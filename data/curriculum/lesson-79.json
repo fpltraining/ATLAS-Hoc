@@ -1,0 +1,72 @@
+{
+  "id": 79,
+  "cn": "数量和质量",
+  "title": "Số lượng và chất lượng",
+  "goal": "Nói tăng giảm, vượt trội, thiếu đủ — bộ từ dùng khi bàn về số liệu.",
+  "words": [
+    { "w": "广告", "py": "guǎnggào", "hv": "quảng cáo", "vi": "quảng cáo", "pos": "danh từ",
+      "note": "Chính là \"quảng cáo\" tiếng Việt: 广 (quảng, rộng) + 告 (cáo, báo).",
+      "ex": [{ "cn": "电视上广告太多了。", "py": "Diànshì shàng guǎnggào tài duō le.", "vi": "Trên tivi quảng cáo nhiều quá." }] },
+    { "w": "质量", "py": "zhìliàng", "hv": "chất lượng", "vi": "chất lượng", "pos": "danh từ",
+      "note": "Chính là \"chất lượng\" tiếng Việt: 质 (chất) + 量 (lượng).",
+      "ex": [{ "cn": "这个牌子质量很好。", "py": "Zhège páizi zhìliàng hěn hǎo.", "vi": "Hãng này chất lượng rất tốt." }] },
+    { "w": "数量", "py": "shùliàng", "hv": "số lượng", "vi": "số lượng", "pos": "danh từ",
+      "note": "Chính là \"số lượng\" tiếng Việt: 数 (số) + 量 (lượng). Cặp đối với 质量.",
+      "ex": [{ "cn": "数量不够，质量也一般。", "py": "Shùliàng bú gòu, zhìliàng yě yìbān.", "vi": "Số lượng không đủ, chất lượng cũng thường." }] },
+    { "w": "全部", "py": "quánbù", "hv": "toàn bộ", "vi": "toàn bộ, tất cả", "pos": "danh từ / phó từ",
+      "note": "Chính là \"toàn bộ\" tiếng Việt: 全 (toàn) + 部 (bộ).",
+      "ex": [{ "cn": "作业我全部做完了。", "py": "Zuòyè wǒ quánbù zuò wán le.", "vi": "Bài tập tôi làm xong toàn bộ." }] },
+    { "w": "部分", "py": "bùfen", "hv": "bộ phận", "vi": "một phần, bộ phận", "pos": "danh từ",
+      "note": "Chính là \"bộ phận\" tiếng Việt. Cặp đối với 全部: 大部分 (phần lớn), 一部分 (một phần).",
+      "ex": [{ "cn": "大部分人都同意。", "py": "Dà bùfen rén dōu tóngyì.", "vi": "Phần lớn mọi người đều đồng ý." }] },
+    { "w": "增加", "py": "zēngjiā", "hv": "tăng gia", "vi": "tăng thêm", "pos": "động từ",
+      "note": "Chính là \"tăng gia\" tiếng Việt (\"tăng gia sản xuất\"): 增 (tăng) + 加 (thêm).",
+      "ex": [{ "cn": "今年的收入增加了。", "py": "Jīnnián de shōurù zēngjiā le.", "vi": "Thu nhập năm nay tăng lên." }] },
+    { "w": "减少", "py": "jiǎnshǎo", "hv": "giảm thiểu", "vi": "giảm bớt", "pos": "động từ",
+      "note": "Chính là \"giảm thiểu\" tiếng Việt: 减 (giảm) + 少 (thiểu, ít). Cặp đối với 增加.",
+      "ex": [{ "cn": "要减少浪费。", "py": "Yào jiǎnshǎo làngfèi.", "vi": "Phải giảm bớt lãng phí." }] },
+    { "w": "超过", "py": "chāoguò", "hv": "siêu quá", "vi": "vượt quá", "pos": "động từ",
+      "note": "超 (siêu, vượt — như 超市 bài 40) + 过 (qua). Dùng cho con số và tốc độ.",
+      "ex": [{ "cn": "价格不能超过一千块。", "py": "Jiàgé bù néng chāoguò yìqiān kuài.", "vi": "Giá không được vượt một nghìn tệ." }] },
+    { "w": "够", "py": "gòu", "hv": "cấu", "vi": "đủ", "pos": "tính từ / động từ",
+      "note": "Đặt SAU danh từ: 钱不够 (không đủ tiền). Cũng đặt trước tính từ nghĩa \"khá\": 够大了.",
+      "ex": [{ "cn": "时间不够了。", "py": "Shíjiān bú gòu le.", "vi": "Không đủ thời gian rồi." }] },
+    { "w": "缺少", "py": "quēshǎo", "hv": "khuyết thiểu", "vi": "thiếu", "pos": "động từ",
+      "note": "缺 (khuyết, thiếu — như 缺点 bài 65) + 少 (ít). Trang trọng hơn 没有.",
+      "ex": [{ "cn": "我们缺少经验。", "py": "Wǒmen quēshǎo jīngyàn.", "vi": "Chúng tôi thiếu kinh nghiệm." }] }
+  ],
+  "grammar": [
+    { "t": "质量 và 数量 — cặp đối kinh điển",
+      "b": "质量 = tốt hay xấu · 数量 = nhiều hay ít",
+      "d": "Hai từ này luôn đi cùng nhau khi đánh giá bất cứ thứ gì. Cả hai đều kết thúc bằng 量, và tiếng Việt cũng có đủ cặp \"chất lượng / số lượng\".",
+      "ex": [
+        { "cn": "我们要重视质量，不只是数量。", "py": "Wǒmen yào zhòngshì zhìliàng, bù zhǐ shì shùliàng.", "vi": "Chúng ta phải coi trọng chất lượng, không chỉ số lượng." }
+      ] },
+    { "t": "够 đứng SAU danh từ",
+      "b": "danh từ + 够 / 不够",
+      "d": "Khác tiếng Việt nói \"đủ tiền\", tiếng Trung nói \"钱够\" (tiền đủ). Phủ định: 钱不够. Đặt trước tính từ thì nghĩa khác: 够大 (đủ to rồi).",
+      "ex": [
+        { "cn": "钱不够，买不了。", "py": "Qián bú gòu, mǎi bu liǎo.", "vi": "Không đủ tiền, mua không nổi." },
+        { "cn": "这个房间够大了。", "py": "Zhège fángjiān gòu dà le.", "vi": "Căn phòng này đủ rộng rồi." }
+      ] },
+    { "t": "Bộ từ nói về thay đổi số liệu",
+      "b": "增加 ↔ 减少 · 提高 ↔ 降低 · 超过",
+      "d": "增加/减少 dùng cho SỐ LƯỢNG (người, tiền, hàng). 提高/降低 dùng cho MỨC ĐỘ (trình độ, giá, nhiệt độ). Chọn sai cặp là câu nghe lạ ngay.",
+      "ex": [
+        { "cn": "学生的数量增加了。", "py": "Xuésheng de shùliàng zēngjiā le.", "vi": "Số lượng học sinh tăng lên." },
+        { "cn": "价格降低了百分之十。", "py": "Jiàgé jiàngdī le bǎi fēn zhī shí.", "vi": "Giá giảm mười phần trăm." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这个广告做得很有意思。", "py": "Zhège guǎnggào zuò de hěn yǒu yìsi.", "vi": "Quảng cáo này làm rất thú vị." },
+    { "cn": "买东西要看质量，不能只看价格。", "py": "Mǎi dōngxi yào kàn zhìliàng, bù néng zhǐ kàn jiàgé.", "vi": "Mua đồ phải xem chất lượng, không chỉ nhìn giá." },
+    { "cn": "今年参加的人数量比去年多。", "py": "Jīnnián cānjiā de rén shùliàng bǐ qùnián duō.", "vi": "Số người tham gia năm nay nhiều hơn năm ngoái." },
+    { "cn": "这些书全部都是他的。", "py": "Zhèxiē shū quánbù dōu shì tā de.", "vi": "Toàn bộ sách này đều của anh ấy." },
+    { "cn": "一部分同学已经毕业了。", "py": "Yí bùfen tóngxué yǐjīng bìyè le.", "vi": "Một bộ phận bạn học đã tốt nghiệp." },
+    { "cn": "为了增加收入，他晚上还去打工。", "py": "Wèile zēngjiā shōurù, tā wǎnshang hái qù dǎgōng.", "vi": "Để tăng thu nhập, tối anh ấy còn đi làm thêm." },
+    { "cn": "医生让他减少工作时间。", "py": "Yīshēng ràng tā jiǎnshǎo gōngzuò shíjiān.", "vi": "Bác sĩ bảo anh ấy giảm giờ làm." },
+    { "cn": "这里的温度很少超过三十度。", "py": "Zhèlǐ de wēndù hěn shǎo chāoguò sānshí dù.", "vi": "Nhiệt độ ở đây ít khi vượt ba mươi độ." },
+    { "cn": "带的钱够不够？", "py": "Dài de qián gòu bu gòu?", "vi": "Tiền mang theo có đủ không?" },
+    { "cn": "我最缺少的是时间。", "py": "Wǒ zuì quēshǎo de shì shíjiān.", "vi": "Thứ tôi thiếu nhất là thời gian." }
+  ]
+}

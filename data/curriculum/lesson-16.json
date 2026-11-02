@@ -1,0 +1,73 @@
+{
+  "id": 16,
+  "cn": "我的家人",
+  "title": "Người thân trong nhà",
+  "goal": "Gọi tên đầy đủ anh chị em, vợ chồng, và dùng 大家 để xưng hô với cả nhóm.",
+  "words": [
+    { "w": "哥哥", "py": "gēge", "hv": "ca ca", "vi": "anh trai", "pos": "danh từ",
+      "note": "Tiếng Việt có \"đại ca\" (anh cả) — chính là chữ 哥 này. Chữ thứ hai đọc nhẹ.",
+      "ex": [{ "cn": "我有一个哥哥。", "py": "Wǒ yǒu yí ge gēge.", "vi": "Tôi có một anh trai." }] },
+    { "w": "姐姐", "py": "jiějie", "hv": "tỷ tỷ", "vi": "chị gái", "pos": "danh từ",
+      "note": "Bộ 女 bên trái. Tiếng Việt có \"tỷ muội\" (chị em gái) trong văn cổ.",
+      "ex": [{ "cn": "我姐姐是老师。", "py": "Wǒ jiějie shì lǎoshī.", "vi": "Chị tôi là giáo viên." }] },
+    { "w": "弟弟", "py": "dìdi", "hv": "đệ đệ", "vi": "em trai", "pos": "danh từ",
+      "note": "Tiếng Việt có \"đệ tử\", \"huynh đệ\" — cùng chữ 弟.",
+      "ex": [{ "cn": "弟弟在学校。", "py": "Dìdi zài xuéxiào.", "vi": "Em trai tôi ở trường." }] },
+    { "w": "妹妹", "py": "mèimei", "hv": "muội muội", "vi": "em gái", "pos": "danh từ",
+      "note": "Tiếng Việt có \"tỷ muội\". Bộ 女 + 未.",
+      "ex": [{ "cn": "我妹妹很漂亮。", "py": "Wǒ mèimei hěn piàoliang.", "vi": "Em gái tôi rất xinh." }] },
+    { "w": "孩子", "py": "háizi", "hv": "hài tử", "vi": "đứa trẻ, con cái", "pos": "danh từ",
+      "note": "孩 có bộ 子 (con). Dùng cho con mình lẫn trẻ con nói chung.",
+      "ex": [{ "cn": "他们有两个孩子。", "py": "Tāmen yǒu liǎng ge háizi.", "vi": "Họ có hai đứa con." }] },
+    { "w": "丈夫", "py": "zhàngfu", "hv": "trượng phu", "vi": "người chồng", "pos": "danh từ",
+      "note": "Chính là \"trượng phu\" tiếng Việt. Cách nói thân mật hơn là 老公 lǎogōng.",
+      "ex": [{ "cn": "她丈夫是医生。", "py": "Tā zhàngfu shì yīshēng.", "vi": "Chồng cô ấy là bác sĩ." }] },
+    { "w": "妻子", "py": "qīzi", "hv": "thê tử", "vi": "người vợ", "pos": "danh từ",
+      "note": "妻 = \"thê\" trong \"phu thê\". Cách nói thân mật là 老婆 lǎopo.",
+      "ex": [{ "cn": "我妻子在公司工作。", "py": "Wǒ qīzi zài gōngsī gōngzuò.", "vi": "Vợ tôi làm ở công ty." }] },
+    { "w": "男", "py": "nán", "hv": "nam", "vi": "nam, đàn ông", "pos": "tính từ",
+      "note": "田 (ruộng) trên 力 (sức) — người đàn ông ra đồng dùng sức. Tiếng Việt: \"nam giới\".",
+      "ex": [{ "cn": "他是男的。", "py": "Tā shì nán de.", "vi": "Anh ấy là nam." }] },
+    { "w": "女", "py": "nǚ", "hv": "nữ", "vi": "nữ, phụ nữ", "pos": "tính từ",
+      "note": "Cũng là bộ thủ số 32 bạn đã học. Tiếng Việt: \"nữ giới\", \"thiếu nữ\".",
+      "ex": [{ "cn": "她是女老师。", "py": "Tā shì nǚ lǎoshī.", "vi": "Cô ấy là cô giáo." }] },
+    { "w": "大家", "py": "dàjiā", "hv": "đại gia", "vi": "mọi người, cả nhà", "pos": "đại từ",
+      "note": "大 (lớn) + 家 (nhà) = cả nhà, mọi người. KHÁC hẳn nghĩa \"đại gia\" (người giàu) của tiếng Việt hiện đại.",
+      "ex": [{ "cn": "大家好！", "py": "Dàjiā hǎo!", "vi": "Chào mọi người!" }] }
+  ],
+  "grammar": [
+    { "t": "Anh chị em gọi theo TUỔI, không theo giới tính trước",
+      "b": "哥哥 anh · 姐姐 chị · 弟弟 em trai · 妹妹 em gái",
+      "d": "Giống hệt tiếng Việt và khác hẳn tiếng Anh (brother/sister không phân biệt lớn nhỏ). Người Việt học phần này rất nhanh vì tư duy giống nhau.",
+      "ex": [
+        { "cn": "我有一个哥哥和一个妹妹。", "py": "Wǒ yǒu yí ge gēge hé yí ge mèimei.", "vi": "Tôi có một anh trai và một em gái." },
+        { "cn": "你有弟弟吗？", "py": "Nǐ yǒu dìdi ma?", "vi": "Bạn có em trai không?" }
+      ] },
+    { "t": "男 / 女 + danh từ",
+      "b": "男 + nghề · 女 + nghề",
+      "d": "Ghép thẳng vào trước danh từ để chỉ giới tính: 男老师 (thầy giáo), 女医生 (nữ bác sĩ). Muốn nói \"người đó là nam\" thì dùng 是男的.",
+      "ex": [
+        { "cn": "她是女医生。", "py": "Tā shì nǚ yīshēng.", "vi": "Cô ấy là nữ bác sĩ." },
+        { "cn": "那个男孩子是我弟弟。", "py": "Nàge nán háizi shì wǒ dìdi.", "vi": "Cậu bé kia là em trai tôi." }
+      ] },
+    { "t": "大家 — chào cả nhóm",
+      "b": "大家好！· 大家 + 都 + động từ",
+      "d": "大家 là chủ ngữ số nhiều, nên rất hay đi kèm 都. Mở đầu một bài nói hay tin nhắn nhóm, người Trung Quốc luôn dùng 大家好.",
+      "ex": [
+        { "cn": "大家好，我叫小明。", "py": "Dàjiā hǎo, wǒ jiào Xiǎomíng.", "vi": "Chào mọi người, tôi tên Tiểu Minh." },
+        { "cn": "大家都是学生。", "py": "Dàjiā dōu shì xuésheng.", "vi": "Mọi người đều là học sinh." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你家有几个孩子？", "py": "Nǐ jiā yǒu jǐ ge háizi?", "vi": "Nhà bạn có mấy đứa con?" },
+    { "cn": "我有一个哥哥和一个妹妹。", "py": "Wǒ yǒu yí ge gēge hé yí ge mèimei.", "vi": "Tôi có một anh trai và một em gái." },
+    { "cn": "我姐姐在北京工作。", "py": "Wǒ jiějie zài Běijīng gōngzuò.", "vi": "Chị tôi làm việc ở Bắc Kinh." },
+    { "cn": "弟弟今年十岁。", "py": "Dìdi jīnnián shí suì.", "vi": "Em trai tôi năm nay mười tuổi." },
+    { "cn": "她丈夫是中国人。", "py": "Tā zhàngfu shì Zhōngguó rén.", "vi": "Chồng cô ấy là người Trung Quốc." },
+    { "cn": "我妻子不会说汉语。", "py": "Wǒ qīzi bú huì shuō Hànyǔ.", "vi": "Vợ tôi không biết nói tiếng Trung." },
+    { "cn": "这个孩子很漂亮。", "py": "Zhège háizi hěn piàoliang.", "vi": "Đứa bé này rất xinh." },
+    { "cn": "大家好！", "py": "Dàjiā hǎo!", "vi": "Chào mọi người!" },
+    { "cn": "大家都很高兴。", "py": "Dàjiā dōu hěn gāoxìng.", "vi": "Mọi người đều rất vui." },
+    { "cn": "我们家有男有女。", "py": "Wǒmen jiā yǒu nán yǒu nǚ.", "vi": "Nhà tôi có cả nam cả nữ." }
+  ]
+}

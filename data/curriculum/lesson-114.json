@@ -1,0 +1,71 @@
+{
+  "id": 114,
+  "cn": "日常生活",
+  "title": "Sinh hoạt thường nhật",
+  "goal": "Từ khẩu ngữ dùng hằng ngày — mua sắm, phiền phức, vừa hay, tuỳ tiện.",
+  "words": [
+    { "w": "购物", "py": "gòuwù", "hv": "cấu vật", "vi": "mua sắm", "pos": "động từ",
+      "note": "购 (cấu, mua) + 物 (vật). Trang trọng hơn 买东西, hay thấy trong 网上购物 (mua sắm online).",
+      "ex": [{ "cn": "周末我喜欢去购物。", "py": "Zhōumò wǒ xǐhuan qù gòuwù.", "vi": "Cuối tuần tôi thích đi mua sắm." }] },
+    { "w": "活动", "py": "huódòng", "hv": "hoạt động", "vi": "hoạt động, sự kiện", "pos": "danh từ / động từ",
+      "note": "Chính là \"hoạt động\" tiếng Việt: 活 (hoạt, sống) + 动 (động).",
+      "ex": [{ "cn": "学校组织了一个活动。", "py": "Xuéxiào zǔzhī le yí ge huódòng.", "vi": "Trường tổ chức một hoạt động." }] },
+    { "w": "麻烦", "py": "máfan", "hv": "ma phiền", "vi": "phiền phức; làm phiền", "pos": "tính từ / động từ / danh từ",
+      "note": "Ba vai. Câu lịch sự cực hay dùng: 麻烦你了 (làm phiền bạn rồi), 麻烦您帮我… (phiền ngài giúp tôi…).",
+      "ex": [{ "cn": "麻烦你帮我看一下。", "py": "Máfan nǐ bāng wǒ kàn yíxià.", "vi": "Phiền bạn xem giúp tôi một chút." }] },
+    { "w": "随便", "py": "suíbiàn", "hv": "tuỳ tiện", "vi": "tuỳ ý, sao cũng được", "pos": "phó từ / tính từ",
+      "note": "随 (tuỳ) + 便 (tiện). Trả lời 随便 khi ai hỏi ăn gì. Nhưng tả người 他很随便 lại mang nghĩa xấu (cẩu thả).",
+      "ex": [{ "cn": "吃什么都行，我随便。", "py": "Chī shénme dōu xíng, wǒ suíbiàn.", "vi": "Ăn gì cũng được, tôi sao cũng xong." }] },
+    { "w": "正好", "py": "zhènghǎo", "hv": "chính hảo", "vi": "vừa hay, vừa vặn", "pos": "phó từ / tính từ",
+      "note": "Hai nghĩa: vừa vặn kích cỡ (这双鞋正好) và tình cờ đúng lúc (我正好也要去).",
+      "ex": [{ "cn": "你来得正好。", "py": "Nǐ lái de zhènghǎo.", "vi": "Bạn đến vừa đúng lúc." }] },
+    { "w": "最好", "py": "zuìhǎo", "hv": "tối hảo", "vi": "tốt nhất là, nên", "pos": "phó từ",
+      "note": "Dùng để khuyên nhẹ nhàng: 你最好早点儿去 (bạn nên đi sớm chút). Mềm hơn 应该.",
+      "ex": [{ "cn": "你最好先问问老师。", "py": "Nǐ zuìhǎo xiān wènwen lǎoshī.", "vi": "Bạn nên hỏi thầy trước thì hơn." }] },
+    { "w": "行", "py": "xíng", "hv": "hành", "vi": "được, ổn", "pos": "động từ / tính từ",
+      "note": "Chính là \"hành\" tiếng Việt (\"hành động\", \"ngân hàng\" đọc háng). Khẩu ngữ: 行！= được!",
+      "ex": [{ "cn": "行，就这么办。", "py": "Xíng, jiù zhème bàn.", "vi": "Được, cứ làm vậy." }] },
+    { "w": "热闹", "py": "rènao", "hv": "nhiệt náo", "vi": "náo nhiệt, đông vui", "pos": "tính từ",
+      "note": "热 (nhiệt) + 闹 (náo). Là từ mang nghĩa TỐT trong tiếng Trung — đông vui, không phải ồn ào khó chịu.",
+      "ex": [{ "cn": "春节的时候很热闹。", "py": "Chūnjié de shíhou hěn rènao.", "vi": "Dịp Tết rất náo nhiệt." }] },
+    { "w": "乱", "py": "luàn", "hv": "loạn", "vi": "lộn xộn; bừa", "pos": "tính từ / phó từ",
+      "note": "Chính là \"loạn\" tiếng Việt. Làm phó từ nghĩa là làm bừa: 别乱说 (đừng nói bừa), 乱扔 (vứt bừa).",
+      "ex": [{ "cn": "房间太乱了。", "py": "Fángjiān tài luàn le.", "vi": "Phòng bừa bộn quá." }] },
+    { "w": "假", "py": "jiǎ", "hv": "giả", "vi": "giả, không thật", "pos": "tính từ",
+      "note": "Chính là \"giả\" tiếng Việt. Đọc jiǎ là giả dối; đọc jià là kỳ nghỉ (放假, 假期) — một chữ hai âm.",
+      "ex": [{ "cn": "这是假的，不是真的。", "py": "Zhè shì jiǎ de, bú shì zhēn de.", "vi": "Cái này là giả, không phải thật." }] }
+  ],
+  "grammar": [
+    { "t": "麻烦 — ba cách dùng trong một từ",
+      "b": "麻烦 + người + động từ (nhờ vả) · 很麻烦 (tính từ) · 遇到麻烦 (danh từ)",
+      "d": "Đây là từ đa năng nhất của khẩu ngữ tiếng Trung. Khi nhờ ai, 麻烦你… lịch sự hơn 请你… nhiều, vì thể hiện mình biết là đang làm phiền họ.",
+      "ex": [
+        { "cn": "麻烦您让一下。", "py": "Máfan nín ràng yíxià.", "vi": "Phiền ngài nhường chút." },
+        { "cn": "他遇到了一点儿麻烦。", "py": "Tā yù dào le yìdiǎnr máfan.", "vi": "Anh ấy gặp chút rắc rối." }
+      ] },
+    { "t": "行 · 可以 · 好 — ba cách nói \"được\"",
+      "b": "行 (khẩu ngữ, đồng ý) · 可以 (được phép) · 好 (đồng ý làm)",
+      "d": "Ai xin phép: 我可以进来吗？— trả lời 可以. Ai đề nghị: 我们六点走吧 — trả lời 行 hoặc 好. 不行 mang giọng dứt khoát hơn 不可以.",
+      "ex": [
+        { "cn": "这样行不行？", "py": "Zhèyàng xíng bu xíng?", "vi": "Thế này được không?" }
+      ] },
+    { "t": "乱 làm phó từ — làm việc gì đó một cách bừa bãi",
+      "b": "乱 + động từ",
+      "d": "乱说 (nói bừa), 乱写 (viết bừa), 乱花钱 (tiêu tiền bừa), 乱扔垃圾 (vứt rác bừa). Mẫu này rất hay gặp trong lời nhắc nhở và biển báo.",
+      "ex": [
+        { "cn": "请不要乱扔垃圾。", "py": "Qǐng búyào luàn rēng lājī.", "vi": "Xin đừng vứt rác bừa bãi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "现在很多人喜欢网上购物。", "py": "Xiànzài hěn duō rén xǐhuan wǎng shàng gòuwù.", "vi": "Bây giờ nhiều người thích mua sắm online." },
+    { "cn": "这次活动有一百多人参加。", "py": "Zhè cì huódòng yǒu yìbǎi duō rén cānjiā.", "vi": "Hoạt động lần này có hơn trăm người dự." },
+    { "cn": "麻烦你了，真不好意思。", "py": "Máfan nǐ le, zhēn bù hǎoyìsi.", "vi": "Làm phiền bạn rồi, thật ngại quá." },
+    { "cn": "你随便坐，别客气。", "py": "Nǐ suíbiàn zuò, bié kèqi.", "vi": "Bạn cứ ngồi tự nhiên, đừng khách sáo." },
+    { "cn": "这件衣服的大小正好。", "py": "Zhè jiàn yīfu de dàxiǎo zhènghǎo.", "vi": "Bộ đồ này vừa vặn." },
+    { "cn": "你最好带把伞，可能会下雨。", "py": "Nǐ zuìhǎo dài bǎ sǎn, kěnéng huì xià yǔ.", "vi": "Bạn nên mang ô, có thể mưa đấy." },
+    { "cn": "明天见面行吗？", "py": "Míngtiān jiànmiàn xíng ma?", "vi": "Mai gặp được không?" },
+    { "cn": "节日的街上非常热闹。", "py": "Jiérì de jiē shàng fēicháng rènao.", "vi": "Phố ngày lễ vô cùng náo nhiệt." },
+    { "cn": "别把东西放得乱七八糟。", "py": "Bié bǎ dōngxi fàng de luànqībāzāo.", "vi": "Đừng để đồ đạc bừa bộn lung tung." },
+    { "cn": "买东西要小心买到假货。", "py": "Mǎi dōngxi yào xiǎoxīn mǎi dào jiǎ huò.", "vi": "Mua đồ phải cẩn thận kẻo mua phải hàng giả." }
+  ]
+}

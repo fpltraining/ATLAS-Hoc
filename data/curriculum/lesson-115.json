@@ -1,0 +1,70 @@
+{
+  "id": 115,
+  "cn": "空气和周围",
+  "title": "Không khí và xung quanh",
+  "goal": "Thời tiết, môi trường xung quanh và một nhóm chữ đơn đa nghĩa hay gặp.",
+  "words": [
+    { "w": "空气", "py": "kōngqì", "hv": "không khí", "vi": "không khí", "pos": "danh từ",
+      "note": "Chính là \"không khí\" tiếng Việt: 空 (không, bài 97) + 气 (khí).",
+      "ex": [{ "cn": "山上的空气很新鲜。", "py": "Shān shàng de kōngqì hěn xīnxiān.", "vi": "Không khí trên núi rất trong lành." }] },
+    { "w": "凉快", "py": "liángkuai", "hv": "lương khoái", "vi": "mát mẻ", "pos": "tính từ",
+      "note": "凉 (lương, mát — bộ 冫 hai chấm băng) + 快. Tiếng Việt: \"lương\" trong \"thanh lương\".",
+      "ex": [{ "cn": "秋天很凉快。", "py": "Qiūtiān hěn liángkuai.", "vi": "Mùa thu rất mát mẻ." }] },
+    { "w": "暖和", "py": "nuǎnhuo", "hv": "noãn hoà", "vi": "ấm áp", "pos": "tính từ",
+      "note": "暖 (noãn, ấm — bộ 日 mặt trời) + 和. Trái nghĩa với 凉快. Chú ý 和 ở đây đọc nhẹ huo.",
+      "ex": [{ "cn": "房间里很暖和。", "py": "Fángjiān lǐ hěn nuǎnhuo.", "vi": "Trong phòng rất ấm." }] },
+    { "w": "严重", "py": "yánzhòng", "hv": "nghiêm trọng", "vi": "nghiêm trọng", "pos": "tính từ",
+      "note": "Chính là \"nghiêm trọng\" tiếng Việt: 严 (nghiêm) + 重 (trọng, đọc zhòng).",
+      "ex": [{ "cn": "情况比较严重。", "py": "Qíngkuàng bǐjiào yánzhòng.", "vi": "Tình hình khá nghiêm trọng." }] },
+    { "w": "自然", "py": "zìrán", "hv": "tự nhiên", "vi": "tự nhiên; thiên nhiên", "pos": "danh từ / tính từ",
+      "note": "Chính là \"tự nhiên\" tiếng Việt: 自 (tự) + 然 (nhiên). Hai nghĩa: thiên nhiên và không gượng ép.",
+      "ex": [{ "cn": "他说汉语很自然。", "py": "Tā shuō Hànyǔ hěn zìrán.", "vi": "Anh ấy nói tiếng Trung rất tự nhiên." }] },
+    { "w": "周围", "py": "zhōuwéi", "hv": "chu vi", "vi": "xung quanh", "pos": "danh từ",
+      "note": "周 (chu, vòng quanh) + 围 (vi, vây). Tiếng Việt \"chu vi\" là thuật ngữ toán học, nghĩa gốc giống nhau.",
+      "ex": [{ "cn": "学校周围有很多小吃店。", "py": "Xuéxiào zhōuwéi yǒu hěn duō xiǎochī diàn.", "vi": "Quanh trường có nhiều quán ăn vặt." }] },
+    { "w": "毛", "py": "máo", "hv": "mao", "vi": "lông; hào (tiền)", "pos": "danh từ / lượng từ",
+      "note": "Chính là \"mao\" tiếng Việt (\"lông mao\"). Hai nghĩa: lông (羊毛 len) và đơn vị tiền = 1/10 nguyên.",
+      "ex": [{ "cn": "这个五毛钱。", "py": "Zhège wǔ máo qián.", "vi": "Cái này năm hào." }] },
+    { "w": "响", "py": "xiǎng", "hv": "hưởng", "vi": "kêu, vang; to (tiếng)", "pos": "động từ / tính từ",
+      "note": "Tiếng Việt: \"âm hưởng\", \"ảnh hưởng\". Vừa là động từ (电话响了) vừa là tính từ (声音很响).",
+      "ex": [{ "cn": "电话响了。", "py": "Diànhuà xiǎng le.", "vi": "Điện thoại reo rồi." }] },
+    { "w": "底", "py": "dǐ", "hv": "để", "vi": "đáy; cuối", "pos": "danh từ",
+      "note": "Bộ 广. Đã gặp trong 到底 (bài 104). Chỉ thời gian: 月底 (cuối tháng), 年底 (cuối năm).",
+      "ex": [{ "cn": "月底我要交房租。", "py": "Yuèdǐ wǒ yào jiāo fángzū.", "vi": "Cuối tháng tôi phải nộp tiền nhà." }] },
+    { "w": "当", "py": "dāng", "hv": "đương", "vi": "làm (nghề); khi", "pos": "động từ / giới từ",
+      "note": "Chính là \"đương\" tiếng Việt (\"đương thời\", \"đảm đương\"). 当老师 = làm thầy giáo; 当…的时候 = khi….",
+      "ex": [{ "cn": "他想当医生。", "py": "Tā xiǎng dāng yīshēng.", "vi": "Anh ấy muốn làm bác sĩ." }] }
+  ],
+  "grammar": [
+    { "t": "当 … 的时候 — khung câu chỉ thời điểm",
+      "b": "当 + mệnh đề + 的时候，…",
+      "d": "当我第一次去中国的时候，我一句汉语也不会说. Có thể bỏ 当 mà vẫn đúng, nhưng có 当 thì câu trang trọng và rõ ràng hơn — hay dùng khi kể chuyện hoặc viết văn.",
+      "ex": [
+        { "cn": "当我遇到困难的时候，朋友都会帮我。", "py": "Dāng wǒ yù dào kùnnan de shíhou, péngyou dōu huì bāng wǒ.", "vi": "Khi tôi gặp khó khăn, bạn bè đều giúp tôi." }
+      ] },
+    { "t": "当 · 做 · 成为 — ba cách nói \"làm nghề\"",
+      "b": "当老师 (khẩu ngữ) · 做老师 (trung tính) · 成为老师 (trang trọng, nhấn quá trình)",
+      "d": "Cả ba đều đúng, khác sắc thái. 当 nhấn vào việc đảm nhận vai trò, 做 nhấn vào công việc thường ngày, 成为 nhấn vào việc TRỞ THÀNH sau một quá trình.",
+      "ex": [
+        { "cn": "我姐姐在中学当老师。", "py": "Wǒ jiějie zài zhōngxué dāng lǎoshī.", "vi": "Chị tôi làm giáo viên cấp hai." }
+      ] },
+    { "t": "Cấu trúc \"nơi chốn + 有\" tả cảnh vật xung quanh",
+      "b": "địa điểm + 周围／附近 + 有 + sự vật",
+      "d": "Đây là mẫu câu tả cảnh cơ bản, hay dùng khi giới thiệu nơi ở: 我家附近有一个公园，公园周围有很多树. Ghi nhớ: 周围 là vòng quanh, 附近 là gần đó (không nhất thiết bao quanh).",
+      "ex": [
+        { "cn": "我家周围很安静。", "py": "Wǒ jiā zhōuwéi hěn ānjìng.", "vi": "Xung quanh nhà tôi rất yên tĩnh." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "下雨以后空气特别好。", "py": "Xià yǔ yǐhòu kōngqì tèbié hǎo.", "vi": "Sau mưa không khí đặc biệt trong lành." },
+    { "cn": "今天比昨天凉快多了。", "py": "Jīntiān bǐ zuótiān liángkuai duō le.", "vi": "Hôm nay mát hơn hôm qua nhiều." },
+    { "cn": "南方的冬天比较暖和。", "py": "Nánfāng de dōngtiān bǐjiào nuǎnhuo.", "vi": "Mùa đông miền Nam khá ấm." },
+    { "cn": "他的病很严重，要住院。", "py": "Tā de bìng hěn yánzhòng, yào zhùyuàn.", "vi": "Bệnh của anh ấy nặng, phải nhập viện." },
+    { "cn": "我们应该保护自然环境。", "py": "Wǒmen yīnggāi bǎohù zìrán huánjìng.", "vi": "Chúng ta nên bảo vệ môi trường tự nhiên." },
+    { "cn": "他周围的朋友都很热情。", "py": "Tā zhōuwéi de péngyou dōu hěn rèqíng.", "vi": "Bạn bè xung quanh anh ấy đều rất nhiệt tình." },
+    { "cn": "这件毛衣是羊毛的。", "py": "Zhè jiàn máoyī shì yángmáo de.", "vi": "Cái áo len này bằng lông cừu." },
+    { "cn": "外面的声音太响了。", "py": "Wàimiàn de shēngyīn tài xiǎng le.", "vi": "Tiếng ngoài kia to quá." },
+    { "cn": "年底公司会给大家发奖金。", "py": "Niándǐ gōngsī huì gěi dàjiā fā jiǎngjīn.", "vi": "Cuối năm công ty sẽ phát thưởng cho mọi người." },
+    { "cn": "当我看到那封信的时候，我哭了。", "py": "Dāng wǒ kàn dào nà fēng xìn de shíhou, wǒ kū le.", "vi": "Khi tôi nhìn thấy lá thư đó, tôi đã khóc." }
+  ]
+}

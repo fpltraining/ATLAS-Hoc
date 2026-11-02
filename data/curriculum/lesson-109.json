@@ -1,0 +1,72 @@
+{
+  "id": 109,
+  "cn": "精神和意志",
+  "title": "Tinh thần và ý chí",
+  "goal": "Nói về cảm giác, tâm trạng, tính khí và ước mơ — từ vựng của đời sống nội tâm.",
+  "words": [
+    { "w": "感觉", "py": "gǎnjué", "hv": "cảm giác", "vi": "cảm giác; cảm thấy", "pos": "danh từ / động từ",
+      "note": "Chính là \"cảm giác\" tiếng Việt: 感 (cảm) + 觉 (giác). Vừa danh từ vừa động từ: 我感觉很好.",
+      "ex": [{ "cn": "我感觉好多了。", "py": "Wǒ gǎnjué hǎo duō le.", "vi": "Tôi thấy đỡ nhiều rồi." }] },
+    { "w": "心情", "py": "xīnqíng", "hv": "tâm tình", "vi": "tâm trạng", "pos": "danh từ",
+      "note": "心 (tâm) + 情 (tình). Tiếng Việt \"tâm tình\" nghĩa hơi khác — ở đây là tâm trạng vui buồn.",
+      "ex": [{ "cn": "他今天心情不好。", "py": "Tā jīntiān xīnqíng bù hǎo.", "vi": "Hôm nay anh ấy tâm trạng không tốt." }] },
+    { "w": "脾气", "py": "píqi", "hv": "tỳ khí", "vi": "tính khí, tính nết", "pos": "danh từ",
+      "note": "脾 (tỳ, lá lách — bộ 月 chỉ cơ thể) + 气 (khí). Đông y cho rằng tính khí sinh từ tạng phủ. 发脾气 = nổi nóng.",
+      "ex": [{ "cn": "他脾气很好。", "py": "Tā píqi hěn hǎo.", "vi": "Anh ấy tính rất tốt." }] },
+    { "w": "信心", "py": "xìnxīn", "hv": "tín tâm", "vi": "niềm tin, sự tự tin", "pos": "danh từ",
+      "note": "信 (tín) + 心 (tâm). Dùng với 有/没有: 我对自己有信心.",
+      "ex": [{ "cn": "我对考试很有信心。", "py": "Wǒ duì kǎoshì hěn yǒu xìnxīn.", "vi": "Tôi rất tự tin vào kỳ thi." }] },
+    { "w": "自信", "py": "zìxìn", "hv": "tự tín", "vi": "tự tin", "pos": "tính từ / danh từ",
+      "note": "Chính là \"tự tin\" tiếng Việt: 自 (tự) + 信 (tín). Khác 信心: 自信 là TÍNH CÁCH, 信心 là niềm tin vào một việc.",
+      "ex": [{ "cn": "她是个很自信的人。", "py": "Tā shì ge hěn zìxìn de rén.", "vi": "Cô ấy là người rất tự tin." }] },
+    { "w": "理想", "py": "lǐxiǎng", "hv": "lý tưởng", "vi": "lý tưởng, hoài bão", "pos": "danh từ / tính từ",
+      "note": "Chính là \"lý tưởng\" tiếng Việt: 理 (lý) + 想 (tưởng). Vừa là danh từ (hoài bão) vừa là tính từ (lý tưởng).",
+      "ex": [{ "cn": "每个人都有自己的理想。", "py": "Měi ge rén dōu yǒu zìjǐ de lǐxiǎng.", "vi": "Ai cũng có lý tưởng của mình." }] },
+    { "w": "梦", "py": "mèng", "hv": "mộng", "vi": "giấc mơ", "pos": "danh từ / động từ",
+      "note": "Chính là \"mộng\" tiếng Việt. 做梦 = nằm mơ (là từ ly hợp: 做了一个梦). 梦想 = ước mơ.",
+      "ex": [{ "cn": "我昨晚做了一个奇怪的梦。", "py": "Wǒ zuówǎn zuò le yí ge qíguài de mèng.", "vi": "Tối qua tôi mơ một giấc mơ lạ." }] },
+    { "w": "辛苦", "py": "xīnkǔ", "hv": "tân khổ", "vi": "vất vả", "pos": "tính từ",
+      "note": "辛 (tân, cay) + 苦 (khổ, đắng — bài 97). Cay đắng tức là vất vả. Câu xã giao: 辛苦了！",
+      "ex": [{ "cn": "您辛苦了！", "py": "Nín xīnkǔ le!", "vi": "Ngài vất vả rồi!" }] },
+    { "w": "困", "py": "kùn", "hv": "khốn", "vi": "buồn ngủ", "pos": "tính từ",
+      "note": "Chữ tượng hình: 木 (cây) bị nhốt trong 囗 (vòng vây) — bị vây khốn. Nghĩa \"buồn ngủ\" là nghĩa mở rộng.",
+      "ex": [{ "cn": "我有点儿困了。", "py": "Wǒ yǒudiǎnr kùn le.", "vi": "Tôi hơi buồn ngủ rồi." }] },
+    { "w": "醒", "py": "xǐng", "hv": "tỉnh", "vi": "tỉnh dậy", "pos": "động từ",
+      "note": "Chính là \"tỉnh\" tiếng Việt. Bộ 酉 (rượu) — tỉnh rượu. 醒来 = tỉnh dậy, 叫醒 = đánh thức.",
+      "ex": [{ "cn": "我每天六点醒。", "py": "Wǒ měi tiān liù diǎn xǐng.", "vi": "Ngày nào tôi cũng tỉnh lúc sáu giờ." }] }
+  ],
+  "grammar": [
+    { "t": "感觉 · 觉得 · 认为 — ba mức của \"tôi thấy\"",
+      "b": "感觉 (cảm nhận cơ thể/trực giác) < 觉得 (ý kiến nhẹ) < 认为 (quan điểm có lập luận)",
+      "d": "我感觉有点儿冷 (cảm nhận). 我觉得这个不错 (thấy vậy). 我认为应该这样做 (tôi cho rằng — trang trọng, có lý lẽ). Dùng 认为 cho chuyện vặt sẽ nghe quá nặng nề.",
+      "ex": [
+        { "cn": "我觉得这个方法更好。", "py": "Wǒ juéde zhège fāngfǎ gèng hǎo.", "vi": "Tôi thấy cách này hay hơn." },
+        { "cn": "我认为学习需要方法。", "py": "Wǒ rènwéi xuéxí xūyào fāngfǎ.", "vi": "Tôi cho rằng việc học cần có phương pháp." }
+      ] },
+    { "t": "醒 làm bổ ngữ kết quả",
+      "b": "Động từ + 醒 = làm cho tỉnh",
+      "d": "叫醒 (gọi cho tỉnh), 吵醒 (làm ồn khiến tỉnh giấc), 睡醒 (ngủ đã rồi tỉnh). Đây là mẫu bổ ngữ kết quả rất hay gặp: động từ chỉ cách làm + 醒 chỉ kết quả.",
+      "ex": [
+        { "cn": "请明天七点叫醒我。", "py": "Qǐng míngtiān qī diǎn jiào xǐng wǒ.", "vi": "Mai bảy giờ gọi tôi dậy nhé." },
+        { "cn": "我被外面的声音吵醒了。", "py": "Wǒ bèi wàimiàn de shēngyīn chǎo xǐng le.", "vi": "Tôi bị tiếng ồn bên ngoài đánh thức." }
+      ] },
+    { "t": "对 … 有信心 — mẫu cố định",
+      "b": "对 + đối tượng + 有／没有 + 信心／兴趣／办法",
+      "d": "Đây là khung câu dùng đi dùng lại: 对汉语有兴趣, 对自己有信心, 对这件事没办法. Nhớ khung là nói được cả chục câu.",
+      "ex": [
+        { "cn": "你要对自己有信心。", "py": "Nǐ yào duì zìjǐ yǒu xìnxīn.", "vi": "Bạn phải tự tin vào bản thân." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "写好一个字的感觉真好。", "py": "Xiě hǎo yí ge zì de gǎnjué zhēn hǎo.", "vi": "Cảm giác viết đẹp được một chữ thật tuyệt." },
+    { "cn": "听音乐能让心情变好。", "py": "Tīng yīnyuè néng ràng xīnqíng biàn hǎo.", "vi": "Nghe nhạc khiến tâm trạng tốt lên." },
+    { "cn": "他很少发脾气。", "py": "Tā hěn shǎo fā píqi.", "vi": "Anh ấy rất ít khi nổi nóng." },
+    { "cn": "失败了几次，我失去了信心。", "py": "Shībài le jǐ cì, wǒ shīqù le xìnxīn.", "vi": "Thất bại vài lần, tôi mất niềm tin." },
+    { "cn": "多练习会让你更自信。", "py": "Duō liànxí huì ràng nǐ gèng zìxìn.", "vi": "Luyện nhiều sẽ khiến bạn tự tin hơn." },
+    { "cn": "他的理想是当一名老师。", "py": "Tā de lǐxiǎng shì dāng yì míng lǎoshī.", "vi": "Lý tưởng của anh ấy là làm thầy giáo." },
+    { "cn": "学好汉语是我的梦想。", "py": "Xué hǎo Hànyǔ shì wǒ de mèngxiǎng.", "vi": "Học giỏi tiếng Trung là ước mơ của tôi." },
+    { "cn": "父母养大孩子很辛苦。", "py": "Fùmǔ yǎng dà háizi hěn xīnkǔ.", "vi": "Cha mẹ nuôi con lớn rất vất vả." },
+    { "cn": "太困了，我先去睡了。", "py": "Tài kùn le, wǒ xiān qù shuì le.", "vi": "Buồn ngủ quá, tôi đi ngủ trước đây." },
+    { "cn": "他睡醒以后觉得舒服多了。", "py": "Tā shuì xǐng yǐhòu juéde shūfu duō le.", "vi": "Ngủ dậy anh ấy thấy dễ chịu hơn nhiều." }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": 26,
+  "cn": "你喜欢什么运动？",
+  "title": "Thể thao và giải trí",
+  "goal": "Nói về sở thích vận động, hiểu \"động từ ly hợp\" và biết khi nào dùng 打, khi nào dùng 踢.",
+  "words": [
+    { "w": "运动", "py": "yùndòng", "hv": "vận động", "vi": "vận động, thể thao", "pos": "danh từ / động từ",
+      "note": "Chính là \"vận động\" tiếng Việt. Vừa là danh từ (môn thể thao) vừa là động từ (tập luyện).",
+      "ex": [{ "cn": "我每天运动。", "py": "Wǒ měi tiān yùndòng.", "vi": "Ngày nào tôi cũng vận động." }] },
+    { "w": "跑步", "py": "pǎobù", "hv": "bào bộ", "vi": "chạy bộ", "pos": "động từ",
+      "note": "跑 (chạy, bộ ⻊ chân) + 步 (bước). Là động từ ly hợp: tách ra được thành 跑了三十分钟步.",
+      "ex": [{ "cn": "我早上去跑步。", "py": "Wǒ zǎoshang qù pǎobù.", "vi": "Buổi sáng tôi đi chạy bộ." }] },
+    { "w": "游泳", "py": "yóuyǒng", "hv": "du vịnh", "vi": "bơi lội", "pos": "động từ",
+      "note": "Cả hai chữ đều có bộ 氵 (nước) — nhìn là biết liên quan tới nước.",
+      "ex": [{ "cn": "我会游泳。", "py": "Wǒ huì yóuyǒng.", "vi": "Tôi biết bơi." }] },
+    { "w": "打篮球", "py": "dǎ lánqiú", "hv": "đả lam cầu", "vi": "chơi bóng rổ", "pos": "động từ",
+      "note": "打 (đánh) + 篮 (cái rổ, bộ 竹 tre) + 球 (quả bóng, bộ 王 tức ngọc). Nghĩa đen: đánh bóng vào rổ.",
+      "ex": [{ "cn": "他喜欢打篮球。", "py": "Tā xǐhuan dǎ lánqiú.", "vi": "Cậu ấy thích chơi bóng rổ." }] },
+    { "w": "踢足球", "py": "tī zúqiú", "hv": "thích túc cầu", "vi": "đá bóng", "pos": "động từ",
+      "note": "足球 chính là \"túc cầu\" — tên gọi cũ của bóng đá trong tiếng Việt. 踢 = đá, có bộ ⻊ (chân).",
+      "ex": [{ "cn": "我们去踢足球吧。", "py": "Wǒmen qù tī zúqiú ba.", "vi": "Chúng ta đi đá bóng đi." }] },
+    { "w": "跳舞", "py": "tiàowǔ", "hv": "khiêu vũ", "vi": "nhảy múa, khiêu vũ", "pos": "động từ",
+      "note": "Chính là \"khiêu vũ\" tiếng Việt. 跳 (nhảy, bộ ⻊) + 舞 (múa).",
+      "ex": [{ "cn": "她跳舞跳得很好。", "py": "Tā tiàowǔ tiào de hěn hǎo.", "vi": "Cô ấy nhảy rất đẹp." }] },
+    { "w": "唱歌", "py": "chànggē", "hv": "xướng ca", "vi": "hát", "pos": "động từ",
+      "note": "Chính là \"xướng ca\" tiếng Việt. Cả hai chữ đều có bộ 口 hoặc 欠 (há miệng).",
+      "ex": [{ "cn": "我喜欢唱歌。", "py": "Wǒ xǐhuan chànggē.", "vi": "Tôi thích hát." }] },
+    { "w": "玩", "py": "wán", "hv": "ngoạn", "vi": "chơi", "pos": "động từ",
+      "note": "Bộ 王 (ngọc) — vốn nghĩa là mân mê viên ngọc. Tiếng Việt: \"du ngoạn\", \"ngoạn mục\".",
+      "ex": [{ "cn": "孩子们在外面玩。", "py": "Háizimen zài wàimiàn wán.", "vi": "Bọn trẻ chơi ở ngoài." }] },
+    { "w": "笑", "py": "xiào", "hv": "tiếu", "vi": "cười", "pos": "động từ",
+      "note": "Bộ 竹 (tre) ở trên — như hai mắt nheo lại. Tiếng Việt: \"tiếu lâm\", \"nụ cười\".",
+      "ex": [{ "cn": "大家都笑了。", "py": "Dàjiā dōu xiào le.", "vi": "Mọi người đều cười." }] },
+    { "w": "一起", "py": "yìqǐ", "hv": "nhất khởi", "vi": "cùng nhau", "pos": "phó từ",
+      "note": "Đứng TRƯỚC động từ: 一起去 (cùng đi). Không đặt cuối câu như tiếng Việt.",
+      "ex": [{ "cn": "我们一起去吧。", "py": "Wǒmen yìqǐ qù ba.", "vi": "Chúng ta cùng đi đi." }] }
+  ],
+  "grammar": [
+    { "t": "Động từ ly hợp — một từ nhưng tách ra được",
+      "b": "唱歌 · 跳舞 · 跑步 · 游泳 · 睡觉 · 上班",
+      "d": "Đây là hiện tượng lạ với người Việt: các từ này thật ra là ĐỘNG TỪ + TÂN NGỮ dính lại. Muốn thêm gì thì phải chèn vào GIỮA, không thêm vào sau. Nói 我唱歌了两个小时 là sai, phải là 我唱了两个小时歌.",
+      "ex": [
+        { "cn": "我跑了三十分钟步。", "py": "Wǒ pǎo le sānshí fēnzhōng bù.", "vi": "Tôi chạy bộ ba mươi phút." },
+        { "cn": "他唱了一个歌。", "py": "Tā chàng le yí ge gē.", "vi": "Anh ấy hát một bài." },
+        { "cn": "我睡了八个小时觉。", "py": "Wǒ shuì le bā ge xiǎoshí jiào.", "vi": "Tôi ngủ tám tiếng." }
+      ] },
+    { "t": "打 hay 踢 — đánh bóng hay đá bóng?",
+      "b": "打 dùng TAY · 踢 dùng CHÂN",
+      "d": "Rất logic: 打篮球 (bóng rổ, dùng tay), 打网球 (tennis), nhưng 踢足球 (bóng đá, dùng chân). Chữ 踢 có bộ ⻊ (chân) nên nhìn là đoán ra.",
+      "ex": [
+        { "cn": "他会打篮球。", "py": "Tā huì dǎ lánqiú.", "vi": "Cậu ấy biết chơi bóng rổ." },
+        { "cn": "我不会踢足球。", "py": "Wǒ bú huì tī zúqiú.", "vi": "Tôi không biết đá bóng." }
+      ] },
+    { "t": "Bổ ngữ trình độ với 得 — làm việc gì đó GIỎI đến đâu",
+      "b": "Động từ + 得 + tính từ",
+      "d": "Muốn khen ai làm việc gì giỏi thì dùng 得. Với động từ ly hợp phải LẶP LẠI động từ: 她跳舞跳得很好, chứ không nói 她跳舞得很好.",
+      "ex": [
+        { "cn": "他跑得很快。", "py": "Tā pǎo de hěn kuài.", "vi": "Anh ấy chạy rất nhanh." },
+        { "cn": "她唱歌唱得很好。", "py": "Tā chànggē chàng de hěn hǎo.", "vi": "Cô ấy hát rất hay." },
+        { "cn": "你说汉语说得很好。", "py": "Nǐ shuō Hànyǔ shuō de hěn hǎo.", "vi": "Bạn nói tiếng Trung rất giỏi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你喜欢什么运动？", "py": "Nǐ xǐhuan shénme yùndòng?", "vi": "Bạn thích môn thể thao nào?" },
+    { "cn": "我最喜欢游泳。", "py": "Wǒ zuì xǐhuan yóuyǒng.", "vi": "Tôi thích bơi nhất." },
+    { "cn": "我每天早上去跑步。", "py": "Wǒ měi tiān zǎoshang qù pǎobù.", "vi": "Sáng nào tôi cũng đi chạy bộ." },
+    { "cn": "他篮球打得非常好。", "py": "Tā lánqiú dǎ de fēicháng hǎo.", "vi": "Cậu ấy chơi bóng rổ cực giỏi." },
+    { "cn": "我们下午去踢足球吧。", "py": "Wǒmen xiàwǔ qù tī zúqiú ba.", "vi": "Chiều nay đi đá bóng đi." },
+    { "cn": "她跳舞跳得很漂亮。", "py": "Tā tiàowǔ tiào de hěn piàoliang.", "vi": "Cô ấy nhảy rất đẹp." },
+    { "cn": "晚上我们一起唱歌吧。", "py": "Wǎnshang wǒmen yìqǐ chànggē ba.", "vi": "Tối nay cùng đi hát đi." },
+    { "cn": "孩子们在外面玩得很高兴。", "py": "Háizimen zài wàimiàn wán de hěn gāoxìng.", "vi": "Bọn trẻ chơi ngoài kia vui lắm." },
+    { "cn": "他说的话让大家都笑了。", "py": "Tā shuō de huà ràng dàjiā dōu xiào le.", "vi": "Câu anh ấy nói làm mọi người đều cười." },
+    { "cn": "我不会游泳，你教我吧。", "py": "Wǒ bú huì yóuyǒng, nǐ jiāo wǒ ba.", "vi": "Tôi không biết bơi, bạn dạy tôi đi." }
+  ]
+}

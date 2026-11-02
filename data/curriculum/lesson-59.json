@@ -1,0 +1,73 @@
+{
+  "id": 59,
+  "cn": "口语常用词",
+  "title": "Từ hay gặp khi nói chuyện",
+  "goal": "Nắm những từ nhỏ mà người bản xứ dùng liên tục — 一边…一边…, 还是, 其实.",
+  "words": [
+    { "w": "啊", "py": "a", "hv": "a", "vi": "(thán từ cuối câu)", "pos": "trợ từ",
+      "note": "Bộ 口 (miệng). Đặt cuối câu làm giọng mềm và thân mật hơn: 好啊！是啊！Không dịch được sang tiếng Việt, chỉ cảm nhận.",
+      "ex": [{ "cn": "好啊，我们一起去！", "py": "Hǎo a, wǒmen yìqǐ qù!", "vi": "Được đấy, chúng ta cùng đi!" }] },
+    { "w": "其实", "py": "qíshí", "hv": "kỳ thực", "vi": "thật ra, kỳ thực", "pos": "phó từ",
+      "note": "Chính là \"kỳ thực\" tiếng Việt. Dùng để nói ra điều trái với vẻ ngoài hoặc trái với điều người ta tưởng.",
+      "ex": [{ "cn": "其实我不太喜欢。", "py": "Qíshí wǒ bú tài xǐhuan.", "vi": "Thật ra tôi không thích lắm." }] },
+    { "w": "先", "py": "xiān", "hv": "tiên", "vi": "trước, trước hết", "pos": "phó từ",
+      "note": "Chính là \"tiên\" tiếng Việt (\"tiên phong\", \"ưu tiên\"). Đã gặp trong 先生 (bài 5). Hay đi với 然后.",
+      "ex": [{ "cn": "你先走，我一会儿就来。", "py": "Nǐ xiān zǒu, wǒ yíhuìr jiù lái.", "vi": "Bạn đi trước đi, lát nữa tôi tới." }] },
+    { "w": "一般", "py": "yìbān", "hv": "nhất bàn", "vi": "thông thường; bình thường", "pos": "tính từ / phó từ",
+      "note": "Hai nghĩa: \"thường thì\" (một phó từ chỉ thói quen) và \"bình thường thôi\" (đánh giá mức trung bình, hơi chê).",
+      "ex": [{ "cn": "我一般七点起床。", "py": "Wǒ yìbān qī diǎn qǐchuáng.", "vi": "Tôi thường dậy lúc bảy giờ." }] },
+    { "w": "一边", "py": "yìbiān", "hv": "nhất biên", "vi": "một bên; vừa… vừa…", "pos": "phó từ",
+      "note": "Dùng cặp 一边…一边… để nói hai việc làm CÙNG LÚC. Giống hệt \"vừa… vừa…\" tiếng Việt.",
+      "ex": [{ "cn": "他一边走一边说。", "py": "Tā yìbiān zǒu yìbiān shuō.", "vi": "Anh ấy vừa đi vừa nói." }] },
+    { "w": "像", "py": "xiàng", "hv": "tượng", "vi": "giống, trông như", "pos": "động từ",
+      "note": "Bộ 亻 (người) + 象 (con voi, hình tượng). Tiếng Việt: \"hình tượng\", \"tượng trưng\".",
+      "ex": [{ "cn": "他很像他爸爸。", "py": "Tā hěn xiàng tā bàba.", "vi": "Cậu ấy rất giống bố." }] },
+    { "w": "只", "py": "zhǐ", "hv": "chỉ", "vi": "chỉ, chỉ có", "pos": "phó từ",
+      "note": "Chính là \"chỉ\" tiếng Việt. Đứng trước động từ. Chú ý: đọc zhī thì lại là lượng từ cho động vật (一只猫).",
+      "ex": [{ "cn": "我只有一个哥哥。", "py": "Wǒ zhǐ yǒu yí ge gēge.", "vi": "Tôi chỉ có một anh trai." }] },
+    { "w": "还是", "py": "háishi", "hv": "hoàn thị", "vi": "hay là (trong câu hỏi); vẫn nên", "pos": "liên từ / phó từ",
+      "note": "Dùng để hỏi lựa chọn — khác 或者 chỉ dùng trong câu kể (bài 55). Nghĩa thứ hai: \"vẫn nên\" khi khuyên.",
+      "ex": [{ "cn": "你喝茶还是喝咖啡？", "py": "Nǐ hē chá háishi hē kāfēi?", "vi": "Bạn uống trà hay cà phê?" }] },
+    { "w": "关", "py": "guān", "hv": "quan", "vi": "đóng, tắt", "pos": "động từ",
+      "note": "Trái nghĩa với 开 (bài 12). 关门 đóng cửa, 关灯 tắt đèn, 关手机 tắt điện thoại. Cùng chữ với 关心, 关系 (bài 51).",
+      "ex": [{ "cn": "请关门。", "py": "Qǐng guān mén.", "vi": "Xin đóng cửa." }] },
+    { "w": "鞋", "py": "xié", "hv": "hài", "vi": "giày, dép", "pos": "danh từ",
+      "note": "Bộ 革 (da thuộc) bên trái — giày làm bằng da. Tiếng Việt: \"hài\" trong \"hài nhi\"? Không — là \"hài\" trong \"đôi hài\" của truyện cổ tích. Lượng từ là 双.",
+      "ex": [{ "cn": "这双鞋很舒服。", "py": "Zhè shuāng xié hěn shūfu.", "vi": "Đôi giày này rất êm chân." }] }
+  ],
+  "grammar": [
+    { "t": "一边 … 一边 … — vừa làm việc này vừa làm việc kia",
+      "b": "一边 + động từ 1 + 一边 + động từ 2",
+      "d": "Hai việc diễn ra CÙNG LÚC, cùng một người làm. Giống hệt \"vừa… vừa…\" tiếng Việt nên rất dễ nhớ. Nói tắt được thành 边…边….",
+      "ex": [
+        { "cn": "我一边吃饭一边看电视。", "py": "Wǒ yìbiān chīfàn yìbiān kàn diànshì.", "vi": "Tôi vừa ăn cơm vừa xem tivi." },
+        { "cn": "别一边走路一边看手机。", "py": "Bié yìbiān zǒulù yìbiān kàn shǒujī.", "vi": "Đừng vừa đi vừa xem điện thoại." }
+      ] },
+    { "t": "还是 dùng để HỎI, 或者 dùng để KỂ",
+      "b": "A 还是 B？(hỏi) · A 或者 B (kể)",
+      "d": "Nhắc lại bài 55 vì đây là lỗi rất dai dẳng. Trong câu hỏi lựa chọn luôn dùng 还是. 还是 còn nghĩa \"vẫn nên\" khi đưa lời khuyên sau khi cân nhắc: 你还是早点儿去吧.",
+      "ex": [
+        { "cn": "我们今天去还是明天去？", "py": "Wǒmen jīntiān qù háishi míngtiān qù?", "vi": "Chúng ta đi hôm nay hay mai?" },
+        { "cn": "外面下雨，你还是带伞吧。", "py": "Wàimiàn xiàyǔ, nǐ háishi dài sǎn ba.", "vi": "Ngoài trời mưa, bạn vẫn nên mang ô đi." }
+      ] },
+    { "t": "像 — ba cách dùng",
+      "b": "A 像 B · 好像 · 像…一样",
+      "d": "他像他爸爸 (giống bố). 好像下雨了 (hình như mưa rồi — phỏng đoán). 像我一样 (giống như tôi). Ba cách này phủ gần hết nhu cầu so sánh hằng ngày.",
+      "ex": [
+        { "cn": "你妹妹很像你。", "py": "Nǐ mèimei hěn xiàng nǐ.", "vi": "Em gái bạn rất giống bạn." },
+        { "cn": "外面好像下雪了。", "py": "Wàimiàn hǎoxiàng xià xuě le.", "vi": "Hình như bên ngoài có tuyết rồi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "好啊，就这么定吧！", "py": "Hǎo a, jiù zhème dìng ba!", "vi": "Được đấy, cứ quyết vậy đi!" },
+    { "cn": "其实这个问题很简单。", "py": "Qíshí zhège wèntí hěn jiǎndān.", "vi": "Thật ra vấn đề này rất đơn giản." },
+    { "cn": "我们先吃饭，然后去看电影。", "py": "Wǒmen xiān chīfàn, ránhòu qù kàn diànyǐng.", "vi": "Chúng ta ăn cơm trước, rồi đi xem phim." },
+    { "cn": "周末我一般在家休息。", "py": "Zhōumò wǒ yìbān zài jiā xiūxi.", "vi": "Cuối tuần tôi thường ở nhà nghỉ." },
+    { "cn": "他一边听音乐一边做作业。", "py": "Tā yìbiān tīng yīnyuè yìbiān zuò zuòyè.", "vi": "Cậu ấy vừa nghe nhạc vừa làm bài." },
+    { "cn": "这个孩子长得很像他妈妈。", "py": "Zhège háizi zhǎng de hěn xiàng tā māma.", "vi": "Đứa bé này trông rất giống mẹ." },
+    { "cn": "我只想休息一会儿。", "py": "Wǒ zhǐ xiǎng xiūxi yíhuìr.", "vi": "Tôi chỉ muốn nghỉ một lát." },
+    { "cn": "你要红色的还是蓝色的？", "py": "Nǐ yào hóngsè de háishi lánsè de?", "vi": "Bạn lấy màu đỏ hay màu xanh?" },
+    { "cn": "出门前请关好门窗和灯。", "py": "Chūmén qián qǐng guān hǎo ménchuāng hé dēng.", "vi": "Trước khi ra ngoài xin đóng kỹ cửa và tắt đèn." },
+    { "cn": "我想买一双运动鞋。", "py": "Wǒ xiǎng mǎi yì shuāng yùndòng xié.", "vi": "Tôi muốn mua một đôi giày thể thao." }
+  ]
+}

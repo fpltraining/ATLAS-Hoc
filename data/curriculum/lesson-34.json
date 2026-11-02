@@ -1,0 +1,73 @@
+{
+  "id": 34,
+  "cn": "心情",
+  "title": "Cảm xúc",
+  "goal": "Nói ra cảm xúc, và khám phá \"gia đình chữ 心\" — nhóm chữ về lòng dạ con người.",
+  "words": [
+    { "w": "着急", "py": "zháojí", "hv": "trước cấp", "vi": "sốt ruột, lo cuống", "pos": "tính từ",
+      "note": "急 có bộ 心 ở dưới. Tiếng Việt: \"cấp bách\", \"khẩn cấp\". 别着急 = đừng vội, câu an ủi rất hay dùng.",
+      "ex": [{ "cn": "别着急，还有时间。", "py": "Bié zháojí, hái yǒu shíjiān.", "vi": "Đừng vội, vẫn còn thời gian." }] },
+    { "w": "害怕", "py": "hàipà", "hv": "hại phạ", "vi": "sợ", "pos": "động từ",
+      "note": "怕 có bộ 忄 (tim). Nói tắt chỉ dùng 怕 cũng được: 我怕狗 (tôi sợ chó).",
+      "ex": [{ "cn": "我害怕坐飞机。", "py": "Wǒ hàipà zuò fēijī.", "vi": "Tôi sợ đi máy bay." }] },
+    { "w": "难过", "py": "nánguò", "hv": "nan quá", "vi": "buồn, khó chịu trong lòng", "pos": "tính từ",
+      "note": "难 (khó) + 过 (qua) — khó mà đi qua được. Cách ghép chữ rất gợi cảm xúc.",
+      "ex": [{ "cn": "听到这个消息，我很难过。", "py": "Tīng dào zhège xiāoxi, wǒ hěn nánguò.", "vi": "Nghe tin này, tôi rất buồn." }] },
+    { "w": "生气", "py": "shēngqì", "hv": "sinh khí", "vi": "tức giận", "pos": "động từ",
+      "note": "生 (sinh ra) + 气 (khí) — trong người sinh ra luồng khí nóng. Giận AI thì dùng 生…的气.",
+      "ex": [{ "cn": "他生气了。", "py": "Tā shēngqì le.", "vi": "Anh ấy giận rồi." }] },
+    { "w": "担心", "py": "dānxīn", "hv": "đảm tâm", "vi": "lo lắng", "pos": "động từ",
+      "note": "担 (gánh) + 心 (tim) — gánh nặng trong lòng. Tiếng Việt: \"đảm đương\", \"gánh vác\".",
+      "ex": [{ "cn": "妈妈很担心我。", "py": "Māma hěn dānxīn wǒ.", "vi": "Mẹ rất lo cho tôi." }] },
+    { "w": "小心", "py": "xiǎoxīn", "hv": "tiểu tâm", "vi": "cẩn thận", "pos": "động từ / tính từ",
+      "note": "小 (nhỏ) + 心 (tim) — giữ lòng nhỏ lại, tức là dè dặt. Biển báo ở Trung Quốc thường ghi 小心！",
+      "ex": [{ "cn": "小心，地上有水。", "py": "Xiǎoxīn, dì shàng yǒu shuǐ.", "vi": "Cẩn thận, dưới sàn có nước." }] },
+    { "w": "放心", "py": "fàngxīn", "hv": "phóng tâm", "vi": "yên tâm", "pos": "động từ",
+      "note": "放 (đặt xuống) + 心 (tim) — đặt lòng xuống, hết lo. Trái nghĩa hoàn toàn với 担心.",
+      "ex": [{ "cn": "你放心吧。", "py": "Nǐ fàngxīn ba.", "vi": "Bạn cứ yên tâm." }] },
+    { "w": "满意", "py": "mǎnyì", "hv": "mãn ý", "vi": "hài lòng", "pos": "tính từ",
+      "note": "Chính là \"mãn ý\" tiếng Việt: 满 (đầy) + 意 (ý). Hài lòng với cái gì thì dùng 对…满意.",
+      "ex": [{ "cn": "老板对我的工作很满意。", "py": "Lǎobǎn duì wǒ de gōngzuò hěn mǎnyì.", "vi": "Sếp rất hài lòng với công việc của tôi." }] },
+    { "w": "愿意", "py": "yuànyì", "hv": "nguyện ý", "vi": "sẵn lòng, muốn", "pos": "động từ",
+      "note": "Chính là \"nguyện ý\" tiếng Việt. Nhấn vào sự TỰ NGUYỆN, khác 想 (muốn) và 要 (cần).",
+      "ex": [{ "cn": "我愿意帮你。", "py": "Wǒ yuànyì bāng nǐ.", "vi": "Tôi sẵn lòng giúp bạn." }] },
+    { "w": "同意", "py": "tóngyì", "hv": "đồng ý", "vi": "đồng ý, tán thành", "pos": "động từ",
+      "note": "Chính là \"đồng ý\" tiếng Việt: 同 (cùng) + 意 (ý) — cùng một ý.",
+      "ex": [{ "cn": "我同意你的看法。", "py": "Wǒ tóngyì nǐ de kànfǎ.", "vi": "Tôi đồng ý với ý kiến của bạn." }] }
+  ],
+  "grammar": [
+    { "t": "Gia đình chữ 心 — mọi cảm xúc đều có trái tim",
+      "b": "心 đứng dưới · 忄 đứng bên trái",
+      "d": "着急, 担心, 小心, 放心, 害怕, 想, 意, 忙, 快 — nhìn thấy 心 hay 忄 là biết chữ nói về LÒNG DẠ. Người Trung Quốc coi tim là nơi suy nghĩ, không phải não; tiếng Việt cũng nói \"nghĩ trong lòng\", \"để bụng\".",
+      "ex": [
+        { "cn": "担心 · 小心 · 放心", "py": "dānxīn · xiǎoxīn · fàngxīn", "vi": "gánh lòng · giữ lòng · đặt lòng xuống" },
+        { "cn": "怕 · 忙 · 快 · 想", "py": "pà · máng · kuài · xiǎng", "vi": "đều mang bộ 忄" }
+      ] },
+    { "t": "对 … 满意 / 生气 — nêu đối tượng của cảm xúc",
+      "b": "对 + người/việc + cảm xúc",
+      "d": "对 duì ở đây nghĩa là \"đối với\". Cả cụm đứng TRƯỚC tính từ, giống quy tắc của 在 và 给. Nói 我满意对这个 là sai.",
+      "ex": [
+        { "cn": "我对这个结果很满意。", "py": "Wǒ duì zhège jiéguǒ hěn mǎnyì.", "vi": "Tôi rất hài lòng với kết quả này." },
+        { "cn": "他对我很热情。", "py": "Tā duì wǒ hěn rèqíng.", "vi": "Anh ấy rất nhiệt tình với tôi." }
+      ] },
+    { "t": "生气 là động từ ly hợp — giận AI đặt vào giữa",
+      "b": "生 + 人 + 的气",
+      "d": "Muốn nói \"giận tôi\" thì phải tách 生气 ra: 生我的气. Nói 生气我 là sai. Đây lại là động từ ly hợp như 唱歌, 跳舞 ở bài 26.",
+      "ex": [
+        { "cn": "你别生我的气。", "py": "Nǐ bié shēng wǒ de qì.", "vi": "Bạn đừng giận tôi." },
+        { "cn": "妈妈生弟弟的气了。", "py": "Māma shēng dìdi de qì le.", "vi": "Mẹ giận em trai rồi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "别着急，慢慢来。", "py": "Bié zháojí, mànman lái.", "vi": "Đừng vội, từ từ thôi." },
+    { "cn": "我很担心他的身体。", "py": "Wǒ hěn dānxīn tā de shēntǐ.", "vi": "Tôi rất lo cho sức khoẻ anh ấy." },
+    { "cn": "你放心，我一定完成。", "py": "Nǐ fàngxīn, wǒ yídìng wánchéng.", "vi": "Bạn yên tâm, tôi nhất định làm xong." },
+    { "cn": "过马路要小心。", "py": "Guò mǎlù yào xiǎoxīn.", "vi": "Qua đường phải cẩn thận." },
+    { "cn": "他为什么生气了？", "py": "Tā wèi shénme shēngqì le?", "vi": "Sao anh ấy lại giận?" },
+    { "cn": "对不起，你别生我的气。", "py": "Duìbuqǐ, nǐ bié shēng wǒ de qì.", "vi": "Xin lỗi, bạn đừng giận tôi." },
+    { "cn": "我小时候很害怕狗。", "py": "Wǒ xiǎo shíhou hěn hàipà gǒu.", "vi": "Hồi nhỏ tôi rất sợ chó." },
+    { "cn": "听到这个消息我很难过。", "py": "Tīng dào zhège xiāoxi wǒ hěn nánguò.", "vi": "Nghe tin đó tôi rất buồn." },
+    { "cn": "老师对我的成绩很满意。", "py": "Lǎoshī duì wǒ de chéngjì hěn mǎnyì.", "vi": "Thầy rất hài lòng với kết quả của tôi." },
+    { "cn": "如果你愿意，我们一起去。", "py": "Rúguǒ nǐ yuànyì, wǒmen yìqǐ qù.", "vi": "Nếu bạn muốn, chúng ta cùng đi." }
+  ]
+}

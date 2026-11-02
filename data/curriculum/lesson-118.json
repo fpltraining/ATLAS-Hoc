@@ -1,0 +1,71 @@
+{
+  "id": 118,
+  "cn": "四级总结",
+  "title": "Tổng kết HSK 4",
+  "goal": "Bài cuối cùng của HSK 4 — mười từ còn lại và lời tổng kết cho cả chặng đường 1180 từ.",
+  "words": [
+    { "w": "不得不", "py": "bùdébù", "hv": "bất đắc bất", "vi": "buộc phải, đành phải", "pos": "phó từ",
+      "note": "Tiếng Việt: \"bất đắc dĩ\". Hai lần phủ định thành khẳng định mạnh: không thể không → buộc phải.",
+      "ex": [{ "cn": "下大雨，我们不得不改天再去。", "py": "Xià dà yǔ, wǒmen bùdébù gǎi tiān zài qù.", "vi": "Mưa to, chúng tôi đành hôm khác đi." }] },
+    { "w": "占线", "py": "zhànxiàn", "hv": "chiếm tuyến", "vi": "máy bận (điện thoại)", "pos": "động từ",
+      "note": "占 (chiếm) + 线 (tuyến, đường dây). Câu quen: 电话一直占线.",
+      "ex": [{ "cn": "他的电话一直占线。", "py": "Tā de diànhuà yìzhí zhànxiàn.", "vi": "Điện thoại anh ấy cứ bận máy." }] },
+    { "w": "情况", "py": "qíngkuàng", "hv": "tình huống", "vi": "tình hình", "pos": "danh từ",
+      "note": "情 (tình) + 况 (huống). Tiếng Việt \"tình huống\" thiên về một cảnh cụ thể, còn 情况 rộng hơn: tình hình chung.",
+      "ex": [{ "cn": "情况有点儿复杂。", "py": "Qíngkuàng yǒudiǎnr fùzá.", "vi": "Tình hình hơi phức tạp." }] },
+    { "w": "原因", "py": "yuányīn", "hv": "nguyên nhân", "vi": "nguyên nhân", "pos": "danh từ",
+      "note": "Chính là \"nguyên nhân\" tiếng Việt: 原 (nguyên) + 因 (nhân). Trái với 结果 (bài 110).",
+      "ex": [{ "cn": "你知道原因吗？", "py": "Nǐ zhīdào yuányīn ma?", "vi": "Bạn biết nguyên nhân không?" }] },
+    { "w": "礼拜天", "py": "lǐbàitiān", "hv": "lễ bái thiên", "vi": "chủ nhật", "pos": "danh từ",
+      "note": "礼拜 (lễ bái) vốn chỉ việc đi lễ nhà thờ. Khẩu ngữ, đồng nghĩa 星期天. 礼拜一 = thứ hai.",
+      "ex": [{ "cn": "礼拜天我不上班。", "py": "Lǐbàitiān wǒ bú shàngbān.", "vi": "Chủ nhật tôi không đi làm." }] },
+    { "w": "速度", "py": "sùdù", "hv": "tốc độ", "vi": "tốc độ", "pos": "danh từ",
+      "note": "Chính là \"tốc độ\" tiếng Việt: 速 (tốc) + 度 (độ).",
+      "ex": [{ "cn": "他说话的速度太快了。", "py": "Tā shuōhuà de sùdù tài kuài le.", "vi": "Anh ấy nói nhanh quá." }] },
+    { "w": "丰富", "py": "fēngfù", "hv": "phong phú", "vi": "phong phú", "pos": "tính từ / động từ",
+      "note": "Chính là \"phong phú\" tiếng Việt: 丰 (phong) + 富 (phú). Còn làm động từ: 丰富自己的知识.",
+      "ex": [{ "cn": "他的经验很丰富。", "py": "Tā de jīngyàn hěn fēngfù.", "vi": "Kinh nghiệm của anh ấy rất phong phú." }] },
+    { "w": "符合", "py": "fúhé", "hv": "phù hợp", "vi": "phù hợp với, khớp với", "pos": "động từ",
+      "note": "Chính là \"phù hợp\" tiếng Việt. Là ĐỘNG TỪ, cần tân ngữ: 符合条件, 符合要求. Khác 合适 (tính từ, bài 116).",
+      "ex": [{ "cn": "你符合我们的要求。", "py": "Nǐ fúhé wǒmen de yāoqiú.", "vi": "Bạn phù hợp với yêu cầu của chúng tôi." }] },
+    { "w": "经历", "py": "jīnglì", "hv": "kinh lịch", "vi": "trải nghiệm; từng trải qua", "pos": "danh từ / động từ",
+      "note": "经 (kinh, trải qua) + 历 (lịch). Tiếng Việt: \"lịch duyệt\", \"từng trải\". Khác 经验 (kinh nghiệm rút ra được).",
+      "ex": [{ "cn": "这是一次难忘的经历。", "py": "Zhè shì yí cì nánwàng de jīnglì.", "vi": "Đây là một trải nghiệm khó quên." }] },
+    { "w": "呀", "py": "ya", "hv": "nha", "vi": "à, nhé (trợ từ)", "pos": "trợ từ",
+      "note": "Biến âm của 啊 khi chữ trước kết thúc bằng a/e/i/o/ü. 你好啊 → 是你呀！Làm câu nói mềm và thân mật.",
+      "ex": [{ "cn": "原来是你呀！", "py": "Yuánlái shì nǐ ya!", "vi": "Hoá ra là bạn à!" }] }
+  ],
+  "grammar": [
+    { "t": "不得不 — hai phủ định thành một khẳng định",
+      "b": "不得不 + động từ = buộc phải",
+      "d": "Khác 必须 (bắt buộc theo quy định) và 得 (cần phải): 不得不 mang sắc thái BẤT ĐẮC DĨ, không muốn nhưng hoàn cảnh ép. 他病了，我不得不一个人去.",
+      "ex": [
+        { "cn": "钱不够，我不得不放弃这次旅行。", "py": "Qián bú gòu, wǒ bùdébù fàngqì zhè cì lǚxíng.", "vi": "Không đủ tiền, tôi đành bỏ chuyến đi này." }
+      ] },
+    { "t": "经历 và 经验 — trải qua và rút ra",
+      "b": "经历 = việc đã trải qua · 经验 = kinh nghiệm rút ra được",
+      "d": "留学是一次很好的经历 (một chuyến trải nghiệm). 他有很多教学经验 (có nhiều kinh nghiệm giảng dạy). 经历 đếm bằng 次, 经验 thì không đếm được — nói 很多经验 chứ không nói 三个经验.",
+      "ex": [
+        { "cn": "这次经历让我学到了很多经验。", "py": "Zhè cì jīnglì ràng wǒ xué dào le hěn duō jīngyàn.", "vi": "Lần trải nghiệm này cho tôi học được nhiều kinh nghiệm." }
+      ] },
+    { "t": "Bạn đã đi tới đâu — và đi tiếp thế nào",
+      "b": "HSK 1–4: 118 bài · 1180 từ · hơn 1200 chữ Hán",
+      "d": "Với vốn này bạn đọc hiểu được phần lớn văn bản đời thường, nói được về hầu hết chủ đề sinh hoạt, và quan trọng nhất: bạn VIẾT được chữ Hán bằng tay, đúng thứ tự nét — điều mà rất nhiều người học nhiều năm vẫn không làm được. Từ đây, cách tiến bộ nhanh nhất không phải là học thêm từ mới, mà là ÔN đều mỗi ngày bằng mục Ôn tập, và bắt đầu đọc truyện ngắn, xem phim có phụ đề tiếng Trung.",
+      "ex": [
+        { "cn": "学习是一辈子的事。", "py": "Xuéxí shì yíbèizi de shì.", "vi": "Học là chuyện cả đời." },
+        { "cn": "只要每天坚持，一定会有进步。", "py": "Zhǐyào měi tiān jiānchí, yídìng huì yǒu jìnbù.", "vi": "Chỉ cần mỗi ngày kiên trì, nhất định sẽ tiến bộ." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "临时有事，我不得不取消约会。", "py": "Línshí yǒu shì, wǒ bùdébù qǔxiāo yuēhuì.", "vi": "Có việc đột xuất, tôi đành huỷ cuộc hẹn." },
+    { "cn": "我打了三次，一直占线。", "py": "Wǒ dǎ le sān cì, yìzhí zhànxiàn.", "vi": "Tôi gọi ba lần, cứ bận máy." },
+    { "cn": "请把这里的情况告诉我。", "py": "Qǐng bǎ zhèlǐ de qíngkuàng gàosu wǒ.", "vi": "Xin cho tôi biết tình hình ở đây." },
+    { "cn": "他迟到的原因是堵车。", "py": "Tā chídào de yuányīn shì dǔchē.", "vi": "Nguyên nhân anh ấy trễ là tắc đường." },
+    { "cn": "礼拜天你有什么安排？", "py": "Lǐbàitiān nǐ yǒu shénme ānpái?", "vi": "Chủ nhật bạn có kế hoạch gì?" },
+    { "cn": "请说慢一点儿，速度太快我听不懂。", "py": "Qǐng shuō màn yìdiǎnr, sùdù tài kuài wǒ tīng bu dǒng.", "vi": "Xin nói chậm chút, nhanh quá tôi không hiểu." },
+    { "cn": "中国的历史文化非常丰富。", "py": "Zhōngguó de lìshǐ wénhuà fēicháng fēngfù.", "vi": "Lịch sử văn hoá Trung Quốc vô cùng phong phú." },
+    { "cn": "他的条件完全符合规定。", "py": "Tā de tiáojiàn wánquán fúhé guīdìng.", "vi": "Điều kiện của anh ấy hoàn toàn phù hợp quy định." },
+    { "cn": "学汉语是我最难忘的经历之一。", "py": "Xué Hànyǔ shì wǒ zuì nánwàng de jīnglì zhī yī.", "vi": "Học tiếng Trung là một trong những trải nghiệm khó quên nhất của tôi." },
+    { "cn": "你终于写完一千多个汉字了呀！", "py": "Nǐ zhōngyú xiě wán yìqiān duō ge Hànzì le ya!", "vi": "Cuối cùng bạn cũng viết xong hơn nghìn chữ Hán rồi đấy!" }
+  ]
+}

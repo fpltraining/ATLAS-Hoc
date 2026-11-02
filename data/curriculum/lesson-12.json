@@ -1,0 +1,76 @@
+{
+  "id": 12,
+  "cn": "去北京",
+  "title": "Đi Bắc Kinh",
+  "goal": "Nói về đi lại, phương tiện giao thông, dùng 坐 và 和, và nắm trật tự \"phương tiện đứng trước động từ\".",
+  "words": [
+    { "w": "去", "py": "qù", "hv": "khứ", "vi": "đi (đến đâu đó)", "pos": "động từ",
+      "note": "Tiếng Việt: \"quá khứ\" (đã đi qua). 去 luôn là đi RA XA khỏi người nói.",
+      "ex": [{ "cn": "我去学校。", "py": "Wǒ qù xuéxiào.", "vi": "Tôi đi đến trường." }] },
+    { "w": "来", "py": "lái", "hv": "lai", "vi": "đến, tới", "pos": "động từ",
+      "note": "Tiếng Việt: \"tương lai\", \"lai lịch\". Ngược với 去 — 来 là đi LẠI GẦN người nói.",
+      "ex": [{ "cn": "你来我家吧。", "py": "Nǐ lái wǒ jiā ba.", "vi": "Bạn đến nhà tôi đi." }] },
+    { "w": "回", "py": "huí", "hv": "hồi", "vi": "về, quay lại", "pos": "động từ",
+      "note": "Hình hai vòng xoáy lồng nhau — quay vòng trở lại. Tiếng Việt: \"hồi hương\", \"hồi đáp\", \"hồi phục\".",
+      "ex": [{ "cn": "我回家了。", "py": "Wǒ huí jiā le.", "vi": "Tôi về nhà rồi." }] },
+    { "w": "坐", "py": "zuò", "hv": "toạ", "vi": "ngồi; đi (bằng phương tiện)", "pos": "động từ",
+      "note": "Hai chữ 人 (người) ngồi trên 土 (đất). Tiếng Việt: \"toạ độ\", \"toạ lạc\". Đừng nhầm với 做 zuò (làm).",
+      "ex": [{ "cn": "请坐。", "py": "Qǐng zuò.", "vi": "Mời ngồi." }] },
+    { "w": "开", "py": "kāi", "hv": "khai", "vi": "mở; lái (xe); bật", "pos": "động từ",
+      "note": "Tiếng Việt: \"khai trương\", \"khai giảng\", \"khai mạc\". 开车 = lái xe, 开门 = mở cửa.",
+      "ex": [{ "cn": "他会开车。", "py": "Tā huì kāichē.", "vi": "Anh ấy biết lái xe." }] },
+    { "w": "出租车", "py": "chūzūchē", "hv": "xuất tô xa", "vi": "xe taxi", "pos": "danh từ",
+      "note": "出租 (cho thuê) + 车 (xe) = xe cho thuê. Ở Trung Quốc còn gọi thân mật là 打车 (bắt xe).",
+      "ex": [{ "cn": "我坐出租车去。", "py": "Wǒ zuò chūzūchē qù.", "vi": "Tôi đi bằng taxi." }] },
+    { "w": "飞机", "py": "fēijī", "hv": "phi cơ", "vi": "máy bay", "pos": "danh từ",
+      "note": "Chính là \"phi cơ\" tiếng Việt! 飞 (bay) + 机 (máy). Tiếng Việt còn có \"phi công\", \"phi trường\".",
+      "ex": [{ "cn": "我坐飞机去北京。", "py": "Wǒ zuò fēijī qù Běijīng.", "vi": "Tôi đi máy bay đến Bắc Kinh." }] },
+    { "w": "北京", "py": "Běijīng", "hv": "Bắc Kinh", "vi": "Bắc Kinh", "pos": "danh từ riêng",
+      "note": "北 (bắc) + 京 (kinh đô) = \"kinh đô phía bắc\". Đúng là \"Bắc Kinh\" tiếng Việt. Tương tự 南京 = Nam Kinh.",
+      "ex": [{ "cn": "北京是中国的首都。", "py": "Běijīng shì Zhōngguó de shǒudū.", "vi": "Bắc Kinh là thủ đô Trung Quốc." }] },
+    { "w": "住", "py": "zhù", "hv": "trú", "vi": "ở, cư trú", "pos": "động từ",
+      "note": "亻 (người) + 主 (chủ). Tiếng Việt: \"cư trú\", \"đồn trú\". Khác 在: 住 là ở LÂU DÀI, 在 là ở ngay lúc này.",
+      "ex": [{ "cn": "我住在北京。", "py": "Wǒ zhù zài Běijīng.", "vi": "Tôi sống ở Bắc Kinh." }] },
+    { "w": "和", "py": "hé", "hv": "hoà", "vi": "và, với", "pos": "liên từ",
+      "note": "禾 (cây lúa) + 口 (miệng) — có lúa ăn thì hoà thuận. Tiếng Việt: \"hoà bình\", \"hoà thuận\". CHỈ nối danh từ, không nối câu.",
+      "ex": [{ "cn": "我和他是朋友。", "py": "Wǒ hé tā shì péngyou.", "vi": "Tôi và anh ấy là bạn." }] }
+  ],
+  "grammar": [
+    { "t": "Phương tiện đi lại: 坐 + xe + động từ",
+      "b": "坐 + phương tiện + 去/来 + nơi đến",
+      "d": "Phương tiện đứng TRƯỚC động từ chính, giống quy tắc của 在. Ta nói \"đi Bắc Kinh BẰNG MÁY BAY\", tiếng Trung nói \"NGỒI MÁY BAY đi Bắc Kinh\". Riêng xe đạp và xe máy dùng 骑 qí (cưỡi).",
+      "ex": [
+        { "cn": "我坐飞机去北京。", "py": "Wǒ zuò fēijī qù Běijīng.", "vi": "Tôi đi máy bay đến Bắc Kinh." },
+        { "cn": "他坐出租车回家。", "py": "Tā zuò chūzūchē huí jiā.", "vi": "Anh ấy đi taxi về nhà." },
+        { "cn": "我开车去。", "py": "Wǒ kāichē qù.", "vi": "Tôi lái xe đi." }
+      ] },
+    { "t": "和 chỉ nối DANH TỪ, không nối câu",
+      "b": "danh từ + 和 + danh từ",
+      "d": "Lỗi rất phổ biến. Tiếng Việt dùng \"và\" nối được cả câu (\"Tôi ăn cơm và anh ấy uống trà\"). Tiếng Trung KHÔNG được: phải bỏ 和 hoặc dùng dấu phẩy.",
+      "ex": [
+        { "cn": "我和他", "py": "wǒ hé tā", "vi": "tôi và anh ấy (ĐÚNG)" },
+        { "cn": "爸爸和妈妈都在家。", "py": "Bàba hé māma dōu zài jiā.", "vi": "Bố và mẹ đều ở nhà." },
+        { "cn": "我吃饭，他喝茶。", "py": "Wǒ chīfàn, tā hē chá.", "vi": "Tôi ăn cơm, anh ấy uống trà. (dùng dấu phẩy, KHÔNG dùng 和)" }
+      ] },
+    { "t": "Phân biệt 去 / 来 / 回",
+      "b": "去 = đi ra xa · 来 = đến gần · 回 = quay về chỗ cũ",
+      "d": "Chọn từ nào phụ thuộc vị trí NGƯỜI NÓI. Đang ở nhà thì nói 你来我家 (bạn đến nhà tôi). Đang ở ngoài thì nói 我回家 (tôi về nhà).",
+      "ex": [
+        { "cn": "我去你家。", "py": "Wǒ qù nǐ jiā.", "vi": "Tôi đến nhà bạn." },
+        { "cn": "你来我家。", "py": "Nǐ lái wǒ jiā.", "vi": "Bạn đến nhà tôi." },
+        { "cn": "我回家。", "py": "Wǒ huí jiā.", "vi": "Tôi về nhà." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你去哪儿？", "py": "Nǐ qù nǎr?", "vi": "Bạn đi đâu?" },
+    { "cn": "我去学校。", "py": "Wǒ qù xuéxiào.", "vi": "Tôi đi đến trường." },
+    { "cn": "我坐飞机去北京。", "py": "Wǒ zuò fēijī qù Běijīng.", "vi": "Tôi đi máy bay đến Bắc Kinh." },
+    { "cn": "他坐出租车回家。", "py": "Tā zuò chūzūchē huí jiā.", "vi": "Anh ấy đi taxi về nhà." },
+    { "cn": "你住在哪儿？", "py": "Nǐ zhù zài nǎr?", "vi": "Bạn sống ở đâu?" },
+    { "cn": "我住在河内。", "py": "Wǒ zhù zài Hénèi.", "vi": "Tôi sống ở Hà Nội." },
+    { "cn": "我和朋友一起去。", "py": "Wǒ hé péngyou yìqǐ qù.", "vi": "Tôi đi cùng bạn." },
+    { "cn": "请坐，喝杯茶。", "py": "Qǐng zuò, hē bēi chá.", "vi": "Mời ngồi, uống chén trà." },
+    { "cn": "他会开车吗？", "py": "Tā huì kāichē ma?", "vi": "Anh ấy biết lái xe không?" },
+    { "cn": "明天我回家。", "py": "Míngtiān wǒ huí jiā.", "vi": "Mai tôi về nhà." }
+  ]
+}

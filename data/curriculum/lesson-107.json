@@ -1,0 +1,71 @@
+{
+  "id": 107,
+  "cn": "允许和禁止",
+  "title": "Cho phép và cấm đoán",
+  "goal": "Ngôn ngữ của quy định, biển báo và lời khuyên — đọc được bảng chỉ dẫn ở Trung Quốc.",
+  "words": [
+    { "w": "允许", "py": "yǔnxǔ", "hv": "duẫn hứa", "vi": "cho phép", "pos": "động từ",
+      "note": "允 (duẫn, ưng thuận) + 许 (hứa, cho phép). Trang trọng hơn 让.",
+      "ex": [{ "cn": "这里不允许抽烟。", "py": "Zhèlǐ bù yǔnxǔ chōuyān.", "vi": "Ở đây không cho phép hút thuốc." }] },
+    { "w": "禁止", "py": "jìnzhǐ", "hv": "cấm chỉ", "vi": "cấm", "pos": "động từ",
+      "note": "Tiếng Việt: \"cấm chỉ\", \"nghiêm cấm\". 禁 (cấm) + 止 (chỉ, dừng). Chữ trên mọi biển cấm ở Trung Quốc.",
+      "ex": [{ "cn": "禁止停车。", "py": "Jìnzhǐ tíngchē.", "vi": "Cấm đỗ xe." }] },
+    { "w": "重视", "py": "zhòngshì", "hv": "trọng thị", "vi": "coi trọng", "pos": "động từ",
+      "note": "Chính là \"trọng thị\" tiếng Việt: 重 (trọng) + 视 (thị, nhìn). Ở đây 重 đọc zhòng.",
+      "ex": [{ "cn": "父母很重视孩子的教育。", "py": "Fùmǔ hěn zhòngshì háizi de jiàoyù.", "vi": "Cha mẹ rất coi trọng việc học của con." }] },
+    { "w": "专门", "py": "zhuānmén", "hv": "chuyên môn", "vi": "chuyên, chuyên để", "pos": "phó từ / tính từ",
+      "note": "Chính là \"chuyên môn\" tiếng Việt, nhưng nghĩa thiên về \"cố ý dành riêng\": 我专门来看你.",
+      "ex": [{ "cn": "我专门为你做的。", "py": "Wǒ zhuānmén wèi nǐ zuò de.", "vi": "Tôi làm riêng cho bạn đấy." }] },
+    { "w": "只要", "py": "zhǐyào", "hv": "chỉ yếu", "vi": "chỉ cần", "pos": "liên từ",
+      "note": "Điều kiện ĐỦ. Cặp: 只要…就…. Khác 只有 (điều kiện CẦN, đi với 才).",
+      "ex": [{ "cn": "只要努力，就会有进步。", "py": "Zhǐyào nǔlì, jiù huì yǒu jìnbù.", "vi": "Chỉ cần cố gắng là sẽ tiến bộ." }] },
+    { "w": "有趣", "py": "yǒuqù", "hv": "hữu thú", "vi": "thú vị", "pos": "tính từ",
+      "note": "有 (có) + 趣 (thú). Tiếng Việt: \"hứng thú\", \"thú vị\". Cùng chữ 趣 với 兴趣.",
+      "ex": [{ "cn": "这本书很有趣。", "py": "Zhè běn shū hěn yǒuqù.", "vi": "Quyển sách này rất thú vị." }] },
+    { "w": "著名", "py": "zhùmíng", "hv": "trứ danh", "vi": "nổi tiếng", "pos": "tính từ",
+      "note": "Chính là \"trứ danh\" tiếng Việt: 著 (trứ, rõ rệt) + 名 (danh). Trang trọng hơn 有名.",
+      "ex": [{ "cn": "他是一位著名的作家。", "py": "Tā shì yí wèi zhùmíng de zuòjiā.", "vi": "Ông ấy là một nhà văn nổi tiếng." }] },
+    { "w": "高级", "py": "gāojí", "hv": "cao cấp", "vi": "cao cấp", "pos": "tính từ",
+      "note": "Chính là \"cao cấp\" tiếng Việt: 高 (cao) + 级 (cấp). Dùng cho hàng hoá và trình độ: 高级班.",
+      "ex": [{ "cn": "这是一家高级饭店。", "py": "Zhè shì yì jiā gāojí fàndiàn.", "vi": "Đây là một nhà hàng cao cấp." }] },
+    { "w": "免费", "py": "miǎnfèi", "hv": "miễn phí", "vi": "miễn phí", "pos": "động từ / tính từ",
+      "note": "Chính là \"miễn phí\" tiếng Việt: 免 (miễn) + 费 (phí). Từ khiến app này tồn tại!",
+      "ex": [{ "cn": "这个软件是免费的。", "py": "Zhège ruǎnjiàn shì miǎnfèi de.", "vi": "Phần mềm này miễn phí." }] },
+    { "w": "值得", "py": "zhídé", "hv": "trị đắc", "vi": "đáng, xứng đáng", "pos": "động từ",
+      "note": "值 (giá trị) + 得 (được). Theo sau là động từ: 值得学习, 值得去看看.",
+      "ex": [{ "cn": "这个地方值得去看看。", "py": "Zhège dìfang zhídé qù kànkan.", "vi": "Nơi này đáng để đi xem." }] }
+  ],
+  "grammar": [
+    { "t": "只要 … 就 … và 只有 … 才 …",
+      "b": "只要 = điều kiện đủ (làm là được) · 只有 = điều kiện cần (không có thì không xong)",
+      "d": "只要你来，我就很高兴 (bạn tới là tôi vui — dễ). 只有努力，才能成功 (chỉ có cố gắng mới thành công — bắt buộc). Nhớ cặp cố định: 只要…就, 只有…才. Ghép sai cặp là lỗi thường gặp nhất.",
+      "ex": [
+        { "cn": "只要有时间，我就练习写字。", "py": "Zhǐyào yǒu shíjiān, wǒ jiù liànxí xiě zì.", "vi": "Chỉ cần có thời gian là tôi luyện viết chữ." },
+        { "cn": "只有多练习，才能写好。", "py": "Zhǐyǒu duō liànxí, cái néng xiě hǎo.", "vi": "Chỉ có luyện nhiều mới viết đẹp được." }
+      ] },
+    { "t": "Đọc biển báo tiếng Trung",
+      "b": "禁止 + động từ · 请勿 + động từ · 严禁 + động từ",
+      "d": "禁止吸烟 (cấm hút thuốc), 禁止拍照 (cấm chụp ảnh), 请勿触摸 (xin đừng chạm vào). 勿 là bản văn ngôn của 别. Học ba mẫu này là đọc được hầu hết biển báo công cộng.",
+      "ex": [
+        { "cn": "馆内禁止拍照。", "py": "Guǎn nèi jìnzhǐ pāizhào.", "vi": "Trong bảo tàng cấm chụp ảnh." }
+      ] },
+    { "t": "值得 + động từ",
+      "b": "值得 + động từ / 不值得 + động từ",
+      "d": "Sau 值得 luôn là ĐỘNG TỪ chứ không phải tính từ: nói 值得学习 chứ không nói 值得好. Phủ định: 不值得生气 (không đáng để bực).",
+      "ex": [
+        { "cn": "为这点小事生气不值得。", "py": "Wèi zhè diǎn xiǎo shì shēngqì bù zhídé.", "vi": "Bực mình vì chuyện nhỏ này thì không đáng." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "图书馆里不允许大声说话。", "py": "Túshūguǎn lǐ bù yǔnxǔ dàshēng shuōhuà.", "vi": "Trong thư viện không được nói to." },
+    { "cn": "地铁里禁止吃东西。", "py": "Dìtiě lǐ jìnzhǐ chī dōngxi.", "vi": "Trong tàu điện cấm ăn uống." },
+    { "cn": "公司很重视员工的意见。", "py": "Gōngsī hěn zhòngshì yuángōng de yìjiàn.", "vi": "Công ty rất coi trọng ý kiến nhân viên." },
+    { "cn": "他专门去中国学汉语。", "py": "Tā zhuānmén qù Zhōngguó xué Hànyǔ.", "vi": "Anh ấy đi hẳn sang Trung Quốc học tiếng Trung." },
+    { "cn": "只要坚持，就一定能学好。", "py": "Zhǐyào jiānchí, jiù yídìng néng xué hǎo.", "vi": "Chỉ cần kiên trì thì nhất định học tốt được." },
+    { "cn": "学习汉字其实很有趣。", "py": "Xuéxí Hànzì qíshí hěn yǒuqù.", "vi": "Học chữ Hán thật ra rất thú vị." },
+    { "cn": "长城是中国著名的景点。", "py": "Chángchéng shì Zhōngguó zhùmíng de jǐngdiǎn.", "vi": "Vạn Lý Trường Thành là thắng cảnh nổi tiếng của Trung Quốc." },
+    { "cn": "他报了一个高级汉语班。", "py": "Tā bào le yí ge gāojí Hànyǔ bān.", "vi": "Anh ấy đăng ký một lớp tiếng Trung cao cấp." },
+    { "cn": "这个博物馆对学生免费。", "py": "Zhège bówùguǎn duì xuésheng miǎnfèi.", "vi": "Bảo tàng này miễn phí cho học sinh." },
+    { "cn": "他的精神值得我们学习。", "py": "Tā de jīngshén zhídé wǒmen xuéxí.", "vi": "Tinh thần của anh ấy đáng để chúng ta học tập." }
+  ]
+}

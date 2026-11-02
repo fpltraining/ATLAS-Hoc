@@ -1,0 +1,83 @@
+{
+  "id": 7,
+  "cn": "今天几号？",
+  "title": "Hôm nay ngày mấy?",
+  "goal": "Nói ngày tháng, thứ trong tuần, xem giờ, và hiểu câu không có động từ \"là\".",
+  "words": [
+    { "w": "今天", "py": "jīntiān", "hv": "kim thiên", "vi": "hôm nay", "pos": "danh từ",
+      "note": "今 (kim, nay) + 天 (thiên, ngày). Tiếng Việt có \"kim cổ\" (nay và xưa).",
+      "ex": [{ "cn": "今天很热。", "py": "Jīntiān hěn rè.", "vi": "Hôm nay rất nóng." }] },
+    { "w": "明天", "py": "míngtiān", "hv": "minh thiên", "vi": "ngày mai", "pos": "danh từ",
+      "note": "明 = 日 (mặt trời) + 月 (mặt trăng) = sáng sủa. Tiếng Việt: \"minh bạch\", \"quang minh\".",
+      "ex": [{ "cn": "明天见！", "py": "Míngtiān jiàn!", "vi": "Mai gặp nhé!" }] },
+    { "w": "昨天", "py": "zuótiān", "hv": "tạc thiên", "vi": "hôm qua", "pos": "danh từ",
+      "note": "Tiếng Việt có \"tạc dạ\" (đêm qua) trong văn cổ.",
+      "ex": [{ "cn": "昨天我很忙。", "py": "Zuótiān wǒ hěn máng.", "vi": "Hôm qua tôi rất bận." }] },
+    { "w": "年", "py": "nián", "hv": "niên", "vi": "năm", "pos": "danh từ",
+      "note": "Tiếng Việt: \"niên khoá\", \"thiếu niên\", \"chu niên\".",
+      "ex": [{ "cn": "今年", "py": "jīnnián", "vi": "năm nay" }] },
+    { "w": "月", "py": "yuè", "hv": "nguyệt", "vi": "tháng; mặt trăng", "pos": "danh từ",
+      "note": "Tháng đặt tên bằng SỐ: 一月 = tháng Một, 十二月 = tháng Mười hai. Không có tên riêng như tiếng Anh.",
+      "ex": [{ "cn": "五月", "py": "wǔ yuè", "vi": "tháng Năm" }] },
+    { "w": "号", "py": "hào", "hv": "hiệu", "vi": "ngày (trong tháng); số", "pos": "danh từ",
+      "note": "Dùng khi NÓI. Khi VIẾT trang trọng thì dùng 日 rì. Tiếng Việt: \"ký hiệu\", \"tín hiệu\".",
+      "ex": [{ "cn": "今天几号？", "py": "Jīntiān jǐ hào?", "vi": "Hôm nay ngày mấy?" }] },
+    { "w": "星期", "py": "xīngqī", "hv": "tinh kỳ", "vi": "tuần; thứ (trong tuần)", "pos": "danh từ",
+      "note": "星 (sao) + 期 (kỳ hạn). Thứ Hai = 星期一, thứ Bảy = 星期六, Chủ nhật = 星期天.",
+      "ex": [{ "cn": "今天星期几？", "py": "Jīntiān xīngqī jǐ?", "vi": "Hôm nay thứ mấy?" }] },
+    { "w": "现在", "py": "xiànzài", "hv": "hiện tại", "vi": "bây giờ, hiện tại", "pos": "danh từ",
+      "note": "Giống hệt \"hiện tại\" tiếng Việt — một trong những từ dễ nhớ nhất cho người Việt.",
+      "ex": [{ "cn": "现在几点？", "py": "Xiànzài jǐ diǎn?", "vi": "Bây giờ mấy giờ?" }] },
+    { "w": "几", "py": "jǐ", "hv": "kỷ", "vi": "mấy, bao nhiêu (số nhỏ)", "pos": "đại từ nghi vấn",
+      "note": "Dùng khi đoán câu trả lời DƯỚI 10. Nếu số lớn hơn thì dùng 多少 (bài 10).",
+      "ex": [{ "cn": "你有几个朋友？", "py": "Nǐ yǒu jǐ ge péngyou?", "vi": "Bạn có mấy người bạn?" }] },
+    { "w": "点", "py": "diǎn", "hv": "điểm", "vi": "giờ; chấm, điểm", "pos": "lượng từ / danh từ",
+      "note": "Bốn chấm dưới là bộ 灬 (lửa). Tiếng Việt: \"điểm danh\", \"địa điểm\".",
+      "ex": [{ "cn": "八点", "py": "bā diǎn", "vi": "tám giờ" }] }
+  ],
+  "grammar": [
+    { "t": "Ngày tháng đi từ LỚN đến NHỎ",
+      "b": "Năm 年 → Tháng 月 → Ngày 号",
+      "d": "Ngược hoàn toàn với tiếng Anh, nhưng GIỐNG cách nói trang trọng của tiếng Việt. Năm đọc từng chữ số một: 2026 = 二零二六年 (nhị-linh-nhị-lục), KHÔNG đọc là \"hai nghìn không trăm hai sáu\".",
+      "ex": [
+        { "cn": "二零二六年九月二号", "py": "èr líng èr liù nián jiǔ yuè èr hào", "vi": "ngày 2 tháng 9 năm 2026" },
+        { "cn": "今天几月几号？", "py": "Jīntiān jǐ yuè jǐ hào?", "vi": "Hôm nay ngày mấy tháng mấy?" }
+      ] },
+    { "t": "Câu chỉ thời gian KHÔNG dùng 是",
+      "b": "今天星期一。(không có 是)",
+      "d": "Đây là ngoại lệ quan trọng. Với ngày tháng, thứ, giờ và tuổi, người Trung Quốc BỎ động từ 是. Nói 今天是星期一 không sai nhưng nghe nặng nề; câu tự nhiên là 今天星期一.",
+      "ex": [
+        { "cn": "今天星期一。", "py": "Jīntiān xīngqīyī.", "vi": "Hôm nay thứ Hai." },
+        { "cn": "现在八点。", "py": "Xiànzài bā diǎn.", "vi": "Bây giờ tám giờ." },
+        { "cn": "明天九月三号。", "py": "Míngtiān jiǔ yuè sān hào.", "vi": "Mai là ngày 3 tháng 9." }
+      ] },
+    { "t": "Thứ trong tuần = 星期 + số",
+      "b": "星期一 … 星期六, riêng Chủ nhật là 星期天",
+      "d": "Hệ thống cực kỳ logic: chỉ cần ghép số vào sau 星期. Duy nhất Chủ nhật dùng 天 (hoặc 日) chứ không phải 七.",
+      "ex": [
+        { "cn": "星期一", "py": "xīngqīyī", "vi": "thứ Hai" },
+        { "cn": "星期五", "py": "xīngqīwǔ", "vi": "thứ Sáu" },
+        { "cn": "星期天", "py": "xīngqītiān", "vi": "Chủ nhật" }
+      ] },
+    { "t": "Xem giờ",
+      "b": "số + 点 + số + 分",
+      "d": "8:30 = 八点三十分, hoặc nói 八点半 (半 bàn = rưỡi). Chú ý 2 giờ là 两点 liǎng diǎn chứ KHÔNG phải 二点.",
+      "ex": [
+        { "cn": "现在几点？", "py": "Xiànzài jǐ diǎn?", "vi": "Bây giờ mấy giờ?" },
+        { "cn": "现在八点。", "py": "Xiànzài bā diǎn.", "vi": "Bây giờ 8 giờ." },
+        { "cn": "两点十分", "py": "liǎng diǎn shí fēn", "vi": "2 giờ 10 phút" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "今天几号？", "py": "Jīntiān jǐ hào?", "vi": "Hôm nay ngày mấy?" },
+    { "cn": "今天九月二号。", "py": "Jīntiān jiǔ yuè èr hào.", "vi": "Hôm nay ngày 2 tháng 9." },
+    { "cn": "今天星期几？", "py": "Jīntiān xīngqī jǐ?", "vi": "Hôm nay thứ mấy?" },
+    { "cn": "今天星期三。", "py": "Jīntiān xīngqīsān.", "vi": "Hôm nay thứ Tư." },
+    { "cn": "明天星期四。", "py": "Míngtiān xīngqīsì.", "vi": "Mai là thứ Năm." },
+    { "cn": "现在几点？", "py": "Xiànzài jǐ diǎn?", "vi": "Bây giờ mấy giờ?" },
+    { "cn": "现在七点半。", "py": "Xiànzài qī diǎn bàn.", "vi": "Bây giờ 7 giờ rưỡi." },
+    { "cn": "昨天是我的生日。", "py": "Zuótiān shì wǒ de shēngrì.", "vi": "Hôm qua là sinh nhật tôi." },
+    { "cn": "明天几点上课？", "py": "Míngtiān jǐ diǎn shàngkè?", "vi": "Mai mấy giờ vào học?" },
+    { "cn": "明天见！", "py": "Míngtiān jiàn!", "vi": "Mai gặp nhé!" }
+  ]
+}

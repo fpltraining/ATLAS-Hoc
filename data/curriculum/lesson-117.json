@@ -1,0 +1,70 @@
+{
+  "id": 117,
+  "cn": "运动和习惯",
+  "title": "Thể thao và rèn thói quen",
+  "goal": "Thể thao và cách nói về việc rèn luyện — bài áp chót, cũng là lời khuyên cho chính việc học của bạn.",
+  "words": [
+    { "w": "网球", "py": "wǎngqiú", "hv": "võng cầu", "vi": "quần vợt", "pos": "danh từ",
+      "note": "网 (võng, lưới) + 球 (cầu, bóng). Quy tắc: môn bóng nào cũng là X + 球 — 篮球, 足球, 排球.",
+      "ex": [{ "cn": "他每周打两次网球。", "py": "Tā měi zhōu dǎ liǎng cì wǎngqiú.", "vi": "Anh ấy chơi quần vợt hai lần một tuần." }] },
+    { "w": "乒乓球", "py": "pīngpāngqiú", "hv": "banh bàng cầu", "vi": "bóng bàn", "pos": "danh từ",
+      "note": "乒乓 là từ TƯỢNG THANH — đọc lên nghe đúng tiếng bóng nảy. Môn thể thao quốc dân của Trung Quốc.",
+      "ex": [{ "cn": "中国人很会打乒乓球。", "py": "Zhōngguó rén hěn huì dǎ pīngpāngqiú.", "vi": "Người Trung Quốc chơi bóng bàn rất giỏi." }] },
+    { "w": "棒", "py": "bàng", "hv": "bổng", "vi": "giỏi, tuyệt; gậy", "pos": "tính từ / danh từ",
+      "note": "Tiếng Việt: \"bổng\" trong \"côn bổng\". Khẩu ngữ khen ngợi: 你真棒！= bạn giỏi thật!",
+      "ex": [{ "cn": "你的汉语真棒！", "py": "Nǐ de Hànyǔ zhēn bàng!", "vi": "Tiếng Trung của bạn giỏi thật!" }] },
+    { "w": "流行", "py": "liúxíng", "hv": "lưu hành", "vi": "thịnh hành, phổ biến", "pos": "tính từ / động từ",
+      "note": "Chính là \"lưu hành\" tiếng Việt: 流 (lưu, chảy) + 行 (hành). 流行音乐 = nhạc pop.",
+      "ex": [{ "cn": "这首歌很流行。", "py": "Zhè shǒu gē hěn liúxíng.", "vi": "Bài hát này rất thịnh hành." }] },
+    { "w": "养成", "py": "yǎngchéng", "hv": "dưỡng thành", "vi": "rèn thành, tạo thành", "pos": "động từ",
+      "note": "养 (dưỡng, nuôi) + 成 (thành). Hầu như luôn đi với 习惯: 养成好习惯.",
+      "ex": [{ "cn": "要养成好习惯。", "py": "Yào yǎngchéng hǎo xíguàn.", "vi": "Phải rèn thói quen tốt." }] },
+    { "w": "放松", "py": "fàngsōng", "hv": "phóng tùng", "vi": "thư giãn", "pos": "động từ",
+      "note": "放 (buông) + 松 (tùng, lỏng). Trái nghĩa với 紧张. Nhớ: 紧张 là hồi hộp, không phải \"khẩn trương\".",
+      "ex": [{ "cn": "考试前要放松一下。", "py": "Kǎoshì qián yào fàngsōng yíxià.", "vi": "Trước thi phải thư giãn chút." }] },
+    { "w": "动作", "py": "dòngzuò", "hv": "động tác", "vi": "động tác", "pos": "danh từ",
+      "note": "Chính là \"động tác\" tiếng Việt: 动 (động) + 作 (tác).",
+      "ex": [{ "cn": "这个动作有点儿难。", "py": "Zhège dòngzuò yǒudiǎnr nán.", "vi": "Động tác này hơi khó." }] },
+    { "w": "对面", "py": "duìmiàn", "hv": "đối diện", "vi": "đối diện, phía trước mặt", "pos": "danh từ",
+      "note": "Chính là \"đối diện\" tiếng Việt: 对 (đối) + 面 (diện).",
+      "ex": [{ "cn": "银行在学校对面。", "py": "Yínháng zài xuéxiào duìmiàn.", "vi": "Ngân hàng đối diện trường học." }] },
+    { "w": "重点", "py": "zhòngdiǎn", "hv": "trọng điểm", "vi": "trọng điểm, điểm chính", "pos": "danh từ",
+      "note": "Chính là \"trọng điểm\" tiếng Việt: 重 (trọng, đọc zhòng) + 点 (điểm).",
+      "ex": [{ "cn": "这是考试的重点。", "py": "Zhè shì kǎoshì de zhòngdiǎn.", "vi": "Đây là trọng điểm của kỳ thi." }] },
+    { "w": "好处", "py": "hǎochù", "hv": "hảo xứ", "vi": "lợi ích, cái lợi", "pos": "danh từ",
+      "note": "好 (tốt) + 处 (xứ, chỗ). Trái nghĩa là 坏处. Dùng với 有: 运动有很多好处.",
+      "ex": [{ "cn": "早起有很多好处。", "py": "Zǎo qǐ yǒu hěn duō hǎochù.", "vi": "Dậy sớm có nhiều cái lợi." }] }
+  ],
+  "grammar": [
+    { "t": "打 · 踢 · 做 — chọn động từ đúng cho từng môn",
+      "b": "打 (dùng tay): 打篮球／打网球／打乒乓球 · 踢 (dùng chân): 踢足球 · 做／练 (vận động chung): 做运动／练太极",
+      "d": "Nói 打足球 là sai — bóng đá phải dùng 踢. Bơi và chạy có động từ riêng: 游泳, 跑步. Đây là kiến thức nhỏ nhưng lộ trình độ ngay lập tức.",
+      "ex": [
+        { "cn": "他喜欢踢足球，我喜欢打篮球。", "py": "Tā xǐhuan tī zúqiú, wǒ xǐhuan dǎ lánqiú.", "vi": "Anh ấy thích đá bóng, tôi thích chơi bóng rổ." }
+      ] },
+    { "t": "养成 … 的习惯 — mẫu câu nói về thói quen",
+      "b": "养成 + 动词 + 的习惯",
+      "d": "养成每天写汉字的习惯 (rèn thói quen mỗi ngày viết chữ Hán). Đây chính là điều quan trọng nhất khi học tiếng Trung: mỗi ngày một ít, hơn hẳn học dồn một buổi dài.",
+      "ex": [
+        { "cn": "我养成了每天听中文的习惯。", "py": "Wǒ yǎngchéng le měi tiān tīng Zhōngwén de xíguàn.", "vi": "Tôi đã rèn được thói quen mỗi ngày nghe tiếng Trung." }
+      ] },
+    { "t": "对 … 有好处 — nói về lợi ích",
+      "b": "A 对 B 有好处／没有好处",
+      "d": "运动对身体有好处 (vận động có lợi cho sức khoẻ). 熬夜对健康没有好处. Cấu trúc song song: 对…有帮助, 对…有影响. Ba khung này bao trọn cách nói về ảnh hưởng.",
+      "ex": [
+        { "cn": "多写多练对记汉字很有帮助。", "py": "Duō xiě duō liàn duì jì Hànzì hěn yǒu bāngzhù.", "vi": "Viết nhiều luyện nhiều rất giúp ích cho việc nhớ chữ Hán." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "周末我们一起去打网球吧。", "py": "Zhōumò wǒmen yìqǐ qù dǎ wǎngqiú ba.", "vi": "Cuối tuần chúng ta đi chơi quần vợt nhé." },
+    { "cn": "学校里有三张乒乓球台。", "py": "Xuéxiào lǐ yǒu sān zhāng pīngpāngqiú tái.", "vi": "Trong trường có ba bàn bóng bàn." },
+    { "cn": "他写的字真棒。", "py": "Tā xiě de zì zhēn bàng.", "vi": "Chữ anh ấy viết đẹp thật." },
+    { "cn": "今年流行这种颜色。", "py": "Jīnnián liúxíng zhè zhǒng yánsè.", "vi": "Năm nay thịnh hành màu này." },
+    { "cn": "养成早睡早起的习惯很重要。", "py": "Yǎngchéng zǎo shuì zǎo qǐ de xíguàn hěn zhòngyào.", "vi": "Rèn thói quen ngủ sớm dậy sớm rất quan trọng." },
+    { "cn": "写字的时候手要放松。", "py": "Xiě zì de shíhou shǒu yào fàngsōng.", "vi": "Lúc viết chữ tay phải thả lỏng." },
+    { "cn": "老师又做了一遍这个动作。", "py": "Lǎoshī yòu zuò le yí biàn zhège dòngzuò.", "vi": "Thầy làm lại động tác này một lượt nữa." },
+    { "cn": "我家对面就是超市。", "py": "Wǒ jiā duìmiàn jiù shì chāoshì.", "vi": "Đối diện nhà tôi chính là siêu thị." },
+    { "cn": "复习的时候要抓住重点。", "py": "Fùxí de shíhou yào zhuā zhù zhòngdiǎn.", "vi": "Lúc ôn tập phải nắm trọng điểm." },
+    { "cn": "每天运动对身体有很多好处。", "py": "Měi tiān yùndòng duì shēntǐ yǒu hěn duō hǎochù.", "vi": "Vận động mỗi ngày rất có lợi cho sức khoẻ." }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": 66,
+  "cn": "看法和记忆",
+  "title": "Ý kiến và trí nhớ",
+  "goal": "Nêu quan điểm, phỏng đoán và nhớ lại — nhóm động từ tư duy của HSK 4.",
+  "words": [
+    { "w": "看法", "py": "kànfǎ", "hv": "khán pháp", "vi": "cách nhìn, quan điểm", "pos": "danh từ",
+      "note": "看 (nhìn) + 法 (cách). Đuôi 法 rất hay gặp: 想法 (cách nghĩ), 做法 (cách làm), 说法 (cách nói).",
+      "ex": [{ "cn": "你有什么看法？", "py": "Nǐ yǒu shénme kànfǎ?", "vi": "Bạn có quan điểm gì?" }] },
+    { "w": "意见", "py": "yìjiàn", "hv": "ý kiến", "vi": "ý kiến; ý kiến phản đối", "pos": "danh từ",
+      "note": "Chính là \"ý kiến\" tiếng Việt. Lưu ý: 对…有意见 nghĩa là BẤT MÃN với ai, không phải chỉ \"có ý kiến\".",
+      "ex": [{ "cn": "请说说你的意见。", "py": "Qǐng shuōshuo nǐ de yìjiàn.", "vi": "Xin nói ý kiến của bạn." }] },
+    { "w": "主意", "py": "zhǔyi", "hv": "chủ ý", "vi": "ý tưởng, chủ ý", "pos": "danh từ",
+      "note": "Chính là \"chủ ý\" tiếng Việt. Khen ý tưởng hay: 好主意！",
+      "ex": [{ "cn": "这是个好主意！", "py": "Zhè shì ge hǎo zhǔyi!", "vi": "Đây là ý hay!" }] },
+    { "w": "想念", "py": "xiǎngniàn", "hv": "tưởng niệm", "vi": "nhớ nhung", "pos": "động từ",
+      "note": "BẪY HÁN VIỆT: âm là \"tưởng niệm\" nhưng nghĩa tiếng Trung là NHỚ người còn sống ở xa, không liên quan tới tang lễ.",
+      "ex": [{ "cn": "我很想念家人。", "py": "Wǒ hěn xiǎngniàn jiārén.", "vi": "Tôi rất nhớ gia đình." }] },
+    { "w": "回忆", "py": "huíyì", "hv": "hồi ức", "vi": "hồi ức; nhớ lại", "pos": "danh từ / động từ",
+      "note": "Chính là \"hồi ức\" tiếng Việt: 回 (quay lại) + 忆 (nhớ, bộ 忄).",
+      "ex": [{ "cn": "那是美好的回忆。", "py": "Nà shì měihǎo de huíyì.", "vi": "Đó là hồi ức đẹp." }] },
+    { "w": "印象", "py": "yìnxiàng", "hv": "ấn tượng", "vi": "ấn tượng", "pos": "danh từ",
+      "note": "Chính là \"ấn tượng\" tiếng Việt: 印 (in dấu) + 象 (hình). Dùng với 对: 对他印象很好.",
+      "ex": [{ "cn": "他给我的印象很好。", "py": "Tā gěi wǒ de yìnxiàng hěn hǎo.", "vi": "Anh ấy để lại ấn tượng tốt với tôi." }] },
+    { "w": "考虑", "py": "kǎolǜ", "hv": "khảo lự", "vi": "cân nhắc, suy xét", "pos": "động từ",
+      "note": "考 (khảo, xét) + 虑 (lo nghĩ, bộ 心). Nặng hơn 想 — là suy xét có cân đo.",
+      "ex": [{ "cn": "让我考虑一下。", "py": "Ràng wǒ kǎolǜ yíxià.", "vi": "Để tôi cân nhắc một chút." }] },
+    { "w": "估计", "py": "gūjì", "hv": "cổ kế", "vi": "ước tính, đoán chừng", "pos": "động từ",
+      "note": "Dựa vào thông tin mà đoán con số hoặc khả năng: 估计他不来了.",
+      "ex": [{ "cn": "我估计他快到了。", "py": "Wǒ gūjì tā kuài dào le.", "vi": "Tôi đoán anh ấy sắp tới rồi." }] },
+    { "w": "判断", "py": "pànduàn", "hv": "phán đoán", "vi": "phán đoán, nhận định", "pos": "động từ / danh từ",
+      "note": "Chính là \"phán đoán\" tiếng Việt: 判 (phán) + 断 (đoán, dứt khoát).",
+      "ex": [{ "cn": "你的判断是对的。", "py": "Nǐ de pànduàn shì duì de.", "vi": "Phán đoán của bạn đúng." }] },
+    { "w": "猜", "py": "cāi", "hv": "sai", "vi": "đoán", "pos": "động từ",
+      "note": "Bộ 犭 bên trái. Đoán mò không có căn cứ, nhẹ hơn 估计 và 判断.",
+      "ex": [{ "cn": "你猜猜我买了什么？", "py": "Nǐ cāicai wǒ mǎi le shénme?", "vi": "Bạn đoán xem tôi mua gì?" }] }
+  ],
+  "grammar": [
+    { "t": "Ba mức phỏng đoán: 猜 < 估计 < 判断",
+      "b": "猜 = đoán mò · 估计 = ước chừng có cơ sở · 判断 = nhận định có phân tích",
+      "d": "猜谜语 (đoán câu đố), 估计有一百人 (ước chừng trăm người), 判断这个消息是假的 (nhận định tin này là giả). Chọn đúng mức thể hiện bạn nắm sắc thái.",
+      "ex": [
+        { "cn": "我猜他今年三十岁。", "py": "Wǒ cāi tā jīnnián sānshí suì.", "vi": "Tôi đoán năm nay anh ấy ba mươi." },
+        { "cn": "估计明天会下雨。", "py": "Gūjì míngtiān huì xiàyǔ.", "vi": "Ước chừng mai sẽ mưa." }
+      ] },
+    { "t": "Đuôi 法 — biến động từ thành \"cách làm\"",
+      "b": "看法 · 想法 · 做法 · 说法 · 用法",
+      "d": "Ghép 法 (pháp, cách) vào sau động từ là ra danh từ chỉ cách thức. Quy tắc cực kỳ sinh lợi: biết một động từ là có thêm một danh từ.",
+      "ex": [
+        { "cn": "我的想法跟你不一样。", "py": "Wǒ de xiǎngfǎ gēn nǐ bù yíyàng.", "vi": "Cách nghĩ của tôi khác bạn." },
+        { "cn": "这个词的用法很特别。", "py": "Zhège cí de yòngfǎ hěn tèbié.", "vi": "Cách dùng từ này rất đặc biệt." }
+      ] },
+    { "t": "对 … 有意见 — cẩn thận nghĩa kép",
+      "b": "有意见 = có ý kiến · 对…有意见 = bất mãn với ai",
+      "d": "Nói 我对他有意见 không phải là \"tôi có ý kiến về anh ấy\" mà là \"tôi bất mãn với anh ấy\". Muốn xin ý kiến trung tính thì dùng 听听你的意见.",
+      "ex": [
+        { "cn": "大家对这个安排有意见。", "py": "Dàjiā duì zhège ānpái yǒu yìjiàn.", "vi": "Mọi người không hài lòng với sắp xếp này." },
+        { "cn": "我想听听大家的意见。", "py": "Wǒ xiǎng tīngting dàjiā de yìjiàn.", "vi": "Tôi muốn nghe ý kiến của mọi người." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "关于这件事，你有什么看法？", "py": "Guānyú zhè jiàn shì, nǐ yǒu shénme kànfǎ?", "vi": "Về việc này, bạn nghĩ sao?" },
+    { "cn": "会上大家提了很多意见。", "py": "Huì shàng dàjiā tí le hěn duō yìjiàn.", "vi": "Trong cuộc họp mọi người nêu nhiều ý kiến." },
+    { "cn": "去海边过周末，好主意！", "py": "Qù hǎibiān guò zhōumò, hǎo zhǔyi!", "vi": "Cuối tuần ra biển, ý hay đấy!" },
+    { "cn": "离开家以后，我很想念妈妈做的菜。", "py": "Líkāi jiā yǐhòu, wǒ hěn xiǎngniàn māma zuò de cài.", "vi": "Xa nhà rồi tôi rất nhớ món mẹ nấu." },
+    { "cn": "那次旅行留下了美好的回忆。", "py": "Nà cì lǚxíng liú xià le měihǎo de huíyì.", "vi": "Chuyến đi đó để lại hồi ức đẹp." },
+    { "cn": "第一印象很重要。", "py": "Dì-yī yìnxiàng hěn zhòngyào.", "vi": "Ấn tượng đầu tiên rất quan trọng." },
+    { "cn": "这件事我需要考虑几天。", "py": "Zhè jiàn shì wǒ xūyào kǎolǜ jǐ tiān.", "vi": "Việc này tôi cần cân nhắc vài ngày." },
+    { "cn": "估计这本书要两百块。", "py": "Gūjì zhè běn shū yào liǎngbǎi kuài.", "vi": "Ước chừng quyển sách này hai trăm đồng." },
+    { "cn": "根据经验，我判断他会同意。", "py": "Gēnjù jīngyàn, wǒ pànduàn tā huì tóngyì.", "vi": "Theo kinh nghiệm, tôi nhận định anh ấy sẽ đồng ý." },
+    { "cn": "你猜猜这是谁送的？", "py": "Nǐ cāicai zhè shì shéi sòng de?", "vi": "Bạn đoán xem ai tặng cái này?" }
+  ]
+}

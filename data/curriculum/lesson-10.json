@@ -1,0 +1,75 @@
+{
+  "id": 10,
+  "cn": "买东西",
+  "title": "Mua sắm",
+  "goal": "Hỏi giá, mặc cả, dùng 多少 để hỏi số lượng lớn và phân biệt 多少 với 几.",
+  "words": [
+    { "w": "买", "py": "mǎi", "hv": "mãi", "vi": "mua", "pos": "động từ",
+      "note": "Chữ phồn thể 買 có bộ 贝 (vỏ sò = tiền) ở dưới. Tiếng Việt: \"thương mại\", \"mãi lực\". Đừng nhầm với 卖 mài (bán) — chỉ khác một nét trên đầu!",
+      "ex": [{ "cn": "我想买一本书。", "py": "Wǒ xiǎng mǎi yì běn shū.", "vi": "Tôi muốn mua một quyển sách." }] },
+    { "w": "钱", "py": "qián", "hv": "tiền", "vi": "tiền", "pos": "danh từ",
+      "note": "Chính là chữ \"tiền\" của tiếng Việt. Bộ 钅 (kim loại) vì tiền xưa đúc bằng đồng.",
+      "ex": [{ "cn": "这个多少钱？", "py": "Zhège duōshao qián?", "vi": "Cái này bao nhiêu tiền?" }] },
+    { "w": "块", "py": "kuài", "hv": "khối", "vi": "đồng (đơn vị tiền); cục, miếng", "pos": "lượng từ",
+      "note": "Đây là cách nói KHẨU NGỮ của đồng nhân dân tệ. Khi viết trang trọng dùng 元 yuán.",
+      "ex": [{ "cn": "十块钱", "py": "shí kuài qián", "vi": "mười đồng" }] },
+    { "w": "多少", "py": "duōshao", "hv": "đa thiểu", "vi": "bao nhiêu", "pos": "đại từ nghi vấn",
+      "note": "多 (nhiều) + 少 (ít) ghép lại thành \"bao nhiêu\". Chữ 少 ở đây đọc nhẹ là shao.",
+      "ex": [{ "cn": "多少钱？", "py": "Duōshao qián?", "vi": "Bao nhiêu tiền?" }] },
+    { "w": "商店", "py": "shāngdiàn", "hv": "thương điếm", "vi": "cửa hàng", "pos": "danh từ",
+      "note": "商 (thương mại) + 店 (cửa tiệm). 店 có bộ 广 (mái hiên). Tiếng Việt: \"thương gia\", \"cửa hiệu\".",
+      "ex": [{ "cn": "我去商店买东西。", "py": "Wǒ qù shāngdiàn mǎi dōngxi.", "vi": "Tôi đi cửa hàng mua đồ." }] },
+    { "w": "东西", "py": "dōngxi", "hv": "đông tây", "vi": "đồ vật, đồ đạc", "pos": "danh từ",
+      "note": "Thú vị: 东 (đông) + 西 (tây) ghép lại lại có nghĩa là \"đồ vật\". Khi đọc là dōngxī (đủ thanh) thì mới nghĩa là phương đông-tây.",
+      "ex": [{ "cn": "我买了很多东西。", "py": "Wǒ mǎi le hěn duō dōngxi.", "vi": "Tôi mua rất nhiều đồ." }] },
+    { "w": "些", "py": "xiē", "hv": "ta", "vi": "một vài, một ít", "pos": "lượng từ",
+      "note": "Luôn đi với 一 hoặc 这/那: 一些 (một ít), 这些 (những cái này), 那些 (những cái kia).",
+      "ex": [{ "cn": "这些苹果很好。", "py": "Zhèxiē píngguǒ hěn hǎo.", "vi": "Những quả táo này rất ngon." }] },
+    { "w": "衣服", "py": "yīfu", "hv": "y phục", "vi": "quần áo", "pos": "danh từ",
+      "note": "Chính là \"y phục\" tiếng Việt. 衣 là bộ thủ chỉ quần áo, bên trái chữ viết thành 衤.",
+      "ex": [{ "cn": "这件衣服很漂亮。", "py": "Zhè jiàn yīfu hěn piàoliang.", "vi": "Bộ quần áo này rất đẹp." }] },
+    { "w": "一点儿", "py": "yìdiǎnr", "hv": "nhất điểm nhi", "vi": "một chút, một ít", "pos": "lượng từ",
+      "note": "Âm 儿 er ở cuối là đặc trưng giọng Bắc Kinh. Đọc uốn lưỡi, không tách thành hai âm tiết.",
+      "ex": [{ "cn": "我会说一点儿汉语。", "py": "Wǒ huì shuō yìdiǎnr Hànyǔ.", "vi": "Tôi biết nói một chút tiếng Trung." }] },
+    { "w": "少", "py": "shǎo", "hv": "thiểu", "vi": "ít", "pos": "tính từ",
+      "note": "小 (nhỏ) thêm một nét phẩy. Tiếng Việt: \"thiểu số\", \"tối thiểu\".",
+      "ex": [{ "cn": "钱很少。", "py": "Qián hěn shǎo.", "vi": "Tiền rất ít." }] }
+  ],
+  "grammar": [
+    { "t": "Hỏi giá — mẫu câu bắt buộc thuộc lòng",
+      "b": "这个多少钱？",
+      "d": "Đây là câu bạn sẽ dùng nhiều nhất khi đi chợ ở Trung Quốc. Trả lời: số + 块钱.",
+      "ex": [
+        { "cn": "这个多少钱？", "py": "Zhège duōshao qián?", "vi": "Cái này bao nhiêu tiền?" },
+        { "cn": "十五块。", "py": "Shíwǔ kuài.", "vi": "Mười lăm đồng." },
+        { "cn": "太贵了！便宜一点儿吧。", "py": "Tài guì le! Piányi yìdiǎnr ba.", "vi": "Đắt quá! Rẻ một chút đi." }
+      ] },
+    { "t": "多少 hay 几 — chọn thế nào?",
+      "b": "几 = đoán dưới 10 (cần lượng từ) · 多少 = số bất kỳ (không cần lượng từ)",
+      "d": "几个人 (mấy người — ít) nhưng 多少人 (bao nhiêu người — có thể rất đông). Đặc biệt: hỏi tiền LUÔN dùng 多少 vì giá có thể lớn.",
+      "ex": [
+        { "cn": "你家有几个人？", "py": "Nǐ jiā yǒu jǐ ge rén?", "vi": "Nhà bạn mấy người? (đoán ít)" },
+        { "cn": "你们学校有多少学生？", "py": "Nǐmen xuéxiào yǒu duōshao xuésheng?", "vi": "Trường bạn có bao nhiêu học sinh?" },
+        { "cn": "多少钱？", "py": "Duōshao qián?", "vi": "Bao nhiêu tiền?" }
+      ] },
+    { "t": "一点儿 đặt ở đâu",
+      "b": "Động từ + 一点儿 + danh từ · Tính từ + 一点儿",
+      "d": "Sau ĐỘNG TỪ nghĩa là \"một ít\": 喝一点儿水. Sau TÍNH TỪ nghĩa là \"hơn một chút\": 便宜一点儿 (rẻ hơn chút). Đừng đặt đầu câu.",
+      "ex": [
+        { "cn": "我想喝一点儿水。", "py": "Wǒ xiǎng hē yìdiǎnr shuǐ.", "vi": "Tôi muốn uống một chút nước." },
+        { "cn": "便宜一点儿。", "py": "Piányi yìdiǎnr.", "vi": "Rẻ chút đi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我去商店买东西。", "py": "Wǒ qù shāngdiàn mǎi dōngxi.", "vi": "Tôi đi cửa hàng mua đồ." },
+    { "cn": "这个多少钱？", "py": "Zhège duōshao qián?", "vi": "Cái này bao nhiêu tiền?" },
+    { "cn": "这个二十块钱。", "py": "Zhège èrshí kuài qián.", "vi": "Cái này hai mươi đồng." },
+    { "cn": "太贵了！", "py": "Tài guì le!", "vi": "Đắt quá!" },
+    { "cn": "便宜一点儿吧。", "py": "Piányi yìdiǎnr ba.", "vi": "Rẻ một chút đi." },
+    { "cn": "我想买这件衣服。", "py": "Wǒ xiǎng mǎi zhè jiàn yīfu.", "vi": "Tôi muốn mua bộ quần áo này." },
+    { "cn": "这些苹果多少钱？", "py": "Zhèxiē píngguǒ duōshao qián?", "vi": "Mấy quả táo này bao nhiêu tiền?" },
+    { "cn": "我的钱很少。", "py": "Wǒ de qián hěn shǎo.", "vi": "Tiền của tôi rất ít." },
+    { "cn": "我买了一些水果。", "py": "Wǒ mǎi le yìxiē shuǐguǒ.", "vi": "Tôi mua một ít hoa quả." },
+    { "cn": "你们学校有多少学生？", "py": "Nǐmen xuéxiào yǒu duōshao xuésheng?", "vi": "Trường các bạn có bao nhiêu học sinh?" }
+  ]
+}

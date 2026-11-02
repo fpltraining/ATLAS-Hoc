@@ -1,0 +1,75 @@
+{
+  "id": 54,
+  "cn": "数量和程度",
+  "title": "Đơn vị và mức độ",
+  "goal": "Đo đếm chính xác hơn, và làm chủ cấu trúc 越…越… — càng… càng…",
+  "words": [
+    { "w": "半", "py": "bàn", "hv": "bán", "vi": "một nửa, rưỡi", "pos": "số từ",
+      "note": "Chính là \"bán\" tiếng Việt (\"bán cầu\", \"bán đảo\", \"bán kính\"). 八 (chia) trên 牛 — chia con trâu làm đôi.",
+      "ex": [{ "cn": "现在三点半。", "py": "Xiànzài sān diǎn bàn.", "vi": "Bây giờ ba giờ rưỡi." }] },
+    { "w": "分", "py": "fēn", "hv": "phân", "vi": "phút; điểm; xu", "pos": "lượng từ",
+      "note": "Chính là \"phân\" tiếng Việt (\"phân chia\", \"phân số\"). Ba nghĩa: phút, điểm số, và đơn vị tiền nhỏ nhất.",
+      "ex": [{ "cn": "这次考试我得了九十分。", "py": "Zhè cì kǎoshì wǒ dé le jiǔshí fēn.", "vi": "Kỳ thi này tôi được chín mươi điểm." }] },
+    { "w": "刻", "py": "kè", "hv": "khắc", "vi": "khắc (15 phút)", "pos": "lượng từ",
+      "note": "Chính là \"khắc\" tiếng Việt (\"một khắc\" = 15 phút trong cách nói cổ). 一刻 = 15 phút, 三刻 = 45 phút.",
+      "ex": [{ "cn": "现在八点一刻。", "py": "Xiànzài bā diǎn yí kè.", "vi": "Bây giờ tám giờ mười lăm." }] },
+    { "w": "段", "py": "duàn", "hv": "đoạn", "vi": "đoạn, khúc", "pos": "lượng từ",
+      "note": "Chính là \"đoạn\" tiếng Việt. Dùng cho đoạn đường, đoạn văn, quãng thời gian: 一段路, 一段时间.",
+      "ex": [{ "cn": "这段时间我很忙。", "py": "Zhè duàn shíjiān wǒ hěn máng.", "vi": "Dạo này tôi rất bận." }] },
+    { "w": "辆", "py": "liàng", "hv": "lượng", "vi": "chiếc (lượng từ cho xe)", "pos": "lượng từ",
+      "note": "Có bộ 车 (xe) bên trái — nhìn là biết dùng cho xe cộ: 一辆车, 一辆自行车.",
+      "ex": [{ "cn": "他买了一辆新车。", "py": "Tā mǎi le yí liàng xīn chē.", "vi": "Anh ấy mua một chiếc xe mới." }] },
+    { "w": "种", "py": "zhǒng", "hv": "chủng", "vi": "loại, thứ", "pos": "lượng từ",
+      "note": "Chính là \"chủng\" tiếng Việt (\"chủng loại\", \"nhân chủng\"). Bộ 禾 (lúa) — vốn nghĩa là giống cây.",
+      "ex": [{ "cn": "这种水果很甜。", "py": "Zhè zhǒng shuǐguǒ hěn tián.", "vi": "Loại quả này rất ngọt." }] },
+    { "w": "极", "py": "jí", "hv": "cực", "vi": "cực kỳ", "pos": "phó từ",
+      "note": "Chính là \"cực\" tiếng Việt (\"cực kỳ\", \"tích cực\"). Thường đặt SAU tính từ kèm 了: 好极了 = tuyệt cực.",
+      "ex": [{ "cn": "这个菜好吃极了！", "py": "Zhège cài hǎochī jí le!", "vi": "Món này ngon cực kỳ!" }] },
+    { "w": "几乎", "py": "jīhū", "hv": "kỷ hồ", "vi": "hầu như, gần như", "pos": "phó từ",
+      "note": "几 (mấy) + 乎 (trợ từ cổ). Đứng trước động từ hoặc tính từ: 几乎忘了 (suýt quên).",
+      "ex": [{ "cn": "我几乎每天都运动。", "py": "Wǒ jīhū měi tiān dōu yùndòng.", "vi": "Hầu như ngày nào tôi cũng tập." }] },
+    { "w": "差", "py": "chà", "hv": "sai", "vi": "kém, thiếu; tệ", "pos": "tính từ / động từ",
+      "note": "Hai cách dùng: xem giờ (差五分八点 = tám giờ kém năm) và chê chất lượng (成绩很差 = điểm kém).",
+      "ex": [{ "cn": "现在差十分七点。", "py": "Xiànzài chà shí fēn qī diǎn.", "vi": "Bây giờ bảy giờ kém mười." }] },
+    { "w": "越", "py": "yuè", "hv": "việt", "vi": "càng (trong 越…越…)", "pos": "phó từ",
+      "note": "Chính là chữ \"Việt\" trong 越南 (Việt Nam), nghĩa gốc là VƯỢT QUA. Dùng trong cấu trúc 越…越… rất thông dụng.",
+      "ex": [{ "cn": "雨越下越大。", "py": "Yǔ yuè xià yuè dà.", "vi": "Mưa càng lúc càng to." }] }
+  ],
+  "grammar": [
+    { "t": "越 … 越 … — càng… càng…",
+      "b": "越 + động từ/tính từ + 越 + tính từ",
+      "d": "Cấu trúc rất hay dùng, giống hệt \"càng… càng…\" tiếng Việt. Có biến thể 越来越… nghĩa là \"ngày càng…\": 越来越好 (ngày càng tốt hơn).",
+      "ex": [
+        { "cn": "汉语越学越有意思。", "py": "Hànyǔ yuè xué yuè yǒu yìsi.", "vi": "Tiếng Trung càng học càng thú vị." },
+        { "cn": "他的汉语越来越好了。", "py": "Tā de Hànyǔ yuè lái yuè hǎo le.", "vi": "Tiếng Trung của cậu ấy ngày càng khá lên." },
+        { "cn": "天气越来越冷了。", "py": "Tiānqì yuè lái yuè lěng le.", "vi": "Trời ngày càng lạnh." }
+      ] },
+    { "t": "Xem giờ đầy đủ",
+      "b": "点 giờ · 分 phút · 刻 15 phút · 半 rưỡi · 差 kém",
+      "d": "8:15 = 八点一刻 hoặc 八点十五分. 8:30 = 八点半. 8:45 = 八点三刻 hoặc 差一刻九点. 7:50 = 差十分八点. Cách nói 差 giống hệt \"tám giờ kém mười\" của tiếng Việt.",
+      "ex": [
+        { "cn": "六点半", "py": "liù diǎn bàn", "vi": "6 giờ rưỡi" },
+        { "cn": "九点一刻", "py": "jiǔ diǎn yí kè", "vi": "9 giờ 15" },
+        { "cn": "差五分十点", "py": "chà wǔ fēn shí diǎn", "vi": "10 giờ kém 5" }
+      ] },
+    { "t": "极了 — đặt SAU tính từ",
+      "b": "tính từ + 极了",
+      "d": "Khác mọi phó từ khác (很, 非常, 太) đều đứng TRƯỚC, riêng 极了 đứng SAU tính từ. Mức độ rất mạnh, mang cảm thán: 好极了! 累极了!",
+      "ex": [
+        { "cn": "好极了！", "py": "Hǎo jí le!", "vi": "Tuyệt cực!" },
+        { "cn": "今天热极了。", "py": "Jīntiān rè jí le.", "vi": "Hôm nay nóng kinh khủng." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "现在几点？— 差一刻三点。", "py": "Xiànzài jǐ diǎn? — Chà yí kè sān diǎn.", "vi": "Bây giờ mấy giờ? — Ba giờ kém mười lăm." },
+    { "cn": "我们等了半个小时。", "py": "Wǒmen děng le bàn ge xiǎoshí.", "vi": "Chúng tôi đợi nửa tiếng." },
+    { "cn": "这次考试他得了一百分。", "py": "Zhè cì kǎoshì tā dé le yìbǎi fēn.", "vi": "Kỳ thi này cậu ấy được một trăm điểm." },
+    { "cn": "这段路很不好走。", "py": "Zhè duàn lù hěn bù hǎo zǒu.", "vi": "Đoạn đường này rất khó đi." },
+    { "cn": "门口停着两辆自行车。", "py": "Ménkǒu tíng zhe liǎng liàng zìxíngchē.", "vi": "Ngoài cửa đỗ hai chiếc xe đạp." },
+    { "cn": "这种茶你喝过吗？", "py": "Zhè zhǒng chá nǐ hē guo ma?", "vi": "Loại trà này bạn uống bao giờ chưa?" },
+    { "cn": "昨天的比赛精彩极了！", "py": "Zuótiān de bǐsài jīngcǎi jí le!", "vi": "Trận đấu hôm qua hay cực kỳ!" },
+    { "cn": "我几乎忘了今天有会议。", "py": "Wǒ jīhū wàng le jīntiān yǒu huìyì.", "vi": "Tôi suýt quên hôm nay có họp." },
+    { "cn": "他的成绩比以前差了一点儿。", "py": "Tā de chéngjì bǐ yǐqián chà le yìdiǎnr.", "vi": "Điểm của cậu ấy kém hơn trước một chút." },
+    { "cn": "越努力，成绩越好。", "py": "Yuè nǔlì, chéngjì yuè hǎo.", "vi": "Càng cố gắng, điểm càng cao." }
+  ]
+}

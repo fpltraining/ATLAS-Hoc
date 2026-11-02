@@ -1,0 +1,79 @@
+{
+  "title": "Bộ thủ cơ bản",
+  "intro": "Bộ thủ là những 'chữ cái' của chữ Hán. Nhớ 60 bộ này, bạn sẽ đoán được nghĩa và cách viết của hàng nghìn chữ.",
+  "groups": [
+    { "name": "Nhóm 1 · Nét và số", "note": "Những hình đơn giản nhất, cũng là các nét bạn sẽ dùng suốt đời.", "items": [
+      { "r": "一", "std": "一", "py": "yī", "hv": "nhất", "vi": "một, nét ngang", "n": 1, "note": "Nét ngang cơ bản. Luôn viết từ TRÁI sang PHẢI.", "ex": ["二", "三", "上", "下"] },
+      { "r": "丶", "std": "丶", "py": "zhǔ", "hv": "chủ", "vi": "dấu chấm", "n": 1, "note": "Chấm nhỏ, thường nằm trên đầu hoặc bên cạnh chữ.", "ex": ["主", "为", "头"] },
+      { "r": "丿", "std": "丿", "py": "piě", "hv": "phiệt", "vi": "nét phẩy", "n": 1, "note": "Phẩy từ trên phải xuống dưới trái, nhẹ dần ở đuôi.", "ex": ["人", "千", "白"] },
+      { "r": "二", "std": "二", "py": "èr", "hv": "nhị", "vi": "hai", "n": 2, "note": "Hai nét ngang, nét dưới dài hơn nét trên.", "ex": ["三", "元", "云"] },
+      { "r": "十", "std": "十", "py": "shí", "hv": "thập", "vi": "mười", "n": 2, "note": "Ngang trước, sổ sau — quy tắc vàng của thứ tự nét.", "ex": ["古", "支", "午", "半"] },
+      { "r": "八", "std": "八", "py": "bā", "hv": "bát", "vi": "tám; chia tách", "n": 2, "note": "Hình hai vật tách ra hai bên.", "ex": ["分", "公", "只", "兴"] },
+      { "r": "人 / 亻", "std": "人", "py": "rén", "hv": "nhân", "vi": "người", "n": 2, "note": "Đứng bên trái chữ thì viết thành 亻. Chữ nào có nó gần như chắc chắn nói về CON NGƯỜI.", "ex": ["你", "他", "们", "住", "作"] },
+      { "r": "儿", "std": "儿", "py": "ér", "hv": "nhi", "vi": "trẻ nhỏ; hai chân", "n": 2, "note": "Thường nằm dưới đáy chữ, như hai cái chân.", "ex": ["先", "见", "元", "光"] }
+    ]},
+    { "name": "Nhóm 2 · Thân thể", "note": "Người xưa vẽ chính cơ thể mình. Đây là nhóm dễ nhớ nhất.", "items": [
+      { "r": "口", "std": "口", "py": "kǒu", "hv": "khẩu", "vi": "cái miệng", "n": 3, "note": "Liên quan tới ăn, nói, kêu. Viết 3 nét, KHÔNG phải 4.", "ex": ["吃", "叫", "喝", "吗", "名"] },
+      { "r": "目", "std": "目", "py": "mù", "hv": "mục", "vi": "con mắt", "n": 5, "note": "Vốn là con mắt nằm ngang, sau xoay dọc cho vừa ô chữ.", "ex": ["看", "眼", "睡", "着"] },
+      { "r": "耳", "std": "耳", "py": "ěr", "hv": "nhĩ", "vi": "cái tai", "n": 6, "note": "Liên quan tới nghe.", "ex": ["听", "取", "聪"] },
+      { "r": "手 / 扌", "std": "手", "py": "shǒu", "hv": "thủ", "vi": "bàn tay", "n": 4, "note": "Bên trái viết thành 扌 (đề thủ bàng). Báo hiệu một HÀNH ĐỘNG làm bằng tay.", "ex": ["打", "找", "拿", "报"] },
+      { "r": "足 / ⻊", "std": "足", "py": "zú", "hv": "túc", "vi": "bàn chân", "n": 7, "note": "Liên quan tới đi, đá, nhảy.", "ex": ["跑", "跳", "路", "踢"] },
+      { "r": "心 / 忄", "std": "心", "py": "xīn", "hv": "tâm", "vi": "trái tim; lòng dạ", "n": 4, "note": "Bên trái viết thành 忄. Chữ có nó đều nói về CẢM XÚC.", "ex": ["想", "爱", "忙", "快", "怕"] },
+      { "r": "力", "std": "力", "py": "lì", "hv": "lực", "vi": "sức mạnh", "n": 2, "note": "Hình cánh tay gồng cơ bắp.", "ex": ["男", "动", "加", "办"] },
+      { "r": "又", "std": "又", "py": "yòu", "hv": "hựu", "vi": "bàn tay phải; lại", "n": 2, "note": "Vốn là hình bàn tay, nay hay dùng nghĩa 'lại, lần nữa'.", "ex": ["友", "对", "双", "取"] }
+    ]},
+    { "name": "Nhóm 3 · Con người và gia đình", "note": "", "items": [
+      { "r": "女", "std": "女", "py": "nǚ", "hv": "nữ", "vi": "đàn bà, con gái", "n": 3, "note": "Hình người phụ nữ đang quỳ, hai tay khoanh trước ngực.", "ex": ["好", "妈", "她", "姐", "安"] },
+      { "r": "子", "std": "子", "py": "zǐ", "hv": "tử", "vi": "đứa con", "n": 3, "note": "Hình em bé quấn tã, hai tay dang ra.", "ex": ["好", "字", "学", "孩"] },
+      { "r": "大", "std": "大", "py": "dà", "hv": "đại", "vi": "to lớn", "n": 3, "note": "Hình người dang rộng hai tay hai chân.", "ex": ["天", "太", "夫", "头"] },
+      { "r": "小", "std": "小", "py": "xiǎo", "hv": "tiểu", "vi": "nhỏ bé", "n": 3, "note": "Ba hạt cát nhỏ. Nét sổ giữa viết TRƯỚC.", "ex": ["少", "尖", "示"] },
+      { "r": "尸", "std": "尸", "py": "shī", "hv": "thi", "vi": "thân người nằm", "n": 3, "note": "Người nằm nghiêng; nay hay chỉ nhà cửa, phần thân.", "ex": ["屋", "层", "居"] },
+      { "r": "父", "std": "父", "py": "fù", "hv": "phụ", "vi": "người cha", "n": 4, "note": "Hình bàn tay cầm cây rìu — người đàn ông đi làm.", "ex": ["爸", "爷"] }
+    ]},
+    { "name": "Nhóm 4 · Trời đất, thiên nhiên", "note": "Nhóm này giải thích nghĩa của rất nhiều chữ HSK1.", "items": [
+      { "r": "日", "std": "日", "py": "rì", "hv": "nhật", "vi": "mặt trời; ngày", "n": 4, "note": "Vòng tròn có chấm giữa, vẽ vuông lại cho dễ viết.", "ex": ["明", "时", "早", "是", "春"] },
+      { "r": "月", "std": "月", "py": "yuè", "hv": "nguyệt", "vi": "mặt trăng; tháng; (và) thịt", "n": 4, "note": "Cẩn thận: 月 bên trái chữ thường thực ra là 肉 (thịt) — nên 脸 (mặt), 脚 (chân) đều có nó.", "ex": ["明", "朋", "有", "服"] },
+      { "r": "水 / 氵", "std": "水", "py": "shuǐ", "hv": "thuỷ", "vi": "nước", "n": 4, "note": "Bên trái viết thành 氵 (ba chấm thuỷ). Thấy 氵 là nghĩ ngay tới nước, sông, chất lỏng.", "ex": ["河", "海", "酒", "汉", "洗"] },
+      { "r": "火 / 灬", "std": "火", "py": "huǒ", "hv": "hoả", "vi": "lửa", "n": 4, "note": "Dưới đáy chữ viết thành 灬 (bốn chấm hoả) — là ngọn lửa liếm lên.", "ex": ["热", "点", "烧", "然"] },
+      { "r": "木", "std": "木", "py": "mù", "hv": "mộc", "vi": "cây, gỗ", "n": 4, "note": "Hình cái cây có tán và rễ. Đồ gỗ đều mang bộ này.", "ex": ["林", "桌", "椅", "本", "校"] },
+      { "r": "土", "std": "土", "py": "tǔ", "hv": "thổ", "vi": "đất", "n": 3, "note": "Đống đất trên mặt đất. Nét ngang dưới DÀI hơn nét trên.", "ex": ["地", "在", "坐", "块"] },
+      { "r": "山", "std": "山", "py": "shān", "hv": "sơn", "vi": "núi", "n": 3, "note": "Ba đỉnh núi. Viết đỉnh giữa trước.", "ex": ["岛", "出", "岁"] },
+      { "r": "石", "std": "石", "py": "shí", "hv": "thạch", "vi": "đá", "n": 5, "note": "Hòn đá dưới vách núi.", "ex": ["矿", "破", "碗"] },
+      { "r": "田", "std": "田", "py": "tián", "hv": "điền", "vi": "ruộng", "n": 5, "note": "Thửa ruộng chia ô. Liên quan tới nông nghiệp.", "ex": ["男", "画", "累"] },
+      { "r": "雨", "std": "雨", "py": "yǔ", "hv": "vũ", "vi": "mưa", "n": 8, "note": "Những giọt nước rơi từ đám mây. Nằm trên đầu chữ thời tiết.", "ex": ["雪", "电", "零"] },
+      { "r": "气", "std": "气", "py": "qì", "hv": "khí", "vi": "hơi, không khí", "n": 4, "note": "Hình làn hơi bốc lên.", "ex": ["汽", "氧"] },
+      { "r": "川", "std": "川", "py": "chuān", "hv": "xuyên", "vi": "dòng sông", "n": 3, "note": "Ba dòng nước chảy song song.", "ex": ["州", "顺"] }
+    ]},
+    { "name": "Nhóm 5 · Cây cỏ và loài vật", "note": "", "items": [
+      { "r": "艹", "std": "草", "py": "cǎo", "hv": "thảo", "vi": "cỏ cây", "n": 3, "note": "Luôn nằm trên đỉnh chữ. Thấy 艹 là biết liên quan tới cây cỏ, rau, hoa, thuốc.", "ex": ["花", "茶", "菜", "药", "苹"] },
+      { "r": "竹", "std": "竹", "py": "zhú", "hv": "trúc", "vi": "tre trúc", "n": 6, "note": "Trên đỉnh chữ viết thu nhỏ. Đồ đan, bút, sách xưa đều làm từ tre.", "ex": ["笔", "第", "等", "答"] },
+      { "r": "禾", "std": "禾", "py": "hé", "hv": "hoà", "vi": "cây lúa", "n": 5, "note": "Cây lúa trĩu bông, khác 木 ở nét phẩy trên đầu.", "ex": ["和", "秋", "种", "香"] },
+      { "r": "米", "std": "米", "py": "mǐ", "hv": "mễ", "vi": "gạo", "n": 6, "note": "Hạt gạo rơi vãi quanh trục.", "ex": ["粉", "糖", "类"] },
+      { "r": "牛", "std": "牛", "py": "niú", "hv": "ngưu", "vi": "con trâu, bò", "n": 4, "note": "Đầu trâu có hai sừng.", "ex": ["物", "特", "牧"] },
+      { "r": "马", "std": "马", "py": "mǎ", "hv": "mã", "vi": "con ngựa", "n": 3, "note": "Hình con ngựa có bờm, giản thể còn 3 nét.", "ex": ["妈", "吗", "骑"] },
+      { "r": "鱼", "std": "鱼", "py": "yú", "hv": "ngư", "vi": "con cá", "n": 8, "note": "Đầu, thân có vảy, đuôi cá.", "ex": ["鲜", "鲁"] },
+      { "r": "鸟", "std": "鸟", "py": "niǎo", "hv": "điểu", "vi": "con chim", "n": 5, "note": "Chim đứng nghiêng, có mắt và mỏ.", "ex": ["鸡", "鸭", "鹅"] },
+      { "r": "犬 / 犭", "std": "犬", "py": "quǎn", "hv": "khuyển", "vi": "con chó", "n": 4, "note": "Bên trái viết thành 犭 — chỉ chung THÚ BỐN CHÂN.", "ex": ["狗", "猫", "猪"] },
+      { "r": "羊", "std": "羊", "py": "yáng", "hv": "dương", "vi": "con dê, cừu", "n": 6, "note": "Đầu dê nhìn từ trước, hai sừng cong.", "ex": ["美", "养", "样"] },
+      { "r": "虫", "std": "虫", "py": "chóng", "hv": "trùng", "vi": "sâu bọ, côn trùng", "n": 6, "note": "Vốn là hình con rắn.", "ex": ["蚊", "蛇", "虾"] }
+    ]},
+    { "name": "Nhóm 6 · Đồ vật và hành động", "note": "", "items": [
+      { "r": "刀 / 刂", "std": "刀", "py": "dāo", "hv": "đao", "vi": "con dao", "n": 2, "note": "Bên phải chữ viết thành 刂. Liên quan tới cắt, chia, sắc bén.", "ex": ["分", "别", "到", "前"] },
+      { "r": "车", "std": "车", "py": "chē", "hv": "xa", "vi": "xe", "n": 4, "note": "Nhìn từ trên xuống: thùng xe và hai bánh.", "ex": ["轻", "较", "辆"] },
+      { "r": "门", "std": "门", "py": "mén", "hv": "môn", "vi": "cửa", "n": 3, "note": "Cánh cửa hai lá của nhà xưa.", "ex": ["问", "间", "闲"] },
+      { "r": "广", "std": "广", "py": "guǎng", "hv": "nghiễm", "vi": "mái hiên, nhà rộng", "n": 3, "note": "Mái nhà dựa vào vách. Liên quan tới công trình.", "ex": ["店", "床", "座"] },
+      { "r": "衣 / 衤", "std": "衣", "py": "yī", "hv": "y", "vi": "quần áo", "n": 6, "note": "Bên trái viết 衤 — chú ý có HAI chấm, khác với 礻 (một chấm).", "ex": ["服", "裤", "被"] },
+      { "r": "食 / 饣", "std": "食", "py": "shí", "hv": "thực", "vi": "đồ ăn, ăn", "n": 9, "note": "Bên trái viết thành 饣. Thấy nó là chữ nói về ĂN UỐNG.", "ex": ["饭", "饿", "馆", "饮"] },
+      { "r": "金 / 钅", "std": "金", "py": "jīn", "hv": "kim", "vi": "kim loại, vàng", "n": 8, "note": "Bên trái viết thành 钅. Đồ kim loại đều mang bộ này.", "ex": ["钱", "银", "错", "钟"] },
+      { "r": "贝", "std": "贝", "py": "bèi", "hv": "bối", "vi": "vỏ sò → tiền bạc", "n": 4, "note": "Người xưa dùng vỏ sò làm tiền, nên chữ có 贝 thường về TIỀN.", "ex": ["买", "贵", "费"] },
+      { "r": "言 / 讠", "std": "言", "py": "yán", "hv": "ngôn", "vi": "lời nói", "n": 7, "note": "Bên trái viết thành 讠. Thấy nó là chữ về NÓI NĂNG, ngôn ngữ.", "ex": ["说", "话", "语", "谢", "请"] },
+      { "r": "见", "std": "见", "py": "jiàn", "hv": "kiến", "vi": "nhìn thấy", "n": 4, "note": "Con mắt 目 đặt trên đôi chân 儿 — người đang nhìn.", "ex": ["现", "视", "觉"] },
+      { "r": "走", "std": "走", "py": "zǒu", "hv": "tẩu", "vi": "đi bộ, chạy", "n": 7, "note": "Người vung tay sải bước.", "ex": ["起", "超", "越"] },
+      { "r": "辶", "std": "辶", "py": "chuò", "hv": "sước", "vi": "đi trên đường", "n": 3, "note": "Bộ 'đi' bao dưới-trái. Chữ có nó nói về DI CHUYỂN. Viết SAU CÙNG.", "ex": ["这", "还", "过", "近", "送"] },
+      { "r": "纟", "std": "纟", "py": "sī", "hv": "mịch", "vi": "sợi tơ, chỉ", "n": 3, "note": "Bó tơ tằm. Liên quan tới vải vóc, dây, màu sắc.", "ex": ["红", "给", "结", "级"] },
+      { "r": "王", "std": "王", "py": "wáng", "hv": "vương / ngọc", "vi": "vua; (và) ngọc", "n": 4, "note": "Bên trái chữ, 王 thực ra là 玉 (ngọc) — nên 玩, 球 đều liên quan tới đá quý.", "ex": ["玩", "球", "现", "班"] },
+      { "r": "工", "std": "工", "py": "gōng", "hv": "công", "vi": "công việc, thợ", "n": 3, "note": "Hình cái thước hoặc cái đục của thợ.", "ex": ["功", "左", "江", "红"] },
+      { "r": "巾", "std": "巾", "py": "jīn", "hv": "cân", "vi": "cái khăn, vải", "n": 3, "note": "Tấm vải treo rủ xuống.", "ex": ["带", "帽", "布", "希"] }
+    ]}
+  ]
+}

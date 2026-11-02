@@ -1,0 +1,76 @@
+{
+  "id": 23,
+  "cn": "点菜",
+  "title": "Gọi món",
+  "goal": "Gọi món ở quán, dùng 要 để yêu cầu, và học bổ ngữ kết quả 完 (làm xong).",
+  "words": [
+    { "w": "鸡蛋", "py": "jīdàn", "hv": "kê đản", "vi": "quả trứng gà", "pos": "danh từ",
+      "note": "鸡 (gà, có bộ 鸟 chim) + 蛋 (trứng). Tiếng Việt: \"kê\" trong \"kê cân\" (gà), \"đản\" trong \"đản bạch\".",
+      "ex": [{ "cn": "我要两个鸡蛋。", "py": "Wǒ yào liǎng ge jīdàn.", "vi": "Cho tôi hai quả trứng." }] },
+    { "w": "牛奶", "py": "niúnǎi", "hv": "ngưu nãi", "vi": "sữa bò", "pos": "danh từ",
+      "note": "牛 (bò) + 奶 (sữa, bộ 女). Nghĩa đen là \"sữa bò\", rất dễ đoán.",
+      "ex": [{ "cn": "我每天喝牛奶。", "py": "Wǒ měi tiān hē niúnǎi.", "vi": "Ngày nào tôi cũng uống sữa." }] },
+    { "w": "咖啡", "py": "kāfēi", "hv": "ca phê", "vi": "cà phê", "pos": "danh từ",
+      "note": "Từ mượn phiên âm, giống hệt \"cà phê\" tiếng Việt. Cả hai chữ đều có bộ 口 vì chỉ mượn âm.",
+      "ex": [{ "cn": "我想喝咖啡。", "py": "Wǒ xiǎng hē kāfēi.", "vi": "Tôi muốn uống cà phê." }] },
+    { "w": "羊肉", "py": "yángròu", "hv": "dương nhục", "vi": "thịt dê, thịt cừu", "pos": "danh từ",
+      "note": "羊 (dê, bộ thủ đã học) + 肉 (thịt). Ghép tên con vật + 肉 là ra tên thịt: 牛肉, 鸡肉, 鱼肉.",
+      "ex": [{ "cn": "我不吃羊肉。", "py": "Wǒ bù chī yángròu.", "vi": "Tôi không ăn thịt dê." }] },
+    { "w": "西瓜", "py": "xīguā", "hv": "tây qua", "vi": "dưa hấu", "pos": "danh từ",
+      "note": "西 (phía tây) + 瓜 (quả bí, dưa) — loại dưa từ phương tây truyền vào.",
+      "ex": [{ "cn": "夏天我喜欢吃西瓜。", "py": "Xiàtiān wǒ xǐhuan chī xīguā.", "vi": "Mùa hè tôi thích ăn dưa hấu." }] },
+    { "w": "鱼", "py": "yú", "hv": "ngư", "vi": "con cá", "pos": "danh từ",
+      "note": "Bộ thủ đã học ở phần bộ thủ. Tiếng Việt: \"ngư dân\", \"ngư nghiệp\".",
+      "ex": [{ "cn": "这个鱼很好吃。", "py": "Zhège yú hěn hǎochī.", "vi": "Con cá này rất ngon." }] },
+    { "w": "好吃", "py": "hǎochī", "hv": "hảo cật", "vi": "ngon (đồ ăn)", "pos": "tính từ",
+      "note": "Nhắc lại quy tắc bài 9: 好 + động từ giác quan. 好吃 ngon, 好喝 ngon (uống), 好看 đẹp, 好听 hay.",
+      "ex": [{ "cn": "太好吃了！", "py": "Tài hǎochī le!", "vi": "Ngon quá!" }] },
+    { "w": "要", "py": "yào", "hv": "yếu", "vi": "muốn, cần; sẽ", "pos": "động từ",
+      "note": "Tiếng Việt: \"yêu cầu\", \"cần yếu\". Mạnh hơn 想 — 想 là \"muốn\", 要 là \"cần / nhất định lấy\".",
+      "ex": [{ "cn": "我要一杯咖啡。", "py": "Wǒ yào yì bēi kāfēi.", "vi": "Cho tôi một cốc cà phê." }] },
+    { "w": "完", "py": "wán", "hv": "hoàn", "vi": "xong, hết", "pos": "động từ",
+      "note": "Bộ 宀 (mái nhà). Tiếng Việt: \"hoàn thành\", \"hoàn tất\". Chủ yếu dùng làm bổ ngữ sau động từ.",
+      "ex": [{ "cn": "我吃完了。", "py": "Wǒ chī wán le.", "vi": "Tôi ăn xong rồi." }] },
+    { "w": "还", "py": "hái", "hv": "hoàn", "vi": "còn, vẫn; thêm nữa", "pos": "phó từ",
+      "note": "Có bộ 辶 (đi đường). Đọc hái nghĩa là \"còn, vẫn\"; đọc huán nghĩa là \"trả lại\" (还书 trả sách).",
+      "ex": [{ "cn": "我还要一个。", "py": "Wǒ hái yào yí ge.", "vi": "Tôi muốn thêm một cái nữa." }] }
+  ],
+  "grammar": [
+    { "t": "要 và 想 — muốn ở hai mức độ",
+      "b": "想 = muốn (mong ước) · 要 = cần, nhất định lấy",
+      "d": "Khi gọi món phải dùng 要 vì đó là yêu cầu cụ thể: 我要一碗米饭. Nói 我想一碗米饭 nghe rất kỳ. Ngược lại, ước mơ xa thì dùng 想: 我想去中国.",
+      "ex": [
+        { "cn": "我要一杯咖啡。", "py": "Wǒ yào yì bēi kāfēi.", "vi": "Cho tôi một cốc cà phê. (gọi món)" },
+        { "cn": "我想去中国。", "py": "Wǒ xiǎng qù Zhōngguó.", "vi": "Tôi muốn đi Trung Quốc. (mong ước)" },
+        { "cn": "我不要，谢谢。", "py": "Wǒ bú yào, xièxie.", "vi": "Tôi không lấy, cảm ơn." }
+      ] },
+    { "t": "完 — bổ ngữ chỉ việc đã LÀM XONG",
+      "b": "Động từ + 完 (+ 了)",
+      "d": "Ghép ngay sau động từ để nói việc đã hoàn tất: 吃完 ăn xong, 看完 xem xong, 写完 viết xong. Phủ định dùng 没: 我没吃完 (tôi ăn chưa xong).",
+      "ex": [
+        { "cn": "我吃完饭了。", "py": "Wǒ chī wán fàn le.", "vi": "Tôi ăn cơm xong rồi." },
+        { "cn": "这本书我看完了。", "py": "Zhè běn shū wǒ kàn wán le.", "vi": "Quyển sách này tôi đọc xong rồi." },
+        { "cn": "我还没写完。", "py": "Wǒ hái méi xiě wán.", "vi": "Tôi vẫn chưa viết xong." }
+      ] },
+    { "t": "还 — vẫn còn, và thêm nữa",
+      "b": "还 + động từ (vẫn) · 还要 + số lượng (thêm)",
+      "d": "Hai nghĩa hay dùng: \"vẫn còn\" (我还在吃) và \"thêm nữa\" (我还要一个). Kết hợp 还没 nghĩa là \"vẫn chưa\".",
+      "ex": [
+        { "cn": "我还在吃饭。", "py": "Wǒ hái zài chīfàn.", "vi": "Tôi vẫn đang ăn cơm." },
+        { "cn": "我还要一杯茶。", "py": "Wǒ hái yào yì bēi chá.", "vi": "Cho tôi thêm một cốc trà." },
+        { "cn": "他还没来。", "py": "Tā hái méi lái.", "vi": "Anh ấy vẫn chưa đến." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你们要点什么？", "py": "Nǐmen yào diǎn shénme?", "vi": "Các bạn gọi món gì?" },
+    { "cn": "我要一碗米饭和一个鸡蛋。", "py": "Wǒ yào yì wǎn mǐfàn hé yí ge jīdàn.", "vi": "Cho tôi một bát cơm và một quả trứng." },
+    { "cn": "我想喝一杯咖啡。", "py": "Wǒ xiǎng hē yì bēi kāfēi.", "vi": "Tôi muốn uống một cốc cà phê." },
+    { "cn": "我不吃羊肉。", "py": "Wǒ bù chī yángròu.", "vi": "Tôi không ăn thịt dê." },
+    { "cn": "这个鱼太好吃了！", "py": "Zhège yú tài hǎochī le!", "vi": "Con cá này ngon quá!" },
+    { "cn": "我每天早上喝牛奶。", "py": "Wǒ měi tiān zǎoshang hē niúnǎi.", "vi": "Sáng nào tôi cũng uống sữa." },
+    { "cn": "夏天的西瓜很甜。", "py": "Xiàtiān de xīguā hěn tián.", "vi": "Dưa hấu mùa hè rất ngọt." },
+    { "cn": "我吃完了，你呢？", "py": "Wǒ chī wán le, nǐ ne?", "vi": "Tôi ăn xong rồi, còn bạn?" },
+    { "cn": "我还没吃完。", "py": "Wǒ hái méi chī wán.", "vi": "Tôi vẫn chưa ăn xong." },
+    { "cn": "还要别的吗？", "py": "Hái yào biéde ma?", "vi": "Có lấy thêm gì nữa không?" }
+  ]
+}

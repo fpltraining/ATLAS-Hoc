@@ -1,0 +1,74 @@
+{
+  "id": 17,
+  "cn": "你身体怎么样？",
+  "title": "Sức khoẻ",
+  "goal": "Nói về sức khoẻ và cảm giác, dùng 觉得 để nêu ý kiến, phân biệt 非常 với 很.",
+  "words": [
+    { "w": "身体", "py": "shēntǐ", "hv": "thân thể", "vi": "cơ thể, sức khoẻ", "pos": "danh từ",
+      "note": "Chính là \"thân thể\" tiếng Việt. Hỏi thăm sức khoẻ: 你身体怎么样？",
+      "ex": [{ "cn": "他身体很好。", "py": "Tā shēntǐ hěn hǎo.", "vi": "Sức khoẻ anh ấy rất tốt." }] },
+    { "w": "眼睛", "py": "yǎnjing", "hv": "nhãn tinh", "vi": "con mắt", "pos": "danh từ",
+      "note": "Cả hai chữ đều có bộ 目 (mắt). Tiếng Việt: \"nhãn khoa\", \"nhãn cầu\". Chữ thứ hai đọc nhẹ.",
+      "ex": [{ "cn": "她的眼睛很大。", "py": "Tā de yǎnjing hěn dà.", "vi": "Mắt cô ấy rất to." }] },
+    { "w": "生病", "py": "shēngbìng", "hv": "sinh bệnh", "vi": "bị bệnh, ốm", "pos": "động từ",
+      "note": "生 (sinh ra) + 病 (bệnh). Là ĐỘNG TỪ nên nói 我生病了, không nói 我是生病.",
+      "ex": [{ "cn": "我昨天生病了。", "py": "Wǒ zuótiān shēngbìng le.", "vi": "Hôm qua tôi bị ốm." }] },
+    { "w": "药", "py": "yào", "hv": "dược", "vi": "thuốc", "pos": "danh từ",
+      "note": "Bộ 艹 (cỏ cây) trên đầu — thuốc xưa làm từ cây cỏ. Tiếng Việt: \"dược sĩ\", \"đông dược\".",
+      "ex": [{ "cn": "你吃药了吗？", "py": "Nǐ chī yào le ma?", "vi": "Bạn uống thuốc chưa?" }] },
+    { "w": "累", "py": "lèi", "hv": "luy", "vi": "mệt", "pos": "tính từ",
+      "note": "田 (ruộng) trên 糸 (sợi tơ) — làm ruộng dệt vải thì mệt. Nhớ dùng 很累, đừng nói trống 累.",
+      "ex": [{ "cn": "我今天很累。", "py": "Wǒ jīntiān hěn lèi.", "vi": "Hôm nay tôi rất mệt." }] },
+    { "w": "休息", "py": "xiūxi", "hv": "hưu tức", "vi": "nghỉ ngơi", "pos": "động từ",
+      "note": "休 = 亻(người) dựa vào 木 (cây) — người tựa gốc cây nghỉ. Tiếng Việt: \"hưu trí\", \"nghỉ hưu\".",
+      "ex": [{ "cn": "你休息一下吧。", "py": "Nǐ xiūxi yíxià ba.", "vi": "Bạn nghỉ một chút đi." }] },
+    { "w": "觉得", "py": "juéde", "hv": "giác đắc", "vi": "cảm thấy, thấy rằng", "pos": "động từ",
+      "note": "Dùng để nêu ý kiến cá nhân, giống \"tôi thấy…\" tiếng Việt. Sau 觉得 là CẢ MỘT CÂU.",
+      "ex": [{ "cn": "我觉得汉语很难。", "py": "Wǒ juéde Hànyǔ hěn nán.", "vi": "Tôi thấy tiếng Trung rất khó." }] },
+    { "w": "非常", "py": "fēicháng", "hv": "phi thường", "vi": "vô cùng, cực kỳ", "pos": "phó từ",
+      "note": "Chính là \"phi thường\" tiếng Việt. Mạnh hơn 很 rất nhiều — đây mới thật sự là \"rất\".",
+      "ex": [{ "cn": "我非常高兴。", "py": "Wǒ fēicháng gāoxìng.", "vi": "Tôi vô cùng vui." }] },
+    { "w": "快", "py": "kuài", "hv": "khoái", "vi": "nhanh", "pos": "tính từ",
+      "note": "Bộ 忄 (tim) — vốn nghĩa là vui, sau thành \"nhanh\". Tiếng Việt: \"khoái lạc\", \"sảng khoái\".",
+      "ex": [{ "cn": "他跑得很快。", "py": "Tā pǎo de hěn kuài.", "vi": "Anh ấy chạy rất nhanh." }] },
+    { "w": "慢", "py": "màn", "hv": "mạn", "vi": "chậm", "pos": "tính từ",
+      "note": "Cũng có bộ 忄. Tiếng Việt: \"mạn tính\" (bệnh tiến triển chậm). 慢慢来 = từ từ thôi.",
+      "ex": [{ "cn": "请说慢一点儿。", "py": "Qǐng shuō màn yìdiǎnr.", "vi": "Xin nói chậm một chút." }] }
+  ],
+  "grammar": [
+    { "t": "觉得 — nêu ý kiến, theo sau là cả một câu",
+      "b": "Chủ ngữ + 觉得 + [một câu hoàn chỉnh]",
+      "d": "Khác các động từ thường chỉ nhận một danh từ, sau 觉得 phải là một mệnh đề có đủ chủ ngữ và vị ngữ. Nói 我觉得很好 cũng được vì chủ ngữ của vế sau được hiểu ngầm.",
+      "ex": [
+        { "cn": "我觉得这个菜很好吃。", "py": "Wǒ juéde zhège cài hěn hǎochī.", "vi": "Tôi thấy món này rất ngon." },
+        { "cn": "你觉得怎么样？", "py": "Nǐ juéde zěnmeyàng?", "vi": "Bạn thấy thế nào?" },
+        { "cn": "我不觉得累。", "py": "Wǒ bù juéde lèi.", "vi": "Tôi không thấy mệt." }
+      ] },
+    { "t": "很 và 非常 — hai mức độ khác hẳn nhau",
+      "b": "很 = từ đệm bắt buộc · 非常 = thật sự rất",
+      "d": "Đây là điểm người Việt hay hiểu sai. 我很好 chỉ nghĩa là \"tôi khoẻ\" (bình thường). Muốn nói \"tôi RẤT khoẻ\" thì phải dùng 非常好. Nhớ: 很 nhạt, 非常 đậm.",
+      "ex": [
+        { "cn": "我很累。", "py": "Wǒ hěn lèi.", "vi": "Tôi mệt." },
+        { "cn": "我非常累。", "py": "Wǒ fēicháng lèi.", "vi": "Tôi mệt lả người." }
+      ] },
+    { "t": "一下 và 一点儿 — làm nhẹ giọng cho lịch sự",
+      "b": "Động từ + 一下 · Tính từ + 一点儿",
+      "d": "Thêm 一下 sau động từ nghĩa là \"làm một chút\", nghe mềm và lịch sự hơn nhiều. Với tính từ thì dùng 一点儿.",
+      "ex": [
+        { "cn": "你休息一下吧。", "py": "Nǐ xiūxi yíxià ba.", "vi": "Bạn nghỉ một chút đi." },
+        { "cn": "请说慢一点儿。", "py": "Qǐng shuō màn yìdiǎnr.", "vi": "Xin nói chậm một chút." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你身体怎么样？", "py": "Nǐ shēntǐ zěnmeyàng?", "vi": "Sức khoẻ bạn thế nào?" },
+    { "cn": "我身体很好，谢谢。", "py": "Wǒ shēntǐ hěn hǎo, xièxie.", "vi": "Tôi khoẻ, cảm ơn." },
+    { "cn": "我昨天生病了。", "py": "Wǒ zuótiān shēngbìng le.", "vi": "Hôm qua tôi bị ốm." },
+    { "cn": "你吃药了吗？", "py": "Nǐ chī yào le ma?", "vi": "Bạn uống thuốc chưa?" },
+    { "cn": "我今天非常累。", "py": "Wǒ jīntiān fēicháng lèi.", "vi": "Hôm nay tôi mệt lả." },
+    { "cn": "你休息一下吧。", "py": "Nǐ xiūxi yíxià ba.", "vi": "Bạn nghỉ một chút đi." },
+    { "cn": "我觉得这个药很好。", "py": "Wǒ juéde zhège yào hěn hǎo.", "vi": "Tôi thấy thuốc này tốt." },
+    { "cn": "请说慢一点儿，我听不懂。", "py": "Qǐng shuō màn yìdiǎnr, wǒ tīng bu dǒng.", "vi": "Xin nói chậm chút, tôi nghe không hiểu." },
+    { "cn": "她的眼睛又大又漂亮。", "py": "Tā de yǎnjing yòu dà yòu piàoliang.", "vi": "Mắt cô ấy vừa to vừa đẹp." },
+    { "cn": "他吃饭很快。", "py": "Tā chīfàn hěn kuài.", "vi": "Anh ấy ăn cơm rất nhanh." }
+  ]
+}

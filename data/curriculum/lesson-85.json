@@ -1,0 +1,72 @@
+{
+  "id": 85,
+  "cn": "机场和证件",
+  "title": "Sân bay và giấy tờ",
+  "goal": "Trọn bộ từ vựng đi máy bay và làm thủ tục xuất nhập cảnh.",
+  "words": [
+    { "w": "航班", "py": "hángbān", "hv": "hàng ban", "vi": "chuyến bay", "pos": "danh từ",
+      "note": "航 (hàng hải, hàng không) + 班 (chuyến, ca). Tiếng Việt: \"hàng không\", \"hải hàng\".",
+      "ex": [{ "cn": "我的航班晚点了。", "py": "Wǒ de hángbān wǎndiǎn le.", "vi": "Chuyến bay của tôi bị trễ." }] },
+    { "w": "起飞", "py": "qǐfēi", "hv": "khởi phi", "vi": "cất cánh", "pos": "động từ",
+      "note": "起 (dậy, bài 18 trong 起床) + 飞 (bay). Cặp đối với 降落.",
+      "ex": [{ "cn": "飞机十点起飞。", "py": "Fēijī shí diǎn qǐfēi.", "vi": "Máy bay cất cánh lúc mười giờ." }] },
+    { "w": "降落", "py": "jiàngluò", "hv": "hàng lạc", "vi": "hạ cánh", "pos": "động từ",
+      "note": "降 (hạ xuống — cùng chữ với 降低 bài 113) + 落 (rơi). Tiếng Việt: \"hạ cánh\", \"giáng cấp\".",
+      "ex": [{ "cn": "飞机已经降落了。", "py": "Fēijī yǐjīng jiàngluò le.", "vi": "Máy bay đã hạ cánh rồi." }] },
+    { "w": "登机牌", "py": "dēngjīpái", "hv": "đăng cơ bài", "vi": "thẻ lên máy bay", "pos": "danh từ",
+      "note": "登 (lên) + 机 (máy bay) + 牌 (thẻ). Tiếng Việt: \"đăng\" trong \"đăng đàn\", \"bài\" trong \"bài vị\".",
+      "ex": [{ "cn": "请出示登机牌。", "py": "Qǐng chūshì dēngjīpái.", "vi": "Xin xuất trình thẻ lên máy bay." }] },
+    { "w": "签证", "py": "qiānzhèng", "hv": "thiêm chứng", "vi": "visa, thị thực", "pos": "danh từ",
+      "note": "签 (ký, bộ 竹) + 证 (chứng, bài 73). Xin visa là 办签证 hoặc 申请签证.",
+      "ex": [{ "cn": "去中国要办签证。", "py": "Qù Zhōngguó yào bàn qiānzhèng.", "vi": "Đi Trung Quốc phải làm visa." }] },
+    { "w": "大使馆", "py": "dàshǐguǎn", "hv": "đại sứ quán", "vi": "đại sứ quán", "pos": "danh từ",
+      "note": "Chính là \"đại sứ quán\" tiếng Việt: 大使 (đại sứ) + 馆 (quán, bài 40).",
+      "ex": [{ "cn": "签证要去大使馆办。", "py": "Qiānzhèng yào qù dàshǐguǎn bàn.", "vi": "Visa phải tới đại sứ quán làm." }] },
+    { "w": "堵车", "py": "dǔchē", "hv": "đổ xa", "vi": "tắc đường", "pos": "động từ",
+      "note": "堵 (chặn, bít, bộ 土) + 车 (xe). Động từ ly hợp: 堵了半个小时车.",
+      "ex": [{ "cn": "路上堵车，我迟到了。", "py": "Lù shàng dǔchē, wǒ chídào le.", "vi": "Đường tắc nên tôi đến muộn." }] },
+    { "w": "加油站", "py": "jiāyóuzhàn", "hv": "gia du trạm", "vi": "trạm xăng", "pos": "danh từ",
+      "note": "加 (thêm) + 油 (dầu) + 站 (trạm). 加油 còn nghĩa là \"cố lên!\" — câu cổ vũ phổ biến nhất.",
+      "ex": [{ "cn": "前面有个加油站。", "py": "Qiánmiàn yǒu ge jiāyóuzhàn.", "vi": "Phía trước có trạm xăng." }] },
+    { "w": "邮局", "py": "yóujú", "hv": "bưu cục", "vi": "bưu điện", "pos": "danh từ",
+      "note": "Chính là \"bưu cục\" tiếng Việt: 邮 (bưu) + 局 (cục). Nay hay gọi \"bưu điện\".",
+      "ex": [{ "cn": "我去邮局寄东西。", "py": "Wǒ qù yóujú jì dōngxi.", "vi": "Tôi ra bưu điện gửi đồ." }] },
+    { "w": "入口", "py": "rùkǒu", "hv": "nhập khẩu", "vi": "lối vào", "pos": "danh từ",
+      "note": "入 (vào) + 口 (miệng, cửa). Trái nghĩa là 出口 (lối ra). Biển chỉ dẫn khắp nơi dùng hai từ này.",
+      "ex": [{ "cn": "入口在那边。", "py": "Rùkǒu zài nàbiān.", "vi": "Lối vào ở đằng kia." }] }
+  ],
+  "grammar": [
+    { "t": "加油 — câu cổ vũ quốc dân",
+      "b": "加油！· 为…加油",
+      "d": "Nghĩa đen là \"thêm dầu\" (đổ xăng), nhưng dùng để cổ vũ ở mọi hoàn cảnh: thi cử, thi đấu, gặp khó khăn. Tương đương \"cố lên!\" của tiếng Việt.",
+      "ex": [
+        { "cn": "考试加油！", "py": "Kǎoshì jiāyóu!", "vi": "Thi tốt nhé!" },
+        { "cn": "大家为他加油。", "py": "Dàjiā wèi tā jiāyóu.", "vi": "Mọi người cổ vũ cho anh ấy." }
+      ] },
+    { "t": "Bộ câu ở sân bay",
+      "b": "办登机牌 → 过安检 → 登机 → 起飞 → 降落 → 取行李",
+      "d": "Sáu bước theo đúng thứ tự bạn sẽ đi qua. Học nguyên chuỗi giúp bạn nghe hiểu thông báo sân bay và làm thủ tục trôi chảy.",
+      "ex": [
+        { "cn": "请到三号柜台办登机牌。", "py": "Qǐng dào sān hào guìtái bàn dēngjīpái.", "vi": "Xin tới quầy số 3 làm thủ tục." },
+        { "cn": "行李在几号出口取？", "py": "Xíngli zài jǐ hào chūkǒu qǔ?", "vi": "Hành lý lấy ở cửa số mấy?" }
+      ] },
+    { "t": "办 — làm thủ tục giấy tờ",
+      "b": "办 + giấy tờ / thủ tục",
+      "d": "办签证, 办护照, 办手续, 办登机牌. Chữ 办 (bài 39 trong 办法, 办公室) là động từ chuyên dùng cho việc hành chính. Không dùng 做 cho những việc này.",
+      "ex": [
+        { "cn": "办护照需要多长时间？", "py": "Bàn hùzhào xūyào duō cháng shíjiān?", "vi": "Làm hộ chiếu mất bao lâu?" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "请问我的航班几点起飞？", "py": "Qǐngwèn wǒ de hángbān jǐ diǎn qǐfēi?", "vi": "Cho hỏi chuyến bay của tôi mấy giờ cất cánh?" },
+    { "cn": "飞机准时起飞了。", "py": "Fēijī zhǔnshí qǐfēi le.", "vi": "Máy bay cất cánh đúng giờ." },
+    { "cn": "因为天气不好，飞机推迟降落。", "py": "Yīnwèi tiānqì bù hǎo, fēijī tuīchí jiàngluò.", "vi": "Vì thời tiết xấu, máy bay hạ cánh muộn." },
+    { "cn": "登机牌和护照请拿好。", "py": "Dēngjīpái hé hùzhào qǐng ná hǎo.", "vi": "Thẻ lên máy bay và hộ chiếu xin cầm kỹ." },
+    { "cn": "我的签证下个月就到期了。", "py": "Wǒ de qiānzhèng xià ge yuè jiù dàoqī le.", "vi": "Visa của tôi tháng sau hết hạn." },
+    { "cn": "中国大使馆在市中心。", "py": "Zhōngguó dàshǐguǎn zài shì zhōngxīn.", "vi": "Đại sứ quán Trung Quốc ở trung tâm thành phố." },
+    { "cn": "早上八点最容易堵车。", "py": "Zǎoshang bā diǎn zuì róngyì dǔchē.", "vi": "Tám giờ sáng dễ tắc đường nhất." },
+    { "cn": "去机场前先到加油站加油。", "py": "Qù jīchǎng qián xiān dào jiāyóuzhàn jiāyóu.", "vi": "Trước khi ra sân bay ghé trạm đổ xăng." },
+    { "cn": "邮局星期天不开门。", "py": "Yóujú xīngqītiān bù kāimén.", "vi": "Bưu điện chủ nhật không mở cửa." },
+    { "cn": "请从入口进，从出口出。", "py": "Qǐng cóng rùkǒu jìn, cóng chūkǒu chū.", "vi": "Xin vào lối vào, ra lối ra." }
+  ]
+}

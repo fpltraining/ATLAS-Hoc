@@ -1,0 +1,72 @@
+{
+  "id": 67,
+  "cn": "身体和打扮",
+  "title": "Cơ thể và vẻ ngoài",
+  "goal": "Mở rộng từ về thân thể và chuyện chăm chút bề ngoài.",
+  "words": [
+    { "w": "胳膊", "py": "gēbo", "hv": "cách bác", "vi": "cánh tay", "pos": "danh từ",
+      "note": "Cả hai chữ đều có bộ 月 (thịt) — dấu hiệu chữ về cơ thể, đúng như bài 32.",
+      "ex": [{ "cn": "我的胳膊有点儿疼。", "py": "Wǒ de gēbo yǒudiǎnr téng.", "vi": "Cánh tay tôi hơi đau." }] },
+    { "w": "皮肤", "py": "pífū", "hv": "bì phu", "vi": "làn da", "pos": "danh từ",
+      "note": "Tiếng Việt: \"bì\" trong \"da bì\", \"phu\" trong \"phu thê\"? Không — \"phu\" ở đây là da thịt, như trong \"cốt nhục bì phu\".",
+      "ex": [{ "cn": "她的皮肤很白。", "py": "Tā de pífū hěn bái.", "vi": "Da cô ấy rất trắng." }] },
+    { "w": "肚子", "py": "dùzi", "hv": "đỗ tử", "vi": "cái bụng", "pos": "danh từ",
+      "note": "Cũng có bộ 月 (thịt). 肚子疼 (đau bụng), 肚子饿 (bụng đói).",
+      "ex": [{ "cn": "我肚子饿了。", "py": "Wǒ dùzi è le.", "vi": "Tôi đói bụng rồi." }] },
+    { "w": "眼镜", "py": "yǎnjìng", "hv": "nhãn kính", "vi": "cái kính (mắt)", "pos": "danh từ",
+      "note": "CẨN THẬN: 眼镜 yǎnjìng (kính) và 眼睛 yǎnjing (mắt, bài 17) chỉ khác chữ cuối. 镜 có bộ 钅 vì kính xưa mài từ kim loại.",
+      "ex": [{ "cn": "他戴着眼镜。", "py": "Tā dài zhe yǎnjìng.", "vi": "Anh ấy đeo kính." }] },
+    { "w": "牙膏", "py": "yágāo", "hv": "nha cao", "vi": "kem đánh răng", "pos": "danh từ",
+      "note": "牙 (răng, bài 51 trong 刷牙) + 膏 (chất sệt). Tiếng Việt: \"nha khoa\", \"cao dán\".",
+      "ex": [{ "cn": "牙膏用完了。", "py": "Yágāo yòng wán le.", "vi": "Kem đánh răng hết rồi." }] },
+    { "w": "汗", "py": "hàn", "hv": "hãn", "vi": "mồ hôi", "pos": "danh từ",
+      "note": "Bộ 氵 (nước) — mồ hôi là nước của cơ thể. Ra mồ hôi là 出汗.",
+      "ex": [{ "cn": "跑完步我出了很多汗。", "py": "Pǎo wán bù wǒ chū le hěn duō hàn.", "vi": "Chạy xong tôi ra nhiều mồ hôi." }] },
+    { "w": "力气", "py": "lìqi", "hv": "lực khí", "vi": "sức lực", "pos": "danh từ",
+      "note": "力 (lực, bộ thủ) + 气 (khí). Chỉ sức mạnh cơ bắp: 没力气 (không còn sức).",
+      "ex": [{ "cn": "我一点儿力气也没有了。", "py": "Wǒ yìdiǎnr lìqi yě méiyǒu le.", "vi": "Tôi chẳng còn chút sức nào." }] },
+    { "w": "样子", "py": "yàngzi", "hv": "dạng tử", "vi": "dáng vẻ, kiểu dáng", "pos": "danh từ",
+      "note": "样 = \"dạng\" trong \"hình dạng\", \"đa dạng\" (đã gặp ở 一样, bài 56).",
+      "ex": [{ "cn": "他看样子很累。", "py": "Tā kàn yàngzi hěn lèi.", "vi": "Trông dáng anh ấy có vẻ mệt." }] },
+    { "w": "打扮", "py": "dǎban", "hv": "đả ban", "vi": "trang điểm, ăn diện", "pos": "động từ",
+      "note": "打 (làm) + 扮 (hoá trang, bộ 扌). Chỉ việc chăm chút quần áo đầu tóc trước khi ra ngoài.",
+      "ex": [{ "cn": "她今天打扮得很漂亮。", "py": "Tā jīntiān dǎban de hěn piàoliang.", "vi": "Hôm nay cô ấy diện rất xinh." }] },
+    { "w": "理发", "py": "lǐfà", "hv": "lý phát", "vi": "cắt tóc", "pos": "động từ",
+      "note": "理 (sửa sang) + 发 (tóc, bài 32 trong 头发). Là động từ ly hợp: 理了一次发.",
+      "ex": [{ "cn": "我该去理发了。", "py": "Wǒ gāi qù lǐfà le.", "vi": "Tôi phải đi cắt tóc rồi." }] }
+  ],
+  "grammar": [
+    { "t": "眼睛 và 眼镜 — hai chữ chỉ khác một nét",
+      "b": "眼睛 yǎnjing = con mắt · 眼镜 yǎnjìng = cái kính",
+      "d": "Đây là cặp dễ nhầm nhất khi VIẾT. Mẹo: 镜 có bộ 钅 (kim loại) vì kính là đồ vật; 睛 có bộ 目 (mắt) vì đó là bộ phận cơ thể. Nhìn bộ thủ là phân biệt được ngay.",
+      "ex": [
+        { "cn": "我的眼睛不太好，要戴眼镜。", "py": "Wǒ de yǎnjing bú tài hǎo, yào dài yǎnjìng.", "vi": "Mắt tôi không tốt lắm, phải đeo kính." }
+      ] },
+    { "t": "看样子 — trông có vẻ",
+      "b": "看样子 + nhận định",
+      "d": "Dùng để phỏng đoán dựa vào vẻ ngoài quan sát được. Gần nghĩa 好像 (bài 101) nhưng nhấn vào chuyện MẮT THẤY.",
+      "ex": [
+        { "cn": "看样子要下雨了。", "py": "Kàn yàngzi yào xiàyǔ le.", "vi": "Trông có vẻ sắp mưa rồi." },
+        { "cn": "看他的样子，好像很不高兴。", "py": "Kàn tā de yàngzi, hǎoxiàng hěn bù gāoxìng.", "vi": "Nhìn dáng anh ấy, hình như không vui." }
+      ] },
+    { "t": "一点儿 … 也/都 没有 — phủ định tuyệt đối",
+      "b": "一点儿 + danh từ + 也/都 + 没有",
+      "d": "Cấu trúc nhấn mạnh \"chẳng có chút nào\". Với động từ dùng 一点儿也不: 我一点儿也不累.",
+      "ex": [
+        { "cn": "我一点儿力气也没有。", "py": "Wǒ yìdiǎnr lìqi yě méiyǒu.", "vi": "Tôi chẳng còn chút sức nào." },
+        { "cn": "他一点儿都不害羞。", "py": "Tā yìdiǎnr dōu bú hàixiū.", "vi": "Cậu ấy chẳng ngại chút nào." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "打篮球的时候我的胳膊受伤了。", "py": "Dǎ lánqiú de shíhou wǒ de gēbo shòushāng le.", "vi": "Lúc chơi bóng rổ tay tôi bị thương." },
+    { "cn": "夏天要保护好皮肤。", "py": "Xiàtiān yào bǎohù hǎo pífū.", "vi": "Mùa hè phải bảo vệ làn da." },
+    { "cn": "吃太多了，肚子有点儿难受。", "py": "Chī tài duō le, dùzi yǒudiǎnr nánshòu.", "vi": "Ăn nhiều quá, bụng hơi khó chịu." },
+    { "cn": "看书太久，眼睛需要休息。", "py": "Kàn shū tài jiǔ, yǎnjing xūyào xiūxi.", "vi": "Đọc sách lâu quá, mắt cần nghỉ." },
+    { "cn": "他新买了一副眼镜。", "py": "Tā xīn mǎi le yí fù yǎnjìng.", "vi": "Anh ấy mới mua một cái kính." },
+    { "cn": "牙膏和毛巾都在洗手间。", "py": "Yágāo hé máojīn dōu zài xǐshǒujiān.", "vi": "Kem đánh răng và khăn đều ở nhà tắm." },
+    { "cn": "天太热了，一动就出汗。", "py": "Tiān tài rè le, yí dòng jiù chū hàn.", "vi": "Trời nóng quá, hễ động là ra mồ hôi." },
+    { "cn": "搬这个箱子需要很大力气。", "py": "Bān zhège xiāngzi xūyào hěn dà lìqi.", "vi": "Khiêng cái thùng này cần rất nhiều sức." },
+    { "cn": "参加聚会前她打扮了很久。", "py": "Cānjiā jùhuì qián tā dǎban le hěn jiǔ.", "vi": "Trước khi dự tiệc cô ấy trang điểm rất lâu." },
+    { "cn": "头发太长了，明天去理发。", "py": "Tóufa tài cháng le, míngtiān qù lǐfà.", "vi": "Tóc dài quá rồi, mai đi cắt." }
+  ]
+}

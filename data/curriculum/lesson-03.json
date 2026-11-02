@@ -1,0 +1,76 @@
+{
+  "id": 3,
+  "cn": "数字",
+  "title": "Con số",
+  "goal": "Đếm từ 1 đến 99, hiểu quy tắc biến điệu của 一, và nhận ra 10 chữ số Hán Việt quen thuộc.",
+  "words": [
+    { "w": "一", "py": "yī", "hv": "nhất", "vi": "một", "pos": "số từ",
+      "note": "Một nét ngang duy nhất. Viết TRÁI sang PHẢI. Tiếng Việt: \"đệ nhất\", \"thống nhất\".",
+      "ex": [{ "cn": "一个人", "py": "yí ge rén", "vi": "một người" }] },
+    { "w": "二", "py": "èr", "hv": "nhị", "vi": "hai", "pos": "số từ",
+      "note": "Hai nét ngang, nét dưới DÀI hơn. Tiếng Việt: \"nhị phân\", \"độc nhất vô nhị\".",
+      "ex": [{ "cn": "二月", "py": "èr yuè", "vi": "tháng Hai" }] },
+    { "w": "三", "py": "sān", "hv": "tam", "vi": "ba", "pos": "số từ",
+      "note": "Ba nét ngang, nét dưới cùng dài nhất. Tiếng Việt: \"tam giác\", \"tam quốc\".",
+      "ex": [{ "cn": "三个学生", "py": "sān ge xuésheng", "vi": "ba học sinh" }] },
+    { "w": "四", "py": "sì", "hv": "tứ", "vi": "bốn", "pos": "số từ",
+      "note": "Người Trung Quốc kiêng số 4 vì đọc gần giống 死 sǐ (chết). Tiếng Việt: \"tứ giác\", \"tứ phương\".",
+      "ex": [{ "cn": "四个人", "py": "sì ge rén", "vi": "bốn người" }] },
+    { "w": "五", "py": "wǔ", "hv": "ngũ", "vi": "năm", "pos": "số từ",
+      "note": "Tiếng Việt: \"ngũ cốc\", \"ngũ quan\", \"ngũ hành\".",
+      "ex": [{ "cn": "五月", "py": "wǔ yuè", "vi": "tháng Năm" }] },
+    { "w": "六", "py": "liù", "hv": "lục", "vi": "sáu", "pos": "số từ",
+      "note": "Số may mắn, vì 六六大顺 nghĩa là mọi việc thuận lợi. Tiếng Việt: \"lục địa\", \"lục bát\".",
+      "ex": [{ "cn": "六个月", "py": "liù ge yuè", "vi": "sáu tháng" }] },
+    { "w": "七", "py": "qī", "hv": "thất", "vi": "bảy", "pos": "số từ",
+      "note": "Tiếng Việt: \"thất tình\" (bảy loại cảm xúc), \"thất bảo\".",
+      "ex": [{ "cn": "七个", "py": "qī ge", "vi": "bảy cái" }] },
+    { "w": "八", "py": "bā", "hv": "bát", "vi": "tám", "pos": "số từ",
+      "note": "Số được yêu thích nhất vì 八 bā nghe giống 发 fā (phát tài). Tiếng Việt: \"bát giác\", \"bát quái\".",
+      "ex": [{ "cn": "八个人", "py": "bā ge rén", "vi": "tám người" }] },
+    { "w": "九", "py": "jiǔ", "hv": "cửu", "vi": "chín", "pos": "số từ",
+      "note": "Tiếng Việt: \"cửu long\" (chín rồng), \"cửu trùng\".",
+      "ex": [{ "cn": "九月", "py": "jiǔ yuè", "vi": "tháng Chín" }] },
+    { "w": "十", "py": "shí", "hv": "thập", "vi": "mười", "pos": "số từ",
+      "note": "Ngang trước, sổ sau. Tiếng Việt: \"thập niên\", \"thập toàn thập mỹ\".",
+      "ex": [{ "cn": "十个学生", "py": "shí ge xuésheng", "vi": "mười học sinh" }] }
+  ],
+  "grammar": [
+    { "t": "Đếm từ 11 đến 99 — logic hơn tiếng Việt",
+      "b": "11 = 十一 · 20 = 二十 · 25 = 二十五 · 99 = 九十九",
+      "d": "Quy tắc cực đơn giản: số hàng chục ĐỨNG TRƯỚC 十, số hàng đơn vị ĐỨNG SAU. Không có ngoại lệ kiểu \"mười lăm / hai mươi lăm\" như tiếng Việt.",
+      "ex": [
+        { "cn": "十一", "py": "shíyī", "vi": "11" },
+        { "cn": "三十", "py": "sānshí", "vi": "30" },
+        { "cn": "四十七", "py": "sìshíqī", "vi": "47" },
+        { "cn": "九十九", "py": "jiǔshíjiǔ", "vi": "99" }
+      ] },
+    { "t": "Biến điệu của 一 — quy tắc bắt buộc phải thuộc",
+      "b": "一 đứng một mình = yī · trước thanh 1,2,3 = yì · trước thanh 4 = yí",
+      "d": "Chữ 一 đổi thanh điệu tuỳ theo chữ đứng sau nó. Khi đếm số hoặc đứng cuối thì vẫn giữ yī. Đây là điểm người Việt hay bỏ qua nhưng người bản xứ nghe ra ngay.",
+      "ex": [
+        { "cn": "一、二、三", "py": "yī, èr, sān", "vi": "đếm số → giữ yī" },
+        { "cn": "一天", "py": "yì tiān", "vi": "một ngày (天 thanh 1 → yì)" },
+        { "cn": "一个", "py": "yí ge", "vi": "một cái (个 thanh 4 → yí)" }
+      ] },
+    { "t": "Số + lượng từ + danh từ",
+      "b": "Số + 个 + danh từ",
+      "d": "Tiếng Trung KHÔNG nói \"ba người\" trực tiếp, mà bắt buộc chèn lượng từ vào giữa, giống tiếng Việt nói \"ba NGƯỜI khách\", \"năm CÁI bàn\". Lượng từ vạn năng là 个 ge.",
+      "ex": [
+        { "cn": "三个人", "py": "sān ge rén", "vi": "ba người" },
+        { "cn": "十个学生", "py": "shí ge xuésheng", "vi": "mười học sinh" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "一、二、三、四、五。", "py": "Yī, èr, sān, sì, wǔ.", "vi": "Một, hai, ba, bốn, năm." },
+    { "cn": "六、七、八、九、十。", "py": "Liù, qī, bā, jiǔ, shí.", "vi": "Sáu, bảy, tám, chín, mười." },
+    { "cn": "十一、十二、十三。", "py": "Shíyī, shí'èr, shísān.", "vi": "Mười một, mười hai, mười ba." },
+    { "cn": "二十、三十、四十。", "py": "Èrshí, sānshí, sìshí.", "vi": "Hai mươi, ba mươi, bốn mươi." },
+    { "cn": "我们班有二十个学生。", "py": "Wǒmen bān yǒu èrshí ge xuésheng.", "vi": "Lớp chúng tôi có hai mươi học sinh." },
+    { "cn": "他有三个朋友。", "py": "Tā yǒu sān ge péngyou.", "vi": "Anh ấy có ba người bạn." },
+    { "cn": "一个老师，十个学生。", "py": "Yí ge lǎoshī, shí ge xuésheng.", "vi": "Một giáo viên, mười học sinh." },
+    { "cn": "五加五是十。", "py": "Wǔ jiā wǔ shì shí.", "vi": "Năm cộng năm là mười." },
+    { "cn": "九十九个人。", "py": "Jiǔshíjiǔ ge rén.", "vi": "Chín mươi chín người." },
+    { "cn": "这是第一个。", "py": "Zhè shì dì-yī ge.", "vi": "Đây là cái thứ nhất." }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": 97,
+  "cn": "形状和状态",
+  "title": "Hình dáng và trạng thái",
+  "goal": "Mười tính từ tả vật — và các cặp trái nghĩa cần học chung.",
+  "words": [
+    { "w": "厚", "py": "hòu", "hv": "hậu", "vi": "dày", "pos": "tính từ",
+      "note": "Chính là \"hậu\" tiếng Việt (\"hậu hĩnh\", \"nhân hậu\" — lòng dày dặn). Trái nghĩa là 薄 báo (mỏng).",
+      "ex": [{ "cn": "冬天要穿厚衣服。", "py": "Dōngtiān yào chuān hòu yīfu.", "vi": "Mùa đông phải mặc đồ dày." }] },
+    { "w": "深", "py": "shēn", "hv": "thâm", "vi": "sâu; đậm (màu)", "pos": "tính từ",
+      "note": "Chính là \"thâm\" tiếng Việt (\"thâm sâu\", \"thâm niên\"). Bộ 氵. Hai nghĩa: sâu và màu đậm.",
+      "ex": [{ "cn": "这条河很深。", "py": "Zhè tiáo hé hěn shēn.", "vi": "Con sông này rất sâu." }] },
+    { "w": "空", "py": "kōng", "hv": "không", "vi": "trống, rỗng", "pos": "tính từ",
+      "note": "Chính là \"không\" trong \"chân không\", \"hư không\". Đọc kōng là trống; đọc kòng là chỗ trống, thời gian rảnh (有空).",
+      "ex": [{ "cn": "这个盒子是空的。", "py": "Zhège hézi shì kōng de.", "vi": "Cái hộp này rỗng." }] },
+    { "w": "满", "py": "mǎn", "hv": "mãn", "vi": "đầy", "pos": "tính từ",
+      "note": "Chính là \"mãn\" tiếng Việt (\"mãn nguyện\", \"viên mãn\"). Bộ 氵. Trái nghĩa với 空.",
+      "ex": [{ "cn": "杯子已经满了。", "py": "Bēizi yǐjīng mǎn le.", "vi": "Cốc đầy rồi." }] },
+    { "w": "圆", "py": "yuán", "hv": "viên", "vi": "tròn", "pos": "tính từ",
+      "note": "Chính là \"viên\" tiếng Việt (\"viên mãn\", \"đoàn viên\"). Cùng chữ với 元 (đồng tiền tròn).",
+      "ex": [{ "cn": "月亮又大又圆。", "py": "Yuèliang yòu dà yòu yuán.", "vi": "Trăng vừa to vừa tròn." }] },
+    { "w": "轻", "py": "qīng", "hv": "khinh", "vi": "nhẹ", "pos": "tính từ",
+      "note": "Chính là \"khinh\" tiếng Việt (\"khinh khí cầu\", \"coi khinh\"). Bộ 车. Đã gặp trong 年轻, 轻松.",
+      "ex": [{ "cn": "这个箱子很轻。", "py": "Zhège xiāngzi hěn qīng.", "vi": "Cái vali này rất nhẹ." }] },
+    { "w": "重", "py": "zhòng", "hv": "trọng", "vi": "nặng", "pos": "tính từ",
+      "note": "Chính là \"trọng\" tiếng Việt (\"trọng lượng\", \"quan trọng\"). Đọc zhòng là nặng; đọc chóng nghĩa là lặp lại (重新, bài 105).",
+      "ex": [{ "cn": "行李太重了。", "py": "Xíngli tài zhòng le.", "vi": "Hành lý nặng quá." }] },
+    { "w": "穷", "py": "qióng", "hv": "cùng", "vi": "nghèo", "pos": "tính từ",
+      "note": "Tiếng Việt: \"cùng\" trong \"bần cùng\", \"cùng khổ\". Bộ 穴 (hang) — nghèo phải ở hang. Trái nghĩa với 富 (bài 78).",
+      "ex": [{ "cn": "他小时候家里很穷。", "py": "Tā xiǎo shíhou jiā lǐ hěn qióng.", "vi": "Hồi nhỏ nhà cậu ấy rất nghèo." }] },
+    { "w": "苦", "py": "kǔ", "hv": "khổ", "vi": "đắng; khổ", "pos": "tính từ",
+      "note": "Chính là \"khổ\" tiếng Việt. Bộ 艹 (cỏ) — vị đắng của thuốc thảo dược. Hai nghĩa: vị đắng và cuộc sống khổ.",
+      "ex": [{ "cn": "这个药很苦。", "py": "Zhège yào hěn kǔ.", "vi": "Thuốc này rất đắng." }] },
+    { "w": "硬", "py": "yìng", "hv": "ngạnh", "vi": "cứng", "pos": "tính từ",
+      "note": "Bộ 石 (đá). Tiếng Việt: \"ngạnh\" trong \"ngoan ngạnh\" (cứng đầu). Trái nghĩa là 软 ruǎn (mềm).",
+      "ex": [{ "cn": "这张床有点儿硬。", "py": "Zhè zhāng chuáng yǒudiǎnr yìng.", "vi": "Cái giường này hơi cứng." }] }
+  ],
+  "grammar": [
+    { "t": "Sáu cặp trái nghĩa nên học chung",
+      "b": "厚↔薄 · 深↔浅 · 空↔满 · 轻↔重 · 穷↔富 · 硬↔软",
+      "d": "Não ghi nhớ bằng đối chiếu, nên học theo cặp hiệu quả gấp đôi. Trong bài này bạn đã có sẵn ba cặp đầy đủ (空满, 轻重, và 穷 với 富 ở bài 78).",
+      "ex": [
+        { "cn": "这本书很厚，那本很薄。", "py": "Zhè běn shū hěn hòu, nà běn hěn báo.", "vi": "Quyển này dày, quyển kia mỏng." },
+        { "cn": "箱子空的时候很轻。", "py": "Xiāngzi kōng de shíhou hěn qīng.", "vi": "Vali lúc rỗng thì rất nhẹ." }
+      ] },
+    { "t": "Một chữ, hai âm, hai nghĩa",
+      "b": "空 kōng/kòng · 重 zhòng/chóng · 长 cháng/zhǎng",
+      "d": "空 kōng (trống) và kòng (thời gian rảnh): 有空吗？= có rảnh không. 重 zhòng (nặng) và chóng (lặp lại): 重新 chóngxīn. Đây là hiện tượng 多音字 (đa âm tự) rất phổ biến — chú ý ngữ cảnh mà chọn âm.",
+      "ex": [
+        { "cn": "你今天有空吗？", "py": "Nǐ jīntiān yǒu kòng ma?", "vi": "Hôm nay bạn rảnh không?" },
+        { "cn": "请重新写一遍。", "py": "Qǐng chóngxīn xiě yí biàn.", "vi": "Xin viết lại một lần nữa." }
+      ] },
+    { "t": "深 tả cả không gian lẫn màu sắc và tình cảm",
+      "b": "水很深 · 深蓝色 · 感情很深",
+      "d": "Một tính từ dùng cho ba lớp nghĩa: vật lý (sâu), thị giác (màu đậm), trừu tượng (tình cảm sâu đậm). Tiếng Việt cũng nói \"xanh đậm\", \"tình sâu nghĩa nặng\".",
+      "ex": [
+        { "cn": "我喜欢深蓝色的衣服。", "py": "Wǒ xǐhuan shēn lánsè de yīfu.", "vi": "Tôi thích đồ màu xanh đậm." },
+        { "cn": "他们的感情很深。", "py": "Tāmen de gǎnqíng hěn shēn.", "vi": "Tình cảm của họ rất sâu đậm." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这本词典又厚又重。", "py": "Zhè běn cídiǎn yòu hòu yòu zhòng.", "vi": "Quyển từ điển này vừa dày vừa nặng." },
+    { "cn": "小心，这里的水很深。", "py": "Xiǎoxīn, zhèlǐ de shuǐ hěn shēn.", "vi": "Cẩn thận, nước ở đây sâu lắm." },
+    { "cn": "教室里空空的，没有人。", "py": "Jiàoshì lǐ kōngkōng de, méiyǒu rén.", "vi": "Trong lớp trống trơn, không có ai." },
+    { "cn": "周末的地铁总是满的。", "py": "Zhōumò de dìtiě zǒngshì mǎn de.", "vi": "Tàu điện cuối tuần lúc nào cũng đầy." },
+    { "cn": "中秋节的月亮特别圆。", "py": "Zhōngqiūjié de yuèliang tèbié yuán.", "vi": "Trăng Trung thu đặc biệt tròn." },
+    { "cn": "这个包很轻，你拿得动。", "py": "Zhège bāo hěn qīng, nǐ ná de dòng.", "vi": "Cái túi này nhẹ, bạn xách nổi." },
+    { "cn": "你的行李有多重？", "py": "Nǐ de xíngli yǒu duō zhòng?", "vi": "Hành lý của bạn nặng bao nhiêu?" },
+    { "cn": "以前很穷，现在生活好多了。", "py": "Yǐqián hěn qióng, xiànzài shēnghuó hǎo duō le.", "vi": "Trước nghèo lắm, giờ cuộc sống khá hơn nhiều." },
+    { "cn": "良药苦口。", "py": "Liáng yào kǔ kǒu.", "vi": "Thuốc tốt thì đắng miệng." },
+    { "cn": "这个面包放久了，变硬了。", "py": "Zhège miànbāo fàng jiǔ le, biàn yìng le.", "vi": "Bánh mì để lâu, cứng lại rồi." }
+  ]
+}

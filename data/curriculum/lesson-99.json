@@ -1,0 +1,72 @@
+{
+  "id": 99,
+  "cn": "程度和估计",
+  "title": "Mức độ và ước lượng",
+  "goal": "Nhóm phó từ mức độ — công cụ để nói năng có sắc thái thay vì chỉ 很 và 太.",
+  "words": [
+    { "w": "十分", "py": "shífēn", "hv": "thập phần", "vi": "vô cùng, hết sức", "pos": "phó từ",
+      "note": "Nghĩa đen \"mười phần\" — đủ mười phần tức là hoàn toàn. Tiếng Việt cũng nói \"mười phần chắc chắn\". Trang trọng, ngang 非常.",
+      "ex": [{ "cn": "我十分感谢您。", "py": "Wǒ shífēn gǎnxiè nín.", "vi": "Tôi vô cùng cảm ơn ngài." }] },
+    { "w": "稍微", "py": "shāowēi", "hv": "sảo vi", "vi": "hơi, một chút", "pos": "phó từ",
+      "note": "Mức độ NHẸ nhất. Thường đi với 一点儿 ở cuối: 稍微等一下.",
+      "ex": [{ "cn": "请稍微等一下。", "py": "Qǐng shāowēi děng yíxià.", "vi": "Xin đợi một chút." }] },
+    { "w": "尤其", "py": "yóuqí", "hv": "vưu kỳ", "vi": "nhất là, đặc biệt là", "pos": "phó từ",
+      "note": "Dùng để nêu bật một trường hợp trong nhóm. Thường đi với 是: 尤其是….",
+      "ex": [{ "cn": "我喜欢水果，尤其是西瓜。", "py": "Wǒ xǐhuan shuǐguǒ, yóuqí shì xīguā.", "vi": "Tôi thích hoa quả, nhất là dưa hấu." }] },
+    { "w": "甚至", "py": "shènzhì", "hv": "thậm chí", "vi": "thậm chí", "pos": "phó từ",
+      "note": "Chính là \"thậm chí\" tiếng Việt: 甚 (thậm) + 至 (chí). Nêu trường hợp cực đoan nhất.",
+      "ex": [{ "cn": "他忙得甚至忘了吃饭。", "py": "Tā máng de shènzhì wàng le chīfàn.", "vi": "Anh ấy bận tới mức quên cả ăn." }] },
+    { "w": "至少", "py": "zhìshǎo", "hv": "chí thiểu", "vi": "ít nhất", "pos": "phó từ",
+      "note": "至 (đến, tới cùng) + 少 (ít). Tiếng Việt: \"chí ít\". Trái nghĩa là 至多 (nhiều nhất).",
+      "ex": [{ "cn": "至少要学三年。", "py": "Zhìshǎo yào xué sān nián.", "vi": "Ít nhất phải học ba năm." }] },
+    { "w": "大约", "py": "dàyuē", "hv": "đại ước", "vi": "khoảng chừng", "pos": "phó từ",
+      "note": "大 (lớn, đại thể) + 约 (ước). Tiếng Việt: \"đại khái\", \"ước chừng\". Đứng trước con số.",
+      "ex": [{ "cn": "大约有一百人。", "py": "Dàyuē yǒu yìbǎi rén.", "vi": "Khoảng chừng một trăm người." }] },
+    { "w": "大概", "py": "dàgài", "hv": "đại khái", "vi": "đại khái, chắc là", "pos": "phó từ",
+      "note": "Chính là \"đại khái\" tiếng Việt. Gần nghĩa 大约 nhưng còn dùng để phỏng đoán: 他大概不来了.",
+      "ex": [{ "cn": "他大概忘了。", "py": "Tā dàgài wàng le.", "vi": "Chắc anh ấy quên rồi." }] },
+    { "w": "差不多", "py": "chàbuduō", "hv": "sai bất đa", "vi": "gần như, xấp xỉ", "pos": "phó từ / tính từ",
+      "note": "差 (kém, bài 54) + 不多 (không nhiều) = chênh không đáng kể. Câu cửa miệng của người Trung Quốc.",
+      "ex": [{ "cn": "我们两个差不多高。", "py": "Wǒmen liǎng ge chàbuduō gāo.", "vi": "Hai chúng tôi cao xấp xỉ nhau." }] },
+    { "w": "左右", "py": "zuǒyòu", "hv": "tả hữu", "vi": "khoảng, xấp xỉ", "pos": "trợ từ",
+      "note": "左 (trái) + 右 (phải) — trên dưới một chút. Đặt SAU con số: 三十岁左右 (khoảng ba mươi tuổi).",
+      "ex": [{ "cn": "他三十岁左右。", "py": "Tā sānshí suì zuǒyòu.", "vi": "Anh ấy khoảng ba mươi tuổi." }] },
+    { "w": "究竟", "py": "jiūjìng", "hv": "cứu cánh", "vi": "rốt cuộc, cuối cùng thì", "pos": "phó từ",
+      "note": "Dùng trong câu hỏi để nhấn mạnh sự truy vấn: 你究竟想说什么？Gần nghĩa 到底 (bài 104).",
+      "ex": [{ "cn": "你究竟去不去？", "py": "Nǐ jiūjìng qù bu qù?", "vi": "Rốt cuộc bạn có đi hay không?" }] }
+  ],
+  "grammar": [
+    { "t": "Thang mức độ đầy đủ của tiếng Trung",
+      "b": "稍微 < 有点儿 < 比较 < 很 < 非常/十分/特别 < 太…了 < 极了",
+      "d": "Đến HSK 4 bạn đã có đủ bảy nấc. Dùng đúng nấc là câu nói có sắc thái như người bản xứ, thay vì lúc nào cũng 很 và 太.",
+      "ex": [
+        { "cn": "稍微有点儿贵。", "py": "Shāowēi yǒudiǎnr guì.", "vi": "Hơi đắt một chút." },
+        { "cn": "十分感谢！", "py": "Shífēn gǎnxiè!", "vi": "Vô cùng cảm ơn!" }
+      ] },
+    { "t": "大约 / 大概 / 差不多 / 左右 — bốn cách nói \"khoảng\"",
+      "b": "大约 + số (trước) · 左右 (sau số) · 大概 (còn dùng phỏng đoán) · 差不多 (xấp xỉ ngang nhau)",
+      "d": "大约三十人 và 三十人左右 đều đúng, chỉ khác vị trí. 大概 còn dùng đoán sự việc: 他大概病了. 差不多 nhấn vào sự NGANG BẰNG giữa hai thứ.",
+      "ex": [
+        { "cn": "大约二十分钟就到。", "py": "Dàyuē èrshí fēnzhōng jiù dào.", "vi": "Khoảng hai mươi phút là tới." },
+        { "cn": "五点左右我给你打电话。", "py": "Wǔ diǎn zuǒyòu wǒ gěi nǐ dǎ diànhuà.", "vi": "Khoảng năm giờ tôi gọi bạn." }
+      ] },
+    { "t": "甚至 — nêu trường hợp cực đoan",
+      "b": "…, 甚至 + trường hợp mạnh nhất",
+      "d": "Dùng sau khi đã nêu vài ví dụ, để đẩy lên mức cao nhất: 他很忙，甚至周末也要工作. Giống hệt \"thậm chí\" tiếng Việt cả về vị trí lẫn chức năng.",
+      "ex": [
+        { "cn": "他连饭都没吃，甚至水也没喝。", "py": "Tā lián fàn dōu méi chī, shènzhì shuǐ yě méi hē.", "vi": "Anh ấy cơm còn chưa ăn, thậm chí nước cũng chưa uống." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "对您的帮助我十分感谢。", "py": "Duì nín de bāngzhù wǒ shífēn gǎnxiè.", "vi": "Tôi vô cùng cảm ơn sự giúp đỡ của ngài." },
+    { "cn": "请稍微大声一点儿。", "py": "Qǐng shāowēi dàshēng yìdiǎnr.", "vi": "Xin nói to lên chút." },
+    { "cn": "我喜欢运动，尤其是游泳。", "py": "Wǒ xǐhuan yùndòng, yóuqí shì yóuyǒng.", "vi": "Tôi thích thể thao, nhất là bơi." },
+    { "cn": "他忙得甚至没时间吃早饭。", "py": "Tā máng de shènzhì méi shíjiān chī zǎofàn.", "vi": "Anh ấy bận tới mức không có thời gian ăn sáng." },
+    { "cn": "写一篇文章至少要两个小时。", "py": "Xiě yì piān wénzhāng zhìshǎo yào liǎng ge xiǎoshí.", "vi": "Viết một bài ít nhất mất hai tiếng." },
+    { "cn": "从这儿到机场大约五十公里。", "py": "Cóng zhèr dào jīchǎng dàyuē wǔshí gōnglǐ.", "vi": "Từ đây ra sân bay khoảng năm mươi cây." },
+    { "cn": "他大概已经到家了。", "py": "Tā dàgài yǐjīng dào jiā le.", "vi": "Chắc anh ấy về đến nhà rồi." },
+    { "cn": "这两件衣服的价格差不多。", "py": "Zhè liǎng jiàn yīfu de jiàgé chàbuduō.", "vi": "Giá hai bộ đồ này xấp xỉ nhau." },
+    { "cn": "会议开了两个小时左右。", "py": "Huìyì kāi le liǎng ge xiǎoshí zuǒyòu.", "vi": "Cuộc họp kéo dài khoảng hai tiếng." },
+    { "cn": "你究竟想要什么？", "py": "Nǐ jiūjìng xiǎng yào shénme?", "vi": "Rốt cuộc bạn muốn gì?" }
+  ]
+}

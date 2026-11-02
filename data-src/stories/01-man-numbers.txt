@@ -1,0 +1,282 @@
+@id man-numbers
+@shelf long
+@level A1
+@title The Man Who Kept the Numbers
+@vi Người giữ những con số
+@blurb Câu ngắn, từ đơn giản, 12 chương. Một người trực đêm nghe thấy một âm thanh không ai giải thích được.
+
+## 1 | The Station | Trạm
+Hải is twenty-eight years old. | Hải hai mươi tám tuổi.
+He works at a small station. | Anh làm việc ở một trạm nhỏ.
+The station is on a hill. | Trạm nằm trên một ngọn đồi.
+The sea is below the hill. | Biển ở dưới chân đồi.
+There is a big dish outside. | Bên ngoài có một cái chảo lớn.
+The dish listens to the sky. | Cái chảo lắng nghe bầu trời.
+
+Hải works at night. | Hải làm ca đêm.
+He starts work at ten. | Anh bắt đầu lúc mười giờ.
+He goes home at six. | Anh về nhà lúc sáu giờ.
+The building is old and cold. | Toà nhà cũ và lạnh.
+He likes the quiet. | Anh thích sự yên tĩnh.
+He does not have many friends here. | Ở đây anh không có nhiều bạn.
+That is fine. | Vậy cũng ổn.
+
+He came here five years ago. | Anh đến đây năm năm trước.
+He never reports anything. | Anh chưa bao giờ báo cáo gì.
+Nothing happens at this station. | Ở trạm này chẳng có gì xảy ra.
+
+? What does the dish do? | Cái chảo làm gì? | It listens to the sky* | It makes tea | It cleans the sea
+> Nói 2 câu tiếng Anh về Hải: tuổi và công việc.
+
+## 2 | A Normal Night | Một đêm bình thường
+It is March. | Đang là tháng Ba.
+The night is warm. | Đêm nay ấm.
+Hải makes tea. | Hải pha trà.
+He sits at the table. | Anh ngồi vào bàn.
+He looks at the screen. | Anh nhìn màn hình.
+The line on the screen is flat. | Đường kẻ trên màn hình nằm phẳng.
+It is always flat. | Nó lúc nào cũng phẳng.
+
+He opens his book. | Anh mở sổ.
+He writes the time. | Anh ghi giờ.
+He writes the weather. | Anh ghi thời tiết.
+He writes: nothing unusual. | Anh ghi: không có gì lạ.
+He does this every night. | Đêm nào anh cũng làm vậy.
+He has done this for five years. | Anh đã làm vậy suốt năm năm.
+
+Outside, the sea is very quiet. | Bên ngoài, biển rất yên.
+He can hear the wind. | Anh nghe được tiếng gió.
+It is ten past one. | Lúc này là một giờ mười.
+
+? What does Hải write every night? | Đêm nào Hải cũng ghi gì? | Nothing unusual* | A long letter | A new song
+> Kể lại một đêm của Hải bằng 2 câu.
+
+## 3 | The Sound | Âm thanh
+The line moves. | Đường kẻ nhúc nhích.
+Hải stops. | Hải khựng lại.
+He looks again. | Anh nhìn lại.
+The line moves again. | Đường kẻ lại nhúc nhích.
+It goes up and down. | Nó lên rồi xuống.
+Three short. Then one long. | Ba ngắn. Rồi một dài.
+Then it stops. | Rồi nó dừng.
+Then it starts again. | Rồi nó lại bắt đầu.
+Three short. Then one long. | Ba ngắn. Rồi một dài.
+
+Hải does not move for a long time. | Hải ngồi im rất lâu.
+He turns the sound on. | Anh bật tiếng lên.
+He can hear it now. | Giờ anh nghe được rồi.
+It is like a finger on a table. | Nó giống một ngón tay gõ lên bàn.
+Three taps. Then one long press. | Ba cái gõ. Rồi một cái ấn dài.
+
+His tea is cold. | Trà của anh đã nguội.
+He does not drink it. | Anh không uống.
+
+? What is the pattern? | Tín hiệu có dạng gì? | Three short, one long* | One short, three long | Two short, two long
+> Bằng tiếng Anh: âm thanh đó giống cái gì?
+
+## 4 | The Machines Are Fine | Máy móc vẫn tốt
+Hải checks the machines. | Hải kiểm tra máy móc.
+He checks every cable. | Anh kiểm tra từng sợi cáp.
+The cables are fine. | Các sợi cáp đều ổn.
+He checks the fan. | Anh kiểm tra cái quạt.
+The fan is fine. | Quạt vẫn ổn.
+He turns the heater off. | Anh tắt lò sưởi.
+The sound does not stop. | Âm thanh không dừng.
+He turns the heater on again. | Anh bật lò sưởi lại.
+Nothing changes. | Không có gì thay đổi.
+
+He goes outside. | Anh ra ngoài.
+The dish is quiet. | Cái chảo im lìm.
+The sea is quiet. | Biển cũng im lìm.
+He comes back in. | Anh quay vào trong.
+The sound is still there. | Âm thanh vẫn còn đó.
+Three short. One long. | Ba ngắn. Một dài.
+It is four in the morning. | Lúc này là bốn giờ sáng.
+
+? Why is this strange? | Vì sao chuyện này lạ? | The machines are fine* | The sea is loud | The tea is hot
+> Nói bằng tiếng Anh: Hải đã kiểm tra những gì?
+
+## 5 | He Writes It Down | Anh ghi lại
+Hải opens his book again. | Hải lại mở sổ.
+He looks at the empty line. | Anh nhìn dòng còn trống.
+He does not know what to write. | Anh không biết phải ghi gì.
+Then he writes four words. | Rồi anh viết bốn chữ.
+Three short, one long. | Ba ngắn, một dài.
+
+He writes the time. | Anh ghi giờ.
+He writes: repeating. | Anh ghi: lặp lại.
+He writes: source unclear. | Anh ghi: nguồn không rõ.
+He looks at the words. | Anh nhìn những chữ đó.
+They look strange on the page. | Trông chúng thật lạ trên trang giấy.
+But they are true. | Nhưng chúng là sự thật.
+
+He closes the book. | Anh gấp sổ lại.
+The sun comes up. | Mặt trời lên.
+The sound is still there. | Âm thanh vẫn còn đó.
+He goes home. | Anh về nhà.
+He does not sleep. | Anh không ngủ.
+
+? What does he write about the source? | Anh ghi gì về nguồn tín hiệu? | Source unclear* | Source is the sea | Source is a bird
+> Vì sao Hải không ngủ? Trả lời 1 câu tiếng Anh.
+
+## 6 | The Report | Bản báo cáo
+Hải writes a report. | Hải viết một bản báo cáo.
+It is one page. | Nó dài một trang.
+He sends it on Monday. | Anh gửi vào thứ Hai.
+Then he waits. | Rồi anh chờ.
+One week passes. | Một tuần trôi qua.
+Nobody answers. | Không ai trả lời.
+Two weeks pass. | Hai tuần trôi qua.
+
+He works every night. | Đêm nào anh cũng làm việc.
+The sound comes and goes. | Âm thanh lúc có lúc không.
+Some nights it is there. | Có đêm nó xuất hiện.
+Some nights it is not. | Có đêm thì không.
+He writes it down every time. | Lần nào anh cũng ghi lại.
+His book is full of the same words. | Cuốn sổ đầy những chữ giống nhau.
+Three short, one long. | Ba ngắn, một dài.
+
+He starts to think he is wrong. | Anh bắt đầu nghĩ mình đã sai.
+But the sound is real. | Nhưng âm thanh là có thật.
+
+? Who answers his report? | Ai trả lời bản báo cáo? | Nobody* | His wife | A new friend
+> Nói 1 câu: Hải cảm thấy thế nào khi chờ đợi?
+
+## 7 | The Car | Chiếc xe
+On a Tuesday, a car comes. | Vào một ngày thứ Ba, một chiếc xe đến.
+The car is very clean. | Chiếc xe rất sạch.
+Two men get out. | Hai người đàn ông bước xuống.
+They are polite. | Họ rất lịch sự.
+They ask many questions. | Họ hỏi rất nhiều câu.
+
+They look at his book. | Họ xem cuốn sổ của anh.
+They read every page. | Họ đọc từng trang.
+One man writes something down. | Một người ghi lại gì đó.
+They take the book with them. | Họ mang cuốn sổ đi.
+They take his report too. | Họ mang cả bản báo cáo.
+
+They say thank you. | Họ nói cảm ơn.
+They say: this is equipment noise. | Họ nói: đây là nhiễu của thiết bị.
+They say: do not report it again. | Họ nói: đừng báo cáo chuyện này nữa.
+Then they leave. | Rồi họ rời đi.
+Hải stands outside for a long time. | Hải đứng ngoài trời rất lâu.
+He watches the car go. | Anh nhìn chiếc xe đi xa.
+
+? What do the men say the sound is? | Hai người nói âm thanh đó là gì? | Equipment noise* | A message | A bird
+> Theo anh, hai người đó có nói thật không? Trả lời bằng 1 câu.
+
+## 8 | The New Rule | Quy định mới
+Now there is a list at the station. | Giờ ở trạm có một danh sách.
+The list has normal things on it. | Danh sách ghi những thứ bình thường.
+Rain is on the list. | Mưa có trong danh sách.
+Birds are on the list. | Chim có trong danh sách.
+Bad cables are on the list. | Cáp hỏng có trong danh sách.
+Now the sound is on the list too. | Giờ âm thanh đó cũng có trong danh sách.
+
+Things on the list are not unusual. | Những thứ trong danh sách không bị coi là lạ.
+So nobody has to write them down. | Nên không ai phải ghi lại chúng.
+The new man does not write it down. | Người mới không ghi lại.
+The next man does not write it down. | Người sau đó cũng không ghi.
+For them, it is just noise. | Với họ, đó chỉ là tiếng nhiễu.
+They never listen to it. | Họ chẳng bao giờ nghe nó.
+
+Hải understands the rule now. | Giờ Hải hiểu quy định này rồi.
+It is a good rule. | Đó là một quy định tốt.
+It is also a wall. | Nó cũng là một bức tường.
+He can see both things at once. | Anh thấy được cả hai điều cùng lúc.
+
+? Why does nobody write the sound down now? | Vì sao giờ không ai ghi âm thanh đó? | It is on the list* | It stopped | They have no book
+> Vì sao quy định đó "cũng là một bức tường"? Thử nói bằng tiếng Việt rồi tiếng Anh.
+
+## 9 | The Secret | Bí mật
+Hải still hears the sound. | Hải vẫn nghe thấy âm thanh đó.
+He still wants to write it down. | Anh vẫn muốn ghi lại.
+But he cannot. | Nhưng anh không được phép.
+So he finds a way. | Thế là anh tìm ra một cách.
+
+He writes the times backwards. | Anh viết giờ theo chiều ngược lại.
+One fifteen becomes five one one. | Một giờ mười lăm thành năm một một.
+It looks like a weather note. | Trông nó như ghi chú thời tiết.
+Nobody asks about it. | Không ai hỏi gì.
+
+He does this every time. | Lần nào anh cũng làm vậy.
+Year after year. | Năm này qua năm khác.
+The numbers fill his books. | Những con số lấp đầy các cuốn sổ.
+They look like nothing. | Trông chúng chẳng có nghĩa gì.
+They are not nothing. | Nhưng chúng không hề vô nghĩa.
+
+He does not tell anybody. | Anh không nói với ai.
+He does not tell his wife. | Anh không nói với cả vợ.
+It is his alone. | Đó là điều của riêng anh.
+
+? How does he hide the times? | Anh giấu giờ bằng cách nào? | He writes them backwards* | He writes them in the sea | He burns them
+> Nếu là anh, anh có giữ bí mật như Hải không? Trả lời 1 câu.
+
+## 10 | Fifteen Years | Mười lăm năm
+Time passes. | Thời gian trôi.
+Hải is thirty-five. | Hải ba mươi lăm tuổi.
+Then he is forty. | Rồi bốn mươi.
+His hair goes grey. | Tóc anh bạc dần.
+His writing gets smaller. | Chữ anh nhỏ dần.
+The station gets older. | Trạm cũ đi.
+
+New people come and go. | Người mới đến rồi đi.
+Nobody stays long. | Không ai ở lâu.
+He never stops writing the numbers. | Anh không bao giờ ngừng ghi những con số.
+Not one night. | Không bỏ một đêm nào.
+
+Fifteen years is a long time. | Mười lăm năm là một thời gian dài.
+Some nights he asks himself why. | Có đêm anh tự hỏi tại sao.
+He does not have a good answer. | Anh không có câu trả lời nào hay.
+But he keeps writing. | Nhưng anh vẫn viết.
+The books fill the shelf. | Những cuốn sổ lấp đầy kệ.
+Nobody opens them. | Không ai mở chúng ra.
+
+? What never stops? | Điều gì không bao giờ dừng? | His writing the numbers* | The rain | His new job
+> Kể bằng 2 câu: 15 năm đã thay đổi Hải thế nào?
+
+## 11 | The Last Page | Trang cuối
+In 1994 Hải leaves the station. | Năm 1994, Hải rời trạm.
+He is forty-three years old. | Anh bốn mươi ba tuổi.
+He is tired. | Anh mệt rồi.
+
+On his last night he writes one more time. | Đêm cuối cùng, anh viết thêm một lần.
+He writes the numbers backwards. | Anh viết các con số theo chiều ngược.
+Then he writes something else. | Rồi anh viết thêm một điều khác.
+It is not about the weather. | Điều đó không liên quan đến thời tiết.
+He writes: someone has to keep the numbers. | Anh viết: phải có người giữ những con số.
+He writes: I will be too old. | Anh viết: tôi rồi sẽ quá già.
+He writes: that is all right. | Anh viết: vậy cũng không sao.
+
+Then he closes the book. | Rồi anh gấp sổ lại.
+He puts it on the shelf. | Anh đặt nó lên kệ.
+He turns off the light. | Anh tắt đèn.
+He walks down the hill. | Anh đi bộ xuống đồi.
+He does not look back. | Anh không ngoái lại.
+He never talks about it again. | Anh không bao giờ nhắc lại chuyện đó.
+
+? What does he write on the last night? | Đêm cuối anh viết gì? | Someone has to keep the numbers* | The weather is bad | I am going home
+> Câu nào trong chương này làm anh nhớ nhất? Đọc to câu đó.
+
+## 12 | Many Years Later | Nhiều năm sau
+The books stay on the shelf. | Những cuốn sổ nằm yên trên kệ.
+Dust covers them. | Bụi phủ lên chúng.
+Twenty years pass. | Hai mươi năm trôi qua.
+
+One night a young woman works alone. | Một đêm, một cô gái trẻ làm việc một mình.
+Her name is Mai. | Cô tên là Mai.
+She hears a sound on the screen. | Cô nghe một âm thanh trên màn hình.
+Three short. One long. | Ba ngắn. Một dài.
+She checks the cables. | Cô kiểm tra cáp.
+She checks the fan. | Cô kiểm tra quạt.
+
+She does not know about Hải. | Cô không biết về Hải.
+She does not know about the list. | Cô không biết về danh sách.
+She only knows the sound is there. | Cô chỉ biết âm thanh đó có thật.
+So she opens her book. | Thế là cô mở sổ.
+She writes the time. | Cô ghi giờ.
+And the story starts again. | Và câu chuyện lại bắt đầu.
+This time it does not stop. | Lần này nó không dừng lại.
+
+? Who hears the sound many years later? | Ai nghe âm thanh đó nhiều năm sau? | Mai* | Hải's wife | The two men
+> Đọc tiếp truyện "The Slow Message" để biết chuyện gì xảy ra với Mai.

@@ -1,0 +1,75 @@
+{
+  "id": 9,
+  "cn": "吃饭",
+  "title": "Ăn uống",
+  "goal": "Gọi món, nói thích ăn gì, dùng lượng từ cho đồ ăn thức uống và nhận ra bộ 饣 (ăn), 艹 (rau cỏ).",
+  "words": [
+    { "w": "吃", "py": "chī", "hv": "cật", "vi": "ăn", "pos": "động từ",
+      "note": "口 (miệng) + 乞. Có bộ khẩu vì ăn phải dùng miệng. Ăn cơm = 吃饭.",
+      "ex": [{ "cn": "我吃米饭。", "py": "Wǒ chī mǐfàn.", "vi": "Tôi ăn cơm." }] },
+    { "w": "喝", "py": "hē", "hv": "hát", "vi": "uống", "pos": "động từ",
+      "note": "Cũng có bộ 口. Đừng nhầm 喝 hē (uống) với 渴 kě (khát) — chỉ khác bộ bên trái.",
+      "ex": [{ "cn": "我喝茶。", "py": "Wǒ hē chá.", "vi": "Tôi uống trà." }] },
+    { "w": "菜", "py": "cài", "hv": "thái", "vi": "rau; món ăn", "pos": "danh từ",
+      "note": "Bộ 艹 (cỏ cây) trên đầu. Vừa nghĩa là rau, vừa nghĩa là món ăn nói chung: 中国菜 = món Trung Quốc.",
+      "ex": [{ "cn": "这个菜很好吃。", "py": "Zhège cài hěn hǎochī.", "vi": "Món này rất ngon." }] },
+    { "w": "茶", "py": "chá", "hv": "trà", "vi": "trà, chè", "pos": "danh từ",
+      "note": "Cũng có bộ 艹. Từ \"trà\" tiếng Việt mượn thẳng từ chữ này. Tiếng Anh \"tea\" cũng từ tiếng Hán.",
+      "ex": [{ "cn": "我喜欢喝茶。", "py": "Wǒ xǐhuan hē chá.", "vi": "Tôi thích uống trà." }] },
+    { "w": "水", "py": "shuǐ", "hv": "thuỷ", "vi": "nước", "pos": "danh từ",
+      "note": "Bộ thủ quan trọng bậc nhất. Khi đứng bên trái chữ khác thì viết thành 氵. Tiếng Việt: \"thuỷ sản\", \"phong thuỷ\".",
+      "ex": [{ "cn": "请给我一杯水。", "py": "Qǐng gěi wǒ yì bēi shuǐ.", "vi": "Cho tôi một cốc nước." }] },
+    { "w": "米饭", "py": "mǐfàn", "hv": "mễ phạn", "vi": "cơm", "pos": "danh từ",
+      "note": "米 (gạo) + 饭 (cơm). 饭 có bộ 饣 (thức ăn). Tiếng Việt: \"gạo mễ\", \"cơm phạn\" trong từ cổ.",
+      "ex": [{ "cn": "我想吃米饭。", "py": "Wǒ xiǎng chī mǐfàn.", "vi": "Tôi muốn ăn cơm." }] },
+    { "w": "水果", "py": "shuǐguǒ", "hv": "thuỷ quả", "vi": "hoa quả, trái cây", "pos": "danh từ",
+      "note": "水 (nước) + 果 (quả) = quả mọng nước. Tiếng Việt: \"kết quả\", \"hiệu quả\" cùng chữ 果.",
+      "ex": [{ "cn": "我喜欢吃水果。", "py": "Wǒ xǐhuan chī shuǐguǒ.", "vi": "Tôi thích ăn hoa quả." }] },
+    { "w": "苹果", "py": "píngguǒ", "hv": "bình quả", "vi": "quả táo", "pos": "danh từ",
+      "note": "苹 có bộ 艹. Hãng Apple trong tiếng Trung cũng gọi là 苹果.",
+      "ex": [{ "cn": "我买了三个苹果。", "py": "Wǒ mǎi le sān ge píngguǒ.", "vi": "Tôi mua ba quả táo." }] },
+    { "w": "饭馆", "py": "fànguǎn", "hv": "phạn quán", "vi": "quán ăn, nhà hàng", "pos": "danh từ",
+      "note": "Cả hai chữ đều có bộ 饣 (thức ăn). Tiếng Việt có \"quán\" — chính là chữ 馆.",
+      "ex": [{ "cn": "我们去饭馆吃饭。", "py": "Wǒmen qù fànguǎn chīfàn.", "vi": "Chúng ta đi nhà hàng ăn cơm." }] },
+    { "w": "杯子", "py": "bēizi", "hv": "bôi tử", "vi": "cái cốc, cái ly", "pos": "danh từ",
+      "note": "木 (gỗ) + 不 — cốc xưa làm bằng gỗ. 杯 cũng là lượng từ: 一杯水 = một cốc nước.",
+      "ex": [{ "cn": "这个杯子很漂亮。", "py": "Zhège bēizi hěn piàoliang.", "vi": "Cái cốc này rất đẹp." }] }
+  ],
+  "grammar": [
+    { "t": "Lượng từ cho đồ ăn thức uống",
+      "b": "一杯茶 · 一个苹果 · 一碗米饭 · 一瓶水",
+      "d": "Mỗi loại vật có lượng từ riêng. 杯 (cốc) cho đồ uống, 个 cho quả tròn, 碗 (bát) cho cơm, 瓶 (chai) cho nước đóng chai. Bí quyết: học lượng từ CÙNG LÚC với danh từ, đừng học riêng.",
+      "ex": [
+        { "cn": "一杯茶", "py": "yì bēi chá", "vi": "một cốc trà" },
+        { "cn": "两个苹果", "py": "liǎng ge píngguǒ", "vi": "hai quả táo" },
+        { "cn": "一碗米饭", "py": "yì wǎn mǐfàn", "vi": "một bát cơm" }
+      ] },
+    { "t": "两 hay 二 — dùng cái nào?",
+      "b": "Đếm số dùng 二 · Đứng trước lượng từ dùng 两",
+      "d": "Rất quan trọng. Nói \"hai quả táo\" phải là 两个苹果, KHÔNG được nói 二个苹果. Nhưng khi đếm 1,2,3 hay đọc số nhà, số điện thoại thì vẫn dùng 二.",
+      "ex": [
+        { "cn": "两个人", "py": "liǎng ge rén", "vi": "hai người (ĐÚNG)" },
+        { "cn": "两杯水", "py": "liǎng bēi shuǐ", "vi": "hai cốc nước" },
+        { "cn": "十二号", "py": "shí'èr hào", "vi": "ngày 12 (dùng 二)" }
+      ] },
+    { "t": "好 + động từ = dễ chịu khi làm việc đó",
+      "b": "好吃 · 好喝 · 好看 · 好听",
+      "d": "Một quy tắc ghép chữ cực kỳ hữu ích: 好 + động từ giác quan = \"ngon / đẹp / hay\". 好吃 = ngon (ăn), 好喝 = ngon (uống), 好看 = đẹp, 好听 = hay (nghe).",
+      "ex": [
+        { "cn": "这个菜很好吃。", "py": "Zhège cài hěn hǎochī.", "vi": "Món này rất ngon." },
+        { "cn": "这个茶很好喝。", "py": "Zhège chá hěn hǎohē.", "vi": "Trà này ngon." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你想吃什么？", "py": "Nǐ xiǎng chī shénme?", "vi": "Bạn muốn ăn gì?" },
+    { "cn": "我想吃米饭和菜。", "py": "Wǒ xiǎng chī mǐfàn hé cài.", "vi": "Tôi muốn ăn cơm và rau." },
+    { "cn": "你喝什么？", "py": "Nǐ hē shénme?", "vi": "Bạn uống gì?" },
+    { "cn": "请给我一杯茶。", "py": "Qǐng gěi wǒ yì bēi chá.", "vi": "Cho tôi một cốc trà." },
+    { "cn": "这个菜很好吃。", "py": "Zhège cài hěn hǎochī.", "vi": "Món này rất ngon." },
+    { "cn": "我买了两个苹果。", "py": "Wǒ mǎi le liǎng ge píngguǒ.", "vi": "Tôi mua hai quả táo." },
+    { "cn": "我喜欢吃水果。", "py": "Wǒ xǐhuan chī shuǐguǒ.", "vi": "Tôi thích ăn hoa quả." },
+    { "cn": "我们去饭馆吃饭吧。", "py": "Wǒmen qù fànguǎn chīfàn ba.", "vi": "Chúng ta đi nhà hàng ăn cơm đi." },
+    { "cn": "中午你吃了吗？", "py": "Zhōngwǔ nǐ chī le ma?", "vi": "Trưa nay bạn ăn chưa?" },
+    { "cn": "我没吃，我不饿。", "py": "Wǒ méi chī, wǒ bú è.", "vi": "Tôi chưa ăn, tôi không đói." }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": 108,
+  "cn": "舞台和文艺",
+  "title": "Sân khấu và văn nghệ",
+  "goal": "Nói về kinh kịch, phim ảnh, tiểu thuyết — mảng văn hoá làm việc học có chiều sâu.",
+  "words": [
+    { "w": "京剧", "py": "jīngjù", "hv": "kinh kịch", "vi": "kinh kịch", "pos": "danh từ",
+      "note": "京 (kinh, Bắc Kinh) + 剧 (kịch). Quốc kịch của Trung Quốc, có mặt nạ vẽ và giọng hát đặc trưng.",
+      "ex": [{ "cn": "我第一次看京剧。", "py": "Wǒ dì-yī cì kàn jīngjù.", "vi": "Tôi xem kinh kịch lần đầu." }] },
+    { "w": "演出", "py": "yǎnchū", "hv": "diễn xuất", "vi": "buổi diễn; biểu diễn", "pos": "động từ / danh từ",
+      "note": "演 (diễn) + 出 (ra). Tiếng Trung dùng làm cả DANH TỪ chỉ buổi diễn: 一场演出.",
+      "ex": [{ "cn": "今晚有一场演出。", "py": "Jīnwǎn yǒu yì chǎng yǎnchū.", "vi": "Tối nay có một buổi diễn." }] },
+    { "w": "表演", "py": "biǎoyǎn", "hv": "biểu diễn", "vi": "biểu diễn", "pos": "động từ / danh từ",
+      "note": "Chính là \"biểu diễn\" tiếng Việt: 表 (biểu) + 演 (diễn). Nhấn vào HÀNH ĐỘNG diễn, còn 演出 nhấn vào sự kiện.",
+      "ex": [{ "cn": "她表演得很好。", "py": "Tā biǎoyǎn de hěn hǎo.", "vi": "Cô ấy diễn rất tốt." }] },
+    { "w": "小说", "py": "xiǎoshuō", "hv": "tiểu thuyết", "vi": "tiểu thuyết", "pos": "danh từ",
+      "note": "Chính là \"tiểu thuyết\" tiếng Việt: 小 (tiểu) + 说 (thuyết). Nghĩa gốc: chuyện nhỏ kể chơi.",
+      "ex": [{ "cn": "我喜欢看中文小说。", "py": "Wǒ xǐhuan kàn Zhōngwén xiǎoshuō.", "vi": "Tôi thích đọc tiểu thuyết tiếng Trung." }] },
+    { "w": "明星", "py": "míngxīng", "hv": "minh tinh", "vi": "ngôi sao, minh tinh", "pos": "danh từ",
+      "note": "Chính là \"minh tinh\" tiếng Việt: 明 (minh, sáng) + 星 (tinh, sao).",
+      "ex": [{ "cn": "他是很有名的电影明星。", "py": "Tā shì hěn yǒumíng de diànyǐng míngxīng.", "vi": "Anh ấy là ngôi sao điện ảnh rất nổi tiếng." }] },
+    { "w": "功夫", "py": "gōngfu", "hv": "công phu", "vi": "công phu, võ thuật", "pos": "danh từ",
+      "note": "Chính là \"công phu\" tiếng Việt. Hai nghĩa: võ thuật Trung Hoa, và công sức bỏ ra: 下了很多功夫.",
+      "ex": [{ "cn": "他从小就学功夫。", "py": "Tā cóng xiǎo jiù xué gōngfu.", "vi": "Anh ấy học võ từ nhỏ." }] },
+    { "w": "笑话", "py": "xiàohua", "hv": "tiếu thoại", "vi": "chuyện cười", "pos": "danh từ / động từ",
+      "note": "笑 (cười) + 话 (lời). Là danh từ (chuyện cười) và động từ (chê cười ai): 别笑话我.",
+      "ex": [{ "cn": "他讲了一个笑话。", "py": "Tā jiǎng le yí ge xiàohua.", "vi": "Anh ấy kể một chuyện cười." }] },
+    { "w": "精彩", "py": "jīngcǎi", "hv": "tinh thái", "vi": "đặc sắc, xuất sắc", "pos": "tính từ",
+      "note": "精 (tinh, tinh tuý) + 彩 (thái, rực rỡ). Chỉ dùng cho biểu diễn, trận đấu, bài nói — không dùng cho người.",
+      "ex": [{ "cn": "比赛非常精彩。", "py": "Bǐsài fēicháng jīngcǎi.", "vi": "Trận đấu vô cùng hay." }] },
+    { "w": "广播", "py": "guǎngbō", "hv": "quảng bá", "vi": "phát thanh", "pos": "danh từ / động từ",
+      "note": "广 (quảng, rộng) + 播 (bá, gieo rắc). Tiếng Việt \"quảng bá\" nghĩa hơi khác — ở đây là đài phát thanh.",
+      "ex": [{ "cn": "我每天听中文广播。", "py": "Wǒ měi tiān tīng Zhōngwén guǎngbō.", "vi": "Tôi nghe đài tiếng Trung mỗi ngày." }] },
+    { "w": "艺术", "py": "yìshù", "hv": "nghệ thuật", "vi": "nghệ thuật", "pos": "danh từ",
+      "note": "Chính là \"nghệ thuật\" tiếng Việt: 艺 (nghệ) + 术 (thuật). 书法是一种艺术 = thư pháp là một loại nghệ thuật.",
+      "ex": [{ "cn": "书法是一门艺术。", "py": "Shūfǎ shì yì mén yìshù.", "vi": "Thư pháp là một môn nghệ thuật." }] }
+  ],
+  "grammar": [
+    { "t": "演出 và 表演 — sự kiện hay hành động?",
+      "b": "一场演出 (danh từ, sự kiện) · 表演节目 (động từ, hành động diễn)",
+      "d": "Nói 看演出 (xem buổi diễn) và 表演得很好 (diễn hay). 演出 hiếm khi mang tân ngữ, còn 表演 thì có: 表演京剧, 表演功夫.",
+      "ex": [
+        { "cn": "他们表演了一个很精彩的节目。", "py": "Tāmen biǎoyǎn le yí ge hěn jīngcǎi de jiémù.", "vi": "Họ diễn một tiết mục rất đặc sắc." }
+      ] },
+    { "t": "下功夫 — thành ngữ đáng nhớ",
+      "b": "在 + việc + 上下功夫",
+      "d": "Nghĩa: bỏ công sức vào việc gì. 他在发音上下了很多功夫 (anh ấy bỏ nhiều công vào phát âm). Đây là cách nói rất tự nhiên, hay dùng khi bàn về việc học.",
+      "ex": [
+        { "cn": "写汉字要下功夫。", "py": "Xiě Hànzì yào xià gōngfu.", "vi": "Viết chữ Hán phải bỏ công phu." }
+      ] },
+    { "t": "门 và 种 — lượng từ cho môn học và loại hình",
+      "b": "一门艺术／一门课 · 一种方法／一种语言",
+      "d": "门 dùng cho môn học, ngành nghệ thuật (vốn nghĩa là \"cửa\", mỗi môn là một cửa vào). 种 dùng cho chủng loại. 京剧是一门艺术, 京剧是一种表演形式 — cả hai đều đúng, khác góc nhìn.",
+      "ex": [
+        { "cn": "这学期我选了五门课。", "py": "Zhè xuéqī wǒ xuǎn le wǔ mén kè.", "vi": "Kỳ này tôi chọn năm môn." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "京剧的脸谱颜色有特别的意思。", "py": "Jīngjù de liǎnpǔ yánsè yǒu tèbié de yìsi.", "vi": "Màu mặt nạ kinh kịch có ý nghĩa riêng." },
+    { "cn": "这场演出的票已经卖完了。", "py": "Zhè chǎng yǎnchū de piào yǐjīng mài wán le.", "vi": "Vé buổi diễn này đã bán hết." },
+    { "cn": "孩子们表演了一个小节目。", "py": "Háizimen biǎoyǎn le yí ge xiǎo jiémù.", "vi": "Bọn trẻ diễn một tiết mục nhỏ." },
+    { "cn": "这本小说我看了三遍。", "py": "Zhè běn xiǎoshuō wǒ kàn le sān biàn.", "vi": "Cuốn tiểu thuyết này tôi đọc ba lượt." },
+    { "cn": "很多年轻人都喜欢这个明星。", "py": "Hěn duō niánqīng rén dōu xǐhuan zhège míngxīng.", "vi": "Nhiều bạn trẻ đều thích ngôi sao này." },
+    { "cn": "中国功夫在世界上很有名。", "py": "Zhōngguó gōngfu zài shìjiè shàng hěn yǒumíng.", "vi": "Võ thuật Trung Hoa nổi tiếng thế giới." },
+    { "cn": "别笑话我，我刚开始学。", "py": "Bié xiàohua wǒ, wǒ gāng kāishǐ xué.", "vi": "Đừng cười tôi, tôi mới bắt đầu học." },
+    { "cn": "昨天的比赛特别精彩。", "py": "Zuótiān de bǐsài tèbié jīngcǎi.", "vi": "Trận đấu hôm qua đặc biệt hay." },
+    { "cn": "听广播是练习听力的好方法。", "py": "Tīng guǎngbō shì liànxí tīnglì de hǎo fāngfǎ.", "vi": "Nghe đài là cách luyện nghe tốt." },
+    { "cn": "他对中国艺术很感兴趣。", "py": "Tā duì Zhōngguó yìshù hěn gǎn xìngqù.", "vi": "Anh ấy rất hứng thú với nghệ thuật Trung Hoa." }
+  ]
+}

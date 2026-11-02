@@ -1,0 +1,72 @@
+{
+  "id": 47,
+  "cn": "春夏秋冬",
+  "title": "Bốn mùa và ngày lễ",
+  "goal": "Nói về mùa và dịp lễ, kể chuyện quá khứ bằng 以前 / 后来 — bài dễ nhớ nhất với người Việt.",
+  "words": [
+    { "w": "春", "py": "chūn", "hv": "xuân", "vi": "mùa xuân", "pos": "danh từ",
+      "note": "Chính là \"xuân\" tiếng Việt. Có bộ 日 (mặt trời) ở dưới. Nói đủ là 春天.",
+      "ex": [{ "cn": "春天到了。", "py": "Chūntiān dào le.", "vi": "Mùa xuân đến rồi." }] },
+    { "w": "夏", "py": "xià", "hv": "hạ", "vi": "mùa hè", "pos": "danh từ",
+      "note": "Chính là \"hạ\" tiếng Việt (\"mùa hạ\", \"hạ chí\"). Nói đủ là 夏天.",
+      "ex": [{ "cn": "夏天很热。", "py": "Xiàtiān hěn rè.", "vi": "Mùa hè rất nóng." }] },
+    { "w": "秋", "py": "qiū", "hv": "thu", "vi": "mùa thu", "pos": "danh từ",
+      "note": "Chính là \"thu\" tiếng Việt. 禾 (lúa) + 火 (lửa) — lúa chín vàng như lửa, đúng là mùa gặt.",
+      "ex": [{ "cn": "秋天最舒服。", "py": "Qiūtiān zuì shūfu.", "vi": "Mùa thu dễ chịu nhất." }] },
+    { "w": "冬", "py": "dōng", "hv": "đông", "vi": "mùa đông", "pos": "danh từ",
+      "note": "Chính là \"đông\" tiếng Việt. Có hai chấm 冫 (băng) ở dưới — dấu hiệu của giá lạnh.",
+      "ex": [{ "cn": "北京的冬天很冷。", "py": "Běijīng de dōngtiān hěn lěng.", "vi": "Mùa đông Bắc Kinh rất lạnh." }] },
+    { "w": "季节", "py": "jìjié", "hv": "quý tiết", "vi": "mùa", "pos": "danh từ",
+      "note": "季 = \"quý\" trong \"quý một, quý hai\". 节 = \"tiết\" trong \"tiết trời\", \"thời tiết\".",
+      "ex": [{ "cn": "你喜欢哪个季节？", "py": "Nǐ xǐhuan nǎge jìjié?", "vi": "Bạn thích mùa nào?" }] },
+    { "w": "周末", "py": "zhōumò", "hv": "chu mạt", "vi": "cuối tuần", "pos": "danh từ",
+      "note": "周 (tuần, vòng) + 末 (cuối). Tiếng Việt: \"chu kỳ\", \"mạt kỳ\" (cuối kỳ).",
+      "ex": [{ "cn": "周末你有空吗？", "py": "Zhōumò nǐ yǒu kòng ma?", "vi": "Cuối tuần bạn rảnh không?" }] },
+    { "w": "节日", "py": "jiérì", "hv": "tiết nhật", "vi": "ngày lễ, ngày tết", "pos": "danh từ",
+      "note": "节 (tiết) + 日 (ngày). Tết Nguyên Đán là 春节 (xuân tiết) — người Việt cũng gọi là \"Tết\", cùng chữ 节.",
+      "ex": [{ "cn": "春节是最重要的节日。", "py": "Chūnjié shì zuì zhòngyào de jiérì.", "vi": "Tết là ngày lễ quan trọng nhất." }] },
+    { "w": "以前", "py": "yǐqián", "hv": "dĩ tiền", "vi": "trước đây, trước khi", "pos": "danh từ",
+      "note": "以 = \"dĩ\" trong \"dĩ nhiên\", \"sở dĩ\". Trái nghĩa là 以后 (sau này).",
+      "ex": [{ "cn": "我以前住在南方。", "py": "Wǒ yǐqián zhù zài nánfāng.", "vi": "Trước đây tôi sống ở miền Nam." }] },
+    { "w": "过去", "py": "guòqù", "hv": "quá khứ", "vi": "quá khứ; đi qua", "pos": "danh từ / động từ",
+      "note": "Chính là \"quá khứ\" tiếng Việt. Cũng là động từ: 过去看看 = đi qua đó xem.",
+      "ex": [{ "cn": "过去的事就别想了。", "py": "Guòqù de shì jiù bié xiǎng le.", "vi": "Chuyện quá khứ thì đừng nghĩ nữa." }] },
+    { "w": "后来", "py": "hòulái", "hv": "hậu lai", "vi": "về sau, sau đó", "pos": "phó từ",
+      "note": "后 (sau) + 来 (đến). CHỈ dùng kể chuyện đã xảy ra trong quá khứ — không dùng cho tương lai.",
+      "ex": [{ "cn": "后来他就搬走了。", "py": "Hòulái tā jiù bān zǒu le.", "vi": "Về sau anh ấy dọn đi rồi." }] }
+  ],
+  "grammar": [
+    { "t": "Bốn mùa: xuân hạ thu đông, giống hệt tiếng Việt",
+      "b": "春天 · 夏天 · 秋天 · 冬天",
+      "d": "Bốn chữ này người Việt đã thuộc lòng từ trước khi học tiếng Trung. Thêm 天 (trời) vào sau là thành tên mùa đầy đủ. Một bài gần như miễn phí cho bạn.",
+      "ex": [
+        { "cn": "一年有四个季节：春、夏、秋、冬。", "py": "Yì nián yǒu sì ge jìjié: chūn, xià, qiū, dōng.", "vi": "Một năm có bốn mùa: xuân, hạ, thu, đông." }
+      ] },
+    { "t": "后来 và 以后 — đừng dùng lẫn",
+      "b": "后来 = về sau (CHỈ quá khứ) · 以后 = sau này (quá khứ và tương lai)",
+      "d": "Kể chuyện đã qua thì dùng 后来: 后来他走了. Nói dự định tương lai phải dùng 以后: 以后我要去中国. Nói 后来我要去中国 là SAI.",
+      "ex": [
+        { "cn": "后来我们就没见过面。", "py": "Hòulái wǒmen jiù méi jiàn guo miàn.", "vi": "Về sau chúng tôi không gặp lại nữa. (quá khứ)" },
+        { "cn": "以后我想当老师。", "py": "Yǐhòu wǒ xiǎng dāng lǎoshī.", "vi": "Sau này tôi muốn làm giáo viên. (tương lai)" }
+      ] },
+    { "t": "以前 đặt sau mệnh đề",
+      "b": "[việc gì] + 以前",
+      "d": "Ngược với tiếng Việt. Ta nói \"TRƯỚC KHI ăn cơm\", tiếng Trung nói \"ăn cơm TRƯỚC\": 吃饭以前. Tương tự 以后: 下课以后 (sau khi tan học).",
+      "ex": [
+        { "cn": "吃饭以前要洗手。", "py": "Chīfàn yǐqián yào xǐ shǒu.", "vi": "Trước khi ăn phải rửa tay." },
+        { "cn": "来中国以前，我不会说汉语。", "py": "Lái Zhōngguó yǐqián, wǒ bú huì shuō Hànyǔ.", "vi": "Trước khi sang Trung Quốc, tôi không biết nói tiếng Trung." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你最喜欢哪个季节？", "py": "Nǐ zuì xǐhuan nǎge jìjié?", "vi": "Bạn thích mùa nào nhất?" },
+    { "cn": "我最喜欢秋天，不冷也不热。", "py": "Wǒ zuì xǐhuan qiūtiān, bù lěng yě bú rè.", "vi": "Tôi thích mùa thu nhất, không lạnh cũng không nóng." },
+    { "cn": "越南的夏天又热又长。", "py": "Yuènán de xiàtiān yòu rè yòu cháng.", "vi": "Mùa hè Việt Nam vừa nóng vừa dài." },
+    { "cn": "北方的冬天会下雪。", "py": "Běifāng de dōngtiān huì xià xuě.", "vi": "Mùa đông miền Bắc có tuyết." },
+    { "cn": "春节是中国最重要的节日。", "py": "Chūnjié shì Zhōngguó zuì zhòngyào de jiérì.", "vi": "Tết Nguyên Đán là ngày lễ quan trọng nhất Trung Quốc." },
+    { "cn": "这个周末你有什么打算？", "py": "Zhège zhōumò nǐ yǒu shénme dǎsuàn?", "vi": "Cuối tuần này bạn có dự định gì?" },
+    { "cn": "我以前不喜欢喝茶，现在很喜欢。", "py": "Wǒ yǐqián bù xǐhuan hē chá, xiànzài hěn xǐhuan.", "vi": "Trước đây tôi không thích uống trà, giờ thì rất thích." },
+    { "cn": "睡觉以前我一般看一会儿书。", "py": "Shuìjiào yǐqián wǒ yìbān kàn yíhuìr shū.", "vi": "Trước khi ngủ tôi thường đọc sách một lát." },
+    { "cn": "后来我才知道他是老师。", "py": "Hòulái wǒ cái zhīdào tā shì lǎoshī.", "vi": "Về sau tôi mới biết anh ấy là giáo viên." },
+    { "cn": "过去的事情别再想了。", "py": "Guòqù de shìqing bié zài xiǎng le.", "vi": "Chuyện đã qua đừng nghĩ nữa." }
+  ]
+}

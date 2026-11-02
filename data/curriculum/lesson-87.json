@@ -1,0 +1,72 @@
+{
+  "id": 87,
+  "cn": "名胜古迹",
+  "title": "Danh lam thắng cảnh",
+  "goal": "Tham quan, tả cảnh đẹp và gọi tên những địa danh nổi tiếng nhất Trung Quốc.",
+  "words": [
+    { "w": "参观", "py": "cānguān", "hv": "tham quan", "vi": "tham quan", "pos": "động từ",
+      "note": "Chính là \"tham quan\" tiếng Việt: 参 (tham) + 观 (quan, xem). Dùng cho nơi chốn: 参观博物馆.",
+      "ex": [{ "cn": "我们去参观了故宫。", "py": "Wǒmen qù cānguān le Gùgōng.", "vi": "Chúng tôi đi tham quan Tử Cấm Thành." }] },
+    { "w": "景色", "py": "jǐngsè", "hv": "cảnh sắc", "vi": "cảnh sắc", "pos": "danh từ",
+      "note": "Chính là \"cảnh sắc\" tiếng Việt: 景 (cảnh) + 色 (sắc, bài 21 trong 颜色).",
+      "ex": [{ "cn": "这里的景色真美。", "py": "Zhèlǐ de jǐngsè zhēn měi.", "vi": "Cảnh sắc ở đây đẹp thật." }] },
+    { "w": "风景", "py": "fēngjǐng", "hv": "phong cảnh", "vi": "phong cảnh", "pos": "danh từ",
+      "note": "Chính là \"phong cảnh\" tiếng Việt: 风 (phong, gió) + 景 (cảnh). Gần nghĩa 景色, dùng thay nhau được.",
+      "ex": [{ "cn": "山上的风景很好。", "py": "Shān shàng de fēngjǐng hěn hǎo.", "vi": "Phong cảnh trên núi rất đẹp." }] },
+    { "w": "长城", "py": "Chángchéng", "hv": "Trường Thành", "vi": "Vạn Lý Trường Thành", "pos": "danh từ riêng",
+      "note": "Chính là \"Trường Thành\" tiếng Việt: 长 (trường, dài) + 城 (thành). Tên đủ là 万里长城.",
+      "ex": [{ "cn": "不到长城非好汉。", "py": "Bú dào Chángchéng fēi hǎohàn.", "vi": "Chưa tới Trường Thành chưa phải hảo hán." }] },
+    { "w": "长江", "py": "Chángjiāng", "hv": "Trường Giang", "vi": "sông Trường Giang", "pos": "danh từ riêng",
+      "note": "Chính là \"Trường Giang\" tiếng Việt. Con sông dài nhất Trung Quốc, cùng với 黄河 (bài 58) làm nên nền văn minh Hoa Hạ.",
+      "ex": [{ "cn": "长江是中国最长的河。", "py": "Chángjiāng shì Zhōngguó zuì cháng de hé.", "vi": "Trường Giang là sông dài nhất Trung Quốc." }] },
+    { "w": "首都", "py": "shǒudū", "hv": "thủ đô", "vi": "thủ đô", "pos": "danh từ",
+      "note": "Chính là \"thủ đô\" tiếng Việt: 首 (thủ, đầu) + 都 (đô). Chú ý 都 ở đây đọc dū, khác 都 dōu (đều).",
+      "ex": [{ "cn": "北京是中国的首都。", "py": "Běijīng shì Zhōngguó de shǒudū.", "vi": "Bắc Kinh là thủ đô Trung Quốc." }] },
+    { "w": "亚洲", "py": "Yàzhōu", "hv": "Á châu", "vi": "châu Á", "pos": "danh từ riêng",
+      "note": "Chính là \"Á châu\" tiếng Việt: 亚 (Á) + 洲 (châu). Các châu khác: 欧洲 (Âu), 非洲 (Phi), 美洲 (Mỹ).",
+      "ex": [{ "cn": "越南和中国都在亚洲。", "py": "Yuènán hé Zhōngguó dōu zài Yàzhōu.", "vi": "Việt Nam và Trung Quốc đều ở châu Á." }] },
+    { "w": "地球", "py": "dìqiú", "hv": "địa cầu", "vi": "trái đất", "pos": "danh từ",
+      "note": "Chính là \"địa cầu\" tiếng Việt: 地 (địa) + 球 (cầu, quả bóng).",
+      "ex": [{ "cn": "保护地球是每个人的责任。", "py": "Bǎohù dìqiú shì měi ge rén de zérèn.", "vi": "Bảo vệ trái đất là trách nhiệm mỗi người." }] },
+    { "w": "海洋", "py": "hǎiyáng", "hv": "hải dương", "vi": "biển cả, đại dương", "pos": "danh từ",
+      "note": "Chính là \"hải dương\" tiếng Việt: 海 (hải) + 洋 (dương). Cả hai đều có bộ 氵.",
+      "ex": [{ "cn": "海洋覆盖了大部分地球。", "py": "Hǎiyáng fùgài le dà bùfen dìqiú.", "vi": "Đại dương bao phủ phần lớn trái đất." }] },
+    { "w": "森林", "py": "sēnlín", "hv": "sâm lâm", "vi": "rừng", "pos": "danh từ",
+      "note": "Chữ đẹp nhất bài: 森 là BA chữ 木 (cây), 林 là HAI chữ 木. Nhiều cây thành rừng — nhìn là hiểu ngay.",
+      "ex": [{ "cn": "这片森林很大。", "py": "Zhè piàn sēnlín hěn dà.", "vi": "Khu rừng này rất rộng." }] }
+  ],
+  "grammar": [
+    { "t": "Chữ hội ý: nhân đôi, nhân ba để tăng nghĩa",
+      "b": "木 → 林 → 森 · 人 → 从 → 众 · 火 → 炎",
+      "d": "Một cây là 木, hai cây thành 林 (rừng thưa), ba cây thành 森 (rừng rậm). Một người là 人, hai người là 从 (đi theo), ba người là 众 (đám đông). Đây là một trong sáu cách tạo chữ Hán, và là cách dễ nhớ nhất.",
+      "ex": [
+        { "cn": "森林 = 森 + 林", "py": "sēnlín", "vi": "ba cây + hai cây = rừng" },
+        { "cn": "观众 = 观 + 众", "py": "guānzhòng", "vi": "xem + đám đông = khán giả" }
+      ] },
+    { "t": "参观 và 旅游 và 逛 — ba kiểu đi chơi",
+      "b": "参观 = thăm nơi có tổ chức · 旅游 = du lịch · 逛 = dạo chơi",
+      "d": "参观博物馆, 参观工厂 (có mục đích tìm hiểu). 旅游 là cả chuyến đi. 逛街, 逛商店 (đi dạo lòng vòng, không mục đích rõ). Chọn đúng từ là câu nghe rất tự nhiên.",
+      "ex": [
+        { "cn": "周末我们去参观博物馆。", "py": "Zhōumò wǒmen qù cānguān bówùguǎn.", "vi": "Cuối tuần chúng tôi đi thăm bảo tàng." },
+        { "cn": "我喜欢一个人逛书店。", "py": "Wǒ xǐhuan yí ge rén guàng shūdiàn.", "vi": "Tôi thích một mình dạo hiệu sách." }
+      ] },
+    { "t": "Đuôi 洲 cho tên châu lục",
+      "b": "亚洲 · 欧洲 · 非洲 · 美洲 · 澳洲",
+      "d": "洲 nghĩa là châu lục, có bộ 氵 vì châu lục là vùng đất giữa biển. Người Việt gọi Á châu, Âu châu, Phi châu — cùng một hệ thống.",
+      "ex": [
+        { "cn": "他去过亚洲和欧洲。", "py": "Tā qù guo Yàzhōu hé Ōuzhōu.", "vi": "Anh ấy từng đi châu Á và châu Âu." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "导游带我们参观了三个地方。", "py": "Dǎoyóu dài wǒmen cānguān le sān ge dìfang.", "vi": "Hướng dẫn viên đưa chúng tôi thăm ba nơi." },
+    { "cn": "秋天山上的景色最美。", "py": "Qiūtiān shān shàng de jǐngsè zuì měi.", "vi": "Mùa thu cảnh trên núi đẹp nhất." },
+    { "cn": "这里风景好，空气也新鲜。", "py": "Zhèlǐ fēngjǐng hǎo, kōngqì yě xīnxiān.", "vi": "Ở đây phong cảnh đẹp, không khí cũng trong lành." },
+    { "cn": "长城是世界有名的古迹。", "py": "Chángchéng shì shìjiè yǒumíng de gǔjì.", "vi": "Trường Thành là di tích nổi tiếng thế giới." },
+    { "cn": "长江经过很多大城市。", "py": "Chángjiāng jīngguò hěn duō dà chéngshì.", "vi": "Trường Giang chảy qua nhiều thành phố lớn." },
+    { "cn": "越南的首都是河内。", "py": "Yuènán de shǒudū shì Hénèi.", "vi": "Thủ đô Việt Nam là Hà Nội." },
+    { "cn": "亚洲是最大的洲。", "py": "Yàzhōu shì zuì dà de zhōu.", "vi": "Châu Á là châu lục lớn nhất." },
+    { "cn": "地球只有一个，要好好保护。", "py": "Dìqiú zhǐ yǒu yí ge, yào hǎohǎo bǎohù.", "vi": "Trái đất chỉ có một, phải bảo vệ cho tốt." },
+    { "cn": "我从来没见过海洋。", "py": "Wǒ cónglái méi jiàn guo hǎiyáng.", "vi": "Tôi chưa bao giờ nhìn thấy biển." },
+    { "cn": "森林里空气特别好。", "py": "Sēnlín lǐ kōngqì tèbié hǎo.", "vi": "Trong rừng không khí đặc biệt tốt." }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": 65,
+  "cn": "优点和缺点",
+  "title": "Ưu điểm và khuyết điểm",
+  "goal": "Nhận xét con người và cách làm việc — bài đầy từ Hán Việt, kèm một bẫy nữa.",
+  "words": [
+    { "w": "优点", "py": "yōudiǎn", "hv": "ưu điểm", "vi": "ưu điểm", "pos": "danh từ",
+      "note": "Chính là \"ưu điểm\" tiếng Việt: 优 (ưu) + 点 (điểm).",
+      "ex": [{ "cn": "每个人都有优点。", "py": "Měi ge rén dōu yǒu yōudiǎn.", "vi": "Ai cũng có ưu điểm." }] },
+    { "w": "缺点", "py": "quēdiǎn", "hv": "khuyết điểm", "vi": "khuyết điểm, nhược điểm", "pos": "danh từ",
+      "note": "Chính là \"khuyết điểm\" tiếng Việt: 缺 (thiếu) + 点 (điểm). Cặp đối với 优点.",
+      "ex": [{ "cn": "他最大的缺点是太懒。", "py": "Tā zuì dà de quēdiǎn shì tài lǎn.", "vi": "Khuyết điểm lớn nhất của cậu ấy là quá lười." }] },
+    { "w": "优秀", "py": "yōuxiù", "hv": "ưu tú", "vi": "ưu tú, xuất sắc", "pos": "tính từ",
+      "note": "Chính là \"ưu tú\" tiếng Việt. Lời khen mạnh, dùng cho học sinh, nhân viên, tác phẩm.",
+      "ex": [{ "cn": "她是个优秀的学生。", "py": "Tā shì ge yōuxiù de xuésheng.", "vi": "Cô ấy là một học sinh ưu tú." }] },
+    { "w": "良好", "py": "liánghǎo", "hv": "lương hảo", "vi": "tốt, khá tốt", "pos": "tính từ",
+      "note": "良 = \"lương\" trong \"lương thiện\", \"cải lương\". Trang trọng, hay gặp trên giấy tờ: 成绩良好.",
+      "ex": [{ "cn": "他有良好的学习习惯。", "py": "Tā yǒu liánghǎo de xuéxí xíguàn.", "vi": "Cậu ấy có thói quen học tập tốt." }] },
+    { "w": "严格", "py": "yángé", "hv": "nghiêm cách", "vi": "nghiêm khắc", "pos": "tính từ",
+      "note": "Tiếng Việt nói \"nghiêm khắc\", \"nghiêm túc\" — cùng chữ 严. Dùng với 对: 对学生很严格.",
+      "ex": [{ "cn": "这位老师很严格。", "py": "Zhè wèi lǎoshī hěn yángé.", "vi": "Thầy giáo này rất nghiêm khắc." }] },
+    { "w": "马虎", "py": "mǎhu", "hv": "mã hổ", "vi": "cẩu thả, qua loa", "pos": "tính từ",
+      "note": "Nghĩa đen là \"ngựa hổ\" — có điển tích về người vẽ con vật nửa ngựa nửa hổ vì làm ẩu. Trái nghĩa với 仔细.",
+      "ex": [{ "cn": "做事不能太马虎。", "py": "Zuòshì bù néng tài mǎhu.", "vi": "Làm việc không được cẩu thả quá." }] },
+    { "w": "粗心", "py": "cūxīn", "hv": "thô tâm", "vi": "bất cẩn, sơ ý", "pos": "tính từ",
+      "note": "粗 (thô) + 心 (lòng) — lòng dạ thô, không tỉ mỉ. Gần nghĩa 马虎 nhưng nhấn vào sự sơ ý.",
+      "ex": [{ "cn": "他很粗心，又写错了。", "py": "Tā hěn cūxīn, yòu xiě cuò le.", "vi": "Cậu ấy sơ ý quá, lại viết sai rồi." }] },
+    { "w": "仔细", "py": "zǐxì", "hv": "tử tế", "vi": "kỹ lưỡng, tỉ mỉ", "pos": "tính từ",
+      "note": "BẪY HÁN VIỆT: âm là \"tử tế\" nhưng nghĩa tiếng Trung là KỸ LƯỠNG, không phải \"tốt bụng\". Tốt bụng là 善良 hoặc 好.",
+      "ex": [{ "cn": "请仔细看看。", "py": "Qǐng zǐxì kànkan.", "vi": "Xin xem kỹ lại." }] },
+    { "w": "耐心", "py": "nàixīn", "hv": "nại tâm", "vi": "kiên nhẫn", "pos": "danh từ / tính từ",
+      "note": "耐 = \"nại\" trong \"nhẫn nại\". Lại một thành viên gia đình chữ 心.",
+      "ex": [{ "cn": "教孩子要有耐心。", "py": "Jiāo háizi yào yǒu nàixīn.", "vi": "Dạy trẻ phải có kiên nhẫn." }] },
+    { "w": "态度", "py": "tàidu", "hv": "thái độ", "vi": "thái độ", "pos": "danh từ",
+      "note": "Chính là \"thái độ\" tiếng Việt: 态 (thái) + 度 (độ).",
+      "ex": [{ "cn": "他的服务态度很好。", "py": "Tā de fúwù tàidu hěn hǎo.", "vi": "Thái độ phục vụ của anh ấy rất tốt." }] }
+  ],
+  "grammar": [
+    { "t": "Bẫy Hán Việt: 仔细 là KỸ LƯỠNG",
+      "b": "仔细 = tỉ mỉ, cẩn thận · 善良 = tử tế, tốt bụng",
+      "d": "Người Việt gặp 仔细 rất dễ hiểu thành \"tử tế, tốt bụng\". Thực ra nó nói về cách LÀM VIỆC, không phải về lòng dạ. Nhớ cặp trái nghĩa: 仔细 ↔ 马虎.",
+      "ex": [
+        { "cn": "他工作很仔细。", "py": "Tā gōngzuò hěn zǐxì.", "vi": "Anh ấy làm việc rất tỉ mỉ." },
+        { "cn": "他是个善良的人。", "py": "Tā shì ge shànliáng de rén.", "vi": "Anh ấy là người tốt bụng." }
+      ] },
+    { "t": "对 … 严格 / 有耐心 — thái độ hướng tới ai",
+      "b": "对 + đối tượng + tính từ / 有 + danh từ",
+      "d": "Nhắc lại mẫu 对 từ bài 34 và 39. Rất nhiều từ trong bài này đi với 对: 对学生严格, 对孩子有耐心, 对工作认真.",
+      "ex": [
+        { "cn": "老师对我们很严格。", "py": "Lǎoshī duì wǒmen hěn yángé.", "vi": "Thầy rất nghiêm khắc với chúng tôi." },
+        { "cn": "他对客人的态度很好。", "py": "Tā duì kèrén de tàidu hěn hǎo.", "vi": "Thái độ của anh ấy với khách rất tốt." }
+      ] },
+    { "t": "Cặp trái nghĩa cần thuộc theo cặp",
+      "b": "优点 ↔ 缺点 · 仔细 ↔ 马虎 · 优秀 ↔ 一般",
+      "d": "Học từ theo CẶP TRÁI NGHĨA hiệu quả gấp đôi học từng từ một, vì não ghi nhớ bằng đối chiếu. Từ HSK 4 trở đi, hãy tự lập bảng cặp trái nghĩa cho mỗi bài.",
+      "ex": [
+        { "cn": "他的优点是认真，缺点是太慢。", "py": "Tā de yōudiǎn shì rènzhēn, quēdiǎn shì tài màn.", "vi": "Ưu điểm của anh ấy là nghiêm túc, khuyết điểm là quá chậm." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "说说你自己的优点和缺点。", "py": "Shuōshuo nǐ zìjǐ de yōudiǎn hé quēdiǎn.", "vi": "Hãy nói về ưu điểm và khuyết điểm của bạn." },
+    { "cn": "他是我们班最优秀的学生。", "py": "Tā shì wǒmen bān zuì yōuxiù de xuésheng.", "vi": "Cậu ấy là học sinh xuất sắc nhất lớp tôi." },
+    { "cn": "他这次考试成绩良好。", "py": "Tā zhè cì kǎoshì chéngjì liánghǎo.", "vi": "Kỳ thi này kết quả của cậu ấy khá tốt." },
+    { "cn": "爸爸对我很严格。", "py": "Bàba duì wǒ hěn yángé.", "vi": "Bố rất nghiêm khắc với tôi." },
+    { "cn": "他做事有点儿马虎。", "py": "Tā zuòshì yǒudiǎnr mǎhu.", "vi": "Cậu ấy làm việc hơi cẩu thả." },
+    { "cn": "因为粗心，我又做错了一道题。", "py": "Yīnwèi cūxīn, wǒ yòu zuò cuò le yí dào tí.", "vi": "Vì sơ ý, tôi lại làm sai một bài." },
+    { "cn": "考试的时候要仔细检查。", "py": "Kǎoshì de shíhou yào zǐxì jiǎnchá.", "vi": "Lúc thi phải kiểm tra kỹ." },
+    { "cn": "学外语一定要有耐心。", "py": "Xué wàiyǔ yídìng yào yǒu nàixīn.", "vi": "Học ngoại ngữ nhất định phải kiên nhẫn." },
+    { "cn": "工作态度比能力更重要。", "py": "Gōngzuò tàidu bǐ nénglì gèng zhòngyào.", "vi": "Thái độ làm việc quan trọng hơn năng lực." },
+    { "cn": "他的优点是对人有耐心。", "py": "Tā de yōudiǎn shì duì rén yǒu nàixīn.", "vi": "Ưu điểm của anh ấy là kiên nhẫn với mọi người." }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "id": 55,
+  "cn": "连接句子",
+  "title": "Liên từ và điều kiện",
+  "goal": "Ghép câu dài mạch lạc — bộ liên từ này là ranh giới giữa nói bập bẹ và nói trôi chảy.",
+  "words": [
+    { "w": "如果", "py": "rúguǒ", "hv": "như quả", "vi": "nếu", "pos": "liên từ",
+      "note": "如 = \"như\" trong \"ví như\", \"như ý\". Vế sau thường có 就: 如果…就….",
+      "ex": [{ "cn": "如果下雨，我就不去了。", "py": "Rúguǒ xiàyǔ, wǒ jiù bú qù le.", "vi": "Nếu mưa thì tôi không đi nữa." }] },
+    { "w": "或者", "py": "huòzhě", "hv": "hoặc giả", "vi": "hoặc (trong câu kể)", "pos": "liên từ",
+      "note": "Chính là \"hoặc giả\" tiếng Việt. QUAN TRỌNG: chỉ dùng trong câu KỂ, không dùng để hỏi — câu hỏi phải dùng 还是.",
+      "ex": [{ "cn": "我喝茶或者咖啡都行。", "py": "Wǒ hē chá huòzhě kāfēi dōu xíng.", "vi": "Tôi uống trà hay cà phê đều được." }] },
+    { "w": "然后", "py": "ránhòu", "hv": "nhiên hậu", "vi": "sau đó, rồi thì", "pos": "liên từ",
+      "note": "然 là đuôi quen thuộc (当然, 虽然, 突然). Dùng để kể trình tự các bước.",
+      "ex": [{ "cn": "我先吃饭，然后做作业。", "py": "Wǒ xiān chīfàn, ránhòu zuò zuòyè.", "vi": "Tôi ăn cơm trước, sau đó làm bài." }] },
+    { "w": "除了", "py": "chúle", "hv": "trừ liễu", "vi": "ngoài… ra", "pos": "giới từ",
+      "note": "除 = \"trừ\" trong \"loại trừ\", \"trừ phi\". Hai nghĩa trái ngược nhau, xem phần ngữ pháp.",
+      "ex": [{ "cn": "除了我，大家都去了。", "py": "Chúle wǒ, dàjiā dōu qù le.", "vi": "Ngoài tôi ra, mọi người đều đi." }] },
+    { "w": "不但", "py": "bùdàn", "hv": "bất đãn", "vi": "không những", "pos": "liên từ",
+      "note": "不 (không) + 但 (chỉ). Luôn đi cặp với 而且 ở vế sau.",
+      "ex": [{ "cn": "他不但会说汉语，而且说得很好。", "py": "Tā bùdàn huì shuō Hànyǔ, érqiě shuō de hěn hǎo.", "vi": "Anh ấy không những biết nói tiếng Trung, mà còn nói rất giỏi." }] },
+    { "w": "而且", "py": "érqiě", "hv": "nhi thả", "vi": "mà còn, hơn nữa", "pos": "liên từ",
+      "note": "Đứng đầu vế thứ hai. Có thể dùng một mình mà không cần 不但: 这里很近，而且很方便.",
+      "ex": [{ "cn": "这个菜好吃，而且便宜。", "py": "Zhège cài hǎochī, érqiě piányi.", "vi": "Món này ngon, mà lại rẻ." }] },
+    { "w": "只有", "py": "zhǐyǒu", "hv": "chỉ hữu", "vi": "chỉ có, chỉ khi", "pos": "liên từ",
+      "note": "Đi cặp với 才 ở vế sau: 只有…才… (chỉ khi… mới…). Nhấn mạnh điều kiện DUY NHẤT.",
+      "ex": [{ "cn": "只有努力，才能成功。", "py": "Zhǐyǒu nǔlì, cái néng chénggōng.", "vi": "Chỉ có cố gắng mới thành công." }] },
+    { "w": "根据", "py": "gēnjù", "hv": "căn cứ", "vi": "căn cứ vào, dựa theo", "pos": "giới từ",
+      "note": "Chính là \"căn cứ\" tiếng Việt: 根 (rễ, gốc) + 据 (dựa). Đứng đầu câu.",
+      "ex": [{ "cn": "根据天气预报，明天会下雨。", "py": "Gēnjù tiānqì yùbào, míngtiān huì xiàyǔ.", "vi": "Theo dự báo thời tiết, mai sẽ mưa." }] },
+    { "w": "关于", "py": "guānyú", "hv": "quan ư", "vi": "về, liên quan tới", "pos": "giới từ",
+      "note": "关 (liên quan) + 于 (ở). Đứng ĐẦU câu: 关于这个问题, 我有话说.",
+      "ex": [{ "cn": "关于这个问题，我们再谈。", "py": "Guānyú zhège wèntí, wǒmen zài tán.", "vi": "Về vấn đề này, ta bàn sau." }] },
+    { "w": "为了", "py": "wèile", "hv": "vị liễu", "vi": "để, vì mục đích", "pos": "giới từ",
+      "note": "Chỉ MỤC ĐÍCH (làm gì để đạt được gì), khác 因为 chỉ NGUYÊN NHÂN. Đứng đầu câu.",
+      "ex": [{ "cn": "为了学好汉语，我每天练习。", "py": "Wèile xué hǎo Hànyǔ, wǒ měi tiān liànxí.", "vi": "Để học giỏi tiếng Trung, ngày nào tôi cũng luyện." }] }
+  ],
+  "grammar": [
+    { "t": "或者 và 还是 — hai chữ \"hoặc\" không thay nhau được",
+      "b": "或者 dùng trong câu KỂ · 还是 dùng trong câu HỎI",
+      "d": "Đây là lỗi kinh điển. 你喝茶还是咖啡？(bạn uống trà hay cà phê? — câu hỏi). 我喝茶或者咖啡都行 (trà hay cà phê đều được — câu kể). Dùng ngược là người bản xứ thấy sai ngay.",
+      "ex": [
+        { "cn": "你去还是我去？", "py": "Nǐ qù háishi wǒ qù?", "vi": "Bạn đi hay tôi đi? (HỎI)" },
+        { "cn": "你去或者我去都可以。", "py": "Nǐ qù huòzhě wǒ qù dōu kěyǐ.", "vi": "Bạn đi hay tôi đi đều được. (KỂ)" }
+      ] },
+    { "t": "除了 có HAI nghĩa trái ngược — nhìn 都 hay 也 mà đoán",
+      "b": "除了…, 都… (loại trừ) · 除了…, 也… (bao gồm)",
+      "d": "Vế sau dùng 都 thì nghĩa là LOẠI TRỪ: 除了他，大家都去了 (trừ anh ấy, mọi người đều đi). Vế sau dùng 也/还 thì nghĩa là NGOÀI RA CÒN: 除了汉语，我还会说英语 (ngoài tiếng Trung, tôi còn biết tiếng Anh).",
+      "ex": [
+        { "cn": "除了小王，我们都去过北京。", "py": "Chúle Xiǎo Wáng, wǒmen dōu qù guo Běijīng.", "vi": "Trừ Tiểu Vương, chúng tôi đều từng đi Bắc Kinh." },
+        { "cn": "除了苹果，我还买了葡萄。", "py": "Chúle píngguǒ, wǒ hái mǎi le pútao.", "vi": "Ngoài táo, tôi còn mua nho." }
+      ] },
+    { "t": "Bốn cặp liên từ cần thuộc lòng",
+      "b": "因为…所以… · 虽然…但是… · 不但…而且… · 只有…才…",
+      "d": "Tiếng Trung dùng ĐỦ CẢ CẶP, khác tiếng Anh thường lược một vế. May mắn là tiếng Việt cũng đi theo cặp: vì…nên…, tuy…nhưng…, không những…mà còn…, chỉ có…mới…. Người Việt nắm phần này rất nhanh.",
+      "ex": [
+        { "cn": "他不但聪明，而且很努力。", "py": "Tā bùdàn cōngming, érqiě hěn nǔlì.", "vi": "Cậu ấy không những thông minh, mà còn rất chăm." },
+        { "cn": "只有多练习，才能提高水平。", "py": "Zhǐyǒu duō liànxí, cái néng tígāo shuǐpíng.", "vi": "Chỉ có luyện nhiều mới nâng được trình độ." }
+      ] },
+    { "t": "为了 và 因为 — mục đích khác nguyên nhân",
+      "b": "为了 + mục đích · 因为 + nguyên nhân",
+      "d": "为了健康，我每天运动 (VÌ MỤC ĐÍCH sức khoẻ — hướng tới tương lai). 因为生病，我没去上班 (VÌ LÝ DO ốm — đã xảy ra). Người Việt hay dùng lẫn vì tiếng Việt đều nói \"vì\".",
+      "ex": [
+        { "cn": "为了考试，我复习了一个星期。", "py": "Wèile kǎoshì, wǒ fùxí le yí ge xīngqī.", "vi": "Để thi, tôi ôn cả tuần." },
+        { "cn": "因为下雨，比赛结束了。", "py": "Yīnwèi xiàyǔ, bǐsài jiéshù le.", "vi": "Vì mưa nên trận đấu kết thúc." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "如果明天天气好，我们就去爬山。", "py": "Rúguǒ míngtiān tiānqì hǎo, wǒmen jiù qù páshān.", "vi": "Nếu mai trời đẹp thì chúng ta đi leo núi." },
+    { "cn": "你可以坐地铁或者坐公共汽车。", "py": "Nǐ kěyǐ zuò dìtiě huòzhě zuò gōnggòng qìchē.", "vi": "Bạn có thể đi tàu điện hoặc xe buýt." },
+    { "cn": "我先去银行，然后去超市。", "py": "Wǒ xiān qù yínháng, ránhòu qù chāoshì.", "vi": "Tôi đi ngân hàng trước, rồi đi siêu thị." },
+    { "cn": "除了我，别人都同意了。", "py": "Chúle wǒ, biéren dōu tóngyì le.", "vi": "Trừ tôi ra, người khác đều đồng ý." },
+    { "cn": "除了中文，他还会说英语。", "py": "Chúle Zhōngwén, tā hái huì shuō Yīngyǔ.", "vi": "Ngoài tiếng Trung, anh ấy còn biết tiếng Anh." },
+    { "cn": "这里不但安静，而且很方便。", "py": "Zhèlǐ bùdàn ānjìng, érqiě hěn fāngbiàn.", "vi": "Ở đây không những yên tĩnh mà còn rất tiện." },
+    { "cn": "只有每天练习，才能写好汉字。", "py": "Zhǐyǒu měi tiān liànxí, cái néng xiě hǎo Hànzì.", "vi": "Chỉ có luyện mỗi ngày mới viết đẹp chữ Hán." },
+    { "cn": "根据我的经验，这个办法最好。", "py": "Gēnjù wǒ de jīngyàn, zhège bànfǎ zuì hǎo.", "vi": "Theo kinh nghiệm của tôi, cách này tốt nhất." },
+    { "cn": "关于这件事，我不太清楚。", "py": "Guānyú zhè jiàn shì, wǒ bú tài qīngchu.", "vi": "Về việc này, tôi không rõ lắm." },
+    { "cn": "为了身体健康，他每天早上跑步。", "py": "Wèile shēntǐ jiànkāng, tā měi tiān zǎoshang pǎobù.", "vi": "Vì sức khoẻ, sáng nào anh ấy cũng chạy bộ." }
+  ]
+}

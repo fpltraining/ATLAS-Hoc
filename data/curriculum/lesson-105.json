@@ -1,0 +1,72 @@
+{
+  "id": 105,
+  "cn": "副词连接",
+  "title": "Phó từ nối ý",
+  "goal": "Phó từ dẫn dắt mạch nói — biết dùng là kể chuyện trôi chảy, không còn câu rời rạc.",
+  "words": [
+    { "w": "首先", "py": "shǒuxiān", "hv": "thủ tiên", "vi": "trước hết", "pos": "phó từ",
+      "note": "首 (đầu) + 先 (trước). Mở đầu chuỗi: 首先… 其次… 最后…. Tiếng Việt: \"thủ\" trong \"thủ đô\", \"nguyên thủ\".",
+      "ex": [{ "cn": "首先，我们来看第一个问题。", "py": "Shǒuxiān, wǒmen lái kàn dì-yī ge wèntí.", "vi": "Trước hết, ta xem vấn đề thứ nhất." }] },
+    { "w": "接着", "py": "jiēzhe", "hv": "tiếp trước", "vi": "tiếp đó", "pos": "phó từ",
+      "note": "接 (nối, bài 41) + 着. Nối hành động xảy ra ngay sau: 他吃了饭，接着去上班了.",
+      "ex": [{ "cn": "先洗手，接着吃饭。", "py": "Xiān xǐ shǒu, jiēzhe chīfàn.", "vi": "Rửa tay trước, tiếp đó ăn cơm." }] },
+    { "w": "重新", "py": "chóngxīn", "hv": "trùng tân", "vi": "làm lại từ đầu", "pos": "phó từ",
+      "note": "重 ở đây đọc chóng (trùng, lặp lại) chứ không phải zhòng (nặng) — xem bài 97. 新 = mới.",
+      "ex": [{ "cn": "请重新写一遍。", "py": "Qǐng chóngxīn xiě yí biàn.", "vi": "Xin viết lại từ đầu một lượt." }] },
+    { "w": "继续", "py": "jìxù", "hv": "kế tục", "vi": "tiếp tục", "pos": "động từ",
+      "note": "Chính là \"kế tục\" tiếng Việt: 继 (kế) + 续 (tục). Cả hai chữ đều bộ 纟 (sợi tơ) — nối sợi cho dài ra.",
+      "ex": [{ "cn": "休息一下再继续。", "py": "Xiūxi yíxià zài jìxù.", "vi": "Nghỉ chút rồi tiếp tục." }] },
+    { "w": "永远", "py": "yǒngyuǎn", "hv": "vĩnh viễn", "vi": "mãi mãi", "pos": "phó từ",
+      "note": "Chính là \"vĩnh viễn\" tiếng Việt: 永 (vĩnh) + 远 (viễn, xa).",
+      "ex": [{ "cn": "我永远不会忘记你。", "py": "Wǒ yǒngyuǎn bú huì wàngjì nǐ.", "vi": "Tôi sẽ mãi không quên bạn." }] },
+    { "w": "也许", "py": "yěxǔ", "hv": "dã hứa", "vi": "có lẽ", "pos": "phó từ",
+      "note": "Mức chắc chắn thấp, thấp hơn 大概 và 可能. Đặt trước động từ hoặc đầu câu.",
+      "ex": [{ "cn": "他也许不来了。", "py": "Tā yěxǔ bù lái le.", "vi": "Có lẽ anh ấy không tới nữa." }] },
+    { "w": "肯定", "py": "kěndìng", "hv": "khẳng định", "vi": "chắc chắn; khẳng định", "pos": "phó từ / động từ",
+      "note": "Chính là \"khẳng định\" tiếng Việt. Vừa là phó từ (chắc chắn sẽ), vừa là động từ (công nhận).",
+      "ex": [{ "cn": "他肯定会来。", "py": "Tā kěndìng huì lái.", "vi": "Anh ấy chắc chắn sẽ đến." }] },
+    { "w": "顺便", "py": "shùnbiàn", "hv": "thuận tiện", "vi": "tiện thể", "pos": "phó từ",
+      "note": "顺 (thuận, bài 95) + 便 (tiện). Làm thêm việc phụ khi đang làm việc chính: 顺便买点儿菜.",
+      "ex": [{ "cn": "去超市顺便买点儿水果。", "py": "Qù chāoshì shùnbiàn mǎi diǎnr shuǐguǒ.", "vi": "Đi siêu thị tiện mua ít hoa quả." }] },
+    { "w": "刚", "py": "gāng", "hv": "cương", "vi": "vừa mới", "pos": "phó từ",
+      "note": "Chỉ việc vừa xảy ra. Khác 刚才 (là danh từ chỉ thời điểm): 我刚到 và 刚才我在忙.",
+      "ex": [{ "cn": "我刚到家。", "py": "Wǒ gāng dào jiā.", "vi": "Tôi vừa về đến nhà." }] },
+    { "w": "挺", "py": "tǐng", "hv": "đĩnh", "vi": "khá, rất", "pos": "phó từ",
+      "note": "Rất khẩu ngữ, thường đi với 的 ở cuối: 挺好的, 挺累的. Mức độ ngang 很 nhưng thân mật hơn.",
+      "ex": [{ "cn": "这个菜挺好吃的。", "py": "Zhège cài tǐng hǎochī de.", "vi": "Món này khá ngon." }] }
+  ],
+  "grammar": [
+    { "t": "Bộ khung kể chuyện và trình bày",
+      "b": "首先 … 接着／然后 … 最后 …",
+      "d": "Đây là bộ khung bắt buộc khi bạn kể lại một việc hoặc trình bày ý kiến trong phần thi nói. Có thể thay 接着 bằng 然后, thay 最后 bằng 总之. Thêm 其次 (bài 101) nếu có ba ý trở lên.",
+      "ex": [
+        { "cn": "首先要有计划，其次要行动，最后要坚持。", "py": "Shǒuxiān yào yǒu jìhuà, qícì yào xíngdòng, zuìhòu yào jiānchí.", "vi": "Trước hết phải có kế hoạch, tiếp đến phải hành động, cuối cùng phải kiên trì." }
+      ] },
+    { "t": "Thang độ chắc chắn của phỏng đoán",
+      "b": "也许 < 可能 < 大概 < 应该 < 肯定 < 一定",
+      "d": "Nắm được thang này là biết cách nói vừa đủ thận trọng. 他也许来 (có lẽ, 40%) → 他应该来 (theo lý thì có, 70%) → 他肯定来 (chắc chắn, 95%).",
+      "ex": [
+        { "cn": "他应该已经到了。", "py": "Tā yīnggāi yǐjīng dào le.", "vi": "Theo lý thì anh ấy đến rồi." },
+        { "cn": "明天肯定会下雨。", "py": "Míngtiān kěndìng huì xià yǔ.", "vi": "Mai chắc chắn mưa." }
+      ] },
+    { "t": "刚 và 刚才 — phó từ hay danh từ?",
+      "b": "刚 + động từ (phó từ) · 刚才 + đứng như trạng ngữ thời gian (danh từ)",
+      "d": "刚 đứng NGAY TRƯỚC động từ: 我刚吃完. 刚才 là mốc thời gian, đứng đầu câu hoặc sau chủ ngữ, và câu có thể dùng 了: 刚才他打电话了. Nói 我刚才刚到 là thừa.",
+      "ex": [
+        { "cn": "我刚来，还不太熟悉。", "py": "Wǒ gāng lái, hái bú tài shúxī.", "vi": "Tôi mới tới, còn chưa quen lắm." },
+        { "cn": "刚才谁来了？", "py": "Gāngcái shéi lái le?", "vi": "Vừa nãy ai đến vậy?" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "首先感谢大家来参加。", "py": "Shǒuxiān gǎnxiè dàjiā lái cānjiā.", "vi": "Trước hết cảm ơn mọi người đã đến dự." },
+    { "cn": "他说完，接着大家都笑了。", "py": "Tā shuō wán, jiēzhe dàjiā dōu xiào le.", "vi": "Anh ấy nói xong, tiếp đó mọi người cùng cười." },
+    { "cn": "这个句子错了，请重新写。", "py": "Zhège jùzi cuò le, qǐng chóngxīn xiě.", "vi": "Câu này sai rồi, xin viết lại." },
+    { "cn": "别停，继续努力。", "py": "Bié tíng, jìxù nǔlì.", "vi": "Đừng dừng, tiếp tục cố gắng." },
+    { "cn": "我会永远记得这一天。", "py": "Wǒ huì yǒngyuǎn jìde zhè yì tiān.", "vi": "Tôi sẽ mãi nhớ ngày hôm nay." },
+    { "cn": "也许我们以后还会见面。", "py": "Yěxǔ wǒmen yǐhòu hái huì jiànmiàn.", "vi": "Có lẽ sau này chúng ta còn gặp lại." },
+    { "cn": "这么努力，他肯定能通过考试。", "py": "Zhème nǔlì, tā kěndìng néng tōngguò kǎoshì.", "vi": "Chăm thế này, cậu ấy chắc chắn đỗ." },
+    { "cn": "你出去的时候顺便扔一下垃圾。", "py": "Nǐ chūqù de shíhou shùnbiàn rēng yíxià lājī.", "vi": "Lúc ra ngoài tiện thể đổ rác giúp." },
+    { "cn": "我刚看完那本书。", "py": "Wǒ gāng kàn wán nà běn shū.", "vi": "Tôi vừa đọc xong quyển sách đó." },
+    { "cn": "今天天气挺不错的。", "py": "Jīntiān tiānqì tǐng búcuò de.", "vi": "Hôm nay thời tiết khá đẹp." }
+  ]
+}

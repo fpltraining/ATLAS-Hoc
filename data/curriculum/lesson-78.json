@@ -1,0 +1,71 @@
+{
+  "id": 78,
+  "cn": "钱的事",
+  "title": "Chuyện tiền bạc",
+  "goal": "Nói về thu nhập, giá cả, thanh toán — và phân biệt 赚 / 挣 / 存.",
+  "words": [
+    { "w": "经济", "py": "jīngjì", "hv": "kinh tế", "vi": "kinh tế", "pos": "danh từ / tính từ",
+      "note": "Chính là \"kinh tế\" tiếng Việt: 经 (kinh) + 济 (tế). Cũng là tính từ nghĩa \"tiết kiệm\": 很经济.",
+      "ex": [{ "cn": "中国经济发展很快。", "py": "Zhōngguó jīngjì fāzhǎn hěn kuài.", "vi": "Kinh tế Trung Quốc phát triển nhanh." }] },
+    { "w": "收入", "py": "shōurù", "hv": "thu nhập", "vi": "thu nhập", "pos": "danh từ",
+      "note": "Chính là \"thu nhập\" tiếng Việt: 收 (thu, bài 84) + 入 (nhập, vào).",
+      "ex": [{ "cn": "他的收入很稳定。", "py": "Tā de shōurù hěn wěndìng.", "vi": "Thu nhập của anh ấy rất ổn định." }] },
+    { "w": "价格", "py": "jiàgé", "hv": "giá cách", "vi": "giá cả", "pos": "danh từ",
+      "note": "价 (giá) + 格 (cách, mức). Trang trọng hơn 多少钱 — dùng trên bảng giá và trong đàm phán.",
+      "ex": [{ "cn": "这里的价格比较便宜。", "py": "Zhèlǐ de jiàgé bǐjiào piányi.", "vi": "Giá ở đây khá rẻ." }] },
+    { "w": "现金", "py": "xiànjīn", "hv": "hiện kim", "vi": "tiền mặt", "pos": "danh từ",
+      "note": "Chính là \"hiện kim\" tiếng Việt: 现 (hiện) + 金 (kim, tiền). Đối lại với thẻ và ví điện tử.",
+      "ex": [{ "cn": "我身上没带现金。", "py": "Wǒ shēnshang méi dài xiànjīn.", "vi": "Trên người tôi không mang tiền mặt." }] },
+    { "w": "付款", "py": "fùkuǎn", "hv": "phó khoản", "vi": "thanh toán, trả tiền", "pos": "động từ",
+      "note": "付 (trả) + 款 (khoản tiền). Tiếng Việt: \"khoản\", \"chi khoản\". Động từ ly hợp: 付了款.",
+      "ex": [{ "cn": "请在这里付款。", "py": "Qǐng zài zhèlǐ fùkuǎn.", "vi": "Xin thanh toán ở đây." }] },
+    { "w": "打折", "py": "dǎzhé", "hv": "đả chiết", "vi": "giảm giá", "pos": "động từ",
+      "note": "QUAN TRỌNG: 打八折 nghĩa là bán 80% giá gốc, tức GIẢM 20% — ngược với cách hiểu của người Việt!",
+      "ex": [{ "cn": "这件衣服打八折。", "py": "Zhè jiàn yīfu dǎ bā zhé.", "vi": "Bộ đồ này bán 80% giá, giảm 20%." }] },
+    { "w": "赚", "py": "zhuàn", "hv": "trám", "vi": "kiếm được (tiền), lãi", "pos": "động từ",
+      "note": "Bộ 贝 (vỏ sò = tiền) bên trái — nhìn bộ là biết chữ về tiền. Trái nghĩa là 赔 (lỗ).",
+      "ex": [{ "cn": "他一个月赚一万块。", "py": "Tā yí ge yuè zhuàn yí wàn kuài.", "vi": "Một tháng anh ấy kiếm một vạn tệ." }] },
+    { "w": "租", "py": "zū", "hv": "tô", "vi": "thuê; cho thuê", "pos": "động từ",
+      "note": "Bộ 禾 (lúa) — thời xưa nộp tô bằng thóc. Đã gặp trong 出租车 (bài 12). Dùng được cả hai chiều.",
+      "ex": [{ "cn": "我在市中心租了一间房。", "py": "Wǒ zài shì zhōngxīn zū le yì jiān fáng.", "vi": "Tôi thuê một phòng ở trung tâm." }] },
+    { "w": "存", "py": "cún", "hv": "tồn", "vi": "gửi (tiền), cất giữ", "pos": "động từ",
+      "note": "Chính là \"tồn\" tiếng Việt (\"tồn tại\", \"lưu tồn\"). 存钱 = gửi tiết kiệm, 存包 = gửi túi.",
+      "ex": [{ "cn": "我去银行存钱。", "py": "Wǒ qù yínháng cún qián.", "vi": "Tôi đi ngân hàng gửi tiền." }] },
+    { "w": "富", "py": "fù", "hv": "phú", "vi": "giàu", "pos": "tính từ",
+      "note": "Chính là \"phú\" tiếng Việt (\"phú quý\", \"giàu có\"). Bộ 宀 (mái nhà). Trái nghĩa là 穷 (bài 97).",
+      "ex": [{ "cn": "他们家很富。", "py": "Tāmen jiā hěn fù.", "vi": "Nhà họ rất giàu." }] }
+  ],
+  "grammar": [
+    { "t": "打折 — con số ngược với tiếng Việt",
+      "b": "打八折 = bán 80% giá gốc = giảm 20%",
+      "d": "Đây là chỗ người Việt hay hiểu ngược và mua hớ. 打折 nêu TỶ LỆ CÒN PHẢI TRẢ, không phải tỷ lệ giảm. 打五折 = giảm nửa giá. 打九折 = giảm 10%. Nhớ: số càng NHỎ thì càng RẺ.",
+      "ex": [
+        { "cn": "全场打五折！", "py": "Quán chǎng dǎ wǔ zhé!", "vi": "Toàn bộ giảm 50%!" },
+        { "cn": "打九折，便宜不了多少。", "py": "Dǎ jiǔ zhé, piányi bu liǎo duōshao.", "vi": "Giảm 10% thôi, chẳng rẻ được bao nhiêu." }
+      ] },
+    { "t": "Bộ 贝 — nhìn là biết chữ về tiền",
+      "b": "赚 · 贵 · 买 · 费 · 账 · 贷",
+      "d": "Nhắc lại bài bộ thủ: 贝 vốn là vỏ sò, tiền tệ đầu tiên của Trung Quốc cổ. Chữ nào mang bộ này gần như chắc chắn liên quan tới tiền bạc, mua bán, giá trị.",
+      "ex": [
+        { "cn": "赚 · 贵 · 费", "py": "zhuàn · guì · fèi", "vi": "kiếm tiền · đắt · phí" }
+      ] },
+    { "t": "租 dùng được cả hai chiều",
+      "b": "我租房子 (tôi thuê) · 他把房子租给我 (anh ấy cho tôi thuê)",
+      "d": "Giống 借 (bài 42), chữ 租 không tự phân biệt chiều. Nhìn giới từ 给 hoặc ngữ cảnh mà đoán. Muốn rõ ràng thì dùng 出租 (cho thuê) và 租用 (đi thuê).",
+      "ex": [
+        { "cn": "这套房子出租吗？", "py": "Zhè tào fángzi chūzū ma?", "vi": "Căn nhà này có cho thuê không?" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "最近经济不太好，工作难找。", "py": "Zuìjìn jīngjì bú tài hǎo, gōngzuò nán zhǎo.", "vi": "Dạo này kinh tế không tốt, việc khó tìm." },
+    { "cn": "他的收入比以前高了很多。", "py": "Tā de shōurù bǐ yǐqián gāo le hěn duō.", "vi": "Thu nhập của anh ấy cao hơn trước nhiều." },
+    { "cn": "这两家店的价格差不多。", "py": "Zhè liǎng jiā diàn de jiàgé chàbuduō.", "vi": "Giá hai cửa hàng này gần như nhau." },
+    { "cn": "现在很多店不收现金了。", "py": "Xiànzài hěn duō diàn bù shōu xiànjīn le.", "vi": "Bây giờ nhiều cửa hàng không nhận tiền mặt nữa." },
+    { "cn": "可以用手机付款吗？", "py": "Kěyǐ yòng shǒujī fùkuǎn ma?", "vi": "Có thể thanh toán bằng điện thoại không?" },
+    { "cn": "这个季节衣服都打折。", "py": "Zhège jìjié yīfu dōu dǎzhé.", "vi": "Mùa này quần áo đều giảm giá." },
+    { "cn": "做生意不一定能赚钱。", "py": "Zuò shēngyi bù yídìng néng zhuànqián.", "vi": "Làm ăn chưa chắc kiếm được tiền." },
+    { "cn": "在北京租房子很贵。", "py": "Zài Běijīng zū fángzi hěn guì.", "vi": "Thuê nhà ở Bắc Kinh rất đắt." },
+    { "cn": "每个月我都存一点儿钱。", "py": "Měi ge yuè wǒ dōu cún yìdiǎnr qián.", "vi": "Tháng nào tôi cũng để dành một ít." },
+    { "cn": "他不富，但是生活得很幸福。", "py": "Tā bú fù, dànshì shēnghuó de hěn xìngfú.", "vi": "Anh ấy không giàu nhưng sống rất hạnh phúc." }
+  ]
+}

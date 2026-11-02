@@ -1,0 +1,75 @@
+{
+  "id": 13,
+  "cn": "在家里",
+  "title": "Trong nhà",
+  "goal": "Gọi tên đồ vật trong nhà, nói chuyện điện thoại, và khám phá \"gia đình chữ 电\".",
+  "words": [
+    { "w": "桌子", "py": "zhuōzi", "hv": "trác tử", "vi": "cái bàn", "pos": "danh từ",
+      "note": "Có bộ 木 (gỗ) ở dưới vì bàn làm bằng gỗ. Hậu tố 子 đọc nhẹ, rất hay gặp ở tên đồ vật.",
+      "ex": [{ "cn": "书在桌子上。", "py": "Shū zài zhuōzi shàng.", "vi": "Sách ở trên bàn." }] },
+    { "w": "椅子", "py": "yǐzi", "hv": "ỷ tử", "vi": "cái ghế", "pos": "danh từ",
+      "note": "Cũng có bộ 木 (gỗ) bên trái. Cặp 桌子 / 椅子 luôn học chung.",
+      "ex": [{ "cn": "这个椅子很好。", "py": "Zhège yǐzi hěn hǎo.", "vi": "Cái ghế này rất tốt." }] },
+    { "w": "电脑", "py": "diànnǎo", "hv": "điện não", "vi": "máy tính", "pos": "danh từ",
+      "note": "电 (điện) + 脑 (não) = \"bộ não điện\". Cách đặt tên rất hình tượng của tiếng Trung.",
+      "ex": [{ "cn": "我有一个电脑。", "py": "Wǒ yǒu yí ge diànnǎo.", "vi": "Tôi có một cái máy tính." }] },
+    { "w": "电视", "py": "diànshì", "hv": "điện thị", "vi": "tivi, truyền hình", "pos": "danh từ",
+      "note": "电 (điện) + 视 (thị, nhìn) = \"nhìn bằng điện\". Tiếng Việt: \"thị giác\", \"truyền hình\".",
+      "ex": [{ "cn": "我看电视。", "py": "Wǒ kàn diànshì.", "vi": "Tôi xem tivi." }] },
+    { "w": "电影", "py": "diànyǐng", "hv": "điện ảnh", "vi": "phim, điện ảnh", "pos": "danh từ",
+      "note": "Chính là \"điện ảnh\" tiếng Việt! 电 (điện) + 影 (ảnh, bóng hình).",
+      "ex": [{ "cn": "我们去看电影吧。", "py": "Wǒmen qù kàn diànyǐng ba.", "vi": "Chúng ta đi xem phim đi." }] },
+    { "w": "打电话", "py": "dǎ diànhuà", "hv": "đả điện thoại", "vi": "gọi điện thoại", "pos": "động từ",
+      "note": "打 (đánh) + 电话 (điện thoại). Người Trung Quốc \"đánh\" điện thoại, giống tiếng Việt \"đánh điện\" ngày xưa.",
+      "ex": [{ "cn": "我给妈妈打电话。", "py": "Wǒ gěi māma dǎ diànhuà.", "vi": "Tôi gọi điện cho mẹ." }] },
+    { "w": "喂", "py": "wèi", "hv": "uy", "vi": "a-lô (khi nghe điện thoại)", "pos": "thán từ",
+      "note": "Khi nghe điện thoại thường đọc thành thanh 2: wéi (nghe mềm mại, lịch sự hơn). Đọc wèi nghe hơi cộc.",
+      "ex": [{ "cn": "喂，你好！", "py": "Wéi, nǐ hǎo!", "vi": "A-lô, xin chào!" }] },
+    { "w": "看见", "py": "kànjiàn", "hv": "khán kiến", "vi": "nhìn thấy", "pos": "động từ",
+      "note": "看 (nhìn) + 见 (thấy). 看 là HÀNH ĐỘNG nhìn, 看见 là KẾT QUẢ đã thấy được.",
+      "ex": [{ "cn": "我看见他了。", "py": "Wǒ kànjiàn tā le.", "vi": "Tôi nhìn thấy anh ấy rồi." }] },
+    { "w": "大", "py": "dà", "hv": "đại", "vi": "to, lớn", "pos": "tính từ",
+      "note": "Hình người dang rộng tay chân. Tiếng Việt: \"đại học\", \"vĩ đại\", \"đại lộ\".",
+      "ex": [{ "cn": "我的家很大。", "py": "Wǒ de jiā hěn dà.", "vi": "Nhà tôi rất rộng." }] },
+    { "w": "小", "py": "xiǎo", "hv": "tiểu", "vi": "nhỏ, bé", "pos": "tính từ",
+      "note": "Tiếng Việt: \"tiểu học\", \"tiểu thuyết\", \"tiểu đội\". Cặp 大 / 小 luôn học chung.",
+      "ex": [{ "cn": "这个杯子很小。", "py": "Zhège bēizi hěn xiǎo.", "vi": "Cái cốc này rất nhỏ." }] }
+  ],
+  "grammar": [
+    { "t": "Gia đình chữ 电 — học một chữ được năm từ",
+      "b": "电 = điện → 电脑, 电视, 电影, 电话, 电子",
+      "d": "Đây chính là sức mạnh của việc học chữ Hán theo thành phần. Biết 电 (điện) rồi, bạn đoán được nghĩa của cả loạt từ mới mà không cần tra từ điển. Người Việt càng lợi thế vì đã quen \"điện ảnh\", \"điện thoại\", \"điện não\".",
+      "ex": [
+        { "cn": "电脑", "py": "diànnǎo", "vi": "điện + não = máy tính" },
+        { "cn": "电视", "py": "diànshì", "vi": "điện + nhìn = tivi" },
+        { "cn": "电影", "py": "diànyǐng", "vi": "điện + bóng hình = phim" },
+        { "cn": "电话", "py": "diànhuà", "vi": "điện + lời nói = điện thoại" }
+      ] },
+    { "t": "Bổ ngữ kết quả: 看 và 看见",
+      "b": "Động từ hành động + động từ kết quả",
+      "d": "Tiếng Trung tách rõ HÀNH ĐỘNG và KẾT QUẢ. 我看了 = tôi đã nhìn (nhưng chưa chắc thấy gì). 我看见了 = tôi đã nhìn THẤY. Tương tự: 听 (nghe) và 听见 (nghe thấy).",
+      "ex": [
+        { "cn": "我看了，但是没看见。", "py": "Wǒ kàn le, dànshì méi kànjiàn.", "vi": "Tôi đã nhìn, nhưng không thấy." },
+        { "cn": "你看见我的书了吗？", "py": "Nǐ kànjiàn wǒ de shū le ma?", "vi": "Bạn có thấy sách của tôi không?" }
+      ] },
+    { "t": "给 + người + động từ — làm gì đó CHO ai",
+      "b": "给 + người + 打电话 / 买 / 写",
+      "d": "给 gěi đứng trước người nhận, và cả cụm đặt TRƯỚC động từ chính. Ta nói \"gọi điện CHO mẹ\", tiếng Trung nói \"CHO mẹ gọi điện\".",
+      "ex": [
+        { "cn": "我给妈妈打电话。", "py": "Wǒ gěi māma dǎ diànhuà.", "vi": "Tôi gọi điện cho mẹ." },
+        { "cn": "他给我买了一本书。", "py": "Tā gěi wǒ mǎi le yì běn shū.", "vi": "Anh ấy mua cho tôi một quyển sách." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "喂，你好，请问王先生在吗？", "py": "Wéi, nǐ hǎo, qǐngwèn Wáng xiānsheng zài ma?", "vi": "A-lô, xin chào, cho hỏi ông Vương có ở đó không ạ?" },
+    { "cn": "他不在，他去医院了。", "py": "Tā bú zài, tā qù yīyuàn le.", "vi": "Ông ấy không ở đây, ông ấy đi bệnh viện rồi." },
+    { "cn": "我给妈妈打电话。", "py": "Wǒ gěi māma dǎ diànhuà.", "vi": "Tôi gọi điện cho mẹ." },
+    { "cn": "书在桌子上，不在椅子上。", "py": "Shū zài zhuōzi shàng, bú zài yǐzi shàng.", "vi": "Sách ở trên bàn, không phải trên ghế." },
+    { "cn": "我有一个电脑。", "py": "Wǒ yǒu yí ge diànnǎo.", "vi": "Tôi có một cái máy tính." },
+    { "cn": "晚上我看电视。", "py": "Wǎnshang wǒ kàn diànshì.", "vi": "Buổi tối tôi xem tivi." },
+    { "cn": "我们去看电影吧。", "py": "Wǒmen qù kàn diànyǐng ba.", "vi": "Chúng ta đi xem phim đi." },
+    { "cn": "这个电影很好看。", "py": "Zhège diànyǐng hěn hǎokàn.", "vi": "Bộ phim này rất hay." },
+    { "cn": "我看见你的书了。", "py": "Wǒ kànjiàn nǐ de shū le.", "vi": "Tôi thấy sách của bạn rồi." },
+    { "cn": "我的房间不大也不小。", "py": "Wǒ de fángjiān bú dà yě bù xiǎo.", "vi": "Phòng tôi không to cũng không nhỏ." }
+  ]
+}

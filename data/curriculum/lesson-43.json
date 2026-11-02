@@ -1,0 +1,72 @@
+{
+  "id": 43,
+  "cn": "买衣服",
+  "title": "Quần áo và lượng từ",
+  "goal": "Gọi tên trang phục, dùng đúng lượng từ 件 / 条 / 双 / 顶 — và cảnh giác một cái bẫy Hán Việt.",
+  "words": [
+    { "w": "衬衫", "py": "chènshān", "hv": "sấn sam", "vi": "áo sơ mi", "pos": "danh từ",
+      "note": "Cả hai chữ đều có bộ 衤 (áo quần) — nhìn bộ là biết ngay chủ đề. Lượng từ: 一件衬衫.",
+      "ex": [{ "cn": "他穿了一件白衬衫。", "py": "Tā chuān le yí jiàn bái chènshān.", "vi": "Anh ấy mặc một chiếc sơ mi trắng." }] },
+    { "w": "裙子", "py": "qúnzi", "hv": "quần tử", "vi": "cái váy", "pos": "danh từ",
+      "note": "CẨN THẬN — bẫy Hán Việt: 裙 đọc Hán Việt là \"quần\" nhưng nghĩa là VÁY, không phải cái quần. Cái quần là 裤子.",
+      "ex": [{ "cn": "这条裙子很漂亮。", "py": "Zhè tiáo qúnzi hěn piàoliang.", "vi": "Chiếc váy này rất đẹp." }] },
+    { "w": "裤子", "py": "kùzi", "hv": "khố tử", "vi": "cái quần", "pos": "danh từ",
+      "note": "Cũng có bộ 衤. Tiếng Việt: \"khố\" là mảnh vải quấn thân của người xưa — cùng gốc chữ này.",
+      "ex": [{ "cn": "我要买一条裤子。", "py": "Wǒ yào mǎi yì tiáo kùzi.", "vi": "Tôi muốn mua một cái quần." }] },
+    { "w": "帽子", "py": "màozi", "hv": "mạo tử", "vi": "cái mũ", "pos": "danh từ",
+      "note": "Có bộ 巾 (khăn vải) bên trái. Lượng từ đúng là 顶 dǐng, nhưng dùng 个 cũng được trong khẩu ngữ.",
+      "ex": [{ "cn": "他戴着一顶帽子。", "py": "Tā dài zhe yì dǐng màozi.", "vi": "Anh ấy đội một cái mũ." }] },
+    { "w": "双", "py": "shuāng", "hv": "song", "vi": "đôi (lượng từ)", "pos": "lượng từ",
+      "note": "Chính là \"song\" trong \"song sinh\", \"song phương\". Hai chữ 又 (bàn tay) ghép lại — hai cái tay là một đôi.",
+      "ex": [{ "cn": "一双鞋", "py": "yì shuāng xié", "vi": "một đôi giày" }] },
+    { "w": "条", "py": "tiáo", "hv": "điều", "vi": "cái, con (vật dài)", "pos": "lượng từ",
+      "note": "Dùng cho mọi thứ DÀI: 一条路 (con đường), 一条鱼 (con cá), 一条裤子, 一条河. Tiếng Việt: \"điều\", \"điều kiện\".",
+      "ex": [{ "cn": "一条裙子", "py": "yì tiáo qúnzi", "vi": "một chiếc váy" }] },
+    { "w": "张", "py": "zhāng", "hv": "trương", "vi": "tờ, tấm, cái (vật phẳng)", "pos": "lượng từ",
+      "note": "Dùng cho vật PHẲNG: 一张纸 (tờ giấy), 一张桌子 (cái bàn), 一张票, 一张照片. Cũng là một họ rất phổ biến.",
+      "ex": [{ "cn": "两张票", "py": "liǎng zhāng piào", "vi": "hai tấm vé" }] },
+    { "w": "位", "py": "wèi", "hv": "vị", "vi": "vị (lượng từ lịch sự cho người)", "pos": "lượng từ",
+      "note": "Chính là \"vị\" tiếng Việt (\"quý vị\", \"các vị\"). Lịch sự hơn 个 nhiều — dùng với khách, thầy cô, người lớn tuổi.",
+      "ex": [{ "cn": "这位是我的老师。", "py": "Zhè wèi shì wǒ de lǎoshī.", "vi": "Vị này là thầy của tôi." }] },
+    { "w": "包", "py": "bāo", "hv": "bao", "vi": "cái túi, cặp; gói", "pos": "danh từ / động từ",
+      "note": "Chính là \"bao\" tiếng Việt. Cũng là bộ thủ 勹 (bao bọc) đã học. Vừa là danh từ (túi) vừa là động từ (gói).",
+      "ex": [{ "cn": "我的包在哪儿？", "py": "Wǒ de bāo zài nǎr?", "vi": "Túi của tôi đâu rồi?" }] },
+    { "w": "行李箱", "py": "xínglixiāng", "hv": "hành lý tương", "vi": "va li", "pos": "danh từ",
+      "note": "行李 chính là \"hành lý\" tiếng Việt. 箱 (thùng, hòm) có bộ 竹 vì hòm xưa đan bằng tre.",
+      "ex": [{ "cn": "我的行李箱很重。", "py": "Wǒ de xínglixiāng hěn zhòng.", "vi": "Va li của tôi rất nặng." }] }
+  ],
+  "grammar": [
+    { "t": "Bảng lượng từ cần thuộc",
+      "b": "件 áo · 条 vật dài · 双 đôi · 张 vật phẳng · 顶 mũ · 位 người (lịch sự)",
+      "d": "Đây là phần người Việt học nhanh vì tiếng Việt cũng có \"chiếc, con, tấm, đôi, vị\". Mẹo: hình dạng quyết định lượng từ — dài thì 条, phẳng thì 张, có đôi thì 双.",
+      "ex": [
+        { "cn": "一件衬衫 · 一条裤子", "py": "yí jiàn chènshān · yì tiáo kùzi", "vi": "một áo sơ mi · một cái quần" },
+        { "cn": "一双鞋 · 一张票", "py": "yì shuāng xié · yì zhāng piào", "vi": "một đôi giày · một tấm vé" },
+        { "cn": "两位老师", "py": "liǎng wèi lǎoshī", "vi": "hai vị giáo viên" }
+      ] },
+    { "t": "Bẫy Hán Việt: 裙 là VÁY, không phải quần",
+      "b": "裙子 = váy · 裤子 = quần",
+      "d": "Âm Hán Việt của 裙 là \"quần\" nên người Việt rất dễ hiểu ngược. Nhớ mẹo: 裤 có chữ 库 (kho) — cái quần như hai cái kho úp xuống chân. Đây là bài học rằng âm Hán Việt là bạn tốt nhưng đôi khi cũng đánh lừa.",
+      "ex": [
+        { "cn": "她穿裙子，他穿裤子。", "py": "Tā chuān qúnzi, tā chuān kùzi.", "vi": "Cô ấy mặc váy, anh ấy mặc quần." }
+      ] },
+    { "t": "戴 và 穿 — nhắc lại từ bài 21",
+      "b": "穿 áo quần giày · 戴 mũ kính đồng hồ",
+      "d": "帽子 dùng 戴 chứ không dùng 穿: 戴帽子. Cũng như 戴眼镜 (đeo kính), 戴手表 (đeo đồng hồ).",
+      "ex": [
+        { "cn": "今天很冷，戴上帽子吧。", "py": "Jīntiān hěn lěng, dài shàng màozi ba.", "vi": "Hôm nay lạnh, đội mũ vào đi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我想买一件衬衫和一条裤子。", "py": "Wǒ xiǎng mǎi yí jiàn chènshān hé yì tiáo kùzi.", "vi": "Tôi muốn mua một áo sơ mi và một cái quần." },
+    { "cn": "这条裙子多少钱？", "py": "Zhè tiáo qúnzi duōshao qián?", "vi": "Chiếc váy này bao nhiêu tiền?" },
+    { "cn": "我穿这双鞋有点儿小。", "py": "Wǒ chuān zhè shuāng xié yǒudiǎnr xiǎo.", "vi": "Tôi đi đôi giày này hơi chật." },
+    { "cn": "请给我两张纸。", "py": "Qǐng gěi wǒ liǎng zhāng zhǐ.", "vi": "Cho tôi xin hai tờ giấy." },
+    { "cn": "这位是我们的经理。", "py": "Zhè wèi shì wǒmen de jīnglǐ.", "vi": "Vị này là giám đốc của chúng tôi." },
+    { "cn": "外面下雨，记得戴帽子。", "py": "Wàimiàn xiàyǔ, jìde dài màozi.", "vi": "Ngoài trời mưa, nhớ đội mũ." },
+    { "cn": "我的行李箱里有很多衣服。", "py": "Wǒ de xínglixiāng lǐ yǒu hěn duō yīfu.", "vi": "Trong va li tôi có nhiều quần áo." },
+    { "cn": "你的包放在哪儿了？", "py": "Nǐ de bāo fàng zài nǎr le?", "vi": "Túi của bạn để đâu rồi?" },
+    { "cn": "这件衣服我可以试一下吗？", "py": "Zhè jiàn yīfu wǒ kěyǐ shì yíxià ma?", "vi": "Bộ đồ này tôi thử một chút được không?" },
+    { "cn": "他今天穿得很正式。", "py": "Tā jīntiān chuān de hěn zhèngshì.", "vi": "Hôm nay anh ấy ăn mặc rất trang trọng." }
+  ]
+}

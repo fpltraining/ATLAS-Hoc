@@ -1,0 +1,83 @@
+{
+  "id": 8,
+  "cn": "一天的生活",
+  "title": "Một ngày của tôi",
+  "goal": "Kể việc làm trong ngày, dùng 了 để nói việc đã xong, phân biệt 想 / 能 / 会 và cấu trúc 太…了.",
+  "words": [
+    { "w": "上午", "py": "shàngwǔ", "hv": "thượng ngọ", "vi": "buổi sáng", "pos": "danh từ",
+      "note": "上 (trên, trước) + 午 (ngọ, giữa trưa) = trước giờ ngọ. Người Việt cũng gọi 12h trưa là \"chính ngọ\".",
+      "ex": [{ "cn": "上午我在学校。", "py": "Shàngwǔ wǒ zài xuéxiào.", "vi": "Buổi sáng tôi ở trường." }] },
+    { "w": "中午", "py": "zhōngwǔ", "hv": "trung ngọ", "vi": "buổi trưa", "pos": "danh từ",
+      "note": "中 (giữa) + 午 (ngọ). Khoảng 11h đến 13h.",
+      "ex": [{ "cn": "中午我吃饭。", "py": "Zhōngwǔ wǒ chīfàn.", "vi": "Buổi trưa tôi ăn cơm." }] },
+    { "w": "下午", "py": "xiàwǔ", "hv": "hạ ngọ", "vi": "buổi chiều", "pos": "danh từ",
+      "note": "下 (dưới, sau) + 午 (ngọ) = sau giờ ngọ. Bộ ba 上午/中午/下午 rất dễ nhớ theo logic này.",
+      "ex": [{ "cn": "下午见。", "py": "Xiàwǔ jiàn.", "vi": "Chiều gặp nhé." }] },
+    { "w": "睡觉", "py": "shuìjiào", "hv": "thuỵ giác", "vi": "ngủ", "pos": "động từ",
+      "note": "睡 có bộ 目 (mắt) — mắt sụp xuống. Đây là động từ ly hợp, tách được: 睡了三个小时的觉.",
+      "ex": [{ "cn": "我十点睡觉。", "py": "Wǒ shí diǎn shuìjiào.", "vi": "Tôi 10 giờ đi ngủ." }] },
+    { "w": "做", "py": "zuò", "hv": "tố", "vi": "làm, chế tạo", "pos": "động từ",
+      "note": "Đừng nhầm với 坐 zuò (ngồi) — cùng âm, khác chữ và khác nghĩa hoàn toàn.",
+      "ex": [{ "cn": "你做什么？", "py": "Nǐ zuò shénme?", "vi": "Bạn làm gì?" }] },
+    { "w": "分钟", "py": "fēnzhōng", "hv": "phân chung", "vi": "phút", "pos": "danh từ",
+      "note": "分 (phân, chia) + 钟 (chuông, đồng hồ). 钟 có bộ 钅 (kim loại) vì chuông đúc bằng đồng.",
+      "ex": [{ "cn": "十分钟", "py": "shí fēnzhōng", "vi": "mười phút" }] },
+    { "w": "太", "py": "tài", "hv": "thái", "vi": "quá, quá mức", "pos": "phó từ",
+      "note": "Hầu như luôn đi kèm 了 ở cuối: 太好了! Tiếng Việt có \"thái quá\".",
+      "ex": [{ "cn": "太好了！", "py": "Tài hǎo le!", "vi": "Tuyệt quá!" }] },
+    { "w": "了", "py": "le", "hv": "liễu", "vi": "(trợ từ: việc đã hoàn thành / tình hình đã đổi)", "pos": "trợ từ",
+      "note": "Đọc nhẹ là le. Khi mang nghĩa \"hiểu rõ\" thì đọc liǎo. Đây là chữ khó nhất của HSK1.",
+      "ex": [{ "cn": "我吃了。", "py": "Wǒ chī le.", "vi": "Tôi ăn rồi." }] },
+    { "w": "想", "py": "xiǎng", "hv": "tưởng", "vi": "muốn; nghĩ; nhớ (ai đó)", "pos": "động từ",
+      "note": "心 (tim) nằm dưới — chữ về cảm xúc. Tiếng Việt: \"tư tưởng\", \"tưởng nhớ\".",
+      "ex": [{ "cn": "我想吃饭。", "py": "Wǒ xiǎng chīfàn.", "vi": "Tôi muốn ăn cơm." }] },
+    { "w": "能", "py": "néng", "hv": "năng", "vi": "có thể (đủ điều kiện)", "pos": "động từ năng nguyện",
+      "note": "Tiếng Việt: \"khả năng\", \"năng lực\". Khác 会: 会 là kỹ năng đã học, 能 là hoàn cảnh cho phép.",
+      "ex": [{ "cn": "我今天不能去。", "py": "Wǒ jīntiān bù néng qù.", "vi": "Hôm nay tôi không đi được." }] }
+  ],
+  "grammar": [
+    { "t": "了 — việc đã xảy ra xong",
+      "b": "Động từ + 了",
+      "d": "了 KHÔNG phải thì quá khứ. Nó báo hiệu một việc đã HOÀN THÀNH. Câu phủ định dùng 没 và PHẢI BỎ 了: 我没吃 (tôi chưa ăn), không được nói 我没吃了.",
+      "ex": [
+        { "cn": "我吃了。", "py": "Wǒ chī le.", "vi": "Tôi ăn rồi." },
+        { "cn": "他去了学校。", "py": "Tā qù le xuéxiào.", "vi": "Anh ấy đi đến trường rồi." },
+        { "cn": "我没吃。", "py": "Wǒ méi chī.", "vi": "Tôi chưa ăn. (bỏ 了)" }
+      ] },
+    { "t": "太 … 了 — cấu trúc cảm thán",
+      "b": "太 + tính từ + 了",
+      "d": "Hai phần này gần như luôn đi cùng nhau. Đây là câu cảm thán thông dụng nhất trong hội thoại hằng ngày.",
+      "ex": [
+        { "cn": "太好了！", "py": "Tài hǎo le!", "vi": "Tuyệt quá!" },
+        { "cn": "太贵了！", "py": "Tài guì le!", "vi": "Đắt quá!" },
+        { "cn": "今天太热了。", "py": "Jīntiān tài rè le.", "vi": "Hôm nay nóng quá." }
+      ] },
+    { "t": "Phân biệt 会 / 能 / 想",
+      "b": "会 = biết làm · 能 = làm được (hoàn cảnh) · 想 = muốn làm",
+      "d": "Ba từ này người Việt rất hay nhầm. 我会游泳 (tôi biết bơi — đã học), 我今天不能游泳 (hôm nay tôi không bơi được — vì bận/ốm), 我想游泳 (tôi muốn đi bơi).",
+      "ex": [
+        { "cn": "我会说汉语。", "py": "Wǒ huì shuō Hànyǔ.", "vi": "Tôi biết nói tiếng Trung." },
+        { "cn": "我现在不能说。", "py": "Wǒ xiànzài bù néng shuō.", "vi": "Bây giờ tôi không nói được." },
+        { "cn": "我想学汉语。", "py": "Wǒ xiǎng xué Hànyǔ.", "vi": "Tôi muốn học tiếng Trung." }
+      ] },
+    { "t": "Thời gian đứng TRƯỚC động từ",
+      "b": "Chủ ngữ + thời gian + động từ",
+      "d": "Ngược với tiếng Việt. Ta nói \"Tôi ăn cơm lúc 12 giờ\", tiếng Trung nói \"Tôi 12 giờ ăn cơm\". Thời gian cũng có thể đứng đầu câu.",
+      "ex": [
+        { "cn": "我十二点吃饭。", "py": "Wǒ shí'èr diǎn chīfàn.", "vi": "Tôi ăn cơm lúc 12 giờ." },
+        { "cn": "上午我在学校。", "py": "Shàngwǔ wǒ zài xuéxiào.", "vi": "Buổi sáng tôi ở trường." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "上午我在学校学习。", "py": "Shàngwǔ wǒ zài xuéxiào xuéxí.", "vi": "Buổi sáng tôi học ở trường." },
+    { "cn": "中午我吃饭。", "py": "Zhōngwǔ wǒ chīfàn.", "vi": "Buổi trưa tôi ăn cơm." },
+    { "cn": "下午我做什么？", "py": "Xiàwǔ wǒ zuò shénme?", "vi": "Buổi chiều tôi làm gì?" },
+    { "cn": "我十点睡觉。", "py": "Wǒ shí diǎn shuìjiào.", "vi": "Tôi đi ngủ lúc 10 giờ." },
+    { "cn": "你今天做什么了？", "py": "Nǐ jīntiān zuò shénme le?", "vi": "Hôm nay bạn đã làm gì?" },
+    { "cn": "我吃了，谢谢。", "py": "Wǒ chī le, xièxie.", "vi": "Tôi ăn rồi, cảm ơn." },
+    { "cn": "太好了！", "py": "Tài hǎo le!", "vi": "Tuyệt quá!" },
+    { "cn": "我想睡觉。", "py": "Wǒ xiǎng shuìjiào.", "vi": "Tôi muốn ngủ." },
+    { "cn": "我今天不能去。", "py": "Wǒ jīntiān bù néng qù.", "vi": "Hôm nay tôi không đi được." },
+    { "cn": "请等十分钟。", "py": "Qǐng děng shí fēnzhōng.", "vi": "Xin đợi mười phút." }
+  ]
+}

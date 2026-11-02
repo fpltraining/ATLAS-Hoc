@@ -1,0 +1,352 @@
+@id myst-dark
+@shelf mystery
+@level A2
+@title Most of the Universe Is Missing
+@vi Phần lớn vũ trụ đang mất tích
+@blurb Mọi thứ anh từng nhìn thấy chỉ chiếm khoảng 5% vũ trụ. Phần còn lại là gì, chưa ai biết.
+
+## 1 | The Missing 95 Percent | 95% mất tích
+Look at everything you know. | Hãy nhìn mọi thứ anh biết.
+Your phone, the sea, the Sun, every star. | Điện thoại, biển, Mặt Trời, mọi ngôi sao.
+All of it is made of normal matter. | Tất cả đều làm từ vật chất thông thường.
+But normal matter is only about 5 percent of the universe. | Nhưng vật chất thường chỉ chiếm khoảng 5% vũ trụ.
+
+Scientists call the rest dark matter and dark energy. | Giới khoa học gọi phần còn lại là vật chất tối và năng lượng tối.
+Dark matter is about 27 percent. | Vật chất tối chiếm khoảng 27%.
+We cannot see it, | Ta không nhìn thấy nó,
+but galaxies spin as if something heavy holds them together. | nhưng các thiên hà quay như thể có thứ gì nặng giữ chúng lại.
+
+Dark energy is about 68 percent. | Năng lượng tối chiếm khoảng 68%.
+In 1998, astronomers found that the universe | Năm 1998, các nhà thiên văn phát hiện vũ trụ
+is growing faster and faster. | đang giãn ra ngày càng nhanh.
+Something is pushing it. | Có gì đó đang đẩy nó.
+
+Here is the honest part. | Đây là phần thành thật.
+"Dark" does not really mean black. | Chữ "tối" không hẳn nghĩa là màu đen.
+It means: we do not know. | Nó nghĩa là: ta không biết.
+Those names are only labels for our confusion. | Những cái tên đó chỉ là nhãn dán cho sự bối rối của ta.
+
+? How much of the universe is normal matter? | Vật chất thường chiếm bao nhiêu phần vũ trụ? | About 5 percent* | About 50 percent | About 95 percent
+> Điều gì trong bài làm anh ngạc nhiên nhất? Nói 1 câu.
+
+@id myst-ocean
+@shelf mystery
+@level A2
+@date 2026-04-01
+@title We Have Better Maps of Mars
+@vi Bản đồ sao Hỏa còn rõ hơn đáy biển
+@blurb Hơn 70% đáy đại dương vẫn chưa được lập bản đồ chi tiết. Ta biết đáy biển còn ít hơn nhiều người nghĩ.
+@source Seabed 2030 / IHO | https://iho.int/en/global-seabed-mapping-reaches-new-milestone-as-five-million-square-kilometres-added-in-a-year
+
+## 1 | The Dark Floor | Đáy biển tối
+The ocean covers about 70 percent of our planet. | Đại dương phủ khoảng 70% hành tinh của ta.
+Yet in 2017, only about 6 percent of the ocean floor | Vậy mà năm 2017, chỉ khoảng 6% đáy đại dương
+had a modern, detailed map. | có bản đồ chi tiết theo chuẩn hiện đại.
+
+An international project called Seabed 2030 is changing that. | Một dự án quốc tế tên Seabed 2030 đang thay đổi điều đó.
+Ships use sound to measure the deep water. | Tàu dùng âm thanh để đo vùng nước sâu.
+In 2026, the project said 28.7 percent had been mapped. | Năm 2026, dự án cho biết 28,7% đã được lập bản đồ.
+That is big progress, | Đó là tiến bộ lớn,
+but it still leaves more than 70 percent. | nhưng vẫn còn hơn 70%.
+
+Why does it matter? | Vì sao điều này quan trọng?
+The sea floor shapes ocean currents, | Đáy biển định hình các dòng hải lưu,
+weather, and tsunamis. | thời tiết và sóng thần.
+And in the deep dark, | Và trong bóng tối sâu thẳm,
+scientists keep finding animals they have never seen. | các nhà khoa học vẫn tìm thấy những loài chưa từng thấy.
+
+We have sent machines to Mars. | Ta đã gửi máy móc lên sao Hỏa.
+We still do not fully know | Ta vẫn chưa biết hết
+what is at the bottom of our own sea. | dưới đáy biển của chính mình có gì.
+
+? How much of the sea floor was mapped in 2026? | Năm 2026 đã lập bản đồ bao nhiêu phần đáy biển? | 28.7 percent* | 6 percent | 100 percent
+> Nếu được xuống đáy biển sâu nhất, anh muốn tìm gì?
+
+@id myst-conscious
+@shelf mystery
+@level B1
+@title Why Is There Anyone Inside?
+@vi Vì sao lại có "ai đó" ở bên trong?
+@blurb Não là các tế bào gửi tín hiệu. Vậy tại sao ta lại cảm thấy mình đang tồn tại? Và AI có cảm thấy gì không?
+
+## 1 | The Hard Problem | Bài toán khó
+Your brain has about 86 billion nerve cells. | Não anh có khoảng 86 tỉ tế bào thần kinh.
+They send small electric signals to each other. | Chúng gửi cho nhau những tín hiệu điện nhỏ.
+Science can explain a lot about this. | Khoa học giải thích được nhiều điều về việc này.
+It can explain how you see red, | Nó giải thích được cách anh nhìn thấy màu đỏ,
+how you remember, and how you move your hand. | cách anh ghi nhớ và cách anh cử động tay.
+
+But here is the strange part. | Nhưng đây là phần kỳ lạ.
+Why does it feel like something to see red? | Vì sao nhìn màu đỏ lại có một cảm giác nào đó?
+Why is there an "you" inside at all? | Vì sao bên trong lại có một "anh"?
+A machine could process colors with no feeling. | Một cái máy có thể xử lý màu sắc mà không cảm thấy gì.
+So why are we different? | Vậy tại sao ta lại khác?
+
+In the 1990s, the philosopher David Chalmers | Vào thập niên 1990, triết gia David Chalmers
+called this the "hard problem of consciousness." | gọi đây là "bài toán khó của ý thức".
+Nobody has solved it. | Chưa ai giải được.
+Scientists do not even agree | Giới khoa học thậm chí chưa thống nhất
+on how to test for it. | cách kiểm tra nó.
+
+This is no longer only a question for philosophers. | Giờ đây câu hỏi này không chỉ của các triết gia.
+AI can now talk about its feelings. | AI hiện có thể nói về cảm xúc của nó.
+But does it have any? | Nhưng nó có cảm xúc thật không?
+We do not know, | Ta không biết,
+because we cannot yet explain why we have them ourselves. | vì ta còn chưa giải thích được vì sao chính mình có.
+
+~ consciousness = ý thức
+~ philosopher = triết gia
+~ process = xử lý
+? What is the "hard problem"? | "Bài toán khó" là gì? | Why experience feels like something* | How to do hard math | How eyes see red
+> Anh nghĩ AI có cảm xúc thật không? Trả lời 2 câu tiếng Anh.
+
+@id myst-life
+@shelf mystery
+@level A2
+@title How Did Life Begin?
+@vi Sự sống bắt đầu thế nào?
+@blurb Từ đá, nước và hoá chất, bằng cách nào đó, đã có thứ biết tự sao chép. Không ai biết chính xác bằng cách nào.
+
+## 1 | The First Spark | Tia lửa đầu tiên
+The Earth is about 4.5 billion years old. | Trái Đất khoảng 4,5 tỉ tuổi.
+At first, it was a world of rock, water, and fire. | Ban đầu, đó là thế giới của đá, nước và lửa.
+There was no life at all. | Hoàn toàn không có sự sống.
+
+Then, at least 3.5 billion years ago, | Rồi, ít nhất 3,5 tỉ năm trước,
+there were tiny living things. | đã có những sinh vật tí hon.
+Somehow, simple chemicals became something | Bằng cách nào đó, các hoá chất đơn giản đã thành một thứ
+that could copy itself. | có thể tự sao chép.
+This is one of the biggest questions in science, | Đây là một trong những câu hỏi lớn nhất của khoa học,
+and we still do not have the answer. | và ta vẫn chưa có câu trả lời.
+
+Some scientists think it started in warm pools. | Một số nhà khoa học nghĩ nó bắt đầu trong các vũng nước ấm.
+Others think it began near hot openings | Người khác nghĩ nó bắt đầu gần các khe nóng
+in the deep sea floor. | dưới đáy biển sâu.
+Labs can make some of the building blocks of life. | Phòng thí nghiệm tạo được vài viên gạch của sự sống.
+But nobody has made life from nothing. | Nhưng chưa ai tạo ra sự sống từ con số không.
+
+If it happened easily here, | Nếu nó xảy ra dễ dàng ở đây,
+maybe the universe is full of life. | có lẽ vũ trụ đầy sự sống.
+If it was a lucky accident, | Nếu đó là một tai nạn may mắn,
+maybe we are very alone. | có lẽ ta rất cô đơn.
+
+? How old are the earliest signs of life? | Dấu vết sự sống sớm nhất bao nhiêu tuổi? | At least 3.5 billion years* | 4,000 years | 10 million years
+> Anh tin ý kiến nào hơn: vũ trụ đầy sự sống, hay ta rất cô đơn?
+
+@id myst-wow
+@shelf mystery
+@level A2
+@title The Wow! Signal
+@vi Tín hiệu "Wow!"
+@blurb 72 giây năm 1977. Một người viết chữ "Wow!" bên lề tờ giấy. Tín hiệu đó không bao giờ quay lại.
+
+## 1 | Seventy-Two Seconds | Bảy mươi hai giây
+On 15 August 1977, a radio telescope in Ohio, in America, | Ngày 15/8/1977, một kính viễn vọng vô tuyến ở Ohio, Mỹ,
+was listening to the sky. | đang lắng nghe bầu trời.
+It picked up a very strong signal. | Nó bắt được một tín hiệu rất mạnh.
+The signal lasted for 72 seconds. | Tín hiệu kéo dài 72 giây.
+
+A few days later, a scientist named Jerry Ehman | Vài ngày sau, một nhà khoa học tên Jerry Ehman
+was reading the computer printout. | đọc tờ giấy in từ máy tính.
+He was so surprised | Ông ngạc nhiên đến mức
+that he circled it in red pen. | khoanh nó bằng bút đỏ.
+Next to it, he wrote one word: Wow! | Bên cạnh, ông viết một chữ: Wow!
+
+The signal came from the direction of a group of stars. | Tín hiệu đến từ hướng một nhóm sao.
+It looked like what scientists hoped to see | Nó giống thứ giới khoa học mong thấy
+if an alien world sent a message. | nếu một thế giới ngoài hành tinh gửi thông điệp.
+
+People have looked at that part of the sky many times. | Người ta đã nhìn vào vùng trời đó rất nhiều lần.
+It has never come back. | Nó chưa bao giờ quay lại.
+There are ideas about natural causes, | Có những giả thuyết về nguyên nhân tự nhiên,
+but nothing has been proven. | nhưng chưa có gì được chứng minh.
+It does not prove aliens. | Nó không chứng minh có người ngoài hành tinh.
+It only proves that we do not know. | Nó chỉ chứng minh rằng ta không biết.
+
+? What did Ehman write? | Ehman đã viết gì? | Wow!* | Help! | Stop!
+> Truyện "The Man Who Kept the Numbers" có gì giống câu chuyện này?
+
+@id myst-fermi
+@shelf mystery
+@level B1
+@title Where Is Everybody?
+@vi Mọi người đâu cả rồi?
+@blurb Vũ trụ có hàng tỉ tỉ ngôi sao. Vậy tại sao bầu trời lại im lặng đến vậy?
+
+## 1 | A Question at Lunch | Câu hỏi trong bữa trưa
+In 1950, the physicist Enrico Fermi | Năm 1950, nhà vật lý Enrico Fermi
+was having lunch with friends. | đang ăn trưa cùng bạn bè.
+They were talking about aliens, as a joke. | Họ đùa về người ngoài hành tinh.
+Suddenly he asked, "But where is everybody?" | Bỗng ông hỏi: "Nhưng mọi người đâu cả rồi?"
+
+It sounds simple, but it is a deep question. | Nghe đơn giản, nhưng đó là câu hỏi sâu sắc.
+Our galaxy has hundreds of billions of stars. | Thiên hà của ta có hàng trăm tỉ ngôi sao.
+Many of them have planets, | Nhiều ngôi sao có hành tinh,
+and many are far older than the Sun. | và nhiều ngôi sao già hơn Mặt Trời rất nhiều.
+If even a few worlds built advanced machines, | Chỉ cần vài thế giới chế tạo được máy móc tiên tiến,
+they have had plenty of time to spread. | họ đã có thừa thời gian để lan rộng.
+So why do we see no sign of them? | Vậy sao ta không thấy dấu vết nào?
+
+There are many possible answers. | Có nhiều câu trả lời khả dĩ.
+Maybe life is extremely rare. | Có lẽ sự sống cực kỳ hiếm.
+Maybe they are too far away. | Có lẽ họ ở quá xa.
+Maybe they are hiding. | Có lẽ họ đang ẩn mình.
+Maybe civilizations do not last very long. | Có lẽ các nền văn minh không tồn tại được lâu.
+
+That last idea is the frightening one, | Ý cuối cùng đáng sợ nhất,
+and some people connect it with powerful AI. | và có người liên hệ nó với AI mạnh.
+Nobody knows the answer yet. | Chưa ai biết câu trả lời.
+The sky is still quiet. | Bầu trời vẫn im lặng.
+
+~ galaxy = thiên hà
+~ civilization = nền văn minh
+~ spread = lan rộng
+? What did Fermi ask? | Fermi đã hỏi gì? | Where is everybody?* | What is for lunch? | How old is the Sun?
+> Anh chọn câu trả lời nào? Vì sao?
+
+@id myst-voynich
+@shelf mystery
+@level A2
+@title The Book Nobody Can Read
+@vi Cuốn sách không ai đọc được
+@blurb Hơn 200 trang chữ lạ, cây lạ và hình vẽ lạ, viết từ hơn 500 năm trước. Máy tính và AI cũng chưa giải được.
+
+## 1 | The Voynich Manuscript | Bản thảo Voynich
+In a library at Yale University in America, | Trong một thư viện ở Đại học Yale, Mỹ,
+there is a very strange book. | có một cuốn sách rất kỳ lạ.
+It has more than 200 pages, | Nó có hơn 200 trang,
+written by hand in an unknown script. | viết tay bằng một thứ chữ không ai biết.
+
+It is called the Voynich manuscript, | Nó tên là bản thảo Voynich,
+after a book dealer who bought it in 1912. | theo tên người buôn sách đã mua nó năm 1912.
+Scientists tested the old animal skin it is written on. | Các nhà khoa học kiểm tra lớp da động vật cổ dùng để viết.
+It comes from the early 1400s. | Nó có từ đầu những năm 1400.
+
+The pages show plants that nobody can name, | Các trang vẽ những loài cây không ai gọi được tên,
+pictures of stars, | hình các vì sao,
+and small women in green water. | và những người phụ nữ nhỏ trong làn nước xanh.
+
+Code breakers from the Second World War tried to read it. | Những người giải mã từ Thế chiến II đã thử đọc nó.
+They failed. | Họ thất bại.
+Computers have tried too. | Máy tính cũng đã thử.
+Every few years, someone says they have solved it, | Vài năm lại có người nói đã giải được,
+and experts soon show they have not. | rồi các chuyên gia sớm chỉ ra là chưa.
+
+Maybe it is a real language. | Có lẽ nó là một ngôn ngữ thật.
+Maybe it is a code. | Có lẽ nó là mật mã.
+Maybe it is a very old joke. | Có lẽ nó là một trò đùa rất cũ.
+
+? How old is the book's material? | Vật liệu của cuốn sách có từ khi nào? | The early 1400s* | The year 1912 | The Second World War
+> Anh nghĩ cuốn sách này là gì? Nói 1 câu tiếng Anh.
+
+@id myst-sleep
+@shelf mystery
+@level A2
+@title Why Do We Sleep?
+@vi Vì sao ta phải ngủ?
+@blurb Ta dành khoảng một phần ba cuộc đời để ngủ, nằm bất động và không biết gì. Lý do thật sự vẫn chưa rõ.
+
+## 1 | A Third of Your Life | Một phần ba cuộc đời
+You will spend about one third of your life asleep. | Anh sẽ dành khoảng một phần ba cuộc đời để ngủ.
+You lie still. | Anh nằm yên.
+You do not eat or work. | Anh không ăn, không làm việc.
+You cannot see danger coming. | Anh không thấy được nguy hiểm đang đến.
+For an animal in the wild, | Với động vật hoang dã,
+that looks like a terrible idea. | điều đó có vẻ là một ý tồi tệ.
+
+And yet, nearly every animal that scientists have studied | Vậy mà gần như mọi loài từng được nghiên cứu
+sleeps in some way. | đều ngủ theo cách nào đó.
+So sleep must do something very important. | Vậy giấc ngủ hẳn phải làm điều gì rất quan trọng.
+
+We know some of the answers. | Ta biết một phần câu trả lời.
+Sleep helps your memory. | Ngủ giúp trí nhớ.
+It helps your body repair itself, | Nó giúp cơ thể tự phục hồi,
+and it may help clean the brain. | và có thể giúp làm sạch não.
+When you do not sleep, you learn badly. | Khi không ngủ, anh học rất kém.
+
+But nobody has one clear answer | Nhưng chưa ai có một câu trả lời rõ ràng
+for why sleep had to exist at all. | cho việc vì sao giấc ngủ phải tồn tại.
+And we still do not really know why we dream. | Và ta vẫn chưa thật sự biết vì sao ta mơ.
+
+Here is one useful fact for today. | Đây là một điều có ích cho hôm nay.
+The words you study tonight | Những từ anh học tối nay
+get stronger while you sleep. | sẽ được củng cố trong lúc anh ngủ.
+
+? How does sleep help learners? | Giấc ngủ giúp người học thế nào? | It helps memory* | It teaches grammar | It makes words longer
+> Anh ngủ mấy tiếng mỗi đêm? Trả lời bằng 1 câu tiếng Anh.
+
+@id myst-anesthesia
+@shelf mystery
+@level B1
+@title We Use It Every Day and Don't Know Why
+@vi Ngày nào cũng dùng mà không biết vì sao nó hiệu quả
+@blurb Thuốc gây mê được dùng từ năm 1846. Đến nay, y học vẫn chưa giải thích được đầy đủ vì sao nó làm ta mất ý thức.
+
+## 1 | Turning Off the Lights | Tắt đèn
+In October 1846, in a hospital in Boston, | Tháng 10 năm 1846, tại một bệnh viện ở Boston,
+a dentist named William Morton | một nha sĩ tên William Morton
+gave a patient a gas called ether. | cho bệnh nhân hít một loại khí tên ete.
+A doctor then cut into the man's neck, | Rồi một bác sĩ rạch vào cổ người đó,
+and the man felt no real pain. | và người đó gần như không thấy đau.
+The world had changed. | Thế giới đã đổi khác.
+
+Today, millions of people go under anesthesia every year. | Ngày nay, mỗi năm có hàng triệu người được gây mê.
+It is one of the great gifts of medicine. | Đó là một trong những món quà lớn của y học.
+Doctors know very well how to use it safely. | Bác sĩ biết rất rõ cách dùng nó an toàn.
+
+But here is the surprising part. | Nhưng đây là phần bất ngờ.
+They still cannot fully explain how it works. | Họ vẫn chưa giải thích được đầy đủ nó hoạt động thế nào.
+We know that these drugs act on brain cells, | Ta biết các thuốc này tác động lên tế bào não,
+and that signals across the brain change. | và tín hiệu khắp não thay đổi.
+But why does that turn you off, | Nhưng vì sao điều đó lại "tắt" anh đi,
+and then turn you on again? | rồi "bật" anh lên trở lại?
+
+Part of the problem is that nobody can say | Một phần vấn đề là chưa ai nói được
+what consciousness is. | ý thức là gì.
+It is hard to explain how you lose something | Thật khó giải thích cách ta mất đi một thứ
+when you cannot explain what it is. | khi ta còn chưa giải thích được nó là gì.
+
+~ anesthesia = gây mê
+~ ether = ete, một loại khí gây mê
+~ consciousness = ý thức
+? What can doctors still not fully explain? | Bác sĩ vẫn chưa giải thích được đầy đủ điều gì? | How anesthesia works* | How to use it safely | Who was Morton
+> Còn thứ gì anh dùng hằng ngày mà không biết nó hoạt động thế nào?
+
+@id myst-blackbox
+@shelf mystery
+@level B1
+@title The People Who Build AI Don't Fully Understand It
+@vi Người tạo ra AI cũng chưa hiểu hết nó
+@blurb AI hiện đại không được lập trình từng dòng, nó được "nuôi lớn". Vì thế bên trong nó vẫn là một bí ẩn.
+
+## 1 | Grown, Not Written | Được nuôi lớn, không phải viết ra
+A normal computer program is written by people, line by line. | Chương trình máy tính thường do con người viết, từng dòng một.
+If it makes a mistake, | Nếu nó sai,
+you can read the code and find the reason. | anh đọc mã và tìm ra lý do.
+
+Modern AI is different. | AI hiện đại thì khác.
+Engineers do not write its answers. | Kỹ sư không viết sẵn câu trả lời cho nó.
+They build a huge network of numbers | Họ dựng một mạng khổng lồ gồm các con số
+and train it on enormous amounts of text. | và huấn luyện nó trên lượng văn bản khổng lồ.
+The numbers change by themselves, billions of times, | Các con số tự thay đổi, hàng tỉ lần,
+until the system becomes good at the task. | cho tới khi hệ thống làm tốt việc đó.
+It is less like building a machine | Việc này không giống chế tạo một cỗ máy
+and more like growing a plant. | mà giống trồng một cái cây hơn.
+
+So when an AI gives an answer, | Vì thế khi AI đưa ra câu trả lời,
+nobody can read a simple reason in the numbers. | không ai đọc được một lý do đơn giản trong các con số.
+Researchers are working on this. | Các nhà nghiên cứu đang tìm hiểu điều này.
+The field is called interpretability, | Lĩnh vực này gọi là khả năng diễn giải,
+and they are starting to find ideas inside the networks. | và họ bắt đầu tìm thấy các ý tưởng bên trong mạng.
+But the work is still young. | Nhưng công việc này vẫn còn non trẻ.
+
+We have built something useful | Ta đã tạo ra một thứ hữu ích
+that we do not fully understand. | mà ta chưa hiểu hết.
+For the first time, one of the world's great mysteries | Lần đầu tiên, một bí ẩn lớn của thế giới
+is something we made ourselves. | lại do chính ta tạo ra.
+
+~ train = huấn luyện
+~ network = mạng
+~ interpretability = khả năng diễn giải (hiểu bên trong AI)
+? How is modern AI made? | AI hiện đại được tạo ra thế nào? | It is trained on huge amounts of text* | Each answer is written by hand | It copies one book
+> Truyện "The Model That Would Not Lie" liên quan gì tới bài này?

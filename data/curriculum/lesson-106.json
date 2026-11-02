@@ -1,0 +1,72 @@
+{
+  "id": 106,
+  "cn": "事情的发生",
+  "title": "Sự việc xảy ra",
+  "goal": "Kể lại chuyện ngoài ý muốn — lạc đường, hiểu lầm, bị lừa — và nguyên nhân của chúng.",
+  "words": [
+    { "w": "掉", "py": "diào", "hv": "điệu", "vi": "rơi; mất", "pos": "động từ",
+      "note": "Bộ 扌. Vừa là động từ (rơi xuống), vừa là bổ ngữ chỉ kết quả mất đi: 忘掉, 卖掉, 扔掉.",
+      "ex": [{ "cn": "我的钱包掉了。", "py": "Wǒ de qiánbāo diào le.", "vi": "Ví của tôi rơi mất rồi." }] },
+    { "w": "断", "py": "duàn", "hv": "đoạn", "vi": "đứt, gãy", "pos": "động từ",
+      "note": "Chính là \"đoạn\" tiếng Việt (\"gián đoạn\", \"đoạn tuyệt\"). 电话断了 = cúp máy giữa chừng.",
+      "ex": [{ "cn": "网络断了。", "py": "Wǎngluò duàn le.", "vi": "Mạng đứt rồi." }] },
+    { "w": "骗", "py": "piàn", "hv": "phiến", "vi": "lừa", "pos": "động từ",
+      "note": "Bộ 马 (ngựa) — vốn là trò lừa khi mua bán ngựa. 骗人 = lừa người, 上当受骗 = bị lừa.",
+      "ex": [{ "cn": "你别骗我。", "py": "Nǐ bié piàn wǒ.", "vi": "Bạn đừng lừa tôi." }] },
+    { "w": "迷路", "py": "mílù", "hv": "mê lộ", "vi": "lạc đường", "pos": "động từ",
+      "note": "迷 (mê, lạc lối) + 路 (lộ, đường). Là từ ly hợp: 迷了路.",
+      "ex": [{ "cn": "我在城里迷路了。", "py": "Wǒ zài chéng lǐ mílù le.", "vi": "Tôi lạc đường trong thành phố." }] },
+    { "w": "误会", "py": "wùhuì", "hv": "ngộ hội", "vi": "hiểu lầm", "pos": "động từ / danh từ",
+      "note": "误 (ngộ, sai — như \"ngộ nhận\") + 会 (hiểu). Vừa là động từ vừa là danh từ: 一场误会.",
+      "ex": [{ "cn": "你误会我了。", "py": "Nǐ wùhuì wǒ le.", "vi": "Bạn hiểu lầm tôi rồi." }] },
+    { "w": "吸引", "py": "xīyǐn", "hv": "hấp dẫn", "vi": "thu hút, hấp dẫn", "pos": "động từ",
+      "note": "Chính là \"hấp dẫn\" tiếng Việt: 吸 (hấp, hút — như 吸烟) + 引 (dẫn).",
+      "ex": [{ "cn": "这个故事很吸引人。", "py": "Zhège gùshi hěn xīyǐn rén.", "vi": "Câu chuyện này rất hấp dẫn." }] },
+    { "w": "引起", "py": "yǐnqǐ", "hv": "dẫn khởi", "vi": "gây ra, dẫn đến", "pos": "động từ",
+      "note": "引 (dẫn) + 起 (khởi). Đi với hậu quả trừu tượng: 引起注意, 引起问题, 引起讨论.",
+      "ex": [{ "cn": "这件事引起了大家的注意。", "py": "Zhè jiàn shì yǐnqǐ le dàjiā de zhùyì.", "vi": "Việc này gây chú ý cho mọi người." }] },
+    { "w": "发生", "py": "fāshēng", "hv": "phát sinh", "vi": "xảy ra", "pos": "động từ",
+      "note": "Chính là \"phát sinh\" tiếng Việt. Chủ ngữ là SỰ VIỆC, không phải người: 发生了什么事？",
+      "ex": [{ "cn": "发生了什么事？", "py": "Fāshēng le shénme shì?", "vi": "Đã xảy ra chuyện gì?" }] },
+    { "w": "发展", "py": "fāzhǎn", "hv": "phát triển", "vi": "phát triển", "pos": "động từ / danh từ",
+      "note": "Chính là \"phát triển\" tiếng Việt: 发 (phát) + 展 (triển).",
+      "ex": [{ "cn": "经济发展得很快。", "py": "Jīngjì fāzhǎn de hěn kuài.", "vi": "Kinh tế phát triển rất nhanh." }] },
+    { "w": "出生", "py": "chūshēng", "hv": "xuất sinh", "vi": "sinh ra", "pos": "động từ",
+      "note": "出 (ra) + 生 (sinh). 我出生在河内 = tôi sinh ra ở Hà Nội. 出生日期 = ngày sinh.",
+      "ex": [{ "cn": "我一九九八年出生。", "py": "Wǒ yī jiǔ jiǔ bā nián chūshēng.", "vi": "Tôi sinh năm 1998." }] }
+  ],
+  "grammar": [
+    { "t": "掉 làm bổ ngữ kết quả",
+      "b": "Động từ + 掉 = làm cho mất đi",
+      "d": "忘掉 (quên đi), 扔掉 (vứt đi), 卖掉 (bán đi), 改掉 (bỏ được thói quen). Sắc thái là DỨT ĐIỂM, không còn nữa — mạnh hơn động từ đứng một mình.",
+      "ex": [
+        { "cn": "把这些旧衣服扔掉吧。", "py": "Bǎ zhèxiē jiù yīfu rēng diào ba.", "vi": "Vứt mấy bộ đồ cũ này đi." },
+        { "cn": "他改掉了迟到的习惯。", "py": "Tā gǎi diào le chídào de xíguàn.", "vi": "Anh ấy bỏ được thói quen đi trễ." }
+      ] },
+    { "t": "发生 và 引起 — cái gì tự xảy ra, cái gì gây ra",
+      "b": "sự việc + 发生 · nguyên nhân + 引起 + hậu quả",
+      "d": "发生 KHÔNG có tân ngữ chỉ người gây ra: nói 发生了交通事故 chứ không nói 他发生了事故. 引起 luôn cần chủ thể gây và hậu quả bị gây: 抽烟会引起很多疾病.",
+      "ex": [
+        { "cn": "昨天发生了一件奇怪的事。", "py": "Zuótiān fāshēng le yí jiàn qíguài de shì.", "vi": "Hôm qua xảy ra một chuyện lạ." },
+        { "cn": "这个消息引起了很大的讨论。", "py": "Zhège xiāoxi yǐnqǐ le hěn dà de tǎolùn.", "vi": "Tin này gây ra tranh luận lớn." }
+      ] },
+    { "t": "Từ ly hợp — chỗ tách được của động từ hai chữ",
+      "b": "迷路 → 迷了路 · 见面 → 见过面 · 帮忙 → 帮我的忙",
+      "d": "Nhiều động từ hai chữ thực chất là động + tân, nên 了/过 và định ngữ chen vào GIỮA: nói 我迷了路 chứ không nói 我迷路了他. Đây là lỗi kinh điển của người học ở trình độ HSK 4.",
+      "ex": [
+        { "cn": "我们见过一次面。", "py": "Wǒmen jiàn guo yí cì miàn.", "vi": "Chúng tôi từng gặp nhau một lần." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "小心，别把手机掉了。", "py": "Xiǎoxīn, bié bǎ shǒujī diào le.", "vi": "Cẩn thận, đừng làm rơi điện thoại." },
+    { "cn": "刚才电话突然断了。", "py": "Gāngcái diànhuà tūrán duàn le.", "vi": "Vừa nãy điện thoại đột nhiên cúp." },
+    { "cn": "他被人骗了很多钱。", "py": "Tā bèi rén piàn le hěn duō qián.", "vi": "Anh ấy bị người ta lừa mất nhiều tiền." },
+    { "cn": "第一次来北京，我迷路了两次。", "py": "Dì-yī cì lái Běijīng, wǒ mílù le liǎng cì.", "vi": "Lần đầu tới Bắc Kinh, tôi lạc đường hai lần." },
+    { "cn": "这只是一场误会。", "py": "Zhè zhǐshì yì chǎng wùhuì.", "vi": "Đây chỉ là một sự hiểu lầm." },
+    { "cn": "中国文化深深地吸引了我。", "py": "Zhōngguó wénhuà shēnshēn de xīyǐn le wǒ.", "vi": "Văn hoá Trung Quốc thu hút tôi sâu sắc." },
+    { "cn": "抽烟会引起很多健康问题。", "py": "Chōuyān huì yǐnqǐ hěn duō jiànkāng wèntí.", "vi": "Hút thuốc gây ra nhiều vấn đề sức khoẻ." },
+    { "cn": "路上发生了交通事故。", "py": "Lù shàng fāshēng le jiāotōng shìgù.", "vi": "Trên đường xảy ra tai nạn giao thông." },
+    { "cn": "这个城市发展得非常快。", "py": "Zhège chéngshì fāzhǎn de fēicháng kuài.", "vi": "Thành phố này phát triển cực nhanh." },
+    { "cn": "他出生在一个普通家庭。", "py": "Tā chūshēng zài yí ge pǔtōng jiātíng.", "vi": "Anh ấy sinh ra trong một gia đình bình thường." }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": 38,
+  "cn": "语言和文化",
+  "title": "Ngôn ngữ và văn hoá",
+  "goal": "Nói về đất nước, văn hoá, trình độ tiếng — và thấy tiếng Việt gần tiếng Trung đến mức nào.",
+  "words": [
+    { "w": "中文", "py": "Zhōngwén", "hv": "Trung văn", "vi": "tiếng Trung, Trung văn", "pos": "danh từ",
+      "note": "文 nhấn vào CHỮ VIẾT và văn bản, còn 汉语 (bài 5) nhấn vào TIẾNG NÓI. Trong đời thường dùng lẫn nhau được.",
+      "ex": [{ "cn": "我在学中文。", "py": "Wǒ zài xué Zhōngwén.", "vi": "Tôi đang học tiếng Trung." }] },
+    { "w": "普通话", "py": "pǔtōnghuà", "hv": "phổ thông thoại", "vi": "tiếng phổ thông", "pos": "danh từ",
+      "note": "普通 chính là \"phổ thông\" tiếng Việt. Đây là tiếng chuẩn dùng trên cả nước, khác các phương ngữ như tiếng Quảng Đông.",
+      "ex": [{ "cn": "他普通话说得很标准。", "py": "Tā pǔtōnghuà shuō de hěn biāozhǔn.", "vi": "Anh ấy nói tiếng phổ thông rất chuẩn." }] },
+    { "w": "水平", "py": "shuǐpíng", "hv": "thuỷ bình", "vi": "trình độ", "pos": "danh từ",
+      "note": "Nghĩa đen là \"mặt nước phẳng\" — mức ngang bằng, từ đó thành \"trình độ\". Hay đi với 提高 (bài 37).",
+      "ex": [{ "cn": "我的汉语水平还不高。", "py": "Wǒ de Hànyǔ shuǐpíng hái bù gāo.", "vi": "Trình độ tiếng Trung của tôi còn chưa cao." }] },
+    { "w": "文化", "py": "wénhuà", "hv": "văn hoá", "vi": "văn hoá", "pos": "danh từ",
+      "note": "Chính là \"văn hoá\" tiếng Việt, không sai một ly.",
+      "ex": [{ "cn": "我对中国文化很感兴趣。", "py": "Wǒ duì Zhōngguó wénhuà hěn gǎn xìngqù.", "vi": "Tôi rất hứng thú với văn hoá Trung Quốc." }] },
+    { "w": "历史", "py": "lìshǐ", "hv": "lịch sử", "vi": "lịch sử", "pos": "danh từ",
+      "note": "Chính là \"lịch sử\" tiếng Việt. Việt Nam và Trung Quốc chia sẻ hàng nghìn năm lịch sử — và cả kho từ vựng này.",
+      "ex": [{ "cn": "中国有很长的历史。", "py": "Zhōngguó yǒu hěn cháng de lìshǐ.", "vi": "Trung Quốc có lịch sử rất dài." }] },
+    { "w": "世界", "py": "shìjiè", "hv": "thế giới", "vi": "thế giới", "pos": "danh từ",
+      "note": "Chính là \"thế giới\" tiếng Việt. 界 có bộ 田 (ruộng) — ranh giới các thửa ruộng.",
+      "ex": [{ "cn": "世界上有很多国家。", "py": "Shìjiè shàng yǒu hěn duō guójiā.", "vi": "Trên thế giới có rất nhiều quốc gia." }] },
+    { "w": "国家", "py": "guójiā", "hv": "quốc gia", "vi": "quốc gia, đất nước", "pos": "danh từ",
+      "note": "Chính là \"quốc gia\" tiếng Việt: 国 (nước) + 家 (nhà) — nước là cái nhà lớn.",
+      "ex": [{ "cn": "你去过几个国家？", "py": "Nǐ qù guo jǐ ge guójiā?", "vi": "Bạn đã đi mấy nước rồi?" }] },
+    { "w": "有名", "py": "yǒumíng", "hv": "hữu danh", "vi": "nổi tiếng", "pos": "tính từ",
+      "note": "有 (có) + 名 (danh tiếng). Tiếng Việt có \"hữu danh vô thực\" — cùng chữ 有名 này.",
+      "ex": [{ "cn": "这个地方很有名。", "py": "Zhège dìfang hěn yǒumíng.", "vi": "Nơi này rất nổi tiếng." }] },
+    { "w": "故事", "py": "gùshi", "hv": "cố sự", "vi": "câu chuyện", "pos": "danh từ",
+      "note": "故 = \"cố\" trong \"cố hương\", \"điển cố\". Nghĩa đen: chuyện cũ. Kể chuyện là 讲故事.",
+      "ex": [{ "cn": "奶奶给我讲故事。", "py": "Nǎinai gěi wǒ jiǎng gùshi.", "vi": "Bà nội kể chuyện cho tôi." }] },
+    { "w": "音乐", "py": "yīnyuè", "hv": "âm nhạc", "vi": "âm nhạc", "pos": "danh từ",
+      "note": "Chính là \"âm nhạc\" tiếng Việt. Chữ 乐 đọc yuè là nhạc, đọc lè là vui (như 快乐 bài 28) — một chữ hai âm.",
+      "ex": [{ "cn": "我喜欢听音乐。", "py": "Wǒ xǐhuan tīng yīnyuè.", "vi": "Tôi thích nghe nhạc." }] }
+  ],
+  "grammar": [
+    { "t": "对 … 感兴趣 — hứng thú với cái gì",
+      "b": "对 + đối tượng + 感兴趣",
+      "d": "Mẫu câu cố định, học nguyên khối. Cả cụm 对…感 đứng trước 兴趣. Phủ định: 对…不感兴趣.",
+      "ex": [
+        { "cn": "我对历史很感兴趣。", "py": "Wǒ duì lìshǐ hěn gǎn xìngqù.", "vi": "Tôi rất hứng thú với lịch sử." },
+        { "cn": "他对音乐不感兴趣。", "py": "Tā duì yīnyuè bù gǎn xìngqù.", "vi": "Anh ấy không hứng thú với âm nhạc." }
+      ] },
+    { "t": "世界上 — thêm 上 sau danh từ trừu tượng",
+      "b": "世界上 · 书上 · 报纸上 · 网上",
+      "d": "Nhắc lại quy tắc bài 11: từ chỉ vị trí đứng SAU danh từ. Với những khái niệm rộng như thế giới, sách, mạng, tiếng Trung vẫn thêm 上 dù tiếng Việt không nói \"trên thế giới\" theo nghĩa đen.",
+      "ex": [
+        { "cn": "世界上最高的山", "py": "shìjiè shàng zuì gāo de shān", "vi": "ngọn núi cao nhất thế giới" },
+        { "cn": "我在网上看到的。", "py": "Wǒ zài wǎng shàng kàn dào de.", "vi": "Tôi thấy trên mạng." }
+      ] },
+    { "t": "Kho từ Hán Việt hai âm tiết — mỏ vàng của người Việt",
+      "b": "文化 · 历史 · 世界 · 国家 · 音乐 · 普通",
+      "d": "Sáu từ trong bài này có âm Hán Việt TRÙNG KHÍT với từ tiếng Việt bạn dùng hằng ngày. Người học tiếng Anh phải học thuộc từng từ một; bạn chỉ cần nhận ra mối liên hệ. Hãy tận dụng: mỗi khi gặp từ hai chữ, đọc âm Hán Việt trước.",
+      "ex": [
+        { "cn": "文化 · 历史 · 世界", "py": "wénhuà · lìshǐ · shìjiè", "vi": "văn hoá · lịch sử · thế giới" },
+        { "cn": "国家 · 音乐 · 普通", "py": "guójiā · yīnyuè · pǔtōng", "vi": "quốc gia · âm nhạc · phổ thông" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我学中文两年了。", "py": "Wǒ xué Zhōngwén liǎng nián le.", "vi": "Tôi học tiếng Trung hai năm rồi." },
+    { "cn": "我的汉语水平还需要提高。", "py": "Wǒ de Hànyǔ shuǐpíng hái xūyào tígāo.", "vi": "Trình độ tiếng Trung của tôi còn cần nâng cao." },
+    { "cn": "他的普通话说得非常好。", "py": "Tā de pǔtōnghuà shuō de fēicháng hǎo.", "vi": "Anh ấy nói tiếng phổ thông cực chuẩn." },
+    { "cn": "我对中国文化很感兴趣。", "py": "Wǒ duì Zhōngguó wénhuà hěn gǎn xìngqù.", "vi": "Tôi rất hứng thú với văn hoá Trung Quốc." },
+    { "cn": "越南和中国的历史关系很长。", "py": "Yuènán hé Zhōngguó de lìshǐ guānxi hěn cháng.", "vi": "Quan hệ lịch sử giữa Việt Nam và Trung Quốc rất lâu đời." },
+    { "cn": "世界上有两百多个国家。", "py": "Shìjiè shàng yǒu liǎngbǎi duō ge guójiā.", "vi": "Trên thế giới có hơn hai trăm quốc gia." },
+    { "cn": "北京是一个很有名的城市。", "py": "Běijīng shì yí ge hěn yǒumíng de chéngshì.", "vi": "Bắc Kinh là một thành phố rất nổi tiếng." },
+    { "cn": "奶奶给我讲了一个很有意思的故事。", "py": "Nǎinai gěi wǒ jiǎng le yí ge hěn yǒu yìsi de gùshi.", "vi": "Bà nội kể cho tôi một câu chuyện rất thú vị." },
+    { "cn": "我一边做作业一边听音乐。", "py": "Wǒ yìbiān zuò zuòyè yìbiān tīng yīnyuè.", "vi": "Tôi vừa làm bài vừa nghe nhạc." },
+    { "cn": "学一门语言就是学一种文化。", "py": "Xué yì mén yǔyán jiù shì xué yì zhǒng wénhuà.", "vi": "Học một ngôn ngữ chính là học một nền văn hoá." }
+  ]
+}

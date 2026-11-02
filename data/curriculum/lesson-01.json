@@ -1,0 +1,79 @@
+{
+  "id": 1,
+  "cn": "你好",
+  "title": "Xin chào",
+  "goal": "Chào hỏi, hỏi thăm sức khoẻ, nói \"tôi là…\" và phủ định bằng 不.",
+  "words": [
+    { "w": "你", "py": "nǐ", "hv": "nễ", "vi": "bạn, cậu, anh, chị (ngôi thứ hai)", "pos": "đại từ",
+      "note": "Bên trái là bộ 亻 (người) — chữ nói về người. Muốn lịch sự với người lớn tuổi thì dùng 您 nín.",
+      "ex": [{ "cn": "你好！", "py": "Nǐ hǎo!", "vi": "Xin chào!" }] },
+    { "w": "好", "py": "hǎo", "hv": "hảo", "vi": "tốt, khoẻ, ổn", "pos": "tính từ",
+      "note": "女 (phụ nữ) + 子 (đứa con) = tốt đẹp. Người xưa cho rằng có mẹ có con là điều tốt lành nhất.",
+      "ex": [{ "cn": "我很好。", "py": "Wǒ hěn hǎo.", "vi": "Tôi khoẻ." }] },
+    { "w": "我", "py": "wǒ", "hv": "ngã", "vi": "tôi, tớ, mình", "pos": "đại từ",
+      "note": "Tiếng Việt có từ \"bản ngã\" — chính là chữ 我 này.",
+      "ex": [{ "cn": "我是学生。", "py": "Wǒ shì xuésheng.", "vi": "Tôi là học sinh." }] },
+    { "w": "是", "py": "shì", "hv": "thị", "vi": "là", "pos": "động từ",
+      "note": "日 (mặt trời) ở trên. Đây là động từ \"là\" — nối hai danh từ với nhau.",
+      "ex": [{ "cn": "他是老师。", "py": "Tā shì lǎoshī.", "vi": "Anh ấy là giáo viên." }] },
+    { "w": "吗", "py": "ma", "hv": "ma", "vi": "(trợ từ đặt cuối câu để hỏi)", "pos": "trợ từ",
+      "note": "口 (miệng) + 马 (ngựa, cho âm đọc). Thêm 吗 vào cuối câu kể là thành câu hỏi. Đọc nhẹ, không có thanh điệu.",
+      "ex": [{ "cn": "你好吗？", "py": "Nǐ hǎo ma?", "vi": "Bạn khoẻ không?" }] },
+    { "w": "不", "py": "bù", "hv": "bất", "vi": "không", "pos": "phó từ",
+      "note": "Tiếng Việt có \"bất lịch sự\", \"bất công\" — đều là chữ 不 này.",
+      "ex": [{ "cn": "我不是老师。", "py": "Wǒ bú shì lǎoshī.", "vi": "Tôi không phải giáo viên." }] },
+    { "w": "很", "py": "hěn", "hv": "ngận", "vi": "rất", "pos": "phó từ",
+      "note": "Trong tiếng Trung, 很 thường chỉ là từ đệm bắt buộc trước tính từ, KHÔNG mang nghĩa \"rất\" mạnh như tiếng Việt.",
+      "ex": [{ "cn": "我很好。", "py": "Wǒ hěn hǎo.", "vi": "Tôi (rất) khoẻ." }] },
+    { "w": "谢谢", "py": "xièxie", "hv": "tạ tạ", "vi": "cảm ơn", "pos": "động từ",
+      "note": "Tiếng Việt có \"cảm tạ\" — chính là chữ 谢. Chữ thứ hai đọc nhẹ (khinh thanh).",
+      "ex": [{ "cn": "谢谢老师！", "py": "Xièxie lǎoshī!", "vi": "Cảm ơn thầy/cô!" }] },
+    { "w": "再见", "py": "zàijiàn", "hv": "tái kiến", "vi": "tạm biệt", "pos": "động từ",
+      "note": "再 (lại) + 见 (gặp) = \"gặp lại\". Giống hệt \"tái kiến\" trong tiếng Việt.",
+      "ex": [{ "cn": "老师，再见！", "py": "Lǎoshī, zàijiàn!", "vi": "Chào thầy/cô, em về ạ!" }] },
+    { "w": "老师", "py": "lǎoshī", "hv": "lão sư", "vi": "thầy giáo, cô giáo", "pos": "danh từ",
+      "note": "老 (già, kính trọng) + 师 (thầy). Tiếng Việt gọi là \"lão sư\" trong từ Hán Việt.",
+      "ex": [{ "cn": "她是老师。", "py": "Tā shì lǎoshī.", "vi": "Cô ấy là giáo viên." }] }
+  ],
+  "grammar": [
+    { "t": "Câu khẳng định với 是 (là)",
+      "b": "A + 是 + B",
+      "d": "是 shì nghĩa là \"là\", dùng để nối hai danh từ. Khác tiếng Việt, tiếng Trung KHÔNG bỏ được 是 trong câu này.",
+      "ex": [
+        { "cn": "我是学生。", "py": "Wǒ shì xuésheng.", "vi": "Tôi là học sinh." },
+        { "cn": "她是老师。", "py": "Tā shì lǎoshī.", "vi": "Cô ấy là giáo viên." }
+      ] },
+    { "t": "Câu hỏi với 吗",
+      "b": "Câu kể + 吗 ?",
+      "d": "Muốn hỏi, chỉ cần thêm 吗 vào cuối câu kể. Trật tự từ GIỮ NGUYÊN, không đảo như tiếng Anh.",
+      "ex": [
+        { "cn": "你好吗？", "py": "Nǐ hǎo ma?", "vi": "Bạn khoẻ không?" },
+        { "cn": "你是老师吗？", "py": "Nǐ shì lǎoshī ma?", "vi": "Bạn là giáo viên phải không?" }
+      ] },
+    { "t": "Phủ định với 不 và quy tắc biến điệu",
+      "b": "不 + động từ / tính từ",
+      "d": "不 đặt TRƯỚC động từ hoặc tính từ. Quan trọng: 不 vốn là thanh 4 (bù), nhưng khi đứng trước một chữ thanh 4 khác thì đổi thành thanh 2 (bú). Vì vậy 不是 đọc là bú shì chứ không phải bù shì.",
+      "ex": [
+        { "cn": "我不是老师。", "py": "Wǒ bú shì lǎoshī.", "vi": "Tôi không phải giáo viên." },
+        { "cn": "我不好。", "py": "Wǒ bù hǎo.", "vi": "Tôi không khoẻ." }
+      ] },
+    { "t": "Tính từ cần có 很 đứng trước",
+      "b": "Chủ ngữ + 很 + tính từ",
+      "d": "Câu \"我好\" nghe cụt và có ý so sánh. Người Trung Quốc luôn nói 我很好. Ở đây 很 chỉ là từ đệm cho câu tròn, đừng dịch thành \"rất\".",
+      "ex": [
+        { "cn": "我很好。", "py": "Wǒ hěn hǎo.", "vi": "Tôi khoẻ." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你好！", "py": "Nǐ hǎo!", "vi": "Xin chào!" },
+    { "cn": "老师好！", "py": "Lǎoshī hǎo!", "vi": "Em chào thầy/cô ạ!" },
+    { "cn": "你好吗？", "py": "Nǐ hǎo ma?", "vi": "Bạn khoẻ không?" },
+    { "cn": "我很好，谢谢。", "py": "Wǒ hěn hǎo, xièxie.", "vi": "Tôi khoẻ, cảm ơn." },
+    { "cn": "我是学生。", "py": "Wǒ shì xuésheng.", "vi": "Tôi là học sinh." },
+    { "cn": "你是老师吗？", "py": "Nǐ shì lǎoshī ma?", "vi": "Bạn là giáo viên à?" },
+    { "cn": "我不是老师。", "py": "Wǒ bú shì lǎoshī.", "vi": "Tôi không phải giáo viên." },
+    { "cn": "他很好。", "py": "Tā hěn hǎo.", "vi": "Anh ấy khoẻ." },
+    { "cn": "谢谢老师！", "py": "Xièxie lǎoshī!", "vi": "Cảm ơn thầy/cô!" },
+    { "cn": "老师，再见！", "py": "Lǎoshī, zàijiàn!", "vi": "Thưa thầy/cô, em về ạ!" }
+  ]
+}

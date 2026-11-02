@@ -1,0 +1,70 @@
+{
+  "id": 103,
+  "cn": "口语连词",
+  "title": "Liên từ hội thoại",
+  "goal": "Liên từ dùng khi nói chuyện — ngắn, nhanh, tự nhiên như người bản xứ.",
+  "words": [
+    { "w": "不过", "py": "búguò", "hv": "bất quá", "vi": "nhưng mà, có điều", "pos": "liên từ",
+      "note": "Chính là \"bất quá\" tiếng Việt. Nhẹ hơn 但是 — dùng để bổ sung một điểm nhỏ, rất khẩu ngữ.",
+      "ex": [{ "cn": "很好吃，不过有点儿贵。", "py": "Hěn hǎochī, búguò yǒudiǎnr guì.", "vi": "Ngon lắm, có điều hơi đắt." }] },
+    { "w": "可是", "py": "kěshì", "hv": "khả thị", "vi": "nhưng", "pos": "liên từ",
+      "note": "Đồng nghĩa 但是 nhưng khẩu ngữ hơn, hay đứng đầu câu nói.",
+      "ex": [{ "cn": "我想去，可是没时间。", "py": "Wǒ xiǎng qù, kěshì méi shíjiān.", "vi": "Tôi muốn đi, nhưng không có thời gian." }] },
+    { "w": "却", "py": "què", "hv": "khước", "vi": "thế mà, lại", "pos": "phó từ",
+      "note": "Là PHÓ TỪ, phải đứng SAU chủ ngữ, trước động từ: 他却不来 (chứ không nói 却他不来).",
+      "ex": [{ "cn": "他答应了，却没有来。", "py": "Tā dāying le, què méiyǒu lái.", "vi": "Anh ấy hứa rồi, thế mà không đến." }] },
+    { "w": "仍然", "py": "réngrán", "hv": "nhưng nhiên", "vi": "vẫn, vẫn còn", "pos": "phó từ",
+      "note": "Trang trọng hơn 还是. Nhấn tình trạng KHÔNG THAY ĐỔI sau một biến cố.",
+      "ex": [{ "cn": "十年后他仍然记得。", "py": "Shí nián hòu tā réngrán jìde.", "vi": "Mười năm sau anh ấy vẫn nhớ." }] },
+    { "w": "无论", "py": "wúlùn", "hv": "vô luận", "vi": "bất luận, dù cho", "pos": "liên từ",
+      "note": "Chính là \"vô luận\" tiếng Việt. Cùng cách dùng với 不管 (bài 102) nhưng trang trọng hơn.",
+      "ex": [{ "cn": "无论如何我都会帮你。", "py": "Wúlùn rúhé wǒ dōu huì bāng nǐ.", "vi": "Dù thế nào tôi cũng giúp bạn." }] },
+    { "w": "即使", "py": "jíshǐ", "hv": "tức sử", "vi": "cho dù (giả định)", "pos": "liên từ",
+      "note": "Khác 虽然: 即使 nêu điều CHƯA xảy ra, chỉ giả định. Cặp: 即使…，也….",
+      "ex": [{ "cn": "即使下雨，我也要去。", "py": "Jíshǐ xià yǔ, wǒ yě yào qù.", "vi": "Cho dù mưa tôi cũng đi." }] },
+    { "w": "假如", "py": "jiǎrú", "hv": "giả như", "vi": "giả như, nếu như", "pos": "liên từ",
+      "note": "Chính là \"giả như\" tiếng Việt: 假 (giả) + 如 (như). Nêu giả thiết, hơi trang trọng.",
+      "ex": [{ "cn": "假如我是你，我会去。", "py": "Jiǎrú wǒ shì nǐ, wǒ huì qù.", "vi": "Giả như tôi là bạn, tôi sẽ đi." }] },
+    { "w": "要是", "py": "yàoshi", "hv": "yếu thị", "vi": "nếu", "pos": "liên từ",
+      "note": "Bản khẩu ngữ của 如果. Cặp quen thuộc: 要是…就….",
+      "ex": [{ "cn": "要是有空，就来玩儿吧。", "py": "Yàoshi yǒu kòng, jiù lái wánr ba.", "vi": "Nếu rảnh thì qua chơi nhé." }] },
+    { "w": "只好", "py": "zhǐhǎo", "hv": "chỉ hảo", "vi": "đành phải", "pos": "phó từ",
+      "note": "只 (chỉ) + 好 (đành). Diễn tả không còn lựa chọn nào khác — tiếng Việt: \"chỉ còn cách\".",
+      "ex": [{ "cn": "没有车了，只好走路。", "py": "Méiyǒu chē le, zhǐhǎo zǒulù.", "vi": "Hết xe rồi, đành đi bộ." }] },
+    { "w": "与", "py": "yǔ", "hv": "dữ", "vi": "và, với", "pos": "liên từ / giới từ",
+      "note": "Bản văn ngôn của 和. Dùng trong tên sách, tiêu đề: 中国与越南. Tiếng Việt có \"dữ\" trong \"tham dự\".",
+      "ex": [{ "cn": "这与我无关。", "py": "Zhè yǔ wǒ wúguān.", "vi": "Việc này không liên quan tới tôi." }] }
+  ],
+  "grammar": [
+    { "t": "即使 · 虽然 · 尽管 — ba kiểu nhượng bộ",
+      "b": "虽然/尽管 + việc CÓ THẬT · 即使 + việc GIẢ ĐỊNH",
+      "d": "虽然他很忙 = anh ấy bận thật. 即使他很忙 = giả sử anh ấy bận. Vế sau: 虽然…但是/还是, còn 即使…也. Đây là điểm ngữ pháp hay ra trong đề HSK 4.",
+      "ex": [
+        { "cn": "即使失败了，也不要难过。", "py": "Jíshǐ shībài le, yě búyào nánguò.", "vi": "Dù có thất bại cũng đừng buồn." }
+      ] },
+    { "t": "却 — phó từ, không phải liên từ",
+      "b": "Chủ ngữ + 却 + động từ",
+      "d": "Người Việt hay viết sai thành 却他不同意 vì dịch từ \"thế mà anh ấy…\". Đúng phải là 他却不同意. Có thể dùng chung với 但是: 但是他却不同意.",
+      "ex": [
+        { "cn": "我等了很久，他却没来。", "py": "Wǒ děng le hěn jiǔ, tā què méi lái.", "vi": "Tôi đợi rất lâu, thế mà anh ấy không đến." }
+      ] },
+    { "t": "Bốn cách nói \"nếu\" theo mức trang trọng",
+      "b": "要是 (nói) < 如果 (chung) < 假如 (viết) < 倘若 (văn học)",
+      "d": "Ở HSK 4 bạn cần ba cái đầu. Vế sau đều dùng 就 hoặc 那么. Có thể thêm 的话 ở cuối vế điều kiện: 要是明天下雨的话，我们就不去了.",
+      "ex": [
+        { "cn": "如果明天有空的话，我们就去看电影。", "py": "Rúguǒ míngtiān yǒu kòng dehuà, wǒmen jiù qù kàn diànyǐng.", "vi": "Nếu mai rảnh thì chúng ta đi xem phim." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这家店不错，不过有点儿远。", "py": "Zhè jiā diàn búcuò, búguò yǒudiǎnr yuǎn.", "vi": "Quán này ổn, có điều hơi xa." },
+    { "cn": "我很想帮你，可是我也不会。", "py": "Wǒ hěn xiǎng bāng nǐ, kěshì wǒ yě bú huì.", "vi": "Tôi rất muốn giúp bạn, nhưng tôi cũng không biết làm." },
+    { "cn": "大家都走了，他却还在工作。", "py": "Dàjiā dōu zǒu le, tā què hái zài gōngzuò.", "vi": "Mọi người về hết rồi, anh ấy thì vẫn còn làm." },
+    { "cn": "虽然很晚了，他仍然在看书。", "py": "Suīrán hěn wǎn le, tā réngrán zài kàn shū.", "vi": "Tuy đã muộn, anh ấy vẫn đang đọc sách." },
+    { "cn": "无论谁问，你都别说。", "py": "Wúlùn shéi wèn, nǐ dōu bié shuō.", "vi": "Bất luận ai hỏi, bạn cũng đừng nói." },
+    { "cn": "即使很难，我也不会放弃。", "py": "Jíshǐ hěn nán, wǒ yě bú huì fàngqì.", "vi": "Cho dù khó, tôi cũng không bỏ cuộc." },
+    { "cn": "假如再给我一次机会，我会更努力。", "py": "Jiǎrú zài gěi wǒ yí cì jīhuì, wǒ huì gèng nǔlì.", "vi": "Giả như cho tôi thêm một cơ hội, tôi sẽ cố hơn." },
+    { "cn": "要是你不忙，帮我看看这个。", "py": "Yàoshi nǐ bù máng, bāng wǒ kànkan zhège.", "vi": "Nếu bạn không bận, xem giúp tôi cái này." },
+    { "cn": "票卖完了，我们只好改天再来。", "py": "Piào mài wán le, wǒmen zhǐhǎo gǎi tiān zài lái.", "vi": "Vé bán hết rồi, đành hôm khác quay lại." },
+    { "cn": "这本书与那本内容差不多。", "py": "Zhè běn shū yǔ nà běn nèiróng chàbuduō.", "vi": "Nội dung quyển này với quyển kia gần như nhau." }
+  ]
+}

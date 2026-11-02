@@ -1,0 +1,73 @@
+{
+  "id": 61,
+  "cn": "人的性格",
+  "title": "Tính cách con người",
+  "goal": "Mở đầu HSK 4 bằng bộ từ tả tính người — năm trên mười từ trùng khít tiếng Việt.",
+  "words": [
+    { "w": "性格", "py": "xìnggé", "hv": "tính cách", "vi": "tính cách", "pos": "danh từ",
+      "note": "Chính là \"tính cách\" tiếng Việt: 性 (tính, có bộ 忄) + 格 (cách). Không sai một ly.",
+      "ex": [{ "cn": "他的性格很好。", "py": "Tā de xìnggé hěn hǎo.", "vi": "Tính cách anh ấy rất tốt." }] },
+    { "w": "活泼", "py": "huópō", "hv": "hoạt bát", "vi": "hoạt bát, lanh lợi", "pos": "tính từ",
+      "note": "Chính là \"hoạt bát\" tiếng Việt: 活 (sống động) + 泼 (bộ 氵). Thường khen trẻ con và người trẻ.",
+      "ex": [{ "cn": "这个孩子很活泼。", "py": "Zhège háizi hěn huópō.", "vi": "Đứa bé này rất hoạt bát." }] },
+    { "w": "幽默", "py": "yōumò", "hv": "u mặc", "vi": "hài hước", "pos": "tính từ",
+      "note": "Thú vị: đây là từ MƯỢN ÂM tiếng Anh \"humour\", người Trung Quốc chọn hai chữ 幽默 cho gần âm. Tiếng Việt mượn thẳng \"hài hước\" từ gốc khác.",
+      "ex": [{ "cn": "他很幽默。", "py": "Tā hěn yōumò.", "vi": "Anh ấy rất hài hước." }] },
+    { "w": "诚实", "py": "chéngshí", "hv": "thành thực", "vi": "thành thật, trung thực", "pos": "tính từ",
+      "note": "Chính là \"thành thực\" tiếng Việt: 诚 (thành, có bộ 讠) + 实 (thực).",
+      "ex": [{ "cn": "做人要诚实。", "py": "Zuòrén yào chéngshí.", "vi": "Làm người phải thành thật." }] },
+    { "w": "骄傲", "py": "jiāo'ào", "hv": "kiêu ngạo", "vi": "kiêu ngạo; tự hào", "pos": "tính từ",
+      "note": "Chính là \"kiêu ngạo\" tiếng Việt, nhưng tiếng Trung có CẢ NGHĨA TỐT: 为你骄傲 = tự hào về bạn.",
+      "ex": [{ "cn": "我为你骄傲。", "py": "Wǒ wèi nǐ jiāo'ào.", "vi": "Tôi tự hào về bạn." }] },
+    { "w": "懒", "py": "lǎn", "hv": "lãn", "vi": "lười", "pos": "tính từ",
+      "note": "Bộ 忄 (tim) — lười là chuyện của lòng dạ. Tiếng Việt: \"lãn công\" (đình công kiểu lười làm).",
+      "ex": [{ "cn": "他太懒了。", "py": "Tā tài lǎn le.", "vi": "Cậu ấy lười quá." }] },
+    { "w": "笨", "py": "bèn", "hv": "bổn", "vi": "ngốc, vụng", "pos": "tính từ",
+      "note": "Bộ 竹 (tre) trên 本 (gốc) — như khúc tre thô chưa gọt. Trái nghĩa với 聪明 (bài 52). Lời chê nặng, dùng cẩn thận.",
+      "ex": [{ "cn": "我真笨！", "py": "Wǒ zhēn bèn!", "vi": "Mình ngốc thật!" }] },
+    { "w": "帅", "py": "shuài", "hv": "soái", "vi": "đẹp trai", "pos": "tính từ",
+      "note": "Tiếng Việt: \"nguyên soái\", \"thống soái\" — nghĩa gốc là vị tướng oai phong. Khen nam giới; khen nữ thì dùng 漂亮 hoặc 美丽.",
+      "ex": [{ "cn": "他很帅。", "py": "Tā hěn shuài.", "vi": "Anh ấy rất đẹp trai." }] },
+    { "w": "冷静", "py": "lěngjìng", "hv": "lãnh tĩnh", "vi": "bình tĩnh", "pos": "tính từ",
+      "note": "冷 (lạnh, bài 15) + 静 (tĩnh, bài 60 trong 安静) — đầu lạnh mà lòng yên. Lời khuyên hay dùng: 冷静一点儿！",
+      "ex": [{ "cn": "冷静一点儿！", "py": "Lěngjìng yìdiǎnr!", "vi": "Bình tĩnh lại nào!" }] },
+    { "w": "勇敢", "py": "yǒnggǎn", "hv": "dũng cảm", "vi": "dũng cảm", "pos": "tính từ",
+      "note": "Chính là \"dũng cảm\" tiếng Việt: 勇 (dũng) + 敢 (dám).",
+      "ex": [{ "cn": "他是个勇敢的人。", "py": "Tā shì ge yǒnggǎn de rén.", "vi": "Anh ấy là một người dũng cảm." }] }
+  ],
+  "grammar": [
+    { "t": "Chào mừng tới HSK 4 — từ trừu tượng bắt đầu chiếm ưu thế",
+      "b": "性格 · 活泼 · 诚实 · 骄傲 · 勇敢",
+      "d": "Từ HSK 4 trở đi, phần lớn từ mới là từ HAI ÂM TIẾT trừu tượng — và đó chính là kho từ Hán Việt của tiếng Việt. Chiến thuật học hiệu quả nhất: gặp từ hai chữ, đọc âm Hán Việt lên trước, rất nhiều lần bạn sẽ tự đoán ra nghĩa mà không cần tra.",
+      "ex": [
+        { "cn": "性格 · 活泼 · 诚实", "py": "xìnggé · huópō · chéngshí", "vi": "tính cách · hoạt bát · thành thực" },
+        { "cn": "骄傲 · 勇敢", "py": "jiāo'ào · yǒnggǎn", "vi": "kiêu ngạo · dũng cảm" }
+      ] },
+    { "t": "骄傲 — một từ hai sắc thái trái ngược",
+      "b": "对…骄傲 (tự hào) · 太骄傲了 (kiêu ngạo)",
+      "d": "Khác tiếng Việt chỉ hiểu \"kiêu ngạo\" theo nghĩa xấu, tiếng Trung dùng 骄傲 cho cả niềm TỰ HÀO chính đáng. Nhìn ngữ cảnh mà đoán: có 为/对 đi kèm thì thường là nghĩa tốt.",
+      "ex": [
+        { "cn": "父母为孩子的成绩骄傲。", "py": "Fùmǔ wèi háizi de chéngjì jiāo'ào.", "vi": "Cha mẹ tự hào về thành tích của con." },
+        { "cn": "他有点儿骄傲，不太听别人的话。", "py": "Tā yǒudiǎnr jiāo'ào, bú tài tīng biéren de huà.", "vi": "Cậu ấy hơi kiêu, không mấy khi nghe người khác." }
+      ] },
+    { "t": "Khen người: dùng từ nào cho ai",
+      "b": "帅 (nam) · 漂亮 / 美丽 (nữ) · 可爱 (trẻ con) · 活泼 (trẻ, người trẻ)",
+      "d": "Tiếng Trung phân biệt khá rạch ròi. Khen một người đàn ông là 漂亮 nghe rất lạ tai. Người Việt cũng phân biệt \"đẹp trai\" với \"xinh\" nên nắm rất nhanh.",
+      "ex": [
+        { "cn": "你儿子真帅！", "py": "Nǐ érzi zhēn shuài!", "vi": "Con trai bạn đẹp trai thật!" },
+        { "cn": "你女儿又漂亮又活泼。", "py": "Nǐ nǚ'ér yòu piàoliang yòu huópō.", "vi": "Con gái bạn vừa xinh vừa lanh lợi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你觉得他的性格怎么样？", "py": "Nǐ juéde tā de xìnggé zěnmeyàng?", "vi": "Bạn thấy tính cách anh ấy thế nào?" },
+    { "cn": "她性格活泼，朋友很多。", "py": "Tā xìnggé huópō, péngyou hěn duō.", "vi": "Cô ấy tính hoạt bát nên nhiều bạn." },
+    { "cn": "他说话很幽默，大家都爱听。", "py": "Tā shuōhuà hěn yōumò, dàjiā dōu ài tīng.", "vi": "Anh ấy nói chuyện hài hước, ai cũng thích nghe." },
+    { "cn": "诚实比聪明更重要。", "py": "Chéngshí bǐ cōngming gèng zhòngyào.", "vi": "Thành thật quan trọng hơn thông minh." },
+    { "cn": "爸爸妈妈都为你骄傲。", "py": "Bàba māma dōu wèi nǐ jiāo'ào.", "vi": "Bố mẹ đều tự hào về con." },
+    { "cn": "他这个人有点儿懒。", "py": "Tā zhège rén yǒudiǎnr lǎn.", "vi": "Người này hơi lười." },
+    { "cn": "我又做错了，真笨。", "py": "Wǒ yòu zuò cuò le, zhēn bèn.", "vi": "Tôi lại làm sai rồi, ngốc thật." },
+    { "cn": "遇到问题要冷静。", "py": "Yù dào wèntí yào lěngjìng.", "vi": "Gặp vấn đề phải bình tĩnh." },
+    { "cn": "他很勇敢，一个人去了那么远的地方。", "py": "Tā hěn yǒnggǎn, yí ge rén qù le nàme yuǎn de dìfang.", "vi": "Anh ấy rất dũng cảm, một mình đi tới nơi xa như thế." },
+    { "cn": "你今天穿得真帅！", "py": "Nǐ jīntiān chuān de zhēn shuài!", "vi": "Hôm nay bạn mặc đẹp trai thật!" }
+  ]
+}

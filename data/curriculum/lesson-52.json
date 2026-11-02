@@ -1,0 +1,74 @@
+{
+  "id": 52,
+  "cn": "怎么形容",
+  "title": "Miêu tả tính chất",
+  "goal": "Mở rộng vốn tính từ để tả người và vật — kèm hai cái bẫy Hán Việt cần nhớ.",
+  "words": [
+    { "w": "蓝", "py": "lán", "hv": "lam", "vi": "màu xanh lam", "pos": "tính từ",
+      "note": "Chính là \"lam\" tiếng Việt (\"màu lam\", \"lam ngọc\"). Bộ 艹 ở trên vì màu chàm nhuộm từ cây.",
+      "ex": [{ "cn": "天是蓝色的。", "py": "Tiān shì lánsè de.", "vi": "Bầu trời màu xanh lam." }] },
+    { "w": "绿", "py": "lǜ", "hv": "lục", "vi": "màu xanh lá", "pos": "tính từ",
+      "note": "Chính là \"lục\" tiếng Việt (\"lục bình\", \"diệp lục\"). Bộ 纟 (sợi tơ) — màu nhuộm vải.",
+      "ex": [{ "cn": "春天树叶是绿色的。", "py": "Chūntiān shùyè shì lǜsè de.", "vi": "Mùa xuân lá cây màu xanh lục." }] },
+    { "w": "短", "py": "duǎn", "hv": "đoản", "vi": "ngắn", "pos": "tính từ",
+      "note": "Tiếng Việt: \"đoản mệnh\", \"đoản khúc\". Trái nghĩa với 长 cháng (dài, bài 28).",
+      "ex": [{ "cn": "她的头发很短。", "py": "Tā de tóufa hěn duǎn.", "vi": "Tóc cô ấy rất ngắn." }] },
+    { "w": "低", "py": "dī", "hv": "đê", "vi": "thấp (độ cao, giá, âm lượng)", "pos": "tính từ",
+      "note": "Khác 矮 (bài 33): 矮 dùng cho NGƯỜI và vật thấp, còn 低 dùng cho mức độ — giá thấp, nhiệt độ thấp, tiếng nhỏ.",
+      "ex": [{ "cn": "请把声音放低一点儿。", "py": "Qǐng bǎ shēngyīn fàng dī yìdiǎnr.", "vi": "Xin vặn nhỏ tiếng một chút." }] },
+    { "w": "旧", "py": "jiù", "hv": "cựu", "vi": "cũ", "pos": "tính từ",
+      "note": "Chính là \"cựu\" tiếng Việt (\"cựu học sinh\", \"cựu chiến binh\"). Trái nghĩa với 新 (mới, bài 21).",
+      "ex": [{ "cn": "这台电脑太旧了。", "py": "Zhè tái diànnǎo tài jiù le.", "vi": "Cái máy tính này cũ quá rồi." }] },
+    { "w": "奇怪", "py": "qíguài", "hv": "kỳ quái", "vi": "kỳ lạ, kỳ quặc", "pos": "tính từ",
+      "note": "Chính là \"kỳ quái\" tiếng Việt: 奇 (kỳ lạ) + 怪 (quái, có bộ 忄).",
+      "ex": [{ "cn": "真奇怪，他怎么没来？", "py": "Zhēn qíguài, tā zěnme méi lái?", "vi": "Lạ thật, sao anh ấy không đến nhỉ?" }] },
+    { "w": "可爱", "py": "kě'ài", "hv": "khả ái", "vi": "đáng yêu", "pos": "tính từ",
+      "note": "Chính là \"khả ái\" tiếng Việt: 可 (có thể) + 爱 (yêu) — đáng để yêu. Cùng cách ghép: 可怕 (đáng sợ), 可以.",
+      "ex": [{ "cn": "这个孩子真可爱。", "py": "Zhège háizi zhēn kě'ài.", "vi": "Đứa bé này đáng yêu thật." }] },
+    { "w": "聪明", "py": "cōngming", "hv": "thông minh", "vi": "thông minh", "pos": "tính từ",
+      "note": "Chính là \"thông minh\" tiếng Việt: 聪 có bộ 耳 (tai — nghe tinh) + 明 (sáng — mắt tỏ). Tai thính mắt tinh thì thông minh.",
+      "ex": [{ "cn": "他很聪明。", "py": "Tā hěn cōngming.", "vi": "Cậu ấy rất thông minh." }] },
+    { "w": "特别", "py": "tèbié", "hv": "đặc biệt", "vi": "đặc biệt; rất", "pos": "tính từ / phó từ",
+      "note": "Chính là \"đặc biệt\" tiếng Việt. Cũng dùng như phó từ mạnh: 特别好 = rất tốt, tương đương 非常.",
+      "ex": [{ "cn": "今天特别冷。", "py": "Jīntiān tèbié lěng.", "vi": "Hôm nay lạnh đặc biệt." }] },
+    { "w": "方便", "py": "fāngbiàn", "hv": "phương tiện", "vi": "tiện lợi, thuận tiện", "pos": "tính từ",
+      "note": "CẨN THẬN — bẫy Hán Việt: âm là \"phương tiện\" nhưng nghĩa tiếng Trung là TIỆN LỢI, không phải \"công cụ đi lại\". Chú ý 便 ở đây đọc biàn, khác 便宜 piányi (bài 22).",
+      "ex": [{ "cn": "坐地铁很方便。", "py": "Zuò dìtiě hěn fāngbiàn.", "vi": "Đi tàu điện ngầm rất tiện." }] }
+  ],
+  "grammar": [
+    { "t": "矮 và 低 — hai kiểu \"thấp\"",
+      "b": "矮 = người, vật thấp · 低 = mức độ thấp",
+      "d": "他很矮 (anh ấy thấp — chiều cao cơ thể). 价格很低 (giá thấp), 声音很低 (tiếng nhỏ), 温度很低 (nhiệt độ thấp). Nói 他很低 là sai hoàn toàn.",
+      "ex": [
+        { "cn": "这张桌子有点儿矮。", "py": "Zhè zhāng zhuōzi yǒudiǎnr ǎi.", "vi": "Cái bàn này hơi thấp." },
+        { "cn": "这里的房价比较低。", "py": "Zhèlǐ de fángjià bǐjiào dī.", "vi": "Giá nhà ở đây khá thấp." }
+      ] },
+    { "t": "可 + động từ = đáng để…",
+      "b": "可爱 · 可怕 · 可惜 · 可以",
+      "d": "可 nghĩa là \"có thể, đáng\". Ghép với động từ ra tính từ: 可爱 (đáng yêu), 可怕 (đáng sợ), 可惜 (đáng tiếc). Tiếng Việt cũng có \"khả ái\", \"khả kính\", \"khả nghi\" — cùng một lối ghép.",
+      "ex": [
+        { "cn": "这只小狗很可爱。", "py": "Zhè zhī xiǎo gǒu hěn kě'ài.", "vi": "Con chó nhỏ này rất đáng yêu." },
+        { "cn": "太可惜了！", "py": "Tài kěxī le!", "vi": "Đáng tiếc quá!" }
+      ] },
+    { "t": "Ba mức nhấn mạnh: 很 < 非常 ≈ 特别 < 太…了",
+      "b": "很好 < 非常好 / 特别好 < 太好了",
+      "d": "很 chỉ là từ đệm (bài 1). 非常 và 特别 đều nghĩa \"rất\", dùng thay nhau được. 太…了 mạnh nhất và mang cảm thán. Nắm được thang này là câu văn của bạn có sắc thái ngay.",
+      "ex": [
+        { "cn": "这个菜很好吃。", "py": "Zhège cài hěn hǎochī.", "vi": "Món này ngon." },
+        { "cn": "这个菜特别好吃。", "py": "Zhège cài tèbié hǎochī.", "vi": "Món này ngon đặc biệt." },
+        { "cn": "太好吃了！", "py": "Tài hǎochī le!", "vi": "Ngon quá đi!" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我想买一件蓝色的衬衫。", "py": "Wǒ xiǎng mǎi yí jiàn lánsè de chènshān.", "vi": "Tôi muốn mua một chiếc sơ mi màu xanh lam." },
+    { "cn": "公园里的草是绿色的。", "py": "Gōngyuán lǐ de cǎo shì lǜsè de.", "vi": "Cỏ trong công viên màu xanh lục." },
+    { "cn": "夏天的裤子比较短。", "py": "Xiàtiān de kùzi bǐjiào duǎn.", "vi": "Quần mùa hè khá ngắn." },
+    { "cn": "这里冬天的温度很低。", "py": "Zhèlǐ dōngtiān de wēndù hěn dī.", "vi": "Nhiệt độ mùa đông ở đây rất thấp." },
+    { "cn": "这本旧词典是爷爷的。", "py": "Zhè běn jiù cídiǎn shì yéye de.", "vi": "Quyển từ điển cũ này là của ông nội." },
+    { "cn": "真奇怪，我的手机不见了。", "py": "Zhēn qíguài, wǒ de shǒujī bú jiàn le.", "vi": "Lạ thật, điện thoại tôi biến mất rồi." },
+    { "cn": "熊猫又可爱又聪明。", "py": "Xióngmāo yòu kě'ài yòu cōngming.", "vi": "Gấu trúc vừa đáng yêu vừa thông minh." },
+    { "cn": "他今天特别高兴。", "py": "Tā jīntiān tèbié gāoxìng.", "vi": "Hôm nay cậu ấy đặc biệt vui." },
+    { "cn": "住在学校附近很方便。", "py": "Zhù zài xuéxiào fùjìn hěn fāngbiàn.", "vi": "Ở gần trường rất tiện." },
+    { "cn": "什么时候方便，我们再见面。", "py": "Shénme shíhou fāngbiàn, wǒmen zài jiànmiàn.", "vi": "Khi nào tiện, chúng ta gặp lại nhé." }
+  ]
+}

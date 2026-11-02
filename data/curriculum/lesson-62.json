@@ -1,0 +1,74 @@
+{
+  "id": 62,
+  "cn": "高兴的心情",
+  "title": "Niềm vui",
+  "goal": "Diễn tả các sắc thái vui khác nhau — bảy trên mười từ là từ Hán Việt bạn đã dùng.",
+  "words": [
+    { "w": "激动", "py": "jīdòng", "hv": "kích động", "vi": "xúc động, phấn khích", "pos": "tính từ",
+      "note": "Chính là \"kích động\" tiếng Việt, nhưng tiếng Trung thiên về nghĩa TỐT: xúc động vì vui, vì cảm kích.",
+      "ex": [{ "cn": "听到这个消息，我很激动。", "py": "Tīng dào zhège xiāoxi, wǒ hěn jīdòng.", "vi": "Nghe tin này tôi rất xúc động." }] },
+    { "w": "兴奋", "py": "xīngfèn", "hv": "hưng phấn", "vi": "hưng phấn, háo hức", "pos": "tính từ",
+      "note": "Chính là \"hưng phấn\" tiếng Việt. Chú ý 兴 ở đây đọc xīng, khác 高兴 gāoxìng (thanh 4).",
+      "ex": [{ "cn": "孩子们很兴奋。", "py": "Háizimen hěn xīngfèn.", "vi": "Bọn trẻ rất háo hức." }] },
+    { "w": "感动", "py": "gǎndòng", "hv": "cảm động", "vi": "cảm động", "pos": "động từ / tính từ",
+      "note": "Chính là \"cảm động\" tiếng Việt: 感 (cảm) + 动 (động).",
+      "ex": [{ "cn": "他的话让我很感动。", "py": "Tā de huà ràng wǒ hěn gǎndòng.", "vi": "Lời anh ấy làm tôi rất cảm động." }] },
+    { "w": "开心", "py": "kāixīn", "hv": "khai tâm", "vi": "vui, vui vẻ", "pos": "tính từ",
+      "note": "开 (mở) + 心 (lòng) — mở lòng ra thì vui. Thân mật hơn 高兴, hay dùng trong khẩu ngữ.",
+      "ex": [{ "cn": "今天玩得很开心。", "py": "Jīntiān wán de hěn kāixīn.", "vi": "Hôm nay chơi rất vui." }] },
+    { "w": "愉快", "py": "yúkuài", "hv": "du khoái", "vi": "vui vẻ, dễ chịu", "pos": "tính từ",
+      "note": "Trang trọng hơn 开心. Hay dùng trong lời chúc: 祝你旅途愉快 (chúc chuyến đi vui vẻ).",
+      "ex": [{ "cn": "祝你周末愉快！", "py": "Zhù nǐ zhōumò yúkuài!", "vi": "Chúc bạn cuối tuần vui vẻ!" }] },
+    { "w": "幸福", "py": "xìngfú", "hv": "hạnh phúc", "vi": "hạnh phúc", "pos": "tính từ / danh từ",
+      "note": "Chính là \"hạnh phúc\" tiếng Việt. Nói về trạng thái sống lâu dài, không dùng cho niềm vui nhất thời.",
+      "ex": [{ "cn": "他们生活得很幸福。", "py": "Tāmen shēnghuó de hěn xìngfú.", "vi": "Họ sống rất hạnh phúc." }] },
+    { "w": "得意", "py": "déyì", "hv": "đắc ý", "vi": "đắc ý, hài lòng về mình", "pos": "tính từ",
+      "note": "Chính là \"đắc ý\" tiếng Việt: 得 (được) + 意 (ý) — được như ý. Hơi mang sắc thái vênh váo.",
+      "ex": [{ "cn": "他考了第一，很得意。", "py": "Tā kǎo le dì-yī, hěn déyì.", "vi": "Cậu ấy thi nhất nên rất đắc ý." }] },
+    { "w": "惊喜", "py": "jīngxǐ", "hv": "kinh hỉ", "vi": "bất ngờ vui, món quà bất ngờ", "pos": "danh từ / tính từ",
+      "note": "惊 (kinh ngạc) + 喜 (mừng) — vừa bất ngờ vừa mừng. Đúng nghĩa \"surprise\" trong tiếng Anh.",
+      "ex": [{ "cn": "这真是个惊喜！", "py": "Zhè zhēn shì ge jīngxǐ!", "vi": "Đúng là bất ngờ thật!" }] },
+    { "w": "精神", "py": "jīngshen", "hv": "tinh thần", "vi": "tinh thần; tươi tắn", "pos": "danh từ / tính từ",
+      "note": "Chính là \"tinh thần\" tiếng Việt. Đọc jīngshén (đủ thanh) là danh từ; đọc jīngshen (nhẹ) là tính từ nghĩa \"trông tươi tỉnh\".",
+      "ex": [{ "cn": "你今天很精神。", "py": "Nǐ jīntiān hěn jīngshen.", "vi": "Hôm nay trông bạn tươi tắn ghê." }] },
+    { "w": "轻松", "py": "qīngsōng", "hv": "khinh tùng", "vi": "nhẹ nhõm, thoải mái", "pos": "tính từ",
+      "note": "轻 (nhẹ, bài 97) + 松 (lỏng, bộ 木). Nghĩa đen: nhẹ và lỏng — không căng thẳng.",
+      "ex": [{ "cn": "考完试我轻松多了。", "py": "Kǎo wán shì wǒ qīngsōng duō le.", "vi": "Thi xong tôi nhẹ cả người." }] }
+  ],
+  "grammar": [
+    { "t": "Thang niềm vui — chọn từ đúng sắc thái",
+      "b": "开心 (thân mật) < 高兴 (chung) < 愉快 (trang trọng) < 幸福 (lâu dài)",
+      "d": "开心 dùng với bạn bè. 高兴 dùng được mọi lúc. 愉快 dùng trong lời chúc và văn viết. 幸福 chỉ dùng cho hạnh phúc cuộc đời, không nói 今天很幸福 khi vừa ăn xong bữa ngon.",
+      "ex": [
+        { "cn": "今天真开心！", "py": "Jīntiān zhēn kāixīn!", "vi": "Hôm nay vui thật!" },
+        { "cn": "祝你生日愉快！", "py": "Zhù nǐ shēngrì yúkuài!", "vi": "Chúc bạn sinh nhật vui vẻ!" },
+        { "cn": "有家人在身边就是幸福。", "py": "Yǒu jiārén zài shēnbiān jiù shì xìngfú.", "vi": "Có người thân bên cạnh chính là hạnh phúc." }
+      ] },
+    { "t": "让 + người + cảm xúc",
+      "b": "A + 让 + người + tính từ cảm xúc",
+      "d": "Nhắc lại 让 ở bài 20, nay dùng với cảm xúc: 这件事让我很感动 (việc này khiến tôi rất cảm động). Cấu trúc cực kỳ thông dụng để nói nguyên nhân của cảm xúc.",
+      "ex": [
+        { "cn": "这个消息让大家很兴奋。", "py": "Zhège xiāoxi ràng dàjiā hěn xīngfèn.", "vi": "Tin này làm mọi người rất háo hức." },
+        { "cn": "他的话让我很感动。", "py": "Tā de huà ràng wǒ hěn gǎndòng.", "vi": "Lời anh ấy khiến tôi cảm động." }
+      ] },
+    { "t": "祝 — mở đầu mọi lời chúc",
+      "b": "祝 + người + điều chúc",
+      "d": "祝你生日快乐, 祝你旅途愉快, 祝你身体健康, 祝你工作顺利. Đây là mẫu câu bạn sẽ dùng suốt đời khi nhắn tin cho bạn bè Trung Quốc.",
+      "ex": [
+        { "cn": "祝你一切顺利！", "py": "Zhù nǐ yíqiè shùnlì!", "vi": "Chúc bạn mọi sự thuận lợi!" },
+        { "cn": "祝你们幸福！", "py": "Zhù nǐmen xìngfú!", "vi": "Chúc hai bạn hạnh phúc!" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "听到这个好消息，我特别激动。", "py": "Tīng dào zhège hǎo xiāoxi, wǒ tèbié jīdòng.", "vi": "Nghe tin vui này tôi đặc biệt xúc động." },
+    { "cn": "明天要去旅游，孩子们很兴奋。", "py": "Míngtiān yào qù lǚyóu, háizimen hěn xīngfèn.", "vi": "Mai đi du lịch nên bọn trẻ rất háo hức." },
+    { "cn": "这部电影让我很感动。", "py": "Zhè bù diànyǐng ràng wǒ hěn gǎndòng.", "vi": "Bộ phim này làm tôi rất cảm động." },
+    { "cn": "跟朋友在一起总是很开心。", "py": "Gēn péngyou zài yìqǐ zǒngshì hěn kāixīn.", "vi": "Ở cùng bạn bè lúc nào cũng vui." },
+    { "cn": "祝你旅途愉快！", "py": "Zhù nǐ lǚtú yúkuài!", "vi": "Chúc bạn chuyến đi vui vẻ!" },
+    { "cn": "有健康的身体才有幸福的生活。", "py": "Yǒu jiànkāng de shēntǐ cái yǒu xìngfú de shēnghuó.", "vi": "Có sức khoẻ mới có cuộc sống hạnh phúc." },
+    { "cn": "别太得意，还有很多要学的。", "py": "Bié tài déyì, hái yǒu hěn duō yào xué de.", "vi": "Đừng đắc ý quá, còn nhiều thứ phải học." },
+    { "cn": "他给了我一个大惊喜。", "py": "Tā gěi le wǒ yí ge dà jīngxǐ.", "vi": "Anh ấy dành cho tôi một bất ngờ lớn." },
+    { "cn": "睡好了人就有精神。", "py": "Shuì hǎo le rén jiù yǒu jīngshen.", "vi": "Ngủ đủ thì người mới tỉnh táo." },
+    { "cn": "考完试，心情轻松多了。", "py": "Kǎo wán shì, xīnqíng qīngsōng duō le.", "vi": "Thi xong rồi, tâm trạng nhẹ hẳn." }
+  ]
+}

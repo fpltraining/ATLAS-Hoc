@@ -1,0 +1,72 @@
+{
+  "id": 93,
+  "cn": "日常琐事",
+  "title": "Việc thường ngày",
+  "goal": "Nhóm động từ 打, chuyện tiết kiệm và sửa chữa.",
+  "words": [
+    { "w": "打扰", "py": "dǎrǎo", "hv": "đả nhiễu", "vi": "làm phiền, quấy rầy", "pos": "động từ",
+      "note": "打 (làm) + 扰 (quấy). Câu lịch sự mở đầu: 打扰一下 (làm phiền chút).",
+      "ex": [{ "cn": "打扰一下，请问…", "py": "Dǎrǎo yíxià, qǐngwèn…", "vi": "Làm phiền chút, cho hỏi…" }] },
+    { "w": "打招呼", "py": "dǎ zhāohu", "hv": "đả chiêu hô", "vi": "chào hỏi", "pos": "động từ",
+      "note": "招 (vẫy) + 呼 (gọi) — vẫy tay gọi. Là động từ ly hợp: 跟他打了个招呼.",
+      "ex": [{ "cn": "他跟我打了个招呼。", "py": "Tā gēn wǒ dǎ le ge zhāohu.", "vi": "Anh ấy chào tôi một câu." }] },
+    { "w": "打针", "py": "dǎzhēn", "hv": "đả châm", "vi": "tiêm", "pos": "động từ",
+      "note": "打 (đánh, chọc) + 针 (kim, bộ 钅). Tiếng Việt: \"châm cứu\" cùng chữ 针. Động từ ly hợp.",
+      "ex": [{ "cn": "孩子最怕打针。", "py": "Háizi zuì pà dǎzhēn.", "vi": "Trẻ con sợ nhất là tiêm." }] },
+    { "w": "抽烟", "py": "chōuyān", "hv": "trừu yên", "vi": "hút thuốc", "pos": "động từ",
+      "note": "抽 (rút, hút, bộ 扌) + 烟 (khói, thuốc lá, bộ 火). Động từ ly hợp: 抽了两支烟.",
+      "ex": [{ "cn": "这里禁止抽烟。", "py": "Zhèlǐ jìnzhǐ chōuyān.", "vi": "Ở đây cấm hút thuốc." }] },
+    { "w": "干活儿", "py": "gànhuór", "hv": "cán hoạt nhi", "vi": "làm việc (chân tay)", "pos": "động từ",
+      "note": "干 ở đây đọc gàn nghĩa là LÀM (khác 干 gān là khô). Chỉ lao động chân tay, khẩu ngữ.",
+      "ex": [{ "cn": "他在工地干活儿。", "py": "Tā zài gōngdì gànhuór.", "vi": "Anh ấy làm việc ở công trường." }] },
+    { "w": "节约", "py": "jiéyuē", "hv": "tiết ước", "vi": "tiết kiệm", "pos": "động từ",
+      "note": "Tiếng Việt: \"tiết kiệm\", \"tiết chế\". 节约用水 (tiết kiệm nước) — khẩu hiệu thấy khắp nơi.",
+      "ex": [{ "cn": "请节约用水。", "py": "Qǐng jiéyuē yòng shuǐ.", "vi": "Xin tiết kiệm nước." }] },
+    { "w": "浪费", "py": "làngfèi", "hv": "lãng phí", "vi": "lãng phí", "pos": "động từ",
+      "note": "Chính là \"lãng phí\" tiếng Việt: 浪 (lãng, sóng) + 费 (phí, bộ 贝). Trái nghĩa với 节约.",
+      "ex": [{ "cn": "别浪费时间。", "py": "Bié làngfèi shíjiān.", "vi": "Đừng lãng phí thời gian." }] },
+    { "w": "省", "py": "shěng", "hv": "tỉnh", "vi": "tiết kiệm, đỡ tốn; tỉnh (đơn vị hành chính)", "pos": "động từ / danh từ",
+      "note": "Hai nghĩa: đọc shěng là tiết kiệm (省钱), cũng là TỈNH — đơn vị hành chính của Trung Quốc, giống \"tỉnh\" tiếng Việt.",
+      "ex": [{ "cn": "坐地铁比较省钱。", "py": "Zuò dìtiě bǐjiào shěng qián.", "vi": "Đi tàu điện đỡ tốn tiền hơn." }] },
+    { "w": "修理", "py": "xiūlǐ", "hv": "tu lý", "vi": "sửa chữa", "pos": "động từ",
+      "note": "修 (tu sửa) + 理 (lý). Tiếng Việt: \"tu sửa\", \"tu bổ\". Nói tắt là 修: 修车, 修手机.",
+      "ex": [{ "cn": "我的车需要修理。", "py": "Wǒ de chē xūyào xiūlǐ.", "vi": "Xe tôi cần sửa." }] },
+    { "w": "保证", "py": "bǎozhèng", "hv": "bảo chứng", "vi": "bảo đảm, cam đoan", "pos": "động từ",
+      "note": "保 (bảo, bài 68 trong 保护) + 证 (chứng, bài 73). Tiếng Việt: \"bảo chứng\", \"bảo đảm\".",
+      "ex": [{ "cn": "我保证按时完成。", "py": "Wǒ bǎozhèng ànshí wánchéng.", "vi": "Tôi cam đoan hoàn thành đúng hạn." }] }
+  ],
+  "grammar": [
+    { "t": "Nhóm động từ mở đầu bằng 打",
+      "b": "打电话 · 打扰 · 打招呼 · 打针 · 打折 · 打扫 · 打印 · 打算",
+      "d": "打 nghĩa gốc là \"đánh\", nhưng ghép với danh từ tạo ra hàng chục động từ chẳng liên quan gì tới việc đánh. Đây là động từ sinh lợi nhất tiếng Trung — gặp 打 + danh từ, hãy học nguyên khối chứ đừng dịch từng chữ.",
+      "ex": [
+        { "cn": "打电话 · 打招呼 · 打针", "py": "dǎ diànhuà · dǎ zhāohu · dǎzhēn", "vi": "gọi điện · chào hỏi · tiêm" },
+        { "cn": "打扫 · 打印 · 打算", "py": "dǎsǎo · dǎyìn · dǎsuàn", "vi": "quét dọn · in · dự định" }
+      ] },
+    { "t": "节约 ↔ 浪费, và 省 trong khẩu ngữ",
+      "b": "节约 (trang trọng) · 省 (khẩu ngữ) · 浪费 (trái nghĩa)",
+      "d": "Khẩu hiệu dùng 节约用水. Đời thường nói 省钱, 省时间. 浪费 là mặt trái của cả hai. Người Trung Quốc rất coi trọng 节约 — khen ai đó 很节约 là lời khen.",
+      "ex": [
+        { "cn": "自己做饭比较省钱。", "py": "Zìjǐ zuòfàn bǐjiào shěng qián.", "vi": "Tự nấu ăn đỡ tốn hơn." },
+        { "cn": "浪费粮食是不好的习惯。", "py": "Làngfèi liángshi shì bù hǎo de xíguàn.", "vi": "Lãng phí lương thực là thói quen xấu." }
+      ] },
+    { "t": "打扰一下 — câu mở lời lịch sự nhất",
+      "b": "打扰一下，请问…",
+      "d": "Khi cần hỏi đường, hỏi giờ, ngắt lời ai đó, mở đầu bằng 打扰一下 là lịch sự nhất. Kết thúc thì nói 不好意思，打扰了 (xin lỗi đã làm phiền).",
+      "ex": [
+        { "cn": "打扰一下，请问这个座位有人吗？", "py": "Dǎrǎo yíxià, qǐngwèn zhège zuòwèi yǒu rén ma?", "vi": "Làm phiền chút, chỗ này có ai ngồi chưa ạ?" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "对不起，打扰您了。", "py": "Duìbuqǐ, dǎrǎo nín le.", "vi": "Xin lỗi đã làm phiền ngài." },
+    { "cn": "见到老师要打招呼。", "py": "Jiàn dào lǎoshī yào dǎ zhāohu.", "vi": "Gặp thầy cô phải chào." },
+    { "cn": "感冒严重的话可能要打针。", "py": "Gǎnmào yánzhòng dehuà kěnéng yào dǎzhēn.", "vi": "Cảm nặng thì có thể phải tiêm." },
+    { "cn": "为了健康，他戒了抽烟。", "py": "Wèile jiànkāng, tā jiè le chōuyān.", "vi": "Vì sức khoẻ, anh ấy bỏ thuốc." },
+    { "cn": "他从早到晚都在干活儿。", "py": "Tā cóng zǎo dào wǎn dōu zài gànhuór.", "vi": "Anh ấy làm việc từ sáng tới tối." },
+    { "cn": "节约用电也是保护环境。", "py": "Jiéyuē yòng diàn yě shì bǎohù huánjìng.", "vi": "Tiết kiệm điện cũng là bảo vệ môi trường." },
+    { "cn": "点这么多菜太浪费了。", "py": "Diǎn zhème duō cài tài làngfèi le.", "vi": "Gọi nhiều món thế này lãng phí quá." },
+    { "cn": "买这个牌子能省不少钱。", "py": "Mǎi zhège páizi néng shěng bù shǎo qián.", "vi": "Mua hãng này đỡ được khá nhiều tiền." },
+    { "cn": "空调坏了，师傅明天来修理。", "py": "Kōngtiáo huài le, shīfu míngtiān lái xiūlǐ.", "vi": "Điều hoà hỏng rồi, mai thợ đến sửa." },
+    { "cn": "我保证以后不再迟到。", "py": "Wǒ bǎozhèng yǐhòu bú zài chídào.", "vi": "Tôi cam đoan sau này không đến muộn nữa." }
+  ]
+}

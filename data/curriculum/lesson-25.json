@@ -1,0 +1,74 @@
+{
+  "id": 25,
+  "cn": "在宾馆",
+  "title": "Ở khách sạn",
+  "goal": "Chỉ vị trí trái phải, vào ra, và học 过 để kể chuyện \"đã từng\".",
+  "words": [
+    { "w": "左边", "py": "zuǒbiān", "hv": "tả biên", "vi": "bên trái", "pos": "danh từ vị trí",
+      "note": "Tiếng Việt: \"tả ngạn\" (bờ trái sông), \"phe tả\". 边 = \"biên\" trong \"biên giới\".",
+      "ex": [{ "cn": "书在左边。", "py": "Shū zài zuǒbiān.", "vi": "Sách ở bên trái." }] },
+    { "w": "右边", "py": "yòubiān", "hv": "hữu biên", "vi": "bên phải", "pos": "danh từ vị trí",
+      "note": "Tiếng Việt: \"hữu ngạn\", \"phe hữu\". Mẹo phân biệt: 右 có bộ 口 (miệng) — miệng ăn bằng tay phải.",
+      "ex": [{ "cn": "洗手间在右边。", "py": "Xǐshǒujiān zài yòubiān.", "vi": "Nhà vệ sinh ở bên phải." }] },
+    { "w": "旁边", "py": "pángbiān", "hv": "bàng biên", "vi": "bên cạnh", "pos": "danh từ vị trí",
+      "note": "Tiếng Việt: \"bàng quan\" (đứng bên ngoài nhìn vào).",
+      "ex": [{ "cn": "他坐在我旁边。", "py": "Tā zuò zài wǒ pángbiān.", "vi": "Anh ấy ngồi cạnh tôi." }] },
+    { "w": "外", "py": "wài", "hv": "ngoại", "vi": "bên ngoài", "pos": "danh từ vị trí",
+      "note": "Tiếng Việt: \"ngoại ô\", \"hải ngoại\", \"ngoại ngữ\". Trái nghĩa với 里 (trong).",
+      "ex": [{ "cn": "外面下雨了。", "py": "Wàimiàn xiàyǔ le.", "vi": "Bên ngoài mưa rồi." }] },
+    { "w": "房间", "py": "fángjiān", "hv": "phòng gian", "vi": "căn phòng", "pos": "danh từ",
+      "note": "房 chính là \"phòng\" tiếng Việt. 间 = \"gian\" trong \"gian nhà\", \"không gian\".",
+      "ex": [{ "cn": "我的房间在三楼。", "py": "Wǒ de fángjiān zài sān lóu.", "vi": "Phòng tôi ở tầng ba." }] },
+    { "w": "宾馆", "py": "bīnguǎn", "hv": "tân quán", "vi": "khách sạn", "pos": "danh từ",
+      "note": "宾 = \"tân\" trong \"tân khách\" (khách). 馆 = \"quán\". Nghĩa đen: quán cho khách. Còn gọi là 酒店.",
+      "ex": [{ "cn": "我住在宾馆。", "py": "Wǒ zhù zài bīnguǎn.", "vi": "Tôi ở khách sạn." }] },
+    { "w": "进", "py": "jìn", "hv": "tiến", "vi": "vào, đi vào", "pos": "động từ",
+      "note": "Bộ 辶 (đi đường). Tiếng Việt: \"tiến vào\", \"tiến bộ\". Mời vào: 请进！",
+      "ex": [{ "cn": "请进！", "py": "Qǐng jìn!", "vi": "Mời vào!" }] },
+    { "w": "出", "py": "chū", "hv": "xuất", "vi": "ra, đi ra", "pos": "động từ",
+      "note": "Hình hai ngọn núi chồng lên — mọc ra. Tiếng Việt: \"xuất phát\", \"xuất khẩu\", \"xuất hiện\".",
+      "ex": [{ "cn": "他出去了。", "py": "Tā chūqu le.", "vi": "Anh ấy ra ngoài rồi." }] },
+    { "w": "过", "py": "guò", "hv": "quá", "vi": "qua; đã từng", "pos": "động từ / trợ từ",
+      "note": "Tiếng Việt: \"quá khứ\", \"vượt quá\". Là chữ ngữ pháp quan trọng nhất bài này.",
+      "ex": [{ "cn": "我去过中国。", "py": "Wǒ qù guo Zhōngguó.", "vi": "Tôi đã từng đi Trung Quốc." }] },
+    { "w": "门", "py": "mén", "hv": "môn", "vi": "cửa", "pos": "danh từ",
+      "note": "Bộ thủ đã học — hình hai cánh cửa. Tiếng Việt: \"môn\" trong \"gia môn\", \"chuyên môn\".",
+      "ex": [{ "cn": "请关门。", "py": "Qǐng guān mén.", "vi": "Xin đóng cửa." }] }
+  ],
+  "grammar": [
+    { "t": "过 — kinh nghiệm \"đã từng làm\"",
+      "b": "Động từ + 过 (đọc nhẹ: guo)",
+      "d": "Đây là điểm ngữ pháp quan trọng nhất của HSK 2. 过 KHÔNG phải quá khứ mà là KINH NGHIỆM: từng làm ít nhất một lần trong đời. So sánh: 我吃了 (tôi ăn rồi — vừa xong) và 我吃过 (tôi từng ăn — biết mùi vị rồi).",
+      "ex": [
+        { "cn": "我去过中国。", "py": "Wǒ qù guo Zhōngguó.", "vi": "Tôi từng đi Trung Quốc." },
+        { "cn": "你吃过中国菜吗？", "py": "Nǐ chī guo Zhōngguó cài ma?", "vi": "Bạn từng ăn món Trung Quốc chưa?" },
+        { "cn": "我没去过日本。", "py": "Wǒ méi qù guo Rìběn.", "vi": "Tôi chưa từng đi Nhật." }
+      ] },
+    { "t": "Phủ định của 过 dùng 没, và GIỮ LẠI 过",
+      "b": "没 + động từ + 过",
+      "d": "Khác hẳn 了 (phủ định thì phải bỏ 了). Với 过 thì 过 vẫn ở nguyên: 我没去过 là ĐÚNG. Nói 我不去过 là sai.",
+      "ex": [
+        { "cn": "我没看过这个电影。", "py": "Wǒ méi kàn guo zhège diànyǐng.", "vi": "Tôi chưa xem phim này bao giờ." },
+        { "cn": "他没来过我家。", "py": "Tā méi lái guo wǒ jiā.", "vi": "Anh ấy chưa từng đến nhà tôi." }
+      ] },
+    { "t": "Từ chỉ vị trí luôn đứng SAU danh từ",
+      "b": "Danh từ + 左边 / 右边 / 旁边 / 外边",
+      "d": "Nhắc lại quy tắc bài 11, giờ áp dụng cho các hướng mới. Tiếng Việt nói \"bên trái NHÀ\", tiếng Trung nói \"NHÀ bên trái\" (房子左边).",
+      "ex": [
+        { "cn": "宾馆旁边有一家饭馆。", "py": "Bīnguǎn pángbiān yǒu yì jiā fànguǎn.", "vi": "Cạnh khách sạn có một quán ăn." },
+        { "cn": "学校左边是医院。", "py": "Xuéxiào zuǒbiān shì yīyuàn.", "vi": "Bên trái trường là bệnh viện." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我住在这个宾馆。", "py": "Wǒ zhù zài zhège bīnguǎn.", "vi": "Tôi ở khách sạn này." },
+    { "cn": "我的房间在三楼。", "py": "Wǒ de fángjiān zài sān lóu.", "vi": "Phòng tôi ở tầng ba." },
+    { "cn": "洗手间在右边。", "py": "Xǐshǒujiān zài yòubiān.", "vi": "Nhà vệ sinh ở bên phải." },
+    { "cn": "宾馆旁边有一家饭馆。", "py": "Bīnguǎn pángbiān yǒu yì jiā fànguǎn.", "vi": "Cạnh khách sạn có một quán ăn." },
+    { "cn": "请进，请坐。", "py": "Qǐng jìn, qǐng zuò.", "vi": "Mời vào, mời ngồi." },
+    { "cn": "他刚才出去了。", "py": "Tā gāngcái chūqu le.", "vi": "Anh ấy vừa ra ngoài." },
+    { "cn": "你去过北京吗？", "py": "Nǐ qù guo Běijīng ma?", "vi": "Bạn từng đi Bắc Kinh chưa?" },
+    { "cn": "我去过两次。", "py": "Wǒ qù guo liǎng cì.", "vi": "Tôi đi hai lần rồi." },
+    { "cn": "我没吃过羊肉。", "py": "Wǒ méi chī guo yángròu.", "vi": "Tôi chưa ăn thịt dê bao giờ." },
+    { "cn": "外面很冷，请关门。", "py": "Wàimiàn hěn lěng, qǐng guān mén.", "vi": "Bên ngoài lạnh lắm, xin đóng cửa." }
+  ]
+}

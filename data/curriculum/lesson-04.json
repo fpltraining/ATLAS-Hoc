@@ -1,0 +1,74 @@
+{
+  "id": 4,
+  "cn": "我的家",
+  "title": "Gia đình tôi",
+  "goal": "Nói về gia đình, dùng 有 / 没有 để nói có và không có, dùng 的 để chỉ sở hữu.",
+  "words": [
+    { "w": "爸爸", "py": "bàba", "hv": "ba ba", "vi": "bố, ba", "pos": "danh từ",
+      "note": "父 (phụ, người cha) ở trên + 巴 cho âm đọc. Chữ thứ hai đọc nhẹ.",
+      "ex": [{ "cn": "我爸爸是医生。", "py": "Wǒ bàba shì yīshēng.", "vi": "Bố tôi là bác sĩ." }] },
+    { "w": "妈妈", "py": "māma", "hv": "ma ma", "vi": "mẹ, má", "pos": "danh từ",
+      "note": "女 (phụ nữ) + 马 (mã, cho âm đọc). Thấy bộ 女 là biết chữ nói về nữ giới.",
+      "ex": [{ "cn": "我妈妈很好。", "py": "Wǒ māma hěn hǎo.", "vi": "Mẹ tôi khoẻ." }] },
+    { "w": "儿子", "py": "érzi", "hv": "nhi tử", "vi": "con trai", "pos": "danh từ",
+      "note": "儿 (nhi, trẻ con) + 子 (tử, con). Tiếng Việt có \"nhi đồng\", \"phụ tử\".",
+      "ex": [{ "cn": "他有一个儿子。", "py": "Tā yǒu yí ge érzi.", "vi": "Anh ấy có một con trai." }] },
+    { "w": "女儿", "py": "nǚ'ér", "hv": "nữ nhi", "vi": "con gái", "pos": "danh từ",
+      "note": "Chính là \"nữ nhi\" trong tiếng Việt. Pinyin có dấu ngăn cách nǚ'ér để không đọc nhầm thành nǚr.",
+      "ex": [{ "cn": "我没有女儿。", "py": "Wǒ méiyǒu nǚ'ér.", "vi": "Tôi không có con gái." }] },
+    { "w": "家", "py": "jiā", "hv": "gia", "vi": "nhà, gia đình", "pos": "danh từ",
+      "note": "宀 (mái nhà) trùm lên 豕 (con lợn). Nhà xưa nuôi lợn dưới sàn — có lợn mới là có nhà. Tiếng Việt: \"gia đình\", \"gia tộc\".",
+      "ex": [{ "cn": "我家有五个人。", "py": "Wǒ jiā yǒu wǔ ge rén.", "vi": "Nhà tôi có năm người." }] },
+    { "w": "人", "py": "rén", "hv": "nhân", "vi": "người", "pos": "danh từ",
+      "note": "Hình người đứng nhìn nghiêng, hai chân dang ra. Tiếng Việt: \"nhân dân\", \"cá nhân\".",
+      "ex": [{ "cn": "他是好人。", "py": "Tā shì hǎorén.", "vi": "Anh ấy là người tốt." }] },
+    { "w": "的", "py": "de", "hv": "đích", "vi": "(trợ từ sở hữu: của)", "pos": "trợ từ",
+      "note": "Chữ XUẤT HIỆN NHIỀU NHẤT trong tiếng Trung. Đọc nhẹ, không thanh điệu.",
+      "ex": [{ "cn": "我的书", "py": "wǒ de shū", "vi": "sách của tôi" }] },
+    { "w": "个", "py": "gè", "hv": "cá", "vi": "cái, người (lượng từ vạn năng)", "pos": "lượng từ",
+      "note": "Khi đứng sau số thì thường đọc nhẹ thành ge. Không biết dùng lượng từ nào thì cứ dùng 个.",
+      "ex": [{ "cn": "三个人", "py": "sān ge rén", "vi": "ba người" }] },
+    { "w": "有", "py": "yǒu", "hv": "hữu", "vi": "có", "pos": "động từ",
+      "note": "Tiếng Việt: \"sở hữu\", \"hữu ích\", \"quốc hữu\".",
+      "ex": [{ "cn": "我有一个哥哥。", "py": "Wǒ yǒu yí ge gēge.", "vi": "Tôi có một anh trai." }] },
+    { "w": "没有", "py": "méiyǒu", "hv": "một hữu", "vi": "không có", "pos": "động từ",
+      "note": "CỰC KỲ QUAN TRỌNG: 有 là động từ DUY NHẤT không phủ định bằng 不. Phải nói 没有, tuyệt đối không nói 不有.",
+      "ex": [{ "cn": "我没有钱。", "py": "Wǒ méiyǒu qián.", "vi": "Tôi không có tiền." }] }
+  ],
+  "grammar": [
+    { "t": "有 và 没有 — cặp đặc biệt",
+      "b": "Khẳng định: A + 有 + B · Phủ định: A + 没有 + B",
+      "d": "Mọi động từ khác đều phủ định bằng 不, RIÊNG 有 phải dùng 没. Nói 不有 là sai hoàn toàn. Hãy học thuộc cặp 有 / 没有 như một khối.",
+      "ex": [
+        { "cn": "我有两个孩子。", "py": "Wǒ yǒu liǎng ge háizi.", "vi": "Tôi có hai đứa con." },
+        { "cn": "我没有孩子。", "py": "Wǒ méiyǒu háizi.", "vi": "Tôi không có con." }
+      ] },
+    { "t": "的 chỉ sở hữu — và khi nào được bỏ",
+      "b": "Người sở hữu + 的 + vật sở hữu",
+      "d": "我的书 = sách của tôi. Nhưng với NGƯỜI THÂN và NƠI CHỐN GẦN GŨI thì thường BỎ 的: 我妈妈 (mẹ tôi), 我家 (nhà tôi) — nghe tự nhiên hơn 我的妈妈.",
+      "ex": [
+        { "cn": "我的名字", "py": "wǒ de míngzi", "vi": "tên của tôi" },
+        { "cn": "我妈妈", "py": "wǒ māma", "vi": "mẹ tôi (bỏ 的)" },
+        { "cn": "老师的书", "py": "lǎoshī de shū", "vi": "sách của thầy" }
+      ] },
+    { "t": "Hỏi số lượng người trong nhà",
+      "b": "你家有几个人？",
+      "d": "几 dùng để hỏi số lượng nhỏ (dưới 10). Trả lời chỉ cần thay 几 bằng con số, giữ nguyên trật tự.",
+      "ex": [
+        { "cn": "你家有几个人？", "py": "Nǐ jiā yǒu jǐ ge rén?", "vi": "Nhà bạn có mấy người?" },
+        { "cn": "我家有四个人。", "py": "Wǒ jiā yǒu sì ge rén.", "vi": "Nhà tôi có bốn người." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你家有几个人？", "py": "Nǐ jiā yǒu jǐ ge rén?", "vi": "Nhà bạn có mấy người?" },
+    { "cn": "我家有四个人。", "py": "Wǒ jiā yǒu sì ge rén.", "vi": "Nhà tôi có bốn người." },
+    { "cn": "爸爸、妈妈、我和弟弟。", "py": "Bàba, māma, wǒ hé dìdi.", "vi": "Bố, mẹ, tôi và em trai." },
+    { "cn": "我爸爸是老师。", "py": "Wǒ bàba shì lǎoshī.", "vi": "Bố tôi là giáo viên." },
+    { "cn": "我妈妈不是老师。", "py": "Wǒ māma bú shì lǎoshī.", "vi": "Mẹ tôi không phải giáo viên." },
+    { "cn": "他有一个儿子和一个女儿。", "py": "Tā yǒu yí ge érzi hé yí ge nǚ'ér.", "vi": "Anh ấy có một con trai và một con gái." },
+    { "cn": "我没有儿子。", "py": "Wǒ méiyǒu érzi.", "vi": "Tôi không có con trai." },
+    { "cn": "这是我的名字。", "py": "Zhè shì wǒ de míngzi.", "vi": "Đây là tên của tôi." },
+    { "cn": "那是老师的书吗？", "py": "Nà shì lǎoshī de shū ma?", "vi": "Kia là sách của thầy phải không?" },
+    { "cn": "我家有一个人是医生。", "py": "Wǒ jiā yǒu yí ge rén shì yīshēng.", "vi": "Nhà tôi có một người là bác sĩ." }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": 82,
+  "cn": "中国菜",
+  "title": "Món ăn Trung Hoa",
+  "goal": "Gọi tên món ăn đặc trưng và các vị cơ bản — bài rất thực dụng khi đi ăn.",
+  "words": [
+    { "w": "包子", "py": "bāozi", "hv": "bao tử", "vi": "bánh bao", "pos": "danh từ",
+      "note": "包 (bọc, bài 43) + 子. Tiếng Việt gọi \"bánh bao\" — mượn thẳng chữ 包 này.",
+      "ex": [{ "cn": "早上我吃了两个包子。", "py": "Zǎoshang wǒ chī le liǎng ge bāozi.", "vi": "Sáng tôi ăn hai cái bánh bao." }] },
+    { "w": "饺子", "py": "jiǎozi", "hv": "giáo tử", "vi": "sủi cảo, bánh chẻo", "pos": "danh từ",
+      "note": "Món ăn Tết bắt buộc ở miền Bắc Trung Quốc. Gói sủi cảo là 包饺子 — lại dùng chữ 包.",
+      "ex": [{ "cn": "过年一定要吃饺子。", "py": "Guònián yídìng yào chī jiǎozi.", "vi": "Tết nhất định phải ăn sủi cảo." }] },
+    { "w": "烤鸭", "py": "kǎoyā", "hv": "khảo áp", "vi": "vịt quay", "pos": "danh từ",
+      "note": "烤 (nướng, bộ 火) + 鸭 (vịt, bộ 鸟). 北京烤鸭 là món nổi tiếng nhất Bắc Kinh.",
+      "ex": [{ "cn": "到北京一定要吃烤鸭。", "py": "Dào Běijīng yídìng yào chī kǎoyā.", "vi": "Đến Bắc Kinh nhất định phải ăn vịt quay." }] },
+    { "w": "小吃", "py": "xiǎochī", "hv": "tiểu cật", "vi": "món ăn vặt, quà vặt", "pos": "danh từ",
+      "note": "小 (nhỏ) + 吃 (ăn). Chỉ các món ăn đường phố đặc sản địa phương, không phải bữa chính.",
+      "ex": [{ "cn": "这条街的小吃很有名。", "py": "Zhè tiáo jiē de xiǎochī hěn yǒumíng.", "vi": "Đồ ăn vặt phố này rất nổi tiếng." }] },
+    { "w": "汤", "py": "tāng", "hv": "thang", "vi": "canh, súp", "pos": "danh từ",
+      "note": "Bộ 氵 (nước). Tiếng Việt: \"thang\" trong \"thang thuốc\" — vốn là nước sắc.",
+      "ex": [{ "cn": "先喝汤还是先吃饭？", "py": "Xiān hē tāng háishi xiān chīfàn?", "vi": "Uống canh trước hay ăn cơm trước?" }] },
+    { "w": "糖", "py": "táng", "hv": "đường", "vi": "đường; kẹo", "pos": "danh từ",
+      "note": "Chính là \"đường\" tiếng Việt! Bộ 米 (gạo) vì đường xưa nấu từ ngũ cốc.",
+      "ex": [{ "cn": "咖啡里放糖吗？", "py": "Kāfēi lǐ fàng táng ma?", "vi": "Cà phê có cho đường không?" }] },
+    { "w": "盐", "py": "yán", "hv": "diêm", "vi": "muối", "pos": "danh từ",
+      "note": "Tiếng Việt: \"diêm\" trong \"diêm dân\" (người làm muối), \"diêm nghiệp\".",
+      "ex": [{ "cn": "菜里盐放多了。", "py": "Cài lǐ yán fàng duō le.", "vi": "Món ăn cho nhiều muối quá." }] },
+    { "w": "勺子", "py": "sháozi", "hv": "thược tử", "vi": "cái thìa", "pos": "danh từ",
+      "note": "Chữ 勺 tượng hình cái muôi có cán. Bộ đồ ăn Trung Quốc: 筷子 (đũa) + 勺子 (thìa).",
+      "ex": [{ "cn": "喝汤要用勺子。", "py": "Hē tāng yào yòng sháozi.", "vi": "Húp canh phải dùng thìa." }] },
+    { "w": "酸", "py": "suān", "hv": "toan", "vi": "chua", "pos": "tính từ",
+      "note": "Tiếng Việt: \"toan\" trong \"axit\" hoá học. Bộ 酉 (bình rượu) vì rượu để lâu thì chua.",
+      "ex": [{ "cn": "这个汤有点儿酸。", "py": "Zhège tāng yǒudiǎnr suān.", "vi": "Canh này hơi chua." }] },
+    { "w": "辣", "py": "là", "hv": "lạt", "vi": "cay", "pos": "tính từ",
+      "note": "Bộ 辛 (vị cay). Món Tứ Xuyên nổi tiếng cay — 四川菜很辣.",
+      "ex": [{ "cn": "我不能吃太辣的。", "py": "Wǒ bù néng chī tài là de.", "vi": "Tôi không ăn được cay quá." }] }
+  ],
+  "grammar": [
+    { "t": "Ngũ vị trong tiếng Trung",
+      "b": "酸 chua · 甜 ngọt · 苦 đắng · 辣 cay · 咸 mặn",
+      "d": "Người Trung Quốc gọi là 五味 (ngũ vị) — tiếng Việt cũng có \"ngũ vị hương\". Học đủ năm vị là gọi món và chê khen được thoải mái.",
+      "ex": [
+        { "cn": "这个菜又酸又辣。", "py": "Zhège cài yòu suān yòu là.", "vi": "Món này vừa chua vừa cay." },
+        { "cn": "我喜欢甜的，不喜欢苦的。", "py": "Wǒ xǐhuan tián de, bù xǐhuan kǔ de.", "vi": "Tôi thích đồ ngọt, không thích đắng." }
+      ] },
+    { "t": "放 + gia vị — cho thêm vào món",
+      "b": "放 + gia vị (+ 多/少)",
+      "d": "放盐, 放糖, 放辣椒. Muốn dặn nhà hàng thì nói 少放盐 (bớt muối), 别放辣 (đừng cho cay). Rất hữu dụng khi bạn không ăn được cay.",
+      "ex": [
+        { "cn": "麻烦少放一点儿盐。", "py": "Máfan shǎo fàng yìdiǎnr yán.", "vi": "Làm ơn cho ít muối thôi." },
+        { "cn": "我不吃辣，别放辣椒。", "py": "Wǒ bù chī là, bié fàng làjiāo.", "vi": "Tôi không ăn cay, đừng cho ớt." }
+      ] },
+    { "t": "Đuôi 子 trong tên đồ vật",
+      "b": "包子 · 饺子 · 勺子 · 盒子 · 筷子 · 杯子",
+      "d": "子 ở đây chỉ là đuôi tạo danh từ, đọc nhẹ và không mang nghĩa \"con\". Rất nhiều tên đồ vật hằng ngày mang đuôi này — nhận ra quy luật giúp bạn đoán ngay đó là một đồ vật.",
+      "ex": [
+        { "cn": "桌子 · 椅子 · 盘子 · 帽子", "py": "zhuōzi · yǐzi · pánzi · màozi", "vi": "bàn · ghế · đĩa · mũ" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "早饭我常吃包子喝豆浆。", "py": "Zǎofàn wǒ cháng chī bāozi hē dòujiāng.", "vi": "Bữa sáng tôi hay ăn bánh bao uống sữa đậu." },
+    { "cn": "全家一起包饺子很热闹。", "py": "Quánjiā yìqǐ bāo jiǎozi hěn rènao.", "vi": "Cả nhà cùng gói sủi cảo rất vui." },
+    { "cn": "北京烤鸭又香又好吃。", "py": "Běijīng kǎoyā yòu xiāng yòu hǎochī.", "vi": "Vịt quay Bắc Kinh vừa thơm vừa ngon." },
+    { "cn": "我最喜欢逛小吃街。", "py": "Wǒ zuì xǐhuan guàng xiǎochī jiē.", "vi": "Tôi thích nhất là dạo phố ăn vặt." },
+    { "cn": "这个汤是妈妈做的。", "py": "Zhège tāng shì māma zuò de.", "vi": "Bát canh này mẹ nấu." },
+    { "cn": "吃太多糖对牙不好。", "py": "Chī tài duō táng duì yá bù hǎo.", "vi": "Ăn nhiều đường không tốt cho răng." },
+    { "cn": "盐放少一点儿更健康。", "py": "Yán fàng shǎo yìdiǎnr gèng jiànkāng.", "vi": "Cho ít muối lại thì khoẻ hơn." },
+    { "cn": "请再给我一个勺子。", "py": "Qǐng zài gěi wǒ yí ge sháozi.", "vi": "Cho tôi thêm một cái thìa." },
+    { "cn": "西红柿是酸的还是甜的？", "py": "Xīhóngshì shì suān de háishi tián de?", "vi": "Cà chua chua hay ngọt?" },
+    { "cn": "四川菜很辣，我受不了。", "py": "Sìchuān cài hěn là, wǒ shòu bu liǎo.", "vi": "Món Tứ Xuyên cay lắm, tôi chịu không nổi." }
+  ]
+}

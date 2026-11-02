@@ -1,0 +1,73 @@
+{
+  "id": 68,
+  "cn": "安全和生命",
+  "title": "An toàn và tính mạng",
+  "goal": "Nói về nguy hiểm, bảo vệ, và những giới hạn chịu đựng.",
+  "words": [
+    { "w": "咳嗽", "py": "késou", "hv": "khái thấu", "vi": "ho", "pos": "động từ",
+      "note": "Cả hai chữ đều có bộ 口 (miệng). Là động từ: 我咳嗽了三天.",
+      "ex": [{ "cn": "他感冒了，一直咳嗽。", "py": "Tā gǎnmào le, yìzhí késou.", "vi": "Anh ấy bị cảm, ho suốt." }] },
+    { "w": "减肥", "py": "jiǎnféi", "hv": "giảm phì", "vi": "giảm cân", "pos": "động từ",
+      "note": "减 (giảm, bài 79) + 肥 (béo, bộ 月 thịt). Tiếng Việt: \"giảm\", \"phì nhiêu\". Động từ ly hợp: 减了五公斤肥.",
+      "ex": [{ "cn": "她最近在减肥。", "py": "Tā zuìjìn zài jiǎnféi.", "vi": "Dạo này cô ấy đang giảm cân." }] },
+    { "w": "厉害", "py": "lìhai", "hv": "lệ hại", "vi": "giỏi, ghê gớm; nặng", "pos": "tính từ",
+      "note": "Hai nghĩa trái chiều: khen ai giỏi (你真厉害！) và tả mức độ nặng (疼得厉害). Nhìn ngữ cảnh mà đoán.",
+      "ex": [{ "cn": "你真厉害！", "py": "Nǐ zhēn lìhai!", "vi": "Bạn giỏi thật!" }] },
+    { "w": "死", "py": "sǐ", "hv": "tử", "vi": "chết", "pos": "động từ",
+      "note": "Chính là \"tử\" tiếng Việt (\"tử vong\", \"sinh tử\"). Cũng dùng làm bổ ngữ cực cấp: 累死了 (mệt chết đi được).",
+      "ex": [{ "cn": "累死我了！", "py": "Lèi sǐ wǒ le!", "vi": "Mệt chết đi được!" }] },
+    { "w": "危险", "py": "wēixiǎn", "hv": "nguy hiểm", "vi": "nguy hiểm", "pos": "tính từ / danh từ",
+      "note": "Chính là \"nguy hiểm\" tiếng Việt: 危 (nguy) + 险 (hiểm).",
+      "ex": [{ "cn": "这里很危险，别过去。", "py": "Zhèlǐ hěn wēixiǎn, bié guòqu.", "vi": "Chỗ này nguy hiểm, đừng qua." }] },
+    { "w": "安全", "py": "ānquán", "hv": "an toàn", "vi": "an toàn", "pos": "tính từ / danh từ",
+      "note": "Chính là \"an toàn\" tiếng Việt: 安 (an) + 全 (toàn). Trái nghĩa với 危险.",
+      "ex": [{ "cn": "注意安全！", "py": "Zhùyì ānquán!", "vi": "Chú ý an toàn!" }] },
+    { "w": "保护", "py": "bǎohù", "hv": "bảo hộ", "vi": "bảo vệ", "pos": "động từ",
+      "note": "Chính là \"bảo hộ\" tiếng Việt (nay hay nói \"bảo vệ\"). 护 cũng nằm trong 护照 (bài 60), 护士 (bài 76).",
+      "ex": [{ "cn": "我们要保护环境。", "py": "Wǒmen yào bǎohù huánjìng.", "vi": "Chúng ta phải bảo vệ môi trường." }] },
+    { "w": "生命", "py": "shēngmìng", "hv": "sinh mệnh", "vi": "sinh mệnh, tính mạng", "pos": "danh từ",
+      "note": "Chính là \"sinh mệnh\" tiếng Việt: 生 (sinh) + 命 (mệnh).",
+      "ex": [{ "cn": "生命是最宝贵的。", "py": "Shēngmìng shì zuì bǎoguì de.", "vi": "Sinh mệnh là quý giá nhất." }] },
+    { "w": "恐怕", "py": "kǒngpà", "hv": "khủng phạ", "vi": "e rằng, sợ là", "pos": "phó từ",
+      "note": "恐 (sợ, có bộ 心) + 怕 (sợ, bộ 忄). Dùng để nói điều KHÔNG HAY một cách nhẹ nhàng.",
+      "ex": [{ "cn": "恐怕他不会来了。", "py": "Kǒngpà tā bú huì lái le.", "vi": "E rằng anh ấy sẽ không đến." }] },
+    { "w": "受不了", "py": "shòu bu liǎo", "hv": "thụ bất liễu", "vi": "không chịu nổi", "pos": "cụm động từ",
+      "note": "受 (chịu) + 不了 (không nổi). Cấu trúc \"động từ + 不了\" nghĩa là không làm nổi: 吃不了 (ăn không hết).",
+      "ex": [{ "cn": "这么热，我受不了。", "py": "Zhème rè, wǒ shòu bu liǎo.", "vi": "Nóng thế này tôi chịu không nổi." }] }
+  ],
+  "grammar": [
+    { "t": "Động từ + 得 + 厉害 / 死了 — nhấn mạnh cực độ",
+      "b": "tính từ + 死了 · động từ + 得厉害",
+      "d": "累死了, 饿死了, 热死了 — cách nói cực kỳ thông dụng trong khẩu ngữ, tương đương \"…chết đi được\" của tiếng Việt. 疼得厉害 = đau dữ dội.",
+      "ex": [
+        { "cn": "今天热死了！", "py": "Jīntiān rè sǐ le!", "vi": "Hôm nay nóng chết đi được!" },
+        { "cn": "他咳嗽得很厉害。", "py": "Tā késou de hěn lìhai.", "vi": "Anh ấy ho dữ lắm." }
+      ] },
+    { "t": "Động từ + 不了 — không làm nổi",
+      "b": "động từ + 得了 (làm nổi) / 不了 (không nổi)",
+      "d": "了 ở đây đọc liǎo. 受不了 (chịu không nổi), 吃不了 (ăn không hết), 去不了 (không đi được). Khác với 不能 (không được phép) — 不了 là KHÔNG ĐỦ KHẢ NĂNG.",
+      "ex": [
+        { "cn": "菜太多了，我吃不了。", "py": "Cài tài duō le, wǒ chī bu liǎo.", "vi": "Nhiều món quá, tôi ăn không hết." },
+        { "cn": "明天我去不了了。", "py": "Míngtiān wǒ qù bu liǎo le.", "vi": "Mai tôi không đi được rồi." }
+      ] },
+    { "t": "恐怕 — nói điều xấu cho nhẹ đi",
+      "b": "恐怕 + điều không hay",
+      "d": "Khi phải báo tin không vui hoặc từ chối, người Trung Quốc mở đầu bằng 恐怕 cho lịch sự. Khác 可能 (có thể) ở chỗ 恐怕 luôn kèm sắc thái tiếc nuối.",
+      "ex": [
+        { "cn": "恐怕我帮不了你。", "py": "Kǒngpà wǒ bāng bu liǎo nǐ.", "vi": "E rằng tôi không giúp được bạn." },
+        { "cn": "恐怕来不及了。", "py": "Kǒngpà láibují le.", "vi": "E là không kịp mất." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "他咳嗽得厉害，应该去看医生。", "py": "Tā késou de lìhai, yīnggāi qù kàn yīshēng.", "vi": "Anh ấy ho dữ lắm, nên đi khám." },
+    { "cn": "为了减肥，她每天跑步。", "py": "Wèile jiǎnféi, tā měi tiān pǎobù.", "vi": "Để giảm cân, ngày nào cô ấy cũng chạy bộ." },
+    { "cn": "你的汉语真厉害！", "py": "Nǐ de Hànyǔ zhēn lìhai!", "vi": "Tiếng Trung của bạn giỏi thật!" },
+    { "cn": "开车的时候一定要注意安全。", "py": "Kāichē de shíhou yídìng yào zhùyì ānquán.", "vi": "Khi lái xe nhất định phải chú ý an toàn." },
+    { "cn": "晚上一个人走这条路很危险。", "py": "Wǎnshang yí ge rén zǒu zhè tiáo lù hěn wēixiǎn.", "vi": "Tối đi một mình con đường này rất nguy hiểm." },
+    { "cn": "保护环境就是保护我们自己。", "py": "Bǎohù huánjìng jiù shì bǎohù wǒmen zìjǐ.", "vi": "Bảo vệ môi trường chính là bảo vệ chính mình." },
+    { "cn": "健康和生命最重要。", "py": "Jiànkāng hé shēngmìng zuì zhòngyào.", "vi": "Sức khoẻ và tính mạng là quan trọng nhất." },
+    { "cn": "恐怕今天的会要推迟了。", "py": "Kǒngpà jīntiān de huì yào tuīchí le.", "vi": "E là cuộc họp hôm nay phải hoãn." },
+    { "cn": "外面太吵，我受不了。", "py": "Wàimiàn tài chǎo, wǒ shòu bu liǎo.", "vi": "Bên ngoài ồn quá, tôi chịu không nổi." },
+    { "cn": "走了一天，累死我了。", "py": "Zǒu le yì tiān, lèi sǐ wǒ le.", "vi": "Đi cả ngày, mệt chết đi được." }
+  ]
+}

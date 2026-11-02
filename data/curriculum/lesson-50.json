@@ -1,0 +1,73 @@
+{
+  "id": 50,
+  "cn": "运动和比赛",
+  "title": "Thể thao và sự kiện",
+  "goal": "Nói về rèn luyện, thi đấu, gặp gỡ — và phân biệt cặp 出现 / 发现, 见面 / 遇到.",
+  "words": [
+    { "w": "锻炼", "py": "duànliàn", "hv": "đoàn luyện", "vi": "rèn luyện, tập thể dục", "pos": "động từ",
+      "note": "Cả hai chữ đều có bộ 钅 (kim loại) — vốn nghĩa là rèn sắt, sau chuyển sang rèn luyện thân thể. Tiếng Việt: \"tôi luyện\", \"rèn luyện\".",
+      "ex": [{ "cn": "我每天早上锻炼身体。", "py": "Wǒ měi tiān zǎoshang duànliàn shēntǐ.", "vi": "Sáng nào tôi cũng tập thể dục." }] },
+    { "w": "爬山", "py": "páshān", "hv": "ba sơn", "vi": "leo núi", "pos": "động từ",
+      "note": "爬 (bò, trèo) + 山 (núi). Là động từ ly hợp: 爬了三个小时山.",
+      "ex": [{ "cn": "周末我们去爬山吧。", "py": "Zhōumò wǒmen qù páshān ba.", "vi": "Cuối tuần chúng ta đi leo núi nhé." }] },
+    { "w": "体育", "py": "tǐyù", "hv": "thể dục", "vi": "thể dục, thể thao", "pos": "danh từ",
+      "note": "Chính là \"thể dục\" tiếng Việt: 体 (thể) + 育 (dục, nuôi dạy). Sân vận động là 体育场.",
+      "ex": [{ "cn": "我们下午有体育课。", "py": "Wǒmen xiàwǔ yǒu tǐyù kè.", "vi": "Chiều nay chúng tôi có tiết thể dục." }] },
+    { "w": "比赛", "py": "bǐsài", "hv": "tỷ tái", "vi": "cuộc thi, trận đấu; thi đấu", "pos": "danh từ / động từ",
+      "note": "比 (so sánh, bài 28) + 赛 (đua). Nghĩa gốc: so tài với nhau.",
+      "ex": [{ "cn": "今天有一场足球比赛。", "py": "Jīntiān yǒu yì chǎng zúqiú bǐsài.", "vi": "Hôm nay có một trận bóng đá." }] },
+    { "w": "参加", "py": "cānjiā", "hv": "tham gia", "vi": "tham gia, dự", "pos": "động từ",
+      "note": "Chính là \"tham gia\" tiếng Việt. Dùng cho hoạt động có tổ chức: 参加会议, 参加比赛, 参加考试.",
+      "ex": [{ "cn": "我想参加这个比赛。", "py": "Wǒ xiǎng cānjiā zhège bǐsài.", "vi": "Tôi muốn tham gia cuộc thi này." }] },
+    { "w": "结束", "py": "jiéshù", "hv": "kết thúc", "vi": "kết thúc", "pos": "động từ",
+      "note": "Chính là \"kết thúc\" tiếng Việt. Trái nghĩa hoàn toàn với 开始 (bài 27).",
+      "ex": [{ "cn": "会议已经结束了。", "py": "Huìyì yǐjīng jiéshù le.", "vi": "Cuộc họp đã kết thúc rồi." }] },
+    { "w": "出现", "py": "chūxiàn", "hv": "xuất hiện", "vi": "xuất hiện", "pos": "động từ",
+      "note": "Chính là \"xuất hiện\" tiếng Việt: 出 (ra) + 现 (hiện). Thứ gì đó TỰ hiện ra.",
+      "ex": [{ "cn": "他突然出现了。", "py": "Tā tūrán chūxiàn le.", "vi": "Anh ấy bỗng nhiên xuất hiện." }] },
+    { "w": "发现", "py": "fāxiàn", "hv": "phát hiện", "vi": "phát hiện, nhận ra", "pos": "động từ",
+      "note": "Chính là \"phát hiện\" tiếng Việt. Khác 出现: 发现 là NGƯỜI tìm ra, 出现 là VẬT tự hiện ra.",
+      "ex": [{ "cn": "我发现了一个问题。", "py": "Wǒ fāxiàn le yí ge wèntí.", "vi": "Tôi phát hiện ra một vấn đề." }] },
+    { "w": "遇到", "py": "yùdào", "hv": "ngộ đáo", "vi": "gặp phải, tình cờ gặp", "pos": "động từ",
+      "note": "遇 có bộ 辶 (đi đường) — gặp trên đường. Tiếng Việt: \"ngộ\" trong \"tao ngộ\", \"kỳ ngộ\".",
+      "ex": [{ "cn": "我在路上遇到了老师。", "py": "Wǒ zài lù shàng yùdào le lǎoshī.", "vi": "Tôi gặp thầy trên đường." }] },
+    { "w": "见面", "py": "jiànmiàn", "hv": "kiến diện", "vi": "gặp mặt", "pos": "động từ",
+      "note": "见 (thấy) + 面 (mặt). Là động từ ly hợp — gặp AI thì phải dùng 跟…见面, KHÔNG nói 见面他.",
+      "ex": [{ "cn": "我们明天见面吧。", "py": "Wǒmen míngtiān jiànmiàn ba.", "vi": "Mai chúng ta gặp nhau nhé." }] }
+  ],
+  "grammar": [
+    { "t": "出现 và 发现 — vật hiện ra hay người tìm ra?",
+      "b": "出现 = tự hiện ra · 发现 = ai đó nhận ra",
+      "d": "问题出现了 (vấn đề nảy sinh — tự nó). 我发现了问题 (tôi phát hiện ra vấn đề — có chủ thể). Tiếng Việt cũng phân biệt \"xuất hiện\" với \"phát hiện\" y hệt, nên người Việt nắm rất nhanh.",
+      "ex": [
+        { "cn": "天上出现了一道彩虹。", "py": "Tiān shàng chūxiàn le yí dào cǎihóng.", "vi": "Trên trời xuất hiện một cầu vồng." },
+        { "cn": "我发现他没来。", "py": "Wǒ fāxiàn tā méi lái.", "vi": "Tôi nhận ra anh ấy không đến." }
+      ] },
+    { "t": "见面 và 遇到 — hẹn gặp hay tình cờ gặp?",
+      "b": "见面 = gặp có hẹn · 遇到 = gặp tình cờ",
+      "d": "见面 là động từ ly hợp nên phải nói 跟他见面 hoặc 我们见面. Còn 遇到 nhận tân ngữ trực tiếp: 遇到他. Đây là lỗi ngữ pháp rất hay gặp ở trình độ HSK 3.",
+      "ex": [
+        { "cn": "我明天跟他见面。", "py": "Wǒ míngtiān gēn tā jiànmiàn.", "vi": "Mai tôi gặp anh ấy. (có hẹn)" },
+        { "cn": "我在超市遇到了他。", "py": "Wǒ zài chāoshì yùdào le tā.", "vi": "Tôi tình cờ gặp anh ấy ở siêu thị." }
+      ] },
+    { "t": "Lượng từ 场 cho sự kiện",
+      "b": "一场比赛 · 一场电影 · 一场雨",
+      "d": "场 chǎng dùng cho những việc diễn ra trong một khoảng thời gian và không gian: trận đấu, buổi chiếu phim, cơn mưa. Tiếng Việt cũng nói \"một trận mưa\", \"một trận đấu\".",
+      "ex": [
+        { "cn": "昨天下了一场大雨。", "py": "Zuótiān xià le yì chǎng dàyǔ.", "vi": "Hôm qua có một trận mưa to." },
+        { "cn": "我们去看一场比赛吧。", "py": "Wǒmen qù kàn yì chǎng bǐsài ba.", "vi": "Chúng ta đi xem một trận đấu đi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "医生说要多锻炼身体。", "py": "Yīshēng shuō yào duō duànliàn shēntǐ.", "vi": "Bác sĩ nói phải tập thể dục nhiều." },
+    { "cn": "这个周末我们去爬山，怎么样？", "py": "Zhège zhōumò wǒmen qù páshān, zěnmeyàng?", "vi": "Cuối tuần này đi leo núi nhé?" },
+    { "cn": "他从小就喜欢体育。", "py": "Tā cóngxiǎo jiù xǐhuan tǐyù.", "vi": "Cậu ấy thích thể thao từ nhỏ." },
+    { "cn": "明天有一场很重要的比赛。", "py": "Míngtiān yǒu yì chǎng hěn zhòngyào de bǐsài.", "vi": "Mai có một trận đấu rất quan trọng." },
+    { "cn": "一共有二十个人参加。", "py": "Yígòng yǒu èrshí ge rén cānjiā.", "vi": "Tất cả có hai mươi người tham gia." },
+    { "cn": "比赛什么时候结束？", "py": "Bǐsài shénme shíhou jiéshù?", "vi": "Khi nào trận đấu kết thúc?" },
+    { "cn": "我发现这个办法很有用。", "py": "Wǒ fāxiàn zhège bànfǎ hěn yǒuyòng.", "vi": "Tôi phát hiện cách này rất hữu ích." },
+    { "cn": "刚才路上出现了一个问题。", "py": "Gāngcái lù shàng chūxiàn le yí ge wèntí.", "vi": "Vừa nãy trên đường xảy ra một sự cố." },
+    { "cn": "我昨天在公园遇到了一个老朋友。", "py": "Wǒ zuótiān zài gōngyuán yùdào le yí ge lǎo péngyou.", "vi": "Hôm qua tôi gặp một người bạn cũ ở công viên." },
+    { "cn": "我们下个星期见面吧。", "py": "Wǒmen xià ge xīngqī jiànmiàn ba.", "vi": "Tuần sau chúng ta gặp nhau nhé." }
+  ]
+}

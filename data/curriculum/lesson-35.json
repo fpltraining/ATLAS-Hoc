@@ -1,0 +1,74 @@
+{
+  "id": 35,
+  "cn": "想法和决定",
+  "title": "Suy nghĩ và quyết định",
+  "goal": "Nêu quan điểm, nói nhớ hay quên, và phân biệt 认为 với 觉得.",
+  "words": [
+    { "w": "相信", "py": "xiāngxìn", "hv": "tương tín", "vi": "tin, tin tưởng", "pos": "động từ",
+      "note": "信 = \"tín\" trong \"tín nhiệm\", \"uy tín\". Sau 相信 có thể là người hoặc cả một câu.",
+      "ex": [{ "cn": "我相信你。", "py": "Wǒ xiāngxìn nǐ.", "vi": "Tôi tin bạn." }] },
+    { "w": "认为", "py": "rènwéi", "hv": "nhận vi", "vi": "cho rằng, nhận định", "pos": "động từ",
+      "note": "Trang trọng hơn 觉得. Dùng khi nêu một nhận định có suy xét, hay gặp trong bài viết và tranh luận.",
+      "ex": [{ "cn": "我认为这个办法很好。", "py": "Wǒ rènwéi zhège bànfǎ hěn hǎo.", "vi": "Tôi cho rằng cách này rất hay." }] },
+    { "w": "了解", "py": "liǎojiě", "hv": "liễu giải", "vi": "hiểu rõ, tìm hiểu", "pos": "động từ",
+      "note": "Chữ 了 ở đây đọc liǎo chứ không phải le. Tiếng Việt có \"liễu giải\", \"giải thích\".",
+      "ex": [{ "cn": "我很了解他。", "py": "Wǒ hěn liǎojiě tā.", "vi": "Tôi hiểu rõ anh ấy." }] },
+    { "w": "明白", "py": "míngbai", "hv": "minh bạch", "vi": "hiểu, rõ ràng", "pos": "động từ / tính từ",
+      "note": "Chính là \"minh bạch\" tiếng Việt: 明 (sáng) + 白 (trắng) — sáng rõ như ban ngày.",
+      "ex": [{ "cn": "我明白了。", "py": "Wǒ míngbai le.", "vi": "Tôi hiểu rồi." }] },
+    { "w": "清楚", "py": "qīngchu", "hv": "thanh sở", "vi": "rõ ràng, rành mạch", "pos": "tính từ",
+      "note": "清 có bộ 氵 (nước) — trong veo như nước. Hay dùng làm bổ ngữ: 听清楚 (nghe rõ), 看清楚 (nhìn rõ).",
+      "ex": [{ "cn": "请说清楚一点儿。", "py": "Qǐng shuō qīngchu yìdiǎnr.", "vi": "Xin nói rõ hơn chút." }] },
+    { "w": "记得", "py": "jìde", "hv": "ký đắc", "vi": "nhớ", "pos": "động từ",
+      "note": "记 = \"ký\" trong \"nhật ký\", \"ghi chép\". Có bộ 讠 (lời nói).",
+      "ex": [{ "cn": "你还记得我吗？", "py": "Nǐ hái jìde wǒ ma?", "vi": "Bạn còn nhớ tôi không?" }] },
+    { "w": "忘记", "py": "wàngjì", "hv": "vong ký", "vi": "quên", "pos": "động từ",
+      "note": "忘 = 亡 (mất) trên 心 (tim) — rơi mất khỏi lòng. Nói tắt là 忘: 我忘了.",
+      "ex": [{ "cn": "我忘记带钱包了。", "py": "Wǒ wàngjì dài qiánbāo le.", "vi": "Tôi quên mang ví rồi." }] },
+    { "w": "决定", "py": "juédìng", "hv": "quyết định", "vi": "quyết định", "pos": "động từ / danh từ",
+      "note": "Chính là \"quyết định\" tiếng Việt. Vừa là động từ vừa là danh từ, y hệt tiếng Việt.",
+      "ex": [{ "cn": "我决定去中国留学。", "py": "Wǒ juédìng qù Zhōngguó liúxué.", "vi": "Tôi quyết định sang Trung Quốc du học." }] },
+    { "w": "选择", "py": "xuǎnzé", "hv": "tuyển trạch", "vi": "lựa chọn", "pos": "động từ / danh từ",
+      "note": "Tiếng Việt: \"tuyển chọn\", \"tuyển sinh\". Cả hai chữ đều có bộ 辶 hoặc 扌 — đi và tay, tức là hành động chọn.",
+      "ex": [{ "cn": "你可以自己选择。", "py": "Nǐ kěyǐ zìjǐ xuǎnzé.", "vi": "Bạn có thể tự chọn." }] },
+    { "w": "需要", "py": "xūyào", "hv": "nhu yếu", "vi": "cần", "pos": "động từ",
+      "note": "Chính là \"nhu yếu\" trong \"nhu yếu phẩm\", \"nhu cầu\". Trang trọng hơn 要 và không dùng để gọi món.",
+      "ex": [{ "cn": "你需要帮助吗？", "py": "Nǐ xūyào bāngzhù ma?", "vi": "Bạn cần giúp đỡ không?" }] }
+  ],
+  "grammar": [
+    { "t": "觉得 / 认为 / 相信 — ba mức chắc chắn",
+      "b": "觉得 = cảm thấy · 认为 = cho rằng · 相信 = tin chắc",
+      "d": "觉得 nhẹ nhất, mang tính cảm nhận cá nhân. 认为 là nhận định có suy xét, dùng trong văn viết và tranh luận. 相信 là tin tưởng, mức chắc chắn cao nhất. Cả ba đều theo sau bởi CẢ MỘT CÂU.",
+      "ex": [
+        { "cn": "我觉得有点儿冷。", "py": "Wǒ juéde yǒudiǎnr lěng.", "vi": "Tôi thấy hơi lạnh. (cảm nhận)" },
+        { "cn": "我认为他是对的。", "py": "Wǒ rènwéi tā shì duì de.", "vi": "Tôi cho rằng anh ấy đúng. (nhận định)" },
+        { "cn": "我相信他会来。", "py": "Wǒ xiāngxìn tā huì lái.", "vi": "Tôi tin anh ấy sẽ đến. (tin chắc)" }
+      ] },
+    { "t": "清楚 làm bổ ngữ kết quả",
+      "b": "động từ giác quan + 清楚",
+      "d": "Ghép sau 听, 看, 说 để nói đã đạt tới mức RÕ RÀNG. Phủ định chèn 不 vào giữa, khẳng định chèn 得 — đúng như 听得懂 / 听不懂 ở bài 19.",
+      "ex": [
+        { "cn": "我没听清楚。", "py": "Wǒ méi tīng qīngchu.", "vi": "Tôi nghe chưa rõ." },
+        { "cn": "太远了，我看不清楚。", "py": "Tài yuǎn le, wǒ kàn bu qīngchu.", "vi": "Xa quá, tôi nhìn không rõ." }
+      ] },
+    { "t": "了解 và 知道 và 认识 — ba kiểu \"biết\"",
+      "b": "知道 = biết thông tin · 认识 = quen mặt · 了解 = hiểu sâu",
+      "d": "Mức độ tăng dần. 我知道他 (nghe tên anh ấy), 我认识他 (quen biết), 我很了解他 (hiểu rõ tính cách anh ấy). Người Việt hay dùng lẫn vì tiếng Việt chỉ có chữ \"biết\".",
+      "ex": [
+        { "cn": "我知道这个地方。", "py": "Wǒ zhīdào zhège dìfang.", "vi": "Tôi biết chỗ này." },
+        { "cn": "我认识他，但是不太了解他。", "py": "Wǒ rènshi tā, dànshì bú tài liǎojiě tā.", "vi": "Tôi quen anh ấy, nhưng không hiểu rõ lắm." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你还记得他的名字吗？", "py": "Nǐ hái jìde tā de míngzi ma?", "vi": "Bạn còn nhớ tên anh ấy không?" },
+    { "cn": "对不起，我忘记了。", "py": "Duìbuqǐ, wǒ wàngjì le.", "vi": "Xin lỗi, tôi quên mất rồi." },
+    { "cn": "我明白你的意思了。", "py": "Wǒ míngbai nǐ de yìsi le.", "vi": "Tôi hiểu ý bạn rồi." },
+    { "cn": "这个问题我没听清楚。", "py": "Zhège wèntí wǒ méi tīng qīngchu.", "vi": "Câu hỏi này tôi nghe chưa rõ." },
+    { "cn": "我认为学汉语最重要的是练习。", "py": "Wǒ rènwéi xué Hànyǔ zuì zhòngyào de shì liànxí.", "vi": "Tôi cho rằng học tiếng Trung quan trọng nhất là luyện tập." },
+    { "cn": "我相信你一定能做到。", "py": "Wǒ xiāngxìn nǐ yídìng néng zuò dào.", "vi": "Tôi tin bạn nhất định làm được." },
+    { "cn": "我们决定明天出发。", "py": "Wǒmen juédìng míngtiān chūfā.", "vi": "Chúng tôi quyết định mai lên đường." },
+    { "cn": "这两个你选择哪一个？", "py": "Zhè liǎng ge nǐ xuǎnzé nǎ yí ge?", "vi": "Hai cái này bạn chọn cái nào?" },
+    { "cn": "我需要一点儿时间。", "py": "Wǒ xūyào yìdiǎnr shíjiān.", "vi": "Tôi cần một chút thời gian." },
+    { "cn": "他很了解中国文化。", "py": "Tā hěn liǎojiě Zhōngguó wénhuà.", "vi": "Anh ấy hiểu rất rõ văn hoá Trung Quốc." }
+  ]
+}

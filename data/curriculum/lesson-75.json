@@ -1,0 +1,73 @@
+{
+  "id": 75,
+  "cn": "科技和网络",
+  "title": "Khoa học và mạng",
+  "goal": "Từ vựng công nghệ — thấy rõ cách tiếng Trung ghép chữ cũ để đặt tên thứ mới.",
+  "words": [
+    { "w": "科学", "py": "kēxué", "hv": "khoa học", "vi": "khoa học", "pos": "danh từ / tính từ",
+      "note": "Chính là \"khoa học\" tiếng Việt: 科 (khoa) + 学 (học). Cũng là tính từ: 这个方法很科学.",
+      "ex": [{ "cn": "这个安排很科学。", "py": "Zhège ānpái hěn kēxué.", "vi": "Cách sắp xếp này rất khoa học." }] },
+    { "w": "技术", "py": "jìshù", "hv": "kỹ thuật", "vi": "kỹ thuật", "pos": "danh từ",
+      "note": "Chính là \"kỹ thuật\" tiếng Việt: 技 (kỹ, bộ 扌) + 术 (thuật).",
+      "ex": [{ "cn": "他的技术很好。", "py": "Tā de jìshù hěn hǎo.", "vi": "Tay nghề của anh ấy rất tốt." }] },
+    { "w": "机器", "py": "jīqì", "hv": "cơ khí", "vi": "cỗ máy", "pos": "danh từ",
+      "note": "Âm Hán Việt là \"cơ khí\" nhưng nghĩa là CÁI MÁY cụ thể. 机 cũng nằm trong 飞机, 手机, 机会.",
+      "ex": [{ "cn": "这台机器坏了。", "py": "Zhè tái jīqì huài le.", "vi": "Cái máy này hỏng rồi." }] },
+    { "w": "互联网", "py": "hùliánwǎng", "hv": "hỗ liên võng", "vi": "Internet", "pos": "danh từ",
+      "note": "互 (lẫn nhau) + 联 (nối) + 网 (lưới) = \"lưới nối lẫn nhau\". Dịch nghĩa chứ không mượn âm — rất đúng bản chất Internet.",
+      "ex": [{ "cn": "互联网改变了生活。", "py": "Hùliánwǎng gǎibiàn le shēnghuó.", "vi": "Internet đã thay đổi cuộc sống." }] },
+    { "w": "网站", "py": "wǎngzhàn", "hv": "võng trạm", "vi": "trang web", "pos": "danh từ",
+      "note": "网 (lưới, mạng) + 站 (trạm, bài 41) = \"trạm trên mạng\". Cách ghép rất gọn.",
+      "ex": [{ "cn": "这个网站很有用。", "py": "Zhège wǎngzhàn hěn yǒuyòng.", "vi": "Trang web này rất hữu ích." }] },
+    { "w": "密码", "py": "mìmǎ", "hv": "mật mã", "vi": "mật khẩu", "pos": "danh từ",
+      "note": "Chính là \"mật mã\" tiếng Việt: 密 (mật) + 码 (mã).",
+      "ex": [{ "cn": "我忘记密码了。", "py": "Wǒ wàngjì mìmǎ le.", "vi": "Tôi quên mật khẩu rồi." }] },
+    { "w": "短信", "py": "duǎnxìn", "hv": "đoản tín", "vi": "tin nhắn", "pos": "danh từ",
+      "note": "短 (ngắn, bài 52) + 信 (thư tín) = \"thư ngắn\". Gửi tin nhắn là 发短信.",
+      "ex": [{ "cn": "我给你发个短信。", "py": "Wǒ gěi nǐ fā ge duǎnxìn.", "vi": "Tôi nhắn tin cho bạn." }] },
+    { "w": "传真", "py": "chuánzhēn", "hv": "truyền chân", "vi": "máy fax, bản fax", "pos": "danh từ",
+      "note": "传 (truyền) + 真 (thật) — truyền hình ảnh thật đi xa. Lại là dịch nghĩa thay vì mượn âm \"fax\".",
+      "ex": [{ "cn": "请把文件传真给我。", "py": "Qǐng bǎ wénjiàn chuánzhēn gěi wǒ.", "vi": "Xin fax tài liệu cho tôi." }] },
+    { "w": "复印", "py": "fùyìn", "hv": "phục ấn", "vi": "photo, sao chụp", "pos": "động từ",
+      "note": "复 (lặp lại, bài 36 trong 复习) + 印 (in). Nghĩa đen: in lại.",
+      "ex": [{ "cn": "请复印三份。", "py": "Qǐng fùyìn sān fèn.", "vi": "Xin photo ba bản." }] },
+    { "w": "打印", "py": "dǎyìn", "hv": "đả ấn", "vi": "in (từ máy tính)", "pos": "động từ",
+      "note": "打 (làm) + 印 (in). Khác 复印: 打印 là in từ máy tính ra, 复印 là chụp lại bản đã có.",
+      "ex": [{ "cn": "我要打印这份材料。", "py": "Wǒ yào dǎyìn zhè fèn cáiliào.", "vi": "Tôi cần in tài liệu này." }] }
+  ],
+  "grammar": [
+    { "t": "Tiếng Trung DỊCH NGHĨA thay vì mượn âm",
+      "b": "互联网 · 网站 · 传真 · 电脑 · 手机",
+      "d": "Internet → 互联网 (lưới nối nhau), website → 网站 (trạm mạng), fax → 传真 (truyền hình thật), computer → 电脑 (não điện). Nhờ vậy người biết chữ Hán đoán được nghĩa từ mới. Tiếng Việt thì mượn âm nhiều hơn (in-tơ-nét, fax) nên mất lợi thế này.",
+      "ex": [
+        { "cn": "网站 = 网 + 站", "py": "wǎngzhàn", "vi": "mạng + trạm" },
+        { "cn": "打印机 = 打印 + 机", "py": "dǎyìnjī", "vi": "in + máy = máy in" }
+      ] },
+    { "t": "复印 và 打印 — hai kiểu \"in\"",
+      "b": "复印 = chụp lại bản giấy · 打印 = in từ máy tính",
+      "d": "Đưa tờ giấy vào máy photo là 复印. Bấm nút in từ file trên máy tính là 打印. Máy tương ứng là 复印机 và 打印机.",
+      "ex": [
+        { "cn": "请把护照复印一份。", "py": "Qǐng bǎ hùzhào fùyìn yí fèn.", "vi": "Xin photo hộ chiếu một bản." },
+        { "cn": "文件已经打印好了。", "py": "Wénjiàn yǐjīng dǎyìn hǎo le.", "vi": "Tài liệu đã in xong rồi." }
+      ] },
+    { "t": "发 — động từ \"gửi đi\" của thời đại số",
+      "b": "发短信 · 发邮件 · 发消息 · 发照片",
+      "d": "发 fā nghĩa là phát ra, gửi đi. Đây là động từ bạn dùng nhiều nhất khi nhắn tin với bạn Trung Quốc.",
+      "ex": [
+        { "cn": "我给你发了三条短信。", "py": "Wǒ gěi nǐ fā le sān tiáo duǎnxìn.", "vi": "Tôi đã nhắn cho bạn ba tin." },
+        { "cn": "照片我发到你邮箱了。", "py": "Zhàopiàn wǒ fā dào nǐ yóuxiāng le.", "vi": "Ảnh tôi gửi vào hòm thư bạn rồi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "科学技术改变了我们的生活。", "py": "Kēxué jìshù gǎibiàn le wǒmen de shēnghuó.", "vi": "Khoa học kỹ thuật đã thay đổi cuộc sống chúng ta." },
+    { "cn": "这家工厂的机器都很新。", "py": "Zhè jiā gōngchǎng de jīqì dōu hěn xīn.", "vi": "Máy móc nhà máy này đều rất mới." },
+    { "cn": "没有互联网我真受不了。", "py": "Méiyǒu hùliánwǎng wǒ zhēn shòu bu liǎo.", "vi": "Không có Internet tôi chịu không nổi." },
+    { "cn": "学校网站上有考试安排。", "py": "Xuéxiào wǎngzhàn shàng yǒu kǎoshì ānpái.", "vi": "Trên web trường có lịch thi." },
+    { "cn": "密码最好不要太简单。", "py": "Mìmǎ zuì hǎo búyào tài jiǎndān.", "vi": "Mật khẩu tốt nhất đừng quá đơn giản." },
+    { "cn": "到了给我发个短信。", "py": "Dào le gěi wǒ fā ge duǎnxìn.", "vi": "Tới nơi nhắn tin cho tôi." },
+    { "cn": "现在很少有人用传真了。", "py": "Xiànzài hěn shǎo yǒu rén yòng chuánzhēn le.", "vi": "Bây giờ ít người dùng fax rồi." },
+    { "cn": "办签证要复印护照。", "py": "Bàn qiānzhèng yào fùyìn hùzhào.", "vi": "Làm visa phải photo hộ chiếu." },
+    { "cn": "打印机没纸了。", "py": "Dǎyìnjī méi zhǐ le.", "vi": "Máy in hết giấy rồi." },
+    { "cn": "他在一家技术公司工作。", "py": "Tā zài yì jiā jìshù gōngsī gōngzuò.", "vi": "Anh ấy làm ở một công ty công nghệ." }
+  ]
+}

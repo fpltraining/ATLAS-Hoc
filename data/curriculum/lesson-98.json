@@ -1,0 +1,71 @@
+{
+  "id": 98,
+  "cn": "准确不准确",
+  "title": "Chính xác hay không",
+  "goal": "Nhóm tính từ đánh giá độ chính xác và tính chính thức — mười từ Hán Việt.",
+  "words": [
+    { "w": "详细", "py": "xiángxì", "hv": "tường tế", "vi": "chi tiết, tỉ mỉ", "pos": "tính từ",
+      "note": "Tiếng Việt: \"tường tận\", \"tường thuật\". 细 là chữ \"tế\" trong 仔细 (bài 65).",
+      "ex": [{ "cn": "请说得详细一点儿。", "py": "Qǐng shuō de xiángxì yìdiǎnr.", "vi": "Xin nói chi tiết hơn chút." }] },
+    { "w": "复杂", "py": "fùzá", "hv": "phức tạp", "vi": "phức tạp", "pos": "tính từ",
+      "note": "Chính là \"phức tạp\" tiếng Việt: 复 (phức) + 杂 (tạp, bài 81 trong 杂志). Trái nghĩa với 简单.",
+      "ex": [{ "cn": "这个问题很复杂。", "py": "Zhège wèntí hěn fùzá.", "vi": "Vấn đề này rất phức tạp." }] },
+    { "w": "正常", "py": "zhèngcháng", "hv": "chính thường", "vi": "bình thường", "pos": "tính từ",
+      "note": "正 (chính) + 常 (thường). Tiếng Việt nói \"bình thường\", nhưng nghĩa là \"đúng như lẽ thường\".",
+      "ex": [{ "cn": "这是很正常的事。", "py": "Zhè shì hěn zhèngcháng de shì.", "vi": "Đây là chuyện rất bình thường." }] },
+    { "w": "正确", "py": "zhèngquè", "hv": "chính xác", "vi": "chính xác, đúng đắn", "pos": "tính từ",
+      "note": "Chính là \"chính xác\" tiếng Việt: 正 (chính) + 确 (xác). Trang trọng hơn 对.",
+      "ex": [{ "cn": "你的答案是正确的。", "py": "Nǐ de dá'àn shì zhèngquè de.", "vi": "Đáp án của bạn đúng." }] },
+    { "w": "正式", "py": "zhèngshì", "hv": "chính thức", "vi": "chính thức", "pos": "tính từ",
+      "note": "Chính là \"chính thức\" tiếng Việt: 正 (chính) + 式 (thức). Tả trang phục, buổi lễ, văn bản.",
+      "ex": [{ "cn": "这是一个正式的场合。", "py": "Zhè shì yí ge zhèngshì de chǎnghé.", "vi": "Đây là một dịp trang trọng." }] },
+    { "w": "准确", "py": "zhǔnquè", "hv": "chuẩn xác", "vi": "chuẩn xác", "pos": "tính từ",
+      "note": "Chính là \"chuẩn xác\" tiếng Việt: 准 (chuẩn) + 确 (xác). Nhấn vào sự khớp đúng con số, thời gian.",
+      "ex": [{ "cn": "请给我准确的时间。", "py": "Qǐng gěi wǒ zhǔnquè de shíjiān.", "vi": "Xin cho tôi thời gian chính xác." }] },
+    { "w": "真正", "py": "zhēnzhèng", "hv": "chân chính", "vi": "thật sự, đích thực", "pos": "tính từ / phó từ",
+      "note": "Chính là \"chân chính\" tiếng Việt: 真 (chân) + 正 (chính).",
+      "ex": [{ "cn": "他才是真正的朋友。", "py": "Tā cái shì zhēnzhèng de péngyou.", "vi": "Anh ấy mới là bạn thật sự." }] },
+    { "w": "实际", "py": "shíjì", "hv": "thực tế", "vi": "thực tế", "pos": "danh từ / tính từ",
+      "note": "Chính là \"thực tế\" tiếng Việt: 实 (thực) + 际 (tế). 实际上 = trên thực tế.",
+      "ex": [{ "cn": "实际情况比这复杂。", "py": "Shíjì qíngkuàng bǐ zhè fùzá.", "vi": "Tình hình thực tế phức tạp hơn thế." }] },
+    { "w": "实在", "py": "shízài", "hv": "thực tại", "vi": "thật là, quả thực", "pos": "phó từ",
+      "note": "Dùng để nhấn mạnh sự thật khó phủ nhận: 实在太累了 (thật là mệt quá). Cũng có nghĩa \"thành thật\" khi tả người.",
+      "ex": [{ "cn": "我实在没时间。", "py": "Wǒ shízài méi shíjiān.", "vi": "Tôi quả thực không có thời gian." }] },
+    { "w": "确实", "py": "quèshí", "hv": "xác thực", "vi": "quả thực, đúng là", "pos": "phó từ",
+      "note": "Chính là \"xác thực\" tiếng Việt: 确 (xác) + 实 (thực). Dùng để xác nhận điều người khác nói.",
+      "ex": [{ "cn": "他确实很努力。", "py": "Tā quèshí hěn nǔlì.", "vi": "Cậu ấy quả thực rất chăm." }] }
+  ],
+  "grammar": [
+    { "t": "Gia đình chữ 正 và chữ 实",
+      "b": "正常 · 正确 · 正式 · 真正 · 实际 · 实在 · 确实",
+      "d": "正 (chính, ngay thẳng) và 实 (thực, có thật) là hai chữ gốc sinh ra cả nhóm từ này. Nhận ra chữ gốc giúp bạn đoán nghĩa và nhớ nhanh hơn nhiều so với học rời từng từ.",
+      "ex": [
+        { "cn": "正常 · 正确 · 正式 · 真正", "py": "zhèngcháng · zhèngquè · zhèngshì · zhēnzhèng", "vi": "đều mang chữ 正 (chính)" },
+        { "cn": "实际 · 实在 · 确实 · 诚实", "py": "shíjì · shízài · quèshí · chéngshí", "vi": "đều mang chữ 实 (thực)" }
+      ] },
+    { "t": "实际上 và 其实 — trên thực tế",
+      "b": "实际上 (trang trọng) · 其实 (khẩu ngữ)",
+      "d": "Cả hai nêu sự thật trái với vẻ ngoài. 其实 (bài 118) dùng trong hội thoại, 实际上 dùng trong văn viết và tranh luận. Đặt đầu câu.",
+      "ex": [
+        { "cn": "实际上，这件事没那么难。", "py": "Shíjì shàng, zhè jiàn shì méi nàme nán.", "vi": "Trên thực tế, việc này không khó thế đâu." }
+      ] },
+    { "t": "确实 dùng để xác nhận",
+      "b": "确实 + tính từ / động từ",
+      "d": "Khi ai đó nói gì mà bạn thấy đúng, dùng 确实 để đồng tình có trọng lượng: 你说得对，他确实很聪明. Mạnh hơn chỉ nói 对.",
+      "ex": [
+        { "cn": "这个地方确实很美。", "py": "Zhège dìfang quèshí hěn měi.", "vi": "Nơi này quả thực rất đẹp." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "请把情况详细地说一遍。", "py": "Qǐng bǎ qíngkuàng xiángxì de shuō yí biàn.", "vi": "Xin kể lại tình hình một cách chi tiết." },
+    { "cn": "汉语的语法其实不太复杂。", "py": "Hànyǔ de yǔfǎ qíshí bú tài fùzá.", "vi": "Ngữ pháp tiếng Trung thật ra không phức tạp lắm." },
+    { "cn": "刚开始不习惯是很正常的。", "py": "Gāng kāishǐ bù xíguàn shì hěn zhèngcháng de.", "vi": "Mới đầu chưa quen là chuyện bình thường." },
+    { "cn": "他的发音很正确。", "py": "Tā de fāyīn hěn zhèngquè.", "vi": "Phát âm của anh ấy rất chuẩn." },
+    { "cn": "面试要穿得正式一点儿。", "py": "Miànshì yào chuān de zhèngshì yìdiǎnr.", "vi": "Phỏng vấn phải ăn mặc trang trọng chút." },
+    { "cn": "这个数字不太准确。", "py": "Zhège shùzì bú tài zhǔnquè.", "vi": "Con số này không chính xác lắm." },
+    { "cn": "真正的朋友会在你困难时帮你。", "py": "Zhēnzhèng de péngyou huì zài nǐ kùnnan shí bāng nǐ.", "vi": "Bạn thật sự sẽ giúp bạn lúc khó khăn." },
+    { "cn": "计划和实际总是有距离。", "py": "Jìhuà hé shíjì zǒngshì yǒu jùlí.", "vi": "Kế hoạch và thực tế luôn có khoảng cách." },
+    { "cn": "今天实在太热了。", "py": "Jīntiān shízài tài rè le.", "vi": "Hôm nay thật là nóng quá." },
+    { "cn": "你说得对，我确实错了。", "py": "Nǐ shuō de duì, wǒ quèshí cuò le.", "vi": "Bạn nói đúng, tôi quả thực sai rồi." }
+  ]
+}

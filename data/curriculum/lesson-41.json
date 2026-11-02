@@ -1,0 +1,72 @@
+{
+  "id": 41,
+  "cn": "坐地铁",
+  "title": "Đi lại trong thành phố",
+  "goal": "Đi tàu điện ngầm, hỏi tầng lầu, đón tiễn người — và phân biệt 楼 với 层.",
+  "words": [
+    { "w": "地铁", "py": "dìtiě", "hv": "địa thiết", "vi": "tàu điện ngầm", "pos": "danh từ",
+      "note": "地 (đất) + 铁 (sắt, bộ 钅 kim loại) — \"đường sắt dưới đất\". Cách gọi rất trực quan.",
+      "ex": [{ "cn": "我坐地铁上班。", "py": "Wǒ zuò dìtiě shàngbān.", "vi": "Tôi đi làm bằng tàu điện ngầm." }] },
+    { "w": "船", "py": "chuán", "hv": "thuyền", "vi": "thuyền, tàu thuỷ", "pos": "danh từ",
+      "note": "Chính là chữ \"thuyền\" tiếng Việt. Bên trái là 舟 (con thuyền) — bộ thủ hình chiếc thuyền.",
+      "ex": [{ "cn": "我们坐船去。", "py": "Wǒmen zuò chuán qù.", "vi": "Chúng tôi đi bằng thuyền." }] },
+    { "w": "地图", "py": "dìtú", "hv": "địa đồ", "vi": "bản đồ", "pos": "danh từ",
+      "note": "地 (đất) + 图 (hình vẽ). Tiếng Việt có \"địa đồ\" trong văn cổ, nay nói \"bản đồ\".",
+      "ex": [{ "cn": "我看看地图。", "py": "Wǒ kànkan dìtú.", "vi": "Để tôi xem bản đồ." }] },
+    { "w": "站", "py": "zhàn", "hv": "trạm", "vi": "ga, bến; đứng", "pos": "danh từ / động từ",
+      "note": "Chính là \"trạm\" tiếng Việt. Vừa là danh từ (bến, ga) vừa là động từ (đứng): 站起来 = đứng dậy.",
+      "ex": [{ "cn": "下一站是哪儿？", "py": "Xià yí zhàn shì nǎr?", "vi": "Ga tiếp theo là đâu?" }] },
+    { "w": "楼", "py": "lóu", "hv": "lâu", "vi": "toà nhà; tầng", "pos": "danh từ",
+      "note": "Chính là \"lầu\" tiếng Việt. Bộ 木 (gỗ) vì nhà xưa làm bằng gỗ. 上楼 lên lầu, 下楼 xuống lầu.",
+      "ex": [{ "cn": "我住在三楼。", "py": "Wǒ zhù zài sān lóu.", "vi": "Tôi ở tầng ba." }] },
+    { "w": "层", "py": "céng", "hv": "tằng", "vi": "tầng (lượng từ)", "pos": "lượng từ",
+      "note": "Chính là chữ \"tầng\" tiếng Việt. Bộ 尸 ở trên. Khác 楼 ở cách dùng — xem phần ngữ pháp.",
+      "ex": [{ "cn": "这座楼有二十层。", "py": "Zhè zuò lóu yǒu èrshí céng.", "vi": "Toà nhà này có hai mươi tầng." }] },
+    { "w": "电梯", "py": "diàntī", "hv": "điện thê", "vi": "thang máy", "pos": "danh từ",
+      "note": "电 (điện) + 梯 (thang, bộ 木 gỗ). Lại một thành viên của \"gia đình chữ 电\" ở bài 13.",
+      "ex": [{ "cn": "电梯在那边。", "py": "Diàntī zài nàbiān.", "vi": "Thang máy ở đằng kia." }] },
+    { "w": "骑", "py": "qí", "hv": "kỵ", "vi": "cưỡi, đi (xe hai bánh)", "pos": "động từ",
+      "note": "Bộ 马 (ngựa) bên trái. Tiếng Việt: \"kỵ binh\", \"kỵ sĩ\". Dùng cho thứ phải dạng chân: ngựa, xe đạp, xe máy.",
+      "ex": [{ "cn": "我骑自行车去学校。", "py": "Wǒ qí zìxíngchē qù xuéxiào.", "vi": "Tôi đạp xe đến trường." }] },
+    { "w": "离开", "py": "líkāi", "hv": "ly khai", "vi": "rời khỏi", "pos": "động từ",
+      "note": "离 (bài 24, khoảng cách) + 开 (mở, rời ra). Tiếng Việt: \"ly khai\", \"chia ly\".",
+      "ex": [{ "cn": "他离开了北京。", "py": "Tā líkāi le Běijīng.", "vi": "Anh ấy đã rời Bắc Kinh." }] },
+    { "w": "接", "py": "jiē", "hv": "tiếp", "vi": "đón; nhận, nghe (máy)", "pos": "động từ",
+      "note": "Bộ 扌 (tay). Tiếng Việt: \"tiếp đón\", \"tiếp nhận\". 接电话 = nghe điện thoại, 接朋友 = đón bạn.",
+      "ex": [{ "cn": "我去机场接你。", "py": "Wǒ qù jīchǎng jiē nǐ.", "vi": "Tôi ra sân bay đón bạn." }] }
+  ],
+  "grammar": [
+    { "t": "楼 và 层 — cùng nghĩa \"tầng\" nhưng dùng khác nhau",
+      "b": "住在三楼 (ở tầng 3) · 这座楼有二十层 (toà nhà có 20 tầng)",
+      "d": "Khi nói MÌNH Ở tầng mấy thì dùng 楼: 三楼. Khi ĐẾM có bao nhiêu tầng thì dùng 层: 二十层. Mẹo nhớ: 层 là lượng từ nên luôn đi sau con số để đếm.",
+      "ex": [
+        { "cn": "我的办公室在五楼。", "py": "Wǒ de bàngōngshì zài wǔ lóu.", "vi": "Văn phòng tôi ở tầng năm." },
+        { "cn": "这座楼一共有十二层。", "py": "Zhè zuò lóu yígòng yǒu shí'èr céng.", "vi": "Toà nhà này tất cả có mười hai tầng." }
+      ] },
+    { "t": "坐 và 骑 — nhắc lại và mở rộng",
+      "b": "坐 = ngồi vào trong · 骑 = dạng chân cưỡi lên",
+      "d": "坐地铁, 坐船, 坐飞机, 坐公共汽车 (ngồi vào). Nhưng 骑自行车, 骑马, 骑摩托车 (cưỡi lên). Giống hệt tiếng Việt phân biệt \"đi tàu\" với \"cưỡi ngựa\".",
+      "ex": [
+        { "cn": "我坐地铁，他骑自行车。", "py": "Wǒ zuò dìtiě, tā qí zìxíngchē.", "vi": "Tôi đi tàu điện, cậu ấy đạp xe." }
+      ] },
+    { "t": "接 — một chữ ba nghĩa hay dùng",
+      "b": "接人 đón người · 接电话 nghe máy · 接东西 nhận đồ",
+      "d": "Nghĩa gốc của 接 là \"nối vào, tiếp nhận\". Từ đó ra cả ba nghĩa. Tiếng Việt cũng nói \"tiếp đón\", \"tiếp nhận\", \"tiếp máy\" — cùng một logic.",
+      "ex": [
+        { "cn": "明天我去车站接你。", "py": "Míngtiān wǒ qù chēzhàn jiē nǐ.", "vi": "Mai tôi ra bến đón bạn." },
+        { "cn": "他正在接电话。", "py": "Tā zhèngzài jiē diànhuà.", "vi": "Anh ấy đang nghe điện thoại." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "从这儿到机场坐地铁最快。", "py": "Cóng zhèr dào jīchǎng zuò dìtiě zuì kuài.", "vi": "Từ đây ra sân bay đi tàu điện ngầm là nhanh nhất." },
+    { "cn": "下一站下车。", "py": "Xià yí zhàn xià chē.", "vi": "Ga sau thì xuống xe." },
+    { "cn": "我住在这座楼的八层。", "py": "Wǒ zhù zài zhè zuò lóu de bā céng.", "vi": "Tôi ở tầng tám của toà nhà này." },
+    { "cn": "电梯坏了，我们走楼梯吧。", "py": "Diàntī huài le, wǒmen zǒu lóutī ba.", "vi": "Thang máy hỏng rồi, ta đi cầu thang bộ nhé." },
+    { "cn": "你有地图吗？我不认识路。", "py": "Nǐ yǒu dìtú ma? Wǒ bú rènshi lù.", "vi": "Bạn có bản đồ không? Tôi không biết đường." },
+    { "cn": "夏天我们可以坐船去玩。", "py": "Xiàtiān wǒmen kěyǐ zuò chuán qù wán.", "vi": "Mùa hè chúng ta có thể đi thuyền chơi." },
+    { "cn": "他每天骑自行车上班。", "py": "Tā měi tiān qí zìxíngchē shàngbān.", "vi": "Ngày nào anh ấy cũng đạp xe đi làm." },
+    { "cn": "明天几点去机场接他？", "py": "Míngtiān jǐ diǎn qù jīchǎng jiē tā?", "vi": "Mai mấy giờ ra sân bay đón anh ấy?" },
+    { "cn": "他去年离开了这个城市。", "py": "Tā qùnián líkāi le zhège chéngshì.", "vi": "Năm ngoái anh ấy rời thành phố này." },
+    { "cn": "对不起，我在开会，一会儿接你电话。", "py": "Duìbuqǐ, wǒ zài kāihuì, yíhuìr jiē nǐ diànhuà.", "vi": "Xin lỗi, tôi đang họp, lát nữa gọi lại cho bạn." }
+  ]
+}

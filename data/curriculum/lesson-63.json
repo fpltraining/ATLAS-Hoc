@@ -1,0 +1,73 @@
+{
+  "id": 63,
+  "cn": "不好的心情",
+  "title": "Nỗi buồn và lo lắng",
+  "goal": "Nói về cảm xúc tiêu cực — kèm một bẫy Hán Việt rất dễ hiểu ngược.",
+  "words": [
+    { "w": "后悔", "py": "hòuhuǐ", "hv": "hậu hối", "vi": "hối hận", "pos": "động từ",
+      "note": "后 (sau) + 悔 (hối, có bộ 忄). Tiếng Việt nói \"hối hận\", cùng chữ 悔.",
+      "ex": [{ "cn": "我很后悔没去。", "py": "Wǒ hěn hòuhuǐ méi qù.", "vi": "Tôi rất hối hận vì đã không đi." }] },
+    { "w": "失望", "py": "shīwàng", "hv": "thất vọng", "vi": "thất vọng", "pos": "tính từ",
+      "note": "Chính là \"thất vọng\" tiếng Việt: 失 (mất) + 望 (hy vọng).",
+      "ex": [{ "cn": "别让我失望。", "py": "Bié ràng wǒ shīwàng.", "vi": "Đừng làm tôi thất vọng." }] },
+    { "w": "伤心", "py": "shāngxīn", "hv": "thương tâm", "vi": "đau lòng, buồn", "pos": "tính từ",
+      "note": "Chính là \"thương tâm\" tiếng Việt: 伤 (thương tổn) + 心 (tim). Nặng hơn 难过 (bài 34).",
+      "ex": [{ "cn": "她哭得很伤心。", "py": "Tā kū de hěn shāngxīn.", "vi": "Cô ấy khóc rất đau lòng." }] },
+    { "w": "讨厌", "py": "tǎoyàn", "hv": "thảo yếm", "vi": "ghét; đáng ghét", "pos": "động từ / tính từ",
+      "note": "Vừa là động từ (ghét ai) vừa là tính từ (đáng ghét). Mạnh hơn 不喜欢 nhiều.",
+      "ex": [{ "cn": "我最讨厌堵车。", "py": "Wǒ zuì tǎoyàn dǔchē.", "vi": "Tôi ghét nhất là tắc đường." }] },
+    { "w": "烦恼", "py": "fánnǎo", "hv": "phiền não", "vi": "phiền muộn, buồn phiền", "pos": "danh từ / tính từ",
+      "note": "Chính là \"phiền não\" tiếng Việt — từ nhà Phật, cả hai ngôn ngữ đều mượn.",
+      "ex": [{ "cn": "每个人都有烦恼。", "py": "Měi ge rén dōu yǒu fánnǎo.", "vi": "Ai cũng có nỗi phiền muộn." }] },
+    { "w": "紧张", "py": "jǐnzhāng", "hv": "khẩn trương", "vi": "hồi hộp, căng thẳng", "pos": "tính từ",
+      "note": "BẪY HÁN VIỆT: âm là \"khẩn trương\" nhưng nghĩa tiếng Trung là HỒI HỘP, CĂNG THẲNG — không phải \"nhanh lên\" như tiếng Việt hiện đại.",
+      "ex": [{ "cn": "考试前我很紧张。", "py": "Kǎoshì qián wǒ hěn jǐnzhāng.", "vi": "Trước khi thi tôi rất hồi hộp." }] },
+    { "w": "难受", "py": "nánshòu", "hv": "nan thụ", "vi": "khó chịu (trong người hoặc trong lòng)", "pos": "tính từ",
+      "note": "难 (khó) + 受 (chịu). Dùng cho cả khó chịu về thân thể lẫn về tinh thần.",
+      "ex": [{ "cn": "我肚子很难受。", "py": "Wǒ dùzi hěn nánshòu.", "vi": "Bụng tôi khó chịu lắm." }] },
+    { "w": "无聊", "py": "wúliáo", "hv": "vô liêu", "vi": "buồn chán, vô vị", "pos": "tính từ",
+      "note": "无 (không) + 聊 (trò chuyện, bài 49) — không có gì để nói. Tả cả người lẫn việc.",
+      "ex": [{ "cn": "这个电影太无聊了。", "py": "Zhège diànyǐng tài wúliáo le.", "vi": "Bộ phim này chán quá." }] },
+    { "w": "可怜", "py": "kělián", "hv": "khả liên", "vi": "đáng thương, tội nghiệp", "pos": "tính từ",
+      "note": "可 (đáng) + 怜 (thương, có bộ 忄). Cùng lối ghép với 可爱, 可怕 ở bài 52.",
+      "ex": [{ "cn": "那只小狗真可怜。", "py": "Nà zhī xiǎo gǒu zhēn kělián.", "vi": "Con chó nhỏ đó thật tội nghiệp." }] },
+    { "w": "害羞", "py": "hàixiū", "hv": "hại tu", "vi": "ngại ngùng, mắc cỡ", "pos": "tính từ",
+      "note": "羞 = \"tu\" trong \"tu sỉ\" (xấu hổ). Cùng chữ 害 với 害怕 (bài 34).",
+      "ex": [{ "cn": "她见到生人有点儿害羞。", "py": "Tā jiàn dào shēngrén yǒudiǎnr hàixiū.", "vi": "Gặp người lạ cô ấy hơi ngại." }] }
+  ],
+  "grammar": [
+    { "t": "Bẫy Hán Việt: 紧张 KHÔNG phải \"khẩn trương\"",
+      "b": "紧张 = hồi hộp, căng thẳng",
+      "d": "Tiếng Việt hiện đại dùng \"khẩn trương\" với nghĩa \"nhanh lên\", nhưng nghĩa gốc Hán là CĂNG. Trong tiếng Trung 紧张 luôn là hồi hộp, lo lắng, hoặc tình hình căng thẳng. Muốn nói \"nhanh lên\" phải dùng 快点儿.",
+      "ex": [
+        { "cn": "第一次上台，我很紧张。", "py": "Dì-yī cì shàngtái, wǒ hěn jǐnzhāng.", "vi": "Lần đầu lên sân khấu, tôi rất hồi hộp." },
+        { "cn": "快点儿，来不及了！", "py": "Kuài diǎnr, láibují le!", "vi": "Nhanh lên, không kịp mất!" }
+      ] },
+    { "t": "后悔 + việc đã làm hoặc chưa làm",
+      "b": "后悔 + (没) + động từ",
+      "d": "后悔来了 (hối vì đã đến) và 后悔没来 (hối vì đã không đến). Chỉ khác một chữ 没 mà nghĩa ngược hẳn — chú ý khi nghe.",
+      "ex": [
+        { "cn": "我后悔买了这个。", "py": "Wǒ hòuhuǐ mǎi le zhège.", "vi": "Tôi hối vì đã mua cái này." },
+        { "cn": "我后悔没听你的话。", "py": "Wǒ hòuhuǐ méi tīng nǐ de huà.", "vi": "Tôi hối vì đã không nghe lời bạn." }
+      ] },
+    { "t": "Ba mức buồn: 难过 < 伤心 < 痛苦",
+      "b": "难过 (buồn) · 伤心 (đau lòng) · 痛苦 (đau khổ)",
+      "d": "难过 (bài 34) là buồn thường ngày. 伤心 nặng hơn, thường kèm nước mắt. Chọn đúng mức để lời nói không quá nhẹ hay quá nặng.",
+      "ex": [
+        { "cn": "考得不好，我有点儿难过。", "py": "Kǎo de bù hǎo, wǒ yǒudiǎnr nánguò.", "vi": "Thi không tốt, tôi hơi buồn." },
+        { "cn": "听到那个消息，她非常伤心。", "py": "Tīng dào nàge xiāoxi, tā fēicháng shāngxīn.", "vi": "Nghe tin đó, cô ấy vô cùng đau lòng." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我很后悔没有早点儿开始学汉语。", "py": "Wǒ hěn hòuhuǐ méiyǒu zǎo diǎnr kāishǐ xué Hànyǔ.", "vi": "Tôi rất tiếc vì đã không học tiếng Trung sớm hơn." },
+    { "cn": "这次的结果让大家都很失望。", "py": "Zhè cì de jiéguǒ ràng dàjiā dōu hěn shīwàng.", "vi": "Kết quả lần này khiến ai cũng thất vọng." },
+    { "cn": "她因为这件事伤心了很久。", "py": "Tā yīnwèi zhè jiàn shì shāngxīn le hěn jiǔ.", "vi": "Cô ấy buồn vì chuyện này rất lâu." },
+    { "cn": "我讨厌下雨天出门。", "py": "Wǒ tǎoyàn xiàyǔ tiān chūmén.", "vi": "Tôi ghét ra ngoài vào ngày mưa." },
+    { "cn": "工作上的烦恼别带回家。", "py": "Gōngzuò shàng de fánnǎo bié dài huí jiā.", "vi": "Phiền muộn công việc đừng mang về nhà." },
+    { "cn": "面试的时候不要太紧张。", "py": "Miànshì de shíhou búyào tài jǐnzhāng.", "vi": "Lúc phỏng vấn đừng quá hồi hộp." },
+    { "cn": "吃得太多，肚子很难受。", "py": "Chī de tài duō, dùzi hěn nánshòu.", "vi": "Ăn nhiều quá, bụng khó chịu." },
+    { "cn": "一个人在家很无聊。", "py": "Yí ge rén zài jiā hěn wúliáo.", "vi": "Ở nhà một mình chán lắm." },
+    { "cn": "他一个人生活，真可怜。", "py": "Tā yí ge rén shēnghuó, zhēn kělián.", "vi": "Anh ấy sống một mình, thật tội." },
+    { "cn": "小朋友第一次见老师会害羞。", "py": "Xiǎopéngyǒu dì-yī cì jiàn lǎoshī huì hàixiū.", "vi": "Trẻ con lần đầu gặp cô giáo hay ngại." }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": 15,
+  "cn": "今天天气怎么样？",
+  "title": "Thời tiết và phép lịch sự",
+  "goal": "Nói về thời tiết, hỏi tuổi, xin lỗi và đáp lễ — trọn bộ nghi thức giao tiếp cơ bản.",
+  "words": [
+    { "w": "天气", "py": "tiānqì", "hv": "thiên khí", "vi": "thời tiết", "pos": "danh từ",
+      "note": "天 (trời) + 气 (khí). Tiếng Việt: \"khí hậu\", \"không khí\", \"thiên nhiên\".",
+      "ex": [{ "cn": "今天天气很好。", "py": "Jīntiān tiānqì hěn hǎo.", "vi": "Hôm nay thời tiết đẹp." }] },
+    { "w": "冷", "py": "lěng", "hv": "lãnh", "vi": "lạnh", "pos": "tính từ",
+      "note": "Bộ 冫 (hai chấm băng) bên trái — dấu hiệu của giá lạnh. Tiếng Việt: \"lãnh đạm\", \"lạnh lẽo\".",
+      "ex": [{ "cn": "今天很冷。", "py": "Jīntiān hěn lěng.", "vi": "Hôm nay rất lạnh." }] },
+    { "w": "热", "py": "rè", "hv": "nhiệt", "vi": "nóng", "pos": "tính từ",
+      "note": "Bộ 灬 (bốn chấm lửa) ở dưới. Tiếng Việt: \"nhiệt độ\", \"nhiệt tình\", \"nhiệt đới\".",
+      "ex": [{ "cn": "越南很热。", "py": "Yuènán hěn rè.", "vi": "Việt Nam rất nóng." }] },
+    { "w": "下雨", "py": "xiàyǔ", "hv": "hạ vũ", "vi": "mưa, trời mưa", "pos": "động từ",
+      "note": "下 (rơi xuống) + 雨 (mưa). Tiếng Trung coi mưa là một HÀNH ĐỘNG, nên nói 下雨了 (mưa rồi).",
+      "ex": [{ "cn": "外面下雨了。", "py": "Wàimiàn xiàyǔ le.", "vi": "Bên ngoài mưa rồi." }] },
+    { "w": "对不起", "py": "duìbuqǐ", "hv": "đối bất khởi", "vi": "xin lỗi", "pos": "động từ",
+      "note": "Nghĩa đen: \"không xứng đối mặt với bạn\". Dùng khi mình thực sự có lỗi.",
+      "ex": [{ "cn": "对不起，我来晚了。", "py": "Duìbuqǐ, wǒ lái wǎn le.", "vi": "Xin lỗi, tôi đến muộn." }] },
+    { "w": "没关系", "py": "méi guānxi", "hv": "một quan hệ", "vi": "không sao đâu", "pos": "cụm từ",
+      "note": "Nghĩa đen: \"không có liên quan gì\". 关系 chính là \"quan hệ\" tiếng Việt. Đây là câu ĐÁP LẠI 对不起.",
+      "ex": [{ "cn": "没关系。", "py": "Méi guānxi.", "vi": "Không sao đâu." }] },
+    { "w": "不客气", "py": "bú kèqi", "hv": "bất khách khí", "vi": "không có gì, đừng khách sáo", "pos": "cụm từ",
+      "note": "Nghĩa đen: \"đừng khách khí\". Đây là câu ĐÁP LẠI 谢谢. Đừng dùng nhầm với 没关系.",
+      "ex": [{ "cn": "不客气！", "py": "Bú kèqi!", "vi": "Không có gì!" }] },
+    { "w": "谁", "py": "shéi", "hv": "thuỳ", "vi": "ai", "pos": "đại từ nghi vấn",
+      "note": "Có bộ 讠 (lời nói). Đọc là shéi trong khẩu ngữ, shuí trong văn viết. Cả hai đều đúng.",
+      "ex": [{ "cn": "他是谁？", "py": "Tā shì shéi?", "vi": "Anh ấy là ai?" }] },
+    { "w": "岁", "py": "suì", "hv": "tuế", "vi": "tuổi", "pos": "lượng từ",
+      "note": "山 (núi) + 夕 (chiều tối). Tiếng Việt có \"tuế nguyệt\" (năm tháng) trong văn cổ.",
+      "ex": [{ "cn": "我二十岁。", "py": "Wǒ èrshí suì.", "vi": "Tôi hai mươi tuổi." }] },
+    { "w": "哪", "py": "nǎ", "hv": "na", "vi": "nào (cái nào)", "pos": "đại từ nghi vấn",
+      "note": "So sánh kỹ ba chữ: 那 nà (kia) — 哪 nǎ (nào) — 呢 ne (trợ từ). Rất dễ nhầm khi mới học.",
+      "ex": [{ "cn": "你是哪国人？", "py": "Nǐ shì nǎ guó rén?", "vi": "Bạn là người nước nào?" }] }
+  ],
+  "grammar": [
+    { "t": "Cặp đôi lịch sự — đáp đúng câu",
+      "b": "谢谢 → 不客气 · 对不起 → 没关系",
+      "d": "Đây là lỗi người mới hay mắc: đáp 没关系 cho lời cảm ơn. Nhớ theo cặp: cảm ơn thì đáp \"đừng khách sáo\", xin lỗi thì đáp \"không sao\".",
+      "ex": [
+        { "cn": "谢谢你！— 不客气。", "py": "Xièxie nǐ! — Bú kèqi.", "vi": "Cảm ơn bạn! — Không có gì." },
+        { "cn": "对不起。— 没关系。", "py": "Duìbuqǐ. — Méi guānxi.", "vi": "Xin lỗi. — Không sao đâu." }
+      ] },
+    { "t": "Hỏi tuổi — ba cách cho ba đối tượng",
+      "b": "Trẻ em: 你几岁？· Người ngang tuổi: 你多大？· Người lớn tuổi: 您多大年纪？",
+      "d": "Hỏi tuổi trong tiếng Trung phải chọn câu theo tuổi người nghe. Hỏi người lớn bằng 你几岁 là rất bất lịch sự vì câu đó chỉ dành cho trẻ con dưới 10 tuổi.",
+      "ex": [
+        { "cn": "你几岁？", "py": "Nǐ jǐ suì?", "vi": "Cháu mấy tuổi? (hỏi trẻ con)" },
+        { "cn": "你多大？", "py": "Nǐ duō dà?", "vi": "Bạn bao nhiêu tuổi?" },
+        { "cn": "我二十岁。", "py": "Wǒ èrshí suì.", "vi": "Tôi 20 tuổi." }
+      ] },
+    { "t": "Câu thời tiết không cần chủ ngữ",
+      "b": "下雨了。· 很冷。",
+      "d": "Tiếng Trung cho phép bỏ hẳn chủ ngữ khi nói về thời tiết, giống tiếng Việt nói \"Mưa rồi\", \"Lạnh quá\". Chữ 了 ở cuối báo hiệu TÌNH HÌNH ĐÃ THAY ĐỔI.",
+      "ex": [
+        { "cn": "下雨了。", "py": "Xiàyǔ le.", "vi": "Mưa rồi." },
+        { "cn": "天气冷了。", "py": "Tiānqì lěng le.", "vi": "Trời lạnh rồi." }
+      ] },
+    { "t": "Ba chữ dễ nhầm: 那 / 哪 / 呢",
+      "b": "那 nà = kia · 哪 nǎ = nào · 呢 ne = trợ từ hỏi lại",
+      "d": "那 và 哪 chỉ khác nhau bộ 口 bên trái và thanh điệu. Mẹo nhớ: 哪 có MIỆNG 口 vì phải MỞ MIỆNG ra hỏi.",
+      "ex": [
+        { "cn": "那是什么？", "py": "Nà shì shénme?", "vi": "Kia là cái gì?" },
+        { "cn": "你要哪个？", "py": "Nǐ yào nǎge?", "vi": "Bạn muốn cái nào?" },
+        { "cn": "我很好，你呢？", "py": "Wǒ hěn hǎo, nǐ ne?", "vi": "Tôi khoẻ, còn bạn?" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "今天天气怎么样？", "py": "Jīntiān tiānqì zěnmeyàng?", "vi": "Hôm nay thời tiết thế nào?" },
+    { "cn": "今天很热。", "py": "Jīntiān hěn rè.", "vi": "Hôm nay rất nóng." },
+    { "cn": "昨天很冷，今天不冷。", "py": "Zuótiān hěn lěng, jīntiān bù lěng.", "vi": "Hôm qua rất lạnh, hôm nay không lạnh." },
+    { "cn": "外面下雨了。", "py": "Wàimiàn xiàyǔ le.", "vi": "Bên ngoài mưa rồi." },
+    { "cn": "对不起，我来晚了。", "py": "Duìbuqǐ, wǒ lái wǎn le.", "vi": "Xin lỗi, tôi đến muộn." },
+    { "cn": "没关系。", "py": "Méi guānxi.", "vi": "Không sao đâu." },
+    { "cn": "谢谢你！— 不客气。", "py": "Xièxie nǐ! — Bú kèqi.", "vi": "Cảm ơn bạn! — Không có gì." },
+    { "cn": "他是谁？", "py": "Tā shì shéi?", "vi": "Anh ấy là ai?" },
+    { "cn": "你今年多大？", "py": "Nǐ jīnnián duō dà?", "vi": "Năm nay bạn bao nhiêu tuổi?" },
+    { "cn": "你是哪国人？", "py": "Nǐ shì nǎ guó rén?", "vi": "Bạn là người nước nào?" }
+  ]
+}

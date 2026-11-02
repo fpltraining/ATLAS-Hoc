@@ -1,0 +1,82 @@
+{
+  "id": 56,
+  "cn": "重要的语法词",
+  "title": "Ngữ pháp trọng tâm",
+  "goal": "Câu bị động với 被, so sánh bằng 跟…一样, và trạng ngữ với 地 — ba cột trụ của HSK 3.",
+  "words": [
+    { "w": "把", "py": "bǎ", "hv": "bả", "vi": "(giới từ đưa tân ngữ lên trước)", "pos": "giới từ",
+      "note": "Đã học ở bài 44. Bộ 扌 (tay) — nghĩa gốc là \"nắm lấy\". Cũng là lượng từ: 一把伞 (một cái ô).",
+      "ex": [{ "cn": "请把门关上。", "py": "Qǐng bǎ mén guān shàng.", "vi": "Xin đóng cửa lại." }] },
+    { "w": "被", "py": "bèi", "hv": "bị", "vi": "bị, được (câu bị động)", "pos": "giới từ",
+      "note": "Chính là chữ \"bị\" trong \"bị động\", \"bị hại\" của tiếng Việt. Bộ 衤 (áo) — nghĩa gốc là cái chăn đắp lên người.",
+      "ex": [{ "cn": "我的自行车被偷了。", "py": "Wǒ de zìxíngchē bèi tōu le.", "vi": "Xe đạp của tôi bị trộm mất." }] },
+    { "w": "地", "py": "de", "hv": "địa", "vi": "(trợ từ nối trạng ngữ)", "pos": "trợ từ",
+      "note": "Cùng chữ với 地方 (bài 40) nhưng khi làm trợ từ thì đọc nhẹ là de. Nối tính từ với động từ.",
+      "ex": [{ "cn": "他高兴地笑了。", "py": "Tā gāoxìng de xiào le.", "vi": "Anh ấy cười vui vẻ." }] },
+    { "w": "跟", "py": "gēn", "hv": "cân", "vi": "với, cùng; theo", "pos": "giới từ",
+      "note": "Bộ ⻊ (chân) — nghĩa gốc là đi theo sau. Gần nghĩa với 和 nhưng 跟 dùng được với động từ: 跟我来 (đi theo tôi).",
+      "ex": [{ "cn": "我跟你一起去。", "py": "Wǒ gēn nǐ yìqǐ qù.", "vi": "Tôi đi cùng bạn." }] },
+    { "w": "更", "py": "gèng", "hv": "cánh", "vi": "càng, hơn nữa", "pos": "phó từ",
+      "note": "Dùng khi đã có một mức so sánh sẵn: 这个好，那个更好 (cái này tốt, cái kia còn tốt hơn).",
+      "ex": [{ "cn": "今天比昨天更冷。", "py": "Jīntiān bǐ zuótiān gèng lěng.", "vi": "Hôm nay còn lạnh hơn hôm qua." }] },
+    { "w": "又", "py": "yòu", "hv": "hựu", "vi": "lại (việc ĐÃ xảy ra)", "pos": "phó từ",
+      "note": "Bộ thủ đã học (hình bàn tay). Khác 再 (bài 30): 又 cho việc đã lặp lại rồi, 再 cho việc sắp lặp lại.",
+      "ex": [{ "cn": "他又迟到了。", "py": "Tā yòu chídào le.", "vi": "Cậu ấy lại đến muộn nữa rồi." }] },
+    { "w": "比较", "py": "bǐjiào", "hv": "tỷ giảo", "vi": "khá, tương đối; so sánh", "pos": "phó từ / động từ",
+      "note": "比 (so, bài 28) + 较 (so đo). Làm phó từ nghĩa là \"khá\" — nhẹ hơn 很: 比较好 = khá tốt.",
+      "ex": [{ "cn": "今天比较忙。", "py": "Jīntiān bǐjiào máng.", "vi": "Hôm nay khá bận." }] },
+    { "w": "一样", "py": "yíyàng", "hv": "nhất dạng", "vi": "giống nhau, như nhau", "pos": "tính từ",
+      "note": "样 = \"dạng\" trong \"hình dạng\", \"đa dạng\". Dùng trong cấu trúc 跟…一样.",
+      "ex": [{ "cn": "这两个一样吗？", "py": "Zhè liǎng ge yíyàng ma?", "vi": "Hai cái này giống nhau không?" }] },
+    { "w": "一定", "py": "yídìng", "hv": "nhất định", "vi": "nhất định, chắc chắn", "pos": "phó từ",
+      "note": "Chính là \"nhất định\" tiếng Việt. Đứng trước động từ: 我一定去.",
+      "ex": [{ "cn": "我一定会来。", "py": "Wǒ yídìng huì lái.", "vi": "Tôi nhất định sẽ đến." }] },
+    { "w": "应该", "py": "yīnggāi", "hv": "ứng cai", "vi": "nên, phải", "pos": "động từ năng nguyện",
+      "note": "Nói về bổn phận và lời khuyên. Nói tắt là 该. Phủ định: 不应该 (không nên).",
+      "ex": [{ "cn": "你应该多休息。", "py": "Nǐ yīnggāi duō xiūxi.", "vi": "Bạn nên nghỉ nhiều hơn." }] }
+  ],
+  "grammar": [
+    { "t": "Câu bị động với 被",
+      "b": "Người/vật bị + 被 (+ kẻ gây ra) + động từ + kết quả",
+      "d": "被 gần như là chữ \"bị\" tiếng Việt, cả về âm lẫn nghĩa. Kẻ gây ra có thể lược đi: 我的车被偷了. Giống câu 把, sau động từ BẮT BUỘC có phần kết quả (了, 走, 完…). Lưu ý: tiếng Trung dùng 被 ít hơn tiếng Việt nhiều, và thường cho việc KHÔNG MAY.",
+      "ex": [
+        { "cn": "我的手机被弟弟拿走了。", "py": "Wǒ de shǒujī bèi dìdi ná zǒu le.", "vi": "Điện thoại tôi bị em trai lấy mất." },
+        { "cn": "蛋糕被孩子们吃完了。", "py": "Dàngāo bèi háizimen chī wán le.", "vi": "Bánh bị bọn trẻ ăn hết rồi." }
+      ] },
+    { "t": "把 và 被 — hai mặt của một đồng xu",
+      "b": "把 = tôi làm gì đó với nó · 被 = nó bị làm gì đó",
+      "d": "Cùng một sự việc, hai góc nhìn: 弟弟把蛋糕吃完了 (em trai ăn hết bánh) và 蛋糕被弟弟吃完了 (bánh bị em trai ăn hết). Cả hai đều cần phần KẾT QUẢ sau động từ.",
+      "ex": [
+        { "cn": "他把窗户打开了。", "py": "Tā bǎ chuānghu dǎkāi le.", "vi": "Anh ấy mở cửa sổ ra." },
+        { "cn": "窗户被他打开了。", "py": "Chuānghu bèi tā dǎkāi le.", "vi": "Cửa sổ bị anh ấy mở ra." }
+      ] },
+    { "t": "跟 … 一样 — giống như",
+      "b": "A + 跟 + B + 一样 (+ tính từ)",
+      "d": "Nói hai thứ giống nhau. Thêm tính từ để nói giống ở điểm nào: 他跟我一样高 (anh ấy cao bằng tôi). Phủ định: 不一样.",
+      "ex": [
+        { "cn": "我的手机跟你的一样。", "py": "Wǒ de shǒujī gēn nǐ de yíyàng.", "vi": "Điện thoại của tôi giống của bạn." },
+        { "cn": "他跟我一样大。", "py": "Tā gēn wǒ yíyàng dà.", "vi": "Anh ấy bằng tuổi tôi." },
+        { "cn": "这两件衣服不一样。", "py": "Zhè liǎng jiàn yīfu bù yíyàng.", "vi": "Hai bộ đồ này không giống nhau." }
+      ] },
+    { "t": "地 — biến tính từ thành trạng ngữ",
+      "b": "tính từ + 地 + động từ",
+      "d": "Đừng nhầm ba chữ đọc \"de\": 的 (sở hữu, đứng trước DANH TỪ), 得 (bổ ngữ, đứng SAU động từ), 地 (trạng ngữ, đứng TRƯỚC động từ). Ba chữ này là cửa ải lớn của HSK 3.",
+      "ex": [
+        { "cn": "他高兴地笑了。", "py": "Tā gāoxìng de xiào le.", "vi": "Anh ấy cười vui vẻ. (地 trước động từ)" },
+        { "cn": "他笑得很高兴。", "py": "Tā xiào de hěn gāoxìng.", "vi": "Anh ấy cười rất vui. (得 sau động từ)" },
+        { "cn": "他是一个高兴的人。", "py": "Tā shì yí ge gāoxìng de rén.", "vi": "Anh ấy là người vui vẻ. (的 trước danh từ)" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "请把这些东西放在桌子上。", "py": "Qǐng bǎ zhèxiē dōngxi fàng zài zhuōzi shàng.", "vi": "Xin đặt mấy thứ này lên bàn." },
+    { "cn": "我的伞被人拿走了。", "py": "Wǒ de sǎn bèi rén ná zǒu le.", "vi": "Cái ô của tôi bị người ta lấy mất." },
+    { "cn": "孩子们高兴地跑了出去。", "py": "Háizimen gāoxìng de pǎo le chūqu.", "vi": "Bọn trẻ vui vẻ chạy ra ngoài." },
+    { "cn": "我跟他一起去看电影。", "py": "Wǒ gēn tā yìqǐ qù kàn diànyǐng.", "vi": "Tôi đi xem phim cùng anh ấy." },
+    { "cn": "这个比那个更便宜。", "py": "Zhège bǐ nàge gèng piányi.", "vi": "Cái này còn rẻ hơn cái kia." },
+    { "cn": "他昨天来了，今天又来了。", "py": "Tā zuótiān lái le, jīntiān yòu lái le.", "vi": "Hôm qua anh ấy đến, hôm nay lại đến nữa." },
+    { "cn": "今天的作业比较简单。", "py": "Jīntiān de zuòyè bǐjiào jiǎndān.", "vi": "Bài tập hôm nay khá đơn giản." },
+    { "cn": "我的想法跟你的一样。", "py": "Wǒ de xiǎngfǎ gēn nǐ de yíyàng.", "vi": "Suy nghĩ của tôi giống bạn." },
+    { "cn": "你放心，我一定帮你。", "py": "Nǐ fàngxīn, wǒ yídìng bāng nǐ.", "vi": "Bạn yên tâm, tôi nhất định giúp bạn." },
+    { "cn": "生病了就应该去看医生。", "py": "Shēngbìng le jiù yīnggāi qù kàn yīshēng.", "vi": "Ốm rồi thì nên đi khám bác sĩ." }
+  ]
+}

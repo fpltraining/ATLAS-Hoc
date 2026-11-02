@@ -1,0 +1,74 @@
+{
+  "id": 39,
+  "cn": "工作和会议",
+  "title": "Công việc và cuộc họp",
+  "goal": "Nói chuyện nơi công sở, đề nghị giải pháp — sáu trên mười từ là từ Hán Việt quen thuộc.",
+  "words": [
+    { "w": "经理", "py": "jīnglǐ", "hv": "kinh lý", "vi": "giám đốc, quản lý", "pos": "danh từ",
+      "note": "经 (kinh doanh) + 理 (quản lý). Tiếng Việt: \"kinh lý\", \"quản lý\", \"lý sự\". Gọi kèm họ: 王经理.",
+      "ex": [{ "cn": "我们的经理姓李。", "py": "Wǒmen de jīnglǐ xìng Lǐ.", "vi": "Giám đốc chúng tôi họ Lý." }] },
+    { "w": "同事", "py": "tóngshì", "hv": "đồng sự", "vi": "đồng nghiệp", "pos": "danh từ",
+      "note": "Chính là \"đồng sự\" tiếng Việt: 同 (cùng) + 事 (việc). Cùng nhóm với 同学 (bài 5), 同意 (bài 34).",
+      "ex": [{ "cn": "他是我的同事。", "py": "Tā shì wǒ de tóngshì.", "vi": "Anh ấy là đồng nghiệp của tôi." }] },
+    { "w": "办公室", "py": "bàngōngshì", "hv": "biện công thất", "vi": "văn phòng", "pos": "danh từ",
+      "note": "办 (làm) + 公 (việc công) + 室 (phòng). Tiếng Việt: \"biện pháp\", \"công vụ\", \"phòng thất\".",
+      "ex": [{ "cn": "经理在办公室里。", "py": "Jīnglǐ zài bàngōngshì lǐ.", "vi": "Giám đốc ở trong văn phòng." }] },
+    { "w": "会议", "py": "huìyì", "hv": "hội nghị", "vi": "cuộc họp, hội nghị", "pos": "danh từ",
+      "note": "Chính là \"hội nghị\" tiếng Việt. Họp là 开会 (mở hội) — dùng động từ 开 như 开车, 开门.",
+      "ex": [{ "cn": "下午有一个会议。", "py": "Xiàwǔ yǒu yí ge huìyì.", "vi": "Chiều có một cuộc họp." }] },
+    { "w": "司机", "py": "sījī", "hv": "tư cơ", "vi": "tài xế", "pos": "danh từ",
+      "note": "司 (điều khiển) + 机 (máy). 司 cũng nằm trong 公司 (công ty) ở bài 20.",
+      "ex": [{ "cn": "出租车司机很热情。", "py": "Chūzūchē sījī hěn rèqíng.", "vi": "Bác tài taxi rất nhiệt tình." }] },
+    { "w": "帮忙", "py": "bāngmáng", "hv": "bang mang", "vi": "giúp một tay", "pos": "động từ",
+      "note": "Là động từ ly hợp: giúp AI thì tách ra — 帮我的忙, hoặc đơn giản dùng 帮我 như bài 20.",
+      "ex": [{ "cn": "你能帮个忙吗？", "py": "Nǐ néng bāng ge máng ma?", "vi": "Bạn giúp một tay được không?" }] },
+    { "w": "完成", "py": "wánchéng", "hv": "hoàn thành", "vi": "hoàn thành", "pos": "động từ",
+      "note": "Chính là \"hoàn thành\" tiếng Việt: 完 (xong, bài 23) + 成 (nên).",
+      "ex": [{ "cn": "工作已经完成了。", "py": "Gōngzuò yǐjīng wánchéng le.", "vi": "Công việc đã hoàn thành rồi." }] },
+    { "w": "要求", "py": "yāoqiú", "hv": "yêu cầu", "vi": "yêu cầu", "pos": "động từ / danh từ",
+      "note": "Chính là \"yêu cầu\" tiếng Việt. Chú ý 要 ở đây đọc yāo (thanh 1), không phải yào.",
+      "ex": [{ "cn": "老板对我们要求很高。", "py": "Lǎobǎn duì wǒmen yāoqiú hěn gāo.", "vi": "Sếp yêu cầu chúng tôi rất cao." }] },
+    { "w": "解决", "py": "jiějué", "hv": "giải quyết", "vi": "giải quyết", "pos": "động từ",
+      "note": "Chính là \"giải quyết\" tiếng Việt. 解 vốn là hình con dao mổ con bò — tháo gỡ ra.",
+      "ex": [{ "cn": "这个问题解决了。", "py": "Zhège wèntí jiějué le.", "vi": "Vấn đề này giải quyết xong rồi." }] },
+    { "w": "办法", "py": "bànfǎ", "hv": "biện pháp", "vi": "cách, biện pháp", "pos": "danh từ",
+      "note": "Chính là \"biện pháp\" tiếng Việt. 没办法 = không còn cách nào, câu than thở rất hay dùng.",
+      "ex": [{ "cn": "你有什么好办法？", "py": "Nǐ yǒu shénme hǎo bànfǎ?", "vi": "Bạn có cách nào hay không?" }] }
+  ],
+  "grammar": [
+    { "t": "已经 … 了 — đã… rồi",
+      "b": "已经 + động từ + 了",
+      "d": "已经 yǐjīng nghĩa là \"đã\". Gần như luôn đi kèm 了 ở cuối câu. Phủ định thì bỏ cả hai và dùng 还没: 还没完成 (vẫn chưa xong).",
+      "ex": [
+        { "cn": "工作已经完成了。", "py": "Gōngzuò yǐjīng wánchéng le.", "vi": "Việc đã xong rồi." },
+        { "cn": "会议已经开始了。", "py": "Huìyì yǐjīng kāishǐ le.", "vi": "Cuộc họp đã bắt đầu rồi." },
+        { "cn": "我还没完成。", "py": "Wǒ hái méi wánchéng.", "vi": "Tôi vẫn chưa xong." }
+      ] },
+    { "t": "Động từ ly hợp trong công sở",
+      "b": "帮忙 · 开会 · 上班 · 请假",
+      "d": "Cùng nhóm với 唱歌, 跳舞, 生气 đã học. Muốn thêm gì thì chèn vào giữa: 帮我的忙, 开了三个小时会, 请一天假. Đây là điểm ngữ pháp người Việt hay quên nhất.",
+      "ex": [
+        { "cn": "他帮了我很大的忙。", "py": "Tā bāng le wǒ hěn dà de máng.", "vi": "Anh ấy giúp tôi rất nhiều." },
+        { "cn": "我们开了两个小时会。", "py": "Wǒmen kāi le liǎng ge xiǎoshí huì.", "vi": "Chúng tôi họp hai tiếng." }
+      ] },
+    { "t": "对 … 要求高 — đòi hỏi cao với ai",
+      "b": "对 + người + 要求 + 高/严",
+      "d": "Lại là mẫu 对 quen thuộc từ bài 34. Nhớ: cụm 对… luôn đứng TRƯỚC phần miêu tả, không đứng sau.",
+      "ex": [
+        { "cn": "老师对学生要求很高。", "py": "Lǎoshī duì xuésheng yāoqiú hěn gāo.", "vi": "Thầy yêu cầu học sinh rất cao." },
+        { "cn": "他对自己要求很严。", "py": "Tā duì zìjǐ yāoqiú hěn yán.", "vi": "Anh ấy đòi hỏi bản thân rất nghiêm." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "经理让我参加下午的会议。", "py": "Jīnglǐ ràng wǒ cānjiā xiàwǔ de huìyì.", "vi": "Giám đốc bảo tôi dự cuộc họp chiều nay." },
+    { "cn": "我的同事都很热情。", "py": "Wǒ de tóngshì dōu hěn rèqíng.", "vi": "Đồng nghiệp của tôi đều rất nhiệt tình." },
+    { "cn": "办公室在三楼。", "py": "Bàngōngshì zài sān lóu.", "vi": "Văn phòng ở tầng ba." },
+    { "cn": "会议几点开始？", "py": "Huìyì jǐ diǎn kāishǐ?", "vi": "Mấy giờ họp?" },
+    { "cn": "你能帮我一个忙吗？", "py": "Nǐ néng bāng wǒ yí ge máng ma?", "vi": "Bạn giúp tôi một việc được không?" },
+    { "cn": "这个工作我已经完成了。", "py": "Zhège gōngzuò wǒ yǐjīng wánchéng le.", "vi": "Việc này tôi đã làm xong rồi." },
+    { "cn": "我们一定能解决这个问题。", "py": "Wǒmen yídìng néng jiějué zhège wèntí.", "vi": "Chúng ta nhất định giải quyết được vấn đề này." },
+    { "cn": "没办法，只能这样了。", "py": "Méi bànfǎ, zhǐ néng zhèyàng le.", "vi": "Không còn cách nào, đành vậy thôi." },
+    { "cn": "司机把我们送到了机场。", "py": "Sījī bǎ wǒmen sòng dào le jīchǎng.", "vi": "Tài xế đưa chúng tôi tới sân bay." },
+    { "cn": "老板对工作要求很高。", "py": "Lǎobǎn duì gōngzuò yāoqiú hěn gāo.", "vi": "Sếp yêu cầu công việc rất cao." }
+  ]
+}

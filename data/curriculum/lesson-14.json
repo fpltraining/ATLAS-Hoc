@@ -1,0 +1,82 @@
+{
+  "id": 14,
+  "cn": "我喜欢猫",
+  "title": "Tôi thích mèo",
+  "goal": "Nói về sở thích, khen chê, hỏi ý kiến bằng 怎么样 và hỏi cách làm bằng 怎么.",
+  "words": [
+    { "w": "喜欢", "py": "xǐhuan", "hv": "hỉ hoan", "vi": "thích", "pos": "động từ",
+      "note": "Tiếng Việt có \"hoan hỉ\" (vui mừng) — cùng hai chữ này nhưng đảo thứ tự. Sau 喜欢 có thể là danh từ HOẶC cả một động từ.",
+      "ex": [{ "cn": "我喜欢猫。", "py": "Wǒ xǐhuan māo.", "vi": "Tôi thích mèo." }] },
+    { "w": "爱", "py": "ài", "hv": "ái", "vi": "yêu; rất thích", "pos": "động từ",
+      "note": "Tiếng Việt: \"ái tình\", \"tình ái\", \"ái mộ\". Mạnh hơn 喜欢 nhiều — đừng dùng bừa với người lạ.",
+      "ex": [{ "cn": "我爱我的家。", "py": "Wǒ ài wǒ de jiā.", "vi": "Tôi yêu gia đình mình." }] },
+    { "w": "漂亮", "py": "piàoliang", "hv": "phiêu lượng", "vi": "đẹp, xinh", "pos": "tính từ",
+      "note": "Chữ thứ hai đọc nhẹ. Dùng khen người (nữ), đồ vật, phong cảnh. Khen nam giới thì dùng 帅 shuài (đẹp trai).",
+      "ex": [{ "cn": "她很漂亮。", "py": "Tā hěn piàoliang.", "vi": "Cô ấy rất xinh." }] },
+    { "w": "多", "py": "duō", "hv": "đa", "vi": "nhiều", "pos": "tính từ",
+      "note": "Hai chữ 夕 (buổi tối) chồng lên nhau — nhiều đêm nối tiếp. Tiếng Việt: \"đa số\", \"đa dạng\".",
+      "ex": [{ "cn": "我有很多书。", "py": "Wǒ yǒu hěn duō shū.", "vi": "Tôi có rất nhiều sách." }] },
+    { "w": "猫", "py": "māo", "hv": "miêu", "vi": "con mèo", "pos": "danh từ",
+      "note": "Bộ 犭 (thú bốn chân) + 苗. Tiếng Việt có \"miêu\" trong \"miêu nữ\". Từ \"mèo\" tiếng Việt cũng cùng gốc.",
+      "ex": [{ "cn": "我家有两只猫。", "py": "Wǒ jiā yǒu liǎng zhī māo.", "vi": "Nhà tôi có hai con mèo." }] },
+    { "w": "狗", "py": "gǒu", "hv": "cẩu", "vi": "con chó", "pos": "danh từ",
+      "note": "Cũng có bộ 犭. Tiếng Việt: \"cẩu\" trong \"cẩu thả\", \"hải cẩu\". Lượng từ cho động vật là 只 zhī.",
+      "ex": [{ "cn": "这只狗很大。", "py": "Zhè zhī gǒu hěn dà.", "vi": "Con chó này rất to." }] },
+    { "w": "本", "py": "běn", "hv": "bản", "vi": "quyển (lượng từ cho sách)", "pos": "lượng từ",
+      "note": "木 (cây) thêm một nét ngang ở gốc = gốc rễ. Tiếng Việt: \"cơ bản\", \"bản gốc\", \"nguyên bản\".",
+      "ex": [{ "cn": "一本书", "py": "yì běn shū", "vi": "một quyển sách" }] },
+    { "w": "时候", "py": "shíhou", "hv": "thì hậu", "vi": "lúc, khi, thời điểm", "pos": "danh từ",
+      "note": "Hay dùng trong cấu trúc …的时候 = \"khi mà…\". Tiếng Việt: \"thời gian\", \"thời điểm\".",
+      "ex": [{ "cn": "我小的时候很喜欢猫。", "py": "Wǒ xiǎo de shíhou hěn xǐhuan māo.", "vi": "Hồi nhỏ tôi rất thích mèo." }] },
+    { "w": "怎么", "py": "zěnme", "hv": "chẩm ma", "vi": "làm thế nào, sao lại", "pos": "đại từ nghi vấn",
+      "note": "Hỏi CÁCH THỨC: 怎么写? (viết thế nào?). Cũng hỏi lý do khi ngạc nhiên: 你怎么不来? (sao bạn không đến?).",
+      "ex": [{ "cn": "这个字怎么写？", "py": "Zhège zì zěnme xiě?", "vi": "Chữ này viết thế nào?" }] },
+    { "w": "怎么样", "py": "zěnmeyàng", "hv": "chẩm ma dạng", "vi": "thế nào, ra sao", "pos": "đại từ nghi vấn",
+      "note": "Hỏi Ý KIẾN hoặc TÌNH TRẠNG, khác 怎么 (hỏi cách làm). Cũng dùng để rủ rê: 我们去吃饭，怎么样?",
+      "ex": [{ "cn": "这个电影怎么样？", "py": "Zhège diànyǐng zěnmeyàng?", "vi": "Bộ phim này thế nào?" }] }
+  ],
+  "grammar": [
+    { "t": "喜欢 + danh từ HOẶC + động từ",
+      "b": "喜欢 + danh từ · 喜欢 + động từ + tân ngữ",
+      "d": "Khác nhiều động từ khác, sau 喜欢 có thể là cả một cụm hành động. 我喜欢猫 (thích mèo) và 我喜欢看书 (thích đọc sách) đều đúng.",
+      "ex": [
+        { "cn": "我喜欢中国菜。", "py": "Wǒ xǐhuan Zhōngguó cài.", "vi": "Tôi thích món Trung Quốc." },
+        { "cn": "我喜欢看电影。", "py": "Wǒ xǐhuan kàn diànyǐng.", "vi": "Tôi thích xem phim." },
+        { "cn": "我不喜欢喝茶。", "py": "Wǒ bù xǐhuan hē chá.", "vi": "Tôi không thích uống trà." }
+      ] },
+    { "t": "怎么 và 怎么样 — đừng nhầm",
+      "b": "怎么 + động từ (cách làm) · Danh từ + 怎么样 ? (ý kiến)",
+      "d": "怎么 luôn đứng TRƯỚC động từ và hỏi LÀM THẾ NÀO. 怎么样 đứng CUỐI câu và hỏi THẾ NÀO, RA SAO. Nói 这个电影怎么? là sai.",
+      "ex": [
+        { "cn": "这个字怎么写？", "py": "Zhège zì zěnme xiě?", "vi": "Chữ này viết thế nào? (cách làm)" },
+        { "cn": "你的工作怎么样？", "py": "Nǐ de gōngzuò zěnmeyàng?", "vi": "Công việc của bạn thế nào? (ý kiến)" },
+        { "cn": "我们去看电影，怎么样？", "py": "Wǒmen qù kàn diànyǐng, zěnmeyàng?", "vi": "Chúng ta đi xem phim nhé?" }
+      ] },
+    { "t": "很多 — nói \"nhiều\" phải có 很",
+      "b": "很多 + danh từ",
+      "d": "Một chữ 多 đứng trước danh từ nghe cụt. Phải nói 很多书 (rất nhiều sách), không nói 多书. Đây là lỗi rất hay gặp.",
+      "ex": [
+        { "cn": "我有很多书。", "py": "Wǒ yǒu hěn duō shū.", "vi": "Tôi có rất nhiều sách." },
+        { "cn": "这里有很多人。", "py": "Zhèlǐ yǒu hěn duō rén.", "vi": "Ở đây có rất nhiều người." }
+      ] },
+    { "t": "… 的时候 = khi mà …",
+      "b": "Mệnh đề + 的时候 + mệnh đề chính",
+      "d": "Vế chỉ thời gian đứng TRƯỚC, khác tiếng Việt hay đặt ở sau. \"Hồi nhỏ tôi thích mèo\" = 我小的时候喜欢猫.",
+      "ex": [
+        { "cn": "我小的时候很喜欢猫。", "py": "Wǒ xiǎo de shíhou hěn xǐhuan māo.", "vi": "Hồi nhỏ tôi rất thích mèo." },
+        { "cn": "吃饭的时候不要说话。", "py": "Chīfàn de shíhou búyào shuōhuà.", "vi": "Lúc ăn cơm đừng nói chuyện." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你喜欢猫还是狗？", "py": "Nǐ xǐhuan māo háishi gǒu?", "vi": "Bạn thích mèo hay chó?" },
+    { "cn": "我喜欢猫，我家有两只猫。", "py": "Wǒ xǐhuan māo, wǒ jiā yǒu liǎng zhī māo.", "vi": "Tôi thích mèo, nhà tôi có hai con mèo." },
+    { "cn": "我很爱我的家。", "py": "Wǒ hěn ài wǒ de jiā.", "vi": "Tôi rất yêu gia đình mình." },
+    { "cn": "她很漂亮。", "py": "Tā hěn piàoliang.", "vi": "Cô ấy rất xinh." },
+    { "cn": "我有很多中文书。", "py": "Wǒ yǒu hěn duō Zhōngwén shū.", "vi": "Tôi có rất nhiều sách tiếng Trung." },
+    { "cn": "这本书怎么样？", "py": "Zhè běn shū zěnmeyàng?", "vi": "Quyển sách này thế nào?" },
+    { "cn": "这个字怎么写？", "py": "Zhège zì zěnme xiě?", "vi": "Chữ này viết thế nào?" },
+    { "cn": "这个字怎么读？", "py": "Zhège zì zěnme dú?", "vi": "Chữ này đọc thế nào?" },
+    { "cn": "我小的时候不喜欢学习。", "py": "Wǒ xiǎo de shíhou bù xǐhuan xuéxí.", "vi": "Hồi nhỏ tôi không thích học." },
+    { "cn": "我们去吃饭，怎么样？", "py": "Wǒmen qù chīfàn, zěnmeyàng?", "vi": "Chúng ta đi ăn cơm nhé?" }
+  ]
+}

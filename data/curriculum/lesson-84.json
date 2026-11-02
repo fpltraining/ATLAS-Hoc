@@ -1,0 +1,72 @@
+{
+  "id": 84,
+  "cn": "收拾东西",
+  "title": "Dọn dẹp và đồ hỏng",
+  "goal": "Bộ động từ dọn dẹp, và phân biệt bốn chữ dễ lẫn 扔 / 丢 / 收 / 整理.",
+  "words": [
+    { "w": "袜子", "py": "wàzi", "hv": "miệt tử", "vi": "đôi tất", "pos": "danh từ",
+      "note": "Bộ 衤 (áo quần) bên trái — cùng nhóm với 衬衫, 裤子, 裙子 ở bài 43. Lượng từ: 一双袜子.",
+      "ex": [{ "cn": "我买了三双袜子。", "py": "Wǒ mǎi le sān shuāng wàzi.", "vi": "Tôi mua ba đôi tất." }] },
+    { "w": "脱", "py": "tuō", "hv": "thoát", "vi": "cởi (quần áo)", "pos": "động từ",
+      "note": "Chính là \"thoát\" tiếng Việt (\"thoát y\", \"giải thoát\"). Bộ 月 (thịt). Trái nghĩa với 穿 (bài 21).",
+      "ex": [{ "cn": "进屋请脱鞋。", "py": "Jìn wū qǐng tuō xié.", "vi": "Vào nhà xin cởi giày." }] },
+    { "w": "戴", "py": "dài", "hv": "đái", "vi": "đeo, đội", "pos": "động từ",
+      "note": "Dùng cho mũ, kính, đồng hồ, nhẫn — thứ GÀI lên người. Khác 穿 dùng cho thứ LUỒN người vào.",
+      "ex": [{ "cn": "他戴着一块新手表。", "py": "Tā dài zhe yí kuài xīn shǒubiǎo.", "vi": "Anh ấy đeo một chiếc đồng hồ mới." }] },
+    { "w": "破", "py": "pò", "hv": "phá", "vi": "rách, vỡ", "pos": "tính từ / động từ",
+      "note": "Chính là \"phá\" tiếng Việt (\"phá vỡ\", \"phá hỏng\"). Bộ 石 (đá).",
+      "ex": [{ "cn": "这双袜子破了。", "py": "Zhè shuāng wàzi pò le.", "vi": "Đôi tất này rách rồi." }] },
+    { "w": "脏", "py": "zāng", "hv": "tạng", "vi": "bẩn", "pos": "tính từ",
+      "note": "Bộ 月 (thịt). Trái nghĩa với 干净 (bài 44).",
+      "ex": [{ "cn": "手很脏，去洗一下。", "py": "Shǒu hěn zāng, qù xǐ yíxià.", "vi": "Tay bẩn quá, đi rửa đi." }] },
+    { "w": "扔", "py": "rēng", "hv": "nhưng", "vi": "vứt, ném", "pos": "động từ",
+      "note": "Bộ 扌 (tay). Là hành động CỐ Ý bỏ đi: 扔垃圾 (vứt rác).",
+      "ex": [{ "cn": "把这些旧报纸扔了吧。", "py": "Bǎ zhèxiē jiù bàozhǐ rēng le ba.", "vi": "Vứt mấy tờ báo cũ này đi." }] },
+    { "w": "丢", "py": "diū", "hv": "đâu", "vi": "làm mất; vứt", "pos": "động từ",
+      "note": "Khác 扔: 丢 thường là VÔ Ý làm mất — 我丢了钱包 (tôi mất ví). Cũng có nghĩa vứt bỏ.",
+      "ex": [{ "cn": "我把钥匙丢了。", "py": "Wǒ bǎ yàoshi diū le.", "vi": "Tôi làm mất chìa khoá rồi." }] },
+    { "w": "收", "py": "shōu", "hv": "thu", "vi": "nhận; thu, cất", "pos": "động từ",
+      "note": "Chính là \"thu\" tiếng Việt (\"thu nhập\", \"thu hoạch\"). 收到 = nhận được, 收好 = cất kỹ.",
+      "ex": [{ "cn": "我收到你的短信了。", "py": "Wǒ shōu dào nǐ de duǎnxìn le.", "vi": "Tôi nhận được tin nhắn của bạn rồi." }] },
+    { "w": "整理", "py": "zhěnglǐ", "hv": "chỉnh lý", "vi": "sắp xếp, chỉnh lý", "pos": "động từ",
+      "note": "Chính là \"chỉnh lý\" tiếng Việt: 整 (chỉnh) + 理 (lý). Sắp cho có trật tự.",
+      "ex": [{ "cn": "我在整理房间。", "py": "Wǒ zài zhěnglǐ fángjiān.", "vi": "Tôi đang sắp xếp phòng." }] },
+    { "w": "收拾", "py": "shōushi", "hv": "thu thập", "vi": "dọn dẹp; thu xếp", "pos": "động từ",
+      "note": "收 (thu) + 拾 (nhặt lên, bộ 扌). Khẩu ngữ hơn 整理. 收拾行李 = xếp hành lý.",
+      "ex": [{ "cn": "快收拾一下，客人要来了。", "py": "Kuài shōushi yíxià, kèrén yào lái le.", "vi": "Dọn nhanh chút, khách sắp đến rồi." }] }
+  ],
+  "grammar": [
+    { "t": "扔 và 丢 — cố ý hay vô ý?",
+      "b": "扔 = cố ý ném bỏ · 丢 = vô ý đánh mất",
+      "d": "我扔了那件旧衣服 (tôi vứt bộ đồ cũ — có chủ ý). 我丢了钱包 (tôi đánh mất ví — ngoài ý muốn). Dùng nhầm 扔了钱包 nghĩa thành \"tôi cố tình ném cái ví đi\"!",
+      "ex": [
+        { "cn": "别把有用的东西扔了。", "py": "Bié bǎ yǒuyòng de dōngxi rēng le.", "vi": "Đừng vứt những thứ còn dùng được." },
+        { "cn": "我的手机丢了，找了一天。", "py": "Wǒ de shǒujī diū le, zhǎo le yì tiān.", "vi": "Điện thoại tôi mất rồi, tìm cả ngày." }
+      ] },
+    { "t": "整理 và 收拾 — trang trọng hay khẩu ngữ",
+      "b": "整理 = sắp xếp có hệ thống · 收拾 = dọn dẹp, thu vén",
+      "d": "整理材料, 整理笔记 (sắp xếp có trật tự). 收拾房间, 收拾行李 (dọn dẹp, thu vén). 收拾 gần gũi hơn và hay dùng trong nhà.",
+      "ex": [
+        { "cn": "我要整理一下学习笔记。", "py": "Wǒ yào zhěnglǐ yíxià xuéxí bǐjì.", "vi": "Tôi phải sắp xếp lại vở ghi." },
+        { "cn": "出发前收拾好行李。", "py": "Chūfā qián shōushi hǎo xíngli.", "vi": "Trước khi đi xếp gọn hành lý." }
+      ] },
+    { "t": "穿 / 脱 / 戴 — bộ ba mặc và cởi",
+      "b": "穿 ↔ 脱 (áo quần giày) · 戴 ↔ 摘 (mũ kính đồng hồ)",
+      "d": "Nhắc lại từ bài 21 và 43, nay đủ cả cặp trái nghĩa. 脱鞋 (cởi giày), 摘眼镜 (bỏ kính xuống). Ở Trung Quốc và Việt Nam đều có tục cởi giày khi vào nhà.",
+      "ex": [
+        { "cn": "天热了，把外套脱了吧。", "py": "Tiān rè le, bǎ wàitào tuō le ba.", "vi": "Trời nóng rồi, cởi áo khoác ra đi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "冬天要穿厚袜子。", "py": "Dōngtiān yào chuān hòu wàzi.", "vi": "Mùa đông phải đi tất dày." },
+    { "cn": "进门请把鞋脱在门口。", "py": "Jìn mén qǐng bǎ xié tuō zài ménkǒu.", "vi": "Vào cửa xin để giày ở ngoài." },
+    { "cn": "开车的时候别戴帽子挡住眼睛。", "py": "Kāichē de shíhou bié dài màozi dǎng zhù yǎnjing.", "vi": "Lúc lái xe đừng đội mũ che mắt." },
+    { "cn": "杯子摔破了，小心别踩到。", "py": "Bēizi shuāi pò le, xiǎoxīn bié cǎi dào.", "vi": "Cái cốc vỡ rồi, cẩn thận đừng giẫm phải." },
+    { "cn": "衣服脏了就洗，别放太久。", "py": "Yīfu zāng le jiù xǐ, bié fàng tài jiǔ.", "vi": "Quần áo bẩn thì giặt, đừng để lâu quá." },
+    { "cn": "请把垃圾扔进垃圾桶里。", "py": "Qǐng bǎ lājī rēng jìn lājītǒng lǐ.", "vi": "Xin vứt rác vào thùng rác." },
+    { "cn": "我在地铁上把伞丢了。", "py": "Wǒ zài dìtiě shàng bǎ sǎn diū le.", "vi": "Tôi làm mất ô trên tàu điện." },
+    { "cn": "钱收好，别放在外面。", "py": "Qián shōu hǎo, bié fàng zài wàimiàn.", "vi": "Tiền cất kỹ, đừng để bên ngoài." },
+    { "cn": "考试前我把笔记整理了一遍。", "py": "Kǎoshì qián wǒ bǎ bǐjì zhěnglǐ le yí biàn.", "vi": "Trước khi thi tôi sắp xếp lại vở một lượt." },
+    { "cn": "周末我要好好收拾房间。", "py": "Zhōumò wǒ yào hǎohǎo shōushi fángjiān.", "vi": "Cuối tuần tôi phải dọn phòng cho tử tế." }
+  ]
+}

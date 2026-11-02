@@ -1,0 +1,73 @@
+{
+  "id": 31,
+  "cn": "亲戚和邻居",
+  "title": "Họ hàng và hàng xóm",
+  "goal": "Gọi đúng vai vế họ hàng, xưng hô với người lạ, và dùng 自己 để nói \"chính mình\".",
+  "words": [
+    { "w": "阿姨", "py": "āyí", "hv": "a di", "vi": "dì, cô (chị em của mẹ); cô (gọi phụ nữ trung niên)", "pos": "danh từ",
+      "note": "Ở Trung Quốc, gọi một phụ nữ lạ trạc tuổi mẹ mình là 阿姨 — lịch sự và thân thiện, giống \"cô\" tiếng Việt.",
+      "ex": [{ "cn": "阿姨，请问洗手间在哪儿？", "py": "Āyí, qǐngwèn xǐshǒujiān zài nǎr?", "vi": "Cô ơi, cho hỏi nhà vệ sinh ở đâu ạ?" }] },
+    { "w": "叔叔", "py": "shūshu", "hv": "thúc thúc", "vi": "chú (em trai của bố); chú (gọi đàn ông trung niên)", "pos": "danh từ",
+      "note": "Tiếng Việt có \"thúc bá\" (chú bác) trong từ Hán Việt. Cặp 叔叔 / 阿姨 dùng để gọi người lạ trạc tuổi bố mẹ.",
+      "ex": [{ "cn": "这位叔叔是我爸爸的朋友。", "py": "Zhè wèi shūshu shì wǒ bàba de péngyou.", "vi": "Chú này là bạn của bố tôi." }] },
+    { "w": "爷爷", "py": "yéye", "hv": "gia gia", "vi": "ông nội", "pos": "danh từ",
+      "note": "Chỉ dùng cho ông NỘI. Ông ngoại là 外公 wàigōng — chữ 外 (ngoại) giống hệt cách phân biệt của tiếng Việt.",
+      "ex": [{ "cn": "我爷爷今年八十岁了。", "py": "Wǒ yéye jīnnián bāshí suì le.", "vi": "Ông nội tôi năm nay tám mươi tuổi rồi." }] },
+    { "w": "奶奶", "py": "nǎinai", "hv": "nãi nãi", "vi": "bà nội", "pos": "danh từ",
+      "note": "奶 có bộ 女 và vốn nghĩa là sữa. Bà ngoại là 外婆 wàipó.",
+      "ex": [{ "cn": "奶奶做的菜最好吃。", "py": "Nǎinai zuò de cài zuì hǎochī.", "vi": "Món bà nội nấu ngon nhất." }] },
+    { "w": "邻居", "py": "línjū", "hv": "lân cư", "vi": "hàng xóm", "pos": "danh từ",
+      "note": "Tiếng Việt: \"lân cận\", \"láng giềng\". 居 = \"cư\" trong \"cư trú\", \"dân cư\".",
+      "ex": [{ "cn": "我的邻居很热情。", "py": "Wǒ de línjū hěn rèqíng.", "vi": "Hàng xóm của tôi rất nhiệt tình." }] },
+    { "w": "客人", "py": "kèrén", "hv": "khách nhân", "vi": "khách", "pos": "danh từ",
+      "note": "客 chính là \"khách\" tiếng Việt (\"khách sạn\", \"hành khách\", \"khách quan\").",
+      "ex": [{ "cn": "今天家里来客人了。", "py": "Jīntiān jiā lǐ lái kèrén le.", "vi": "Hôm nay nhà có khách." }] },
+    { "w": "别人", "py": "biéren", "hv": "biệt nhân", "vi": "người khác", "pos": "đại từ",
+      "note": "别 (khác) + 人 (người). Chữ thứ hai đọc nhẹ. Đừng nhầm với 别 bié (đừng) ở bài 27.",
+      "ex": [{ "cn": "别说别人的坏话。", "py": "Bié shuō biéren de huàihuà.", "vi": "Đừng nói xấu người khác." }] },
+    { "w": "自己", "py": "zìjǐ", "hv": "tự kỷ", "vi": "chính mình, tự mình", "pos": "đại từ",
+      "note": "Chính là \"tự kỷ\" tiếng Việt (自 tự + 己 kỷ), nhưng nghĩa gốc chỉ đơn giản là BẢN THÂN, không mang nghĩa bệnh lý.",
+      "ex": [{ "cn": "我自己去就行。", "py": "Wǒ zìjǐ qù jiù xíng.", "vi": "Tôi tự đi là được." }] },
+    { "w": "年轻", "py": "niánqīng", "hv": "niên khinh", "vi": "trẻ, trẻ tuổi", "pos": "tính từ",
+      "note": "年 (năm, tuổi) + 轻 (nhẹ) — tuổi còn nhẹ. Cách ghép chữ rất hình tượng.",
+      "ex": [{ "cn": "他看起来很年轻。", "py": "Tā kàn qǐlai hěn niánqīng.", "vi": "Anh ấy trông rất trẻ." }] },
+    { "w": "老", "py": "lǎo", "hv": "lão", "vi": "già; cũ; lâu năm", "pos": "tính từ",
+      "note": "Tiếng Việt: \"lão\", \"lão làng\". Đã gặp trong 老师 (bài 1) — ở đó 老 mang nghĩa kính trọng chứ không phải \"già\".",
+      "ex": [{ "cn": "我爷爷老了。", "py": "Wǒ yéye lǎo le.", "vi": "Ông nội tôi già rồi." }] }
+  ],
+  "grammar": [
+    { "t": "自己 — chính mình",
+      "b": "Chủ ngữ + 自己 + động từ · danh từ + 自己的",
+      "d": "自己 đặt ngay sau chủ ngữ để nhấn mạnh \"tự làm lấy\". Cũng dùng làm sở hữu: 我自己的房间 (phòng của riêng tôi). Không cần chia theo ngôi như tiếng Anh (myself/yourself).",
+      "ex": [
+        { "cn": "我自己做饭。", "py": "Wǒ zìjǐ zuòfàn.", "vi": "Tôi tự nấu cơm." },
+        { "cn": "这是我自己的自行车。", "py": "Zhè shì wǒ zìjǐ de zìxíngchē.", "vi": "Đây là xe đạp của riêng tôi." },
+        { "cn": "你自己去还是我们一起去？", "py": "Nǐ zìjǐ qù háishi wǒmen yìqǐ qù?", "vi": "Bạn tự đi hay chúng ta cùng đi?" }
+      ] },
+    { "t": "Gọi người lạ bằng từ họ hàng",
+      "b": "阿姨 · 叔叔 · 爷爷 · 奶奶 · 哥哥 · 姐姐",
+      "d": "Đây là điểm văn hoá giống hệt tiếng Việt: người Trung Quốc gọi người lạ theo VAI VẾ họ hàng chứ không gọi \"ông/bà\" chung chung. Người trạc tuổi bố mẹ là 叔叔/阿姨, người già là 爷爷/奶奶, người hơn mình chút là 哥哥/姐姐.",
+      "ex": [
+        { "cn": "阿姨，多少钱？", "py": "Āyí, duōshao qián?", "vi": "Cô ơi, bao nhiêu tiền ạ?" },
+        { "cn": "叔叔，谢谢您！", "py": "Shūshu, xièxie nín!", "vi": "Chú ơi, cháu cảm ơn chú!" }
+      ] },
+    { "t": "Nội và ngoại phân biệt bằng chữ 外",
+      "b": "爷爷/奶奶 bên nội · 外公/外婆 bên ngoại",
+      "d": "外 nghĩa là \"ngoại\". Người Việt cũng nói \"ông nội / ông ngoại\" — cùng một cách tư duy về dòng họ. Đây là chỗ người phương Tây học rất vất vả còn người Việt hiểu ngay.",
+      "ex": [
+        { "cn": "这是我爷爷，那是我外公。", "py": "Zhè shì wǒ yéye, nà shì wǒ wàigōng.", "vi": "Đây là ông nội tôi, kia là ông ngoại tôi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我爷爷奶奶住在南方。", "py": "Wǒ yéye nǎinai zhù zài nánfāng.", "vi": "Ông bà nội tôi sống ở miền Nam." },
+    { "cn": "这位阿姨是我妈妈的同事。", "py": "Zhè wèi āyí shì wǒ māma de tóngshì.", "vi": "Cô này là đồng nghiệp của mẹ tôi." },
+    { "cn": "我的邻居有两个孩子。", "py": "Wǒ de línjū yǒu liǎng ge háizi.", "vi": "Hàng xóm tôi có hai đứa con." },
+    { "cn": "今天晚上有客人来。", "py": "Jīntiān wǎnshang yǒu kèrén lái.", "vi": "Tối nay có khách đến." },
+    { "cn": "别人的事，我们别管。", "py": "Biéren de shì, wǒmen bié guǎn.", "vi": "Chuyện người khác, ta đừng xen vào." },
+    { "cn": "我自己一个人来的。", "py": "Wǒ zìjǐ yí ge rén lái de.", "vi": "Tôi tự đến một mình." },
+    { "cn": "他比我年轻五岁。", "py": "Tā bǐ wǒ niánqīng wǔ suì.", "vi": "Anh ấy trẻ hơn tôi năm tuổi." },
+    { "cn": "这本词典太老了。", "py": "Zhè běn cídiǎn tài lǎo le.", "vi": "Quyển từ điển này cũ quá rồi." },
+    { "cn": "叔叔，请问这儿有座位吗？", "py": "Shūshu, qǐngwèn zhèr yǒu zuòwèi ma?", "vi": "Chú ơi, cho hỏi ở đây còn chỗ không ạ?" },
+    { "cn": "奶奶每天早上去公园锻炼。", "py": "Nǎinai měi tiān zǎoshang qù gōngyuán duànliàn.", "vi": "Sáng nào bà nội cũng ra công viên tập thể dục." }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "id": 112,
+  "cn": "方法和目的",
+  "title": "Phương pháp và mục đích",
+  "goal": "Bộ từ trừu tượng để bàn về cách làm, điều kiện, đặc điểm và hiệu quả — ngôn ngữ của bài luận.",
+  "words": [
+    { "w": "方法", "py": "fāngfǎ", "hv": "phương pháp", "vi": "phương pháp", "pos": "danh từ",
+      "note": "Chính là \"phương pháp\" tiếng Việt: 方 (phương) + 法 (pháp).",
+      "ex": [{ "cn": "这个方法很有效。", "py": "Zhège fāngfǎ hěn yǒuxiào.", "vi": "Cách này rất hiệu quả." }] },
+    { "w": "方面", "py": "fāngmiàn", "hv": "phương diện", "vi": "phương diện, mặt", "pos": "danh từ",
+      "note": "Chính là \"phương diện\" tiếng Việt. Mẫu quen: 一方面…，另一方面… (một mặt…, mặt khác…).",
+      "ex": [{ "cn": "他在这方面很有经验。", "py": "Tā zài zhè fāngmiàn hěn yǒu jīngyàn.", "vi": "Anh ấy có kinh nghiệm ở mặt này." }] },
+    { "w": "过程", "py": "guòchéng", "hv": "quá trình", "vi": "quá trình", "pos": "danh từ",
+      "note": "Chính là \"quá trình\" tiếng Việt: 过 (quá) + 程 (trình).",
+      "ex": [{ "cn": "学习是一个长期的过程。", "py": "Xuéxí shì yí ge chángqī de guòchéng.", "vi": "Học là một quá trình lâu dài." }] },
+    { "w": "条件", "py": "tiáojiàn", "hv": "điều kiện", "vi": "điều kiện", "pos": "danh từ",
+      "note": "Chính là \"điều kiện\" tiếng Việt: 条 (điều) + 件 (kiện).",
+      "ex": [{ "cn": "这里的条件不太好。", "py": "Zhèlǐ de tiáojiàn bú tài hǎo.", "vi": "Điều kiện ở đây không tốt lắm." }] },
+    { "w": "规定", "py": "guīdìng", "hv": "quy định", "vi": "quy định", "pos": "danh từ / động từ",
+      "note": "Chính là \"quy định\" tiếng Việt: 规 (quy) + 定 (định). Đi với 按照 (bài 104): 按照规定.",
+      "ex": [{ "cn": "这是公司的规定。", "py": "Zhè shì gōngsī de guīdìng.", "vi": "Đây là quy định của công ty." }] },
+    { "w": "顺序", "py": "shùnxù", "hv": "thuận tự", "vi": "thứ tự, trình tự", "pos": "danh từ",
+      "note": "顺 (thuận) + 序 (tự). Với app này thì rất quen: 笔画顺序 = thứ tự nét bút.",
+      "ex": [{ "cn": "写汉字要注意笔画顺序。", "py": "Xiě Hànzì yào zhùyì bǐhuà shùnxù.", "vi": "Viết chữ Hán phải chú ý thứ tự nét." }] },
+    { "w": "排列", "py": "páiliè", "hv": "bài liệt", "vi": "sắp xếp, xếp thứ tự", "pos": "động từ",
+      "note": "排 (bài, xếp hàng — cùng chữ với 安排, 排队) + 列 (liệt, dãy).",
+      "ex": [{ "cn": "请按顺序排列这些卡片。", "py": "Qǐng àn shùnxù páiliè zhèxiē kǎpiàn.", "vi": "Xin xếp các thẻ này theo thứ tự." }] },
+    { "w": "特点", "py": "tèdiǎn", "hv": "đặc điểm", "vi": "đặc điểm", "pos": "danh từ",
+      "note": "Chính là \"đặc điểm\" tiếng Việt: 特 (đặc) + 点 (điểm).",
+      "ex": [{ "cn": "汉语的特点是有声调。", "py": "Hànyǔ de tèdiǎn shì yǒu shēngdiào.", "vi": "Đặc điểm tiếng Trung là có thanh điệu." }] },
+    { "w": "效果", "py": "xiàoguǒ", "hv": "hiệu quả", "vi": "hiệu quả, tác dụng", "pos": "danh từ",
+      "note": "Chính là \"hiệu quả\" tiếng Việt: 效 (hiệu) + 果 (quả). Là DANH TỪ; muốn nói tính từ dùng 有效.",
+      "ex": [{ "cn": "这个办法效果很好。", "py": "Zhège bànfǎ xiàoguǒ hěn hǎo.", "vi": "Cách này hiệu quả rất tốt." }] },
+    { "w": "目的", "py": "mùdì", "hv": "mục đích", "vi": "mục đích", "pos": "danh từ",
+      "note": "Chính là \"mục đích\" tiếng Việt: 目 (mục, mắt) + 的 (đích, cái bia bắn). Lưu ý 的 ở đây đọc dì.",
+      "ex": [{ "cn": "你学汉语的目的是什么？", "py": "Nǐ xué Hànyǔ de mùdì shì shénme?", "vi": "Mục đích bạn học tiếng Trung là gì?" }] }
+  ],
+  "grammar": [
+    { "t": "一方面 … 另一方面 … — trình bày hai mặt",
+      "b": "一方面 + ý 1，另一方面 + ý 2",
+      "d": "Khung câu quan trọng nhất khi viết đoạn văn nêu ý kiến: 学汉语，一方面能了解文化，另一方面对工作也有帮助. Đây chính là kiểu câu giám khảo HSK muốn thấy.",
+      "ex": [
+        { "cn": "一方面工作很忙，另一方面身体也不太好。", "py": "Yì fāngmiàn gōngzuò hěn máng, lìng yì fāngmiàn shēntǐ yě bú tài hǎo.", "vi": "Một mặt công việc bận, mặt khác sức khoẻ cũng không tốt lắm." }
+      ] },
+    { "t": "为了 và 目的 — nói về mục đích",
+      "b": "为了 + mục đích，+ hành động · … 的目的是 …",
+      "d": "为了学好汉语，我每天练习 (vì mục đích). 我学汉语的目的是了解中国文化 (nêu thẳng mục đích). Cách một dùng khi nói, cách hai trang trọng hơn.",
+      "ex": [
+        { "cn": "为了参加考试，他复习了三个月。", "py": "Wèile cānjiā kǎoshì, tā fùxí le sān ge yuè.", "vi": "Để dự thi, anh ấy ôn ba tháng." }
+      ] },
+    { "t": "效果 · 有效 · 效率 — ba từ dễ lẫn",
+      "b": "效果 (danh từ: tác dụng) · 有效 (tính từ: hiệu quả) · 效率 (danh từ: hiệu suất)",
+      "d": "这个方法效果很好 hoặc 这个方法很有效 — cả hai đúng, khác từ loại. 效率 chỉ tốc độ làm việc: 他工作效率很高.",
+      "ex": [
+        { "cn": "早上学习效率最高。", "py": "Zǎoshang xuéxí xiàolǜ zuì gāo.", "vi": "Buổi sáng học hiệu suất cao nhất." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "每个人都有自己的学习方法。", "py": "Měi ge rén dōu yǒu zìjǐ de xuéxí fāngfǎ.", "vi": "Ai cũng có cách học riêng." },
+    { "cn": "他在很多方面都比我强。", "py": "Tā zài hěn duō fāngmiàn dōu bǐ wǒ qiáng.", "vi": "Anh ấy giỏi hơn tôi ở nhiều mặt." },
+    { "cn": "在学习过程中，犯错很正常。", "py": "Zài xuéxí guòchéng zhōng, fàncuò hěn zhèngcháng.", "vi": "Trong quá trình học, mắc lỗi là bình thường." },
+    { "cn": "只要条件允许，我就去留学。", "py": "Zhǐyào tiáojiàn yǔnxǔ, wǒ jiù qù liúxué.", "vi": "Chỉ cần điều kiện cho phép là tôi đi du học." },
+    { "cn": "按照规定，这里不能停车。", "py": "Ànzhào guīdìng, zhèlǐ bù néng tíngchē.", "vi": "Theo quy định, ở đây không được đỗ xe." },
+    { "cn": "笔画顺序写错了，字就不好看。", "py": "Bǐhuà shùnxù xiě cuò le, zì jiù bù hǎokàn.", "vi": "Viết sai thứ tự nét thì chữ không đẹp." },
+    { "cn": "请把这些句子重新排列。", "py": "Qǐng bǎ zhèxiē jùzi chóngxīn páiliè.", "vi": "Xin sắp xếp lại những câu này." },
+    { "cn": "这个城市最大的特点是安静。", "py": "Zhège chéngshì zuì dà de tèdiǎn shì ānjìng.", "vi": "Đặc điểm lớn nhất của thành phố này là yên tĩnh." },
+    { "cn": "每天写十个字，效果很明显。", "py": "Měi tiān xiě shí ge zì, xiàoguǒ hěn míngxiǎn.", "vi": "Mỗi ngày viết mười chữ, hiệu quả rất rõ." },
+    { "cn": "我来的目的是想跟您商量一件事。", "py": "Wǒ lái de mùdì shì xiǎng gēn nín shāngliang yí jiàn shì.", "vi": "Mục đích tôi đến là muốn bàn với ngài một việc." }
+  ]
+}

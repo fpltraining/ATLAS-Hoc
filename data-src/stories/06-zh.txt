@@ -1,0 +1,363 @@
+@id zh-robot
+@lang zh
+@shelf ai
+@level HSK1
+@title 爱问问题的机器人
+@vi Con robot hay hỏi
+@blurb Tiểu Ba là robot nhỏ trong một xưởng sửa xe. Cậu hỏi suốt ngày, cho tới một buổi sáng.
+
+## 1 | 修车店 | Xưởng sửa xe
+小波是一个小机器人。 | Xiǎo Bō shì yí ge xiǎo jīqìrén. | Tiểu Ba là một con robot nhỏ.
+他在一家修车店工作。 | Tā zài yì jiā xiūchēdiàn gōngzuò. | Cậu làm việc ở một xưởng sửa xe.
+老板姓明。 | Lǎobǎn xìng Míng. | Ông chủ họ Minh.
+明老板每天都很忙。 | Míng lǎobǎn měi tiān dōu hěn máng. | Ông Minh ngày nào cũng rất bận.
+
+小波有一个问题。 | Xiǎo Bō yǒu yí ge wèntí. | Tiểu Ba có một vấn đề.
+他太喜欢问问题了。 | Tā tài xǐhuan wèn wèntí le. | Cậu thích hỏi quá.
+“这辆车为什么是红色的？” | "Zhè liàng chē wèishénme shì hóngsè de?" | "Sao xe này màu đỏ?"
+“人们为什么开得那么快？” | "Rénmen wèishénme kāi de nàme kuài?" | "Sao mọi người lái nhanh vậy?"
+明老板笑了。 | Míng lǎobǎn xiào le. | Ông Minh bật cười.
+“小波，别问了，我在工作。” | "Xiǎo Bō, bié wèn le, wǒ zài gōngzuò." | "Tiểu Ba, đừng hỏi nữa, ta đang làm việc."
+
+? 小波在哪儿工作？ | Tiểu Ba làm việc ở đâu? | 修车店* | 学校 | 医院
+> Đọc to 2 câu hỏi của Tiểu Ba.
+
+## 2 | 黑色的车 | Chiếc xe màu đen
+一天下午，来了一位女士。 | Yì tiān xiàwǔ, lái le yí wèi nǚshì. | Một buổi chiều, có một cô đến.
+她开一辆黑色的车。 | Tā kāi yí liàng hēisè de chē. | Cô lái một chiếc xe màu đen.
+“我的车有一点儿声音。” | "Wǒ de chē yǒu yìdiǎnr shēngyīn." | "Xe tôi hơi có tiếng kêu."
+明老板看了看车。 | Míng lǎobǎn kàn le kàn chē. | Ông Minh xem qua chiếc xe.
+“没问题，明天来吧。” | "Méi wèntí, míngtiān lái ba." | "Không sao, mai cô quay lại nhé."
+
+小波走到车的前面。 | Xiǎo Bō zǒu dào chē de qiánmiàn. | Tiểu Ba đi tới đầu xe.
+他摸了摸车轮。 | Tā mō le mō chēlún. | Cậu sờ bánh xe.
+“这个车轮为什么这么热？” | "Zhège chēlún wèishénme zhème rè?" | "Bánh xe này sao nóng thế?"
+明老板说：“现在不是时候。” | Míng lǎobǎn shuō: "Xiànzài bú shì shíhou." | Ông Minh nói: "Giờ không phải lúc."
+
+? 小波发现了什么？ | Tiểu Ba phát hiện điều gì? | 车轮很热* | 车很新 | 女士很高
+> Tập viết chữ 车 và 热 bằng bút.
+
+## 3 | 晚上 | Buổi tối
+晚上，店里很安静。 | Wǎnshang, diàn lǐ hěn ānjìng. | Buổi tối, trong xưởng rất yên tĩnh.
+明老板回家了。 | Míng lǎobǎn huí jiā le. | Ông Minh về nhà rồi.
+机器人不用睡觉。 | Jīqìrén bú yòng shuìjiào. | Robot không cần ngủ.
+小波还在想那个问题。 | Xiǎo Bō hái zài xiǎng nàge wèntí. | Tiểu Ba vẫn nghĩ về câu hỏi đó.
+
+他走到车下面， | Tā zǒu dào chē xiàmiàn, | Cậu chui xuống gầm xe,
+打开小灯。 | dǎkāi xiǎo dēng. | bật chiếc đèn nhỏ.
+他看见了一点儿油。 | Tā kànjiàn le yìdiǎnr yóu. | Cậu nhìn thấy một ít dầu.
+一滴，两滴，三滴。 | Yì dī, liǎng dī, sān dī. | Một giọt, hai giọt, ba giọt.
+油在慢慢地往下流。 | Yóu zài mànmàn de wǎng xià liú. | Dầu đang từ từ chảy xuống.
+
+? 小波在车下面看见了什么？ | Tiểu Ba thấy gì dưới gầm xe? | 油* | 猫 | 书
+> Theo bạn, chuyện gì sẽ xảy ra tiếp theo?
+
+## 4 | 请不要走 | Xin đừng đi
+第二天早上，那位女士来了。 | Dì èr tiān zǎoshang, nà wèi nǚshì lái le. | Sáng hôm sau, cô ấy đến.
+她带着两个孩子。 | Tā dài zhe liǎng ge háizi. | Cô dẫn theo hai đứa con.
+小波跑过去， | Xiǎo Bō pǎo guòqù, | Tiểu Ba chạy tới,
+站在车的前面。 | zhàn zài chē de qiánmiàn. | đứng chắn trước xe.
+“请不要走！” | "Qǐng bú yào zǒu!" | "Xin đừng đi!"
+
+明老板很生气。 | Míng lǎobǎn hěn shēngqì. | Ông Minh rất tức giận.
+“小波，你在做什么？” | "Xiǎo Bō, nǐ zài zuò shénme?" | "Tiểu Ba, cháu làm gì vậy?"
+“最后一个问题。 | "Zuìhòu yí ge wèntí. | "Câu hỏi cuối cùng thôi.
+地上为什么有油？” | Dì shang wèishénme yǒu yóu?" | Sao dưới đất có dầu?"
+明老板低下头。 | Míng lǎobǎn dī xià tóu. | Ông Minh cúi đầu nhìn.
+他不说话了。 | Tā bù shuōhuà le. | Ông im bặt.
+
+? 小波为什么站在车前面？ | Vì sao Tiểu Ba đứng trước xe? | 他不想让车走* | 他想开车 | 他喜欢黑色
+> Đọc to câu hỏi cuối cùng của Tiểu Ba.
+
+## 5 | 新牌子 | Tấm biển mới
+明老板看了很久。 | Míng lǎobǎn kàn le hěn jiǔ. | Ông Minh xem rất lâu.
+刹车坏了。 | Shāchē huài le. | Phanh bị hỏng rồi.
+如果开上路， | Rúguǒ kāi shàng lù, | Nếu lái ra đường,
+会非常危险。 | huì fēicháng wēixiǎn. | sẽ cực kỳ nguy hiểm.
+那位女士拉着孩子的手， | Nà wèi nǚshì lā zhe háizi de shǒu, | Cô ấy nắm tay hai đứa con,
+对小波说：“谢谢你。” | duì Xiǎo Bō shuō: "Xièxie nǐ." | nói với Tiểu Ba: "Cảm ơn cháu."
+
+第二天，店里有了新牌子。 | Dì èr tiān, diàn lǐ yǒu le xīn páizi. | Hôm sau, trong xưởng có tấm biển mới.
+上面写着：欢迎问问题。 | Shàngmiàn xiě zhe: huānyíng wèn wèntí. | Trên đó viết: Hoan nghênh đặt câu hỏi.
+小波看了看牌子。 | Xiǎo Bō kàn le kàn páizi. | Tiểu Ba nhìn tấm biển.
+“牌子为什么是蓝色的？” | "Páizi wèishénme shì lánsè de?" | "Sao tấm biển màu xanh?"
+明老板笑了： | Míng lǎobǎn xiào le: | Ông Minh cười:
+“这个问题很好。” | "Zhège wèntí hěn hǎo." | "Câu hỏi này hay đấy."
+
+? 牌子上写着什么？ | Trên tấm biển viết gì? | 欢迎问问题* | 今天休息 | 不要说话
+> Kể lại câu chuyện bằng tiếng Việt, rồi thử nói 2 câu tiếng Trung.
+
+@id zh-teacher
+@lang zh
+@shelf ai
+@level HSK2
+@title 我的AI老师
+@vi Thầy giáo AI của tôi
+@blurb Tiểu Lan học tiếng Trung với một giáo viên AI không bao giờ giận. Rồi cô đến Thượng Hải và nhận ra một điều.
+
+## 1 | 小兰 | Tiểu Lan
+小兰是越南人，住在河内。 | Xiǎo Lán shì Yuènánrén, zhù zài Hénèi. | Tiểu Lan là người Việt Nam, sống ở Hà Nội.
+她今年二十岁，想学汉语。 | Tā jīnnián èrshí suì, xiǎng xué Hànyǔ. | Năm nay cô 20 tuổi, muốn học tiếng Trung.
+可是学费太贵了。 | Kěshì xuéfèi tài guì le. | Nhưng học phí đắt quá.
+朋友告诉她： | Péngyou gàosu tā: | Bạn cô bảo:
+“你可以跟AI老师学。” | "Nǐ kěyǐ gēn AI lǎoshī xué." | "Cậu có thể học với giáo viên AI."
+
+AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là Tiểu Minh.
+他每天都有时间。 | Tā měi tiān dōu yǒu shíjiān. | Ngày nào cậu ấy cũng có thời gian.
+他从来不生气。 | Tā cónglái bù shēngqì. | Cậu ấy không bao giờ giận.
+小兰说错了， | Xiǎo Lán shuō cuò le, | Tiểu Lan nói sai,
+他就慢慢地再说一遍。 | tā jiù mànmàn de zài shuō yí biàn. | cậu ấy liền nói chậm lại một lần nữa.
+
+? 小兰为什么跟AI老师学？ | Vì sao Tiểu Lan học với giáo viên AI? | 学费太贵了* | 她不喜欢老师 | 她住在上海
+> Bạn thích học với giáo viên AI hay giáo viên thật? Vì sao?
+
+## 2 | 一年以后 | Một năm sau
+一年以后，小兰的汉语很好了。 | Yì nián yǐhòu, Xiǎo Lán de Hànyǔ hěn hǎo le. | Một năm sau, tiếng Trung của Tiểu Lan đã rất tốt.
+她去上海工作。 | Tā qù Shànghǎi gōngzuò. | Cô đi Thượng Hải làm việc.
+第一天，她很高兴。 | Dì yī tiān, tā hěn gāoxìng. | Ngày đầu, cô rất vui.
+可是同事们说话很快， | Kěshì tóngshìmen shuōhuà hěn kuài, | Nhưng đồng nghiệp nói rất nhanh,
+她听不懂。 | tā tīng bu dǒng. | cô nghe không hiểu.
+
+他们开玩笑，大家都笑了。 | Tāmen kāi wánxiào, dàjiā dōu xiào le. | Họ nói đùa, mọi người cùng cười.
+只有她不知道为什么笑。 | Zhǐyǒu tā bù zhīdào wèishénme xiào. | Chỉ mình cô không biết vì sao họ cười.
+晚上，她问小明： | Wǎnshang, tā wèn Xiǎo Míng: | Buổi tối, cô hỏi Tiểu Minh:
+“他们为什么笑？” | "Tāmen wèishénme xiào?" | "Sao họ lại cười?"
+小明说：“我不在那儿。 | Xiǎo Míng shuō: "Wǒ bú zài nàr. | Tiểu Minh nói: "Tôi đâu có ở đó.
+你应该去问他们。” | Nǐ yīnggāi qù wèn tāmen." | Cậu nên đi hỏi họ."
+
+? 小明让小兰做什么？ | Tiểu Minh bảo Tiểu Lan làm gì? | 去问同事* | 回越南 | 不要笑
+> Bạn đã bao giờ nghe không hiểu người nước ngoài chưa? Kể 1 câu.
+
+## 3 | 第二天 | Ngày hôm sau
+第二天中午，小兰很紧张。 | Dì èr tiān zhōngwǔ, Xiǎo Lán hěn jǐnzhāng. | Trưa hôm sau, Tiểu Lan rất hồi hộp.
+她走到同事面前， | Tā zǒu dào tóngshì miànqián, | Cô đi đến trước mặt đồng nghiệp,
+说：“对不起，昨天我没听懂。 | shuō: "Duìbuqǐ, zuótiān wǒ méi tīng dǒng. | nói: "Xin lỗi, hôm qua tôi không nghe hiểu.
+可以告诉我吗？” | Kěyǐ gàosu wǒ ma?" | Có thể nói cho tôi biết không?"
+
+同事们笑了，可是很友好。 | Tóngshìmen xiào le, kěshì hěn yǒuhǎo. | Đồng nghiệp cười, nhưng rất thân thiện.
+他们请她一起吃饭。 | Tāmen qǐng tā yìqǐ chīfàn. | Họ mời cô cùng ăn cơm.
+那天，她学了很多新词。 | Nà tiān, tā xué le hěn duō xīn cí. | Hôm đó, cô học được rất nhiều từ mới.
+书上没有这些词， | Shū shang méiyǒu zhèxiē cí, | Trong sách không có những từ này,
+小明也没教过。 | Xiǎo Míng yě méi jiāo guo. | Tiểu Minh cũng chưa dạy.
+
+晚上，她告诉了小明。 | Wǎnshang, tā gàosu le Xiǎo Míng. | Buổi tối, cô kể với Tiểu Minh.
+小明说：“太好了。 | Xiǎo Míng shuō: "Tài hǎo le. | Tiểu Minh nói: "Tuyệt quá.
+现在，你教教我吧。” | Xiànzài, nǐ jiāo jiao wǒ ba." | Giờ thì, cậu dạy tôi đi."
+
+? 小兰从哪儿学到了新词？ | Tiểu Lan học được từ mới từ đâu? | 从同事那儿* | 从书上 | 从小明那儿
+> Kết truyện nói gì về AI và con người? Nói 1 câu tiếng Việt.
+
+@id zh-rabbit
+@lang zh
+@shelf fable
+@level HSK2
+@title 守株待兔
+@vi Thủ chu đãi thố: Ôm cây đợi thỏ
+@blurb Thành ngữ hơn 2000 năm tuổi. Người Việt cũng dùng "ôm cây đợi thỏ", và âm Hán Việt của nó là thủ chu đãi thố.
+
+## 1 | 农民和兔子 | Người nông dân và con thỏ
+从前，有一个农民。 | Cóngqián, yǒu yí ge nóngmín. | Ngày xưa, có một người nông dân.
+他每天在田里工作。 | Tā měi tiān zài tián lǐ gōngzuò. | Ngày nào ông cũng làm việc ngoài đồng.
+田里有一棵大树。 | Tián lǐ yǒu yì kē dà shù. | Trên đồng có một cái cây to.
+
+有一天，一只兔子跑得很快， | Yǒu yì tiān, yì zhī tùzi pǎo de hěn kuài, | Một hôm, một con thỏ chạy rất nhanh,
+撞在树上，死了。 | zhuàng zài shù shang, sǐ le. | đâm vào cây, chết luôn.
+农民很高兴。 | Nóngmín hěn gāoxìng. | Người nông dân rất vui.
+他没有工作， | Tā méiyǒu gōngzuò, | Ông chẳng làm gì,
+就得到了一只兔子。 | jiù dédào le yì zhī tùzi. | mà có được một con thỏ.
+
+第二天，他不工作了。 | Dì èr tiān, tā bù gōngzuò le. | Hôm sau, ông không làm việc nữa.
+他坐在树下，等兔子。 | Tā zuò zài shù xià, děng tùzi. | Ông ngồi dưới gốc cây, đợi thỏ.
+一天，两天，很多天过去了。 | Yì tiān, liǎng tiān, hěn duō tiān guòqù le. | Một ngày, hai ngày, nhiều ngày trôi qua.
+兔子没有再来。 | Tùzi méiyǒu zài lái. | Thỏ không đến nữa.
+田里的草长得很高。 | Tián lǐ de cǎo zhǎng de hěn gāo. | Cỏ ngoài đồng mọc rất cao.
+
+这就是“守株待兔”。 | Zhè jiù shì "shǒu zhū dài tù". | Đó chính là "ôm cây đợi thỏ".
+
+? 农民为什么坐在树下？ | Vì sao người nông dân ngồi dưới gốc cây? | 他在等兔子* | 他在看书 | 他很累
+> Bạn có từng "ôm cây đợi thỏ" trong công việc không?
+
+@id zh-snake
+@lang zh
+@shelf fable
+@level HSK2
+@title 画蛇添足
+@vi Họa xà thiêm túc: Vẽ rắn thêm chân
+@blurb Vì sao làm thừa lại thành hỏng việc? Câu chuyện về một bình rượu và một con rắn có chân.
+
+## 1 | 一壶酒 | Một bình rượu
+从前，几个朋友有一壶酒。 | Cóngqián, jǐ ge péngyou yǒu yì hú jiǔ. | Ngày xưa, mấy người bạn có một bình rượu.
+酒太少了，不够大家喝。 | Jiǔ tài shǎo le, bú gòu dàjiā hē. | Rượu ít quá, không đủ cho mọi người.
+一个人说：“我们来画蛇吧。 | Yí ge rén shuō: "Wǒmen lái huà shé ba. | Một người nói: "Chúng ta thi vẽ rắn đi.
+谁先画好，谁喝酒。” | Shéi xiān huà hǎo, shéi hē jiǔ." | Ai vẽ xong trước, người đó uống."
+
+大家都在地上画。 | Dàjiā dōu zài dì shang huà. | Mọi người đều vẽ trên đất.
+有一个人画得最快。 | Yǒu yí ge rén huà de zuì kuài. | Có một người vẽ nhanh nhất.
+他拿起酒，很得意。 | Tā ná qǐ jiǔ, hěn déyì. | Anh ta cầm rượu, rất đắc ý.
+他说：“我还能给蛇画上脚！” | Tā shuō: "Wǒ hái néng gěi shé huà shang jiǎo!" | Anh ta nói: "Tôi còn vẽ thêm chân cho rắn được!"
+
+这时候，另一个人画好了。 | Zhè shíhou, lìng yí ge rén huà hǎo le. | Lúc này, một người khác đã vẽ xong.
+他拿过酒，说： | Tā ná guò jiǔ, shuō: | Người đó giật lấy rượu, nói:
+“蛇没有脚，你画的不是蛇。” | "Shé méiyǒu jiǎo, nǐ huà de bú shì shé." | "Rắn không có chân, cái anh vẽ không phải rắn."
+说完，他把酒喝了。 | Shuō wán, tā bǎ jiǔ hē le. | Nói xong, người đó uống cạn rượu.
+
+? 为什么他没有喝到酒？ | Vì sao anh ta không được uống rượu? | 他给蛇画了脚* | 他画得太慢 | 他不喜欢酒
+> Bạn đã từng "vẽ rắn thêm chân" chưa? Kể 1 câu.
+
+@id zh-sheep
+@lang zh
+@shelf fable
+@level HSK3
+@title 亡羊补牢
+@vi Vong dương bổ lao: Mất dê mới vá chuồng
+@blurb Mất rồi mới sửa có muộn không? Thành ngữ này trả lời ngược với nhiều người nghĩ.
+
+## 1 | 羊圈的洞 | Cái lỗ ở chuồng dê
+一个人养了很多羊。 | Yí ge rén yǎng le hěn duō yáng. | Có người nuôi rất nhiều dê.
+一天早上，他少了一只羊。 | Yì tiān zǎoshang, tā shǎo le yì zhī yáng. | Một sáng, ông thiếu mất một con dê.
+羊圈破了一个洞， | Yángjuàn pò le yí ge dòng, | Chuồng dê bị thủng một lỗ,
+狼从洞里进来了。 | láng cóng dòng lǐ jìnlái le. | sói chui qua lỗ vào.
+
+邻居说：“快把洞修好吧。” | Línjū shuō: "Kuài bǎ dòng xiū hǎo ba." | Hàng xóm nói: "Mau vá lỗ đó đi."
+他说：“羊已经没了， | Tā shuō: "Yáng yǐjīng méi le, | Ông nói: "Dê đã mất rồi,
+修它做什么？” | xiū tā zuò shénme?" | vá làm gì?"
+
+第二天早上，又少了一只羊。 | Dì èr tiān zǎoshang, yòu shǎo le yì zhī yáng. | Sáng hôm sau, lại thiếu một con nữa.
+他很后悔。 | Tā hěn hòuhuǐ. | Ông rất hối hận.
+他马上把洞修好了。 | Tā mǎshàng bǎ dòng xiū hǎo le. | Ông lập tức vá lỗ lại.
+从那以后， | Cóng nà yǐhòu, | Từ đó về sau,
+他的羊再也没有少过。 | tā de yáng zài yě méiyǒu shǎo guo. | đàn dê không hề mất con nào nữa.
+
+? 这个故事告诉我们什么？ | Câu chuyện này nói với ta điều gì? | 错了马上改，还不晚* | 不要养羊 | 邻居不好
+> Có việc gì bạn nên "vá chuồng" ngay từ hôm nay không?
+
+@id zh-universe
+@lang zh
+@shelf mystery
+@level HSK3
+@title 宇宙里有什么？
+@vi Trong vũ trụ có gì?
+@blurb Mọi thứ ta nhìn thấy chỉ chiếm khoảng 5% vũ trụ. Phần còn lại vẫn là bí ẩn.
+
+## 1 | 百分之五 | Năm phần trăm
+我们能看到太阳、月亮和星星。 | Wǒmen néng kàn dào tàiyáng, yuèliang hé xīngxing. | Ta có thể thấy mặt trời, mặt trăng và các vì sao.
+可是科学家说， | Kěshì kēxuéjiā shuō, | Nhưng các nhà khoa học nói,
+这些东西只占宇宙的百分之五。 | zhèxiē dōngxi zhǐ zhàn yǔzhòu de bǎi fēn zhī wǔ. | những thứ này chỉ chiếm khoảng 5% vũ trụ.
+还有百分之九十五是什么？ | Hái yǒu bǎi fēn zhī jiǔshíwǔ shì shénme? | Còn 95% kia là gì?
+没有人知道。 | Méiyǒu rén zhīdào. | Không ai biết.
+
+科学家叫它们“暗物质”和“暗能量”。 | Kēxuéjiā jiào tāmen "àn wùzhì" hé "àn néngliàng". | Giới khoa học gọi chúng là "vật chất tối" và "năng lượng tối".
+我们看不见它们， | Wǒmen kàn bu jiàn tāmen, | Ta không nhìn thấy chúng,
+可是知道它们在那儿。 | kěshì zhīdào tāmen zài nàr. | nhưng biết chúng ở đó.
+这个“暗”字不是说它们是黑色的。 | Zhège "àn" zì bú shì shuō tāmen shì hēisè de. | Chữ "ám" này không có nghĩa là chúng màu đen.
+它的意思是： | Tā de yìsi shì: | Ý nghĩa của nó là:
+我们还不知道。 | wǒmen hái bù zhīdào. | ta vẫn chưa biết.
+
+? 我们看到的东西占宇宙的多少？ | Những thứ ta thấy chiếm bao nhiêu phần vũ trụ? | 百分之五* | 百分之五十 | 百分之九十五
+> Âm Hán Việt của 宇宙 là "vũ trụ". Bạn còn nhận ra từ Hán Việt nào trong bài?
+
+@id zh-sleep
+@lang zh
+@shelf mystery
+@level HSK3
+@title 为什么要睡觉？
+@vi Vì sao phải ngủ?
+@blurb Một phần ba đời người là để ngủ, vậy mà khoa học vẫn chưa trả lời trọn vẹn vì sao.
+
+## 1 | 三分之一 | Một phần ba
+人的一生， | Rén de yìshēng, | Một đời người,
+有三分之一的时间在睡觉。 | yǒu sān fēn zhī yī de shíjiān zài shuìjiào. | có một phần ba thời gian là để ngủ.
+睡觉的时候，我们不能工作， | Shuìjiào de shíhou, wǒmen bù néng gōngzuò, | Khi ngủ, ta không thể làm việc,
+也不能吃东西。 | yě bù néng chī dōngxi. | cũng không thể ăn uống.
+可是几乎所有的动物都要睡觉。 | Kěshì jīhū suǒyǒu de dòngwù dōu yào shuìjiào. | Nhưng hầu như mọi loài vật đều phải ngủ.
+
+科学家知道， | Kēxuéjiā zhīdào, | Các nhà khoa học biết,
+睡觉对记忆很有帮助。 | shuìjiào duì jìyì hěn yǒu bāngzhù. | giấc ngủ rất có ích cho trí nhớ.
+可是我们为什么一定要睡觉？ | Kěshì wǒmen wèishénme yídìng yào shuìjiào? | Nhưng vì sao nhất định phải ngủ?
+为什么会做梦？ | Wèishénme huì zuò mèng? | Vì sao lại mơ?
+到现在，还没有人能完全回答。 | Dào xiànzài, hái méiyǒu rén néng wánquán huídá. | Đến nay, vẫn chưa ai trả lời được trọn vẹn.
+
+今天学的生词， | Jīntiān xué de shēngcí, | Từ mới học hôm nay,
+晚上睡觉的时候会记得更好。 | wǎnshang shuìjiào de shíhou huì jìde gèng hǎo. | khi ngủ tối nay sẽ được nhớ tốt hơn.
+
+? 睡觉对什么很有帮助？ | Giấc ngủ có ích cho điều gì? | 记忆* | 开车 | 吃饭
+> Nói bằng tiếng Trung: bạn ngủ mấy tiếng mỗi đêm? (我每天睡…个小时)
+
+@id zh-ocean
+@lang zh
+@shelf mystery
+@level HSK3
+@date 2026-04-01
+@title 海底有什么？
+@vi Dưới đáy biển có gì?
+@blurb Hơn 70% đáy đại dương vẫn chưa có bản đồ chi tiết.
+@source Seabed 2030 / IHO | https://iho.int/en/global-seabed-mapping-reaches-new-milestone-as-five-million-square-kilometres-added-in-a-year
+
+## 1 | 没有地图的地方 | Nơi chưa có bản đồ
+地球的大部分是海。 | Dìqiú de dà bùfen shì hǎi. | Phần lớn Trái Đất là biển.
+可是我们对海底知道得很少。 | Kěshì wǒmen duì hǎidǐ zhīdào de hěn shǎo. | Nhưng ta biết rất ít về đáy biển.
+二零一七年， | Èr líng yī qī nián, | Năm 2017,
+只有百分之六的海底有详细的地图。 | zhǐ yǒu bǎi fēn zhī liù de hǎidǐ yǒu xiángxì de dìtú. | chỉ 6% đáy biển có bản đồ chi tiết.
+二零二六年，这个数字 | Èr líng èr liù nián, zhège shùzì | Năm 2026, con số này
+是百分之二十八点七。 | shì bǎi fēn zhī èrshíbā diǎn qī. | là 28,7%.
+
+还有很多地方， | Hái yǒu hěn duō dìfang, | Còn rất nhiều nơi,
+人们从来没有去过。 | rénmen cónglái méiyǒu qù guo. | con người chưa từng đến.
+科学家常常在那儿发现新的动物。 | Kēxuéjiā chángcháng zài nàr fāxiàn xīn de dòngwù. | Các nhà khoa học thường phát hiện động vật mới ở đó.
+我们去过月亮， | Wǒmen qù guo yuèliang, | Con người đã lên mặt trăng,
+可是还不了解自己的海。 | kěshì hái bù liǎojiě zìjǐ de hǎi. | nhưng vẫn chưa hiểu biển của chính mình.
+
+? 二零二六年，多少海底有详细的地图？ | Năm 2026, bao nhiêu phần đáy biển có bản đồ chi tiết? | 百分之二十八点七* | 百分之六 | 百分之百
+> Đọc to các con số trong bài bằng tiếng Trung.
+
+@id zh-news-law
+@lang zh
+@shelf news
+@level HSK3
+@date 2026-03-01
+@title 越南有了人工智能法
+@vi Việt Nam đã có luật trí tuệ nhân tạo
+@blurb Từ 1/3/2026, Việt Nam có luật riêng về AI. Bản tin viết lại bằng tiếng Trung dễ.
+@source Baker McKenzie | https://connectontech.bakermckenzie.com/vietnams-first-standalone-ai-law-an-overview-of-key-provisions-future-implications/
+@source Asia IP | https://asiaiplaw.com/article/first-in-southeast-asia-vietnam-enacts-standalone-ai-law
+
+## 1 | 三类风险 | Ba loại rủi ro
+从二零二六年三月一日开始， | Cóng èr líng èr liù nián sān yuè yī rì kāishǐ, | Từ ngày 1/3/2026,
+越南有了自己的人工智能法。 | Yuènán yǒu le zìjǐ de réngōng zhìnéng fǎ. | Việt Nam có luật trí tuệ nhân tạo của riêng mình.
+这个法律把AI分成三类： | Zhège fǎlǜ bǎ AI fēn chéng sān lèi: | Luật này chia AI thành ba loại:
+高风险、中风险和低风险。 | gāo fēngxiǎn, zhōng fēngxiǎn hé dī fēngxiǎn. | rủi ro cao, trung bình và thấp.
+
+如果用AI做一个人的声音或者视频， | Rúguǒ yòng AI zuò yí ge rén de shēngyīn huòzhě shìpín, | Nếu dùng AI làm giọng nói hoặc video của một người,
+就要清楚地告诉大家。 | jiù yào qīngchu de gàosu dàjiā. | thì phải nói rõ cho mọi người biết.
+政府以后还会公布详细的规定。 | Zhèngfǔ yǐhòu hái huì gōngbù xiángxì de guīdìng. | Chính phủ sau này sẽ công bố quy định chi tiết.
+这是东南亚第一部这样的法律。 | Zhè shì Dōngnányà dì yī bù zhèyàng de fǎlǜ. | Đây là luật đầu tiên như vậy ở Đông Nam Á.
+
+? 这个法律把AI分成几类？ | Luật này chia AI thành mấy loại? | 三类* | 两类 | 五类
+> 法律 là "pháp luật", 风险 là "phong hiểm". Hãy viết hai từ này bằng bút.
+
+@id zh-news-robot
+@lang zh
+@shelf news
+@level HSK3
+@date 2026-08-12
+@title 机器人越来越便宜
+@vi Robot ngày càng rẻ
+@blurb Giá robot hình người đã giảm 93% trong 5 năm, theo một dự báo của Wood Mackenzie.
+@source Robotics & Automation News | https://roboticsandautomationnews.com/2026/08/12/robots-could-consume-as-much-electricity-as-35-million-us-homes-by-2035/104073/
+
+## 1 | 便宜了百分之九十三 | Rẻ đi 93%
+人形机器人越来越便宜了。 | Rénxíng jīqìrén yuèláiyuè piányi le. | Robot hình người ngày càng rẻ.
+从二零二零年到二零二五年， | Cóng èr líng èr líng nián dào èr líng èr wǔ nián, | Từ năm 2020 đến năm 2025,
+平均价格下降了百分之九十三。 | píngjūn jiàgé xiàjiàng le bǎi fēn zhī jiǔshísān. | giá trung bình giảm 93%.
+现在大约是五万八千美元。 | Xiànzài dàyuē shì wǔwàn bāqiān měiyuán. | Hiện khoảng 58.000 đô la.
+
+二零二五年， | Èr líng èr wǔ nián, | Năm 2025,
+差不多百分之九十的人形机器人 | chàbuduō bǎi fēn zhī jiǔshí de rénxíng jīqìrén | gần 90% robot hình người
+来自中国公司。 | láizì Zhōngguó gōngsī. | đến từ các công ty Trung Quốc.
+
+可是机器人也需要很多电。 | Kěshì jīqìrén yě xūyào hěn duō diàn. | Nhưng robot cũng cần rất nhiều điện.
+这只是一个公司的预测， | Zhè zhǐ shì yí ge gōngsī de yùcè, | Đây chỉ là dự báo của một công ty,
+不一定都是对的。 | bù yídìng dōu shì duì de. | chưa chắc đã đúng hết.
+
+? 人形机器人的价格下降了多少？ | Giá robot hình người giảm bao nhiêu? | 百分之九十三* | 百分之九 | 百分之五十
+> Đọc to số 58.000 bằng tiếng Trung: 五万八千.

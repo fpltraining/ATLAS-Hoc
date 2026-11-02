@@ -1,0 +1,71 @@
+{
+  "id": 80,
+  "cn": "家里的房间",
+  "title": "Trong căn nhà",
+  "goal": "Gọi tên các phòng và đồ đạc — từ vựng thuê nhà và sinh hoạt.",
+  "words": [
+    { "w": "厨房", "py": "chúfáng", "hv": "trù phòng", "vi": "nhà bếp", "pos": "danh từ",
+      "note": "厨 (bếp) + 房 (phòng, bài 25). Tiếng Việt: \"trù phòng\" trong từ cổ, nay nói \"nhà bếp\".",
+      "ex": [{ "cn": "妈妈在厨房做饭。", "py": "Māma zài chúfáng zuòfàn.", "vi": "Mẹ đang nấu cơm trong bếp." }] },
+    { "w": "客厅", "py": "kètīng", "hv": "khách sảnh", "vi": "phòng khách", "pos": "danh từ",
+      "note": "客 (khách, bài 69 trong 客人) + 厅 (sảnh). Tiếng Việt: \"khách sảnh\", \"đại sảnh\".",
+      "ex": [{ "cn": "客人在客厅等着。", "py": "Kèrén zài kètīng děng zhe.", "vi": "Khách đang đợi ở phòng khách." }] },
+    { "w": "卫生间", "py": "wèishēngjiān", "hv": "vệ sinh gian", "vi": "nhà vệ sinh", "pos": "danh từ",
+      "note": "卫生 chính là \"vệ sinh\" tiếng Việt + 间 (gian phòng). Đồng nghĩa 洗手间 (bài 40).",
+      "ex": [{ "cn": "卫生间在哪儿？", "py": "Wèishēngjiān zài nǎr?", "vi": "Nhà vệ sinh ở đâu?" }] },
+    { "w": "窗户", "py": "chuānghu", "hv": "song hộ", "vi": "cửa sổ", "pos": "danh từ",
+      "note": "窗 (song cửa) + 户 (hộ, cửa). Tiếng Việt: \"song cửa\", \"hộ khẩu\".",
+      "ex": [{ "cn": "请把窗户关上。", "py": "Qǐng bǎ chuānghu guān shàng.", "vi": "Xin đóng cửa sổ lại." }] },
+    { "w": "沙发", "py": "shāfā", "hv": "sa phát", "vi": "ghế sofa", "pos": "danh từ",
+      "note": "Từ MƯỢN ÂM tiếng Anh \"sofa\". Tiếng Việt cũng mượn thẳng \"sofa\" — hiếm khi hai bên mượn giống nhau như vậy.",
+      "ex": [{ "cn": "他坐在沙发上看电视。", "py": "Tā zuò zài shāfā shàng kàn diànshì.", "vi": "Anh ấy ngồi trên sofa xem tivi." }] },
+    { "w": "家具", "py": "jiājù", "hv": "gia cụ", "vi": "đồ nội thất", "pos": "danh từ",
+      "note": "家 (nhà) + 具 (dụng cụ). Tiếng Việt: \"gia cụ\", \"dụng cụ\", \"công cụ\".",
+      "ex": [{ "cn": "这套家具很贵。", "py": "Zhè tào jiājù hěn guì.", "vi": "Bộ nội thất này rất đắt." }] },
+    { "w": "房东", "py": "fángdōng", "hv": "phòng đông", "vi": "chủ nhà (cho thuê)", "pos": "danh từ",
+      "note": "房 (nhà) + 东 (chủ). Chữ 东 ở đây nghĩa là CHỦ, như trong 股东 (cổ đông). Người thuê là 房客.",
+      "ex": [{ "cn": "房东下个月要涨房租。", "py": "Fángdōng xià ge yuè yào zhǎng fángzū.", "vi": "Tháng sau chủ nhà sẽ tăng tiền thuê." }] },
+    { "w": "钥匙", "py": "yàoshi", "hv": "thược thi", "vi": "chìa khoá", "pos": "danh từ",
+      "note": "Cả hai chữ đều có bộ 钅 (kim loại). Chú ý 匙 ở đây đọc nhẹ shi, khác 勺子 (thìa).",
+      "ex": [{ "cn": "我把钥匙忘在家里了。", "py": "Wǒ bǎ yàoshi wàng zài jiā lǐ le.", "vi": "Tôi để quên chìa khoá ở nhà." }] },
+    { "w": "垃圾桶", "py": "lājītǒng", "hv": "lạp cấp dũng", "vi": "thùng rác", "pos": "danh từ",
+      "note": "垃圾 (rác) + 桶 (thùng, bộ 木). Vứt rác là 扔垃圾.",
+      "ex": [{ "cn": "请把垃圾扔进垃圾桶。", "py": "Qǐng bǎ lājī rēng jìn lājītǒng.", "vi": "Xin vứt rác vào thùng rác." }] },
+    { "w": "毛巾", "py": "máojīn", "hv": "mao cân", "vi": "khăn mặt", "pos": "danh từ",
+      "note": "毛 (lông, bài 115) + 巾 (khăn — bộ thủ đã học). Nghĩa đen: khăn có lông.",
+      "ex": [{ "cn": "毛巾挂在卫生间。", "py": "Máojīn guà zài wèishēngjiān.", "vi": "Khăn treo trong nhà tắm." }] }
+  ],
+  "grammar": [
+    { "t": "Đuôi 间 và 房 và 厅 — cách gọi tên phòng",
+      "b": "房间 · 卫生间 · 厨房 · 客厅",
+      "d": "间 (gian) dùng cho phòng chức năng nhỏ, 房 (phòng) cho phòng ở, 厅 (sảnh) cho không gian rộng tiếp khách. Ba đuôi này ghép được với hầu hết tên phòng trong nhà.",
+      "ex": [
+        { "cn": "卧室 · 书房 · 餐厅", "py": "wòshì · shūfáng · cāntīng", "vi": "phòng ngủ · phòng sách · phòng ăn" }
+      ] },
+    { "t": "Câu 把 với đồ vật trong nhà",
+      "b": "把 + đồ vật + động từ + 上/进/好",
+      "d": "Nhắc lại bài 44. Trong sinh hoạt hằng ngày, câu 把 xuất hiện liên tục vì ta luôn TÁC ĐỘNG lên đồ vật: 把窗户关上, 把垃圾扔进垃圾桶, 把钥匙放好.",
+      "ex": [
+        { "cn": "请把门关好。", "py": "Qǐng bǎ mén guān hǎo.", "vi": "Xin đóng cửa cho kỹ." },
+        { "cn": "他把家具都搬走了。", "py": "Tā bǎ jiājù dōu bān zǒu le.", "vi": "Anh ấy khiêng hết đồ đạc đi rồi." }
+      ] },
+    { "t": "Lượng từ 套 cho bộ đồ",
+      "b": "一套家具 · 一套房子 · 一套衣服",
+      "d": "套 tào dùng cho thứ gồm nhiều món hợp thành một BỘ. Tiếng Việt cũng nói \"một bộ bàn ghế\", \"một căn hộ\".",
+      "ex": [
+        { "cn": "他买了一套新家具。", "py": "Tā mǎi le yí tào xīn jiājù.", "vi": "Anh ấy mua một bộ nội thất mới." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我们家的厨房不太大。", "py": "Wǒmen jiā de chúfáng bú tài dà.", "vi": "Bếp nhà tôi không lớn lắm." },
+    { "cn": "晚上全家人都在客厅看电视。", "py": "Wǎnshang quánjiā rén dōu zài kètīng kàn diànshì.", "vi": "Buổi tối cả nhà xem tivi ở phòng khách." },
+    { "cn": "请问卫生间在几楼？", "py": "Qǐngwèn wèishēngjiān zài jǐ lóu?", "vi": "Xin hỏi nhà vệ sinh ở tầng mấy?" },
+    { "cn": "打开窗户，让空气进来。", "py": "Dǎkāi chuānghu, ràng kōngqì jìnlai.", "vi": "Mở cửa sổ cho không khí vào." },
+    { "cn": "这个沙发坐着很舒服。", "py": "Zhège shāfā zuò zhe hěn shūfu.", "vi": "Cái sofa này ngồi rất thoải mái." },
+    { "cn": "搬家最麻烦的是家具。", "py": "Bānjiā zuì máfan de shì jiājù.", "vi": "Chuyển nhà phiền nhất là đồ đạc." },
+    { "cn": "房东人很好，房租也不贵。", "py": "Fángdōng rén hěn hǎo, fángzū yě bú guì.", "vi": "Chủ nhà tốt tính, tiền thuê cũng không đắt." },
+    { "cn": "我的钥匙找不到了。", "py": "Wǒ de yàoshi zhǎo bu dào le.", "vi": "Tôi không tìm thấy chìa khoá." },
+    { "cn": "垃圾桶满了，该倒了。", "py": "Lājītǒng mǎn le, gāi dào le.", "vi": "Thùng rác đầy rồi, phải đổ thôi." },
+    { "cn": "洗完澡记得把毛巾挂好。", "py": "Xǐ wán zǎo jìde bǎ máojīn guà hǎo.", "vi": "Tắm xong nhớ treo khăn lại." }
+  ]
+}

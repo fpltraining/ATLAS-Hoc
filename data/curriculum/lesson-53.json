@@ -1,0 +1,73 @@
+{
+  "id": 53,
+  "cn": "东南西北",
+  "title": "Phương hướng và vị trí",
+  "goal": "Nói bốn phương, chỉ chỗ ngồi, đo khoảng cách — và học thứ tự phương hướng kiểu Trung Quốc.",
+  "words": [
+    { "w": "东", "py": "dōng", "hv": "đông", "vi": "phía đông", "pos": "danh từ",
+      "note": "Chính là \"đông\" tiếng Việt (\"phương đông\", \"Đông Nam Á\"). Đã gặp trong 东西 (đồ vật, bài 10).",
+      "ex": [{ "cn": "太阳从东边出来。", "py": "Tàiyáng cóng dōngbiān chūlai.", "vi": "Mặt trời mọc từ phía đông." }] },
+    { "w": "南", "py": "nán", "hv": "nam", "vi": "phía nam", "pos": "danh từ",
+      "note": "Chính là \"nam\" tiếng Việt (\"miền Nam\", \"Việt Nam\" — nghĩa đen là \"nước Việt phương Nam\").",
+      "ex": [{ "cn": "越南在中国的南边。", "py": "Yuènán zài Zhōngguó de nánbiān.", "vi": "Việt Nam ở phía nam Trung Quốc." }] },
+    { "w": "西", "py": "xī", "hv": "tây", "vi": "phía tây", "pos": "danh từ",
+      "note": "Chính là \"tây\" tiếng Việt (\"phương Tây\", \"Tây Ban Nha\"). Hình cái tổ chim — chim về tổ lúc mặt trời lặn ở phía tây.",
+      "ex": [{ "cn": "他住在城市西边。", "py": "Tā zhù zài chéngshì xībiān.", "vi": "Anh ấy sống ở phía tây thành phố." }] },
+    { "w": "北方", "py": "běifāng", "hv": "bắc phương", "vi": "miền Bắc, phương Bắc", "pos": "danh từ",
+      "note": "北 (bắc, đã gặp trong 北京) + 方 (phương). Trái nghĩa là 南方 (miền Nam).",
+      "ex": [{ "cn": "北方的冬天很冷。", "py": "Běifāng de dōngtiān hěn lěng.", "vi": "Mùa đông miền Bắc rất lạnh." }] },
+    { "w": "向", "py": "xiàng", "hv": "hướng", "vi": "về phía, hướng về", "pos": "giới từ",
+      "note": "Chính là \"hướng\" tiếng Việt. Gần nghĩa với 往 (bài 24) nhưng 向 dùng được cả với người: 向他学习.",
+      "ex": [{ "cn": "向左转。", "py": "Xiàng zuǒ zhuǎn.", "vi": "Rẽ trái." }] },
+    { "w": "座", "py": "zuò", "hv": "toạ", "vi": "toà, ngọn (lượng từ vật lớn)", "pos": "lượng từ",
+      "note": "Dùng cho vật LỚN và cố định: 一座山 (ngọn núi), 一座楼 (toà nhà), 一座桥 (cây cầu). Tiếng Việt cũng nói \"một toà nhà\".",
+      "ex": [{ "cn": "那座山很高。", "py": "Nà zuò shān hěn gāo.", "vi": "Ngọn núi kia rất cao." }] },
+    { "w": "座位", "py": "zuòwèi", "hv": "toạ vị", "vi": "chỗ ngồi", "pos": "danh từ",
+      "note": "座 (chỗ ngồi) + 位 (vị trí, bài 43). Tiếng Việt: \"toạ độ\", \"vị trí\".",
+      "ex": [{ "cn": "这个座位有人吗？", "py": "Zhège zuòwèi yǒu rén ma?", "vi": "Chỗ này có ai ngồi chưa?" }] },
+    { "w": "口", "py": "kǒu", "hv": "khẩu", "vi": "miệng, cửa; người (lượng từ)", "pos": "danh từ / lượng từ",
+      "note": "Bộ thủ đã học, nay dùng như từ độc lập: 门口 (cửa ra vào), 路口 (ngã tư). Cũng là lượng từ đếm nhân khẩu: 五口人.",
+      "ex": [{ "cn": "我在门口等你。", "py": "Wǒ zài ménkǒu děng nǐ.", "vi": "Tôi đợi bạn ở cửa." }] },
+    { "w": "角", "py": "jiǎo", "hv": "giác", "vi": "góc; hào (tiền)", "pos": "danh từ",
+      "note": "Chính là \"giác\" tiếng Việt (\"tam giác\", \"góc độ\"). Cũng là đơn vị tiền: 1 角 = 1/10 đồng.",
+      "ex": [{ "cn": "他坐在房间的角落里。", "py": "Tā zuò zài fángjiān de jiǎoluò lǐ.", "vi": "Anh ấy ngồi ở góc phòng." }] },
+    { "w": "米", "py": "mǐ", "hv": "mễ", "vi": "mét (đơn vị đo)", "pos": "lượng từ",
+      "note": "Cùng chữ với 米饭 (gạo, bài 9) nhưng đây là nghĩa hiện đại: đơn vị MÉT. Người Trung Quốc mượn âm \"mètre\" gán vào chữ 米.",
+      "ex": [{ "cn": "他有一米八高。", "py": "Tā yǒu yì mǐ bā gāo.", "vi": "Anh ấy cao một mét tám." }] }
+  ],
+  "grammar": [
+    { "t": "Thứ tự phương hướng khác tiếng Việt",
+      "b": "东南西北 (đông-nam-tây-bắc)",
+      "d": "Người Việt đọc \"đông tây nam bắc\", người Trung Quốc đọc 东南西北 (đông-nam-tây-bắc) theo chiều kim đồng hồ. Ghép hướng: 东南 (đông nam), 西北 (tây bắc) — giống tiếng Việt.",
+      "ex": [
+        { "cn": "东南西北", "py": "dōng nán xī běi", "vi": "đông - nam - tây - bắc" },
+        { "cn": "越南在中国的东南边。", "py": "Yuènán zài Zhōngguó de dōngnán biān.", "vi": "Việt Nam ở phía đông nam Trung Quốc." }
+      ] },
+    { "t": "Thêm 边 hoặc 面 để thành từ chỉ vị trí",
+      "b": "东边 · 南面 · 上边 · 里面",
+      "d": "Một chữ hướng đứng riêng nghe cụt. Thêm 边 (bên) hoặc 面 (mặt) là thành danh từ vị trí hoàn chỉnh. Hai đuôi này dùng thay nhau được.",
+      "ex": [
+        { "cn": "银行在学校的东边。", "py": "Yínháng zài xuéxiào de dōngbiān.", "vi": "Ngân hàng ở phía đông trường học." },
+        { "cn": "他站在我前面。", "py": "Tā zhàn zài wǒ qiánmiàn.", "vi": "Anh ấy đứng phía trước tôi." }
+      ] },
+    { "t": "Nói chiều cao và khoảng cách",
+      "b": "一米八 · 三百米 · 两公里",
+      "d": "Chiều cao người: 一米七五 (1m75), đọc thẳng các con số. Khoảng cách dùng 米 (mét) và 公里 (ki-lô-mét). Chú ý số đứng TRƯỚC đơn vị, giống tiếng Việt.",
+      "ex": [
+        { "cn": "他一米七五。", "py": "Tā yì mǐ qī wǔ.", "vi": "Anh ấy cao 1m75." },
+        { "cn": "从这儿到那儿大概五百米。", "py": "Cóng zhèr dào nàr dàgài wǔbǎi mǐ.", "vi": "Từ đây tới đó khoảng năm trăm mét." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "太阳从东边升起，从西边落下。", "py": "Tàiyáng cóng dōngbiān shēngqǐ, cóng xībiān luòxià.", "vi": "Mặt trời mọc đằng đông, lặn đằng tây." },
+    { "cn": "越南在中国的南边。", "py": "Yuènán zài Zhōngguó de nánbiān.", "vi": "Việt Nam ở phía nam Trung Quốc." },
+    { "cn": "北方人喜欢吃面，南方人喜欢吃米饭。", "py": "Běifāng rén xǐhuan chī miàn, nánfāng rén xǐhuan chī mǐfàn.", "vi": "Người miền Bắc thích ăn mì, người miền Nam thích ăn cơm." },
+    { "cn": "到了路口向右转。", "py": "Dào le lùkǒu xiàng yòu zhuǎn.", "vi": "Tới ngã tư thì rẽ phải." },
+    { "cn": "那座楼有三十层。", "py": "Nà zuò lóu yǒu sānshí céng.", "vi": "Toà nhà kia có ba mươi tầng." },
+    { "cn": "对不起，这个座位有人了。", "py": "Duìbuqǐ, zhège zuòwèi yǒu rén le.", "vi": "Xin lỗi, chỗ này có người rồi." },
+    { "cn": "我在学校门口等你。", "py": "Wǒ zài xuéxiào ménkǒu děng nǐ.", "vi": "Tôi đợi bạn ở cổng trường." },
+    { "cn": "他家一共有五口人。", "py": "Tā jiā yígòng yǒu wǔ kǒu rén.", "vi": "Nhà anh ấy tất cả năm người." },
+    { "cn": "这个房间的角落里有一盏灯。", "py": "Zhège fángjiān de jiǎoluò lǐ yǒu yì zhǎn dēng.", "vi": "Góc phòng này có một cái đèn." },
+    { "cn": "我弟弟已经一米八了。", "py": "Wǒ dìdi yǐjīng yì mǐ bā le.", "vi": "Em trai tôi đã cao một mét tám rồi." }
+  ]
+}

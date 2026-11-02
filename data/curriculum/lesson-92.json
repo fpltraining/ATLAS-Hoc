@@ -1,0 +1,72 @@
+{
+  "id": 92,
+  "cn": "身体的动作",
+  "title": "Động tác của thân",
+  "goal": "Động từ chỉ tư thế và di chuyển, kèm ba động từ ngữ pháp 弄 / 使 / 敢.",
+  "words": [
+    { "w": "躺", "py": "tǎng", "hv": "thảng", "vi": "nằm", "pos": "động từ",
+      "note": "Bộ ⻊ (chân) + 尚. Bộ ba tư thế: 站 (đứng) — 坐 (ngồi) — 躺 (nằm).",
+      "ex": [{ "cn": "他躺在沙发上休息。", "py": "Tā tǎng zài shāfā shàng xiūxi.", "vi": "Anh ấy nằm trên sofa nghỉ." }] },
+    { "w": "停", "py": "tíng", "hv": "đình", "vi": "dừng, đỗ", "pos": "động từ",
+      "note": "Chính là \"đình\" tiếng Việt (\"đình chỉ\", \"tạm đình\"). 停车 (đỗ xe), 雨停了 (mưa tạnh rồi).",
+      "ex": [{ "cn": "这里不能停车。", "py": "Zhèlǐ bù néng tíngchē.", "vi": "Ở đây không được đỗ xe." }] },
+    { "w": "转", "py": "zhuǎn", "hv": "chuyển", "vi": "quay, rẽ; chuyển", "pos": "động từ",
+      "note": "Chính là \"chuyển\" tiếng Việt. Bộ 车 (xe). Đọc zhuǎn là rẽ/chuyển; đọc zhuàn là xoay tròn.",
+      "ex": [{ "cn": "前面向右转。", "py": "Qiánmiàn xiàng yòu zhuǎn.", "vi": "Phía trước rẽ phải." }] },
+    { "w": "逛", "py": "guàng", "hv": "cuống", "vi": "dạo chơi, đi lòng vòng", "pos": "động từ",
+      "note": "Bộ 辶 (đi đường). 逛街 (dạo phố), 逛商店 (đi ngắm cửa hàng) — đi không có mục đích mua cụ thể.",
+      "ex": [{ "cn": "周末我喜欢逛街。", "py": "Zhōumò wǒ xǐhuan guàngjiē.", "vi": "Cuối tuần tôi thích dạo phố." }] },
+    { "w": "散步", "py": "sànbù", "hv": "tản bộ", "vi": "đi dạo, tản bộ", "pos": "động từ",
+      "note": "Chính là \"tản bộ\" tiếng Việt: 散 (tản) + 步 (bộ). Động từ ly hợp: 散了半个小时步.",
+      "ex": [{ "cn": "晚饭后我们去散步。", "py": "Wǎnfàn hòu wǒmen qù sànbù.", "vi": "Ăn tối xong chúng tôi đi dạo." }] },
+    { "w": "排队", "py": "páiduì", "hv": "bài đội", "vi": "xếp hàng", "pos": "động từ",
+      "note": "排 (sắp, bài 112 trong 排列) + 队 (hàng, đội). Động từ ly hợp: 排了一个小时队.",
+      "ex": [{ "cn": "买票要排队。", "py": "Mǎi piào yào páiduì.", "vi": "Mua vé phải xếp hàng." }] },
+    { "w": "赶", "py": "gǎn", "hv": "cản", "vi": "vội đuổi theo, kịp chuyến", "pos": "động từ",
+      "note": "Bộ ⻊ (chân) + 干. 赶飞机 (chạy cho kịp chuyến bay), 赶时间 (gấp gáp về thời gian).",
+      "ex": [{ "cn": "我要赶飞机。", "py": "Wǒ yào gǎn fēijī.", "vi": "Tôi phải chạy cho kịp chuyến bay." }] },
+    { "w": "敢", "py": "gǎn", "hv": "cảm", "vi": "dám", "pos": "động từ năng nguyện",
+      "note": "Chính là \"cảm\" trong \"dũng cảm\" (bài 61). Đứng trước động từ: 不敢说 (không dám nói).",
+      "ex": [{ "cn": "我不敢一个人去。", "py": "Wǒ bù gǎn yí ge rén qù.", "vi": "Tôi không dám đi một mình." }] },
+    { "w": "弄", "py": "nòng", "hv": "lộng", "vi": "làm, nghịch (động từ vạn năng)", "pos": "động từ",
+      "note": "Động từ thay thế khi không nhớ từ chính xác: 弄坏 (làm hỏng), 弄丢 (làm mất), 弄干净 (làm sạch). Rất tiện khi mới học.",
+      "ex": [{ "cn": "我把手机弄坏了。", "py": "Wǒ bǎ shǒujī nòng huài le.", "vi": "Tôi làm hỏng điện thoại rồi." }] },
+    { "w": "使", "py": "shǐ", "hv": "sử", "vi": "khiến cho; sử dụng", "pos": "động từ",
+      "note": "Chính là \"sử\" tiếng Việt (\"sử dụng\", \"sai sử\"). Trang trọng hơn 让 (bài 20), hay dùng trong văn viết.",
+      "ex": [{ "cn": "这件事使我很感动。", "py": "Zhè jiàn shì shǐ wǒ hěn gǎndòng.", "vi": "Việc này khiến tôi rất cảm động." }] }
+  ],
+  "grammar": [
+    { "t": "弄 — động từ cứu cánh khi bí từ",
+      "b": "弄 + bổ ngữ kết quả",
+      "d": "弄坏 (làm hỏng), 弄丢 (làm mất), 弄错 (làm sai), 弄清楚 (làm rõ), 弄干净 (làm sạch). Khi chưa nhớ ra động từ chính xác, dùng 弄 vẫn diễn đạt được ý — người bản xứ cũng dùng rất nhiều.",
+      "ex": [
+        { "cn": "对不起，我弄错了。", "py": "Duìbuqǐ, wǒ nòng cuò le.", "vi": "Xin lỗi, tôi nhầm rồi." },
+        { "cn": "这个问题要弄清楚。", "py": "Zhège wèntí yào nòng qīngchu.", "vi": "Vấn đề này phải làm cho rõ." }
+      ] },
+    { "t": "使 và 让 — khiến cho",
+      "b": "让 = khẩu ngữ, đời thường · 使 = văn viết, trang trọng",
+      "d": "这个消息让我很高兴 (khẩu ngữ). 这个消息使我们感到高兴 (văn viết). Cả hai cùng cấu trúc, chỉ khác sắc thái. Trong bài thi và báo chí, 使 xuất hiện nhiều hơn.",
+      "ex": [
+        { "cn": "音乐使人放松。", "py": "Yīnyuè shǐ rén fàngsōng.", "vi": "Âm nhạc khiến người ta thư giãn." }
+      ] },
+    { "t": "Ba tư thế cơ thể",
+      "b": "站 đứng · 坐 ngồi · 躺 nằm",
+      "d": "Ba động từ này thường đi với 着 để tả trạng thái đang giữ: 站着 (đang đứng), 坐着 (đang ngồi), 躺着 (đang nằm). Kết hợp với 在 + nơi chốn để nói rõ chỗ.",
+      "ex": [
+        { "cn": "他站着看书。", "py": "Tā zhàn zhe kàn shū.", "vi": "Anh ấy đứng đọc sách." },
+        { "cn": "别躺着玩手机。", "py": "Bié tǎng zhe wán shǒujī.", "vi": "Đừng nằm nghịch điện thoại." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "累了就躺一会儿吧。", "py": "Lèi le jiù tǎng yíhuìr ba.", "vi": "Mệt thì nằm một lát đi." },
+    { "cn": "雨停了，我们出发吧。", "py": "Yǔ tíng le, wǒmen chūfā ba.", "vi": "Mưa tạnh rồi, chúng ta lên đường thôi." },
+    { "cn": "到红绿灯向左转。", "py": "Dào hónglǜdēng xiàng zuǒ zhuǎn.", "vi": "Tới đèn giao thông rẽ trái." },
+    { "cn": "我们逛了一下午商店。", "py": "Wǒmen guàng le yí xiàwǔ shāngdiàn.", "vi": "Chúng tôi dạo cửa hàng cả buổi chiều." },
+    { "cn": "爷爷每天早上都去公园散步。", "py": "Yéye měi tiān zǎoshang dōu qù gōngyuán sànbù.", "vi": "Sáng nào ông cũng ra công viên tản bộ." },
+    { "cn": "银行门口排了很长的队。", "py": "Yínháng ménkǒu pái le hěn cháng de duì.", "vi": "Trước cửa ngân hàng xếp hàng rất dài." },
+    { "cn": "时间来不及了，我们赶紧走。", "py": "Shíjiān láibují le, wǒmen gǎnjǐn zǒu.", "vi": "Không kịp giờ rồi, ta đi gấp thôi." },
+    { "cn": "他不敢跟经理说这件事。", "py": "Tā bù gǎn gēn jīnglǐ shuō zhè jiàn shì.", "vi": "Anh ấy không dám nói việc này với giám đốc." },
+    { "cn": "别把衣服弄脏了。", "py": "Bié bǎ yīfu nòng zāng le.", "vi": "Đừng làm bẩn quần áo." },
+    { "cn": "他的话使大家都笑了。", "py": "Tā de huà shǐ dàjiā dōu xiào le.", "vi": "Lời anh ấy khiến mọi người đều cười." }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": 48,
+  "cn": "时间副词",
+  "title": "Thời gian và tần suất",
+  "goal": "Làm chủ nhóm phó từ khó nhất tiếng Trung — nói được \"vừa nãy, lát nữa, luôn luôn, cuối cùng\".",
+  "words": [
+    { "w": "刚才", "py": "gāngcái", "hv": "cương tài", "vi": "vừa nãy, ban nãy", "pos": "danh từ",
+      "note": "Chỉ khoảng thời gian RẤT GẦN vừa qua. Là DANH TỪ nên đứng được đầu câu: 刚才我在开会.",
+      "ex": [{ "cn": "刚才谁来了？", "py": "Gāngcái shéi lái le?", "vi": "Vừa nãy ai đến vậy?" }] },
+    { "w": "马上", "py": "mǎshàng", "hv": "mã thượng", "vi": "ngay lập tức", "pos": "phó từ",
+      "note": "Nghĩa đen: \"trên lưng ngựa\" — thời xưa cưỡi ngựa là nhanh nhất. Hình ảnh rất đẹp.",
+      "ex": [{ "cn": "我马上就来。", "py": "Wǒ mǎshàng jiù lái.", "vi": "Tôi đến ngay đây." }] },
+    { "w": "一会儿", "py": "yíhuìr", "hv": "nhất hội nhi", "vi": "một lát, chốc nữa", "pos": "danh từ",
+      "note": "Đọc uốn lưỡi kiểu Bắc Kinh. Đứng trước động từ nghĩa là \"lát nữa\", đứng sau nghĩa là \"trong chốc lát\".",
+      "ex": [{ "cn": "一会儿见。", "py": "Yíhuìr jiàn.", "vi": "Lát nữa gặp." }] },
+    { "w": "最近", "py": "zuìjìn", "hv": "tối cận", "vi": "dạo này, gần đây", "pos": "danh từ",
+      "note": "最 (nhất, bài 22) + 近 (gần, bài 24) = \"gần nhất\". Câu hỏi thăm rất hay dùng: 最近怎么样？",
+      "ex": [{ "cn": "你最近怎么样？", "py": "Nǐ zuìjìn zěnmeyàng?", "vi": "Dạo này bạn thế nào?" }] },
+    { "w": "最后", "py": "zuìhòu", "hv": "tối hậu", "vi": "cuối cùng, sau cùng", "pos": "danh từ",
+      "note": "Tiếng Việt: \"tối hậu thư\". Chỉ VỊ TRÍ cuối cùng trong một dãy, khác 终于 (xem ngữ pháp).",
+      "ex": [{ "cn": "他是最后一个来的。", "py": "Tā shì zuìhòu yí ge lái de.", "vi": "Anh ấy là người đến cuối cùng." }] },
+    { "w": "终于", "py": "zhōngyú", "hv": "chung ư", "vi": "cuối cùng cũng, rốt cuộc", "pos": "phó từ",
+      "note": "终 = \"chung\" trong \"thuỷ chung\", \"chung kết\". Mang cảm xúc NHẸ NHÕM sau chờ đợi lâu.",
+      "ex": [{ "cn": "我终于学会了！", "py": "Wǒ zhōngyú xué huì le!", "vi": "Cuối cùng tôi cũng học được rồi!" }] },
+    { "w": "经常", "py": "jīngcháng", "hv": "kinh thường", "vi": "thường xuyên", "pos": "phó từ",
+      "note": "常 = \"thường\" trong \"bình thường\", \"thường xuyên\". Tần suất cao nhưng không phải lúc nào cũng.",
+      "ex": [{ "cn": "我经常去图书馆。", "py": "Wǒ jīngcháng qù túshūguǎn.", "vi": "Tôi thường xuyên đi thư viện." }] },
+    { "w": "总是", "py": "zǒngshì", "hv": "tổng thị", "vi": "luôn luôn, lúc nào cũng", "pos": "phó từ",
+      "note": "总 = \"tổng\" trong \"tổng cộng\". Mạnh hơn 经常 — nghĩa là KHÔNG có ngoại lệ, đôi khi mang ý than phiền.",
+      "ex": [{ "cn": "他总是迟到。", "py": "Tā zǒngshì chídào.", "vi": "Cậu ấy lúc nào cũng đến muộn." }] },
+    { "w": "一直", "py": "yìzhí", "hv": "nhất trực", "vi": "luôn, suốt; thẳng", "pos": "phó từ",
+      "note": "直 = \"trực\" (thẳng). Hai nghĩa: liên tục không ngắt quãng, và đi thẳng: 一直走 (đi thẳng).",
+      "ex": [{ "cn": "我一直在等你。", "py": "Wǒ yìzhí zài děng nǐ.", "vi": "Tôi vẫn luôn đợi bạn." }] },
+    { "w": "突然", "py": "tūrán", "hv": "đột nhiên", "vi": "đột nhiên, bỗng nhiên", "pos": "phó từ",
+      "note": "Chính là \"đột nhiên\" tiếng Việt. 然 là đuôi hay gặp ở phó từ: 当然, 虽然, 忽然.",
+      "ex": [{ "cn": "天突然下雨了。", "py": "Tiān tūrán xiàyǔ le.", "vi": "Trời bỗng nhiên đổ mưa." }] }
+  ],
+  "grammar": [
+    { "t": "Thang tần suất — từ ít tới nhiều",
+      "b": "有时候 < 经常 < 总是 < 一直",
+      "d": "有时候 (thỉnh thoảng) → 经常 (thường xuyên) → 总是 (lúc nào cũng) → 一直 (liên tục không ngắt). Tất cả đều đứng SAU chủ ngữ, TRƯỚC động từ — giống quy tắc của 都 và 也.",
+      "ex": [
+        { "cn": "我经常喝咖啡。", "py": "Wǒ jīngcháng hē kāfēi.", "vi": "Tôi thường uống cà phê." },
+        { "cn": "他总是很忙。", "py": "Tā zǒngshì hěn máng.", "vi": "Anh ấy lúc nào cũng bận." },
+        { "cn": "他一直没回来。", "py": "Tā yìzhí méi huílai.", "vi": "Anh ấy vẫn chưa về." }
+      ] },
+    { "t": "最后 và 终于 — cùng dịch \"cuối cùng\" nhưng khác hẳn",
+      "b": "最后 = vị trí cuối trong dãy · 终于 = rốt cuộc cũng đạt được",
+      "d": "最后 là DANH TỪ chỉ thứ tự: 最后一个人 (người cuối cùng). 终于 là PHÓ TỪ mang cảm xúc nhẹ nhõm sau chờ đợi: 终于来了! (cuối cùng cũng đến rồi!). Người Việt hay dùng lẫn vì tiếng Việt dùng chung một cụm.",
+      "ex": [
+        { "cn": "最后我们去了公园。", "py": "Zuìhòu wǒmen qù le gōngyuán.", "vi": "Cuối cùng (sau chót) chúng tôi đi công viên." },
+        { "cn": "等了一个小时，他终于来了。", "py": "Děng le yí ge xiǎoshí, tā zhōngyú lái le.", "vi": "Đợi một tiếng, cuối cùng anh ấy cũng tới." }
+      ] },
+    { "t": "刚才 và 一会儿 — nãy và lát nữa",
+      "b": "刚才 = vừa xong (đã qua) · 一会儿 = lát nữa (sắp tới)",
+      "d": "Hai từ đối xứng nhau qua hiện tại. Cả hai đều là danh từ thời gian nên đứng linh hoạt: 刚才我在开会 hoặc 我刚才在开会 đều đúng.",
+      "ex": [
+        { "cn": "刚才他给你打电话了。", "py": "Gāngcái tā gěi nǐ dǎ diànhuà le.", "vi": "Vừa nãy anh ấy gọi cho bạn." },
+        { "cn": "一会儿我们去吃饭。", "py": "Yíhuìr wǒmen qù chīfàn.", "vi": "Lát nữa chúng ta đi ăn." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你最近忙不忙？", "py": "Nǐ zuìjìn máng bu máng?", "vi": "Dạo này bạn có bận không?" },
+    { "cn": "刚才我在开会，没接你电话。", "py": "Gāngcái wǒ zài kāihuì, méi jiē nǐ diànhuà.", "vi": "Vừa nãy tôi đang họp, không nghe máy được." },
+    { "cn": "请等一会儿，我马上就好。", "py": "Qǐng děng yíhuìr, wǒ mǎshàng jiù hǎo.", "vi": "Đợi một lát, tôi xong ngay đây." },
+    { "cn": "他经常在周末去爬山。", "py": "Tā jīngcháng zài zhōumò qù páshān.", "vi": "Cuối tuần anh ấy thường đi leo núi." },
+    { "cn": "我妹妹总是忘记带钥匙。", "py": "Wǒ mèimei zǒngshì wàngjì dài yàoshi.", "vi": "Em gái tôi lúc nào cũng quên mang chìa khoá." },
+    { "cn": "从早上到现在我一直在工作。", "py": "Cóng zǎoshang dào xiànzài wǒ yìzhí zài gōngzuò.", "vi": "Từ sáng đến giờ tôi làm việc liên tục." },
+    { "cn": "他突然站起来走了。", "py": "Tā tūrán zhàn qǐlai zǒu le.", "vi": "Anh ấy bỗng nhiên đứng dậy đi mất." },
+    { "cn": "学了三年，我终于能看懂中文报纸了。", "py": "Xué le sān nián, wǒ zhōngyú néng kàn dǒng Zhōngwén bàozhǐ le.", "vi": "Học ba năm, cuối cùng tôi cũng đọc hiểu được báo tiếng Trung." },
+    { "cn": "最后一个问题最难。", "py": "Zuìhòu yí ge wèntí zuì nán.", "vi": "Câu hỏi cuối cùng khó nhất." },
+    { "cn": "一直往前走，就到银行了。", "py": "Yìzhí wǎng qián zǒu, jiù dào yínháng le.", "vi": "Cứ đi thẳng là tới ngân hàng." }
+  ]
+}

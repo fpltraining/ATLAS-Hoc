@@ -1,0 +1,72 @@
+{
+  "id": 88,
+  "cn": "自然和污染",
+  "title": "Thiên nhiên và ô nhiễm",
+  "goal": "Nói về khí hậu, cây cỏ, loài vật và vấn đề môi trường.",
+  "words": [
+    { "w": "气候", "py": "qìhòu", "hv": "khí hậu", "vi": "khí hậu", "pos": "danh từ",
+      "note": "Chính là \"khí hậu\" tiếng Việt: 气 (khí) + 候 (hậu). Khác 天气 (thời tiết hôm nay) — 气候 là đặc điểm lâu dài của một vùng.",
+      "ex": [{ "cn": "越南的气候比较热。", "py": "Yuènán de qìhòu bǐjiào rè.", "vi": "Khí hậu Việt Nam khá nóng." }] },
+    { "w": "温度", "py": "wēndù", "hv": "ôn độ", "vi": "nhiệt độ", "pos": "danh từ",
+      "note": "温 (ấm) + 度 (độ). Tiếng Việt: \"ôn hoà\", \"ôn đới\". Hỏi nhiệt độ: 今天多少度？",
+      "ex": [{ "cn": "今天温度只有五度。", "py": "Jīntiān wēndù zhǐ yǒu wǔ dù.", "vi": "Hôm nay nhiệt độ chỉ có năm độ." }] },
+    { "w": "阳光", "py": "yángguāng", "hv": "dương quang", "vi": "ánh nắng", "pos": "danh từ",
+      "note": "阳 (dương, mặt trời — bài 46 trong 太阳) + 光 (ánh sáng).",
+      "ex": [{ "cn": "今天阳光很好。", "py": "Jīntiān yángguāng hěn hǎo.", "vi": "Hôm nay nắng đẹp." }] },
+    { "w": "叶子", "py": "yèzi", "hv": "diệp tử", "vi": "chiếc lá", "pos": "danh từ",
+      "note": "Tiếng Việt: \"diệp\" trong \"diệp lục\", \"kim chi ngọc diệp\". Bộ 艹 ở trên.",
+      "ex": [{ "cn": "秋天叶子会变黄。", "py": "Qiūtiān yèzi huì biàn huáng.", "vi": "Mùa thu lá sẽ chuyển vàng." }] },
+    { "w": "竹子", "py": "zhúzi", "hv": "trúc tử", "vi": "cây tre, trúc", "pos": "danh từ",
+      "note": "竹 chính là bộ thủ \"trúc\" đã học. Gấu trúc 熊猫 ăn 竹子 — hai từ này đi liền nhau.",
+      "ex": [{ "cn": "熊猫喜欢吃竹子。", "py": "Xióngmāo xǐhuan chī zhúzi.", "vi": "Gấu trúc thích ăn tre." }] },
+    { "w": "老虎", "py": "lǎohǔ", "hv": "lão hổ", "vi": "con hổ", "pos": "danh từ",
+      "note": "Chính là \"lão hổ\" tiếng Việt. Chữ 虎 có bộ 虍 tượng hình đầu hổ. Chữ 老 ở đây chỉ là tiền tố quen thuộc.",
+      "ex": [{ "cn": "动物园里有两只老虎。", "py": "Dòngwùyuán lǐ yǒu liǎng zhī lǎohǔ.", "vi": "Sở thú có hai con hổ." }] },
+    { "w": "猪", "py": "zhū", "hv": "trư", "vi": "con lợn", "pos": "danh từ",
+      "note": "Tiếng Việt: \"trư\" trong \"Trư Bát Giới\". Bộ 犭 (thú bốn chân). Nhắc lại: 家 = 宀 + 豕 (lợn dưới mái nhà).",
+      "ex": [{ "cn": "他家养了十头猪。", "py": "Tā jiā yǎng le shí tóu zhū.", "vi": "Nhà anh ấy nuôi mười con lợn." }] },
+    { "w": "污染", "py": "wūrǎn", "hv": "ô nhiễm", "vi": "ô nhiễm", "pos": "danh từ / động từ",
+      "note": "Chính là \"ô nhiễm\" tiếng Việt: 污 (ô, bẩn) + 染 (nhiễm). Cả hai đều có bộ 氵.",
+      "ex": [{ "cn": "空气污染越来越严重。", "py": "Kōngqì wūrǎn yuè lái yuè yánzhòng.", "vi": "Ô nhiễm không khí ngày càng nghiêm trọng." }] },
+    { "w": "光", "py": "guāng", "hv": "quang", "vi": "ánh sáng; hết sạch", "pos": "danh từ / tính từ",
+      "note": "Chính là \"quang\" tiếng Việt (\"quang minh\", \"ánh quang\"). Còn nghĩa \"hết nhẵn\": 吃光了 (ăn sạch).",
+      "ex": [{ "cn": "菜都吃光了。", "py": "Cài dōu chī guāng le.", "vi": "Món ăn hết sạch rồi." }] },
+    { "w": "火", "py": "huǒ", "hv": "hoả", "vi": "lửa", "pos": "danh từ",
+      "note": "Bộ thủ đã học. Tiếng Việt: \"hoả\" trong \"hoả hoạn\", \"hoả xa\". 着火了！= cháy rồi!",
+      "ex": [{ "cn": "小心火！", "py": "Xiǎoxīn huǒ!", "vi": "Cẩn thận lửa!" }] }
+  ],
+  "grammar": [
+    { "t": "气候 và 天气 — dài hạn hay hôm nay?",
+      "b": "气候 = đặc điểm khí hậu của vùng · 天气 = thời tiết cụ thể",
+      "d": "北京的气候很干 (khí hậu Bắc Kinh khô — nói chung, quanh năm). 今天天气很好 (thời tiết hôm nay đẹp — cụ thể). Nói 今天气候很好 là sai.",
+      "ex": [
+        { "cn": "这里的气候适合种水果。", "py": "Zhèlǐ de qìhòu shìhé zhòng shuǐguǒ.", "vi": "Khí hậu ở đây hợp trồng cây ăn quả." },
+        { "cn": "明天天气怎么样？", "py": "Míngtiān tiānqì zěnmeyàng?", "vi": "Thời tiết mai thế nào?" }
+      ] },
+    { "t": "光 làm bổ ngữ — hết sạch",
+      "b": "động từ + 光",
+      "d": "吃光 (ăn sạch), 卖光 (bán hết), 用光 (dùng hết). Cùng nhóm bổ ngữ kết quả với 完 (bài 23), nhưng 光 nhấn mạnh KHÔNG CÒN GÌ.",
+      "ex": [
+        { "cn": "票已经卖光了。", "py": "Piào yǐjīng mài guāng le.", "vi": "Vé đã bán hết sạch." },
+        { "cn": "钱花光了。", "py": "Qián huā guāng le.", "vi": "Tiền tiêu hết nhẵn rồi." }
+      ] },
+    { "t": "Lượng từ cho gia súc: 头 và 只",
+      "b": "一头猪 · 一头牛 · 一只鸡 · 一只老虎",
+      "d": "头 (đầu) dùng cho gia súc lớn — lợn, bò, trâu. 只 dùng cho con vật nhỏ và gia cầm. Tiếng Việt cũng đếm \"một đầu lợn\" trong cách nói cổ.",
+      "ex": [
+        { "cn": "农民养了三头牛。", "py": "Nóngmín yǎng le sān tóu niú.", "vi": "Nông dân nuôi ba con bò." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "北方和南方的气候很不一样。", "py": "Běifāng hé nánfāng de qìhòu hěn bù yíyàng.", "vi": "Khí hậu miền Bắc và miền Nam rất khác nhau." },
+    { "cn": "冬天的温度常常低于零度。", "py": "Dōngtiān de wēndù chángcháng dī yú líng dù.", "vi": "Nhiệt độ mùa đông thường dưới không độ." },
+    { "cn": "早上的阳光照进了房间。", "py": "Zǎoshang de yángguāng zhào jìn le fángjiān.", "vi": "Nắng sớm rọi vào phòng." },
+    { "cn": "秋天的叶子红了。", "py": "Qiūtiān de yèzi hóng le.", "vi": "Lá mùa thu đỏ rồi." },
+    { "cn": "南方有很多竹子。", "py": "Nánfāng yǒu hěn duō zhúzi.", "vi": "Miền Nam có nhiều tre." },
+    { "cn": "老虎是很危险的动物。", "py": "Lǎohǔ shì hěn wēixiǎn de dòngwù.", "vi": "Hổ là loài vật rất nguy hiểm." },
+    { "cn": "这个菜是猪肉做的。", "py": "Zhège cài shì zhūròu zuò de.", "vi": "Món này làm từ thịt lợn." },
+    { "cn": "工厂造成了很严重的污染。", "py": "Gōngchǎng zàochéng le hěn yánzhòng de wūrǎn.", "vi": "Nhà máy gây ô nhiễm rất nghiêm trọng." },
+    { "cn": "房间里一点儿光都没有。", "py": "Fángjiān lǐ yìdiǎnr guāng dōu méiyǒu.", "vi": "Trong phòng chẳng có chút ánh sáng nào." },
+    { "cn": "用火以后一定要检查。", "py": "Yòng huǒ yǐhòu yídìng yào jiǎnchá.", "vi": "Dùng lửa xong nhất định phải kiểm tra." }
+  ]
+}

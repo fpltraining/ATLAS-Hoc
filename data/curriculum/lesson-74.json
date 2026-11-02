@@ -1,0 +1,72 @@
+{
+  "id": 74,
+  "cn": "知识和研究",
+  "title": "Kiến thức và nghiên cứu",
+  "goal": "Bộ động từ tư duy học thuật — nền tảng để đọc bài viết tiếng Trung.",
+  "words": [
+    { "w": "基础", "py": "jīchǔ", "hv": "cơ sở", "vi": "cơ sở, nền tảng", "pos": "danh từ",
+      "note": "Chính là \"cơ sở\" tiếng Việt: 基 (cơ) + 础 (sở, đá tảng chân cột). Nghĩa đen: nền móng.",
+      "ex": [{ "cn": "他的汉语基础很好。", "py": "Tā de Hànyǔ jīchǔ hěn hǎo.", "vi": "Nền tảng tiếng Trung của cậu ấy rất tốt." }] },
+    { "w": "经验", "py": "jīngyàn", "hv": "kinh nghiệm", "vi": "kinh nghiệm", "pos": "danh từ",
+      "note": "Chính là \"kinh nghiệm\" tiếng Việt: 经 (kinh, trải qua) + 验 (nghiệm).",
+      "ex": [{ "cn": "他有丰富的工作经验。", "py": "Tā yǒu fēngfù de gōngzuò jīngyàn.", "vi": "Anh ấy có kinh nghiệm làm việc phong phú." }] },
+    { "w": "理解", "py": "lǐjiě", "hv": "lý giải", "vi": "hiểu, lĩnh hội", "pos": "động từ",
+      "note": "Chính là \"lý giải\" tiếng Việt: 理 (lý) + 解 (giải). Sâu hơn 明白 — là hiểu được cái lý bên trong.",
+      "ex": [{ "cn": "我理解你的心情。", "py": "Wǒ lǐjiě nǐ de xīnqíng.", "vi": "Tôi hiểu tâm trạng của bạn." }] },
+    { "w": "研究", "py": "yánjiū", "hv": "nghiên cứu", "vi": "nghiên cứu", "pos": "động từ / danh từ",
+      "note": "Chính là \"nghiên cứu\" tiếng Việt: 研 (nghiên, mài) + 究 (cứu, xét tận cùng).",
+      "ex": [{ "cn": "他在研究中国历史。", "py": "Tā zài yánjiū Zhōngguó lìshǐ.", "vi": "Anh ấy đang nghiên cứu lịch sử Trung Quốc." }] },
+    { "w": "讨论", "py": "tǎolùn", "hv": "thảo luận", "vi": "thảo luận", "pos": "động từ",
+      "note": "Chính là \"thảo luận\" tiếng Việt: 讨 (thảo) + 论 (luận). Cả hai chữ đều có bộ 讠 (lời nói).",
+      "ex": [{ "cn": "我们讨论了两个小时。", "py": "Wǒmen tǎolùn le liǎng ge xiǎoshí.", "vi": "Chúng tôi thảo luận hai tiếng." }] },
+    { "w": "解释", "py": "jiěshì", "hv": "giải thích", "vi": "giải thích", "pos": "động từ",
+      "note": "Chính là \"giải thích\" tiếng Việt: 解 (giải) + 释 (thích).",
+      "ex": [{ "cn": "老师解释得很清楚。", "py": "Lǎoshī jiěshì de hěn qīngchu.", "vi": "Thầy giải thích rất rõ." }] },
+    { "w": "说明", "py": "shuōmíng", "hv": "thuyết minh", "vi": "thuyết minh, nói rõ", "pos": "động từ / danh từ",
+      "note": "Chính là \"thuyết minh\" tiếng Việt: 说 (thuyết) + 明 (minh). 说明书 = bản hướng dẫn sử dụng.",
+      "ex": [{ "cn": "请看说明书。", "py": "Qǐng kàn shuōmíngshū.", "vi": "Xin xem bản hướng dẫn." }] },
+    { "w": "总结", "py": "zǒngjié", "hv": "tổng kết", "vi": "tổng kết", "pos": "động từ / danh từ",
+      "note": "Chính là \"tổng kết\" tiếng Việt: 总 (tổng) + 结 (kết).",
+      "ex": [{ "cn": "我们来总结一下。", "py": "Wǒmen lái zǒngjié yíxià.", "vi": "Chúng ta tổng kết một chút." }] },
+    { "w": "内容", "py": "nèiróng", "hv": "nội dung", "vi": "nội dung", "pos": "danh từ",
+      "note": "Chính là \"nội dung\" tiếng Việt: 内 (nội, trong) + 容 (dung, chứa).",
+      "ex": [{ "cn": "这本书的内容很丰富。", "py": "Zhè běn shū de nèiróng hěn fēngfù.", "vi": "Nội dung sách này rất phong phú." }] },
+    { "w": "文章", "py": "wénzhāng", "hv": "văn chương", "vi": "bài viết, bài văn", "pos": "danh từ",
+      "note": "Chính là \"văn chương\" tiếng Việt, nhưng tiếng Trung dùng cho MỌI bài viết, kể cả bài báo — không chỉ văn nghệ thuật.",
+      "ex": [{ "cn": "这篇文章写得很好。", "py": "Zhè piān wénzhāng xiě de hěn hǎo.", "vi": "Bài viết này viết rất hay." }] }
+  ],
+  "grammar": [
+    { "t": "Cả bài là mười từ Hán Việt trùng khít",
+      "b": "基础 · 经验 · 理解 · 研究 · 讨论 · 解释 · 说明 · 总结 · 内容 · 文章",
+      "d": "Đây là bài có mật độ Hán Việt cao nhất toàn giáo trình — MƯỜI TRÊN MƯỜI. Lớp từ học thuật của tiếng Việt gần như mượn nguyên khối từ chữ Hán, nên người Việt đọc văn bản chính luận tiếng Trung dễ hơn nghe hội thoại đời thường.",
+      "ex": [
+        { "cn": "基础 · 经验 · 理解", "py": "jīchǔ · jīngyàn · lǐjiě", "vi": "cơ sở · kinh nghiệm · lý giải" },
+        { "cn": "研究 · 讨论 · 总结", "py": "yánjiū · tǎolùn · zǒngjié", "vi": "nghiên cứu · thảo luận · tổng kết" }
+      ] },
+    { "t": "Lượng từ 篇 cho bài viết",
+      "b": "一篇文章 · 一篇日记 · 一篇论文",
+      "d": "篇 (bài 100) dùng riêng cho văn bản thành bài. Sách dùng 本, tờ giấy dùng 张, còn bài viết dùng 篇. Tiếng Việt cũng nói \"một bài văn\", \"một thiên truyện\".",
+      "ex": [
+        { "cn": "我写了一篇日记。", "py": "Wǒ xiě le yì piān rìjì.", "vi": "Tôi viết một bài nhật ký." }
+      ] },
+    { "t": "解释 và 说明 — giải thích hay trình bày?",
+      "b": "解释 = làm cho hiểu điều khó · 说明 = trình bày rõ sự việc",
+      "d": "解释 dùng khi có điều khó hiểu hoặc hiểu lầm cần gỡ. 说明 trung tính hơn, là trình bày thông tin. 说明书 (sách hướng dẫn) không bao giờ gọi là 解释书.",
+      "ex": [
+        { "cn": "他解释了迟到的原因。", "py": "Tā jiěshì le chídào de yuányīn.", "vi": "Anh ấy giải thích lý do đến muộn." },
+        { "cn": "这说明他很努力。", "py": "Zhè shuōmíng tā hěn nǔlì.", "vi": "Điều này cho thấy cậu ấy rất cố gắng." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "学好语法是打好基础的关键。", "py": "Xué hǎo yǔfǎ shì dǎ hǎo jīchǔ de guānjiàn.", "vi": "Học chắc ngữ pháp là mấu chốt để có nền tảng tốt." },
+    { "cn": "这份工作需要三年以上的经验。", "py": "Zhè fèn gōngzuò xūyào sān nián yǐshàng de jīngyàn.", "vi": "Công việc này cần trên ba năm kinh nghiệm." },
+    { "cn": "谢谢你的理解和支持。", "py": "Xièxie nǐ de lǐjiě hé zhīchí.", "vi": "Cảm ơn sự thấu hiểu và ủng hộ của bạn." },
+    { "cn": "他花了十年研究这个问题。", "py": "Tā huā le shí nián yánjiū zhège wèntí.", "vi": "Anh ấy dành mười năm nghiên cứu vấn đề này." },
+    { "cn": "这个问题值得好好讨论。", "py": "Zhège wèntí zhíde hǎohǎo tǎolùn.", "vi": "Vấn đề này đáng để thảo luận kỹ." },
+    { "cn": "能不能再解释一遍？", "py": "Néng bu néng zài jiěshì yí biàn?", "vi": "Có thể giải thích lại một lần nữa không?" },
+    { "cn": "使用前请仔细阅读说明书。", "py": "Shǐyòng qián qǐng zǐxì yuèdú shuōmíngshū.", "vi": "Trước khi dùng xin đọc kỹ hướng dẫn." },
+    { "cn": "每个学期末都要写总结。", "py": "Měi ge xuéqī mò dōu yào xiě zǒngjié.", "vi": "Cuối mỗi học kỳ đều phải viết tổng kết." },
+    { "cn": "这本书的内容对我很有用。", "py": "Zhè běn shū de nèiróng duì wǒ hěn yǒuyòng.", "vi": "Nội dung sách này rất hữu ích với tôi." },
+    { "cn": "我在报纸上读到一篇好文章。", "py": "Wǒ zài bàozhǐ shàng dú dào yì piān hǎo wénzhāng.", "vi": "Tôi đọc được một bài hay trên báo." }
+  ]
+}

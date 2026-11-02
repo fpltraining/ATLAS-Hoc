@@ -1,0 +1,73 @@
+{
+  "id": 89,
+  "cn": "频率和过去",
+  "title": "Tần suất và chuyện đã qua",
+  "goal": "Nhóm phó từ thời gian tinh tế nhất HSK 4 — 本来, 原来, 从来, 往往.",
+  "words": [
+    { "w": "平时", "py": "píngshí", "hv": "bình thời", "vi": "ngày thường, bình thường", "pos": "danh từ",
+      "note": "平 (bình thường) + 时 (thời). Chỉ khoảng thời gian thông thường, đối lại với dịp đặc biệt.",
+      "ex": [{ "cn": "平时我很少喝酒。", "py": "Píngshí wǒ hěn shǎo hē jiǔ.", "vi": "Ngày thường tôi ít uống rượu." }] },
+    { "w": "从来", "py": "cónglái", "hv": "tòng lai", "vi": "từ trước tới nay", "pos": "phó từ",
+      "note": "Hầu như LUÔN dùng với phủ định: 从来不 (chưa bao giờ), 从来没 (chưa từng). Ít khi dùng câu khẳng định.",
+      "ex": [{ "cn": "我从来不抽烟。", "py": "Wǒ cónglái bù chōuyān.", "vi": "Tôi chưa bao giờ hút thuốc." }] },
+    { "w": "往往", "py": "wǎngwǎng", "hv": "vãng vãng", "vi": "thường thường, hay là", "pos": "phó từ",
+      "note": "Chỉ quy luật KHÁCH QUAN đã quan sát được, khác 经常 chỉ tần suất chủ quan. Không dùng cho tương lai.",
+      "ex": [{ "cn": "他往往工作到很晚。", "py": "Tā wǎngwǎng gōngzuò dào hěn wǎn.", "vi": "Anh ấy thường làm việc tới rất khuya." }] },
+    { "w": "偶尔", "py": "ǒu'ěr", "hv": "ngẫu nhĩ", "vi": "thỉnh thoảng", "pos": "phó từ",
+      "note": "偶 = \"ngẫu\" trong \"ngẫu nhiên\". Tần suất thấp nhất trong thang: 偶尔 < 有时候 < 经常 < 总是.",
+      "ex": [{ "cn": "我偶尔去看电影。", "py": "Wǒ ǒu'ěr qù kàn diànyǐng.", "vi": "Thỉnh thoảng tôi đi xem phim." }] },
+    { "w": "暂时", "py": "zànshí", "hv": "tạm thời", "vi": "tạm thời", "pos": "phó từ / tính từ",
+      "note": "Chính là \"tạm thời\" tiếng Việt: 暂 (tạm) + 时 (thời).",
+      "ex": [{ "cn": "我暂时住在朋友家。", "py": "Wǒ zànshí zhù zài péngyou jiā.", "vi": "Tôi tạm ở nhà bạn." }] },
+    { "w": "将来", "py": "jiānglái", "hv": "tương lai", "vi": "tương lai", "pos": "danh từ",
+      "note": "Chính là \"tương lai\" tiếng Việt: 将 (tương, sắp) + 来 (lai, đến).",
+      "ex": [{ "cn": "将来我想当老师。", "py": "Jiānglái wǒ xiǎng dāng lǎoshī.", "vi": "Tương lai tôi muốn làm giáo viên." }] },
+    { "w": "本来", "py": "běnlái", "hv": "bản lai", "vi": "vốn dĩ, ban đầu", "pos": "phó từ",
+      "note": "Tiếng Việt: \"bản lai diện mục\" (bộ mặt vốn có). Nêu ý định BAN ĐẦU, thường kèm sự thay đổi sau đó.",
+      "ex": [{ "cn": "我本来想去，后来没去。", "py": "Wǒ běnlái xiǎng qù, hòulái méi qù.", "vi": "Ban đầu tôi định đi, sau lại không đi." }] },
+    { "w": "原来", "py": "yuánlái", "hv": "nguyên lai", "vi": "hoá ra; vốn là", "pos": "phó từ",
+      "note": "Hai nghĩa: \"hoá ra\" (vỡ lẽ điều mới biết) và \"vốn dĩ\" (giống 本来). Nghĩa \"hoá ra\" hay gặp hơn.",
+      "ex": [{ "cn": "原来你也在这儿！", "py": "Yuánlái nǐ yě zài zhèr!", "vi": "Hoá ra bạn cũng ở đây!" }] },
+    { "w": "当时", "py": "dāngshí", "hv": "đương thời", "vi": "lúc đó, khi ấy", "pos": "danh từ",
+      "note": "Chính là \"đương thời\" tiếng Việt: 当 (đương) + 时 (thời). Chỉ một thời điểm trong quá khứ đang kể.",
+      "ex": [{ "cn": "当时我还是个学生。", "py": "Dāngshí wǒ hái shì ge xuésheng.", "vi": "Lúc đó tôi còn là học sinh." }] },
+    { "w": "及时", "py": "jíshí", "hv": "cập thời", "vi": "kịp thời", "pos": "tính từ / phó từ",
+      "note": "Chính là \"kịp thời\" tiếng Việt: 及 (cập, kịp) + 时 (thời).",
+      "ex": [{ "cn": "幸好发现得及时。", "py": "Xìnghǎo fāxiàn de jíshí.", "vi": "May mà phát hiện kịp thời." }] }
+  ],
+  "grammar": [
+    { "t": "本来 và 原来 — hai chữ \"vốn dĩ\"",
+      "b": "本来 = ý định ban đầu (rồi đổi) · 原来 = hoá ra (vỡ lẽ)",
+      "d": "我本来想去 nhấn vào KẾ HOẠCH cũ đã thay đổi. 原来你也在 nhấn vào sự BẤT NGỜ vừa nhận ra. Đây là cặp người Việt hay dùng lẫn vì tiếng Việt đều nói \"vốn\", \"hoá ra\".",
+      "ex": [
+        { "cn": "我本来要买这个，后来买了那个。", "py": "Wǒ běnlái yào mǎi zhège, hòulái mǎi le nàge.", "vi": "Ban đầu tôi định mua cái này, sau lại mua cái kia." },
+        { "cn": "原来他早就知道了。", "py": "Yuánlái tā zǎo jiù zhīdào le.", "vi": "Hoá ra anh ấy biết từ lâu rồi." }
+      ] },
+    { "t": "从来 gần như luôn đi với phủ định",
+      "b": "从来不 + động từ · 从来没 + động từ + 过",
+      "d": "从来不 phủ định thói quen (không bao giờ làm). 从来没…过 phủ định kinh nghiệm (chưa từng làm lần nào). Nhắc lại cấu trúc 过 ở bài 25.",
+      "ex": [
+        { "cn": "他从来不迟到。", "py": "Tā cónglái bù chídào.", "vi": "Anh ấy không bao giờ đến muộn." },
+        { "cn": "我从来没去过日本。", "py": "Wǒ cónglái méi qù guo Rìběn.", "vi": "Tôi chưa từng đi Nhật." }
+      ] },
+    { "t": "往往 và 经常 — quy luật hay thói quen?",
+      "b": "往往 = quy luật khách quan (chỉ quá khứ) · 经常 = tần suất (mọi thì)",
+      "d": "冬天往往下雪 (mùa đông hay có tuyết — quy luật tự nhiên đã quan sát). 我经常去图书馆 (tôi thường đi thư viện — thói quen của tôi). Nói 明天往往下雨 là SAI vì 往往 không dùng cho tương lai.",
+      "ex": [
+        { "cn": "周末的商店往往人很多。", "py": "Zhōumò de shāngdiàn wǎngwǎng rén hěn duō.", "vi": "Cửa hàng cuối tuần thường rất đông." },
+        { "cn": "我经常给妈妈打电话。", "py": "Wǒ jīngcháng gěi māma dǎ diànhuà.", "vi": "Tôi thường gọi điện cho mẹ." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "平时他很安静，喝了酒就爱说话。", "py": "Píngshí tā hěn ānjìng, hē le jiǔ jiù ài shuōhuà.", "vi": "Ngày thường anh ấy trầm, uống rượu vào là nói nhiều." },
+    { "cn": "我从来没吃过这么辣的菜。", "py": "Wǒ cónglái méi chī guo zhème là de cài.", "vi": "Tôi chưa từng ăn món cay thế này." },
+    { "cn": "努力的人往往运气也不错。", "py": "Nǔlì de rén wǎngwǎng yùnqi yě búcuò.", "vi": "Người chăm chỉ thường cũng gặp may." },
+    { "cn": "我偶尔会想起小时候的事。", "py": "Wǒ ǒu'ěr huì xiǎng qǐ xiǎo shíhou de shì.", "vi": "Thỉnh thoảng tôi nhớ chuyện hồi nhỏ." },
+    { "cn": "这个问题暂时还没有答案。", "py": "Zhège wèntí zànshí hái méiyǒu dá'àn.", "vi": "Vấn đề này tạm thời chưa có đáp án." },
+    { "cn": "将来的事谁也说不准。", "py": "Jiānglái de shì shéi yě shuō bu zhǔn.", "vi": "Chuyện tương lai chẳng ai nói chắc được." },
+    { "cn": "我本来打算今天去，可是下雨了。", "py": "Wǒ běnlái dǎsuàn jīntiān qù, kěshì xiàyǔ le.", "vi": "Vốn tôi định hôm nay đi, nhưng lại mưa." },
+    { "cn": "原来这本书是你的！", "py": "Yuánlái zhè běn shū shì nǐ de!", "vi": "Hoá ra quyển sách này của bạn!" },
+    { "cn": "当时我一句汉语也不会说。", "py": "Dāngshí wǒ yí jù Hànyǔ yě bú huì shuō.", "vi": "Lúc đó tôi không nói nổi một câu tiếng Trung." },
+    { "cn": "谢谢你及时提醒我。", "py": "Xièxie nǐ jíshí tíxǐng wǒ.", "vi": "Cảm ơn bạn đã nhắc tôi kịp thời." }
+  ]
+}

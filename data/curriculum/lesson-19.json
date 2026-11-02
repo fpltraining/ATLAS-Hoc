@@ -1,0 +1,75 @@
+{
+  "id": 19,
+  "cn": "在教室里",
+  "title": "Trong lớp học",
+  "goal": "Hỏi bài, nói hiểu hay không hiểu, và khai thác kho từ Hán Việt về học hành.",
+  "words": [
+    { "w": "课", "py": "kè", "hv": "khoá", "vi": "bài học, tiết học", "pos": "danh từ",
+      "note": "Bộ 讠 (lời nói). Tiếng Việt: \"khoá học\", \"giáo khoa\". 上课 = vào học, 下课 = tan học.",
+      "ex": [{ "cn": "我们八点上课。", "py": "Wǒmen bā diǎn shàngkè.", "vi": "Chúng tôi vào học lúc 8 giờ." }] },
+    { "w": "教室", "py": "jiàoshì", "hv": "giáo thất", "vi": "phòng học, lớp học", "pos": "danh từ",
+      "note": "教 (dạy) + 室 (phòng, bộ 宀 mái nhà). Tiếng Việt: \"giáo dục\", \"phòng thất\".",
+      "ex": [{ "cn": "老师在教室里。", "py": "Lǎoshī zài jiàoshì lǐ.", "vi": "Thầy ở trong lớp." }] },
+    { "w": "考试", "py": "kǎoshì", "hv": "khảo thí", "vi": "thi, kỳ thi", "pos": "danh từ / động từ",
+      "note": "Chính là \"khảo thí\" tiếng Việt. Vừa là danh từ vừa là động từ: 明天考试 = mai thi.",
+      "ex": [{ "cn": "明天我们考试。", "py": "Míngtiān wǒmen kǎoshì.", "vi": "Mai chúng tôi thi." }] },
+    { "w": "题", "py": "tí", "hv": "đề", "vi": "câu hỏi, bài tập, đề", "pos": "danh từ",
+      "note": "Đúng là chữ \"đề\" trong \"đề bài\", \"chủ đề\" của tiếng Việt.",
+      "ex": [{ "cn": "这个题很难。", "py": "Zhège tí hěn nán.", "vi": "Bài này rất khó." }] },
+    { "w": "问题", "py": "wèntí", "hv": "vấn đề", "vi": "câu hỏi; vấn đề", "pos": "danh từ",
+      "note": "Chính là \"vấn đề\" tiếng Việt. Vừa nghĩa là câu hỏi, vừa nghĩa là rắc rối — y hệt tiếng Việt.",
+      "ex": [{ "cn": "我有一个问题。", "py": "Wǒ yǒu yí ge wèntí.", "vi": "Tôi có một câu hỏi." }] },
+    { "w": "问", "py": "wèn", "hv": "vấn", "vi": "hỏi", "pos": "động từ",
+      "note": "口 (miệng) nằm trong 门 (cửa) — thò đầu qua cửa hỏi. Tiếng Việt: \"phỏng vấn\", \"tư vấn\".",
+      "ex": [{ "cn": "我想问老师。", "py": "Wǒ xiǎng wèn lǎoshī.", "vi": "Tôi muốn hỏi thầy." }] },
+    { "w": "懂", "py": "dǒng", "hv": "đổng", "vi": "hiểu", "pos": "động từ",
+      "note": "Bộ 忄 (tim) — hiểu là chuyện của lòng. Rất hay dùng: 听懂 (nghe hiểu), 看懂 (đọc hiểu).",
+      "ex": [{ "cn": "我不懂。", "py": "Wǒ bù dǒng.", "vi": "Tôi không hiểu." }] },
+    { "w": "铅笔", "py": "qiānbǐ", "hv": "duyên bút", "vi": "bút chì", "pos": "danh từ",
+      "note": "铅 (chì, bộ 钅 kim loại) + 笔 (bút, bộ 竹 tre). Chữ 笔 = 竹 trên 毛 (lông) — đúng là cây bút lông!",
+      "ex": [{ "cn": "这是我的铅笔。", "py": "Zhè shì wǒ de qiānbǐ.", "vi": "Đây là bút chì của tôi." }] },
+    { "w": "意思", "py": "yìsi", "hv": "ý tứ", "vi": "ý nghĩa", "pos": "danh từ",
+      "note": "Cả hai chữ đều có bộ 心. Tiếng Việt: \"ý tứ\", \"ý nghĩa\". 有意思 = thú vị.",
+      "ex": [{ "cn": "这个字是什么意思？", "py": "Zhège zì shì shénme yìsi?", "vi": "Chữ này nghĩa là gì?" }] },
+    { "w": "对", "py": "duì", "hv": "đối", "vi": "đúng; đối với", "pos": "tính từ / giới từ",
+      "note": "Tiếng Việt: \"đối đáp\", \"đối tượng\". Đáp \"đúng rồi\" là 对了.",
+      "ex": [{ "cn": "对，你说得对。", "py": "Duì, nǐ shuō de duì.", "vi": "Đúng, bạn nói đúng." }] }
+  ],
+  "grammar": [
+    { "t": "Bốn câu sống còn trong lớp học",
+      "b": "我不懂 · 请再说一次 · 这是什么意思？· 我有一个问题",
+      "d": "Học thuộc bốn câu này trước mọi thứ khác. Không hiểu mà im lặng là cách học chậm nhất.",
+      "ex": [
+        { "cn": "老师，我有一个问题。", "py": "Lǎoshī, wǒ yǒu yí ge wèntí.", "vi": "Thưa thầy, em có một câu hỏi." },
+        { "cn": "这个字是什么意思？", "py": "Zhège zì shì shénme yìsi?", "vi": "Chữ này nghĩa là gì?" },
+        { "cn": "对不起，我不懂。", "py": "Duìbuqǐ, wǒ bù dǒng.", "vi": "Xin lỗi, em không hiểu." }
+      ] },
+    { "t": "Bổ ngữ kết quả với 懂",
+      "b": "听懂 = nghe HIỂU · 看懂 = đọc HIỂU",
+      "d": "Ghép động từ giác quan với 懂 để nói rõ có đạt kết quả hay không. Phủ định chèn 不 vào giữa: 听不懂 (nghe mà không hiểu), khẳng định là 听得懂.",
+      "ex": [
+        { "cn": "我听不懂。", "py": "Wǒ tīng bu dǒng.", "vi": "Tôi nghe không hiểu." },
+        { "cn": "这本书我看得懂。", "py": "Zhè běn shū wǒ kàn de dǒng.", "vi": "Quyển sách này tôi đọc hiểu được." }
+      ] },
+    { "t": "Kho từ Hán Việt về học hành — học một biết mười",
+      "b": "问题 vấn đề · 考试 khảo thí · 题 đề · 意思 ý tứ · 教室 giáo thất",
+      "d": "Cả bài này gần như là tiếng Việt viết bằng chữ Hán. Đây chính là lợi thế mà người học tiếng Anh không bao giờ có được — hãy tận dụng triệt để: gặp từ mới, thử đọc âm Hán Việt trước khi tra nghĩa.",
+      "ex": [
+        { "cn": "问题", "py": "wèntí", "vi": "vấn đề" },
+        { "cn": "考试", "py": "kǎoshì", "vi": "khảo thí → kỳ thi" },
+        { "cn": "注意", "py": "zhùyì", "vi": "chú ý" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "老师在教室里吗？", "py": "Lǎoshī zài jiàoshì lǐ ma?", "vi": "Thầy có ở trong lớp không?" },
+    { "cn": "我们明天有考试。", "py": "Wǒmen míngtiān yǒu kǎoshì.", "vi": "Mai chúng tôi có bài kiểm tra." },
+    { "cn": "这个题太难了。", "py": "Zhège tí tài nán le.", "vi": "Bài này khó quá." },
+    { "cn": "我有一个问题想问你。", "py": "Wǒ yǒu yí ge wèntí xiǎng wèn nǐ.", "vi": "Tôi có một câu muốn hỏi bạn." },
+    { "cn": "对不起，我听不懂。", "py": "Duìbuqǐ, wǒ tīng bu dǒng.", "vi": "Xin lỗi, tôi nghe không hiểu." },
+    { "cn": "这个字是什么意思？", "py": "Zhège zì shì shénme yìsi?", "vi": "Chữ này nghĩa là gì?" },
+    { "cn": "学汉语很有意思。", "py": "Xué Hànyǔ hěn yǒu yìsi.", "vi": "Học tiếng Trung rất thú vị." },
+    { "cn": "请用铅笔写。", "py": "Qǐng yòng qiānbǐ xiě.", "vi": "Xin viết bằng bút chì." },
+    { "cn": "对，你说得对。", "py": "Duì, nǐ shuō de duì.", "vi": "Đúng, bạn nói đúng." },
+    { "cn": "我们几点上课？", "py": "Wǒmen jǐ diǎn shàngkè?", "vi": "Mấy giờ chúng ta vào học?" }
+  ]
+}

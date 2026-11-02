@@ -1,0 +1,73 @@
+{
+  "id": 77,
+  "cn": "找工作和上班",
+  "title": "Xin việc và đi làm",
+  "goal": "Toàn bộ vòng đời một công việc: ứng tuyển, lương thưởng, áp lực, quản lý.",
+  "words": [
+    { "w": "应聘", "py": "yìngpìn", "hv": "ứng sính", "vi": "ứng tuyển, xin việc", "pos": "động từ",
+      "note": "应 (đáp lại) + 聘 (mời làm). Người XIN việc dùng 应聘; công ty TÌM người dùng 招聘.",
+      "ex": [{ "cn": "我去应聘了一家公司。", "py": "Wǒ qù yìngpìn le yì jiā gōngsī.", "vi": "Tôi đi xin việc ở một công ty." }] },
+    { "w": "招聘", "py": "zhāopìn", "hv": "chiêu sính", "vi": "tuyển dụng", "pos": "động từ",
+      "note": "招 (vẫy gọi, bộ 扌) + 聘 (mời). Tiếng Việt: \"chiêu mộ\", \"chiêu sinh\".",
+      "ex": [{ "cn": "公司正在招聘工程师。", "py": "Gōngsī zhèngzài zhāopìn gōngchéngshī.", "vi": "Công ty đang tuyển kỹ sư." }] },
+    { "w": "工资", "py": "gōngzī", "hv": "công tư", "vi": "tiền lương", "pos": "danh từ",
+      "note": "工 (công việc) + 资 (tiền của). Tiếng Việt: \"tư bản\", \"đầu tư\" cùng chữ 资.",
+      "ex": [{ "cn": "这份工作工资不错。", "py": "Zhè fèn gōngzuò gōngzī búcuò.", "vi": "Công việc này lương khá." }] },
+    { "w": "奖金", "py": "jiǎngjīn", "hv": "thưởng kim", "vi": "tiền thưởng", "pos": "danh từ",
+      "note": "奖 (thưởng) + 金 (tiền vàng). Tiếng Việt: \"giải thưởng\", \"học bổng\" (奖学金).",
+      "ex": [{ "cn": "年底会发奖金。", "py": "Niándǐ huì fā jiǎngjīn.", "vi": "Cuối năm sẽ phát thưởng." }] },
+    { "w": "加班", "py": "jiābān", "hv": "gia ban", "vi": "làm thêm giờ", "pos": "động từ",
+      "note": "加 (thêm) + 班 (ca làm, bài 36). Động từ ly hợp: 加了三个小时班.",
+      "ex": [{ "cn": "今天我又要加班。", "py": "Jīntiān wǒ yòu yào jiābān.", "vi": "Hôm nay tôi lại phải tăng ca." }] },
+    { "w": "出差", "py": "chūchāi", "hv": "xuất sai", "vi": "đi công tác", "pos": "động từ",
+      "note": "出 (ra) + 差 (việc được phái đi — đọc chāi, khác 差 chà ở bài 54). Động từ ly hợp: 出了一个星期差.",
+      "ex": [{ "cn": "他下周去上海出差。", "py": "Tā xià zhōu qù Shànghǎi chūchāi.", "vi": "Tuần sau anh ấy đi công tác Thượng Hải." }] },
+    { "w": "任务", "py": "rènwu", "hv": "nhiệm vụ", "vi": "nhiệm vụ", "pos": "danh từ",
+      "note": "Chính là \"nhiệm vụ\" tiếng Việt: 任 (nhiệm) + 务 (vụ).",
+      "ex": [{ "cn": "这个任务不容易。", "py": "Zhège rènwu bù róngyì.", "vi": "Nhiệm vụ này không dễ." }] },
+    { "w": "能力", "py": "nénglì", "hv": "năng lực", "vi": "năng lực", "pos": "danh từ",
+      "note": "Chính là \"năng lực\" tiếng Việt: 能 (năng, bài 8) + 力 (lực).",
+      "ex": [{ "cn": "他的工作能力很强。", "py": "Tā de gōngzuò nénglì hěn qiáng.", "vi": "Năng lực làm việc của anh ấy rất mạnh." }] },
+    { "w": "压力", "py": "yālì", "hv": "áp lực", "vi": "áp lực", "pos": "danh từ",
+      "note": "Chính là \"áp lực\" tiếng Việt: 压 (áp, đè) + 力 (lực).",
+      "ex": [{ "cn": "工作压力太大了。", "py": "Gōngzuò yālì tài dà le.", "vi": "Áp lực công việc lớn quá." }] },
+    { "w": "管理", "py": "guǎnlǐ", "hv": "quản lý", "vi": "quản lý", "pos": "động từ / danh từ",
+      "note": "Chính là \"quản lý\" tiếng Việt: 管 (quản, bộ 竹) + 理 (lý).",
+      "ex": [{ "cn": "他管理着五十个人。", "py": "Tā guǎnlǐ zhe wǔshí ge rén.", "vi": "Anh ấy quản lý năm mươi người." }] }
+  ],
+  "grammar": [
+    { "t": "应聘 và 招聘 — hai đầu của một việc",
+      "b": "应聘 = phía người xin việc · 招聘 = phía công ty tuyển",
+      "d": "Cả hai đều chứa 聘 (mời làm việc). Nhìn chữ đầu mà phân biệt: 应 là ĐÁP LẠI lời mời (ứng viên), 招 là VẪY GỌI (nhà tuyển dụng). Bảng tin việc làm ghi 招聘启事.",
+      "ex": [
+        { "cn": "他去应聘销售的工作。", "py": "Tā qù yìngpìn xiāoshòu de gōngzuò.", "vi": "Anh ấy đi ứng tuyển vị trí bán hàng." },
+        { "cn": "我们公司在招聘新人。", "py": "Wǒmen gōngsī zài zhāopìn xīnrén.", "vi": "Công ty chúng tôi đang tuyển người mới." }
+      ] },
+    { "t": "Động từ ly hợp nơi công sở",
+      "b": "加班 · 出差 · 上班 · 请假 · 帮忙",
+      "d": "Muốn thêm thời lượng phải chèn vào GIỮA: 加了两个小时班, 出了三天差. Đây là nhóm động từ ly hợp bạn dùng nhiều nhất khi đi làm.",
+      "ex": [
+        { "cn": "昨天我加了三个小时班。", "py": "Zuótiān wǒ jiā le sān ge xiǎoshí bān.", "vi": "Hôm qua tôi tăng ca ba tiếng." },
+        { "cn": "他出了一个星期差。", "py": "Tā chū le yí ge xīngqī chāi.", "vi": "Anh ấy đi công tác một tuần." }
+      ] },
+    { "t": "压力大 / 能力强 — cặp danh từ + tính từ cố định",
+      "b": "压力大 · 能力强 · 责任重",
+      "d": "Một số danh từ trừu tượng đi với tính từ cố định. 压力 luôn dùng 大/小 (không dùng 多/少). 能力 dùng 强/弱. Học nguyên cụm sẽ nói tự nhiên hơn ghép rời.",
+      "ex": [
+        { "cn": "最近我压力很大。", "py": "Zuìjìn wǒ yālì hěn dà.", "vi": "Dạo này tôi áp lực lớn." },
+        { "cn": "她的学习能力很强。", "py": "Tā de xuéxí nénglì hěn qiáng.", "vi": "Khả năng học của cô ấy rất mạnh." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我下周去应聘，有点儿紧张。", "py": "Wǒ xià zhōu qù yìngpìn, yǒudiǎnr jǐnzhāng.", "vi": "Tuần sau tôi đi phỏng vấn, hơi hồi hộp." },
+    { "cn": "网站上有很多招聘信息。", "py": "Wǎngzhàn shàng yǒu hěn duō zhāopìn xìnxī.", "vi": "Trên web có nhiều thông tin tuyển dụng." },
+    { "cn": "每个月十号发工资。", "py": "Měi ge yuè shí hào fā gōngzī.", "vi": "Mùng mười hàng tháng phát lương." },
+    { "cn": "今年的奖金比去年多。", "py": "Jīnnián de jiǎngjīn bǐ qùnián duō.", "vi": "Thưởng năm nay nhiều hơn năm ngoái." },
+    { "cn": "为了完成任务，我们加了三天班。", "py": "Wèile wánchéng rènwu, wǒmen jiā le sān tiān bān.", "vi": "Để hoàn thành nhiệm vụ, chúng tôi tăng ca ba ngày." },
+    { "cn": "经理经常出差，很少在办公室。", "py": "Jīnglǐ jīngcháng chūchāi, hěn shǎo zài bàngōngshì.", "vi": "Giám đốc hay đi công tác, ít khi ở văn phòng." },
+    { "cn": "这个任务交给你了。", "py": "Zhège rènwu jiāo gěi nǐ le.", "vi": "Nhiệm vụ này giao cho bạn đấy." },
+    { "cn": "公司很重视员工的能力。", "py": "Gōngsī hěn zhòngshì yuángōng de nénglì.", "vi": "Công ty rất coi trọng năng lực nhân viên." },
+    { "cn": "压力太大对身体不好。", "py": "Yālì tài dà duì shēntǐ bù hǎo.", "vi": "Áp lực lớn quá không tốt cho sức khoẻ." },
+    { "cn": "他学的是企业管理。", "py": "Tā xué de shì qǐyè guǎnlǐ.", "vi": "Anh ấy học ngành quản trị doanh nghiệp." }
+  ]
+}

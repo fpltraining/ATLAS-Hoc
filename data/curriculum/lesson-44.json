@@ -1,0 +1,74 @@
+{
+  "id": 44,
+  "cn": "家里的东西",
+  "title": "Đồ đạc trong nhà",
+  "goal": "Gọi tên đồ dùng gia đình, nói việc dọn dẹp chuyển nhà, và dùng cấu trúc 把.",
+  "words": [
+    { "w": "冰箱", "py": "bīngxiāng", "hv": "băng tương", "vi": "tủ lạnh", "pos": "danh từ",
+      "note": "冰 (băng, đá) có bộ 冫 (hai chấm băng) + 箱 (thùng) = \"thùng băng\". Rất dễ đoán.",
+      "ex": [{ "cn": "牛奶在冰箱里。", "py": "Niúnǎi zài bīngxiāng lǐ.", "vi": "Sữa ở trong tủ lạnh." }] },
+    { "w": "空调", "py": "kōngtiáo", "hv": "không điều", "vi": "máy điều hoà", "pos": "danh từ",
+      "note": "空气 (không khí) + 调节 (điều tiết) = \"điều hoà không khí\". Tiếng Việt gọi tắt là \"điều hoà\" — cùng một cách rút gọn.",
+      "ex": [{ "cn": "太热了，开空调吧。", "py": "Tài rè le, kāi kōngtiáo ba.", "vi": "Nóng quá, bật điều hoà đi." }] },
+    { "w": "灯", "py": "dēng", "hv": "đăng", "vi": "cái đèn", "pos": "danh từ",
+      "note": "Bộ 火 (lửa) bên trái — đèn xưa đốt bằng lửa. Tiếng Việt: \"hoa đăng\", \"đèn\". Bật đèn 开灯, tắt đèn 关灯.",
+      "ex": [{ "cn": "请关灯。", "py": "Qǐng guān dēng.", "vi": "Xin tắt đèn." }] },
+    { "w": "盘子", "py": "pánzi", "hv": "bàn tử", "vi": "cái đĩa", "pos": "danh từ",
+      "note": "Có bộ 皿 (đồ đựng) ở dưới — cùng bộ với 碗. Nhìn bộ này là biết đồ dùng nhà bếp.",
+      "ex": [{ "cn": "请把盘子放在桌子上。", "py": "Qǐng bǎ pánzi fàng zài zhuōzi shàng.", "vi": "Xin đặt đĩa lên bàn." }] },
+    { "w": "碗", "py": "wǎn", "hv": "uyển", "vi": "cái bát; bát (lượng từ)", "pos": "danh từ / lượng từ",
+      "note": "Bộ 石 (đá) — bát xưa nặn từ đất đá. Vừa là đồ vật vừa là lượng từ: 一碗米饭 (một bát cơm).",
+      "ex": [{ "cn": "我要一碗面。", "py": "Wǒ yào yì wǎn miàn.", "vi": "Cho tôi một bát mì." }] },
+    { "w": "筷子", "py": "kuàizi", "hv": "khoái tử", "vi": "đôi đũa", "pos": "danh từ",
+      "note": "Bộ 竹 (tre) ở trên vì đũa làm bằng tre. Lượng từ là 双 (đôi): 一双筷子.",
+      "ex": [{ "cn": "请给我一双筷子。", "py": "Qǐng gěi wǒ yì shuāng kuàizi.", "vi": "Cho tôi xin một đôi đũa." }] },
+    { "w": "伞", "py": "sǎn", "hv": "tán", "vi": "cái ô, cái dù", "pos": "danh từ",
+      "note": "Chữ TƯỢNG HÌNH đẹp nhất tiếng Trung: nhìn đúng như cái ô đang mở, có cán và nan. Tiếng Việt: \"tán\" (cái lọng).",
+      "ex": [{ "cn": "下雨了，带伞吧。", "py": "Xiàyǔ le, dài sǎn ba.", "vi": "Mưa rồi, mang ô đi." }] },
+    { "w": "干净", "py": "gānjìng", "hv": "can tịnh", "vi": "sạch sẽ", "pos": "tính từ",
+      "note": "净 = \"tịnh\" trong \"thanh tịnh\", \"tịnh khiết\". Trái nghĩa là 脏 zāng (bẩn).",
+      "ex": [{ "cn": "房间很干净。", "py": "Fángjiān hěn gānjìng.", "vi": "Căn phòng rất sạch." }] },
+    { "w": "打扫", "py": "dǎsǎo", "hv": "đả tảo", "vi": "quét dọn", "pos": "động từ",
+      "note": "打 (làm) + 扫 (quét). Cả hai đều có bộ 扌 (tay). Tiếng Việt: \"tảo\" trong \"tảo mộ\" (dọn mộ).",
+      "ex": [{ "cn": "周末我要打扫房间。", "py": "Zhōumò wǒ yào dǎsǎo fángjiān.", "vi": "Cuối tuần tôi phải dọn phòng." }] },
+    { "w": "搬", "py": "bān", "hv": "ban", "vi": "khiêng, dọn (nhà)", "pos": "động từ",
+      "note": "Bộ 扌 (tay). 搬家 = chuyển nhà, 搬东西 = khiêng đồ.",
+      "ex": [{ "cn": "他们下个月搬家。", "py": "Tāmen xià ge yuè bānjiā.", "vi": "Tháng sau họ chuyển nhà." }] }
+  ],
+  "grammar": [
+    { "t": "Câu chữ 把 — điểm ngữ pháp KHÓ NHẤT của HSK 3",
+      "b": "Chủ ngữ + 把 + tân ngữ + động từ + kết quả",
+      "d": "Bình thường tiếng Trung là Chủ-Động-Tân. Câu 把 đảo tân ngữ lên TRƯỚC động từ để nhấn mạnh \"xử lý cái đó thế nào\". Bắt buộc phải có phần KẾT QUẢ sau động từ (放在…上, 拿走, 打扫干净) — nói 我把书 rồi dừng là sai.",
+      "ex": [
+        { "cn": "请把盘子放在桌子上。", "py": "Qǐng bǎ pánzi fàng zài zhuōzi shàng.", "vi": "Xin đặt đĩa lên bàn." },
+        { "cn": "我把房间打扫干净了。", "py": "Wǒ bǎ fángjiān dǎsǎo gānjìng le.", "vi": "Tôi đã dọn phòng sạch sẽ rồi." },
+        { "cn": "他把我的伞拿走了。", "py": "Tā bǎ wǒ de sǎn ná zǒu le.", "vi": "Anh ấy lấy mất cái ô của tôi rồi." }
+      ] },
+    { "t": "Khi nào PHẢI dùng 把",
+      "b": "Khi tân ngữ là thứ XÁC ĐỊNH và bị TÁC ĐỘNG thay đổi",
+      "d": "Nói 我打扫房间 cũng được (chỉ kể việc). Nhưng muốn nói rõ căn phòng ĐÃ THÀNH sạch thì phải dùng 把: 我把房间打扫干净了. Mẹo: hễ có kết quả rõ rệt tác động lên vật, hãy nghĩ tới 把.",
+      "ex": [
+        { "cn": "我把作业写完了。", "py": "Wǒ bǎ zuòyè xiě wán le.", "vi": "Tôi viết xong bài tập rồi." },
+        { "cn": "请把门关上。", "py": "Qǐng bǎ mén guān shàng.", "vi": "Xin đóng cửa lại." }
+      ] },
+    { "t": "开 và 关 — cặp bật/tắt, mở/đóng",
+      "b": "开灯 / 关灯 · 开门 / 关门 · 开空调 / 关空调",
+      "d": "开 (bài 12) và 关 dùng cho cả thiết bị điện lẫn cửa nẻo. Rất tiện: học một cặp dùng được cho hàng chục tình huống.",
+      "ex": [
+        { "cn": "天黑了，开灯吧。", "py": "Tiān hēi le, kāi dēng ba.", "vi": "Trời tối rồi, bật đèn đi." },
+        { "cn": "出门前关好门窗。", "py": "Chūmén qián guān hǎo ménchuāng.", "vi": "Trước khi ra ngoài đóng kỹ cửa." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "请把牛奶放进冰箱。", "py": "Qǐng bǎ niúnǎi fàng jìn bīngxiāng.", "vi": "Xin cho sữa vào tủ lạnh." },
+    { "cn": "房间里太热，开空调吧。", "py": "Fángjiān lǐ tài rè, kāi kōngtiáo ba.", "vi": "Trong phòng nóng quá, bật điều hoà đi." },
+    { "cn": "睡觉前记得关灯。", "py": "Shuìjiào qián jìde guān dēng.", "vi": "Trước khi ngủ nhớ tắt đèn." },
+    { "cn": "中国人吃饭用筷子。", "py": "Zhōngguó rén chīfàn yòng kuàizi.", "vi": "Người Trung Quốc ăn cơm bằng đũa." },
+    { "cn": "请给我一个盘子和一个碗。", "py": "Qǐng gěi wǒ yí ge pánzi hé yí ge wǎn.", "vi": "Cho tôi một cái đĩa và một cái bát." },
+    { "cn": "外面下雨了，你带伞了吗？", "py": "Wàimiàn xiàyǔ le, nǐ dài sǎn le ma?", "vi": "Ngoài trời mưa rồi, bạn mang ô chưa?" },
+    { "cn": "你的房间真干净。", "py": "Nǐ de fángjiān zhēn gānjìng.", "vi": "Phòng bạn sạch thật đấy." },
+    { "cn": "每个周末我都打扫一次房间。", "py": "Měi ge zhōumò wǒ dōu dǎsǎo yí cì fángjiān.", "vi": "Cuối tuần nào tôi cũng dọn phòng một lần." },
+    { "cn": "他们下个月要搬到新家去。", "py": "Tāmen xià ge yuè yào bān dào xīn jiā qù.", "vi": "Tháng sau họ sẽ dọn sang nhà mới." },
+    { "cn": "我把房间打扫得很干净。", "py": "Wǒ bǎ fángjiān dǎsǎo de hěn gānjìng.", "vi": "Tôi dọn phòng rất sạch sẽ." }
+  ]
+}

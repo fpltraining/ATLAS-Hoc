@@ -1,0 +1,75 @@
+{
+  "id": 33,
+  "cn": "我不舒服",
+  "title": "Ốm đau và cảm giác",
+  "goal": "Kể triệu chứng với bác sĩ, và dùng 了 để báo hiệu tình trạng đã thay đổi.",
+  "words": [
+    { "w": "感冒", "py": "gǎnmào", "hv": "cảm mạo", "vi": "cảm, cảm cúm", "pos": "động từ / danh từ",
+      "note": "Chính là \"cảm mạo\" tiếng Việt. Là ĐỘNG TỪ nên nói 我感冒了, không nói 我有感冒.",
+      "ex": [{ "cn": "我感冒了。", "py": "Wǒ gǎnmào le.", "vi": "Tôi bị cảm rồi." }] },
+    { "w": "发烧", "py": "fāshāo", "hv": "phát thiêu", "vi": "sốt", "pos": "động từ",
+      "note": "发 (phát ra) + 烧 (đốt, có bộ 火 lửa) — người nóng lên như bị đốt. Cũng là động từ ly hợp.",
+      "ex": [{ "cn": "他发烧了。", "py": "Tā fāshāo le.", "vi": "Cậu ấy bị sốt rồi." }] },
+    { "w": "疼", "py": "téng", "hv": "đông", "vi": "đau", "pos": "tính từ",
+      "note": "Bộ 疒 (bệnh tật) bao ngoài — nhìn bộ này là biết chữ nói về ốm đau. Nói bộ phận nào đau: 头疼, 肚子疼.",
+      "ex": [{ "cn": "我头疼。", "py": "Wǒ tóu téng.", "vi": "Tôi đau đầu." }] },
+    { "w": "舒服", "py": "shūfu", "hv": "thư phục", "vi": "dễ chịu, thoải mái", "pos": "tính từ",
+      "note": "舒 = \"thư\" trong \"thư giãn\", \"thư thái\". 不舒服 là cách nói \"trong người khó chịu\" — câu đầu tiên bạn nói khi đi khám.",
+      "ex": [{ "cn": "我今天不舒服。", "py": "Wǒ jīntiān bù shūfu.", "vi": "Hôm nay tôi thấy khó chịu." }] },
+    { "w": "健康", "py": "jiànkāng", "hv": "kiện khang", "vi": "sức khoẻ; khoẻ mạnh", "pos": "danh từ / tính từ",
+      "note": "Tiếng Việt có \"kiện tráng\", \"khang kiện\". Vừa là danh từ (sức khoẻ) vừa là tính từ (khoẻ mạnh).",
+      "ex": [{ "cn": "身体健康最重要。", "py": "Shēntǐ jiànkāng zuì zhòngyào.", "vi": "Sức khoẻ là quan trọng nhất." }] },
+    { "w": "检查", "py": "jiǎnchá", "hv": "kiểm tra", "vi": "kiểm tra, khám", "pos": "động từ",
+      "note": "Chính là \"kiểm tra\" tiếng Việt. Dùng cả cho khám bệnh lẫn soát lại bài làm.",
+      "ex": [{ "cn": "医生给我检查了身体。", "py": "Yīshēng gěi wǒ jiǎnchá le shēntǐ.", "vi": "Bác sĩ khám sức khoẻ cho tôi." }] },
+    { "w": "饿", "py": "è", "hv": "ngạ", "vi": "đói", "pos": "tính từ",
+      "note": "Bộ 饣 (thức ăn) bên trái. Tiếng Việt: \"ngạ quỷ\" (quỷ đói) trong Phật giáo.",
+      "ex": [{ "cn": "我很饿。", "py": "Wǒ hěn è.", "vi": "Tôi rất đói." }] },
+    { "w": "渴", "py": "kě", "hv": "khát", "vi": "khát", "pos": "tính từ",
+      "note": "Chính là chữ \"khát\" tiếng Việt. Bộ 氵 (nước) bên trái. Đừng nhầm với 喝 hē (uống) — chỉ khác bộ.",
+      "ex": [{ "cn": "我渴了，想喝水。", "py": "Wǒ kě le, xiǎng hē shuǐ.", "vi": "Tôi khát rồi, muốn uống nước." }] },
+    { "w": "饱", "py": "bǎo", "hv": "bão", "vi": "no", "pos": "tính từ",
+      "note": "Cũng có bộ 饣 (thức ăn). Cặp 饿 / 饱 đi liền nhau như \"đói / no\".",
+      "ex": [{ "cn": "我吃饱了。", "py": "Wǒ chī bǎo le.", "vi": "Tôi ăn no rồi." }] },
+    { "w": "矮", "py": "ǎi", "hv": "ải", "vi": "thấp (người, vật)", "pos": "tính từ",
+      "note": "Trái nghĩa với 高. Dùng cho người và vật thấp; còn 低 dī (bài 52) dùng cho độ cao, giá cả, âm thanh.",
+      "ex": [{ "cn": "他个子有点儿矮。", "py": "Tā gèzi yǒudiǎnr ǎi.", "vi": "Anh ấy hơi thấp." }] }
+  ],
+  "grammar": [
+    { "t": "了 báo hiệu TÌNH TRẠNG ĐÃ THAY ĐỔI",
+      "b": "tính từ / động từ + 了",
+      "d": "Khác với 了 chỉ việc hoàn thành ở bài 8, chữ 了 cuối câu ở đây nghĩa là \"đã trở nên…\". 我饿了 = trước không đói, giờ đói rồi. Đây là cách dùng 了 quan trọng thứ hai.",
+      "ex": [
+        { "cn": "我饿了。", "py": "Wǒ è le.", "vi": "Tôi đói rồi. (trước chưa đói)" },
+        { "cn": "他感冒了。", "py": "Tā gǎnmào le.", "vi": "Cậu ấy bị cảm rồi." },
+        { "cn": "天气冷了。", "py": "Tiānqì lěng le.", "vi": "Trời lạnh rồi." }
+      ] },
+    { "t": "Nói chỗ nào đau: bộ phận + 疼",
+      "b": "Người + bộ phận cơ thể + 疼",
+      "d": "Không cần chữ \"bị\" hay giới từ nào cả. 我头疼 nghĩa đen là \"tôi, đầu đau\" — lại là cấu trúc chủ đề kép của bài 32.",
+      "ex": [
+        { "cn": "我头疼。", "py": "Wǒ tóu téng.", "vi": "Tôi đau đầu." },
+        { "cn": "他肚子疼。", "py": "Tā dùzi téng.", "vi": "Cậu ấy đau bụng." },
+        { "cn": "我嗓子疼，还发烧。", "py": "Wǒ sǎngzi téng, hái fāshāo.", "vi": "Tôi đau họng, còn sốt nữa." }
+      ] },
+    { "t": "Bộ 疒 và bộ 饣 — đoán nghĩa không cần từ điển",
+      "b": "疒 = bệnh tật · 饣 = ăn uống",
+      "d": "疼 (đau), 病 (bệnh), 瘦 (gầy) đều có 疒. 饿 (đói), 饱 (no), 饭 (cơm), 馆 (quán) đều có 饣. Gặp chữ lạ mang hai bộ này, bạn đã đoán được nửa nghĩa.",
+      "ex": [
+        { "cn": "疼 · 病 · 瘦", "py": "téng · bìng · shòu", "vi": "đều thuộc nhóm ốm đau" },
+        { "cn": "饿 · 饱 · 饭 · 馆", "py": "è · bǎo · fàn · guǎn", "vi": "đều thuộc nhóm ăn uống" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我今天不太舒服。", "py": "Wǒ jīntiān bú tài shūfu.", "vi": "Hôm nay tôi thấy hơi khó chịu." },
+    { "cn": "我感冒了，还有点儿发烧。", "py": "Wǒ gǎnmào le, hái yǒudiǎnr fāshāo.", "vi": "Tôi bị cảm, còn hơi sốt nữa." },
+    { "cn": "哪儿疼？", "py": "Nǎr téng?", "vi": "Đau chỗ nào?" },
+    { "cn": "我头疼，嗓子也疼。", "py": "Wǒ tóu téng, sǎngzi yě téng.", "vi": "Tôi đau đầu, họng cũng đau." },
+    { "cn": "医生给我检查了一下。", "py": "Yīshēng gěi wǒ jiǎnchá le yíxià.", "vi": "Bác sĩ khám cho tôi một chút." },
+    { "cn": "多喝水，多休息，很快就好。", "py": "Duō hē shuǐ, duō xiūxi, hěn kuài jiù hǎo.", "vi": "Uống nhiều nước, nghỉ nhiều, sẽ nhanh khỏi." },
+    { "cn": "身体健康比什么都重要。", "py": "Shēntǐ jiànkāng bǐ shénme dōu zhòngyào.", "vi": "Sức khoẻ quan trọng hơn mọi thứ." },
+    { "cn": "我饿了，我们去吃饭吧。", "py": "Wǒ è le, wǒmen qù chīfàn ba.", "vi": "Tôi đói rồi, đi ăn cơm đi." },
+    { "cn": "谢谢，我吃饱了。", "py": "Xièxie, wǒ chī bǎo le.", "vi": "Cảm ơn, tôi ăn no rồi." },
+    { "cn": "这张桌子太矮了。", "py": "Zhè zhāng zhuōzi tài ǎi le.", "vi": "Cái bàn này thấp quá." }
+  ]
+}

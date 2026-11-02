@@ -1,0 +1,76 @@
+{
+  "id": 27,
+  "cn": "旅游计划",
+  "title": "Kế hoạch du lịch",
+  "goal": "Bàn kế hoạch, xin phép bằng 可以, rủ rê bằng 吧 và ngăn cản bằng 别.",
+  "words": [
+    { "w": "旅游", "py": "lǚyóu", "hv": "lữ du", "vi": "du lịch", "pos": "động từ / danh từ",
+      "note": "Tiếng Việt: \"lữ hành\", \"lữ khách\", \"du lịch\" — cùng gốc chữ Hán này.",
+      "ex": [{ "cn": "我想去中国旅游。", "py": "Wǒ xiǎng qù Zhōngguó lǚyóu.", "vi": "Tôi muốn đi du lịch Trung Quốc." }] },
+    { "w": "希望", "py": "xīwàng", "hv": "hy vọng", "vi": "hy vọng, mong", "pos": "động từ",
+      "note": "Chính là \"hy vọng\" tiếng Việt. Sau 希望 là CẢ MỘT CÂU, giống 觉得.",
+      "ex": [{ "cn": "我希望你能来。", "py": "Wǒ xīwàng nǐ néng lái.", "vi": "Tôi mong bạn đến được." }] },
+    { "w": "可能", "py": "kěnéng", "hv": "khả năng", "vi": "có thể, có lẽ", "pos": "phó từ",
+      "note": "Chính là \"khả năng\" tiếng Việt. Diễn đạt sự phỏng đoán, không chắc chắn.",
+      "ex": [{ "cn": "他可能不来了。", "py": "Tā kěnéng bù lái le.", "vi": "Có lẽ anh ấy không đến nữa." }] },
+    { "w": "可以", "py": "kěyǐ", "hv": "khả dĩ", "vi": "được phép, có thể", "pos": "động từ năng nguyện",
+      "note": "Tiếng Việt: \"khả dĩ\". Dùng để XIN PHÉP và CHO PHÉP — khác 能 (đủ điều kiện) và 会 (biết làm).",
+      "ex": [{ "cn": "我可以进来吗？", "py": "Wǒ kěyǐ jìnlai ma?", "vi": "Tôi vào được không?" }] },
+    { "w": "开始", "py": "kāishǐ", "hv": "khai thuỷ", "vi": "bắt đầu", "pos": "động từ",
+      "note": "开 (mở) + 始 (đầu tiên, bộ 女). Tiếng Việt: \"khai giảng\", \"khai mạc\", \"nguyên thuỷ\".",
+      "ex": [{ "cn": "我们开始吧。", "py": "Wǒmen kāishǐ ba.", "vi": "Chúng ta bắt đầu nhé." }] },
+    { "w": "送", "py": "sòng", "hv": "tống", "vi": "tặng; tiễn, đưa đi", "pos": "động từ",
+      "note": "Bộ 辶 (đi đường). Tiếng Việt: \"tống tiễn\", \"hộ tống\". Hai nghĩa: tặng quà và tiễn người.",
+      "ex": [{ "cn": "我送你一本书。", "py": "Wǒ sòng nǐ yì běn shū.", "vi": "Tôi tặng bạn một quyển sách." }] },
+    { "w": "找", "py": "zhǎo", "hv": "trảo", "vi": "tìm; tìm gặp", "pos": "động từ",
+      "note": "Bộ 扌 (tay) — tìm bằng tay. Còn nghĩa \"tìm ai đó\": 我找王老师.",
+      "ex": [{ "cn": "我在找我的手机。", "py": "Wǒ zài zhǎo wǒ de shǒujī.", "vi": "Tôi đang tìm điện thoại." }] },
+    { "w": "等", "py": "děng", "hv": "đẳng", "vi": "đợi, chờ", "pos": "động từ",
+      "note": "Bộ 竹 (tre) ở trên. Còn nghĩa \"hạng, đẳng cấp\" như trong tiếng Việt.",
+      "ex": [{ "cn": "请等一下。", "py": "Qǐng děng yíxià.", "vi": "Xin đợi một chút." }] },
+    { "w": "别", "py": "bié", "hv": "biệt", "vi": "đừng; khác", "pos": "phó từ",
+      "note": "Bộ 刂 (dao) — cắt ra thành cái khác. Tiếng Việt: \"biệt ly\", \"đặc biệt\", \"phân biệt\".",
+      "ex": [{ "cn": "别忘了！", "py": "Bié wàng le!", "vi": "Đừng quên nhé!" }] },
+    { "w": "吧", "py": "ba", "hv": "ba", "vi": "(trợ từ: rủ rê, đề nghị)", "pos": "trợ từ",
+      "note": "Bộ 口 (miệng). Đặt cuối câu để rủ rê hoặc đề nghị nhẹ nhàng — giống \"…đi\", \"…nhé\" tiếng Việt.",
+      "ex": [{ "cn": "我们走吧。", "py": "Wǒmen zǒu ba.", "vi": "Chúng ta đi thôi." }] }
+  ],
+  "grammar": [
+    { "t": "会 / 能 / 可以 — ba chữ \"có thể\" khác nhau",
+      "b": "会 = biết làm (kỹ năng) · 能 = làm được (điều kiện) · 可以 = được phép",
+      "d": "Người Việt hay dùng lẫn vì tiếng Việt chỉ có một chữ \"có thể\". Ba câu này khác hẳn nhau: 我会开车 (tôi biết lái xe), 我今天不能开车 (hôm nay tôi không lái được, vì mệt), 这里可以停车吗 (ở đây được đỗ xe không).",
+      "ex": [
+        { "cn": "我会说汉语。", "py": "Wǒ huì shuō Hànyǔ.", "vi": "Tôi biết nói tiếng Trung. (kỹ năng)" },
+        { "cn": "我明天不能来。", "py": "Wǒ míngtiān bù néng lái.", "vi": "Mai tôi không đến được. (điều kiện)" },
+        { "cn": "我可以问一个问题吗？", "py": "Wǒ kěyǐ wèn yí ge wèntí ma?", "vi": "Tôi hỏi một câu được không? (xin phép)" }
+      ] },
+    { "t": "吧 — rủ rê và đề nghị",
+      "b": "Câu + 吧",
+      "d": "Thêm 吧 làm câu mềm hẳn đi. 我们走 nghe như ra lệnh, còn 我们走吧 là \"chúng ta đi thôi\". Cũng dùng để đoán: 你是中国人吧？(bạn là người Trung Quốc phải không?).",
+      "ex": [
+        { "cn": "我们一起去吧。", "py": "Wǒmen yìqǐ qù ba.", "vi": "Chúng ta cùng đi đi." },
+        { "cn": "你休息一下吧。", "py": "Nǐ xiūxi yíxià ba.", "vi": "Bạn nghỉ chút đi." },
+        { "cn": "你是老师吧？", "py": "Nǐ shì lǎoshī ba?", "vi": "Bạn là giáo viên phải không?" }
+      ] },
+    { "t": "别 — cấm đoán nhẹ nhàng",
+      "b": "别 + động từ (+ 了)",
+      "d": "别 nghĩa là \"đừng\". Thêm 了 ở cuối nghĩa là \"thôi đừng làm nữa\" (việc đang diễn ra). So sánh: 别说 (đừng nói) và 别说了 (thôi đừng nói nữa).",
+      "ex": [
+        { "cn": "别忘了带票。", "py": "Bié wàng le dài piào.", "vi": "Đừng quên mang vé." },
+        { "cn": "别走这么快。", "py": "Bié zǒu zhème kuài.", "vi": "Đừng đi nhanh thế." },
+        { "cn": "别说了！", "py": "Bié shuō le!", "vi": "Thôi đừng nói nữa!" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我想去中国旅游。", "py": "Wǒ xiǎng qù Zhōngguó lǚyóu.", "vi": "Tôi muốn đi du lịch Trung Quốc." },
+    { "cn": "我们什么时候开始？", "py": "Wǒmen shénme shíhou kāishǐ?", "vi": "Khi nào chúng ta bắt đầu?" },
+    { "cn": "我可以问一个问题吗？", "py": "Wǒ kěyǐ wèn yí ge wèntí ma?", "vi": "Tôi hỏi một câu được không?" },
+    { "cn": "当然可以。", "py": "Dāngrán kěyǐ.", "vi": "Tất nhiên là được." },
+    { "cn": "他可能不来了。", "py": "Tā kěnéng bù lái le.", "vi": "Có lẽ anh ấy không đến nữa." },
+    { "cn": "请等一下，我马上来。", "py": "Qǐng děng yíxià, wǒ mǎshàng lái.", "vi": "Xin đợi chút, tôi tới ngay." },
+    { "cn": "我在找我的手机。", "py": "Wǒ zài zhǎo wǒ de shǒujī.", "vi": "Tôi đang tìm điện thoại." },
+    { "cn": "别忘了带护照。", "py": "Bié wàng le dài hùzhào.", "vi": "Đừng quên mang hộ chiếu." },
+    { "cn": "我希望明年去北京。", "py": "Wǒ xīwàng míngnián qù Běijīng.", "vi": "Tôi mong sang năm được đi Bắc Kinh." },
+    { "cn": "我送你去机场吧。", "py": "Wǒ sòng nǐ qù jīchǎng ba.", "vi": "Để tôi tiễn bạn ra sân bay nhé." }
+  ]
+}

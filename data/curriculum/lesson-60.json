@@ -1,0 +1,81 @@
+{
+  "id": 60,
+  "cn": "生活中的事",
+  "title": "Chuyện đời sống",
+  "goal": "Bài cuối HSK 3: giấy tờ, cưới hỏi, và cặp phó từ 才 / 就 khép lại toàn bộ giáo trình.",
+  "words": [
+    { "w": "黑板", "py": "hēibǎn", "hv": "hắc bản", "vi": "bảng đen", "pos": "danh từ",
+      "note": "黑 (đen, bài 21) + 板 (tấm ván, bộ 木). Tiếng Việt: \"hắc\" trong \"hắc ám\", \"bản\" trong \"bảng biểu\".",
+      "ex": [{ "cn": "老师在黑板上写字。", "py": "Lǎoshī zài hēibǎn shàng xiě zì.", "vi": "Thầy viết chữ lên bảng." }] },
+    { "w": "护照", "py": "hùzhào", "hv": "hộ chiếu", "vi": "hộ chiếu", "pos": "danh từ",
+      "note": "Chính là \"hộ chiếu\" tiếng Việt: 护 (bảo hộ) + 照 (giấy chứng). Không sai một ly.",
+      "ex": [{ "cn": "出国要带护照。", "py": "Chūguó yào dài hùzhào.", "vi": "Ra nước ngoài phải mang hộ chiếu." }] },
+    { "w": "画", "py": "huà", "hv": "hoạ", "vi": "vẽ; bức tranh", "pos": "động từ / danh từ",
+      "note": "Chính là \"hoạ\" tiếng Việt (\"hội hoạ\", \"hoạ sĩ\"). Có bộ 田 (ruộng) — vốn là vẽ ranh giới thửa ruộng.",
+      "ex": [{ "cn": "她画得很好。", "py": "Tā huà de hěn hǎo.", "vi": "Cô ấy vẽ rất đẹp." }] },
+    { "w": "坏", "py": "huài", "hv": "hoại", "vi": "hỏng; xấu, ác", "pos": "tính từ",
+      "note": "Chính là \"hoại\" tiếng Việt (\"phá hoại\", \"hư hoại\"). Trái nghĩa với 好. Hai nghĩa: đồ hỏng và người xấu.",
+      "ex": [{ "cn": "我的手机坏了。", "py": "Wǒ de shǒujī huài le.", "vi": "Điện thoại tôi hỏng rồi." }] },
+    { "w": "结婚", "py": "jiéhūn", "hv": "kết hôn", "vi": "kết hôn, cưới", "pos": "động từ",
+      "note": "Chính là \"kết hôn\" tiếng Việt: 结 (kết, bài 50 trong 结束) + 婚 (hôn, có bộ 女). Là động từ ly hợp — cưới AI thì dùng 跟…结婚.",
+      "ex": [{ "cn": "他们去年结婚了。", "py": "Tāmen qùnián jiéhūn le.", "vi": "Năm ngoái họ cưới nhau." }] },
+    { "w": "为", "py": "wèi", "hv": "vị", "vi": "vì, cho", "pos": "giới từ",
+      "note": "Ngắn gọn hơn 为了 (bài 55). 为你高兴 = mừng cho bạn. Đọc wéi (thanh 2) thì lại nghĩa là \"làm, là\".",
+      "ex": [{ "cn": "我为你高兴。", "py": "Wǒ wèi nǐ gāoxìng.", "vi": "Tôi mừng cho bạn." }] },
+    { "w": "多么", "py": "duōme", "hv": "đa ma", "vi": "biết bao, thật là", "pos": "phó từ",
+      "note": "Dùng trong câu CẢM THÁN, thường kèm 啊 ở cuối: 多么漂亮啊！Nói tắt được thành 多.",
+      "ex": [{ "cn": "这里的风景多么美啊！", "py": "Zhèlǐ de fēngjǐng duōme měi a!", "vi": "Phong cảnh ở đây đẹp biết bao!" }] },
+    { "w": "放", "py": "fàng", "hv": "phóng", "vi": "đặt, để; thả; nghỉ", "pos": "động từ",
+      "note": "Chính là \"phóng\" tiếng Việt (\"phóng thích\", \"giải phóng\"). Đã gặp trong 放心 (bài 34). 放假 = nghỉ lễ.",
+      "ex": [{ "cn": "请把书放在桌子上。", "py": "Qǐng bǎ shū fàng zài zhuōzi shàng.", "vi": "Xin đặt sách lên bàn." }] },
+    { "w": "安静", "py": "ānjìng", "hv": "an tĩnh", "vi": "yên tĩnh", "pos": "tính từ",
+      "note": "Chính là \"an tĩnh\" tiếng Việt (nay hay nói \"yên tĩnh\"): 安 (an toàn, bộ 宀 mái nhà + 女) + 静 (tĩnh lặng).",
+      "ex": [{ "cn": "图书馆里很安静。", "py": "Túshūguǎn lǐ hěn ānjìng.", "vi": "Trong thư viện rất yên tĩnh." }] },
+    { "w": "才", "py": "cái", "hv": "tài", "vi": "mới (muộn hơn mong đợi)", "pos": "phó từ",
+      "note": "Trái ngược hoàn toàn với 就 (bài 18). 就 = sớm hơn mong đợi, 才 = muộn hơn mong đợi. Cặp này là đỉnh cao sắc thái tiếng Trung.",
+      "ex": [{ "cn": "他九点才来。", "py": "Tā jiǔ diǎn cái lái.", "vi": "Mãi chín giờ anh ấy mới đến." }] }
+  ],
+  "grammar": [
+    { "t": "才 và 就 — cặp phó từ tinh tế nhất tiếng Trung",
+      "b": "就 = sớm hơn mong đợi · 才 = muộn hơn mong đợi",
+      "d": "Cùng một sự việc, hai thái độ khác hẳn. 他七点就来了 (mới bảy giờ anh ấy ĐÃ đến — sớm thế). 他九点才来 (mãi chín giờ anh ấy MỚI đến — muộn quá). Câu có 才 thường KHÔNG dùng 了 ở cuối. Nắm được cặp này là tiếng Trung của bạn có sắc thái như người bản xứ.",
+      "ex": [
+        { "cn": "我五点就起床了。", "py": "Wǒ wǔ diǎn jiù qǐchuáng le.", "vi": "Mới năm giờ tôi đã dậy rồi." },
+        { "cn": "我十点才起床。", "py": "Wǒ shí diǎn cái qǐchuáng.", "vi": "Mãi mười giờ tôi mới dậy." },
+        { "cn": "学了三年，他才学会。", "py": "Xué le sān nián, tā cái xué huì.", "vi": "Học ba năm cậu ấy mới học được." }
+      ] },
+    { "t": "Câu cảm thán với 多么 … 啊！",
+      "b": "多么 + tính từ + 啊！",
+      "d": "Mẫu cảm thán trang trọng, hay gặp trong văn viết và bài hát. Trong khẩu ngữ thường nói tắt: 多好啊！Giống \"…biết bao!\" của tiếng Việt.",
+      "ex": [
+        { "cn": "今天的天气多么好啊！", "py": "Jīntiān de tiānqì duōme hǎo a!", "vi": "Thời tiết hôm nay đẹp biết bao!" },
+        { "cn": "他画得多好啊！", "py": "Tā huà de duō hǎo a!", "vi": "Cậu ấy vẽ đẹp thật!" }
+      ] },
+    { "t": "结婚 là động từ ly hợp",
+      "b": "跟 + người + 结婚",
+      "d": "Không nói 结婚他. Phải nói 跟他结婚 (cưới anh ấy). Cùng nhóm với 见面, 帮忙, 请假, 聊天 — đến bài cuối này bạn đã gặp hơn mười động từ ly hợp.",
+      "ex": [
+        { "cn": "她跟一个中国人结婚了。", "py": "Tā gēn yí ge Zhōngguó rén jiéhūn le.", "vi": "Cô ấy lấy một người Trung Quốc." },
+        { "cn": "他们结婚三年了。", "py": "Tāmen jiéhūn sān nián le.", "vi": "Họ cưới nhau ba năm rồi." }
+      ] },
+    { "t": "Chúc mừng bạn đã học hết HSK 3",
+      "b": "600 từ · 60 bài · hơn 600 chữ Hán",
+      "d": "Với vốn này bạn đọc hiểu được biển báo, thực đơn, tin nhắn đơn giản và nói chuyện hằng ngày về gia đình, công việc, sức khoẻ, du lịch. Đừng dừng lại: hãy tiếp tục ôn bằng thẻ viết tay mỗi ngày, vì chữ Hán quên rất nhanh nếu không luyện bút.",
+      "ex": [
+        { "cn": "学了三年，我才明白学习是一辈子的事。", "py": "Xué le sān nián, wǒ cái míngbai xuéxí shì yí bèizi de shì.", "vi": "Học ba năm tôi mới hiểu học là việc cả đời." },
+        { "cn": "只要每天练习，就一定会进步。", "py": "Zhǐyào měi tiān liànxí, jiù yídìng huì jìnbù.", "vi": "Chỉ cần ngày nào cũng luyện, nhất định sẽ tiến bộ." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "老师把答案写在黑板上了。", "py": "Lǎoshī bǎ dá'àn xiě zài hēibǎn shàng le.", "vi": "Thầy viết đáp án lên bảng rồi." },
+    { "cn": "别忘了带护照和机票。", "py": "Bié wàng le dài hùzhào hé jīpiào.", "vi": "Đừng quên mang hộ chiếu và vé máy bay." },
+    { "cn": "我妹妹很喜欢画画儿。", "py": "Wǒ mèimei hěn xǐhuan huà huàr.", "vi": "Em gái tôi rất thích vẽ tranh." },
+    { "cn": "电梯坏了，我们走楼梯吧。", "py": "Diàntī huài le, wǒmen zǒu lóutī ba.", "vi": "Thang máy hỏng rồi, ta đi thang bộ nhé." },
+    { "cn": "他们下个月就要结婚了。", "py": "Tāmen xià ge yuè jiù yào jiéhūn le.", "vi": "Tháng sau họ sẽ cưới rồi." },
+    { "cn": "我为你的成绩感到高兴。", "py": "Wǒ wèi nǐ de chéngjì gǎndào gāoxìng.", "vi": "Tôi mừng cho kết quả của bạn." },
+    { "cn": "这个地方多么安静啊！", "py": "Zhège dìfang duōme ānjìng a!", "vi": "Chỗ này yên tĩnh biết bao!" },
+    { "cn": "请把行李箱放在这儿。", "py": "Qǐng bǎ xínglixiāng fàng zài zhèr.", "vi": "Xin để va li ở đây." },
+    { "cn": "我等了一个小时，他才来。", "py": "Wǒ děng le yí ge xiǎoshí, tā cái lái.", "vi": "Tôi đợi một tiếng, anh ấy mới đến." },
+    { "cn": "学完这本书，你的汉语一定会更好。", "py": "Xué wán zhè běn shū, nǐ de Hànyǔ yídìng huì gèng hǎo.", "vi": "Học xong quyển này, tiếng Trung của bạn nhất định sẽ khá hơn." }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": 71,
+  "cn": "交往",
+  "title": "Giao thiệp",
+  "goal": "Liên lạc, bàn bạc, mời mọc — bộ động từ giao tiếp xã hội.",
+  "words": [
+    { "w": "联系", "py": "liánxì", "hv": "liên hệ", "vi": "liên hệ, liên lạc", "pos": "động từ / danh từ",
+      "note": "Chính là \"liên hệ\" tiếng Việt: 联 (liên) + 系 (hệ).",
+      "ex": [{ "cn": "请跟我联系。", "py": "Qǐng gēn wǒ liánxì.", "vi": "Xin liên hệ với tôi." }] },
+    { "w": "交流", "py": "jiāoliú", "hv": "giao lưu", "vi": "giao lưu, trao đổi", "pos": "động từ",
+      "note": "Chính là \"giao lưu\" tiếng Việt: 交 (giao) + 流 (lưu, chảy).",
+      "ex": [{ "cn": "我们经常交流学习经验。", "py": "Wǒmen jīngcháng jiāoliú xuéxí jīngyàn.", "vi": "Chúng tôi thường trao đổi kinh nghiệm học." }] },
+    { "w": "互相", "py": "hùxiāng", "hv": "hỗ tương", "vi": "lẫn nhau", "pos": "phó từ",
+      "note": "Chính là \"hỗ tương\" tiếng Việt (\"hỗ trợ\", \"tương trợ\"). Đứng trước động từ: 互相帮助.",
+      "ex": [{ "cn": "我们要互相帮助。", "py": "Wǒmen yào hùxiāng bāngzhù.", "vi": "Chúng ta phải giúp đỡ lẫn nhau." }] },
+    { "w": "共同", "py": "gòngtóng", "hv": "cộng đồng", "vi": "chung, cùng nhau", "pos": "tính từ / phó từ",
+      "note": "Chính là \"cộng đồng\" tiếng Việt, nhưng tiếng Trung dùng như tính từ \"chung\": 共同的爱好 (sở thích chung).",
+      "ex": [{ "cn": "我们有共同的爱好。", "py": "Wǒmen yǒu gòngtóng de àihào.", "vi": "Chúng tôi có sở thích chung." }] },
+    { "w": "关键", "py": "guānjiàn", "hv": "quan kiện", "vi": "then chốt, mấu chốt", "pos": "danh từ / tính từ",
+      "note": "关 (then cửa) + 键 (chốt, bộ 钅) — nghĩa đen là cái then chốt. Tiếng Việt cũng nói \"then chốt\".",
+      "ex": [{ "cn": "关键是要坚持。", "py": "Guānjiàn shì yào jiānchí.", "vi": "Mấu chốt là phải kiên trì." }] },
+    { "w": "陪", "py": "péi", "hv": "bồi", "vi": "đi cùng, bầu bạn", "pos": "động từ",
+      "note": "Tiếng Việt: \"bồi\" trong \"bồi bàn\", \"bồi dưỡng\". Bộ 阝 bên trái.",
+      "ex": [{ "cn": "我陪你去医院。", "py": "Wǒ péi nǐ qù yīyuàn.", "vi": "Tôi đi cùng bạn tới bệnh viện." }] },
+    { "w": "谈", "py": "tán", "hv": "đàm", "vi": "bàn, nói chuyện", "pos": "động từ",
+      "note": "Chính là \"đàm\" tiếng Việt (\"đàm phán\", \"hội đàm\"). Bộ 讠 (lời nói). Trang trọng hơn 聊天.",
+      "ex": [{ "cn": "我们谈谈这个问题。", "py": "Wǒmen tántan zhège wèntí.", "vi": "Chúng ta bàn về vấn đề này chút." }] },
+    { "w": "商量", "py": "shāngliang", "hv": "thương lượng", "vi": "bàn bạc, thương lượng", "pos": "động từ",
+      "note": "Chính là \"thương lượng\" tiếng Việt. 商 cũng nằm trong 商店 (bài 10).",
+      "ex": [{ "cn": "这件事我们商量一下。", "py": "Zhè jiàn shì wǒmen shāngliang yíxià.", "vi": "Việc này chúng ta bàn chút đã." }] },
+    { "w": "邀请", "py": "yāoqǐng", "hv": "yêu thỉnh", "vi": "mời", "pos": "động từ",
+      "note": "邀 (mời, bộ 辶) + 请 (thỉnh, bài 2). Trang trọng hơn 请 dùng một mình.",
+      "ex": [{ "cn": "谢谢你的邀请。", "py": "Xièxie nǐ de yāoqǐng.", "vi": "Cảm ơn lời mời của bạn." }] },
+    { "w": "聚会", "py": "jùhuì", "hv": "tụ hội", "vi": "buổi tụ họp, tiệc", "pos": "danh từ / động từ",
+      "note": "Chính là \"tụ hội\" tiếng Việt: 聚 (tụ) + 会 (hội).",
+      "ex": [{ "cn": "周末有个同学聚会。", "py": "Zhōumò yǒu ge tóngxué jùhuì.", "vi": "Cuối tuần có buổi họp lớp." }] }
+  ],
+  "grammar": [
+    { "t": "跟 / 和 + người + 联系 · 商量 · 谈",
+      "b": "跟 + người + động từ giao tiếp",
+      "d": "Các động từ hai chiều đều cần nêu đối tượng bằng 跟 hoặc 和 đặt TRƯỚC động từ. Nói 联系我 được, nhưng trang trọng thì dùng 跟我联系.",
+      "ex": [
+        { "cn": "有问题请跟我联系。", "py": "Yǒu wèntí qǐng gēn wǒ liánxì.", "vi": "Có vấn đề xin liên hệ với tôi." },
+        { "cn": "我想跟你商量一件事。", "py": "Wǒ xiǎng gēn nǐ shāngliang yí jiàn shì.", "vi": "Tôi muốn bàn với bạn một việc." }
+      ] },
+    { "t": "互相 — chỉ dùng với hành động HAI CHIỀU",
+      "b": "互相 + động từ hai âm tiết",
+      "d": "互相帮助, 互相学习, 互相尊重, 互相理解 — đều là việc cả hai bên cùng làm cho nhau. Không nói 互相吃饭 vì ăn cơm không phải hành động qua lại.",
+      "ex": [
+        { "cn": "同学之间要互相帮助。", "py": "Tóngxué zhījiān yào hùxiāng bāngzhù.", "vi": "Bạn học phải giúp nhau." },
+        { "cn": "夫妻要互相理解。", "py": "Fūqī yào hùxiāng lǐjiě.", "vi": "Vợ chồng phải hiểu nhau." }
+      ] },
+    { "t": "关键是 … — điều mấu chốt là…",
+      "b": "关键是 + mệnh đề",
+      "d": "Mẫu câu rất hay dùng khi tổng kết hoặc khuyên nhủ. Tương đương \"vấn đề mấu chốt là…\" của tiếng Việt.",
+      "ex": [
+        { "cn": "关键是要每天练习。", "py": "Guānjiàn shì yào měi tiān liànxí.", "vi": "Mấu chốt là phải luyện mỗi ngày." },
+        { "cn": "学好汉语的关键是什么？", "py": "Xué hǎo Hànyǔ de guānjiàn shì shénme?", "vi": "Mấu chốt để học giỏi tiếng Trung là gì?" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "到了以后请跟我联系。", "py": "Dào le yǐhòu qǐng gēn wǒ liánxì.", "vi": "Đến nơi rồi xin liên hệ với tôi." },
+    { "cn": "留学生和本地学生经常交流。", "py": "Liúxuéshēng hé běndì xuésheng jīngcháng jiāoliú.", "vi": "Du học sinh và sinh viên bản địa thường giao lưu." },
+    { "cn": "我们互相学习，互相进步。", "py": "Wǒmen hùxiāng xuéxí, hùxiāng jìnbù.", "vi": "Chúng ta học lẫn nhau, cùng tiến bộ." },
+    { "cn": "这是我们共同的目标。", "py": "Zhè shì wǒmen gòngtóng de mùbiāo.", "vi": "Đây là mục tiêu chung của chúng ta." },
+    { "cn": "成功的关键是坚持。", "py": "Chénggōng de guānjiàn shì jiānchí.", "vi": "Mấu chốt của thành công là kiên trì." },
+    { "cn": "周末我陪妈妈去买东西。", "py": "Zhōumò wǒ péi māma qù mǎi dōngxi.", "vi": "Cuối tuần tôi đi mua sắm cùng mẹ." },
+    { "cn": "经理想跟你谈一谈。", "py": "Jīnglǐ xiǎng gēn nǐ tán yi tán.", "vi": "Giám đốc muốn nói chuyện với bạn." },
+    { "cn": "买房子这么大的事要商量。", "py": "Mǎi fángzi zhème dà de shì yào shāngliang.", "vi": "Việc lớn như mua nhà thì phải bàn bạc." },
+    { "cn": "他邀请我去他家吃饭。", "py": "Tā yāoqǐng wǒ qù tā jiā chīfàn.", "vi": "Anh ấy mời tôi đến nhà ăn cơm." },
+    { "cn": "今晚的聚会你去不去？", "py": "Jīnwǎn de jùhuì nǐ qù bu qù?", "vi": "Buổi tụ họp tối nay bạn có đi không?" }
+  ]
+}

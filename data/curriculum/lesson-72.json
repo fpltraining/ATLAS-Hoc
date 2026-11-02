@@ -1,0 +1,72 @@
+{
+  "id": 72,
+  "cn": "大学生活",
+  "title": "Trường đại học",
+  "goal": "Từ vựng bậc đại học: ngành học, bằng cấp, đăng ký, nghỉ hè.",
+  "words": [
+    { "w": "学期", "py": "xuéqī", "hv": "học kỳ", "vi": "học kỳ", "pos": "danh từ",
+      "note": "Chính là \"học kỳ\" tiếng Việt: 学 (học) + 期 (kỳ).",
+      "ex": [{ "cn": "这个学期我选了五门课。", "py": "Zhège xuéqī wǒ xuǎn le wǔ mén kè.", "vi": "Học kỳ này tôi chọn năm môn." }] },
+    { "w": "专业", "py": "zhuānyè", "hv": "chuyên nghiệp", "vi": "chuyên ngành", "pos": "danh từ",
+      "note": "Âm là \"chuyên nghiệp\" nhưng nghĩa chính trong tiếng Trung là CHUYÊN NGÀNH học. Nghĩa \"chuyên nghiệp\" cũng có nhưng phụ.",
+      "ex": [{ "cn": "你学什么专业？", "py": "Nǐ xué shénme zhuānyè?", "vi": "Bạn học ngành gì?" }] },
+    { "w": "硕士", "py": "shuòshì", "hv": "thạc sĩ", "vi": "thạc sĩ", "pos": "danh từ",
+      "note": "Chính là \"thạc sĩ\" tiếng Việt: 硕 (thạc, to lớn) + 士 (sĩ).",
+      "ex": [{ "cn": "他是硕士毕业。", "py": "Tā shì shuòshì bìyè.", "vi": "Anh ấy tốt nghiệp thạc sĩ." }] },
+    { "w": "博士", "py": "bóshì", "hv": "bác sĩ", "vi": "tiến sĩ", "pos": "danh từ",
+      "note": "BẪY HÁN VIỆT: âm là \"bác sĩ\" nhưng nghĩa là TIẾN SĨ. Bác sĩ chữa bệnh là 医生 hoặc 大夫.",
+      "ex": [{ "cn": "她在读博士。", "py": "Tā zài dú bóshì.", "vi": "Cô ấy đang học tiến sĩ." }] },
+    { "w": "教授", "py": "jiàoshòu", "hv": "giáo thụ", "vi": "giáo sư", "pos": "danh từ",
+      "note": "Tiếng Việt gọi là \"giáo sư\"; âm Hán Việt của 教授 là \"giáo thụ\" — nghĩa đen: người truyền dạy.",
+      "ex": [{ "cn": "王教授今天有课。", "py": "Wáng jiàoshòu jīntiān yǒu kè.", "vi": "Giáo sư Vương hôm nay có tiết." }] },
+    { "w": "毕业", "py": "bìyè", "hv": "tốt nghiệp", "vi": "tốt nghiệp", "pos": "động từ",
+      "note": "Âm Hán Việt là \"tất nghiệp\" — chính là \"tốt nghiệp\" trong tiếng Việt. Là động từ ly hợp: 毕了业.",
+      "ex": [{ "cn": "我明年毕业。", "py": "Wǒ míngnián bìyè.", "vi": "Sang năm tôi tốt nghiệp." }] },
+    { "w": "报名", "py": "bàomíng", "hv": "báo danh", "vi": "đăng ký, ghi danh", "pos": "động từ",
+      "note": "Chính là \"báo danh\" tiếng Việt: 报 (báo) + 名 (danh). Động từ ly hợp: 报了名.",
+      "ex": [{ "cn": "我要报名参加比赛。", "py": "Wǒ yào bàomíng cānjiā bǐsài.", "vi": "Tôi muốn đăng ký dự thi." }] },
+    { "w": "申请", "py": "shēnqǐng", "hv": "thân thỉnh", "vi": "xin, nộp đơn", "pos": "động từ",
+      "note": "申 (trình bày) + 请 (xin). Dùng cho việc chính thức: 申请签证, 申请奖学金.",
+      "ex": [{ "cn": "我申请了留学。", "py": "Wǒ shēnqǐng le liúxué.", "vi": "Tôi đã nộp đơn du học." }] },
+    { "w": "寒假", "py": "hánjià", "hv": "hàn giả", "vi": "nghỉ đông, nghỉ Tết", "pos": "danh từ",
+      "note": "寒 (lạnh) + 假 (nghỉ, đọc jià). Ở Trung Quốc nghỉ đông trùng dịp Tết Nguyên Đán.",
+      "ex": [{ "cn": "寒假我要回家。", "py": "Hánjià wǒ yào huí jiā.", "vi": "Nghỉ đông tôi sẽ về nhà." }] },
+    { "w": "放暑假", "py": "fàng shǔjià", "hv": "phóng thử giả", "vi": "nghỉ hè", "pos": "động từ",
+      "note": "放 (thả, bài 60) + 暑 (nắng nóng) + 假 (nghỉ). 放假 = được nghỉ; 暑假 = kỳ nghỉ hè.",
+      "ex": [{ "cn": "七月开始放暑假。", "py": "Qī yuè kāishǐ fàng shǔjià.", "vi": "Tháng bảy bắt đầu nghỉ hè." }] }
+  ],
+  "grammar": [
+    { "t": "Bẫy Hán Việt: 博士 là TIẾN SĨ",
+      "b": "博士 = tiến sĩ · 医生 / 大夫 = bác sĩ",
+      "d": "Đây là cái bẫy nguy hiểm vì cả hai đều là nghề nghiệp. Nhớ: 博 nghĩa là UYÊN BÁC (như \"bác học\", \"uyên bác\") — người học rộng, tức tiến sĩ. Người chữa bệnh là 医生.",
+      "ex": [
+        { "cn": "他是医学博士。", "py": "Tā shì yīxué bóshì.", "vi": "Anh ấy là tiến sĩ y học." },
+        { "cn": "我要去看医生。", "py": "Wǒ yào qù kàn yīshēng.", "vi": "Tôi phải đi khám bác sĩ." }
+      ] },
+    { "t": "Thang bằng cấp",
+      "b": "本科 → 硕士 → 博士",
+      "d": "本科 (cử nhân) → 硕士 (thạc sĩ) → 博士 (tiến sĩ). Ba từ này giống hệt hệ thống bằng cấp Việt Nam vì cùng gốc Hán. Người dạy là 教授 (giáo sư).",
+      "ex": [
+        { "cn": "他硕士毕业以后去读博士了。", "py": "Tā shuòshì bìyè yǐhòu qù dú bóshì le.", "vi": "Anh ấy tốt nghiệp thạc sĩ rồi đi học tiến sĩ." }
+      ] },
+    { "t": "报名 và 申请 — đăng ký hay nộp đơn?",
+      "b": "报名 = ghi tên tham gia · 申请 = nộp đơn xin xét duyệt",
+      "d": "报名参加比赛 (ghi tên dự thi — ai cũng vào được). 申请奖学金 (xin học bổng — phải được duyệt). Mức trang trọng và tính cạnh tranh khác nhau.",
+      "ex": [
+        { "cn": "我报名参加了汉语比赛。", "py": "Wǒ bàomíng cānjiā le Hànyǔ bǐsài.", "vi": "Tôi đăng ký dự thi tiếng Trung." },
+        { "cn": "他申请了三所大学。", "py": "Tā shēnqǐng le sān suǒ dàxué.", "vi": "Cậu ấy nộp đơn vào ba trường đại học." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这个学期的课程很紧张。", "py": "Zhège xuéqī de kèchéng hěn jǐnzhāng.", "vi": "Chương trình học kỳ này rất căng." },
+    { "cn": "你大学学的什么专业？", "py": "Nǐ dàxué xué de shénme zhuānyè?", "vi": "Đại học bạn học ngành gì?" },
+    { "cn": "读硕士需要两三年。", "py": "Dú shuòshì xūyào liǎng sān nián.", "vi": "Học thạc sĩ cần hai ba năm." },
+    { "cn": "他是这个专业最年轻的博士。", "py": "Tā shì zhège zhuānyè zuì niánqīng de bóshì.", "vi": "Anh ấy là tiến sĩ trẻ nhất ngành này." },
+    { "cn": "李教授的课很受欢迎。", "py": "Lǐ jiàoshòu de kè hěn shòu huānyíng.", "vi": "Lớp của giáo sư Lý rất được ưa thích." },
+    { "cn": "毕业以后你有什么打算？", "py": "Bìyè yǐhòu nǐ yǒu shénme dǎsuàn?", "vi": "Tốt nghiệp xong bạn dự định gì?" },
+    { "cn": "报名时间只有三天。", "py": "Bàomíng shíjiān zhǐ yǒu sān tiān.", "vi": "Thời gian đăng ký chỉ có ba ngày." },
+    { "cn": "他申请了中国的奖学金。", "py": "Tā shēnqǐng le Zhōngguó de jiǎngxuéjīn.", "vi": "Cậu ấy xin học bổng của Trung Quốc." },
+    { "cn": "寒假一般有一个月。", "py": "Hánjià yìbān yǒu yí ge yuè.", "vi": "Nghỉ đông thường được một tháng." },
+    { "cn": "放暑假我打算去打工。", "py": "Fàng shǔjià wǒ dǎsuàn qù dǎgōng.", "vi": "Nghỉ hè tôi định đi làm thêm." }
+  ]
+}

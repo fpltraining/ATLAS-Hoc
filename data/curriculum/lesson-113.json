@@ -1,0 +1,72 @@
+{
+  "id": 113,
+  "cn": "改变和收发",
+  "title": "Thay đổi và trao nhận",
+  "goal": "Động từ chỉ sự biến đổi và việc trao — nhận, gồm nhiều động từ một chữ rất hay dùng.",
+  "words": [
+    { "w": "改变", "py": "gǎibiàn", "hv": "cải biến", "vi": "thay đổi", "pos": "động từ",
+      "note": "Chính là \"cải biến\" tiếng Việt: 改 (cải) + 变 (biến). Cần tân ngữ: 改变习惯, 改变主意.",
+      "ex": [{ "cn": "他改变了主意。", "py": "Tā gǎibiàn le zhǔyi.", "vi": "Anh ấy đổi ý rồi." }] },
+    { "w": "成为", "py": "chéngwéi", "hv": "thành vi", "vi": "trở thành", "pos": "động từ",
+      "note": "成 (thành) + 为 (vi, làm). Bắt buộc có tân ngữ: 成为老师. Khác 变成 (biến thành, nhấn quá trình đổi).",
+      "ex": [{ "cn": "他成为了一名医生。", "py": "Tā chéngwéi le yì míng yīshēng.", "vi": "Anh ấy trở thành bác sĩ." }] },
+    { "w": "出发", "py": "chūfā", "hv": "xuất phát", "vi": "xuất phát, khởi hành", "pos": "động từ",
+      "note": "Chính là \"xuất phát\" tiếng Việt: 出 (xuất) + 发 (phát).",
+      "ex": [{ "cn": "我们明天早上出发。", "py": "Wǒmen míngtiān zǎoshang chūfā.", "vi": "Sáng mai chúng ta xuất phát." }] },
+    { "w": "降低", "py": "jiàngdī", "hv": "giáng đê", "vi": "hạ xuống, giảm", "pos": "động từ",
+      "note": "降 (giáng, hạ — như \"giáng chức\") + 低 (thấp). Trái nghĩa là 提高.",
+      "ex": [{ "cn": "商店降低了价格。", "py": "Shāngdiàn jiàngdī le jiàgé.", "vi": "Cửa hàng hạ giá." }] },
+    { "w": "扩大", "py": "kuòdà", "hv": "khoách đại", "vi": "mở rộng", "pos": "động từ",
+      "note": "扩 (khoách, mở rộng) + 大 (lớn). Đi với 范围, 影响, 规模. Trái nghĩa là 缩小.",
+      "ex": [{ "cn": "公司要扩大规模。", "py": "Gōngsī yào kuòdà guīmó.", "vi": "Công ty muốn mở rộng quy mô." }] },
+    { "w": "留", "py": "liú", "hv": "lưu", "vi": "để lại, ở lại", "pos": "động từ",
+      "note": "Chính là \"lưu\" tiếng Việt (\"lưu lại\", \"lưu học sinh\"). 留学 = du học, 留下 = để lại.",
+      "ex": [{ "cn": "他给我留了一张条。", "py": "Tā gěi wǒ liú le yì zhāng tiáo.", "vi": "Anh ấy để lại cho tôi một mẩu giấy." }] },
+    { "w": "取", "py": "qǔ", "hv": "thủ", "vi": "lấy, rút", "pos": "động từ",
+      "note": "Chữ hội ý: 耳 (tai) + 又 (tay) — thời xưa lính lấy tai địch làm chứng công. 取钱 = rút tiền.",
+      "ex": [{ "cn": "我去银行取钱。", "py": "Wǒ qù yínháng qǔ qián.", "vi": "Tôi ra ngân hàng rút tiền." }] },
+    { "w": "交", "py": "jiāo", "hv": "giao", "vi": "nộp, giao; kết bạn", "pos": "động từ",
+      "note": "Chính là \"giao\" tiếng Việt. 交作业 = nộp bài, 交朋友 = kết bạn, 交给我 = giao cho tôi.",
+      "ex": [{ "cn": "明天交作业。", "py": "Míngtiān jiāo zuòyè.", "vi": "Mai nộp bài." }] },
+    { "w": "寄", "py": "jì", "hv": "ký", "vi": "gửi (bưu điện)", "pos": "động từ",
+      "note": "Tiếng Việt: \"ký gửi\", \"ký thác\". Bộ 宀 (mái nhà). Chỉ dùng cho gửi qua bưu điện, khác 发 (gửi tin nhắn).",
+      "ex": [{ "cn": "我给家里寄了一封信。", "py": "Wǒ gěi jiā lǐ jì le yì fēng xìn.", "vi": "Tôi gửi về nhà một lá thư." }] },
+    { "w": "剩", "py": "shèng", "hv": "thặng", "vi": "còn thừa, còn lại", "pos": "động từ",
+      "note": "Tiếng Việt: \"thặng dư\". Thường đi với 下: 剩下 = còn lại.",
+      "ex": [{ "cn": "只剩下三个了。", "py": "Zhǐ shèng xià sān ge le.", "vi": "Chỉ còn lại ba cái." }] }
+  ],
+  "grammar": [
+    { "t": "成为 và 变成 — trở thành hay biến thành",
+      "b": "成为 + danh từ (địa vị mới) · 变成 + danh từ (hình dạng mới)",
+      "d": "他成为了老师 (đạt được vị trí). 冰变成了水 (chất đổi hình). Nói về người và sự nghiệp thì dùng 成为; nói về sự biến đổi vật chất hoặc tình trạng thì dùng 变成.",
+      "ex": [
+        { "cn": "他从一个学生成为了老师。", "py": "Tā cóng yí ge xuésheng chéngwéi le lǎoshī.", "vi": "Từ một học sinh, anh ấy trở thành giáo viên." },
+        { "cn": "天气变成阴天了。", "py": "Tiānqì biàn chéng yīntiān le.", "vi": "Trời chuyển thành âm u." }
+      ] },
+    { "t": "Các cặp trái nghĩa của sự tăng giảm",
+      "b": "提高 ↔ 降低 · 扩大 ↔ 缩小 · 增加 ↔ 减少",
+      "d": "Ba cặp này luôn đi cùng những tân ngữ nhất định: 提高水平／降低价格, 扩大影响／缩小范围, 增加收入／减少压力. Học theo cặp và theo cụm cố định, đừng học rời.",
+      "ex": [
+        { "cn": "我要提高我的汉语水平。", "py": "Wǒ yào tígāo wǒ de Hànyǔ shuǐpíng.", "vi": "Tôi muốn nâng cao trình độ tiếng Trung." }
+      ] },
+    { "t": "Ba động từ \"gửi\": 寄 · 发 · 送",
+      "b": "寄 (bưu điện) · 发 (tin nhắn, email) · 送 (đưa tận nơi, tặng)",
+      "d": "寄信/寄包裹 qua bưu điện. 发短信/发邮件 qua điện tử. 送 vừa là tặng quà (送礼物) vừa là đưa tiễn ai đó (送你回家). Chọn sai động từ là lỗi rất hay gặp.",
+      "ex": [
+        { "cn": "我给他发了一条短信。", "py": "Wǒ gěi tā fā le yì tiáo duǎnxìn.", "vi": "Tôi gửi cho anh ấy một tin nhắn." },
+        { "cn": "我送你回家吧。", "py": "Wǒ sòng nǐ huí jiā ba.", "vi": "Để tôi đưa bạn về nhà." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "学汉语改变了我的生活。", "py": "Xué Hànyǔ gǎibiàn le wǒ de shēnghuó.", "vi": "Học tiếng Trung đã thay đổi cuộc sống của tôi." },
+    { "cn": "他的梦想是成为一名翻译。", "py": "Tā de mèngxiǎng shì chéngwéi yì míng fānyì.", "vi": "Ước mơ của anh ấy là trở thành phiên dịch." },
+    { "cn": "我们六点出发，别迟到。", "py": "Wǒmen liù diǎn chūfā, bié chídào.", "vi": "Sáu giờ ta xuất phát, đừng trễ." },
+    { "cn": "多睡觉可以降低压力。", "py": "Duō shuìjiào kěyǐ jiàngdī yālì.", "vi": "Ngủ nhiều có thể giảm áp lực." },
+    { "cn": "读书能扩大我们的知识面。", "py": "Dú shū néng kuòdà wǒmen de zhīshi miàn.", "vi": "Đọc sách giúp mở rộng hiểu biết." },
+    { "cn": "请把你的电话号码留给我。", "py": "Qǐng bǎ nǐ de diànhuà hàomǎ liú gěi wǒ.", "vi": "Xin để lại số điện thoại cho tôi." },
+    { "cn": "包裹到了，你去取一下。", "py": "Bāoguǒ dào le, nǐ qù qǔ yíxià.", "vi": "Bưu kiện đến rồi, bạn đi lấy nhé." },
+    { "cn": "在中国我交了很多朋友。", "py": "Zài Zhōngguó wǒ jiāo le hěn duō péngyou.", "vi": "Ở Trung Quốc tôi kết được nhiều bạn." },
+    { "cn": "这封信要寄到北京。", "py": "Zhè fēng xìn yào jì dào Běijīng.", "vi": "Lá thư này gửi tới Bắc Kinh." },
+    { "cn": "钱花完了，只剩下一点儿。", "py": "Qián huā wán le, zhǐ shèng xià yìdiǎnr.", "vi": "Tiền tiêu hết rồi, chỉ còn lại một ít." }
+  ]
+}

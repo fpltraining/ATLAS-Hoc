@@ -1,0 +1,73 @@
+{
+  "id": 57,
+  "cn": "计划和重要的事",
+  "title": "Dự định và điều quan trọng",
+  "goal": "Nói kế hoạch, nhấn mạnh điều cần chú ý — bài có mật độ từ Hán Việt cao nhất giáo trình.",
+  "words": [
+    { "w": "打算", "py": "dǎsuàn", "hv": "đả toán", "vi": "dự định, tính toán", "pos": "động từ / danh từ",
+      "note": "打 (làm) + 算 (tính, bộ 竹 vì bàn tính làm bằng tre). Gần nghĩa với 准备 (bài 20) nhưng nhấn vào việc ĐÃ NGHĨ SẴN.",
+      "ex": [{ "cn": "你有什么打算？", "py": "Nǐ yǒu shénme dǎsuàn?", "vi": "Bạn có dự định gì?" }] },
+    { "w": "当然", "py": "dāngrán", "hv": "đương nhiên", "vi": "đương nhiên, tất nhiên", "pos": "phó từ",
+      "note": "Chính là \"đương nhiên\" tiếng Việt. Trả lời đồng ý dứt khoát: 当然可以！",
+      "ex": [{ "cn": "当然可以！", "py": "Dāngrán kěyǐ!", "vi": "Tất nhiên là được!" }] },
+    { "w": "必须", "py": "bìxū", "hv": "tất tu", "vi": "bắt buộc phải", "pos": "động từ năng nguyện",
+      "note": "必 = \"tất\" trong \"tất yếu\", \"tất nhiên\". Mạnh hơn 应该 (nên) — 必须 là BẮT BUỘC, không có lựa chọn.",
+      "ex": [{ "cn": "你必须准时到。", "py": "Nǐ bìxū zhǔnshí dào.", "vi": "Bạn bắt buộc phải đến đúng giờ." }] },
+    { "w": "机会", "py": "jīhuì", "hv": "cơ hội", "vi": "cơ hội", "pos": "danh từ",
+      "note": "Chính là \"cơ hội\" tiếng Việt: 机 (cơ, thời cơ) + 会 (hội). Không sai một ly.",
+      "ex": [{ "cn": "这是一个好机会。", "py": "Zhè shì yí ge hǎo jīhuì.", "vi": "Đây là một cơ hội tốt." }] },
+    { "w": "影响", "py": "yǐngxiǎng", "hv": "ảnh hưởng", "vi": "ảnh hưởng", "pos": "động từ / danh từ",
+      "note": "Chính là \"ảnh hưởng\" tiếng Việt: 影 (bóng) + 响 (tiếng vang). Bóng và tiếng vọng lại — hình ảnh rất hay.",
+      "ex": [{ "cn": "天气影响了我们的计划。", "py": "Tiānqì yǐngxiǎng le wǒmen de jìhuà.", "vi": "Thời tiết ảnh hưởng tới kế hoạch của chúng tôi." }] },
+    { "w": "变化", "py": "biànhuà", "hv": "biến hoá", "vi": "thay đổi, biến đổi", "pos": "danh từ / động từ",
+      "note": "Chính là \"biến hoá\" tiếng Việt: 变 (biến) + 化 (hoá).",
+      "ex": [{ "cn": "这里变化很大。", "py": "Zhèlǐ biànhuà hěn dà.", "vi": "Nơi này thay đổi nhiều lắm." }] },
+    { "w": "主要", "py": "zhǔyào", "hv": "chủ yếu", "vi": "chủ yếu", "pos": "tính từ",
+      "note": "Chính là \"chủ yếu\" tiếng Việt: 主 (chủ) + 要 (yếu).",
+      "ex": [{ "cn": "这是主要的原因。", "py": "Zhè shì zhǔyào de yuányīn.", "vi": "Đây là nguyên nhân chủ yếu." }] },
+    { "w": "重要", "py": "zhòngyào", "hv": "trọng yếu", "vi": "quan trọng", "pos": "tính từ",
+      "note": "Chính là \"trọng yếu\" tiếng Việt. Chú ý 重 ở đây đọc zhòng (trọng), còn khi nghĩa \"lặp lại\" thì đọc chóng.",
+      "ex": [{ "cn": "身体健康最重要。", "py": "Shēntǐ jiànkāng zuì zhòngyào.", "vi": "Sức khoẻ là quan trọng nhất." }] },
+    { "w": "注意", "py": "zhùyì", "hv": "chú ý", "vi": "chú ý, để ý", "pos": "động từ",
+      "note": "Chính là \"chú ý\" tiếng Việt: 注 (rót vào, bộ 氵) + 意 (ý) — dồn ý vào một chỗ.",
+      "ex": [{ "cn": "请注意安全。", "py": "Qǐng zhùyì ānquán.", "vi": "Xin chú ý an toàn." }] },
+    { "w": "用", "py": "yòng", "hv": "dụng", "vi": "dùng, sử dụng", "pos": "động từ",
+      "note": "Chính là \"dụng\" tiếng Việt (\"sử dụng\", \"công dụng\", \"hữu dụng\"). Cũng là giới từ: 用筷子吃饭.",
+      "ex": [{ "cn": "我用中文写信。", "py": "Wǒ yòng Zhōngwén xiě xìn.", "vi": "Tôi viết thư bằng tiếng Trung." }] }
+  ],
+  "grammar": [
+    { "t": "Thang bắt buộc: 想 < 要 < 应该 < 必须",
+      "b": "想 muốn · 要 cần · 应该 nên · 必须 bắt buộc",
+      "d": "Bốn mức tăng dần. 我想去 (tôi muốn đi), 我要去 (tôi cần đi), 我应该去 (tôi nên đi), 我必须去 (tôi buộc phải đi). Chọn đúng mức là câu nói có sắc thái chuẩn xác.",
+      "ex": [
+        { "cn": "你应该多练习。", "py": "Nǐ yīnggāi duō liànxí.", "vi": "Bạn nên luyện nhiều hơn. (lời khuyên)" },
+        { "cn": "你必须参加考试。", "py": "Nǐ bìxū cānjiā kǎoshì.", "vi": "Bạn bắt buộc phải dự thi. (không có lựa chọn)" }
+      ] },
+    { "t": "用 làm giới từ: dùng cái gì để làm gì",
+      "b": "用 + công cụ + động từ",
+      "d": "Cả cụm 用… đứng TRƯỚC động từ chính, đúng quy tắc của 在, 给, 对 đã học. Nói 我吃饭用筷子 là sai trật tự; đúng là 我用筷子吃饭.",
+      "ex": [
+        { "cn": "中国人用筷子吃饭。", "py": "Zhōngguó rén yòng kuàizi chīfàn.", "vi": "Người Trung Quốc dùng đũa ăn cơm." },
+        { "cn": "请用铅笔写。", "py": "Qǐng yòng qiānbǐ xiě.", "vi": "Xin viết bằng bút chì." }
+      ] },
+    { "t": "Bảy từ Hán Việt trùng khít trong một bài",
+      "b": "当然 · 机会 · 影响 · 变化 · 主要 · 重要 · 注意",
+      "d": "Đương nhiên, cơ hội, ảnh hưởng, biến hoá, chủ yếu, trọng yếu, chú ý — bảy từ này bạn đã dùng bằng tiếng Việt suốt đời. Đây là bài minh hoạ rõ nhất vì sao người Việt học tiếng Trung nhanh hơn người phương Tây rất nhiều ở trình độ trung cấp: vốn từ trừu tượng gần như có sẵn.",
+      "ex": [
+        { "cn": "这件事很重要，请注意。", "py": "Zhè jiàn shì hěn zhòngyào, qǐng zhùyì.", "vi": "Việc này rất quan trọng, xin chú ý." },
+        { "cn": "这个机会对我影响很大。", "py": "Zhège jīhuì duì wǒ yǐngxiǎng hěn dà.", "vi": "Cơ hội này ảnh hưởng lớn tới tôi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你毕业以后有什么打算？", "py": "Nǐ bìyè yǐhòu yǒu shénme dǎsuàn?", "vi": "Sau khi tốt nghiệp bạn dự định gì?" },
+    { "cn": "我打算明年去中国留学。", "py": "Wǒ dǎsuàn míngnián qù Zhōngguó liúxué.", "vi": "Tôi dự định sang năm đi du học Trung Quốc." },
+    { "cn": "当然可以，没问题。", "py": "Dāngrán kěyǐ, méi wèntí.", "vi": "Tất nhiên được, không vấn đề gì." },
+    { "cn": "考试的时候必须带学生证。", "py": "Kǎoshì de shíhou bìxū dài xuéshēngzhèng.", "vi": "Khi thi bắt buộc mang thẻ học sinh." },
+    { "cn": "这是提高汉语水平的好机会。", "py": "Zhè shì tígāo Hànyǔ shuǐpíng de hǎo jīhuì.", "vi": "Đây là cơ hội tốt để nâng cao trình độ tiếng Trung." },
+    { "cn": "天气不好，影响了比赛。", "py": "Tiānqì bù hǎo, yǐngxiǎng le bǐsài.", "vi": "Thời tiết xấu đã ảnh hưởng tới trận đấu." },
+    { "cn": "十年来这个城市变化很大。", "py": "Shí nián lái zhège chéngshì biànhuà hěn dà.", "vi": "Mười năm qua thành phố này thay đổi rất nhiều." },
+    { "cn": "我们今天主要谈这个问题。", "py": "Wǒmen jīntiān zhǔyào tán zhège wèntí.", "vi": "Hôm nay chúng ta chủ yếu bàn vấn đề này." },
+    { "cn": "过马路的时候要注意安全。", "py": "Guò mǎlù de shíhou yào zhùyì ānquán.", "vi": "Khi qua đường phải chú ý an toàn." },
+    { "cn": "你可以用我的电脑。", "py": "Nǐ kěyǐ yòng wǒ de diànnǎo.", "vi": "Bạn có thể dùng máy tính của tôi." }
+  ]
+}

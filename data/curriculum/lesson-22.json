@@ -1,0 +1,83 @@
+{
+  "id": 22,
+  "cn": "买卖和数字",
+  "title": "Mua bán và số lớn",
+  "goal": "Đếm tới hàng nghìn, mặc cả, và dùng 最 để nói \"nhất\".",
+  "words": [
+    { "w": "卖", "py": "mài", "hv": "mại", "vi": "bán", "pos": "động từ",
+      "note": "CẨN THẬN: 买 mǎi (mua, thanh 3) và 卖 mài (bán, thanh 4) chỉ khác một nét trên đầu và một thanh điệu. Chữ 卖 có thêm nét ngang ở trên — hàng bày ra để bán.",
+      "ex": [{ "cn": "这里卖水果。", "py": "Zhèlǐ mài shuǐguǒ.", "vi": "Ở đây bán hoa quả." }] },
+    { "w": "便宜", "py": "piányi", "hv": "tiện nghi", "vi": "rẻ", "pos": "tính từ",
+      "note": "Đừng nhầm với \"tiện nghi\" tiếng Việt (đầy đủ tiện ích) — tiếng Trung 便宜 nghĩa là RẺ. Chữ 便 ở đây đọc pián chứ không phải biàn.",
+      "ex": [{ "cn": "这个很便宜。", "py": "Zhège hěn piányi.", "vi": "Cái này rất rẻ." }] },
+    { "w": "贵", "py": "guì", "hv": "quý", "vi": "đắt; quý", "pos": "tính từ",
+      "note": "Bộ 贝 (vỏ sò = tiền) ở dưới. Tiếng Việt: \"quý giá\", \"cao quý\". 贵姓 = quý danh (hỏi họ lịch sự).",
+      "ex": [{ "cn": "太贵了！", "py": "Tài guì le!", "vi": "Đắt quá!" }] },
+    { "w": "票", "py": "piào", "hv": "phiếu", "vi": "vé", "pos": "danh từ",
+      "note": "Chính là \"phiếu\" tiếng Việt. 飞机票 vé máy bay, 电影票 vé xem phim.",
+      "ex": [{ "cn": "我买了两张票。", "py": "Wǒ mǎi le liǎng zhāng piào.", "vi": "Tôi mua hai vé." }] },
+    { "w": "千", "py": "qiān", "hv": "thiên", "vi": "nghìn", "pos": "số từ",
+      "note": "Tiếng Việt: \"thiên niên kỷ\", \"thiên lý\". Chú ý 千 (nghìn) khác 干 (khô) chỉ ở nét phẩy trên đầu.",
+      "ex": [{ "cn": "一千块钱", "py": "yìqiān kuài qián", "vi": "một nghìn đồng" }] },
+    { "w": "百", "py": "bǎi", "hv": "bách", "vi": "trăm", "pos": "số từ",
+      "note": "Tiếng Việt: \"bách khoa\" (trăm ngành), \"bách hoá\" (trăm mặt hàng).",
+      "ex": [{ "cn": "两百个人", "py": "liǎngbǎi ge rén", "vi": "hai trăm người" }] },
+    { "w": "零", "py": "líng", "hv": "linh", "vi": "số không", "pos": "số từ",
+      "note": "Có bộ 雨 (mưa) ở trên. Tiếng Việt: \"linh\" trong \"một trăm linh năm\" — dùng y hệt nhau!",
+      "ex": [{ "cn": "一百零五", "py": "yìbǎi líng wǔ", "vi": "một trăm linh năm" }] },
+    { "w": "公斤", "py": "gōngjīn", "hv": "công cân", "vi": "ki-lô-gam", "pos": "lượng từ",
+      "note": "公 (chuẩn quốc tế) + 斤 (cân, đơn vị cổ). Một 斤 ở Trung Quốc là nửa ki-lô.",
+      "ex": [{ "cn": "我买了两公斤苹果。", "py": "Wǒ mǎi le liǎng gōngjīn píngguǒ.", "vi": "Tôi mua hai cân táo." }] },
+    { "w": "两", "py": "liǎng", "hv": "lưỡng", "vi": "hai (trước lượng từ)", "pos": "số từ",
+      "note": "Tiếng Việt: \"lưỡng lự\", \"lưỡng cực\". Nhắc lại quy tắc bài 9: đứng trước lượng từ thì dùng 两, đếm số thì dùng 二.",
+      "ex": [{ "cn": "两个人", "py": "liǎng ge rén", "vi": "hai người" }] },
+    { "w": "最", "py": "zuì", "hv": "tối", "vi": "nhất, tối", "pos": "phó từ",
+      "note": "Tiếng Việt: \"tối đa\", \"tối thiểu\", \"tối cao\" — đều mang nghĩa \"nhất\" này.",
+      "ex": [{ "cn": "这个最便宜。", "py": "Zhège zuì piányi.", "vi": "Cái này rẻ nhất." }] }
+  ],
+  "grammar": [
+    { "t": "Đọc số từ 100 đến 9999",
+      "b": "百 trăm → 千 nghìn · đọc theo từng bậc",
+      "d": "235 = 二百三十五. 1800 = 一千八百. Quy tắc giống tiếng Việt, chỉ khác là bậc trăm/nghìn phải nói rõ chứ không lược đi.",
+      "ex": [
+        { "cn": "一百二十", "py": "yìbǎi èrshí", "vi": "120" },
+        { "cn": "三百五十六", "py": "sānbǎi wǔshíliù", "vi": "356" },
+        { "cn": "两千零八", "py": "liǎngqiān líng bā", "vi": "2008" }
+      ] },
+    { "t": "零 — khi nào phải nói \"linh\"",
+      "b": "Có bậc bị TRỐNG ở giữa thì phải chèn 零",
+      "d": "Giống hệt tiếng Việt nói \"một trăm linh năm\". 105 = 一百零五. Nhưng 150 = 一百五十 thì không cần vì không có bậc trống ở giữa.",
+      "ex": [
+        { "cn": "一百零五", "py": "yìbǎi líng wǔ", "vi": "105 (có bậc chục trống)" },
+        { "cn": "一百五十", "py": "yìbǎi wǔshí", "vi": "150 (không cần 零)" },
+        { "cn": "两千零一", "py": "liǎngqiān líng yī", "vi": "2001" }
+      ] },
+    { "t": "最 — so sánh nhất",
+      "b": "最 + tính từ",
+      "d": "Đặt ngay trước tính từ, không cần gì thêm. Khi có 最 thì KHÔNG dùng 很 nữa: nói 最很好 là sai.",
+      "ex": [
+        { "cn": "这个最便宜。", "py": "Zhège zuì piányi.", "vi": "Cái này rẻ nhất." },
+        { "cn": "我最喜欢红色。", "py": "Wǒ zuì xǐhuan hóngsè.", "vi": "Tôi thích màu đỏ nhất." }
+      ] },
+    { "t": "Bộ câu mặc cả ở chợ Trung Quốc",
+      "b": "多少钱？→ 太贵了 → 便宜一点儿吧 → 好，我买了",
+      "d": "Ở chợ và cửa hàng nhỏ, mặc cả là chuyện bình thường. Bốn câu này đủ để bạn đi chợ.",
+      "ex": [
+        { "cn": "这个多少钱一公斤？", "py": "Zhège duōshao qián yì gōngjīn?", "vi": "Cái này bao nhiêu tiền một cân?" },
+        { "cn": "太贵了，便宜一点儿吧。", "py": "Tài guì le, piányi yìdiǎnr ba.", "vi": "Đắt quá, rẻ chút đi." },
+        { "cn": "好，我买两公斤。", "py": "Hǎo, wǒ mǎi liǎng gōngjīn.", "vi": "Được, tôi mua hai cân." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这里卖什么？", "py": "Zhèlǐ mài shénme?", "vi": "Ở đây bán gì?" },
+    { "cn": "苹果多少钱一公斤？", "py": "Píngguǒ duōshao qián yì gōngjīn?", "vi": "Táo bao nhiêu tiền một cân?" },
+    { "cn": "十五块钱一公斤。", "py": "Shíwǔ kuài qián yì gōngjīn.", "vi": "Mười lăm đồng một cân." },
+    { "cn": "太贵了，便宜一点儿吧。", "py": "Tài guì le, piányi yìdiǎnr ba.", "vi": "Đắt quá, rẻ chút đi." },
+    { "cn": "这个最便宜。", "py": "Zhège zuì piányi.", "vi": "Cái này rẻ nhất." },
+    { "cn": "我买了两张电影票。", "py": "Wǒ mǎi le liǎng zhāng diànyǐng piào.", "vi": "Tôi mua hai vé xem phim." },
+    { "cn": "飞机票一千八百块。", "py": "Fēijī piào yìqiān bābǎi kuài.", "vi": "Vé máy bay một nghìn tám trăm đồng." },
+    { "cn": "我们学校有两千零五个学生。", "py": "Wǒmen xuéxiào yǒu liǎngqiān líng wǔ ge xuésheng.", "vi": "Trường tôi có 2005 học sinh." },
+    { "cn": "我最喜欢这件衣服。", "py": "Wǒ zuì xǐhuan zhè jiàn yīfu.", "vi": "Tôi thích bộ đồ này nhất." },
+    { "cn": "这本书不贵，很便宜。", "py": "Zhè běn shū bú guì, hěn piányi.", "vi": "Quyển sách này không đắt, rất rẻ." }
+  ]
+}

@@ -1,0 +1,182 @@
+@id true-turing
+@shelf true
+@level A2
+@title Can Machines Think?
+@vi Máy có biết nghĩ không?
+@blurb Năm 1950, Alan Turing đặt một câu hỏi mà đến giờ người ta vẫn còn cãi nhau.
+
+## 1 | The Question | Câu hỏi
+In 1950, a British scientist named Alan Turing | Năm 1950, một nhà khoa học Anh tên Alan Turing
+wrote a famous paper. | viết một bài báo nổi tiếng.
+It began with a simple question: | Nó mở đầu bằng một câu hỏi đơn giản:
+"Can machines think?" | "Máy có thể suy nghĩ không?"
+
+At that time, computers were as big as rooms. | Khi đó, máy tính to bằng cả căn phòng.
+They could only do simple math. | Chúng chỉ làm được phép tính đơn giản.
+Many people thought the question was silly. | Nhiều người thấy câu hỏi đó ngớ ngẩn.
+
+Turing knew that "think" was hard to define, | Turing biết rằng "suy nghĩ" rất khó định nghĩa,
+so he suggested a game. | nên ông đề xuất một trò chơi.
+A person talks by text | Một người nhắn tin trò chuyện
+with a human and a machine. | với một người thật và một cái máy.
+If the person cannot tell which is which, | Nếu người đó không phân biệt được ai là ai,
+maybe the machine is thinking. | có lẽ cái máy đang suy nghĩ.
+
+Today we call it the Turing test. | Ngày nay ta gọi đó là phép thử Turing.
+Modern AI can often pass versions of it. | AI hiện đại thường qua được các phiên bản của nó.
+But people still argue about the real question. | Nhưng người ta vẫn cãi nhau về câu hỏi thật sự.
+Does a machine that talks like us | Một cái máy nói chuyện như ta
+really think like us? | có thật sự suy nghĩ như ta không?
+
+? What was Turing's test about? | Phép thử của Turing nói về gì? | Telling a human from a machine* | Doing fast math | Building big rooms
+> Theo anh, AI bây giờ có "suy nghĩ" không? Trả lời 1 câu tiếng Anh.
+
+@id true-eliza
+@shelf true
+@level A2
+@title The Secretary and the Machine
+@vi Cô thư ký và cái máy
+@blurb Năm 1966, một chương trình rất đơn giản đã khiến người ta muốn tâm sự với nó. Người tạo ra nó thấy sợ.
+
+## 1 | ELIZA | ELIZA
+In the 1960s, at MIT in America, | Vào những năm 1960, tại MIT ở Mỹ,
+a scientist named Joseph Weizenbaum | một nhà khoa học tên Joseph Weizenbaum
+made a small program called ELIZA. | tạo ra một chương trình nhỏ tên ELIZA.
+
+ELIZA was not smart. | ELIZA không thông minh.
+It understood nothing. | Nó chẳng hiểu gì cả.
+It only followed simple rules. | Nó chỉ làm theo những quy tắc đơn giản.
+If you typed, "I am sad," | Nếu anh gõ "Tôi buồn",
+it answered, "Why are you sad?" | nó đáp "Vì sao bạn buồn?"
+It turned your words into questions, | Nó biến lời anh thành câu hỏi,
+like a quiet doctor. | như một bác sĩ ít nói.
+
+Then something strange happened. | Rồi một chuyện lạ xảy ra.
+People began to tell it their secrets. | Người ta bắt đầu kể bí mật cho nó.
+One day, Weizenbaum's own secretary | Một hôm, chính cô thư ký của Weizenbaum
+was talking to ELIZA. | đang trò chuyện với ELIZA.
+She knew it was only a program. | Cô biết đó chỉ là một chương trình.
+Still, she asked him to leave the room. | Vậy mà cô vẫn nhờ ông ra khỏi phòng.
+She wanted to be private. | Cô muốn được riêng tư.
+
+Weizenbaum was shocked. | Weizenbaum bị sốc.
+He spent years warning people | Ông dành nhiều năm cảnh báo mọi người
+not to trust machines too easily. | đừng quá dễ tin vào máy móc.
+Today, we still fall for the same trick. | Ngày nay, ta vẫn mắc đúng cái bẫy đó.
+It even has a name: the ELIZA effect. | Nó còn có tên: hiệu ứng ELIZA.
+
+? Why did the secretary ask him to leave? | Vì sao cô thư ký nhờ ông ra ngoài? | She wanted to talk privately* | The room was cold | She was angry
+> Anh có từng thấy mình nói chuyện với AI như với người thật không?
+
+@id true-kasparov
+@shelf true
+@level A2
+@title The Day Kasparov Lost
+@vi Ngày Kasparov thua
+@blurb Năm 1997, người chơi cờ giỏi nhất thế giới thua một cái máy. Ông rời bàn cờ trong giận dữ.
+
+## 1 | Man Against Machine | Người đấu với máy
+Garry Kasparov was the best chess player in the world. | Garry Kasparov là kỳ thủ giỏi nhất thế giới.
+In 1996, he played a match | Năm 1996, ông thi đấu một trận
+against an IBM computer called Deep Blue. | với máy tính của IBM tên Deep Blue.
+He lost one game, | Ông thua một ván,
+but he won the match. | nhưng thắng cả trận.
+
+One year later, they played again in New York. | Một năm sau, họ đấu lại ở New York.
+Deep Blue was now much stronger. | Deep Blue giờ đã mạnh hơn nhiều.
+It could look at 200 million chess positions | Nó có thể xem xét 200 triệu thế cờ
+in one second. | trong một giây.
+
+The match was very close. | Trận đấu rất sát sao.
+Before the last game, the score was equal. | Trước ván cuối, tỉ số đang hoà.
+Then, in May 1997, | Rồi vào tháng 5 năm 1997,
+Kasparov lost the final game in only 19 moves. | Kasparov thua ván cuối chỉ sau 19 nước.
+He stood up and walked away with his arms open. | Ông đứng dậy, dang tay rồi bỏ đi.
+
+It was the first time a world champion | Đây là lần đầu một nhà vô địch thế giới
+lost a match to a computer | thua cả trận trước máy tính
+under normal tournament rules. | theo luật thi đấu thông thường.
+
+For years, Kasparov was angry. | Suốt nhiều năm, Kasparov vẫn giận.
+Later, he changed his mind. | Về sau, ông đổi ý.
+He said that people and machines | Ông nói con người và máy móc
+are stronger when they work together. | mạnh hơn khi làm việc cùng nhau.
+
+? What could Deep Blue do? | Deep Blue làm được gì? | Check 200 million positions a second* | Talk to Kasparov | Walk away
+> Anh đồng ý với Kasparov không? Trả lời bằng tiếng Anh.
+
+@id true-move37
+@shelf true
+@level A2
+@title Move 37
+@vi Nước đi 37
+@blurb Năm 2016, ở Seoul, một AI đi một nước cờ mà không ai hiểu. Về sau người ta gọi nó là đẹp.
+
+## 1 | The Strange Move | Nước đi kỳ lạ
+Go is an old game from China. | Cờ vây là trò chơi cổ của Trung Quốc.
+The rules are simple, | Luật chơi đơn giản,
+but the game is incredibly deep. | nhưng trò chơi sâu vô cùng.
+There are more possible positions | Số thế cờ có thể có còn nhiều hơn
+than atoms in the universe. | số nguyên tử trong vũ trụ.
+
+In March 2016, in Seoul, | Tháng 3 năm 2016, tại Seoul,
+the great player Lee Sedol | kỳ thủ lừng danh Lee Sedol
+played an AI called AlphaGo. | đấu với một AI tên AlphaGo.
+Most experts thought Lee would win easily. | Đa số chuyên gia nghĩ Lee sẽ thắng dễ.
+
+In the second game, AlphaGo played its 37th move. | Ở ván hai, AlphaGo đi nước thứ 37.
+The experts thought it was a mistake. | Các chuyên gia tưởng đó là nước sai.
+No good human would play there. | Không kỳ thủ giỏi nào đi vào chỗ đó.
+AlphaGo itself had guessed | Chính AlphaGo đã ước tính
+that only one human in ten thousand would. | chỉ một người trong mười nghìn sẽ đi vậy.
+Lee left the room to think. | Lee rời phòng để suy nghĩ.
+
+Move 37 helped AlphaGo win that game. | Nước 37 giúp AlphaGo thắng ván đó.
+People who had played for a lifetime | Những người chơi cả đời
+called it beautiful. | gọi nó là đẹp.
+
+Lee lost the match, four games to one. | Lee thua chung cuộc, bốn ván một.
+But he won game four, | Nhưng ông thắng ván bốn,
+with his own surprising move. | bằng một nước đi bất ngờ của chính mình.
+It remains the only game | Đó vẫn là ván duy nhất
+that a human ever won against that AlphaGo. | mà con người từng thắng phiên bản AlphaGo đó.
+In 2019 he retired from the game. | Năm 2019, ông giải nghệ.
+
+? Why did experts think Move 37 was a mistake? | Vì sao chuyên gia tưởng nước 37 là sai? | No good human would play it* | It broke the rules | It was too slow
+> AI tìm ra thứ mà con người chưa nghĩ tới. Điều đó làm anh thấy thế nào?
+
+@id true-alphafold
+@shelf true
+@level A2
+@title The Fifty-Year Problem
+@vi Bài toán năm mươi năm
+@blurb Hình dạng của protein là câu đố làm các nhà khoa học đau đầu suốt nửa thế kỷ. Rồi AI giải được phần lớn.
+
+## 1 | The Shape of Life | Hình dạng của sự sống
+Your body is full of proteins. | Cơ thể anh đầy protein.
+They carry oxygen, fight sickness, and build muscle. | Chúng mang oxy, chống bệnh và xây cơ bắp.
+Each protein folds into a special shape, | Mỗi protein gập thành một hình dạng riêng,
+and the shape decides what it can do. | và hình dạng quyết định nó làm được gì.
+
+For about fifty years, scientists had a problem. | Suốt khoảng năm mươi năm, giới khoa học có một bài toán.
+Finding the shape of one protein | Tìm hình dạng của một protein
+could take years of hard work in a lab. | có thể mất nhiều năm làm việc trong phòng thí nghiệm.
+Could a computer simply predict it? | Máy tính có thể đoán ra được không?
+
+In 2020, a company called DeepMind | Năm 2020, một công ty tên DeepMind
+showed that its AI, AlphaFold, | cho thấy AI của họ, AlphaFold,
+could predict many shapes | có thể đoán nhiều hình dạng
+almost as well as lab work. | gần chính xác như làm thí nghiệm.
+
+Then they did something generous. | Rồi họ làm một việc hào phóng.
+They shared more than 200 million protein shapes | Họ chia sẻ hơn 200 triệu hình dạng protein
+for free, for scientists everywhere. | miễn phí, cho các nhà khoa học khắp nơi.
+
+In 2024, Demis Hassabis and John Jumper | Năm 2024, Demis Hassabis và John Jumper
+shared the Nobel Prize in Chemistry | cùng nhận giải Nobel Hoá học
+with David Baker, | với David Baker,
+for their work on proteins. | nhờ công trình về protein.
+AI had helped to win a Nobel Prize. | AI đã góp phần đoạt một giải Nobel.
+
+? What did AlphaFold predict? | AlphaFold dự đoán gì? | The shape of proteins* | The weather | Chess moves
+> Vì sao chia sẻ miễn phí lại quan trọng? Trả lời 1–2 câu.

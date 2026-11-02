@@ -1,0 +1,71 @@
+{
+  "id": 83,
+  "cn": "饮料和味道",
+  "title": "Đồ uống và mùi vị",
+  "goal": "Gọi đồ uống, tả mùi vị và nâng ly chúc mừng.",
+  "words": [
+    { "w": "饼干", "py": "bǐnggān", "hv": "bính can", "vi": "bánh quy", "pos": "danh từ",
+      "note": "饼 (bánh dẹt, bộ 饣) + 干 (khô). Nghĩa đen: bánh khô. Tiếng Việt: \"bính\" trong \"nguyệt bính\" (bánh trung thu).",
+      "ex": [{ "cn": "孩子最爱吃饼干。", "py": "Háizi zuì ài chī bǐnggān.", "vi": "Trẻ con thích nhất là ăn bánh quy." }] },
+    { "w": "巧克力", "py": "qiǎokèlì", "hv": "xảo khắc lực", "vi": "sô cô la", "pos": "danh từ",
+      "note": "Từ MƯỢN ÂM tiếng Anh \"chocolate\" — ba chữ chỉ mượn âm, không mang nghĩa.",
+      "ex": [{ "cn": "她送了我一盒巧克力。", "py": "Tā sòng le wǒ yì hé qiǎokèlì.", "vi": "Cô ấy tặng tôi một hộp sô cô la." }] },
+    { "w": "果汁", "py": "guǒzhī", "hv": "quả trấp", "vi": "nước ép trái cây", "pos": "danh từ",
+      "note": "果 (quả) + 汁 (nước cốt, bộ 氵). Tiếng Việt: \"trấp\" trong từ cổ chỉ nước cốt.",
+      "ex": [{ "cn": "我要一杯橙汁。", "py": "Wǒ yào yì bēi chéngzhī.", "vi": "Cho tôi một ly nước cam." }] },
+    { "w": "矿泉水", "py": "kuàngquánshuǐ", "hv": "khoáng tuyền thuỷ", "vi": "nước khoáng", "pos": "danh từ",
+      "note": "矿 (khoáng) + 泉 (suối) + 水 (nước) = \"nước suối khoáng\". Tiếng Việt cũng gọi \"nước khoáng\".",
+      "ex": [{ "cn": "来两瓶矿泉水。", "py": "Lái liǎng píng kuàngquánshuǐ.", "vi": "Cho hai chai nước khoáng." }] },
+    { "w": "西红柿", "py": "xīhóngshì", "hv": "tây hồng thị", "vi": "cà chua", "pos": "danh từ",
+      "note": "西 (tây) + 红 (đỏ) + 柿 (quả hồng) = \"quả hồng đỏ phương tây\". Cách đặt tên rất hình ảnh.",
+      "ex": [{ "cn": "西红柿炒鸡蛋是家常菜。", "py": "Xīhóngshì chǎo jīdàn shì jiācháng cài.", "vi": "Trứng xào cà chua là món nhà thường ăn." }] },
+    { "w": "香", "py": "xiāng", "hv": "hương", "vi": "thơm", "pos": "tính từ",
+      "note": "Chính là \"hương\" tiếng Việt (\"hương thơm\", \"nước hoa\"). 禾 (lúa) trên 日 — mùi lúa chín.",
+      "ex": [{ "cn": "这个菜真香！", "py": "Zhège cài zhēn xiāng!", "vi": "Món này thơm thật!" }] },
+    { "w": "尝", "py": "cháng", "hv": "thường", "vi": "nếm", "pos": "động từ",
+      "note": "Tiếng Việt: \"thường\" trong \"nếm thử\" của văn cổ. Hay dùng dạng lặp: 尝尝 (nếm thử chút).",
+      "ex": [{ "cn": "你尝尝这个。", "py": "Nǐ chángchang zhège.", "vi": "Bạn nếm thử cái này đi." }] },
+    { "w": "干杯", "py": "gānbēi", "hv": "can bôi", "vi": "cạn ly, nâng ly", "pos": "động từ",
+      "note": "干 (cạn khô) + 杯 (ly, bài 9). Nghĩa đen: uống cạn ly. Câu chúc bắt buộc biết khi dự tiệc.",
+      "ex": [{ "cn": "为我们的友谊干杯！", "py": "Wèi wǒmen de yǒuyì gānbēi!", "vi": "Nâng ly vì tình bạn của chúng ta!" }] },
+    { "w": "味道", "py": "wèidào", "hv": "vị đạo", "vi": "mùi vị", "pos": "danh từ",
+      "note": "味 (vị) + 道 (đạo). Tiếng Việt: \"vị\", \"khẩu vị\". Dùng cho cả mùi lẫn vị.",
+      "ex": [{ "cn": "这个味道很特别。", "py": "Zhège wèidào hěn tèbié.", "vi": "Vị này rất đặc biệt." }] },
+    { "w": "咸", "py": "xián", "hv": "hàm", "vi": "mặn", "pos": "tính từ",
+      "note": "Tiếng Việt: \"hàm\" trong \"hàm lượng muối\". Một trong ngũ vị đã học ở bài 82.",
+      "ex": [{ "cn": "汤有点儿咸。", "py": "Tāng yǒudiǎnr xián.", "vi": "Canh hơi mặn." }] }
+  ],
+  "grammar": [
+    { "t": "Từ mượn âm và từ dịch nghĩa",
+      "b": "巧克力 (mượn âm) · 矿泉水 (dịch nghĩa)",
+      "d": "Tiếng Trung mượn âm cho tên riêng và sản phẩm ngoại (巧克力, 咖啡, 沙发, 幽默), nhưng dịch nghĩa cho khái niệm (矿泉水, 互联网, 电脑). Nhận ra loại nào giúp bạn đoán nghĩa nhanh hơn.",
+      "ex": [
+        { "cn": "咖啡 · 沙发 · 巧克力", "py": "kāfēi · shāfā · qiǎokèlì", "vi": "mượn âm nước ngoài" },
+        { "cn": "电脑 · 火车 · 矿泉水", "py": "diànnǎo · huǒchē · kuàngquánshuǐ", "vi": "ghép chữ theo nghĩa" }
+      ] },
+    { "t": "干杯 và văn hoá bàn tiệc",
+      "b": "为 + điều chúc + 干杯！",
+      "d": "为我们的友谊干杯, 为你的成功干杯. Ở Trung Quốc, người mời nâng ly trước và uống cạn thể hiện thành ý. Nếu không uống được rượu, nói 我以茶代酒 (tôi thay rượu bằng trà) là cách từ chối lịch sự.",
+      "ex": [
+        { "cn": "为大家的健康干杯！", "py": "Wèi dàjiā de jiànkāng gānbēi!", "vi": "Nâng ly vì sức khoẻ mọi người!" }
+      ] },
+    { "t": "味道 + tính từ — nhận xét món ăn",
+      "b": "味道 + 好 / 不错 / 怪 / 特别",
+      "d": "Muốn khen món ăn ngoài 好吃 còn có thể nói 味道很好, 味道不错. Chê nhẹ thì 味道有点儿怪 (vị hơi lạ) — lịch sự hơn nói thẳng là dở.",
+      "ex": [
+        { "cn": "这家饭馆的味道不错。", "py": "Zhè jiā fànguǎn de wèidào búcuò.", "vi": "Quán này vị khá đấy." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我买了一盒饼干带在路上吃。", "py": "Wǒ mǎi le yì hé bǐnggān dài zài lù shàng chī.", "vi": "Tôi mua một hộp bánh quy mang theo ăn dọc đường." },
+    { "cn": "情人节大家都送巧克力。", "py": "Qíngrénjié dàjiā dōu sòng qiǎokèlì.", "vi": "Lễ Tình nhân ai cũng tặng sô cô la." },
+    { "cn": "早上喝一杯果汁很健康。", "py": "Zǎoshang hē yì bēi guǒzhī hěn jiànkāng.", "vi": "Sáng uống một ly nước ép rất tốt." },
+    { "cn": "出门记得带瓶矿泉水。", "py": "Chūmén jìde dài píng kuàngquánshuǐ.", "vi": "Ra ngoài nhớ mang chai nước khoáng." },
+    { "cn": "夏天的西红柿又大又甜。", "py": "Xiàtiān de xīhóngshì yòu dà yòu tián.", "vi": "Cà chua mùa hè vừa to vừa ngọt." },
+    { "cn": "刚做好的面包特别香。", "py": "Gāng zuò hǎo de miànbāo tèbié xiāng.", "vi": "Bánh mì mới ra lò thơm đặc biệt." },
+    { "cn": "你尝尝，看看咸不咸。", "py": "Nǐ chángchang, kànkan xián bu xián.", "vi": "Bạn nếm thử xem có mặn không." },
+    { "cn": "来，为大家的健康干杯！", "py": "Lái, wèi dàjiā de jiànkāng gānbēi!", "vi": "Nào, nâng ly vì sức khoẻ mọi người!" },
+    { "cn": "这个菜的味道我很喜欢。", "py": "Zhège cài de wèidào wǒ hěn xǐhuan.", "vi": "Vị món này tôi rất thích." },
+    { "cn": "医生说吃太咸对身体不好。", "py": "Yīshēng shuō chī tài xián duì shēntǐ bù hǎo.", "vi": "Bác sĩ nói ăn mặn quá không tốt." }
+  ]
+}

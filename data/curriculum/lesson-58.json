@@ -1,0 +1,71 @@
+{
+  "id": 58,
+  "cn": "留学和环境",
+  "title": "Du học và môi trường",
+  "goal": "Nói về việc học xa nhà, mô tả âm thanh và hoàn cảnh, dùng 其他 để nói \"những cái khác\".",
+  "words": [
+    { "w": "留学", "py": "liúxué", "hv": "lưu học", "vi": "du học", "pos": "động từ",
+      "note": "留 (ở lại) + 学 (học) — ở lại nước ngoài mà học. Du học sinh là 留学生. Là động từ ly hợp: 留了三年学.",
+      "ex": [{ "cn": "他在中国留学。", "py": "Tā zài Zhōngguó liúxué.", "vi": "Cậu ấy du học ở Trung Quốc." }] },
+    { "w": "经过", "py": "jīngguò", "hv": "kinh quá", "vi": "đi qua; trải qua", "pos": "động từ",
+      "note": "经 (kinh, trải) + 过 (qua, bài 25). Hai nghĩa: đi ngang qua một nơi, và trải qua một quá trình.",
+      "ex": [{ "cn": "经过三年的努力，他成功了。", "py": "Jīngguò sān nián de nǔlì, tā chénggōng le.", "vi": "Sau ba năm cố gắng, anh ấy đã thành công." }] },
+    { "w": "久", "py": "jiǔ", "hv": "cửu", "vi": "lâu", "pos": "tính từ",
+      "note": "Chính là \"cửu\" tiếng Việt (\"vĩnh cửu\", \"trường cửu\"). Câu chào người lâu không gặp: 好久不见！",
+      "ex": [{ "cn": "好久不见！", "py": "Hǎo jiǔ bú jiàn!", "vi": "Lâu rồi không gặp!" }] },
+    { "w": "声音", "py": "shēngyīn", "hv": "thanh âm", "vi": "âm thanh, giọng", "pos": "danh từ",
+      "note": "Chính là \"thanh âm\" tiếng Việt: 声 (thanh) + 音 (âm). 音 cũng nằm trong 音乐 (bài 38).",
+      "ex": [{ "cn": "她的声音很好听。", "py": "Tā de shēngyīn hěn hǎotīng.", "vi": "Giọng cô ấy rất hay." }] },
+    { "w": "哭", "py": "kū", "hv": "khốc", "vi": "khóc", "pos": "động từ",
+      "note": "Chính là \"khốc\" tiếng Việt (\"khốc liệt\", \"thống khốc\"). Chữ tượng hình: hai con mắt 口口 đang chảy nước. Trái nghĩa với 笑 (cười, bài 26).",
+      "ex": [{ "cn": "孩子哭了。", "py": "Háizi kū le.", "vi": "Đứa bé khóc rồi." }] },
+    { "w": "黄河", "py": "Huáng Hé", "hv": "Hoàng Hà", "vi": "sông Hoàng Hà", "pos": "danh từ riêng",
+      "note": "Chính là \"Hoàng Hà\" tiếng Việt: 黄 (vàng) + 河 (sông, bộ 氵). Cái nôi của văn minh Trung Hoa.",
+      "ex": [{ "cn": "黄河是中国的母亲河。", "py": "Huáng Hé shì Zhōngguó de mǔqīn hé.", "vi": "Hoàng Hà là dòng sông mẹ của Trung Quốc." }] },
+    { "w": "环境", "py": "huánjìng", "hv": "hoàn cảnh", "vi": "môi trường, hoàn cảnh", "pos": "danh từ",
+      "note": "Âm Hán Việt là \"hoàn cảnh\" nhưng nghĩa thường dùng là MÔI TRƯỜNG (thiên nhiên, nơi sống). 环 = vòng, 境 = cảnh giới.",
+      "ex": [{ "cn": "这里的环境很好。", "py": "Zhèlǐ de huánjìng hěn hǎo.", "vi": "Môi trường ở đây rất tốt." }] },
+    { "w": "作者", "py": "zuòzhě", "hv": "tác giả", "vi": "tác giả", "pos": "danh từ",
+      "note": "Chính là \"tác giả\" tiếng Việt: 作 (làm, sáng tác) + 者 (giả, người). Đuôi 者 rất hay gặp: 记者 (ký giả), 读者 (độc giả).",
+      "ex": [{ "cn": "这本书的作者是谁？", "py": "Zhè běn shū de zuòzhě shì shéi?", "vi": "Tác giả quyển sách này là ai?" }] },
+    { "w": "作用", "py": "zuòyòng", "hv": "tác dụng", "vi": "tác dụng, vai trò", "pos": "danh từ",
+      "note": "Chính là \"tác dụng\" tiếng Việt: 作 (tác) + 用 (dụng, bài 57).",
+      "ex": [{ "cn": "这个药有什么作用？", "py": "Zhège yào yǒu shénme zuòyòng?", "vi": "Thuốc này có tác dụng gì?" }] },
+    { "w": "其他", "py": "qítā", "hv": "kỳ tha", "vi": "cái khác, những cái khác", "pos": "đại từ",
+      "note": "其 = \"kỳ\" trong \"kỳ thực\", \"kỳ dư\". Dùng cho cả người lẫn vật, trang trọng hơn 别的.",
+      "ex": [{ "cn": "其他人都同意了。", "py": "Qítā rén dōu tóngyì le.", "vi": "Những người khác đều đồng ý." }] }
+  ],
+  "grammar": [
+    { "t": "Đuôi 者 — người làm việc gì đó",
+      "b": "作者 · 读者 · 记者 · 学者",
+      "d": "者 nghĩa là \"người\". Ghép sau động từ ra tên nghề hoặc vai trò. Tiếng Việt cũng có \"tác giả\", \"độc giả\", \"ký giả\", \"học giả\" — cùng một cách ghép, nên bạn đoán được ngay.",
+      "ex": [
+        { "cn": "作者 · 读者 · 记者", "py": "zuòzhě · dúzhě · jìzhě", "vi": "tác giả · độc giả · ký giả" }
+      ] },
+    { "t": "经过 — hai nghĩa, hai cách dùng",
+      "b": "经过 + nơi chốn (đi ngang) · 经过 + quá trình (trải qua)",
+      "d": "经过银行 (đi ngang ngân hàng). 经过三年的努力 (sau ba năm cố gắng). Nghĩa thứ hai rất hay dùng ở đầu câu để nêu quá trình dẫn tới kết quả.",
+      "ex": [
+        { "cn": "我每天上班都经过这个公园。", "py": "Wǒ měi tiān shàngbān dōu jīngguò zhège gōngyuán.", "vi": "Ngày nào đi làm tôi cũng đi qua công viên này." },
+        { "cn": "经过检查，医生说我很健康。", "py": "Jīngguò jiǎnchá, yīshēng shuō wǒ hěn jiànkāng.", "vi": "Sau khi khám, bác sĩ nói tôi rất khoẻ." }
+      ] },
+    { "t": "好久不见 — câu chào của người quen cũ",
+      "b": "好久不见！",
+      "d": "Câu chào bắt buộc thuộc, dùng khi gặp lại người lâu không gặp. 好 ở đây nghĩa là \"rất\", không phải \"tốt\". Đáp lại cũng bằng chính câu đó.",
+      "ex": [
+        { "cn": "好久不见！你最近怎么样？", "py": "Hǎo jiǔ bú jiàn! Nǐ zuìjìn zěnmeyàng?", "vi": "Lâu rồi không gặp! Dạo này bạn thế nào?" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "他去年去中国留学了。", "py": "Tā qùnián qù Zhōngguó liúxué le.", "vi": "Năm ngoái cậu ấy đi du học Trung Quốc." },
+    { "cn": "好久不见，你变化真大！", "py": "Hǎo jiǔ bú jiàn, nǐ biànhuà zhēn dà!", "vi": "Lâu rồi không gặp, bạn thay đổi nhiều thật!" },
+    { "cn": "经过一年的学习，我能看懂中文报纸了。", "py": "Jīngguò yì nián de xuéxí, wǒ néng kàn dǒng Zhōngwén bàozhǐ le.", "vi": "Sau một năm học, tôi đã đọc hiểu được báo tiếng Trung." },
+    { "cn": "外面的声音太大了，我听不清楚。", "py": "Wàimiàn de shēngyīn tài dà le, wǒ tīng bu qīngchu.", "vi": "Tiếng bên ngoài to quá, tôi nghe không rõ." },
+    { "cn": "妹妹一看这个电影就哭了。", "py": "Mèimei yí kàn zhège diànyǐng jiù kū le.", "vi": "Em gái vừa xem phim này là khóc." },
+    { "cn": "黄河经过很多城市。", "py": "Huáng Hé jīngguò hěn duō chéngshì.", "vi": "Sông Hoàng Hà chảy qua nhiều thành phố." },
+    { "cn": "我们应该关心环境问题。", "py": "Wǒmen yīnggāi guānxīn huánjìng wèntí.", "vi": "Chúng ta nên quan tâm tới vấn đề môi trường." },
+    { "cn": "这本书的作者是一位年轻人。", "py": "Zhè běn shū de zuòzhě shì yí wèi niánqīng rén.", "vi": "Tác giả quyển sách này là một người trẻ." },
+    { "cn": "多锻炼对身体有很大的作用。", "py": "Duō duànliàn duì shēntǐ yǒu hěn dà de zuòyòng.", "vi": "Tập luyện nhiều rất có tác dụng với sức khoẻ." },
+    { "cn": "除了他，其他人我都不认识。", "py": "Chúle tā, qítā rén wǒ dōu bú rènshi.", "vi": "Ngoài anh ấy ra, những người khác tôi đều không quen." }
+  ]
+}

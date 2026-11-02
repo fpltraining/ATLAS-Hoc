@@ -1,0 +1,70 @@
+{
+  "id": 116,
+  "cn": "人和社会",
+  "title": "Con người và xã hội",
+  "goal": "Từ vựng khai báo thông tin cá nhân và nói về xã hội — cần cho mọi biểu mẫu tiếng Trung.",
+  "words": [
+    { "w": "人民币", "py": "rénmínbì", "hv": "nhân dân tệ", "vi": "nhân dân tệ (RMB)", "pos": "danh từ",
+      "note": "人民 (nhân dân) + 币 (tệ, tiền). Đơn vị đọc là 元 (viết) hay 块 (nói).",
+      "ex": [{ "cn": "这个多少人民币？", "py": "Zhège duōshao rénmínbì?", "vi": "Cái này bao nhiêu nhân dân tệ?" }] },
+    { "w": "志愿者", "py": "zhìyuànzhě", "hv": "chí nguyện giả", "vi": "tình nguyện viên", "pos": "danh từ",
+      "note": "志愿 (chí nguyện) + 者 (giả, người). Hậu tố 者 tạo danh từ chỉ người: 作者, 读者, 记者.",
+      "ex": [{ "cn": "他是一名志愿者。", "py": "Tā shì yì míng zhìyuànzhě.", "vi": "Anh ấy là tình nguyện viên." }] },
+    { "w": "性别", "py": "xìngbié", "hv": "tính biệt", "vi": "giới tính", "pos": "danh từ",
+      "note": "性 (tính) + 别 (biệt, phân biệt). Trường bắt buộc trên mọi biểu mẫu Trung Quốc.",
+      "ex": [{ "cn": "请填写您的性别。", "py": "Qǐng tiánxiě nín de xìngbié.", "vi": "Xin điền giới tính của ngài." }] },
+    { "w": "年龄", "py": "niánlíng", "hv": "niên linh", "vi": "tuổi, độ tuổi", "pos": "danh từ",
+      "note": "年 (niên) + 龄 (linh, tuổi — bộ 齿 răng, vì xưa xem răng đoán tuổi). Trang trọng hơn 岁.",
+      "ex": [{ "cn": "他的年龄跟我差不多。", "py": "Tā de niánlíng gēn wǒ chàbuduō.", "vi": "Tuổi anh ấy xấp xỉ tôi." }] },
+    { "w": "国际", "py": "guójì", "hv": "quốc tế", "vi": "quốc tế", "pos": "tính từ",
+      "note": "Chính là \"quốc tế\" tiếng Việt: 国 (quốc) + 际 (tế). 国际机场 = sân bay quốc tế.",
+      "ex": [{ "cn": "这是一所国际学校。", "py": "Zhè shì yì suǒ guójì xuéxiào.", "vi": "Đây là một trường quốc tế." }] },
+    { "w": "熟悉", "py": "shúxī", "hv": "thục tất", "vi": "quen thuộc, thông thạo", "pos": "động từ / tính từ",
+      "note": "熟 (thục, chín, thành thạo) + 悉 (tất, biết rõ). Tiếng Việt: \"thành thục\", \"tường tất\".",
+      "ex": [{ "cn": "我对这里很熟悉。", "py": "Wǒ duì zhèlǐ hěn shúxī.", "vi": "Tôi rất quen chỗ này." }] },
+    { "w": "合适", "py": "héshì", "hv": "hợp thích", "vi": "phù hợp, vừa", "pos": "tính từ",
+      "note": "合 (hợp) + 适 (thích, thích hợp). Là TÍNH TỪ, không mang tân ngữ — khác 适合 là động từ.",
+      "ex": [{ "cn": "这件衣服很合适。", "py": "Zhè jiàn yīfu hěn héshì.", "vi": "Bộ đồ này rất vừa." }] },
+    { "w": "困难", "py": "kùnnan", "hv": "khốn nan", "vi": "khó khăn", "pos": "danh từ / tính từ",
+      "note": "困 (khốn, bài 109) + 难 (nan). Tiếng Việt \"khốn nạn\" đã đổi nghĩa hoàn toàn — đây là BẠN GIẢ, đừng dịch bừa!",
+      "ex": [{ "cn": "遇到困难别害怕。", "py": "Yù dào kùnnan bié hàipà.", "vi": "Gặp khó khăn đừng sợ." }] },
+    { "w": "不仅", "py": "bùjǐn", "hv": "bất cận", "vi": "không chỉ", "pos": "liên từ",
+      "note": "Đồng nghĩa 不但 nhưng trang trọng hơn. Cặp: 不仅…，而且／还….",
+      "ex": [{ "cn": "他不仅会英语，还会汉语。", "py": "Tā bùjǐn huì Yīngyǔ, hái huì Hànyǔ.", "vi": "Anh ấy không chỉ biết tiếng Anh, còn biết tiếng Trung." }] },
+    { "w": "来自", "py": "láizì", "hv": "lai tự", "vi": "đến từ", "pos": "động từ",
+      "note": "来 (lai, đến) + 自 (tự, từ). Trang trọng hơn 从…来: 我来自越南.",
+      "ex": [{ "cn": "我来自越南。", "py": "Wǒ láizì Yuènán.", "vi": "Tôi đến từ Việt Nam." }] }
+  ],
+  "grammar": [
+    { "t": "BẠN GIẢ Hán Việt: 困难 KHÔNG phải \"khốn nạn\"",
+      "b": "困难 = khó khăn (trung tính) · \"khốn nạn\" tiếng Việt = xấu xa, đê tiện",
+      "d": "Đây là một trong những cái bẫy Hán Việt nguy hiểm nhất. 生活很困难 nghĩa là cuộc sống khó khăn, hoàn toàn không có ý chê bai. Bổ sung danh sách bẫy đã học: 紧张 ≠ khẩn trương, 同情 ≠ đồng tình, 仔细 ≠ tử tế, 博士 ≠ bác sĩ, 方便 ≠ phương tiện.",
+      "ex": [
+        { "cn": "他家生活比较困难。", "py": "Tā jiā shēnghuó bǐjiào kùnnan.", "vi": "Cuộc sống nhà anh ấy khá khó khăn." }
+      ] },
+    { "t": "合适 và 适合 — tính từ hay động từ?",
+      "b": "合适 = tính từ (không mang tân ngữ) · 适合 = động từ (phải có tân ngữ)",
+      "d": "这个工作很合适 (đúng). 这个工作很适合你 (đúng). Nhưng 这个工作很合适你 là SAI. Nhớ: chữ nào đứng sau thì quyết định từ loại — 合适 đuôi 适 là tính từ, 适合 đuôi 合 là động từ.",
+      "ex": [
+        { "cn": "这本书很适合初学者。", "py": "Zhè běn shū hěn shìhé chūxuézhě.", "vi": "Quyển sách này rất hợp với người mới học." }
+      ] },
+    { "t": "Hậu tố 者 và 员 — hai cách gọi tên người",
+      "b": "者 (người có tính chất đó) · 员 (thành viên của tổ chức)",
+      "d": "作者, 读者, 记者, 志愿者, 初学者 — dùng 者. 服务员, 售货员, 演员, 运动员 — dùng 员. Nhận ra hai hậu tố này giúp bạn đoán nghĩa hàng trăm từ chỉ nghề nghiệp.",
+      "ex": [
+        { "cn": "我还是一个初学者。", "py": "Wǒ háishi yí ge chūxuézhě.", "vi": "Tôi vẫn là người mới học." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "一百人民币大约是多少越南盾？", "py": "Yìbǎi rénmínbì dàyuē shì duōshao Yuènán dùn?", "vi": "Một trăm nhân dân tệ khoảng bao nhiêu tiền Việt?" },
+    { "cn": "很多大学生假期去当志愿者。", "py": "Hěn duō dàxuéshēng jiàqī qù dāng zhìyuànzhě.", "vi": "Nhiều sinh viên đi làm tình nguyện viên dịp nghỉ." },
+    { "cn": "表格上要填姓名和性别。", "py": "Biǎogé shàng yào tián xìngmíng hé xìngbié.", "vi": "Trên biểu mẫu phải điền họ tên và giới tính." },
+    { "cn": "他看起来比实际年龄小。", "py": "Tā kàn qǐlái bǐ shíjì niánlíng xiǎo.", "vi": "Anh ấy trông trẻ hơn tuổi thật." },
+    { "cn": "汉语现在是一门国际语言。", "py": "Hànyǔ xiànzài shì yì mén guójì yǔyán.", "vi": "Tiếng Trung nay là một ngôn ngữ quốc tế." },
+    { "cn": "刚来的时候我谁也不熟悉。", "py": "Gāng lái de shíhou wǒ shéi yě bù shúxī.", "vi": "Lúc mới đến tôi chẳng quen ai." },
+    { "cn": "这个时间对你合适吗？", "py": "Zhège shíjiān duì nǐ héshì ma?", "vi": "Giờ này với bạn có tiện không?" },
+    { "cn": "学习中遇到困难是很正常的。", "py": "Xuéxí zhōng yù dào kùnnan shì hěn zhèngcháng de.", "vi": "Học mà gặp khó khăn là chuyện bình thường." },
+    { "cn": "他不仅聪明，而且很努力。", "py": "Tā bùjǐn cōngming, érqiě hěn nǔlì.", "vi": "Cậu ấy không chỉ thông minh mà còn chăm." },
+    { "cn": "我们班的学生来自十个国家。", "py": "Wǒmen bān de xuésheng láizì shí ge guójiā.", "vi": "Học sinh lớp tôi đến từ mười nước." }
+  ]
+}

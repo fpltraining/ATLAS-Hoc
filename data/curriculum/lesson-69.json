@@ -1,0 +1,72 @@
+{
+  "id": 69,
+  "cn": "亲人和朋友",
+  "title": "Người thân và bạn hữu",
+  "goal": "Mở rộng cách gọi người thân, và dùng 咱们 — đại từ \"chúng ta\" thân mật.",
+  "words": [
+    { "w": "亲戚", "py": "qīnqi", "hv": "thân thích", "vi": "họ hàng, thân thích", "pos": "danh từ",
+      "note": "Chính là \"thân thích\" tiếng Việt. Chỉ họ hàng ngoài gia đình hạt nhân.",
+      "ex": [{ "cn": "过节的时候亲戚都来了。", "py": "Guòjié de shíhou qīnqi dōu lái le.", "vi": "Dịp lễ họ hàng đều đến." }] },
+    { "w": "孙子", "py": "sūnzi", "hv": "tôn tử", "vi": "cháu trai (nội)", "pos": "danh từ",
+      "note": "Chính là \"tôn\" trong \"tử tôn\", \"con cháu\". Cháu gái là 孙女.",
+      "ex": [{ "cn": "爷爷很爱他的孙子。", "py": "Yéye hěn ài tā de sūnzi.", "vi": "Ông nội rất yêu cháu trai." }] },
+    { "w": "母亲", "py": "mǔqīn", "hv": "mẫu thân", "vi": "mẹ (trang trọng)", "pos": "danh từ",
+      "note": "Chính là \"mẫu thân\" tiếng Việt. Trang trọng hơn 妈妈 — dùng trong văn viết. Cha là 父亲 (phụ thân).",
+      "ex": [{ "cn": "母亲的爱是最伟大的。", "py": "Mǔqīn de ài shì zuì wěidà de.", "vi": "Tình mẹ là vĩ đại nhất." }] },
+    { "w": "儿童", "py": "értóng", "hv": "nhi đồng", "vi": "nhi đồng, trẻ em", "pos": "danh từ",
+      "note": "Chính là \"nhi đồng\" tiếng Việt. Trang trọng hơn 孩子 — dùng trong văn bản, biển báo: 儿童节 (Tết thiếu nhi).",
+      "ex": [{ "cn": "六月一号是儿童节。", "py": "Liù yuè yī hào shì Értóngjié.", "vi": "Mùng 1 tháng 6 là Tết thiếu nhi." }] },
+    { "w": "小伙子", "py": "xiǎohuǒzi", "hv": "tiểu hoả tử", "vi": "chàng trai trẻ", "pos": "danh từ",
+      "note": "Cách gọi thân mật của người lớn tuổi dành cho thanh niên nam. Nữ thì gọi là 姑娘.",
+      "ex": [{ "cn": "这个小伙子很努力。", "py": "Zhège xiǎohuǒzi hěn nǔlì.", "vi": "Cậu thanh niên này rất chăm." }] },
+    { "w": "咱们", "py": "zánmen", "hv": "cha môn", "vi": "chúng ta (gồm cả người nghe)", "pos": "đại từ",
+      "note": "Khác 我们: 咱们 CHẮC CHẮN bao gồm người nghe, còn 我们 có thể không. Rất thân mật, đặc trưng miền Bắc.",
+      "ex": [{ "cn": "咱们一起去吧！", "py": "Zánmen yìqǐ qù ba!", "vi": "Chúng mình cùng đi đi!" }] },
+    { "w": "俩", "py": "liǎ", "hv": "lưỡng", "vi": "hai người, cả hai", "pos": "số lượng từ",
+      "note": "Là 两个 gộp lại thành một chữ. Vì đã chứa \"个\" nên KHÔNG được thêm lượng từ: nói 我们俩, không nói 我们俩个.",
+      "ex": [{ "cn": "我们俩是老朋友。", "py": "Wǒmen liǎ shì lǎo péngyou.", "vi": "Hai chúng tôi là bạn cũ." }] },
+    { "w": "友谊", "py": "yǒuyì", "hv": "hữu nghị", "vi": "tình bạn, hữu nghị", "pos": "danh từ",
+      "note": "Chính là \"hữu nghị\" tiếng Việt: 友 (bạn) + 谊 (tình nghĩa).",
+      "ex": [{ "cn": "我们的友谊很深。", "py": "Wǒmen de yǒuyì hěn shēn.", "vi": "Tình bạn của chúng tôi rất sâu đậm." }] },
+    { "w": "友好", "py": "yǒuhǎo", "hv": "hữu hảo", "vi": "thân thiện, hữu hảo", "pos": "tính từ",
+      "note": "Chính là \"hữu hảo\" tiếng Việt. Dùng cho cả người lẫn quan hệ giữa hai nước.",
+      "ex": [{ "cn": "这里的人很友好。", "py": "Zhèlǐ de rén hěn yǒuhǎo.", "vi": "Người ở đây rất thân thiện." }] },
+    { "w": "尊重", "py": "zūnzhòng", "hv": "tôn trọng", "vi": "tôn trọng", "pos": "động từ",
+      "note": "Chính là \"tôn trọng\" tiếng Việt: 尊 (tôn) + 重 (trọng).",
+      "ex": [{ "cn": "我们要尊重别人的意见。", "py": "Wǒmen yào zūnzhòng biéren de yìjiàn.", "vi": "Chúng ta phải tôn trọng ý kiến người khác." }] }
+  ],
+  "grammar": [
+    { "t": "咱们 và 我们 — sự khác biệt tinh tế",
+      "b": "咱们 = tôi + BẠN · 我们 = tôi + người khác (có thể không có bạn)",
+      "d": "Nói với một người bạn: 咱们去吃饭吧 (mình với cậu đi ăn) nghe thân thiết hơn hẳn 我们去吃饭吧. Tiếng Việt cũng có sắc thái này giữa \"chúng ta\" và \"chúng tôi\" — nên người Việt nắm rất nhanh.",
+      "ex": [
+        { "cn": "咱们是好朋友。", "py": "Zánmen shì hǎo péngyou.", "vi": "Mình với cậu là bạn tốt." },
+        { "cn": "我们公司在北京。", "py": "Wǒmen gōngsī zài Běijīng.", "vi": "Công ty chúng tôi ở Bắc Kinh. (không gồm người nghe)" }
+      ] },
+    { "t": "俩 và 仨 — số đã gộp sẵn lượng từ",
+      "b": "俩 = 两个 · 仨 = 三个",
+      "d": "Hai chữ khẩu ngữ này đã chứa sẵn lượng từ 个, nên tuyệt đối KHÔNG thêm lượng từ nữa. 我们俩 đúng, 我们俩个 sai.",
+      "ex": [
+        { "cn": "他们俩认识很久了。", "py": "Tāmen liǎ rènshi hěn jiǔ le.", "vi": "Hai người họ quen nhau lâu rồi." }
+      ] },
+    { "t": "Từ trang trọng và từ thường ngày",
+      "b": "妈妈 / 母亲 · 孩子 / 儿童 · 朋友 / 友谊",
+      "d": "Từ HSK 4 trở đi bạn học song song hai lớp từ vựng: lớp khẩu ngữ và lớp văn viết. Trong bài thi HSK và báo chí, lớp trang trọng xuất hiện rất nhiều — và nó chính là lớp gần tiếng Việt Hán Việt nhất.",
+      "ex": [
+        { "cn": "妈妈 → 母亲", "py": "māma → mǔqīn", "vi": "mẹ → mẫu thân" },
+        { "cn": "孩子 → 儿童", "py": "háizi → értóng", "vi": "đứa trẻ → nhi đồng" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "春节的时候，所有的亲戚都会来。", "py": "Chūnjié de shíhou, suǒyǒu de qīnqi dōu huì lái.", "vi": "Dịp Tết tất cả họ hàng đều đến." },
+    { "cn": "爷爷奶奶最喜欢的就是孙子。", "py": "Yéye nǎinai zuì xǐhuan de jiù shì sūnzi.", "vi": "Ông bà thích nhất là cháu trai." },
+    { "cn": "他把第一份工资给了母亲。", "py": "Tā bǎ dì-yī fèn gōngzī gěi le mǔqīn.", "vi": "Anh ấy đưa tháng lương đầu tiên cho mẹ." },
+    { "cn": "这本书是给儿童看的。", "py": "Zhè běn shū shì gěi értóng kàn de.", "vi": "Quyển sách này dành cho trẻ em." },
+    { "cn": "那个小伙子帮我搬了行李。", "py": "Nàge xiǎohuǒzi bāng wǒ bān le xíngli.", "vi": "Cậu thanh niên đó giúp tôi khiêng hành lý." },
+    { "cn": "咱们下班以后去喝一杯吧。", "py": "Zánmen xiàbān yǐhòu qù hē yì bēi ba.", "vi": "Tan làm mình đi làm ly nhé." },
+    { "cn": "我们俩从小就认识。", "py": "Wǒmen liǎ cóngxiǎo jiù rènshi.", "vi": "Hai chúng tôi quen nhau từ nhỏ." },
+    { "cn": "友谊比什么都重要。", "py": "Yǒuyì bǐ shénme dōu zhòngyào.", "vi": "Tình bạn quan trọng hơn mọi thứ." },
+    { "cn": "越南人对客人特别友好。", "py": "Yuènán rén duì kèrén tèbié yǒuhǎo.", "vi": "Người Việt Nam đặc biệt thân thiện với khách." },
+    { "cn": "互相尊重才能长久。", "py": "Hùxiāng zūnzhòng cái néng chángjiǔ.", "vi": "Tôn trọng lẫn nhau mới bền lâu." }
+  ]
+}

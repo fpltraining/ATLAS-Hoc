@@ -1,0 +1,72 @@
+{
+  "id": 73,
+  "cn": "作业和考试",
+  "title": "Bài vở và kiểm tra",
+  "goal": "Từ vựng phòng thi: đề bài, đáp án, chuẩn mực, chứng minh.",
+  "words": [
+    { "w": "预习", "py": "yùxí", "hv": "dự tập", "vi": "chuẩn bị bài trước", "pos": "động từ",
+      "note": "预 = \"dự\" trong \"dự báo\", \"dự đoán\". Cặp với 复习 (ôn lại, bài 36): học trước và học lại.",
+      "ex": [{ "cn": "上课前要预习。", "py": "Shàngkè qián yào yùxí.", "vi": "Trước khi vào lớp phải chuẩn bị bài." }] },
+    { "w": "阅读", "py": "yuèdú", "hv": "duyệt độc", "vi": "đọc hiểu", "pos": "động từ / danh từ",
+      "note": "阅 = \"duyệt\" trong \"duyệt binh\", \"kiểm duyệt\". Trang trọng hơn 看书 — là kỹ năng đọc hiểu trong thi cử.",
+      "ex": [{ "cn": "阅读是我最弱的部分。", "py": "Yuèdú shì wǒ zuì ruò de bùfen.", "vi": "Đọc hiểu là phần yếu nhất của tôi." }] },
+    { "w": "语法", "py": "yǔfǎ", "hv": "ngữ pháp", "vi": "ngữ pháp", "pos": "danh từ",
+      "note": "Chính là \"ngữ pháp\" tiếng Việt: 语 (ngữ) + 法 (pháp).",
+      "ex": [{ "cn": "汉语语法比英语简单。", "py": "Hànyǔ yǔfǎ bǐ Yīngyǔ jiǎndān.", "vi": "Ngữ pháp tiếng Trung đơn giản hơn tiếng Anh." }] },
+    { "w": "试卷", "py": "shìjuàn", "hv": "thí quyển", "vi": "bài thi, đề thi", "pos": "danh từ",
+      "note": "试 (thi, bài 45) + 卷 (cuộn giấy). Nghĩa đen: tờ giấy thi.",
+      "ex": [{ "cn": "老师在发试卷。", "py": "Lǎoshī zài fā shìjuàn.", "vi": "Thầy đang phát đề thi." }] },
+    { "w": "填空", "py": "tiánkòng", "hv": "điền không", "vi": "điền vào chỗ trống", "pos": "động từ",
+      "note": "填 (điền vào) + 空 (chỗ trống). Tiếng Việt cũng nói \"điền vào chỗ trống\" — dịch sát từng chữ.",
+      "ex": [{ "cn": "这道题是填空题。", "py": "Zhè dào tí shì tiánkòng tí.", "vi": "Câu này là câu điền khuyết." }] },
+    { "w": "答案", "py": "dá'àn", "hv": "đáp án", "vi": "đáp án", "pos": "danh từ",
+      "note": "Chính là \"đáp án\" tiếng Việt: 答 (đáp, bài 37 trong 回答) + 案 (án).",
+      "ex": [{ "cn": "答案在书的最后。", "py": "Dá'àn zài shū de zuìhòu.", "vi": "Đáp án ở cuối sách." }] },
+    { "w": "错误", "py": "cuòwù", "hv": "thác ngộ", "vi": "sai lầm, lỗi", "pos": "danh từ / tính từ",
+      "note": "错 (sai, bài 30) + 误 (nhầm, bài 106 trong 误会). Trang trọng hơn 错 dùng một mình.",
+      "ex": [{ "cn": "这是一个常见的错误。", "py": "Zhè shì yí ge chángjiàn de cuòwù.", "vi": "Đây là một lỗi thường gặp." }] },
+    { "w": "标准", "py": "biāozhǔn", "hv": "tiêu chuẩn", "vi": "tiêu chuẩn; chuẩn", "pos": "danh từ / tính từ",
+      "note": "Chính là \"tiêu chuẩn\" tiếng Việt: 标 (tiêu) + 准 (chuẩn). Khen phát âm: 你的发音很标准.",
+      "ex": [{ "cn": "他的发音很标准。", "py": "Tā de fāyīn hěn biāozhǔn.", "vi": "Phát âm của anh ấy rất chuẩn." }] },
+    { "w": "合格", "py": "hégé", "hv": "hợp cách", "vi": "đạt yêu cầu, đủ tiêu chuẩn", "pos": "tính từ",
+      "note": "合 (hợp) + 格 (cách, quy cách). Tiếng Việt: \"hợp cách\", \"đủ tư cách\". Thi đạt là 考试合格.",
+      "ex": [{ "cn": "这次考试他合格了。", "py": "Zhè cì kǎoshì tā hégé le.", "vi": "Kỳ thi này cậu ấy đạt rồi." }] },
+    { "w": "证明", "py": "zhèngmíng", "hv": "chứng minh", "vi": "chứng minh; giấy chứng nhận", "pos": "động từ / danh từ",
+      "note": "Chính là \"chứng minh\" tiếng Việt: 证 (chứng) + 明 (minh). Cũng là danh từ: 学生证明 (giấy xác nhận sinh viên).",
+      "ex": [{ "cn": "结果证明他是对的。", "py": "Jiéguǒ zhèngmíng tā shì duì de.", "vi": "Kết quả chứng minh anh ấy đúng." }] }
+  ],
+  "grammar": [
+    { "t": "预 — tiền tố \"trước\"",
+      "b": "预习 · 预报 · 预订 · 预计",
+      "d": "预 nghĩa là \"trước, dự\". Ghép vào trước động từ là ra nghĩa \"làm sẵn trước\": 预习 (học trước), 天气预报 (dự báo thời tiết), 预订房间 (đặt phòng trước).",
+      "ex": [
+        { "cn": "我预订了两个座位。", "py": "Wǒ yùdìng le liǎng ge zuòwèi.", "vi": "Tôi đã đặt trước hai chỗ." },
+        { "cn": "天气预报说明天有雨。", "py": "Tiānqì yùbào shuō míngtiān yǒu yǔ.", "vi": "Dự báo nói mai có mưa." }
+      ] },
+    { "t": "Bốn kỹ năng trong bài thi HSK",
+      "b": "听力 · 阅读 · 书写 · 口语",
+      "d": "听力 (nghe), 阅读 (đọc), 书写 (viết), 口语 (nói). Bài thi HSK 4 gồm ba phần đầu. Biết tên bốn kỹ năng giúp bạn đọc hiểu đề thi và tài liệu ôn.",
+      "ex": [
+        { "cn": "我的听力比阅读好。", "py": "Wǒ de tīnglì bǐ yuèdú hǎo.", "vi": "Nghe của tôi tốt hơn đọc." }
+      ] },
+    { "t": "错 và 错误 — khẩu ngữ và văn viết",
+      "b": "错 (tính từ, khẩu ngữ) · 错误 (danh từ, trang trọng)",
+      "d": "我写错了 (tôi viết sai — dùng 错). 这是一个错误 (đây là một lỗi — dùng 错误 làm danh từ). Cặp này minh hoạ quy luật chung: từ một âm thiên khẩu ngữ, từ hai âm thiên văn viết.",
+      "ex": [
+        { "cn": "你说错了。", "py": "Nǐ shuō cuò le.", "vi": "Bạn nói sai rồi." },
+        { "cn": "请改正这些错误。", "py": "Qǐng gǎizhèng zhèxiē cuòwù.", "vi": "Xin sửa những lỗi này." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "老师让我们回家预习第五课。", "py": "Lǎoshī ràng wǒmen huí jiā yùxí dì-wǔ kè.", "vi": "Thầy bảo về nhà chuẩn bị bài 5." },
+    { "cn": "多阅读能提高词汇量。", "py": "Duō yuèdú néng tígāo cíhuìliàng.", "vi": "Đọc nhiều giúp tăng vốn từ." },
+    { "cn": "这个语法点我还不太懂。", "py": "Zhège yǔfǎ diǎn wǒ hái bú tài dǒng.", "vi": "Điểm ngữ pháp này tôi vẫn chưa hiểu lắm." },
+    { "cn": "试卷一共有五十道题。", "py": "Shìjuàn yígòng yǒu wǔshí dào tí.", "vi": "Đề thi tất cả năm mươi câu." },
+    { "cn": "填空题最容易丢分。", "py": "Tiánkòng tí zuì róngyì diū fēn.", "vi": "Câu điền khuyết dễ mất điểm nhất." },
+    { "cn": "做完以后请对一下答案。", "py": "Zuò wán yǐhòu qǐng duì yíxià dá'àn.", "vi": "Làm xong rồi xin đối chiếu đáp án." },
+    { "cn": "从错误中学习最有效。", "py": "Cóng cuòwù zhōng xuéxí zuì yǒuxiào.", "vi": "Học từ sai lầm là hiệu quả nhất." },
+    { "cn": "他的普通话非常标准。", "py": "Tā de pǔtōnghuà fēicháng biāozhǔn.", "vi": "Tiếng phổ thông của anh ấy cực chuẩn." },
+    { "cn": "六十分以上才算合格。", "py": "Liùshí fēn yǐshàng cái suàn hégé.", "vi": "Từ sáu mươi điểm trở lên mới coi là đạt." },
+    { "cn": "请出示您的身份证明。", "py": "Qǐng chūshì nín de shēnfèn zhèngmíng.", "vi": "Xin xuất trình giấy tờ tuỳ thân." }
+  ]
+}

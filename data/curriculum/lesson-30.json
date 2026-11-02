@@ -1,0 +1,84 @@
+{
+  "id": 30,
+  "cn": "今天的天气",
+  "title": "Thời tiết và tin tức",
+  "goal": "Nói thời tiết đầy đủ, phân biệt 知道 với 认识, 说 với 告诉 — và khép lại HSK 2.",
+  "words": [
+    { "w": "晴", "py": "qíng", "hv": "tình", "vi": "trời nắng, quang đãng", "pos": "tính từ",
+      "note": "日 (mặt trời) + 青 (xanh) = mặt trời trên nền trời xanh. Chữ tượng hình rất đẹp.",
+      "ex": [{ "cn": "今天是晴天。", "py": "Jīntiān shì qíngtiān.", "vi": "Hôm nay trời nắng." }] },
+    { "w": "阴", "py": "yīn", "hv": "âm", "vi": "trời âm u, nhiều mây", "pos": "tính từ",
+      "note": "Tiếng Việt: \"âm u\", \"âm dương\". Cặp 晴 / 阴 giống cặp \"nắng / râm\".",
+      "ex": [{ "cn": "今天天气很阴。", "py": "Jīntiān tiānqì hěn yīn.", "vi": "Hôm nay trời âm u." }] },
+    { "w": "雪", "py": "xuě", "hv": "tuyết", "vi": "tuyết", "pos": "danh từ",
+      "note": "Chính là \"tuyết\" tiếng Việt. Bộ 雨 (mưa) ở trên — mưa đông lại thành tuyết. 下雪 = trời có tuyết.",
+      "ex": [{ "cn": "北京冬天下雪。", "py": "Běijīng dōngtiān xià xuě.", "vi": "Mùa đông Bắc Kinh có tuyết." }] },
+    { "w": "日", "py": "rì", "hv": "nhật", "vi": "ngày; mặt trời", "pos": "danh từ",
+      "note": "Dạng VIẾT trang trọng của 号: 九月二日 (viết) = 九月二号 (nói). Cũng có trong 日本 (Nhật Bản).",
+      "ex": [{ "cn": "九月二日", "py": "jiǔ yuè èr rì", "vi": "ngày 2 tháng 9" }] },
+    { "w": "去年", "py": "qùnián", "hv": "khứ niên", "vi": "năm ngoái", "pos": "danh từ",
+      "note": "去 (đã qua) + 年 (năm). Bộ ba: 去年 (năm ngoái), 今年 (năm nay), 明年 (năm sau).",
+      "ex": [{ "cn": "我去年去过北京。", "py": "Wǒ qùnián qù guo Běijīng.", "vi": "Năm ngoái tôi đã đi Bắc Kinh." }] },
+    { "w": "再", "py": "zài", "hv": "tái", "vi": "lại, lần nữa (việc CHƯA xảy ra)", "pos": "phó từ",
+      "note": "Tiếng Việt: \"tái diễn\", \"tái bản\", \"tái kiến\" (再见). Dùng cho việc sắp lặp lại.",
+      "ex": [{ "cn": "请再说一次。", "py": "Qǐng zài shuō yí cì.", "vi": "Xin nói lại một lần nữa." }] },
+    { "w": "错", "py": "cuò", "hv": "thác", "vi": "sai, nhầm", "pos": "tính từ",
+      "note": "Bộ 钅 (kim loại). Trái nghĩa với 对. 不错 nghĩa là \"không tệ, khá đấy\" — một lời khen!",
+      "ex": [{ "cn": "我写错了。", "py": "Wǒ xiě cuò le.", "vi": "Tôi viết sai rồi." }] },
+    { "w": "说", "py": "shuō", "hv": "thuyết", "vi": "nói", "pos": "động từ",
+      "note": "Tiếng Việt: \"thuyết minh\", \"diễn thuyết\", \"tiểu thuyết\". Bộ 讠 (lời nói).",
+      "ex": [{ "cn": "他说汉语说得很好。", "py": "Tā shuō Hànyǔ shuō de hěn hǎo.", "vi": "Anh ấy nói tiếng Trung rất giỏi." }] },
+    { "w": "知道", "py": "zhīdào", "hv": "tri đạo", "vi": "biết (thông tin)", "pos": "động từ",
+      "note": "Tiếng Việt: \"tri thức\", \"thông tri\". Biết một SỰ VIỆC — khác 认识 (quen một NGƯỜI).",
+      "ex": [{ "cn": "我知道了。", "py": "Wǒ zhīdào le.", "vi": "Tôi biết rồi." }] },
+    { "w": "报纸", "py": "bàozhǐ", "hv": "báo chỉ", "vi": "báo giấy", "pos": "danh từ",
+      "note": "报 chính là \"báo\" tiếng Việt (\"báo cáo\", \"tờ báo\"). 纸 = \"chỉ\" (giấy), có bộ 纟 (sợi).",
+      "ex": [{ "cn": "爸爸在看报纸。", "py": "Bàba zài kàn bàozhǐ.", "vi": "Bố đang đọc báo." }] }
+  ],
+  "grammar": [
+    { "t": "知道 và 认识 — biết việc hay quen người?",
+      "b": "知道 + thông tin · 认识 + người",
+      "d": "Lỗi rất phổ biến. 我认识他 = tôi quen anh ấy (đã gặp mặt). 我知道他 = tôi biết anh ấy (nghe tên, chưa chắc quen). Nói 我知道这个字 nghĩa là biết chữ đó, còn 我认识这个字 nghĩa là nhận ra mặt chữ — cả hai đều dùng được với chữ viết.",
+      "ex": [
+        { "cn": "我认识他，他是我的同学。", "py": "Wǒ rènshi tā, tā shì wǒ de tóngxué.", "vi": "Tôi quen anh ấy, anh ấy là bạn cùng lớp." },
+        { "cn": "我知道他的名字。", "py": "Wǒ zhīdào tā de míngzi.", "vi": "Tôi biết tên anh ấy." },
+        { "cn": "我不知道。", "py": "Wǒ bù zhīdào.", "vi": "Tôi không biết." }
+      ] },
+    { "t": "说 và 告诉 — nói và nói CHO AI",
+      "b": "说 + nội dung · 告诉 + người + nội dung",
+      "d": "说 không đi trực tiếp với người: nói 我说他 là sai. Muốn nói với ai thì dùng 告诉他 hoặc 跟他说.",
+      "ex": [
+        { "cn": "他说他很忙。", "py": "Tā shuō tā hěn máng.", "vi": "Anh ấy nói anh ấy bận." },
+        { "cn": "请告诉我。", "py": "Qǐng gàosu wǒ.", "vi": "Xin nói cho tôi biết." },
+        { "cn": "我想跟你说一件事。", "py": "Wǒ xiǎng gēn nǐ shuō yí jiàn shì.", "vi": "Tôi muốn nói với bạn một việc." }
+      ] },
+    { "t": "再 và 又 — lại lần nữa, nhưng khác thì",
+      "b": "再 = việc CHƯA xảy ra · 又 yòu = việc ĐÃ xảy ra",
+      "d": "请再说一次 (xin nói lại — sắp làm). 他又来了 (anh ấy lại đến nữa rồi — đã làm). Đây là điểm phân biệt kinh điển của HSK 2.",
+      "ex": [
+        { "cn": "请再说一次。", "py": "Qǐng zài shuō yí cì.", "vi": "Xin nói lại lần nữa. (chưa nói)" },
+        { "cn": "他昨天又来了。", "py": "Tā zuótiān yòu lái le.", "vi": "Hôm qua anh ấy lại đến. (đã đến)" },
+        { "cn": "明天再见！", "py": "Míngtiān zàijiàn!", "vi": "Mai gặp lại!" }
+      ] },
+    { "t": "Bộ từ nói về thời tiết",
+      "b": "晴天 · 阴天 · 下雨 · 下雪 · 很冷 · 很热",
+      "d": "Chú ý mưa và tuyết là ĐỘNG TỪ trong tiếng Trung (下雨, 下雪), còn nắng và âm u là TÍNH TỪ. Hỏi thời tiết: 今天天气怎么样？",
+      "ex": [
+        { "cn": "今天是晴天。", "py": "Jīntiān shì qíngtiān.", "vi": "Hôm nay trời nắng." },
+        { "cn": "昨天下雪了。", "py": "Zuótiān xià xuě le.", "vi": "Hôm qua có tuyết." },
+        { "cn": "明天可能下雨。", "py": "Míngtiān kěnéng xiàyǔ.", "vi": "Mai có thể mưa." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "今天天气怎么样？", "py": "Jīntiān tiānqì zěnmeyàng?", "vi": "Hôm nay thời tiết thế nào?" },
+    { "cn": "今天是晴天，很暖和。", "py": "Jīntiān shì qíngtiān, hěn nuǎnhuo.", "vi": "Hôm nay trời nắng, rất ấm." },
+    { "cn": "明天可能下雨，别忘了带伞。", "py": "Míngtiān kěnéng xiàyǔ, bié wàng le dài sǎn.", "vi": "Mai có thể mưa, đừng quên mang ô." },
+    { "cn": "去年冬天下了很多雪。", "py": "Qùnián dōngtiān xià le hěn duō xuě.", "vi": "Mùa đông năm ngoái tuyết rơi nhiều." },
+    { "cn": "对不起，我没听清楚，请再说一次。", "py": "Duìbuqǐ, wǒ méi tīng qīngchu, qǐng zài shuō yí cì.", "vi": "Xin lỗi, tôi nghe chưa rõ, xin nói lại lần nữa." },
+    { "cn": "这个字我写错了。", "py": "Zhège zì wǒ xiě cuò le.", "vi": "Chữ này tôi viết sai rồi." },
+    { "cn": "你的汉语真不错！", "py": "Nǐ de Hànyǔ zhēn búcuò!", "vi": "Tiếng Trung của bạn khá thật đấy!" },
+    { "cn": "我不知道他在哪儿。", "py": "Wǒ bù zhīdào tā zài nǎr.", "vi": "Tôi không biết anh ấy ở đâu." },
+    { "cn": "爸爸每天早上看报纸。", "py": "Bàba měi tiān zǎoshang kàn bàozhǐ.", "vi": "Sáng nào bố cũng đọc báo." },
+    { "cn": "虽然汉语很难，但是我一定学得会。", "py": "Suīrán Hànyǔ hěn nán, dànshì wǒ yídìng xué de huì.", "vi": "Tuy tiếng Trung khó nhưng nhất định tôi học được." }
+  ]
+}

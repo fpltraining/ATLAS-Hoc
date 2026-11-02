@@ -1,0 +1,74 @@
+{
+  "id": 20,
+  "cn": "在公司",
+  "title": "Ở công ty",
+  "goal": "Nói về công việc, dùng câu hai tân ngữ (告诉, 给) và câu nhờ vả với 让.",
+  "words": [
+    { "w": "公司", "py": "gōngsī", "hv": "công ty", "vi": "công ty", "pos": "danh từ",
+      "note": "Chính là \"công ty\" tiếng Việt — mượn thẳng từ chữ Hán này.",
+      "ex": [{ "cn": "我在一家公司工作。", "py": "Wǒ zài yì jiā gōngsī gōngzuò.", "vi": "Tôi làm ở một công ty." }] },
+    { "w": "上班", "py": "shàngbān", "hv": "thượng ban", "vi": "đi làm", "pos": "động từ",
+      "note": "上 (lên) + 班 (ca, lớp). Đối lại là 下班 (tan làm) — giống cặp 上课 / 下课.",
+      "ex": [{ "cn": "我八点上班。", "py": "Wǒ bā diǎn shàngbān.", "vi": "Tôi đi làm lúc 8 giờ." }] },
+    { "w": "忙", "py": "máng", "hv": "mang", "vi": "bận", "pos": "tính từ",
+      "note": "Bộ 忄 (tim) + 亡 (mất) — bận đến mức mất cả tâm trí. Cách ghép chữ rất gợi.",
+      "ex": [{ "cn": "我今天很忙。", "py": "Wǒ jīntiān hěn máng.", "vi": "Hôm nay tôi rất bận." }] },
+    { "w": "事情", "py": "shìqing", "hv": "sự tình", "vi": "việc, chuyện", "pos": "danh từ",
+      "note": "Chính là \"sự tình\" tiếng Việt. Nói tắt chỉ dùng 事 cũng được: 我有事 (tôi có việc).",
+      "ex": [{ "cn": "我有一件事情。", "py": "Wǒ yǒu yí jiàn shìqing.", "vi": "Tôi có một việc." }] },
+    { "w": "帮助", "py": "bāngzhù", "hv": "bang trợ", "vi": "giúp đỡ", "pos": "động từ",
+      "note": "助 = \"trợ\" trong \"trợ giúp\", \"hỗ trợ\". Nói tắt là 帮: 帮我一下 (giúp tôi chút).",
+      "ex": [{ "cn": "谢谢你的帮助。", "py": "Xièxie nǐ de bāngzhù.", "vi": "Cảm ơn sự giúp đỡ của bạn." }] },
+    { "w": "介绍", "py": "jièshào", "hv": "giới thiệu", "vi": "giới thiệu", "pos": "động từ",
+      "note": "Chính là \"giới thiệu\" tiếng Việt. Cả hai chữ đều có bộ 纟 hoặc liên quan tới sợi dây nối.",
+      "ex": [{ "cn": "我介绍一下。", "py": "Wǒ jièshào yíxià.", "vi": "Tôi xin giới thiệu một chút." }] },
+    { "w": "告诉", "py": "gàosu", "hv": "cáo tố", "vi": "nói cho biết, bảo", "pos": "động từ",
+      "note": "Tiếng Việt: \"cáo\" trong \"báo cáo\", \"tố\" trong \"tố cáo\". Nhận HAI tân ngữ: 告诉 ai cái gì.",
+      "ex": [{ "cn": "请告诉我。", "py": "Qǐng gàosu wǒ.", "vi": "Xin nói cho tôi biết." }] },
+    { "w": "给", "py": "gěi", "hv": "cấp", "vi": "cho, đưa; cho ai đó", "pos": "động từ / giới từ",
+      "note": "Bộ 纟. Tiếng Việt: \"cung cấp\", \"cấp phát\". Vừa là động từ (đưa) vừa là giới từ (cho ai).",
+      "ex": [{ "cn": "他给我一本书。", "py": "Tā gěi wǒ yì běn shū.", "vi": "Anh ấy đưa tôi một quyển sách." }] },
+    { "w": "让", "py": "ràng", "hv": "nhượng", "vi": "để cho, bảo ai làm gì", "pos": "động từ",
+      "note": "Bộ 讠 (lời nói). Tiếng Việt: \"nhượng bộ\", \"nhường\". Dùng để sai bảo hoặc cho phép.",
+      "ex": [{ "cn": "妈妈让我去。", "py": "Māma ràng wǒ qù.", "vi": "Mẹ bảo tôi đi." }] },
+    { "w": "准备", "py": "zhǔnbèi", "hv": "chuẩn bị", "vi": "chuẩn bị; định làm", "pos": "động từ",
+      "note": "Chính là \"chuẩn bị\" tiếng Việt. Còn nghĩa \"dự định\": 我准备去中国.",
+      "ex": [{ "cn": "我在准备考试。", "py": "Wǒ zài zhǔnbèi kǎoshì.", "vi": "Tôi đang chuẩn bị thi." }] }
+  ],
+  "grammar": [
+    { "t": "Động từ nhận HAI tân ngữ",
+      "b": "告诉 / 给 / 教 + người + vật",
+      "d": "Một số động từ nhận liền hai tân ngữ: người nhận đứng TRƯỚC, vật đứng SAU. Trật tự này giống tiếng Việt \"đưa TÔI quyển sách\", nên rất dễ với người Việt.",
+      "ex": [
+        { "cn": "他给我一本书。", "py": "Tā gěi wǒ yì běn shū.", "vi": "Anh ấy đưa tôi một quyển sách." },
+        { "cn": "请告诉我你的名字。", "py": "Qǐng gàosu wǒ nǐ de míngzi.", "vi": "Xin cho tôi biết tên bạn." },
+        { "cn": "老师教我们汉语。", "py": "Lǎoshī jiāo wǒmen Hànyǔ.", "vi": "Thầy dạy chúng tôi tiếng Trung." }
+      ] },
+    { "t": "让 — bảo ai đó làm việc gì",
+      "b": "A + 让 + B + động từ",
+      "d": "Câu có hai tầng: A khiến B làm việc. Chú ý 让 đứng trước NGƯỜI, rồi mới tới việc. Phủ định đặt 不 trước 让: 妈妈不让我去.",
+      "ex": [
+        { "cn": "妈妈让我早点儿回家。", "py": "Māma ràng wǒ zǎo diǎnr huí jiā.", "vi": "Mẹ bảo tôi về nhà sớm chút." },
+        { "cn": "老板不让我们休息。", "py": "Lǎobǎn bú ràng wǒmen xiūxi.", "vi": "Sếp không cho chúng tôi nghỉ." }
+      ] },
+    { "t": "帮 và 帮助 — nhờ giúp",
+      "b": "帮 + người + động từ",
+      "d": "Khi nhờ ai làm việc gì thì dùng 帮 (không cần 助): 帮我看一下 (xem giúp tôi chút). Còn 帮助 hay dùng như danh từ hoặc trong câu trang trọng.",
+      "ex": [
+        { "cn": "你能帮我一下吗？", "py": "Nǐ néng bāng wǒ yíxià ma?", "vi": "Bạn giúp tôi một chút được không?" },
+        { "cn": "谢谢你的帮助。", "py": "Xièxie nǐ de bāngzhù.", "vi": "Cảm ơn sự giúp đỡ của bạn." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你在哪儿上班？", "py": "Nǐ zài nǎr shàngbān?", "vi": "Bạn làm việc ở đâu?" },
+    { "cn": "我在一家公司上班。", "py": "Wǒ zài yì jiā gōngsī shàngbān.", "vi": "Tôi làm ở một công ty." },
+    { "cn": "我今天很忙，有很多事情。", "py": "Wǒ jīntiān hěn máng, yǒu hěn duō shìqing.", "vi": "Hôm nay tôi rất bận, có nhiều việc." },
+    { "cn": "我介绍一下，这是我的同事。", "py": "Wǒ jièshào yíxià, zhè shì wǒ de tóngshì.", "vi": "Tôi xin giới thiệu, đây là đồng nghiệp của tôi." },
+    { "cn": "请告诉我你的电话号码。", "py": "Qǐng gàosu wǒ nǐ de diànhuà hàomǎ.", "vi": "Xin cho tôi số điện thoại của bạn." },
+    { "cn": "你能帮我一下吗？", "py": "Nǐ néng bāng wǒ yíxià ma?", "vi": "Bạn giúp tôi một chút được không?" },
+    { "cn": "谢谢你的帮助。", "py": "Xièxie nǐ de bāngzhù.", "vi": "Cảm ơn sự giúp đỡ của bạn." },
+    { "cn": "老板让我明天来。", "py": "Lǎobǎn ràng wǒ míngtiān lái.", "vi": "Sếp bảo tôi mai đến." },
+    { "cn": "我准备去中国工作。", "py": "Wǒ zhǔnbèi qù Zhōngguó gōngzuò.", "vi": "Tôi định sang Trung Quốc làm việc." },
+    { "cn": "他给我打电话了。", "py": "Tā gěi wǒ dǎ diànhuà le.", "vi": "Anh ấy gọi điện cho tôi rồi." }
+  ]
+}

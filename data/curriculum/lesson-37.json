@@ -1,0 +1,75 @@
+{
+  "id": 37,
+  "cn": "认真学习",
+  "title": "Dạy và học",
+  "goal": "Nói về việc dạy, hỏi đáp, khó dễ, và dùng bổ ngữ trình độ 得 thành thạo.",
+  "words": [
+    { "w": "教", "py": "jiāo", "hv": "giáo", "vi": "dạy", "pos": "động từ",
+      "note": "Tiếng Việt: \"giáo dục\", \"giáo viên\". Đọc jiāo (thanh 1) là động từ dạy; đọc jiào (thanh 4) trong 教室, 教育.",
+      "ex": [{ "cn": "老师教我们汉语。", "py": "Lǎoshī jiāo wǒmen Hànyǔ.", "vi": "Thầy dạy chúng tôi tiếng Trung." }] },
+    { "w": "讲", "py": "jiǎng", "hv": "giảng", "vi": "giảng, kể, nói", "pos": "động từ",
+      "note": "Chính là \"giảng\" tiếng Việt (\"giảng bài\", \"diễn giảng\"). Bộ 讠 (lời nói).",
+      "ex": [{ "cn": "老师讲得很清楚。", "py": "Lǎoshī jiǎng de hěn qīngchu.", "vi": "Thầy giảng rất rõ ràng." }] },
+    { "w": "回答", "py": "huídá", "hv": "hồi đáp", "vi": "trả lời", "pos": "động từ",
+      "note": "Chính là \"hồi đáp\" tiếng Việt: 回 (quay lại) + 答 (đáp). 答 có bộ 竹 (tre) — thẻ tre để viết câu trả lời.",
+      "ex": [{ "cn": "请回答我的问题。", "py": "Qǐng huídá wǒ de wèntí.", "vi": "Xin trả lời câu hỏi của tôi." }] },
+    { "w": "句子", "py": "jùzi", "hv": "cú tử", "vi": "câu", "pos": "danh từ",
+      "note": "Tiếng Việt: \"cú pháp\", \"tạo cú\". Lượng từ là 个: 一个句子.",
+      "ex": [{ "cn": "请用这个词造一个句子。", "py": "Qǐng yòng zhège cí zào yí ge jùzi.", "vi": "Hãy đặt một câu với từ này." }] },
+    { "w": "简单", "py": "jiǎndān", "hv": "giản đơn", "vi": "đơn giản", "pos": "tính từ",
+      "note": "Chính là \"giản đơn\" tiếng Việt, chỉ đảo thứ tự thành \"đơn giản\". 简 có bộ 竹 (thẻ tre).",
+      "ex": [{ "cn": "这个问题很简单。", "py": "Zhège wèntí hěn jiǎndān.", "vi": "Câu hỏi này rất đơn giản." }] },
+    { "w": "容易", "py": "róngyì", "hv": "dung dị", "vi": "dễ, dễ dàng", "pos": "tính từ",
+      "note": "Khác 简单 một chút: 简单 là ít phức tạp, 容易 là không tốn công. Trái nghĩa của cả hai đều là 难.",
+      "ex": [{ "cn": "写汉字不容易。", "py": "Xiě Hànzì bù róngyì.", "vi": "Viết chữ Hán không dễ." }] },
+    { "w": "难", "py": "nán", "hv": "nan", "vi": "khó", "pos": "tính từ",
+      "note": "Tiếng Việt: \"nan giải\", \"khó khăn\", \"gian nan\". Đã gặp trong 难过 (bài 34).",
+      "ex": [{ "cn": "汉语难不难？", "py": "Hànyǔ nán bu nán?", "vi": "Tiếng Trung có khó không?" }] },
+    { "w": "认真", "py": "rènzhēn", "hv": "nhận chân", "vi": "nghiêm túc, chăm chú", "pos": "tính từ",
+      "note": "认 (nhận) + 真 (thật) — coi mọi việc là thật. Lời khen rất hay dùng với học sinh và nhân viên.",
+      "ex": [{ "cn": "他学习很认真。", "py": "Tā xuéxí hěn rènzhēn.", "vi": "Cậu ấy học rất nghiêm túc." }] },
+    { "w": "努力", "py": "nǔlì", "hv": "nỗ lực", "vi": "nỗ lực, cố gắng", "pos": "động từ / tính từ",
+      "note": "Chính là \"nỗ lực\" tiếng Việt. 力 là bộ thủ \"lực\" bạn đã học — dồn sức ra làm.",
+      "ex": [{ "cn": "只要努力，就一定能学会。", "py": "Zhǐyào nǔlì, jiù yídìng néng xué huì.", "vi": "Chỉ cần cố gắng là nhất định học được." }] },
+    { "w": "提高", "py": "tígāo", "hv": "đề cao", "vi": "nâng cao", "pos": "động từ",
+      "note": "Chính là \"đề cao\" tiếng Việt: 提 (nâng, bộ 扌 tay) + 高 (cao). Hay dùng với 水平 (trình độ).",
+      "ex": [{ "cn": "我想提高我的汉语水平。", "py": "Wǒ xiǎng tígāo wǒ de Hànyǔ shuǐpíng.", "vi": "Tôi muốn nâng cao trình độ tiếng Trung." }] }
+  ],
+  "grammar": [
+    { "t": "Bổ ngữ trình độ 得 — nói làm việc gì đó ra sao",
+      "b": "Động từ + 得 + tính từ",
+      "d": "Nhắc lại bài 26 nhưng giờ dùng thành thạo. Nếu động từ có tân ngữ thì phải LẶP LẠI động từ: 他说汉语说得很好. Hoặc đảo tân ngữ lên trước: 他汉语说得很好. Cả hai đều đúng.",
+      "ex": [
+        { "cn": "老师讲得很清楚。", "py": "Lǎoshī jiǎng de hěn qīngchu.", "vi": "Thầy giảng rất rõ." },
+        { "cn": "他汉字写得很漂亮。", "py": "Tā Hànzì xiě de hěn piàoliang.", "vi": "Anh ấy viết chữ Hán rất đẹp." },
+        { "cn": "你回答得不对。", "py": "Nǐ huídá de bú duì.", "vi": "Bạn trả lời không đúng." }
+      ] },
+    { "t": "Câu hỏi chính phản: A 不 A",
+      "b": "tính từ + 不 + tính từ · động từ + 不 + động từ",
+      "d": "Cách hỏi thay cho 吗, nghe tự nhiên và hay dùng hơn trong hội thoại. 难不难? = có khó không? Lưu ý: câu này KHÔNG được thêm 吗 nữa.",
+      "ex": [
+        { "cn": "汉语难不难？", "py": "Hànyǔ nán bu nán?", "vi": "Tiếng Trung có khó không?" },
+        { "cn": "你去不去？", "py": "Nǐ qù bu qù?", "vi": "Bạn có đi không?" },
+        { "cn": "这个问题简单不简单？", "py": "Zhège wèntí jiǎndān bu jiǎndān?", "vi": "Câu hỏi này có đơn giản không?" }
+      ] },
+    { "t": "只要 … 就 … — chỉ cần… là…",
+      "b": "只要 + điều kiện, 就 + kết quả",
+      "d": "Cấu trúc động viên rất hay dùng khi học. Giống hệt \"chỉ cần… là…\" của tiếng Việt, kể cả vị trí hai vế.",
+      "ex": [
+        { "cn": "只要努力，就一定能学会。", "py": "Zhǐyào nǔlì, jiù yídìng néng xué huì.", "vi": "Chỉ cần cố gắng là nhất định học được." },
+        { "cn": "只要每天练习，你的字就会越来越好。", "py": "Zhǐyào měi tiān liànxí, nǐ de zì jiù huì yuè lái yuè hǎo.", "vi": "Chỉ cần ngày nào cũng luyện, chữ bạn sẽ ngày càng đẹp." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "老师教得很认真。", "py": "Lǎoshī jiāo de hěn rènzhēn.", "vi": "Thầy dạy rất tận tâm." },
+    { "cn": "这个句子是什么意思？", "py": "Zhège jùzi shì shénme yìsi?", "vi": "Câu này nghĩa là gì?" },
+    { "cn": "请回答第一个问题。", "py": "Qǐng huídá dì-yī ge wèntí.", "vi": "Xin trả lời câu hỏi thứ nhất." },
+    { "cn": "汉语的发音不太容易。", "py": "Hànyǔ de fāyīn bú tài róngyì.", "vi": "Phát âm tiếng Trung không dễ lắm." },
+    { "cn": "这个语法很简单。", "py": "Zhège yǔfǎ hěn jiǎndān.", "vi": "Ngữ pháp này rất đơn giản." },
+    { "cn": "写汉字很难，但是很有意思。", "py": "Xiě Hànzì hěn nán, dànshì hěn yǒu yìsi.", "vi": "Viết chữ Hán khó nhưng rất thú vị." },
+    { "cn": "他学习很努力，成绩也很好。", "py": "Tā xuéxí hěn nǔlì, chéngjì yě hěn hǎo.", "vi": "Cậu ấy học rất chăm, điểm cũng tốt." },
+    { "cn": "我要提高我的听力水平。", "py": "Wǒ yào tígāo wǒ de tīnglì shuǐpíng.", "vi": "Tôi phải nâng cao khả năng nghe." },
+    { "cn": "只要认真练习，一定会进步。", "py": "Zhǐyào rènzhēn liànxí, yídìng huì jìnbù.", "vi": "Chỉ cần luyện tập nghiêm túc, nhất định sẽ tiến bộ." },
+    { "cn": "老师，请您再讲一次。", "py": "Lǎoshī, qǐng nín zài jiǎng yí cì.", "vi": "Thưa thầy, xin thầy giảng lại một lần nữa." }
+  ]
+}

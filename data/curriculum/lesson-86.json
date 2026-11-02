@@ -1,0 +1,73 @@
+{
+  "id": 86,
+  "cn": "路上",
+  "title": "Đường sá và địa chỉ",
+  "goal": "Nói khoảng cách, phương hướng, địa chỉ — bộ từ dùng khi chỉ đường và đặt xe.",
+  "words": [
+    { "w": "交通", "py": "jiāotōng", "hv": "giao thông", "vi": "giao thông", "pos": "danh từ",
+      "note": "Chính là \"giao thông\" tiếng Việt: 交 (giao) + 通 (thông).",
+      "ex": [{ "cn": "这里的交通很方便。", "py": "Zhèlǐ de jiāotōng hěn fāngbiàn.", "vi": "Giao thông ở đây rất tiện." }] },
+    { "w": "公里", "py": "gōnglǐ", "hv": "công lý", "vi": "ki-lô-mét", "pos": "lượng từ",
+      "note": "公 (chuẩn quốc tế) + 里 (dặm Trung Quốc). Cùng lối ghép với 公斤 (bài 22).",
+      "ex": [{ "cn": "从这儿到机场三十公里。", "py": "Cóng zhèr dào jīchǎng sānshí gōnglǐ.", "vi": "Từ đây ra sân bay ba mươi cây số." }] },
+    { "w": "距离", "py": "jùlí", "hv": "cự ly", "vi": "khoảng cách", "pos": "danh từ / động từ",
+      "note": "Chính là \"cự ly\" tiếng Việt: 距 (cự) + 离 (ly, bài 24).",
+      "ex": [{ "cn": "两个城市的距离不远。", "py": "Liǎng ge chéngshì de jùlí bù yuǎn.", "vi": "Khoảng cách hai thành phố không xa." }] },
+    { "w": "方向", "py": "fāngxiàng", "hv": "phương hướng", "vi": "phương hướng", "pos": "danh từ",
+      "note": "Chính là \"phương hướng\" tiếng Việt: 方 (phương) + 向 (hướng, bài 53).",
+      "ex": [{ "cn": "我走错方向了。", "py": "Wǒ zǒu cuò fāngxiàng le.", "vi": "Tôi đi sai hướng rồi." }] },
+    { "w": "地点", "py": "dìdiǎn", "hv": "địa điểm", "vi": "địa điểm", "pos": "danh từ",
+      "note": "Chính là \"địa điểm\" tiếng Việt: 地 (địa) + 点 (điểm).",
+      "ex": [{ "cn": "开会的地点还没定。", "py": "Kāihuì de dìdiǎn hái méi dìng.", "vi": "Địa điểm họp còn chưa chốt." }] },
+    { "w": "地址", "py": "dìzhǐ", "hv": "địa chỉ", "vi": "địa chỉ", "pos": "danh từ",
+      "note": "Chính là \"địa chỉ\" tiếng Việt: 地 (địa) + 址 (chỉ, nền đất).",
+      "ex": [{ "cn": "请写下你的地址。", "py": "Qǐng xiě xià nǐ de dìzhǐ.", "vi": "Xin ghi lại địa chỉ của bạn." }] },
+    { "w": "号码", "py": "hàomǎ", "hv": "hiệu mã", "vi": "số (điện thoại, phòng)", "pos": "danh từ",
+      "note": "号 (số, bài 7) + 码 (mã, bài 75 trong 密码).",
+      "ex": [{ "cn": "你的电话号码是多少？", "py": "Nǐ de diànhuà hàomǎ shì duōshao?", "vi": "Số điện thoại của bạn là bao nhiêu?" }] },
+    { "w": "到处", "py": "dàochù", "hv": "đáo xứ", "vi": "khắp nơi", "pos": "phó từ",
+      "note": "到 (đến) + 处 (nơi chốn). Đứng trước động từ: 到处都是人.",
+      "ex": [{ "cn": "春节的时候到处都很热闹。", "py": "Chūnjié de shíhou dàochù dōu hěn rènao.", "vi": "Dịp Tết chỗ nào cũng nhộn nhịp." }] },
+    { "w": "郊区", "py": "jiāoqū", "hv": "giao khu", "vi": "ngoại ô", "pos": "danh từ",
+      "note": "郊 (vùng ven, bộ 阝) + 区 (khu). Trái nghĩa với 市中心 (trung tâm thành phố).",
+      "ex": [{ "cn": "他家在郊区，房子很大。", "py": "Tā jiā zài jiāoqū, fángzi hěn dà.", "vi": "Nhà anh ấy ở ngoại ô, rộng lắm." }] },
+    { "w": "桥", "py": "qiáo", "hv": "kiều", "vi": "cây cầu", "pos": "danh từ",
+      "note": "Chính là \"kiều\" tiếng Việt (\"kiều lộ\", \"Kiều\" trong địa danh). Bộ 木 vì cầu xưa làm bằng gỗ. Lượng từ: 一座桥.",
+      "ex": [{ "cn": "过了这座桥就到了。", "py": "Guò le zhè zuò qiáo jiù dào le.", "vi": "Qua cây cầu này là tới." }] }
+  ],
+  "grammar": [
+    { "t": "到处 + 都 — khắp nơi đều…",
+      "b": "到处 + 都 + động từ / tính từ",
+      "d": "到处 hầu như luôn đi kèm 都 ở sau, giống quy tắc của 每 (bài 18). Nhấn mạnh sự phổ biến ở mọi chỗ.",
+      "ex": [
+        { "cn": "到处都是人。", "py": "Dàochù dōu shì rén.", "vi": "Chỗ nào cũng đầy người." },
+        { "cn": "我到处找你。", "py": "Wǒ dàochù zhǎo nǐ.", "vi": "Tôi tìm bạn khắp nơi." }
+      ] },
+    { "t": "Ba từ hỏi khoảng cách",
+      "b": "多远？· 有多少公里？· A 离 B 有多远？",
+      "d": "Nhắc lại 离 ở bài 24, nay dùng với con số cụ thể: 我家离学校有三公里. Từ để hỏi là 多远.",
+      "ex": [
+        { "cn": "从这儿到那儿有多远？", "py": "Cóng zhèr dào nàr yǒu duō yuǎn?", "vi": "Từ đây tới đó bao xa?" },
+        { "cn": "大概五公里。", "py": "Dàgài wǔ gōnglǐ.", "vi": "Khoảng năm cây số." }
+      ] },
+    { "t": "地点 và 地址 — nơi hẹn hay số nhà?",
+      "b": "地点 = nơi diễn ra việc gì · 地址 = địa chỉ cụ thể để tìm tới",
+      "d": "开会地点 (nơi họp — có thể chỉ là \"phòng 302\"). 家庭地址 (địa chỉ nhà — số nhà, tên phố, thành phố). Điền vào biểu mẫu thì luôn là 地址.",
+      "ex": [
+        { "cn": "请告诉我详细地址。", "py": "Qǐng gàosu wǒ xiángxì dìzhǐ.", "vi": "Xin cho tôi địa chỉ chi tiết." },
+        { "cn": "见面的地点改了。", "py": "Jiànmiàn de dìdiǎn gǎi le.", "vi": "Địa điểm gặp mặt đổi rồi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这个城市的公共交通很发达。", "py": "Zhège chéngshì de gōnggòng jiāotōng hěn fādá.", "vi": "Giao thông công cộng thành phố này rất phát triển." },
+    { "cn": "我每天骑十公里自行车。", "py": "Wǒ měi tiān qí shí gōnglǐ zìxíngchē.", "vi": "Ngày nào tôi cũng đạp xe mười cây." },
+    { "cn": "两个人的距离越来越远了。", "py": "Liǎng ge rén de jùlí yuè lái yuè yuǎn le.", "vi": "Khoảng cách hai người ngày càng xa." },
+    { "cn": "没有地图我会走错方向。", "py": "Méiyǒu dìtú wǒ huì zǒu cuò fāngxiàng.", "vi": "Không có bản đồ tôi sẽ đi sai hướng." },
+    { "cn": "考试的时间和地点都通知了。", "py": "Kǎoshì de shíjiān hé dìdiǎn dōu tōngzhī le.", "vi": "Thời gian và địa điểm thi đều đã thông báo." },
+    { "cn": "快递需要详细的地址。", "py": "Kuàidì xūyào xiángxì de dìzhǐ.", "vi": "Chuyển phát cần địa chỉ chi tiết." },
+    { "cn": "请把房间号码告诉我。", "py": "Qǐng bǎ fángjiān hàomǎ gàosu wǒ.", "vi": "Xin cho tôi biết số phòng." },
+    { "cn": "夏天公园里到处都是花。", "py": "Xiàtiān gōngyuán lǐ dàochù dōu shì huā.", "vi": "Mùa hè trong công viên chỗ nào cũng có hoa." },
+    { "cn": "住在郊区安静，但是上班不方便。", "py": "Zhù zài jiāoqū ānjìng, dànshì shàngbān bù fāngbiàn.", "vi": "Ở ngoại ô yên tĩnh nhưng đi làm bất tiện." },
+    { "cn": "这座桥是去年建好的。", "py": "Zhè zuò qiáo shì qùnián jiàn hǎo de.", "vi": "Cây cầu này xây xong năm ngoái." }
+  ]
+}

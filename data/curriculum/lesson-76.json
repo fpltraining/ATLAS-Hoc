@@ -1,0 +1,72 @@
+{
+  "id": 76,
+  "cn": "各种职业",
+  "title": "Nghề nghiệp",
+  "goal": "Gọi tên nghề nghiệp và hiểu ba đuôi tạo tên nghề trong tiếng Trung.",
+  "words": [
+    { "w": "律师", "py": "lǜshī", "hv": "luật sư", "vi": "luật sư", "pos": "danh từ",
+      "note": "Chính là \"luật sư\" tiếng Việt: 律 (luật) + 师 (sư).",
+      "ex": [{ "cn": "他是一位有名的律师。", "py": "Tā shì yí wèi yǒumíng de lǜshī.", "vi": "Ông ấy là một luật sư nổi tiếng." }] },
+    { "w": "护士", "py": "hùshi", "hv": "hộ sĩ", "vi": "y tá, điều dưỡng", "pos": "danh từ",
+      "note": "护 (bảo hộ, bài 68) + 士 (sĩ). Nghĩa đen: người chăm sóc. Đuôi 士 giống 硕士, 博士.",
+      "ex": [{ "cn": "护士给我打了针。", "py": "Hùshi gěi wǒ dǎ le zhēn.", "vi": "Y tá tiêm cho tôi." }] },
+    { "w": "记者", "py": "jìzhě", "hv": "ký giả", "vi": "nhà báo, phóng viên", "pos": "danh từ",
+      "note": "Chính là \"ký giả\" tiếng Việt: 记 (ghi) + 者 (người). Đuôi 者 như 作者 (bài 58).",
+      "ex": [{ "cn": "记者问了很多问题。", "py": "Jìzhě wèn le hěn duō wèntí.", "vi": "Phóng viên hỏi rất nhiều câu." }] },
+    { "w": "售货员", "py": "shòuhuòyuán", "hv": "thụ hoá viên", "vi": "nhân viên bán hàng", "pos": "danh từ",
+      "note": "售 (bán) + 货 (hàng) + 员 (viên). Đuôi 员 như 服务员 (bài 29), 演员.",
+      "ex": [{ "cn": "售货员很热情。", "py": "Shòuhuòyuán hěn rèqíng.", "vi": "Nhân viên bán hàng rất nhiệt tình." }] },
+    { "w": "师傅", "py": "shīfu", "hv": "sư phó", "vi": "bác tài, thợ, sư phụ", "pos": "danh từ",
+      "note": "Cách gọi lịch sự dành cho người lao động có tay nghề: tài xế, thợ sửa, đầu bếp. Gọi bác tài taxi là 师傅.",
+      "ex": [{ "cn": "师傅，去火车站。", "py": "Shīfu, qù huǒchēzhàn.", "vi": "Bác tài ơi, đi ga tàu." }] },
+    { "w": "大夫", "py": "dàifu", "hv": "đại phu", "vi": "bác sĩ (khẩu ngữ)", "pos": "danh từ",
+      "note": "Chính là \"đại phu\" trong truyện cổ tiếng Việt. Chú ý đọc dàifu, KHÔNG phải dàfū. Đồng nghĩa 医生 nhưng thân mật hơn.",
+      "ex": [{ "cn": "大夫说我要多休息。", "py": "Dàifu shuō wǒ yào duō xiūxi.", "vi": "Bác sĩ nói tôi phải nghỉ nhiều." }] },
+    { "w": "导游", "py": "dǎoyóu", "hv": "đạo du", "vi": "hướng dẫn viên du lịch", "pos": "danh từ",
+      "note": "导 (dẫn dắt) + 游 (đi chơi, bài 49 trong 游戏). Tiếng Việt: \"đạo diễn\", \"chỉ đạo\" cùng chữ 导.",
+      "ex": [{ "cn": "导游带我们参观了长城。", "py": "Dǎoyóu dài wǒmen cānguān le Chángchéng.", "vi": "Hướng dẫn viên đưa chúng tôi thăm Vạn Lý Trường Thành." }] },
+    { "w": "演员", "py": "yǎnyuán", "hv": "diễn viên", "vi": "diễn viên", "pos": "danh từ",
+      "note": "Chính là \"diễn viên\" tiếng Việt: 演 (diễn) + 员 (viên).",
+      "ex": [{ "cn": "她是个优秀的演员。", "py": "Tā shì ge yōuxiù de yǎnyuán.", "vi": "Cô ấy là một diễn viên xuất sắc." }] },
+    { "w": "作家", "py": "zuòjiā", "hv": "tác gia", "vi": "nhà văn", "pos": "danh từ",
+      "note": "Chính là \"tác gia\" tiếng Việt: 作 (sáng tác) + 家 (nhà). Đuôi 家 chỉ chuyên gia: 画家, 音乐家, 科学家.",
+      "ex": [{ "cn": "他是我最喜欢的作家。", "py": "Tā shì wǒ zuì xǐhuan de zuòjiā.", "vi": "Ông ấy là nhà văn tôi thích nhất." }] },
+    { "w": "教育", "py": "jiàoyù", "hv": "giáo dục", "vi": "giáo dục", "pos": "danh từ / động từ",
+      "note": "Chính là \"giáo dục\" tiếng Việt: 教 (giáo, bài 37) + 育 (dục, nuôi dạy).",
+      "ex": [{ "cn": "教育非常重要。", "py": "Jiàoyù fēicháng zhòngyào.", "vi": "Giáo dục vô cùng quan trọng." }] }
+  ],
+  "grammar": [
+    { "t": "Ba đuôi tạo tên nghề: 员 · 者 · 家",
+      "b": "员 = nhân viên · 者 = người làm · 家 = chuyên gia",
+      "d": "服务员, 售货员, 演员 (nhân viên). 记者, 作者, 读者 (người làm việc đó). 作家, 画家, 音乐家, 科学家 (bậc chuyên gia). Tiếng Việt cũng có \"viên\", \"giả\", \"gia\" — cùng ba đuôi này. Biết quy luật là đoán được hàng chục nghề.",
+      "ex": [
+        { "cn": "运动员 · 服务员", "py": "yùndòngyuán · fúwùyuán", "vi": "vận động viên · phục vụ viên" },
+        { "cn": "记者 · 作者 · 读者", "py": "jìzhě · zuòzhě · dúzhě", "vi": "ký giả · tác giả · độc giả" },
+        { "cn": "作家 · 画家 · 科学家", "py": "zuòjiā · huàjiā · kēxuéjiā", "vi": "tác gia · hoạ gia · khoa học gia" }
+      ] },
+    { "t": "师傅 — cách gọi lịch sự người lao động",
+      "b": "师傅 + câu hỏi",
+      "d": "Gọi tài xế taxi, thợ sửa xe, bảo vệ đều dùng 师傅 — vừa lịch sự vừa thân thiện, không phân biệt tuổi. Tương đương \"bác\", \"chú\" khi người Việt gọi bác tài.",
+      "ex": [
+        { "cn": "师傅，请问洗手间在哪儿？", "py": "Shīfu, qǐngwèn xǐshǒujiān zài nǎr?", "vi": "Bác ơi, cho hỏi nhà vệ sinh ở đâu?" }
+      ] },
+    { "t": "医生 và 大夫 — cùng nghĩa, khác giọng",
+      "b": "医生 (chung, văn viết) · 大夫 dàifu (khẩu ngữ, miền Bắc)",
+      "d": "Hai từ hoàn toàn đồng nghĩa. 大夫 nghe gần gũi hơn và rất phổ biến ở Bắc Kinh. Nhớ đọc là dàifu chứ không phải dàfū — đọc sai nghĩa thành \"quan đại phu\" thời cổ.",
+      "ex": [
+        { "cn": "我要去看大夫。", "py": "Wǒ yào qù kàn dàifu.", "vi": "Tôi phải đi khám bác sĩ." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "遇到法律问题最好找律师。", "py": "Yù dào fǎlǜ wèntí zuì hǎo zhǎo lǜshī.", "vi": "Gặp vấn đề pháp lý tốt nhất tìm luật sư." },
+    { "cn": "医院里的护士都很忙。", "py": "Yīyuàn lǐ de hùshi dōu hěn máng.", "vi": "Y tá trong bệnh viện đều rất bận." },
+    { "cn": "他从大学毕业后当了记者。", "py": "Tā cóng dàxué bìyè hòu dāng le jìzhě.", "vi": "Tốt nghiệp đại học xong anh ấy làm phóng viên." },
+    { "cn": "请问售货员，这个多少钱？", "py": "Qǐngwèn shòuhuòyuán, zhège duōshao qián?", "vi": "Xin hỏi nhân viên, cái này bao nhiêu tiền?" },
+    { "cn": "师傅，麻烦开快一点儿。", "py": "Shīfu, máfan kāi kuài yìdiǎnr.", "vi": "Bác tài, làm ơn chạy nhanh chút." },
+    { "cn": "大夫，我最近总是咳嗽。", "py": "Dàifu, wǒ zuìjìn zǒngshì késou.", "vi": "Bác sĩ ơi, dạo này tôi ho suốt." },
+    { "cn": "我们的导游会说三种语言。", "py": "Wǒmen de dǎoyóu huì shuō sān zhǒng yǔyán.", "vi": "Hướng dẫn viên của chúng tôi nói được ba thứ tiếng." },
+    { "cn": "这部电影的演员都很有名。", "py": "Zhè bù diànyǐng de yǎnyuán dōu hěn yǒumíng.", "vi": "Diễn viên phim này đều nổi tiếng." },
+    { "cn": "这位作家写了二十多本小说。", "py": "Zhè wèi zuòjiā xiě le èrshí duō běn xiǎoshuō.", "vi": "Nhà văn này viết hơn hai mươi cuốn tiểu thuyết." },
+    { "cn": "父母的教育对孩子影响很大。", "py": "Fùmǔ de jiàoyù duì háizi yǐngxiǎng hěn dà.", "vi": "Giáo dục của cha mẹ ảnh hưởng lớn tới con." }
+  ]
+}

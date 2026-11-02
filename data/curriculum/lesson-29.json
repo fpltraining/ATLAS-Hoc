@@ -1,0 +1,81 @@
+{
+  "id": 29,
+  "cn": "因为……所以……",
+  "title": "Nối câu dài",
+  "goal": "Ghép câu dài bằng cặp liên từ, và nói việc ĐANG diễn ra bằng 正在 và 着.",
+  "words": [
+    { "w": "因为", "py": "yīnwèi", "hv": "nhân vi", "vi": "bởi vì", "pos": "liên từ",
+      "note": "因 = \"nhân\" trong \"nguyên nhân\", \"nhân quả\". Gần như luôn đi cặp với 所以.",
+      "ex": [{ "cn": "因为下雨，所以我没去。", "py": "Yīnwèi xiàyǔ, suǒyǐ wǒ méi qù.", "vi": "Vì trời mưa nên tôi không đi." }] },
+    { "w": "所以", "py": "suǒyǐ", "hv": "sở dĩ", "vi": "cho nên, vì vậy", "pos": "liên từ",
+      "note": "Chính là \"sở dĩ\" tiếng Việt (\"sở dĩ như vậy là vì…\"). Đứng đầu vế KẾT QUẢ.",
+      "ex": [{ "cn": "我很累，所以想休息。", "py": "Wǒ hěn lèi, suǒyǐ xiǎng xiūxi.", "vi": "Tôi rất mệt nên muốn nghỉ." }] },
+    { "w": "虽然", "py": "suīrán", "hv": "tuy nhiên", "vi": "tuy, mặc dù", "pos": "liên từ",
+      "note": "Đúng là \"tuy nhiên\" tiếng Việt, nhưng vị trí khác: 虽然 đứng ở vế ĐẦU (vế nhượng bộ), không đứng ở vế sau.",
+      "ex": [{ "cn": "虽然很贵，但是很好。", "py": "Suīrán hěn guì, dànshì hěn hǎo.", "vi": "Tuy đắt nhưng rất tốt." }] },
+    { "w": "但是", "py": "dànshì", "hv": "đãn thị", "vi": "nhưng, tuy nhiên", "pos": "liên từ",
+      "note": "Đứng đầu vế TƯƠNG PHẢN. Nói tắt là 但. Đi cặp với 虽然.",
+      "ex": [{ "cn": "汉语很难，但是很有意思。", "py": "Hànyǔ hěn nán, dànshì hěn yǒu yìsi.", "vi": "Tiếng Trung khó nhưng thú vị." }] },
+    { "w": "为什么", "py": "wèi shénme", "hv": "vi thập ma", "vi": "tại sao", "pos": "đại từ nghi vấn",
+      "note": "为 (vì) + 什么 (cái gì) = \"vì cái gì\". Trả lời bằng 因为…",
+      "ex": [{ "cn": "你为什么不来？", "py": "Nǐ wèi shénme bù lái?", "vi": "Sao bạn không đến?" }] },
+    { "w": "得", "py": "de", "hv": "đắc", "vi": "(trợ từ nối bổ ngữ trình độ)", "pos": "trợ từ",
+      "note": "Đọc nhẹ là de khi làm trợ từ; đọc dé nghĩa là \"được, đạt\" (\"đắc lợi\"); đọc děi nghĩa là \"phải\".",
+      "ex": [{ "cn": "他跑得很快。", "py": "Tā pǎo de hěn kuài.", "vi": "Anh ấy chạy rất nhanh." }] },
+    { "w": "着", "py": "zhe", "hv": "trước", "vi": "(trợ từ: đang ở trạng thái)", "pos": "trợ từ",
+      "note": "Diễn tả TRẠNG THÁI kéo dài, khác 正在 (hành động đang diễn ra). 门开着 = cửa đang mở (trạng thái).",
+      "ex": [{ "cn": "门开着。", "py": "Mén kāi zhe.", "vi": "Cửa đang mở." }] },
+    { "w": "正在", "py": "zhèngzài", "hv": "chính tại", "vi": "đang (làm gì)", "pos": "phó từ",
+      "note": "Đứng TRƯỚC động từ. Có thể rút gọn thành 正 hoặc 在, hoặc thêm 呢 ở cuối câu.",
+      "ex": [{ "cn": "我正在吃饭。", "py": "Wǒ zhèngzài chīfàn.", "vi": "Tôi đang ăn cơm." }] },
+    { "w": "第一", "py": "dì-yī", "hv": "đệ nhất", "vi": "thứ nhất", "pos": "số thứ tự",
+      "note": "Chính là \"đệ nhất\" tiếng Việt. Thêm 第 vào trước số là thành số thứ tự: 第二, 第三…",
+      "ex": [{ "cn": "这是我第一次来。", "py": "Zhè shì wǒ dì-yī cì lái.", "vi": "Đây là lần đầu tôi đến." }] },
+    { "w": "服务员", "py": "fúwùyuán", "hv": "phục vụ viên", "vi": "nhân viên phục vụ", "pos": "danh từ",
+      "note": "Chính là \"phục vụ viên\" tiếng Việt. 员 = \"viên\" trong \"nhân viên\", \"giáo viên\", \"đảng viên\".",
+      "ex": [{ "cn": "服务员，买单！", "py": "Fúwùyuán, mǎidān!", "vi": "Bạn ơi, tính tiền!" }] }
+  ],
+  "grammar": [
+    { "t": "因为 … 所以 … — dùng CẢ HAI vế",
+      "b": "因为 + nguyên nhân, 所以 + kết quả",
+      "d": "Khác tiếng Việt và tiếng Anh: tiếng Trung dùng ĐỦ CẢ CẶP, không bỏ vế nào. Tiếng Việt nói \"Vì mưa nên tôi không đi\" — cũng có cặp \"vì… nên…\", nên người Việt quen ngay.",
+      "ex": [
+        { "cn": "因为下雨，所以我没去。", "py": "Yīnwèi xiàyǔ, suǒyǐ wǒ méi qù.", "vi": "Vì trời mưa nên tôi không đi." },
+        { "cn": "因为很累，所以他没来。", "py": "Yīnwèi hěn lèi, suǒyǐ tā méi lái.", "vi": "Vì mệt nên anh ấy không đến." }
+      ] },
+    { "t": "虽然 … 但是 … — tuy… nhưng…",
+      "b": "虽然 + sự thật, 但是 + điều trái ngược",
+      "d": "Cũng dùng đủ cặp. Chú ý 虽然 có thể đứng trước hoặc sau chủ ngữ đều được: 虽然他很忙 hoặc 他虽然很忙.",
+      "ex": [
+        { "cn": "虽然很贵，但是我很喜欢。", "py": "Suīrán hěn guì, dànshì wǒ hěn xǐhuan.", "vi": "Tuy đắt nhưng tôi rất thích." },
+        { "cn": "虽然他很忙，但是每天都运动。", "py": "Suīrán tā hěn máng, dànshì měi tiān dōu yùndòng.", "vi": "Tuy bận nhưng ngày nào anh ấy cũng tập thể dục." }
+      ] },
+    { "t": "正在 và 着 — đang làm khác đang ở trạng thái",
+      "b": "正在 + động từ (hành động) · động từ + 着 (trạng thái)",
+      "d": "正在开门 = đang mở cửa (hành động diễn ra). 门开着 = cửa đang mở (trạng thái sau khi mở xong). Đây là chỗ người Việt hay lẫn vì tiếng Việt dùng chung chữ \"đang\".",
+      "ex": [
+        { "cn": "我正在写作业。", "py": "Wǒ zhèngzài xiě zuòyè.", "vi": "Tôi đang làm bài tập. (hành động)" },
+        { "cn": "他穿着一件红衣服。", "py": "Tā chuān zhe yí jiàn hóng yīfu.", "vi": "Anh ấy đang mặc áo đỏ. (trạng thái)" },
+        { "cn": "窗户开着呢。", "py": "Chuānghu kāi zhe ne.", "vi": "Cửa sổ đang mở đấy." }
+      ] },
+    { "t": "第 + số = số thứ tự",
+      "b": "第一 · 第二 · 第三 · 第一次",
+      "d": "Chỉ cần thêm 第 vào trước con số. Giống hệt \"đệ nhất, đệ nhị\" trong tiếng Việt Hán Việt. Nhớ có lượng từ ở sau: 第一个人, 第二本书.",
+      "ex": [
+        { "cn": "这是第一次。", "py": "Zhè shì dì-yī cì.", "vi": "Đây là lần đầu tiên." },
+        { "cn": "他是第三个来的。", "py": "Tā shì dì-sān ge lái de.", "vi": "Anh ấy là người thứ ba đến." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你为什么不来？", "py": "Nǐ wèi shénme bù lái?", "vi": "Sao bạn không đến?" },
+    { "cn": "因为我生病了，所以没来。", "py": "Yīnwèi wǒ shēngbìng le, suǒyǐ méi lái.", "vi": "Vì tôi bị ốm nên không đến." },
+    { "cn": "虽然汉语很难，但是很有意思。", "py": "Suīrán Hànyǔ hěn nán, dànshì hěn yǒu yìsi.", "vi": "Tuy tiếng Trung khó nhưng rất thú vị." },
+    { "cn": "我正在准备考试。", "py": "Wǒ zhèngzài zhǔnbèi kǎoshì.", "vi": "Tôi đang chuẩn bị thi." },
+    { "cn": "他正在打电话呢。", "py": "Tā zhèngzài dǎ diànhuà ne.", "vi": "Anh ấy đang gọi điện đấy." },
+    { "cn": "门开着，请进。", "py": "Mén kāi zhe, qǐng jìn.", "vi": "Cửa đang mở, mời vào." },
+    { "cn": "她穿着一件白色的衣服。", "py": "Tā chuān zhe yí jiàn báisè de yīfu.", "vi": "Cô ấy mặc một bộ đồ trắng." },
+    { "cn": "这是我第一次来中国。", "py": "Zhè shì wǒ dì-yī cì lái Zhōngguó.", "vi": "Đây là lần đầu tôi đến Trung Quốc." },
+    { "cn": "服务员，请给我一杯水。", "py": "Fúwùyuán, qǐng gěi wǒ yì bēi shuǐ.", "vi": "Bạn ơi, cho tôi một cốc nước." },
+    { "cn": "他汉语说得比我好。", "py": "Tā Hànyǔ shuō de bǐ wǒ hǎo.", "vi": "Anh ấy nói tiếng Trung giỏi hơn tôi." }
+  ]
+}

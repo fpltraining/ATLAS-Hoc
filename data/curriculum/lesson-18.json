@@ -1,0 +1,80 @@
+{
+  "id": 18,
+  "cn": "时间和习惯",
+  "title": "Thời gian và thói quen",
+  "goal": "Kể lịch sinh hoạt hằng ngày, dùng 从…到…, 每…都… và phân biệt 小时 với 点.",
+  "words": [
+    { "w": "时间", "py": "shíjiān", "hv": "thời gian", "vi": "thời gian", "pos": "danh từ",
+      "note": "Chính là \"thời gian\" tiếng Việt, không cần học thuộc gì thêm.",
+      "ex": [{ "cn": "我没有时间。", "py": "Wǒ méiyǒu shíjiān.", "vi": "Tôi không có thời gian." }] },
+    { "w": "小时", "py": "xiǎoshí", "hv": "tiểu thời", "vi": "tiếng đồng hồ, giờ (khoảng dài)", "pos": "danh từ",
+      "note": "QUAN TRỌNG: 小时 là ĐỘ DÀI (hai tiếng), còn 点 là THỜI ĐIỂM (hai giờ). Đừng lẫn.",
+      "ex": [{ "cn": "我学了两个小时。", "py": "Wǒ xué le liǎng ge xiǎoshí.", "vi": "Tôi học hai tiếng." }] },
+    { "w": "早上", "py": "zǎoshang", "hv": "tảo thượng", "vi": "buổi sáng sớm", "pos": "danh từ",
+      "note": "早 có bộ 日 (mặt trời) ở trên. Sớm hơn 上午 — khoảng 5 đến 9 giờ.",
+      "ex": [{ "cn": "早上好！", "py": "Zǎoshang hǎo!", "vi": "Chào buổi sáng!" }] },
+    { "w": "晚上", "py": "wǎnshang", "hv": "vãn thượng", "vi": "buổi tối", "pos": "danh từ",
+      "note": "晚 cũng có bộ 日. Tiếng Việt: \"vãn\" trong \"chiều vãn\", \"vãn cảnh\".",
+      "ex": [{ "cn": "晚上我看电视。", "py": "Wǎnshang wǒ kàn diànshì.", "vi": "Buổi tối tôi xem tivi." }] },
+    { "w": "起床", "py": "qǐchuáng", "hv": "khởi sàng", "vi": "ngủ dậy, rời giường", "pos": "động từ",
+      "note": "起 (dậy) + 床 (giường, bộ 广 mái nhà). Tiếng Việt: \"khởi hành\", \"khởi động\".",
+      "ex": [{ "cn": "我六点起床。", "py": "Wǒ liù diǎn qǐchuáng.", "vi": "Tôi dậy lúc 6 giờ." }] },
+    { "w": "每", "py": "měi", "hv": "mỗi", "vi": "mỗi, mọi", "pos": "đại từ",
+      "note": "Âm Hán Việt đúng là \"mỗi\" — chính là từ \"mỗi\" tiếng Việt đang dùng hằng ngày.",
+      "ex": [{ "cn": "我每天学习汉语。", "py": "Wǒ měi tiān xuéxí Hànyǔ.", "vi": "Ngày nào tôi cũng học tiếng Trung." }] },
+    { "w": "次", "py": "cì", "hv": "thứ", "vi": "lần, lượt", "pos": "lượng từ",
+      "note": "Đếm số lần làm việc gì: 一次 (một lần), 第一次 (lần đầu tiên). Tiếng Việt: \"thứ tự\", \"lần thứ\".",
+      "ex": [{ "cn": "我去过三次。", "py": "Wǒ qù guo sān cì.", "vi": "Tôi đã đi ba lần." }] },
+    { "w": "从", "py": "cóng", "hv": "tòng", "vi": "từ (mốc bắt đầu)", "pos": "giới từ",
+      "note": "Hai chữ 人 nối nhau — người theo sau người. Tiếng Việt: \"tòng quân\", \"phục tòng\".",
+      "ex": [{ "cn": "我从早上学到晚上。", "py": "Wǒ cóng zǎoshang xué dào wǎnshang.", "vi": "Tôi học từ sáng đến tối." }] },
+    { "w": "到", "py": "dào", "hv": "đáo", "vi": "đến, tới", "pos": "động từ / giới từ",
+      "note": "Có bộ 刂 bên phải. Tiếng Việt: \"chu đáo\", \"đáo hạn\".",
+      "ex": [{ "cn": "我到学校了。", "py": "Wǒ dào xuéxiào le.", "vi": "Tôi đến trường rồi." }] },
+    { "w": "就", "py": "jiù", "hv": "tựu", "vi": "liền, ngay, thì", "pos": "phó từ",
+      "note": "Chữ rất khó dịch. Nghĩa cốt lõi: việc xảy ra SỚM hoặc NHANH hơn mong đợi.",
+      "ex": [{ "cn": "我七点就起床了。", "py": "Wǒ qī diǎn jiù qǐchuáng le.", "vi": "Mới 7 giờ tôi đã dậy rồi." }] }
+  ],
+  "grammar": [
+    { "t": "从 … 到 … — từ đâu đến đâu",
+      "b": "从 + mốc đầu + 到 + mốc cuối",
+      "d": "Dùng được cho cả thời gian lẫn nơi chốn, giống hệt \"từ… đến…\" tiếng Việt. Cả cụm đứng TRƯỚC động từ.",
+      "ex": [
+        { "cn": "我从八点到十点学习。", "py": "Wǒ cóng bā diǎn dào shí diǎn xuéxí.", "vi": "Tôi học từ 8 giờ đến 10 giờ." },
+        { "cn": "从我家到学校很近。", "py": "Cóng wǒ jiā dào xuéxiào hěn jìn.", "vi": "Từ nhà tôi đến trường rất gần." }
+      ] },
+    { "t": "每 … 都 … — cứ mỗi… đều…",
+      "b": "每 + (lượng từ) + danh từ + 都 + động từ",
+      "d": "每 gần như luôn đi kèm 都 ở vế sau. Riêng 每天, 每年, 每月 không cần lượng từ; còn 每个人, 每本书 thì phải có.",
+      "ex": [
+        { "cn": "我每天都写汉字。", "py": "Wǒ měi tiān dōu xiě Hànzì.", "vi": "Ngày nào tôi cũng viết chữ Hán." },
+        { "cn": "每个人都有名字。", "py": "Měi ge rén dōu yǒu míngzi.", "vi": "Ai cũng có tên." }
+      ] },
+    { "t": "小时 hay 点 — độ dài hay thời điểm?",
+      "b": "两点 = 2 giờ (thời điểm) · 两个小时 = 2 tiếng (độ dài)",
+      "d": "Lỗi kinh điển của người mới. 我学了两点 là sai hoàn toàn. Nhớ: 小时 luôn cần lượng từ 个 đứng trước, còn 点 thì không.",
+      "ex": [
+        { "cn": "现在两点。", "py": "Xiànzài liǎng diǎn.", "vi": "Bây giờ 2 giờ." },
+        { "cn": "我睡了八个小时。", "py": "Wǒ shuì le bā ge xiǎoshí.", "vi": "Tôi ngủ tám tiếng." }
+      ] },
+    { "t": "就 — nhấn mạnh việc xảy ra sớm",
+      "b": "mốc thời gian + 就 + động từ + 了",
+      "d": "So sánh: 我七点起床 (tôi dậy lúc 7 giờ — trung tính) và 我七点就起床了 (mới 7 giờ tôi ĐÃ dậy rồi — ý là sớm). Ngược lại với 才 cái (mãi mới).",
+      "ex": [
+        { "cn": "他五点就来了。", "py": "Tā wǔ diǎn jiù lái le.", "vi": "Mới 5 giờ anh ấy đã đến rồi." },
+        { "cn": "我吃完就走。", "py": "Wǒ chī wán jiù zǒu.", "vi": "Tôi ăn xong là đi ngay." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你每天几点起床？", "py": "Nǐ měi tiān jǐ diǎn qǐchuáng?", "vi": "Ngày nào bạn cũng dậy lúc mấy giờ?" },
+    { "cn": "我每天早上六点起床。", "py": "Wǒ měi tiān zǎoshang liù diǎn qǐchuáng.", "vi": "Sáng nào tôi cũng dậy lúc 6 giờ." },
+    { "cn": "我从八点到十二点上课。", "py": "Wǒ cóng bā diǎn dào shí'èr diǎn shàngkè.", "vi": "Tôi học từ 8 giờ đến 12 giờ." },
+    { "cn": "晚上我看一个小时电视。", "py": "Wǎnshang wǒ kàn yí ge xiǎoshí diànshì.", "vi": "Buổi tối tôi xem tivi một tiếng." },
+    { "cn": "我没有时间休息。", "py": "Wǒ méiyǒu shíjiān xiūxi.", "vi": "Tôi không có thời gian nghỉ." },
+    { "cn": "这是我第一次来北京。", "py": "Zhè shì wǒ dì-yī cì lái Běijīng.", "vi": "Đây là lần đầu tôi đến Bắc Kinh." },
+    { "cn": "我每个星期去两次。", "py": "Wǒ měi ge xīngqī qù liǎng cì.", "vi": "Mỗi tuần tôi đi hai lần." },
+    { "cn": "他六点就到了。", "py": "Tā liù diǎn jiù dào le.", "vi": "Mới 6 giờ anh ấy đã tới rồi." },
+    { "cn": "早上好！", "py": "Zǎoshang hǎo!", "vi": "Chào buổi sáng!" },
+    { "cn": "我每天都很忙。", "py": "Wǒ měi tiān dōu hěn máng.", "vi": "Ngày nào tôi cũng rất bận." }
+  ]
+}

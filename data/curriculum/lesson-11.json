@@ -1,0 +1,76 @@
+{
+  "id": 11,
+  "cn": "在哪儿？",
+  "title": "Ở đâu?",
+  "goal": "Hỏi và chỉ vị trí, dùng 在, phân biệt 这/那 và nắm quy tắc từ chỉ nơi chốn đứng sau danh từ.",
+  "words": [
+    { "w": "在", "py": "zài", "hv": "tại", "vi": "ở, tại; đang", "pos": "động từ / giới từ",
+      "note": "Tiếng Việt: \"hiện tại\", \"tại chỗ\", \"tồn tại\". Vừa là động từ (ở đâu) vừa là giới từ (ở tại).",
+      "ex": [{ "cn": "我在家。", "py": "Wǒ zài jiā.", "vi": "Tôi ở nhà." }] },
+    { "w": "哪儿", "py": "nǎr", "hv": "na nhi", "vi": "ở đâu", "pos": "đại từ nghi vấn",
+      "note": "Giọng Bắc Kinh nói 哪儿 nǎr, giọng miền Nam nói 哪里 nǎlǐ. Cả hai đều đúng.",
+      "ex": [{ "cn": "你在哪儿？", "py": "Nǐ zài nǎr?", "vi": "Bạn ở đâu?" }] },
+    { "w": "这", "py": "zhè", "hv": "giá", "vi": "này, đây", "pos": "đại từ chỉ định",
+      "note": "Có bộ 辶 (đi đường). Trước lượng từ thường đọc thành zhèi trong khẩu ngữ.",
+      "ex": [{ "cn": "这是我的书。", "py": "Zhè shì wǒ de shū.", "vi": "Đây là sách của tôi." }] },
+    { "w": "那", "py": "nà", "hv": "na", "vi": "kia, đó", "pos": "đại từ chỉ định",
+      "note": "Cặp 这 / 那 giống \"này / kia\" tiếng Việt. Cẩn thận: 那 nà (kia) và 哪 nǎ (nào) chỉ khác bộ 口 và thanh điệu.",
+      "ex": [{ "cn": "那是什么？", "py": "Nà shì shénme?", "vi": "Kia là cái gì?" }] },
+    { "w": "里", "py": "lǐ", "hv": "lý", "vi": "trong, bên trong", "pos": "danh từ vị trí",
+      "note": "Đứng SAU danh từ: 家里 (trong nhà), 学校里 (trong trường). Ngược với tiếng Việt.",
+      "ex": [{ "cn": "书在包里。", "py": "Shū zài bāo lǐ.", "vi": "Sách ở trong cặp." }] },
+    { "w": "前面", "py": "qiánmiàn", "hv": "tiền diện", "vi": "phía trước", "pos": "danh từ vị trí",
+      "note": "前 (tiền, trước) — tiếng Việt có \"tiền sử\", \"tiền lệ\". 面 (diện, mặt) — \"diện tích\", \"bề mặt\".",
+      "ex": [{ "cn": "医院在前面。", "py": "Yīyuàn zài qiánmiàn.", "vi": "Bệnh viện ở phía trước." }] },
+    { "w": "后面", "py": "hòumiàn", "hv": "hậu diện", "vi": "phía sau", "pos": "danh từ vị trí",
+      "note": "后 (hậu, sau) — tiếng Việt có \"hậu quả\", \"hậu phương\", \"sau này\".",
+      "ex": [{ "cn": "学校在后面。", "py": "Xuéxiào zài hòumiàn.", "vi": "Trường học ở phía sau." }] },
+    { "w": "上", "py": "shàng", "hv": "thượng", "vi": "trên; lên", "pos": "danh từ vị trí / động từ",
+      "note": "Một nét ngang làm mốc, phần nhô LÊN trên. Tiếng Việt: \"thượng đế\", \"cao thượng\".",
+      "ex": [{ "cn": "书在桌子上。", "py": "Shū zài zhuōzi shàng.", "vi": "Sách ở trên bàn." }] },
+    { "w": "下", "py": "xià", "hv": "hạ", "vi": "dưới; xuống", "pos": "danh từ vị trí / động từ",
+      "note": "Ngược lại của 上 — phần chìa XUỐNG dưới. Tiếng Việt: \"hạ giá\", \"thiên hạ\".",
+      "ex": [{ "cn": "猫在桌子下。", "py": "Māo zài zhuōzi xià.", "vi": "Con mèo ở dưới bàn." }] },
+    { "w": "医院", "py": "yīyuàn", "hv": "y viện", "vi": "bệnh viện", "pos": "danh từ",
+      "note": "医 (y) + 院 (viện). Tiếng Việt cũng có \"y viện\", \"học viện\", \"viện nghiên cứu\".",
+      "ex": [{ "cn": "我妈妈在医院工作。", "py": "Wǒ māma zài yīyuàn gōngzuò.", "vi": "Mẹ tôi làm việc ở bệnh viện." }] }
+  ],
+  "grammar": [
+    { "t": "在 làm động từ: A 在 nơi chốn",
+      "b": "Người/vật + 在 + nơi chốn",
+      "d": "Ở đây 在 là ĐỘNG TỪ CHÍNH, câu không cần động từ nào khác. 我在家 = tôi ở nhà (đủ câu). Phủ định: 不在.",
+      "ex": [
+        { "cn": "我在家。", "py": "Wǒ zài jiā.", "vi": "Tôi ở nhà." },
+        { "cn": "老师不在学校。", "py": "Lǎoshī bú zài xuéxiào.", "vi": "Thầy không ở trường." },
+        { "cn": "你在哪儿？", "py": "Nǐ zài nǎr?", "vi": "Bạn ở đâu?" }
+      ] },
+    { "t": "在 làm giới từ: đứng TRƯỚC động từ chính",
+      "b": "Chủ ngữ + 在 + nơi chốn + động từ",
+      "d": "Đây là điểm khác biệt lớn với tiếng Việt. Ta nói \"Tôi học Ở TRƯỜNG\" (nơi chốn ở cuối), tiếng Trung nói \"Tôi Ở TRƯỜNG học\" (nơi chốn ở giữa). Nói 我学习在学校 là SAI.",
+      "ex": [
+        { "cn": "我在学校学习。", "py": "Wǒ zài xuéxiào xuéxí.", "vi": "Tôi học ở trường." },
+        { "cn": "他在饭馆吃饭。", "py": "Tā zài fànguǎn chīfàn.", "vi": "Anh ấy ăn cơm ở nhà hàng." },
+        { "cn": "妈妈在医院工作。", "py": "Māma zài yīyuàn gōngzuò.", "vi": "Mẹ làm việc ở bệnh viện." }
+      ] },
+    { "t": "Từ chỉ vị trí đứng SAU danh từ",
+      "b": "Danh từ + 上 / 下 / 里 / 前面 / 后面",
+      "d": "Ngược hoàn toàn với tiếng Việt. Ta nói \"TRÊN bàn\", tiếng Trung nói \"bàn TRÊN\" (桌子上). Ta nói \"TRONG nhà\", tiếng Trung nói \"nhà TRONG\" (家里).",
+      "ex": [
+        { "cn": "桌子上", "py": "zhuōzi shàng", "vi": "trên bàn" },
+        { "cn": "家里", "py": "jiā lǐ", "vi": "trong nhà" },
+        { "cn": "学校前面", "py": "xuéxiào qiánmiàn", "vi": "phía trước trường học" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你在哪儿？", "py": "Nǐ zài nǎr?", "vi": "Bạn ở đâu?" },
+    { "cn": "我在家。", "py": "Wǒ zài jiā.", "vi": "Tôi ở nhà." },
+    { "cn": "医院在哪儿？", "py": "Yīyuàn zài nǎr?", "vi": "Bệnh viện ở đâu?" },
+    { "cn": "医院在学校前面。", "py": "Yīyuàn zài xuéxiào qiánmiàn.", "vi": "Bệnh viện ở phía trước trường học." },
+    { "cn": "书在桌子上。", "py": "Shū zài zhuōzi shàng.", "vi": "Sách ở trên bàn." },
+    { "cn": "这是我的家。", "py": "Zhè shì wǒ de jiā.", "vi": "Đây là nhà tôi." },
+    { "cn": "那是你的书吗？", "py": "Nà shì nǐ de shū ma?", "vi": "Kia là sách của bạn à?" },
+    { "cn": "我在学校学习汉语。", "py": "Wǒ zài xuéxiào xuéxí Hànyǔ.", "vi": "Tôi học tiếng Trung ở trường." },
+    { "cn": "老师不在，他在医院。", "py": "Lǎoshī bú zài, tā zài yīyuàn.", "vi": "Thầy không ở đây, thầy ở bệnh viện." },
+    { "cn": "商店在后面。", "py": "Shāngdiàn zài hòumiàn.", "vi": "Cửa hàng ở phía sau." }
+  ]
+}

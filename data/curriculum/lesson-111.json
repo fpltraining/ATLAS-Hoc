@@ -1,0 +1,71 @@
+{
+  "id": 111,
+  "cn": "语言和信息",
+  "title": "Ngôn ngữ và thông tin",
+  "goal": "Từ vựng để nói về chính việc học ngôn ngữ — dịch, đối thoại, tin tức, con số.",
+  "words": [
+    { "w": "消息", "py": "xiāoxi", "hv": "tiêu tức", "vi": "tin tức", "pos": "danh từ",
+      "note": "消 (tiêu) + 息 (tức). Tin về một sự việc cụ thể. Khác 新闻 (bản tin thời sự trên báo đài).",
+      "ex": [{ "cn": "我有个好消息告诉你。", "py": "Wǒ yǒu ge hǎo xiāoxi gàosu nǐ.", "vi": "Tôi có tin vui báo cho bạn." }] },
+    { "w": "信息", "py": "xìnxī", "hv": "tín tức", "vi": "thông tin", "pos": "danh từ",
+      "note": "信 (tín) + 息 (tức). Thông tin theo nghĩa dữ liệu: 信息技术 = công nghệ thông tin.",
+      "ex": [{ "cn": "网上的信息不都是真的。", "py": "Wǎng shàng de xìnxī bù dōu shì zhēn de.", "vi": "Thông tin trên mạng không phải đều thật." }] },
+    { "w": "语言", "py": "yǔyán", "hv": "ngữ ngôn", "vi": "ngôn ngữ", "pos": "danh từ",
+      "note": "Tiếng Việt đảo ngược thành \"ngôn ngữ\". 语 (ngữ) + 言 (ngôn) — hiện tượng đảo trật tự khá thường gặp.",
+      "ex": [{ "cn": "汉语是一门有意思的语言。", "py": "Hànyǔ shì yì mén yǒu yìsi de yǔyán.", "vi": "Tiếng Trung là một ngôn ngữ thú vị." }] },
+    { "w": "词语", "py": "cíyǔ", "hv": "từ ngữ", "vi": "từ ngữ", "pos": "danh từ",
+      "note": "Chính là \"từ ngữ\" tiếng Việt: 词 (từ) + 语 (ngữ).",
+      "ex": [{ "cn": "这些词语很常用。", "py": "Zhèxiē cíyǔ hěn chángyòng.", "vi": "Những từ ngữ này rất hay dùng." }] },
+    { "w": "对话", "py": "duìhuà", "hv": "đối thoại", "vi": "đối thoại, hội thoại", "pos": "danh từ / động từ",
+      "note": "Chính là \"đối thoại\" tiếng Việt: 对 (đối) + 话 (thoại).",
+      "ex": [{ "cn": "请听下面的对话。", "py": "Qǐng tīng xiàmiàn de duìhuà.", "vi": "Xin nghe đoạn hội thoại sau." }] },
+    { "w": "翻译", "py": "fānyì", "hv": "phiên dịch", "vi": "phiên dịch, dịch", "pos": "động từ / danh từ",
+      "note": "Chính là \"phiên dịch\" tiếng Việt: 翻 (phiên, lật) + 译 (dịch). Vừa là hành động vừa là nghề.",
+      "ex": [{ "cn": "请把这句话翻译成中文。", "py": "Qǐng bǎ zhè jù huà fānyì chéng Zhōngwén.", "vi": "Xin dịch câu này sang tiếng Trung." }] },
+    { "w": "数字", "py": "shùzì", "hv": "số tự", "vi": "con số, chữ số", "pos": "danh từ",
+      "note": "数 (số) + 字 (tự, chữ). Người Trung Quốc thích số 8 (谐音 phát, giàu) và tránh số 4 (谐音 tử).",
+      "ex": [{ "cn": "中国人喜欢数字八。", "py": "Zhōngguó rén xǐhuan shùzì bā.", "vi": "Người Trung Quốc thích số tám." }] },
+    { "w": "内", "py": "nèi", "hv": "nội", "vi": "trong, nội bộ", "pos": "danh từ",
+      "note": "Chính là \"nội\" tiếng Việt. Bản trang trọng của 里, dùng cho phạm vi trừu tượng: 一周内, 国内.",
+      "ex": [{ "cn": "请在三天内回复。", "py": "Qǐng zài sān tiān nèi huífù.", "vi": "Xin trả lời trong ba ngày." }] },
+    { "w": "其中", "py": "qízhōng", "hv": "kỳ trung", "vi": "trong đó", "pos": "đại từ",
+      "note": "其 (cái đó) + 中 (trong). Chỉ một phần của tập đã nêu: 十个人，其中三个是老师.",
+      "ex": [{ "cn": "五本书，其中两本是中文的。", "py": "Wǔ běn shū, qízhōng liǎng běn shì Zhōngwén de.", "vi": "Năm quyển sách, trong đó hai quyển tiếng Trung." }] },
+    { "w": "所有", "py": "suǒyǒu", "hv": "sở hữu", "vi": "tất cả", "pos": "tính từ",
+      "note": "Tiếng Việt \"sở hữu\" nghĩa khác — ở đây là \"tất cả\". Thường có 的: 所有的学生都来了.",
+      "ex": [{ "cn": "所有的问题都解决了。", "py": "Suǒyǒu de wèntí dōu jiějué le.", "vi": "Tất cả vấn đề đều đã giải quyết." }] }
+  ],
+  "grammar": [
+    { "t": "把 … 翻译成 … — mẫu câu chuyển đổi",
+      "b": "把 + A + động từ + 成 + B",
+      "d": "成 làm bổ ngữ chỉ kết quả biến thành: 翻译成中文, 改成星期六, 换成人民币, 写成大写. Đây là mẫu câu 把 hay dùng nhất ở HSK 4.",
+      "ex": [
+        { "cn": "请把会议改成下午三点。", "py": "Qǐng bǎ huìyì gǎi chéng xiàwǔ sān diǎn.", "vi": "Xin đổi cuộc họp thành ba giờ chiều." },
+        { "cn": "我把美元换成了人民币。", "py": "Wǒ bǎ měiyuán huàn chéng le rénmínbì.", "vi": "Tôi đổi đô la sang nhân dân tệ." }
+      ] },
+    { "t": "其中 — nói về một phần của tập đã nêu",
+      "b": "Tập hợp，其中 + số/phần",
+      "d": "其中 phải có tập hợp nêu TRƯỚC đó, không dùng mở đầu câu: 班里有二十个学生，其中五个是留学生. Đây là cách nói số liệu chuẩn trong bài viết.",
+      "ex": [
+        { "cn": "我买了三本书，其中一本是词典。", "py": "Wǒ mǎi le sān běn shū, qízhōng yì běn shì cídiǎn.", "vi": "Tôi mua ba quyển sách, trong đó một quyển là từ điển." }
+      ] },
+    { "t": "内 và 里 — phạm vi trừu tượng hay không gian thật",
+      "b": "内 (thời hạn, phạm vi) · 里 (không gian cụ thể)",
+      "d": "一个月内 (trong vòng một tháng), 国内 (trong nước) — dùng 内. 房间里, 包里 (trong phòng, trong túi) — dùng 里. Nói 房间内 vẫn đúng nhưng nghe rất văn bản hành chính.",
+      "ex": [
+        { "cn": "请在一周内交作业。", "py": "Qǐng zài yì zhōu nèi jiāo zuòyè.", "vi": "Xin nộp bài trong vòng một tuần." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "他给我发来一个好消息。", "py": "Tā gěi wǒ fā lái yí ge hǎo xiāoxi.", "vi": "Anh ấy gửi cho tôi một tin vui." },
+    { "cn": "手机让我们获得信息更方便。", "py": "Shǒujī ràng wǒmen huòdé xìnxī gèng fāngbiàn.", "vi": "Điện thoại khiến việc lấy thông tin tiện hơn." },
+    { "cn": "学一门语言需要时间和耐心。", "py": "Xué yì mén yǔyán xūyào shíjiān hé nàixīn.", "vi": "Học một ngôn ngữ cần thời gian và kiên nhẫn." },
+    { "cn": "这一课的词语我都记住了。", "py": "Zhè yí kè de cíyǔ wǒ dōu jì zhù le.", "vi": "Từ ngữ bài này tôi nhớ hết rồi." },
+    { "cn": "我们来练习这段对话。", "py": "Wǒmen lái liànxí zhè duàn duìhuà.", "vi": "Chúng ta luyện đoạn hội thoại này nào." },
+    { "cn": "他做过五年的翻译工作。", "py": "Tā zuò guo wǔ nián de fānyì gōngzuò.", "vi": "Anh ấy làm phiên dịch năm năm." },
+    { "cn": "这些数字说明了问题。", "py": "Zhèxiē shùzì shuōmíng le wèntí.", "vi": "Những con số này nói lên vấn đề." },
+    { "cn": "请在两天内给我答复。", "py": "Qǐng zài liǎng tiān nèi gěi wǒ dáfù.", "vi": "Xin trả lời tôi trong hai ngày." },
+    { "cn": "我认识很多汉字，其中一些不会写。", "py": "Wǒ rènshi hěn duō Hànzì, qízhōng yìxiē bú huì xiě.", "vi": "Tôi biết nhiều chữ Hán, trong đó một số không viết được." },
+    { "cn": "感谢所有帮助过我的人。", "py": "Gǎnxiè suǒyǒu bāngzhù guo wǒ de rén.", "vi": "Cảm ơn tất cả những người từng giúp tôi." }
+  ]
+}

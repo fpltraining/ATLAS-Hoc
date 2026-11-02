@@ -1,0 +1,74 @@
+{
+  "id": 21,
+  "cn": "颜色和衣服",
+  "title": "Màu sắc và quần áo",
+  "goal": "Gọi tên màu sắc, nói về quần áo và đồ dùng, dùng đúng lượng từ 件.",
+  "words": [
+    { "w": "颜色", "py": "yánsè", "hv": "nhan sắc", "vi": "màu sắc", "pos": "danh từ",
+      "note": "Thú vị: tiếng Việt \"nhan sắc\" nói về vẻ đẹp người, còn tiếng Trung 颜色 chỉ đơn giản là MÀU.",
+      "ex": [{ "cn": "你喜欢什么颜色？", "py": "Nǐ xǐhuan shénme yánsè?", "vi": "Bạn thích màu gì?" }] },
+    { "w": "白", "py": "bái", "hv": "bạch", "vi": "trắng", "pos": "tính từ",
+      "note": "Tiếng Việt: \"bạch mã\", \"bạch tuộc\", \"trắng bạch\". Màu trắng ở Trung Quốc gắn với tang lễ.",
+      "ex": [{ "cn": "我喜欢白色。", "py": "Wǒ xǐhuan báisè.", "vi": "Tôi thích màu trắng." }] },
+    { "w": "黑", "py": "hēi", "hv": "hắc", "vi": "đen", "pos": "tính từ",
+      "note": "Có bộ 灬 (lửa) ở dưới — bồ hóng bám đen. Tiếng Việt: \"hắc ám\", \"hắc ín\".",
+      "ex": [{ "cn": "他有一个黑色的包。", "py": "Tā yǒu yí ge hēisè de bāo.", "vi": "Anh ấy có một cái túi đen." }] },
+    { "w": "红", "py": "hóng", "hv": "hồng", "vi": "đỏ", "pos": "tính từ",
+      "note": "Bộ 纟 (sợi tơ) — màu nhuộm vải. Tiếng Việt: \"hồng\". Đỏ là màu may mắn nhất ở Trung Quốc.",
+      "ex": [{ "cn": "这件衣服是红色的。", "py": "Zhè jiàn yīfu shì hóngsè de.", "vi": "Bộ đồ này màu đỏ." }] },
+    { "w": "新", "py": "xīn", "hv": "tân", "vi": "mới", "pos": "tính từ",
+      "note": "Tiếng Việt: \"tân binh\", \"canh tân\", \"tân niên\" (năm mới). Trái nghĩa là 旧 jiù (cũ).",
+      "ex": [{ "cn": "这是我的新手机。", "py": "Zhè shì wǒ de xīn shǒujī.", "vi": "Đây là điện thoại mới của tôi." }] },
+    { "w": "件", "py": "jiàn", "hv": "kiện", "vi": "cái, chiếc (lượng từ cho áo, việc)", "pos": "lượng từ",
+      "note": "亻 (người) + 牛 (trâu). Tiếng Việt: \"điều kiện\", \"sự kiện\". Dùng cho quần ÁO và công VIỆC.",
+      "ex": [{ "cn": "一件衣服", "py": "yí jiàn yīfu", "vi": "một bộ quần áo" }] },
+    { "w": "穿", "py": "chuān", "hv": "xuyên", "vi": "mặc, đi (giày)", "pos": "động từ",
+      "note": "Tiếng Việt: \"xuyên qua\" — mặc áo là luồn người xuyên qua áo. Dùng cho áo, quần, giày.",
+      "ex": [{ "cn": "她穿了一件红衣服。", "py": "Tā chuān le yí jiàn hóng yīfu.", "vi": "Cô ấy mặc một bộ đồ đỏ." }] },
+    { "w": "洗", "py": "xǐ", "hv": "tẩy", "vi": "giặt, rửa", "pos": "động từ",
+      "note": "Bộ 氵 (nước). Tiếng Việt: \"tẩy rửa\", \"tẩy trắng\". 洗手 = rửa tay, 洗衣服 = giặt đồ.",
+      "ex": [{ "cn": "我要洗衣服。", "py": "Wǒ yào xǐ yīfu.", "vi": "Tôi phải giặt quần áo." }] },
+    { "w": "手表", "py": "shǒubiǎo", "hv": "thủ biểu", "vi": "đồng hồ đeo tay", "pos": "danh từ",
+      "note": "手 (tay) + 表 (mặt đồng hồ, bảng biểu). Nghĩa đen: cái bảng đeo trên tay.",
+      "ex": [{ "cn": "这块手表很贵。", "py": "Zhè kuài shǒubiǎo hěn guì.", "vi": "Chiếc đồng hồ này rất đắt." }] },
+    { "w": "手机", "py": "shǒujī", "hv": "thủ cơ", "vi": "điện thoại di động", "pos": "danh từ",
+      "note": "手 (tay) + 机 (máy) = \"máy cầm tay\". Cách đặt tên rất gọn của tiếng Trung.",
+      "ex": [{ "cn": "我的手机在哪儿？", "py": "Wǒ de shǒujī zài nǎr?", "vi": "Điện thoại tôi ở đâu?" }] }
+  ],
+  "grammar": [
+    { "t": "Màu sắc: thêm 色 hay không?",
+      "b": "红色的衣服 · 衣服是红色的 · 红衣服",
+      "d": "色 sè nghĩa là \"màu\". Đứng trước danh từ thì cả hai cách đều được (红衣服 hoặc 红色的衣服). Nhưng làm vị ngữ thì phải đủ: 这件衣服是红色的.",
+      "ex": [
+        { "cn": "我要那件白色的。", "py": "Wǒ yào nà jiàn báisè de.", "vi": "Tôi lấy cái màu trắng kia." },
+        { "cn": "他的手机是黑色的。", "py": "Tā de shǒujī shì hēisè de.", "vi": "Điện thoại anh ấy màu đen." }
+      ] },
+    { "t": "Lượng từ phải hợp với đồ vật",
+      "b": "一件衣服 · 一块手表 · 一个手机 · 一双鞋",
+      "d": "Đây là phần người Việt thấy quen vì tiếng Việt cũng có \"một CHIẾC áo\", \"một ĐÔI giày\". Mẹo: học lượng từ CÙNG LÚC với danh từ, đừng học tách rời.",
+      "ex": [
+        { "cn": "两件衣服", "py": "liǎng jiàn yīfu", "vi": "hai bộ quần áo" },
+        { "cn": "一块手表", "py": "yí kuài shǒubiǎo", "vi": "một chiếc đồng hồ" },
+        { "cn": "三件事情", "py": "sān jiàn shìqing", "vi": "ba việc" }
+      ] },
+    { "t": "穿 và 戴 — mặc hay đeo?",
+      "b": "穿 cho áo quần giày · 戴 dài cho mũ kính đồng hồ",
+      "d": "Tiếng Việt cũng phân biệt \"mặc áo\" với \"đeo đồng hồ\", nên quy tắc này rất dễ nhớ: thứ gì luồn người vào thì 穿, thứ gì gài lên người thì 戴.",
+      "ex": [
+        { "cn": "她穿着白色的衣服。", "py": "Tā chuān zhe báisè de yīfu.", "vi": "Cô ấy đang mặc đồ trắng." },
+        { "cn": "他戴着一块手表。", "py": "Tā dài zhe yí kuài shǒubiǎo.", "vi": "Anh ấy đeo một chiếc đồng hồ." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你喜欢什么颜色？", "py": "Nǐ xǐhuan shénme yánsè?", "vi": "Bạn thích màu gì?" },
+    { "cn": "我喜欢白色和红色。", "py": "Wǒ xǐhuan báisè hé hóngsè.", "vi": "Tôi thích màu trắng và màu đỏ." },
+    { "cn": "这件衣服是黑色的。", "py": "Zhè jiàn yīfu shì hēisè de.", "vi": "Bộ đồ này màu đen." },
+    { "cn": "我买了一件新衣服。", "py": "Wǒ mǎi le yí jiàn xīn yīfu.", "vi": "Tôi mua một bộ đồ mới." },
+    { "cn": "她今天穿了红色的衣服。", "py": "Tā jīntiān chuān le hóngsè de yīfu.", "vi": "Hôm nay cô ấy mặc đồ đỏ." },
+    { "cn": "我要洗衣服。", "py": "Wǒ yào xǐ yīfu.", "vi": "Tôi phải giặt quần áo." },
+    { "cn": "吃饭前要洗手。", "py": "Chīfàn qián yào xǐ shǒu.", "vi": "Trước khi ăn phải rửa tay." },
+    { "cn": "这块手表多少钱？", "py": "Zhè kuài shǒubiǎo duōshao qián?", "vi": "Chiếc đồng hồ này bao nhiêu tiền?" },
+    { "cn": "我的手机不见了。", "py": "Wǒ de shǒujī bú jiàn le.", "vi": "Điện thoại của tôi mất rồi." },
+    { "cn": "这是我的新手机。", "py": "Zhè shì wǒ de xīn shǒujī.", "vi": "Đây là điện thoại mới của tôi." }
+  ]
+}

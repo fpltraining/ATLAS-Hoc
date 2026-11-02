@@ -1,0 +1,71 @@
+{
+  "id": 110,
+  "cn": "爱情和感情",
+  "title": "Tình cảm lứa đôi",
+  "goal": "Từ vựng tình cảm — hẹn hò, lãng mạn, tiếc nuối; cũng là mảng từ hay gặp trong phim và bài hát.",
+  "words": [
+    { "w": "爱情", "py": "àiqíng", "hv": "ái tình", "vi": "tình yêu (đôi lứa)", "pos": "danh từ",
+      "note": "Chính là \"ái tình\" tiếng Việt: 爱 (ái) + 情 (tình). CHỈ dùng cho tình yêu nam nữ, không dùng cho cha mẹ.",
+      "ex": [{ "cn": "这是一个爱情故事。", "py": "Zhè shì yí ge àiqíng gùshi.", "vi": "Đây là một câu chuyện tình." }] },
+    { "w": "感情", "py": "gǎnqíng", "hv": "cảm tình", "vi": "tình cảm", "pos": "danh từ",
+      "note": "Rộng hơn 爱情 — dùng cho mọi mối quan hệ: 我们的感情很好 (tình cảm chúng tôi rất tốt).",
+      "ex": [{ "cn": "他们的感情很深。", "py": "Tāmen de gǎnqíng hěn shēn.", "vi": "Tình cảm của họ rất sâu đậm." }] },
+    { "w": "浪漫", "py": "làngmàn", "hv": "lãng mạn", "vi": "lãng mạn", "pos": "tính từ",
+      "note": "Chính là \"lãng mạn\" tiếng Việt — cả hai đều phiên âm từ \"romantic\" qua chữ Hán 浪漫.",
+      "ex": [{ "cn": "这是一个很浪漫的地方。", "py": "Zhè shì yí ge hěn làngmàn de dìfang.", "vi": "Đây là một nơi rất lãng mạn." }] },
+    { "w": "约会", "py": "yuēhuì", "hv": "ước hội", "vi": "hẹn hò; cuộc hẹn", "pos": "động từ / danh từ",
+      "note": "约 (ước, hẹn — cùng chữ với 大约 bài 99) + 会 (gặp). Là từ ly hợp: 约过一次会.",
+      "ex": [{ "cn": "他们今晚有个约会。", "py": "Tāmen jīnwǎn yǒu ge yuēhuì.", "vi": "Tối nay họ có một buổi hẹn." }] },
+    { "w": "美丽", "py": "měilì", "hv": "mỹ lệ", "vi": "xinh đẹp", "pos": "tính từ",
+      "note": "Chính là \"mỹ lệ\" tiếng Việt: 美 (mỹ) + 丽 (lệ). Văn vẻ hơn 漂亮, dùng cho phong cảnh và người.",
+      "ex": [{ "cn": "这里的风景很美丽。", "py": "Zhèlǐ de fēngjǐng hěn měilì.", "vi": "Phong cảnh ở đây rất đẹp." }] },
+    { "w": "流泪", "py": "liúlèi", "hv": "lưu lệ", "vi": "rơi nước mắt", "pos": "động từ",
+      "note": "流 (lưu, chảy) + 泪 (lệ, nước mắt). Tiếng Việt: \"lệ\" trong \"giọt lệ\". Cả hai chữ đều bộ 氵.",
+      "ex": [{ "cn": "看到这里我流泪了。", "py": "Kàn dào zhèlǐ wǒ liúlèi le.", "vi": "Xem tới đây tôi rơi nước mắt." }] },
+    { "w": "礼貌", "py": "lǐmào", "hv": "lễ mạo", "vi": "lễ phép, lịch sự", "pos": "danh từ / tính từ",
+      "note": "礼 (lễ) + 貌 (mạo, dáng vẻ). Dùng với 有/没有: 他很有礼貌.",
+      "ex": [{ "cn": "这个孩子很有礼貌。", "py": "Zhège háizi hěn yǒu lǐmào.", "vi": "Đứa trẻ này rất lễ phép." }] },
+    { "w": "开玩笑", "py": "kāi wánxiào", "hv": "khai ngoạn tiếu", "vi": "đùa, nói giỡn", "pos": "cụm động từ",
+      "note": "开 (mở) + 玩笑 (trò đùa). Là từ ly hợp: 开了个玩笑, 别跟我开玩笑.",
+      "ex": [{ "cn": "我只是开个玩笑。", "py": "Wǒ zhǐshì kāi ge wánxiào.", "vi": "Tôi chỉ đùa thôi." }] },
+    { "w": "可惜", "py": "kěxī", "hv": "khả tích", "vi": "tiếc là, đáng tiếc", "pos": "tính từ / phó từ",
+      "note": "可 (đáng) + 惜 (tích, tiếc). Tiếng Việt: \"thương tiếc\", \"trân tích\". Đặt đầu câu: 可惜他没来.",
+      "ex": [{ "cn": "可惜你没来。", "py": "Kěxī nǐ méi lái.", "vi": "Tiếc là bạn không đến." }] },
+    { "w": "结果", "py": "jiéguǒ", "hv": "kết quả", "vi": "kết quả; rốt cuộc", "pos": "danh từ / liên từ",
+      "note": "Chính là \"kết quả\" tiếng Việt. Còn dùng làm liên từ kể chuyện, ý bất ngờ: 我等了两小时，结果他没来.",
+      "ex": [{ "cn": "考试结果明天出来。", "py": "Kǎoshì jiéguǒ míngtiān chūlái.", "vi": "Kết quả thi mai có." }] }
+  ],
+  "grammar": [
+    { "t": "爱情 · 感情 · 爱 — dùng đúng chỗ",
+      "b": "爱情 = tình yêu đôi lứa (danh từ) · 感情 = tình cảm nói chung · 爱 = yêu (động từ)",
+      "d": "Không nói 我爱情你 — 爱情 là DANH TỪ. Với cha mẹ dùng 感情 chứ không dùng 爱情. Người Trung Quốc ít nói 我爱你 trực tiếp hơn người phương Tây; thường nói gián tiếp qua hành động.",
+      "ex": [
+        { "cn": "我和父母的感情很好。", "py": "Wǒ hé fùmǔ de gǎnqíng hěn hǎo.", "vi": "Tình cảm tôi với cha mẹ rất tốt." }
+      ] },
+    { "t": "结果 làm liên từ — cái kết bất ngờ",
+      "b": "…，结果 + kết cục ngoài dự tính",
+      "d": "Khi kể chuyện, 结果 dẫn vào kết cục thường là trái mong đợi: 我准备了很久，结果没考好. Đây là cách kể chuyện rất tự nhiên, khác hẳn với 结果 làm danh từ.",
+      "ex": [
+        { "cn": "我跑着去车站，结果车已经走了。", "py": "Wǒ pǎo zhe qù chēzhàn, jiéguǒ chē yǐjīng zǒu le.", "vi": "Tôi chạy ra bến, rốt cuộc xe đã đi mất." }
+      ] },
+    { "t": "Từ ly hợp trong bài: 约会 · 开玩笑",
+      "b": "约会 → 约了一次会 · 开玩笑 → 开个玩笑／跟他开玩笑",
+      "d": "Cả hai đều tách được. Đối tượng đùa dùng 跟/和 chứ không đặt sau: nói 别跟我开玩笑 chứ không nói 别开玩笑我. Nhắc lại quy tắc từ ly hợp ở bài 106.",
+      "ex": [
+        { "cn": "他们约过几次会。", "py": "Tāmen yuē guo jǐ cì huì.", "vi": "Họ hẹn hò vài lần rồi." },
+        { "cn": "别跟老师开玩笑。", "py": "Bié gēn lǎoshī kāi wánxiào.", "vi": "Đừng đùa với thầy." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这部电影讲了一个美丽的爱情故事。", "py": "Zhè bù diànyǐng jiǎng le yí ge měilì de àiqíng gùshi.", "vi": "Bộ phim này kể một chuyện tình đẹp." },
+    { "cn": "时间会让感情变得更深。", "py": "Shíjiān huì ràng gǎnqíng biàn de gèng shēn.", "vi": "Thời gian sẽ khiến tình cảm sâu đậm hơn." },
+    { "cn": "他给她准备了一个浪漫的晚餐。", "py": "Tā gěi tā zhǔnbèi le yí ge làngmàn de wǎncān.", "vi": "Anh ấy chuẩn bị cho cô ấy một bữa tối lãng mạn." },
+    { "cn": "他们第一次约会是在公园。", "py": "Tāmen dì-yī cì yuēhuì shì zài gōngyuán.", "vi": "Lần hẹn đầu của họ là ở công viên." },
+    { "cn": "西湖的风景非常美丽。", "py": "Xīhú de fēngjǐng fēicháng měilì.", "vi": "Phong cảnh Tây Hồ vô cùng đẹp." },
+    { "cn": "听完这首歌，很多人都流泪了。", "py": "Tīng wán zhè shǒu gē, hěn duō rén dōu liúlèi le.", "vi": "Nghe xong bài hát này, nhiều người rơi nước mắt." },
+    { "cn": "对长辈说话要有礼貌。", "py": "Duì zhǎngbèi shuōhuà yào yǒu lǐmào.", "vi": "Nói với người lớn phải lễ phép." },
+    { "cn": "他喜欢跟朋友开玩笑。", "py": "Tā xǐhuan gēn péngyou kāi wánxiào.", "vi": "Anh ấy thích đùa với bạn bè." },
+    { "cn": "可惜那天我有事，没能参加。", "py": "Kěxī nà tiān wǒ yǒu shì, méi néng cānjiā.", "vi": "Tiếc là hôm đó tôi bận, không dự được." },
+    { "cn": "他准备了很久，结果还是紧张了。", "py": "Tā zhǔnbèi le hěn jiǔ, jiéguǒ háishi jǐnzhāng le.", "vi": "Anh ấy chuẩn bị rất lâu, rốt cuộc vẫn hồi hộp." }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": 94,
+  "cn": "传达和鼓励",
+  "title": "Truyền đạt và động viên",
+  "goal": "Thông báo, nhắc nhở, khen chê, động viên — bộ động từ giao tiếp công việc.",
+  "words": [
+    { "w": "通知", "py": "tōngzhī", "hv": "thông tri", "vi": "thông báo", "pos": "động từ / danh từ",
+      "note": "Chính là \"thông tri\" tiếng Việt: 通 (thông) + 知 (tri, biết). Vừa là hành động vừa là tờ thông báo.",
+      "ex": [{ "cn": "请通知大家明天开会。", "py": "Qǐng tōngzhī dàjiā míngtiān kāihuì.", "vi": "Xin thông báo mọi người mai họp." }] },
+    { "w": "提醒", "py": "tíxǐng", "hv": "đề tỉnh", "vi": "nhắc nhở", "pos": "động từ",
+      "note": "提 (nâng lên) + 醒 (tỉnh, bài 109). Nghĩa đen: đánh thức ai đó nhớ ra.",
+      "ex": [{ "cn": "谢谢你提醒我。", "py": "Xièxie nǐ tíxǐng wǒ.", "vi": "Cảm ơn bạn đã nhắc tôi." }] },
+    { "w": "提供", "py": "tígōng", "hv": "đề cung", "vi": "cung cấp", "pos": "động từ",
+      "note": "提 (đưa ra) + 供 (cung). Tiếng Việt: \"cung cấp\", \"cung ứng\". Dùng cho dịch vụ, thông tin, tài liệu.",
+      "ex": [{ "cn": "酒店提供免费早餐。", "py": "Jiǔdiàn tígōng miǎnfèi zǎocān.", "vi": "Khách sạn cung cấp bữa sáng miễn phí." }] },
+    { "w": "提", "py": "tí", "hv": "đề", "vi": "nêu ra; xách", "pos": "động từ",
+      "note": "Bộ 扌 (tay). Hai nghĩa: nêu ra (提问题, 提意见) và xách bằng tay (提行李).",
+      "ex": [{ "cn": "他提了一个好建议。", "py": "Tā tí le yí ge hǎo jiànyì.", "vi": "Anh ấy nêu một đề xuất hay." }] },
+    { "w": "表示", "py": "biǎoshì", "hv": "biểu thị", "vi": "biểu thị, bày tỏ", "pos": "động từ",
+      "note": "Chính là \"biểu thị\" tiếng Việt: 表 (biểu) + 示 (thị).",
+      "ex": [{ "cn": "他表示同意。", "py": "Tā biǎoshì tóngyì.", "vi": "Anh ấy bày tỏ sự đồng ý." }] },
+    { "w": "表扬", "py": "biǎoyáng", "hv": "biểu dương", "vi": "biểu dương, khen ngợi", "pos": "động từ",
+      "note": "Chính là \"biểu dương\" tiếng Việt: 表 (biểu) + 扬 (dương, nêu cao). Trái nghĩa với 批评.",
+      "ex": [{ "cn": "老师表扬了他。", "py": "Lǎoshī biǎoyáng le tā.", "vi": "Thầy khen cậu ấy." }] },
+    { "w": "批评", "py": "pīpíng", "hv": "phê bình", "vi": "phê bình, khiển trách", "pos": "động từ",
+      "note": "Chính là \"phê bình\" tiếng Việt: 批 (phê, bộ 扌) + 评 (bình, bộ 讠).",
+      "ex": [{ "cn": "他被经理批评了。", "py": "Tā bèi jīnglǐ pīpíng le.", "vi": "Anh ấy bị giám đốc phê bình." }] },
+    { "w": "鼓励", "py": "gǔlì", "hv": "cổ lệ", "vi": "khích lệ, động viên", "pos": "động từ",
+      "note": "鼓 (cái trống — đánh trống thúc quân) + 励 (khích lệ). Tiếng Việt: \"cổ vũ\", \"khích lệ\".",
+      "ex": [{ "cn": "谢谢你的鼓励。", "py": "Xièxie nǐ de gǔlì.", "vi": "Cảm ơn sự động viên của bạn." }] },
+    { "w": "建议", "py": "jiànyì", "hv": "kiến nghị", "vi": "kiến nghị, đề xuất", "pos": "động từ / danh từ",
+      "note": "Chính là \"kiến nghị\" tiếng Việt: 建 (kiến, dựng) + 议 (nghị, bàn).",
+      "ex": [{ "cn": "我建议你早点儿休息。", "py": "Wǒ jiànyì nǐ zǎo diǎnr xiūxi.", "vi": "Tôi khuyên bạn nghỉ sớm chút." }] },
+    { "w": "祝贺", "py": "zhùhè", "hv": "chúc hạ", "vi": "chúc mừng", "pos": "động từ",
+      "note": "祝 (chúc, bài 62) + 贺 (hạ, mừng — bộ 贝). Trang trọng hơn 恭喜.",
+      "ex": [{ "cn": "祝贺你毕业！", "py": "Zhùhè nǐ bìyè!", "vi": "Chúc mừng bạn tốt nghiệp!" }] }
+  ],
+  "grammar": [
+    { "t": "表扬 ↔ 批评 — cặp khen chê nơi công sở",
+      "b": "表扬 + người · 批评 + người",
+      "d": "Hai từ này rất hay xuất hiện trong câu bị động với 被 (bài 56): 被表扬了 (được khen), 被批评了 (bị phê bình). Chú ý tiếng Trung dùng 被 cho cả việc tốt lẫn xấu ở đây.",
+      "ex": [
+        { "cn": "他因为工作认真被表扬了。", "py": "Tā yīnwèi gōngzuò rènzhēn bèi biǎoyáng le.", "vi": "Anh ấy được khen vì làm việc nghiêm túc." },
+        { "cn": "迟到的学生被老师批评了。", "py": "Chídào de xuésheng bèi lǎoshī pīpíng le.", "vi": "Học sinh đi muộn bị thầy phê bình." }
+      ] },
+    { "t": "建议 — vừa động từ vừa danh từ",
+      "b": "我建议你… (động từ) · 提一个建议 (danh từ)",
+      "d": "Làm động từ thì theo sau là cả một câu: 我建议你多休息. Làm danh từ thì đi với 提 hoặc 给: 我给你一个建议. Cùng kiểu với 计划, 决定, 影响.",
+      "ex": [
+        { "cn": "我建议我们坐地铁去。", "py": "Wǒ jiànyì wǒmen zuò dìtiě qù.", "vi": "Tôi đề nghị chúng ta đi tàu điện." },
+        { "cn": "你的建议很好。", "py": "Nǐ de jiànyì hěn hǎo.", "vi": "Đề xuất của bạn rất hay." }
+      ] },
+    { "t": "Nhóm động từ mở đầu bằng 提",
+      "b": "提 · 提醒 · 提供 · 提前 · 提高",
+      "d": "提 nghĩa gốc là NÂNG LÊN bằng tay. Từ đó ra: 提高 (nâng cao), 提前 (kéo lên sớm), 提醒 (nâng ai đó tỉnh dậy), 提供 (đưa ra cung cấp), 提问题 (nêu vấn đề lên).",
+      "ex": [
+        { "cn": "提高 · 提前 · 提醒 · 提供", "py": "tígāo · tíqián · tíxǐng · tígōng", "vi": "nâng cao · làm sớm · nhắc nhở · cung cấp" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "学校通知明天不上课。", "py": "Xuéxiào tōngzhī míngtiān bú shàngkè.", "vi": "Trường thông báo mai nghỉ học." },
+    { "cn": "请提醒我八点出发。", "py": "Qǐng tíxǐng wǒ bā diǎn chūfā.", "vi": "Nhắc tôi tám giờ lên đường nhé." },
+    { "cn": "这家公司提供住的地方。", "py": "Zhè jiā gōngsī tígōng zhù de dìfang.", "vi": "Công ty này cung cấp chỗ ở." },
+    { "cn": "开会时他提了几个问题。", "py": "Kāihuì shí tā tí le jǐ ge wèntí.", "vi": "Lúc họp anh ấy nêu vài câu hỏi." },
+    { "cn": "大家都表示支持这个计划。", "py": "Dàjiā dōu biǎoshì zhīchí zhège jìhuà.", "vi": "Mọi người đều bày tỏ ủng hộ kế hoạch này." },
+    { "cn": "孩子做得好要及时表扬。", "py": "Háizi zuò de hǎo yào jíshí biǎoyáng.", "vi": "Trẻ làm tốt phải khen kịp thời." },
+    { "cn": "批评的时候要注意方法。", "py": "Pīpíng de shíhou yào zhùyì fāngfǎ.", "vi": "Khi phê bình phải chú ý cách nói." },
+    { "cn": "他的鼓励让我有了信心。", "py": "Tā de gǔlì ràng wǒ yǒu le xìnxīn.", "vi": "Sự động viên của anh ấy cho tôi niềm tin." },
+    { "cn": "医生建议他少吃盐。", "py": "Yīshēng jiànyì tā shǎo chī yán.", "vi": "Bác sĩ khuyên anh ấy ăn ít muối." },
+    { "cn": "祝贺你找到了新工作！", "py": "Zhùhè nǐ zhǎo dào le xīn gōngzuò!", "vi": "Chúc mừng bạn tìm được việc mới!" }
+  ]
+}

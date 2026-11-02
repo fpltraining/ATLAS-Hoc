@@ -1,0 +1,72 @@
+{
+  "id": 64,
+  "cn": "对别人的态度",
+  "title": "Thái độ với người khác",
+  "goal": "Đồng ý, phản đối, xin lỗi và cảm ơn ở mức trang trọng hơn HSK 1.",
+  "words": [
+    { "w": "羡慕", "py": "xiànmù", "hv": "tiện mộ", "vi": "ngưỡng mộ, thèm được như", "pos": "động từ",
+      "note": "慕 = \"mộ\" trong \"ái mộ\", \"ngưỡng mộ\". Mang sắc thái tích cực, khác với ghen tị.",
+      "ex": [{ "cn": "我很羡慕你。", "py": "Wǒ hěn xiànmù nǐ.", "vi": "Tôi ngưỡng mộ bạn lắm." }] },
+    { "w": "怀疑", "py": "huáiyí", "hv": "hoài nghi", "vi": "nghi ngờ", "pos": "động từ",
+      "note": "Chính là \"hoài nghi\" tiếng Việt: 怀 (ôm trong lòng) + 疑 (nghi).",
+      "ex": [{ "cn": "我怀疑他没说实话。", "py": "Wǒ huáiyí tā méi shuō shíhuà.", "vi": "Tôi nghi anh ấy không nói thật." }] },
+    { "w": "同情", "py": "tóngqíng", "hv": "đồng tình", "vi": "thông cảm, thương cảm", "pos": "động từ",
+      "note": "BẪY HÁN VIỆT: âm là \"đồng tình\" nhưng nghĩa tiếng Trung là THÔNG CẢM, THƯƠNG XÓT — không phải \"tán thành\". Tán thành là 同意 (bài 34).",
+      "ex": [{ "cn": "大家都很同情他。", "py": "Dàjiā dōu hěn tóngqíng tā.", "vi": "Mọi người đều thương cảm cho anh ấy." }] },
+    { "w": "吃惊", "py": "chījīng", "hv": "cật kinh", "vi": "kinh ngạc, giật mình", "pos": "tính từ",
+      "note": "吃 (ăn) + 惊 (kinh sợ) — nghĩa đen \"nuốt phải cú giật mình\". Là động từ ly hợp: 吃了一惊.",
+      "ex": [{ "cn": "这个消息让我很吃惊。", "py": "Zhège xiāoxi ràng wǒ hěn chījīng.", "vi": "Tin này làm tôi rất kinh ngạc." }] },
+    { "w": "反对", "py": "fǎnduì", "hv": "phản đối", "vi": "phản đối", "pos": "động từ",
+      "note": "Chính là \"phản đối\" tiếng Việt: 反 (ngược) + 对 (đối). Trái nghĩa với 同意.",
+      "ex": [{ "cn": "我反对这个办法。", "py": "Wǒ fǎnduì zhège bànfǎ.", "vi": "Tôi phản đối cách này." }] },
+    { "w": "拒绝", "py": "jùjué", "hv": "cự tuyệt", "vi": "từ chối", "pos": "động từ",
+      "note": "Chính là \"cự tuyệt\" tiếng Việt: 拒 (chống lại, bộ 扌) + 绝 (dứt).",
+      "ex": [{ "cn": "他拒绝了我的邀请。", "py": "Tā jùjué le wǒ de yāoqǐng.", "vi": "Anh ấy từ chối lời mời của tôi." }] },
+    { "w": "原谅", "py": "yuánliàng", "hv": "nguyên lượng", "vi": "tha thứ, lượng thứ", "pos": "động từ",
+      "note": "Tiếng Việt có \"lượng thứ\", \"khoan dung\". 谅 có bộ 讠 (lời nói) — tha thứ bằng lời.",
+      "ex": [{ "cn": "请原谅我。", "py": "Qǐng yuánliàng wǒ.", "vi": "Xin hãy tha thứ cho tôi." }] },
+    { "w": "道歉", "py": "dàoqiàn", "hv": "đạo khiểm", "vi": "xin lỗi (chính thức)", "pos": "động từ",
+      "note": "道 (nói) + 歉 (áy náy). Là động từ ly hợp: 向他道歉 (xin lỗi anh ấy), KHÔNG nói 道歉他.",
+      "ex": [{ "cn": "你应该向他道歉。", "py": "Nǐ yīnggāi xiàng tā dàoqiàn.", "vi": "Bạn nên xin lỗi anh ấy." }] },
+    { "w": "抱歉", "py": "bàoqiàn", "hv": "bão khiểm", "vi": "áy náy, rất tiếc", "pos": "tính từ",
+      "note": "Nhẹ và lịch sự hơn 对不起, hay dùng trong công việc và văn viết: 很抱歉，我不能参加.",
+      "ex": [{ "cn": "很抱歉，我来晚了。", "py": "Hěn bàoqiàn, wǒ lái wǎn le.", "vi": "Rất xin lỗi, tôi đến muộn." }] },
+    { "w": "感谢", "py": "gǎnxiè", "hv": "cảm tạ", "vi": "cảm tạ, cảm ơn", "pos": "động từ",
+      "note": "Chính là \"cảm tạ\" tiếng Việt. Trang trọng hơn 谢谢 (bài 1) — dùng khi biết ơn thật sự.",
+      "ex": [{ "cn": "非常感谢您的帮助。", "py": "Fēicháng gǎnxiè nín de bāngzhù.", "vi": "Vô cùng cảm ơn sự giúp đỡ của ngài." }] }
+  ],
+  "grammar": [
+    { "t": "Hai bẫy Hán Việt trong một bài",
+      "b": "同情 = thông cảm (không phải \"đồng tình\") · 紧张 = hồi hộp (bài 63)",
+      "d": "Âm Hán Việt là người bạn tốt nhưng đôi khi đánh lừa, vì tiếng Việt đã dịch chuyển nghĩa qua nhiều thế kỷ. Gặp từ nào nghĩa nghe \"hơi lệch\", hãy tra lại thay vì đoán bừa.",
+      "ex": [
+        { "cn": "我同情他，但是不同意他的做法。", "py": "Wǒ tóngqíng tā, dànshì bù tóngyì tā de zuòfǎ.", "vi": "Tôi thương anh ấy, nhưng không tán thành cách anh ấy làm." }
+      ] },
+    { "t": "向 + người + động từ nói năng",
+      "b": "向 + người + 道歉 / 学习 / 借",
+      "d": "向 xiàng (bài 53) nêu ĐỐI TƯỢNG hướng tới. Các động từ ly hợp như 道歉 bắt buộc dùng cấu trúc này: 向他道歉, không nói 道歉他.",
+      "ex": [
+        { "cn": "我向老师道歉了。", "py": "Wǒ xiàng lǎoshī dàoqiàn le.", "vi": "Tôi đã xin lỗi thầy." },
+        { "cn": "我们要向他学习。", "py": "Wǒmen yào xiàng tā xuéxí.", "vi": "Chúng ta phải học tập anh ấy." }
+      ] },
+    { "t": "Thang xin lỗi và cảm ơn theo mức trang trọng",
+      "b": "对不起 < 抱歉 < 道歉 · 谢谢 < 感谢",
+      "d": "对不起 dùng hằng ngày. 抱歉 lịch sự, hay dùng trong email và công việc. 道歉 là hành động xin lỗi chính thức. Tương tự 谢谢 thường ngày, 感谢 trang trọng.",
+      "ex": [
+        { "cn": "很抱歉，给您添麻烦了。", "py": "Hěn bàoqiàn, gěi nín tiān máfan le.", "vi": "Rất xin lỗi đã làm phiền ngài." },
+        { "cn": "衷心感谢大家的支持。", "py": "Zhōngxīn gǎnxiè dàjiā de zhīchí.", "vi": "Chân thành cảm ơn sự ủng hộ của mọi người." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我很羡慕你能去中国留学。", "py": "Wǒ hěn xiànmù nǐ néng qù Zhōngguó liúxué.", "vi": "Tôi ngưỡng mộ bạn được đi du học Trung Quốc." },
+    { "cn": "我怀疑这个消息是假的。", "py": "Wǒ huáiyí zhège xiāoxi shì jiǎ de.", "vi": "Tôi nghi tin này là giả." },
+    { "cn": "听了她的故事，大家都很同情。", "py": "Tīng le tā de gùshi, dàjiā dōu hěn tóngqíng.", "vi": "Nghe chuyện của cô ấy, ai cũng thương cảm." },
+    { "cn": "他的话让我很吃惊。", "py": "Tā de huà ràng wǒ hěn chījīng.", "vi": "Lời anh ấy làm tôi kinh ngạc." },
+    { "cn": "父母反对他一个人去那么远。", "py": "Fùmǔ fǎnduì tā yí ge rén qù nàme yuǎn.", "vi": "Bố mẹ phản đối việc cậu ấy đi xa một mình." },
+    { "cn": "他很客气地拒绝了。", "py": "Tā hěn kèqi de jùjué le.", "vi": "Anh ấy từ chối rất lịch sự." },
+    { "cn": "希望你能原谅我这一次。", "py": "Xīwàng nǐ néng yuánliàng wǒ zhè yí cì.", "vi": "Mong bạn tha thứ cho tôi lần này." },
+    { "cn": "做错了就应该道歉。", "py": "Zuò cuò le jiù yīnggāi dàoqiàn.", "vi": "Làm sai thì nên xin lỗi." },
+    { "cn": "很抱歉，明天的会议我不能参加。", "py": "Hěn bàoqiàn, míngtiān de huìyì wǒ bù néng cānjiā.", "vi": "Rất tiếc, cuộc họp mai tôi không dự được." },
+    { "cn": "感谢你这段时间的照顾。", "py": "Gǎnxiè nǐ zhè duàn shíjiān de zhàogù.", "vi": "Cảm ơn bạn đã chăm sóc thời gian qua." }
+  ]
+}

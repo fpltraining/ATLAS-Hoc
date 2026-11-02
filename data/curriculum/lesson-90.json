@@ -1,0 +1,72 @@
+{
+  "id": 90,
+  "cn": "准时和迟到",
+  "title": "Đúng giờ và trễ hẹn",
+  "goal": "Nói về hẹn giờ, hoãn, kịp hay không kịp — rất cần khi làm việc với người Trung Quốc.",
+  "words": [
+    { "w": "按时", "py": "ànshí", "hv": "án thời", "vi": "đúng giờ (theo lịch)", "pos": "phó từ",
+      "note": "按 (theo, bài 104 trong 按照) + 时 (giờ). Nhấn vào việc tuân theo lịch đã định: 按时吃药.",
+      "ex": [{ "cn": "请按时吃药。", "py": "Qǐng ànshí chī yào.", "vi": "Xin uống thuốc đúng giờ." }] },
+    { "w": "准时", "py": "zhǔnshí", "hv": "chuẩn thời", "vi": "đúng giờ (không sớm không muộn)", "pos": "tính từ / phó từ",
+      "note": "准 (chuẩn, bài 73 trong 标准) + 时. Nhấn vào ĐÚNG KHẮC giờ hẹn: 准时到.",
+      "ex": [{ "cn": "他每次都很准时。", "py": "Tā měi cì dōu hěn zhǔnshí.", "vi": "Lần nào anh ấy cũng rất đúng giờ." }] },
+    { "w": "提前", "py": "tíqián", "hv": "đề tiền", "vi": "làm sớm hơn dự định", "pos": "động từ / phó từ",
+      "note": "提 (nâng, bài 94) + 前 (trước). Kéo việc lên sớm hơn. Trái nghĩa với 推迟.",
+      "ex": [{ "cn": "会议提前到九点。", "py": "Huìyì tíqián dào jiǔ diǎn.", "vi": "Cuộc họp dời sớm lên chín giờ." }] },
+    { "w": "推迟", "py": "tuīchí", "hv": "thôi trì", "vi": "hoãn lại", "pos": "động từ",
+      "note": "推 (đẩy, bài 91) + 迟 (chậm, bài 51 trong 迟到). Đẩy việc lùi về sau.",
+      "ex": [{ "cn": "比赛推迟了一个星期。", "py": "Bǐsài tuīchí le yí ge xīngqī.", "vi": "Trận đấu hoãn một tuần." }] },
+    { "w": "来不及", "py": "láibují", "hv": "lai bất cập", "vi": "không kịp", "pos": "cụm động từ",
+      "note": "来 (đến) + 不及 (không kịp). Tiếng Việt: \"bất cập\". Cặp đối với 来得及.",
+      "ex": [{ "cn": "快点儿，来不及了！", "py": "Kuài diǎnr, láibují le!", "vi": "Nhanh lên, không kịp mất!" }] },
+    { "w": "来得及", "py": "láidejí", "hv": "lai đắc cập", "vi": "còn kịp", "pos": "cụm động từ",
+      "note": "Cấu trúc 得/不 chèn giữa, giống 听得懂 / 听不懂 ở bài 19.",
+      "ex": [{ "cn": "别急，还来得及。", "py": "Bié jí, hái láidejí.", "vi": "Đừng vội, vẫn còn kịp." }] },
+    { "w": "秒", "py": "miǎo", "hv": "miểu", "vi": "giây", "pos": "lượng từ",
+      "note": "Bộ 禾 (lúa) — vốn chỉ sợi râu lúa, thứ nhỏ nhất. Bộ ba đơn vị: 秒 → 分 → 小时.",
+      "ex": [{ "cn": "只用了三十秒。", "py": "Zhǐ yòng le sānshí miǎo.", "vi": "Chỉ mất ba mươi giây." }] },
+    { "w": "期间", "py": "qījiān", "hv": "kỳ gian", "vi": "trong thời gian, thời kỳ", "pos": "danh từ",
+      "note": "期 (kỳ, bài 47 trong 季节) + 间 (gian). Đứng SAU cụm chỉ thời gian: 放假期间.",
+      "ex": [{ "cn": "放假期间我在打工。", "py": "Fàngjià qījiān wǒ zài dǎgōng.", "vi": "Trong kỳ nghỉ tôi đi làm thêm." }] },
+    { "w": "同时", "py": "tóngshí", "hv": "đồng thời", "vi": "đồng thời, cùng lúc", "pos": "phó từ / danh từ",
+      "note": "Chính là \"đồng thời\" tiếng Việt: 同 (đồng) + 时 (thời).",
+      "ex": [{ "cn": "他同时学两门外语。", "py": "Tā tóngshí xué liǎng mén wàiyǔ.", "vi": "Anh ấy học hai ngoại ngữ cùng lúc." }] },
+    { "w": "陆续", "py": "lùxù", "hv": "lục tục", "vi": "lần lượt, lũ lượt", "pos": "phó từ",
+      "note": "Chính là \"lục tục\" tiếng Việt. Chỉ nhiều người hoặc việc xảy ra nối tiếp, không cùng lúc — trái với 同时.",
+      "ex": [{ "cn": "客人陆续到了。", "py": "Kèrén lùxù dào le.", "vi": "Khách lần lượt đến." }] }
+  ],
+  "grammar": [
+    { "t": "按时 và 准时 — theo lịch hay đúng khắc?",
+      "b": "按时 = theo đúng lịch trình lặp lại · 准时 = đúng khắc giờ hẹn",
+      "d": "按时吃饭, 按时睡觉, 按时吃药 (đều đặn theo lịch). 准时到, 准时开始 (đúng khắc thời điểm). Nói 准时吃药 nghe kỳ vì thuốc uống nhiều lần trong ngày.",
+      "ex": [
+        { "cn": "医生说要按时吃药。", "py": "Yīshēng shuō yào ànshí chī yào.", "vi": "Bác sĩ nói phải uống thuốc đúng cữ." },
+        { "cn": "飞机准时起飞了。", "py": "Fēijī zhǔnshí qǐfēi le.", "vi": "Máy bay cất cánh đúng giờ." }
+      ] },
+    { "t": "来得及 và 来不及",
+      "b": "还来得及 (còn kịp) · 来不及了 (không kịp rồi)",
+      "d": "Đây là cặp câu bạn dùng liên tục khi đi lại và hẹn hò. Có thể thêm động từ ở sau: 来不及吃早饭 (không kịp ăn sáng).",
+      "ex": [
+        { "cn": "现在出发还来得及吗？", "py": "Xiànzài chūfā hái láidejí ma?", "vi": "Giờ xuất phát còn kịp không?" },
+        { "cn": "我来不及跟他说再见。", "py": "Wǒ láibují gēn tā shuō zàijiàn.", "vi": "Tôi không kịp chào tạm biệt anh ấy." }
+      ] },
+    { "t": "期间 đứng SAU cụm thời gian",
+      "b": "[thời gian] + 期间",
+      "d": "放假期间, 考试期间, 出差期间. Ngược với tiếng Việt nói \"trong kỳ nghỉ\" (giới từ đứng trước). Đây lại là quy tắc \"từ chỉ vị trí/thời gian đứng sau\" đã gặp từ bài 11.",
+      "ex": [
+        { "cn": "考试期间图书馆人很多。", "py": "Kǎoshì qījiān túshūguǎn rén hěn duō.", "vi": "Trong kỳ thi thư viện rất đông." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "请大家按时完成任务。", "py": "Qǐng dàjiā ànshí wánchéng rènwu.", "vi": "Xin mọi người hoàn thành nhiệm vụ đúng hạn." },
+    { "cn": "开会请准时参加。", "py": "Kāihuì qǐng zhǔnshí cānjiā.", "vi": "Họp xin dự đúng giờ." },
+    { "cn": "我们提前半个小时到了机场。", "py": "Wǒmen tíqián bàn ge xiǎoshí dào le jīchǎng.", "vi": "Chúng tôi tới sân bay sớm nửa tiếng." },
+    { "cn": "因为下雨，运动会推迟了。", "py": "Yīnwèi xiàyǔ, yùndònghuì tuīchí le.", "vi": "Vì mưa, hội thao bị hoãn." },
+    { "cn": "再不走就来不及了。", "py": "Zài bù zǒu jiù láibují le.", "vi": "Không đi ngay là không kịp mất." },
+    { "cn": "别着急，时间还来得及。", "py": "Bié zháojí, shíjiān hái láidejí.", "vi": "Đừng vội, thời gian vẫn còn kịp." },
+    { "cn": "他跑一百米只用了十二秒。", "py": "Tā pǎo yìbǎi mǐ zhǐ yòng le shí'èr miǎo.", "vi": "Anh ấy chạy trăm mét chỉ mất mười hai giây." },
+    { "cn": "出差期间他每天给家里打电话。", "py": "Chūchāi qījiān tā měi tiān gěi jiā lǐ dǎ diànhuà.", "vi": "Trong thời gian công tác ngày nào anh ấy cũng gọi về nhà." },
+    { "cn": "他同时做着两份工作。", "py": "Tā tóngshí zuò zhe liǎng fèn gōngzuò.", "vi": "Anh ấy làm hai việc cùng lúc." },
+    { "cn": "学生们陆续走进了教室。", "py": "Xuéshengmen lùxù zǒu jìn le jiàoshì.", "vi": "Học sinh lần lượt bước vào lớp." }
+  ]
+}

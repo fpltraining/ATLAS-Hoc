@@ -1,0 +1,73 @@
+{
+  "id": 95,
+  "cn": "安排和进行",
+  "title": "Tổ chức công việc",
+  "goal": "Lên kế hoạch, tổ chức sự kiện, triển khai công việc.",
+  "words": [
+    { "w": "安排", "py": "ānpái", "hv": "an bài", "vi": "sắp xếp, bố trí", "pos": "động từ / danh từ",
+      "note": "Chính là \"an bài\" tiếng Việt: 安 (an) + 排 (bài, sắp). Nhưng tiếng Trung trung tính, không mang nghĩa định mệnh.",
+      "ex": [{ "cn": "这个星期的安排很满。", "py": "Zhège xīngqī de ānpái hěn mǎn.", "vi": "Lịch tuần này rất kín." }] },
+    { "w": "计划", "py": "jìhuà", "hv": "kế hoạch", "vi": "kế hoạch", "pos": "danh từ / động từ",
+      "note": "Chính là \"kế hoạch\" tiếng Việt: 计 (kế) + 划 (hoạch).",
+      "ex": [{ "cn": "我们的计划改变了。", "py": "Wǒmen de jìhuà gǎibiàn le.", "vi": "Kế hoạch của chúng tôi thay đổi rồi." }] },
+    { "w": "调查", "py": "diàochá", "hv": "điều tra", "vi": "điều tra, khảo sát", "pos": "động từ / danh từ",
+      "note": "Chính là \"điều tra\" tiếng Việt: 调 (điều — đọc diào ở đây) + 查 (tra).",
+      "ex": [{ "cn": "他们做了一个市场调查。", "py": "Tāmen zuò le yí ge shìchǎng diàochá.", "vi": "Họ làm một cuộc khảo sát thị trường." }] },
+    { "w": "进行", "py": "jìnxíng", "hv": "tiến hành", "vi": "tiến hành", "pos": "động từ",
+      "note": "Chính là \"tiến hành\" tiếng Việt: 进 (tiến) + 行 (hành). Chỉ dùng với hoạt động HAI ÂM TIẾT trở lên và trang trọng.",
+      "ex": [{ "cn": "会议正在进行。", "py": "Huìyì zhèngzài jìnxíng.", "vi": "Cuộc họp đang diễn ra." }] },
+    { "w": "举办", "py": "jǔbàn", "hv": "cử biện", "vi": "tổ chức (sự kiện)", "pos": "động từ",
+      "note": "举 (nêu lên, bài 91) + 办 (làm, bài 39). Dùng cho sự kiện lớn: 举办比赛, 举办展览.",
+      "ex": [{ "cn": "学校举办了一次比赛。", "py": "Xuéxiào jǔbàn le yí cì bǐsài.", "vi": "Trường tổ chức một cuộc thi." }] },
+    { "w": "举行", "py": "jǔxíng", "hv": "cử hành", "vi": "cử hành, tiến hành (nghi lễ)", "pos": "động từ",
+      "note": "Chính là \"cử hành\" tiếng Việt. Gần nghĩa 举办 nhưng thiên về nghi thức: 举行婚礼, 举行会议.",
+      "ex": [{ "cn": "婚礼在周六举行。", "py": "Hūnlǐ zài zhōuliù jǔxíng.", "vi": "Hôn lễ cử hành vào thứ Bảy." }] },
+    { "w": "制造", "py": "zhìzào", "hv": "chế tạo", "vi": "chế tạo, sản xuất", "pos": "động từ",
+      "note": "Chính là \"chế tạo\" tiếng Việt: 制 (chế) + 造 (tạo). 中国制造 = Made in China.",
+      "ex": [{ "cn": "这台机器是德国制造的。", "py": "Zhè tái jīqì shì Déguó zhìzào de.", "vi": "Cái máy này do Đức chế tạo." }] },
+    { "w": "使用", "py": "shǐyòng", "hv": "sử dụng", "vi": "sử dụng", "pos": "động từ",
+      "note": "Chính là \"sử dụng\" tiếng Việt: 使 (sử, bài 92) + 用 (dụng, bài 57). Trang trọng hơn 用.",
+      "ex": [{ "cn": "使用前请阅读说明书。", "py": "Shǐyòng qián qǐng yuèdú shuōmíngshū.", "vi": "Trước khi dùng xin đọc hướng dẫn." }] },
+    { "w": "完全", "py": "wánquán", "hv": "hoàn toàn", "vi": "hoàn toàn", "pos": "phó từ / tính từ",
+      "note": "Chính là \"hoàn toàn\" tiếng Việt: 完 (hoàn) + 全 (toàn).",
+      "ex": [{ "cn": "我完全同意。", "py": "Wǒ wánquán tóngyì.", "vi": "Tôi hoàn toàn đồng ý." }] },
+    { "w": "顺利", "py": "shùnlì", "hv": "thuận lợi", "vi": "thuận lợi, suôn sẻ", "pos": "tính từ",
+      "note": "Chính là \"thuận lợi\" tiếng Việt: 顺 (thuận) + 利 (lợi). Lời chúc: 祝你一切顺利.",
+      "ex": [{ "cn": "事情进行得很顺利。", "py": "Shìqing jìnxíng de hěn shùnlì.", "vi": "Mọi việc diễn ra rất suôn sẻ." }] }
+  ],
+  "grammar": [
+    { "t": "进行 chỉ đi với hoạt động trang trọng",
+      "b": "进行 + danh từ/động từ hai âm tiết",
+      "d": "进行讨论, 进行调查, 进行研究 — đều đúng. Nhưng KHÔNG nói 进行吃饭 hay 进行看书, vì 进行 chỉ dùng cho hoạt động có tổ chức, kéo dài. Đây là điểm dễ sai khi viết văn.",
+      "ex": [
+        { "cn": "我们对这个问题进行了讨论。", "py": "Wǒmen duì zhège wèntí jìnxíng le tǎolùn.", "vi": "Chúng tôi đã tiến hành thảo luận vấn đề này." },
+        { "cn": "比赛正在进行中。", "py": "Bǐsài zhèngzài jìnxíng zhōng.", "vi": "Trận đấu đang diễn ra." }
+      ] },
+    { "t": "举办 và 举行 — tổ chức hay cử hành?",
+      "b": "举办 = đứng ra tổ chức (nhấn chủ thể) · 举行 = sự kiện diễn ra (nhấn sự việc)",
+      "d": "学校举办比赛 (trường đứng ra tổ chức). 比赛在体育馆举行 (trận đấu diễn ra ở nhà thi đấu). Mẹo: có chủ thể tổ chức thì dùng 举办, nêu địa điểm/thời gian thì dùng 举行.",
+      "ex": [
+        { "cn": "公司举办了一个聚会。", "py": "Gōngsī jǔbàn le yí ge jùhuì.", "vi": "Công ty tổ chức một buổi tiệc." },
+        { "cn": "会议将在北京举行。", "py": "Huìyì jiāng zài Běijīng jǔxíng.", "vi": "Hội nghị sẽ diễn ra ở Bắc Kinh." }
+      ] },
+    { "t": "完全 + phủ định — hoàn toàn không",
+      "b": "完全不 · 完全没有",
+      "d": "完全 đứng trước phủ định để nhấn mạnh tuyệt đối: 我完全不知道 (tôi hoàn toàn không biết). Mạnh hơn nhiều so với chỉ nói 我不知道.",
+      "ex": [
+        { "cn": "这件事我完全不知道。", "py": "Zhè jiàn shì wǒ wánquán bù zhīdào.", "vi": "Việc này tôi hoàn toàn không biết." },
+        { "cn": "两个人的看法完全不同。", "py": "Liǎng ge rén de kànfǎ wánquán bù tóng.", "vi": "Quan điểm hai người hoàn toàn khác nhau." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这个月的工作我已经安排好了。", "py": "Zhège yuè de gōngzuò wǒ yǐjīng ānpái hǎo le.", "vi": "Công việc tháng này tôi đã sắp xếp xong." },
+    { "cn": "你有什么假期计划？", "py": "Nǐ yǒu shénme jiàqī jìhuà?", "vi": "Bạn có kế hoạch gì cho kỳ nghỉ?" },
+    { "cn": "警察正在调查这件事。", "py": "Jǐngchá zhèngzài diàochá zhè jiàn shì.", "vi": "Cảnh sát đang điều tra việc này." },
+    { "cn": "考试正在进行，请安静。", "py": "Kǎoshì zhèngzài jìnxíng, qǐng ānjìng.", "vi": "Đang thi, xin giữ yên lặng." },
+    { "cn": "他们每年举办一次运动会。", "py": "Tāmen měi nián jǔbàn yí cì yùndònghuì.", "vi": "Mỗi năm họ tổ chức một lần hội thao." },
+    { "cn": "毕业典礼下周举行。", "py": "Bìyè diǎnlǐ xià zhōu jǔxíng.", "vi": "Lễ tốt nghiệp diễn ra tuần sau." },
+    { "cn": "这些产品都是中国制造的。", "py": "Zhèxiē chǎnpǐn dōu shì Zhōngguó zhìzào de.", "vi": "Các sản phẩm này đều do Trung Quốc sản xuất." },
+    { "cn": "这个软件使用起来很方便。", "py": "Zhège ruǎnjiàn shǐyòng qǐlai hěn fāngbiàn.", "vi": "Phần mềm này dùng rất tiện." },
+    { "cn": "我完全理解你的想法。", "py": "Wǒ wánquán lǐjiě nǐ de xiǎngfǎ.", "vi": "Tôi hoàn toàn hiểu suy nghĩ của bạn." },
+    { "cn": "祝你考试顺利！", "py": "Zhù nǐ kǎoshì shùnlì!", "vi": "Chúc bạn thi suôn sẻ!" }
+  ]
+}

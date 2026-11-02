@@ -1,0 +1,75 @@
+{
+  "id": 5,
+  "cn": "朋友和工作",
+  "title": "Bạn bè và công việc",
+  "goal": "Giới thiệu bạn bè và nghề nghiệp, dùng 都 (đều), nói về quốc tịch và tiếng Trung.",
+  "words": [
+    { "w": "朋友", "py": "péngyou", "hv": "bằng hữu", "vi": "bạn, bạn bè", "pos": "danh từ",
+      "note": "Chính là \"bằng hữu\" trong tiếng Việt. Hai chữ 月 ghép lại — vốn là hình hai chuỗi vỏ sò buộc chung.",
+      "ex": [{ "cn": "他是我的好朋友。", "py": "Tā shì wǒ de hǎo péngyou.", "vi": "Anh ấy là bạn tốt của tôi." }] },
+    { "w": "同学", "py": "tóngxué", "hv": "đồng học", "vi": "bạn cùng lớp, bạn học", "pos": "danh từ",
+      "note": "同 (đồng, cùng) + 学 (học). Thầy cô Trung Quốc gọi học sinh là 同学 thay vì gọi tên.",
+      "ex": [{ "cn": "我们是同学。", "py": "Wǒmen shì tóngxué.", "vi": "Chúng tôi là bạn cùng lớp." }] },
+    { "w": "先生", "py": "xiānsheng", "hv": "tiên sinh", "vi": "ông, ngài, anh (lịch sự); chồng", "pos": "danh từ",
+      "note": "Đặt SAU họ: 王先生 = ông Vương. Ngược với tiếng Việt (\"ông Vương\").",
+      "ex": [{ "cn": "王先生是老师。", "py": "Wáng xiānsheng shì lǎoshī.", "vi": "Ông Vương là giáo viên." }] },
+    { "w": "小姐", "py": "xiǎojiě", "hv": "tiểu tỷ", "vi": "cô, tiểu thư", "pos": "danh từ",
+      "note": "Âm Hán Việt đúng là “tiểu tỷ” (姐 = tỷ); tiếng Việt quen gọi là “tiểu thư”. Cũng đặt sau họ: 李小姐 = cô Lý. Lưu ý ở Trung Quốc đại lục nay ít dùng vì có nghĩa xấu; nên dùng 女士 nǚshì.",
+      "ex": [{ "cn": "她是李小姐。", "py": "Tā shì Lǐ xiǎojiě.", "vi": "Cô ấy là cô Lý." }] },
+    { "w": "医生", "py": "yīshēng", "hv": "y sinh", "vi": "bác sĩ", "pos": "danh từ",
+      "note": "医 (y) + 生 (sinh). Tiếng Việt có \"y sĩ\", \"y tế\", \"y học\".",
+      "ex": [{ "cn": "我妈妈是医生。", "py": "Wǒ māma shì yīshēng.", "vi": "Mẹ tôi là bác sĩ." }] },
+    { "w": "工作", "py": "gōngzuò", "hv": "công tác", "vi": "công việc; làm việc", "pos": "danh từ / động từ",
+      "note": "Giống hệt \"công tác\" tiếng Việt. Vừa là danh từ (công việc) vừa là động từ (làm việc).",
+      "ex": [{ "cn": "他在医院工作。", "py": "Tā zài yīyuàn gōngzuò.", "vi": "Anh ấy làm việc ở bệnh viện." }] },
+    { "w": "都", "py": "dōu", "hv": "đô", "vi": "đều, tất cả", "pos": "phó từ",
+      "note": "Luôn đứng SAU chủ ngữ, TRƯỚC động từ. Không bao giờ đứng đầu câu.",
+      "ex": [{ "cn": "我们都是学生。", "py": "Wǒmen dōu shì xuésheng.", "vi": "Chúng tôi đều là học sinh." }] },
+    { "w": "我们", "py": "wǒmen", "hv": "ngã môn", "vi": "chúng tôi, chúng ta", "pos": "đại từ",
+      "note": "们 men là hậu tố số nhiều cho NGƯỜI: 你们 (các bạn), 他们 (họ). Không dùng cho đồ vật.",
+      "ex": [{ "cn": "我们是朋友。", "py": "Wǒmen shì péngyou.", "vi": "Chúng ta là bạn." }] },
+    { "w": "中国", "py": "Zhōngguó", "hv": "Trung Quốc", "vi": "Trung Quốc", "pos": "danh từ riêng",
+      "note": "中 (trung, giữa) + 国 (quốc, nước) = \"nước ở giữa\". Đúng là \"Trung Quốc\" tiếng Việt.",
+      "ex": [{ "cn": "他是中国人。", "py": "Tā shì Zhōngguó rén.", "vi": "Anh ấy là người Trung Quốc." }] },
+    { "w": "汉语", "py": "Hànyǔ", "hv": "Hán ngữ", "vi": "tiếng Trung, tiếng Hán", "pos": "danh từ",
+      "note": "汉 (Hán) + 语 (ngữ). Tiếng Việt gọi là \"Hán ngữ\". Còn gọi là 中文 Zhōngwén.",
+      "ex": [{ "cn": "我学习汉语。", "py": "Wǒ xuéxí Hànyǔ.", "vi": "Tôi học tiếng Trung." }] }
+  ],
+  "grammar": [
+    { "t": "Vị trí của 都 — sau chủ ngữ, trước động từ",
+      "b": "Chủ ngữ + 都 + động từ / tính từ",
+      "d": "Đây là lỗi rất phổ biến. Người Việt hay đặt 都 lên đầu câu vì tiếng Việt nói \"Tất cả chúng tôi…\". Trong tiếng Trung 都 BẮT BUỘC đứng sau chủ ngữ.",
+      "ex": [
+        { "cn": "我们都是学生。", "py": "Wǒmen dōu shì xuésheng.", "vi": "ĐÚNG — Chúng tôi đều là học sinh." },
+        { "cn": "他们都很好。", "py": "Tāmen dōu hěn hǎo.", "vi": "Họ đều khoẻ." },
+        { "cn": "我们都不是老师。", "py": "Wǒmen dōu bú shì lǎoshī.", "vi": "Chúng tôi đều không phải giáo viên." }
+      ] },
+    { "t": "Nói quốc tịch: Tên nước + 人",
+      "b": "Tên nước + 人",
+      "d": "Chỉ cần ghép chữ 人 (người) vào sau tên nước. Không cần thêm gì khác. Giống hệt cách nói \"người Việt Nam\", \"người Trung Quốc\".",
+      "ex": [
+        { "cn": "中国人", "py": "Zhōngguó rén", "vi": "người Trung Quốc" },
+        { "cn": "越南人", "py": "Yuènán rén", "vi": "người Việt Nam" },
+        { "cn": "我是越南人。", "py": "Wǒ shì Yuènán rén.", "vi": "Tôi là người Việt Nam." }
+      ] },
+    { "t": "Xưng hô: họ đứng TRƯỚC danh xưng",
+      "b": "Họ + 先生 / 小姐 / 老师",
+      "d": "Ngược hoàn toàn với tiếng Việt. Ta nói \"ông Vương\", tiếng Trung nói 王先生 (Vương + ông). Người Trung Quốc cũng viết họ trước tên.",
+      "ex": [
+        { "cn": "王先生", "py": "Wáng xiānsheng", "vi": "ông Vương" },
+        { "cn": "李老师", "py": "Lǐ lǎoshī", "vi": "thầy Lý / cô Lý" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我们都是学生。", "py": "Wǒmen dōu shì xuésheng.", "vi": "Chúng tôi đều là học sinh." },
+    { "cn": "他们都是我的朋友。", "py": "Tāmen dōu shì wǒ de péngyou.", "vi": "Họ đều là bạn của tôi." },
+    { "cn": "我是越南人，他是中国人。", "py": "Wǒ shì Yuènán rén, tā shì Zhōngguó rén.", "vi": "Tôi là người Việt Nam, anh ấy là người Trung Quốc." },
+    { "cn": "王先生是医生吗？", "py": "Wáng xiānsheng shì yīshēng ma?", "vi": "Ông Vương là bác sĩ à?" },
+    { "cn": "他不是医生，他是老师。", "py": "Tā bú shì yīshēng, tā shì lǎoshī.", "vi": "Ông ấy không phải bác sĩ, ông ấy là giáo viên." },
+    { "cn": "我们是同学，也是朋友。", "py": "Wǒmen shì tóngxué, yě shì péngyou.", "vi": "Chúng tôi là bạn cùng lớp, cũng là bạn bè." },
+    { "cn": "你的工作是什么？", "py": "Nǐ de gōngzuò shì shénme?", "vi": "Công việc của bạn là gì?" },
+    { "cn": "我学习汉语。", "py": "Wǒ xuéxí Hànyǔ.", "vi": "Tôi học tiếng Trung." },
+    { "cn": "汉语很好。", "py": "Hànyǔ hěn hǎo.", "vi": "Tiếng Trung hay lắm." },
+    { "cn": "我们都学习汉语。", "py": "Wǒmen dōu xuéxí Hànyǔ.", "vi": "Chúng tôi đều học tiếng Trung." }
+  ]
+}

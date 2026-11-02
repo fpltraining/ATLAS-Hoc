@@ -1,0 +1,74 @@
+{
+  "id": 24,
+  "cn": "怎么走？",
+  "title": "Hỏi đường",
+  "goal": "Hỏi đường và nói khoảng cách, dùng 离 để đo xa gần và 往 để chỉ hướng.",
+  "words": [
+    { "w": "火车站", "py": "huǒchēzhàn", "hv": "hoả xa trạm", "vi": "ga tàu hoả", "pos": "danh từ",
+      "note": "火车 chính là \"hoả xa\" — xe chạy bằng lửa, tức tàu hoả. 站 là \"trạm\". Ghép lại quá dễ nhớ với người Việt.",
+      "ex": [{ "cn": "火车站在哪儿？", "py": "Huǒchēzhàn zài nǎr?", "vi": "Ga tàu ở đâu?" }] },
+    { "w": "机场", "py": "jīchǎng", "hv": "cơ trường", "vi": "sân bay", "pos": "danh từ",
+      "note": "机 (máy, viết tắt của 飞机 phi cơ) + 场 (bãi, sân). Nghĩa đen: bãi đỗ máy bay.",
+      "ex": [{ "cn": "我去机场。", "py": "Wǒ qù jīchǎng.", "vi": "Tôi đi sân bay." }] },
+    { "w": "公共汽车", "py": "gōnggòng qìchē", "hv": "công cộng khí xa", "vi": "xe buýt", "pos": "danh từ",
+      "note": "公共 chính là \"công cộng\", 汽车 là \"khí xa\" (xe chạy bằng hơi) = ô tô. Nói tắt là 公交车.",
+      "ex": [{ "cn": "我坐公共汽车上班。", "py": "Wǒ zuò gōnggòng qìchē shàngbān.", "vi": "Tôi đi làm bằng xe buýt." }] },
+    { "w": "自行车", "py": "zìxíngchē", "hv": "tự hành xa", "vi": "xe đạp", "pos": "danh từ",
+      "note": "自行 = \"tự hành\" (tự đi) + 车 (xe). Xe tự chạy bằng sức mình — cách gọi rất logic.",
+      "ex": [{ "cn": "我骑自行车去。", "py": "Wǒ qí zìxíngchē qù.", "vi": "Tôi đi xe đạp." }] },
+    { "w": "路", "py": "lù", "hv": "lộ", "vi": "đường", "pos": "danh từ",
+      "note": "Bộ ⻊ (chân) bên trái. Tiếng Việt: \"lộ trình\", \"đại lộ\", \"đường lộ\".",
+      "ex": [{ "cn": "这条路很长。", "py": "Zhè tiáo lù hěn cháng.", "vi": "Con đường này rất dài." }] },
+    { "w": "远", "py": "yuǎn", "hv": "viễn", "vi": "xa", "pos": "tính từ",
+      "note": "Bộ 辶 (đi đường). Tiếng Việt: \"viễn thông\", \"viễn cảnh\", \"vĩnh viễn\".",
+      "ex": [{ "cn": "机场很远。", "py": "Jīchǎng hěn yuǎn.", "vi": "Sân bay rất xa." }] },
+    { "w": "近", "py": "jìn", "hv": "cận", "vi": "gần", "pos": "tính từ",
+      "note": "Cũng có bộ 辶. Tiếng Việt: \"cận thị\", \"lân cận\", \"cận cảnh\".",
+      "ex": [{ "cn": "我家离学校很近。", "py": "Wǒ jiā lí xuéxiào hěn jìn.", "vi": "Nhà tôi gần trường." }] },
+    { "w": "离", "py": "lí", "hv": "ly", "vi": "cách (khoảng cách)", "pos": "giới từ",
+      "note": "Tiếng Việt: \"ly biệt\", \"cách ly\", \"chia ly\". Chuyên dùng để đo khoảng cách giữa hai điểm.",
+      "ex": [{ "cn": "这儿离火车站很近。", "py": "Zhèr lí huǒchēzhàn hěn jìn.", "vi": "Chỗ này gần ga tàu." }] },
+    { "w": "往", "py": "wǎng", "hv": "vãng", "vi": "về phía, hướng về", "pos": "giới từ",
+      "note": "Bộ 彳 (bước chân trái). Tiếng Việt: \"vãng lai\", \"dĩ vãng\". Chỉ hướng di chuyển.",
+      "ex": [{ "cn": "往前走。", "py": "Wǎng qián zǒu.", "vi": "Đi thẳng về phía trước." }] },
+    { "w": "走", "py": "zǒu", "hv": "tẩu", "vi": "đi bộ; rời đi", "pos": "động từ",
+      "note": "Bộ thủ đã học. Khác 去: 走 nhấn vào HÀNH ĐỘNG đi/rời đi, 去 nhấn vào ĐÍCH ĐẾN.",
+      "ex": [{ "cn": "我们走吧。", "py": "Wǒmen zǒu ba.", "vi": "Chúng ta đi thôi." }] }
+  ],
+  "grammar": [
+    { "t": "离 — đo khoảng cách giữa hai nơi",
+      "b": "A + 离 + B + 远 / 近",
+      "d": "Mẫu câu cố định để nói xa gần. Chú ý KHÔNG dùng 从 ở đây: nói 从我家到学校很近 cũng được nhưng dài dòng, người bản xứ dùng 离 gọn hơn.",
+      "ex": [
+        { "cn": "我家离学校很近。", "py": "Wǒ jiā lí xuéxiào hěn jìn.", "vi": "Nhà tôi gần trường." },
+        { "cn": "机场离这儿远吗？", "py": "Jīchǎng lí zhèr yuǎn ma?", "vi": "Sân bay có xa đây không?" },
+        { "cn": "离考试还有三天。", "py": "Lí kǎoshì hái yǒu sān tiān.", "vi": "Còn ba ngày nữa là thi." }
+      ] },
+    { "t": "往 + hướng + 走 — chỉ đường",
+      "b": "往 + 前/后/左/右 + 走",
+      "d": "Bộ ba câu chỉ đường cơ bản. 往前走 đi thẳng, 往左走 rẽ trái, 往右走 rẽ phải. Học thuộc là đi đâu cũng hỏi được đường.",
+      "ex": [
+        { "cn": "往前走五分钟。", "py": "Wǎng qián zǒu wǔ fēnzhōng.", "vi": "Đi thẳng năm phút." },
+        { "cn": "往右走，就到了。", "py": "Wǎng yòu zǒu, jiù dào le.", "vi": "Rẽ phải là tới ngay." }
+      ] },
+    { "t": "Phương tiện: 坐 hay 骑?",
+      "b": "坐 cho xe có chỗ ngồi · 骑 qí cho thứ phải dạng chân",
+      "d": "坐公共汽车, 坐火车, 坐飞机 (ngồi). Nhưng xe đạp và xe máy thì 骑自行车, 骑摩托车 (cưỡi) — giống tiếng Việt nói \"cưỡi ngựa\".",
+      "ex": [
+        { "cn": "我坐公共汽车去。", "py": "Wǒ zuò gōnggòng qìchē qù.", "vi": "Tôi đi bằng xe buýt." },
+        { "cn": "他骑自行车上班。", "py": "Tā qí zìxíngchē shàngbān.", "vi": "Anh ấy đạp xe đi làm." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "请问，火车站怎么走？", "py": "Qǐngwèn, huǒchēzhàn zěnme zǒu?", "vi": "Xin hỏi, ga tàu đi thế nào ạ?" },
+    { "cn": "往前走，然后往左走。", "py": "Wǎng qián zǒu, ránhòu wǎng zuǒ zǒu.", "vi": "Đi thẳng, rồi rẽ trái." },
+    { "cn": "这儿离机场远吗？", "py": "Zhèr lí jīchǎng yuǎn ma?", "vi": "Từ đây đến sân bay có xa không?" },
+    { "cn": "不远，很近。", "py": "Bù yuǎn, hěn jìn.", "vi": "Không xa, rất gần." },
+    { "cn": "我家离公司很远。", "py": "Wǒ jiā lí gōngsī hěn yuǎn.", "vi": "Nhà tôi xa công ty lắm." },
+    { "cn": "我每天坐公共汽车上班。", "py": "Wǒ měi tiān zuò gōnggòng qìchē shàngbān.", "vi": "Ngày nào tôi cũng đi làm bằng xe buýt." },
+    { "cn": "他骑自行车去学校。", "py": "Tā qí zìxíngchē qù xuéxiào.", "vi": "Cậu ấy đạp xe đến trường." },
+    { "cn": "这条路很长。", "py": "Zhè tiáo lù hěn cháng.", "vi": "Con đường này rất dài." },
+    { "cn": "我们走吧，快到了。", "py": "Wǒmen zǒu ba, kuài dào le.", "vi": "Đi thôi, sắp tới rồi." },
+    { "cn": "去机场怎么走最快？", "py": "Qù jīchǎng zěnme zǒu zuì kuài?", "vi": "Đi sân bay đường nào nhanh nhất?" }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": 70,
+  "cn": "社会生活",
+  "title": "Xã hội và cộng đồng",
+  "goal": "Nói về xã hội, dân tộc, pháp luật — lớp từ trừu tượng gần tiếng Việt nhất.",
+  "words": [
+    { "w": "社会", "py": "shèhuì", "hv": "xã hội", "vi": "xã hội", "pos": "danh từ",
+      "note": "Chính là \"xã hội\" tiếng Việt: 社 (xã) + 会 (hội).",
+      "ex": [{ "cn": "这是一个社会问题。", "py": "Zhè shì yí ge shèhuì wèntí.", "vi": "Đây là một vấn đề xã hội." }] },
+    { "w": "民族", "py": "mínzú", "hv": "dân tộc", "vi": "dân tộc", "pos": "danh từ",
+      "note": "Chính là \"dân tộc\" tiếng Việt: 民 (dân) + 族 (tộc). Trung Quốc có 56 dân tộc.",
+      "ex": [{ "cn": "中国有五十六个民族。", "py": "Zhōngguó yǒu wǔshíliù ge mínzú.", "vi": "Trung Quốc có 56 dân tộc." }] },
+    { "w": "国籍", "py": "guójí", "hv": "quốc tịch", "vi": "quốc tịch", "pos": "danh từ",
+      "note": "Chính là \"quốc tịch\" tiếng Việt: 国 (quốc) + 籍 (tịch, sổ sách).",
+      "ex": [{ "cn": "请填写您的国籍。", "py": "Qǐng tiánxiě nín de guójí.", "vi": "Xin điền quốc tịch của ngài." }] },
+    { "w": "法律", "py": "fǎlǜ", "hv": "pháp luật", "vi": "pháp luật", "pos": "danh từ",
+      "note": "Chính là \"pháp luật\" tiếng Việt: 法 (pháp) + 律 (luật).",
+      "ex": [{ "cn": "每个人都要遵守法律。", "py": "Měi ge rén dōu yào zūnshǒu fǎlǜ.", "vi": "Ai cũng phải tuân thủ pháp luật." }] },
+    { "w": "责任", "py": "zérèn", "hv": "trách nhiệm", "vi": "trách nhiệm", "pos": "danh từ",
+      "note": "Chính là \"trách nhiệm\" tiếng Việt: 责 (trách) + 任 (nhiệm).",
+      "ex": [{ "cn": "这是我的责任。", "py": "Zhè shì wǒ de zérèn.", "vi": "Đây là trách nhiệm của tôi." }] },
+    { "w": "世纪", "py": "shìjì", "hv": "thế kỷ", "vi": "thế kỷ", "pos": "danh từ",
+      "note": "Chính là \"thế kỷ\" tiếng Việt: 世 (thế, bài 38 trong 世界) + 纪 (kỷ).",
+      "ex": [{ "cn": "现在是二十一世纪。", "py": "Xiànzài shì èrshíyī shìjì.", "vi": "Bây giờ là thế kỷ 21." }] },
+    { "w": "生活", "py": "shēnghuó", "hv": "sinh hoạt", "vi": "cuộc sống; sinh sống", "pos": "danh từ / động từ",
+      "note": "Chính là \"sinh hoạt\" tiếng Việt, nhưng nghĩa rộng hơn — là cả CUỘC SỐNG chứ không chỉ hoạt động hằng ngày.",
+      "ex": [{ "cn": "我很喜欢这里的生活。", "py": "Wǒ hěn xǐhuan zhèlǐ de shēnghuó.", "vi": "Tôi rất thích cuộc sống ở đây." }] },
+    { "w": "观众", "py": "guānzhòng", "hv": "quan chúng", "vi": "khán giả", "pos": "danh từ",
+      "note": "观 (xem) + 众 (đám đông — ba chữ 人 chồng lên nhau!). Tiếng Việt nói \"khán giả\", cùng chữ 观.",
+      "ex": [{ "cn": "观众们都站了起来。", "py": "Guānzhòngmen dōu zhàn le qǐlai.", "vi": "Khán giả đều đứng dậy." }] },
+    { "w": "群", "py": "qún", "hv": "quần", "vi": "đám, nhóm (lượng từ)", "pos": "lượng từ",
+      "note": "Tiếng Việt: \"quần chúng\", \"quần thể\". Đếm nhóm người hay động vật: 一群人, 一群鸟.",
+      "ex": [{ "cn": "门口有一群人。", "py": "Ménkǒu yǒu yì qún rén.", "vi": "Ngoài cửa có một đám người." }] },
+    { "w": "各", "py": "gè", "hv": "các", "vi": "các, mỗi", "pos": "đại từ",
+      "note": "Chính là \"các\" tiếng Việt. Đứng trước lượng từ: 各个国家, 各种颜色.",
+      "ex": [{ "cn": "各国代表都来了。", "py": "Gè guó dàibiǎo dōu lái le.", "vi": "Đại biểu các nước đều đến." }] }
+  ],
+  "grammar": [
+    { "t": "Bài này gần như là tiếng Việt viết bằng chữ Hán",
+      "b": "社会 · 民族 · 国籍 · 法律 · 责任 · 世纪",
+      "d": "Sáu từ trùng khít hoàn toàn. Đây là lý do người Việt đọc báo tiếng Trung dễ hơn nói tiếng Trung: lớp từ chính luận, học thuật gần như dùng chung kho Hán Việt.",
+      "ex": [
+        { "cn": "社会 · 民族 · 国籍", "py": "shèhuì · mínzú · guójí", "vi": "xã hội · dân tộc · quốc tịch" },
+        { "cn": "法律 · 责任 · 世纪", "py": "fǎlǜ · zérèn · shìjì", "vi": "pháp luật · trách nhiệm · thế kỷ" }
+      ] },
+    { "t": "各 + lượng từ — mỗi, các",
+      "b": "各 + lượng từ + danh từ",
+      "d": "各 luôn đi kèm lượng từ hoặc danh từ đơn âm: 各个 (mỗi cái), 各种 (các loại), 各国 (các nước). Khác 每 (bài 18) ở chỗ 各 nhấn vào sự KHÁC BIỆT giữa các cá thể, còn 每 nhấn vào sự lặp lại đều đặn.",
+      "ex": [
+        { "cn": "商店里有各种水果。", "py": "Shāngdiàn lǐ yǒu gè zhǒng shuǐguǒ.", "vi": "Trong cửa hàng có đủ loại hoa quả." },
+        { "cn": "各位好！", "py": "Gè wèi hǎo!", "vi": "Chào quý vị!" }
+      ] },
+    { "t": "Lượng từ 群 và các lượng từ tập thể",
+      "b": "一群人 · 一群鸟 · 一批货 · 一堆书",
+      "d": "群 dùng cho nhóm sinh vật sống di chuyển cùng nhau. Tiếng Việt cũng nói \"một đàn chim\", \"một đám người\" — cùng tư duy phân loại theo tập thể.",
+      "ex": [
+        { "cn": "天上飞过一群鸟。", "py": "Tiān shàng fēi guò yì qún niǎo.", "vi": "Trên trời bay qua một đàn chim." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "毕业以后就要走进社会了。", "py": "Bìyè yǐhòu jiù yào zǒu jìn shèhuì le.", "vi": "Tốt nghiệp rồi là bước vào xã hội." },
+    { "cn": "每个民族都有自己的文化。", "py": "Měi ge mínzú dōu yǒu zìjǐ de wénhuà.", "vi": "Mỗi dân tộc đều có văn hoá riêng." },
+    { "cn": "办签证要填国籍和地址。", "py": "Bàn qiānzhèng yào tián guójí hé dìzhǐ.", "vi": "Làm visa phải điền quốc tịch và địa chỉ." },
+    { "cn": "开车不能喝酒，这是法律。", "py": "Kāichē bù néng hē jiǔ, zhè shì fǎlǜ.", "vi": "Lái xe không được uống rượu, đó là luật." },
+    { "cn": "照顾好家人是我们的责任。", "py": "Zhàogù hǎo jiārén shì wǒmen de zérèn.", "vi": "Chăm lo cho gia đình là trách nhiệm của chúng ta." },
+    { "cn": "这座桥是上个世纪建的。", "py": "Zhè zuò qiáo shì shàng ge shìjì jiàn de.", "vi": "Cây cầu này xây từ thế kỷ trước." },
+    { "cn": "城市生活很方便，但是也很累。", "py": "Chéngshì shēnghuó hěn fāngbiàn, dànshì yě hěn lèi.", "vi": "Cuộc sống thành phố tiện nhưng cũng mệt." },
+    { "cn": "演出结束时观众都鼓掌了。", "py": "Yǎnchū jiéshù shí guānzhòng dōu gǔzhǎng le.", "vi": "Khi diễn xong khán giả đều vỗ tay." },
+    { "cn": "公园里有一群孩子在玩。", "py": "Gōngyuán lǐ yǒu yì qún háizi zài wán.", "vi": "Trong công viên có một nhóm trẻ đang chơi." },
+    { "cn": "各位朋友，欢迎大家！", "py": "Gè wèi péngyou, huānyíng dàjiā!", "vi": "Thưa các bạn, hoan nghênh mọi người!" }
+  ]
+}

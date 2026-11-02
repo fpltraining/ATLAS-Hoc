@@ -1,0 +1,72 @@
+{
+  "id": 104,
+  "cn": "介词和强调",
+  "title": "Giới từ và nhấn mạnh",
+  "goal": "Giới từ trang trọng và các phó từ tạo giọng điệu — chỗ dễ lộ ra là người mới hay người đã vững.",
+  "words": [
+    { "w": "按照", "py": "ànzhào", "hv": "án chiếu", "vi": "theo, chiếu theo", "pos": "giới từ",
+      "note": "按 (ấn, theo) + 照 (chiếu). Tiếng Việt: \"chiếu theo quy định\". Đi với quy định, kế hoạch, thứ tự.",
+      "ex": [{ "cn": "请按照规定去做。", "py": "Qǐng ànzhào guīdìng qù zuò.", "vi": "Xin làm theo quy định." }] },
+    { "w": "通过", "py": "tōngguò", "hv": "thông quá", "vi": "thông qua; đỗ", "pos": "giới từ / động từ",
+      "note": "Hai vai: giới từ (thông qua cách nào) và động từ (đỗ kỳ thi, được duyệt).",
+      "ex": [{ "cn": "通过练习，我进步了。", "py": "Tōngguò liànxí, wǒ jìnbù le.", "vi": "Nhờ luyện tập, tôi tiến bộ." }] },
+    { "w": "由", "py": "yóu", "hv": "do", "vi": "do (ai làm)", "pos": "giới từ",
+      "note": "Chính là \"do\" tiếng Việt. Chỉ người chịu trách nhiệm: 这件事由我负责.",
+      "ex": [{ "cn": "这个会由王经理主持。", "py": "Zhège huì yóu Wáng jīnglǐ zhǔchí.", "vi": "Cuộc họp này do giám đốc Vương chủ trì." }] },
+    { "w": "对于", "py": "duìyú", "hv": "đối vu", "vi": "đối với", "pos": "giới từ",
+      "note": "Chính là \"đối với\" tiếng Việt. Nêu đối tượng của thái độ, thường đứng đầu câu.",
+      "ex": [{ "cn": "对于这个问题，我有不同看法。", "py": "Duìyú zhège wèntí, wǒ yǒu bùtóng kànfǎ.", "vi": "Đối với vấn đề này, tôi có cách nhìn khác." }] },
+    { "w": "随着", "py": "suízhe", "hv": "tuỳ trước", "vi": "cùng với, theo đà", "pos": "giới từ",
+      "note": "随 (tuỳ, theo) + 着. Diễn tả hai thứ biến đổi song song: 随着时间…, 随着经济发展….",
+      "ex": [{ "cn": "随着年龄增长，想法也变了。", "py": "Suízhe niánlíng zēngzhǎng, xiǎngfǎ yě biàn le.", "vi": "Cùng với tuổi tác, suy nghĩ cũng đổi." }] },
+    { "w": "连", "py": "lián", "hv": "liên", "vi": "ngay cả", "pos": "giới từ",
+      "note": "Luôn đi với 都/也: 连他都不知道 (ngay cả anh ấy cũng không biết). Cấu trúc nhấn mạnh quan trọng nhất HSK 4.",
+      "ex": [{ "cn": "他连一句话也没说。", "py": "Tā lián yí jù huà yě méi shuō.", "vi": "Anh ấy không nói lấy một câu." }] },
+    { "w": "到底", "py": "dàodǐ", "hv": "đáo để", "vi": "rốt cuộc, đến cùng", "pos": "phó từ",
+      "note": "到 (tới) + 底 (đáy). Trong câu hỏi = rốt cuộc; trong câu kể = làm đến cùng: 坚持到底.",
+      "ex": [{ "cn": "你到底想怎么样？", "py": "Nǐ dàodǐ xiǎng zěnmeyàng?", "vi": "Rốt cuộc bạn muốn thế nào?" }] },
+    { "w": "难道", "py": "nándào", "hv": "nan đạo", "vi": "chẳng lẽ", "pos": "phó từ",
+      "note": "Hỏi tu từ, thể hiện sự ngạc nhiên hoặc trách móc. Hay kết bằng 吗: 难道你忘了吗？",
+      "ex": [{ "cn": "难道你不知道吗？", "py": "Nándào nǐ bù zhīdào ma?", "vi": "Chẳng lẽ bạn không biết à?" }] },
+    { "w": "千万", "py": "qiānwàn", "hv": "thiên vạn", "vi": "nhất định phải, chớ có", "pos": "phó từ",
+      "note": "Nghĩa đen \"nghìn vạn\". Dùng dặn dò khẩn thiết, hầu như luôn đi với 别/不要: 千万别忘了.",
+      "ex": [{ "cn": "路上千万小心。", "py": "Lù shàng qiānwàn xiǎoxīn.", "vi": "Trên đường nhất định phải cẩn thận." }] },
+    { "w": "无", "py": "wú", "hv": "vô", "vi": "không có", "pos": "động từ",
+      "note": "Chính là \"vô\" tiếng Việt. Bản văn ngôn của 没有, chỉ dùng trong từ ghép và biển báo: 无人, 无关, 无所谓.",
+      "ex": [{ "cn": "这件事与他无关。", "py": "Zhè jiàn shì yǔ tā wúguān.", "vi": "Việc này không liên quan tới anh ấy." }] }
+  ],
+  "grammar": [
+    { "t": "连 … 都/也 … — cấu trúc nhấn mạnh",
+      "b": "连 + thành phần nhấn mạnh + 都/也 + động từ",
+      "d": "Ý: ngay cả trường hợp cực đoan này còn vậy, huống chi cái khác. 连小孩子都懂 (trẻ con còn hiểu). Bắt buộc phải có 都 hoặc 也 — thiếu là sai ngữ pháp.",
+      "ex": [
+        { "cn": "他忙得连饭都没吃。", "py": "Tā máng de lián fàn dōu méi chī.", "vi": "Anh ấy bận tới mức cơm cũng chưa ăn." },
+        { "cn": "这个字连老师也不认识。", "py": "Zhège zì lián lǎoshī yě bú rènshi.", "vi": "Chữ này ngay cả thầy cũng không biết." }
+      ] },
+    { "t": "对于 và 关于 — đối với hay về",
+      "b": "对于 + đối tượng của thái độ · 关于 + chủ đề",
+      "d": "对于孩子的教育，父母很重视 (thái độ đối với). 关于中国文化的书 (sách VỀ chủ đề). 关于 đứng được trước danh từ làm định ngữ, 对于 thì không.",
+      "ex": [
+        { "cn": "对于这个决定，我完全支持。", "py": "Duìyú zhège juédìng, wǒ wánquán zhīchí.", "vi": "Đối với quyết định này, tôi hoàn toàn ủng hộ." }
+      ] },
+    { "t": "难道 và 千万 — giọng điệu của người bản xứ",
+      "b": "难道 … 吗？(hỏi tu từ) · 千万别 … (dặn dò)",
+      "d": "Hai phó từ này không thêm nghĩa mà thêm CẢM XÚC. Dùng đúng thì câu tiếng Trung của bạn nghe như người bản xứ chứ không như câu dịch. 难道 mang giọng trách, 千万 mang giọng lo lắng quan tâm.",
+      "ex": [
+        { "cn": "难道这也是我的错吗？", "py": "Nándào zhè yě shì wǒ de cuò ma?", "vi": "Chẳng lẽ cái này cũng là lỗi của tôi?" },
+        { "cn": "千万别告诉他。", "py": "Qiānwàn bié gàosu tā.", "vi": "Chớ có nói với anh ấy đấy." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "请按照顺序排队。", "py": "Qǐng ànzhào shùnxù páiduì.", "vi": "Xin xếp hàng theo thứ tự." },
+    { "cn": "通过这次经历，我学到了很多。", "py": "Tōngguò zhè cì jīnglì, wǒ xué dào le hěn duō.", "vi": "Qua lần trải nghiệm này, tôi học được nhiều." },
+    { "cn": "这项工作由他负责。", "py": "Zhè xiàng gōngzuò yóu tā fùzé.", "vi": "Công việc này do anh ấy phụ trách." },
+    { "cn": "对于学生来说，健康最重要。", "py": "Duìyú xuésheng lái shuō, jiànkāng zuì zhòngyào.", "vi": "Đối với học sinh mà nói, sức khoẻ quan trọng nhất." },
+    { "cn": "随着技术的发展，生活更方便了。", "py": "Suízhe jìshù de fāzhǎn, shēnghuó gèng fāngbiàn le.", "vi": "Cùng với sự phát triển công nghệ, cuộc sống tiện hơn." },
+    { "cn": "他连一个汉字都不会写。", "py": "Tā lián yí ge Hànzì dōu bú huì xiě.", "vi": "Anh ấy đến một chữ Hán cũng không biết viết." },
+    { "cn": "你到底去还是不去？", "py": "Nǐ dàodǐ qù háishi bú qù?", "vi": "Rốt cuộc bạn đi hay không đi?" },
+    { "cn": "难道你一点儿也不担心？", "py": "Nándào nǐ yìdiǎnr yě bù dānxīn?", "vi": "Chẳng lẽ bạn không lo chút nào?" },
+    { "cn": "千万别忘了带护照。", "py": "Qiānwàn bié wàng le dài hùzhào.", "vi": "Chớ có quên mang hộ chiếu." },
+    { "cn": "去还是不去，我无所谓。", "py": "Qù háishi bú qù, wǒ wúsuǒwèi.", "vi": "Đi hay không tôi cũng chẳng sao." }
+  ]
+}

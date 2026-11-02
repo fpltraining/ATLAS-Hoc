@@ -1,0 +1,71 @@
+{
+  "id": 91,
+  "cn": "手上的动作",
+  "title": "Động tác của tay",
+  "goal": "Mười động từ tay — và thấy sức mạnh của bộ 扌 khi đoán nghĩa.",
+  "words": [
+    { "w": "拉", "py": "lā", "hv": "lạp", "vi": "kéo", "pos": "động từ",
+      "note": "Bộ 扌 (tay). Trái nghĩa với 推. Cửa ở Trung Quốc ghi 拉 (kéo) và 推 (đẩy).",
+      "ex": [{ "cn": "请拉门。", "py": "Qǐng lā mén.", "vi": "Xin kéo cửa." }] },
+    { "w": "推", "py": "tuī", "hv": "thôi", "vi": "đẩy", "pos": "động từ",
+      "note": "Bộ 扌. Tiếng Việt: \"thôi thúc\", \"thôi động\". Cũng có trong 推迟 (bài 90).",
+      "ex": [{ "cn": "把门推开。", "py": "Bǎ mén tuī kāi.", "vi": "Đẩy cửa ra." }] },
+    { "w": "抬", "py": "tái", "hv": "đài", "vi": "khiêng, nhấc lên", "pos": "động từ",
+      "note": "Bộ 扌. Khiêng vật nặng bằng nhiều người, hoặc nhấc lên: 抬头 (ngẩng đầu).",
+      "ex": [{ "cn": "我们一起抬这张桌子。", "py": "Wǒmen yìqǐ tái zhè zhāng zhuōzi.", "vi": "Chúng ta cùng khiêng cái bàn này." }] },
+    { "w": "举", "py": "jǔ", "hv": "cử", "vi": "giơ lên; nêu ra", "pos": "động từ",
+      "note": "Chính là \"cử\" tiếng Việt (\"cử chỉ\", \"cử tạ\"). 举手 (giơ tay), 举例子 (nêu ví dụ). Cũng có trong 举办, 举行 (bài 95).",
+      "ex": [{ "cn": "有问题请举手。", "py": "Yǒu wèntí qǐng jǔ shǒu.", "vi": "Có câu hỏi xin giơ tay." }] },
+    { "w": "拍", "py": "pāi", "hv": "phách", "vi": "vỗ; chụp (ảnh)", "pos": "động từ",
+      "note": "Bộ 扌. Hai nghĩa: vỗ tay (拍手) và chụp ảnh (拍照). Cũng là dụng cụ: 球拍 (cái vợt).",
+      "ex": [{ "cn": "我们拍张照吧。", "py": "Wǒmen pāi zhāng zhào ba.", "vi": "Chúng ta chụp một tấm ảnh nhé." }] },
+    { "w": "敲", "py": "qiāo", "hv": "xao", "vi": "gõ", "pos": "động từ",
+      "note": "Tiếng Việt: \"xao\" trong \"lao xao\". 敲门 (gõ cửa) — phép lịch sự bắt buộc trước khi vào phòng.",
+      "ex": [{ "cn": "进来前请先敲门。", "py": "Jìnlai qián qǐng xiān qiāo mén.", "vi": "Trước khi vào xin gõ cửa." }] },
+    { "w": "抱", "py": "bào", "hv": "bão", "vi": "ôm, bế", "pos": "động từ",
+      "note": "Bộ 扌 + 包 (bọc, bài 43). Nghĩa đen: dùng tay bọc lấy. Cũng có trong 抱歉 (bài 64).",
+      "ex": [{ "cn": "妈妈抱着孩子。", "py": "Māma bào zhe háizi.", "vi": "Mẹ đang bế con." }] },
+    { "w": "指", "py": "zhǐ", "hv": "chỉ", "vi": "chỉ (bằng ngón tay); ngón tay", "pos": "động từ / danh từ",
+      "note": "Chính là \"chỉ\" tiếng Việt. Bộ 扌. Ngón tay là 手指. Chỉ vào người khác bị coi là bất lịch sự.",
+      "ex": [{ "cn": "他指着地图说话。", "py": "Tā zhǐ zhe dìtú shuōhuà.", "vi": "Anh ấy vừa chỉ bản đồ vừa nói." }] },
+    { "w": "擦", "py": "cā", "hv": "sát", "vi": "lau, chùi", "pos": "động từ",
+      "note": "Bộ 扌. Tiếng Việt: \"sát\" trong \"ma sát\", \"cọ xát\". 擦桌子 (lau bàn), 擦黑板 (lau bảng).",
+      "ex": [{ "cn": "请把桌子擦干净。", "py": "Qǐng bǎ zhuōzi cā gānjìng.", "vi": "Xin lau bàn cho sạch." }] },
+    { "w": "弹钢琴", "py": "tán gāngqín", "hv": "đàn cương cầm", "vi": "chơi đàn dương cầm", "pos": "động từ",
+      "note": "弹 (gảy, bật) + 钢琴 (piano — 钢 thép + 琴 đàn). Tiếng Việt gọi \"dương cầm\"; chữ 弹 chính là \"đàn\".",
+      "ex": [{ "cn": "她会弹钢琴。", "py": "Tā huì tán gāngqín.", "vi": "Cô ấy biết chơi piano." }] }
+  ],
+  "grammar": [
+    { "t": "Bộ 扌 — nhìn là biết động tác của tay",
+      "b": "拉 · 推 · 抬 · 拍 · 抱 · 指 · 擦 · 打 · 找 · 换",
+      "d": "Tám trong mười từ bài này mang bộ 扌 (đề thủ bàng). Gặp chữ lạ có bộ này, bạn đoán ngay đó là một hành động làm bằng tay — đã hiểu được nửa nghĩa mà chưa cần tra.",
+      "ex": [
+        { "cn": "拉 · 推 · 抬 · 拍", "py": "lā · tuī · tái · pāi", "vi": "kéo · đẩy · khiêng · vỗ" },
+        { "cn": "抱 · 指 · 擦", "py": "bào · zhǐ · cā", "vi": "ôm · chỉ · lau" }
+      ] },
+    { "t": "拉 và 推 — hai chữ trên mọi cánh cửa",
+      "b": "拉 = kéo · 推 = đẩy",
+      "d": "Hai chữ này dán trên cửa khắp Trung Quốc. Nhớ được là không còn cảnh đẩy nhầm cửa kéo. Mẹo: 推 có bộ 扌 và 隹 (chim) — đẩy cho chim bay đi.",
+      "ex": [
+        { "cn": "门上写着「推」。", "py": "Mén shàng xiě zhe \"tuī\".", "vi": "Trên cửa ghi chữ \"đẩy\"." }
+      ] },
+    { "t": "Động từ + 着 tả tư thế đang giữ",
+      "b": "抱着 · 指着 · 拿着 · 戴着",
+      "d": "Nhắc lại 着 ở bài 29. Với động từ tay, 着 tả TRẠNG THÁI đang duy trì: 抱着孩子 (đang bế con), 拿着一本书 (đang cầm quyển sách). Rất hay dùng để tả người trong ảnh.",
+      "ex": [
+        { "cn": "他手里拿着一把伞。", "py": "Tā shǒu lǐ ná zhe yì bǎ sǎn.", "vi": "Tay anh ấy cầm một cái ô." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这个门是拉的，不是推的。", "py": "Zhège mén shì lā de, bú shì tuī de.", "vi": "Cửa này là kéo, không phải đẩy." },
+    { "cn": "请帮我推一下车。", "py": "Qǐng bāng wǒ tuī yíxià chē.", "vi": "Giúp tôi đẩy xe một chút." },
+    { "cn": "箱子太重，两个人才抬得动。", "py": "Xiāngzi tài zhòng, liǎng ge rén cái tái de dòng.", "vi": "Thùng nặng quá, hai người mới khiêng nổi." },
+    { "cn": "知道答案的同学请举手。", "py": "Zhīdào dá'àn de tóngxué qǐng jǔ shǒu.", "vi": "Bạn nào biết đáp án xin giơ tay." },
+    { "cn": "我们在长城前拍了很多照片。", "py": "Wǒmen zài Chángchéng qián pāi le hěn duō zhàopiàn.", "vi": "Chúng tôi chụp nhiều ảnh trước Trường Thành." },
+    { "cn": "有人在敲门，去看看。", "py": "Yǒu rén zài qiāo mén, qù kànkan.", "vi": "Có người gõ cửa, ra xem đi." },
+    { "cn": "很久没见，他抱了抱我。", "py": "Hěn jiǔ méi jiàn, tā bào le bào wǒ.", "vi": "Lâu không gặp, anh ấy ôm tôi một cái." },
+    { "cn": "用手指着别人不礼貌。", "py": "Yòng shǒu zhǐ zhe biéren bù lǐmào.", "vi": "Chỉ tay vào người khác là bất lịch sự." },
+    { "cn": "吃完饭请把桌子擦一擦。", "py": "Chī wán fàn qǐng bǎ zhuōzi cā yi cā.", "vi": "Ăn xong xin lau bàn một chút." },
+    { "cn": "她从五岁开始学弹钢琴。", "py": "Tā cóng wǔ suì kāishǐ xué tán gāngqín.", "vi": "Cô ấy học piano từ năm tuổi." }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": 40,
+  "cn": "城市生活",
+  "title": "Trong thành phố",
+  "goal": "Gọi tên các địa điểm trong thành phố và tả vị trí bằng cấu trúc 在…的…",
+  "words": [
+    { "w": "城市", "py": "chéngshì", "hv": "thành thị", "vi": "thành phố", "pos": "danh từ",
+      "note": "Chính là \"thành thị\" tiếng Việt: 城 (thành luỹ) + 市 (chợ). Trái nghĩa là 农村 (nông thôn).",
+      "ex": [{ "cn": "北京是一个大城市。", "py": "Běijīng shì yí ge dà chéngshì.", "vi": "Bắc Kinh là một thành phố lớn." }] },
+    { "w": "地方", "py": "dìfang", "hv": "địa phương", "vi": "nơi, chỗ", "pos": "danh từ",
+      "note": "Chính là \"địa phương\" tiếng Việt, nhưng tiếng Trung dùng rộng hơn — bất cứ \"chỗ\" nào cũng là 地方.",
+      "ex": [{ "cn": "这个地方很漂亮。", "py": "Zhège dìfang hěn piàoliang.", "vi": "Chỗ này rất đẹp." }] },
+    { "w": "附近", "py": "fùjìn", "hv": "phụ cận", "vi": "gần đây, lân cận", "pos": "danh từ",
+      "note": "Chính là \"phụ cận\" tiếng Việt. 近 là chữ \"cận\" (gần) đã học ở bài 24.",
+      "ex": [{ "cn": "附近有超市吗？", "py": "Fùjìn yǒu chāoshì ma?", "vi": "Gần đây có siêu thị không?" }] },
+    { "w": "中间", "py": "zhōngjiān", "hv": "trung gian", "vi": "ở giữa", "pos": "danh từ vị trí",
+      "note": "Tiếng Việt: \"trung gian\", \"trung tâm\". Nằm giữa hai vật thì dùng 在 A 和 B 中间.",
+      "ex": [{ "cn": "银行在书店和超市中间。", "py": "Yínháng zài shūdiàn hé chāoshì zhōngjiān.", "vi": "Ngân hàng ở giữa hiệu sách và siêu thị." }] },
+    { "w": "街道", "py": "jiēdào", "hv": "nhai đạo", "vi": "đường phố", "pos": "danh từ",
+      "note": "街 (phố) + 道 (đường). Nói tắt là 街: 上街 = ra phố. 道 cũng là \"đạo\" trong \"đạo lý\", \"đường đạo\".",
+      "ex": [{ "cn": "这条街道很干净。", "py": "Zhè tiáo jiēdào hěn gānjìng.", "vi": "Con phố này rất sạch." }] },
+    { "w": "公园", "py": "gōngyuán", "hv": "công viên", "vi": "công viên", "pos": "danh từ",
+      "note": "Chính là \"công viên\" tiếng Việt: 公 (công cộng) + 园 (vườn).",
+      "ex": [{ "cn": "我们去公园走走吧。", "py": "Wǒmen qù gōngyuán zǒuzou ba.", "vi": "Chúng ta ra công viên đi dạo đi." }] },
+    { "w": "银行", "py": "yínháng", "hv": "ngân hàng", "vi": "ngân hàng", "pos": "danh từ",
+      "note": "Chính là \"ngân hàng\" tiếng Việt: 银 (bạc, bộ 钅 kim loại) + 行. Chú ý 行 ở đây đọc háng, không phải xíng.",
+      "ex": [{ "cn": "我去银行取钱。", "py": "Wǒ qù yínháng qǔ qián.", "vi": "Tôi đi ngân hàng rút tiền." }] },
+    { "w": "超市", "py": "chāoshì", "hv": "siêu thị", "vi": "siêu thị", "pos": "danh từ",
+      "note": "Chính là \"siêu thị\" tiếng Việt: 超 (siêu, vượt) + 市 (chợ). Nói đủ là 超级市场.",
+      "ex": [{ "cn": "超市里的水果很新鲜。", "py": "Chāoshì lǐ de shuǐguǒ hěn xīnxiān.", "vi": "Hoa quả trong siêu thị rất tươi." }] },
+    { "w": "图书馆", "py": "túshūguǎn", "hv": "đồ thư quán", "vi": "thư viện", "pos": "danh từ",
+      "note": "图 (đồ, tranh) + 书 (sách) + 馆 (quán). Tiếng Việt gọi là \"thư viện\", cùng chữ 书 (thư).",
+      "ex": [{ "cn": "我在图书馆看书。", "py": "Wǒ zài túshūguǎn kàn shū.", "vi": "Tôi đọc sách ở thư viện." }] },
+    { "w": "洗手间", "py": "xǐshǒujiān", "hv": "tẩy thủ gian", "vi": "nhà vệ sinh", "pos": "danh từ",
+      "note": "洗 (rửa) + 手 (tay) + 间 (gian phòng) — \"phòng rửa tay\", cách nói lịch sự. Còn gọi là 卫生间.",
+      "ex": [{ "cn": "请问洗手间在哪儿？", "py": "Qǐngwèn xǐshǒujiān zài nǎr?", "vi": "Cho hỏi nhà vệ sinh ở đâu?" }] }
+  ],
+  "grammar": [
+    { "t": "附近有 … 吗？ — hỏi quanh đây có gì",
+      "b": "(nơi chốn) + 有 + vật + 吗?",
+      "d": "Mẫu câu tồn tại: nơi chốn đứng đầu, rồi 有, rồi thứ tồn tại. Rất khác tiếng Anh (there is) nhưng giống tiếng Việt: \"gần đây có siêu thị không?\".",
+      "ex": [
+        { "cn": "附近有银行吗？", "py": "Fùjìn yǒu yínháng ma?", "vi": "Gần đây có ngân hàng không?" },
+        { "cn": "学校附近有很多饭馆。", "py": "Xuéxiào fùjìn yǒu hěn duō fànguǎn.", "vi": "Gần trường có nhiều quán ăn." }
+      ] },
+    { "t": "在 A 和 B 中间 — nằm giữa hai thứ",
+      "b": "在 + A + 和 + B + 中间",
+      "d": "Cấu trúc chỉ vị trí ba thành phần. Chú ý 中间 đứng CUỐI, sau cả hai mốc — đúng quy tắc \"từ chỉ vị trí đứng sau danh từ\" của bài 11.",
+      "ex": [
+        { "cn": "公园在学校和医院中间。", "py": "Gōngyuán zài xuéxiào hé yīyuàn zhōngjiān.", "vi": "Công viên nằm giữa trường học và bệnh viện." },
+        { "cn": "他坐在我和妹妹中间。", "py": "Tā zuò zài wǒ hé mèimei zhōngjiān.", "vi": "Cậu ấy ngồi giữa tôi và em gái." }
+      ] },
+    { "t": "Đuôi 馆 và 店 — tên các loại cơ sở",
+      "b": "馆 = nơi lớn có tổ chức · 店 = cửa hàng",
+      "d": "图书馆 (thư viện), 饭馆 (quán ăn), 宾馆 (khách sạn) đều dùng 馆. Còn 商店 (cửa hàng), 书店 (hiệu sách) dùng 店. Biết hai đuôi này là đoán được rất nhiều tên địa điểm.",
+      "ex": [
+        { "cn": "图书馆 · 饭馆 · 宾馆", "py": "túshūguǎn · fànguǎn · bīnguǎn", "vi": "thư viện · quán ăn · khách sạn" },
+        { "cn": "商店 · 书店 · 饭店", "py": "shāngdiàn · shūdiàn · fàndiàn", "vi": "cửa hàng · hiệu sách · nhà hàng" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这个城市不太大，但是很干净。", "py": "Zhège chéngshì bú tài dà, dànshì hěn gānjìng.", "vi": "Thành phố này không lớn lắm nhưng rất sạch." },
+    { "cn": "请问，附近有超市吗？", "py": "Qǐngwèn, fùjìn yǒu chāoshì ma?", "vi": "Xin hỏi, gần đây có siêu thị không?" },
+    { "cn": "有，就在银行旁边。", "py": "Yǒu, jiù zài yínháng pángbiān.", "vi": "Có, ngay cạnh ngân hàng." },
+    { "cn": "图书馆在公园和学校中间。", "py": "Túshūguǎn zài gōngyuán hé xuéxiào zhōngjiān.", "vi": "Thư viện nằm giữa công viên và trường học." },
+    { "cn": "我每个周末都去图书馆。", "py": "Wǒ měi ge zhōumò dōu qù túshūguǎn.", "vi": "Cuối tuần nào tôi cũng đi thư viện." },
+    { "cn": "这条街道上有很多商店。", "py": "Zhè tiáo jiēdào shàng yǒu hěn duō shāngdiàn.", "vi": "Trên phố này có nhiều cửa hàng." },
+    { "cn": "老人们喜欢在公园里锻炼。", "py": "Lǎorénmen xǐhuan zài gōngyuán lǐ duànliàn.", "vi": "Người già thích tập thể dục trong công viên." },
+    { "cn": "请问洗手间怎么走？", "py": "Qǐngwèn xǐshǒujiān zěnme zǒu?", "vi": "Xin hỏi nhà vệ sinh đi lối nào?" },
+    { "cn": "这个地方我来过一次。", "py": "Zhège dìfang wǒ lái guo yí cì.", "vi": "Chỗ này tôi từng đến một lần." },
+    { "cn": "银行几点关门？", "py": "Yínháng jǐ diǎn guānmén?", "vi": "Mấy giờ ngân hàng đóng cửa?" }
+  ]
+}

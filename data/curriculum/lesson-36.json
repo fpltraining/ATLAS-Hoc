@@ -1,0 +1,75 @@
+{
+  "id": 36,
+  "cn": "在学校",
+  "title": "Trường lớp",
+  "goal": "Nói về lớp học, bài vở, điểm số — bài giàu từ Hán Việt nhất từ đầu giáo trình.",
+  "words": [
+    { "w": "班", "py": "bān", "hv": "ban", "vi": "lớp (học); ca (làm việc)", "pos": "danh từ",
+      "note": "Đã gặp trong 上班 (đi làm) ở bài 20. Ở trường thì 班 là lớp: 我们班 = lớp chúng tôi.",
+      "ex": [{ "cn": "我们班有三十个学生。", "py": "Wǒmen bān yǒu sānshí ge xuésheng.", "vi": "Lớp chúng tôi có ba mươi học sinh." }] },
+    { "w": "年级", "py": "niánjí", "hv": "niên cấp", "vi": "khối lớp, năm học", "pos": "danh từ",
+      "note": "年 (năm) + 级 (cấp bậc). 级 có bộ 纟. Tiếng Việt: \"cấp bậc\", \"đẳng cấp\".",
+      "ex": [{ "cn": "你上几年级？", "py": "Nǐ shàng jǐ niánjí?", "vi": "Bạn học lớp mấy?" }] },
+    { "w": "校长", "py": "xiàozhǎng", "hv": "hiệu trưởng", "vi": "hiệu trưởng", "pos": "danh từ",
+      "note": "Chính là \"hiệu trưởng\" tiếng Việt. Chữ 长 ở đây đọc zhǎng (trưởng), không phải cháng (dài).",
+      "ex": [{ "cn": "校长在办公室。", "py": "Xiàozhǎng zài bàngōngshì.", "vi": "Thầy hiệu trưởng ở văn phòng." }] },
+    { "w": "作业", "py": "zuòyè", "hv": "tác nghiệp", "vi": "bài tập về nhà", "pos": "danh từ",
+      "note": "作 (làm) + 业 (nghiệp, việc). Tiếng Việt: \"tác phẩm\", \"nghiệp vụ\". Làm bài tập là 做作业.",
+      "ex": [{ "cn": "我在做作业。", "py": "Wǒ zài zuò zuòyè.", "vi": "Tôi đang làm bài tập." }] },
+    { "w": "练习", "py": "liànxí", "hv": "luyện tập", "vi": "luyện tập; bài luyện", "pos": "động từ / danh từ",
+      "note": "Chính là \"luyện tập\" tiếng Việt. 练 có bộ 纟 (sợi tơ) — luyện như kéo sợi, làm đi làm lại.",
+      "ex": [{ "cn": "我每天练习写汉字。", "py": "Wǒ měi tiān liànxí xiě Hànzì.", "vi": "Ngày nào tôi cũng luyện viết chữ Hán." }] },
+    { "w": "复习", "py": "fùxí", "hv": "phục tập", "vi": "ôn tập, ôn lại", "pos": "động từ",
+      "note": "复 = \"phục\" trong \"khôi phục\", \"lặp lại\". Khác 练习 (luyện kỹ năng mới) — 复习 là xem lại cái đã học.",
+      "ex": [{ "cn": "考试前要复习。", "py": "Kǎoshì qián yào fùxí.", "vi": "Trước khi thi phải ôn bài." }] },
+    { "w": "成绩", "py": "chéngjì", "hv": "thành tích", "vi": "thành tích, điểm số", "pos": "danh từ",
+      "note": "Chính là \"thành tích\" tiếng Việt. 绩 cũng có bộ 纟 — dệt nên kết quả.",
+      "ex": [{ "cn": "他的成绩很好。", "py": "Tā de chéngjì hěn hǎo.", "vi": "Điểm của cậu ấy rất tốt." }] },
+    { "w": "数学", "py": "shùxué", "hv": "số học", "vi": "môn toán", "pos": "danh từ",
+      "note": "数 (số) + 学 (học). Ghép 学 vào sau là ra tên môn: 数学, 化学 (hoá học), 文学 (văn học).",
+      "ex": [{ "cn": "我最喜欢数学课。", "py": "Wǒ zuì xǐhuan shùxué kè.", "vi": "Tôi thích môn toán nhất." }] },
+    { "w": "词典", "py": "cídiǎn", "hv": "từ điển", "vi": "từ điển", "pos": "danh từ",
+      "note": "Chính là \"từ điển\" tiếng Việt. 词 có bộ 讠 (lời nói). Còn gọi là 字典 zìdiǎn (tự điển — tra từng chữ).",
+      "ex": [{ "cn": "这个词我要查词典。", "py": "Zhège cí wǒ yào chá cídiǎn.", "vi": "Từ này tôi phải tra từ điển." }] },
+    { "w": "笔记本", "py": "bǐjìběn", "hv": "bút ký bản", "vi": "quyển vở; máy tính xách tay", "pos": "danh từ",
+      "note": "笔 (bút) + 记 (ghi) + 本 (quyển). Nay còn nghĩa laptop: 笔记本电脑.",
+      "ex": [{ "cn": "请把作业写在笔记本上。", "py": "Qǐng bǎ zuòyè xiě zài bǐjìběn shàng.", "vi": "Hãy viết bài tập vào vở." }] }
+  ],
+  "grammar": [
+    { "t": "Cả bài này là tiếng Việt viết bằng chữ Hán",
+      "b": "校长 hiệu trưởng · 练习 luyện tập · 成绩 thành tích · 词典 từ điển",
+      "d": "Đây là bài thể hiện rõ nhất lợi thế của người Việt. Bảy trên mười từ có âm Hán Việt trùng khít nghĩa tiếng Việt hiện đại. Mẹo học: gặp từ mới hai chữ, hãy đọc âm Hán Việt lên trước — rất nhiều lần bạn sẽ tự đoán ra nghĩa.",
+      "ex": [
+        { "cn": "校长", "py": "xiàozhǎng", "vi": "hiệu trưởng" },
+        { "cn": "成绩", "py": "chéngjì", "vi": "thành tích" },
+        { "cn": "词典", "py": "cídiǎn", "vi": "từ điển" }
+      ] },
+    { "t": "复习 và 练习 — ôn lại hay luyện mới?",
+      "b": "复习 = xem lại cái đã học · 练习 = làm đi làm lại cho thạo",
+      "d": "复习课文 (ôn lại bài khoá) nhưng 练习写字 (luyện viết chữ). Nhớ mẹo: 复 là \"lặp lại\", 练 là \"rèn\".",
+      "ex": [
+        { "cn": "我在复习昨天的课。", "py": "Wǒ zài fùxí zuótiān de kè.", "vi": "Tôi đang ôn bài hôm qua." },
+        { "cn": "我要多练习说话。", "py": "Wǒ yào duō liànxí shuōhuà.", "vi": "Tôi phải luyện nói nhiều hơn." }
+      ] },
+    { "t": "Ghép 学 để gọi tên môn học",
+      "b": "gốc + 学",
+      "d": "Quy tắc ghép chữ cực kỳ hữu ích: biết 学 (học) rồi thì đoán được cả loạt tên môn. Tiếng Việt cũng vậy: số học, hoá học, văn học, y học.",
+      "ex": [
+        { "cn": "数学", "py": "shùxué", "vi": "toán học" },
+        { "cn": "文学", "py": "wénxué", "vi": "văn học" },
+        { "cn": "医学", "py": "yīxué", "vi": "y học" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你上几年级？", "py": "Nǐ shàng jǐ niánjí?", "vi": "Bạn học lớp mấy?" },
+    { "cn": "我们班一共有二十五个人。", "py": "Wǒmen bān yígòng yǒu èrshíwǔ ge rén.", "vi": "Lớp tôi tất cả có hai mươi lăm người." },
+    { "cn": "今天的作业不太多。", "py": "Jīntiān de zuòyè bú tài duō.", "vi": "Bài tập hôm nay không nhiều lắm." },
+    { "cn": "我每天练习写二十个汉字。", "py": "Wǒ měi tiān liànxí xiě èrshí ge Hànzì.", "vi": "Ngày nào tôi cũng luyện viết hai mươi chữ Hán." },
+    { "cn": "明天考试，我要复习一下。", "py": "Míngtiān kǎoshì, wǒ yào fùxí yíxià.", "vi": "Mai thi, tôi phải ôn lại chút." },
+    { "cn": "这次考试成绩怎么样？", "py": "Zhè cì kǎoshì chéngjì zěnmeyàng?", "vi": "Kết quả kỳ thi lần này thế nào?" },
+    { "cn": "我的数学成绩比中文好。", "py": "Wǒ de shùxué chéngjì bǐ Zhōngwén hǎo.", "vi": "Điểm toán của tôi tốt hơn tiếng Trung." },
+    { "cn": "不认识的字可以查词典。", "py": "Bú rènshi de zì kěyǐ chá cídiǎn.", "vi": "Chữ không biết thì tra từ điển." },
+    { "cn": "校长要跟我们说话。", "py": "Xiàozhǎng yào gēn wǒmen shuōhuà.", "vi": "Thầy hiệu trưởng muốn nói chuyện với chúng ta." },
+    { "cn": "我把笔记本忘在教室了。", "py": "Wǒ bǎ bǐjìběn wàng zài jiàoshì le.", "vi": "Tôi để quên vở ở lớp rồi." }
+  ]
+}

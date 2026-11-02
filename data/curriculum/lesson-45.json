@@ -1,0 +1,74 @@
+{
+  "id": 45,
+  "cn": "在饭馆",
+  "title": "Ở quán ăn",
+  "goal": "Đọc thực đơn, gọi đồ uống, khen chê món ăn và dùng động từ lặp để nói \"thử một chút\".",
+  "words": [
+    { "w": "蛋糕", "py": "dàngāo", "hv": "đản cao", "vi": "bánh ngọt, bánh kem", "pos": "danh từ",
+      "note": "蛋 (trứng, bài 23) + 糕 (bánh, bộ 米 gạo). Bánh sinh nhật là 生日蛋糕.",
+      "ex": [{ "cn": "生日蛋糕很好吃。", "py": "Shēngrì dàngāo hěn hǎochī.", "vi": "Bánh sinh nhật rất ngon." }] },
+    { "w": "面包", "py": "miànbāo", "hv": "diện bao", "vi": "bánh mì", "pos": "danh từ",
+      "note": "面 (diện — ở đây nghĩa là bột mì) + 包 (bao, bài 43). Nghĩa đen: gói bột — đúng là ổ bánh mì.",
+      "ex": [{ "cn": "我早上吃面包。", "py": "Wǒ zǎoshang chī miànbāo.", "vi": "Buổi sáng tôi ăn bánh mì." }] },
+    { "w": "香蕉", "py": "xiāngjiāo", "hv": "hương tiêu", "vi": "quả chuối", "pos": "danh từ",
+      "note": "香 (thơm) + 蕉 (cây chuối). Cả hai đều có bộ 艹 hoặc liên quan cây cỏ. Tiếng Việt: \"hương thơm\".",
+      "ex": [{ "cn": "我最喜欢吃香蕉。", "py": "Wǒ zuì xǐhuan chī xiāngjiāo.", "vi": "Tôi thích ăn chuối nhất." }] },
+    { "w": "葡萄", "py": "pútao", "hv": "bồ đào", "vi": "quả nho", "pos": "danh từ",
+      "note": "Chính là \"bồ đào\" trong \"rượu bồ đào\" của thơ cổ Việt Nam. Cả hai chữ đều có bộ 艹.",
+      "ex": [{ "cn": "这些葡萄很甜。", "py": "Zhèxiē pútao hěn tián.", "vi": "Mấy quả nho này rất ngọt." }] },
+    { "w": "啤酒", "py": "píjiǔ", "hv": "bia tửu", "vi": "bia", "pos": "danh từ",
+      "note": "啤 là mượn âm \"beer\", 酒 là \"tửu\" (rượu) có bộ 氵 (nước). Ghép âm Tây với chữ Hán.",
+      "ex": [{ "cn": "来两瓶啤酒。", "py": "Lái liǎng píng píjiǔ.", "vi": "Cho hai chai bia." }] },
+    { "w": "饮料", "py": "yǐnliào", "hv": "ẩm liệu", "vi": "đồ uống, nước ngọt", "pos": "danh từ",
+      "note": "饮 = \"ẩm\" trong \"ẩm thực\", có bộ 饣 (ăn uống). 料 = \"liệu\" (nguyên liệu).",
+      "ex": [{ "cn": "你要喝什么饮料？", "py": "Nǐ yào hē shénme yǐnliào?", "vi": "Bạn muốn uống đồ gì?" }] },
+    { "w": "菜单", "py": "càidān", "hv": "thái đơn", "vi": "thực đơn", "pos": "danh từ",
+      "note": "菜 (món ăn, bài 9) + 单 (đơn, tờ). Tiếng Việt gọi là \"thực đơn\" — cùng chữ 单 (đơn).",
+      "ex": [{ "cn": "服务员，请给我菜单。", "py": "Fúwùyuán, qǐng gěi wǒ càidān.", "vi": "Bạn ơi, cho tôi xin thực đơn." }] },
+    { "w": "甜", "py": "tián", "hv": "điềm", "vi": "ngọt", "pos": "tính từ",
+      "note": "舌 (lưỡi) + 甘 (ngọt) — vị ngọt trên đầu lưỡi. Một chữ hội ý rất hay.",
+      "ex": [{ "cn": "这个太甜了。", "py": "Zhège tài tián le.", "vi": "Cái này ngọt quá." }] },
+    { "w": "新鲜", "py": "xīnxiān", "hv": "tân tiên", "vi": "tươi, mới mẻ", "pos": "tính từ",
+      "note": "新 (mới, bài 21) + 鲜 (tươi) — mà 鲜 = 鱼 (cá) + 羊 (dê), hai thứ phải ăn thật tươi!",
+      "ex": [{ "cn": "这些水果很新鲜。", "py": "Zhèxiē shuǐguǒ hěn xīnxiān.", "vi": "Mấy loại quả này rất tươi." }] },
+    { "w": "试", "py": "shì", "hv": "thí", "vi": "thử", "pos": "động từ",
+      "note": "Bộ 讠 (lời nói). Tiếng Việt: \"thí nghiệm\", \"khảo thí\". Thử đồ ăn, thử quần áo, thử làm — đều dùng 试.",
+      "ex": [{ "cn": "你试试这个菜。", "py": "Nǐ shìshi zhège cài.", "vi": "Bạn thử món này xem." }] }
+  ],
+  "grammar": [
+    { "t": "Động từ LẶP LẠI — làm nhẹ giọng đi",
+      "b": "试试 · 看看 · 尝尝 · 走走",
+      "d": "Lặp động từ hai lần nghĩa là \"làm một chút, thử xem\" — nghe nhẹ nhàng và thân thiện hơn hẳn. Tương đương với 一下 nhưng tự nhiên hơn trong khẩu ngữ. Từ hai chữ thì lặp cả khối: 打扫打扫, 休息休息.",
+      "ex": [
+        { "cn": "你试试。", "py": "Nǐ shìshi.", "vi": "Bạn thử xem." },
+        { "cn": "我看看菜单。", "py": "Wǒ kànkan càidān.", "vi": "Để tôi xem thực đơn chút." },
+        { "cn": "我们出去走走吧。", "py": "Wǒmen chūqu zǒuzou ba.", "vi": "Chúng ta ra ngoài đi dạo chút đi." }
+      ] },
+    { "t": "来 dùng để gọi món",
+      "b": "来 + số lượng + món",
+      "d": "Trong quán ăn, 来 không có nghĩa \"đến\" mà nghĩa là \"cho tôi\". Đây là cách nói cực kỳ tự nhiên của người bản xứ: 来两瓶啤酒 nghe sành hơn 我要两瓶啤酒.",
+      "ex": [
+        { "cn": "来一碗米饭。", "py": "Lái yì wǎn mǐfàn.", "vi": "Cho một bát cơm." },
+        { "cn": "再来一个菜。", "py": "Zài lái yí ge cài.", "vi": "Thêm một món nữa." }
+      ] },
+    { "t": "Các vị cơ bản",
+      "b": "甜 ngọt · 酸 chua · 苦 đắng · 辣 cay · 咸 mặn",
+      "d": "Người Trung Quốc gọi đây là 五味 (ngũ vị) — tiếng Việt cũng có \"ngũ vị hương\". Trong bài này bạn học 甜; bốn vị còn lại rất đáng nhớ luôn vì chúng xuất hiện khắp thực đơn.",
+      "ex": [
+        { "cn": "这个菜有点儿辣。", "py": "Zhège cài yǒudiǎnr là.", "vi": "Món này hơi cay." },
+        { "cn": "葡萄又甜又新鲜。", "py": "Pútao yòu tián yòu xīnxiān.", "vi": "Nho vừa ngọt vừa tươi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "服务员，请给我看看菜单。", "py": "Fúwùyuán, qǐng gěi wǒ kànkan càidān.", "vi": "Bạn ơi, cho tôi xem thực đơn với." },
+    { "cn": "你们要喝什么饮料？", "py": "Nǐmen yào hē shénme yǐnliào?", "vi": "Các bạn uống gì?" },
+    { "cn": "来两瓶啤酒，谢谢。", "py": "Lái liǎng píng píjiǔ, xièxie.", "vi": "Cho hai chai bia, cảm ơn." },
+    { "cn": "这个菜太甜了，我不太喜欢。", "py": "Zhège cài tài tián le, wǒ bú tài xǐhuan.", "vi": "Món này ngọt quá, tôi không thích lắm." },
+    { "cn": "这里的鱼很新鲜。", "py": "Zhèlǐ de yú hěn xīnxiān.", "vi": "Cá ở đây rất tươi." },
+    { "cn": "你试试这个，很好吃。", "py": "Nǐ shìshi zhège, hěn hǎochī.", "vi": "Bạn thử cái này đi, ngon lắm." },
+    { "cn": "我早上一般吃面包喝牛奶。", "py": "Wǒ zǎoshang yìbān chī miànbāo hē niúnǎi.", "vi": "Buổi sáng tôi thường ăn bánh mì uống sữa." },
+    { "cn": "妈妈给我做了一个生日蛋糕。", "py": "Māma gěi wǒ zuò le yí ge shēngrì dàngāo.", "vi": "Mẹ làm cho tôi một chiếc bánh sinh nhật." },
+    { "cn": "香蕉和葡萄我都喜欢。", "py": "Xiāngjiāo hé pútao wǒ dōu xǐhuan.", "vi": "Chuối và nho tôi đều thích." },
+    { "cn": "我们点得太多了，吃不完。", "py": "Wǒmen diǎn de tài duō le, chī bu wán.", "vi": "Chúng ta gọi nhiều quá, ăn không hết." }
+  ]
+}

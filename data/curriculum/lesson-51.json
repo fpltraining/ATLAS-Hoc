@@ -1,0 +1,73 @@
+{
+  "id": 51,
+  "cn": "生活习惯",
+  "title": "Thói quen và quan hệ",
+  "goal": "Kể thói quen hằng ngày, xin nghỉ phép, và nói về quan hệ giữa người với người.",
+  "words": [
+    { "w": "刷牙", "py": "shuāyá", "hv": "loát nha", "vi": "đánh răng", "pos": "động từ",
+      "note": "刷 (chải, có bộ 刂) + 牙 (răng). Tiếng Việt: \"nha khoa\", \"nha sĩ\" — cùng chữ 牙.",
+      "ex": [{ "cn": "我每天早晚刷牙。", "py": "Wǒ měi tiān zǎo wǎn shuāyá.", "vi": "Ngày nào tôi cũng đánh răng sáng tối." }] },
+    { "w": "洗澡", "py": "xǐzǎo", "hv": "tẩy tảo", "vi": "tắm", "pos": "động từ",
+      "note": "Cả hai chữ đều có bộ 氵 (nước). 洗 là \"tẩy\" đã học ở bài 21. Là động từ ly hợp.",
+      "ex": [{ "cn": "我想先洗个澡。", "py": "Wǒ xiǎng xiān xǐ ge zǎo.", "vi": "Tôi muốn tắm cái đã." }] },
+    { "w": "习惯", "py": "xíguàn", "hv": "tập quán", "vi": "thói quen; quen với", "pos": "danh từ / động từ",
+      "note": "Chính là \"tập quán\" tiếng Việt. Vừa là danh từ (thói quen) vừa là động từ (quen với): 我习惯了.",
+      "ex": [{ "cn": "这是我的习惯。", "py": "Zhè shì wǒ de xíguàn.", "vi": "Đây là thói quen của tôi." }] },
+    { "w": "迟到", "py": "chídào", "hv": "trì đáo", "vi": "đến muộn", "pos": "động từ",
+      "note": "迟 (chậm trễ, bộ 辶) + 到 (đến). Tiếng Việt: \"trì hoãn\", \"trì trệ\".",
+      "ex": [{ "cn": "对不起，我迟到了。", "py": "Duìbuqǐ, wǒ chídào le.", "vi": "Xin lỗi, tôi đến muộn." }] },
+    { "w": "请假", "py": "qǐngjià", "hv": "thỉnh giả", "vi": "xin nghỉ phép", "pos": "động từ",
+      "note": "请 (xin, bài 2) + 假 (nghỉ). Chú ý 假 ở đây đọc jià (thanh 4). Là động từ ly hợp: 请一天假.",
+      "ex": [{ "cn": "我想请一天假。", "py": "Wǒ xiǎng qǐng yì tiān jià.", "vi": "Tôi muốn xin nghỉ một ngày." }] },
+    { "w": "照顾", "py": "zhàogù", "hv": "chiếu cố", "vi": "chăm sóc", "pos": "động từ",
+      "note": "Chính là \"chiếu cố\" tiếng Việt, nhưng nghĩa tiếng Trung là CHĂM SÓC thật sự, không mang sắc thái ban ơn.",
+      "ex": [{ "cn": "她在家照顾孩子。", "py": "Tā zài jiā zhàogù háizi.", "vi": "Cô ấy ở nhà chăm con." }] },
+    { "w": "关心", "py": "guānxīn", "hv": "quan tâm", "vi": "quan tâm", "pos": "động từ",
+      "note": "Chính là \"quan tâm\" tiếng Việt: 关 (liên quan) + 心 (lòng). Lại một thành viên gia đình chữ 心.",
+      "ex": [{ "cn": "谢谢你的关心。", "py": "Xièxie nǐ de guānxīn.", "vi": "Cảm ơn sự quan tâm của bạn." }] },
+    { "w": "关系", "py": "guānxi", "hv": "quan hệ", "vi": "quan hệ, mối liên hệ", "pos": "danh từ",
+      "note": "Chính là \"quan hệ\" tiếng Việt. Đã gặp trong 没关系 (bài 15) — nghĩa đen: \"không có liên quan gì\".",
+      "ex": [{ "cn": "他们的关系很好。", "py": "Tāmen de guānxi hěn hǎo.", "vi": "Quan hệ của họ rất tốt." }] },
+    { "w": "热情", "py": "rèqíng", "hv": "nhiệt tình", "vi": "nhiệt tình, nồng hậu", "pos": "tính từ",
+      "note": "Chính là \"nhiệt tình\" tiếng Việt: 热 (nóng, bài 15) + 情 (tình, có bộ 忄).",
+      "ex": [{ "cn": "这里的人很热情。", "py": "Zhèlǐ de rén hěn rèqíng.", "vi": "Người ở đây rất nhiệt tình." }] },
+    { "w": "欢迎", "py": "huānyíng", "hv": "hoan nghênh", "vi": "hoan nghênh, chào đón", "pos": "động từ",
+      "note": "Chính là \"hoan nghênh\" tiếng Việt: 欢 (vui) + 迎 (đón, bộ 辶). Biển hiệu khắp Trung Quốc ghi 欢迎光临.",
+      "ex": [{ "cn": "欢迎你来我家！", "py": "Huānyíng nǐ lái wǒ jiā!", "vi": "Hoan nghênh bạn đến nhà tôi!" }] }
+  ],
+  "grammar": [
+    { "t": "习惯 vừa là danh từ vừa là động từ",
+      "b": "有…的习惯 (danh từ) · 习惯了 (động từ)",
+      "d": "Nói về thói quen thì dùng như danh từ: 我有早起的习惯. Nói đã quen với hoàn cảnh thì dùng như động từ: 我已经习惯了这里的天气.",
+      "ex": [
+        { "cn": "他有早睡早起的习惯。", "py": "Tā yǒu zǎo shuì zǎo qǐ de xíguàn.", "vi": "Anh ấy có thói quen ngủ sớm dậy sớm." },
+        { "cn": "我还不习惯这里的生活。", "py": "Wǒ hái bù xíguàn zhèlǐ de shēnghuó.", "vi": "Tôi vẫn chưa quen với cuộc sống ở đây." }
+      ] },
+    { "t": "Động từ ly hợp: chèn số lượng vào giữa",
+      "b": "请一天假 · 洗个澡 · 睡个好觉",
+      "d": "请假, 洗澡, 睡觉, 聊天, 帮忙, 见面 đều là động từ ly hợp. Muốn thêm số lượng hay lượng từ, phải chèn vào GIỮA. Nói 请假一天 nghe sai; đúng là 请一天假.",
+      "ex": [
+        { "cn": "我想请三天假。", "py": "Wǒ xiǎng qǐng sān tiān jià.", "vi": "Tôi muốn xin nghỉ ba ngày." },
+        { "cn": "回家先洗个澡吧。", "py": "Huí jiā xiān xǐ ge zǎo ba.", "vi": "Về nhà tắm cái đã." }
+      ] },
+    { "t": "Sáu từ Hán Việt trùng khít trong một bài",
+      "b": "习惯 · 照顾 · 关心 · 关系 · 热情 · 欢迎",
+      "d": "Tập quán, chiếu cố, quan tâm, quan hệ, nhiệt tình, hoan nghênh — sáu từ này bạn đã dùng bằng tiếng Việt cả đời. Với người học tiếng Anh, đây là sáu từ phải học thuộc lòng; với bạn, chỉ cần nhớ mặt chữ và cách đọc.",
+      "ex": [
+        { "cn": "谢谢你的关心和照顾。", "py": "Xièxie nǐ de guānxīn hé zhàogù.", "vi": "Cảm ơn sự quan tâm và chăm sóc của bạn." },
+        { "cn": "欢迎光临！", "py": "Huānyíng guānglín!", "vi": "Hoan nghênh quý khách!" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我每天早上刷牙、洗脸、吃早饭。", "py": "Wǒ měi tiān zǎoshang shuāyá, xǐliǎn, chī zǎofàn.", "vi": "Sáng nào tôi cũng đánh răng, rửa mặt, ăn sáng." },
+    { "cn": "运动以后我要洗个澡。", "py": "Yùndòng yǐhòu wǒ yào xǐ ge zǎo.", "vi": "Sau khi tập tôi phải tắm cái." },
+    { "cn": "早睡早起是个好习惯。", "py": "Zǎo shuì zǎo qǐ shì ge hǎo xíguàn.", "vi": "Ngủ sớm dậy sớm là thói quen tốt." },
+    { "cn": "路上堵车，所以我迟到了。", "py": "Lù shàng dǔchē, suǒyǐ wǒ chídào le.", "vi": "Đường tắc nên tôi đến muộn." },
+    { "cn": "我明天要请假去医院。", "py": "Wǒ míngtiān yào qǐngjià qù yīyuàn.", "vi": "Mai tôi phải xin nghỉ để đi bệnh viện." },
+    { "cn": "谢谢您这几天的照顾。", "py": "Xièxie nín zhè jǐ tiān de zhàogù.", "vi": "Cảm ơn bác đã chăm sóc mấy hôm nay." },
+    { "cn": "他很关心自己的邻居。", "py": "Tā hěn guānxīn zìjǐ de línjū.", "vi": "Anh ấy rất quan tâm hàng xóm của mình." },
+    { "cn": "我跟同事的关系一直很好。", "py": "Wǒ gēn tóngshì de guānxi yìzhí hěn hǎo.", "vi": "Quan hệ giữa tôi với đồng nghiệp luôn rất tốt." },
+    { "cn": "越南人对客人非常热情。", "py": "Yuènán rén duì kèrén fēicháng rèqíng.", "vi": "Người Việt Nam rất nhiệt tình với khách." },
+    { "cn": "欢迎大家来中国旅游！", "py": "Huānyíng dàjiā lái Zhōngguó lǚyóu!", "vi": "Hoan nghênh mọi người đến Trung Quốc du lịch!" }
+  ]
+}

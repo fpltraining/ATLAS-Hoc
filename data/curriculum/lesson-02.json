@@ -1,0 +1,73 @@
+{
+  "id": 2,
+  "cn": "你叫什么名字？",
+  "title": "Bạn tên là gì?",
+  "goal": "Hỏi và nói tên, giới thiệu người khác, dùng 呢 để hỏi lại.",
+  "words": [
+    { "w": "他", "py": "tā", "hv": "tha", "vi": "anh ấy, ông ấy, cậu ấy", "pos": "đại từ",
+      "note": "亻 (người) + 也. Dùng cho nam giới, hoặc khi chưa rõ giới tính.",
+      "ex": [{ "cn": "他是我朋友。", "py": "Tā shì wǒ péngyou.", "vi": "Anh ấy là bạn tôi." }] },
+    { "w": "她", "py": "tā", "hv": "tha", "vi": "cô ấy, chị ấy, bà ấy", "pos": "đại từ",
+      "note": "女 (phụ nữ) + 也. Đọc HỆT như 他 — chỉ khác khi VIẾT. Đây là điểm dễ sai của người mới.",
+      "ex": [{ "cn": "她是老师。", "py": "Tā shì lǎoshī.", "vi": "Cô ấy là giáo viên." }] },
+    { "w": "叫", "py": "jiào", "hv": "khiếu", "vi": "gọi là, tên là", "pos": "động từ",
+      "note": "口 (miệng) + 丩. Việc gọi tên thì phải dùng miệng.",
+      "ex": [{ "cn": "我叫小明。", "py": "Wǒ jiào Xiǎomíng.", "vi": "Tôi tên là Tiểu Minh." }] },
+    { "w": "什么", "py": "shénme", "hv": "thập ma", "vi": "cái gì, gì", "pos": "đại từ nghi vấn",
+      "note": "Chữ thứ hai đọc nhẹ. Câu có 什么 thì KHÔNG được thêm 吗 nữa.",
+      "ex": [{ "cn": "这是什么？", "py": "Zhè shì shénme?", "vi": "Đây là cái gì?" }] },
+    { "w": "名字", "py": "míngzi", "hv": "danh tự", "vi": "tên", "pos": "danh từ",
+      "note": "名 (danh) + 字 (tự). Tiếng Việt có \"danh tính\", \"chữ ký\" — cùng gốc.",
+      "ex": [{ "cn": "你叫什么名字？", "py": "Nǐ jiào shénme míngzi?", "vi": "Bạn tên là gì?" }] },
+    { "w": "呢", "py": "ne", "hv": "ni", "vi": "(trợ từ: còn… thì sao?)", "pos": "trợ từ",
+      "note": "Dùng để hỏi ngược lại mà không phải nhắc lại cả câu. Rất hay dùng trong hội thoại.",
+      "ex": [{ "cn": "我很好，你呢？", "py": "Wǒ hěn hǎo, nǐ ne?", "vi": "Tôi khoẻ, còn bạn?" }] },
+    { "w": "请", "py": "qǐng", "hv": "thỉnh", "vi": "mời, xin vui lòng", "pos": "động từ",
+      "note": "讠 (lời nói) + 青. Tiếng Việt có \"thỉnh cầu\", \"thỉnh giảng\".",
+      "ex": [{ "cn": "请坐。", "py": "Qǐng zuò.", "vi": "Mời ngồi." }] },
+    { "w": "认识", "py": "rènshi", "hv": "nhận thức", "vi": "quen biết, nhận ra", "pos": "động từ",
+      "note": "Đúng là từ \"nhận thức\" trong tiếng Việt, nhưng nghĩa tiếng Trung là QUEN BIẾT một người.",
+      "ex": [{ "cn": "我认识他。", "py": "Wǒ rènshi tā.", "vi": "Tôi quen anh ấy." }] },
+    { "w": "高兴", "py": "gāoxìng", "hv": "cao hứng", "vi": "vui, vui mừng", "pos": "tính từ",
+      "note": "Tiếng Việt \"cao hứng\" nghĩa hơi khác; tiếng Trung 高兴 đơn giản là VUI.",
+      "ex": [{ "cn": "我很高兴。", "py": "Wǒ hěn gāoxìng.", "vi": "Tôi rất vui." }] },
+    { "w": "学生", "py": "xuésheng", "hv": "học sinh", "vi": "học sinh, sinh viên", "pos": "danh từ",
+      "note": "Giống hệt \"học sinh\" tiếng Việt. 学 (học) + 生 (sinh).",
+      "ex": [{ "cn": "他是学生。", "py": "Tā shì xuésheng.", "vi": "Cậu ấy là học sinh." }] }
+  ],
+  "grammar": [
+    { "t": "Hỏi tên bằng 叫",
+      "b": "你 + 叫 + 什么名字？ → 我 + 叫 + tên",
+      "d": "Đây là mẫu câu hỏi tên chuẩn mực nhất. Trả lời chỉ cần thay 什么名字 bằng tên của mình, trật tự giữ nguyên.",
+      "ex": [
+        { "cn": "你叫什么名字？", "py": "Nǐ jiào shénme míngzi?", "vi": "Bạn tên là gì?" },
+        { "cn": "我叫阿英。", "py": "Wǒ jiào Ā Yīng.", "vi": "Tôi tên là A Anh." }
+      ] },
+    { "t": "Câu hỏi có từ để hỏi thì KHÔNG dùng 吗",
+      "b": "什么 / 谁 / 哪儿 … (không có 吗)",
+      "d": "Đây là lỗi kinh điển của người mới. Đã có 什么 thì tuyệt đối không thêm 吗 vào cuối câu. Nói \"你叫什么名字吗?\" là SAI.",
+      "ex": [
+        { "cn": "你叫什么名字？", "py": "Nǐ jiào shénme míngzi?", "vi": "ĐÚNG" },
+        { "cn": "这是什么？", "py": "Zhè shì shénme?", "vi": "Đây là cái gì?" }
+      ] },
+    { "t": "Hỏi lại bằng 呢",
+      "b": "A + 呢 ?",
+      "d": "Thay vì lặp lại cả câu hỏi dài, chỉ cần nêu đối tượng rồi thêm 呢. Giống \"còn bạn thì sao?\" trong tiếng Việt.",
+      "ex": [
+        { "cn": "我很好，你呢？", "py": "Wǒ hěn hǎo, nǐ ne?", "vi": "Tôi khoẻ, còn bạn?" },
+        { "cn": "我是学生，他呢？", "py": "Wǒ shì xuésheng, tā ne?", "vi": "Tôi là học sinh, còn cậu ấy?" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你叫什么名字？", "py": "Nǐ jiào shénme míngzi?", "vi": "Bạn tên là gì?" },
+    { "cn": "我叫小明，你呢？", "py": "Wǒ jiào Xiǎomíng, nǐ ne?", "vi": "Tôi tên Tiểu Minh, còn bạn?" },
+    { "cn": "他叫什么名字？", "py": "Tā jiào shénme míngzi?", "vi": "Cậu ấy tên là gì?" },
+    { "cn": "她是学生吗？", "py": "Tā shì xuésheng ma?", "vi": "Cô ấy là học sinh à?" },
+    { "cn": "她不是学生，她是老师。", "py": "Tā bú shì xuésheng, tā shì lǎoshī.", "vi": "Cô ấy không phải học sinh, cô ấy là giáo viên." },
+    { "cn": "我认识她。", "py": "Wǒ rènshi tā.", "vi": "Tôi quen cô ấy." },
+    { "cn": "我不认识他。", "py": "Wǒ bú rènshi tā.", "vi": "Tôi không quen anh ấy." },
+    { "cn": "认识你很高兴。", "py": "Rènshi nǐ hěn gāoxìng.", "vi": "Rất vui được quen bạn." },
+    { "cn": "请问，你是老师吗？", "py": "Qǐngwèn, nǐ shì lǎoshī ma?", "vi": "Xin hỏi, bạn là giáo viên phải không?" },
+    { "cn": "我很高兴，谢谢你。", "py": "Wǒ hěn gāoxìng, xièxie nǐ.", "vi": "Tôi rất vui, cảm ơn bạn." }
+  ]
+}

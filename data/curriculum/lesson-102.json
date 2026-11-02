@@ -1,0 +1,71 @@
+{
+  "id": 102,
+  "cn": "书面连词",
+  "title": "Liên từ trang trọng",
+  "goal": "Mười liên từ của văn viết — thứ nâng câu văn từ trình độ nói lên trình độ viết.",
+  "words": [
+    { "w": "并且", "py": "bìngqiě", "hv": "tịnh thả", "vi": "hơn nữa, đồng thời", "pos": "liên từ",
+      "note": "并 (cùng, song song) + 且 (vả lại). Nối hai vế cùng chiều, trang trọng hơn 而且.",
+      "ex": [{ "cn": "他很聪明，并且很努力。", "py": "Tā hěn cōngming, bìngqiě hěn nǔlì.", "vi": "Cậu ấy thông minh, hơn nữa lại chăm." }] },
+    { "w": "而", "py": "ér", "hv": "nhi", "vi": "mà, còn", "pos": "liên từ",
+      "note": "Chữ văn ngôn một âm tiết. Nối hai vế TRÁI chiều: 他去了，而我没去. Cũng có trong 而且, 然而.",
+      "ex": [{ "cn": "他喜欢茶，而我喜欢咖啡。", "py": "Tā xǐhuan chá, ér wǒ xǐhuan kāfēi.", "vi": "Anh ấy thích trà, còn tôi thích cà phê." }] },
+    { "w": "否则", "py": "fǒuzé", "hv": "phủ tắc", "vi": "nếu không thì", "pos": "liên từ",
+      "note": "否 (phủ định) + 则 (thì). Nêu hậu quả xấu nếu không làm: 快走，否则会迟到.",
+      "ex": [{ "cn": "快点儿，否则来不及了。", "py": "Kuài diǎnr, fǒuzé lái bu jí le.", "vi": "Nhanh lên, không thì không kịp." }] },
+    { "w": "然而", "py": "rán'ér", "hv": "nhiên nhi", "vi": "tuy nhiên", "pos": "liên từ",
+      "note": "然 (như vậy) + 而 (nhi). Chuyển ý mạnh trong văn viết, ngang \"tuy nhiên\" tiếng Việt.",
+      "ex": [{ "cn": "他很努力，然而没有成功。", "py": "Tā hěn nǔlì, rán'ér méiyǒu chénggōng.", "vi": "Anh ấy rất cố gắng, tuy nhiên không thành công." }] },
+    { "w": "于是", "py": "yúshì", "hv": "vu thị", "vi": "thế là, do đó", "pos": "liên từ",
+      "note": "于 (ở, tại) + 是 (đó). Nối sự việc theo trình tự thời gian: xảy ra A, 于是 làm B.",
+      "ex": [{ "cn": "下雨了，于是我们回家了。", "py": "Xià yǔ le, yúshì wǒmen huí jiā le.", "vi": "Trời mưa, thế là chúng tôi về nhà." }] },
+    { "w": "因此", "py": "yīncǐ", "hv": "nhân thử", "vi": "vì thế, do đó", "pos": "liên từ",
+      "note": "因 (nhân) + 此 (thử, cái này). Nhấn quan hệ NHÂN QUẢ, trang trọng hơn 所以.",
+      "ex": [{ "cn": "他生病了，因此没来上课。", "py": "Tā shēngbìng le, yīncǐ méi lái shàngkè.", "vi": "Cậu ấy ốm, do đó không tới lớp." }] },
+    { "w": "由于", "py": "yóuyú", "hv": "do vu", "vi": "do, bởi vì", "pos": "liên từ",
+      "note": "由 (do) + 于. Chỉ dùng cho nguyên nhân KHÁCH QUAN, đứng đầu câu. Cặp: 由于…，因此….",
+      "ex": [{ "cn": "由于天气不好，比赛取消了。", "py": "Yóuyú tiānqì bù hǎo, bǐsài qǔxiāo le.", "vi": "Do thời tiết xấu, trận đấu bị huỷ." }] },
+    { "w": "既然", "py": "jìrán", "hv": "ký nhiên", "vi": "đã… thì", "pos": "liên từ",
+      "note": "既 (đã) + 然. Nêu sự thật hai bên đều biết rồi suy ra kết luận. Cặp: 既然…，就….",
+      "ex": [{ "cn": "既然来了，就多坐一会儿。", "py": "Jìrán lái le, jiù duō zuò yíhuìr.", "vi": "Đã đến rồi thì ngồi thêm chút." }] },
+    { "w": "尽管", "py": "jǐnguǎn", "hv": "tận quản", "vi": "mặc dù", "pos": "liên từ",
+      "note": "Trang trọng hơn 虽然. Còn một nghĩa khẩu ngữ: \"cứ việc\" — 有问题尽管问 (có gì cứ hỏi).",
+      "ex": [{ "cn": "尽管很累，他还是坚持了。", "py": "Jǐnguǎn hěn lèi, tā háishi jiānchí le.", "vi": "Mặc dù mệt, anh ấy vẫn kiên trì." }] },
+    { "w": "不管", "py": "bùguǎn", "hv": "bất quản", "vi": "bất kể, dù cho", "pos": "liên từ",
+      "note": "Sau 不管 phải có từ nghi vấn hoặc cấu trúc lựa chọn: 不管谁, 不管去不去. Vế sau có 都/也.",
+      "ex": [{ "cn": "不管多难，我都要试试。", "py": "Bùguǎn duō nán, wǒ dōu yào shìshi.", "vi": "Dù khó thế nào tôi cũng thử." }] }
+  ],
+  "grammar": [
+    { "t": "既然 … 就 … — đã vậy thì",
+      "b": "既然 + sự thật đã biết，就 + kết luận",
+      "d": "Khác 因为: 因为 nêu nguyên nhân MỚI cho người nghe, còn 既然 nêu điều CẢ HAI đã biết rồi rút ra kết luận. 既然你不舒服，就早点儿休息吧.",
+      "ex": [
+        { "cn": "既然你决定了，我就不说了。", "py": "Jìrán nǐ juédìng le, wǒ jiù bù shuō le.", "vi": "Đã quyết rồi thì tôi không nói nữa." }
+      ] },
+    { "t": "尽管 … 还是 … và 不管 … 都 …",
+      "b": "尽管 + sự thật，还是 · 不管 + từ nghi vấn，都/也",
+      "d": "Đây là cặp cực dễ nhầm. 尽管 đi với sự thật CỤ THỂ (尽管下雨). 不管 đi với điều CHƯA XÁC ĐỊNH, bắt buộc có 谁/什么/多/还是 phía sau (不管下不下雨).",
+      "ex": [
+        { "cn": "尽管下着雨，他还是来了。", "py": "Jǐnguǎn xià zhe yǔ, tā háishi lái le.", "vi": "Mặc dù đang mưa, anh ấy vẫn tới." },
+        { "cn": "不管下不下雨，我都去。", "py": "Bùguǎn xià bu xià yǔ, wǒ dōu qù.", "vi": "Mưa hay không tôi cũng đi." }
+      ] },
+    { "t": "于是 hay 因此 — kể chuyện hay lập luận?",
+      "b": "于是 = rồi thì (trình tự) · 因此 = do đó (nhân quả)",
+      "d": "于是 dùng khi kể lại chuỗi sự việc, không nhất thiết là nhân quả chặt. 因此 khẳng định quan hệ nguyên nhân — kết quả, hay gặp trong bài luận. 由于 luôn đứng ở vế nguyên nhân, 因此 ở vế kết quả.",
+      "ex": [
+        { "cn": "由于工作忙，因此我很少运动。", "py": "Yóuyú gōngzuò máng, yīncǐ wǒ hěn shǎo yùndòng.", "vi": "Do công việc bận, vì thế tôi ít vận động." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "这个方法简单并且有效。", "py": "Zhège fāngfǎ jiǎndān bìngqiě yǒuxiào.", "vi": "Cách này đơn giản mà lại hiệu quả." },
+    { "cn": "他是南方人，而我是北方人。", "py": "Tā shì nánfāng rén, ér wǒ shì běifāng rén.", "vi": "Anh ấy người miền Nam, còn tôi người miền Bắc." },
+    { "cn": "记得带钥匙，否则进不去。", "py": "Jìde dài yàoshi, fǒuzé jìn bu qù.", "vi": "Nhớ mang chìa khoá, không thì không vào được." },
+    { "cn": "计划很好，然而没能实现。", "py": "Jìhuà hěn hǎo, rán'ér méi néng shíxiàn.", "vi": "Kế hoạch rất hay, tuy nhiên đã không thực hiện được." },
+    { "cn": "他没接电话，于是我发了短信。", "py": "Tā méi jiē diànhuà, yúshì wǒ fā le duǎnxìn.", "vi": "Anh ấy không nghe máy, thế là tôi nhắn tin." },
+    { "cn": "他很有经验，因此大家都相信他。", "py": "Tā hěn yǒu jīngyàn, yīncǐ dàjiā dōu xiāngxìn tā.", "vi": "Anh ấy có kinh nghiệm, do đó mọi người tin anh ấy." },
+    { "cn": "由于堵车，我迟到了半个小时。", "py": "Yóuyú dǔchē, wǒ chídào le bàn ge xiǎoshí.", "vi": "Do tắc đường, tôi trễ nửa tiếng." },
+    { "cn": "既然大家都同意，那就这样办。", "py": "Jìrán dàjiā dōu tóngyì, nà jiù zhèyàng bàn.", "vi": "Đã ai cũng đồng ý thì làm vậy đi." },
+    { "cn": "尽管学了很久，我还是常常忘。", "py": "Jǐnguǎn xué le hěn jiǔ, wǒ háishi chángcháng wàng.", "vi": "Dù học đã lâu, tôi vẫn hay quên." },
+    { "cn": "不管别人怎么说，我都相信你。", "py": "Bùguǎn biéren zěnme shuō, wǒ dōu xiāngxìn nǐ.", "vi": "Bất kể người khác nói gì, tôi vẫn tin bạn." }
+  ]
+}

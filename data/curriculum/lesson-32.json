@@ -1,0 +1,75 @@
+{
+  "id": 32,
+  "cn": "身体和长相",
+  "title": "Cơ thể và ngoại hình",
+  "goal": "Gọi tên các bộ phận cơ thể, tả người cao thấp béo gầy — và thấy rõ sức mạnh của bộ thủ.",
+  "words": [
+    { "w": "鼻子", "py": "bízi", "hv": "tỵ tử", "vi": "cái mũi", "pos": "danh từ",
+      "note": "鼻 có bộ 自 ở trên — mà 自 vốn là hình CÁI MŨI (người Trung Quốc chỉ vào mũi khi nói \"tôi\").",
+      "ex": [{ "cn": "他的鼻子很高。", "py": "Tā de bízi hěn gāo.", "vi": "Mũi anh ấy rất cao." }] },
+    { "w": "耳朵", "py": "ěrduo", "hv": "nhĩ đoá", "vi": "cái tai", "pos": "danh từ",
+      "note": "耳 là bộ thủ bạn đã học. Tiếng Việt: \"nhĩ khoa\", \"thính nhĩ\". Chữ thứ hai đọc nhẹ.",
+      "ex": [{ "cn": "兔子的耳朵很长。", "py": "Tùzi de ěrduo hěn cháng.", "vi": "Tai thỏ rất dài." }] },
+    { "w": "嘴", "py": "zuǐ", "hv": "chuỷ", "vi": "cái miệng", "pos": "danh từ",
+      "note": "Có bộ 口 (miệng) bên trái. 口 là bộ thủ, còn 嘴 là từ dùng hằng ngày để chỉ cái miệng.",
+      "ex": [{ "cn": "张开嘴。", "py": "Zhāng kāi zuǐ.", "vi": "Há miệng ra." }] },
+    { "w": "脸", "py": "liǎn", "hv": "kiểm", "vi": "khuôn mặt", "pos": "danh từ",
+      "note": "Bên trái là 月 — nhưng đây là 肉 (thịt) chứ không phải mặt trăng, đúng như đã học ở phần bộ thủ.",
+      "ex": [{ "cn": "她的脸很小。", "py": "Tā de liǎn hěn xiǎo.", "vi": "Mặt cô ấy nhỏ nhắn." }] },
+    { "w": "头发", "py": "tóufa", "hv": "đầu phát", "vi": "tóc", "pos": "danh từ",
+      "note": "头 (đầu) + 发 (tóc). Tiếng Việt: \"đầu\", \"phát\" trong \"lý phát\" (cắt tóc). Chữ thứ hai đọc nhẹ.",
+      "ex": [{ "cn": "她的头发很长。", "py": "Tā de tóufa hěn cháng.", "vi": "Tóc cô ấy rất dài." }] },
+    { "w": "腿", "py": "tuǐ", "hv": "thoái", "vi": "chân, đùi", "pos": "danh từ",
+      "note": "Cũng có bộ 月 (thịt) bên trái — như mọi bộ phận cơ thể. Chỉ phần từ hông xuống bàn chân.",
+      "ex": [{ "cn": "我的腿有点儿疼。", "py": "Wǒ de tuǐ yǒudiǎnr téng.", "vi": "Chân tôi hơi đau." }] },
+    { "w": "脚", "py": "jiǎo", "hv": "cước", "vi": "bàn chân", "pos": "danh từ",
+      "note": "Tiếng Việt: \"cước\" trong \"nhân cước\", \"cước bộ\". Cũng có bộ 月 (thịt). 腿 là cả cái chân, 脚 chỉ bàn chân.",
+      "ex": [{ "cn": "我的脚很大。", "py": "Wǒ de jiǎo hěn dà.", "vi": "Chân tôi to." }] },
+    { "w": "个子", "py": "gèzi", "hv": "cá tử", "vi": "vóc người, chiều cao", "pos": "danh từ",
+      "note": "Chuyên dùng để nói chiều cao của NGƯỜI: 个子高 (cao), 个子矮 (thấp). Đồ vật thì không dùng 个子.",
+      "ex": [{ "cn": "他个子很高。", "py": "Tā gèzi hěn gāo.", "vi": "Anh ấy dáng cao." }] },
+    { "w": "胖", "py": "pàng", "hv": "bàn", "vi": "béo, mập", "pos": "tính từ",
+      "note": "Bộ 月 (thịt) + 半. Chỉ dùng cho NGƯỜI và động vật. Nói đồ ăn nhiều mỡ thì dùng 肥 féi.",
+      "ex": [{ "cn": "我最近胖了。", "py": "Wǒ zuìjìn pàng le.", "vi": "Dạo này tôi béo lên." }] },
+    { "w": "瘦", "py": "shòu", "hv": "sấu", "vi": "gầy; (quần áo) chật", "pos": "tính từ",
+      "note": "Có bộ 疒 (bệnh tật) bao ngoài — người xưa coi gầy quá là có bệnh. Nói về quần áo thì 瘦 nghĩa là chật.",
+      "ex": [{ "cn": "她太瘦了。", "py": "Tā tài shòu le.", "vi": "Cô ấy gầy quá." }] }
+  ],
+  "grammar": [
+    { "t": "Bộ 月 (thịt) — chìa khoá của mọi chữ về cơ thể",
+      "b": "脸 · 腿 · 脚 · 胖 · 脑 · 肚",
+      "d": "Nhắc lại bài bộ thủ: 月 bên TRÁI một chữ hầu như luôn là 肉 (thịt), không phải mặt trăng. Nhìn thấy nó là đoán ngay chữ nói về cơ thể. Cả bài này là ví dụ sống động.",
+      "ex": [
+        { "cn": "脸", "py": "liǎn", "vi": "mặt" },
+        { "cn": "腿", "py": "tuǐ", "vi": "chân" },
+        { "cn": "脚", "py": "jiǎo", "vi": "bàn chân" }
+      ] },
+    { "t": "Tả người: chủ đề kép",
+      "b": "Người + bộ phận + tính từ",
+      "d": "Tiếng Trung hay dùng cấu trúc \"chủ đề kép\": 他个子很高 nghĩa đen là \"anh ấy, vóc người rất cao\". Nêu người trước, rồi nêu đặc điểm — giống tiếng Việt nói \"anh ấy dáng người cao\".",
+      "ex": [
+        { "cn": "他个子很高。", "py": "Tā gèzi hěn gāo.", "vi": "Anh ấy dáng cao." },
+        { "cn": "她头发很长。", "py": "Tā tóufa hěn cháng.", "vi": "Cô ấy tóc rất dài." },
+        { "cn": "这个孩子眼睛很大。", "py": "Zhège háizi yǎnjing hěn dà.", "vi": "Đứa bé này mắt rất to." }
+      ] },
+    { "t": "有点儿 và 一点儿 — khác nhau chỗ nào?",
+      "b": "有点儿 + tính từ (chê) · tính từ + 一点儿 (so sánh)",
+      "d": "有点儿 đứng TRƯỚC tính từ và luôn mang ý CHÊ, không hài lòng: 有点儿贵 (hơi đắt quá). Còn 一点儿 đứng SAU và chỉ là so sánh trung tính: 便宜一点儿 (rẻ hơn chút). Đây là lỗi rất phổ biến.",
+      "ex": [
+        { "cn": "这件衣服有点儿瘦。", "py": "Zhè jiàn yīfu yǒudiǎnr shòu.", "vi": "Bộ đồ này hơi chật. (chê)" },
+        { "cn": "我想要大一点儿的。", "py": "Wǒ xiǎng yào dà yìdiǎnr de.", "vi": "Tôi muốn cái to hơn chút. (so sánh)" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "他个子很高，也很瘦。", "py": "Tā gèzi hěn gāo, yě hěn shòu.", "vi": "Anh ấy cao và gầy." },
+    { "cn": "她的头发又黑又长。", "py": "Tā de tóufa yòu hēi yòu cháng.", "vi": "Tóc cô ấy vừa đen vừa dài." },
+    { "cn": "我最近胖了三公斤。", "py": "Wǒ zuìjìn pàng le sān gōngjīn.", "vi": "Dạo này tôi tăng ba cân." },
+    { "cn": "我的腿有点儿疼。", "py": "Wǒ de tuǐ yǒudiǎnr téng.", "vi": "Chân tôi hơi đau." },
+    { "cn": "这双鞋对我的脚太小了。", "py": "Zhè shuāng xié duì wǒ de jiǎo tài xiǎo le.", "vi": "Đôi giày này nhỏ quá so với chân tôi." },
+    { "cn": "医生说：请张开嘴。", "py": "Yīshēng shuō: qǐng zhāng kāi zuǐ.", "vi": "Bác sĩ nói: xin há miệng ra." },
+    { "cn": "他的鼻子和眼睛像爸爸。", "py": "Tā de bízi hé yǎnjing xiàng bàba.", "vi": "Mũi và mắt cậu ấy giống bố." },
+    { "cn": "我的耳朵听不清楚。", "py": "Wǒ de ěrduo tīng bu qīngchu.", "vi": "Tai tôi nghe không rõ." },
+    { "cn": "洗完脸就吃饭吧。", "py": "Xǐ wán liǎn jiù chīfàn ba.", "vi": "Rửa mặt xong thì ăn cơm nhé." },
+    { "cn": "他个子不高也不矮。", "py": "Tā gèzi bù gāo yě bù ǎi.", "vi": "Anh ấy không cao cũng không thấp." }
+  ]
+}

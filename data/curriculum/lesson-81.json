@@ -1,0 +1,71 @@
+{
+  "id": 81,
+  "cn": "办公用品",
+  "title": "Đồ dùng văn phòng",
+  "goal": "Gọi tên giấy tờ, đồ dùng và học thêm hai lượng từ hay gặp.",
+  "words": [
+    { "w": "盒子", "py": "hézi", "hv": "hạp tử", "vi": "cái hộp", "pos": "danh từ",
+      "note": "Tiếng Việt: \"hộp\" chính là chữ 盒 này. Bộ 皿 (đồ đựng) ở dưới.",
+      "ex": [{ "cn": "这个盒子里装的是什么？", "py": "Zhège hézi lǐ zhuāng de shì shénme?", "vi": "Trong hộp này đựng gì?" }] },
+    { "w": "刀", "py": "dāo", "hv": "đao", "vi": "con dao", "pos": "danh từ",
+      "note": "Bộ thủ đã học ở phần bộ thủ. Tiếng Việt: \"đao\", \"đao kiếm\". Lượng từ là 把: 一把刀.",
+      "ex": [{ "cn": "小心，这把刀很快。", "py": "Xiǎoxīn, zhè bǎ dāo hěn kuài.", "vi": "Cẩn thận, con dao này sắc lắm." }] },
+    { "w": "塑料袋", "py": "sùliàodài", "hv": "tố liệu đại", "vi": "túi ni lông", "pos": "danh từ",
+      "note": "塑料 (nhựa) + 袋 (túi). 料 là \"liệu\" trong \"nguyên liệu\", \"tài liệu\".",
+      "ex": [{ "cn": "少用塑料袋，保护环境。", "py": "Shǎo yòng sùliàodài, bǎohù huánjìng.", "vi": "Ít dùng túi ni lông để bảo vệ môi trường." }] },
+    { "w": "信封", "py": "xìnfēng", "hv": "tín phong", "vi": "phong bì", "pos": "danh từ",
+      "note": "信 (thư tín) + 封 (phong, niêm). Tiếng Việt gọi \"phong bì\" — cùng chữ 封. Cũng là lượng từ: 一封信.",
+      "ex": [{ "cn": "请把信放进信封。", "py": "Qǐng bǎ xìn fàng jìn xìnfēng.", "vi": "Xin cho thư vào phong bì." }] },
+    { "w": "表格", "py": "biǎogé", "hv": "biểu cách", "vi": "biểu mẫu, tờ khai", "pos": "danh từ",
+      "note": "表 (bảng biểu) + 格 (ô, cách). Điền tờ khai là 填表格.",
+      "ex": [{ "cn": "请先填这张表格。", "py": "Qǐng xiān tián zhè zhāng biǎogé.", "vi": "Xin điền tờ khai này trước." }] },
+    { "w": "材料", "py": "cáiliào", "hv": "tài liệu", "vi": "tài liệu; vật liệu", "pos": "danh từ",
+      "note": "Chính là \"tài liệu\" tiếng Việt, nhưng tiếng Trung còn nghĩa VẬT LIỆU xây dựng, nấu ăn.",
+      "ex": [{ "cn": "请准备好申请材料。", "py": "Qǐng zhǔnbèi hǎo shēnqǐng cáiliào.", "vi": "Xin chuẩn bị đầy đủ hồ sơ xin." }] },
+    { "w": "页", "py": "yè", "hv": "hiệt", "vi": "trang (sách)", "pos": "lượng từ",
+      "note": "Chính là bộ thủ 页 (hiệt, cái đầu). Nay dùng đếm trang giấy: 第一页, 三页.",
+      "ex": [{ "cn": "请翻到第二十页。", "py": "Qǐng fān dào dì-èrshí yè.", "vi": "Xin mở tới trang hai mươi." }] },
+    { "w": "台", "py": "tái", "hv": "đài", "vi": "chiếc (lượng từ cho máy móc)", "pos": "lượng từ",
+      "note": "Chính là \"đài\" tiếng Việt (\"đài truyền hình\"). Làm lượng từ thì đếm máy móc: 一台电脑, 一台机器.",
+      "ex": [{ "cn": "办公室有五台电脑。", "py": "Bàngōngshì yǒu wǔ tái diànnǎo.", "vi": "Văn phòng có năm cái máy tính." }] },
+    { "w": "杂志", "py": "zázhì", "hv": "tạp chí", "vi": "tạp chí", "pos": "danh từ",
+      "note": "Chính là \"tạp chí\" tiếng Việt: 杂 (tạp) + 志 (chí).",
+      "ex": [{ "cn": "我订了一本汉语杂志。", "py": "Wǒ dìng le yì běn Hànyǔ zázhì.", "vi": "Tôi đặt mua một tờ tạp chí tiếng Trung." }] },
+    { "w": "日记", "py": "rìjì", "hv": "nhật ký", "vi": "nhật ký", "pos": "danh từ",
+      "note": "Chính là \"nhật ký\" tiếng Việt: 日 (nhật) + 记 (ký). Viết nhật ký là 写日记.",
+      "ex": [{ "cn": "我每天写日记。", "py": "Wǒ měi tiān xiě rìjì.", "vi": "Ngày nào tôi cũng viết nhật ký." }] }
+  ],
+  "grammar": [
+    { "t": "Lượng từ 台 và 把",
+      "b": "台 cho máy móc · 把 cho vật có tay cầm",
+      "d": "一台电脑, 一台机器, 一台电视 (máy móc). 一把刀, 一把伞, 一把椅子 (vật cầm được bằng tay). Nhớ: 把 vốn nghĩa là \"nắm lấy\" nên dùng cho thứ có chỗ nắm.",
+      "ex": [
+        { "cn": "他家有两台空调。", "py": "Tā jiā yǒu liǎng tái kōngtiáo.", "vi": "Nhà anh ấy có hai cái điều hoà." },
+        { "cn": "请给我一把刀。", "py": "Qǐng gěi wǒ yì bǎ dāo.", "vi": "Cho tôi xin một con dao." }
+      ] },
+    { "t": "封 vừa là danh từ vừa là lượng từ",
+      "b": "一封信 · 信封",
+      "d": "封 nghĩa gốc là niêm phong. Làm lượng từ thì đếm thư: 一封信 (một lá thư). Ghép với 信 thì thành cái phong bì. Cùng một chữ, hai vai trò.",
+      "ex": [
+        { "cn": "我收到了三封信。", "py": "Wǒ shōu dào le sān fēng xìn.", "vi": "Tôi nhận được ba lá thư." }
+      ] },
+    { "t": "Từ vựng làm giấy tờ",
+      "b": "填表格 · 准备材料 · 复印证明 · 交申请",
+      "d": "Bốn cụm này bạn sẽ dùng khi xin visa, nhập học hoặc xin việc ở Trung Quốc. Học nguyên cụm sẽ hiệu quả hơn học rời từng từ.",
+      "ex": [
+        { "cn": "办签证要填表格、交材料。", "py": "Bàn qiānzhèng yào tián biǎogé, jiāo cáiliào.", "vi": "Làm visa phải điền tờ khai, nộp hồ sơ." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "礼物我放在一个红盒子里。", "py": "Lǐwù wǒ fàng zài yí ge hóng hézi lǐ.", "vi": "Quà tôi để trong một cái hộp đỏ." },
+    { "cn": "厨房的刀要放好，别让孩子拿到。", "py": "Chúfáng de dāo yào fàng hǎo, bié ràng háizi ná dào.", "vi": "Dao trong bếp phải cất kỹ, đừng để trẻ lấy được." },
+    { "cn": "超市现在不免费提供塑料袋了。", "py": "Chāoshì xiànzài bù miǎnfèi tígōng sùliàodài le.", "vi": "Siêu thị giờ không phát túi ni lông miễn phí nữa." },
+    { "cn": "信封上要写清楚地址。", "py": "Xìnfēng shàng yào xiě qīngchu dìzhǐ.", "vi": "Trên phong bì phải ghi rõ địa chỉ." },
+    { "cn": "这张表格有点儿复杂。", "py": "Zhè zhāng biǎogé yǒudiǎnr fùzá.", "vi": "Tờ khai này hơi phức tạp." },
+    { "cn": "开会前请准备好材料。", "py": "Kāihuì qián qǐng zhǔnbèi hǎo cáiliào.", "vi": "Trước khi họp xin chuẩn bị tài liệu." },
+    { "cn": "这本书一共三百页。", "py": "Zhè běn shū yígòng sānbǎi yè.", "vi": "Quyển sách này tất cả ba trăm trang." },
+    { "cn": "我们办公室新买了两台打印机。", "py": "Wǒmen bàngōngshì xīn mǎi le liǎng tái dǎyìnjī.", "vi": "Văn phòng tôi mới mua hai máy in." },
+    { "cn": "这本杂志每个月出一期。", "py": "Zhè běn zázhì měi ge yuè chū yì qī.", "vi": "Tạp chí này mỗi tháng ra một số." },
+    { "cn": "写日记是提高写作的好办法。", "py": "Xiě rìjì shì tígāo xiězuò de hǎo bànfǎ.", "vi": "Viết nhật ký là cách hay để nâng khả năng viết." }
+  ]
+}

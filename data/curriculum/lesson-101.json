@@ -1,0 +1,71 @@
+{
+  "id": 101,
+  "cn": "比较和举例",
+  "title": "So sánh và ví dụ",
+  "goal": "Cách nêu điểm giống, điểm khác và dẫn ví dụ — bộ khung của mọi bài nói có lập luận.",
+  "words": [
+    { "w": "相同", "py": "xiāngtóng", "hv": "tương đồng", "vi": "giống nhau", "pos": "tính từ",
+      "note": "Chính là \"tương đồng\" tiếng Việt: 相 (tương, lẫn nhau) + 同 (đồng).",
+      "ex": [{ "cn": "我们的想法相同。", "py": "Wǒmen de xiǎngfǎ xiāngtóng.", "vi": "Suy nghĩ của chúng tôi giống nhau." }] },
+    { "w": "相反", "py": "xiāngfǎn", "hv": "tương phản", "vi": "trái ngược", "pos": "tính từ / liên từ",
+      "note": "Chính là \"tương phản\" tiếng Việt. Đầu câu 相反， = ngược lại.",
+      "ex": [{ "cn": "他的看法跟我相反。", "py": "Tā de kànfǎ gēn wǒ xiāngfǎn.", "vi": "Quan điểm của anh ấy trái ngược với tôi." }] },
+    { "w": "区别", "py": "qūbié", "hv": "khu biệt", "vi": "sự khác biệt; phân biệt", "pos": "danh từ / động từ",
+      "note": "区 (khu, chia vùng) + 别 (biệt). Tiếng Việt có \"khu biệt\" trong ngôn ngữ học.",
+      "ex": [{ "cn": "这两个词有什么区别？", "py": "Zhè liǎng ge cí yǒu shénme qūbié?", "vi": "Hai từ này khác nhau chỗ nào?" }] },
+    { "w": "比如", "py": "bǐrú", "hv": "bỉ như", "vi": "ví dụ như", "pos": "động từ",
+      "note": "比 (so) + 如 (như). Khẩu ngữ, hay dùng dạng 比如说.",
+      "ex": [{ "cn": "比如说苹果、香蕉。", "py": "Bǐrú shuō píngguǒ, xiāngjiāo.", "vi": "Ví dụ như táo, chuối." }] },
+    { "w": "例如", "py": "lìrú", "hv": "lệ như", "vi": "ví dụ như", "pos": "động từ",
+      "note": "例 (lệ, trong \"ví dụ\", \"tiền lệ\") + 如 (như). Trang trọng hơn 比如, dùng trong văn viết.",
+      "ex": [{ "cn": "很多水果，例如西瓜。", "py": "Hěn duō shuǐguǒ, lìrú xīguā.", "vi": "Nhiều loại quả, ví dụ như dưa hấu." }] },
+    { "w": "好像", "py": "hǎoxiàng", "hv": "hảo tượng", "vi": "hình như, giống như", "pos": "động từ / phó từ",
+      "note": "好 (tốt, ở đây là \"rất\") + 像 (giống). Hai nghĩa: phỏng đoán (hình như) và so sánh (giống như).",
+      "ex": [{ "cn": "他好像不高兴。", "py": "Tā hǎoxiàng bù gāoxìng.", "vi": "Hình như anh ấy không vui." }] },
+    { "w": "一切", "py": "yíqiè", "hv": "nhất thiết", "vi": "tất cả, mọi thứ", "pos": "đại từ",
+      "note": "Chính là \"nhất thiết\" trong \"nhất thiết mọi người\". Trừu tượng hơn 所有, đứng một mình được: 一切都好.",
+      "ex": [{ "cn": "一切都会好起来的。", "py": "Yíqiè dōu huì hǎo qǐlái de.", "vi": "Mọi thứ rồi sẽ tốt lên." }] },
+    { "w": "任何", "py": "rènhé", "hv": "nhậm hà", "vi": "bất kỳ", "pos": "đại từ",
+      "note": "Luôn đi kèm 都/也: 任何人都可以来 (bất kỳ ai cũng có thể tới).",
+      "ex": [{ "cn": "任何人都不能进去。", "py": "Rènhé rén dōu bù néng jìnqù.", "vi": "Bất kỳ ai cũng không được vào." }] },
+    { "w": "另外", "py": "lìngwài", "hv": "lánh ngoại", "vi": "ngoài ra; cái kia", "pos": "liên từ / đại từ",
+      "note": "另 (khác) + 外 (ngoài). Vừa là liên từ nối ý (ngoài ra), vừa chỉ vật còn lại: 另外一个.",
+      "ex": [{ "cn": "另外，我还有个问题。", "py": "Lìngwài, wǒ hái yǒu ge wèntí.", "vi": "Ngoài ra, tôi còn một câu hỏi." }] },
+    { "w": "其次", "py": "qícì", "hv": "kỳ thứ", "vi": "thứ hai là, tiếp theo", "pos": "đại từ",
+      "note": "其 (cái đó) + 次 (thứ tự). Đi cặp với 首先 (bài 105): 首先… 其次… 最后….",
+      "ex": [{ "cn": "首先要努力，其次要坚持。", "py": "Shǒuxiān yào nǔlì, qícì yào jiānchí.", "vi": "Trước hết phải cố gắng, tiếp đến phải kiên trì." }] }
+  ],
+  "grammar": [
+    { "t": "Bộ khung nêu ví dụ",
+      "b": "…，比如／例如 + ví dụ + 等等",
+      "d": "比如 dùng khi nói, 例如 dùng khi viết. Kết bằng 等 hoặc 等等 (vân vân) cho tự nhiên: 我喜欢很多运动，比如游泳、跑步等等.",
+      "ex": [
+        { "cn": "我学过几种语言，例如英语和汉语。", "py": "Wǒ xué guo jǐ zhǒng yǔyán, lìrú Yīngyǔ hé Hànyǔ.", "vi": "Tôi từng học vài ngoại ngữ, ví dụ tiếng Anh và tiếng Trung." }
+      ] },
+    { "t": "好像 — hai nghĩa, phân biệt bằng ngữ cảnh",
+      "b": "好像 + phỏng đoán · 好像 + 一样 (so sánh)",
+      "d": "他好像生病了 = phỏng đoán (hình như ốm). 他好像孩子一样 = so sánh (giống như trẻ con). Có 一样 ở cuối thì chắc chắn là so sánh.",
+      "ex": [
+        { "cn": "时间过得好像水一样快。", "py": "Shíjiān guò de hǎoxiàng shuǐ yíyàng kuài.", "vi": "Thời gian trôi nhanh như nước." }
+      ] },
+    { "t": "任何 · 一切 · 所有 — ba từ \"tất cả\"",
+      "b": "任何 + danh từ + 都 · 一切 (trừu tượng, đứng riêng) · 所有的 + danh từ",
+      "d": "任何 nhấn \"bất kỳ cái nào cũng vậy\", bắt buộc có 都/也. 一切 chỉ tổng thể trừu tượng: 一切都好. 所有 (bài 111) chỉ toàn bộ một tập cụ thể: 所有的学生.",
+      "ex": [
+        { "cn": "任何问题都可以问我。", "py": "Rènhé wèntí dōu kěyǐ wèn wǒ.", "vi": "Bất kỳ câu hỏi nào cũng hỏi tôi được." },
+        { "cn": "别担心，一切都很顺利。", "py": "Bié dānxīn, yíqiè dōu hěn shùnlì.", "vi": "Đừng lo, mọi thứ đều suôn sẻ." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "我们两个人的爱好完全相同。", "py": "Wǒmen liǎng ge rén de àihào wánquán xiāngtóng.", "vi": "Sở thích của hai chúng tôi hoàn toàn giống nhau." },
+    { "cn": "结果跟我想的正好相反。", "py": "Jiéguǒ gēn wǒ xiǎng de zhènghǎo xiāngfǎn.", "vi": "Kết quả ngược hẳn với điều tôi nghĩ." },
+    { "cn": "这两种方法没有太大的区别。", "py": "Zhè liǎng zhǒng fāngfǎ méiyǒu tài dà de qūbié.", "vi": "Hai cách này không khác nhau nhiều." },
+    { "cn": "我喜欢中国菜，比如饺子。", "py": "Wǒ xǐhuan Zhōngguó cài, bǐrú jiǎozi.", "vi": "Tôi thích món Trung Quốc, ví dụ sủi cảo." },
+    { "cn": "汉字有很多部首，例如水部。", "py": "Hànzì yǒu hěn duō bùshǒu, lìrú shuǐ bù.", "vi": "Chữ Hán có nhiều bộ thủ, ví dụ bộ thuỷ." },
+    { "cn": "外面好像下雨了。", "py": "Wàimiàn hǎoxiàng xià yǔ le.", "vi": "Hình như bên ngoài mưa rồi." },
+    { "cn": "谢谢你为我做的一切。", "py": "Xièxie nǐ wèi wǒ zuò de yíqiè.", "vi": "Cảm ơn tất cả những gì bạn đã làm cho tôi." },
+    { "cn": "有任何困难都可以找我。", "py": "Yǒu rènhé kùnnan dōu kěyǐ zhǎo wǒ.", "vi": "Có bất kỳ khó khăn nào cứ tìm tôi." },
+    { "cn": "另外一个办法可能更好。", "py": "Lìngwài yí ge bànfǎ kěnéng gèng hǎo.", "vi": "Cách kia có lẽ hay hơn." },
+    { "cn": "首先是身体，其次才是工作。", "py": "Shǒuxiān shì shēntǐ, qícì cái shì gōngzuò.", "vi": "Trước hết là sức khoẻ, sau đó mới đến công việc." }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": 100,
+  "cn": "更多量词",
+  "title": "Lượng từ mở rộng",
+  "goal": "Bài thứ 100: hoàn thiện bộ lượng từ — thứ khiến tiếng Trung và tiếng Việt giống nhau nhất.",
+  "words": [
+    { "w": "许多", "py": "xǔduō", "hv": "hứa đa", "vi": "rất nhiều", "pos": "số từ",
+      "note": "许 (hứa, nhiều) + 多 (đa). Trang trọng hơn 很多, hay dùng trong văn viết. KHÔNG cần 很 đứng trước.",
+      "ex": [{ "cn": "他有许多朋友。", "py": "Tā yǒu xǔduō péngyou.", "vi": "Anh ấy có rất nhiều bạn." }] },
+    { "w": "棵", "py": "kē", "hv": "khoả", "vi": "cây (lượng từ cho cây cối)", "pos": "lượng từ",
+      "note": "Bộ 木 (gỗ) — nhìn bộ là biết dùng cho cây. 一棵树, 一棵草.",
+      "ex": [{ "cn": "院子里有三棵树。", "py": "Yuànzi lǐ yǒu sān kē shù.", "vi": "Trong sân có ba cây." }] },
+    { "w": "篇", "py": "piān", "hv": "thiên", "vi": "bài (lượng từ cho bài viết)", "pos": "lượng từ",
+      "note": "Bộ 竹 (tre) — bài viết xưa chép trên thẻ tre. Tiếng Việt: \"thiên\" trong \"thiên truyện\", \"thiên tuỳ bút\".",
+      "ex": [{ "cn": "我写了一篇文章。", "py": "Wǒ xiě le yì piān wénzhāng.", "vi": "Tôi viết một bài văn." }] },
+    { "w": "趟", "py": "tàng", "hv": "thảng", "vi": "chuyến, lượt đi", "pos": "lượng từ",
+      "note": "Bộ ⻊ (chân). Đếm số lần ĐI LẠI một nơi: 去一趟北京 (đi Bắc Kinh một chuyến).",
+      "ex": [{ "cn": "我去了一趟银行。", "py": "Wǒ qù le yí tàng yínháng.", "vi": "Tôi ra ngân hàng một chuyến." }] },
+    { "w": "遍", "py": "biàn", "hv": "biến", "vi": "lượt, lần (từ đầu đến cuối)", "pos": "lượng từ",
+      "note": "Khác 次 (bài 18): 遍 nhấn mạnh làm TRỌN VẸN từ đầu tới cuối. 看了三遍 = xem trọn ba lượt.",
+      "ex": [{ "cn": "请再说一遍。", "py": "Qǐng zài shuō yí biàn.", "vi": "Xin nói lại một lượt nữa." }] },
+    { "w": "节", "py": "jié", "hv": "tiết", "vi": "tiết (học); đốt", "pos": "lượng từ",
+      "note": "Chính là \"tiết\" tiếng Việt (\"tiết học\"). Bộ 艹 — vốn là đốt tre. Cũng có trong 节日, 节约.",
+      "ex": [{ "cn": "今天上午有四节课。", "py": "Jīntiān shàngwǔ yǒu sì jié kè.", "vi": "Sáng nay có bốn tiết học." }] },
+    { "w": "场", "py": "chǎng", "hv": "trường", "vi": "trận, buổi", "pos": "lượng từ",
+      "note": "Đếm sự việc diễn ra trong một khoảng thời gian: 一场比赛, 一场电影, 一场雨. Tiếng Việt cũng nói \"một trận mưa\".",
+      "ex": [{ "cn": "昨天下了一场大雨。", "py": "Zuótiān xià le yì chǎng dàyǔ.", "vi": "Hôm qua có một trận mưa to." }] },
+    { "w": "份", "py": "fèn", "hv": "phần", "vi": "phần, bản, suất", "pos": "lượng từ",
+      "note": "Chính là \"phần\" tiếng Việt. Đếm tài liệu, suất ăn, công việc: 一份材料, 一份工作, 一份饭.",
+      "ex": [{ "cn": "请复印三份。", "py": "Qǐng fùyìn sān fèn.", "vi": "Xin photo ba bản." }] },
+    { "w": "倍", "py": "bèi", "hv": "bội", "vi": "lần (gấp bội)", "pos": "lượng từ",
+      "note": "Chính là \"bội\" tiếng Việt (\"bội số\", \"gấp bội\"). Dùng so sánh: 大两倍 (lớn gấp hai).",
+      "ex": [{ "cn": "价格涨了一倍。", "py": "Jiàgé zhǎng le yí bèi.", "vi": "Giá tăng gấp đôi." }] },
+    { "w": "百分之", "py": "bǎi fēn zhī", "hv": "bách phân chi", "vi": "phần trăm", "pos": "cụm số",
+      "note": "Nghĩa đen: \"trong một trăm phần thì lấy…\". 百分之十 = 10%. Chữ 之 là chữ văn ngôn thay cho 的 (bài 96).",
+      "ex": [{ "cn": "百分之八十的人同意。", "py": "Bǎi fēn zhī bāshí de rén tóngyì.", "vi": "Tám mươi phần trăm người đồng ý." }] }
+  ],
+  "grammar": [
+    { "t": "次 và 遍 và 趟 — ba cách đếm \"lần\"",
+      "b": "次 = số lần bất kỳ · 遍 = trọn vẹn từ đầu tới cuối · 趟 = lượt đi lại một nơi",
+      "d": "我看了三次 (xem ba lần, có thể xem dở). 我看了三遍 (xem trọn ba lượt). 我去了三趟 (đi tới đó ba chuyến). Đây là bộ ba dễ nhầm nhất về lượng từ ở HSK 4.",
+      "ex": [
+        { "cn": "这本书我读了两遍。", "py": "Zhè běn shū wǒ dú le liǎng biàn.", "vi": "Quyển sách này tôi đọc trọn hai lượt." },
+        { "cn": "今天我跑了三趟医院。", "py": "Jīntiān wǒ pǎo le sān tàng yīyuàn.", "vi": "Hôm nay tôi chạy tới bệnh viện ba chuyến." }
+      ] },
+    { "t": "Cách nói phân số và phần trăm",
+      "b": "分母 + 分之 + 分子",
+      "d": "Ngược với tiếng Việt: nói MẪU SỐ trước. 三分之一 = một phần ba (ba phần chi một). 百分之五十 = năm mươi phần trăm. Nhớ thứ tự này là đọc được mọi số liệu.",
+      "ex": [
+        { "cn": "四分之三", "py": "sì fēn zhī sān", "vi": "ba phần tư" },
+        { "cn": "百分之百", "py": "bǎi fēn zhī bǎi", "vi": "một trăm phần trăm" }
+      ] },
+    { "t": "倍 dùng trong so sánh",
+      "b": "A 比 B + tính từ + 数 + 倍",
+      "d": "这个比那个大两倍 (cái này lớn gấp hai cái kia). Lưu ý: tiếng Trung 增加了一倍 nghĩa là TĂNG THÊM một lần, tức thành gấp đôi — dễ nhầm khi đọc số liệu.",
+      "ex": [
+        { "cn": "他的工资比我高一倍。", "py": "Tā de gōngzī bǐ wǒ gāo yí bèi.", "vi": "Lương anh ấy cao gấp đôi tôi." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "图书馆里有许多中文书。", "py": "Túshūguǎn lǐ yǒu xǔduō Zhōngwén shū.", "vi": "Trong thư viện có rất nhiều sách tiếng Trung." },
+    { "cn": "他在门口种了两棵树。", "py": "Tā zài ménkǒu zhòng le liǎng kē shù.", "vi": "Anh ấy trồng hai cây trước cửa." },
+    { "cn": "老师让我们写一篇日记。", "py": "Lǎoshī ràng wǒmen xiě yì piān rìjì.", "vi": "Thầy bảo chúng tôi viết một bài nhật ký." },
+    { "cn": "为了办签证我跑了好几趟。", "py": "Wèile bàn qiānzhèng wǒ pǎo le hǎo jǐ tàng.", "vi": "Để làm visa tôi chạy đi mấy chuyến." },
+    { "cn": "这个电影我看了两遍。", "py": "Zhège diànyǐng wǒ kàn le liǎng biàn.", "vi": "Bộ phim này tôi xem hai lượt." },
+    { "cn": "我们一天上六节课。", "py": "Wǒmen yì tiān shàng liù jié kè.", "vi": "Một ngày chúng tôi học sáu tiết." },
+    { "cn": "昨晚的那场比赛很精彩。", "py": "Zuówǎn de nà chǎng bǐsài hěn jīngcǎi.", "vi": "Trận đấu tối qua rất hay." },
+    { "cn": "请给我一份菜单。", "py": "Qǐng gěi wǒ yí fèn càidān.", "vi": "Cho tôi một tờ thực đơn." },
+    { "cn": "今年的收入是去年的两倍。", "py": "Jīnnián de shōurù shì qùnián de liǎng bèi.", "vi": "Thu nhập năm nay gấp đôi năm ngoái." },
+    { "cn": "百分之九十的学生通过了考试。", "py": "Bǎi fēn zhī jiǔshí de xuésheng tōngguò le kǎoshì.", "vi": "Chín mươi phần trăm học sinh qua kỳ thi." }
+  ]
+}

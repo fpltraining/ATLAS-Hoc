@@ -1,0 +1,82 @@
+{
+  "id": 28,
+  "cn": "他比我高",
+  "title": "So sánh và chúc mừng",
+  "goal": "Dùng 比 để so sánh — điểm ngữ pháp lớn nhất của HSK 2 — và nói lời chúc.",
+  "words": [
+    { "w": "比", "py": "bǐ", "hv": "tỷ", "vi": "hơn, so với", "pos": "giới từ",
+      "note": "Hình hai người đứng cạnh nhau để so. Tiếng Việt: \"tỷ lệ\", \"so sánh\", \"đối tỷ\".",
+      "ex": [{ "cn": "他比我高。", "py": "Tā bǐ wǒ gāo.", "vi": "Anh ấy cao hơn tôi." }] },
+    { "w": "真", "py": "zhēn", "hv": "chân", "vi": "thật, thật là", "pos": "phó từ / tính từ",
+      "note": "Tiếng Việt: \"chân thật\", \"chân lý\", \"chân thành\". Dùng để cảm thán: 真好！",
+      "ex": [{ "cn": "今天真冷！", "py": "Jīntiān zhēn lěng!", "vi": "Hôm nay lạnh thật!" }] },
+    { "w": "高", "py": "gāo", "hv": "cao", "vi": "cao", "pos": "tính từ",
+      "note": "Chính là chữ \"cao\" tiếng Việt. Hình cái tháp nhiều tầng. Cũng có trong 高兴 (bài 2).",
+      "ex": [{ "cn": "他很高。", "py": "Tā hěn gāo.", "vi": "Anh ấy rất cao." }] },
+    { "w": "长", "py": "cháng", "hv": "trường", "vi": "dài", "pos": "tính từ",
+      "note": "Đọc cháng = dài (\"trường kỳ\"); đọc zhǎng = lớn lên, trưởng (\"trưởng thành\", \"hiệu trưởng\"). Một chữ hai âm hai nghĩa.",
+      "ex": [{ "cn": "这条路很长。", "py": "Zhè tiáo lù hěn cháng.", "vi": "Con đường này rất dài." }] },
+    { "w": "您", "py": "nín", "hv": "nâm", "vi": "ngài, ông/bà (kính ngữ)", "pos": "đại từ",
+      "note": "你 có thêm 心 (trái tim) ở dưới — xưng hô có để tâm, tức là kính trọng. Dùng với người lớn tuổi, khách hàng, cấp trên.",
+      "ex": [{ "cn": "您好！", "py": "Nín hǎo!", "vi": "Chào ngài/bác ạ!" }] },
+    { "w": "它", "py": "tā", "hv": "tha", "vi": "nó (đồ vật, con vật)", "pos": "đại từ",
+      "note": "Bộ 宀 (mái nhà). Đọc giống hệt 他 và 她 nhưng dùng cho VẬT, không dùng cho người.",
+      "ex": [{ "cn": "它是我的猫。", "py": "Tā shì wǒ de māo.", "vi": "Nó là con mèo của tôi." }] },
+    { "w": "也", "py": "yě", "hv": "dã", "vi": "cũng", "pos": "phó từ",
+      "note": "Luôn đứng SAU chủ ngữ, TRƯỚC động từ — giống hệt quy tắc của 都. Không đặt đầu câu.",
+      "ex": [{ "cn": "我也是学生。", "py": "Wǒ yě shì xuésheng.", "vi": "Tôi cũng là học sinh." }] },
+    { "w": "姓", "py": "xìng", "hv": "tính", "vi": "họ; mang họ", "pos": "danh từ / động từ",
+      "note": "女 (nữ) + 生 (sinh) — họ truyền theo dòng mẹ thời cổ. Tiếng Việt: \"tính danh\", \"bách tính\".",
+      "ex": [{ "cn": "我姓王。", "py": "Wǒ xìng Wáng.", "vi": "Tôi họ Vương." }] },
+    { "w": "生日", "py": "shēngrì", "hv": "sinh nhật", "vi": "sinh nhật", "pos": "danh từ",
+      "note": "Chính là \"sinh nhật\" tiếng Việt: 生 (sinh) + 日 (nhật, ngày).",
+      "ex": [{ "cn": "今天是我的生日。", "py": "Jīntiān shì wǒ de shēngrì.", "vi": "Hôm nay là sinh nhật tôi." }] },
+    { "w": "快乐", "py": "kuàilè", "hv": "khoái lạc", "vi": "vui vẻ, hạnh phúc", "pos": "tính từ",
+      "note": "Tiếng Việt \"khoái lạc\" nghiêng về hưởng thụ, còn 快乐 tiếng Trung chỉ đơn giản là VUI. Dùng trong mọi lời chúc.",
+      "ex": [{ "cn": "生日快乐！", "py": "Shēngrì kuàilè!", "vi": "Chúc mừng sinh nhật!" }] }
+  ],
+  "grammar": [
+    { "t": "比 — cấu trúc so sánh hơn",
+      "b": "A + 比 + B + tính từ",
+      "d": "Điểm ngữ pháp lớn nhất HSK 2. Quan trọng: KHÔNG được dùng 很 trong câu có 比. Nói 他比我很高 là SAI, phải là 他比我高.",
+      "ex": [
+        { "cn": "他比我高。", "py": "Tā bǐ wǒ gāo.", "vi": "Anh ấy cao hơn tôi." },
+        { "cn": "今天比昨天冷。", "py": "Jīntiān bǐ zuótiān lěng.", "vi": "Hôm nay lạnh hơn hôm qua." },
+        { "cn": "这个比那个便宜。", "py": "Zhège bǐ nàge piányi.", "vi": "Cái này rẻ hơn cái kia." }
+      ] },
+    { "t": "Nói hơn BAO NHIÊU",
+      "b": "A + 比 + B + tính từ + mức chênh",
+      "d": "Phần chênh lệch đặt ở CUỐI câu, sau tính từ. Ngược với tiếng Việt hay nói \"cao hơn tôi 5 phân\" — trật tự thật ra giống nhau, chỉ cần nhớ đừng chèn vào giữa.",
+      "ex": [
+        { "cn": "他比我大两岁。", "py": "Tā bǐ wǒ dà liǎng suì.", "vi": "Anh ấy hơn tôi hai tuổi." },
+        { "cn": "这个比那个贵十块。", "py": "Zhège bǐ nàge guì shí kuài.", "vi": "Cái này đắt hơn cái kia mười đồng." },
+        { "cn": "他比我高一点儿。", "py": "Tā bǐ wǒ gāo yìdiǎnr.", "vi": "Anh ấy cao hơn tôi một chút." }
+      ] },
+    { "t": "Phủ định của so sánh: 没有 chứ không phải 不比",
+      "b": "A + 没有 + B + tính từ",
+      "d": "Muốn nói \"tôi không cao bằng anh ấy\" thì dùng 我没有他高, chứ không dùng 我不比他高 (câu này nghĩa hơi khác: \"tôi chẳng cao hơn anh ấy đâu\", mang ý phản bác).",
+      "ex": [
+        { "cn": "我没有他高。", "py": "Wǒ méiyǒu tā gāo.", "vi": "Tôi không cao bằng anh ấy." },
+        { "cn": "今天没有昨天冷。", "py": "Jīntiān méiyǒu zuótiān lěng.", "vi": "Hôm nay không lạnh bằng hôm qua." }
+      ] },
+    { "t": "姓 và 叫 — hỏi họ hay hỏi tên?",
+      "b": "您贵姓？ → 我姓… · 你叫什么名字？ → 我叫…",
+      "d": "您贵姓 là câu hỏi họ lịch sự nhất. Trả lời chỉ nói HỌ: 我姓王. Tuyệt đối không trả lời 我贵姓王 — chữ 贵 là để tôn người khác, không dùng cho mình.",
+      "ex": [
+        { "cn": "您贵姓？", "py": "Nín guìxìng?", "vi": "Xin hỏi quý danh?" },
+        { "cn": "我姓王，叫王小明。", "py": "Wǒ xìng Wáng, jiào Wáng Xiǎomíng.", "vi": "Tôi họ Vương, tên Vương Tiểu Minh." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "他比我高一点儿。", "py": "Tā bǐ wǒ gāo yìdiǎnr.", "vi": "Anh ấy cao hơn tôi một chút." },
+    { "cn": "今天比昨天热。", "py": "Jīntiān bǐ zuótiān rè.", "vi": "Hôm nay nóng hơn hôm qua." },
+    { "cn": "我姐姐比我大三岁。", "py": "Wǒ jiějie bǐ wǒ dà sān suì.", "vi": "Chị tôi hơn tôi ba tuổi." },
+    { "cn": "我没有他跑得快。", "py": "Wǒ méiyǒu tā pǎo de kuài.", "vi": "Tôi chạy không nhanh bằng anh ấy." },
+    { "cn": "您好，您贵姓？", "py": "Nín hǎo, nín guìxìng?", "vi": "Chào ngài, xin hỏi quý danh?" },
+    { "cn": "我姓陈，我也是学生。", "py": "Wǒ xìng Chén, wǒ yě shì xuésheng.", "vi": "Tôi họ Trần, tôi cũng là học sinh." },
+    { "cn": "今天是我的生日。", "py": "Jīntiān shì wǒ de shēngrì.", "vi": "Hôm nay là sinh nhật tôi." },
+    { "cn": "生日快乐！", "py": "Shēngrì kuàilè!", "vi": "Chúc mừng sinh nhật!" },
+    { "cn": "这条路真长。", "py": "Zhè tiáo lù zhēn cháng.", "vi": "Con đường này dài thật." },
+    { "cn": "它是我家的狗，它很可爱。", "py": "Tā shì wǒ jiā de gǒu, tā hěn kě'ài.", "vi": "Nó là con chó nhà tôi, nó rất đáng yêu." }
+  ]
+}

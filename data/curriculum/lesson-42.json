@@ -1,0 +1,75 @@
+{
+  "id": 42,
+  "cn": "买东西付钱",
+  "title": "Tiền bạc và mua sắm",
+  "goal": "Trả tiền, đổi tiền, mượn đồ — và phân biệt ba động từ cầm nắm 带 / 拿 / 借.",
+  "words": [
+    { "w": "元", "py": "yuán", "hv": "nguyên", "vi": "đồng (đơn vị tiền, văn viết)", "pos": "lượng từ",
+      "note": "Dạng VIẾT trang trọng của 块 (bài 22). Trên hoá đơn và bảng giá luôn ghi 元, nhưng nói miệng thì dùng 块.",
+      "ex": [{ "cn": "一共三十五元。", "py": "Yígòng sānshíwǔ yuán.", "vi": "Tổng cộng ba mươi lăm đồng." }] },
+    { "w": "万", "py": "wàn", "hv": "vạn", "vi": "mười nghìn, vạn", "pos": "số từ",
+      "note": "Chính là \"vạn\" tiếng Việt. QUAN TRỌNG: tiếng Trung đếm theo VẠN chứ không theo nghìn — 100.000 là 十万 (mười vạn), không phải \"một trăm nghìn\".",
+      "ex": [{ "cn": "这辆车十万元。", "py": "Zhè liàng chē shí wàn yuán.", "vi": "Chiếc xe này mười vạn đồng." }] },
+    { "w": "花", "py": "huā", "hv": "hoa", "vi": "bông hoa; tiêu (tiền, thời gian)", "pos": "danh từ / động từ",
+      "note": "Bộ 艹 (cỏ cây). Hai nghĩa: bông hoa và TIÊU TIỀN. Tiếng Việt cũng nói \"tiêu hoa\", \"hoa phí\".",
+      "ex": [{ "cn": "我花了三百块。", "py": "Wǒ huā le sānbǎi kuài.", "vi": "Tôi tiêu mất ba trăm đồng." }] },
+    { "w": "信用卡", "py": "xìnyòngkǎ", "hv": "tín dụng ca", "vi": "thẻ tín dụng", "pos": "danh từ",
+      "note": "信用 chính là \"tín dụng\" tiếng Việt. 卡 kǎ là từ mượn âm của \"card\".",
+      "ex": [{ "cn": "可以用信用卡吗？", "py": "Kěyǐ yòng xìnyòngkǎ ma?", "vi": "Dùng thẻ tín dụng được không?" }] },
+    { "w": "礼物", "py": "lǐwù", "hv": "lễ vật", "vi": "món quà", "pos": "danh từ",
+      "note": "Chính là \"lễ vật\" tiếng Việt: 礼 (lễ) + 物 (vật). Tặng quà là 送礼物 (bài 27 đã học 送).",
+      "ex": [{ "cn": "这是给你的礼物。", "py": "Zhè shì gěi nǐ de lǐwù.", "vi": "Đây là quà cho bạn." }] },
+    { "w": "一共", "py": "yígòng", "hv": "nhất cộng", "vi": "tổng cộng", "pos": "phó từ",
+      "note": "共 = \"cộng\" trong \"công cộng\", \"tổng cộng\". Đứng trước con số tổng.",
+      "ex": [{ "cn": "一共多少钱？", "py": "Yígòng duōshao qián?", "vi": "Tổng cộng bao nhiêu tiền?" }] },
+    { "w": "换", "py": "huàn", "hv": "hoán", "vi": "đổi, thay", "pos": "động từ",
+      "note": "Bộ 扌 (tay). Tiếng Việt: \"hoán đổi\", \"trao đổi\", \"chuyển hoán\".",
+      "ex": [{ "cn": "我想换一件大一点儿的。", "py": "Wǒ xiǎng huàn yí jiàn dà yìdiǎnr de.", "vi": "Tôi muốn đổi cái to hơn chút." }] },
+    { "w": "借", "py": "jiè", "hv": "tá", "vi": "mượn; cho mượn", "pos": "động từ",
+      "note": "Thú vị: 借 dùng cho CẢ HAI chiều. 我借你的书 (tôi mượn sách của bạn) và 我借给你 (tôi cho bạn mượn). Nhìn giới từ để biết chiều.",
+      "ex": [{ "cn": "我可以借你的词典吗？", "py": "Wǒ kěyǐ jiè nǐ de cídiǎn ma?", "vi": "Tôi mượn từ điển của bạn được không?" }] },
+    { "w": "带", "py": "dài", "hv": "đới", "vi": "mang theo; dẫn theo", "pos": "động từ",
+      "note": "Có bộ 巾 (khăn vải) ở dưới — vốn là cái thắt lưng để đeo đồ. Nhấn vào việc MANG ĐI CÙNG.",
+      "ex": [{ "cn": "别忘了带钱包。", "py": "Bié wàng le dài qiánbāo.", "vi": "Đừng quên mang ví." }] },
+    { "w": "拿", "py": "ná", "hv": "nã", "vi": "cầm, lấy", "pos": "động từ",
+      "note": "合 (hợp) trên 手 (tay) — khép bàn tay lại mà cầm. Nhấn vào động tác CẦM BẰNG TAY.",
+      "ex": [{ "cn": "请拿一下这个。", "py": "Qǐng ná yíxià zhège.", "vi": "Xin cầm hộ cái này." }] }
+  ],
+  "grammar": [
+    { "t": "Tiếng Trung đếm theo VẠN, không theo nghìn",
+      "b": "一万 = 10.000 · 十万 = 100.000 · 一百万 = 1.000.000",
+      "d": "Đây là chỗ người Việt hay bối rối vì tiếng Việt đếm theo nghìn và triệu. Người Trung Quốc nhảy bậc ở 万 (vạn) và 亿 (ức = 100 triệu). Mẹo: gặp số lớn, hãy tách nhóm bốn chữ số từ phải sang chứ không phải ba.",
+      "ex": [
+        { "cn": "一万", "py": "yí wàn", "vi": "10.000 (một vạn)" },
+        { "cn": "二十万", "py": "èrshí wàn", "vi": "200.000 (hai mươi vạn)" },
+        { "cn": "一百万", "py": "yìbǎi wàn", "vi": "1.000.000 (một trăm vạn)" }
+      ] },
+    { "t": "带 / 拿 / 借 — ba kiểu cầm lấy",
+      "b": "带 = mang theo mình · 拿 = cầm bằng tay · 借 = mượn",
+      "d": "带钱包 (mang ví theo người, có thể trong túi). 拿杯子 (cầm cái cốc trong tay ngay lúc này). 借书 (mượn sách, sẽ trả lại). Ba động từ này người Việt rất hay dùng lẫn.",
+      "ex": [
+        { "cn": "出门要带护照。", "py": "Chūmén yào dài hùzhào.", "vi": "Ra ngoài phải mang hộ chiếu." },
+        { "cn": "请帮我拿一下包。", "py": "Qǐng bāng wǒ ná yíxià bāo.", "vi": "Cầm hộ tôi cái túi với." },
+        { "cn": "这本书是我借的。", "py": "Zhè běn shū shì wǒ jiè de.", "vi": "Quyển sách này tôi mượn." }
+      ] },
+    { "t": "花 + thời gian/tiền + động từ",
+      "b": "花 + số lượng + 动词",
+      "d": "花 dùng được cho cả tiền lẫn thời gian. 我花了三百块买这件衣服 / 我花了两个小时做作业. Cấu trúc giống hệt tiếng Việt \"tiêu ba trăm để mua…\", \"mất hai tiếng để làm…\".",
+      "ex": [
+        { "cn": "我花了两百块买这双鞋。", "py": "Wǒ huā le liǎngbǎi kuài mǎi zhè shuāng xié.", "vi": "Tôi tiêu hai trăm để mua đôi giày này." },
+        { "cn": "他每天花一个小时学中文。", "py": "Tā měi tiān huā yí ge xiǎoshí xué Zhōngwén.", "vi": "Ngày nào anh ấy cũng dành một tiếng học tiếng Trung." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "一共多少钱？", "py": "Yígòng duōshao qián?", "vi": "Tổng cộng bao nhiêu tiền?" },
+    { "cn": "一共一百二十元。", "py": "Yígòng yìbǎi èrshí yuán.", "vi": "Tổng cộng một trăm hai mươi đồng." },
+    { "cn": "可以用信用卡付钱吗？", "py": "Kěyǐ yòng xìnyòngkǎ fùqián ma?", "vi": "Trả bằng thẻ tín dụng được không?" },
+    { "cn": "这件太小了，我想换一件。", "py": "Zhè jiàn tài xiǎo le, wǒ xiǎng huàn yí jiàn.", "vi": "Cái này nhỏ quá, tôi muốn đổi cái khác." },
+    { "cn": "我买了一个礼物送给妈妈。", "py": "Wǒ mǎi le yí ge lǐwù sòng gěi māma.", "vi": "Tôi mua một món quà tặng mẹ." },
+    { "cn": "这个月我花了很多钱。", "py": "Zhège yuè wǒ huā le hěn duō qián.", "vi": "Tháng này tôi tiêu nhiều tiền quá." },
+    { "cn": "我可以借你的笔用一下吗？", "py": "Wǒ kěyǐ jiè nǐ de bǐ yòng yíxià ma?", "vi": "Tôi mượn bút của bạn một chút được không?" },
+    { "cn": "出门别忘了带手机。", "py": "Chūmén bié wàng le dài shǒujī.", "vi": "Ra ngoài đừng quên mang điện thoại." },
+    { "cn": "请把那本词典拿给我。", "py": "Qǐng bǎ nà běn cídiǎn ná gěi wǒ.", "vi": "Đưa giúp tôi quyển từ điển kia." },
+    { "cn": "这台电脑要一万多块。", "py": "Zhè tái diànnǎo yào yí wàn duō kuài.", "vi": "Cái máy tính này hơn một vạn đồng." }
+  ]
+}

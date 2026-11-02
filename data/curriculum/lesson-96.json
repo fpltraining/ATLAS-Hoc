@@ -1,0 +1,73 @@
+{
+  "id": 96,
+  "cn": "成功和失败",
+  "title": "Thành công và thất bại",
+  "goal": "Nói về kết quả, kiên trì hay bỏ cuộc — bộ từ động viên bản thân.",
+  "words": [
+    { "w": "成功", "py": "chénggōng", "hv": "thành công", "vi": "thành công", "pos": "động từ / tính từ",
+      "note": "Chính là \"thành công\" tiếng Việt: 成 (thành) + 功 (công).",
+      "ex": [{ "cn": "他终于成功了。", "py": "Tā zhōngyú chénggōng le.", "vi": "Cuối cùng anh ấy cũng thành công." }] },
+    { "w": "失败", "py": "shībài", "hv": "thất bại", "vi": "thất bại", "pos": "động từ / danh từ",
+      "note": "Chính là \"thất bại\" tiếng Việt: 失 (thất, mất) + 败 (bại). Câu tục ngữ: 失败是成功之母.",
+      "ex": [{ "cn": "失败是成功之母。", "py": "Shībài shì chénggōng zhī mǔ.", "vi": "Thất bại là mẹ thành công." }] },
+    { "w": "输", "py": "shū", "hv": "thâu", "vi": "thua", "pos": "động từ",
+      "note": "Bộ 车 (xe) — vốn nghĩa là vận chuyển, sau thành \"thua\". Trái nghĩa với 赢.",
+      "ex": [{ "cn": "我们输了这场比赛。", "py": "Wǒmen shū le zhè chǎng bǐsài.", "vi": "Chúng tôi thua trận này." }] },
+    { "w": "赢", "py": "yíng", "hv": "doanh", "vi": "thắng", "pos": "động từ",
+      "note": "Chữ nhiều nét nhất bài (17 nét). Gồm 亡, 口, 月, 贝, 凡 — thắng thì phải có đủ mọi thứ.",
+      "ex": [{ "cn": "哪个队赢了？", "py": "Nǎge duì yíng le?", "vi": "Đội nào thắng?" }] },
+    { "w": "获得", "py": "huòdé", "hv": "hoạch đắc", "vi": "giành được, đạt được", "pos": "động từ",
+      "note": "获 (hoạch, thu hoạch) + 得 (được). Trang trọng, dùng cho giải thưởng và thành tựu.",
+      "ex": [{ "cn": "她获得了第一名。", "py": "Tā huòdé le dì-yī míng.", "vi": "Cô ấy giành hạng nhất." }] },
+    { "w": "受到", "py": "shòudào", "hv": "thụ đáo", "vi": "nhận được, chịu", "pos": "động từ",
+      "note": "受 (chịu, nhận) + 到 (tới). Dùng cho thứ trừu tượng: 受到欢迎, 受到影响, 受到批评.",
+      "ex": [{ "cn": "他受到了大家的欢迎。", "py": "Tā shòudào le dàjiā de huānyíng.", "vi": "Anh ấy được mọi người chào đón." }] },
+    { "w": "接受", "py": "jiēshòu", "hv": "tiếp thụ", "vi": "tiếp nhận, chấp nhận", "pos": "động từ",
+      "note": "Chính là \"tiếp thụ\" tiếng Việt: 接 (tiếp, bài 41) + 受 (thụ). Khác 受到 ở chỗ 接受 là CHỦ ĐỘNG nhận.",
+      "ex": [{ "cn": "他接受了我的建议。", "py": "Tā jiēshòu le wǒ de jiànyì.", "vi": "Anh ấy chấp nhận đề xuất của tôi." }] },
+    { "w": "坚持", "py": "jiānchí", "hv": "kiên trì", "vi": "kiên trì", "pos": "động từ",
+      "note": "Chính là \"kiên trì\" tiếng Việt: 坚 (kiên) + 持 (trì, giữ — bộ 扌).",
+      "ex": [{ "cn": "坚持就是胜利。", "py": "Jiānchí jiù shì shènglì.", "vi": "Kiên trì chính là chiến thắng." }] },
+    { "w": "放弃", "py": "fàngqì", "hv": "phóng khí", "vi": "từ bỏ", "pos": "động từ",
+      "note": "放 (buông, bài 60) + 弃 (vứt bỏ). Trái nghĩa hoàn toàn với 坚持.",
+      "ex": [{ "cn": "别轻易放弃。", "py": "Bié qīngyì fàngqì.", "vi": "Đừng dễ dàng bỏ cuộc." }] },
+    { "w": "竞争", "py": "jìngzhēng", "hv": "cạnh tranh", "vi": "cạnh tranh", "pos": "động từ / danh từ",
+      "note": "Chính là \"cạnh tranh\" tiếng Việt: 竞 (cạnh) + 争 (tranh).",
+      "ex": [{ "cn": "现在的竞争很激烈。", "py": "Xiànzài de jìngzhēng hěn jīliè.", "vi": "Cạnh tranh bây giờ rất khốc liệt." }] }
+  ],
+  "grammar": [
+    { "t": "受到 và 接受 — bị động hay chủ động?",
+      "b": "受到 = nhận lấy (không chọn) · 接受 = chấp nhận (có chọn)",
+      "d": "受到影响 (chịu ảnh hưởng — không tự chọn). 接受建议 (chấp nhận đề xuất — có quyền từ chối). Người Việt hay dùng lẫn vì tiếng Việt đều nói \"nhận\".",
+      "ex": [
+        { "cn": "他受到了很大的影响。", "py": "Tā shòudào le hěn dà de yǐngxiǎng.", "vi": "Anh ấy chịu ảnh hưởng rất lớn." },
+        { "cn": "我不能接受这个价格。", "py": "Wǒ bù néng jiēshòu zhège jiàgé.", "vi": "Tôi không chấp nhận được giá này." }
+      ] },
+    { "t": "坚持 ↔ 放弃 — cặp từ của ý chí",
+      "b": "坚持 + động từ · 放弃 + danh từ/động từ",
+      "d": "坚持学习 (kiên trì học), 坚持锻炼 (kiên trì tập). 放弃机会 (bỏ lỡ cơ hội), 放弃学习 (bỏ học). Đây là cặp từ xuất hiện nhiều nhất trong bài viết động viên.",
+      "ex": [
+        { "cn": "他坚持每天写一篇日记。", "py": "Tā jiānchí měi tiān xiě yì piān rìjì.", "vi": "Anh ấy kiên trì mỗi ngày viết một bài nhật ký." },
+        { "cn": "遇到困难别放弃。", "py": "Yù dào kùnnan bié fàngqì.", "vi": "Gặp khó khăn đừng bỏ cuộc." }
+      ] },
+    { "t": "之 — chữ văn ngôn còn sót trong tục ngữ",
+      "b": "失败是成功之母 · 三分之一",
+      "d": "之 là chữ cổ tương đương 的. Nay chỉ còn trong thành ngữ và phân số: 三分之一 (một phần ba), 百分之十 (mười phần trăm — bài 100). Tiếng Việt cũng giữ \"chi\" trong \"vô sở bất chi\".",
+      "ex": [
+        { "cn": "失败是成功之母。", "py": "Shībài shì chénggōng zhī mǔ.", "vi": "Thất bại là mẹ thành công." },
+        { "cn": "四分之三", "py": "sì fēn zhī sān", "vi": "ba phần tư" }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "经过多次失败，他终于成功了。", "py": "Jīngguò duō cì shībài, tā zhōngyú chénggōng le.", "vi": "Qua nhiều lần thất bại, cuối cùng anh ấy thành công." },
+    { "cn": "输了不要紧，下次再来。", "py": "Shū le búyàojǐn, xià cì zài lái.", "vi": "Thua không sao, lần sau lại làm." },
+    { "cn": "我们队赢了三比一。", "py": "Wǒmen duì yíng le sān bǐ yī.", "vi": "Đội tôi thắng ba một." },
+    { "cn": "他获得了汉语比赛的第一名。", "py": "Tā huòdé le Hànyǔ bǐsài de dì-yī míng.", "vi": "Cậu ấy giành giải nhất cuộc thi tiếng Trung." },
+    { "cn": "这本书受到了很多读者的欢迎。", "py": "Zhè běn shū shòudào le hěn duō dúzhě de huānyíng.", "vi": "Quyển sách này được nhiều độc giả đón nhận." },
+    { "cn": "我接受你的道歉。", "py": "Wǒ jiēshòu nǐ de dàoqiàn.", "vi": "Tôi chấp nhận lời xin lỗi của bạn." },
+    { "cn": "学汉语最重要的是坚持。", "py": "Xué Hànyǔ zuì zhòngyào de shì jiānchí.", "vi": "Học tiếng Trung quan trọng nhất là kiên trì." },
+    { "cn": "他放弃了那个工作机会。", "py": "Tā fàngqì le nàge gōngzuò jīhuì.", "vi": "Anh ấy từ bỏ cơ hội việc làm đó." },
+    { "cn": "找工作的竞争越来越大。", "py": "Zhǎo gōngzuò de jìngzhēng yuè lái yuè dà.", "vi": "Cạnh tranh tìm việc ngày càng lớn." },
+    { "cn": "只要不放弃，就有机会成功。", "py": "Zhǐyào bú fàngqì, jiù yǒu jīhuì chénggōng.", "vi": "Chỉ cần không bỏ cuộc là còn cơ hội thành công." }
+  ]
+}

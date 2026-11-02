@@ -1,0 +1,74 @@
+{
+  "id": 49,
+  "cn": "爱好和上网",
+  "title": "Sở thích và Internet",
+  "goal": "Nói về sở thích, dùng máy tính và mạng — nhóm từ hiện đại nhưng vẫn đầy gốc Hán Việt.",
+  "words": [
+    { "w": "爱好", "py": "àihào", "hv": "ái hảo", "vi": "sở thích", "pos": "danh từ",
+      "note": "爱 (yêu) + 好 (thích). Chú ý 好 ở đây đọc hào (thanh 4), không phải hǎo.",
+      "ex": [{ "cn": "你有什么爱好？", "py": "Nǐ yǒu shénme àihào?", "vi": "Bạn có sở thích gì?" }] },
+    { "w": "感兴趣", "py": "gǎn xìngqù", "hv": "cảm hứng thú", "vi": "hứng thú, quan tâm", "pos": "cụm động từ",
+      "note": "兴趣 chính là \"hứng thú\" tiếng Việt. Luôn dùng với 对: 对…感兴趣 (bài 38).",
+      "ex": [{ "cn": "我对历史很感兴趣。", "py": "Wǒ duì lìshǐ hěn gǎn xìngqù.", "vi": "Tôi rất hứng thú với lịch sử." }] },
+    { "w": "游戏", "py": "yóuxì", "hv": "du hí", "vi": "trò chơi, game", "pos": "danh từ",
+      "note": "游 (chơi, đi rong — bộ 氵) + 戏 (trò diễn). Tiếng Việt: \"du hí\", \"du lịch\", \"hí kịch\".",
+      "ex": [{ "cn": "他喜欢玩游戏。", "py": "Tā xǐhuan wán yóuxì.", "vi": "Cậu ấy thích chơi game." }] },
+    { "w": "节目", "py": "jiémù", "hv": "tiết mục", "vi": "chương trình, tiết mục", "pos": "danh từ",
+      "note": "Chính là \"tiết mục\" tiếng Việt: 节 (tiết) + 目 (mục). Chương trình tivi cũng gọi là 节目.",
+      "ex": [{ "cn": "这个节目很有意思。", "py": "Zhège jiémù hěn yǒu yìsi.", "vi": "Chương trình này rất thú vị." }] },
+    { "w": "新闻", "py": "xīnwén", "hv": "tân văn", "vi": "tin tức, thời sự", "pos": "danh từ",
+      "note": "新 (mới) + 闻 (nghe được). CẨN THẬN: 新闻 là TIN TỨC, còn \"tân văn\" tiếng Việt nghĩa khác. Báo là 报纸 (bài 30).",
+      "ex": [{ "cn": "我每天看新闻。", "py": "Wǒ měi tiān kàn xīnwén.", "vi": "Ngày nào tôi cũng xem thời sự." }] },
+    { "w": "照片", "py": "zhàopiàn", "hv": "chiếu phiến", "vi": "bức ảnh", "pos": "danh từ",
+      "note": "照 (chiếu, rọi) + 片 (tấm mỏng). Lượng từ là 张 (vật phẳng, bài 43): 一张照片.",
+      "ex": [{ "cn": "这张照片很漂亮。", "py": "Zhè zhāng zhàopiàn hěn piàoliang.", "vi": "Bức ảnh này rất đẹp." }] },
+    { "w": "照相机", "py": "zhàoxiàngjī", "hv": "chiếu tướng cơ", "vi": "máy ảnh", "pos": "danh từ",
+      "note": "照相 (chụp ảnh) + 机 (máy). Chụp ảnh là 照相 hoặc 拍照.",
+      "ex": [{ "cn": "我带了照相机。", "py": "Wǒ dài le zhàoxiàngjī.", "vi": "Tôi có mang máy ảnh." }] },
+    { "w": "上网", "py": "shàngwǎng", "hv": "thượng võng", "vi": "lên mạng, vào Internet", "pos": "động từ",
+      "note": "上 (lên) + 网 (lưới, mạng). 网 vốn là hình cái lưới đánh cá — Internet đúng là một cái lưới.",
+      "ex": [{ "cn": "我每天上网查资料。", "py": "Wǒ měi tiān shàngwǎng chá zīliào.", "vi": "Ngày nào tôi cũng lên mạng tra tài liệu." }] },
+    { "w": "聊天", "py": "liáotiān", "hv": "liêu thiên", "vi": "tán gẫu, trò chuyện", "pos": "động từ",
+      "note": "聊 có bộ 耳 (tai) — chuyện trò là nghe nhau nói. Là động từ ly hợp: 聊了一个小时天.",
+      "ex": [{ "cn": "我们聊了很久。", "py": "Wǒmen liáo le hěn jiǔ.", "vi": "Chúng tôi nói chuyện rất lâu." }] },
+    { "w": "电子邮件", "py": "diànzǐ yóujiàn", "hv": "điện tử bưu kiện", "vi": "thư điện tử, email", "pos": "danh từ",
+      "note": "电子 chính là \"điện tử\", 邮件 là \"bưu kiện\". Ghép lại đúng nghĩa \"thư điện tử\". Nói tắt là 邮件.",
+      "ex": [{ "cn": "我给你发一封电子邮件。", "py": "Wǒ gěi nǐ fā yì fēng diànzǐ yóujiàn.", "vi": "Tôi gửi cho bạn một email." }] }
+  ],
+  "grammar": [
+    { "t": "Ba cách nói về sở thích",
+      "b": "我喜欢… · 我的爱好是… · 我对…感兴趣",
+      "d": "Ba mẫu câu này bổ sung cho nhau. 喜欢 nhẹ nhất, 爱好 dùng khi kể sở thích như một danh sách, 对…感兴趣 trang trọng và trí tuệ hơn.",
+      "ex": [
+        { "cn": "我喜欢听音乐。", "py": "Wǒ xǐhuan tīng yīnyuè.", "vi": "Tôi thích nghe nhạc." },
+        { "cn": "我的爱好是照相和爬山。", "py": "Wǒ de àihào shì zhàoxiàng hé páshān.", "vi": "Sở thích của tôi là chụp ảnh và leo núi." },
+        { "cn": "我对中国文化很感兴趣。", "py": "Wǒ duì Zhōngguó wénhuà hěn gǎn xìngqù.", "vi": "Tôi rất hứng thú với văn hoá Trung Quốc." }
+      ] },
+    { "t": "Từ mới thời hiện đại vẫn ghép từ chữ cũ",
+      "b": "电脑 · 电视 · 电影 · 电话 · 电梯 · 电子邮件",
+      "d": "Tiếng Trung hầu như không mượn nguyên từ nước ngoài mà GHÉP chữ sẵn có. Nhờ vậy người biết chữ đoán được nghĩa từ mới. So sánh: người Việt phải học riêng \"email\", còn người Trung nhìn 电子邮件 là hiểu ngay.",
+      "ex": [
+        { "cn": "上网 = 上 + 网", "py": "shàngwǎng", "vi": "lên + lưới = vào mạng" },
+        { "cn": "照相机 = 照相 + 机", "py": "zhàoxiàngjī", "vi": "chụp ảnh + máy = máy ảnh" }
+      ] },
+    { "t": "Động từ ly hợp lại xuất hiện",
+      "b": "聊天 · 上网 · 照相",
+      "d": "Ba từ này đều tách được: 聊了一个小时天, 上了两个小时网, 照了很多相. Đến đây bạn đã gặp cả chục động từ ly hợp — hãy để ý mỗi khi muốn thêm thời lượng hay số lần vào giữa.",
+      "ex": [
+        { "cn": "我们聊了两个小时天。", "py": "Wǒmen liáo le liǎng ge xiǎoshí tiān.", "vi": "Chúng tôi nói chuyện hai tiếng." },
+        { "cn": "他每天上三个小时网。", "py": "Tā měi tiān shàng sān ge xiǎoshí wǎng.", "vi": "Ngày nào cậu ấy cũng lên mạng ba tiếng." }
+      ] }
+  ],
+  "sentences": [
+    { "cn": "你有什么爱好？", "py": "Nǐ yǒu shénme àihào?", "vi": "Bạn có sở thích gì?" },
+    { "cn": "我的爱好是听音乐和照相。", "py": "Wǒ de àihào shì tīng yīnyuè hé zhàoxiàng.", "vi": "Sở thích của tôi là nghe nhạc và chụp ảnh." },
+    { "cn": "晚上我喜欢看新闻节目。", "py": "Wǎnshang wǒ xǐhuan kàn xīnwén jiémù.", "vi": "Buổi tối tôi thích xem chương trình thời sự." },
+    { "cn": "弟弟每天玩两个小时游戏。", "py": "Dìdi měi tiān wán liǎng ge xiǎoshí yóuxì.", "vi": "Em trai tôi ngày nào cũng chơi game hai tiếng." },
+    { "cn": "这些照片是去年在北京照的。", "py": "Zhèxiē zhàopiàn shì qùnián zài Běijīng zhào de.", "vi": "Mấy tấm ảnh này chụp ở Bắc Kinh năm ngoái." },
+    { "cn": "旅游的时候我总是带着照相机。", "py": "Lǚyóu de shíhou wǒ zǒngshì dài zhe zhàoxiàngjī.", "vi": "Khi đi du lịch tôi luôn mang theo máy ảnh." },
+    { "cn": "我上网跟中国朋友聊天。", "py": "Wǒ shàngwǎng gēn Zhōngguó péngyou liáotiān.", "vi": "Tôi lên mạng nói chuyện với bạn Trung Quốc." },
+    { "cn": "请把资料发到我的电子邮件。", "py": "Qǐng bǎ zīliào fā dào wǒ de diànzǐ yóujiàn.", "vi": "Xin gửi tài liệu vào email của tôi." },
+    { "cn": "他对音乐特别感兴趣。", "py": "Tā duì yīnyuè tèbié gǎn xìngqù.", "vi": "Cậu ấy đặc biệt hứng thú với âm nhạc." },
+    { "cn": "上网太久对眼睛不好。", "py": "Shàngwǎng tài jiǔ duì yǎnjing bù hǎo.", "vi": "Lên mạng lâu quá không tốt cho mắt." }
+  ]
+}
