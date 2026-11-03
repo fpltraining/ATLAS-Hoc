@@ -100,10 +100,23 @@ export function applyTopicIpa() {
   log.push(`Phiên âm chủ đề: đổi ${n}`);
 }
 
+/* 4. Trạng thái các chặng tiếng Anh: ghi chú và đánh dấu chặng chưa đủ nội dung */
+export function applyCourse() {
+  const f = path.join(PATCH, 'course.json');
+  if (!fs.existsSync(f)) return;
+  const fix = readJson(f).stages;
+  const cf = path.join(OUT, 'en', 'course.json');
+  const course = readJson(cf);
+  course.stages.forEach((st, i) => { if (fix[i]) Object.assign(st, fix[i]); });
+  fs.writeFileSync(cf, JSON.stringify(course));
+  log.push(`Chặng tiếng Anh: ${Object.keys(fix).length} ghi chú`);
+}
+
 export function applyAll() {
   applyReplace();
   applyEnBank();
   applyTopicIpa();
+  applyCourse();
   console.log(log.join('\n'));
 }
 

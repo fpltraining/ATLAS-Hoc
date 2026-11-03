@@ -12,6 +12,7 @@ import { applyAll as applyPatches } from './apply-patches.mjs';
 import { buildStories } from './build-stories.mjs';
 import { buildCurriculum } from './build-curriculum.mjs';
 import { buildExams } from './build-exams.mjs';
+import { buildPlacement } from './build-placement.mjs';
 
 const SRC = path.resolve(process.argv[2] || '../_src');
 const ROOT = process.cwd();
@@ -521,5 +522,6 @@ console.log(perStory);
    rồi áp các bản sửa trong data-src/patches/ (lỗi Hán Việt, phiên âm, từ bổ sung) */
 buildCurriculum({ quiet: true });
 buildExams({ quiet: true });
+buildPlacement({ quiet: true });
 buildStories({ quiet: true });
 applyPatches();

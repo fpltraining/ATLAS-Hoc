@@ -15,6 +15,7 @@ export async function render(route) {
   const sub = route.args[0];
   if (sub === 'session') return session();
   if (sub === 'do') return activity(route.args[1]);
+  if (sub === 'placement') return placement();
   return hub();
 }
 
@@ -39,7 +40,9 @@ async function hub() {
     h('div.small.hero-sub', `${stage.name} · ${stage.cefr} · buổi ${n}/${stage.total}`),
     h('h1.today-title', enTitle(st, n, course)),
     h('div', { style: { marginTop: '12px' } }, progressBar(doneHere / stage.total)),
+    stage.ready === false ? h('div.note.seal', { style: { marginTop: '10px' } }, stage.note) : null,
     h('a.btn.seal.block', { href: '#/en/session', style: { marginTop: '14px' } }, doneHere || enCards.length ? 'Học tiếp ›' : 'Bắt đầu ›'),
+    !en.placed && !doneHere ? h('a.small', { href: '#/en/placement', style: { display: 'block', textAlign: 'center', marginTop: '10px', color: '#fff', opacity: 0.85, textDecoration: 'underline' } }, 'Chưa biết bắt đầu từ đâu? Làm bài xếp lớp (10 phút)') : null,
   ));
 
   el.append(h('div.hub-grid',
@@ -54,6 +57,9 @@ async function hub() {
     tile('#/lib/irreg', 'V', 'Động từ bất quy tắc', 'Theo nhóm dễ nhớ'),
     tile('#/lib/sentences', '“', 'Câu mẫu', 'Luyện nghe và viết'),
   ));
+  el.append(h('div.hub-grid',
+    tile('#/en/placement', '?', 'Kiểm tra xếp lớp', en.placed ? `Lần trước: ${en.placed.level}` : '36 câu, gợi ý chặng phù hợp'),
+  ));
 
   /* ---- lộ trình các chặng ---- */
   const path = h('div.stack');
@@ -61,6 +67,8 @@ async function hub() {
     const done = Object.values(en.sess?.[i] || {}).filter((x) => x.done).length;
     path.append(h(`div.stage${i === st ? '.now' : ''}`,
       h('div.row.spread', h('b', `${s.name}: ${s.sub}`), h('span.level', s.cefr)),
+      s.ready === false ? pill('Đang soạn', 'seal') : null,
+      s.note ? h('div.small.muted', { style: { margin: '4px 0' } }, s.note) : null,
       h('div.small.faint', `${done}/${s.total} buổi`),
       h('div', { style: { margin: '6px 0' } }, progressBar(done / s.total)),
       h('div.small.muted', 'Điều kiện qua chặng: ', s.gate),
@@ -459,4 +467,88 @@ function retellBlock(key, t) {
     ),
     cleanup: () => clearInterval(timer),
   };
+}
+
+/* ---------- kiểm tra xếp lớp ---------------------------------------------------- */
+
+const LEVEL_NAME = { 0: 'A0', 1: 'A1', 2: 'A2', 3: 'B1', 4: 'B2' };
+
+/* Cấp đạt được: cấp cao nhất mà mọi cấp từ 1 tới đó đều đúng từ 60% trở lên */
+function placedLevel(items, answers) {
+  let level = 0;
+  for (const lv of [1, 2, 3, 4]) {
+    const idx = items.map((it, i) => i).filter((i) => items[i].lv === lv);
+    const right = idx.filter((i) => answers[i] === items[i].a).length;
+    if (right / idx.length >= 0.6) level = lv; else break;
+  }
+  return level;
+}
+
+/* Cấp → chặng nên bắt đầu */
+const STAGE_FOR = { 0: 0, 1: 1, 2: 1, 3: 2, 4: 2 };
+
+async function placement() {
+  const data = await fetch('data/en/placement.json').then((r) => r.json());
+  const course = await content.course();
+  const items = data.items;
+  const answers = new Array(items.length).fill(null);
+  let cur = 0;
+  const el = h('div.stack');
+
+  const draw = () => {
+    const it = items[cur];
+    const list = h('div.mcq');
+    it.opts.forEach((o, k) => list.append(h(`button.mcq-opt${answers[cur] === k ? '.ok' : ''}`, {
+      onclick: () => { answers[cur] = k; if (cur < items.length - 1) { cur++; } draw(); },
+    }, o)));
+    el.replaceChildren(
+      h('div.card',
+        h('div.small.faint', `Câu ${cur + 1}/${items.length} · ${it.kind === 'vocab' ? 'Từ vựng' : 'Ngữ pháp'}`),
+        h('div', { style: { margin: '6px 0 10px' } }, progressBar(cur / items.length)),
+        h('div.mcq-q', it.q),
+        it.ex ? h('div.small.muted', { style: { marginBottom: '8px' } }, it.ex) : null,
+        list,
+        h('p.small.faint', { style: { marginTop: '10px' } }, 'Không biết thì chọn đại hoặc bỏ qua, đừng tra. Bài này chỉ để xếp chặng.'),
+        h('div.btn-row', { style: { marginTop: '10px' } },
+          h('button.btn.ghost', { disabled: cur === 0, onclick: () => { cur--; draw(); } }, '‹ Câu trước'),
+          cur < items.length - 1
+            ? h('button.btn.ghost', { onclick: () => { cur++; draw(); } }, 'Bỏ qua ›')
+            : h('button.btn.seal', { onclick: finish }, 'Xem kết quả'),
+        ),
+      ),
+    );
+  };
+
+  async function finish() {
+    const level = placedLevel(items, answers);
+    const st = STAGE_FOR[level];
+    const right = items.filter((it, i) => answers[i] === it.a).length;
+    await store.updateEn((e) => { e.placed = { level: LEVEL_NAME[level], at: Date.now(), right, total: items.length }; return e; });
+    const stage = course.stages[st];
+    el.replaceChildren(h('div.card',
+      h('div.small.faint', `Đúng ${right}/${items.length} câu`),
+      h('h1', `Trình độ ước lượng: ${LEVEL_NAME[level]}`),
+      h('p', `Nên bắt đầu từ ${stage.name}: ${stage.sub} (${stage.cefr}).`),
+      h('p.small.muted', 'Đây là ước lượng nhanh qua ngữ pháp và từ vựng. Kỹ năng nghe, nói, viết cần luyện thêm để khớp với trình độ này.'),
+      h('div.btn-row', { style: { marginTop: '12px' } },
+        h('button.btn.seal', {
+          onclick: async () => {
+            await store.updateEn((e) => { e.stage = st; return e; });
+            toast(`Đã chọn ${stage.name}.`);
+            location.hash = '#/en/session';
+          },
+        }, `Bắt đầu ${stage.name}`),
+        h('a.btn.ghost', { href: '#/en' }, 'Để sau'),
+      ),
+      section('Xem lại', h('div.stack', ...items.map((it, i) => (answers[i] === it.a ? null : h('div.card',
+        h('div.small.faint', `Câu ${i + 1} · ${LEVEL_NAME[it.lv]}`),
+        h('div', it.q),
+        h('div.small', 'Đáp án: ', h('b', it.opts[it.a])),
+        it.why ? h('div.small.muted', it.why) : null,
+      ))))),
+    ));
+  }
+
+  draw();
+  return { title: 'Kiểm tra xếp lớp', el };
 }

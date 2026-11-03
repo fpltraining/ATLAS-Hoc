@@ -24,7 +24,7 @@ const CORE_FILES = [
 ];
 
 /* Tải sau, chạy ngầm: nhiều và nặng hơn nhưng không cần ngay lúc mở app */
-const EXTRA_FILES = ['data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json'];
+const EXTRA_FILES = ['data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {
