@@ -243,26 +243,74 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @level HSK2
 @title 画蛇添足
 @vi Họa xà thiêm túc: Vẽ rắn thêm chân
-@blurb Vì sao làm thừa lại thành hỏng việc? Câu chuyện về một bình rượu và một con rắn có chân.
+@blurb Vì sao làm thừa lại thành hỏng việc? Câu chuyện về một bình rượu, một con rắn có chân, và một vị tướng suýt mất tất cả.
 
 ## 1 | 一壶酒 | Một bình rượu
-从前，几个朋友有一壶酒。 | Cóngqián, jǐ ge péngyou yǒu yì hú jiǔ. | Ngày xưa, mấy người bạn có một bình rượu.
-酒太少了，不够大家喝。 | Jiǔ tài shǎo le, bú gòu dàjiā hē. | Rượu ít quá, không đủ cho mọi người.
-一个人说：“我们来画蛇吧。 | Yí ge rén shuō: "Wǒmen lái huà shé ba. | Một người nói: "Chúng ta thi vẽ rắn đi.
-谁先画好，谁喝酒。” | Shéi xiān huà hǎo, shéi hē jiǔ." | Ai vẽ xong trước, người đó uống."
+从前，在楚国，有一家人请客。 | Cóngqián, zài Chǔguó, yǒu yì jiā rén qǐngkè. | Ngày xưa, ở nước Sở, có một nhà mời khách.
+客人走了以后， | Kèrén zǒu le yǐhòu, | Khách về rồi,
+主人给帮忙的人一壶酒。 | zhǔrén gěi bāngmáng de rén yì hú jiǔ. | chủ nhà cho những người giúp việc một bình rượu.
+帮忙的人有好几个。 | Bāngmáng de rén yǒu hǎo jǐ ge. | Người giúp việc có đến mấy người.
 
-大家都在地上画。 | Dàjiā dōu zài dì shang huà. | Mọi người đều vẽ trên đất.
-有一个人画得最快。 | Yǒu yí ge rén huà de zuì kuài. | Có một người vẽ nhanh nhất.
-他拿起酒，很得意。 | Tā ná qǐ jiǔ, hěn déyì. | Anh ta cầm rượu, rất đắc ý.
-他说：“我还能给蛇画上脚！” | Tā shuō: "Wǒ hái néng gěi shé huà shang jiǎo!" | Anh ta nói: "Tôi còn vẽ thêm chân cho rắn được!"
+一个人说：“酒太少了， | Yí ge rén shuō: "Jiǔ tài shǎo le, | Một người nói: "Rượu ít quá,
+大家一起喝，谁都喝不够。 | dàjiā yìqǐ hē, shéi dōu hē bu gòu. | cả bọn cùng uống thì chẳng ai đủ.
+一个人喝，就正好。” | Yí ge rén hē, jiù zhènghǎo." | Một người uống thì vừa đẹp."
+另一个人说：“那我们比赛吧！ | Lìng yí ge rén shuō: "Nà wǒmen bǐsài ba! | Một người khác nói: "Vậy chúng ta thi đi!
+每个人在地上画一条蛇。 | Měi ge rén zài dì shang huà yì tiáo shé. | Mỗi người vẽ một con rắn trên đất.
+谁先画好，酒就是谁的。” | Shéi xiān huà hǎo, jiǔ jiù shì shéi de." | Ai vẽ xong trước, rượu là của người đó."
+大家都说：“好！” | Dàjiā dōu shuō: "Hǎo!" | Mọi người đều nói: "Được!"
+
+? 为什么他们要比赛？ | Vì sao họ phải thi? | 酒太少了* | 他们不喜欢喝酒 | 主人让他们比赛
+? 比赛的人要做什么？ | Người thi phải làm gì? | 在地上画蛇* | 唱歌 | 跑步
+> Đọc to câu “谁先画好，酒就是谁的。”
+
+## 2 | 蛇的脚 | Chân của con rắn
+大家马上开始画。 | Dàjiā mǎshàng kāishǐ huà. | Mọi người lập tức bắt đầu vẽ.
+有一个人画得特别快。 | Yǒu yí ge rén huà de tèbié kuài. | Có một người vẽ đặc biệt nhanh.
+很快，他的蛇就画好了。 | Hěn kuài, tā de shé jiù huà hǎo le. | Rất nhanh, con rắn của anh ta đã vẽ xong.
+他拿起酒壶，看看别人。 | Tā ná qǐ jiǔhú, kànkan biérén. | Anh ta cầm bình rượu lên, nhìn những người khác.
+别人都还没画完。 | Biérén dōu hái méi huà wán. | Người khác đều chưa vẽ xong.
+
+他很得意，想： | Tā hěn déyì, xiǎng: | Anh ta rất đắc ý, nghĩ:
+“我有很多时间， | "Wǒ yǒu hěn duō shíjiān, | "Ta còn nhiều thời gian,
+我还能给蛇画上脚！” | wǒ hái néng gěi shé huà shang jiǎo!" | ta còn vẽ thêm chân cho rắn được!"
+他左手拿着酒， | Tā zuǒshǒu ná zhe jiǔ, | Tay trái anh ta cầm rượu,
+右手给蛇画脚。 | yòushǒu gěi shé huà jiǎo. | tay phải vẽ chân cho rắn.
+一只，两只，三只…… | Yì zhī, liǎng zhī, sān zhī…… | Một cái, hai cái, ba cái……
 
 这时候，另一个人画好了。 | Zhè shíhou, lìng yí ge rén huà hǎo le. | Lúc này, một người khác đã vẽ xong.
-他拿过酒，说： | Tā ná guò jiǔ, shuō: | Người đó giật lấy rượu, nói:
-“蛇没有脚，你画的不是蛇。” | "Shé méiyǒu jiǎo, nǐ huà de bú shì shé." | "Rắn không có chân, cái anh vẽ không phải rắn."
-说完，他把酒喝了。 | Shuō wán, tā bǎ jiǔ hē le. | Nói xong, người đó uống cạn rượu.
+他拿过酒壶，说： | Tā ná guò jiǔhú, shuō: | Người đó giật lấy bình rượu, nói:
+“蛇本来没有脚。 | "Shé běnlái méiyǒu jiǎo. | "Rắn vốn không có chân.
+你画的不是蛇。” | Nǐ huà de bú shì shé." | Cái anh vẽ không phải rắn."
+说完，他把酒都喝了。 | Shuō wán, tā bǎ jiǔ dōu hē le. | Nói xong, người đó uống sạch rượu.
+第一个画好的人， | Dì yī ge huà hǎo de rén, | Người vẽ xong đầu tiên,
+最后什么也没有得到。 | zuìhòu shénme yě méiyǒu dédào. | cuối cùng chẳng được gì cả.
 
-? 为什么他没有喝到酒？ | Vì sao anh ta không được uống rượu? | 他给蛇画了脚* | 他画得太慢 | 他不喜欢酒
-> Bạn đã từng "vẽ rắn thêm chân" chưa? Kể 1 câu.
+? 第一个人为什么没有喝到酒？ | Vì sao người thứ nhất không được uống rượu? | 他给蛇画了脚* | 他画得太慢 | 他不喜欢酒
+? 蛇有几只脚？ | Rắn có mấy cái chân? | 没有脚* | 两只 | 四只
+> Bằng tiếng Trung, kể lại trong 2 câu: người thứ nhất đã sai ở đâu?
+
+## 3 | 讲故事的人 | Người kể câu chuyện
+这个故事有两千多年了。 | Zhège gùshi yǒu liǎng qiān duō nián le. | Câu chuyện này đã hơn hai nghìn năm tuổi.
+那时候，楚国有一位大将军。 | Nà shíhou, Chǔguó yǒu yí wèi dà jiāngjūn. | Thời đó, nước Sở có một vị đại tướng quân.
+他打了很多胜仗， | Tā dǎ le hěn duō shèngzhàng, | Ông đánh thắng rất nhiều trận,
+还想再去打一个国家。 | hái xiǎng zài qù dǎ yí ge guójiā. | còn muốn đi đánh thêm một nước nữa.
+
+一个聪明人来见他， | Yí ge cōngming rén lái jiàn tā, | Một người thông minh đến gặp ông,
+给他讲了这个故事。 | gěi tā jiǎng le zhège gùshi. | kể cho ông nghe câu chuyện này.
+然后说：“您已经赢了很多。 | Ránhòu shuō: "Nín yǐjīng yíng le hěn duō. | Rồi nói: "Ngài đã thắng rất nhiều rồi.
+如果再打，赢了也不会更多， | Rúguǒ zài dǎ, yíng le yě bú huì gèng duō, | Nếu đánh nữa, thắng cũng chẳng thêm được gì,
+输了就什么都没有了。 | shū le jiù shénme dōu méiyǒu le. | thua thì mất hết.
+这就像给蛇画脚。” | Zhè jiù xiàng gěi shé huà jiǎo." | Việc này giống như vẽ chân cho rắn."
+将军想了想，没有去打。 | Jiāngjūn xiǎng le xiǎng, méiyǒu qù dǎ. | Tướng quân nghĩ một lúc, rồi không đi đánh nữa.
+
+! 做完了，就要知道停。 | Zuò wán le, jiù yào zhīdào tíng. | Làm xong rồi thì phải biết dừng.
+! 多做一点，不一定更好。 | Duō zuò yìdiǎn, bù yídìng gèng hǎo. | Làm thêm một chút, chưa chắc đã tốt hơn.
+! 赢的时候，最容易犯错。 | Yíng de shíhou, zuì róngyì fàncuò. | Lúc đang thắng là lúc dễ phạm sai lầm nhất.
+! 先想一想：这一步有用吗？ | Xiān xiǎng yi xiǎng: zhè yí bù yǒuyòng ma? | Hãy nghĩ trước: bước này có ích không?
+
+? 聪明人为什么给将军讲这个故事？ | Vì sao người thông minh kể chuyện này cho tướng quân? | 让他不要再去打仗* | 让他学画画 | 让他喝酒
+? “赢的时候，最容易……” | "Lúc đang thắng, dễ nhất là…" | 犯错* | 睡觉 | 吃饭
+> Nghĩ về một lần bạn làm thừa một bước và hỏng việc. Lần sau bạn sẽ dừng lúc nào?
 
 @id zh-sheep
 @lang zh
@@ -270,26 +318,72 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @level HSK3
 @title 亡羊补牢
 @vi Vong dương bổ lao: Mất dê mới vá chuồng
-@blurb Mất rồi mới sửa có muộn không? Thành ngữ này trả lời ngược với nhiều người nghĩ.
+@blurb Mất rồi mới sửa có muộn không? Thành ngữ này trả lời ngược với nhiều người nghĩ, và nó từng cứu cả một đất nước.
 
 ## 1 | 羊圈的洞 | Cái lỗ ở chuồng dê
-一个人养了很多羊。 | Yí ge rén yǎng le hěn duō yáng. | Có người nuôi rất nhiều dê.
-一天早上，他少了一只羊。 | Yì tiān zǎoshang, tā shǎo le yì zhī yáng. | Một sáng, ông thiếu mất một con dê.
-羊圈破了一个洞， | Yángjuàn pò le yí ge dòng, | Chuồng dê bị thủng một lỗ,
-狼从洞里进来了。 | láng cóng dòng lǐ jìnlái le. | sói chui qua lỗ vào.
+从前，有一个人养了很多羊。 | Cóngqián, yǒu yí ge rén yǎng le hěn duō yáng. | Ngày xưa, có người nuôi rất nhiều dê.
+每天晚上，羊都住在羊圈里。 | Měi tiān wǎnshang, yáng dōu zhù zài yángjuàn lǐ. | Tối nào đàn dê cũng ở trong chuồng.
+一天早上，他去看羊， | Yì tiān zǎoshang, tā qù kàn yáng, | Một buổi sáng, ông ra xem dê,
+发现少了一只。 | fāxiàn shǎo le yì zhī. | phát hiện thiếu mất một con.
 
-邻居说：“快把洞修好吧。” | Línjū shuō: "Kuài bǎ dòng xiū hǎo ba." | Hàng xóm nói: "Mau vá lỗ đó đi."
+他在羊圈旁边走了一圈。 | Tā zài yángjuàn pángbiān zǒu le yì quān. | Ông đi một vòng quanh chuồng.
+羊圈破了一个洞。 | Yángjuàn pò le yí ge dòng. | Chuồng dê bị thủng một lỗ.
+晚上，狼从洞里进来， | Wǎnshang, láng cóng dòng lǐ jìnlái, | Ban đêm, sói chui qua lỗ vào,
+把羊叼走了。 | bǎ yáng diāo zǒu le. | tha mất con dê.
+
+邻居看见了，对他说： | Línjū kànjiàn le, duì tā shuō: | Hàng xóm thấy vậy, nói với ông:
+“快把洞修好吧。” | "Kuài bǎ dòng xiū hǎo ba." | "Mau vá cái lỗ lại đi."
 他说：“羊已经没了， | Tā shuō: "Yáng yǐjīng méi le, | Ông nói: "Dê đã mất rồi,
-修它做什么？” | xiū tā zuò shénme?" | vá làm gì?"
+修它还有什么用？” | xiū tā hái yǒu shénme yòng?" | vá thì còn ích gì?"
+他没有修，回家了。 | Tā méiyǒu xiū, huí jiā le. | Ông không vá, đi về nhà.
 
-第二天早上，又少了一只羊。 | Dì èr tiān zǎoshang, yòu shǎo le yì zhī yáng. | Sáng hôm sau, lại thiếu một con nữa.
-他很后悔。 | Tā hěn hòuhuǐ. | Ông rất hối hận.
-他马上把洞修好了。 | Tā mǎshàng bǎ dòng xiū hǎo le. | Ông lập tức vá lỗ lại.
+? 羊是怎么少的？ | Dê mất bằng cách nào? | 狼从洞里进来了* | 羊自己走了 | 邻居拿走了
+? 他为什么不修羊圈？ | Vì sao ông không vá chuồng? | 他觉得没有用了* | 他没有时间 | 他不知道有洞
+> Bằng tiếng Trung: nếu là hàng xóm, bạn sẽ nói gì với ông ấy?
+
+## 2 | 又少了一只 | Lại thiếu một con
+第二天早上，他又去看羊。 | Dì èr tiān zǎoshang, tā yòu qù kàn yáng. | Sáng hôm sau, ông lại ra xem dê.
+又少了一只！ | Yòu shǎo le yì zhī! | Lại thiếu một con!
+狼又从那个洞进来了。 | Láng yòu cóng nàge dòng jìnlái le. | Sói lại chui vào từ cái lỗ đó.
+
+这次他很后悔。 | Zhè cì tā hěn hòuhuǐ. | Lần này ông rất hối hận.
+他想：“邻居说得对。 | Tā xiǎng: "Línjū shuō de duì. | Ông nghĩ: "Hàng xóm nói đúng.
+丢了的羊回不来了， | Diū le de yáng huí bu lái le, | Dê mất rồi không về được,
+可是别的羊还在。” | kěshì bié de yáng hái zài." | nhưng những con khác vẫn còn."
+他马上找来木头和绳子， | Tā mǎshàng zhǎo lái mùtou hé shéngzi, | Ông lập tức tìm gỗ và dây,
+认真地把洞修好了。 | rènzhēn de bǎ dòng xiū hǎo le. | cẩn thận vá lại cái lỗ.
+他还检查了整个羊圈。 | Tā hái jiǎnchá le zhěnggè yángjuàn. | Ông còn kiểm tra cả cái chuồng.
+
 从那以后， | Cóng nà yǐhòu, | Từ đó về sau,
-他的羊再也没有少过。 | tā de yáng zài yě méiyǒu shǎo guo. | đàn dê không hề mất con nào nữa.
+他的羊再也没有少过。 | tā de yáng zài yě méiyǒu shǎo guo. | đàn dê không mất con nào nữa.
 
-? 这个故事告诉我们什么？ | Câu chuyện này nói với ta điều gì? | 错了马上改，还不晚* | 不要养羊 | 邻居不好
-> Có việc gì bạn nên "vá chuồng" ngay từ hôm nay không?
+? 第二次少了羊以后，他做了什么？ | Sau lần mất dê thứ hai, ông làm gì? | 马上把洞修好了* | 又回家了 | 卖了所有的羊
+? 他为什么觉得应该修？ | Vì sao ông thấy nên vá? | 别的羊还在* | 丢的羊会回来 | 狼不会再来
+> Đọc to câu “丢了的羊回不来了，可是别的羊还在。”
+
+## 3 | 国王和大臣 | Nhà vua và vị quan
+这个故事来自两千多年前。 | Zhège gùshi láizì liǎng qiān duō nián qián. | Câu chuyện này có từ hơn hai nghìn năm trước.
+那时候，楚国的国王不听劝告， | Nà shíhou, Chǔguó de guówáng bù tīng quàngào, | Thời đó, vua nước Sở không nghe lời khuyên,
+每天只知道玩。 | měi tiān zhǐ zhīdào wán. | ngày nào cũng chỉ biết vui chơi.
+一位大臣说：“这样下去很危险。” | Yí wèi dàchén shuō: "Zhèyàng xiàqu hěn wēixiǎn." | Một vị quan nói: "Cứ thế này thì rất nguy hiểm."
+国王不高兴，大臣只好离开了。 | Guówáng bù gāoxìng, dàchén zhǐhǎo líkāi le. | Vua không vui, vị quan đành ra đi.
+
+后来，别的国家打了进来。 | Hòulái, bié de guójiā dǎ le jìnlái. | Về sau, nước khác đánh vào.
+国王丢了很多地方，非常后悔。 | Guówáng diū le hěn duō dìfang, fēicháng hòuhuǐ. | Vua mất nhiều vùng đất, vô cùng hối hận.
+他请大臣回来，问他怎么办。 | Tā qǐng dàchén huílai, wèn tā zěnme bàn. | Vua mời vị quan quay về, hỏi phải làm sao.
+大臣说：“丢了羊再修羊圈， | Dàchén shuō: "Diū le yáng zài xiū yángjuàn, | Vị quan nói: "Mất dê rồi mới vá chuồng,
+还不算晚。” | hái bú suàn wǎn." | vẫn chưa phải là muộn."
+国王听了他的话， | Guówáng tīng le tā de huà, | Nhà vua nghe theo lời ông,
+国家慢慢地好起来了。 | guójiā mànmàn de hǎo qǐlai le. | đất nước dần dần khá lên.
+
+! 犯了错，不要只是后悔。 | Fàn le cuò, bú yào zhǐshì hòuhuǐ. | Mắc lỗi rồi, đừng chỉ hối hận.
+! 马上改，就还不晚。 | Mǎshàng gǎi, jiù hái bù wǎn. | Sửa ngay thì vẫn chưa muộn.
+! 丢了的东西回不来， | Diū le de dōngxi huí bu lái, | Thứ đã mất không quay lại,
+! 可是还有的东西，可以保护。 | kěshì hái yǒu de dōngxi, kěyǐ bǎohù. | nhưng thứ còn lại thì vẫn bảo vệ được.
+
+? 大臣说“亡羊补牢”是什么意思？ | Vị quan dùng "vong dương bổ lao" với ý gì? | 改错还不晚* | 应该多养羊 | 已经太晚了
+? 国王后来怎么样了？ | Về sau nhà vua thế nào? | 听了大臣的话，国家好起来了* | 继续玩 | 离开了国家
+> Có lỗi nào bạn mắc trong trận đấu hay lúc học mà nên "vá chuồng" ngay từ hôm nay không?
 
 @id zh-universe
 @lang zh
@@ -297,10 +391,14 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @level HSK3
 @title 宇宙里有什么？
 @vi Trong vũ trụ có gì?
-@blurb Mọi thứ ta nhìn thấy chỉ chiếm khoảng 5% vũ trụ. Phần còn lại vẫn là bí ẩn.
+@blurb Mọi thứ ta nhìn thấy chỉ chiếm khoảng 5% vũ trụ. Phần còn lại vẫn là bí ẩn, và chính những người dám nói "chưa biết" đã tìm ra điều đó.
+@source NASA: Dark Matter & Dark Energy | https://science.nasa.gov/universe/dark-matter-dark-energy/
+@source Wikipedia: Vera Rubin | https://en.wikipedia.org/wiki/Vera_Rubin
 
 ## 1 | 百分之五 | Năm phần trăm
 我们能看到太阳、月亮和星星。 | Wǒmen néng kàn dào tàiyáng, yuèliang hé xīngxing. | Ta có thể thấy mặt trời, mặt trăng và các vì sao.
+我们的身体、手机、大海， | Wǒmen de shēntǐ, shǒujī, dàhǎi, | Cơ thể ta, điện thoại, biển cả,
+都是普通的物质。 | dōu shì pǔtōng de wùzhì. | đều là vật chất thông thường.
 可是科学家说， | Kěshì kēxuéjiā shuō, | Nhưng các nhà khoa học nói,
 这些东西只占宇宙的百分之五。 | zhèxiē dōngxi zhǐ zhàn yǔzhòu de bǎi fēn zhī wǔ. | những thứ này chỉ chiếm khoảng 5% vũ trụ.
 还有百分之九十五是什么？ | Hái yǒu bǎi fēn zhī jiǔshíwǔ shì shénme? | Còn 95% kia là gì?
@@ -309,12 +407,54 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 科学家叫它们“暗物质”和“暗能量”。 | Kēxuéjiā jiào tāmen "àn wùzhì" hé "àn néngliàng". | Giới khoa học gọi chúng là "vật chất tối" và "năng lượng tối".
 我们看不见它们， | Wǒmen kàn bu jiàn tāmen, | Ta không nhìn thấy chúng,
 可是知道它们在那儿。 | kěshì zhīdào tāmen zài nàr. | nhưng biết chúng ở đó.
-这个“暗”字不是说它们是黑色的。 | Zhège "àn" zì bú shì shuō tāmen shì hēisè de. | Chữ "ám" này không có nghĩa là chúng màu đen.
+为什么呢？ | Wèishénme ne? | Vì sao vậy?
+
+? 我们看到的东西占宇宙的多少？ | Những thứ ta thấy chiếm bao nhiêu phần vũ trụ? | 百分之五* | 百分之五十 | 百分之九十五
+? 科学家能看见暗物质吗？ | Các nhà khoa học có nhìn thấy vật chất tối không? | 看不见* | 能看见 | 每天都看见
+> Âm Hán Việt của 宇宙 là "vũ trụ", 物质 là "vật chất". Bạn còn nhận ra từ Hán Việt nào?
+
+## 2 | 转得太快的星星 | Những ngôi sao quay quá nhanh
+上个世纪七十年代， | Shàng ge shìjì qīshí niándài, | Vào những năm 70 của thế kỷ trước,
+一位美国女科学家研究星系。 | yí wèi Měiguó nǚ kēxuéjiā yánjiū xīngxì. | một nữ khoa học gia người Mỹ nghiên cứu các thiên hà.
+那时候，女科学家很少。 | Nà shíhou, nǚ kēxuéjiā hěn shǎo. | Thời đó, nhà khoa học nữ rất ít.
+有的地方不让她用望远镜。 | Yǒu de dìfang bú ràng tā yòng wàngyuǎnjìng. | Có nơi không cho bà dùng kính thiên văn.
+可是她没有放弃。 | Kěshì tā méiyǒu fàngqì. | Nhưng bà không bỏ cuộc.
+
+她发现了一件奇怪的事。 | Tā fāxiàn le yí jiàn qíguài de shì. | Bà phát hiện một chuyện kỳ lạ.
+星系边上的星星，转得太快了。 | Xīngxì biān shang de xīngxing, zhuàn de tài kuài le. | Các ngôi sao ở rìa thiên hà quay quá nhanh.
+如果只有看得见的东西， | Rúguǒ zhǐ yǒu kàn de jiàn de dōngxi, | Nếu chỉ có những thứ nhìn thấy được,
+它们早就飞走了。 | tāmen zǎo jiù fēi zǒu le. | chúng đã văng đi từ lâu.
+一定有看不见的东西拉着它们。 | Yídìng yǒu kàn bu jiàn de dōngxi lā zhe tāmen. | Nhất định có thứ vô hình đang kéo giữ chúng.
+这就是暗物质。 | Zhè jiù shì àn wùzhì. | Đó chính là vật chất tối.
+
+一九九八年，科学家又发现： | Yī jiǔ jiǔ bā nián, kēxuéjiā yòu fāxiàn: | Năm 1998, các nhà khoa học lại phát hiện:
+宇宙越来越大，而且越来越快。 | yǔzhòu yuèláiyuè dà, érqiě yuèláiyuè kuài. | vũ trụ ngày càng lớn, mà còn lớn ngày càng nhanh.
+好像有什么东西在推它。 | Hǎoxiàng yǒu shénme dōngxi zài tuī tā. | Như thể có thứ gì đang đẩy nó.
+这就是暗能量。 | Zhè jiù shì àn néngliàng. | Đó chính là năng lượng tối.
+
+? 那位女科学家发现了什么？ | Nhà khoa học nữ ấy phát hiện điều gì? | 星星转得太快了* | 星星都是黑色的 | 星系没有星星
+? 一九九八年，科学家发现宇宙怎么样？ | Năm 1998, các nhà khoa học thấy vũ trụ thế nào? | 越来越快地变大* | 越来越小 | 不动了
+> Nói bằng tiếng Trung: bạn đã từng không bỏ cuộc trong việc gì? (我没有放弃……)
+
+## 3 | “暗”的意思 | Ý nghĩa của chữ "ám"
+到现在，科学家还没有 | Dào xiànzài, kēxuéjiā hái méiyǒu | Đến nay, giới khoa học vẫn chưa
+抓到一点儿暗物质。 | zhuā dào yìdiǎnr àn wùzhì. | bắt được chút vật chất tối nào.
+他们在很深的地下等了很多年。 | Tāmen zài hěn shēn de dìxià děng le hěn duō nián. | Họ đã chờ nhiều năm sâu dưới lòng đất.
+暗能量是什么，也没有人知道。 | Àn néngliàng shì shénme, yě méiyǒu rén zhīdào. | Năng lượng tối là gì, cũng chẳng ai biết.
+
+这个“暗”字， | Zhège "àn" zì, | Chữ "ám" này,
+不是说它们是黑色的。 | bú shì shuō tāmen shì hēisè de. | không có nghĩa chúng màu đen.
 它的意思是： | Tā de yìsi shì: | Ý nghĩa của nó là:
 我们还不知道。 | wǒmen hái bù zhīdào. | ta vẫn chưa biết.
 
-? 我们看到的东西占宇宙的多少？ | Những thứ ta thấy chiếm bao nhiêu phần vũ trụ? | 百分之五* | 百分之五十 | 百分之九十五
-> Âm Hán Việt của 宇宙 là "vũ trụ". Bạn còn nhận ra từ Hán Việt nào trong bài?
+! 发现问题，比回答问题更早。 | Fāxiàn wèntí, bǐ huídá wèntí gèng zǎo. | Phát hiện ra vấn đề luôn đến trước việc trả lời nó.
+! 奇怪的数字，不要马上扔掉。 | Qíguài de shùzì, bú yào mǎshàng rēng diào. | Con số kỳ lạ, đừng vội vứt đi.
+! 说“我不知道”，需要勇气。 | Shuō "wǒ bù zhīdào", xūyào yǒngqì. | Nói "tôi không biết" cần có dũng khí.
+! 可是学习，就从这句话开始。 | Kěshì xuéxí, jiù cóng zhè jù huà kāishǐ. | Nhưng việc học bắt đầu từ chính câu nói đó.
+
+? “暗”是什么意思？ | Chữ "ám" ở đây có nghĩa gì? | 我们还不知道* | 黑色的 | 很冷
+? 科学家抓到暗物质了吗？ | Các nhà khoa học đã bắt được vật chất tối chưa? | 还没有* | 抓到了很多 | 抓到了一点儿
+> Viết bằng tiếng Trung một điều bạn chưa biết và muốn tìm hiểu: 我还不知道……
 
 @id zh-sleep
 @lang zh
@@ -322,26 +462,72 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @level HSK3
 @title 为什么要睡觉？
 @vi Vì sao phải ngủ?
-@blurb Một phần ba đời người là để ngủ, vậy mà khoa học vẫn chưa trả lời trọn vẹn vì sao.
+@blurb Một phần ba đời người là để ngủ, vậy mà khoa học vẫn chưa trả lời trọn vẹn vì sao. Nhưng có một điều chắc chắn: thiếu ngủ thì học kém.
+@source NIH NINDS: Brain Basics, Understanding Sleep | https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-understanding-sleep
+@source Wikipedia: Randy Gardner's sleep deprivation experiment | https://en.wikipedia.org/wiki/Randy_Gardner_sleep_deprivation_experiment
 
 ## 1 | 三分之一 | Một phần ba
 人的一生， | Rén de yìshēng, | Một đời người,
 有三分之一的时间在睡觉。 | yǒu sān fēn zhī yī de shíjiān zài shuìjiào. | có một phần ba thời gian là để ngủ.
 睡觉的时候，我们不能工作， | Shuìjiào de shíhou, wǒmen bù néng gōngzuò, | Khi ngủ, ta không thể làm việc,
 也不能吃东西。 | yě bù néng chī dōngxi. | cũng không thể ăn uống.
-可是几乎所有的动物都要睡觉。 | Kěshì jīhū suǒyǒu de dòngwù dōu yào shuìjiào. | Nhưng hầu như mọi loài vật đều phải ngủ.
+有危险，也看不见。 | Yǒu wēixiǎn, yě kàn bu jiàn. | Có nguy hiểm, cũng không thấy.
 
-科学家知道， | Kēxuéjiā zhīdào, | Các nhà khoa học biết,
-睡觉对记忆很有帮助。 | shuìjiào duì jìyì hěn yǒu bāngzhù. | giấc ngủ rất có ích cho trí nhớ.
+可是几乎所有的动物都要睡觉。 | Kěshì jīhū suǒyǒu de dòngwù dōu yào shuìjiào. | Nhưng hầu như mọi loài vật đều phải ngủ.
+小小的苍蝇也睡觉。 | Xiǎoxiǎo de cāngying yě shuìjiào. | Con ruồi bé tí cũng ngủ.
+海豚睡觉的时候， | Hǎitún shuìjiào de shíhou, | Khi cá heo ngủ,
+只让一半大脑休息。 | zhǐ ràng yíbàn dànǎo xiūxi. | chỉ cho một nửa bộ não nghỉ.
+另一半还在工作， | Lìng yíbàn hái zài gōngzuò, | Nửa kia vẫn làm việc,
+所以它能一边睡，一边游。 | suǒyǐ tā néng yìbiān shuì, yìbiān yóu. | nên nó vừa ngủ vừa bơi được.
+睡觉一定非常重要。 | Shuìjiào yídìng fēicháng zhòngyào. | Giấc ngủ hẳn là vô cùng quan trọng.
+
+? 人的一生有多少时间在睡觉？ | Một đời người dành bao nhiêu thời gian để ngủ? | 三分之一* | 一半 | 十分之一
+? 海豚怎么睡觉？ | Cá heo ngủ thế nào? | 只让一半大脑休息* | 不睡觉 | 在沙滩上睡
+> Nói bằng tiếng Trung: bạn ngủ mấy tiếng mỗi đêm? (我每天睡…个小时)
+
+## 2 | 十一天不睡觉 | Mười một ngày không ngủ
+一九六四年，一个十七岁的美国学生 | Yī jiǔ liù sì nián, yí ge shíqī suì de Měiguó xuésheng | Năm 1964, một học sinh Mỹ 17 tuổi
+想参加学校的科学比赛。 | xiǎng cānjiā xuéxiào de kēxué bǐsài. | muốn tham gia cuộc thi khoa học của trường.
+他的办法很简单： | Tā de bànfǎ hěn jiǎndān: | Cách của cậu rất đơn giản:
+尽量不睡觉。 | jǐnliàng bú shuìjiào. | cố gắng không ngủ.
+
+他十一天没有睡觉。 | Tā shíyī tiān méiyǒu shuìjiào. | Cậu không ngủ suốt mười một ngày.
+朋友们陪他打球、玩游戏。 | Péngyoumen péi tā dǎ qiú, wán yóuxì. | Bạn bè ở cạnh cậu chơi bóng, chơi trò chơi.
+可是他慢慢地变了。 | Kěshì tā mànmàn de biàn le. | Nhưng cậu dần dần thay đổi.
+他常常忘记简单的词， | Tā chángcháng wàngjì jiǎndān de cí, | Cậu hay quên những từ đơn giản,
+简单的数学也不会做了。 | jiǎndān de shùxué yě bú huì zuò le. | toán đơn giản cũng không làm được nữa.
+比赛以后，他睡了十四个小时。 | Bǐsài yǐhòu, tā shuì le shísì ge xiǎoshí. | Sau cuộc thi, cậu ngủ mười bốn tiếng.
+
+现在科学家说， | Xiànzài kēxuéjiā shuō, | Giờ các nhà khoa học nói,
+谁都不应该这样做。 | shéi dōu bù yīnggāi zhèyàng zuò. | không ai nên làm như vậy.
+只要一个晚上没睡好， | Zhǐyào yí ge wǎnshang méi shuì hǎo, | Chỉ cần một tối ngủ không ngon,
+第二天学习和运动都会差一些。 | dì èr tiān xuéxí hé yùndòng dōu huì chà yìxiē. | hôm sau học và chơi thể thao đều kém đi.
+
+? 那个学生为什么不睡觉？ | Vì sao cậu học sinh không ngủ? | 为了参加科学比赛* | 因为他生病了 | 因为他要看电视
+? 没睡觉以后，他怎么样了？ | Sau khi không ngủ, cậu ấy thế nào? | 忘记简单的词* | 更聪明了 | 跑得更快
+> Đọc to câu “谁都不应该这样做。”
+
+## 3 | 大脑的打扫时间 | Giờ dọn dẹp của bộ não
+科学家发现， | Kēxuéjiā fāxiàn, | Các nhà khoa học phát hiện,
+睡觉的时候，大脑会把今天的事 | shuìjiào de shíhou, dànǎo huì bǎ jīntiān de shì | khi ngủ, bộ não sẽ đem chuyện hôm nay
+再放一遍， | zài fàng yí biàn, | phát lại một lần,
+让记忆更牢。 | ràng jìyì gèng láo. | khiến trí nhớ chắc hơn.
+睡觉的时候，大脑还会打扫自己， | Shuìjiào de shíhou, dànǎo hái huì dǎsǎo zìjǐ, | Khi ngủ, não còn tự dọn dẹp,
+把没用的东西洗干净。 | bǎ méi yòng de dōngxi xǐ gānjìng. | rửa sạch những thứ vô dụng.
+
 可是我们为什么一定要睡觉？ | Kěshì wǒmen wèishénme yídìng yào shuìjiào? | Nhưng vì sao nhất định phải ngủ?
 为什么会做梦？ | Wèishénme huì zuò mèng? | Vì sao lại mơ?
 到现在，还没有人能完全回答。 | Dào xiànzài, hái méiyǒu rén néng wánquán huídá. | Đến nay, vẫn chưa ai trả lời được trọn vẹn.
 
-今天学的生词， | Jīntiān xué de shēngcí, | Từ mới học hôm nay,
-晚上睡觉的时候会记得更好。 | wǎnshang shuìjiào de shíhou huì jìde gèng hǎo. | khi ngủ tối nay sẽ được nhớ tốt hơn.
+! 合上书，学习还没有结束。 | Hé shang shū, xuéxí hái méiyǒu jiéshù. | Gấp sách lại, việc học vẫn chưa kết thúc.
+! 今天学的生词， | Jīntiān xué de shēngcí, | Từ mới học hôm nay,
+! 晚上睡觉的时候会记得更好。 | wǎnshang shuìjiào de shíhou huì jìde gèng hǎo. | sẽ được nhớ tốt hơn khi ngủ tối nay.
+! 睡觉不是浪费时间， | Shuìjiào bú shì làngfèi shíjiān, | Ngủ không phải là phí thời gian,
+! 它也是学习的一部分。 | tā yě shì xuéxí de yí bùfen. | mà cũng là một phần của việc học.
 
-? 睡觉对什么很有帮助？ | Giấc ngủ có ích cho điều gì? | 记忆* | 开车 | 吃饭
-> Nói bằng tiếng Trung: bạn ngủ mấy tiếng mỗi đêm? (我每天睡…个小时)
+? 睡觉的时候，大脑会做什么？ | Khi ngủ, bộ não làm gì? | 把今天的事再放一遍* | 什么也不做 | 忘记所有的事
+? 睡觉是浪费时间吗？ | Ngủ có phải là phí thời gian không? | 不是，它是学习的一部分* | 是 | 不知道
+> Viết bằng tiếng Trung kế hoạch ngủ của bạn: 我每天…点睡觉，…点起床。
 
 @id zh-ocean
 @lang zh
@@ -350,25 +536,70 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @date 2026-04-01
 @title 海底有什么？
 @vi Dưới đáy biển có gì?
-@blurb Hơn 70% đáy đại dương vẫn chưa có bản đồ chi tiết.
+@blurb Hơn 70% đáy đại dương vẫn chưa có bản đồ chi tiết. Một dự án toàn cầu đang vẽ lại nó, nhờ dữ liệu của rất nhiều con tàu.
 @source Seabed 2030 / IHO | https://iho.int/en/global-seabed-mapping-reaches-new-milestone-as-five-million-square-kilometres-added-in-a-year
+@source Wikipedia: Seabed 2030 | https://en.wikipedia.org/wiki/Seabed_2030
 
 ## 1 | 没有地图的地方 | Nơi chưa có bản đồ
 地球的大部分是海。 | Dìqiú de dà bùfen shì hǎi. | Phần lớn Trái Đất là biển.
+海很深，平均差不多有四公里。 | Hǎi hěn shēn, píngjūn chàbuduō yǒu sì gōnglǐ. | Biển rất sâu, trung bình gần bốn ki-lô-mét.
+海底没有阳光， | Hǎidǐ méiyǒu yángguāng, | Đáy biển không có ánh nắng,
+又黑又冷。 | yòu hēi yòu lěng. | vừa tối vừa lạnh.
+
+我们去过月亮， | Wǒmen qù guo yuèliang, | Con người đã lên mặt trăng,
+也有很好的月亮地图。 | yě yǒu hěn hǎo de yuèliang dìtú. | cũng có bản đồ mặt trăng rất tốt.
 可是我们对海底知道得很少。 | Kěshì wǒmen duì hǎidǐ zhīdào de hěn shǎo. | Nhưng ta biết rất ít về đáy biển.
 二零一七年， | Èr líng yī qī nián, | Năm 2017,
 只有百分之六的海底有详细的地图。 | zhǐ yǒu bǎi fēn zhī liù de hǎidǐ yǒu xiángxì de dìtú. | chỉ 6% đáy biển có bản đồ chi tiết.
+
+为什么这么难？ | Wèishénme zhème nán? | Vì sao khó đến vậy?
+光不能穿过很深的水。 | Guāng bù néng chuān guò hěn shēn de shuǐ. | Ánh sáng không xuyên qua được nước sâu.
+从天上拍照，看不到海底。 | Cóng tiān shang pāizhào, kàn bu dào hǎidǐ. | Chụp ảnh từ trên trời thì không thấy đáy biển.
+
+? 二零一七年，多少海底有详细的地图？ | Năm 2017, bao nhiêu phần đáy biển có bản đồ chi tiết? | 百分之六* | 百分之七十 | 百分之百
+? 为什么从天上看不到海底？ | Vì sao từ trên trời không thấy đáy biển? | 光不能穿过很深的水* | 海太冷了 | 天上没有人
+> Đọc to các con số trong chương này bằng tiếng Trung.
+
+## 2 | 用声音画地图 | Vẽ bản đồ bằng âm thanh
+那么，怎么给海底画地图呢？ | Nàme, zěnme gěi hǎidǐ huà dìtú ne? | Vậy, vẽ bản đồ đáy biển bằng cách nào?
+用声音。 | Yòng shēngyīn. | Bằng âm thanh.
+船把声音送到海底， | Chuán bǎ shēngyīn sòng dào hǎidǐ, | Con tàu phát âm thanh xuống đáy biển,
+声音再回到船上。 | shēngyīn zài huí dào chuán shang. | âm thanh lại dội về tàu.
+用了多少时间， | Yòng le duōshao shíjiān, | Mất bao nhiêu thời gian,
+就知道海有多深。 | jiù zhīdào hǎi yǒu duō shēn. | thì biết biển sâu bao nhiêu.
+
+二零一七年，一个国际项目开始了。 | Èr líng yī qī nián, yí ge guójì xiàngmù kāishǐ le. | Năm 2017, một dự án quốc tế bắt đầu.
+它想在二零三零年以前， | Tā xiǎng zài èr líng sān líng nián yǐqián, | Nó muốn trước năm 2030,
+画好全部的海底地图。 | huà hǎo quánbù de hǎidǐ dìtú. | vẽ xong toàn bộ bản đồ đáy biển.
+这个项目自己的船不多。 | Zhège xiàngmù zìjǐ de chuán bù duō. | Dự án này không có nhiều tàu của riêng mình.
+很多国家、公司，还有渔船， | Hěn duō guójiā, gōngsī, hái yǒu yúchuán, | Nhiều quốc gia, công ty, cả tàu cá nữa,
+都把自己的数据送给它。 | dōu bǎ zìjǐ de shùjù sòng gěi tā. | đều gửi dữ liệu của mình cho nó.
 二零二六年，这个数字 | Èr líng èr liù nián, zhège shùzì | Năm 2026, con số này
 是百分之二十八点七。 | shì bǎi fēn zhī èrshíbā diǎn qī. | là 28,7%.
 
-还有很多地方， | Hái yǒu hěn duō dìfang, | Còn rất nhiều nơi,
-人们从来没有去过。 | rénmen cónglái méiyǒu qù guo. | con người chưa từng đến.
-科学家常常在那儿发现新的动物。 | Kēxuéjiā chángcháng zài nàr fāxiàn xīn de dòngwù. | Các nhà khoa học thường phát hiện động vật mới ở đó.
-我们去过月亮， | Wǒmen qù guo yuèliang, | Con người đã lên mặt trăng,
-可是还不了解自己的海。 | kěshì hái bù liǎojiě zìjǐ de hǎi. | nhưng vẫn chưa hiểu biển của chính mình.
+? 船用什么给海底画地图？ | Tàu dùng gì để vẽ bản đồ đáy biển? | 声音* | 照片 | 绳子
+? 这个项目的数据从哪儿来？ | Dữ liệu của dự án này từ đâu ra? | 很多国家、公司和渔船* | 只有一个公司 | 月亮
+> Nói bằng tiếng Trung: 28,7% đọc là 百分之二十八点七. Hãy đọc to 3 lần.
 
-? 二零二六年，多少海底有详细的地图？ | Năm 2026, bao nhiêu phần đáy biển có bản đồ chi tiết? | 百分之二十八点七* | 百分之六 | 百分之百
-> Đọc to các con số trong bài bằng tiếng Trung.
+## 3 | 海底为什么重要 | Vì sao đáy biển quan trọng
+海底的样子，会改变海水怎么流。 | Hǎidǐ de yàngzi, huì gǎibiàn hǎishuǐ zěnme liú. | Hình dạng đáy biển làm thay đổi cách nước biển chảy.
+海水的流动，又会改变天气。 | Hǎishuǐ de liúdòng, yòu huì gǎibiàn tiānqì. | Dòng chảy của nước biển lại làm thay đổi thời tiết.
+很多上网用的电线， | Hěn duō shàngwǎng yòng de diànxiàn, | Rất nhiều dây cáp dùng để lên mạng,
+也放在海底。 | yě fàng zài hǎidǐ. | cũng nằm dưới đáy biển.
+你给外国朋友发信息， | Nǐ gěi wàiguó péngyou fā xìnxī, | Khi bạn nhắn tin cho bạn bè nước ngoài,
+信息常常从海底走过去。 | xìnxī chángcháng cóng hǎidǐ zǒu guòqu. | tin nhắn thường đi qua đáy biển.
+
+还有很多地方，人们从来没有去过。 | Hái yǒu hěn duō dìfang, rénmen cónglái méiyǒu qù guo. | Còn rất nhiều nơi con người chưa từng đến.
+科学家常常在那儿发现新的动物。 | Kēxuéjiā chángcháng zài nàr fāxiàn xīn de dòngwù. | Các nhà khoa học thường phát hiện động vật mới ở đó.
+
+! 我们常常看很远的地方， | Wǒmen chángcháng kàn hěn yuǎn de dìfang, | Ta thường nhìn về nơi thật xa,
+! 却忘了脚下的世界。 | què wàng le jiǎo xià de shìjiè. | mà quên thế giới ngay dưới chân.
+! 一条船画不完大海， | Yì tiáo chuán huà bu wán dàhǎi, | Một con tàu không vẽ hết được biển cả,
+! 很多船一起，就可以。 | hěn duō chuán yìqǐ, jiù kěyǐ. | nhiều con tàu cùng làm thì được.
+
+? 海底的电线有什么用？ | Dây cáp dưới đáy biển dùng để làm gì? | 上网* | 做饭 | 开车
+? 一条船能画完大海吗？ | Một con tàu có vẽ hết được biển không? | 不能，很多船一起才可以* | 能 | 不知道
+> Bằng tiếng Trung, kể một việc nhóm bạn làm được mà một người không làm được.
 
 @id zh-news-law
 @lang zh
