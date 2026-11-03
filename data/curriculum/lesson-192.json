@@ -1,0 +1,216 @@
+{
+ "id": 192,
+ "cn": "普遍和少见",
+ "title": "Đánh giá mức độ",
+ "goal": "Nói về phổ biến, bình thường, thường ngày, hằng ngày, hiếm gặp, đa dạng, trực tiếp, phù hợp, thích nghi và hiệu quả.",
+ "words": [
+  {
+   "w": "普遍",
+   "py": "pǔbiàn",
+   "hv": "phổ biến",
+   "vi": "phổ biến",
+   "pos": "tính từ",
+   "note": "Chính là \"phổ biến\".",
+   "ex": [
+    {
+     "cn": "这种现象很普遍。",
+     "py": "Zhè zhǒng xiànxiàng hěn pǔbiàn.",
+     "vi": "Hiện tượng này rất phổ biến."
+    }
+   ]
+  },
+  {
+   "w": "普通",
+   "py": "pǔtōng",
+   "hv": "phổ thông",
+   "vi": "bình thường",
+   "pos": "tính từ",
+   "note": "Chính là \"phổ thông\". Tiếng phổ thông là 普通话.",
+   "ex": [
+    {
+     "cn": "我只是一个普通人。",
+     "py": "Wǒ zhǐshì yí ge pǔtōng rén.",
+     "vi": "Tôi chỉ là một người bình thường."
+    }
+   ]
+  },
+  {
+   "w": "平常",
+   "py": "píngcháng",
+   "hv": "bình thường",
+   "vi": "thường ngày; bình thường",
+   "pos": "danh từ",
+   "note": "Chính là \"bình thường\". Còn nghĩa \"ngày thường\".",
+   "ex": [
+    {
+     "cn": "我平常七点起床。",
+     "py": "Wǒ píngcháng qī diǎn qǐchuáng.",
+     "vi": "Ngày thường tôi dậy lúc bảy giờ."
+    }
+   ]
+  },
+  {
+   "w": "日常",
+   "py": "rìcháng",
+   "hv": "nhật thường",
+   "vi": "hằng ngày",
+   "pos": "tính từ",
+   "note": "Chính là \"nhật thường\". 日常生活 (cuộc sống hằng ngày).",
+   "ex": [
+    {
+     "cn": "这些都是日常用语。",
+     "py": "Zhèxiē dōu shì rìcháng yòngyǔ.",
+     "vi": "Đây đều là câu dùng hằng ngày."
+    }
+   ]
+  },
+  {
+   "w": "少见",
+   "py": "shǎojiàn",
+   "hv": "thiểu kiến",
+   "vi": "hiếm gặp",
+   "pos": "tính từ",
+   "note": "少 + 见.",
+   "ex": [
+    {
+     "cn": "这种鸟很少见。",
+     "py": "Zhè zhǒng niǎo hěn shǎojiàn.",
+     "vi": "Loài chim này rất hiếm gặp."
+    }
+   ]
+  },
+  {
+   "w": "多样",
+   "py": "duōyàng",
+   "hv": "đa dạng",
+   "vi": "đa dạng",
+   "pos": "tính từ",
+   "note": "Chính là \"đa dạng\".",
+   "ex": [
+    {
+     "cn": "越南的食物很多样。",
+     "py": "Yuènán de shíwù hěn duōyàng.",
+     "vi": "Đồ ăn Việt Nam rất đa dạng."
+    }
+   ]
+  },
+  {
+   "w": "直接",
+   "py": "zhíjiē",
+   "hv": "trực tiếp",
+   "vi": "trực tiếp",
+   "pos": "tính từ",
+   "note": "Chính là \"trực tiếp\".",
+   "ex": [
+    {
+     "cn": "有问题可以直接问我。",
+     "py": "Yǒu wèntí kěyǐ zhíjiē wèn wǒ.",
+     "vi": "Có vấn đề có thể hỏi thẳng tôi."
+    }
+   ]
+  },
+  {
+   "w": "适合",
+   "py": "shìhé",
+   "hv": "thích hợp",
+   "vi": "phù hợp",
+   "pos": "động từ",
+   "note": "Chính là \"thích hợp\". Sau 适合 là tân ngữ trực tiếp: 适合你.",
+   "ex": [
+    {
+     "cn": "这件衣服很适合你。",
+     "py": "Zhè jiàn yīfu hěn shìhé nǐ.",
+     "vi": "Bộ đồ này rất hợp với bạn."
+    }
+   ]
+  },
+  {
+   "w": "适应",
+   "py": "shìyìng",
+   "hv": "thích ứng",
+   "vi": "thích nghi",
+   "pos": "động từ",
+   "note": "Chính là \"thích ứng\".",
+   "ex": [
+    {
+     "cn": "我已经适应了这里的生活。",
+     "py": "Wǒ yǐjīng shìyìng le zhèlǐ de shēnghuó.",
+     "vi": "Tôi đã thích nghi với cuộc sống ở đây."
+    }
+   ]
+  },
+  {
+   "w": "有效",
+   "py": "yǒuxiào",
+   "hv": "hữu hiệu",
+   "vi": "có hiệu quả; có hiệu lực",
+   "pos": "động từ",
+   "note": "Chính là \"hữu hiệu\". Vé còn hạn: 有效.",
+   "ex": [
+    {
+     "cn": "这张票三天内有效。",
+     "py": "Zhè zhāng piào sān tiān nèi yǒuxiào.",
+     "vi": "Vé này có hiệu lực trong ba ngày."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "适合 và 合适",
+   "b": "适合 + tân ngữ (động từ) · 合适 (tính từ)",
+   "d": "这件衣服适合你 / 这件衣服很合适. Không nói 很适合 mà không có tân ngữ.",
+   "ex": [
+    {
+     "cn": "这个工作很适合他。",
+     "py": "Zhège gōngzuò hěn shìhé tā.",
+     "vi": "Công việc này rất hợp với anh ấy."
+    },
+    {
+     "cn": "大小很合适。",
+     "py": "Dàxiǎo hěn héshì.",
+     "vi": "Kích cỡ rất vừa."
+    }
+   ]
+  },
+  {
+   "t": "在…内: trong vòng",
+   "b": "三天内 · 一小时内 · 公司内",
+   "d": "Giới hạn thời gian hoặc phạm vi.",
+   "ex": [
+    {
+     "cn": "请在一周内回复。",
+     "py": "Qǐng zài yì zhōu nèi huífù.",
+     "vi": "Xin trả lời trong vòng một tuần."
+    },
+    {
+     "cn": "会议室内不能吸烟。",
+     "py": "Huìyìshì nèi bù néng xīyān.",
+     "vi": "Trong phòng họp không được hút thuốc."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "现在用手机付钱已经很普遍了。",
+   "py": "Xiànzài yòng shǒujī fù qián yǐjīng hěn pǔbiàn le.",
+   "vi": "Bây giờ trả tiền bằng điện thoại đã rất phổ biến."
+  },
+  {
+   "cn": "学外语要从日常对话开始。",
+   "py": "Xué wàiyǔ yào cóng rìcháng duìhuà kāishǐ.",
+   "vi": "Học ngoại ngữ nên bắt đầu từ hội thoại hằng ngày."
+  },
+  {
+   "cn": "刚来的时候，我不太适应这里的天气。",
+   "py": "Gāng lái de shíhou, wǒ bú tài shìyìng zhèlǐ de tiānqì.",
+   "vi": "Mới đến, tôi chưa quen lắm với thời tiết ở đây."
+  },
+  {
+   "cn": "这个方法简单有效。",
+   "py": "Zhège fāngfǎ jiǎndān yǒuxiào.",
+   "vi": "Phương pháp này đơn giản mà hiệu quả."
+  }
+ ]
+}

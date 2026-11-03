@@ -1,0 +1,216 @@
+{
+ "id": 191,
+ "cn": "不光…而且…",
+ "title": "Liên từ nối ý",
+ "goal": "Nối câu bằng 并, 既, 此外, 加上, 不论, 不光, 再说, 就是, 实际上, 是否.",
+ "words": [
+  {
+   "w": "并",
+   "py": "bìng",
+   "hv": "tịnh",
+   "vi": "và; hoàn toàn (không)",
+   "pos": "liên từ",
+   "note": "Nối hai động từ: 讨论并通过. Trước 不 / 没 để nhấn mạnh: 并不难.",
+   "ex": [
+    {
+     "cn": "这个问题并不难。",
+     "py": "Zhège wèntí bìng bù nán.",
+     "vi": "Vấn đề này hoàn toàn không khó."
+    }
+   ]
+  },
+  {
+   "w": "既",
+   "py": "jì",
+   "hv": "ký",
+   "vi": "đã… lại…",
+   "pos": "phó từ",
+   "note": "既…又…: vừa… vừa….",
+   "ex": [
+    {
+     "cn": "她既聪明又漂亮。",
+     "py": "Tā jì cōngming yòu piàoliang.",
+     "vi": "Cô ấy vừa thông minh vừa xinh đẹp."
+    }
+   ]
+  },
+  {
+   "w": "此外",
+   "py": "cǐwài",
+   "hv": "thử ngoại",
+   "vi": "ngoài ra",
+   "pos": "liên từ",
+   "note": "此 (này) + 外.",
+   "ex": [
+    {
+     "cn": "此外，我们还要准备一些水。",
+     "py": "Cǐwài, wǒmen hái yào zhǔnbèi yìxiē shuǐ.",
+     "vi": "Ngoài ra, chúng ta còn phải chuẩn bị ít nước."
+    }
+   ]
+  },
+  {
+   "w": "加上",
+   "py": "jiāshàng",
+   "hv": "gia thượng",
+   "vi": "thêm vào đó",
+   "pos": "liên từ",
+   "note": "Nêu thêm một lý do.",
+   "ex": [
+    {
+     "cn": "天气不好，加上身体不舒服，我就没去。",
+     "py": "Tiānqì bù hǎo, jiāshàng shēntǐ bù shūfu, wǒ jiù méi qù.",
+     "vi": "Thời tiết xấu, thêm nữa người không khoẻ, nên tôi không đi."
+    }
+   ]
+  },
+  {
+   "w": "不论",
+   "py": "búlùn",
+   "hv": "bất luận",
+   "vi": "bất luận, dù",
+   "pos": "liên từ",
+   "note": "Chính là \"bất luận\". Hay đi với 都.",
+   "ex": [
+    {
+     "cn": "不论多忙，他都每天跑步。",
+     "py": "Búlùn duō máng, tā dōu měi tiān pǎobù.",
+     "vi": "Dù bận đến mấy, ngày nào anh ấy cũng chạy bộ."
+    }
+   ]
+  },
+  {
+   "w": "不光",
+   "py": "bùguāng",
+   "hv": "bất quang",
+   "vi": "không chỉ",
+   "pos": "liên từ",
+   "note": "Khẩu ngữ của 不但. Vế sau có 还 / 也.",
+   "ex": [
+    {
+     "cn": "他不光会说汉语，还会说日语。",
+     "py": "Tā bùguāng huì shuō Hànyǔ, hái huì shuō Rìyǔ.",
+     "vi": "Anh ấy không chỉ nói được tiếng Trung, còn nói được tiếng Nhật."
+    }
+   ]
+  },
+  {
+   "w": "再说",
+   "py": "zàishuō",
+   "hv": "tái thuyết",
+   "vi": "hơn nữa; để sau hãy tính",
+   "pos": "liên từ",
+   "note": "Hai nghĩa: \"hơn nữa\" (thêm lý do) và \"để sau tính\".",
+   "ex": [
+    {
+     "cn": "今天太晚了，再说你也累了，明天再做吧。",
+     "py": "Jīntiān tài wǎn le, zàishuō nǐ yě lèi le, míngtiān zài zuò ba.",
+     "vi": "Hôm nay muộn quá rồi, hơn nữa bạn cũng mệt, mai làm tiếp nhé."
+    }
+   ]
+  },
+  {
+   "w": "就是",
+   "py": "jiùshì",
+   "hv": "tựu thị",
+   "vi": "chính là; chỉ là",
+   "pos": "phó từ",
+   "note": "Nhấn mạnh: 就是他 (chính là anh ấy). Còn là \"chỉ có điều\".",
+   "ex": [
+    {
+     "cn": "这件衣服很好，就是有点儿贵。",
+     "py": "Zhè jiàn yīfu hěn hǎo, jiùshì yǒudiǎnr guì.",
+     "vi": "Bộ đồ này đẹp, chỉ có điều hơi đắt."
+    }
+   ]
+  },
+  {
+   "w": "实际上",
+   "py": "shíjìshàng",
+   "hv": "thực tế thượng",
+   "vi": "thực ra",
+   "pos": "phó từ",
+   "note": "Chính là \"trên thực tế\".",
+   "ex": [
+    {
+     "cn": "他看起来很冷，实际上很热情。",
+     "py": "Tā kàn qǐlai hěn lěng, shíjìshàng hěn rèqíng.",
+     "vi": "Trông anh ấy lạnh lùng, thực ra rất nhiệt tình."
+    }
+   ]
+  },
+  {
+   "w": "是否",
+   "py": "shìfǒu",
+   "hv": "thị phủ",
+   "vi": "có… hay không",
+   "pos": "phó từ",
+   "note": "Văn viết của 是不是.",
+   "ex": [
+    {
+     "cn": "我不知道他是否同意。",
+     "py": "Wǒ bù zhīdào tā shìfǒu tóngyì.",
+     "vi": "Tôi không biết anh ấy có đồng ý hay không."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "不论 / 不管…都…: dù… cũng",
+   "b": "不论 + câu hỏi / lựa chọn，都 + kết quả",
+   "d": "Sau 不论 thường là từ để hỏi (多, 什么, 谁) hoặc lựa chọn (A 还是 B).",
+   "ex": [
+    {
+     "cn": "不论你去不去，我都去。",
+     "py": "Búlùn nǐ qù bu qù, wǒ dōu qù.",
+     "vi": "Dù bạn có đi hay không, tôi vẫn đi."
+    },
+    {
+     "cn": "不论是谁，都要遵守规定。",
+     "py": "Búlùn shì shéi, dōu yào zūnshǒu guīdìng.",
+     "vi": "Bất kể là ai cũng phải tuân thủ quy định."
+    }
+   ]
+  },
+  {
+   "t": "既…又…: vừa… vừa…",
+   "b": "既 + tính từ / động từ + 又 + tính từ / động từ",
+   "d": "Hai đặc điểm cùng tồn tại.",
+   "ex": [
+    {
+     "cn": "这个办法既简单又有效。",
+     "py": "Zhège bànfǎ jì jiǎndān yòu yǒuxiào.",
+     "vi": "Cách này vừa đơn giản vừa hiệu quả."
+    },
+    {
+     "cn": "他既会唱歌又会跳舞。",
+     "py": "Tā jì huì chànggē yòu huì tiàowǔ.",
+     "vi": "Anh ấy vừa biết hát vừa biết nhảy."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "学汉语并不像你想的那么难。",
+   "py": "Xué Hànyǔ bìng bú xiàng nǐ xiǎng de nàme nán.",
+   "vi": "Học tiếng Trung không khó như bạn nghĩ đâu."
+  },
+  {
+   "cn": "这里环境好，此外交通也很方便。",
+   "py": "Zhèlǐ huánjìng hǎo, cǐwài jiāotōng yě hěn fāngbiàn.",
+   "vi": "Ở đây môi trường tốt, ngoài ra giao thông cũng tiện."
+  },
+  {
+   "cn": "请告诉我你是否能参加。",
+   "py": "Qǐng gàosu wǒ nǐ shìfǒu néng cānjiā.",
+   "vi": "Xin cho tôi biết bạn có thể tham gia hay không."
+  },
+  {
+   "cn": "我们先吃饭，别的事再说。",
+   "py": "Wǒmen xiān chīfàn, bié de shì zàishuō.",
+   "vi": "Chúng ta ăn cơm trước, việc khác để sau tính."
+  }
+ ]
+}

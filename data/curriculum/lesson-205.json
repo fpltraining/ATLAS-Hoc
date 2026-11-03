@@ -1,0 +1,216 @@
+{
+ "id": 205,
+ "cn": "客气什么",
+ "title": "Những từ còn lại của cấp 4",
+ "goal": "Học các từ: thể hiện, bước, điểm danh, phép / luật, điểm xấu, khách sáo, nhanh chóng, ừ, số và đáng giá.",
+ "words": [
+  {
+   "w": "表现",
+   "py": "biǎoxiàn",
+   "hv": "biểu hiện",
+   "vi": "thể hiện; biểu hiện",
+   "pos": "động từ",
+   "note": "Chính là \"biểu hiện\".",
+   "ex": [
+    {
+     "cn": "他这次比赛表现得很好。",
+     "py": "Tā zhè cì bǐsài biǎoxiàn de hěn hǎo.",
+     "vi": "Trận này anh ấy thể hiện rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "步",
+   "py": "bù",
+   "hv": "bộ",
+   "vi": "bước",
+   "pos": "danh từ",
+   "note": "\"Bộ\" trong \"bộ hành\", \"tiến bộ\". Đi bộ là 散步, 跑步.",
+   "ex": [
+    {
+     "cn": "我们一步一步来。",
+     "py": "Wǒmen yí bù yí bù lái.",
+     "vi": "Chúng ta làm từng bước một."
+    }
+   ]
+  },
+  {
+   "w": "点名",
+   "py": "diǎnmíng",
+   "hv": "điểm danh",
+   "vi": "điểm danh; gọi tên",
+   "pos": "động từ",
+   "note": "Chính là \"điểm danh\".",
+   "ex": [
+    {
+     "cn": "上课以前老师先点名。",
+     "py": "Shàngkè yǐqián lǎoshī xiān diǎnmíng.",
+     "vi": "Trước giờ học thầy điểm danh trước."
+    }
+   ]
+  },
+  {
+   "w": "法",
+   "py": "fǎ",
+   "hv": "pháp",
+   "vi": "luật; cách",
+   "pos": "danh từ",
+   "note": "\"Pháp\" trong \"pháp luật\", \"phương pháp\".",
+   "ex": [
+    {
+     "cn": "每个人都要守法。",
+     "py": "Měi ge rén dōu yào shǒufǎ.",
+     "vi": "Ai cũng phải tuân thủ pháp luật."
+    }
+   ]
+  },
+  {
+   "w": "坏处",
+   "py": "huàichù",
+   "hv": "hoại xứ",
+   "vi": "điểm xấu, tác hại",
+   "pos": "danh từ",
+   "note": "Đối lập với 好处.",
+   "ex": [
+    {
+     "cn": "熬夜有很多坏处。",
+     "py": "Áoyè yǒu hěn duō huàichù.",
+     "vi": "Thức khuya có nhiều tác hại."
+    }
+   ]
+  },
+  {
+   "w": "客气",
+   "py": "kèqi",
+   "hv": "khách khí",
+   "vi": "khách sáo; lịch sự",
+   "pos": "tính từ",
+   "note": "Chính là \"khách khí\". 别客气 (đừng khách sáo).",
+   "ex": [
+    {
+     "cn": "别客气，就像在自己家一样。",
+     "py": "Bié kèqi, jiù xiàng zài zìjǐ jiā yíyàng.",
+     "vi": "Đừng khách sáo, cứ như ở nhà mình."
+    }
+   ]
+  },
+  {
+   "w": "快速",
+   "py": "kuàisù",
+   "hv": "khoái tốc",
+   "vi": "nhanh chóng",
+   "pos": "tính từ",
+   "note": "快 + 速.",
+   "ex": [
+    {
+     "cn": "经济快速发展。",
+     "py": "Jīngjì kuàisù fāzhǎn.",
+     "vi": "Kinh tế phát triển nhanh chóng."
+    }
+   ]
+  },
+  {
+   "w": "嗯",
+   "py": "ǹg",
+   "hv": "ân",
+   "vi": "ừ, ờ",
+   "pos": "thán từ",
+   "note": "Đáp lại tỏ ý đồng ý hay đang nghe.",
+   "ex": [
+    {
+     "cn": "嗯，我知道了。",
+     "py": "Ǹg, wǒ zhīdào le.",
+     "vi": "Ừ, tôi biết rồi."
+    }
+   ]
+  },
+  {
+   "w": "数",
+   "py": "shù",
+   "hv": "số",
+   "vi": "con số; số",
+   "pos": "danh từ",
+   "note": "Chính là \"số\". Đọc shǔ khi là động từ \"đếm\".",
+   "ex": [
+    {
+     "cn": "你最喜欢的数是几？",
+     "py": "Nǐ zuì xǐhuan de shù shì jǐ?",
+     "vi": "Số bạn thích nhất là số mấy?"
+    }
+   ]
+  },
+  {
+   "w": "值",
+   "py": "zhí",
+   "hv": "trị",
+   "vi": "đáng giá",
+   "pos": "động từ",
+   "note": "\"Trị\" trong \"giá trị\". 值得 (đáng để).",
+   "ex": [
+    {
+     "cn": "这本书很值得看。",
+     "py": "Zhè běn shū hěn zhíde kàn.",
+     "vi": "Cuốn sách này rất đáng đọc."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "好处 và 坏处",
+   "b": "有好处 / 有坏处 · 对…有好处",
+   "d": "Nói mặt lợi và hại của một việc.",
+   "ex": [
+    {
+     "cn": "运动对身体有好处。",
+     "py": "Yùndòng duì shēntǐ yǒu hǎochù.",
+     "vi": "Vận động có lợi cho sức khoẻ."
+    },
+    {
+     "cn": "玩游戏太多有什么坏处？",
+     "py": "Wán yóuxì tài duō yǒu shénme huàichù?",
+     "vi": "Chơi game quá nhiều có tác hại gì?"
+    }
+   ]
+  },
+  {
+   "t": "值得 + động từ: đáng để làm",
+   "b": "值得看 · 值得去 · 值得学习",
+   "d": "Khen một việc đáng bỏ công sức.",
+   "ex": [
+    {
+     "cn": "这个地方值得去一次。",
+     "py": "Zhège dìfang zhíde qù yí cì.",
+     "vi": "Nơi này đáng để đến một lần."
+    },
+    {
+     "cn": "他的精神值得我们学习。",
+     "py": "Tā de jīngshén zhíde wǒmen xuéxí.",
+     "vi": "Tinh thần của anh ấy đáng để chúng ta học tập."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "一步一步来，不要着急。",
+   "py": "Yí bù yí bù lái, búyào zháojí.",
+   "vi": "Từng bước một, đừng vội."
+  },
+  {
+   "cn": "你帮了我这么多，我不跟你客气了。",
+   "py": "Nǐ bāng le wǒ zhème duō, wǒ bù gēn nǐ kèqi le.",
+   "vi": "Bạn giúp tôi nhiều vậy, tôi không khách sáo với bạn nữa."
+  },
+  {
+   "cn": "他在工作中表现得很积极。",
+   "py": "Tā zài gōngzuò zhōng biǎoxiàn de hěn jījí.",
+   "vi": "Anh ấy thể hiện rất tích cực trong công việc."
+  },
+  {
+   "cn": "嗯，这个想法不错，值得试试。",
+   "py": "Ǹg, zhège xiǎngfǎ búcuò, zhíde shìshi.",
+   "vi": "Ừ, ý này hay đấy, đáng thử."
+  }
+ ]
+}

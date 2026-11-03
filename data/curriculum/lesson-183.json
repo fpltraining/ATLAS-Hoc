@@ -1,0 +1,216 @@
+{
+ "id": 183,
+ "cn": "难忘的友情",
+ "title": "Cảm xúc và tình cảm",
+ "goal": "Nói về cảm động, cảm nhận, nội tâm, khó quên, tốt đẹp, tình bạn, lòng nhân ái, phiền, bất mãn và buồn cười.",
+ "words": [
+  {
+   "w": "感人",
+   "py": "gǎnrén",
+   "hv": "cảm nhân",
+   "vi": "cảm động",
+   "pos": "tính từ",
+   "note": "Khiến người ta xúc động. Chính mình xúc động là 感动.",
+   "ex": [
+    {
+     "cn": "这是一个很感人的故事。",
+     "py": "Zhè shì yí ge hěn gǎnrén de gùshi.",
+     "vi": "Đây là một câu chuyện rất cảm động."
+    }
+   ]
+  },
+  {
+   "w": "感受",
+   "py": "gǎnshòu",
+   "hv": "cảm thụ",
+   "vi": "cảm nhận",
+   "pos": "danh từ",
+   "note": "Chính là \"cảm thụ\".",
+   "ex": [
+    {
+     "cn": "说说你的感受吧。",
+     "py": "Shuōshuo nǐ de gǎnshòu ba.",
+     "vi": "Nói cảm nhận của bạn đi."
+    }
+   ]
+  },
+  {
+   "w": "内心",
+   "py": "nèixīn",
+   "hv": "nội tâm",
+   "vi": "nội tâm, trong lòng",
+   "pos": "danh từ",
+   "note": "Chính là \"nội tâm\".",
+   "ex": [
+    {
+     "cn": "他的内心很孤独。",
+     "py": "Tā de nèixīn hěn gūdú.",
+     "vi": "Trong lòng anh ấy rất cô đơn."
+    }
+   ]
+  },
+  {
+   "w": "难忘",
+   "py": "nánwàng",
+   "hv": "nan vong",
+   "vi": "khó quên",
+   "pos": "động từ",
+   "note": "难 (khó) + 忘 (quên).",
+   "ex": [
+    {
+     "cn": "那是一次难忘的旅行。",
+     "py": "Nà shì yí cì nánwàng de lǚxíng.",
+     "vi": "Đó là một chuyến đi khó quên."
+    }
+   ]
+  },
+  {
+   "w": "美好",
+   "py": "měihǎo",
+   "hv": "mỹ hảo",
+   "vi": "tốt đẹp",
+   "pos": "tính từ",
+   "note": "Chính là \"mỹ hảo\".",
+   "ex": [
+    {
+     "cn": "祝你有一个美好的未来。",
+     "py": "Zhù nǐ yǒu yí ge měihǎo de wèilái.",
+     "vi": "Chúc bạn có một tương lai tươi đẹp."
+    }
+   ]
+  },
+  {
+   "w": "友情",
+   "py": "yǒuqíng",
+   "hv": "hữu tình",
+   "vi": "tình bạn",
+   "pos": "danh từ",
+   "note": "Khác \"hữu tình\" (đẹp, nên thơ) tiếng Việt: 友情 là tình bạn.",
+   "ex": [
+    {
+     "cn": "友情比钱更重要。",
+     "py": "Yǒuqíng bǐ qián gèng zhòngyào.",
+     "vi": "Tình bạn quan trọng hơn tiền."
+    }
+   ]
+  },
+  {
+   "w": "爱心",
+   "py": "àixīn",
+   "hv": "ái tâm",
+   "vi": "lòng nhân ái",
+   "pos": "danh từ",
+   "note": "爱 + 心 (lòng).",
+   "ex": [
+    {
+     "cn": "她是一个很有爱心的人。",
+     "py": "Tā shì yí ge hěn yǒu àixīn de rén.",
+     "vi": "Cô ấy là người rất có lòng nhân ái."
+    }
+   ]
+  },
+  {
+   "w": "烦",
+   "py": "fán",
+   "hv": "phiền",
+   "vi": "phiền, bực",
+   "pos": "tính từ",
+   "note": "\"Phiền\" trong \"phiền phức\". 烦死了 (bực chết đi được).",
+   "ex": [
+    {
+     "cn": "别烦我，我在学习。",
+     "py": "Bié fán wǒ, wǒ zài xuéxí.",
+     "vi": "Đừng làm phiền tôi, tôi đang học."
+    }
+   ]
+  },
+  {
+   "w": "不满",
+   "py": "bùmǎn",
+   "hv": "bất mãn",
+   "vi": "bất mãn, không hài lòng",
+   "pos": "tính từ",
+   "note": "Chính là \"bất mãn\".",
+   "ex": [
+    {
+     "cn": "顾客对服务很不满。",
+     "py": "Gùkè duì fúwù hěn bùmǎn.",
+     "vi": "Khách hàng rất không hài lòng về dịch vụ."
+    }
+   ]
+  },
+  {
+   "w": "好笑",
+   "py": "hǎoxiào",
+   "hv": "hảo tiếu",
+   "vi": "buồn cười",
+   "pos": "tính từ",
+   "note": "好 + 笑 (cười).",
+   "ex": [
+    {
+     "cn": "这个笑话太好笑了。",
+     "py": "Zhège xiàohua tài hǎoxiào le.",
+     "vi": "Câu chuyện cười này buồn cười quá."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "感人 và 感动",
+   "b": "感人 = khiến người khác cảm động (tả sự việc) · 感动 = bị cảm động (tả người)",
+   "d": "这个电影很感人 / 我很感动.",
+   "ex": [
+    {
+     "cn": "他的话让我很感动。",
+     "py": "Tā de huà ràng wǒ hěn gǎndòng.",
+     "vi": "Lời anh ấy làm tôi rất cảm động."
+    },
+    {
+     "cn": "这首歌很感人。",
+     "py": "Zhè shǒu gē hěn gǎnrén.",
+     "vi": "Bài hát này rất cảm động."
+    }
+   ]
+  },
+  {
+   "t": "祝 + người + lời chúc",
+   "b": "祝你生日快乐 · 祝你一路平安",
+   "d": "Câu chúc mở đầu bằng 祝.",
+   "ex": [
+    {
+     "cn": "祝你考试顺利！",
+     "py": "Zhù nǐ kǎoshì shùnlì!",
+     "vi": "Chúc bạn thi tốt!"
+    },
+    {
+     "cn": "祝大家新年快乐！",
+     "py": "Zhù dàjiā xīnnián kuàilè!",
+     "vi": "Chúc mọi người năm mới vui vẻ!"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我们的友情已经十年了。",
+   "py": "Wǒmen de yǒuqíng yǐjīng shí nián le.",
+   "vi": "Tình bạn của chúng tôi đã mười năm."
+  },
+  {
+   "cn": "大学生活是我一生中最美好的时光。",
+   "py": "Dàxué shēnghuó shì wǒ yìshēng zhōng zuì měihǎo de shíguāng.",
+   "vi": "Đời sinh viên là quãng thời gian đẹp nhất đời tôi."
+  },
+  {
+   "cn": "每天加班，他心里很不满。",
+   "py": "Měi tiān jiābān, tā xīnlǐ hěn bùmǎn.",
+   "vi": "Ngày nào cũng tăng ca, trong lòng anh ấy rất bất mãn."
+  },
+  {
+   "cn": "这件事让我很难忘。",
+   "py": "Zhè jiàn shì ràng wǒ hěn nánwàng.",
+   "vi": "Chuyện này làm tôi khó quên."
+  }
+ ]
+}

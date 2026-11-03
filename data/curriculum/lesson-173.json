@@ -1,0 +1,216 @@
+{
+ "id": 173,
+ "cn": "听音乐会",
+ "title": "Âm nhạc và sân khấu",
+ "goal": "Nói về ca sĩ, tiếng hát, biểu diễn, diễn, kịch nói, nhà hát, phim truyền hình, đàn piano, đàn và chơi đàn.",
+ "words": [
+  {
+   "w": "歌手",
+   "py": "gēshǒu",
+   "hv": "ca thủ",
+   "vi": "ca sĩ",
+   "pos": "danh từ",
+   "note": "歌 + 手 (người giỏi một việc). Giống 歌星 (ngôi sao ca nhạc).",
+   "ex": [
+    {
+     "cn": "她是我最喜欢的歌手。",
+     "py": "Tā shì wǒ zuì xǐhuan de gēshǒu.",
+     "vi": "Cô ấy là ca sĩ tôi thích nhất."
+    }
+   ]
+  },
+  {
+   "w": "歌声",
+   "py": "gēshēng",
+   "hv": "ca thanh",
+   "vi": "tiếng hát",
+   "pos": "danh từ",
+   "note": "歌 + 声 (tiếng).",
+   "ex": [
+    {
+     "cn": "她的歌声很美。",
+     "py": "Tā de gēshēng hěn měi.",
+     "vi": "Tiếng hát của cô ấy rất hay."
+    }
+   ]
+  },
+  {
+   "w": "演唱",
+   "py": "yǎnchàng",
+   "hv": "diễn xướng",
+   "vi": "biểu diễn (hát)",
+   "pos": "động từ",
+   "note": "Buổi hoà nhạc là 演唱会.",
+   "ex": [
+    {
+     "cn": "明天晚上她要在北京演唱。",
+     "py": "Míngtiān wǎnshang tā yào zài Běijīng yǎnchàng.",
+     "vi": "Tối mai cô ấy sẽ biểu diễn ở Bắc Kinh."
+    }
+   ]
+  },
+  {
+   "w": "演",
+   "py": "yǎn",
+   "hv": "diễn",
+   "vi": "diễn, đóng (vai)",
+   "pos": "động từ",
+   "note": "\"Diễn\" trong \"diễn viên\".",
+   "ex": [
+    {
+     "cn": "他在电影里演一个老师。",
+     "py": "Tā zài diànyǐng lǐ yǎn yí ge lǎoshī.",
+     "vi": "Trong phim anh ấy đóng vai một thầy giáo."
+    }
+   ]
+  },
+  {
+   "w": "话剧",
+   "py": "huàjù",
+   "hv": "thoại kịch",
+   "vi": "kịch nói",
+   "pos": "danh từ",
+   "note": "话 (lời nói) + 剧 (kịch).",
+   "ex": [
+    {
+     "cn": "我们去看话剧吧。",
+     "py": "Wǒmen qù kàn huàjù ba.",
+     "vi": "Mình đi xem kịch nói nhé."
+    }
+   ]
+  },
+  {
+   "w": "剧院",
+   "py": "jùyuàn",
+   "hv": "kịch viện",
+   "vi": "nhà hát",
+   "pos": "danh từ",
+   "note": "剧 + 院.",
+   "ex": [
+    {
+     "cn": "剧院门口有很多人。",
+     "py": "Jùyuàn ménkǒu yǒu hěn duō rén.",
+     "vi": "Trước cửa nhà hát có nhiều người."
+    }
+   ]
+  },
+  {
+   "w": "电视剧",
+   "py": "diànshìjù",
+   "hv": "điện thị kịch",
+   "vi": "phim truyền hình",
+   "pos": "danh từ",
+   "note": "电视 + 剧.",
+   "ex": [
+    {
+     "cn": "我妈妈每天晚上看电视剧。",
+     "py": "Wǒ māma měi tiān wǎnshang kàn diànshìjù.",
+     "vi": "Tối nào mẹ tôi cũng xem phim truyền hình."
+    }
+   ]
+  },
+  {
+   "w": "钢琴",
+   "py": "gāngqín",
+   "hv": "cương cầm",
+   "vi": "đàn piano",
+   "pos": "danh từ",
+   "note": "Chính là \"dương cầm\" (cương cầm).",
+   "ex": [
+    {
+     "cn": "她从五岁开始学钢琴。",
+     "py": "Tā cóng wǔ suì kāishǐ xué gāngqín.",
+     "vi": "Cô ấy học piano từ năm tuổi."
+    }
+   ]
+  },
+  {
+   "w": "琴",
+   "py": "qín",
+   "hv": "cầm",
+   "vi": "đàn",
+   "pos": "danh từ",
+   "note": "\"Cầm\" trong \"cầm kỳ thi hoạ\".",
+   "ex": [
+    {
+     "cn": "他每天练两个小时琴。",
+     "py": "Tā měi tiān liàn liǎng ge xiǎoshí qín.",
+     "vi": "Mỗi ngày anh ấy luyện đàn hai tiếng."
+    }
+   ]
+  },
+  {
+   "w": "弹",
+   "py": "tán",
+   "hv": "đàn",
+   "vi": "chơi (đàn)",
+   "pos": "động từ",
+   "note": "Đàn bằng ngón tay dùng 弹: 弹钢琴, 弹吉他.",
+   "ex": [
+    {
+     "cn": "你会弹钢琴吗？",
+     "py": "Nǐ huì tán gāngqín ma?",
+     "vi": "Bạn biết chơi piano không?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Chơi nhạc cụ: 弹 / 拉 / 吹",
+   "b": "弹钢琴 · 拉小提琴 · 吹笛子",
+   "d": "Đàn gảy, đánh phím dùng 弹; đàn kéo dùng 拉; nhạc cụ thổi dùng 吹.",
+   "ex": [
+    {
+     "cn": "他会拉小提琴。",
+     "py": "Tā huì lā xiǎotíqín.",
+     "vi": "Anh ấy biết kéo vĩ cầm."
+    },
+    {
+     "cn": "她弹得很好。",
+     "py": "Tā tán de hěn hǎo.",
+     "vi": "Cô ấy đàn rất hay."
+    }
+   ]
+  },
+  {
+   "t": "从 + tuổi / thời gian + 开始: bắt đầu từ",
+   "b": "从五岁开始 · 从明天开始",
+   "d": "Nói điểm khởi đầu của một việc.",
+   "ex": [
+    {
+     "cn": "我从去年开始学汉语。",
+     "py": "Wǒ cóng qùnián kāishǐ xué Hànyǔ.",
+     "vi": "Tôi bắt đầu học tiếng Trung từ năm ngoái."
+    },
+    {
+     "cn": "从今天开始，我每天早起。",
+     "py": "Cóng jīntiān kāishǐ, wǒ měi tiān zǎo qǐ.",
+     "vi": "Từ hôm nay, ngày nào tôi cũng dậy sớm."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "这部电视剧很受欢迎。",
+   "py": "Zhè bù diànshìjù hěn shòu huānyíng.",
+   "vi": "Bộ phim truyền hình này rất được yêu thích."
+  },
+  {
+   "cn": "剧院里传来美丽的歌声。",
+   "py": "Jùyuàn lǐ chuán lái měilì de gēshēng.",
+   "vi": "Từ nhà hát vọng ra tiếng hát tuyệt đẹp."
+  },
+  {
+   "cn": "我小时候学过钢琴，现在忘了。",
+   "py": "Wǒ xiǎoshíhou xué guo gāngqín, xiànzài wàng le.",
+   "vi": "Hồi nhỏ tôi học piano, giờ quên rồi."
+  },
+  {
+   "cn": "那个歌手演唱了五首歌。",
+   "py": "Nàge gēshǒu yǎnchàng le wǔ shǒu gē.",
+   "vi": "Ca sĩ đó đã hát năm bài."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 159,
+ "cn": "网购",
+ "title": "Mua sắm và thanh toán",
+ "goal": "Nói về mua, hàng hoá, giá cả, giá rẻ, giá cao, giảm giá, mua trên mạng, tính tiền và trả tiền.",
+ "words": [
+  {
+   "w": "购买",
+   "py": "gòumǎi",
+   "hv": "cấu mãi",
+   "vi": "mua",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 买.",
+   "ex": [
+    {
+     "cn": "你可以在网上购买门票。",
+     "py": "Nǐ kěyǐ zài wǎngshang gòumǎi ménpiào.",
+     "vi": "Bạn có thể mua vé trên mạng."
+    }
+   ]
+  },
+  {
+   "w": "商品",
+   "py": "shāngpǐn",
+   "hv": "thương phẩm",
+   "vi": "hàng hoá",
+   "pos": "danh từ",
+   "note": "Chính là \"thương phẩm\".",
+   "ex": [
+    {
+     "cn": "这家超市的商品很多。",
+     "py": "Zhè jiā chāoshì de shāngpǐn hěn duō.",
+     "vi": "Siêu thị này có nhiều hàng hoá."
+    }
+   ]
+  },
+  {
+   "w": "价钱",
+   "py": "jiàqián",
+   "hv": "giá tiền",
+   "vi": "giá cả",
+   "pos": "danh từ",
+   "note": "Khẩu ngữ, nghĩa như 价格.",
+   "ex": [
+    {
+     "cn": "这个价钱太贵了。",
+     "py": "Zhège jiàqián tài guì le.",
+     "vi": "Giá này đắt quá."
+    }
+   ]
+  },
+  {
+   "w": "低价",
+   "py": "dījià",
+   "hv": "đê giá",
+   "vi": "giá thấp",
+   "pos": "danh từ",
+   "note": "低 (thấp) + 价.",
+   "ex": [
+    {
+     "cn": "他们用低价卖旧手机。",
+     "py": "Tāmen yòng dījià mài jiù shǒujī.",
+     "vi": "Họ bán điện thoại cũ với giá thấp."
+    }
+   ]
+  },
+  {
+   "w": "高价",
+   "py": "gāojià",
+   "hv": "cao giá",
+   "vi": "giá cao",
+   "pos": "danh từ",
+   "note": "高 + 价.",
+   "ex": [
+    {
+     "cn": "他高价买了一张票。",
+     "py": "Tā gāojià mǎi le yì zhāng piào.",
+     "vi": "Anh ấy mua một vé với giá cao."
+    }
+   ]
+  },
+  {
+   "w": "降价",
+   "py": "jiàngjià",
+   "hv": "giáng giá",
+   "vi": "giảm giá",
+   "pos": "động từ",
+   "note": "降 (hạ) + 价.",
+   "ex": [
+    {
+     "cn": "这些衣服都降价了。",
+     "py": "Zhèxiē yīfu dōu jiàngjià le.",
+     "vi": "Những bộ quần áo này đều giảm giá rồi."
+    }
+   ]
+  },
+  {
+   "w": "网购",
+   "py": "wǎnggòu",
+   "hv": "võng cấu",
+   "vi": "mua hàng trên mạng",
+   "pos": "động từ",
+   "note": "Viết tắt của 网上购物.",
+   "ex": [
+    {
+     "cn": "现在很多人喜欢网购。",
+     "py": "Xiànzài hěn duō rén xǐhuan wǎnggòu.",
+     "vi": "Bây giờ nhiều người thích mua hàng trên mạng."
+    }
+   ]
+  },
+  {
+   "w": "结账",
+   "py": "jiézhàng",
+   "hv": "kết trướng",
+   "vi": "tính tiền, thanh toán",
+   "pos": "động từ",
+   "note": "Ăn xong gọi tính tiền: 服务员，结账！",
+   "ex": [
+    {
+     "cn": "服务员，我们结账。",
+     "py": "Fúwùyuán, wǒmen jiézhàng.",
+     "vi": "Phục vụ ơi, tính tiền cho chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "付",
+   "py": "fù",
+   "hv": "phó",
+   "vi": "trả (tiền)",
+   "pos": "động từ",
+   "note": "\"Phó\" trong \"giao phó\". 付钱 là trả tiền.",
+   "ex": [
+    {
+     "cn": "我来付钱。",
+     "py": "Wǒ lái fù qián.",
+     "vi": "Để tôi trả tiền."
+    }
+   ]
+  },
+  {
+   "w": "支付",
+   "py": "zhīfù",
+   "hv": "chi phó",
+   "vi": "thanh toán",
+   "pos": "động từ",
+   "note": "Trang trọng. Thanh toán bằng điện thoại: 手机支付.",
+   "ex": [
+    {
+     "cn": "在中国很多人用手机支付。",
+     "py": "Zài Zhōngguó hěn duō rén yòng shǒujī zhīfù.",
+     "vi": "Ở Trung Quốc nhiều người thanh toán bằng điện thoại."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "用 + phương tiện + động từ",
+   "b": "用手机支付 · 用低价卖",
+   "d": "用 nói công cụ hay cách thức, đứng trước động từ chính.",
+   "ex": [
+    {
+     "cn": "可以用银行卡付钱吗？",
+     "py": "Kěyǐ yòng yínhángkǎ fù qián ma?",
+     "vi": "Có thể trả bằng thẻ ngân hàng không?"
+    },
+    {
+     "cn": "我用手机买票。",
+     "py": "Wǒ yòng shǒujī mǎi piào.",
+     "vi": "Tôi mua vé bằng điện thoại."
+    }
+   ]
+  },
+  {
+   "t": "我来 + động từ: để tôi làm",
+   "b": "我来付 · 我来介绍",
+   "d": "来 trước động từ thể hiện chủ động nhận việc.",
+   "ex": [
+    {
+     "cn": "我来介绍一下。",
+     "py": "Wǒ lái jièshào yíxià.",
+     "vi": "Để tôi giới thiệu một chút."
+    },
+    {
+     "cn": "这次我来结账吧。",
+     "py": "Zhè cì wǒ lái jiézhàng ba.",
+     "vi": "Lần này để tôi trả nhé."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "网购很方便，但是有时候质量不好。",
+   "py": "Wǎnggòu hěn fāngbiàn, dànshì yǒushíhou zhìliàng bù hǎo.",
+   "vi": "Mua trên mạng rất tiện, nhưng đôi khi chất lượng không tốt."
+  },
+  {
+   "cn": "周末商场的商品都降价了。",
+   "py": "Zhōumò shāngchǎng de shāngpǐn dōu jiàngjià le.",
+   "vi": "Cuối tuần hàng ở trung tâm thương mại đều giảm giá."
+  },
+  {
+   "cn": "这个价钱可以便宜一点儿吗？",
+   "py": "Zhège jiàqián kěyǐ piányi yìdiǎnr ma?",
+   "vi": "Giá này có thể bớt chút không?"
+  },
+  {
+   "cn": "吃完饭我们去前台结账。",
+   "py": "Chī wán fàn wǒmen qù qiántái jiézhàng.",
+   "vi": "Ăn xong chúng ta ra quầy tính tiền."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 167,
+ "cn": "在工厂打工",
+ "title": "Nơi làm việc",
+ "goal": "Nói về làm việc văn phòng, phòng ban, cơ quan, phụ trách, người phụ trách, nhân viên, công nhân, nhà máy và làm thêm.",
+ "words": [
+  {
+   "w": "办公",
+   "py": "bàngōng",
+   "hv": "biện công",
+   "vi": "làm việc (văn phòng)",
+   "pos": "động từ",
+   "note": "Văn phòng là 办公室.",
+   "ex": [
+    {
+     "cn": "他在楼上办公。",
+     "py": "Tā zài lóu shang bàngōng.",
+     "vi": "Anh ấy làm việc ở tầng trên."
+    }
+   ]
+  },
+  {
+   "w": "部门",
+   "py": "bùmén",
+   "hv": "bộ môn",
+   "vi": "phòng ban",
+   "pos": "danh từ",
+   "note": "Khác \"bộ môn\" ở trường tiếng Việt: 部门 là phòng ban trong cơ quan.",
+   "ex": [
+    {
+     "cn": "你在哪个部门工作？",
+     "py": "Nǐ zài nǎge bùmén gōngzuò?",
+     "vi": "Bạn làm ở phòng ban nào?"
+    }
+   ]
+  },
+  {
+   "w": "单位",
+   "py": "dānwèi",
+   "hv": "đơn vị",
+   "vi": "cơ quan, đơn vị công tác",
+   "pos": "danh từ",
+   "note": "Chính là \"đơn vị\".",
+   "ex": [
+    {
+     "cn": "我们单位有两百多人。",
+     "py": "Wǒmen dānwèi yǒu liǎng bǎi duō rén.",
+     "vi": "Cơ quan chúng tôi có hơn hai trăm người."
+    }
+   ]
+  },
+  {
+   "w": "负责",
+   "py": "fùzé",
+   "hv": "phụ trách",
+   "vi": "phụ trách, chịu trách nhiệm",
+   "pos": "động từ",
+   "note": "Chính là \"phụ trách\". Còn là tính từ: 他很负责 (anh ấy rất có trách nhiệm).",
+   "ex": [
+    {
+     "cn": "这件事由我负责。",
+     "py": "Zhè jiàn shì yóu wǒ fùzé.",
+     "vi": "Việc này do tôi phụ trách."
+    }
+   ]
+  },
+  {
+   "w": "负责人",
+   "py": "fùzérén",
+   "hv": "phụ trách nhân",
+   "vi": "người phụ trách",
+   "pos": "danh từ",
+   "note": "负责 + 人.",
+   "ex": [
+    {
+     "cn": "请问这里的负责人是谁？",
+     "py": "Qǐngwèn zhèlǐ de fùzérén shì shéi?",
+     "vi": "Cho hỏi người phụ trách ở đây là ai?"
+    }
+   ]
+  },
+  {
+   "w": "人员",
+   "py": "rényuán",
+   "hv": "nhân viên",
+   "vi": "nhân sự, người (làm việc)",
+   "pos": "danh từ",
+   "note": "Hay ghép: 工作人员 (nhân viên), 服务人员.",
+   "ex": [
+    {
+     "cn": "请找工作人员帮忙。",
+     "py": "Qǐng zhǎo gōngzuò rényuán bāngmáng.",
+     "vi": "Xin nhờ nhân viên giúp đỡ."
+    }
+   ]
+  },
+  {
+   "w": "工人",
+   "py": "gōngrén",
+   "hv": "công nhân",
+   "vi": "công nhân",
+   "pos": "danh từ",
+   "note": "Chính là \"công nhân\".",
+   "ex": [
+    {
+     "cn": "这个工厂有五百个工人。",
+     "py": "Zhège gōngchǎng yǒu wǔ bǎi ge gōngrén.",
+     "vi": "Nhà máy này có năm trăm công nhân."
+    }
+   ]
+  },
+  {
+   "w": "工厂",
+   "py": "gōngchǎng",
+   "hv": "công xưởng",
+   "vi": "nhà máy",
+   "pos": "danh từ",
+   "note": "Chính là \"công xưởng\".",
+   "ex": [
+    {
+     "cn": "他在汽车工厂工作。",
+     "py": "Tā zài qìchē gōngchǎng gōngzuò.",
+     "vi": "Anh ấy làm ở nhà máy ô tô."
+    }
+   ]
+  },
+  {
+   "w": "厂",
+   "py": "chǎng",
+   "hv": "xưởng",
+   "vi": "xưởng, nhà máy",
+   "pos": "danh từ",
+   "note": "Gọn hơn 工厂. Ghép: 厂长 (giám đốc nhà máy).",
+   "ex": [
+    {
+     "cn": "我爸爸在厂里上班。",
+     "py": "Wǒ bàba zài chǎng lǐ shàngbān.",
+     "vi": "Bố tôi làm ở nhà máy."
+    }
+   ]
+  },
+  {
+   "w": "打工",
+   "py": "dǎgōng",
+   "hv": "đả công",
+   "vi": "làm thuê, làm thêm",
+   "pos": "động từ",
+   "note": "Sinh viên làm thêm cũng gọi là 打工.",
+   "ex": [
+    {
+     "cn": "暑假我在咖啡馆打工。",
+     "py": "Shǔjià wǒ zài kāfēiguǎn dǎgōng.",
+     "vi": "Nghỉ hè tôi làm thêm ở quán cà phê."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "由 + người + 负责: do ai phụ trách",
+   "b": "这件事由他负责",
+   "d": "由 giới thiệu người chịu trách nhiệm, trang trọng hơn 让.",
+   "ex": [
+    {
+     "cn": "这次活动由小王负责。",
+     "py": "Zhè cì huódòng yóu Xiǎo Wáng fùzé.",
+     "vi": "Hoạt động lần này do Tiểu Vương phụ trách."
+    },
+    {
+     "cn": "会议由经理主持。",
+     "py": "Huìyì yóu jīnglǐ zhǔchí.",
+     "vi": "Cuộc họp do giám đốc chủ trì."
+    }
+   ]
+  },
+  {
+   "t": "对…负责: chịu trách nhiệm với",
+   "b": "对自己负责 · 对工作负责",
+   "d": "Đối tượng chịu trách nhiệm đặt sau 对.",
+   "ex": [
+    {
+     "cn": "每个人都要对自己负责。",
+     "py": "Měi ge rén dōu yào duì zìjǐ fùzé.",
+     "vi": "Ai cũng phải chịu trách nhiệm với bản thân."
+    },
+    {
+     "cn": "他对工作非常负责。",
+     "py": "Tā duì gōngzuò fēicháng fùzé.",
+     "vi": "Anh ấy rất có trách nhiệm với công việc."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "很多大学生周末去打工。",
+   "py": "Hěn duō dàxuéshēng zhōumò qù dǎgōng.",
+   "vi": "Nhiều sinh viên cuối tuần đi làm thêm."
+  },
+  {
+   "cn": "我们部门一共有十个人。",
+   "py": "Wǒmen bùmén yígòng yǒu shí ge rén.",
+   "vi": "Phòng chúng tôi tổng cộng có mười người."
+  },
+  {
+   "cn": "工厂里的工人都很辛苦。",
+   "py": "Gōngchǎng lǐ de gōngrén dōu hěn xīnkǔ.",
+   "vi": "Công nhân trong nhà máy đều rất vất vả."
+  },
+  {
+   "cn": "有问题可以问工作人员。",
+   "py": "Yǒu wèntí kěyǐ wèn gōngzuò rényuán.",
+   "vi": "Có vấn đề có thể hỏi nhân viên."
+  }
+ ]
+}

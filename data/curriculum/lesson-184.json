@@ -1,0 +1,216 @@
+{
+ "id": 184,
+ "cn": "抬头看",
+ "title": "Động tác cơ thể",
+ "goal": "Nói về ngẩng đầu, gật đầu, hét, đeo trên lưng, ba lô, đè, ngửi, đo, rơi và chảy.",
+ "words": [
+  {
+   "w": "抬头",
+   "py": "táitóu",
+   "hv": "đài đầu",
+   "vi": "ngẩng đầu",
+   "pos": "động từ",
+   "note": "抬 (nâng) + 头. Cúi đầu là 低头.",
+   "ex": [
+    {
+     "cn": "他抬头看了看天。",
+     "py": "Tā táitóu kàn le kàn tiān.",
+     "vi": "Anh ấy ngẩng đầu nhìn trời."
+    }
+   ]
+  },
+  {
+   "w": "点头",
+   "py": "diǎntóu",
+   "hv": "điểm đầu",
+   "vi": "gật đầu",
+   "pos": "động từ",
+   "note": "Lắc đầu là 摇头.",
+   "ex": [
+    {
+     "cn": "老师点了点头。",
+     "py": "Lǎoshī diǎn le diǎn tóu.",
+     "vi": "Thầy giáo gật gật đầu."
+    }
+   ]
+  },
+  {
+   "w": "喊",
+   "py": "hǎn",
+   "hv": "hảm",
+   "vi": "hét, gọi to",
+   "pos": "động từ",
+   "note": "Có bộ 口. Gọi to tên ai: 喊他的名字.",
+   "ex": [
+    {
+     "cn": "有人在外面喊你。",
+     "py": "Yǒu rén zài wàimian hǎn nǐ.",
+     "vi": "Có người đang gọi bạn ngoài kia."
+    }
+   ]
+  },
+  {
+   "w": "背",
+   "py": "bēi",
+   "hv": "bối",
+   "vi": "đeo (trên lưng), cõng",
+   "pos": "động từ",
+   "note": "Đọc bēi khi là đeo, cõng; đọc bèi khi là lưng hoặc học thuộc.",
+   "ex": [
+    {
+     "cn": "他背着一个大包。",
+     "py": "Tā bēi zhe yí ge dà bāo.",
+     "vi": "Anh ấy đeo một cái túi to trên lưng."
+    }
+   ]
+  },
+  {
+   "w": "背包",
+   "py": "bēibāo",
+   "hv": "bối bao",
+   "vi": "ba lô",
+   "pos": "danh từ",
+   "note": "背 + 包.",
+   "ex": [
+    {
+     "cn": "我的背包里有水和面包。",
+     "py": "Wǒ de bēibāo lǐ yǒu shuǐ hé miànbāo.",
+     "vi": "Trong ba lô tôi có nước và bánh mì."
+    }
+   ]
+  },
+  {
+   "w": "压",
+   "py": "yā",
+   "hv": "áp",
+   "vi": "đè, ép",
+   "pos": "động từ",
+   "note": "\"Áp\" trong \"áp lực\", \"huyết áp\". Áp lực là 压力.",
+   "ex": [
+    {
+     "cn": "别压着我的书。",
+     "py": "Bié yā zhe wǒ de shū.",
+     "vi": "Đừng đè lên sách của tôi."
+    }
+   ]
+  },
+  {
+   "w": "闻",
+   "py": "wén",
+   "hv": "văn",
+   "vi": "ngửi",
+   "pos": "động từ",
+   "note": "Nghĩa gốc \"nghe\" (新闻 tin tức), nay chủ yếu là ngửi.",
+   "ex": [
+    {
+     "cn": "你闻闻，这是什么味道？",
+     "py": "Nǐ wénwen, zhè shì shénme wèidao?",
+     "vi": "Bạn ngửi thử xem, mùi gì đây?"
+    }
+   ]
+  },
+  {
+   "w": "量",
+   "py": "liáng",
+   "hv": "lượng",
+   "vi": "đo",
+   "pos": "động từ",
+   "note": "Đo nhiệt độ, chiều cao. Đọc liàng thì là \"lượng\" (số lượng).",
+   "ex": [
+    {
+     "cn": "护士给我量了体温。",
+     "py": "Hùshi gěi wǒ liáng le tǐwēn.",
+     "vi": "Y tá đo thân nhiệt cho tôi."
+    }
+   ]
+  },
+  {
+   "w": "落",
+   "py": "luò",
+   "hv": "lạc",
+   "vi": "rơi, rụng",
+   "pos": "động từ",
+   "note": "\"Lạc\" trong \"toạ lạc\", \"lưu lạc\", nghĩa gốc là rơi xuống. Lá rụng: 叶子落了.",
+   "ex": [
+    {
+     "cn": "秋天树叶都落了。",
+     "py": "Qiūtiān shùyè dōu luò le.",
+     "vi": "Mùa thu lá cây rụng hết."
+    }
+   ]
+  },
+  {
+   "w": "流",
+   "py": "liú",
+   "hv": "lưu",
+   "vi": "chảy",
+   "pos": "động từ",
+   "note": "\"Lưu\" trong \"lưu lượng\", \"giao lưu\".",
+   "ex": [
+    {
+     "cn": "河水慢慢地流着。",
+     "py": "Héshuǐ mànmàn de liú zhe.",
+     "vi": "Nước sông chảy chầm chậm."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Động từ lặp lại: làm thử, làm một chút",
+   "b": "看看 · 闻闻 · 点了点头",
+   "d": "Lặp động từ cho nhẹ nhàng; việc đã xong thì chèn 了 vào giữa.",
+   "ex": [
+    {
+     "cn": "你尝尝这个菜。",
+     "py": "Nǐ chángchang zhège cài.",
+     "vi": "Bạn nếm thử món này."
+    },
+    {
+     "cn": "他想了想，说\"好\"。",
+     "py": "Tā xiǎng le xiǎng, shuō \"hǎo\".",
+     "vi": "Anh ấy nghĩ một lúc rồi nói \"được\"."
+    }
+   ]
+  },
+  {
+   "t": "Một chữ, hai cách đọc",
+   "b": "背 bēi (đeo) / bèi (lưng, học thuộc) · 量 liáng (đo) / liàng (lượng)",
+   "d": "Nhiều chữ đổi nghĩa theo thanh điệu, phải học theo từ.",
+   "ex": [
+    {
+     "cn": "我在背生词。",
+     "py": "Wǒ zài bèi shēngcí.",
+     "vi": "Tôi đang học thuộc từ mới."
+    },
+    {
+     "cn": "工作量太大了。",
+     "py": "Gōngzuòliàng tài dà le.",
+     "vi": "Khối lượng công việc lớn quá."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "听到有人喊他，他马上抬头。",
+   "py": "Tīngdào yǒu rén hǎn tā, tā mǎshàng táitóu.",
+   "vi": "Nghe có người gọi, anh ấy lập tức ngẩng đầu."
+  },
+  {
+   "cn": "他同意了，点了点头。",
+   "py": "Tā tóngyì le, diǎn le diǎn tóu.",
+   "vi": "Anh ấy đồng ý, gật gật đầu."
+  },
+  {
+   "cn": "学生们背着书包去学校。",
+   "py": "Xuéshengmen bēi zhe shūbāo qù xuéxiào.",
+   "vi": "Học sinh đeo cặp đến trường."
+  },
+  {
+   "cn": "她感动得流下了眼泪。",
+   "py": "Tā gǎndòng de liú xià le yǎnlèi.",
+   "vi": "Cô ấy cảm động đến rơi nước mắt."
+  }
+ ]
+}

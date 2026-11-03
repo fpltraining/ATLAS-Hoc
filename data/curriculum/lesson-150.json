@@ -1,0 +1,216 @@
+{
+ "id": 150,
+ "cn": "火车晚点了",
+ "title": "Ga tàu và chuyển nhà",
+ "goal": "Nói về soát vé, tàu trễ, chuyển nhà, cầu thang, trước mặt, gặp tình cờ, và danh sách.",
+ "words": [
+  {
+   "w": "检票",
+   "py": "jiǎnpiào",
+   "hv": "kiểm phiếu",
+   "vi": "soát vé",
+   "pos": "động từ",
+   "note": "检 (kiểm) + 票 (vé).",
+   "ex": [
+    {
+     "cn": "火车站开始检票了。",
+     "py": "Huǒchēzhàn kāishǐ jiǎnpiào le.",
+     "vi": "Ga tàu bắt đầu soát vé rồi."
+    }
+   ]
+  },
+  {
+   "w": "晚点",
+   "py": "wǎndiǎn",
+   "hv": "vãn điểm",
+   "vi": "trễ giờ (tàu xe)",
+   "pos": "động từ",
+   "note": "晚 (muộn) + 点 (giờ). Dùng cho tàu, máy bay đến muộn.",
+   "ex": [
+    {
+     "cn": "飞机晚点了一个小时。",
+     "py": "Fēijī wǎndiǎn le yí ge xiǎoshí.",
+     "vi": "Máy bay trễ một tiếng."
+    }
+   ]
+  },
+  {
+   "w": "搬家",
+   "py": "bānjiā",
+   "hv": "ban gia",
+   "vi": "chuyển nhà",
+   "pos": "động từ",
+   "note": "搬 = chuyển, khiêng.",
+   "ex": [
+    {
+     "cn": "我们下个月搬家。",
+     "py": "Wǒmen xià ge yuè bānjiā.",
+     "vi": "Tháng sau chúng tôi chuyển nhà."
+    }
+   ]
+  },
+  {
+   "w": "楼梯",
+   "py": "lóutī",
+   "hv": "lâu thê",
+   "vi": "cầu thang",
+   "pos": "danh từ",
+   "note": "楼 (lầu) + 梯 (thang).",
+   "ex": [
+    {
+     "cn": "电梯坏了，我们走楼梯吧。",
+     "py": "Diàntī huài le, wǒmen zǒu lóutī ba.",
+     "vi": "Thang máy hỏng, mình đi cầu thang nhé."
+    }
+   ]
+  },
+  {
+   "w": "面前",
+   "py": "miànqián",
+   "hv": "diện tiền",
+   "vi": "trước mặt",
+   "pos": "danh từ",
+   "note": "面 (mặt) + 前.",
+   "ex": [
+    {
+     "cn": "他站在我面前。",
+     "py": "Tā zhàn zài wǒ miànqián.",
+     "vi": "Anh ấy đứng trước mặt tôi."
+    }
+   ]
+  },
+  {
+   "w": "照",
+   "py": "zhào",
+   "hv": "chiếu",
+   "vi": "chiếu; soi; chụp",
+   "pos": "động từ",
+   "note": "\"Chiếu\" trong \"chiếu sáng\". 照镜子 là soi gương.",
+   "ex": [
+    {
+     "cn": "她在照镜子。",
+     "py": "Tā zài zhào jìngzi.",
+     "vi": "Cô ấy đang soi gương."
+    }
+   ]
+  },
+  {
+   "w": "遇见",
+   "py": "yùjiàn",
+   "hv": "ngộ kiến",
+   "vi": "gặp (tình cờ)",
+   "pos": "động từ",
+   "note": "\"Ngộ\" trong \"hội ngộ\". Gặp không hẹn trước.",
+   "ex": [
+    {
+     "cn": "我在路上遇见了老同学。",
+     "py": "Wǒ zài lùshang yùjiàn le lǎo tóngxué.",
+     "vi": "Tôi tình cờ gặp bạn học cũ trên đường."
+    }
+   ]
+  },
+  {
+   "w": "不见",
+   "py": "bújiàn",
+   "hv": "bất kiến",
+   "vi": "không gặp; mất, không thấy",
+   "pos": "động từ",
+   "note": "Hai nghĩa: 好久不见 (lâu không gặp) và 我的钥匙不见了 (chìa khoá biến đâu mất).",
+   "ex": [
+    {
+     "cn": "我的手机不见了！",
+     "py": "Wǒ de shǒujī bú jiàn le!",
+     "vi": "Điện thoại của tôi mất đâu rồi!"
+    }
+   ]
+  },
+  {
+   "w": "起",
+   "py": "qǐ",
+   "hv": "khởi",
+   "vi": "dậy; bắt đầu từ",
+   "pos": "động từ",
+   "note": "起床 (dậy), 从明天起 (bắt đầu từ ngày mai).",
+   "ex": [
+    {
+     "cn": "从明天起，我每天跑步。",
+     "py": "Cóng míngtiān qǐ, wǒ měi tiān pǎobù.",
+     "vi": "Từ mai, ngày nào tôi cũng chạy bộ."
+    }
+   ]
+  },
+  {
+   "w": "名单",
+   "py": "míngdān",
+   "hv": "danh đơn",
+   "vi": "danh sách",
+   "pos": "danh từ",
+   "note": "名 (tên) + 单 (tờ, đơn).",
+   "ex": [
+    {
+     "cn": "你的名字在名单上。",
+     "py": "Nǐ de míngzi zài míngdān shang.",
+     "vi": "Tên bạn có trong danh sách."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "从…起: bắt đầu từ",
+   "b": "从 + thời điểm + 起",
+   "d": "Đánh dấu điểm bắt đầu của một thói quen hay quy định mới.",
+   "ex": [
+    {
+     "cn": "从下个月起，这里不能停车。",
+     "py": "Cóng xià ge yuè qǐ, zhèlǐ bù néng tíngchē.",
+     "vi": "Từ tháng sau, ở đây không được đỗ xe."
+    },
+    {
+     "cn": "从今天起我不喝可乐了。",
+     "py": "Cóng jīntiān qǐ wǒ bù hē kělè le.",
+     "vi": "Từ hôm nay tôi không uống cola nữa."
+    }
+   ]
+  },
+  {
+   "t": "…不见了: biến mất",
+   "b": "Đồ vật + 不见了",
+   "d": "Phát hiện đồ bỗng nhiên không thấy đâu.",
+   "ex": [
+    {
+     "cn": "我的钱包不见了。",
+     "py": "Wǒ de qiánbāo bú jiàn le.",
+     "vi": "Ví của tôi không thấy đâu rồi."
+    },
+    {
+     "cn": "刚才还在这儿，怎么不见了？",
+     "py": "Gāngcái hái zài zhèr, zěnme bú jiàn le?",
+     "vi": "Vừa nãy còn ở đây, sao lại mất rồi?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "火车晚点了，我们要等一会儿。",
+   "py": "Huǒchē wǎndiǎn le, wǒmen yào děng yíhuìr.",
+   "vi": "Tàu trễ rồi, chúng ta phải đợi một lúc."
+  },
+  {
+   "cn": "搬家很累，但是新房子很漂亮。",
+   "py": "Bānjiā hěn lèi, dànshì xīn fángzi hěn piàoliang.",
+   "vi": "Chuyển nhà rất mệt, nhưng nhà mới rất đẹp."
+  },
+  {
+   "cn": "我昨天在商场遇见了老师。",
+   "py": "Wǒ zuótiān zài shāngchǎng yùjiàn le lǎoshī.",
+   "vi": "Hôm qua tôi tình cờ gặp thầy ở trung tâm thương mại."
+  },
+  {
+   "cn": "请大家看一下名单。",
+   "py": "Qǐng dàjiā kàn yíxià míngdān.",
+   "vi": "Mời mọi người xem qua danh sách."
+  }
+ ]
+}

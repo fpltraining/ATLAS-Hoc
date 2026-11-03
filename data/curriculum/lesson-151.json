@@ -1,0 +1,216 @@
+{
+ "id": 151,
+ "cn": "听说",
+ "title": "Cảm nhận và thay đổi",
+ "goal": "Nói về thay đổi, có được, cảm thấy, trong lòng, có vẻ, tưởng rằng, nghe nói, yêu thích và nuôi.",
+ "words": [
+  {
+   "w": "变",
+   "py": "biàn",
+   "hv": "biến",
+   "vi": "thay đổi, biến",
+   "pos": "động từ",
+   "note": "\"Biến\" trong \"biến đổi\".",
+   "ex": [
+    {
+     "cn": "你一点儿都没变。",
+     "py": "Nǐ yìdiǎnr dōu méi biàn.",
+     "vi": "Bạn chẳng thay đổi chút nào."
+    }
+   ]
+  },
+  {
+   "w": "变成",
+   "py": "biànchéng",
+   "hv": "biến thành",
+   "vi": "trở thành, biến thành",
+   "pos": "động từ",
+   "note": "变 + 成 (thành).",
+   "ex": [
+    {
+     "cn": "水变成了冰。",
+     "py": "Shuǐ biànchéng le bīng.",
+     "vi": "Nước biến thành băng."
+    }
+   ]
+  },
+  {
+   "w": "得到",
+   "py": "dédào",
+   "hv": "đắc đáo",
+   "vi": "có được, nhận được",
+   "pos": "động từ",
+   "note": "得 = \"đắc\" trong \"đắc ý\".",
+   "ex": [
+    {
+     "cn": "他得到了老师的帮助。",
+     "py": "Tā dédào le lǎoshī de bāngzhù.",
+     "vi": "Anh ấy nhận được sự giúp đỡ của thầy."
+    }
+   ]
+  },
+  {
+   "w": "感到",
+   "py": "gǎndào",
+   "hv": "cảm đáo",
+   "vi": "cảm thấy",
+   "pos": "động từ",
+   "note": "感 = \"cảm\" trong \"cảm xúc\". Trang trọng hơn 觉得 một chút.",
+   "ex": [
+    {
+     "cn": "我感到很高兴。",
+     "py": "Wǒ gǎndào hěn gāoxìng.",
+     "vi": "Tôi cảm thấy rất vui."
+    }
+   ]
+  },
+  {
+   "w": "心里",
+   "py": "xīnlǐ",
+   "hv": "tâm lý",
+   "vi": "trong lòng",
+   "pos": "danh từ",
+   "note": "Khác \"tâm lý\" tiếng Việt: 心里 là \"trong lòng, trong bụng\".",
+   "ex": [
+    {
+     "cn": "我心里有点儿难过。",
+     "py": "Wǒ xīnlǐ yǒudiǎnr nánguò.",
+     "vi": "Trong lòng tôi hơi buồn."
+    }
+   ]
+  },
+  {
+   "w": "看来",
+   "py": "kànlái",
+   "hv": "khán lai",
+   "vi": "xem ra, có vẻ",
+   "pos": "động từ",
+   "note": "Đầu câu để rút ra nhận định từ điều thấy được.",
+   "ex": [
+    {
+     "cn": "看来今天要下雨。",
+     "py": "Kànlái jīntiān yào xià yǔ.",
+     "vi": "Xem ra hôm nay sắp mưa."
+    }
+   ]
+  },
+  {
+   "w": "以为",
+   "py": "yǐwéi",
+   "hv": "dĩ vi",
+   "vi": "tưởng (nhầm) rằng",
+   "pos": "động từ",
+   "note": "Khác 认为: 以为 thường là tưởng sai.",
+   "ex": [
+    {
+     "cn": "我以为你是中国人。",
+     "py": "Wǒ yǐwéi nǐ shì Zhōngguó rén.",
+     "vi": "Tôi cứ tưởng bạn là người Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "听说",
+   "py": "tīngshuō",
+   "hv": "thính thuyết",
+   "vi": "nghe nói",
+   "pos": "động từ",
+   "note": "Đầu câu để kể lại điều nghe người khác nói.",
+   "ex": [
+    {
+     "cn": "听说他要结婚了。",
+     "py": "Tīngshuō tā yào jiéhūn le.",
+     "vi": "Nghe nói anh ấy sắp cưới."
+    }
+   ]
+  },
+  {
+   "w": "喜爱",
+   "py": "xǐ'ài",
+   "hv": "hỉ ái",
+   "vi": "yêu thích",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 喜欢.",
+   "ex": [
+    {
+     "cn": "这本书很受年轻人喜爱。",
+     "py": "Zhè běn shū hěn shòu niánqīng rén xǐ'ài.",
+     "vi": "Cuốn sách này rất được giới trẻ yêu thích."
+    }
+   ]
+  },
+  {
+   "w": "养",
+   "py": "yǎng",
+   "hv": "dưỡng",
+   "vi": "nuôi",
+   "pos": "động từ",
+   "note": "\"Dưỡng\" trong \"nuôi dưỡng\". Nuôi chó là 养狗.",
+   "ex": [
+    {
+     "cn": "我家养了一只猫。",
+     "py": "Wǒ jiā yǎng le yì zhī māo.",
+     "vi": "Nhà tôi nuôi một con mèo."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "以为 và 认为",
+   "b": "以为 = tưởng (nhầm) · 认为 = cho rằng (ý kiến)",
+   "d": "Dùng 以为 khi sự thật hoá ra khác.",
+   "ex": [
+    {
+     "cn": "我以为今天是星期五，原来是星期四。",
+     "py": "Wǒ yǐwéi jīntiān shì xīngqīwǔ, yuánlái shì xīngqīsì.",
+     "vi": "Tôi tưởng hôm nay thứ Sáu, hoá ra là thứ Năm."
+    },
+    {
+     "cn": "我认为这个办法很好。",
+     "py": "Wǒ rènwéi zhège bànfǎ hěn hǎo.",
+     "vi": "Tôi cho rằng cách này rất tốt."
+    }
+   ]
+  },
+  {
+   "t": "变 / 变成 / 变得",
+   "b": "变成 + danh từ · 变得 + tính từ",
+   "d": "Thành một thứ khác dùng 变成; trở nên thế nào dùng 变得.",
+   "ex": [
+    {
+     "cn": "他变得很瘦。",
+     "py": "Tā biàn de hěn shòu.",
+     "vi": "Anh ấy trở nên rất gầy."
+    },
+    {
+     "cn": "小城变成了大城市。",
+     "py": "Xiǎo chéng biànchéng le dà chéngshì.",
+     "vi": "Thị trấn nhỏ đã thành thành phố lớn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "听说那家饭店的菜很好吃。",
+   "py": "Tīngshuō nà jiā fàndiàn de cài hěn hǎochī.",
+   "vi": "Nghe nói món ăn nhà hàng đó rất ngon."
+  },
+  {
+   "cn": "看来你很喜欢这个工作。",
+   "py": "Kànlái nǐ hěn xǐhuan zhège gōngzuò.",
+   "vi": "Xem ra bạn rất thích công việc này."
+  },
+  {
+   "cn": "我心里一直想着这件事。",
+   "py": "Wǒ xīnlǐ yìzhí xiǎng zhe zhè jiàn shì.",
+   "vi": "Trong lòng tôi cứ nghĩ mãi về chuyện này."
+  },
+  {
+   "cn": "这几年，我的家乡变了很多。",
+   "py": "Zhè jǐ nián, wǒ de jiāxiāng biàn le hěn duō.",
+   "vi": "Mấy năm nay, quê tôi thay đổi nhiều lắm."
+  }
+ ]
+}

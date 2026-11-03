@@ -1,0 +1,216 @@
+{
+ "id": 198,
+ "cn": "各种职业",
+ "title": "Nghề nghiệp và vai trò",
+ "goal": "Nói về đầu bếp, cảnh sát, khách hàng, độc giả, thính giả, hội viên, nhân viên bán vé, nghề nghiệp, nhóm và tổ.",
+ "words": [
+  {
+   "w": "厨师",
+   "py": "chúshī",
+   "hv": "trù sư",
+   "vi": "đầu bếp",
+   "pos": "danh từ",
+   "note": "厨 (bếp, \"trù\") + 师.",
+   "ex": [
+    {
+     "cn": "他是一名中餐厨师。",
+     "py": "Tā shì yì míng zhōngcān chúshī.",
+     "vi": "Anh ấy là đầu bếp món Trung."
+    }
+   ]
+  },
+  {
+   "w": "警察",
+   "py": "jǐngchá",
+   "hv": "cảnh sát",
+   "vi": "cảnh sát",
+   "pos": "danh từ",
+   "note": "Chính là \"cảnh sát\".",
+   "ex": [
+    {
+     "cn": "有问题可以找警察。",
+     "py": "Yǒu wèntí kěyǐ zhǎo jǐngchá.",
+     "vi": "Có chuyện có thể tìm cảnh sát."
+    }
+   ]
+  },
+  {
+   "w": "顾客",
+   "py": "gùkè",
+   "hv": "cố khách",
+   "vi": "khách hàng",
+   "pos": "danh từ",
+   "note": "Khách mua hàng, khách của cửa hàng.",
+   "ex": [
+    {
+     "cn": "顾客是上帝。",
+     "py": "Gùkè shì shàngdì.",
+     "vi": "Khách hàng là thượng đế."
+    }
+   ]
+  },
+  {
+   "w": "读者",
+   "py": "dúzhě",
+   "hv": "độc giả",
+   "vi": "độc giả",
+   "pos": "danh từ",
+   "note": "Chính là \"độc giả\".",
+   "ex": [
+    {
+     "cn": "这本书受到读者的喜爱。",
+     "py": "Zhè běn shū shòudào dúzhě de xǐ'ài.",
+     "vi": "Cuốn sách này được độc giả yêu thích."
+    }
+   ]
+  },
+  {
+   "w": "听众",
+   "py": "tīngzhòng",
+   "hv": "thính chúng",
+   "vi": "thính giả",
+   "pos": "danh từ",
+   "note": "听 + 众 (đám đông).",
+   "ex": [
+    {
+     "cn": "各位听众，晚上好。",
+     "py": "Gèwèi tīngzhòng, wǎnshang hǎo.",
+     "vi": "Thưa quý thính giả, chào buổi tối."
+    }
+   ]
+  },
+  {
+   "w": "会员",
+   "py": "huìyuán",
+   "hv": "hội viên",
+   "vi": "hội viên, thành viên",
+   "pos": "danh từ",
+   "note": "Chính là \"hội viên\". Thẻ hội viên là 会员卡.",
+   "ex": [
+    {
+     "cn": "会员可以打九折。",
+     "py": "Huìyuán kěyǐ dǎ jiǔ zhé.",
+     "vi": "Hội viên được giảm mười phần trăm."
+    }
+   ]
+  },
+  {
+   "w": "售票员",
+   "py": "shòupiàoyuán",
+   "hv": "thụ phiếu viên",
+   "vi": "nhân viên bán vé",
+   "pos": "danh từ",
+   "note": "售 (bán) + 票 + 员.",
+   "ex": [
+    {
+     "cn": "售票员告诉我票已经卖完了。",
+     "py": "Shòupiàoyuán gàosu wǒ piào yǐjīng mài wán le.",
+     "vi": "Nhân viên bán vé bảo tôi vé đã bán hết."
+    }
+   ]
+  },
+  {
+   "w": "职业",
+   "py": "zhíyè",
+   "hv": "chức nghiệp",
+   "vi": "nghề nghiệp",
+   "pos": "danh từ",
+   "note": "Chính là \"chức nghiệp\" (nghề).",
+   "ex": [
+    {
+     "cn": "你的职业是什么？",
+     "py": "Nǐ de zhíyè shì shénme?",
+     "vi": "Nghề nghiệp của bạn là gì?"
+    }
+   ]
+  },
+  {
+   "w": "小组",
+   "py": "xiǎozǔ",
+   "hv": "tiểu tổ",
+   "vi": "nhóm nhỏ",
+   "pos": "danh từ",
+   "note": "小 + 组 (tổ).",
+   "ex": [
+    {
+     "cn": "我们分成三个小组讨论。",
+     "py": "Wǒmen fēn chéng sān ge xiǎozǔ tǎolùn.",
+     "vi": "Chúng ta chia thành ba nhóm thảo luận."
+    }
+   ]
+  },
+  {
+   "w": "组",
+   "py": "zǔ",
+   "hv": "tổ",
+   "vi": "tổ, nhóm",
+   "pos": "danh từ",
+   "note": "\"Tổ\" trong \"tổ chức\".",
+   "ex": [
+    {
+     "cn": "我们组有五个人。",
+     "py": "Wǒmen zǔ yǒu wǔ ge rén.",
+     "vi": "Tổ chúng tôi có năm người."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "打折: giảm giá kiểu Trung Quốc",
+   "b": "打九折 = giảm 10% · 打八折 = giảm 20%",
+   "d": "Con số là phần trăm phải trả (90%, 80%), ngược với cách nói \"giảm…\" của người Việt.",
+   "ex": [
+    {
+     "cn": "这件衣服打七折。",
+     "py": "Zhè jiàn yīfu dǎ qī zhé.",
+     "vi": "Bộ đồ này giảm 30%."
+    },
+    {
+     "cn": "周末所有商品打八折。",
+     "py": "Zhōumò suǒyǒu shāngpǐn dǎ bā zhé.",
+     "vi": "Cuối tuần mọi mặt hàng giảm 20%."
+    }
+   ]
+  },
+  {
+   "t": "受到 + sự yêu thích / giúp đỡ",
+   "b": "受到欢迎 · 受到喜爱 · 受到帮助",
+   "d": "Nhận được (thái độ, sự đối xử) từ người khác.",
+   "ex": [
+    {
+     "cn": "这个节目很受观众欢迎。",
+     "py": "Zhège jiémù hěn shòu guānzhòng huānyíng.",
+     "vi": "Chương trình này rất được khán giả yêu thích."
+    },
+    {
+     "cn": "我受到了很多人的帮助。",
+     "py": "Wǒ shòudào le hěn duō rén de bāngzhù.",
+     "vi": "Tôi nhận được sự giúp đỡ của rất nhiều người."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "他从小的梦想就是当警察。",
+   "py": "Tā cóngxiǎo de mèngxiǎng jiù shì dāng jǐngchá.",
+   "vi": "Ước mơ từ nhỏ của cậu ấy là làm cảnh sát."
+  },
+  {
+   "cn": "这家店对顾客很热情。",
+   "py": "Zhè jiā diàn duì gùkè hěn rèqíng.",
+   "vi": "Cửa hàng này rất nhiệt tình với khách."
+  },
+  {
+   "cn": "每个小组选一个代表。",
+   "py": "Měi ge xiǎozǔ xuǎn yí ge dàibiǎo.",
+   "vi": "Mỗi nhóm chọn một đại diện."
+  },
+  {
+   "cn": "选择职业的时候，要考虑自己的兴趣。",
+   "py": "Xuǎnzé zhíyè de shíhou, yào kǎolǜ zìjǐ de xìngqù.",
+   "vi": "Khi chọn nghề, phải cân nhắc sở thích của mình."
+  }
+ ]
+}

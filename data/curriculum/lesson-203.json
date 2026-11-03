@@ -1,0 +1,216 @@
+{
+ "id": 203,
+ "cn": "做了一个梦",
+ "title": "Thân thể, lòng người và cuộc sống",
+ "goal": "Nói về thân, lòng, hơi / tức giận, mùi vị, đẹp, sống, đời người, nằm mơ, cháy và muộn.",
+ "words": [
+  {
+   "w": "身",
+   "py": "shēn",
+   "hv": "thân",
+   "vi": "thân, người",
+   "pos": "danh từ",
+   "note": "\"Thân\" trong \"thân thể\". Làm lượng từ cho bộ quần áo: 一身衣服.",
+   "ex": [
+    {
+     "cn": "他穿了一身新衣服。",
+     "py": "Tā chuān le yì shēn xīn yīfu.",
+     "vi": "Anh ấy mặc một bộ quần áo mới."
+    }
+   ]
+  },
+  {
+   "w": "心",
+   "py": "xīn",
+   "hv": "tâm",
+   "vi": "tim; lòng",
+   "pos": "danh từ",
+   "note": "\"Tâm\" trong \"tâm hồn\". 小心 (cẩn thận), 放心 (yên tâm).",
+   "ex": [
+    {
+     "cn": "他的心很好。",
+     "py": "Tā de xīn hěn hǎo.",
+     "vi": "Anh ấy rất tốt bụng."
+    }
+   ]
+  },
+  {
+   "w": "气",
+   "py": "qì",
+   "hv": "khí",
+   "vi": "hơi, khí; tức giận",
+   "pos": "danh từ",
+   "note": "\"Khí\" trong \"không khí\". 生气 là tức giận.",
+   "ex": [
+    {
+     "cn": "别生气了。",
+     "py": "Bié shēngqì le.",
+     "vi": "Đừng giận nữa."
+    }
+   ]
+  },
+  {
+   "w": "味",
+   "py": "wèi",
+   "hv": "vị",
+   "vi": "vị, mùi",
+   "pos": "danh từ",
+   "note": "\"Vị\" trong \"mùi vị\". 味道 cũng là mùi vị.",
+   "ex": [
+    {
+     "cn": "这个菜有点儿怪味。",
+     "py": "Zhège cài yǒudiǎnr guài wèi.",
+     "vi": "Món này có mùi hơi lạ."
+    }
+   ]
+  },
+  {
+   "w": "美",
+   "py": "měi",
+   "hv": "mỹ",
+   "vi": "đẹp",
+   "pos": "tính từ",
+   "note": "Chính là \"mỹ\". 美国 là nước Mỹ.",
+   "ex": [
+    {
+     "cn": "这里的风景真美。",
+     "py": "Zhèlǐ de fēngjǐng zhēn měi.",
+     "vi": "Phong cảnh ở đây đẹp thật."
+    }
+   ]
+  },
+  {
+   "w": "活",
+   "py": "huó",
+   "hv": "hoạt",
+   "vi": "sống",
+   "pos": "động từ",
+   "note": "\"Hoạt\" trong \"sinh hoạt\". 活着 (đang sống), 干活儿 (làm việc).",
+   "ex": [
+    {
+     "cn": "我奶奶活到了一百岁。",
+     "py": "Wǒ nǎinai huó dào le yìbǎi suì.",
+     "vi": "Bà tôi sống đến một trăm tuổi."
+    }
+   ]
+  },
+  {
+   "w": "人生",
+   "py": "rénshēng",
+   "hv": "nhân sinh",
+   "vi": "đời người",
+   "pos": "danh từ",
+   "note": "Chính là \"nhân sinh\".",
+   "ex": [
+    {
+     "cn": "人生就像一次旅行。",
+     "py": "Rénshēng jiù xiàng yí cì lǚxíng.",
+     "vi": "Đời người giống như một chuyến đi."
+    }
+   ]
+  },
+  {
+   "w": "做梦",
+   "py": "zuòmèng",
+   "hv": "tố mộng",
+   "vi": "nằm mơ",
+   "pos": "động từ",
+   "note": "做 + 梦. Mơ thấy là 梦见.",
+   "ex": [
+    {
+     "cn": "我昨天晚上做了一个奇怪的梦。",
+     "py": "Wǒ zuótiān wǎnshang zuò le yí ge qíguài de mèng.",
+     "vi": "Đêm qua tôi mơ một giấc mơ kỳ lạ."
+    }
+   ]
+  },
+  {
+   "w": "着火",
+   "py": "zháohuǒ",
+   "hv": "trước hoả",
+   "vi": "bốc cháy",
+   "pos": "động từ",
+   "note": "着 (zháo, bắt) + 火.",
+   "ex": [
+    {
+     "cn": "着火了！快打一一九！",
+     "py": "Zháohuǒ le! Kuài dǎ yāo yāo jiǔ!",
+     "vi": "Cháy rồi! Gọi 119 ngay!"
+    }
+   ]
+  },
+  {
+   "w": "迟",
+   "py": "chí",
+   "hv": "trì",
+   "vi": "muộn",
+   "pos": "tính từ",
+   "note": "\"Trì\" trong \"trì hoãn\". 迟到 là đến muộn.",
+   "ex": [
+    {
+     "cn": "现在开始还不迟。",
+     "py": "Xiànzài kāishǐ hái bù chí.",
+     "vi": "Bắt đầu bây giờ vẫn chưa muộn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Động từ ly hợp: 做梦, 生气, 着火",
+   "b": "做了一个梦 · 生他的气 · 着了火",
+   "d": "Các động từ hai chữ này tách ra được, chèn số lượng, đối tượng vào giữa.",
+   "ex": [
+    {
+     "cn": "你别生我的气。",
+     "py": "Nǐ bié shēng wǒ de qì.",
+     "vi": "Bạn đừng giận tôi."
+    },
+    {
+     "cn": "我做了一个好梦。",
+     "py": "Wǒ zuò le yí ge hǎo mèng.",
+     "vi": "Tôi mơ một giấc mơ đẹp."
+    }
+   ]
+  },
+  {
+   "t": "还不迟 / 还来得及: vẫn kịp",
+   "b": "现在…还不迟",
+   "d": "An ủi, khích lệ rằng chưa muộn.",
+   "ex": [
+    {
+     "cn": "学外语什么时候开始都不迟。",
+     "py": "Xué wàiyǔ shénme shíhou kāishǐ dōu bù chí.",
+     "vi": "Học ngoại ngữ bắt đầu lúc nào cũng không muộn."
+    },
+    {
+     "cn": "现在走还来得及。",
+     "py": "Xiànzài zǒu hái láidejí.",
+     "vi": "Đi bây giờ vẫn còn kịp."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "学习是活到老学到老的事。",
+   "py": "Xuéxí shì huó dào lǎo xué dào lǎo de shì.",
+   "vi": "Học là việc sống đến già học đến già."
+  },
+  {
+   "cn": "他气得说不出话来。",
+   "py": "Tā qì de shuō bu chū huà lái.",
+   "vi": "Anh ấy tức đến không nói nên lời."
+  },
+  {
+   "cn": "这道菜的味道很特别。",
+   "py": "Zhè dào cài de wèidao hěn tèbié.",
+   "vi": "Món này mùi vị rất đặc biệt."
+  },
+  {
+   "cn": "人生没有太迟的开始。",
+   "py": "Rénshēng méiyǒu tài chí de kāishǐ.",
+   "vi": "Đời người không có khởi đầu nào là quá muộn."
+  }
+ ]
+}

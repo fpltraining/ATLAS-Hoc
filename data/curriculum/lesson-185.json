@@ -1,0 +1,216 @@
+{
+ "id": 185,
+ "cn": "忽然下雨了",
+ "title": "Phó từ chỉ thời gian và bất ngờ",
+ "goal": "Dùng các phó từ: đột nhiên, không ngờ, mau, nhanh lên, suýt nữa, đã, vẫn, lại lần nữa, từ đó, cứ mãi.",
+ "words": [
+  {
+   "w": "忽然",
+   "py": "hūrán",
+   "hv": "hốt nhiên",
+   "vi": "bỗng nhiên",
+   "pos": "phó từ",
+   "note": "Chính là \"hốt nhiên\". Gần nghĩa 突然.",
+   "ex": [
+    {
+     "cn": "忽然下起了大雨。",
+     "py": "Hūrán xià qǐ le dà yǔ.",
+     "vi": "Bỗng nhiên trời đổ mưa to."
+    }
+   ]
+  },
+  {
+   "w": "竟然",
+   "py": "jìngrán",
+   "hv": "cánh nhiên",
+   "vi": "không ngờ, vậy mà",
+   "pos": "phó từ",
+   "note": "Thể hiện ngạc nhiên vì điều trái dự đoán.",
+   "ex": [
+    {
+     "cn": "他竟然忘了我的生日。",
+     "py": "Tā jìngrán wàng le wǒ de shēngrì.",
+     "vi": "Không ngờ anh ấy quên sinh nhật tôi."
+    }
+   ]
+  },
+  {
+   "w": "赶紧",
+   "py": "gǎnjǐn",
+   "hv": "cản khẩn",
+   "vi": "vội, mau chóng",
+   "pos": "phó từ",
+   "note": "Làm ngay vì thời gian gấp.",
+   "ex": [
+    {
+     "cn": "快下雨了，赶紧回家吧。",
+     "py": "Kuài xià yǔ le, gǎnjǐn huí jiā ba.",
+     "vi": "Sắp mưa rồi, mau về nhà thôi."
+    }
+   ]
+  },
+  {
+   "w": "赶快",
+   "py": "gǎnkuài",
+   "hv": "cản khoái",
+   "vi": "nhanh lên",
+   "pos": "phó từ",
+   "note": "Hay dùng trong câu giục.",
+   "ex": [
+    {
+     "cn": "赶快走，要迟到了！",
+     "py": "Gǎnkuài zǒu, yào chídào le!",
+     "vi": "Đi nhanh lên, sắp muộn rồi!"
+    }
+   ]
+  },
+  {
+   "w": "差点儿",
+   "py": "chàdiǎnr",
+   "hv": "sai điểm nhi",
+   "vi": "suýt nữa",
+   "pos": "phó từ",
+   "note": "Việc suýt xảy ra nhưng không xảy ra.",
+   "ex": [
+    {
+     "cn": "我差点儿忘了。",
+     "py": "Wǒ chàdiǎnr wàng le.",
+     "vi": "Tôi suýt nữa thì quên."
+    }
+   ]
+  },
+  {
+   "w": "已",
+   "py": "yǐ",
+   "hv": "dĩ",
+   "vi": "đã",
+   "pos": "phó từ",
+   "note": "Văn viết của 已经.",
+   "ex": [
+    {
+     "cn": "比赛已结束。",
+     "py": "Bǐsài yǐ jiéshù.",
+     "vi": "Trận đấu đã kết thúc."
+    }
+   ]
+  },
+  {
+   "w": "仍",
+   "py": "réng",
+   "hv": "nhưng",
+   "vi": "vẫn",
+   "pos": "phó từ",
+   "note": "Văn viết của 仍然, 还.",
+   "ex": [
+    {
+     "cn": "雨仍在下。",
+     "py": "Yǔ réng zài xià.",
+     "vi": "Mưa vẫn đang rơi."
+    }
+   ]
+  },
+  {
+   "w": "再次",
+   "py": "zàicì",
+   "hv": "tái thứ",
+   "vi": "lần nữa",
+   "pos": "phó từ",
+   "note": "Chính là \"tái thứ\" (lần thứ hai).",
+   "ex": [
+    {
+     "cn": "欢迎您再次光临。",
+     "py": "Huānyíng nín zàicì guānglín.",
+     "vi": "Hân hạnh đón quý khách lần sau."
+    }
+   ]
+  },
+  {
+   "w": "从此",
+   "py": "cóngcǐ",
+   "hv": "tòng thử",
+   "vi": "từ đó",
+   "pos": "phó từ",
+   "note": "从 (từ) + 此 (đây, đó).",
+   "ex": [
+    {
+     "cn": "从此以后，他再也不抽烟了。",
+     "py": "Cóngcǐ yǐhòu, tā zài yě bù chōuyān le.",
+     "vi": "Từ đó về sau, anh ấy không hút thuốc nữa."
+    }
+   ]
+  },
+  {
+   "w": "老是",
+   "py": "lǎoshì",
+   "hv": "lão thị",
+   "vi": "cứ mãi, lúc nào cũng",
+   "pos": "phó từ",
+   "note": "Khẩu ngữ, mang ý phàn nàn, như 总是.",
+   "ex": [
+    {
+     "cn": "你怎么老是迟到？",
+     "py": "Nǐ zěnme lǎoshì chídào?",
+     "vi": "Sao bạn cứ đến muộn mãi thế?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "差点儿: suýt",
+   "b": "差点儿 + động từ + 了",
+   "d": "Câu khẳng định với 差点儿 nghĩa là việc đó KHÔNG xảy ra (may quá).",
+   "ex": [
+    {
+     "cn": "我差点儿没赶上火车。",
+     "py": "Wǒ chàdiǎnr méi gǎnshàng huǒchē.",
+     "vi": "Tôi suýt nữa thì lỡ tàu."
+    },
+    {
+     "cn": "他差点儿摔倒了。",
+     "py": "Tā chàdiǎnr shuāi dǎo le.",
+     "vi": "Anh ấy suýt ngã."
+    }
+   ]
+  },
+  {
+   "t": "竟然: thể hiện bất ngờ",
+   "b": "Chủ ngữ + 竟然 + động từ",
+   "d": "Đứng trước động từ, người nói không ngờ tới điều đó.",
+   "ex": [
+    {
+     "cn": "这么难的题，他竟然做对了。",
+     "py": "Zhème nán de tí, tā jìngrán zuò duì le.",
+     "vi": "Bài khó vậy mà cậu ấy làm đúng."
+    },
+    {
+     "cn": "我竟然在这儿遇见了你！",
+     "py": "Wǒ jìngrán zài zhèr yùjiàn le nǐ!",
+     "vi": "Không ngờ lại gặp bạn ở đây!"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "他忽然站起来走了。",
+   "py": "Tā hūrán zhàn qǐlai zǒu le.",
+   "vi": "Anh ấy bỗng đứng dậy bỏ đi."
+  },
+  {
+   "cn": "天黑了，我们赶快回去吧。",
+   "py": "Tiān hēi le, wǒmen gǎnkuài huíqu ba.",
+   "vi": "Trời tối rồi, mình về nhanh thôi."
+  },
+  {
+   "cn": "时间过去很久了，我仍记得那一天。",
+   "py": "Shíjiān guòqu hěn jiǔ le, wǒ réng jìde nà yì tiān.",
+   "vi": "Đã lâu lắm rồi, tôi vẫn nhớ ngày hôm đó."
+  },
+  {
+   "cn": "你老是玩手机，眼睛会坏的。",
+   "py": "Nǐ lǎoshì wán shǒujī, yǎnjing huì huài de.",
+   "vi": "Bạn cứ chơi điện thoại mãi, mắt sẽ hỏng đấy."
+  }
+ ]
+}

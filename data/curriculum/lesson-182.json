@@ -1,0 +1,216 @@
+{
+ "id": 182,
+ "cn": "之前和之后",
+ "title": "Trước, sau và trong khoảng",
+ "goal": "Dùng 之前 / 之后 / 之间 / 之中 / 之, 前后, 今后, 目前, 将 / 将要 để nói thời gian và quan hệ.",
+ "words": [
+  {
+   "w": "之前",
+   "py": "zhīqián",
+   "hv": "chi tiền",
+   "vi": "trước, trước khi",
+   "pos": "danh từ",
+   "note": "Trang trọng hơn 以前. Sau một việc: 吃饭之前.",
+   "ex": [
+    {
+     "cn": "睡觉之前不要喝咖啡。",
+     "py": "Shuìjiào zhīqián búyào hē kāfēi.",
+     "vi": "Trước khi ngủ đừng uống cà phê."
+    }
+   ]
+  },
+  {
+   "w": "之后",
+   "py": "zhīhòu",
+   "hv": "chi hậu",
+   "vi": "sau, sau khi",
+   "pos": "danh từ",
+   "note": "Trang trọng hơn 以后.",
+   "ex": [
+    {
+     "cn": "毕业之后他去了上海。",
+     "py": "Bìyè zhīhòu tā qù le Shànghǎi.",
+     "vi": "Sau khi tốt nghiệp anh ấy đi Thượng Hải."
+    }
+   ]
+  },
+  {
+   "w": "之间",
+   "py": "zhījiān",
+   "hv": "chi gian",
+   "vi": "giữa (hai bên)",
+   "pos": "danh từ",
+   "note": "A 和 B 之间: giữa A và B.",
+   "ex": [
+    {
+     "cn": "我们之间没有秘密。",
+     "py": "Wǒmen zhījiān méiyǒu mìmì.",
+     "vi": "Giữa chúng ta không có bí mật."
+    }
+   ]
+  },
+  {
+   "w": "之中",
+   "py": "zhīzhōng",
+   "hv": "chi trung",
+   "vi": "trong số, trong khi",
+   "pos": "danh từ",
+   "note": "Trang trọng hơn 中.",
+   "ex": [
+    {
+     "cn": "在这些学生之中，他最努力。",
+     "py": "Zài zhèxiē xuésheng zhīzhōng, tā zuì nǔlì.",
+     "vi": "Trong số học sinh này, cậu ấy chăm nhất."
+    }
+   ]
+  },
+  {
+   "w": "之",
+   "py": "zhī",
+   "hv": "chi",
+   "vi": "của (văn viết)",
+   "pos": "trợ từ",
+   "note": "Giống 的 nhưng dùng trong văn viết, thành ngữ: 之一, 百分之十.",
+   "ex": [
+    {
+     "cn": "这是世界上最高的山之一。",
+     "py": "Zhè shì shìjiè shang zuì gāo de shān zhī yī.",
+     "vi": "Đây là một trong những ngọn núi cao nhất thế giới."
+    }
+   ]
+  },
+  {
+   "w": "前后",
+   "py": "qiánhòu",
+   "hv": "tiền hậu",
+   "vi": "khoảng, trước sau",
+   "pos": "danh từ",
+   "note": "Mốc thời gian + 前后: khoảng lúc đó.",
+   "ex": [
+    {
+     "cn": "我五点前后到。",
+     "py": "Wǒ wǔ diǎn qiánhòu dào.",
+     "vi": "Tôi đến khoảng năm giờ."
+    }
+   ]
+  },
+  {
+   "w": "今后",
+   "py": "jīnhòu",
+   "hv": "kim hậu",
+   "vi": "từ nay về sau",
+   "pos": "danh từ",
+   "note": "今 (nay) + 后.",
+   "ex": [
+    {
+     "cn": "今后我会更加努力。",
+     "py": "Jīnhòu wǒ huì gèngjiā nǔlì.",
+     "vi": "Từ nay về sau tôi sẽ cố gắng hơn."
+    }
+   ]
+  },
+  {
+   "w": "目前",
+   "py": "mùqián",
+   "hv": "mục tiền",
+   "vi": "hiện nay, trước mắt",
+   "pos": "danh từ",
+   "note": "Trang trọng, hay gặp trong tin tức.",
+   "ex": [
+    {
+     "cn": "目前情况还不清楚。",
+     "py": "Mùqián qíngkuàng hái bù qīngchu.",
+     "vi": "Hiện tình hình vẫn chưa rõ."
+    }
+   ]
+  },
+  {
+   "w": "将",
+   "py": "jiāng",
+   "hv": "tương",
+   "vi": "sẽ (văn viết)",
+   "pos": "phó từ",
+   "note": "Văn viết của 会 / 要. Hay gặp trong thông báo.",
+   "ex": [
+    {
+     "cn": "会议将在下午三点开始。",
+     "py": "Huìyì jiāng zài xiàwǔ sān diǎn kāishǐ.",
+     "vi": "Cuộc họp sẽ bắt đầu lúc ba giờ chiều."
+    }
+   ]
+  },
+  {
+   "w": "将要",
+   "py": "jiāngyào",
+   "hv": "tương yếu",
+   "vi": "sắp sẽ",
+   "pos": "phó từ",
+   "note": "Văn viết của 快要.",
+   "ex": [
+    {
+     "cn": "新学期将要开始了。",
+     "py": "Xīn xuéqī jiāngyào kāishǐ le.",
+     "vi": "Học kỳ mới sắp bắt đầu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "之前 / 之后 và 以前 / 以后",
+   "b": "việc + 之前 / 之后",
+   "d": "Nghĩa gần như nhau, 之 trang trọng hơn. Đứng một mình đầu câu thường dùng 以前, 以后.",
+   "ex": [
+    {
+     "cn": "吃饭以前要洗手。",
+     "py": "Chīfàn yǐqián yào xǐ shǒu.",
+     "vi": "Trước khi ăn phải rửa tay."
+    },
+    {
+     "cn": "下课之后我去找你。",
+     "py": "Xiàkè zhīhòu wǒ qù zhǎo nǐ.",
+     "vi": "Tan học tôi đi tìm bạn."
+    }
+   ]
+  },
+  {
+   "t": "A 和 B 之间",
+   "b": "北京和上海之间 · 朋友之间",
+   "d": "Diễn tả khoảng giữa hai điểm hoặc quan hệ giữa các bên.",
+   "ex": [
+    {
+     "cn": "北京和天津之间只要半个小时。",
+     "py": "Běijīng hé Tiānjīn zhījiān zhǐ yào bàn ge xiǎoshí.",
+     "vi": "Giữa Bắc Kinh và Thiên Tân chỉ mất nửa tiếng."
+    },
+    {
+     "cn": "朋友之间要互相帮助。",
+     "py": "Péngyou zhījiān yào hùxiāng bāngzhù.",
+     "vi": "Bạn bè phải giúp đỡ lẫn nhau."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "春节前后火车票很难买。",
+   "py": "Chūnjié qiánhòu huǒchēpiào hěn nán mǎi.",
+   "vi": "Quanh dịp Tết vé tàu rất khó mua."
+  },
+  {
+   "cn": "目前我还在找工作。",
+   "py": "Mùqián wǒ hái zài zhǎo gōngzuò.",
+   "vi": "Hiện tôi vẫn đang tìm việc."
+  },
+  {
+   "cn": "比赛将在明天举行。",
+   "py": "Bǐsài jiāng zài míngtiān jǔxíng.",
+   "vi": "Trận đấu sẽ diễn ra vào ngày mai."
+  },
+  {
+   "cn": "百分之八十的人同意这个计划。",
+   "py": "Bǎi fēn zhī bāshí de rén tóngyì zhège jìhuà.",
+   "vi": "Tám mươi phần trăm người đồng ý kế hoạch này."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 140,
+ "cn": "男人和女人",
+ "title": "Người quanh ta",
+ "goal": "Gọi các nhóm người: vợ chồng, chị em, người lớn, người già, nam, nữ, bạn học nam nữ.",
+ "words": [
+  {
+   "w": "爱人",
+   "py": "àiren",
+   "hv": "ái nhân",
+   "vi": "vợ, chồng",
+   "pos": "danh từ",
+   "note": "Ở Trung Quốc đại lục, 爱人 là cách gọi vợ hoặc chồng, không phải \"người yêu\".",
+   "ex": [
+    {
+     "cn": "这是我爱人。",
+     "py": "Zhè shì wǒ àiren.",
+     "vi": "Đây là vợ (chồng) tôi."
+    }
+   ]
+  },
+  {
+   "w": "夫妻",
+   "py": "fūqī",
+   "hv": "phu thê",
+   "vi": "vợ chồng",
+   "pos": "danh từ",
+   "note": "Chính là \"phu thê\".",
+   "ex": [
+    {
+     "cn": "他们是一对老夫妻。",
+     "py": "Tāmen shì yí duì lǎo fūqī.",
+     "vi": "Họ là một đôi vợ chồng già."
+    }
+   ]
+  },
+  {
+   "w": "姐妹",
+   "py": "jiěmèi",
+   "hv": "tỷ muội",
+   "vi": "chị em gái",
+   "pos": "danh từ",
+   "note": "Chính là \"tỷ muội\". Anh em trai là 兄弟.",
+   "ex": [
+    {
+     "cn": "她们是好姐妹。",
+     "py": "Tāmen shì hǎo jiěmèi.",
+     "vi": "Họ là chị em thân thiết."
+    }
+   ]
+  },
+  {
+   "w": "大人",
+   "py": "dàren",
+   "hv": "đại nhân",
+   "vi": "người lớn",
+   "pos": "danh từ",
+   "note": "Khác \"đại nhân\" (quan) trong tiếng Việt: 大人 là người lớn, đối lập với trẻ con.",
+   "ex": [
+    {
+     "cn": "这件事要问大人。",
+     "py": "Zhè jiàn shì yào wèn dàren.",
+     "vi": "Việc này phải hỏi người lớn."
+    }
+   ]
+  },
+  {
+   "w": "老人",
+   "py": "lǎorén",
+   "hv": "lão nhân",
+   "vi": "người già",
+   "pos": "danh từ",
+   "note": "Chính là \"lão nhân\".",
+   "ex": [
+    {
+     "cn": "公交车上要给老人让座。",
+     "py": "Gōngjiāochē shang yào gěi lǎorén ràngzuò.",
+     "vi": "Trên xe buýt phải nhường chỗ cho người già."
+    }
+   ]
+  },
+  {
+   "w": "男人",
+   "py": "nánrén",
+   "hv": "nam nhân",
+   "vi": "đàn ông",
+   "pos": "danh từ",
+   "note": "男 + 人.",
+   "ex": [
+    {
+     "cn": "那个男人是我们的新老师。",
+     "py": "Nàge nánrén shì wǒmen de xīn lǎoshī.",
+     "vi": "Người đàn ông kia là thầy giáo mới của chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "女人",
+   "py": "nǚrén",
+   "hv": "nữ nhân",
+   "vi": "phụ nữ, đàn bà",
+   "pos": "danh từ",
+   "note": "Lịch sự hơn thì dùng 女士.",
+   "ex": [
+    {
+     "cn": "那个女人在等谁？",
+     "py": "Nàge nǚrén zài děng shéi?",
+     "vi": "Người phụ nữ kia đang đợi ai?"
+    }
+   ]
+  },
+  {
+   "w": "男生",
+   "py": "nánshēng",
+   "hv": "nam sinh",
+   "vi": "bạn nam, nam sinh",
+   "pos": "danh từ",
+   "note": "Dùng trong trường học cho bạn nam.",
+   "ex": [
+    {
+     "cn": "我们班有二十个男生。",
+     "py": "Wǒmen bān yǒu èrshí ge nánshēng.",
+     "vi": "Lớp chúng tôi có hai mươi bạn nam."
+    }
+   ]
+  },
+  {
+   "w": "女生",
+   "py": "nǚshēng",
+   "hv": "nữ sinh",
+   "vi": "bạn nữ, nữ sinh",
+   "pos": "danh từ",
+   "note": "Đối xứng với 男生.",
+   "ex": [
+    {
+     "cn": "女生们在唱歌。",
+     "py": "Nǚshēngmen zài chànggē.",
+     "vi": "Các bạn nữ đang hát."
+    }
+   ]
+  },
+  {
+   "w": "身边",
+   "py": "shēnbiān",
+   "hv": "thân biên",
+   "vi": "bên cạnh (người)",
+   "pos": "danh từ",
+   "note": "身 (thân) + 边: ngay bên mình.",
+   "ex": [
+    {
+     "cn": "有你在身边，我很放心。",
+     "py": "Yǒu nǐ zài shēnbiān, wǒ hěn fàngxīn.",
+     "vi": "Có bạn bên cạnh, tôi rất yên tâm."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "一对 + đôi",
+   "b": "一对夫妻 · 一对姐妹",
+   "d": "对 là lượng từ cho một cặp người hoặc vật đi đôi.",
+   "ex": [
+    {
+     "cn": "他们是一对好朋友。",
+     "py": "Tāmen shì yí duì hǎo péngyou.",
+     "vi": "Họ là một đôi bạn thân."
+    },
+    {
+     "cn": "我买了一对耳环。",
+     "py": "Wǒ mǎi le yí duì ěrhuán.",
+     "vi": "Tôi mua một đôi bông tai."
+    }
+   ]
+  },
+  {
+   "t": "给 + người + động từ",
+   "b": "给老人让座 · 给妈妈打电话",
+   "d": "给 đưa người nhận lên trước động từ.",
+   "ex": [
+    {
+     "cn": "我给爱人买了一件礼物。",
+     "py": "Wǒ gěi àiren mǎi le yí jiàn lǐwù.",
+     "vi": "Tôi mua cho vợ một món quà."
+    },
+    {
+     "cn": "请给老人让个座。",
+     "py": "Qǐng gěi lǎorén ràng ge zuò.",
+     "vi": "Xin nhường chỗ cho người già."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我爱人在医院工作。",
+   "py": "Wǒ àiren zài yīyuàn gōngzuò.",
+   "vi": "Vợ (chồng) tôi làm ở bệnh viện."
+  },
+  {
+   "cn": "大人说话，小孩儿别说。",
+   "py": "Dàren shuōhuà, xiǎoháir bié shuō.",
+   "vi": "Người lớn nói chuyện, trẻ con đừng chen vào."
+  },
+  {
+   "cn": "我们班女生比男生多。",
+   "py": "Wǒmen bān nǚshēng bǐ nánshēng duō.",
+   "vi": "Lớp chúng tôi bạn nữ đông hơn bạn nam."
+  },
+  {
+   "cn": "身边的人对我都很好。",
+   "py": "Shēnbiān de rén duì wǒ dōu hěn hǎo.",
+   "vi": "Những người quanh tôi đều rất tốt với tôi."
+  }
+ ]
+}

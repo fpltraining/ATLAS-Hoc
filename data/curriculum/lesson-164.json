@@ -1,0 +1,216 @@
+{
+ "id": 164,
+ "cn": "读研究生",
+ "title": "Đại học và học bổng",
+ "goal": "Nói về đại học hệ chính quy, nghiên cứu sinh, học viện, sinh viên tốt nghiệp, nhập học, học phí, học bổng, viện trưởng, nghỉ hè và tri thức.",
+ "words": [
+  {
+   "w": "本科",
+   "py": "běnkē",
+   "hv": "bản khoa",
+   "vi": "đại học (hệ cử nhân)",
+   "pos": "danh từ",
+   "note": "Bậc đại học bốn năm. Sinh viên là 本科生.",
+   "ex": [
+    {
+     "cn": "我本科学的是经济。",
+     "py": "Wǒ běnkē xué de shì jīngjì.",
+     "vi": "Đại học tôi học ngành kinh tế."
+    }
+   ]
+  },
+  {
+   "w": "研究生",
+   "py": "yánjiūshēng",
+   "hv": "nghiên cứu sinh",
+   "vi": "học viên cao học",
+   "pos": "danh từ",
+   "note": "Ở Trung Quốc, 研究生 gồm thạc sĩ và tiến sĩ.",
+   "ex": [
+    {
+     "cn": "她在读研究生。",
+     "py": "Tā zài dú yánjiūshēng.",
+     "vi": "Cô ấy đang học cao học."
+    }
+   ]
+  },
+  {
+   "w": "学院",
+   "py": "xuéyuàn",
+   "hv": "học viện",
+   "vi": "học viện; khoa",
+   "pos": "danh từ",
+   "note": "Chính là \"học viện\". Trong đại học, 学院 cũng là một khoa lớn.",
+   "ex": [
+    {
+     "cn": "他在外语学院学习。",
+     "py": "Tā zài wàiyǔ xuéyuàn xuéxí.",
+     "vi": "Anh ấy học ở khoa ngoại ngữ."
+    }
+   ]
+  },
+  {
+   "w": "毕业生",
+   "py": "bìyèshēng",
+   "hv": "tất nghiệp sinh",
+   "vi": "sinh viên tốt nghiệp",
+   "pos": "danh từ",
+   "note": "毕业 (tốt nghiệp) + 生.",
+   "ex": [
+    {
+     "cn": "今年的毕业生很难找工作。",
+     "py": "Jīnnián de bìyèshēng hěn nán zhǎo gōngzuò.",
+     "vi": "Sinh viên tốt nghiệp năm nay rất khó tìm việc."
+    }
+   ]
+  },
+  {
+   "w": "入学",
+   "py": "rùxué",
+   "hv": "nhập học",
+   "vi": "nhập học",
+   "pos": "động từ",
+   "note": "Chính là \"nhập học\".",
+   "ex": [
+    {
+     "cn": "新生九月入学。",
+     "py": "Xīnshēng jiǔ yuè rùxué.",
+     "vi": "Tân sinh viên nhập học tháng chín."
+    }
+   ]
+  },
+  {
+   "w": "学费",
+   "py": "xuéfèi",
+   "hv": "học phí",
+   "vi": "học phí",
+   "pos": "danh từ",
+   "note": "Chính là \"học phí\".",
+   "ex": [
+    {
+     "cn": "这个大学的学费很贵。",
+     "py": "Zhège dàxué de xuéfèi hěn guì.",
+     "vi": "Học phí trường này rất đắt."
+    }
+   ]
+  },
+  {
+   "w": "奖学金",
+   "py": "jiǎngxuéjīn",
+   "hv": "tưởng học kim",
+   "vi": "học bổng",
+   "pos": "danh từ",
+   "note": "奖 (thưởng) + 学 + 金 (tiền).",
+   "ex": [
+    {
+     "cn": "她拿到了全额奖学金。",
+     "py": "Tā ná dào le quán'é jiǎngxuéjīn.",
+     "vi": "Cô ấy nhận được học bổng toàn phần."
+    }
+   ]
+  },
+  {
+   "w": "院长",
+   "py": "yuànzhǎng",
+   "hv": "viện trưởng",
+   "vi": "viện trưởng, trưởng khoa",
+   "pos": "danh từ",
+   "note": "院 + 长 (trưởng).",
+   "ex": [
+    {
+     "cn": "院长在大会上讲了话。",
+     "py": "Yuànzhǎng zài dàhuì shang jiǎng le huà.",
+     "vi": "Trưởng khoa đã phát biểu tại đại hội."
+    }
+   ]
+  },
+  {
+   "w": "暑假",
+   "py": "shǔjià",
+   "hv": "thử giả",
+   "vi": "nghỉ hè",
+   "pos": "danh từ",
+   "note": "暑 = nóng (\"thử\"). Nghỉ đông là 寒假.",
+   "ex": [
+    {
+     "cn": "暑假你打算做什么？",
+     "py": "Shǔjià nǐ dǎsuàn zuò shénme?",
+     "vi": "Nghỉ hè bạn định làm gì?"
+    }
+   ]
+  },
+  {
+   "w": "知识",
+   "py": "zhīshi",
+   "hv": "tri thức",
+   "vi": "kiến thức, tri thức",
+   "pos": "danh từ",
+   "note": "Chính là \"tri thức\".",
+   "ex": [
+    {
+     "cn": "读书可以增加知识。",
+     "py": "Dú shū kěyǐ zēngjiā zhīshi.",
+     "vi": "Đọc sách giúp tăng thêm kiến thức."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "是…的: nhấn mạnh thông tin",
+   "b": "我本科学的是经济 · 我是去年毕业的",
+   "d": "Dùng để nhấn mạnh một chi tiết (thời gian, cách thức, đối tượng) của việc đã xảy ra.",
+   "ex": [
+    {
+     "cn": "我是二零二二年毕业的。",
+     "py": "Wǒ shì èr líng èr èr nián bìyè de.",
+     "vi": "Tôi tốt nghiệp năm 2022."
+    },
+    {
+     "cn": "你是怎么来的？",
+     "py": "Nǐ shì zěnme lái de?",
+     "vi": "Bạn đến bằng cách nào?"
+    }
+   ]
+  },
+  {
+   "t": "打算 + động từ: định làm",
+   "b": "打算 + 做 / 去 / 学",
+   "d": "Nói kế hoạch sắp tới.",
+   "ex": [
+    {
+     "cn": "我打算明年读研究生。",
+     "py": "Wǒ dǎsuàn míngnián dú yánjiūshēng.",
+     "vi": "Tôi định năm sau học cao học."
+    },
+    {
+     "cn": "暑假我打算去打工。",
+     "py": "Shǔjià wǒ dǎsuàn qù dǎgōng.",
+     "vi": "Nghỉ hè tôi định đi làm thêm."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "他是我们学院的研究生。",
+   "py": "Tā shì wǒmen xuéyuàn de yánjiūshēng.",
+   "vi": "Anh ấy là học viên cao học của khoa chúng tôi."
+  },
+  {
+   "cn": "有了奖学金，我不用担心学费了。",
+   "py": "Yǒu le jiǎngxuéjīn, wǒ búyòng dānxīn xuéfèi le.",
+   "vi": "Có học bổng rồi, tôi không phải lo học phí nữa."
+  },
+  {
+   "cn": "知识可以改变命运。",
+   "py": "Zhīshi kěyǐ gǎibiàn mìngyùn.",
+   "vi": "Tri thức có thể thay đổi số phận."
+  },
+  {
+   "cn": "暑假一共有两个月。",
+   "py": "Shǔjià yígòng yǒu liǎng ge yuè.",
+   "vi": "Nghỉ hè tổng cộng hai tháng."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 152,
+ "cn": "不同的看法",
+ "title": "Nhận xét và so sánh",
+ "goal": "Khen chê xấu, khó nghe; nói nhiều, có ích, liên quan, khác nhau, cỡ to nhỏ, thường gặp, người nổi tiếng.",
+ "words": [
+  {
+   "w": "难看",
+   "py": "nánkàn",
+   "hv": "nan khán",
+   "vi": "xấu, khó coi",
+   "pos": "tính từ",
+   "note": "难 (khó) + 看. Đối lập với 好看.",
+   "ex": [
+    {
+     "cn": "这件衣服太难看了。",
+     "py": "Zhè jiàn yīfu tài nánkàn le.",
+     "vi": "Bộ quần áo này xấu quá."
+    }
+   ]
+  },
+  {
+   "w": "难听",
+   "py": "nántīng",
+   "hv": "nan thính",
+   "vi": "khó nghe",
+   "pos": "tính từ",
+   "note": "Đối lập với 好听. Cũng dùng cho lời nói khó nghe.",
+   "ex": [
+    {
+     "cn": "别说这么难听的话。",
+     "py": "Bié shuō zhème nántīng de huà.",
+     "vi": "Đừng nói lời khó nghe như thế."
+    }
+   ]
+  },
+  {
+   "w": "好多",
+   "py": "hǎoduō",
+   "hv": "hảo đa",
+   "vi": "rất nhiều",
+   "pos": "số từ",
+   "note": "好 = rất. Khẩu ngữ, nghĩa như 很多.",
+   "ex": [
+    {
+     "cn": "公园里有好多人。",
+     "py": "Gōngyuán lǐ yǒu hǎoduō rén.",
+     "vi": "Trong công viên có rất nhiều người."
+    }
+   ]
+  },
+  {
+   "w": "有用",
+   "py": "yǒuyòng",
+   "hv": "hữu dụng",
+   "vi": "có ích",
+   "pos": "tính từ",
+   "note": "Chính là \"hữu dụng\". Vô ích là 没用.",
+   "ex": [
+    {
+     "cn": "这本书对我很有用。",
+     "py": "Zhè běn shū duì wǒ hěn yǒuyòng.",
+     "vi": "Cuốn sách này rất có ích với tôi."
+    }
+   ]
+  },
+  {
+   "w": "有关",
+   "py": "yǒuguān",
+   "hv": "hữu quan",
+   "vi": "có liên quan",
+   "pos": "động từ",
+   "note": "Chính là \"hữu quan\". 跟…有关 là \"liên quan đến…\".",
+   "ex": [
+    {
+     "cn": "这件事跟你有关。",
+     "py": "Zhè jiàn shì gēn nǐ yǒuguān.",
+     "vi": "Việc này có liên quan đến bạn."
+    }
+   ]
+  },
+  {
+   "w": "不同",
+   "py": "bù tóng",
+   "hv": "bất đồng",
+   "vi": "khác nhau",
+   "pos": "tính từ",
+   "note": "Khác \"bất đồng\" (không đồng ý) tiếng Việt: 不同 chỉ là \"không giống\".",
+   "ex": [
+    {
+     "cn": "每个人的想法都不同。",
+     "py": "Měi ge rén de xiǎngfǎ dōu bù tóng.",
+     "vi": "Suy nghĩ mỗi người đều khác nhau."
+    }
+   ]
+  },
+  {
+   "w": "大小",
+   "py": "dàxiǎo",
+   "hv": "đại tiểu",
+   "vi": "kích cỡ",
+   "pos": "danh từ",
+   "note": "大 + 小 ghép thành danh từ chỉ cỡ, giống 长短, 高低.",
+   "ex": [
+    {
+     "cn": "这双鞋大小正好。",
+     "py": "Zhè shuāng xié dàxiǎo zhènghǎo.",
+     "vi": "Đôi giày này vừa cỡ."
+    }
+   ]
+  },
+  {
+   "w": "常见",
+   "py": "cháng jiàn",
+   "hv": "thường kiến",
+   "vi": "thường gặp",
+   "pos": "tính từ",
+   "note": "常 (thường) + 见 (gặp).",
+   "ex": [
+    {
+     "cn": "这是一个很常见的问题。",
+     "py": "Zhè shì yí ge hěn cháng jiàn de wèntí.",
+     "vi": "Đây là một câu hỏi rất thường gặp."
+    }
+   ]
+  },
+  {
+   "w": "常用",
+   "py": "cháng yòng",
+   "hv": "thường dụng",
+   "vi": "thường dùng",
+   "pos": "tính từ",
+   "note": "常 + 用.",
+   "ex": [
+    {
+     "cn": "这些是最常用的汉字。",
+     "py": "Zhèxiē shì zuì cháng yòng de Hànzì.",
+     "vi": "Đây là những chữ Hán thường dùng nhất."
+    }
+   ]
+  },
+  {
+   "w": "名人",
+   "py": "míngrén",
+   "hv": "danh nhân",
+   "vi": "người nổi tiếng",
+   "pos": "danh từ",
+   "note": "Chính là \"danh nhân\".",
+   "ex": [
+    {
+     "cn": "很多名人来过这家饭店。",
+     "py": "Hěn duō míngrén lái guo zhè jiā fàndiàn.",
+     "vi": "Nhiều người nổi tiếng từng đến nhà hàng này."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "跟 / 和 + A + 不同 / 一样",
+   "b": "A 跟 B 不同 · A 跟 B 一样",
+   "d": "So sánh giống hay khác: đặt B sau 跟.",
+   "ex": [
+    {
+     "cn": "我的看法跟你不同。",
+     "py": "Wǒ de kànfǎ gēn nǐ bù tóng.",
+     "vi": "Ý kiến của tôi khác bạn."
+    },
+    {
+     "cn": "他跟我一样高。",
+     "py": "Tā gēn wǒ yíyàng gāo.",
+     "vi": "Anh ấy cao bằng tôi."
+    }
+   ]
+  },
+  {
+   "t": "对 + người + 有用",
+   "b": "对我有用 · 对学习有用",
+   "d": "Có ích cho ai: dùng 对.",
+   "ex": [
+    {
+     "cn": "多读书对你有用。",
+     "py": "Duō dú shū duì nǐ yǒuyòng.",
+     "vi": "Đọc nhiều sách có ích cho bạn."
+    },
+    {
+     "cn": "这个软件对学汉语很有用。",
+     "py": "Zhège ruǎnjiàn duì xué Hànyǔ hěn yǒuyòng.",
+     "vi": "Phần mềm này rất có ích cho việc học tiếng Trung."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "南方和北方的生活很不同。",
+   "py": "Nánfāng hé běifāng de shēnghuó hěn bù tóng.",
+   "vi": "Cuộc sống miền Nam và miền Bắc rất khác nhau."
+  },
+  {
+   "cn": "这首歌一点儿也不难听。",
+   "py": "Zhè shǒu gē yìdiǎnr yě bù nántīng.",
+   "vi": "Bài hát này chẳng khó nghe chút nào."
+  },
+  {
+   "cn": "我学了好多常用的句子。",
+   "py": "Wǒ xué le hǎoduō cháng yòng de jùzi.",
+   "vi": "Tôi đã học rất nhiều câu thường dùng."
+  },
+  {
+   "cn": "这个问题跟钱有关。",
+   "py": "Zhège wèntí gēn qián yǒuguān.",
+   "vi": "Vấn đề này liên quan đến tiền."
+  }
+ ]
+}

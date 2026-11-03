@@ -1,0 +1,216 @@
+{
+ "id": 145,
+ "cn": "带好行李",
+ "title": "Quần áo và đồ đạc",
+ "goal": "Nói về áo khoác, áo, quần đùi, áo mưa, nhà cửa, phòng, máy giặt, vali và hành lý.",
+ "words": [
+  {
+   "w": "大衣",
+   "py": "dàyī",
+   "hv": "đại y",
+   "vi": "áo khoác dài",
+   "pos": "danh từ",
+   "note": "大 + 衣 (áo). Áo khoác ngắn là 外套.",
+   "ex": [
+    {
+     "cn": "天冷了，穿上大衣吧。",
+     "py": "Tiān lěng le, chuān shang dàyī ba.",
+     "vi": "Trời lạnh rồi, mặc áo khoác vào đi."
+    }
+   ]
+  },
+  {
+   "w": "上衣",
+   "py": "shàngyī",
+   "hv": "thượng y",
+   "vi": "áo (phần trên)",
+   "pos": "danh từ",
+   "note": "上 (trên) + 衣. Đối lập với 裤子 (quần).",
+   "ex": [
+    {
+     "cn": "这件上衣很好看。",
+     "py": "Zhè jiàn shàngyī hěn hǎokàn.",
+     "vi": "Chiếc áo này rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "短裤",
+   "py": "duǎnkù",
+   "hv": "đoản khố",
+   "vi": "quần đùi, quần soóc",
+   "pos": "danh từ",
+   "note": "短 (ngắn, \"đoản\") + 裤 (quần).",
+   "ex": [
+    {
+     "cn": "夏天我常穿短裤。",
+     "py": "Xiàtiān wǒ cháng chuān duǎnkù.",
+     "vi": "Mùa hè tôi hay mặc quần đùi."
+    }
+   ]
+  },
+  {
+   "w": "雨衣",
+   "py": "yǔyī",
+   "hv": "vũ y",
+   "vi": "áo mưa",
+   "pos": "danh từ",
+   "note": "雨 + 衣. Người Việt đi xe máy ngày mưa đều cần 雨衣.",
+   "ex": [
+    {
+     "cn": "下雨了，快穿雨衣。",
+     "py": "Xià yǔ le, kuài chuān yǔyī.",
+     "vi": "Mưa rồi, mặc áo mưa nhanh lên."
+    }
+   ]
+  },
+  {
+   "w": "房子",
+   "py": "fángzi",
+   "hv": "phòng tử",
+   "vi": "căn nhà",
+   "pos": "danh từ",
+   "note": "房 = nhà, phòng. Mua nhà là 买房子.",
+   "ex": [
+    {
+     "cn": "他们买了一套新房子。",
+     "py": "Tāmen mǎi le yí tào xīn fángzi.",
+     "vi": "Họ mua một căn nhà mới."
+    }
+   ]
+  },
+  {
+   "w": "屋子",
+   "py": "wūzi",
+   "hv": "ốc tử",
+   "vi": "căn phòng, gian nhà",
+   "pos": "danh từ",
+   "note": "屋 = \"ốc\" trong \"ốc xá\" (nhà cửa).",
+   "ex": [
+    {
+     "cn": "屋子里太热了。",
+     "py": "Wūzi lǐ tài rè le.",
+     "vi": "Trong phòng nóng quá."
+    }
+   ]
+  },
+  {
+   "w": "室",
+   "py": "shì",
+   "hv": "thất",
+   "vi": "phòng",
+   "pos": "danh từ",
+   "note": "\"Thất\" trong \"giáo thất\", \"phòng thất\". Ghép: 教室 (lớp học), 办公室 (văn phòng).",
+   "ex": [
+    {
+     "cn": "老师在办公室。",
+     "py": "Lǎoshī zài bàngōngshì.",
+     "vi": "Thầy giáo ở văn phòng."
+    }
+   ]
+  },
+  {
+   "w": "洗衣机",
+   "py": "xǐyījī",
+   "hv": "tẩy y cơ",
+   "vi": "máy giặt",
+   "pos": "danh từ",
+   "note": "洗 (giặt) + 衣 (quần áo) + 机 (máy).",
+   "ex": [
+    {
+     "cn": "洗衣机坏了。",
+     "py": "Xǐyījī huài le.",
+     "vi": "Máy giặt hỏng rồi."
+    }
+   ]
+  },
+  {
+   "w": "箱子",
+   "py": "xiāngzi",
+   "hv": "tương tử",
+   "vi": "cái hòm, vali",
+   "pos": "danh từ",
+   "note": "箱 = hòm. Vali kéo là 行李箱.",
+   "ex": [
+    {
+     "cn": "这个箱子太重了。",
+     "py": "Zhège xiāngzi tài zhòng le.",
+     "vi": "Cái vali này nặng quá."
+    }
+   ]
+  },
+  {
+   "w": "行李",
+   "py": "xíngli",
+   "hv": "hành lý",
+   "vi": "hành lý",
+   "pos": "danh từ",
+   "note": "Chính là \"hành lý\".",
+   "ex": [
+    {
+     "cn": "你的行李都带好了吗？",
+     "py": "Nǐ de xíngli dōu dài hǎo le ma?",
+     "vi": "Hành lý của bạn mang đủ chưa?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "穿 + quần áo · 戴 + phụ kiện",
+   "b": "穿大衣 / 短裤 · 戴帽子 / 眼镜 / 耳机",
+   "d": "Mặc quần áo dùng 穿; đeo đội đồ phụ kiện dùng 戴.",
+   "ex": [
+    {
+     "cn": "他穿着大衣，戴着帽子。",
+     "py": "Tā chuān zhe dàyī, dài zhe màozi.",
+     "vi": "Anh ấy mặc áo khoác, đội mũ."
+    },
+    {
+     "cn": "出门别忘了穿雨衣。",
+     "py": "Chūmén bié wàng le chuān yǔyī.",
+     "vi": "Ra ngoài đừng quên mặc áo mưa."
+    }
+   ]
+  },
+  {
+   "t": "Động từ + 好: làm xong, ổn thoả",
+   "b": "带好 · 准备好 · 收拾好",
+   "d": "好 sau động từ nghĩa là đã làm xong, đâu vào đấy.",
+   "ex": [
+    {
+     "cn": "行李我已经准备好了。",
+     "py": "Xíngli wǒ yǐjīng zhǔnbèi hǎo le.",
+     "vi": "Hành lý tôi đã chuẩn bị xong."
+    },
+    {
+     "cn": "请坐好，我们要开车了。",
+     "py": "Qǐng zuò hǎo, wǒmen yào kāichē le.",
+     "vi": "Mời ngồi yên, chúng ta sắp chạy rồi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "这间屋子不大，但是很干净。",
+   "py": "Zhè jiān wūzi bú dà, dànshì hěn gānjìng.",
+   "vi": "Căn phòng này không rộng, nhưng rất sạch."
+  },
+  {
+   "cn": "我的行李箱是黑色的。",
+   "py": "Wǒ de xínglixiāng shì hēisè de.",
+   "vi": "Vali của tôi màu đen."
+  },
+  {
+   "cn": "冬天要穿大衣，夏天穿短裤。",
+   "py": "Dōngtiān yào chuān dàyī, xiàtiān chuān duǎnkù.",
+   "vi": "Mùa đông phải mặc áo khoác, mùa hè mặc quần đùi."
+  },
+  {
+   "cn": "我们想买一套大一点儿的房子。",
+   "py": "Wǒmen xiǎng mǎi yí tào dà yìdiǎnr de fángzi.",
+   "vi": "Chúng tôi muốn mua một căn nhà rộng hơn chút."
+  }
+ ]
+}

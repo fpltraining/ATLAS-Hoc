@@ -1,0 +1,216 @@
+{
+ "id": 143,
+ "cn": "发邮件",
+ "title": "Điện thoại và thư điện tử",
+ "goal": "Nói về điện, sách điện tử, tai nghe, bật tắt máy, gửi nhận thư, theo dõi trên mạng.",
+ "words": [
+  {
+   "w": "电",
+   "py": "diàn",
+   "hv": "điện",
+   "vi": "điện",
+   "pos": "danh từ",
+   "note": "\"Điện\" trong \"điện thoại\", \"điện ảnh\". Hết pin là 没电了.",
+   "ex": [
+    {
+     "cn": "我的手机没电了。",
+     "py": "Wǒ de shǒujī méi diàn le.",
+     "vi": "Điện thoại tôi hết pin rồi."
+    }
+   ]
+  },
+  {
+   "w": "电子书",
+   "py": "diànzǐshū",
+   "hv": "điện tử thư",
+   "vi": "sách điện tử",
+   "pos": "danh từ",
+   "note": "电子 (điện tử) + 书.",
+   "ex": [
+    {
+     "cn": "现在很多人看电子书。",
+     "py": "Xiànzài hěn duō rén kàn diànzǐshū.",
+     "vi": "Bây giờ nhiều người đọc sách điện tử."
+    }
+   ]
+  },
+  {
+   "w": "耳机",
+   "py": "ěrjī",
+   "hv": "nhĩ cơ",
+   "vi": "tai nghe",
+   "pos": "danh từ",
+   "note": "耳 = \"nhĩ\" (tai) + 机 (máy).",
+   "ex": [
+    {
+     "cn": "我戴着耳机听音乐。",
+     "py": "Wǒ dài zhe ěrjī tīng yīnyuè.",
+     "vi": "Tôi đeo tai nghe nghe nhạc."
+    }
+   ]
+  },
+  {
+   "w": "开机",
+   "py": "kāijī",
+   "hv": "khai cơ",
+   "vi": "bật máy, mở máy",
+   "pos": "động từ",
+   "note": "开 + 机. Ngược lại là 关机.",
+   "ex": [
+    {
+     "cn": "请先开机。",
+     "py": "Qǐng xiān kāijī.",
+     "vi": "Xin hãy bật máy trước."
+    }
+   ]
+  },
+  {
+   "w": "关机",
+   "py": "guānjī",
+   "hv": "quan cơ",
+   "vi": "tắt máy",
+   "pos": "động từ",
+   "note": "关 = đóng, tắt.",
+   "ex": [
+    {
+     "cn": "上课的时候请关机。",
+     "py": "Shàngkè de shíhou qǐng guānjī.",
+     "vi": "Trong giờ học xin tắt máy."
+    }
+   ]
+  },
+  {
+   "w": "邮件",
+   "py": "yóujiàn",
+   "hv": "bưu kiện",
+   "vi": "thư, email",
+   "pos": "danh từ",
+   "note": "Tiếng Việt \"bưu kiện\" là gói hàng; trong tiếng Trung hiện đại 邮件 thường là email (电子邮件).",
+   "ex": [
+    {
+     "cn": "我给老师发了一封邮件。",
+     "py": "Wǒ gěi lǎoshī fā le yì fēng yóujiàn.",
+     "vi": "Tôi đã gửi một email cho thầy."
+    }
+   ]
+  },
+  {
+   "w": "邮箱",
+   "py": "yóuxiāng",
+   "hv": "bưu tương",
+   "vi": "hộp thư; địa chỉ email",
+   "pos": "danh từ",
+   "note": "邮 (bưu) + 箱 (hòm).",
+   "ex": [
+    {
+     "cn": "你的邮箱是什么？",
+     "py": "Nǐ de yóuxiāng shì shénme?",
+     "vi": "Email của bạn là gì?"
+    }
+   ]
+  },
+  {
+   "w": "发",
+   "py": "fā",
+   "hv": "phát",
+   "vi": "gửi; phát ra",
+   "pos": "động từ",
+   "note": "\"Phát\" trong \"phát thư\", \"phát biểu\". Gửi tin nhắn: 发短信, 发微信.",
+   "ex": [
+    {
+     "cn": "到了以后给我发个信息。",
+     "py": "Dào le yǐhòu gěi wǒ fā ge xìnxī.",
+     "vi": "Đến nơi thì nhắn tin cho tôi nhé."
+    }
+   ]
+  },
+  {
+   "w": "收到",
+   "py": "shōudào",
+   "hv": "thu đáo",
+   "vi": "nhận được",
+   "pos": "động từ",
+   "note": "收 (thu nhận) + 到 (tới). Trả lời \"đã nhận\" ngắn gọn: 收到.",
+   "ex": [
+    {
+     "cn": "你的邮件我收到了。",
+     "py": "Nǐ de yóujiàn wǒ shōudào le.",
+     "vi": "Email của bạn tôi nhận được rồi."
+    }
+   ]
+  },
+  {
+   "w": "关注",
+   "py": "guānzhù",
+   "hv": "quan chú",
+   "vi": "theo dõi, quan tâm",
+   "pos": "động từ",
+   "note": "Trên mạng xã hội, bấm theo dõi là 关注.",
+   "ex": [
+    {
+     "cn": "欢迎大家关注我们。",
+     "py": "Huānyíng dàjiā guānzhù wǒmen.",
+     "vi": "Hoan nghênh mọi người theo dõi chúng tôi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "给 + người + 发 + thư / tin",
+   "b": "给他发邮件 · 给我发信息",
+   "d": "Người nhận đứng sau 给, trước động từ 发.",
+   "ex": [
+    {
+     "cn": "我明天给你发邮件。",
+     "py": "Wǒ míngtiān gěi nǐ fā yóujiàn.",
+     "vi": "Mai tôi gửi email cho bạn."
+    },
+    {
+     "cn": "他给我发了一张照片。",
+     "py": "Tā gěi wǒ fā le yì zhāng zhàopiàn.",
+     "vi": "Anh ấy gửi cho tôi một tấm ảnh."
+    }
+   ]
+  },
+  {
+   "t": "Động từ + 到: đạt được",
+   "b": "收到 · 买到 · 找到 · 看到",
+   "d": "到 sau động từ cho biết hành động đạt kết quả.",
+   "ex": [
+    {
+     "cn": "我找到我的耳机了。",
+     "py": "Wǒ zhǎodào wǒ de ěrjī le.",
+     "vi": "Tôi tìm thấy tai nghe rồi."
+    },
+    {
+     "cn": "票买到了吗？",
+     "py": "Piào mǎidào le ma?",
+     "vi": "Mua được vé chưa?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "手机快没电了，我要关机了。",
+   "py": "Shǒujī kuài méi diàn le, wǒ yào guānjī le.",
+   "vi": "Điện thoại sắp hết pin, tôi phải tắt máy đây."
+  },
+  {
+   "cn": "收到邮件以后请回复我。",
+   "py": "Shōudào yóujiàn yǐhòu qǐng huífù wǒ.",
+   "vi": "Nhận được email xin trả lời tôi."
+  },
+  {
+   "cn": "我关注了很多学汉语的账号。",
+   "py": "Wǒ guānzhù le hěn duō xué Hànyǔ de zhànghào.",
+   "vi": "Tôi theo dõi rất nhiều tài khoản học tiếng Trung."
+  },
+  {
+   "cn": "坐地铁的时候我喜欢戴耳机。",
+   "py": "Zuò dìtiě de shíhou wǒ xǐhuan dài ěrjī.",
+   "vi": "Lúc đi tàu điện ngầm tôi thích đeo tai nghe."
+  }
+ ]
+}

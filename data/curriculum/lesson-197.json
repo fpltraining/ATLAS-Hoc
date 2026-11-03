@@ -1,0 +1,216 @@
+{
+ "id": 197,
+ "cn": "取消订单",
+ "title": "Thao tác và đặt chỗ",
+ "goal": "Nói về xem, tìm kiếm, lấy (thông tin), vào, tung ra, tạm dừng, huỷ, đặt trước, quyết định và hẹn.",
+ "words": [
+  {
+   "w": "查看",
+   "py": "chákàn",
+   "hv": "tra khán",
+   "vi": "xem, kiểm tra",
+   "pos": "động từ",
+   "note": "查 + 看. Xem chi tiết trên ứng dụng: 查看详情.",
+   "ex": [
+    {
+     "cn": "请查看你的邮箱。",
+     "py": "Qǐng chákàn nǐ de yóuxiāng.",
+     "vi": "Xin kiểm tra hộp thư của bạn."
+    }
+   ]
+  },
+  {
+   "w": "查找",
+   "py": "cházhǎo",
+   "hv": "tra trảo",
+   "vi": "tìm kiếm, tra tìm",
+   "pos": "động từ",
+   "note": "查 + 找.",
+   "ex": [
+    {
+     "cn": "我在网上查找资料。",
+     "py": "Wǒ zài wǎngshang cházhǎo zīliào.",
+     "vi": "Tôi tìm tài liệu trên mạng."
+    }
+   ]
+  },
+  {
+   "w": "获取",
+   "py": "huòqǔ",
+   "hv": "hoạch thủ",
+   "vi": "thu được, lấy được",
+   "pos": "động từ",
+   "note": "Trang trọng. 获取信息 (thu thập thông tin).",
+   "ex": [
+    {
+     "cn": "我们从网上获取信息。",
+     "py": "Wǒmen cóng wǎngshang huòqǔ xìnxī.",
+     "vi": "Chúng ta lấy thông tin từ mạng."
+    }
+   ]
+  },
+  {
+   "w": "进入",
+   "py": "jìnrù",
+   "hv": "tiến nhập",
+   "vi": "đi vào",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 进.",
+   "ex": [
+    {
+     "cn": "比赛进入了最后一分钟。",
+     "py": "Bǐsài jìnrù le zuìhòu yì fēnzhōng.",
+     "vi": "Trận đấu bước vào phút cuối cùng."
+    }
+   ]
+  },
+  {
+   "w": "推出",
+   "py": "tuīchū",
+   "hv": "suy xuất",
+   "vi": "tung ra, ra mắt",
+   "pos": "động từ",
+   "note": "推 (đẩy) + 出. Ra mắt sản phẩm mới.",
+   "ex": [
+    {
+     "cn": "公司推出了新手机。",
+     "py": "Gōngsī tuīchū le xīn shǒujī.",
+     "vi": "Công ty ra mắt điện thoại mới."
+    }
+   ]
+  },
+  {
+   "w": "暂停",
+   "py": "zàntíng",
+   "hv": "tạm đình",
+   "vi": "tạm dừng",
+   "pos": "động từ",
+   "note": "Chính là \"tạm đình\".",
+   "ex": [
+    {
+     "cn": "视频可以暂停一下吗？",
+     "py": "Shìpín kěyǐ zàntíng yíxià ma?",
+     "vi": "Có thể tạm dừng video một chút không?"
+    }
+   ]
+  },
+  {
+   "w": "取消",
+   "py": "qǔxiāo",
+   "hv": "thủ tiêu",
+   "vi": "huỷ bỏ",
+   "pos": "động từ",
+   "note": "Khác \"thủ tiêu\" (giết) tiếng Việt: 取消 là huỷ (đơn, chuyến bay).",
+   "ex": [
+    {
+     "cn": "因为下大雪，航班取消了。",
+     "py": "Yīnwèi xià dà xuě, hángbān qǔxiāo le.",
+     "vi": "Vì tuyết rơi dày, chuyến bay bị huỷ."
+    }
+   ]
+  },
+  {
+   "w": "订",
+   "py": "dìng",
+   "hv": "đính",
+   "vi": "đặt trước",
+   "pos": "động từ",
+   "note": "Đặt phòng 订房间, đặt vé 订票.",
+   "ex": [
+    {
+     "cn": "我已经订好了酒店。",
+     "py": "Wǒ yǐjīng dìng hǎo le jiǔdiàn.",
+     "vi": "Tôi đã đặt xong khách sạn."
+    }
+   ]
+  },
+  {
+   "w": "定",
+   "py": "dìng",
+   "hv": "định",
+   "vi": "quyết định, định",
+   "pos": "động từ",
+   "note": "\"Định\" trong \"quyết định\". 定了 (đã chốt).",
+   "ex": [
+    {
+     "cn": "时间定了吗？",
+     "py": "Shíjiān dìng le ma?",
+     "vi": "Đã chốt thời gian chưa?"
+    }
+   ]
+  },
+  {
+   "w": "约",
+   "py": "yuē",
+   "hv": "ước",
+   "vi": "hẹn",
+   "pos": "động từ",
+   "note": "\"Ước\" trong \"ước hẹn\". Hẹn gặp: 约好了.",
+   "ex": [
+    {
+     "cn": "我约了朋友一起吃饭。",
+     "py": "Wǒ yuē le péngyou yìqǐ chīfàn.",
+     "vi": "Tôi hẹn bạn cùng ăn cơm."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "订 và 定",
+   "b": "订 = đặt trước (vé, phòng) · 定 = quyết định, chốt",
+   "d": "Hai chữ đọc giống nhau, nghĩa khác. Đặt chỗ dùng 订, chốt kế hoạch dùng 定.",
+   "ex": [
+    {
+     "cn": "我订了两张电影票。",
+     "py": "Wǒ dìng le liǎng zhāng diànyǐngpiào.",
+     "vi": "Tôi đặt hai vé xem phim."
+    },
+    {
+     "cn": "我们定在周六见面。",
+     "py": "Wǒmen dìng zài zhōuliù jiànmiàn.",
+     "vi": "Chúng ta chốt gặp nhau thứ Bảy."
+    }
+   ]
+  },
+  {
+   "t": "因为…，…: vì… nên…",
+   "b": "因为 + lý do，(所以) + kết quả",
+   "d": "Có thể bỏ 所以 ở vế sau.",
+   "ex": [
+    {
+     "cn": "因为生病，他没来上课。",
+     "py": "Yīnwèi shēngbìng, tā méi lái shàngkè.",
+     "vi": "Vì ốm, cậu ấy không đến lớp."
+    },
+    {
+     "cn": "因为太忙，所以我取消了旅行。",
+     "py": "Yīnwèi tài máng, suǒyǐ wǒ qǔxiāo le lǚxíng.",
+     "vi": "Vì quá bận nên tôi huỷ chuyến đi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "订单已经取消了。",
+   "py": "Dìngdān yǐjīng qǔxiāo le.",
+   "vi": "Đơn hàng đã bị huỷ."
+  },
+  {
+   "cn": "你可以在手机上查看成绩。",
+   "py": "Nǐ kěyǐ zài shǒujī shang chákàn chéngjì.",
+   "vi": "Bạn có thể xem điểm trên điện thoại."
+  },
+  {
+   "cn": "我们约好下午三点见面。",
+   "py": "Wǒmen yuē hǎo xiàwǔ sān diǎn jiànmiàn.",
+   "vi": "Chúng ta hẹn ba giờ chiều gặp nhau."
+  },
+  {
+   "cn": "这家店每个月都推出新菜。",
+   "py": "Zhè jiā diàn měi ge yuè dōu tuīchū xīn cài.",
+   "vi": "Quán này tháng nào cũng ra món mới."
+  }
+ ]
+}

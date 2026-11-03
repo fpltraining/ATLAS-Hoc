@@ -1,0 +1,216 @@
+{
+ "id": 202,
+ "cn": "不必担心",
+ "title": "Phó từ chỉ thái độ",
+ "goal": "Dùng: không cần, bất tiện, không ngừng, không đủ, cố ý, cho tốt, lẫn nhau, từ trong đó, cuối cùng và đợi đến khi.",
+ "words": [
+  {
+   "w": "不必",
+   "py": "búbì",
+   "hv": "bất tất",
+   "vi": "không cần",
+   "pos": "phó từ",
+   "note": "Chính là \"bất tất\". Trang trọng hơn 不用.",
+   "ex": [
+    {
+     "cn": "你不必担心。",
+     "py": "Nǐ búbì dānxīn.",
+     "vi": "Bạn không cần lo."
+    }
+   ]
+  },
+  {
+   "w": "不便",
+   "py": "búbiàn",
+   "hv": "bất tiện",
+   "vi": "bất tiện",
+   "pos": "tính từ",
+   "note": "Chính là \"bất tiện\".",
+   "ex": [
+    {
+     "cn": "给您带来不便，非常抱歉。",
+     "py": "Gěi nín dài lái búbiàn, fēicháng bàoqiàn.",
+     "vi": "Gây bất tiện cho quý khách, chúng tôi rất xin lỗi."
+    }
+   ]
+  },
+  {
+   "w": "不断",
+   "py": "búduàn",
+   "hv": "bất đoạn",
+   "vi": "không ngừng",
+   "pos": "phó từ",
+   "note": "Chính là \"bất đoạn\".",
+   "ex": [
+    {
+     "cn": "我们要不断学习。",
+     "py": "Wǒmen yào búduàn xuéxí.",
+     "vi": "Chúng ta phải không ngừng học hỏi."
+    }
+   ]
+  },
+  {
+   "w": "不够",
+   "py": "búgòu",
+   "hv": "bất cấu",
+   "vi": "không đủ",
+   "pos": "phó từ",
+   "note": "不 + 够 (đủ).",
+   "ex": [
+    {
+     "cn": "时间不够了，快点儿。",
+     "py": "Shíjiān búgòu le, kuài diǎnr.",
+     "vi": "Không đủ thời gian rồi, nhanh lên."
+    }
+   ]
+  },
+  {
+   "w": "故意",
+   "py": "gùyì",
+   "hv": "cố ý",
+   "vi": "cố ý",
+   "pos": "phó từ",
+   "note": "Chính là \"cố ý\".",
+   "ex": [
+    {
+     "cn": "对不起，我不是故意的。",
+     "py": "Duìbuqǐ, wǒ bú shì gùyì de.",
+     "vi": "Xin lỗi, tôi không cố ý."
+    }
+   ]
+  },
+  {
+   "w": "好好",
+   "py": "hǎohǎo",
+   "hv": "hảo hảo",
+   "vi": "cho tốt, đàng hoàng",
+   "pos": "phó từ",
+   "note": "Đứng trước động từ: 好好学习 (học cho tốt).",
+   "ex": [
+    {
+     "cn": "你要好好休息。",
+     "py": "Nǐ yào hǎohǎo xiūxi.",
+     "vi": "Bạn phải nghỉ ngơi cho đàng hoàng."
+    }
+   ]
+  },
+  {
+   "w": "相互",
+   "py": "xiānghù",
+   "hv": "tương hỗ",
+   "vi": "lẫn nhau",
+   "pos": "phó từ",
+   "note": "Chính là \"tương hỗ\". Giống 互相.",
+   "ex": [
+    {
+     "cn": "朋友之间要相互信任。",
+     "py": "Péngyou zhījiān yào xiānghù xìnrèn.",
+     "vi": "Bạn bè phải tin tưởng lẫn nhau."
+    }
+   ]
+  },
+  {
+   "w": "从中",
+   "py": "cóngzhōng",
+   "hv": "tòng trung",
+   "vi": "từ trong đó",
+   "pos": "phó từ",
+   "note": "Rút ra bài học từ một việc: 从中学到.",
+   "ex": [
+    {
+     "cn": "失败不可怕，可以从中学到很多。",
+     "py": "Shībài bù kěpà, kěyǐ cóngzhōng xué dào hěn duō.",
+     "vi": "Thất bại không đáng sợ, có thể học được nhiều điều từ đó."
+    }
+   ]
+  },
+  {
+   "w": "最终",
+   "py": "zuìzhōng",
+   "hv": "tối chung",
+   "vi": "cuối cùng",
+   "pos": "danh từ",
+   "note": "Kết quả sau cùng.",
+   "ex": [
+    {
+     "cn": "最终我们赢了比赛。",
+     "py": "Zuìzhōng wǒmen yíng le bǐsài.",
+     "vi": "Cuối cùng chúng tôi thắng trận."
+    }
+   ]
+  },
+  {
+   "w": "等到",
+   "py": "děngdào",
+   "hv": "đẳng đáo",
+   "vi": "đợi đến khi",
+   "pos": "giới từ",
+   "note": "等到 + thời điểm / sự việc，再 / 才….",
+   "ex": [
+    {
+     "cn": "等到放假，我们去旅行。",
+     "py": "Děngdào fàngjià, wǒmen qù lǚxíng.",
+     "vi": "Đợi đến kỳ nghỉ, chúng ta đi du lịch."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "不是故意的: không cố ý",
+   "b": "我不是故意的",
+   "d": "Câu xin lỗi rất hay dùng khi lỡ làm sai.",
+   "ex": [
+    {
+     "cn": "他不是故意迟到的。",
+     "py": "Tā bú shì gùyì chídào de.",
+     "vi": "Anh ấy không cố ý đến muộn."
+    },
+    {
+     "cn": "对不起，我不是故意说错的。",
+     "py": "Duìbuqǐ, wǒ bú shì gùyì shuō cuò de.",
+     "vi": "Xin lỗi, tôi không cố ý nói sai."
+    }
+   ]
+  },
+  {
+   "t": "等到…再 / 才…: đợi đến… mới…",
+   "b": "等到 + điều kiện，再 / 才 + hành động",
+   "d": "再 cho kế hoạch tương lai, 才 cho việc đã xảy ra muộn.",
+   "ex": [
+    {
+     "cn": "等到你回来，我们再吃饭。",
+     "py": "Děngdào nǐ huílai, wǒmen zài chīfàn.",
+     "vi": "Đợi bạn về, chúng ta rồi mới ăn cơm."
+    },
+    {
+     "cn": "等到天黑，他才回家。",
+     "py": "Děngdào tiān hēi, tā cái huí jiā.",
+     "vi": "Đợi đến khi trời tối, anh ấy mới về nhà."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "输了不要紧，重要的是从中学到东西。",
+   "py": "Shū le bú yàojǐn, zhòngyào de shì cóngzhōng xué dào dōngxi.",
+   "vi": "Thua không sao, quan trọng là học được điều gì từ đó."
+  },
+  {
+   "cn": "队员之间要相互支持。",
+   "py": "Duìyuán zhījiān yào xiānghù zhīchí.",
+   "vi": "Đồng đội phải hỗ trợ lẫn nhau."
+  },
+  {
+   "cn": "只有不断练习，才能不断进步。",
+   "py": "Zhǐyǒu búduàn liànxí, cái néng búduàn jìnbù.",
+   "vi": "Chỉ có luyện tập không ngừng mới tiến bộ không ngừng."
+  },
+  {
+   "cn": "最终的结果还不知道。",
+   "py": "Zuìzhōng de jiéguǒ hái bù zhīdào.",
+   "vi": "Kết quả cuối cùng vẫn chưa biết."
+  }
+ ]
+}

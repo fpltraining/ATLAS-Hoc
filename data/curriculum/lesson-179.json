@@ -1,0 +1,216 @@
+{
+ "id": 179,
+ "cn": "租房子",
+ "title": "Thuê nhà và sửa nhà",
+ "goal": "Nói về tiền thuê nhà, cho thuê, sân, cửa sổ, gương, treo, sáng, lắp, sửa và đến tận nhà.",
+ "words": [
+  {
+   "w": "房租",
+   "py": "fángzū",
+   "hv": "phòng tô",
+   "vi": "tiền thuê nhà",
+   "pos": "danh từ",
+   "note": "房 + 租 (thuê).",
+   "ex": [
+    {
+     "cn": "这里的房租太贵了。",
+     "py": "Zhèlǐ de fángzū tài guì le.",
+     "vi": "Tiền thuê nhà ở đây đắt quá."
+    }
+   ]
+  },
+  {
+   "w": "出租",
+   "py": "chūzū",
+   "hv": "xuất tô",
+   "vi": "cho thuê",
+   "pos": "động từ",
+   "note": "Taxi là 出租车 (xe cho thuê).",
+   "ex": [
+    {
+     "cn": "这套房子出租。",
+     "py": "Zhè tào fángzi chūzū.",
+     "vi": "Căn nhà này cho thuê."
+    }
+   ]
+  },
+  {
+   "w": "院子",
+   "py": "yuànzi",
+   "hv": "viện tử",
+   "vi": "sân",
+   "pos": "danh từ",
+   "note": "院 = sân, viện.",
+   "ex": [
+    {
+     "cn": "院子里种了很多花。",
+     "py": "Yuànzi lǐ zhòng le hěn duō huā.",
+     "vi": "Trong sân trồng nhiều hoa."
+    }
+   ]
+  },
+  {
+   "w": "窗",
+   "py": "chuāng",
+   "hv": "song",
+   "vi": "cửa sổ",
+   "pos": "danh từ",
+   "note": "Hay dùng 窗户 hoặc 窗子.",
+   "ex": [
+    {
+     "cn": "打开窗，让空气进来。",
+     "py": "Dǎkāi chuāng, ràng kōngqì jìnlai.",
+     "vi": "Mở cửa sổ cho không khí vào."
+    }
+   ]
+  },
+  {
+   "w": "镜子",
+   "py": "jìngzi",
+   "hv": "kính tử",
+   "vi": "cái gương",
+   "pos": "danh từ",
+   "note": "镜 = \"kính\" (gương, kính). Kính mắt là 眼镜.",
+   "ex": [
+    {
+     "cn": "她站在镜子前面。",
+     "py": "Tā zhàn zài jìngzi qiánmian.",
+     "vi": "Cô ấy đứng trước gương."
+    }
+   ]
+  },
+  {
+   "w": "挂",
+   "py": "guà",
+   "hv": "quải",
+   "vi": "treo",
+   "pos": "động từ",
+   "note": "Treo tranh, treo áo. Cúp máy điện thoại cũng là 挂.",
+   "ex": [
+    {
+     "cn": "墙上挂着一张地图。",
+     "py": "Qiáng shang guà zhe yì zhāng dìtú.",
+     "vi": "Trên tường treo một tấm bản đồ."
+    }
+   ]
+  },
+  {
+   "w": "亮",
+   "py": "liàng",
+   "hv": "lượng",
+   "vi": "sáng",
+   "pos": "tính từ",
+   "note": "\"Lượng\" trong \"minh lượng\". Đèn sáng: 灯亮了.",
+   "ex": [
+    {
+     "cn": "这个房间很亮。",
+     "py": "Zhège fángjiān hěn liàng.",
+     "vi": "Căn phòng này rất sáng."
+    }
+   ]
+  },
+  {
+   "w": "装",
+   "py": "zhuāng",
+   "hv": "trang",
+   "vi": "lắp; đựng; giả vờ",
+   "pos": "động từ",
+   "note": "\"Trang\" trong \"trang bị\". 装空调 (lắp điều hoà), 装傻 (giả ngốc).",
+   "ex": [
+    {
+     "cn": "我们家装了新空调。",
+     "py": "Wǒmen jiā zhuāng le xīn kōngtiáo.",
+     "vi": "Nhà chúng tôi lắp điều hoà mới."
+    }
+   ]
+  },
+  {
+   "w": "修",
+   "py": "xiū",
+   "hv": "tu",
+   "vi": "sửa",
+   "pos": "động từ",
+   "note": "\"Tu\" trong \"tu sửa\". Sửa xe là 修车.",
+   "ex": [
+    {
+     "cn": "你能帮我修一下电脑吗？",
+     "py": "Nǐ néng bāng wǒ xiū yíxià diànnǎo ma?",
+     "vi": "Bạn sửa giúp tôi máy tính được không?"
+    }
+   ]
+  },
+  {
+   "w": "上门",
+   "py": "shàngmén",
+   "hv": "thượng môn",
+   "vi": "đến tận nhà",
+   "pos": "động từ",
+   "note": "Dịch vụ tận nhà: 上门服务.",
+   "ex": [
+    {
+     "cn": "师傅明天上门修空调。",
+     "py": "Shīfu míngtiān shàngmén xiū kōngtiáo.",
+     "vi": "Mai thợ đến tận nhà sửa điều hoà."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Nơi + động từ + 着 + vật: tả sự tồn tại",
+   "b": "墙上挂着画 · 桌子上放着书",
+   "d": "Câu tồn tại: nơi chốn đứng đầu, động từ + 着, rồi đến vật.",
+   "ex": [
+    {
+     "cn": "门口站着一个人。",
+     "py": "Ménkǒu zhàn zhe yí ge rén.",
+     "vi": "Trước cửa có một người đứng."
+    },
+    {
+     "cn": "桌子上放着一杯水。",
+     "py": "Zhuōzi shang fàng zhe yì bēi shuǐ.",
+     "vi": "Trên bàn có một cốc nước."
+    }
+   ]
+  },
+  {
+   "t": "Lượng từ 套 cho căn hộ, bộ",
+   "b": "一套房子 · 一套衣服 · 一套书",
+   "d": "套 dùng cho thứ đi thành bộ hoàn chỉnh.",
+   "ex": [
+    {
+     "cn": "他们买了一套新房子。",
+     "py": "Tāmen mǎi le yí tào xīn fángzi.",
+     "vi": "Họ mua một căn nhà mới."
+    },
+    {
+     "cn": "我买了一套茶具。",
+     "py": "Wǒ mǎi le yí tào chájù.",
+     "vi": "Tôi mua một bộ ấm chén."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我想租一套离公司近的房子。",
+   "py": "Wǒ xiǎng zū yí tào lí gōngsī jìn de fángzi.",
+   "vi": "Tôi muốn thuê một căn gần công ty."
+  },
+  {
+   "cn": "房租每个月三千块。",
+   "py": "Fángzū měi ge yuè sānqiān kuài.",
+   "vi": "Tiền thuê nhà mỗi tháng ba nghìn tệ."
+  },
+  {
+   "cn": "灯坏了，房间一点儿也不亮。",
+   "py": "Dēng huài le, fángjiān yìdiǎnr yě bú liàng.",
+   "vi": "Đèn hỏng rồi, phòng chẳng sáng chút nào."
+  },
+  {
+   "cn": "现在很多服务都可以上门。",
+   "py": "Xiànzài hěn duō fúwù dōu kěyǐ shàngmén.",
+   "vi": "Bây giờ nhiều dịch vụ có thể đến tận nhà."
+  }
+ ]
+}

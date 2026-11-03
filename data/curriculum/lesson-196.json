@@ -1,0 +1,216 @@
+{
+ "id": 196,
+ "cn": "前方路口",
+ "title": "Vị trí và cách thức",
+ "goal": "Nói về phía trước, trước mắt, bên dưới, trong vòng, miền Bắc, cách thức, đối phương, khác, này và lần này.",
+ "words": [
+  {
+   "w": "前方",
+   "py": "qiánfāng",
+   "hv": "tiền phương",
+   "vi": "phía trước",
+   "pos": "danh từ",
+   "note": "Hay gặp trong thông báo giao thông: 前方到站 (ga sắp tới).",
+   "ex": [
+    {
+     "cn": "前方五百米有一个加油站。",
+     "py": "Qiánfāng wǔbǎi mǐ yǒu yí ge jiāyóuzhàn.",
+     "vi": "Năm trăm mét phía trước có một trạm xăng."
+    }
+   ]
+  },
+  {
+   "w": "眼前",
+   "py": "yǎnqián",
+   "hv": "nhãn tiền",
+   "vi": "trước mắt",
+   "pos": "danh từ",
+   "note": "Chính là \"nhãn tiền\".",
+   "ex": [
+    {
+     "cn": "美丽的大海出现在眼前。",
+     "py": "Měilì de dàhǎi chūxiàn zài yǎnqián.",
+     "vi": "Biển đẹp hiện ra trước mắt."
+    }
+   ]
+  },
+  {
+   "w": "底下",
+   "py": "dǐxia",
+   "hv": "để hạ",
+   "vi": "bên dưới",
+   "pos": "danh từ",
+   "note": "Khẩu ngữ của 下面.",
+   "ex": [
+    {
+     "cn": "猫在床底下。",
+     "py": "Māo zài chuáng dǐxia.",
+     "vi": "Con mèo ở dưới gầm giường."
+    }
+   ]
+  },
+  {
+   "w": "以内",
+   "py": "yǐnèi",
+   "hv": "dĩ nội",
+   "vi": "trong vòng",
+   "pos": "danh từ",
+   "note": "Số + 以内: 一百块以内 (trong vòng một trăm tệ).",
+   "ex": [
+    {
+     "cn": "请在三天以内完成。",
+     "py": "Qǐng zài sān tiān yǐnèi wánchéng.",
+     "vi": "Xin hoàn thành trong vòng ba ngày."
+    }
+   ]
+  },
+  {
+   "w": "北部",
+   "py": "běibù",
+   "hv": "bắc bộ",
+   "vi": "miền bắc",
+   "pos": "danh từ",
+   "note": "Chính là \"Bắc Bộ\".",
+   "ex": [
+    {
+     "cn": "河内在越南北部。",
+     "py": "Hénèi zài Yuènán běibù.",
+     "vi": "Hà Nội ở miền Bắc Việt Nam."
+    }
+   ]
+  },
+  {
+   "w": "方式",
+   "py": "fāngshì",
+   "hv": "phương thức",
+   "vi": "cách thức",
+   "pos": "danh từ",
+   "note": "Chính là \"phương thức\".",
+   "ex": [
+    {
+     "cn": "你喜欢什么样的学习方式？",
+     "py": "Nǐ xǐhuan shénme yàng de xuéxí fāngshì?",
+     "vi": "Bạn thích cách học nào?"
+    }
+   ]
+  },
+  {
+   "w": "对方",
+   "py": "duìfāng",
+   "hv": "đối phương",
+   "vi": "phía bên kia, đối phương",
+   "pos": "danh từ",
+   "note": "Chính là \"đối phương\". Cũng chỉ người đang nói chuyện với mình.",
+   "ex": [
+    {
+     "cn": "打电话的时候，对方没有说话。",
+     "py": "Dǎ diànhuà de shíhou, duìfāng méiyǒu shuōhuà.",
+     "vi": "Lúc gọi điện, đầu bên kia không nói gì."
+    }
+   ]
+  },
+  {
+   "w": "另",
+   "py": "lìng",
+   "hv": "lánh",
+   "vi": "khác",
+   "pos": "đại từ",
+   "note": "Hay gặp trong 另一个, 另外.",
+   "ex": [
+    {
+     "cn": "我们换另一家饭店吧。",
+     "py": "Wǒmen huàn lìng yì jiā fàndiàn ba.",
+     "vi": "Mình đổi sang nhà hàng khác nhé."
+    }
+   ]
+  },
+  {
+   "w": "此",
+   "py": "cǐ",
+   "hv": "thử",
+   "vi": "này, đây (văn viết)",
+   "pos": "đại từ",
+   "note": "Văn viết của 这. Ghép: 因此, 从此, 此外.",
+   "ex": [
+    {
+     "cn": "此路不通。",
+     "py": "Cǐ lù bù tōng.",
+     "vi": "Đường này không đi được."
+    }
+   ]
+  },
+  {
+   "w": "此次",
+   "py": "cǐ cì",
+   "hv": "thử thứ",
+   "vi": "lần này",
+   "pos": "cụm từ",
+   "note": "Văn viết của 这次.",
+   "ex": [
+    {
+     "cn": "此次会议非常重要。",
+     "py": "Cǐ cì huìyì fēicháng zhòngyào.",
+     "vi": "Cuộc họp lần này rất quan trọng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "以内 / 以上 / 以下",
+   "b": "số + 以内 (trong vòng) · 以上 (trở lên) · 以下 (trở xuống)",
+   "d": "Ba từ đi sau con số để giới hạn phạm vi.",
+   "ex": [
+    {
+     "cn": "一千块以内的手机有很多。",
+     "py": "Yìqiān kuài yǐnèi de shǒujī yǒu hěn duō.",
+     "vi": "Điện thoại dưới một nghìn tệ có rất nhiều."
+    },
+    {
+     "cn": "十八岁以上才能参加。",
+     "py": "Shíbā suì yǐshàng cái néng cānjiā.",
+     "vi": "Từ mười tám tuổi trở lên mới được tham gia."
+    }
+   ]
+  },
+  {
+   "t": "另 + 一 + lượng từ: một cái khác",
+   "b": "另一个人 · 另一件事",
+   "d": "另 đứng trước số từ.",
+   "ex": [
+    {
+     "cn": "这是另一个问题。",
+     "py": "Zhè shì lìng yí ge wèntí.",
+     "vi": "Đó là một vấn đề khác."
+    },
+    {
+     "cn": "我还有另一件事要说。",
+     "py": "Wǒ hái yǒu lìng yí jiàn shì yào shuō.",
+     "vi": "Tôi còn một việc khác muốn nói."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "前方到站是北京西站。",
+   "py": "Qiánfāng dào zhàn shì Běijīng Xī Zhàn.",
+   "vi": "Ga sắp tới là ga Bắc Kinh Tây."
+  },
+  {
+   "cn": "每个人都有自己的生活方式。",
+   "py": "Měi ge rén dōu yǒu zìjǐ de shēnghuó fāngshì.",
+   "vi": "Ai cũng có lối sống riêng."
+  },
+  {
+   "cn": "说话的时候要尊重对方。",
+   "py": "Shuōhuà de shíhou yào zūnzhòng duìfāng.",
+   "vi": "Khi nói chuyện phải tôn trọng người đối diện."
+  },
+  {
+   "cn": "此次比赛共有三十个国家参加。",
+   "py": "Cǐ cì bǐsài gòng yǒu sānshí ge guójiā cānjiā.",
+   "vi": "Giải đấu lần này có ba mươi quốc gia tham gia."
+  }
+ ]
+}

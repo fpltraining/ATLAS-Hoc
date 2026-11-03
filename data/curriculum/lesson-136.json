@@ -1,0 +1,216 @@
+{
+ "id": 136,
+ "cn": "四季",
+ "title": "Bốn mùa và thời tiết",
+ "goal": "Gọi tên bốn mùa, nói về gió, băng, biển, và mùa nào thích nhất.",
+ "words": [
+  {
+   "w": "春天",
+   "py": "chūntiān",
+   "hv": "xuân thiên",
+   "vi": "mùa xuân",
+   "pos": "danh từ",
+   "note": "春 = \"xuân\" trong \"thanh xuân\", \"Tết xuân\".",
+   "ex": [
+    {
+     "cn": "春天到了，花都开了。",
+     "py": "Chūntiān dào le, huā dōu kāi le.",
+     "vi": "Mùa xuân đến rồi, hoa nở hết rồi."
+    }
+   ]
+  },
+  {
+   "w": "夏天",
+   "py": "xiàtiān",
+   "hv": "hạ thiên",
+   "vi": "mùa hè",
+   "pos": "danh từ",
+   "note": "夏 = \"hạ\" trong \"mùa hạ\".",
+   "ex": [
+    {
+     "cn": "夏天我常常去游泳。",
+     "py": "Xiàtiān wǒ chángcháng qù yóuyǒng.",
+     "vi": "Mùa hè tôi hay đi bơi."
+    }
+   ]
+  },
+  {
+   "w": "秋天",
+   "py": "qiūtiān",
+   "hv": "thu thiên",
+   "vi": "mùa thu",
+   "pos": "danh từ",
+   "note": "秋 = \"thu\" trong \"Trung thu\".",
+   "ex": [
+    {
+     "cn": "北京的秋天最美。",
+     "py": "Běijīng de qiūtiān zuì měi.",
+     "vi": "Mùa thu Bắc Kinh đẹp nhất."
+    }
+   ]
+  },
+  {
+   "w": "冬天",
+   "py": "dōngtiān",
+   "hv": "đông thiên",
+   "vi": "mùa đông",
+   "pos": "danh từ",
+   "note": "冬 = \"đông\" trong \"mùa đông\".",
+   "ex": [
+    {
+     "cn": "冬天很冷，要多穿衣服。",
+     "py": "Dōngtiān hěn lěng, yào duō chuān yīfu.",
+     "vi": "Mùa đông rất lạnh, phải mặc nhiều áo."
+    }
+   ]
+  },
+  {
+   "w": "四季",
+   "py": "sìjì",
+   "hv": "tứ quý",
+   "vi": "bốn mùa",
+   "pos": "danh từ",
+   "note": "Chính là \"tứ quý\" trong \"tứ quý xuân hạ thu đông\".",
+   "ex": [
+    {
+     "cn": "这里四季都很暖和。",
+     "py": "Zhèlǐ sìjì dōu hěn nuǎnhuo.",
+     "vi": "Ở đây bốn mùa đều ấm áp."
+    }
+   ]
+  },
+  {
+   "w": "季",
+   "py": "jì",
+   "hv": "quý",
+   "vi": "mùa; quý",
+   "pos": "danh từ",
+   "note": "\"Quý\" trong \"quý một\", \"quý hai\" của năm. 季节 là mùa.",
+   "ex": [
+    {
+     "cn": "一年有四个季节。",
+     "py": "Yì nián yǒu sì ge jìjié.",
+     "vi": "Một năm có bốn mùa."
+    }
+   ]
+  },
+  {
+   "w": "风",
+   "py": "fēng",
+   "hv": "phong",
+   "vi": "gió",
+   "pos": "danh từ",
+   "note": "\"Phong\" trong \"phong ba\", \"phong cảnh\".",
+   "ex": [
+    {
+     "cn": "今天风很大。",
+     "py": "Jīntiān fēng hěn dà.",
+     "vi": "Hôm nay gió to."
+    }
+   ]
+  },
+  {
+   "w": "刮",
+   "py": "guā",
+   "hv": "quát",
+   "vi": "thổi (gió); cạo",
+   "pos": "động từ",
+   "note": "Gió thổi dùng 刮风, không dùng 吹.",
+   "ex": [
+    {
+     "cn": "外面在刮大风。",
+     "py": "Wàimian zài guā dà fēng.",
+     "vi": "Bên ngoài đang có gió to."
+    }
+   ]
+  },
+  {
+   "w": "冰",
+   "py": "bīng",
+   "hv": "băng",
+   "vi": "băng, đá lạnh",
+   "pos": "danh từ",
+   "note": "Chính là \"băng\" trong \"băng tuyết\". Đồ uống thêm đá: 加冰.",
+   "ex": [
+    {
+     "cn": "我要一杯冰水。",
+     "py": "Wǒ yào yì bēi bīng shuǐ.",
+     "vi": "Cho tôi một cốc nước đá."
+    }
+   ]
+  },
+  {
+   "w": "海",
+   "py": "hǎi",
+   "hv": "hải",
+   "vi": "biển",
+   "pos": "danh từ",
+   "note": "\"Hải\" trong \"hải quân\", \"hải sản\". Bộ 氵 (nước).",
+   "ex": [
+    {
+     "cn": "我们去海边玩儿吧。",
+     "py": "Wǒmen qù hǎibiān wánr ba.",
+     "vi": "Mình ra biển chơi nhé."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "刮风 / 下雨 / 下雪",
+   "b": "刮 + 风 · 下 + 雨 / 雪",
+   "d": "Thời tiết trong tiếng Trung dùng động từ cố định: gió thì 刮, mưa tuyết thì 下.",
+   "ex": [
+    {
+     "cn": "明天可能会刮风。",
+     "py": "Míngtiān kěnéng huì guā fēng.",
+     "vi": "Mai có thể có gió."
+    },
+    {
+     "cn": "冬天北京常常下雪。",
+     "py": "Dōngtiān Běijīng chángcháng xià xuě.",
+     "vi": "Mùa đông Bắc Kinh hay có tuyết."
+    }
+   ]
+  },
+  {
+   "t": "最 + tính từ / động từ",
+   "b": "最 + 冷 / 美 / 喜欢",
+   "d": "最 là \"nhất\", đứng trước tính từ hoặc động từ tâm lý.",
+   "ex": [
+    {
+     "cn": "你最喜欢哪个季节？",
+     "py": "Nǐ zuì xǐhuan nǎge jìjié?",
+     "vi": "Bạn thích mùa nào nhất?"
+    },
+    {
+     "cn": "一月最冷。",
+     "py": "Yī yuè zuì lěng.",
+     "vi": "Tháng một lạnh nhất."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "越南南方没有冬天。",
+   "py": "Yuènán nánfāng méiyǒu dōngtiān.",
+   "vi": "Miền Nam Việt Nam không có mùa đông."
+  },
+  {
+   "cn": "春天天气不冷也不热。",
+   "py": "Chūntiān tiānqì bù lěng yě bú rè.",
+   "vi": "Mùa xuân trời không lạnh cũng không nóng."
+  },
+  {
+   "cn": "夏天我们常去海边。",
+   "py": "Xiàtiān wǒmen cháng qù hǎibiān.",
+   "vi": "Mùa hè chúng tôi hay ra biển."
+  },
+  {
+   "cn": "风太大了，我们回家吧。",
+   "py": "Fēng tài dà le, wǒmen huí jiā ba.",
+   "vi": "Gió to quá, mình về nhà thôi."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 149,
+ "cn": "住院",
+ "title": "Sức khoẻ và việc nhà",
+ "goal": "Nói về bệnh nhân, nằm viện, ra viện, răng, bàn chải, chải, quét, vội, sợ, và chịu đựng.",
+ "words": [
+  {
+   "w": "病人",
+   "py": "bìngrén",
+   "hv": "bệnh nhân",
+   "vi": "bệnh nhân",
+   "pos": "danh từ",
+   "note": "Chính là \"bệnh nhân\".",
+   "ex": [
+    {
+     "cn": "医生在看病人。",
+     "py": "Yīshēng zài kàn bìngrén.",
+     "vi": "Bác sĩ đang khám bệnh nhân."
+    }
+   ]
+  },
+  {
+   "w": "住院",
+   "py": "zhùyuàn",
+   "hv": "trú viện",
+   "vi": "nằm viện",
+   "pos": "động từ",
+   "note": "住 (ở) + 院 (viện).",
+   "ex": [
+    {
+     "cn": "他住院了三天。",
+     "py": "Tā zhùyuàn le sān tiān.",
+     "vi": "Anh ấy nằm viện ba ngày."
+    }
+   ]
+  },
+  {
+   "w": "出院",
+   "py": "chūyuàn",
+   "hv": "xuất viện",
+   "vi": "ra viện",
+   "pos": "động từ",
+   "note": "Chính là \"xuất viện\".",
+   "ex": [
+    {
+     "cn": "奶奶明天可以出院了。",
+     "py": "Nǎinai míngtiān kěyǐ chūyuàn le.",
+     "vi": "Mai bà có thể ra viện rồi."
+    }
+   ]
+  },
+  {
+   "w": "牙",
+   "py": "yá",
+   "hv": "nha",
+   "vi": "răng",
+   "pos": "danh từ",
+   "note": "\"Nha\" trong \"nha sĩ\", \"nha khoa\". Đau răng là 牙疼.",
+   "ex": [
+    {
+     "cn": "我牙疼，要去看医生。",
+     "py": "Wǒ yá téng, yào qù kàn yīshēng.",
+     "vi": "Tôi đau răng, phải đi khám."
+    }
+   ]
+  },
+  {
+   "w": "牙刷",
+   "py": "yáshuā",
+   "hv": "nha loát",
+   "vi": "bàn chải đánh răng",
+   "pos": "danh từ",
+   "note": "牙 + 刷 (bàn chải).",
+   "ex": [
+    {
+     "cn": "我忘了带牙刷。",
+     "py": "Wǒ wàng le dài yáshuā.",
+     "vi": "Tôi quên mang bàn chải đánh răng."
+    }
+   ]
+  },
+  {
+   "w": "刷",
+   "py": "shuā",
+   "hv": "loát",
+   "vi": "chải, quét; quẹt",
+   "pos": "động từ",
+   "note": "Đánh răng là 刷牙. Quẹt thẻ là 刷卡, lướt điện thoại là 刷手机.",
+   "ex": [
+    {
+     "cn": "早上起床先刷牙。",
+     "py": "Zǎoshang qǐchuáng xiān shuāyá.",
+     "vi": "Sáng dậy đánh răng trước."
+    }
+   ]
+  },
+  {
+   "w": "扫",
+   "py": "sǎo",
+   "hv": "tảo",
+   "vi": "quét",
+   "pos": "động từ",
+   "note": "\"Tảo\" trong \"tảo mộ\". Quét nhà là 扫地, quét mã là 扫码.",
+   "ex": [
+    {
+     "cn": "我每天扫一次地。",
+     "py": "Wǒ měi tiān sǎo yí cì dì.",
+     "vi": "Mỗi ngày tôi quét nhà một lần."
+    }
+   ]
+  },
+  {
+   "w": "急",
+   "py": "jí",
+   "hv": "cấp",
+   "vi": "vội, gấp; sốt ruột",
+   "pos": "tính từ",
+   "note": "\"Cấp\" trong \"cấp cứu\", \"khẩn cấp\". 别急 là \"đừng vội\".",
+   "ex": [
+    {
+     "cn": "别急，慢慢说。",
+     "py": "Bié jí, mànmàn shuō.",
+     "vi": "Đừng vội, nói từ từ."
+    }
+   ]
+  },
+  {
+   "w": "怕",
+   "py": "pà",
+   "hv": "phạ",
+   "vi": "sợ",
+   "pos": "động từ",
+   "note": "Có bộ 忄 (tim). 怕冷 (sợ lạnh), 怕狗 (sợ chó).",
+   "ex": [
+    {
+     "cn": "我很怕打针。",
+     "py": "Wǒ hěn pà dǎzhēn.",
+     "vi": "Tôi rất sợ tiêm."
+    }
+   ]
+  },
+  {
+   "w": "受",
+   "py": "shòu",
+   "hv": "thụ",
+   "vi": "chịu, bị",
+   "pos": "động từ",
+   "note": "\"Thụ\" trong \"thụ động\", \"cảm thụ\". 受伤 là bị thương.",
+   "ex": [
+    {
+     "cn": "他踢球的时候受伤了。",
+     "py": "Tā tī qiú de shíhou shòushāng le.",
+     "vi": "Anh ấy bị thương lúc đá bóng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "动词 + 一次 / 两次: số lần",
+   "b": "扫一次地 · 去过两次",
+   "d": "Số lần đứng sau động từ; với động từ ly hợp thì chen vào giữa: 刷两次牙.",
+   "ex": [
+    {
+     "cn": "我一天刷两次牙。",
+     "py": "Wǒ yì tiān shuā liǎng cì yá.",
+     "vi": "Mỗi ngày tôi đánh răng hai lần."
+    },
+    {
+     "cn": "我去过一次中国。",
+     "py": "Wǒ qù guo yí cì Zhōngguó.",
+     "vi": "Tôi đã đến Trung Quốc một lần."
+    }
+   ]
+  },
+  {
+   "t": "怕 + danh từ / động từ",
+   "b": "怕冷 · 怕狗 · 怕说错",
+   "d": "Sau 怕 có thể là danh từ hoặc cả một việc.",
+   "ex": [
+    {
+     "cn": "我怕说错，所以不敢说。",
+     "py": "Wǒ pà shuō cuò, suǒyǐ bù gǎn shuō.",
+     "vi": "Tôi sợ nói sai nên không dám nói."
+    },
+    {
+     "cn": "她很怕冷。",
+     "py": "Tā hěn pà lěng.",
+     "vi": "Cô ấy rất sợ lạnh."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "病人要多休息。",
+   "py": "Bìngrén yào duō xiūxi.",
+   "vi": "Bệnh nhân cần nghỉ ngơi nhiều."
+  },
+  {
+   "cn": "他出院以后身体好多了。",
+   "py": "Tā chūyuàn yǐhòu shēntǐ hǎo duō le.",
+   "vi": "Ra viện rồi sức khoẻ anh ấy khá hơn nhiều."
+  },
+  {
+   "cn": "现在买东西可以扫码。",
+   "py": "Xiànzài mǎi dōngxi kěyǐ sǎo mǎ.",
+   "vi": "Bây giờ mua đồ có thể quét mã."
+  },
+  {
+   "cn": "别怕，我在你身边。",
+   "py": "Bié pà, wǒ zài nǐ shēnbiān.",
+   "vi": "Đừng sợ, có tôi bên cạnh."
+  }
+ ]
+}

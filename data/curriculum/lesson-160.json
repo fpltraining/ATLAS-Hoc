@@ -1,0 +1,216 @@
+{
+ "id": 160,
+ "cn": "去餐厅吃饭",
+ "title": "Bữa ăn và nhà hàng",
+ "goal": "Nói về nhà hàng, đồ ăn nhanh, món Trung, bữa sáng, trưa, tối (trang trọng), nhà ăn, món ngon, thức ăn và thực phẩm.",
+ "words": [
+  {
+   "w": "餐厅",
+   "py": "cāntīng",
+   "hv": "xan sảnh",
+   "vi": "nhà hàng, phòng ăn",
+   "pos": "danh từ",
+   "note": "餐 = bữa ăn (\"xan\"), 厅 = sảnh.",
+   "ex": [
+    {
+     "cn": "酒店二楼有一个餐厅。",
+     "py": "Jiǔdiàn èr lóu yǒu yí ge cāntīng.",
+     "vi": "Tầng hai khách sạn có một nhà hàng."
+    }
+   ]
+  },
+  {
+   "w": "快餐",
+   "py": "kuàicān",
+   "hv": "khoái xan",
+   "vi": "đồ ăn nhanh",
+   "pos": "danh từ",
+   "note": "快 (nhanh) + 餐.",
+   "ex": [
+    {
+     "cn": "快餐好吃，但是不太健康。",
+     "py": "Kuàicān hǎochī, dànshì bú tài jiànkāng.",
+     "vi": "Đồ ăn nhanh ngon, nhưng không lành mạnh lắm."
+    }
+   ]
+  },
+  {
+   "w": "中餐",
+   "py": "zhōngcān",
+   "hv": "trung xan",
+   "vi": "món Trung Quốc",
+   "pos": "danh từ",
+   "note": "Món Tây là 西餐.",
+   "ex": [
+    {
+     "cn": "你喜欢中餐还是西餐？",
+     "py": "Nǐ xǐhuan zhōngcān háishi xīcān?",
+     "vi": "Bạn thích món Trung hay món Tây?"
+    }
+   ]
+  },
+  {
+   "w": "早餐",
+   "py": "zǎocān",
+   "hv": "tảo xan",
+   "vi": "bữa sáng",
+   "pos": "danh từ",
+   "note": "Trang trọng hơn 早饭, hay gặp ở khách sạn.",
+   "ex": [
+    {
+     "cn": "酒店的早餐是免费的。",
+     "py": "Jiǔdiàn de zǎocān shì miǎnfèi de.",
+     "vi": "Bữa sáng ở khách sạn miễn phí."
+    }
+   ]
+  },
+  {
+   "w": "午餐",
+   "py": "wǔcān",
+   "hv": "ngọ xan",
+   "vi": "bữa trưa",
+   "pos": "danh từ",
+   "note": "Trang trọng hơn 午饭.",
+   "ex": [
+    {
+     "cn": "午餐时间是十二点到一点。",
+     "py": "Wǔcān shíjiān shì shí'èr diǎn dào yì diǎn.",
+     "vi": "Giờ ăn trưa từ mười hai đến một giờ."
+    }
+   ]
+  },
+  {
+   "w": "晚餐",
+   "py": "wǎncān",
+   "hv": "vãn xan",
+   "vi": "bữa tối",
+   "pos": "danh từ",
+   "note": "Trang trọng hơn 晚饭.",
+   "ex": [
+    {
+     "cn": "我们一起吃晚餐吧。",
+     "py": "Wǒmen yìqǐ chī wǎncān ba.",
+     "vi": "Chúng ta cùng ăn tối nhé."
+    }
+   ]
+  },
+  {
+   "w": "食堂",
+   "py": "shítáng",
+   "hv": "thực đường",
+   "vi": "nhà ăn (tập thể)",
+   "pos": "danh từ",
+   "note": "Nhà ăn của trường, công ty.",
+   "ex": [
+    {
+     "cn": "学校食堂的饭很便宜。",
+     "py": "Xuéxiào shítáng de fàn hěn piányi.",
+     "vi": "Cơm ở nhà ăn trường rất rẻ."
+    }
+   ]
+  },
+  {
+   "w": "美食",
+   "py": "měishí",
+   "hv": "mỹ thực",
+   "vi": "món ngon, ẩm thực",
+   "pos": "danh từ",
+   "note": "Chính là \"mỹ thực\".",
+   "ex": [
+    {
+     "cn": "越南有很多美食。",
+     "py": "Yuènán yǒu hěn duō měishí.",
+     "vi": "Việt Nam có rất nhiều món ngon."
+    }
+   ]
+  },
+  {
+   "w": "食物",
+   "py": "shíwù",
+   "hv": "thực vật",
+   "vi": "thức ăn",
+   "pos": "danh từ",
+   "note": "Chú ý: tiếng Việt \"thực vật\" là cây cỏ (植物), còn 食物 là đồ ăn.",
+   "ex": [
+    {
+     "cn": "冰箱里没有食物了。",
+     "py": "Bīngxiāng lǐ méiyǒu shíwù le.",
+     "vi": "Trong tủ lạnh hết đồ ăn rồi."
+    }
+   ]
+  },
+  {
+   "w": "食品",
+   "py": "shípǐn",
+   "hv": "thực phẩm",
+   "vi": "thực phẩm",
+   "pos": "danh từ",
+   "note": "Chính là \"thực phẩm\", thường là đồ ăn đóng gói.",
+   "ex": [
+    {
+     "cn": "这种食品对身体不好。",
+     "py": "Zhè zhǒng shípǐn duì shēntǐ bù hǎo.",
+     "vi": "Loại thực phẩm này không tốt cho sức khoẻ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Bữa ăn: 饭 (khẩu ngữ) và 餐 (trang trọng)",
+   "b": "早饭 / 早餐 · 午饭 / 午餐 · 晚饭 / 晚餐",
+   "d": "Nói chuyện hằng ngày dùng 饭, trên thực đơn, thông báo dùng 餐.",
+   "ex": [
+    {
+     "cn": "早餐几点开始？",
+     "py": "Zǎocān jǐ diǎn kāishǐ?",
+     "vi": "Bữa sáng mấy giờ bắt đầu?"
+    },
+    {
+     "cn": "你吃早饭了吗？",
+     "py": "Nǐ chī zǎofàn le ma?",
+     "vi": "Bạn ăn sáng chưa?"
+    }
+   ]
+  },
+  {
+   "t": "对 + người / việc + 好 / 不好",
+   "b": "对身体好 · 对学习不好",
+   "d": "Nói điều gì tốt hay xấu cho ai, cho việc gì.",
+   "ex": [
+    {
+     "cn": "多吃水果对身体好。",
+     "py": "Duō chī shuǐguǒ duì shēntǐ hǎo.",
+     "vi": "Ăn nhiều hoa quả tốt cho sức khoẻ."
+    },
+    {
+     "cn": "熬夜对眼睛不好。",
+     "py": "Áoyè duì yǎnjing bù hǎo.",
+     "vi": "Thức khuya không tốt cho mắt."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "公司食堂的午餐很好吃。",
+   "py": "Gōngsī shítáng de wǔcān hěn hǎochī.",
+   "vi": "Bữa trưa ở nhà ăn công ty rất ngon."
+  },
+  {
+   "cn": "这家餐厅的中餐很有名。",
+   "py": "Zhè jiā cāntīng de zhōngcān hěn yǒumíng.",
+   "vi": "Món Trung của nhà hàng này rất nổi tiếng."
+  },
+  {
+   "cn": "别总吃快餐，对身体不好。",
+   "py": "Bié zǒng chī kuàicān, duì shēntǐ bù hǎo.",
+   "vi": "Đừng ăn đồ ăn nhanh suốt, không tốt cho sức khoẻ."
+  },
+  {
+   "cn": "旅行的时候我喜欢吃当地美食。",
+   "py": "Lǚxíng de shíhou wǒ xǐhuan chī dāngdì měishí.",
+   "vi": "Khi đi du lịch tôi thích ăn món ngon địa phương."
+  }
+ ]
+}

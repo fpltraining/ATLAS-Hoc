@@ -1,0 +1,216 @@
+{
+ "id": 138,
+ "cn": "过马路",
+ "title": "Trên phố",
+ "goal": "Nói về đường phố, ngã tư, đèn giao thông, ô tô, tàu cao tốc, thành phố, khu dân cư.",
+ "words": [
+  {
+   "w": "街",
+   "py": "jiē",
+   "hv": "nhai",
+   "vi": "phố, đường phố",
+   "pos": "danh từ",
+   "note": "Ra phố mua sắm là 逛街.",
+   "ex": [
+    {
+     "cn": "这条街上有很多饭店。",
+     "py": "Zhè tiáo jiē shang yǒu hěn duō fàndiàn.",
+     "vi": "Phố này có nhiều nhà hàng."
+    }
+   ]
+  },
+  {
+   "w": "马路",
+   "py": "mǎlù",
+   "hv": "mã lộ",
+   "vi": "đường cái, lòng đường",
+   "pos": "danh từ",
+   "note": "Nghĩa đen \"đường cho ngựa\". Qua đường là 过马路.",
+   "ex": [
+    {
+     "cn": "过马路要小心。",
+     "py": "Guò mǎlù yào xiǎoxīn.",
+     "vi": "Qua đường phải cẩn thận."
+    }
+   ]
+  },
+  {
+   "w": "路口",
+   "py": "lùkǒu",
+   "hv": "lộ khẩu",
+   "vi": "ngã tư, giao lộ",
+   "pos": "danh từ",
+   "note": "路 + 口 (miệng, cửa). Ngã tư là 十字路口.",
+   "ex": [
+    {
+     "cn": "在前面的路口往右拐。",
+     "py": "Zài qiánmian de lùkǒu wǎng yòu guǎi.",
+     "vi": "Đến ngã tư phía trước thì rẽ phải."
+    }
+   ]
+  },
+  {
+   "w": "路边",
+   "py": "lùbiān",
+   "hv": "lộ biên",
+   "vi": "lề đường, ven đường",
+   "pos": "danh từ",
+   "note": "路 + 边.",
+   "ex": [
+    {
+     "cn": "他把车停在路边。",
+     "py": "Tā bǎ chē tíng zài lùbiān.",
+     "vi": "Anh ấy đỗ xe ở lề đường."
+    }
+   ]
+  },
+  {
+   "w": "红绿灯",
+   "py": "hóng-lǜdēng",
+   "hv": "hồng lục đăng",
+   "vi": "đèn giao thông",
+   "pos": "danh từ",
+   "note": "Nghĩa đen \"đèn đỏ xanh\". 灯 = \"đăng\" trong \"hải đăng\".",
+   "ex": [
+    {
+     "cn": "看见红绿灯要停下来。",
+     "py": "Kànjiàn hóng-lǜdēng yào tíng xiàlai.",
+     "vi": "Thấy đèn giao thông phải dừng lại."
+    }
+   ]
+  },
+  {
+   "w": "汽车",
+   "py": "qìchē",
+   "hv": "khí xa",
+   "vi": "ô tô",
+   "pos": "danh từ",
+   "note": "汽 (hơi) + 车. Chú ý: 汽车 là ô tô, không phải \"tàu hoả\".",
+   "ex": [
+    {
+     "cn": "他买了一辆新汽车。",
+     "py": "Tā mǎi le yí liàng xīn qìchē.",
+     "vi": "Anh ấy mua một chiếc ô tô mới."
+    }
+   ]
+  },
+  {
+   "w": "高铁",
+   "py": "gāotiě",
+   "hv": "cao thiết",
+   "vi": "tàu cao tốc",
+   "pos": "danh từ",
+   "note": "Viết tắt của 高速铁路 (đường sắt cao tốc).",
+   "ex": [
+    {
+     "cn": "坐高铁从北京到上海只要四个多小时。",
+     "py": "Zuò gāotiě cóng Běijīng dào Shànghǎi zhǐ yào sì ge duō xiǎoshí.",
+     "vi": "Đi tàu cao tốc từ Bắc Kinh đến Thượng Hải chỉ hơn bốn tiếng."
+    }
+   ]
+  },
+  {
+   "w": "市",
+   "py": "shì",
+   "hv": "thị",
+   "vi": "thành phố; chợ",
+   "pos": "danh từ",
+   "note": "\"Thị\" trong \"thành thị\", \"thị trường\". Hà Nội là 河内市.",
+   "ex": [
+    {
+     "cn": "我住在胡志明市。",
+     "py": "Wǒ zhù zài Húzhìmíng Shì.",
+     "vi": "Tôi sống ở Thành phố Hồ Chí Minh."
+    }
+   ]
+  },
+  {
+   "w": "小区",
+   "py": "xiǎoqū",
+   "hv": "tiểu khu",
+   "vi": "khu dân cư, khu chung cư",
+   "pos": "danh từ",
+   "note": "小 + 区 (khu vực).",
+   "ex": [
+    {
+     "cn": "我们小区里有一个公园。",
+     "py": "Wǒmen xiǎoqū lǐ yǒu yí ge gōngyuán.",
+     "vi": "Trong khu nhà chúng tôi có một công viên."
+    }
+   ]
+  },
+  {
+   "w": "外地",
+   "py": "wàidì",
+   "hv": "ngoại địa",
+   "vi": "nơi khác, tỉnh khác",
+   "pos": "danh từ",
+   "note": "Người từ tỉnh khác đến là 外地人.",
+   "ex": [
+    {
+     "cn": "他是外地人，不太认识路。",
+     "py": "Tā shì wàidì rén, bú tài rènshi lù.",
+     "vi": "Anh ấy là người nơi khác, không rành đường lắm."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Lượng từ 条 cho vật dài",
+   "b": "一条街 · 一条马路 · 一条河",
+   "d": "Đường, sông, phố, cá, quần… đều đếm bằng 条.",
+   "ex": [
+    {
+     "cn": "这条马路很宽。",
+     "py": "Zhè tiáo mǎlù hěn kuān.",
+     "vi": "Con đường này rất rộng."
+    },
+    {
+     "cn": "我家前面有一条小河。",
+     "py": "Wǒ jiā qiánmian yǒu yì tiáo xiǎo hé.",
+     "vi": "Trước nhà tôi có một con sông nhỏ."
+    }
+   ]
+  },
+  {
+   "t": "从 A 到 B",
+   "b": "从 + nơi / giờ + 到 + nơi / giờ",
+   "d": "Diễn tả khoảng cách hoặc khoảng thời gian.",
+   "ex": [
+    {
+     "cn": "从我家到学校要二十分钟。",
+     "py": "Cóng wǒ jiā dào xuéxiào yào èrshí fēnzhōng.",
+     "vi": "Từ nhà tôi đến trường mất hai mươi phút."
+    },
+    {
+     "cn": "我从早上到晚上都很忙。",
+     "py": "Wǒ cóng zǎoshang dào wǎnshang dōu hěn máng.",
+     "vi": "Tôi bận từ sáng đến tối."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "红灯停，绿灯行。",
+   "py": "Hóng dēng tíng, lǜ dēng xíng.",
+   "vi": "Đèn đỏ dừng, đèn xanh đi."
+  },
+  {
+   "cn": "这个城市的街上人很多。",
+   "py": "Zhège chéngshì de jiē shang rén hěn duō.",
+   "vi": "Phố xá thành phố này rất đông người."
+  },
+  {
+   "cn": "很多外地人来这里工作。",
+   "py": "Hěn duō wàidì rén lái zhèlǐ gōngzuò.",
+   "vi": "Nhiều người nơi khác đến đây làm việc."
+  },
+  {
+   "cn": "坐高铁比坐飞机方便。",
+   "py": "Zuò gāotiě bǐ zuò fēijī fāngbiàn.",
+   "vi": "Đi tàu cao tốc tiện hơn đi máy bay."
+  }
+ ]
+}

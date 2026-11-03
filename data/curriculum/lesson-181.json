@@ -1,0 +1,216 @@
+{
+ "id": 181,
+ "cn": "年底",
+ "title": "Ngày tháng và thời điểm",
+ "goal": "Nói về ngày tháng, ngày sống, tháng, cuối năm, cuối (kỳ), ngày lễ, ngày nghỉ, đêm, ban đêm và sáng sớm.",
+ "words": [
+  {
+   "w": "日期",
+   "py": "rìqī",
+   "hv": "nhật kỳ",
+   "vi": "ngày tháng",
+   "pos": "danh từ",
+   "note": "Ngày cụ thể trên lịch, trên giấy tờ.",
+   "ex": [
+    {
+     "cn": "请写上今天的日期。",
+     "py": "Qǐng xiě shang jīntiān de rìqī.",
+     "vi": "Xin ghi ngày hôm nay vào."
+    }
+   ]
+  },
+  {
+   "w": "日子",
+   "py": "rìzi",
+   "hv": "nhật tử",
+   "vi": "ngày; cuộc sống",
+   "pos": "danh từ",
+   "note": "Ngày đặc biệt, hoặc cuộc sống: 过日子.",
+   "ex": [
+    {
+     "cn": "今天是个好日子。",
+     "py": "Jīntiān shì ge hǎo rìzi.",
+     "vi": "Hôm nay là một ngày đẹp."
+    }
+   ]
+  },
+  {
+   "w": "月份",
+   "py": "yuèfèn",
+   "hv": "nguyệt phần",
+   "vi": "tháng",
+   "pos": "danh từ",
+   "note": "Dùng khi nói về tháng nói chung: 哪个月份.",
+   "ex": [
+    {
+     "cn": "几月份去旅行最好？",
+     "py": "Jǐ yuèfèn qù lǚxíng zuì hǎo?",
+     "vi": "Tháng mấy đi du lịch là tốt nhất?"
+    }
+   ]
+  },
+  {
+   "w": "年底",
+   "py": "niándǐ",
+   "hv": "niên để",
+   "vi": "cuối năm",
+   "pos": "danh từ",
+   "note": "年 + 底 (đáy, cuối).",
+   "ex": [
+    {
+     "cn": "年底公司很忙。",
+     "py": "Niándǐ gōngsī hěn máng.",
+     "vi": "Cuối năm công ty rất bận."
+    }
+   ]
+  },
+  {
+   "w": "末",
+   "py": "mò",
+   "hv": "mạt",
+   "vi": "cuối",
+   "pos": "danh từ",
+   "note": "\"Mạt\" trong \"mạt vận\". Ghép: 周末, 月末, 期末.",
+   "ex": [
+    {
+     "cn": "我们月末见面吧。",
+     "py": "Wǒmen yuèmò jiànmiàn ba.",
+     "vi": "Cuối tháng mình gặp nhau nhé."
+    }
+   ]
+  },
+  {
+   "w": "节假日",
+   "py": "jiéjiàrì",
+   "hv": "tiết giả nhật",
+   "vi": "ngày lễ, ngày nghỉ",
+   "pos": "danh từ",
+   "note": "节日 (lễ) + 假日 (ngày nghỉ).",
+   "ex": [
+    {
+     "cn": "节假日景区人很多。",
+     "py": "Jiéjiàrì jǐngqū rén hěn duō.",
+     "vi": "Ngày lễ khu du lịch rất đông."
+    }
+   ]
+  },
+  {
+   "w": "假日",
+   "py": "jiàrì",
+   "hv": "giả nhật",
+   "vi": "ngày nghỉ",
+   "pos": "danh từ",
+   "note": "假 + 日.",
+   "ex": [
+    {
+     "cn": "假日我喜欢在家看书。",
+     "py": "Jiàrì wǒ xǐhuan zài jiā kàn shū.",
+     "vi": "Ngày nghỉ tôi thích ở nhà đọc sách."
+    }
+   ]
+  },
+  {
+   "w": "夜",
+   "py": "yè",
+   "hv": "dạ",
+   "vi": "đêm",
+   "pos": "danh từ",
+   "note": "\"Dạ\" trong \"dạ hội\". Làm lượng từ: 住一夜 (ở một đêm).",
+   "ex": [
+    {
+     "cn": "我们在那儿住了一夜。",
+     "py": "Wǒmen zài nàr zhù le yí yè.",
+     "vi": "Chúng tôi ở đó một đêm."
+    }
+   ]
+  },
+  {
+   "w": "夜晚",
+   "py": "yèwǎn",
+   "hv": "dạ vãn",
+   "vi": "ban đêm",
+   "pos": "danh từ",
+   "note": "Văn chương hơn 晚上.",
+   "ex": [
+    {
+     "cn": "夏天的夜晚很美。",
+     "py": "Xiàtiān de yèwǎn hěn měi.",
+     "vi": "Đêm mùa hè rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "早晨",
+   "py": "zǎochen",
+   "hv": "tảo thần",
+   "vi": "sáng sớm",
+   "pos": "danh từ",
+   "note": "晨 = \"thần\" (buổi sớm). Giống 早上.",
+   "ex": [
+    {
+     "cn": "早晨的空气很新鲜。",
+     "py": "Zǎochen de kōngqì hěn xīnxiān.",
+     "vi": "Không khí buổi sáng sớm rất trong lành."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Thứ tự ngày tháng: lớn trước, nhỏ sau",
+   "b": "年 → 月 → 日 → 星期",
+   "d": "Tiếng Trung viết năm trước, rồi tháng, ngày, ngược với tiếng Việt.",
+   "ex": [
+    {
+     "cn": "今天是二零二六年十一月三日。",
+     "py": "Jīntiān shì èr líng èr liù nián shíyī yuè sān rì.",
+     "vi": "Hôm nay là ngày 3 tháng 11 năm 2026."
+    },
+    {
+     "cn": "我的生日是五月二十号。",
+     "py": "Wǒ de shēngrì shì wǔ yuè èrshí hào.",
+     "vi": "Sinh nhật tôi là ngày 20 tháng 5."
+    }
+   ]
+  },
+  {
+   "t": "过日子: sống, sinh hoạt",
+   "b": "过 + 日子 / 生活 / 年 / 节",
+   "d": "过 nghĩa \"trải qua\": 过年, 过节, 过日子.",
+   "ex": [
+    {
+     "cn": "他们一家人过着简单的日子。",
+     "py": "Tāmen yì jiā rén guò zhe jiǎndān de rìzi.",
+     "vi": "Cả nhà họ sống một cuộc sống giản dị."
+    },
+    {
+     "cn": "你们怎么过周末？",
+     "py": "Nǐmen zěnme guò zhōumò?",
+     "vi": "Các bạn trải qua cuối tuần thế nào?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "合同上的日期写错了。",
+   "py": "Hétong shang de rìqī xiě cuò le.",
+   "vi": "Ngày tháng trên hợp đồng viết sai rồi."
+  },
+  {
+   "cn": "年底我要回国。",
+   "py": "Niándǐ wǒ yào huí guó.",
+   "vi": "Cuối năm tôi sẽ về nước."
+  },
+  {
+   "cn": "早晨六点，公园里已经有很多人了。",
+   "py": "Zǎochen liù diǎn, gōngyuán lǐ yǐjīng yǒu hěn duō rén le.",
+   "vi": "Sáu giờ sáng, công viên đã có nhiều người."
+  },
+  {
+   "cn": "节假日最好不要开车出门。",
+   "py": "Jiéjiàrì zuì hǎo búyào kāichē chūmén.",
+   "vi": "Ngày lễ tốt nhất đừng lái xe ra ngoài."
+  }
+ ]
+}

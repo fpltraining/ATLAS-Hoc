@@ -1,0 +1,216 @@
+{
+ "id": 175,
+ "cn": "去健身房",
+ "title": "Khám sức khoẻ và tập luyện",
+ "goal": "Nói về khám sức khoẻ, cân nặng, đau đầu, đau, ho, bị thương, máu, tập thể hình, phòng gym và toàn thân.",
+ "words": [
+  {
+   "w": "体检",
+   "py": "tǐjiǎn",
+   "hv": "thể kiểm",
+   "vi": "khám sức khoẻ",
+   "pos": "động từ",
+   "note": "Viết tắt của 身体检查.",
+   "ex": [
+    {
+     "cn": "公司每年组织一次体检。",
+     "py": "Gōngsī měi nián zǔzhī yí cì tǐjiǎn.",
+     "vi": "Công ty mỗi năm tổ chức khám sức khoẻ một lần."
+    }
+   ]
+  },
+  {
+   "w": "体重",
+   "py": "tǐzhòng",
+   "hv": "thể trọng",
+   "vi": "cân nặng",
+   "pos": "danh từ",
+   "note": "Chính là \"thể trọng\".",
+   "ex": [
+    {
+     "cn": "我的体重增加了三公斤。",
+     "py": "Wǒ de tǐzhòng zēngjiā le sān gōngjīn.",
+     "vi": "Cân nặng của tôi tăng ba ký."
+    }
+   ]
+  },
+  {
+   "w": "头痛",
+   "py": "tóutòng",
+   "hv": "đầu thống",
+   "vi": "đau đầu",
+   "pos": "tính từ",
+   "note": "Giống 头疼. Còn nghĩa bóng: đau đầu vì một chuyện.",
+   "ex": [
+    {
+     "cn": "这个问题让我很头痛。",
+     "py": "Zhège wèntí ràng wǒ hěn tóutòng.",
+     "vi": "Vấn đề này làm tôi rất đau đầu."
+    }
+   ]
+  },
+  {
+   "w": "痛",
+   "py": "tòng",
+   "hv": "thống",
+   "vi": "đau",
+   "pos": "tính từ",
+   "note": "\"Thống\" trong \"thống khổ\". Gần nghĩa 疼.",
+   "ex": [
+    {
+     "cn": "我的腿很痛。",
+     "py": "Wǒ de tuǐ hěn tòng.",
+     "vi": "Chân tôi rất đau."
+    }
+   ]
+  },
+  {
+   "w": "咳",
+   "py": "ké",
+   "hv": "khái",
+   "vi": "ho",
+   "pos": "động từ",
+   "note": "Ho là 咳嗽.",
+   "ex": [
+    {
+     "cn": "他咳了一个晚上。",
+     "py": "Tā ké le yí ge wǎnshang.",
+     "vi": "Anh ấy ho cả đêm."
+    }
+   ]
+  },
+  {
+   "w": "受伤",
+   "py": "shòushāng",
+   "hv": "thụ thương",
+   "vi": "bị thương",
+   "pos": "động từ",
+   "note": "Chính là \"thụ thương\".",
+   "ex": [
+    {
+     "cn": "他打篮球的时候受伤了。",
+     "py": "Tā dǎ lánqiú de shíhou shòushāng le.",
+     "vi": "Anh ấy bị thương lúc chơi bóng rổ."
+    }
+   ]
+  },
+  {
+   "w": "血",
+   "py": "xiě",
+   "hv": "huyết",
+   "vi": "máu",
+   "pos": "danh từ",
+   "note": "\"Huyết\" trong \"huyết áp\". Khẩu ngữ đọc xiě, văn viết đọc xuè.",
+   "ex": [
+    {
+     "cn": "他的手流血了。",
+     "py": "Tā de shǒu liú xiě le.",
+     "vi": "Tay anh ấy chảy máu rồi."
+    }
+   ]
+  },
+  {
+   "w": "健身",
+   "py": "jiànshēn",
+   "hv": "kiện thân",
+   "vi": "tập thể hình, rèn luyện",
+   "pos": "động từ",
+   "note": "健 (khoẻ) + 身 (thân).",
+   "ex": [
+    {
+     "cn": "我每周健身三次。",
+     "py": "Wǒ měi zhōu jiànshēn sān cì.",
+     "vi": "Mỗi tuần tôi tập thể hình ba lần."
+    }
+   ]
+  },
+  {
+   "w": "健身房",
+   "py": "jiànshēnfáng",
+   "hv": "kiện thân phòng",
+   "vi": "phòng tập gym",
+   "pos": "danh từ",
+   "note": "健身 + 房.",
+   "ex": [
+    {
+     "cn": "小区里有一个健身房。",
+     "py": "Xiǎoqū lǐ yǒu yí ge jiànshēnfáng.",
+     "vi": "Trong khu nhà có một phòng gym."
+    }
+   ]
+  },
+  {
+   "w": "全身",
+   "py": "quánshēn",
+   "hv": "toàn thân",
+   "vi": "toàn thân",
+   "pos": "danh từ",
+   "note": "Chính là \"toàn thân\".",
+   "ex": [
+    {
+     "cn": "跑完步，我全身都是汗。",
+     "py": "Pǎo wán bù, wǒ quánshēn dōu shì hàn.",
+     "vi": "Chạy bộ xong, tôi ướt đẫm mồ hôi toàn thân."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "让 + người + tính từ: khiến ai",
+   "b": "让我很头痛 · 让他很高兴",
+   "d": "Sự việc làm ai đó có cảm giác thế nào.",
+   "ex": [
+    {
+     "cn": "你的话让我很感动。",
+     "py": "Nǐ de huà ràng wǒ hěn gǎndòng.",
+     "vi": "Lời bạn nói làm tôi rất cảm động."
+    },
+    {
+     "cn": "这次考试让他很紧张。",
+     "py": "Zhè cì kǎoshì ràng tā hěn jǐnzhāng.",
+     "vi": "Kỳ thi này làm cậu ấy rất căng thẳng."
+    }
+   ]
+  },
+  {
+   "t": "Tần suất: 每 + thời gian + số lần",
+   "b": "每周三次 · 每天两次 · 每年一次",
+   "d": "Số lần đứng sau khoảng thời gian.",
+   "ex": [
+    {
+     "cn": "这种药每天吃三次。",
+     "py": "Zhè zhǒng yào měi tiān chī sān cì.",
+     "vi": "Thuốc này mỗi ngày uống ba lần."
+    },
+    {
+     "cn": "我每个月去一次健身房。",
+     "py": "Wǒ měi ge yuè qù yí cì jiànshēnfáng.",
+     "vi": "Mỗi tháng tôi đi gym một lần."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "体检以后，医生说我很健康。",
+   "py": "Tǐjiǎn yǐhòu, yīshēng shuō wǒ hěn jiànkāng.",
+   "vi": "Khám sức khoẻ xong, bác sĩ nói tôi rất khoẻ."
+  },
+  {
+   "cn": "健身不光为了好看，更为了健康。",
+   "py": "Jiànshēn bùguāng wèile hǎokàn, gèng wèile jiànkāng.",
+   "vi": "Tập thể hình không chỉ để đẹp, mà còn để khoẻ."
+  },
+  {
+   "cn": "他咳得很厉害，应该去医院。",
+   "py": "Tā ké de hěn lìhai, yīnggāi qù yīyuàn.",
+   "vi": "Anh ấy ho dữ quá, nên đi bệnh viện."
+  },
+  {
+   "cn": "运动的时候要小心，别受伤。",
+   "py": "Yùndòng de shíhou yào xiǎoxīn, bié shòushāng.",
+   "vi": "Lúc tập thể thao phải cẩn thận, đừng để bị thương."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 148,
+ "cn": "运动员",
+ "title": "Thể thao và chụp ảnh",
+ "goal": "Nói về vận động viên, ghi điểm, sân bóng, nhà thi đấu, cầu lông, nhảy, leo, và chụp ảnh.",
+ "words": [
+  {
+   "w": "运动员",
+   "py": "yùndòngyuán",
+   "hv": "vận động viên",
+   "vi": "vận động viên",
+   "pos": "danh từ",
+   "note": "Chính là \"vận động viên\".",
+   "ex": [
+    {
+     "cn": "他是一名足球运动员。",
+     "py": "Tā shì yì míng zúqiú yùndòngyuán.",
+     "vi": "Anh ấy là một cầu thủ bóng đá."
+    }
+   ]
+  },
+  {
+   "w": "得分",
+   "py": "défēn",
+   "hv": "đắc phân",
+   "vi": "ghi điểm; điểm số",
+   "pos": "động từ",
+   "note": "得 (được, \"đắc\") + 分 (điểm).",
+   "ex": [
+    {
+     "cn": "他这场比赛得了三十分。",
+     "py": "Tā zhè chǎng bǐsài dé le sānshí fēn.",
+     "vi": "Trận này anh ấy ghi ba mươi điểm."
+    }
+   ]
+  },
+  {
+   "w": "球场",
+   "py": "qiúchǎng",
+   "hv": "cầu trường",
+   "vi": "sân bóng",
+   "pos": "danh từ",
+   "note": "球 + 场 (bãi, sân).",
+   "ex": [
+    {
+     "cn": "我们在学校球场踢球。",
+     "py": "Wǒmen zài xuéxiào qiúchǎng tī qiú.",
+     "vi": "Chúng tôi đá bóng ở sân trường."
+    }
+   ]
+  },
+  {
+   "w": "体育馆",
+   "py": "tǐyùguǎn",
+   "hv": "thể dục quán",
+   "vi": "nhà thi đấu",
+   "pos": "danh từ",
+   "note": "体育 (thể dục, thể thao) + 馆 (toà nhà).",
+   "ex": [
+    {
+     "cn": "比赛在体育馆举行。",
+     "py": "Bǐsài zài tǐyùguǎn jǔxíng.",
+     "vi": "Trận đấu diễn ra ở nhà thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "羽毛球",
+   "py": "yǔmáoqiú",
+   "hv": "vũ mao cầu",
+   "vi": "cầu lông",
+   "pos": "danh từ",
+   "note": "羽毛 (lông vũ) + 球. Đánh cầu lông là 打羽毛球.",
+   "ex": [
+    {
+     "cn": "你会打羽毛球吗？",
+     "py": "Nǐ huì dǎ yǔmáoqiú ma?",
+     "vi": "Bạn biết đánh cầu lông không?"
+    }
+   ]
+  },
+  {
+   "w": "跳",
+   "py": "tiào",
+   "hv": "khiêu",
+   "vi": "nhảy",
+   "pos": "động từ",
+   "note": "\"Khiêu\" trong \"khiêu vũ\". Nhảy múa là 跳舞, nhảy cao là 跳高.",
+   "ex": [
+    {
+     "cn": "他跳得很高。",
+     "py": "Tā tiào de hěn gāo.",
+     "vi": "Anh ấy nhảy rất cao."
+    }
+   ]
+  },
+  {
+   "w": "爬",
+   "py": "pá",
+   "hv": "bà",
+   "vi": "bò; leo",
+   "pos": "động từ",
+   "note": "Leo núi là 爬山, leo cầu thang là 爬楼梯.",
+   "ex": [
+    {
+     "cn": "我们一起去爬山吧。",
+     "py": "Wǒmen yìqǐ qù pá shān ba.",
+     "vi": "Chúng ta cùng đi leo núi nhé."
+    }
+   ]
+  },
+  {
+   "w": "照相",
+   "py": "zhàoxiàng",
+   "hv": "chiếu tướng",
+   "vi": "chụp ảnh",
+   "pos": "động từ",
+   "note": "照 (chiếu) + 相 (hình, \"tướng\").",
+   "ex": [
+    {
+     "cn": "这里不能照相。",
+     "py": "Zhèlǐ bù néng zhàoxiàng.",
+     "vi": "Ở đây không được chụp ảnh."
+    }
+   ]
+  },
+  {
+   "w": "拍照",
+   "py": "pāizhào",
+   "hv": "phách chiếu",
+   "vi": "chụp ảnh",
+   "pos": "động từ",
+   "note": "Đồng nghĩa với 照相, hay dùng hơn trong khẩu ngữ hiện đại.",
+   "ex": [
+    {
+     "cn": "我们在这儿拍张照吧。",
+     "py": "Wǒmen zài zhèr pāi zhāng zhào ba.",
+     "vi": "Mình chụp một tấm ở đây nhé."
+    }
+   ]
+  },
+  {
+   "w": "相机",
+   "py": "xiàngjī",
+   "hv": "tướng cơ",
+   "vi": "máy ảnh",
+   "pos": "danh từ",
+   "note": "照相机 nói gọn là 相机.",
+   "ex": [
+    {
+     "cn": "我的相机是新买的。",
+     "py": "Wǒ de xiàngjī shì xīn mǎi de.",
+     "vi": "Máy ảnh của tôi mới mua."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Lượng từ 场 cho trận đấu, buổi diễn",
+   "b": "一场比赛 · 一场电影 · 一场雨",
+   "d": "Sự kiện diễn ra một lần trọn vẹn dùng 场.",
+   "ex": [
+    {
+     "cn": "这场比赛很精彩。",
+     "py": "Zhè chǎng bǐsài hěn jīngcǎi.",
+     "vi": "Trận đấu này rất hay."
+    },
+    {
+     "cn": "昨天下了一场大雨。",
+     "py": "Zuótiān xià le yì chǎng dà yǔ.",
+     "vi": "Hôm qua có một trận mưa to."
+    }
+   ]
+  },
+  {
+   "t": "Động từ ly hợp: 照相, 拍照, 跳舞",
+   "b": "照张相 · 拍张照 · 跳个舞",
+   "d": "Một số động từ hai chữ có thể tách ra, chèn lượng từ hay bổ ngữ vào giữa.",
+   "ex": [
+    {
+     "cn": "请帮我们照张相。",
+     "py": "Qǐng bāng wǒmen zhào zhāng xiàng.",
+     "vi": "Nhờ chụp giúp chúng tôi một tấm."
+    },
+    {
+     "cn": "我们去跳个舞吧。",
+     "py": "Wǒmen qù tiào ge wǔ ba.",
+     "vi": "Mình đi nhảy một bài nhé."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "他是我们学校最好的运动员。",
+   "py": "Tā shì wǒmen xuéxiào zuì hǎo de yùndòngyuán.",
+   "vi": "Anh ấy là vận động viên giỏi nhất trường tôi."
+  },
+  {
+   "cn": "体育馆里有很多人在打羽毛球。",
+   "py": "Tǐyùguǎn lǐ yǒu hěn duō rén zài dǎ yǔmáoqiú.",
+   "vi": "Trong nhà thi đấu có nhiều người đang đánh cầu lông."
+  },
+  {
+   "cn": "山上风景很美，我拍了很多照片。",
+   "py": "Shān shang fēngjǐng hěn měi, wǒ pāi le hěn duō zhàopiàn.",
+   "vi": "Trên núi cảnh rất đẹp, tôi chụp rất nhiều ảnh."
+  },
+  {
+   "cn": "最后一分钟他得分了！",
+   "py": "Zuìhòu yì fēnzhōng tā défēn le!",
+   "vi": "Phút cuối cùng anh ấy ghi điểm rồi!"
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 172,
+ "cn": "加油！",
+ "title": "Mục tiêu và thành tích",
+ "goal": "Nói về đoạt giải, giải thưởng, giành được, đạt được, mục tiêu, ước mơ, cổ vũ, ủng hộ và tích cực.",
+ "words": [
+  {
+   "w": "获奖",
+   "py": "huòjiǎng",
+   "hv": "hoạch tưởng",
+   "vi": "đoạt giải",
+   "pos": "động từ",
+   "note": "获 (giành được, \"hoạch\") + 奖 (giải thưởng).",
+   "ex": [
+    {
+     "cn": "他的作品获奖了。",
+     "py": "Tā de zuòpǐn huòjiǎng le.",
+     "vi": "Tác phẩm của anh ấy đoạt giải rồi."
+    }
+   ]
+  },
+  {
+   "w": "奖",
+   "py": "jiǎng",
+   "hv": "tưởng",
+   "vi": "giải thưởng",
+   "pos": "danh từ",
+   "note": "\"Tưởng\" trong \"khen tưởng\". Giải nhất là 一等奖.",
+   "ex": [
+    {
+     "cn": "她得了一等奖。",
+     "py": "Tā dé le yī děng jiǎng.",
+     "vi": "Cô ấy đạt giải nhất."
+    }
+   ]
+  },
+  {
+   "w": "赢得",
+   "py": "yíngdé",
+   "hv": "doanh đắc",
+   "vi": "giành được",
+   "pos": "động từ",
+   "note": "赢 (thắng) + 得.",
+   "ex": [
+    {
+     "cn": "他赢得了大家的尊重。",
+     "py": "Tā yíngdé le dàjiā de zūnzhòng.",
+     "vi": "Anh ấy giành được sự tôn trọng của mọi người."
+    }
+   ]
+  },
+  {
+   "w": "取得",
+   "py": "qǔdé",
+   "hv": "thủ đắc",
+   "vi": "đạt được, giành được",
+   "pos": "động từ",
+   "note": "Hay đi với 成绩 (thành tích), 成功.",
+   "ex": [
+    {
+     "cn": "他取得了很好的成绩。",
+     "py": "Tā qǔdé le hěn hǎo de chéngjì.",
+     "vi": "Anh ấy đạt thành tích rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "达到",
+   "py": "dádào",
+   "hv": "đạt đáo",
+   "vi": "đạt tới",
+   "pos": "động từ",
+   "note": "\"Đạt\" trong \"đạt được\". Hay đi với 目标, 要求.",
+   "ex": [
+    {
+     "cn": "我们终于达到了目标。",
+     "py": "Wǒmen zhōngyú dádào le mùbiāo.",
+     "vi": "Cuối cùng chúng tôi đã đạt mục tiêu."
+    }
+   ]
+  },
+  {
+   "w": "目标",
+   "py": "mùbiāo",
+   "hv": "mục tiêu",
+   "vi": "mục tiêu",
+   "pos": "danh từ",
+   "note": "Chính là \"mục tiêu\".",
+   "ex": [
+    {
+     "cn": "我今年的目标是通过HSK四级。",
+     "py": "Wǒ jīnnián de mùbiāo shì tōngguò HSK sì jí.",
+     "vi": "Mục tiêu năm nay của tôi là đỗ HSK cấp 4."
+    }
+   ]
+  },
+  {
+   "w": "梦想",
+   "py": "mèngxiǎng",
+   "hv": "mộng tưởng",
+   "vi": "ước mơ",
+   "pos": "danh từ",
+   "note": "Khác \"mộng tưởng\" (viển vông) tiếng Việt: 梦想 là ước mơ tích cực.",
+   "ex": [
+    {
+     "cn": "我的梦想是当一名医生。",
+     "py": "Wǒ de mèngxiǎng shì dāng yì míng yīshēng.",
+     "vi": "Ước mơ của tôi là làm bác sĩ."
+    }
+   ]
+  },
+  {
+   "w": "加油",
+   "py": "jiāyóu",
+   "hv": "gia du",
+   "vi": "cố lên; đổ xăng",
+   "pos": "động từ",
+   "note": "Nghĩa đen \"thêm dầu\". Cổ vũ: 加油！",
+   "ex": [
+    {
+     "cn": "加油！你一定能行！",
+     "py": "Jiāyóu! Nǐ yídìng néng xíng!",
+     "vi": "Cố lên! Bạn nhất định làm được!"
+    }
+   ]
+  },
+  {
+   "w": "支持",
+   "py": "zhīchí",
+   "hv": "chi trì",
+   "vi": "ủng hộ",
+   "pos": "động từ",
+   "note": "\"Chi trì\" (chống đỡ) → ủng hộ.",
+   "ex": [
+    {
+     "cn": "谢谢你一直支持我。",
+     "py": "Xièxie nǐ yìzhí zhīchí wǒ.",
+     "vi": "Cảm ơn bạn luôn ủng hộ tôi."
+    }
+   ]
+  },
+  {
+   "w": "积极",
+   "py": "jījí",
+   "hv": "tích cực",
+   "vi": "tích cực",
+   "pos": "tính từ",
+   "note": "Chính là \"tích cực\".",
+   "ex": [
+    {
+     "cn": "他上课很积极。",
+     "py": "Tā shàngkè hěn jījí.",
+     "vi": "Cậu ấy học rất tích cực."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "达到 / 取得 / 赢得 — kết hợp cố định",
+   "b": "达到目标 · 取得成绩 · 赢得比赛 / 尊重",
+   "d": "Ba động từ đều là \"đạt được\" nhưng đi với danh từ khác nhau. Học theo cụm.",
+   "ex": [
+    {
+     "cn": "他赢得了比赛。",
+     "py": "Tā yíngdé le bǐsài.",
+     "vi": "Anh ấy thắng trận đấu."
+    },
+    {
+     "cn": "公司取得了很大的成功。",
+     "py": "Gōngsī qǔdé le hěn dà de chénggōng.",
+     "vi": "Công ty đạt được thành công lớn."
+    }
+   ]
+  },
+  {
+   "t": "一定 + động từ: nhất định",
+   "b": "一定能行 · 一定要来",
+   "d": "Khẳng định chắc chắn hoặc nhấn mạnh yêu cầu.",
+   "ex": [
+    {
+     "cn": "明天你一定要来。",
+     "py": "Míngtiān nǐ yídìng yào lái.",
+     "vi": "Mai bạn nhất định phải đến nhé."
+    },
+    {
+     "cn": "只要努力，你一定能成功。",
+     "py": "Zhǐyào nǔlì, nǐ yídìng néng chénggōng.",
+     "vi": "Chỉ cần cố gắng, bạn nhất định thành công."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "有梦想，才有动力。",
+   "py": "Yǒu mèngxiǎng, cái yǒu dònglì.",
+   "vi": "Có ước mơ mới có động lực."
+  },
+  {
+   "cn": "我们队获奖了，大家都很高兴。",
+   "py": "Wǒmen duì huòjiǎng le, dàjiā dōu hěn gāoxìng.",
+   "vi": "Đội chúng tôi đoạt giải, ai cũng rất vui."
+  },
+  {
+   "cn": "积极的态度很重要。",
+   "py": "Jījí de tàidu hěn zhòngyào.",
+   "vi": "Thái độ tích cực rất quan trọng."
+  },
+  {
+   "cn": "目标要大，但是每一步要小。",
+   "py": "Mùbiāo yào dà, dànshì měi yí bù yào xiǎo.",
+   "vi": "Mục tiêu phải lớn, nhưng mỗi bước phải nhỏ."
+  }
+ ]
+}
