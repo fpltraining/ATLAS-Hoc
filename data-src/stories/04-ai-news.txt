@@ -37,6 +37,40 @@ so this is partly a sales message. | nên đây phần nào là thông điệp b
 ? What did Microsoft call AI agents? | Microsoft gọi tác tử AI là gì? | Agentic insiders* | Friendly robots | Outside attackers
 > Nếu anh dùng AI để quản lý khách hàng, anh sẽ giới hạn quyền của nó thế nào?
 
+## 2 | Keys to the House | Chìa khoá ngôi nhà
+Imagine a new worker on their first day. | Hãy tưởng tượng một nhân viên mới ngày đầu đi làm.
+Would you give them every key in the building? | Bạn có đưa họ mọi chìa khoá trong toà nhà không?
+Probably not. | Chắc là không.
+You would give them the keys they need, | Bạn sẽ đưa đúng những chìa họ cần,
+and more keys later, when you trust them. | và thêm chìa sau này, khi đã tin họ.
+
+AI agents need the same rule. | Tác tử AI cũng cần quy tắc tương tự.
+Security experts call it "least privilege": | Giới bảo mật gọi đó là "quyền tối thiểu":
+give each tool only the access it really needs. | chỉ cấp cho mỗi công cụ đúng quyền nó thật sự cần.
+This is not only for big companies. | Điều này không chỉ dành cho công ty lớn.
+When an app asks to read your email, | Khi một ứng dụng xin đọc email của bạn,
+your contacts, or your files, | danh bạ hay tệp của bạn,
+stop for a moment and ask why. | hãy dừng một chút và hỏi vì sao.
+
+Notice one more thing in this story. | Hãy để ý thêm một điều trong bản tin này.
+The warning came from a company | Lời cảnh báo đến từ một công ty
+that also sells the solution. | cũng đang bán giải pháp.
+That does not make it wrong. | Điều đó không có nghĩa là nó sai.
+But it is a good reason to read carefully. | Nhưng đó là lý do tốt để đọc kỹ.
+
+! Trust should grow step by step, for people and for tools. | Niềm tin nên lớn dần từng bước, với người cũng như với công cụ.
+! Give access only for the job, | Chỉ cấp quyền cho đúng việc,
+! and keep a human for the big decisions. | và để con người quyết những việc lớn.
+! When you read a warning, ask who is speaking, | Khi đọc một lời cảnh báo, hãy hỏi ai đang nói,
+! and what they want you to buy. | và họ muốn bạn mua gì.
+
+? What does "least privilege" mean? | "Quyền tối thiểu" nghĩa là gì? | Give only the access that is needed* | Give every tool full access | Never use any tools
+? Why should we read this warning carefully? | Vì sao nên đọc kỹ lời cảnh báo này? | The company also sells the solution* | It is very old | It is written in French
+~ privilege = đặc quyền
+~ access = quyền truy cập
+> Mở điện thoại, kiểm tra quyền của một ứng dụng. Viết 2 câu tiếng Anh về điều bạn thấy.
+
+
 @id news-eu-delay
 @shelf news
 @level B1
@@ -74,6 +108,40 @@ if its AI is used by people in Europe. | nếu AI của họ được người �
 ~ enter into force = bắt đầu có hiệu lực
 ? What is the new date for stand-alone high-risk systems? | Mốc mới cho hệ thống rủi ro cao độc lập là khi nào? | 2 December 2027* | 2 August 2026 | 1 March 2026
 > Theo anh, lùi thời hạn là tốt hay xấu? Vì sao?
+
+## 2 | Why Deadlines Move | Vì sao hạn chót bị lùi
+Writing laws for AI is hard. | Viết luật cho AI rất khó.
+The technology changes every few months, | Công nghệ thay đổi vài tháng một lần,
+but a law can take years to write. | còn một đạo luật có thể mất nhiều năm để soạn.
+Governments want to protect people. | Chính phủ muốn bảo vệ người dân.
+They also do not want to stop new ideas | Họ cũng không muốn chặn ý tưởng mới
+or push companies to other countries. | hay đẩy doanh nghiệp sang nước khác.
+
+So deadlines move, | Vì thế hạn chót bị lùi,
+details change, | chi tiết thay đổi,
+and companies must keep reading the news. | và doanh nghiệp phải liên tục theo dõi tin tức.
+But a delay is not a cancel. | Nhưng lùi hạn không phải là huỷ bỏ.
+The rules are still coming. | Các quy định vẫn đang tới.
+Companies that prepare early | Doanh nghiệp chuẩn bị sớm
+will have less stress later. | sẽ đỡ áp lực về sau.
+
+For learners, there is a small gift here too. | Với người học, ở đây cũng có một món quà nhỏ.
+News like this is full of dates. | Tin như thế này đầy ngày tháng.
+Reading dates in English quickly | Đọc nhanh ngày tháng bằng tiếng Anh
+is a skill you will use all your life. | là kỹ năng bạn sẽ dùng cả đời.
+
+! A deadline that moves is still a deadline. | Hạn chót bị lùi vẫn là hạn chót.
+! Use the extra time to prepare, not to forget. | Hãy dùng thời gian thêm để chuẩn bị, chứ đừng để quên.
+! Good rules try to balance two things: | Quy định tốt cố cân bằng hai điều:
+! keeping people safe, and leaving room for new ideas. | giữ an toàn cho mọi người, và chừa chỗ cho ý tưởng mới.
+
+? What is the difference between a delay and a cancel? | Lùi hạn khác huỷ bỏ ở chỗ nào? | The rules are still coming* | There is no difference | The rules are gone
+? What do governments try to balance? | Chính phủ cố cân bằng điều gì? | Safety and new ideas* | Food and water | Sport and music
+~ deadline = hạn chót
+~ delay = sự trì hoãn
+~ balance = cân bằng
+> Đọc to bằng tiếng Anh: 2 December 2027, 2 August 2028, 27 July 2026.
+
 
 @id news-vn-law
 @shelf news
@@ -116,6 +184,39 @@ to support AI research. | để hỗ trợ nghiên cứu AI.
 ? What needs a clear label? | Cái gì phải được dán nhãn rõ ràng? | Content copying a real person* | All old cars | Every phone call
 > Anh làm video TikTok có dùng AI. Luật này có thể ảnh hưởng thế nào tới anh?
 
+## 2 | What It Means for You | Điều này có ý nghĩa gì với bạn
+Think about the videos you watch every day. | Hãy nghĩ về những video bạn xem mỗi ngày.
+Some faces and voices are now made by AI. | Một số gương mặt và giọng nói giờ do AI tạo ra.
+Some are made for fun. | Có cái làm cho vui.
+Some are made to trick people. | Có cái làm ra để lừa người.
+Scammers have used fake voices | Kẻ lừa đảo đã dùng giọng nói giả
+to ask families for money. | để xin tiền các gia đình.
+
+A clear label helps you as a viewer. | Nhãn rõ ràng giúp bạn khi là người xem.
+You know what is real and what is not, | Bạn biết cái gì thật, cái gì không,
+before you believe it or share it. | trước khi tin hay chia sẻ nó.
+If you make content, the label protects you too. | Nếu bạn làm nội dung, nhãn cũng bảo vệ bạn.
+Your viewers trust you more | Người xem sẽ tin bạn hơn
+when you are honest about your tools. | khi bạn thành thật về công cụ mình dùng.
+
+The details of the rules are still coming. | Chi tiết của các quy định vẫn đang được soạn.
+But the idea is already clear: | Nhưng ý tưởng thì đã rõ:
+if AI made it look real, say so. | nếu AI làm nó trông như thật, hãy nói ra.
+
+! Honesty about your tools builds trust. | Thành thật về công cụ mình dùng sẽ tạo ra niềm tin.
+! Before you share a shocking video, | Trước khi chia sẻ một video gây sốc,
+! ask: "Could this be made by AI?" | hãy hỏi: "Cái này có thể do AI làm không?"
+! If someone asks for money in a call, | Nếu có người xin tiền qua điện thoại,
+! check in another way first, even if the voice sounds right. | hãy kiểm tra bằng cách khác trước, dù giọng nghe đúng là người quen.
+
+? Why do scammers use fake voices? | Vì sao kẻ lừa đảo dùng giọng nói giả? | To ask families for money* | To sing songs | To learn English
+? How does a label help creators? | Nhãn giúp người làm nội dung thế nào? | Viewers trust them more* | They get free money | Their videos get longer
+~ label = nhãn
+~ scammer = kẻ lừa đảo
+~ trick = lừa
+> Viết 3 câu tiếng Anh: bạn sẽ làm gì nếu nhận cuộc gọi lạ xin tiền bằng giọng người thân?
+
+
 @id news-robots-power
 @shelf news
 @level B1
@@ -156,6 +257,39 @@ and it comes from one firm. | và nó đến từ một công ty.
 ? How much did humanoid prices fall? | Giá robot hình người giảm bao nhiêu? | 93 percent* | 9 percent | 50 percent
 > Giá robot giảm mạnh sẽ thay đổi công việc nào quanh anh?
 
+## 2 | The Hidden Bill | Hoá đơn ẩn
+When something gets cheaper, people buy more of it. | Khi thứ gì rẻ đi, người ta mua nhiều hơn.
+Cheaper robots mean more robots. | Robot rẻ hơn nghĩa là nhiều robot hơn.
+More robots mean more electricity. | Nhiều robot hơn nghĩa là nhiều điện hơn.
+Somebody has to produce that power, | Ai đó phải sản xuất ra lượng điện đó,
+and somebody has to pay for it. | và ai đó phải trả tiền cho nó.
+
+This is true for many new technologies. | Điều này đúng với nhiều công nghệ mới.
+We see the shiny machine. | Ta nhìn thấy cỗ máy bóng loáng.
+We do not see the power plant, | Ta không thấy nhà máy điện,
+the cables, or the cooling water behind it. | dây cáp hay nước làm mát phía sau nó.
+
+Robots will also change jobs. | Robot cũng sẽ thay đổi việc làm.
+Some work will disappear. | Có việc sẽ biến mất.
+New work will appear, | Việc mới sẽ xuất hiện,
+like fixing, training, and managing robots. | như sửa chữa, huấn luyện và quản lý robot.
+People who keep learning | Người không ngừng học
+will find it easier to move. | sẽ dễ chuyển hướng hơn.
+
+! Every new technology has a hidden bill. | Mọi công nghệ mới đều có một hoá đơn ẩn.
+! Ask what it needs behind the scenes. | Hãy hỏi nó cần những gì ở hậu trường.
+! A forecast is a possible future, not a promise. | Dự báo là một tương lai có thể xảy ra, không phải lời hứa.
+! The best protection against change | Cách tự bảo vệ tốt nhất trước thay đổi
+! is the habit of learning new skills. | là thói quen học kỹ năng mới.
+
+? Why will cheaper robots need more electricity? | Vì sao robot rẻ hơn sẽ cần nhiều điện hơn? | People will use more robots* | Cheap robots are bigger | Electricity gets cheaper
+? What new jobs might robots create? | Robot có thể tạo ra việc làm mới nào? | Fixing and training robots* | Selling newspapers | Driving horses
+~ hidden = ẩn, giấu
+~ cooling = làm mát
+~ behind the scenes = ở hậu trường
+> Kể bằng tiếng Anh một việc ở nơi bạn sống có thể sẽ do robot làm trong 10 năm tới.
+
+
 @id news-datacenter
 @shelf news
 @level B1
@@ -192,6 +326,38 @@ electricity may become one of the real limits on AI. | điện có thể trở t
 ~ supply = nguồn cung
 ? What may become a limit on AI? | Điều gì có thể trở thành giới hạn của AI? | Electricity* | Water bottles | Old phones
 > Thử tóm tắt bản tin này bằng 2 câu tiếng Anh.
+
+## 2 | The Cost of a Question | Cái giá của một câu hỏi
+One AI question uses only a little electricity. | Một câu hỏi gửi AI chỉ tốn chút điện.
+But billions of people ask questions every day. | Nhưng hàng tỉ người hỏi mỗi ngày.
+Small numbers become very big numbers. | Con số nhỏ trở thành con số rất lớn.
+
+To get enough power, | Để có đủ điện,
+some tech companies now sign deals | một số công ty công nghệ giờ ký hợp đồng
+to buy electricity from nuclear plants | mua điện từ nhà máy hạt nhân
+and large solar and wind farms. | và các cánh đồng điện mặt trời, điện gió lớn.
+Countries are also competing | Các quốc gia cũng đang cạnh tranh
+to build data centers on their land. | để xây trung tâm dữ liệu trên đất mình.
+
+This does not mean you should stop using AI. | Điều này không có nghĩa bạn nên ngừng dùng AI.
+It means every tool has a real cost, | Nó có nghĩa mọi công cụ đều có cái giá thật,
+even when it feels free. | kể cả khi ta cảm thấy nó miễn phí.
+A clear question often gets a good answer the first time. | Một câu hỏi rõ ràng thường được trả lời tốt ngay lần đầu.
+That saves your time, | Điều đó tiết kiệm thời gian của bạn,
+and a little energy too. | và cả một chút năng lượng.
+
+! "Free" online often has a cost you cannot see. | "Miễn phí" trên mạng thường có một cái giá bạn không thấy.
+! When you read a big number, compare it: | Khi đọc một con số lớn, hãy so sánh:
+! 26 percent in one year is a very fast rise. | tăng 26% trong một năm là tăng rất nhanh.
+! Use powerful tools with care and a clear purpose. | Hãy dùng công cụ mạnh một cách cẩn thận và có mục đích rõ ràng.
+
+? Why does a small amount of power become a big problem? | Vì sao lượng điện nhỏ lại thành vấn đề lớn? | Billions of people use AI every day* | Each question uses a whole city's power | Computers are getting bigger
+? What are some tech companies doing to get power? | Một số công ty công nghệ làm gì để có điện? | Buying power from nuclear, solar, and wind* | Stopping all AI | Using candles
+~ deal = thoả thuận, hợp đồng
+~ compete = cạnh tranh
+~ purpose = mục đích
+> Viết lại một câu hỏi bạn hay hỏi AI sao cho rõ ràng hơn. Viết bằng tiếng Anh.
+
 
 @id news-ai-drug
 @shelf news
@@ -231,3 +397,35 @@ The drug is not yet proven. | Thuốc này chưa được chứng minh.
 ~ proven = đã được chứng minh
 ? Is the drug proven to work? | Thuốc đã được chứng minh hiệu quả chưa? | Not yet* | Yes, in every country | Yes, for aging
 > Khi đọc tin "AI chữa được bệnh", anh nên hỏi những câu gì?
+
+## 2 | How to Read a Health Headline | Cách đọc một tiêu đề tin y tế
+New medicines are tested in steps. | Thuốc mới được thử nghiệm theo từng bước.
+First, a small group checks if the drug is safe. | Đầu tiên, một nhóm nhỏ kiểm tra thuốc có an toàn không.
+Next, a bigger group checks if it seems to help. | Tiếp theo, một nhóm lớn hơn kiểm tra xem nó có vẻ giúp ích không.
+Last, hundreds or thousands of patients | Cuối cùng, hàng trăm hay hàng nghìn bệnh nhân
+help prove if it really works. | giúp chứng minh nó có thật sự hiệu quả không.
+Most drugs that start these tests never finish them. | Phần lớn thuốc bắt đầu các thử nghiệm này không bao giờ đi tới cuối.
+
+So when you see a big headline, | Vì thế khi thấy một tiêu đề lớn,
+ask a few simple questions. | hãy hỏi vài câu đơn giản.
+How many people were in the study? | Nghiên cứu có bao nhiêu người?
+What exactly was tested? | Chính xác thì đã kiểm tra điều gì?
+Was the result the main goal of the study, | Kết quả đó là mục tiêu chính của nghiên cứu,
+or something found later by chance? | hay thứ tình cờ thấy về sau?
+And who is telling the story? | Và ai đang kể câu chuyện?
+
+AI may really help make medicines faster. | AI có thể thật sự giúp làm thuốc nhanh hơn.
+That is exciting. | Điều đó thật đáng mừng.
+But patients need proof, not only hope. | Nhưng bệnh nhân cần bằng chứng, không chỉ hy vọng.
+
+! Hope is good, but proof takes time. | Hy vọng là tốt, nhưng bằng chứng cần thời gian.
+! A small study is a first step, not the last word. | Một nghiên cứu nhỏ là bước đầu, không phải lời kết.
+! Before you share health news, | Trước khi chia sẻ tin y tế,
+! check the size of the study and what it tested. | hãy kiểm tra quy mô nghiên cứu và nó kiểm tra điều gì.
+
+? What happens to most drugs that start testing? | Phần lớn thuốc bắt đầu thử nghiệm thì sao? | They never finish* | They all work | They become cheaper
+? Which question helps you read health news? | Câu hỏi nào giúp bạn đọc tin y tế? | How many people were in the study?* | What color is the pill? | Where is the company's office?
+~ headline = tiêu đề
+~ proof = bằng chứng
+~ patient = bệnh nhân
+> Tìm một tin sức khoẻ gần đây. Trả lời bằng tiếng Anh 3 câu hỏi trong chương này.

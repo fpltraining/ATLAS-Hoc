@@ -626,6 +626,30 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 ? 这个法律把AI分成几类？ | Luật này chia AI thành mấy loại? | 三类* | 两类 | 五类
 > 法律 là "pháp luật", 风险 là "phong hiểm". Hãy viết hai từ này bằng bút.
 
+## 2 | 对我们有什么影响 | Ảnh hưởng gì tới chúng ta
+现在，很多视频里的人和声音， | Xiànzài, hěn duō shìpín lǐ de rén hé shēngyīn, | Bây giờ, nhiều người và giọng nói trong video,
+都是AI做的。 | dōu shì AI zuò de. | đều do AI làm ra.
+有的是为了好玩， | Yǒu de shì wèile hǎowán, | Có cái để cho vui,
+有的是为了骗人。 | yǒu de shì wèile piàn rén. | có cái để lừa người.
+有人用假的声音打电话， | Yǒu rén yòng jiǎ de shēngyīn dǎ diànhuà, | Có kẻ dùng giọng giả gọi điện thoại,
+让家里人给他们钱。 | ràng jiā lǐ rén gěi tāmen qián. | bắt người nhà chuyển tiền cho chúng.
+
+如果视频告诉我们“这是AI做的”， | Rúguǒ shìpín gàosu wǒmen "zhè shì AI zuò de", | Nếu video cho ta biết "cái này do AI làm",
+我们就知道什么是真的。 | wǒmen jiù zhīdào shénme shì zhēn de. | ta sẽ biết cái gì là thật.
+如果你自己做视频， | Rúguǒ nǐ zìjǐ zuò shìpín, | Nếu bạn tự làm video,
+说清楚也很重要。 | shuō qīngchu yě hěn zhòngyào. | nói rõ ràng cũng rất quan trọng.
+看视频的人会更相信你。 | Kàn shìpín de rén huì gèng xiāngxìn nǐ. | Người xem sẽ tin bạn hơn.
+
+! 说真话，别人才会相信你。 | Shuō zhēn huà, biérén cái huì xiāngxìn nǐ. | Nói thật thì người khác mới tin bạn.
+! 看到奇怪的视频，先想一想。 | Kàn dào qíguài de shìpín, xiān xiǎng yi xiǎng. | Thấy video lạ, hãy nghĩ một chút trước.
+! 有人打电话要钱， | Yǒu rén dǎ diànhuà yào qián, | Có người gọi điện xin tiền,
+! 先用别的办法问一问。 | xiān yòng bié de bànfǎ wèn yi wèn. | hãy hỏi lại bằng cách khác trước.
+
+? 有人用假的声音做什么？ | Có kẻ dùng giọng giả để làm gì? | 骗家里人的钱* | 唱歌 | 学汉语
+? 有人打电话要钱，我们应该怎么做？ | Có người gọi điện xin tiền, ta nên làm gì? | 先用别的办法问一问* | 马上给钱 | 不接电话
+> Đọc to câu “说真话，别人才会相信你。”
+
+
 @id zh-news-robot
 @lang zh
 @shelf news
@@ -652,3 +676,25 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 
 ? 人形机器人的价格下降了多少？ | Giá robot hình người giảm bao nhiêu? | 百分之九十三* | 百分之九 | 百分之五十
 > Đọc to số 58.000 bằng tiếng Trung: 五万八千.
+
+## 2 | 预测和事实 | Dự báo và sự thật
+机器人越来越便宜， | Jīqìrén yuèláiyuè piányi, | Robot ngày càng rẻ,
+用机器人的公司就会越来越多。 | yòng jīqìrén de gōngsī jiù huì yuèláiyuè duō. | công ty dùng robot sẽ ngày càng nhiều.
+机器人越多，用的电也越多。 | Jīqìrén yuè duō, yòng de diàn yě yuè duō. | Robot càng nhiều, điện dùng càng nhiều.
+这些电从哪儿来？ | Zhèxiē diàn cóng nǎr lái? | Lượng điện đó từ đâu ra?
+谁来付钱？ | Shéi lái fù qián? | Ai sẽ trả tiền?
+
+机器人也会改变工作。 | Jīqìrén yě huì gǎibiàn gōngzuò. | Robot cũng sẽ thay đổi công việc.
+有的工作会没有了， | Yǒu de gōngzuò huì méiyǒu le, | Có việc sẽ mất đi,
+也会有新的工作， | yě huì yǒu xīn de gōngzuò, | cũng sẽ có việc mới,
+比如修机器人、教机器人。 | bǐrú xiū jīqìrén, jiāo jīqìrén. | như sửa robot, dạy robot.
+一直学习的人，更容易找到新工作。 | Yìzhí xuéxí de rén, gèng róngyì zhǎo dào xīn gōngzuò. | Người không ngừng học sẽ dễ tìm việc mới hơn.
+
+! 预测不是事实， | Yùcè bú shì shìshí, | Dự báo không phải sự thật,
+! 只是一种可能。 | zhǐshì yì zhǒng kěnéng. | chỉ là một khả năng.
+! 新东西都有看不见的价格。 | Xīn dōngxi dōu yǒu kàn bu jiàn de jiàgé. | Thứ mới nào cũng có cái giá không nhìn thấy.
+! 学习新的本领，是最好的准备。 | Xuéxí xīn de běnlǐng, shì zuì hǎo de zhǔnbèi. | Học kỹ năng mới là sự chuẩn bị tốt nhất.
+
+? 机器人越多，什么也越多？ | Robot càng nhiều thì cái gì cũng càng nhiều? | 用的电* | 下雨的天 | 学校
+? 预测是事实吗？ | Dự báo có phải sự thật không? | 不是，只是一种可能* | 是 | 一定是
+> Nói bằng tiếng Trung: 我想学习新的本领，比如……
