@@ -15,7 +15,7 @@ const PATCH = path.join(ROOT, 'data-src', 'patches');
 const readJson = (f) => JSON.parse(fs.readFileSync(f, 'utf8'));
 const log = [];
 
-/* 1. Thay chuỗi chính xác (lỗi tiếng Trung, câu sai trong bài đọc) */
+/* 1. Thay chuỗi chính xác (lỗi tiếng Trung) */
 export function applyReplace() {
   const p = readJson(path.join(PATCH, 'fixes.json'));
   let done = 0, skip = 0;
@@ -100,43 +100,10 @@ export function applyTopicIpa() {
   log.push(`Phiên âm chủ đề: đổi ${n}`);
 }
 
-/* 4. Nguồn của bài đọc: lấy dòng @source trong data-src/stories/ ghi vào data/stories/ */
-export function applyStorySources() {
-  const dir = path.join(ROOT, 'data-src', 'stories');
-  const src = {};
-  let id = null;
-  for (const name of fs.readdirSync(dir).filter((x) => x.endsWith('.txt'))) {
-    for (const line of fs.readFileSync(path.join(dir, name), 'utf8').split(/\r?\n/)) {
-      const m = line.match(/^@(\w+)\s+(.*)$/);
-      if (!m) continue;
-      if (m[1] === 'id') { id = m[2].trim(); src[id] = []; }
-      if (m[1] === 'source' && id) {
-        const [nm, url] = m[2].split('|').map((x) => x.trim());
-        src[id].push({ name: nm, url });
-      }
-    }
-  }
-  const idxF = path.join(OUT, 'stories', 'index.json');
-  const idx = readJson(idxF);
-  let n = 0;
-  for (const s of idx) {
-    if (!src[s.id]) continue;
-    const f = path.join(OUT, 'stories', `${s.id}.json`);
-    const st = readJson(f);
-    if (JSON.stringify(st.sources) !== JSON.stringify(src[s.id])) {
-      st.sources = src[s.id]; fs.writeFileSync(f, JSON.stringify(st)); n++;
-    }
-    if ('sources' in s) s.sources = src[s.id];
-  }
-  fs.writeFileSync(idxF, JSON.stringify(idx));
-  log.push(`Nguồn bài đọc: cập nhật ${n} bài`);
-}
-
 export function applyAll() {
   applyReplace();
   applyEnBank();
   applyTopicIpa();
-  applyStorySources();
   console.log(log.join('\n'));
 }
 

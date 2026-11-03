@@ -1,5 +1,5 @@
 {
-  "_note": "Sửa lỗi nội dung bằng cách thay đúng một chuỗi trong một tệp của data/ (tiếng Trung, câu sai trong bài đọc). tools/apply-patches.mjs chạy lại được nhiều lần, chuỗi nào đã sửa thì bỏ qua. Bài đọc thì sửa cả trong data-src/stories/.",
+  "_note": "Sửa lỗi nội dung tiếng Trung bằng cách thay đúng một chuỗi trong một tệp của data/. tools/apply-patches.mjs chạy lại được nhiều lần, chuỗi nào đã sửa thì bỏ qua. Bài đọc thì sửa thẳng trong data-src/stories/ rồi chạy tools/build-stories.mjs.",
   "replace": [
     {
       "file": "curriculum/lesson-85.json",
@@ -40,16 +40,6 @@
       "file": "curriculum/lesson-17.json",
       "find": "Nhớ dùng 很累, đừng nói trống 累.",
       "to": "Khi tả trạng thái, câu kể thường có 很 đứng trước: 我很累. Nói 累了, 累死了 cũng rất tự nhiên."
-    },
-    {
-      "file": "stories/true-move37.json",
-      "find": "[\"Lee left the room to think.\",\"Lee rời phòng để suy nghĩ.\"]",
-      "to": "[\"Lee was out of the room when it was played.\",\"Lúc nước đó được đi, Lee đang ở ngoài phòng.\"],[\"He came back and thought for almost fifteen minutes.\",\"Anh quay lại và suy nghĩ gần mười lăm phút.\"]"
-    },
-    {
-      "file": "stories/myst-conscious.json",
-      "find": "Why is there an \\\"you\\\" inside at all?",
-      "to": "Why is there a \\\"you\\\" inside at all?"
     }
   ]
 }

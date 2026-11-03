@@ -9,6 +9,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import { applyAll as applyPatches } from './apply-patches.mjs';
+import { buildStories } from './build-stories.mjs';
 
 const SRC = path.resolve(process.argv[2] || '../_src');
 const ROOT = process.cwd();
@@ -514,5 +515,7 @@ const perStory = {};
 for (const l of longLines) { const k = l.split(' ')[0]; perStory[k] = (perStory[k] || 0) + 1; }
 console.log(perStory);
 
-/* Các bản sửa nội dung trong data-src/patches/ (lỗi Hán Việt, phiên âm, từ bổ sung, nguồn bài đọc) */
+/* Dựng lại bài đọc bằng cùng công cụ với tools/build-stories.mjs (hỗ trợ phần "Điều rút ra"),
+   rồi áp các bản sửa trong data-src/patches/ (lỗi Hán Việt, phiên âm, từ bổ sung) */
+buildStories({ quiet: true });
 applyPatches();

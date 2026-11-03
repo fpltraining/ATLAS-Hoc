@@ -123,6 +123,8 @@
 .card .mode-seg button { white-space: nowrap; padding: 0 10px; }
 .reader-body { --read-size: 22px; margin-top: 14px; }
 .reader-para { margin-bottom: 26px; }
+.reader-lesson { background: var(--jade-soft); border-left: 4px solid var(--jade); border-radius: 12px; padding: 14px 16px 4px; }
+.reader-lesson-h { font-weight: 700; color: var(--jade); margin-bottom: 8px; font-size: 15px; letter-spacing: .02em; }
 .ln { padding: 6px 8px; margin: 0 -8px 8px; border-radius: 10px; cursor: pointer; }
 .ln.on { background: var(--amber-soft); }
 .ln-text {

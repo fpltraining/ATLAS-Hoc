@@ -33,17 +33,26 @@ export async function render(route) {
   const body = h('div.reader-body');
   body.style.setProperty('--read-size', `${size}px`);
 
+  const addLine = (p, [text, vi, py]) => {
+    const ln = h('div.ln', { dataset: { i: String(lines.length) } },
+      h(`div.ln-text${zh ? '.cn' : ''}`, zh ? zhLine(text, zhDict) : enLine(text, ch.gloss, story)),
+      zh && py ? h('div.ln-py', py) : null,
+      h('div.ln-vi', vi),
+    );
+    lines.push({ el: ln, text });
+    p.append(ln);
+  };
+
   for (const para of ch.paras) {
     const p = h('div.reader-para');
-    for (const [text, vi, py] of para) {
-      const ln = h('div.ln', { dataset: { i: String(lines.length) } },
-        h(`div.ln-text${zh ? '.cn' : ''}`, zh ? zhLine(text, zhDict) : enLine(text, ch.gloss, story)),
-        zh && py ? h('div.ln-py', py) : null,
-        h('div.ln-vi', vi),
-      );
-      lines.push({ el: ln, text });
-      p.append(ln);
-    }
+    for (const line of para) addLine(p, line);
+    body.append(p);
+  }
+
+  // "Điều rút ra": vẫn là các dòng song ngữ, nghe và chạm tra từ như phần truyện
+  if (ch.lesson?.length) {
+    const p = h('div.reader-para.reader-lesson', h('div.reader-lesson-h', 'Điều rút ra'));
+    for (const line of ch.lesson) addLine(p, line);
     body.append(p);
   }
 
