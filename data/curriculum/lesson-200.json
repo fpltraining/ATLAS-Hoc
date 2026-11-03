@@ -1,0 +1,216 @@
+{
+ "id": 200,
+ "cn": "按时完成",
+ "title": "Động từ một chữ thường dùng",
+ "goal": "Dùng các động từ: ấn / theo, sửa, quản, ở lại, đổ / rót, tính, thông, thiếu, vào và sinh.",
+ "words": [
+  {
+   "w": "按",
+   "py": "àn",
+   "hv": "án",
+   "vi": "ấn; theo",
+   "pos": "động từ",
+   "note": "Ấn nút: 按电梯. Làm theo: 按时 (đúng giờ), 按照.",
+   "ex": [
+    {
+     "cn": "请按一下电梯。",
+     "py": "Qǐng àn yíxià diàntī.",
+     "vi": "Xin bấm thang máy giúp."
+    }
+   ]
+  },
+  {
+   "w": "改",
+   "py": "gǎi",
+   "hv": "cải",
+   "vi": "sửa, đổi",
+   "pos": "động từ",
+   "note": "\"Cải\" trong \"cải cách\", \"cải tạo\".",
+   "ex": [
+    {
+     "cn": "老师帮我改作文。",
+     "py": "Lǎoshī bāng wǒ gǎi zuòwén.",
+     "vi": "Thầy sửa bài văn giúp tôi."
+    }
+   ]
+  },
+  {
+   "w": "管",
+   "py": "guǎn",
+   "hv": "quản",
+   "vi": "quản lý; lo",
+   "pos": "động từ",
+   "note": "\"Quản\" trong \"quản lý\". 别管我 (đừng lo cho tôi, kệ tôi).",
+   "ex": [
+    {
+     "cn": "这件事你别管了。",
+     "py": "Zhè jiàn shì nǐ bié guǎn le.",
+     "vi": "Chuyện này bạn đừng lo nữa."
+    }
+   ]
+  },
+  {
+   "w": "待",
+   "py": "dāi",
+   "hv": "đãi",
+   "vi": "ở lại",
+   "pos": "động từ",
+   "note": "Khẩu ngữ, nghĩa như 呆: 在家待着.",
+   "ex": [
+    {
+     "cn": "周末我在家待了两天。",
+     "py": "Zhōumò wǒ zài jiā dāi le liǎng tiān.",
+     "vi": "Cuối tuần tôi ở nhà hai ngày."
+    }
+   ]
+  },
+  {
+   "w": "倒",
+   "py": "dào",
+   "hv": "đảo",
+   "vi": "rót, đổ; ngược",
+   "pos": "động từ",
+   "note": "Đọc dào: rót nước 倒水, đổ rác 倒垃圾. Đọc dǎo: ngã.",
+   "ex": [
+    {
+     "cn": "我给你倒杯茶。",
+     "py": "Wǒ gěi nǐ dào bēi chá.",
+     "vi": "Tôi rót cho bạn cốc trà."
+    }
+   ]
+  },
+  {
+   "w": "算",
+   "py": "suàn",
+   "hv": "toán",
+   "vi": "tính; coi như",
+   "pos": "động từ",
+   "note": "\"Toán\" trong \"tính toán\". 算了 là \"thôi bỏ đi\".",
+   "ex": [
+    {
+     "cn": "算了，我们不去了。",
+     "py": "Suàn le, wǒmen bú qù le.",
+     "vi": "Thôi bỏ đi, chúng ta không đi nữa."
+    }
+   ]
+  },
+  {
+   "w": "通",
+   "py": "tōng",
+   "hv": "thông",
+   "vi": "thông; thông suốt",
+   "pos": "động từ",
+   "note": "Chính là \"thông\". Điện thoại gọi được: 电话通了.",
+   "ex": [
+    {
+     "cn": "电话打不通。",
+     "py": "Diànhuà dǎ bu tōng.",
+     "vi": "Điện thoại gọi không được."
+    }
+   ]
+  },
+  {
+   "w": "缺",
+   "py": "quē",
+   "hv": "khuyết",
+   "vi": "thiếu",
+   "pos": "động từ",
+   "note": "\"Khuyết\" trong \"khuyết điểm\". 缺钱 (thiếu tiền).",
+   "ex": [
+    {
+     "cn": "我们还缺一个人。",
+     "py": "Wǒmen hái quē yí ge rén.",
+     "vi": "Chúng ta còn thiếu một người."
+    }
+   ]
+  },
+  {
+   "w": "入",
+   "py": "rù",
+   "hv": "nhập",
+   "vi": "vào",
+   "pos": "động từ",
+   "note": "Chính là \"nhập\". Văn viết của 进. 入口 là lối vào.",
+   "ex": [
+    {
+     "cn": "入口在左边。",
+     "py": "Rùkǒu zài zuǒbian.",
+     "vi": "Lối vào ở bên trái."
+    }
+   ]
+  },
+  {
+   "w": "生",
+   "py": "shēng",
+   "hv": "sinh",
+   "vi": "sinh ra; sống",
+   "pos": "động từ",
+   "note": "Chính là \"sinh\". 生孩子 (sinh con), 生病 (bị bệnh).",
+   "ex": [
+    {
+     "cn": "她生了一个女儿。",
+     "py": "Tā shēng le yí ge nǚ'ér.",
+     "vi": "Cô ấy sinh một bé gái."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "按 / 按照 + quy định: theo",
+   "b": "按时 · 按照计划",
+   "d": "Làm việc theo một tiêu chuẩn có sẵn.",
+   "ex": [
+    {
+     "cn": "请按时完成作业。",
+     "py": "Qǐng ànshí wánchéng zuòyè.",
+     "vi": "Xin hoàn thành bài tập đúng hạn."
+    },
+    {
+     "cn": "我们按照计划做吧。",
+     "py": "Wǒmen ànzhào jìhuà zuò ba.",
+     "vi": "Chúng ta làm theo kế hoạch nhé."
+    }
+   ]
+  },
+  {
+   "t": "算了: thôi bỏ đi",
+   "b": "算了 · 就算了吧",
+   "d": "Dùng khi bỏ qua, không tính toán nữa.",
+   "ex": [
+    {
+     "cn": "他不来就算了。",
+     "py": "Tā bù lái jiù suàn le.",
+     "vi": "Anh ấy không đến thì thôi."
+    },
+    {
+     "cn": "太贵了，算了吧。",
+     "py": "Tài guì le, suàn le ba.",
+     "vi": "Đắt quá, thôi bỏ đi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "文章写完了，再改一改。",
+   "py": "Wénzhāng xiě wán le, zài gǎi yi gǎi.",
+   "vi": "Viết xong bài rồi, sửa lại chút nữa."
+  },
+  {
+   "cn": "我们算一下一共多少钱。",
+   "py": "Wǒmen suàn yíxià yígòng duōshao qián.",
+   "vi": "Mình tính xem tổng cộng bao nhiêu tiền."
+  },
+  {
+   "cn": "这个城市不缺好饭店。",
+   "py": "Zhège chéngshì bù quē hǎo fàndiàn.",
+   "vi": "Thành phố này không thiếu nhà hàng ngon."
+  },
+  {
+   "cn": "他在北京生活了十年。",
+   "py": "Tā zài Běijīng shēnghuó le shí nián.",
+   "vi": "Anh ấy sống ở Bắc Kinh mười năm."
+  }
+ ]
+}

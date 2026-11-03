@@ -1,0 +1,216 @@
+{
+ "id": 199,
+ "cn": "公共场所",
+ "title": "Không gian chung và thế giới",
+ "goal": "Nói về sân vận động, sảnh, lối ra, công cộng, toàn cầu, khoa học công nghệ, tác phẩm, hiện có, có và đối mặt.",
+ "words": [
+  {
+   "w": "操场",
+   "py": "cāochǎng",
+   "hv": "thao trường",
+   "vi": "sân vận động (trường)",
+   "pos": "danh từ",
+   "note": "Chính là \"thao trường\".",
+   "ex": [
+    {
+     "cn": "下课后学生们在操场上跑步。",
+     "py": "Xiàkè hòu xuéshengmen zài cāochǎng shang pǎobù.",
+     "vi": "Tan học học sinh chạy bộ trên sân trường."
+    }
+   ]
+  },
+  {
+   "w": "大厅",
+   "py": "dàtīng",
+   "hv": "đại sảnh",
+   "vi": "đại sảnh",
+   "pos": "danh từ",
+   "note": "Chính là \"đại sảnh\".",
+   "ex": [
+    {
+     "cn": "我在酒店大厅等你。",
+     "py": "Wǒ zài jiǔdiàn dàtīng děng nǐ.",
+     "vi": "Tôi đợi bạn ở sảnh khách sạn."
+    }
+   ]
+  },
+  {
+   "w": "出口",
+   "py": "chūkǒu",
+   "hv": "xuất khẩu",
+   "vi": "lối ra; xuất khẩu",
+   "pos": "danh từ",
+   "note": "Hai nghĩa: lối ra (ở nhà ga) và \"xuất khẩu\" hàng hoá.",
+   "ex": [
+    {
+     "cn": "请从二号出口出去。",
+     "py": "Qǐng cóng èr hào chūkǒu chūqu.",
+     "vi": "Xin ra ở lối ra số hai."
+    }
+   ]
+  },
+  {
+   "w": "公共",
+   "py": "gōnggòng",
+   "hv": "công cộng",
+   "vi": "công cộng",
+   "pos": "tính từ",
+   "note": "Chính là \"công cộng\".",
+   "ex": [
+    {
+     "cn": "在公共场所不要大声说话。",
+     "py": "Zài gōnggòng chǎngsuǒ búyào dà shēng shuōhuà.",
+     "vi": "Ở nơi công cộng đừng nói to."
+    }
+   ]
+  },
+  {
+   "w": "全球",
+   "py": "quánqiú",
+   "hv": "toàn cầu",
+   "vi": "toàn cầu",
+   "pos": "danh từ",
+   "note": "Chính là \"toàn cầu\".",
+   "ex": [
+    {
+     "cn": "这个问题影响全球。",
+     "py": "Zhège wèntí yǐngxiǎng quánqiú.",
+     "vi": "Vấn đề này ảnh hưởng toàn cầu."
+    }
+   ]
+  },
+  {
+   "w": "科技",
+   "py": "kējì",
+   "hv": "khoa kỹ",
+   "vi": "khoa học công nghệ",
+   "pos": "danh từ",
+   "note": "Viết tắt của 科学技术.",
+   "ex": [
+    {
+     "cn": "科技改变了我们的生活。",
+     "py": "Kējì gǎibiàn le wǒmen de shēnghuó.",
+     "vi": "Khoa học công nghệ thay đổi cuộc sống chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "作品",
+   "py": "zuòpǐn",
+   "hv": "tác phẩm",
+   "vi": "tác phẩm",
+   "pos": "danh từ",
+   "note": "Chính là \"tác phẩm\".",
+   "ex": [
+    {
+     "cn": "这是他最有名的作品。",
+     "py": "Zhè shì tā zuì yǒumíng de zuòpǐn.",
+     "vi": "Đây là tác phẩm nổi tiếng nhất của ông ấy."
+    }
+   ]
+  },
+  {
+   "w": "现有",
+   "py": "xiànyǒu",
+   "hv": "hiện hữu",
+   "vi": "hiện có",
+   "pos": "động từ",
+   "note": "Chính là \"hiện hữu\".",
+   "ex": [
+    {
+     "cn": "现有的问题要马上解决。",
+     "py": "Xiànyǒu de wèntí yào mǎshàng jiějué.",
+     "vi": "Những vấn đề hiện có phải giải quyết ngay."
+    }
+   ]
+  },
+  {
+   "w": "有着",
+   "py": "yǒuzhe",
+   "hv": "hữu trước",
+   "vi": "có (văn viết)",
+   "pos": "động từ",
+   "note": "Văn viết, nhấn mạnh trạng thái: 有着悠久的历史.",
+   "ex": [
+    {
+     "cn": "这座城市有着很长的历史。",
+     "py": "Zhè zuò chéngshì yǒuzhe hěn cháng de lìshǐ.",
+     "vi": "Thành phố này có lịch sử rất lâu đời."
+    }
+   ]
+  },
+  {
+   "w": "面对",
+   "py": "miànduì",
+   "hv": "diện đối",
+   "vi": "đối mặt",
+   "pos": "động từ",
+   "note": "Chính là \"diện đối\".",
+   "ex": [
+    {
+     "cn": "我们要勇敢地面对困难。",
+     "py": "Wǒmen yào yǒnggǎn de miànduì kùnnan.",
+     "vi": "Chúng ta phải dũng cảm đối mặt khó khăn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "在…上 / 在…里: trên mặt, trong lòng",
+   "b": "在操场上 · 在大厅里",
+   "d": "Sân, mặt bàn dùng 上; phòng, toà nhà dùng 里.",
+   "ex": [
+    {
+     "cn": "孩子们在操场上玩儿。",
+     "py": "Háizimen zài cāochǎng shang wánr.",
+     "vi": "Bọn trẻ chơi trên sân."
+    },
+    {
+     "cn": "很多人在大厅里等着。",
+     "py": "Hěn duō rén zài dàtīng lǐ děng zhe.",
+     "vi": "Nhiều người đang đợi trong sảnh."
+    }
+   ]
+  },
+  {
+   "t": "Tính từ + 地 + động từ: trạng từ",
+   "b": "勇敢地面对 · 认真地学习",
+   "d": "地 (de) nối tính từ với động từ để chỉ cách làm.",
+   "ex": [
+    {
+     "cn": "他高兴地笑了。",
+     "py": "Tā gāoxìng de xiào le.",
+     "vi": "Anh ấy vui vẻ cười."
+    },
+    {
+     "cn": "请慢慢地说。",
+     "py": "Qǐng mànmàn de shuō.",
+     "vi": "Xin nói từ từ."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "地铁站的出口很多，别走错了。",
+   "py": "Dìtiězhàn de chūkǒu hěn duō, bié zǒu cuò le.",
+   "vi": "Ga tàu điện có nhiều lối ra, đừng đi nhầm."
+  },
+  {
+   "cn": "公共交通越来越方便。",
+   "py": "Gōnggòng jiāotōng yuèláiyuè fāngbiàn.",
+   "vi": "Giao thông công cộng ngày càng tiện lợi."
+  },
+  {
+   "cn": "他的作品在全球都很有名。",
+   "py": "Tā de zuòpǐn zài quánqiú dōu hěn yǒumíng.",
+   "vi": "Tác phẩm của ông ấy nổi tiếng toàn cầu."
+  },
+  {
+   "cn": "面对问题，不要害怕。",
+   "py": "Miànduì wèntí, búyào hàipà.",
+   "vi": "Đối mặt vấn đề, đừng sợ hãi."
+  }
+ ]
+}

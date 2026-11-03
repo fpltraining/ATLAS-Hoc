@@ -1,0 +1,216 @@
+{
+ "id": 201,
+ "cn": "加入我们",
+ "title": "Động từ hai chữ thường dùng",
+ "goal": "Dùng các động từ: gia nhập, phát ra, mang lại (tác dụng), dùng để, dùng cho, tiện cho, chia thành, gọi là, tránh xa và ra ngoài.",
+ "words": [
+  {
+   "w": "加入",
+   "py": "jiārù",
+   "hv": "gia nhập",
+   "vi": "gia nhập, tham gia",
+   "pos": "động từ",
+   "note": "Chính là \"gia nhập\".",
+   "ex": [
+    {
+     "cn": "欢迎你加入我们的球队。",
+     "py": "Huānyíng nǐ jiārù wǒmen de qiúduì.",
+     "vi": "Hoan nghênh bạn gia nhập đội bóng của chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "发出",
+   "py": "fāchū",
+   "hv": "phát xuất",
+   "vi": "phát ra",
+   "pos": "động từ",
+   "note": "发 + 出. Phát ra âm thanh, ánh sáng.",
+   "ex": [
+    {
+     "cn": "手机发出了声音。",
+     "py": "Shǒujī fāchū le shēngyīn.",
+     "vi": "Điện thoại phát ra tiếng."
+    }
+   ]
+  },
+  {
+   "w": "起到",
+   "py": "qǐdào",
+   "hv": "khởi đáo",
+   "vi": "mang lại (tác dụng)",
+   "pos": "động từ",
+   "note": "Đi với 作用: 起到作用.",
+   "ex": [
+    {
+     "cn": "这个办法起到了很好的作用。",
+     "py": "Zhège bànfǎ qǐdào le hěn hǎo de zuòyòng.",
+     "vi": "Cách này đã mang lại tác dụng tốt."
+    }
+   ]
+  },
+  {
+   "w": "用来",
+   "py": "yònglái",
+   "hv": "dụng lai",
+   "vi": "dùng để",
+   "pos": "động từ",
+   "note": "Vật + 用来 + làm gì.",
+   "ex": [
+    {
+     "cn": "这个盒子用来放笔。",
+     "py": "Zhège hézi yònglái fàng bǐ.",
+     "vi": "Cái hộp này dùng để đựng bút."
+    }
+   ]
+  },
+  {
+   "w": "用于",
+   "py": "yòngyú",
+   "hv": "dụng vu",
+   "vi": "dùng cho, dùng vào",
+   "pos": "động từ",
+   "note": "Văn viết của 用在.",
+   "ex": [
+    {
+     "cn": "这笔钱用于买书。",
+     "py": "Zhè bǐ qián yòngyú mǎi shū.",
+     "vi": "Khoản tiền này dùng để mua sách."
+    }
+   ]
+  },
+  {
+   "w": "便于",
+   "py": "biànyú",
+   "hv": "tiện vu",
+   "vi": "tiện cho",
+   "pos": "động từ",
+   "note": "便 (tiện) + 于.",
+   "ex": [
+    {
+     "cn": "把东西放好，便于查找。",
+     "py": "Bǎ dōngxi fàng hǎo, biànyú cházhǎo.",
+     "vi": "Để đồ gọn gàng cho dễ tìm."
+    }
+   ]
+  },
+  {
+   "w": "分为",
+   "py": "fēnwéi",
+   "hv": "phân vi",
+   "vi": "chia thành",
+   "pos": "động từ",
+   "note": "Văn viết của 分成.",
+   "ex": [
+    {
+     "cn": "一年分为四个季节。",
+     "py": "Yì nián fēnwéi sì ge jìjié.",
+     "vi": "Một năm chia thành bốn mùa."
+    }
+   ]
+  },
+  {
+   "w": "叫作",
+   "py": "jiàozuò",
+   "hv": "khiếu tác",
+   "vi": "gọi là",
+   "pos": "động từ",
+   "note": "Đặt tên, giải thích tên gọi.",
+   "ex": [
+    {
+     "cn": "这种花叫作牡丹。",
+     "py": "Zhè zhǒng huā jiàozuò mǔdan.",
+     "vi": "Loài hoa này gọi là mẫu đơn."
+    }
+   ]
+  },
+  {
+   "w": "远离",
+   "py": "yuǎnlí",
+   "hv": "viễn ly",
+   "vi": "tránh xa",
+   "pos": "động từ",
+   "note": "远 (xa) + 离 (rời).",
+   "ex": [
+    {
+     "cn": "请远离火源。",
+     "py": "Qǐng yuǎnlí huǒyuán.",
+     "vi": "Xin tránh xa nguồn lửa."
+    }
+   ]
+  },
+  {
+   "w": "外出",
+   "py": "wàichū",
+   "hv": "ngoại xuất",
+   "vi": "ra ngoài, đi vắng",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 出去.",
+   "ex": [
+    {
+     "cn": "经理外出了，下午回来。",
+     "py": "Jīnglǐ wàichū le, xiàwǔ huílai.",
+     "vi": "Giám đốc ra ngoài rồi, chiều sẽ về."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "起到…作用: có tác dụng",
+   "b": "起到 + tính từ + 的 + 作用",
+   "d": "Cụm cố định nói về hiệu quả của một việc.",
+   "ex": [
+    {
+     "cn": "运动对健康起到重要作用。",
+     "py": "Yùndòng duì jiànkāng qǐdào zhòngyào zuòyòng.",
+     "vi": "Vận động có tác dụng quan trọng với sức khoẻ."
+    },
+    {
+     "cn": "老师的话起到了作用。",
+     "py": "Lǎoshī de huà qǐdào le zuòyòng.",
+     "vi": "Lời thầy đã có tác dụng."
+    }
+   ]
+  },
+  {
+   "t": "用来 / 用于: dùng để",
+   "b": "Vật + 用来 + động từ · Vật + 用于 + danh từ / động từ",
+   "d": "用来 khẩu ngữ hơn, 用于 văn viết hơn.",
+   "ex": [
+    {
+     "cn": "这个房间用来开会。",
+     "py": "Zhège fángjiān yònglái kāihuì.",
+     "vi": "Phòng này dùng để họp."
+    },
+    {
+     "cn": "这种药用于治疗感冒。",
+     "py": "Zhè zhǒng yào yòngyú zhìliáo gǎnmào.",
+     "vi": "Thuốc này dùng để chữa cảm."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "很多年轻人想加入这家公司。",
+   "py": "Hěn duō niánqīng rén xiǎng jiārù zhè jiā gōngsī.",
+   "vi": "Nhiều người trẻ muốn vào công ty này."
+  },
+  {
+   "cn": "外出的时候要注意安全。",
+   "py": "Wàichū de shíhou yào zhùyì ānquán.",
+   "vi": "Khi ra ngoài phải chú ý an toàn."
+  },
+  {
+   "cn": "远离手机，多陪陪家人。",
+   "py": "Yuǎnlí shǒujī, duō péipei jiārén.",
+   "vi": "Tránh xa điện thoại, dành thời gian cho gia đình."
+  },
+  {
+   "cn": "比赛分为上半场和下半场。",
+   "py": "Bǐsài fēnwéi shàngbànchǎng hé xiàbànchǎng.",
+   "vi": "Trận đấu chia thành hiệp một và hiệp hai."
+  }
+ ]
+}

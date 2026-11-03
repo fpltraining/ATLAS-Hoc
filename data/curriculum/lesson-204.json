@@ -1,0 +1,216 @@
+{
+ "id": 204,
+ "cn": "作为学生",
+ "title": "Hậu tố và cách nói trang trọng",
+ "goal": "Dùng 者, 性, 感, 自, 整, 整个, 各个, 各位, 各种 và 作为.",
+ "words": [
+  {
+   "w": "者",
+   "py": "zhě",
+   "hv": "giả",
+   "vi": "người (hậu tố)",
+   "pos": "trợ từ",
+   "note": "\"Giả\" trong \"tác giả\", \"độc giả\". Gắn sau động từ để chỉ người làm: 记者, 学者.",
+   "ex": [
+    {
+     "cn": "记者正在采访运动员。",
+     "py": "Jìzhě zhèngzài cǎifǎng yùndòngyuán.",
+     "vi": "Phóng viên đang phỏng vấn vận động viên."
+    }
+   ]
+  },
+  {
+   "w": "性",
+   "py": "xìng",
+   "hv": "tính",
+   "vi": "tính (hậu tố)",
+   "pos": "hậu tố",
+   "note": "\"Tính\" trong \"tính chất\". 重要性 (tầm quan trọng), 可能性 (khả năng).",
+   "ex": [
+    {
+     "cn": "大家都知道学习的重要性。",
+     "py": "Dàjiā dōu zhīdào xuéxí de zhòngyàoxìng.",
+     "vi": "Ai cũng biết tầm quan trọng của việc học."
+    }
+   ]
+  },
+  {
+   "w": "感",
+   "py": "gǎn",
+   "hv": "cảm",
+   "vi": "cảm giác (hậu tố)",
+   "pos": "hậu tố",
+   "note": "幸福感 (cảm giác hạnh phúc), 责任感 (tinh thần trách nhiệm).",
+   "ex": [
+    {
+     "cn": "他是一个很有责任感的人。",
+     "py": "Tā shì yí ge hěn yǒu zérèngǎn de rén.",
+     "vi": "Anh ấy là người rất có tinh thần trách nhiệm."
+    }
+   ]
+  },
+  {
+   "w": "自",
+   "py": "zì",
+   "hv": "tự",
+   "vi": "từ (văn viết)",
+   "pos": "giới từ",
+   "note": "Văn viết của 从. 来自 (đến từ).",
+   "ex": [
+    {
+     "cn": "他来自越南。",
+     "py": "Tā láizì Yuènán.",
+     "vi": "Anh ấy đến từ Việt Nam."
+    }
+   ]
+  },
+  {
+   "w": "整",
+   "py": "zhěng",
+   "hv": "chỉnh",
+   "vi": "cả, trọn; đúng (giờ)",
+   "pos": "tính từ",
+   "note": "\"Chỉnh\" trong \"chỉnh tề\". 三点整 (đúng ba giờ).",
+   "ex": [
+    {
+     "cn": "会议九点整开始。",
+     "py": "Huìyì jiǔ diǎn zhěng kāishǐ.",
+     "vi": "Cuộc họp bắt đầu đúng chín giờ."
+    }
+   ]
+  },
+  {
+   "w": "整个",
+   "py": "zhěnggè",
+   "hv": "chỉnh cá",
+   "vi": "toàn bộ, cả",
+   "pos": "tính từ",
+   "note": "整 + 个.",
+   "ex": [
+    {
+     "cn": "整个下午他都在睡觉。",
+     "py": "Zhěnggè xiàwǔ tā dōu zài shuìjiào.",
+     "vi": "Cả buổi chiều anh ấy ngủ."
+    }
+   ]
+  },
+  {
+   "w": "各个",
+   "py": "gègè",
+   "hv": "các cá",
+   "vi": "từng, mỗi",
+   "pos": "đại từ",
+   "note": "各 + 个.",
+   "ex": [
+    {
+     "cn": "各个国家都有自己的文化。",
+     "py": "Gègè guójiā dōu yǒu zìjǐ de wénhuà.",
+     "vi": "Mỗi quốc gia đều có văn hoá riêng."
+    }
+   ]
+  },
+  {
+   "w": "各位",
+   "py": "gèwèi",
+   "hv": "các vị",
+   "vi": "các vị, quý vị",
+   "pos": "đại từ",
+   "note": "Chính là \"các vị\".",
+   "ex": [
+    {
+     "cn": "各位老师，大家好！",
+     "py": "Gèwèi lǎoshī, dàjiā hǎo!",
+     "vi": "Kính chào các thầy cô!"
+    }
+   ]
+  },
+  {
+   "w": "各种",
+   "py": "gèzhǒng",
+   "hv": "các chủng",
+   "vi": "các loại",
+   "pos": "đại từ",
+   "note": "Chính là \"các chủng\".",
+   "ex": [
+    {
+     "cn": "超市里有各种水果。",
+     "py": "Chāoshì lǐ yǒu gèzhǒng shuǐguǒ.",
+     "vi": "Siêu thị có đủ loại hoa quả."
+    }
+   ]
+  },
+  {
+   "w": "作为",
+   "py": "zuòwéi",
+   "hv": "tác vi",
+   "vi": "với tư cách là, là",
+   "pos": "giới từ",
+   "note": "Khác \"tác vi\" (hành vi) tiếng Việt: 作为 là \"với tư cách\".",
+   "ex": [
+    {
+     "cn": "作为学生，我们要好好学习。",
+     "py": "Zuòwéi xuésheng, wǒmen yào hǎohǎo xuéxí.",
+     "vi": "Là học sinh, chúng ta phải học hành chăm chỉ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Hậu tố tạo danh từ trừu tượng",
+   "b": "tính từ / danh từ + 性 / 感",
+   "d": "重要 → 重要性, 安全 → 安全感. Giống \"-tính\", \"-cảm\" trong tiếng Việt.",
+   "ex": [
+    {
+     "cn": "这件事的严重性很大。",
+     "py": "Zhè jiàn shì de yánzhòngxìng hěn dà.",
+     "vi": "Mức độ nghiêm trọng của việc này rất lớn."
+    },
+    {
+     "cn": "孩子需要安全感。",
+     "py": "Háizi xūyào ānquángǎn.",
+     "vi": "Trẻ con cần cảm giác an toàn."
+    }
+   ]
+  },
+  {
+   "t": "作为 + vai trò，…: với tư cách là",
+   "b": "作为 + danh từ chỉ vai trò",
+   "d": "Đặt đầu câu để nêu vai trò của chủ ngữ.",
+   "ex": [
+    {
+     "cn": "作为队长，他要负责整个球队。",
+     "py": "Zuòwéi duìzhǎng, tā yào fùzé zhěnggè qiúduì.",
+     "vi": "Là đội trưởng, anh ấy phải chịu trách nhiệm cả đội."
+    },
+    {
+     "cn": "作为朋友，我必须告诉你真话。",
+     "py": "Zuòwéi péngyou, wǒ bìxū gàosu nǐ zhēn huà.",
+     "vi": "Là bạn, tôi phải nói thật với bạn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "各位乘客请注意。",
+   "py": "Gèwèi chéngkè qǐng zhùyì.",
+   "vi": "Quý hành khách xin chú ý."
+  },
+  {
+   "cn": "整个城市都在下雨。",
+   "py": "Zhěnggè chéngshì dōu zài xià yǔ.",
+   "vi": "Cả thành phố đều đang mưa."
+  },
+  {
+   "cn": "这些游客来自世界各地。",
+   "py": "Zhèxiē yóukè láizì shìjiè gèdì.",
+   "vi": "Những du khách này đến từ khắp nơi trên thế giới."
+  },
+  {
+   "cn": "各种各样的人都来参加了。",
+   "py": "Gè zhǒng gè yàng de rén dōu lái cānjiā le.",
+   "vi": "Đủ mọi kiểu người đều đến tham gia."
+  }
+ ]
+}
