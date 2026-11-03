@@ -1,0 +1,221 @@
+{
+ "id": 133,
+ "cn": "开学了",
+ "title": "Vào năm học",
+ "goal": "Nói về đồ dùng học tập, từ mới, thi cử, ngày khai giảng, cấp ba, và ghi họ tên.",
+ "words": [
+  {
+   "w": "开学",
+   "py": "kāixué",
+   "hv": "khai học",
+   "vi": "khai giảng, vào năm học",
+   "pos": "động từ",
+   "note": "开 = mở, bắt đầu. \"Khai giảng\" tiếng Việt cùng chữ 开.",
+   "ex": [
+    {
+     "cn": "九月一号开学。",
+     "py": "Jiǔ yuè yī hào kāixué.",
+     "vi": "Ngày mùng một tháng chín khai giảng."
+    }
+   ]
+  },
+  {
+   "w": "高中",
+   "py": "gāozhōng",
+   "hv": "cao trung",
+   "vi": "trung học phổ thông, cấp ba",
+   "pos": "danh từ",
+   "note": "Cấp ba là 高中, cấp hai là 初中.",
+   "ex": [
+    {
+     "cn": "我妹妹在上高中。",
+     "py": "Wǒ mèimei zài shàng gāozhōng.",
+     "vi": "Em gái tôi đang học cấp ba."
+    }
+   ]
+  },
+  {
+   "w": "书包",
+   "py": "shūbāo",
+   "hv": "thư bao",
+   "vi": "cặp sách",
+   "pos": "danh từ",
+   "note": "书 (sách) + 包 (túi, \"bao\").",
+   "ex": [
+    {
+     "cn": "我的书包很重。",
+     "py": "Wǒ de shūbāo hěn zhòng.",
+     "vi": "Cặp sách của tôi rất nặng."
+    }
+   ]
+  },
+  {
+   "w": "本子",
+   "py": "běnzi",
+   "hv": "bản tử",
+   "vi": "quyển vở",
+   "pos": "danh từ",
+   "note": "本 = \"bản\" trong \"bản sao\". Đếm vở và sách bằng 本.",
+   "ex": [
+    {
+     "cn": "我要买两个本子。",
+     "py": "Wǒ yào mǎi liǎng ge běnzi.",
+     "vi": "Tôi cần mua hai quyển vở."
+    }
+   ]
+  },
+  {
+   "w": "笔",
+   "py": "bǐ",
+   "hv": "bút",
+   "vi": "cây bút",
+   "pos": "danh từ",
+   "note": "Chính là \"bút\". Có bộ ⺮ (tre): bút xưa làm từ tre.",
+   "ex": [
+    {
+     "cn": "你有笔吗？借我用一下。",
+     "py": "Nǐ yǒu bǐ ma? Jiè wǒ yòng yíxià.",
+     "vi": "Bạn có bút không? Cho tôi mượn chút."
+    }
+   ]
+  },
+  {
+   "w": "词",
+   "py": "cí",
+   "hv": "từ",
+   "vi": "từ (ngôn ngữ)",
+   "pos": "danh từ",
+   "note": "\"Từ\" trong \"từ điển\", \"từ vựng\". Từ mới là 生词.",
+   "ex": [
+    {
+     "cn": "这个词是什么意思？",
+     "py": "Zhège cí shì shénme yìsi?",
+     "vi": "Từ này nghĩa là gì?"
+    }
+   ]
+  },
+  {
+   "w": "考",
+   "py": "kǎo",
+   "hv": "khảo",
+   "vi": "thi, kiểm tra",
+   "pos": "động từ",
+   "note": "\"Khảo\" trong \"khảo thí\". Thi HSK: 考HSK.",
+   "ex": [
+    {
+     "cn": "我明年想考HSK。",
+     "py": "Wǒ míngnián xiǎng kǎo HSK.",
+     "vi": "Năm sau tôi muốn thi HSK."
+    }
+   ]
+  },
+  {
+   "w": "忘",
+   "py": "wàng",
+   "hv": "vong",
+   "vi": "quên",
+   "pos": "động từ",
+   "note": "Trên là 亡 (mất), dưới là 心 (lòng): mất khỏi lòng là quên. Hay dùng 忘了.",
+   "ex": [
+    {
+     "cn": "对不起，我忘了你的名字。",
+     "py": "Duìbuqǐ, wǒ wàng le nǐ de míngzi.",
+     "vi": "Xin lỗi, tôi quên tên bạn rồi."
+    }
+   ]
+  },
+  {
+   "w": "姓名",
+   "py": "xìngmíng",
+   "hv": "tính danh",
+   "vi": "họ tên",
+   "pos": "danh từ",
+   "note": "姓 (họ) + 名 (tên). Hay gặp trên các mẫu đơn.",
+   "ex": [
+    {
+     "cn": "请写一下你的姓名。",
+     "py": "Qǐng xiě yíxià nǐ de xìngmíng.",
+     "vi": "Xin hãy viết họ tên của bạn."
+    }
+   ]
+  },
+  {
+   "w": "名",
+   "py": "míng",
+   "hv": "danh",
+   "vi": "tên; hạng (lượng từ)",
+   "pos": "danh từ",
+   "note": "\"Danh\" trong \"danh sách\". Làm lượng từ cho thứ hạng, người: 第一名 (hạng nhất).",
+   "ex": [
+    {
+     "cn": "他考了第一名。",
+     "py": "Tā kǎo le dì yī míng.",
+     "vi": "Cậu ấy thi được hạng nhất."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "忘了 / 别忘了",
+   "b": "忘了 + việc · 别忘了 + việc",
+   "d": "忘了 là đã quên. Nhắc ai đừng quên thì nói 别忘了.",
+   "ex": [
+    {
+     "cn": "别忘了带书包。",
+     "py": "Bié wàng le dài shūbāo.",
+     "vi": "Đừng quên mang cặp sách."
+    },
+    {
+     "cn": "我忘了带笔。",
+     "py": "Wǒ wàng le dài bǐ.",
+     "vi": "Tôi quên mang bút."
+    }
+   ]
+  },
+  {
+   "t": "考 + môn / kỳ thi",
+   "b": "考汉语 · 考大学 · 考得好",
+   "d": "考 đi thẳng với tên môn hay kỳ thi. Nhận xét kết quả dùng 得: 考得很好.",
+   "ex": [
+    {
+     "cn": "你这次考得怎么样？",
+     "py": "Nǐ zhè cì kǎo de zěnmeyàng?",
+     "vi": "Lần này bạn thi thế nào?"
+    },
+    {
+     "cn": "他想考北京大学。",
+     "py": "Tā xiǎng kǎo Běijīng Dàxué.",
+     "vi": "Cậu ấy muốn thi vào Đại học Bắc Kinh."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "明天开学，我很高兴。",
+   "py": "Míngtiān kāixué, wǒ hěn gāoxìng.",
+   "vi": "Mai khai giảng, tôi rất vui."
+  },
+  {
+   "cn": "我把生词写在本子上。",
+   "py": "Wǒ bǎ shēngcí xiě zài běnzi shang.",
+   "vi": "Tôi viết từ mới vào vở."
+  },
+  {
+   "cn": "高中生每天学习很多东西。",
+   "py": "Gāozhōngshēng měi tiān xuéxí hěn duō dōngxi.",
+   "vi": "Học sinh cấp ba ngày nào cũng học rất nhiều."
+  },
+  {
+   "cn": "考试的时候不要忘了写姓名。",
+   "py": "Kǎoshì de shíhou búyào wàng le xiě xìngmíng.",
+   "vi": "Lúc thi đừng quên ghi họ tên."
+  },
+  {
+   "cn": "这次考试他考了第二名。",
+   "py": "Zhè cì kǎoshì tā kǎo le dì èr míng.",
+   "vi": "Kỳ thi này cậu ấy được hạng hai."
+  }
+ ]
+}

@@ -1,0 +1,221 @@
+{
+ "id": 128,
+ "cn": "上来，下去",
+ "title": "Lên, xuống, trên, dưới",
+ "goal": "Dùng 上来 / 上去 / 下来 / 下去 / 起来 chỉ hướng lên xuống, và nói vị trí bằng 上面 / 下面 / 里面 / 外面.",
+ "words": [
+  {
+   "w": "上来",
+   "py": "shànglái",
+   "hv": "thượng lai",
+   "vi": "đi lên (về phía người nói)",
+   "pos": "động từ",
+   "note": "Người nói ở trên, người kia đi lên.",
+   "ex": [
+    {
+     "cn": "你上来看看吧。",
+     "py": "Nǐ shànglai kànkan ba.",
+     "vi": "Bạn lên đây xem đi."
+    }
+   ]
+  },
+  {
+   "w": "上去",
+   "py": "shàngqù",
+   "hv": "thượng khứ",
+   "vi": "đi lên (xa người nói)",
+   "pos": "động từ",
+   "note": "Người nói ở dưới.",
+   "ex": [
+    {
+     "cn": "我们坐电梯上去吧。",
+     "py": "Wǒmen zuò diàntī shàngqu ba.",
+     "vi": "Chúng ta đi thang máy lên nhé."
+    }
+   ]
+  },
+  {
+   "w": "下来",
+   "py": "xiàlái",
+   "hv": "hạ lai",
+   "vi": "đi xuống (về phía người nói)",
+   "pos": "động từ",
+   "note": "Người nói ở dưới gọi người trên lầu: 快下来吃饭！",
+   "ex": [
+    {
+     "cn": "快下来吃饭！",
+     "py": "Kuài xiàlai chīfàn!",
+     "vi": "Xuống ăn cơm nhanh lên!"
+    }
+   ]
+  },
+  {
+   "w": "下去",
+   "py": "xiàqù",
+   "hv": "hạ khứ",
+   "vi": "đi xuống (xa người nói); tiếp tục",
+   "pos": "động từ",
+   "note": "Ngoài nghĩa đi xuống, 下去 sau động từ còn nghĩa là \"tiếp tục\": 说下去 (nói tiếp đi).",
+   "ex": [
+    {
+     "cn": "你说下去，我在听。",
+     "py": "Nǐ shuō xiàqu, wǒ zài tīng.",
+     "vi": "Bạn nói tiếp đi, tôi đang nghe."
+    }
+   ]
+  },
+  {
+   "w": "起来",
+   "py": "qǐlái",
+   "hv": "khởi lai",
+   "vi": "đứng dậy; bắt đầu",
+   "pos": "động từ",
+   "note": "起 = \"khởi\" trong \"khởi đầu\". 站起来 (đứng dậy), 笑起来 (bật cười).",
+   "ex": [
+    {
+     "cn": "大家站起来！",
+     "py": "Dàjiā zhàn qǐlai!",
+     "vi": "Mọi người đứng dậy!"
+    }
+   ]
+  },
+  {
+   "w": "上面",
+   "py": "shàngmiàn",
+   "hv": "thượng diện",
+   "vi": "phía trên, bên trên",
+   "pos": "danh từ",
+   "note": "面 = mặt, phía. Hay đọc nhẹ: shàngmian.",
+   "ex": [
+    {
+     "cn": "书在桌子上面。",
+     "py": "Shū zài zhuōzi shàngmian.",
+     "vi": "Sách ở trên bàn."
+    }
+   ]
+  },
+  {
+   "w": "下面",
+   "py": "xiàmiàn",
+   "hv": "hạ diện",
+   "vi": "phía dưới, bên dưới; tiếp theo",
+   "pos": "danh từ",
+   "note": "Còn có nghĩa \"tiếp theo\": 下面请小王说.",
+   "ex": [
+    {
+     "cn": "下面我们学习第五课。",
+     "py": "Xiàmian wǒmen xuéxí dì wǔ kè.",
+     "vi": "Tiếp theo chúng ta học bài năm."
+    }
+   ]
+  },
+  {
+   "w": "里面",
+   "py": "lǐmiàn",
+   "hv": "lý diện",
+   "vi": "bên trong",
+   "pos": "danh từ",
+   "note": "Giống 里边. Đối lập với 外面.",
+   "ex": [
+    {
+     "cn": "包里面有什么？",
+     "py": "Bāo lǐmian yǒu shénme?",
+     "vi": "Trong túi có gì?"
+    }
+   ]
+  },
+  {
+   "w": "外面",
+   "py": "wàimiàn",
+   "hv": "ngoại diện",
+   "vi": "bên ngoài",
+   "pos": "danh từ",
+   "note": "Giống 外边.",
+   "ex": [
+    {
+     "cn": "外面有人找你。",
+     "py": "Wàimian yǒu rén zhǎo nǐ.",
+     "vi": "Ngoài kia có người tìm bạn."
+    }
+   ]
+  },
+  {
+   "w": "面",
+   "py": "miàn",
+   "hv": "diện",
+   "vi": "mặt, phía (hậu tố phương hướng)",
+   "pos": "hậu tố",
+   "note": "\"Diện\" trong \"phương diện\", \"mặt tiền\". Ghép sau phương hướng: 前面, 后面, 左面.",
+   "ex": [
+    {
+     "cn": "学校后面有一条河。",
+     "py": "Xuéxiào hòumian yǒu yì tiáo hé.",
+     "vi": "Sau trường có một con sông."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Động từ + 上 / 下 / 起 + 来 / 去",
+   "b": "走上去 · 跑下来 · 站起来",
+   "d": "Có thể ghép thêm động từ chỉ cách di chuyển ở trước: 走 (đi bộ), 跑 (chạy), 拿 (cầm). 起来 luôn đi với 来, không có 起去.",
+   "ex": [
+    {
+     "cn": "他跑上楼去了。",
+     "py": "Tā pǎo shàng lóu qù le.",
+     "vi": "Anh ấy chạy lên lầu rồi."
+    },
+    {
+     "cn": "请坐下来休息一下。",
+     "py": "Qǐng zuò xiàlai xiūxi yíxià.",
+     "vi": "Mời ngồi xuống nghỉ một lát."
+    }
+   ]
+  },
+  {
+   "t": "Danh từ + 上面 / 下面 / 里面 / 外面",
+   "b": "桌子上面 · 椅子下面 · 房间里面",
+   "d": "Từ chỉ vị trí đứng sau danh từ. Hai chữ 面 / 边 dùng như nhau: 上面 = 上边.",
+   "ex": [
+    {
+     "cn": "猫在椅子下面。",
+     "py": "Māo zài yǐzi xiàmian.",
+     "vi": "Con mèo ở dưới ghế."
+    },
+    {
+     "cn": "房间里面很干净。",
+     "py": "Fángjiān lǐmian hěn gānjìng.",
+     "vi": "Bên trong phòng rất sạch."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "电梯坏了，我们走上去吧。",
+   "py": "Diàntī huài le, wǒmen zǒu shàngqu ba.",
+   "vi": "Thang máy hỏng rồi, mình đi bộ lên nhé."
+  },
+  {
+   "cn": "你的手机在桌子上面。",
+   "py": "Nǐ de shǒujī zài zhuōzi shàngmian.",
+   "vi": "Điện thoại của bạn ở trên bàn."
+  },
+  {
+   "cn": "听了他的话，大家都笑起来了。",
+   "py": "Tīng le tā de huà, dàjiā dōu xiào qǐlai le.",
+   "vi": "Nghe anh ấy nói, mọi người đều bật cười."
+  },
+  {
+   "cn": "外面下雨了，我们在里面等吧。",
+   "py": "Wàimian xià yǔ le, wǒmen zài lǐmian děng ba.",
+   "vi": "Ngoài trời mưa rồi, chúng ta đợi ở trong nhé."
+  },
+  {
+   "cn": "下面请小王说一下。",
+   "py": "Xiàmian qǐng Xiǎo Wáng shuō yíxià.",
+   "vi": "Tiếp theo mời Tiểu Vương nói đôi lời."
+  }
+ ]
+}

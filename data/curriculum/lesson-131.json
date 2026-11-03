@@ -1,0 +1,206 @@
+{
+ "id": 131,
+ "cn": "打车去机场",
+ "title": "Đi lại và đi xa",
+ "goal": "Nói về bến xe, xe buýt, gọi taxi, vé máy bay, vé vào cửa, đi bộ, bay, nước ngoài và ăn Tết.",
+ "words": [
+  {
+   "w": "车站",
+   "py": "chēzhàn",
+   "hv": "xa trạm",
+   "vi": "bến xe, ga",
+   "pos": "danh từ",
+   "note": "车 + 站 (trạm). Ga tàu là 火车站.",
+   "ex": [
+    {
+     "cn": "车站离这儿不远。",
+     "py": "Chēzhàn lí zhèr bù yuǎn.",
+     "vi": "Bến xe cách đây không xa."
+    }
+   ]
+  },
+  {
+   "w": "公交车",
+   "py": "gōngjiāochē",
+   "hv": "công giao xa",
+   "vi": "xe buýt",
+   "pos": "danh từ",
+   "note": "公 (công cộng) + 交 (giao thông) + 车. Cũng nói 公共汽车.",
+   "ex": [
+    {
+     "cn": "我每天坐公交车上班。",
+     "py": "Wǒ měi tiān zuò gōngjiāochē shàngbān.",
+     "vi": "Ngày nào tôi cũng đi xe buýt đi làm."
+    }
+   ]
+  },
+  {
+   "w": "打车",
+   "py": "dǎchē",
+   "hv": "đả xa",
+   "vi": "gọi taxi, bắt xe",
+   "pos": "động từ",
+   "note": "打 ở đây là \"gọi, đón\". Gọi xe qua ứng dụng cũng là 打车.",
+   "ex": [
+    {
+     "cn": "太晚了，我们打车回去吧。",
+     "py": "Tài wǎn le, wǒmen dǎchē huíqu ba.",
+     "vi": "Muộn quá rồi, mình gọi taxi về nhé."
+    }
+   ]
+  },
+  {
+   "w": "走路",
+   "py": "zǒulù",
+   "hv": "tẩu lộ",
+   "vi": "đi bộ",
+   "pos": "động từ",
+   "note": "走 (đi) + 路 (đường).",
+   "ex": [
+    {
+     "cn": "我家很近，走路十分钟。",
+     "py": "Wǒ jiā hěn jìn, zǒulù shí fēnzhōng.",
+     "vi": "Nhà tôi gần lắm, đi bộ mười phút."
+    }
+   ]
+  },
+  {
+   "w": "飞",
+   "py": "fēi",
+   "hv": "phi",
+   "vi": "bay",
+   "pos": "động từ",
+   "note": "\"Phi\" trong \"phi cơ\", \"phi công\". Máy bay là 飞机.",
+   "ex": [
+    {
+     "cn": "小鸟飞走了。",
+     "py": "Xiǎo niǎo fēi zǒu le.",
+     "vi": "Con chim nhỏ bay đi rồi."
+    }
+   ]
+  },
+  {
+   "w": "机票",
+   "py": "jīpiào",
+   "hv": "cơ phiếu",
+   "vi": "vé máy bay",
+   "pos": "danh từ",
+   "note": "机 (máy bay) + 票 (vé, \"phiếu\").",
+   "ex": [
+    {
+     "cn": "我在网上买了机票。",
+     "py": "Wǒ zài wǎngshang mǎi le jīpiào.",
+     "vi": "Tôi đã mua vé máy bay trên mạng."
+    }
+   ]
+  },
+  {
+   "w": "门票",
+   "py": "ménpiào",
+   "hv": "môn phiếu",
+   "vi": "vé vào cửa",
+   "pos": "danh từ",
+   "note": "门 (cửa) + 票. Vé vào công viên, bảo tàng.",
+   "ex": [
+    {
+     "cn": "公园的门票多少钱？",
+     "py": "Gōngyuán de ménpiào duōshao qián?",
+     "vi": "Vé vào công viên bao nhiêu tiền?"
+    }
+   ]
+  },
+  {
+   "w": "外国",
+   "py": "wàiguó",
+   "hv": "ngoại quốc",
+   "vi": "nước ngoài",
+   "pos": "danh từ",
+   "note": "Chính là \"ngoại quốc\". Người nước ngoài là 外国人.",
+   "ex": [
+    {
+     "cn": "这里有很多外国人。",
+     "py": "Zhèlǐ yǒu hěn duō wàiguó rén.",
+     "vi": "Ở đây có rất nhiều người nước ngoài."
+    }
+   ]
+  },
+  {
+   "w": "过年",
+   "py": "guònián",
+   "hv": "quá niên",
+   "vi": "ăn Tết",
+   "pos": "động từ",
+   "note": "Nghĩa đen \"qua năm\". Người Trung Quốc và người Việt đều ăn Tết âm lịch.",
+   "ex": [
+    {
+     "cn": "你回家过年吗？",
+     "py": "Nǐ huí jiā guònián ma?",
+     "vi": "Bạn có về nhà ăn Tết không?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "坐 / 打 / 走路: cách đi lại",
+   "b": "坐 + 公交车 / 火车 / 飞机 · 打车 · 走路",
+   "d": "Đi phương tiện công cộng dùng 坐 (ngồi), gọi taxi dùng 打车, đi bộ là 走路. Cách đi đứng trước động từ chính: 坐公交车上班.",
+   "ex": [
+    {
+     "cn": "我坐飞机去北京。",
+     "py": "Wǒ zuò fēijī qù Běijīng.",
+     "vi": "Tôi đi máy bay đến Bắc Kinh."
+    },
+    {
+     "cn": "他走路去学校。",
+     "py": "Tā zǒulù qù xuéxiào.",
+     "vi": "Cậu ấy đi bộ đến trường."
+    }
+   ]
+  },
+  {
+   "t": "离: khoảng cách",
+   "b": "A + 离 + B + 远 / 近",
+   "d": "Nói A cách B xa hay gần. 离 đứng trước điểm mốc.",
+   "ex": [
+    {
+     "cn": "机场离这儿很远。",
+     "py": "Jīchǎng lí zhèr hěn yuǎn.",
+     "vi": "Sân bay cách đây rất xa."
+    },
+    {
+     "cn": "我家离学校很近。",
+     "py": "Wǒ jiā lí xuéxiào hěn jìn.",
+     "vi": "Nhà tôi cách trường rất gần."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我们打车去机场吧。",
+   "py": "Wǒmen dǎchē qù jīchǎng ba.",
+   "vi": "Mình gọi taxi ra sân bay nhé."
+  },
+  {
+   "cn": "过年的时候机票很贵。",
+   "py": "Guònián de shíhou jīpiào hěn guì.",
+   "vi": "Dịp Tết vé máy bay rất đắt."
+  },
+  {
+   "cn": "请问，去车站坐几路公交车？",
+   "py": "Qǐngwèn, qù chēzhàn zuò jǐ lù gōngjiāochē?",
+   "vi": "Cho hỏi, ra bến xe thì đi xe buýt số mấy?"
+  },
+  {
+   "cn": "飞机飞得很快。",
+   "py": "Fēijī fēi de hěn kuài.",
+   "vi": "Máy bay bay rất nhanh."
+  },
+  {
+   "cn": "很多外国人喜欢来越南过年。",
+   "py": "Hěn duō wàiguó rén xǐhuan lái Yuènán guònián.",
+   "vi": "Nhiều người nước ngoài thích sang Việt Nam ăn Tết."
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+ "id": 134,
+ "cn": "小时候",
+ "title": "Hồi nhỏ và bây giờ",
+ "goal": "Nói về trẻ con, hồi nhỏ, từ nhỏ, tuần, đôi khi, và các trạng thái 已经 / 快要 / 正.",
+ "words": [
+  {
+   "w": "小孩儿",
+   "py": "xiǎoháir",
+   "hv": "tiểu hài nhi",
+   "vi": "trẻ con",
+   "pos": "danh từ",
+   "note": "小 + 孩 (\"hài\" trong \"hài nhi\"). Khẩu ngữ, hay đọc uốn lưỡi.",
+   "ex": [
+    {
+     "cn": "那个小孩儿很可爱。",
+     "py": "Nàge xiǎoháir hěn kě'ài.",
+     "vi": "Đứa trẻ kia rất đáng yêu."
+    }
+   ]
+  },
+  {
+   "w": "男孩儿",
+   "py": "nánháir",
+   "hv": "nam hài nhi",
+   "vi": "bé trai, cậu bé",
+   "pos": "danh từ",
+   "note": "男 + 孩儿. Cũng nói 男孩子.",
+   "ex": [
+    {
+     "cn": "他们有一个男孩儿。",
+     "py": "Tāmen yǒu yí ge nánháir.",
+     "vi": "Họ có một bé trai."
+    }
+   ]
+  },
+  {
+   "w": "女孩儿",
+   "py": "nǚháir",
+   "hv": "nữ hài nhi",
+   "vi": "bé gái, cô bé",
+   "pos": "danh từ",
+   "note": "女 + 孩儿. Cũng dùng gọi cô gái trẻ.",
+   "ex": [
+    {
+     "cn": "那个女孩儿是我同学。",
+     "py": "Nàge nǚháir shì wǒ tóngxué.",
+     "vi": "Cô gái kia là bạn cùng lớp tôi."
+    }
+   ]
+  },
+  {
+   "w": "小时候",
+   "py": "xiǎoshíhou",
+   "hv": "tiểu thời hậu",
+   "vi": "hồi nhỏ",
+   "pos": "danh từ",
+   "note": "小 (nhỏ) + 时候 (lúc). Kể chuyện ngày bé luôn mở đầu bằng 小时候.",
+   "ex": [
+    {
+     "cn": "小时候我住在农村。",
+     "py": "Xiǎoshíhou wǒ zhù zài nóngcūn.",
+     "vi": "Hồi nhỏ tôi sống ở nông thôn."
+    }
+   ]
+  },
+  {
+   "w": "从小",
+   "py": "cóngxiǎo",
+   "hv": "tòng tiểu",
+   "vi": "từ nhỏ",
+   "pos": "phó từ",
+   "note": "从 (từ) + 小. Đứng trước động từ: 从小就喜欢.",
+   "ex": [
+    {
+     "cn": "他从小就喜欢足球。",
+     "py": "Tā cóngxiǎo jiù xǐhuan zúqiú.",
+     "vi": "Anh ấy thích bóng đá từ nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "时",
+   "py": "shí",
+   "hv": "thời",
+   "vi": "lúc, khi",
+   "pos": "danh từ",
+   "note": "Dạng viết gọn của 时候: 上课时 = 上课的时候.",
+   "ex": [
+    {
+     "cn": "上课时不要玩手机。",
+     "py": "Shàngkè shí búyào wán shǒujī.",
+     "vi": "Trong giờ học đừng chơi điện thoại."
+    }
+   ]
+  },
+  {
+   "w": "有时",
+   "py": "yǒushí",
+   "hv": "hữu thời",
+   "vi": "đôi khi, có lúc",
+   "pos": "phó từ",
+   "note": "Gọn hơn 有时候, nghĩa như nhau.",
+   "ex": [
+    {
+     "cn": "我有时坐公交车，有时走路。",
+     "py": "Wǒ yǒushí zuò gōngjiāochē, yǒushí zǒulù.",
+     "vi": "Tôi lúc đi xe buýt, lúc đi bộ."
+    }
+   ]
+  },
+  {
+   "w": "周",
+   "py": "zhōu",
+   "hv": "chu",
+   "vi": "tuần",
+   "pos": "danh từ",
+   "note": "Trang trọng hơn 星期. 周末 là cuối tuần, 周一 là thứ Hai.",
+   "ex": [
+    {
+     "cn": "我们下周去旅游。",
+     "py": "Wǒmen xià zhōu qù lǚyóu.",
+     "vi": "Tuần sau chúng tôi đi du lịch."
+    }
+   ]
+  },
+  {
+   "w": "已经",
+   "py": "yǐjīng",
+   "hv": "dĩ kinh",
+   "vi": "đã, rồi",
+   "pos": "phó từ",
+   "note": "\"Dĩ\" trong \"dĩ vãng\". Thường đi với 了 ở cuối câu: 已经…了.",
+   "ex": [
+    {
+     "cn": "他已经回家了。",
+     "py": "Tā yǐjīng huí jiā le.",
+     "vi": "Anh ấy đã về nhà rồi."
+    }
+   ]
+  },
+  {
+   "w": "快要",
+   "py": "kuàiyào",
+   "hv": "khoái yếu",
+   "vi": "sắp, sắp sửa",
+   "pos": "phó từ",
+   "note": "快要…了 là \"sắp…rồi\". Không đi với mốc thời gian cụ thể.",
+   "ex": [
+    {
+     "cn": "火车快要开了。",
+     "py": "Huǒchē kuàiyào kāi le.",
+     "vi": "Tàu sắp chạy rồi."
+    }
+   ]
+  },
+  {
+   "w": "正",
+   "py": "zhèng",
+   "hv": "chính",
+   "vi": "đang (đúng lúc)",
+   "pos": "phó từ",
+   "note": "\"Chính\" trong \"chính lúc\". 正在 cũng là \"đang\". Hay đi với 呢 ở cuối.",
+   "ex": [
+    {
+     "cn": "我正吃饭呢。",
+     "py": "Wǒ zhèng chīfàn ne.",
+     "vi": "Tôi đang ăn cơm đây."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "已经…了 / 快要…了",
+   "b": "已经 + động từ + 了 · 快要 + động từ + 了",
+   "d": "Hai cấu trúc đối xứng: việc đã xong và việc sắp xảy ra. Cả hai đều có 了 ở cuối.",
+   "ex": [
+    {
+     "cn": "我已经吃饭了。",
+     "py": "Wǒ yǐjīng chīfàn le.",
+     "vi": "Tôi ăn cơm rồi."
+    },
+    {
+     "cn": "快要下雨了，我们快走吧。",
+     "py": "Kuàiyào xià yǔ le, wǒmen kuài zǒu ba.",
+     "vi": "Sắp mưa rồi, mình đi nhanh thôi."
+    }
+   ]
+  },
+  {
+   "t": "正 + động từ + 呢: đang làm",
+   "b": "正 / 正在 + động từ + 呢",
+   "d": "Diễn tả việc đang diễn ra đúng lúc đó. Hay dùng khi trả lời điện thoại.",
+   "ex": [
+    {
+     "cn": "他正上课呢，不能接电话。",
+     "py": "Tā zhèng shàngkè ne, bù néng jiē diànhuà.",
+     "vi": "Anh ấy đang học, không nghe điện thoại được."
+    },
+    {
+     "cn": "你打电话的时候，我正睡觉呢。",
+     "py": "Nǐ dǎ diànhuà de shíhou, wǒ zhèng shuìjiào ne.",
+     "vi": "Lúc bạn gọi, tôi đang ngủ."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "小时候我很喜欢唱歌。",
+   "py": "Xiǎoshíhou wǒ hěn xǐhuan chànggē.",
+   "vi": "Hồi nhỏ tôi rất thích hát."
+  },
+  {
+   "cn": "我从小就想当老师。",
+   "py": "Wǒ cóngxiǎo jiù xiǎng dāng lǎoshī.",
+   "vi": "Từ nhỏ tôi đã muốn làm giáo viên."
+  },
+  {
+   "cn": "这个周末你有时间吗？",
+   "py": "Zhège zhōumò nǐ yǒu shíjiān ma?",
+   "vi": "Cuối tuần này bạn có thời gian không?"
+  },
+  {
+   "cn": "我已经学了一年汉语了。",
+   "py": "Wǒ yǐjīng xué le yì nián Hànyǔ le.",
+   "vi": "Tôi đã học tiếng Trung được một năm rồi."
+  },
+  {
+   "cn": "快要过年了，大家都很高兴。",
+   "py": "Kuàiyào guònián le, dàjiā dōu hěn gāoxìng.",
+   "vi": "Sắp Tết rồi, ai cũng rất vui."
+  }
+ ]
+}

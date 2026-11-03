@@ -46,6 +46,8 @@ export const radicals   = () => getJSON('data/radicals.json');
 export const hanviet    = () => getJSON('data/hanviet.json');
 export const decomp     = () => getJSON('data/decomp.json');
 export const lesson     = (file) => getJSON(`data/curriculum/${file}`);
+/* Cấp của từng từ theo chuẩn HSK 2025: { từ: "1"…"6" | "7-9" } */
+export const hsk2025    = () => getJSON('data/hsk2025.json').catch(() => ({}));
 
 /* ---------- Nét viết, nạp theo mảnh ------------------------------------- */
 

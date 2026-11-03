@@ -1,0 +1,236 @@
+{
+ "id": 119,
+ "cn": "他们和这些",
+ "title": "Họ, cái này, những cái kia",
+ "goal": "Nói số nhiều bằng 们, và chỉ người, vật bằng 这个 / 那个 / 哪个, 这些 / 那些 / 哪些.",
+ "words": [
+  {
+   "w": "们",
+   "py": "men",
+   "hv": "môn",
+   "vi": "(hậu tố số nhiều cho người)",
+   "pos": "hậu tố",
+   "note": "Gắn sau đại từ hoặc danh từ chỉ người để thành số nhiều: 我们, 老师们. Không dùng 们 khi đã có số đếm: nói 三个学生, không nói 三个学生们.",
+   "ex": [
+    {
+     "cn": "同学们好！",
+     "py": "Tóngxuémen hǎo!",
+     "vi": "Chào các bạn!"
+    }
+   ]
+  },
+  {
+   "w": "你们",
+   "py": "nǐmen",
+   "hv": "nễ môn",
+   "vi": "các bạn, các anh chị",
+   "pos": "đại từ",
+   "note": "你 + 们. Dùng khi nói với từ hai người trở lên.",
+   "ex": [
+    {
+     "cn": "你们是学生吗？",
+     "py": "Nǐmen shì xuésheng ma?",
+     "vi": "Các bạn là học sinh à?"
+    }
+   ]
+  },
+  {
+   "w": "他们",
+   "py": "tāmen",
+   "hv": "tha môn",
+   "vi": "họ, các anh ấy",
+   "pos": "đại từ",
+   "note": "Nhóm có cả nam lẫn nữ cũng dùng 他们.",
+   "ex": [
+    {
+     "cn": "他们是我的朋友。",
+     "py": "Tāmen shì wǒ de péngyou.",
+     "vi": "Họ là bạn của tôi."
+    }
+   ]
+  },
+  {
+   "w": "她们",
+   "py": "tāmen",
+   "hv": "tha môn",
+   "vi": "họ (toàn nữ), các cô ấy",
+   "pos": "đại từ",
+   "note": "Đọc giống hệt 他们, chỉ khác khi viết: cả nhóm đều là nữ mới dùng 她们.",
+   "ex": [
+    {
+     "cn": "她们都是老师。",
+     "py": "Tāmen dōu shì lǎoshī.",
+     "vi": "Các cô ấy đều là giáo viên."
+    }
+   ]
+  },
+  {
+   "w": "它们",
+   "py": "tāmen",
+   "hv": "tha môn",
+   "vi": "chúng nó (con vật, đồ vật)",
+   "pos": "đại từ",
+   "note": "它 dùng cho con vật, đồ vật. Ba chữ 他们, 她们, 它们 đọc như nhau.",
+   "ex": [
+    {
+     "cn": "我家有两只猫，它们很可爱。",
+     "py": "Wǒ jiā yǒu liǎng zhī māo, tāmen hěn kě'ài.",
+     "vi": "Nhà tôi có hai con mèo, chúng rất đáng yêu."
+    }
+   ]
+  },
+  {
+   "w": "这个",
+   "py": "zhège",
+   "hv": "giá cá",
+   "vi": "cái này, người này",
+   "pos": "đại từ",
+   "note": "这 (này) + 个 (lượng từ chung). Trong khẩu ngữ hay đọc zhèige.",
+   "ex": [
+    {
+     "cn": "这个多少钱？",
+     "py": "Zhège duōshao qián?",
+     "vi": "Cái này bao nhiêu tiền?"
+    }
+   ]
+  },
+  {
+   "w": "那个",
+   "py": "nàge",
+   "hv": "na cá",
+   "vi": "cái kia, người kia",
+   "pos": "đại từ",
+   "note": "那 (kia) + 个. Khẩu ngữ hay đọc nèige. Người Trung Quốc còn nói 那个… khi đang nghĩ, giống \"ờ…\" của người Việt.",
+   "ex": [
+    {
+     "cn": "那个人是谁？",
+     "py": "Nàge rén shì shéi?",
+     "vi": "Người kia là ai?"
+    }
+   ]
+  },
+  {
+   "w": "哪个",
+   "py": "nǎge",
+   "hv": "na cá",
+   "vi": "cái nào, người nào",
+   "pos": "đại từ",
+   "note": "Chú ý thanh điệu: 哪 thanh 3 (nǎ) là \"nào\", 那 thanh 4 (nà) là \"kia\". Chữ 哪 có thêm bộ 口.",
+   "ex": [
+    {
+     "cn": "你喜欢哪个？",
+     "py": "Nǐ xǐhuan nǎge?",
+     "vi": "Bạn thích cái nào?"
+    }
+   ]
+  },
+  {
+   "w": "这些",
+   "py": "zhèxiē",
+   "hv": "giá ta",
+   "vi": "những cái này",
+   "pos": "đại từ",
+   "note": "些 là \"một vài, những\". Sau 这些 không cần lượng từ: 这些书.",
+   "ex": [
+    {
+     "cn": "这些书都是我的。",
+     "py": "Zhèxiē shū dōu shì wǒ de.",
+     "vi": "Những cuốn sách này đều là của tôi."
+    }
+   ]
+  },
+  {
+   "w": "那些",
+   "py": "nàxiē",
+   "hv": "na ta",
+   "vi": "những cái kia",
+   "pos": "đại từ",
+   "note": "Đối xứng với 这些.",
+   "ex": [
+    {
+     "cn": "那些苹果很好吃。",
+     "py": "Nàxiē píngguǒ hěn hǎochī.",
+     "vi": "Những quả táo kia rất ngon."
+    }
+   ]
+  },
+  {
+   "w": "哪些",
+   "py": "nǎxiē",
+   "hv": "na ta",
+   "vi": "những cái nào",
+   "pos": "đại từ",
+   "note": "Hỏi khi câu trả lời có thể là nhiều thứ.",
+   "ex": [
+    {
+     "cn": "你会说哪些语言？",
+     "py": "Nǐ huì shuō nǎxiē yǔyán?",
+     "vi": "Bạn nói được những thứ tiếng nào?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "们 — số nhiều cho người",
+   "b": "đại từ / danh từ chỉ người + 们",
+   "d": "Tiếng Trung không đổi hình thức danh từ theo số nhiều. Chỉ người mới thêm 们, và không thêm khi đã có số đếm hay từ chỉ số lượng.",
+   "ex": [
+    {
+     "cn": "老师们都很忙。",
+     "py": "Lǎoshīmen dōu hěn máng.",
+     "vi": "Các thầy cô đều rất bận."
+    },
+    {
+     "cn": "我有三个朋友。",
+     "py": "Wǒ yǒu sān ge péngyou.",
+     "vi": "Tôi có ba người bạn."
+    }
+   ]
+  },
+  {
+   "t": "这 / 那 / 哪 + 个 hoặc 些",
+   "b": "这个 cái này · 那个 cái kia · 哪个 cái nào · 这些 / 那些 / 哪些 nhiều cái",
+   "d": "Một cái thì dùng 个 (hoặc lượng từ riêng), nhiều cái thì dùng 些. Câu hỏi với 哪 không cần thêm 吗.",
+   "ex": [
+    {
+     "cn": "你要这个还是那个？",
+     "py": "Nǐ yào zhège háishi nàge?",
+     "vi": "Bạn lấy cái này hay cái kia?"
+    },
+    {
+     "cn": "哪些是你的？",
+     "py": "Nǎxiē shì nǐ de?",
+     "vi": "Những cái nào là của bạn?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "你们好！",
+   "py": "Nǐmen hǎo!",
+   "vi": "Chào các bạn!"
+  },
+  {
+   "cn": "他们是哪国人？",
+   "py": "Tāmen shì nǎ guó rén?",
+   "vi": "Họ là người nước nào?"
+  },
+  {
+   "cn": "这个是我的，那个是你的。",
+   "py": "Zhège shì wǒ de, nàge shì nǐ de.",
+   "vi": "Cái này của tôi, cái kia của bạn."
+  },
+  {
+   "cn": "这些都是新的。",
+   "py": "Zhèxiē dōu shì xīn de.",
+   "vi": "Những cái này đều mới."
+  },
+  {
+   "cn": "你喜欢哪些菜？",
+   "py": "Nǐ xǐhuan nǎxiē cài?",
+   "vi": "Bạn thích những món nào?"
+  }
+ ]
+}

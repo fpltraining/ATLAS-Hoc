@@ -173,7 +173,7 @@ export async function buildToday() {
       href: beginner ? '#/pinyin' : `#/lesson/${meta.id}`,
       desc: beginner
         ? 'Bắt đầu từ Pinyin và thanh điệu, rồi tới bài 1'
-        : `HSK ${meta.level}, bài ${meta.id}: ${meta.title}${quota.zh ? ` · tối đa ${quota.zh} từ mới, viết từng nét bằng bút` : ' · luyện viết chữ cũ'}`,
+        : `HSK ${meta.level}, bài ${meta.no ?? meta.id}: ${meta.title}${quota.zh ? ` · tối đa ${quota.zh} từ mới, viết từng nét bằng bút` : ' · luyện viết chữ cũ'}`,
     });
   }
 

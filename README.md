@@ -10,7 +10,7 @@ Gộp từ 5 app: Bút Hán, Inklish, ATLAS bản cũ, Song Ngữ và Han's Engl
 |---|---|
 | Hôm nay | Việc cần làm theo thứ tự, chia theo quỹ 30 phút đến 2 tiếng, có nhật ký |
 | Tiếng Anh | 5 chặng từ A0 đến C1, truyện và tin song ngữ, viết bằng bút, ôn thẻ, tiếng Anh nghề, sổ tay ngữ pháp |
-| Tiếng Trung | 118 bài HSK 1–4, truyện song ngữ có pinyin, viết chấm từng nét, ôn thẻ, pinyin, bộ thủ |
+| Tiếng Trung | 135 bài HSK 1–4 theo chuẩn 2025 (đủ 100% từ cấp 1–2), truyện song ngữ có pinyin, viết chấm từng nét, ôn thẻ, pinyin, bộ thủ |
 | Chủ đề | 99 chủ đề song song hai ngôn ngữ, từ theo lĩnh vực, kiến thức, đọc số và tiền, sổ ghi |
 | Tiến độ | Thời gian thật theo từng khối, nhật ký, sao lưu và nhập từ app cũ |
 
@@ -80,6 +80,17 @@ Dòng bắt đầu bằng `!` là phần **Điều rút ra**, hiện thành khun
 Tiếng Trung thêm `@lang zh`, mỗi dòng là `chữ Hán | pinyin | tiếng Việt`. Chữ Hán mới cần thêm vào `data-src/strokes-extra.json` để viết được bằng bút, và từ mới thêm vào `data-src/zh-extra.txt` để chạm vào là tra được.
 
 `@shelf` nhận `ai`, `true`, `news`, `mystery`, `long`, và `fable` cho tiếng Trung.
+
+## Giáo trình tiếng Trung theo chuẩn HSK 2025
+
+Lộ trình xếp theo bản sửa đổi năm 2025 của chuẩn HSK 3.0 (cấp 1: 300 từ, cấp 2: 200, cấp 3: 500, cấp 4: 1.000).
+
+- `data-src/hsk2025/levels.json`: cấp của từng từ, nguồn ghi trong `data-src/hsk2025/README.md`.
+- `data-src/curriculum-2025/*.txt`: bài bổ sung, mỗi bài ghi `@after` để chèn vào đúng chỗ trong lộ trình.
+- `node tools/build-curriculum.mjs`: dựng bài bổ sung, xếp lại nhóm cấp, đánh số bài, in độ phủ từng cấp.
+
+Bài cũ giữ nguyên `id` để không mất tiến độ người học; số bài hiển thị lấy theo vị trí (`no`).
+Sau khi thêm bài có chữ Hán mới, chạy `tools/add-strokes.mjs` rồi `tools/build-stories.mjs` để chép dữ liệu nét.
 
 ## Sửa nội dung
 

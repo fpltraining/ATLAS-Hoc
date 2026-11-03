@@ -1,0 +1,221 @@
+{
+ "id": 120,
+ "cn": "这里和那里",
+ "title": "Ở đây, ở kia",
+ "goal": "Chỉ nơi chốn bằng 这里 / 那里 / 哪里, 这边 / 那边, và nói trước, sau, bên ngoài.",
+ "words": [
+  {
+   "w": "这里",
+   "py": "zhèlǐ",
+   "hv": "giá lý",
+   "vi": "ở đây, chỗ này",
+   "pos": "đại từ",
+   "note": "里 ở đây là \"chỗ, nơi\". Miền Bắc Trung Quốc hay nói 这儿, nghĩa như nhau.",
+   "ex": [
+    {
+     "cn": "这里是我的学校。",
+     "py": "Zhèlǐ shì wǒ de xuéxiào.",
+     "vi": "Đây là trường của tôi."
+    }
+   ]
+  },
+  {
+   "w": "那里",
+   "py": "nàlǐ",
+   "hv": "na lý",
+   "vi": "ở đó, ở kia",
+   "pos": "đại từ",
+   "note": "Tương đương 那儿.",
+   "ex": [
+    {
+     "cn": "那里有很多人。",
+     "py": "Nàlǐ yǒu hěn duō rén.",
+     "vi": "Ở đó có rất nhiều người."
+    }
+   ]
+  },
+  {
+   "w": "哪里",
+   "py": "nǎlǐ",
+   "hv": "na lý",
+   "vi": "ở đâu",
+   "pos": "đại từ",
+   "note": "Hai thanh 3 đi liền nên đọc thành nálǐ. Khi được khen, người Trung Quốc hay đáp 哪里哪里 nghĩa là \"đâu có, đâu có\".",
+   "ex": [
+    {
+     "cn": "你家在哪里？",
+     "py": "Nǐ jiā zài nǎlǐ?",
+     "vi": "Nhà bạn ở đâu?"
+    }
+   ]
+  },
+  {
+   "w": "这边",
+   "py": "zhèbiān",
+   "hv": "giá biên",
+   "vi": "bên này, phía này",
+   "pos": "đại từ",
+   "note": "边 là \"bên, phía\". Hay dùng khi chỉ đường: 请这边走 (mời đi lối này).",
+   "ex": [
+    {
+     "cn": "请这边走。",
+     "py": "Qǐng zhèbiān zǒu.",
+     "vi": "Mời đi lối này."
+    }
+   ]
+  },
+  {
+   "w": "那边",
+   "py": "nàbiān",
+   "hv": "na biên",
+   "vi": "bên kia, phía kia",
+   "pos": "đại từ",
+   "note": "Đối xứng với 这边.",
+   "ex": [
+    {
+     "cn": "洗手间在那边。",
+     "py": "Xǐshǒujiān zài nàbiān.",
+     "vi": "Nhà vệ sinh ở phía kia."
+    }
+   ]
+  },
+  {
+   "w": "外边",
+   "py": "wàibian",
+   "hv": "ngoại biên",
+   "vi": "bên ngoài",
+   "pos": "danh từ",
+   "note": "外 = \"ngoại\" trong \"ngoại quốc\". Chữ 边 ở đây đọc nhẹ.",
+   "ex": [
+    {
+     "cn": "外边下雨了。",
+     "py": "Wàibian xià yǔ le.",
+     "vi": "Bên ngoài mưa rồi."
+    }
+   ]
+  },
+  {
+   "w": "前",
+   "py": "qián",
+   "hv": "tiền",
+   "vi": "phía trước; trước (thời gian)",
+   "pos": "danh từ",
+   "note": "\"Tiền\" trong \"tiền sảnh\", \"trước tiên\". Dùng cả cho chỗ lẫn thời gian: 三天前 (ba ngày trước).",
+   "ex": [
+    {
+     "cn": "学校前有一个商店。",
+     "py": "Xuéxiào qián yǒu yí ge shāngdiàn.",
+     "vi": "Trước trường có một cửa hàng."
+    }
+   ]
+  },
+  {
+   "w": "后",
+   "py": "hòu",
+   "hv": "hậu",
+   "vi": "phía sau; sau (thời gian)",
+   "pos": "danh từ",
+   "note": "\"Hậu\" trong \"hậu quả\", \"hậu phương\". 以后 là \"sau này\".",
+   "ex": [
+    {
+     "cn": "吃饭后我们去看电影。",
+     "py": "Chīfàn hòu wǒmen qù kàn diànyǐng.",
+     "vi": "Ăn cơm xong chúng ta đi xem phim."
+    }
+   ]
+  },
+  {
+   "w": "边",
+   "py": "biān",
+   "hv": "biên",
+   "vi": "bên, phía, cạnh",
+   "pos": "danh từ",
+   "note": "\"Biên\" trong \"biên giới\". Ghép với phương hướng: 左边, 右边, 旁边.",
+   "ex": [
+    {
+     "cn": "我坐在他旁边。",
+     "py": "Wǒ zuò zài tā pángbiān.",
+     "vi": "Tôi ngồi cạnh anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "有的",
+   "py": "yǒude",
+   "hv": "hữu đích",
+   "vi": "có cái, có người, một số",
+   "pos": "đại từ",
+   "note": "Dùng để chia một nhóm: 有的…有的… (có người thì…, có người thì…).",
+   "ex": [
+    {
+     "cn": "有的人喜欢茶，有的人喜欢咖啡。",
+     "py": "Yǒude rén xǐhuan chá, yǒude rén xǐhuan kāfēi.",
+     "vi": "Có người thích trà, có người thích cà phê."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "在 + nơi chốn",
+   "b": "Người / vật + 在 + 这里 / 那里 / 哪里",
+   "d": "Hỏi \"ở đâu\" thì chỉ cần đặt 哪里 vào đúng chỗ của câu trả lời, không cần đảo trật tự như tiếng Anh.",
+   "ex": [
+    {
+     "cn": "你在哪里？",
+     "py": "Nǐ zài nǎlǐ?",
+     "vi": "Bạn đang ở đâu?"
+    },
+    {
+     "cn": "我在这里。",
+     "py": "Wǒ zài zhèlǐ.",
+     "vi": "Tôi ở đây."
+    }
+   ]
+  },
+  {
+   "t": "Danh từ + 前 / 后 / 边",
+   "b": "学校前 · 吃饭后 · 门边",
+   "d": "Từ chỉ phương hướng đứng SAU danh từ, ngược với tiếng Việt: tiếng Việt nói \"trước trường\", tiếng Trung nói \"trường trước\" (学校前).",
+   "ex": [
+    {
+     "cn": "银行在医院后边。",
+     "py": "Yínháng zài yīyuàn hòubian.",
+     "vi": "Ngân hàng ở phía sau bệnh viện."
+    },
+    {
+     "cn": "下课后我去图书馆。",
+     "py": "Xiàkè hòu wǒ qù túshūguǎn.",
+     "vi": "Tan học tôi đi thư viện."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "这里是哪里？",
+   "py": "Zhèlǐ shì nǎlǐ?",
+   "vi": "Đây là đâu?"
+  },
+  {
+   "cn": "我在那边等你。",
+   "py": "Wǒ zài nàbiān děng nǐ.",
+   "vi": "Tôi đợi bạn ở bên kia."
+  },
+  {
+   "cn": "外边很冷，你多穿一点儿。",
+   "py": "Wàibian hěn lěng, nǐ duō chuān yìdiǎnr.",
+   "vi": "Bên ngoài lạnh lắm, bạn mặc thêm vào."
+  },
+  {
+   "cn": "我家前边有一个公园。",
+   "py": "Wǒ jiā qiánbian yǒu yí ge gōngyuán.",
+   "vi": "Trước nhà tôi có một công viên."
+  },
+  {
+   "cn": "有的同学来了，有的还没来。",
+   "py": "Yǒude tóngxué lái le, yǒude hái méi lái.",
+   "vi": "Có bạn đến rồi, có bạn chưa đến."
+  }
+ ]
+}

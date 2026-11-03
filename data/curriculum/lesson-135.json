@@ -1,0 +1,221 @@
+{
+ "id": 135,
+ "cn": "不好意思",
+ "title": "Nói chuyện tự nhiên",
+ "goal": "Khen, xin lỗi nhẹ nhàng, nói thú vị hay chán, dùng 这么 / 那么 / 这样 / 那样, nhờ giúp, và nối câu bằng 但.",
+ "words": [
+  {
+   "w": "不错",
+   "py": "búcuò",
+   "hv": "bất thác",
+   "vi": "khá tốt, không tồi",
+   "pos": "tính từ",
+   "note": "Nghĩa đen \"không sai\", dùng để khen nhẹ. Người Trung Quốc khen bằng 不错 rất nhiều.",
+   "ex": [
+    {
+     "cn": "你的汉语说得很不错！",
+     "py": "Nǐ de Hànyǔ shuō de hěn búcuò!",
+     "vi": "Tiếng Trung của bạn nói khá lắm!"
+    }
+   ]
+  },
+  {
+   "w": "不好意思",
+   "py": "bù hǎoyìsi",
+   "hv": "bất hảo ý tứ",
+   "vi": "ngại quá, xin lỗi",
+   "pos": "cụm từ",
+   "note": "Nhẹ hơn 对不起. Dùng khi làm phiền, nhờ vả, hoặc thấy ngại.",
+   "ex": [
+    {
+     "cn": "不好意思，我来晚了。",
+     "py": "Bù hǎoyìsi, wǒ lái wǎn le.",
+     "vi": "Ngại quá, tôi đến muộn."
+    }
+   ]
+  },
+  {
+   "w": "有意思",
+   "py": "yǒu yìsi",
+   "hv": "hữu ý tứ",
+   "vi": "thú vị, hay",
+   "pos": "cụm từ",
+   "note": "意思 là \"ý nghĩa\". Có ý nghĩa thì thú vị.",
+   "ex": [
+    {
+     "cn": "这本书很有意思。",
+     "py": "Zhè běn shū hěn yǒu yìsi.",
+     "vi": "Cuốn sách này rất thú vị."
+    }
+   ]
+  },
+  {
+   "w": "没意思",
+   "py": "méi yìsi",
+   "hv": "một ý tứ",
+   "vi": "chán, vô vị",
+   "pos": "cụm từ",
+   "note": "Đối lập với 有意思.",
+   "ex": [
+    {
+     "cn": "这个电影太没意思了。",
+     "py": "Zhège diànyǐng tài méi yìsi le.",
+     "vi": "Bộ phim này chán quá."
+    }
+   ]
+  },
+  {
+   "w": "这么",
+   "py": "zhème",
+   "hv": "giá ma",
+   "vi": "như thế này, đến vậy",
+   "pos": "đại từ",
+   "note": "Đứng trước tính từ để nhấn mạnh: 这么贵 (đắt thế này).",
+   "ex": [
+    {
+     "cn": "今天怎么这么冷？",
+     "py": "Jīntiān zěnme zhème lěng?",
+     "vi": "Sao hôm nay lạnh thế này?"
+    }
+   ]
+  },
+  {
+   "w": "那么",
+   "py": "nàme",
+   "hv": "na ma",
+   "vi": "như thế kia; vậy thì",
+   "pos": "đại từ",
+   "note": "Trước tính từ là \"như thế\"; đầu câu là \"vậy thì\".",
+   "ex": [
+    {
+     "cn": "那么，我们明天见吧。",
+     "py": "Nàme, wǒmen míngtiān jiàn ba.",
+     "vi": "Vậy thì, mai mình gặp nhé."
+    }
+   ]
+  },
+  {
+   "w": "这样",
+   "py": "zhèyàng",
+   "hv": "giá dạng",
+   "vi": "như thế này, cách này",
+   "pos": "đại từ",
+   "note": "样 = \"dạng\" trong \"hình dạng\". 这样做 là \"làm như thế này\".",
+   "ex": [
+    {
+     "cn": "这个字应该这样写。",
+     "py": "Zhège zì yīnggāi zhèyàng xiě.",
+     "vi": "Chữ này phải viết như thế này."
+    }
+   ]
+  },
+  {
+   "w": "那样",
+   "py": "nàyàng",
+   "hv": "na dạng",
+   "vi": "như thế kia, cách kia",
+   "pos": "đại từ",
+   "note": "Đối xứng với 这样.",
+   "ex": [
+    {
+     "cn": "别那样说，他会不高兴的。",
+     "py": "Bié nàyàng shuō, tā huì bù gāoxìng de.",
+     "vi": "Đừng nói như thế, anh ấy sẽ buồn đấy."
+    }
+   ]
+  },
+  {
+   "w": "帮",
+   "py": "bāng",
+   "hv": "bang",
+   "vi": "giúp",
+   "pos": "động từ",
+   "note": "\"Bang\" trong \"bang trợ\". Gọn hơn 帮助, rất hay dùng trong khẩu ngữ.",
+   "ex": [
+    {
+     "cn": "你能帮我一下吗？",
+     "py": "Nǐ néng bāng wǒ yíxià ma?",
+     "vi": "Bạn giúp tôi một chút được không?"
+    }
+   ]
+  },
+  {
+   "w": "但",
+   "py": "dàn",
+   "hv": "đãn",
+   "vi": "nhưng",
+   "pos": "liên từ",
+   "note": "Gọn hơn 但是, nghĩa như nhau.",
+   "ex": [
+    {
+     "cn": "这件衣服很好看，但有点儿贵。",
+     "py": "Zhè jiàn yīfu hěn hǎokàn, dàn yǒudiǎnr guì.",
+     "vi": "Bộ quần áo này đẹp, nhưng hơi đắt."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "这么 / 那么 + tính từ",
+   "b": "这么 + 好 / 贵 / 冷 · 没有 + A + 那么 + tính từ",
+   "d": "这么 cho thứ ở gần hoặc đang nói tới, 那么 cho thứ ở xa. 那么 còn dùng để so sánh: 我没有他那么高 (tôi không cao bằng anh ấy).",
+   "ex": [
+    {
+     "cn": "你的房间这么大！",
+     "py": "Nǐ de fángjiān zhème dà!",
+     "vi": "Phòng bạn rộng thế!"
+    },
+    {
+     "cn": "我没有你那么忙。",
+     "py": "Wǒ méiyǒu nǐ nàme máng.",
+     "vi": "Tôi không bận bằng bạn."
+    }
+   ]
+  },
+  {
+   "t": "帮 + người + động từ",
+   "b": "帮我买 · 帮他拿 · 帮妈妈做饭",
+   "d": "Người được giúp đứng ngay sau 帮, rồi đến việc cần làm.",
+   "ex": [
+    {
+     "cn": "你帮我买一杯咖啡吧。",
+     "py": "Nǐ bāng wǒ mǎi yì bēi kāfēi ba.",
+     "vi": "Bạn mua giúp tôi một cốc cà phê nhé."
+    },
+    {
+     "cn": "我帮妈妈做饭。",
+     "py": "Wǒ bāng māma zuò fàn.",
+     "vi": "Tôi giúp mẹ nấu cơm."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "不好意思，请问这个怎么用？",
+   "py": "Bù hǎoyìsi, qǐngwèn zhège zěnme yòng?",
+   "vi": "Ngại quá, cho hỏi cái này dùng thế nào?"
+  },
+  {
+   "cn": "学汉语很有意思，但不容易。",
+   "py": "Xué Hànyǔ hěn yǒu yìsi, dàn bù róngyì.",
+   "vi": "Học tiếng Trung rất thú vị, nhưng không dễ."
+  },
+  {
+   "cn": "你怎么这么高兴？",
+   "py": "Nǐ zěnme zhème gāoxìng?",
+   "vi": "Sao bạn vui thế?"
+  },
+  {
+   "cn": "这家饭店的菜很不错。",
+   "py": "Zhè jiā fàndiàn de cài hěn búcuò.",
+   "vi": "Món ăn của nhà hàng này khá ngon."
+  },
+  {
+   "cn": "别这样，我们是朋友。",
+   "py": "Bié zhèyàng, wǒmen shì péngyou.",
+   "vi": "Đừng thế, chúng ta là bạn mà."
+  }
+ ]
+}

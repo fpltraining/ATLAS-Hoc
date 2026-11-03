@@ -1,0 +1,221 @@
+{
+ "id": 127,
+ "cn": "出来，进去",
+ "title": "Ra, vào, về",
+ "goal": "Dùng 来 và 去 sau động từ để chỉ hướng: lại gần người nói hay đi xa người nói.",
+ "words": [
+  {
+   "w": "出来",
+   "py": "chūlái",
+   "hv": "xuất lai",
+   "vi": "đi ra (về phía người nói)",
+   "pos": "động từ",
+   "note": "出 (ra) + 来 (về phía mình). Người nói đang ở bên ngoài.",
+   "ex": [
+    {
+     "cn": "你快出来吧！",
+     "py": "Nǐ kuài chūlai ba!",
+     "vi": "Bạn ra đây nhanh lên!"
+    }
+   ]
+  },
+  {
+   "w": "出去",
+   "py": "chūqù",
+   "hv": "xuất khứ",
+   "vi": "đi ra (xa người nói)",
+   "pos": "động từ",
+   "note": "出 + 去 (đi xa mình). Người nói đang ở bên trong.",
+   "ex": [
+    {
+     "cn": "我出去买点儿东西。",
+     "py": "Wǒ chūqu mǎi diǎnr dōngxi.",
+     "vi": "Tôi ra ngoài mua ít đồ."
+    }
+   ]
+  },
+  {
+   "w": "进来",
+   "py": "jìnlái",
+   "hv": "tiến lai",
+   "vi": "đi vào (về phía người nói)",
+   "pos": "động từ",
+   "note": "进 = \"tiến\" trong \"tiến vào\". Mời khách vào nhà: 请进来.",
+   "ex": [
+    {
+     "cn": "请进来坐。",
+     "py": "Qǐng jìnlai zuò.",
+     "vi": "Mời vào ngồi."
+    }
+   ]
+  },
+  {
+   "w": "进去",
+   "py": "jìnqù",
+   "hv": "tiến khứ",
+   "vi": "đi vào (xa người nói)",
+   "pos": "động từ",
+   "note": "Người nói đứng bên ngoài, người kia đi vào trong.",
+   "ex": [
+    {
+     "cn": "你先进去，我马上来。",
+     "py": "Nǐ xiān jìnqu, wǒ mǎshàng lái.",
+     "vi": "Bạn vào trước đi, tôi đến ngay."
+    }
+   ]
+  },
+  {
+   "w": "回来",
+   "py": "huílái",
+   "hv": "hồi lai",
+   "vi": "quay về (chỗ người nói)",
+   "pos": "động từ",
+   "note": "回 = \"hồi\" trong \"hồi hương\". Mẹ ở nhà hỏi con: 你几点回来？",
+   "ex": [
+    {
+     "cn": "爸爸什么时候回来？",
+     "py": "Bàba shénme shíhou huílai?",
+     "vi": "Bao giờ bố về?"
+    }
+   ]
+  },
+  {
+   "w": "回去",
+   "py": "huíqù",
+   "hv": "hồi khứ",
+   "vi": "quay về (nơi khác, xa người nói)",
+   "pos": "động từ",
+   "note": "Đang ở chỗ bạn, nói mình về nhà: 我回去了.",
+   "ex": [
+    {
+     "cn": "太晚了，我回去了。",
+     "py": "Tài wǎn le, wǒ huíqu le.",
+     "vi": "Muộn quá rồi, tôi về đây."
+    }
+   ]
+  },
+  {
+   "w": "过来",
+   "py": "guòlái",
+   "hv": "quá lai",
+   "vi": "lại đây",
+   "pos": "động từ",
+   "note": "过 = đi qua. Gọi ai lại gần: 你过来一下.",
+   "ex": [
+    {
+     "cn": "你过来一下，我有事问你。",
+     "py": "Nǐ guòlai yíxià, wǒ yǒu shì wèn nǐ.",
+     "vi": "Bạn lại đây chút, tôi có việc muốn hỏi."
+    }
+   ]
+  },
+  {
+   "w": "出门",
+   "py": "chūmén",
+   "hv": "xuất môn",
+   "vi": "ra khỏi nhà, đi ra ngoài",
+   "pos": "động từ",
+   "note": "Nghĩa đen \"ra cửa\". Cũng có nghĩa đi xa: 出门在外 (đi xa nhà).",
+   "ex": [
+    {
+     "cn": "我早上八点出门。",
+     "py": "Wǒ zǎoshang bā diǎn chūmén.",
+     "vi": "Tôi ra khỏi nhà lúc tám giờ sáng."
+    }
+   ]
+  },
+  {
+   "w": "出国",
+   "py": "chūguó",
+   "hv": "xuất quốc",
+   "vi": "ra nước ngoài",
+   "pos": "động từ",
+   "note": "出 + 国. Đi du học, công tác nước ngoài đều dùng.",
+   "ex": [
+    {
+     "cn": "她明年要出国学习。",
+     "py": "Tā míngnián yào chūguó xuéxí.",
+     "vi": "Năm sau cô ấy sẽ ra nước ngoài học."
+    }
+   ]
+  },
+  {
+   "w": "打开",
+   "py": "dǎkāi",
+   "hv": "đả khai",
+   "vi": "mở ra; bật",
+   "pos": "động từ",
+   "note": "Mở sách, mở cửa, bật máy tính đều dùng 打开. Ngược lại là 关上 / 关.",
+   "ex": [
+    {
+     "cn": "请打开书，看第十页。",
+     "py": "Qǐng dǎkāi shū, kàn dì shí yè.",
+     "vi": "Mời mở sách, xem trang mười."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Động từ + 来 / 去: hướng so với người nói",
+   "b": "出来 / 出去 · 进来 / 进去 · 回来 / 回去",
+   "d": "来 là hướng về phía người nói, 去 là hướng ra xa người nói. Cùng một hành động \"đi vào\", người trong phòng nói 进来, người ngoài phòng nói 进去.",
+   "ex": [
+    {
+     "cn": "外边很冷，快进来吧。",
+     "py": "Wàibian hěn lěng, kuài jìnlai ba.",
+     "vi": "Ngoài trời lạnh lắm, vào nhanh đi."
+    },
+    {
+     "cn": "他不在家，出去了。",
+     "py": "Tā bú zài jiā, chūqu le.",
+     "vi": "Anh ấy không có nhà, ra ngoài rồi."
+    }
+   ]
+  },
+  {
+   "t": "Nơi chốn đứng giữa động từ và 来 / 去",
+   "b": "回家来 · 进教室去 · 回中国去",
+   "d": "Khi có nơi chốn, đặt nó vào giữa: 回家去, không nói 回去家.",
+   "ex": [
+    {
+     "cn": "他回家去了。",
+     "py": "Tā huí jiā qù le.",
+     "vi": "Anh ấy về nhà rồi."
+    },
+    {
+     "cn": "老师进教室来了。",
+     "py": "Lǎoshī jìn jiàoshì lái le.",
+     "vi": "Thầy giáo vào lớp rồi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "你什么时候回来？",
+   "py": "Nǐ shénme shíhou huílai?",
+   "vi": "Khi nào bạn về?"
+  },
+  {
+   "cn": "请大家打开电脑。",
+   "py": "Qǐng dàjiā dǎkāi diànnǎo.",
+   "vi": "Mời mọi người bật máy tính."
+  },
+  {
+   "cn": "下雨了，我们不出去了。",
+   "py": "Xià yǔ le, wǒmen bù chūqu le.",
+   "vi": "Trời mưa rồi, chúng ta không ra ngoài nữa."
+  },
+  {
+   "cn": "你出过国吗？",
+   "py": "Nǐ chū guo guó ma?",
+   "vi": "Bạn đã từng ra nước ngoài chưa?"
+  },
+  {
+   "cn": "小狗跑过来了。",
+   "py": "Xiǎo gǒu pǎo guòlai le.",
+   "vi": "Con chó nhỏ chạy lại đây rồi."
+  }
+ ]
+}

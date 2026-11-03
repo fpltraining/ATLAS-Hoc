@@ -1,0 +1,221 @@
+{
+ "id": 122,
+ "cn": "吃饭了吗？",
+ "title": "Ba bữa cơm",
+ "goal": "Nói về bữa sáng, trưa, tối, nấu ăn, và các nơi bán đồ ăn, bán sách.",
+ "words": [
+  {
+   "w": "饭",
+   "py": "fàn",
+   "hv": "phạn",
+   "vi": "cơm; bữa ăn",
+   "pos": "danh từ",
+   "note": "\"Phạn\" trong \"phạn điếm\". Người Trung Quốc chào nhau bằng 吃饭了吗？ (ăn cơm chưa?), giống người Việt.",
+   "ex": [
+    {
+     "cn": "你吃饭了吗？",
+     "py": "Nǐ chīfàn le ma?",
+     "vi": "Bạn ăn cơm chưa?"
+    }
+   ]
+  },
+  {
+   "w": "早饭",
+   "py": "zǎofàn",
+   "hv": "tảo phạn",
+   "vi": "bữa sáng",
+   "pos": "danh từ",
+   "note": "早 (sớm) + 饭 (bữa ăn).",
+   "ex": [
+    {
+     "cn": "我七点吃早饭。",
+     "py": "Wǒ qī diǎn chī zǎofàn.",
+     "vi": "Tôi ăn sáng lúc bảy giờ."
+    }
+   ]
+  },
+  {
+   "w": "午饭",
+   "py": "wǔfàn",
+   "hv": "ngọ phạn",
+   "vi": "bữa trưa",
+   "pos": "danh từ",
+   "note": "午 = \"ngọ\" trong \"giờ Ngọ\", \"chính ngọ\": giữa trưa.",
+   "ex": [
+    {
+     "cn": "我们一起吃午饭吧。",
+     "py": "Wǒmen yìqǐ chī wǔfàn ba.",
+     "vi": "Chúng mình cùng ăn trưa nhé."
+    }
+   ]
+  },
+  {
+   "w": "晚饭",
+   "py": "wǎnfàn",
+   "hv": "vãn phạn",
+   "vi": "bữa tối",
+   "pos": "danh từ",
+   "note": "晚 (tối) + 饭.",
+   "ex": [
+    {
+     "cn": "晚饭吃什么？",
+     "py": "Wǎnfàn chī shénme?",
+     "vi": "Bữa tối ăn gì?"
+    }
+   ]
+  },
+  {
+   "w": "做饭",
+   "py": "zuò fàn",
+   "hv": "tố phạn",
+   "vi": "nấu cơm, nấu ăn",
+   "pos": "động từ",
+   "note": "做 = làm. Tiếng Trung \"làm cơm\" chứ không \"nấu cơm\".",
+   "ex": [
+    {
+     "cn": "妈妈在做饭。",
+     "py": "Māma zài zuò fàn.",
+     "vi": "Mẹ đang nấu cơm."
+    }
+   ]
+  },
+  {
+   "w": "面条儿",
+   "py": "miàntiáor",
+   "hv": "diện điều nhi",
+   "vi": "mì sợi",
+   "pos": "danh từ",
+   "note": "面 (bột mì) + 条 (sợi dài). Âm 儿 cuối là giọng Bắc Kinh, viết 面条 cũng được.",
+   "ex": [
+    {
+     "cn": "我想吃一碗面条儿。",
+     "py": "Wǒ xiǎng chī yì wǎn miàntiáor.",
+     "vi": "Tôi muốn ăn một bát mì."
+    }
+   ]
+  },
+  {
+   "w": "饭店",
+   "py": "fàndiàn",
+   "hv": "phạn điếm",
+   "vi": "nhà hàng; khách sạn",
+   "pos": "danh từ",
+   "note": "Vừa là nhà hàng, vừa có thể là khách sạn lớn (北京饭店 là khách sạn).",
+   "ex": [
+    {
+     "cn": "这家饭店的菜很好吃。",
+     "py": "Zhè jiā fàndiàn de cài hěn hǎochī.",
+     "vi": "Món ăn của nhà hàng này rất ngon."
+    }
+   ]
+  },
+  {
+   "w": "店",
+   "py": "diàn",
+   "hv": "điếm",
+   "vi": "cửa hàng, quán",
+   "pos": "danh từ",
+   "note": "\"Điếm\" trong \"tửu điếm\", \"khách điếm\". Đếm bằng 家: 一家店.",
+   "ex": [
+    {
+     "cn": "这家店几点开门？",
+     "py": "Zhè jiā diàn jǐ diǎn kāimén?",
+     "vi": "Quán này mấy giờ mở cửa?"
+    }
+   ]
+  },
+  {
+   "w": "书店",
+   "py": "shūdiàn",
+   "hv": "thư điếm",
+   "vi": "hiệu sách",
+   "pos": "danh từ",
+   "note": "书 (sách) + 店 (cửa hàng). Cứ thế ghép: 花店, 鞋店…",
+   "ex": [
+    {
+     "cn": "学校旁边有一个书店。",
+     "py": "Xuéxiào pángbiān yǒu yí ge shūdiàn.",
+     "vi": "Cạnh trường có một hiệu sách."
+    }
+   ]
+  },
+  {
+   "w": "一些",
+   "py": "yìxiē",
+   "hv": "nhất ta",
+   "vi": "một ít, một vài",
+   "pos": "số lượng từ",
+   "note": "Dùng cho số lượng không xác định, không nhiều: 买一些水果.",
+   "ex": [
+    {
+     "cn": "我去买一些水果。",
+     "py": "Wǒ qù mǎi yìxiē shuǐguǒ.",
+     "vi": "Tôi đi mua ít hoa quả."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Ăn bữa nào thì dùng 吃",
+   "b": "吃 + 早饭 / 午饭 / 晚饭",
+   "d": "Không cần \"ăn bữa\", chỉ cần 吃早饭. Hỏi \"ăn chưa\" thì thêm 了吗.",
+   "ex": [
+    {
+     "cn": "你吃早饭了吗？",
+     "py": "Nǐ chī zǎofàn le ma?",
+     "vi": "Bạn ăn sáng chưa?"
+    },
+    {
+     "cn": "我还没吃午饭。",
+     "py": "Wǒ hái méi chī wǔfàn.",
+     "vi": "Tôi vẫn chưa ăn trưa."
+    }
+   ]
+  },
+  {
+   "t": "Lượng từ 家 cho cửa hàng, công ty",
+   "b": "一家 + 店 / 饭店 / 书店 / 公司",
+   "d": "Nơi kinh doanh đếm bằng 家, giống tiếng Việt nói \"một nhà hàng\".",
+   "ex": [
+    {
+     "cn": "这里有两家书店。",
+     "py": "Zhèlǐ yǒu liǎng jiā shūdiàn.",
+     "vi": "Ở đây có hai hiệu sách."
+    },
+    {
+     "cn": "那家饭店很贵。",
+     "py": "Nà jiā fàndiàn hěn guì.",
+     "vi": "Nhà hàng kia rất đắt."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "你会做饭吗？",
+   "py": "Nǐ huì zuò fàn ma?",
+   "vi": "Bạn biết nấu ăn không?"
+  },
+  {
+   "cn": "我们晚上去饭店吃饭吧。",
+   "py": "Wǒmen wǎnshang qù fàndiàn chīfàn ba.",
+   "vi": "Tối nay chúng ta ra nhà hàng ăn nhé."
+  },
+  {
+   "cn": "早饭我喝牛奶，吃面包。",
+   "py": "Zǎofàn wǒ hē niúnǎi, chī miànbāo.",
+   "vi": "Bữa sáng tôi uống sữa, ăn bánh mì."
+  },
+  {
+   "cn": "这家店的面条儿很便宜。",
+   "py": "Zhè jiā diàn de miàntiáor hěn piányi.",
+   "vi": "Mì ở quán này rất rẻ."
+  },
+  {
+   "cn": "我在书店买了一些书。",
+   "py": "Wǒ zài shūdiàn mǎi le yìxiē shū.",
+   "vi": "Tôi đã mua vài cuốn sách ở hiệu sách."
+  }
+ ]
+}
