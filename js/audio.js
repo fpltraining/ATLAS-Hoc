@@ -6,23 +6,48 @@ let enVoice = null;
 let ready = false;
 let unlocked = false;
 
+let wantEn = '';   // tên giọng người dùng chọn trong Cài đặt, rỗng là tự chọn
+let wantZh = '';
+
+/* Điểm cho giọng: giọng Premium/Enhanced (bản tải về của iOS) nghe tự nhiên hơn hẳn bản Compact */
+function quality(v) {
+  let q = 0;
+  if (/premium/i.test(v.name)) q += 30;
+  if (/enhanced|nâng cao/i.test(v.name)) q += 20;
+  if (/siri/i.test(v.name)) q += 15;
+  if (/compact|eloquence|novelty/i.test(v.name)) q -= 30;
+  if (/^(bad news|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|albert|fred|junior|ralph|kathy|bahh)\b/i.test(v.name)) q -= 100;
+  if (v.localService) q += 2;
+  return q;
+}
+
+const best = (list, bonus) => list.slice().sort((a, b) => (quality(b) + bonus(b)) - (quality(a) + bonus(a)))[0] || null;
+
+export function voiceList(lang) {
+  const re = lang === 'en' ? /^en/i : /^zh/i;
+  return (speechSynthesis.getVoices() || []).filter((v) => re.test(v.lang) && quality(v) > -50)
+    .sort((a, b) => quality(b) - quality(a) || a.name.localeCompare(b.name));
+}
+
 function pickVoice() {
   const voices = speechSynthesis.getVoices() || [];
   const zh = voices.filter((v) => /^zh/i.test(v.lang));
-  // Ưu tiên giọng phổ thông đại lục (zh-CN) hơn Đài Loan/Hồng Kông
-  zhVoice =
-    zh.find((v) => /zh[-_]CN/i.test(v.lang) && v.localService) ||
-    zh.find((v) => /zh[-_]CN/i.test(v.lang)) ||
-    zh.find((v) => v.localService) ||
-    zh[0] || null;
   const en = voices.filter((v) => /^en/i.test(v.lang));
-  enVoice =
-    en.find((v) => /en[-_]US/i.test(v.lang) && /samantha|ava|allison|nicky|aria|jenny/i.test(v.name)) ||
-    en.find((v) => /en[-_]US/i.test(v.lang) && v.localService) ||
-    en.find((v) => /en[-_]US/i.test(v.lang)) ||
-    en[0] || null;
+  // Tiếng Trung: ưu tiên giọng phổ thông đại lục (zh-CN) hơn Đài Loan/Hồng Kông
+  zhVoice = zh.find((v) => v.name === wantZh) ||
+    best(zh, (v) => (/zh[-_]CN/i.test(v.lang) ? 50 : 0));
+  // Tiếng Anh: ưu tiên giọng Mỹ
+  enVoice = en.find((v) => v.name === wantEn) ||
+    best(en, (v) => (/en[-_]US/i.test(v.lang) ? 50 : 0) + (/samantha|ava|allison|nicky|aria|jenny|zoe|evan|nathan/i.test(v.name) ? 5 : 0));
   ready = true;
   return zhVoice;
+}
+
+/* Đặt giọng theo tên đã lưu trong Cài đặt */
+export function setVoices({ en, zh } = {}) {
+  if (en !== undefined) wantEn = en || '';
+  if (zh !== undefined) wantZh = zh || '';
+  if ('speechSynthesis' in window) pickVoice();
 }
 
 export function initVoices() {
@@ -91,6 +116,12 @@ export function stop() {
 }
 
 /** Hướng dẫn hiện cho người dùng khi iPad chưa có giọng tiếng Trung. */
+export const BETTER_VOICE_HELP =
+  'Giọng nghe máy móc là do máy đang dùng bản rút gọn. Để có giọng tự nhiên hơn: vào Cài đặt của iPad → ' +
+  'Trợ năng → Nội dung nói → Giọng nói → chọn ngôn ngữ (Tiếng Anh hoặc Tiếng Trung) → tải giọng có chữ ' +
+  '"Nâng cao" hoặc "Cao cấp" (ví dụ Ava, Zoe, Evan cho tiếng Anh; Lilian, Tingting cho tiếng Trung). ' +
+  'Tải xong đóng hẳn app rồi mở lại, chọn giọng mới ở đây.';
+
 export const NO_VOICE_HELP =
   'iPad chưa có giọng đọc tiếng Trung. Vào Cài đặt → Trợ năng → Nội dung nói → ' +
   'Giọng nói → Thêm giọng nói… → chọn Tiếng Trung (Trung Quốc đại lục), tải về ' +

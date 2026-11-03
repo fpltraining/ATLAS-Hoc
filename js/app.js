@@ -191,6 +191,7 @@ async function boot() {
     const [settings] = await Promise.all([store.settings(), data.curriculum()]);
     applyTheme(settings.theme);
 
+    audio.setVoices({ en: settings.enVoice, zh: settings.zhVoice });
     audio.initVoices();
 
     // Mở khoá âm thanh ở lần chạm đầu tiên (yêu cầu bắt buộc của iOS)

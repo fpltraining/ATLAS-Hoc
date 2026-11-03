@@ -76,11 +76,10 @@ export async function renderSettings() {
 
     h('h4', 'Giọng đọc'),
     rate('enRate', 'Tốc độ giọng tiếng Anh'),
-    row('Giọng tiếng Anh', audio.hasEnVoice() ? `Đang dùng: ${audio.enVoiceName()}` : 'Chưa có giọng tiếng Anh trên máy này.',
-      h('button.btn.sm', { onclick: () => sayEn('Hello, nice to meet you.') }, 'Thử')),
+    voiceRow('en', 'Giọng tiếng Anh', s, () => sayEn('Hello, nice to meet you. How was your day?')),
     rate('speechRate', 'Tốc độ giọng tiếng Trung'),
-    row('Giọng tiếng Trung', audio.hasVoice() ? `Đang dùng: ${audio.voiceName()}` : 'CHƯA CÓ giọng tiếng Trung trên máy này.',
-      h('button.btn.sm', { onclick: () => audio.speak('你好，很高兴认识你。', { rate: s.speechRate }) }, 'Thử')),
+    voiceRow('zh', 'Giọng tiếng Trung', s, () => audio.speak('你好，很高兴认识你。今天过得怎么样？', { rate: s.speechRate })),
+    h('div.note', { style: { marginTop: '10px' } }, audio.BETTER_VOICE_HELP),
     !audio.hasVoice() ? h('div.note.seal', { style: { marginTop: '10px' } }, audio.NO_VOICE_HELP) : null,
 
     h('hr.divider'),
@@ -99,6 +98,33 @@ export async function renderSettings() {
       h('a.btn.sm', { href: '#/stats', onclick: () => setTimeout(closeSheet, 30) }, 'Sao lưu dữ liệu'),
       h('button.btn.sm.ghost', { 'data-close': '' }, 'Đóng'),
     ),
+  );
+}
+
+/* Chọn giọng đọc trong số giọng máy đang có; giọng tốt nhất xếp đầu */
+function voiceRow(lang, title, s, test) {
+  const key = lang === 'en' ? 'enVoice' : 'zhVoice';
+  const list = audio.voiceList(lang);
+  const status = h('div.small.faint');
+  const showCur = () => {
+    const name = lang === 'en' ? audio.enVoiceName() : audio.voiceName();
+    status.textContent = name ? `Đang dùng: ${name}` : `Chưa có ${lang === 'en' ? 'giọng tiếng Anh' : 'GIỌNG TIẾNG TRUNG'} trên máy này.`;
+  };
+  showCur();
+  const sel = h('select.scribble', {
+    style: { width: '100%', marginTop: '6px' },
+    onchange: async (e) => {
+      await store.setSetting(key, e.target.value);
+      audio.setVoices({ [lang]: e.target.value });
+      showCur();
+      test();
+    },
+  },
+  h('option', { value: '' }, 'Tự chọn giọng tốt nhất'),
+  ...list.map((v) => h('option', { value: v.name, selected: v.name === s[key] }, `${v.name} · ${v.lang}`)));
+  return h('div.setting',
+    h('div.grow', h('b', title), status, list.length ? sel : null),
+    h('button.btn.sm', { onclick: test }, 'Thử'),
   );
 }
 
