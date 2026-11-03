@@ -4,6 +4,8 @@
 @title Can Machines Think?
 @vi Máy có biết nghĩ không?
 @blurb Năm 1950, Alan Turing đặt một câu hỏi mà đến giờ người ta vẫn còn cãi nhau.
+@source Turing (1950), Computing Machinery and Intelligence | https://doi.org/10.1093/mind/LIX.236.433
+@source Wikipedia: Turing test | https://en.wikipedia.org/wiki/Turing_test
 
 ## 1 | The Question | Câu hỏi
 In 1950, a British scientist named Alan Turing | Năm 1950, một nhà khoa học Anh tên Alan Turing
@@ -37,6 +39,8 @@ really think like us? | có thật sự suy nghĩ như ta không?
 @title The Secretary and the Machine
 @vi Cô thư ký và cái máy
 @blurb Năm 1966, một chương trình rất đơn giản đã khiến người ta muốn tâm sự với nó. Người tạo ra nó thấy sợ.
+@source Wikipedia: ELIZA | https://en.wikipedia.org/wiki/ELIZA
+@source Wikipedia: ELIZA effect | https://en.wikipedia.org/wiki/ELIZA_effect
 
 ## 1 | ELIZA | ELIZA
 In the 1960s, at MIT in America, | Vào những năm 1960, tại MIT ở Mỹ,
@@ -74,6 +78,8 @@ It even has a name: the ELIZA effect. | Nó còn có tên: hiệu ứng ELIZA.
 @title The Day Kasparov Lost
 @vi Ngày Kasparov thua
 @blurb Năm 1997, người chơi cờ giỏi nhất thế giới thua một cái máy. Ông rời bàn cờ trong giận dữ.
+@source Wikipedia: Deep Blue versus Garry Kasparov | https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov
+@source IBM: Deep Blue | https://www.ibm.com/history/deep-blue
 
 ## 1 | Man Against Machine | Người đấu với máy
 Garry Kasparov was the best chess player in the world. | Garry Kasparov là kỳ thủ giỏi nhất thế giới.
@@ -111,6 +117,7 @@ are stronger when they work together. | mạnh hơn khi làm việc cùng nhau.
 @title Move 37
 @vi Nước đi 37
 @blurb Năm 2016, ở Seoul, một AI đi một nước cờ mà không ai hiểu. Về sau người ta gọi nó là đẹp.
+@source Wikipedia: AlphaGo versus Lee Sedol | https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol
 
 ## 1 | The Strange Move | Nước đi kỳ lạ
 Go is an old game from China. | Cờ vây là trò chơi cổ của Trung Quốc.
@@ -129,7 +136,8 @@ The experts thought it was a mistake. | Các chuyên gia tưởng đó là nư�
 No good human would play there. | Không kỳ thủ giỏi nào đi vào chỗ đó.
 AlphaGo itself had guessed | Chính AlphaGo đã ước tính
 that only one human in ten thousand would. | chỉ một người trong mười nghìn sẽ đi vậy.
-Lee left the room to think. | Lee rời phòng để suy nghĩ.
+Lee was out of the room when it was played. | Lúc nước đó được đi, Lee đang ở ngoài phòng.
+He came back and thought for almost fifteen minutes. | Anh quay lại và suy nghĩ gần mười lăm phút.
 
 Move 37 helped AlphaGo win that game. | Nước 37 giúp AlphaGo thắng ván đó.
 People who had played for a lifetime | Những người chơi cả đời
@@ -151,6 +159,8 @@ In 2019 he retired from the game. | Năm 2019, ông giải nghệ.
 @title The Fifty-Year Problem
 @vi Bài toán năm mươi năm
 @blurb Hình dạng của protein là câu đố làm các nhà khoa học đau đầu suốt nửa thế kỷ. Rồi AI giải được phần lớn.
+@source Nobel Prize in Chemistry 2024 | https://www.nobelprize.org/prizes/chemistry/2024/summary/
+@source Wikipedia: AlphaFold | https://en.wikipedia.org/wiki/AlphaFold
 
 ## 1 | The Shape of Life | Hình dạng của sự sống
 Your body is full of proteins. | Cơ thể anh đầy protein.

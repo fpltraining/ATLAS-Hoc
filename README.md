@@ -65,6 +65,26 @@ Tiếng Trung thêm `@lang zh`, mỗi dòng là `chữ Hán | pinyin | tiếng V
 
 `@shelf` nhận `ai`, `true`, `news`, `mystery`, `long`, và `fable` cho tiếng Trung.
 
+## Sửa nội dung
+
+Lỗi nội dung sửa trong `data-src/patches/`, không sửa tay vào `data/`:
+
+| Tệp | Dùng để |
+|---|---|
+| `fixes.json` | Thay đúng một chuỗi trong một tệp của `data/` (Hán Việt, ghi chú, câu sai trong bài đọc) |
+| `en-add-*.txt` | Bổ sung từ tiếng Anh, mỗi dòng `từ \| phiên âm \| từ loại \| câu ví dụ \| nghĩa câu ví dụ` |
+| `pos.txt` | Từ loại cho các từ còn thiếu, mỗi dòng `từ loại: từ ; từ ; ...` |
+| `en-bank.json` | Viết thường, phiên âm giọng Mỹ, sửa nghĩa của kho từ |
+| `topics-ipa.json` | Phiên âm giọng Mỹ cho mục Chủ đề |
+
+Nguồn của bài đọc ghi bằng dòng `@source` trong `data-src/stories/`. Sau khi sửa:
+
+```bash
+node tools/apply-patches.mjs
+```
+
+`merge-data.mjs` cũng tự gọi bước này ở cuối, nên dựng lại dữ liệu không làm mất bản sửa. Phiên âm tiếng Anh theo giọng Mỹ. Đổi dữ liệu xong thì tăng `VERSION` trong `sw.js` để máy người dùng tải bản mới.
+
 ## Cấu trúc
 
 ```

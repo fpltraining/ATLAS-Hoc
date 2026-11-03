@@ -8,6 +8,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
+import { applyAll as applyPatches } from './apply-patches.mjs';
 
 const SRC = path.resolve(process.argv[2] || '../_src');
 const ROOT = process.cwd();
@@ -512,3 +513,6 @@ if (process.argv.includes('--long')) console.log(longLines.join('\n'));
 const perStory = {};
 for (const l of longLines) { const k = l.split(' ')[0]; perStory[k] = (perStory[k] || 0) + 1; }
 console.log(perStory);
+
+/* Các bản sửa nội dung trong data-src/patches/ (lỗi Hán Việt, phiên âm, từ bổ sung, nguồn bài đọc) */
+applyPatches();

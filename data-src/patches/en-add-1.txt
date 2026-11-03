@@ -1,0 +1,290 @@
+I | /aɪ/ | pron | I am a student. | Tôi là học sinh.
+you | /juː/ | pron | Are you hungry? | Bạn có đói không?
+he | /hiː/ | pron | He works in a bank. | Anh ấy làm ở ngân hàng.
+she | /ʃiː/ | pron | She lives in Hanoi. | Cô ấy sống ở Hà Nội.
+it | /ɪt/ | pron | It is very hot today. | Hôm nay trời rất nóng.
+we | /wiː/ | pron | We play football on Sunday. | Chúng tôi đá bóng vào Chủ nhật.
+they | /ðeɪ/ | pron | They are my friends. | Họ là bạn của tôi.
+this | /ðɪs/ | det | This is my phone. | Đây là điện thoại của tôi.
+that | /ðæt/ | det | That house is very old. | Ngôi nhà kia rất cũ.
+here | /hɪr/ | adv | Come here, please. | Lại đây nào.
+there | /ðer/ | adv | My bag is over there. | Túi của tôi ở đằng kia.
+be | /biː/ | v | I want to be a doctor. | Tôi muốn trở thành bác sĩ.
+am | /æm/ | v | I am tired. | Tôi mệt.
+is | /ɪz/ | v | She is my sister. | Cô ấy là chị tôi.
+are | /ɑːr/ | v | We are ready. | Chúng tôi sẵn sàng rồi.
+was | /wʌz/ | v | He was at home yesterday. | Hôm qua anh ấy ở nhà.
+were | /wɜːr/ | v | They were late again. | Họ lại đến muộn.
+not | /nɑːt/ | adv | I am not busy now. | Bây giờ tôi không bận.
+has | /hæz/ | v | She has two cats. | Cô ấy có hai con mèo.
+had | /hæd/ | v | We had a good time. | Chúng tôi đã có khoảng thời gian vui vẻ.
+do | /duː/ | v | What do you do? | Bạn làm nghề gì?
+does | /dʌz/ | v | Does he speak English? | Anh ấy có nói tiếng Anh không?
+did | /dɪd/ | v | I did my homework. | Tôi đã làm bài tập về nhà.
+goes | /ɡoʊz/ | v | She goes to school by bus. | Cô bé đi học bằng xe buýt.
+went | /went/ | v | We went to the beach. | Chúng tôi đã đi biển.
+came | /keɪm/ | v | He came home late. | Anh ấy về nhà muộn.
+got | /ɡɑːt/ | v | I got a message from her. | Tôi nhận được tin nhắn của cô ấy.
+made | /meɪd/ | v | Mom made a cake. | Mẹ đã làm một cái bánh.
+took | /tʊk/ | v | She took a taxi. | Cô ấy đã đi taxi.
+gave | /ɡeɪv/ | v | He gave me a book. | Anh ấy đã tặng tôi một cuốn sách.
+said | /sed/ | v | She said yes. | Cô ấy đã nói đồng ý.
+told | /toʊld/ | v | He told me a story. | Anh ấy đã kể cho tôi một câu chuyện.
+talk | /tɔːk/ | v | Can we talk later? | Lát nữa mình nói chuyện được không?
+hear | /hɪr/ | v | I can't hear you. | Tôi không nghe thấy bạn.
+saw | /sɔː/ | v | I saw him at the market. | Tôi đã thấy anh ấy ở chợ.
+watch | /wɑːtʃ/ | v | We watch TV after dinner. | Chúng tôi xem TV sau bữa tối.
+wrote | /roʊt/ | v | She wrote a letter. | Cô ấy đã viết một lá thư.
+knew | /nuː/ | v | I knew the answer. | Tôi đã biết câu trả lời.
+thought | /θɔːt/ | v | I thought you were busy. | Tôi đã nghĩ là bạn bận.
+hate | /heɪt/ | v | I hate waiting. | Tôi ghét phải chờ.
+feel | /fiːl/ | v | I feel better today. | Hôm nay tôi thấy khá hơn.
+guess | /ɡes/ | v | Guess who called me! | Đoán xem ai gọi cho tôi!
+wonder | /ˈwʌndər/ | v | I wonder where he is. | Tôi tự hỏi anh ấy đang ở đâu.
+matter | /ˈmætər/ | v | It doesn't matter. | Không sao đâu.
+care | /ker/ | v | I care about my family. | Tôi quan tâm đến gia đình mình.
+mind | /maɪnd/ | v | Do you mind if I sit here? | Bạn có phiền nếu tôi ngồi đây không?
+prefer | /prɪˈfɜːr/ | v | I prefer tea to coffee. | Tôi thích trà hơn cà phê.
+can | /kæn/ | modal | I can swim. | Tôi biết bơi.
+could | /kʊd/ | modal | Could you help me? | Bạn giúp tôi được không?
+will | /wɪl/ | modal | I will call you tomorrow. | Mai tôi sẽ gọi cho bạn.
+would | /wʊd/ | modal | I would like some water. | Tôi muốn một ít nước.
+should | /ʃʊd/ | modal | You should sleep early. | Bạn nên ngủ sớm.
+must | /mʌst/ | modal | You must wear a helmet. | Bạn phải đội mũ bảo hiểm.
+might | /maɪt/ | modal | It might rain tonight. | Tối nay có thể sẽ mưa.
+shall | /ʃæl/ | modal | Shall we go now? | Chúng ta đi bây giờ nhé?
+let | /let/ | v | Let me help you. | Để tôi giúp bạn.
+found | /faʊnd/ | v | I found my keys. | Tôi đã tìm thấy chìa khoá.
+keep | /kiːp/ | v | Keep the change. | Cứ giữ tiền thừa nhé.
+whose | /huːz/ | pron | Whose bag is this? | Cái túi này của ai?
+how many | /haʊ ˈmeni/ | phr | How many brothers do you have? | Bạn có mấy anh em trai?
+a | /ə/ | det | I have a dog. | Tôi có một con chó.
+an | /æn/ | det | She ate an apple. | Cô ấy đã ăn một quả táo.
+the | /ðə/ | det | The door is open. | Cánh cửa đang mở.
+any | /ˈeni/ | det | Do you have any questions? | Bạn có câu hỏi nào không?
+all | /ɔːl/ | det | All my friends came. | Tất cả bạn bè tôi đều đến.
+none | /nʌn/ | pron | None of them knew the answer. | Không ai trong số họ biết câu trả lời.
+boy | /bɔɪ/ | n | The boy is playing outside. | Cậu bé đang chơi ngoài sân.
+girl | /ɡɜːrl/ | n | That girl is my cousin. | Cô bé kia là em họ tôi.
+children | /ˈtʃɪldrən/ | n | The children are at school. | Bọn trẻ đang ở trường.
+person | /ˈpɜːrsən/ | n | She is a kind person. | Cô ấy là một người tốt bụng.
+name | /neɪm/ | n | What is your name? | Bạn tên là gì?
+wall | /wɔːl/ | n | There is a clock on the wall. | Có một cái đồng hồ trên tường.
+bike | /baɪk/ | n | I ride my bike to work. | Tôi đạp xe đi làm.
+town | /taʊn/ | n | I grew up in a small town. | Tôi lớn lên ở một thị trấn nhỏ.
+time | /taɪm/ | n | I don't have time today. | Hôm nay tôi không có thời gian.
+warm | /wɔːrm/ | adj | The water is warm. | Nước ấm.
+cool | /kuːl/ | adj | It is cool in the evening. | Buổi tối trời mát.
+wrong | /rɔːŋ/ | adj | Sorry, wrong number. | Xin lỗi, nhầm số rồi.
+closed | /kloʊzd/ | adj | The shop is closed on Monday. | Cửa hàng đóng cửa vào thứ Hai.
+full | /fʊl/ | adj | The bus is full. | Xe buýt đã đầy người.
+empty | /ˈempti/ | adj | The fridge is empty. | Tủ lạnh trống trơn.
+thirsty | /ˈθɜːrsti/ | adj | I am thirsty. | Tôi khát nước.
+ready | /ˈredi/ | adj | Dinner is ready. | Cơm tối xong rồi.
+in | /ɪn/ | prep | The keys are in my bag. | Chìa khoá ở trong túi tôi.
+on | /ɑːn/ | prep | The book is on the table. | Cuốn sách ở trên bàn.
+at | /æt/ | prep | I am at the office. | Tôi đang ở văn phòng.
+to | /tuː/ | prep | I go to school every day. | Tôi đi học mỗi ngày.
+from | /frʌm/ | prep | I am from Vietnam. | Tôi đến từ Việt Nam.
+of | /ʌv/ | prep | A cup of coffee, please. | Cho tôi một tách cà phê.
+for | /fɔːr/ | prep | This gift is for you. | Món quà này dành cho bạn.
+with | /wɪð/ | prep | I live with my parents. | Tôi sống với bố mẹ.
+by | /baɪ/ | prep | I go to work by bus. | Tôi đi làm bằng xe buýt.
+under | /ˈʌndər/ | prep | The cat is under the bed. | Con mèo ở dưới gầm giường.
+over | /ˈoʊvər/ | prep | The plane flew over the city. | Máy bay bay qua thành phố.
+into | /ˈɪntuː/ | prep | She walked into the room. | Cô ấy bước vào phòng.
+out of | /aʊt ʌv/ | prep | He ran out of the house. | Anh ấy chạy ra khỏi nhà.
+through | /θruː/ | prep | We drove through the city. | Chúng tôi lái xe xuyên qua thành phố.
+than | /ðæn/ | conj | He is taller than me. | Anh ấy cao hơn tôi.
+as | /æz/ | prep | She works as a nurse. | Cô ấy làm y tá.
+too | /tuː/ | adv | I like it too. | Tôi cũng thích nó.
+just | /dʒʌst/ | adv | I just got home. | Tôi vừa mới về đến nhà.
+yet | /jet/ | adv | I haven't eaten yet. | Tôi chưa ăn.
+next | /nekst/ | adj | See you next week. | Hẹn gặp bạn tuần sau.
+few | /fjuː/ | det | Few people came to the party. | Ít người đến bữa tiệc.
+bread | /bred/ | n | I eat bread for breakfast. | Tôi ăn bánh mì vào bữa sáng.
+egg | /eɡ/ | n | I'd like two eggs, please. | Cho tôi hai quả trứng.
+fruit | /fruːt/ | n | Fruit is good for you. | Trái cây tốt cho sức khoẻ.
+hungry for | /ˈhʌŋɡri fɔːr/ | phr | I'm hungry for something sweet. | Tôi đang thèm đồ ngọt.
+taste | /teɪst/ | v | This soup tastes great. | Món súp này vị rất ngon.
+begin | /bɪˈɡɪn/ | v | The class begins at eight. | Lớp học bắt đầu lúc tám giờ.
+finish | /ˈfɪnɪʃ/ | v | I finish work at five. | Tôi tan làm lúc năm giờ.
+end | /end/ | v | The movie ends at ten. | Bộ phim kết thúc lúc mười giờ.
+stay | /steɪ/ | v | I stayed at home all day. | Tôi ở nhà cả ngày.
+leave | /liːv/ | v | The train leaves at six. | Tàu rời ga lúc sáu giờ.
+visit | /ˈvɪzɪt/ | v | We visit our grandparents every Tet. | Tết nào chúng tôi cũng về thăm ông bà.
+meet | /miːt/ | v | Let's meet at the café. | Mình gặp nhau ở quán cà phê nhé.
+open (v) | /ˈoʊpən/ | v | Please open the window. | Làm ơn mở cửa sổ.
+turn | /tɜːrn/ | v | Turn left at the corner. | Đến góc đường thì rẽ trái.
+catch | /kætʃ/ | v | I need to catch the bus. | Tôi phải bắt kịp xe buýt.
+fix | /fɪks/ | v | Can you fix my bike? | Bạn sửa xe đạp giúp tôi được không?
+cut | /kʌt/ | v | Cut the bread, please. | Cắt bánh mì giúp tôi.
+clean (v) | /kliːn/ | v | I clean my room on Sunday. | Tôi dọn phòng vào Chủ nhật.
+wear | /wer/ | v | She wears glasses. | Cô ấy đeo kính.
+lie down | /laɪ daʊn/ | v | I need to lie down for a while. | Tôi cần nằm nghỉ một lúc.
+play | /pleɪ/ | v | The kids play in the park. | Bọn trẻ chơi trong công viên.
+laugh | /læf/ | v | His jokes make me laugh. | Mấy câu đùa của anh ấy làm tôi bật cười.
+cry | /kraɪ/ | v | The baby is crying. | Em bé đang khóc.
+wait for | /weɪt fɔːr/ | v | I'm waiting for my friend. | Tôi đang đợi bạn tôi.
+worry | /ˈwɜːri/ | v | Don't worry, I'm fine. | Đừng lo, tôi ổn.
+enjoy | /ɪnˈdʒɔɪ/ | v | I enjoy reading. | Tôi thích đọc sách.
+often | /ˈɔːfən/ | adv | I often walk to work. | Tôi hay đi bộ đi làm.
+rarely | /ˈrerli/ | adv | He rarely eats meat. | Anh ấy hiếm khi ăn thịt.
+again and again | /əˈɡen ənd əˈɡen/ | phr | I read the letter again and again. | Tôi đọc đi đọc lại lá thư.
+quite | /kwaɪt/ | adv | The test was quite easy. | Bài kiểm tra khá dễ.
+least | /liːst/ | det | This one costs the least. | Cái này rẻ nhất.
+body | /ˈbɑːdi/ | n | Exercise is good for your body. | Tập thể dục tốt cho cơ thể.
+nose | /noʊz/ | n | My nose is running. | Tôi bị sổ mũi.
+arm | /ɑːrm/ | n | He broke his arm. | Anh ấy bị gãy tay.
+leg | /leɡ/ | n | My legs hurt after the run. | Chân tôi đau sau khi chạy.
+back | /bæk/ | n | I have a pain in my back. | Tôi bị đau lưng.
+finger | /ˈfɪŋɡər/ | n | I cut my finger. | Tôi bị đứt tay.
+voice | /vɔɪs/ | n | She has a beautiful voice. | Cô ấy có giọng hát hay.
+sun | /sʌn/ | n | The sun is very strong today. | Hôm nay nắng rất gắt.
+tree | /triː/ | n | There is a big tree in our yard. | Sân nhà tôi có một cái cây to.
+flower | /ˈflaʊər/ | n | He bought her some flowers. | Anh ấy mua tặng cô ấy ít hoa.
+grass | /ɡræs/ | n | The grass is wet. | Cỏ ướt.
+animal | /ˈænɪməl/ | n | The cat is my favorite animal. | Mèo là con vật tôi thích nhất.
+air | /er/ | n | The air is fresh here. | Không khí ở đây trong lành.
+yellow | /ˈjeloʊ/ | adj | She has a yellow dress. | Cô ấy có một chiếc váy vàng.
+brown | /braʊn/ | adj | He has brown eyes. | Anh ấy có đôi mắt nâu.
+grey | /ɡreɪ/ | adj | The sky is grey today. | Hôm nay trời xám xịt.
+dark | /dɑːrk/ | adj | It gets dark at six. | Sáu giờ là trời tối.
+big and small | /bɪɡ ənd smɔːl/ | phr | We have boxes big and small. | Chúng tôi có đủ hộp to hộp nhỏ.
+flat | /flæt/ | adj | The road is flat and straight. | Con đường phẳng và thẳng.
+hard (adj) | /hɑːrd/ | adj | This bed is too hard. | Cái giường này cứng quá.
+answer (v) | /ˈænsər/ | v | Please answer the phone. | Làm ơn nghe máy giúp tôi.
+film | /fɪlm/ | n | We watched a film last night. | Tối qua chúng tôi xem một bộ phim.
+letter | /ˈletər/ | n | "A" is the first letter. | "A" là chữ cái đầu tiên.
+thing | /θɪŋ/ | n | I have one more thing to say. | Tôi còn một điều nữa muốn nói.
+something | /ˈsʌmθɪŋ/ | pron | I want something to drink. | Tôi muốn uống chút gì đó.
+anything | /ˈeniθɪŋ/ | pron | Do you need anything? | Bạn có cần gì không?
+nothing | /ˈnʌθɪŋ/ | pron | There is nothing in the box. | Trong hộp không có gì.
+everything | /ˈevriθɪŋ/ | pron | Everything is fine. | Mọi thứ đều ổn.
+someone | /ˈsʌmwʌn/ | pron | Someone is at the door. | Có ai đó ở ngoài cửa.
+anyone | /ˈeniwʌn/ | pron | Is anyone home? | Có ai ở nhà không?
+no one | /ˈnoʊ wʌn/ | pron | No one answered the phone. | Không ai nghe máy.
+everyone | /ˈevriwʌn/ | pron | Everyone likes her. | Ai cũng quý cô ấy.
+somewhere | /ˈsʌmwer/ | adv | Let's go somewhere quiet. | Mình đi đâu đó yên tĩnh nhé.
+piece | /piːs/ | n | Can I have a piece of cake? | Cho tôi một miếng bánh được không?
+side | /saɪd/ | n | Walk on the left side. | Đi bên trái.
+death | /deθ/ | n | His death was a shock to us. | Cái chết của ông ấy là cú sốc với chúng tôi.
+birth | /bɜːrθ/ | n | Write your date of birth here. | Ghi ngày sinh của bạn vào đây.
+age | /eɪdʒ/ | n | What is your age? | Bạn bao nhiêu tuổi?
+man and woman | /mæn ənd ˈwʊmən/ | phr | A man and a woman got on the bus. | Một người đàn ông và một người phụ nữ lên xe buýt.
+marry | /ˈmæri/ | v | They will marry next spring. | Họ sẽ cưới vào mùa xuân tới.
+die | /daɪ/ | v | The plant died because of the cold. | Cái cây chết vì lạnh.
+born | /bɔːrn/ | adj | I was born in 1995. | Tôi sinh năm 1995.
+story | /ˈstɔːri/ | n | Tell me a story. | Kể cho tôi một câu chuyện đi.
+answer (n) | /ˈænsər/ | n | I don't know the answer. | Tôi không biết câu trả lời.
+truth | /truːθ/ | n | Please tell me the truth. | Làm ơn nói thật với tôi.
+lie | /laɪ/ | n | That's a lie! | Đó là lời nói dối!
+information | /ˌɪnfərˈmeɪʃən/ | n | I need more information. | Tôi cần thêm thông tin.
+other | /ˈʌðər/ | adj | Where are the other students? | Các bạn học sinh khác đâu rồi?
+another | /əˈnʌðər/ | det | Can I have another cup? | Cho tôi thêm một cốc nữa được không?
+both | /boʊθ/ | det | Both my parents are teachers. | Cả bố và mẹ tôi đều là giáo viên.
+each | /iːtʃ/ | det | Each student has a book. | Mỗi học sinh có một cuốn sách.
+either | /ˈiːðər/ | det | You can take either bus. | Bạn đi xe buýt nào trong hai xe cũng được.
+neither | /ˈniːðər/ | det | Neither answer is correct. | Cả hai đáp án đều sai.
+several | /ˈsevrəl/ | det | I called him several times. | Tôi đã gọi anh ấy vài lần.
+able | /ˈeɪbəl/ | adj | She is able to speak three languages. | Cô ấy nói được ba thứ tiếng.
+available | /əˈveɪləbəl/ | adj | Is this room available? | Phòng này còn trống không?
+whole | /hoʊl/ | adj | I slept the whole day. | Tôi ngủ cả ngày.
+single | /ˈsɪŋɡəl/ | adj | I didn't spend a single dollar. | Tôi không tiêu một đồng nào.
+extra | /ˈekstrə/ | adj | Do you have an extra pen? | Bạn có thừa cây bút nào không?
+final | /ˈfaɪnəl/ | adj | This is the final question. | Đây là câu hỏi cuối cùng.
+impossible | /ɪmˈpɑːsəbəl/ | adj | Nothing is impossible. | Không gì là không thể.
+sure | /ʃʊr/ | adj | Are you sure? | Bạn chắc chứ?
+clearly | /ˈklɪrli/ | adv | Please speak clearly. | Làm ơn nói rõ ràng.
+actually | /ˈæktʃuəli/ | adv | Actually, I'm not hungry. | Thật ra tôi không đói.
+real | /ˈriːəl/ | adj | Is this real gold? | Đây có phải vàng thật không?
+normal | /ˈnɔːrməl/ | adj | It's normal to feel tired. | Cảm thấy mệt là chuyện bình thường.
+simple | /ˈsɪmpəl/ | adj | The answer is simple. | Câu trả lời rất đơn giản.
+see you | /ˈsiː juː/ | phr | See you tomorrow! | Mai gặp lại nhé!
+congratulations | /kənˌɡrætʃəˈleɪʃənz/ | phr | Congratulations on your new job! | Chúc mừng bạn có công việc mới!
+what's your name | /wʌts jʊr neɪm/ | phr | Hi, what's your name? | Chào bạn, bạn tên gì?
+I don't know | /aɪ doʊnt noʊ/ | phr | Sorry, I don't know. | Xin lỗi, tôi không biết.
+can you help me | /kæn juː help miː/ | phr | Excuse me, can you help me? | Xin lỗi, bạn giúp tôi được không?
+how much is it | /haʊ mʌtʃ ɪz ɪt/ | phr | I like this bag. How much is it? | Tôi thích cái túi này. Bao nhiêu tiền vậy?
+where is | /wer ɪz/ | phr | Where is the bus stop? | Trạm xe buýt ở đâu?
+what time | /wʌt taɪm/ | phr | What time is it? | Mấy giờ rồi?
+I'm sorry | /aɪm ˈsɑːri/ | phr | I'm sorry I'm late. | Xin lỗi tôi đến muộn.
+morning routine | /ˈmɔːrnɪŋ ruːˈtiːn/ | n | My morning routine starts at six. | Việc buổi sáng của tôi bắt đầu lúc sáu giờ.
+go to work | /ɡoʊ tə wɜːrk/ | phr | I go to work at seven thirty. | Tôi đi làm lúc bảy rưỡi.
+have breakfast | /hæv ˈbrekfəst/ | phr | We have breakfast together. | Chúng tôi ăn sáng cùng nhau.
+take a shower | /teɪk ə ˈʃaʊər/ | phr | I take a shower every morning. | Sáng nào tôi cũng tắm.
+get dressed | /ɡet drest/ | phr | Get dressed, we are late! | Mặc quần áo nhanh lên, muộn rồi!
+leave home | /liːv hoʊm/ | phr | I leave home at seven. | Tôi ra khỏi nhà lúc bảy giờ.
+come home | /kʌm hoʊm/ | phr | Dad comes home at six. | Bố về nhà lúc sáu giờ.
+go to bed | /ɡoʊ tə bed/ | phr | I go to bed at eleven. | Tôi đi ngủ lúc mười một giờ.
+take a break | /teɪk ə breɪk/ | phr | Let's take a break. | Mình nghỉ giải lao chút nhé.
+look for | /lʊk fɔːr/ | v | I'm looking for my glasses. | Tôi đang tìm kính.
+look at | /lʊk æt/ | v | Look at this photo! | Nhìn tấm ảnh này xem!
+listen to | /ˈlɪsən tuː/ | v | I listen to music on the bus. | Tôi nghe nhạc trên xe buýt.
+talk about | /tɔːk əˈbaʊt/ | v | What did you talk about? | Các bạn đã nói về chuyện gì?
+think about | /θɪŋk əˈbaʊt/ | v | I'm thinking about my future. | Tôi đang nghĩ về tương lai.
+ask for | /æsk fɔːr/ | v | He asked for a glass of water. | Anh ấy xin một cốc nước.
+pay for | /peɪ fɔːr/ | v | I'll pay for dinner. | Tôi sẽ trả tiền bữa tối.
+belong to | /bɪˈlɔːŋ tuː/ | v | This book belongs to me. | Cuốn sách này là của tôi.
+glance | /ɡlæns/ | v | She glanced at her watch. | Cô ấy liếc nhìn đồng hồ.
+stare | /ster/ | v | Don't stare at people. | Đừng nhìn chằm chằm người khác.
+gaze | /ɡeɪz/ | v | He gazed at the sea for hours. | Anh ấy nhìn đăm đăm ra biển hàng giờ.
+peer | /pɪr/ | v | She peered through the window. | Cô ấy nheo mắt nhìn qua cửa sổ.
+glare | /ɡler/ | v | The old man glared at us. | Ông lão nhìn trừng trừng chúng tôi.
+blink | /blɪŋk/ | v | He didn't even blink. | Anh ta thậm chí không chớp mắt.
+frown | /fraʊn/ | v | She frowned at the bill. | Cô ấy cau mày nhìn hoá đơn.
+grin | /ɡrɪn/ | v | He grinned at me. | Anh ấy cười toe toét với tôi.
+smirk | /smɜːrk/ | v | He smirked when I fell. | Hắn cười nhếch mép khi tôi ngã.
+sigh | /saɪ/ | v | She sighed and closed the book. | Cô ấy thở dài rồi gấp sách lại.
+gasp | /ɡæsp/ | v | We gasped when we saw the price. | Chúng tôi há hốc miệng khi thấy giá.
+whisper | /ˈwɪspər/ | v | She whispered his name. | Cô ấy thì thầm tên anh ấy.
+mutter | /ˈmʌtər/ | v | He muttered something and left. | Anh ta lẩm bẩm gì đó rồi bỏ đi.
+murmur | /ˈmɜːrmər/ | v | The crowd murmured quietly. | Đám đông rì rầm khe khẽ.
+mumble | /ˈmʌmbəl/ | v | Don't mumble, speak up! | Đừng nói lí nhí, nói to lên!
+yell | /jel/ | v | Stop yelling at me! | Đừng hét vào mặt tôi nữa!
+shout | /ʃaʊt/ | v | He shouted for help. | Anh ấy hét to kêu cứu.
+scream | /skriːm/ | v | She screamed when she saw the snake. | Cô ấy hét lên khi thấy con rắn.
+groan | /ɡroʊn/ | v | He groaned in pain. | Anh ấy rên rỉ vì đau.
+chuckle | /ˈtʃʌkəl/ | v | Grandpa chuckled at the joke. | Ông cười khùng khục vì câu đùa.
+stride | /straɪd/ | v | She strode into the office. | Cô ấy sải bước vào văn phòng.
+stroll | /stroʊl/ | v | We strolled along the lake. | Chúng tôi thong thả dạo quanh hồ.
+wander | /ˈwɑːndər/ | v | We wandered around the old town. | Chúng tôi lang thang quanh phố cổ.
+rush | /rʌʃ/ | v | He rushed to the hospital. | Anh ấy vội vã lao đến bệnh viện.
+dash | /dæʃ/ | v | She dashed out of the room. | Cô ấy phóng ra khỏi phòng.
+crawl | /krɔːl/ | v | The baby is learning to crawl. | Em bé đang tập bò.
+stumble | /ˈstʌmbəl/ | v | He stumbled on the stairs. | Anh ấy vấp trên cầu thang.
+slip | /slɪp/ | v | Be careful, don't slip! | Cẩn thận kẻo trượt chân!
+lean | /liːn/ | v | She leaned against the wall. | Cô ấy tựa vào tường.
+crouch | /kraʊtʃ/ | v | He crouched behind the car. | Anh ấy ngồi thu mình sau chiếc xe.
+kneel | /niːl/ | v | She knelt down to pray. | Cô ấy quỳ xuống cầu nguyện.
+stretch | /stretʃ/ | v | Stretch before you run. | Hãy giãn cơ trước khi chạy.
+grab | /ɡræb/ | v | Grab your coat, let's go. | Lấy áo khoác đi, mình đi thôi.
+grip | /ɡrɪp/ | v | Grip the rope with both hands. | Nắm chặt sợi dây bằng cả hai tay.
+clutch | /klʌtʃ/ | v | She clutched her bag tightly. | Cô ấy ôm chặt túi xách.
+release | /rɪˈliːs/ | v | Slowly release the button. | Từ từ thả nút ra.
+shove | /ʃʌv/ | v | Don't shove, wait your turn. | Đừng xô đẩy, chờ đến lượt.
+drag | /dræɡ/ | v | He dragged the heavy box inside. | Anh ấy kéo lê cái thùng nặng vào trong.
+toss | /tɔːs/ | v | Toss me the keys. | Ném chìa khoá cho tôi.
+fling | /flɪŋ/ | v | She flung the phone onto the bed. | Cô ấy quăng điện thoại lên giường.
+reluctant | /rɪˈlʌktənt/ | adj | He was reluctant to leave. | Anh ấy miễn cưỡng ra về.
+eager | /ˈiːɡər/ | adj | The kids are eager to start. | Bọn trẻ háo hức muốn bắt đầu.
+anxious | /ˈæŋkʃəs/ | adj | I feel anxious before exams. | Tôi thấy lo lắng trước kỳ thi.
+weary | /ˈwɪri/ | adj | She looked weary after the trip. | Cô ấy trông mệt rã rời sau chuyến đi.
+restless | /ˈrestləs/ | adj | The children are restless today. | Hôm nay bọn trẻ cứ bồn chồn không yên.
+steady | /ˈstedi/ | adj | Hold the ladder steady. | Giữ cái thang cho vững.
+fragile | /ˈfrædʒəl/ | adj | Be careful, the glass is fragile. | Cẩn thận, đồ thuỷ tinh dễ vỡ.
+rough | /rʌf/ | adj | His hands are rough from work. | Tay anh ấy thô ráp vì lao động.
+damp | /dæmp/ | adj | The towel is still damp. | Khăn vẫn còn ẩm.
+dim | /dɪm/ | adj | The room was dim and quiet. | Căn phòng lờ mờ và yên tĩnh.
+faint | /feɪnt/ | adj | I heard a faint noise. | Tôi nghe thấy một tiếng động khe khẽ.
+vivid | /ˈvɪvɪd/ | adj | I had a vivid dream last night. | Đêm qua tôi mơ một giấc mơ rất sống động.
+barely | /ˈberli/ | adv | I could barely see the road. | Tôi hầu như không nhìn thấy đường.
+hardly | /ˈhɑːrdli/ | adv | I hardly know him. | Tôi hầu như không quen anh ấy.
+scarcely | /ˈskersli/ | adv | There was scarcely any food left. | Hầu như chẳng còn chút đồ ăn nào.
+gently | /ˈdʒentli/ | adv | She closed the door gently. | Cô ấy nhẹ nhàng đóng cửa.
+firmly | /ˈfɜːrmli/ | adv | He said no firmly. | Anh ấy dứt khoát từ chối.
+abruptly | /əˈbrʌptli/ | adv | The music stopped abruptly. | Tiếng nhạc đột ngột dừng lại.
+briefly | /ˈbriːfli/ | adv | Let me explain briefly. | Để tôi giải thích ngắn gọn.
+deliberately | /dɪˈlɪbərətli/ | adv | He broke the cup deliberately. | Anh ta cố ý làm vỡ cái cốc.
+furious | /ˈfjʊriəs/ | adj | My boss was furious. | Sếp tôi giận điên lên.
+livid | /ˈlɪvɪd/ | adj | She was livid when she saw the mess. | Cô ấy giận tím mặt khi thấy đống bừa bộn.
