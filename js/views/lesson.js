@@ -48,7 +48,7 @@ export async function render(route) {
 
   /* ---- các nút hành động ---- */
   el.append(h('div.btn-row',
-    h('a.btn.primary', { href: `#/write/lesson-${id}` }, '✍️ Luyện viết chữ mới'),
+    h('a.btn.primary', { href: `#/charmap/${id}` }, '✍️ Luyện viết chữ mới'),
     h('button.btn.jade', {
       onclick: async () => {
         const added = await addLessonCards(L, id);
