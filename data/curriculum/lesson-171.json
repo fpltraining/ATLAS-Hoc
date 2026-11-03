@@ -1,0 +1,216 @@
+{
+ "id": 171,
+ "cn": "球队",
+ "title": "Đội tuyển và thi đấu",
+ "goal": "Nói về đội, thành viên, đội trưởng, đội bóng, cổ động viên, huấn luyện viên, dự thi, giải đấu lớn, bóng chuyền và đánh bại.",
+ "words": [
+  {
+   "w": "队",
+   "py": "duì",
+   "hv": "đội",
+   "vi": "đội; hàng",
+   "pos": "danh từ",
+   "note": "Chính là \"đội\". Xếp hàng là 排队.",
+   "ex": [
+    {
+     "cn": "我们队赢了！",
+     "py": "Wǒmen duì yíng le!",
+     "vi": "Đội chúng tôi thắng rồi!"
+    }
+   ]
+  },
+  {
+   "w": "队员",
+   "py": "duìyuán",
+   "hv": "đội viên",
+   "vi": "thành viên đội",
+   "pos": "danh từ",
+   "note": "Chính là \"đội viên\".",
+   "ex": [
+    {
+     "cn": "每个队员都很努力。",
+     "py": "Měi ge duìyuán dōu hěn nǔlì.",
+     "vi": "Thành viên nào cũng rất cố gắng."
+    }
+   ]
+  },
+  {
+   "w": "队长",
+   "py": "duìzhǎng",
+   "hv": "đội trưởng",
+   "vi": "đội trưởng",
+   "pos": "danh từ",
+   "note": "Chính là \"đội trưởng\".",
+   "ex": [
+    {
+     "cn": "他是我们的队长。",
+     "py": "Tā shì wǒmen de duìzhǎng.",
+     "vi": "Anh ấy là đội trưởng của chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "球队",
+   "py": "qiúduì",
+   "hv": "cầu đội",
+   "vi": "đội bóng",
+   "pos": "danh từ",
+   "note": "球 + 队.",
+   "ex": [
+    {
+     "cn": "你支持哪个球队？",
+     "py": "Nǐ zhīchí nǎge qiúduì?",
+     "vi": "Bạn ủng hộ đội bóng nào?"
+    }
+   ]
+  },
+  {
+   "w": "球迷",
+   "py": "qiúmí",
+   "hv": "cầu mê",
+   "vi": "người hâm mộ bóng đá",
+   "pos": "danh từ",
+   "note": "迷 = mê. Người mê điện ảnh là 影迷.",
+   "ex": [
+    {
+     "cn": "他是一个老球迷了。",
+     "py": "Tā shì yí ge lǎo qiúmí le.",
+     "vi": "Anh ấy là fan bóng đá lâu năm."
+    }
+   ]
+  },
+  {
+   "w": "教练",
+   "py": "jiàoliàn",
+   "hv": "giáo luyện",
+   "vi": "huấn luyện viên",
+   "pos": "danh từ",
+   "note": "教 (dạy) + 练 (luyện).",
+   "ex": [
+    {
+     "cn": "教练让我们每天跑步。",
+     "py": "Jiàoliàn ràng wǒmen měi tiān pǎobù.",
+     "vi": "Huấn luyện viên bắt chúng tôi chạy bộ mỗi ngày."
+    }
+   ]
+  },
+  {
+   "w": "参赛",
+   "py": "cānsài",
+   "hv": "tham tái",
+   "vi": "tham gia thi đấu",
+   "pos": "động từ",
+   "note": "参 (tham) + 赛 (thi đấu).",
+   "ex": [
+    {
+     "cn": "这次比赛有二十个队参赛。",
+     "py": "Zhè cì bǐsài yǒu èrshí ge duì cānsài.",
+     "vi": "Giải lần này có hai mươi đội tham gia."
+    }
+   ]
+  },
+  {
+   "w": "大赛",
+   "py": "dàsài",
+   "hv": "đại tái",
+   "vi": "giải đấu lớn",
+   "pos": "danh từ",
+   "note": "大 + 赛.",
+   "ex": [
+    {
+     "cn": "他参加了全国大赛。",
+     "py": "Tā cānjiā le quánguó dàsài.",
+     "vi": "Anh ấy tham gia giải toàn quốc."
+    }
+   ]
+  },
+  {
+   "w": "排球",
+   "py": "páiqiú",
+   "hv": "bài cầu",
+   "vi": "bóng chuyền",
+   "pos": "danh từ",
+   "note": "排 (hàng) + 球.",
+   "ex": [
+    {
+     "cn": "她排球打得很好。",
+     "py": "Tā páiqiú dǎ de hěn hǎo.",
+     "vi": "Cô ấy chơi bóng chuyền rất giỏi."
+    }
+   ]
+  },
+  {
+   "w": "打败",
+   "py": "dǎbài",
+   "hv": "đả bại",
+   "vi": "đánh bại",
+   "pos": "động từ",
+   "note": "Chính là \"đả bại\".",
+   "ex": [
+    {
+     "cn": "我们打败了对手。",
+     "py": "Wǒmen dǎbài le duìshǒu.",
+     "vi": "Chúng tôi đánh bại đối thủ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "被 + người + động từ: bị",
+   "b": "被打败了 · 被他发现了",
+   "d": "Câu bị động dùng 被. Người thực hiện hành động đứng sau 被, có thể lược bỏ.",
+   "ex": [
+    {
+     "cn": "我们被对手打败了。",
+     "py": "Wǒmen bèi duìshǒu dǎbài le.",
+     "vi": "Chúng tôi bị đối thủ đánh bại."
+    },
+    {
+     "cn": "我的手机被偷了。",
+     "py": "Wǒ de shǒujī bèi tōu le.",
+     "vi": "Điện thoại của tôi bị trộm rồi."
+    }
+   ]
+  },
+  {
+   "t": "支持 + đội / người",
+   "b": "支持哪个队 · 支持你",
+   "d": "支持 là ủng hộ; dùng cho đội bóng, ý kiến, người.",
+   "ex": [
+    {
+     "cn": "我永远支持你。",
+     "py": "Wǒ yǒngyuǎn zhīchí nǐ.",
+     "vi": "Tôi mãi ủng hộ bạn."
+    },
+    {
+     "cn": "大家都支持这个计划。",
+     "py": "Dàjiā dōu zhīchí zhège jìhuà.",
+     "vi": "Mọi người đều ủng hộ kế hoạch này."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我们的队长特别会鼓励队员。",
+   "py": "Wǒmen de duìzhǎng tèbié huì gǔlì duìyuán.",
+   "vi": "Đội trưởng chúng tôi rất biết động viên đồng đội."
+  },
+  {
+   "cn": "比赛结束，球迷们都很激动。",
+   "py": "Bǐsài jiéshù, qiúmímen dōu hěn jīdòng.",
+   "vi": "Trận đấu kết thúc, cổ động viên đều rất xúc động."
+  },
+  {
+   "cn": "好的教练会看到每个队员的优点。",
+   "py": "Hǎo de jiàoliàn huì kàndào měi ge duìyuán de yōudiǎn.",
+   "vi": "Huấn luyện viên giỏi sẽ thấy điểm mạnh của từng thành viên."
+  },
+  {
+   "cn": "输了不要紧，下次再打败他们。",
+   "py": "Shū le bú yàojǐn, xià cì zài dǎbài tāmen.",
+   "vi": "Thua không sao, lần sau đánh bại họ."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 169,
+ "cn": "转发视频",
+ "title": "Trên mạng xã hội",
+ "goal": "Nói về video, trang web, bạn trên mạng, địa chỉ web, chia sẻ, gửi, trả lời, hồi âm, tín hiệu và quét mã.",
+ "words": [
+  {
+   "w": "视频",
+   "py": "shìpín",
+   "hv": "thị tần",
+   "vi": "video",
+   "pos": "danh từ",
+   "note": "视 (nhìn) + 频 (tần số). Gọi video là 视频通话.",
+   "ex": [
+    {
+     "cn": "我在网上看了一个有意思的视频。",
+     "py": "Wǒ zài wǎngshang kàn le yí ge yǒu yìsi de shìpín.",
+     "vi": "Tôi xem một video thú vị trên mạng."
+    }
+   ]
+  },
+  {
+   "w": "网页",
+   "py": "wǎngyè",
+   "hv": "võng hiệt",
+   "vi": "trang web",
+   "pos": "danh từ",
+   "note": "网 (mạng) + 页 (trang).",
+   "ex": [
+    {
+     "cn": "这个网页打不开。",
+     "py": "Zhège wǎngyè dǎ bu kāi.",
+     "vi": "Trang web này không mở được."
+    }
+   ]
+  },
+  {
+   "w": "网友",
+   "py": "wǎngyǒu",
+   "hv": "võng hữu",
+   "vi": "bạn trên mạng, cư dân mạng",
+   "pos": "danh từ",
+   "note": "网 + 友 (bạn).",
+   "ex": [
+    {
+     "cn": "很多网友都在讨论这件事。",
+     "py": "Hěn duō wǎngyǒu dōu zài tǎolùn zhè jiàn shì.",
+     "vi": "Nhiều cư dân mạng đang bàn về việc này."
+    }
+   ]
+  },
+  {
+   "w": "网址",
+   "py": "wǎngzhǐ",
+   "hv": "võng chỉ",
+   "vi": "địa chỉ trang web",
+   "pos": "danh từ",
+   "note": "网 + 址 (địa chỉ).",
+   "ex": [
+    {
+     "cn": "请把网址发给我。",
+     "py": "Qǐng bǎ wǎngzhǐ fā gěi wǒ.",
+     "vi": "Xin gửi địa chỉ trang web cho tôi."
+    }
+   ]
+  },
+  {
+   "w": "转发",
+   "py": "zhuǎnfā",
+   "hv": "chuyển phát",
+   "vi": "chia sẻ, chuyển tiếp",
+   "pos": "động từ",
+   "note": "Chia sẻ bài viết, chuyển tiếp email.",
+   "ex": [
+    {
+     "cn": "我把这条消息转发给你了。",
+     "py": "Wǒ bǎ zhè tiáo xiāoxi zhuǎnfā gěi nǐ le.",
+     "vi": "Tôi đã chuyển tin này cho bạn."
+    }
+   ]
+  },
+  {
+   "w": "发送",
+   "py": "fāsòng",
+   "hv": "phát tống",
+   "vi": "gửi (đi)",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 发. Nút \"Gửi\" trên ứng dụng thường ghi 发送.",
+   "ex": [
+    {
+     "cn": "写好以后点\"发送\"。",
+     "py": "Xiě hǎo yǐhòu diǎn \"fāsòng\".",
+     "vi": "Viết xong thì bấm \"Gửi\"."
+    }
+   ]
+  },
+  {
+   "w": "回复",
+   "py": "huífù",
+   "hv": "hồi phục",
+   "vi": "trả lời (tin nhắn)",
+   "pos": "động từ",
+   "note": "Chú ý: khác \"hồi phục\" (khỏi bệnh) tiếng Việt; 回复 là trả lời tin nhắn, email.",
+   "ex": [
+    {
+     "cn": "他还没回复我的邮件。",
+     "py": "Tā hái méi huífù wǒ de yóujiàn.",
+     "vi": "Anh ấy vẫn chưa trả lời email của tôi."
+    }
+   ]
+  },
+  {
+   "w": "回信",
+   "py": "huíxìn",
+   "hv": "hồi tín",
+   "vi": "thư trả lời; viết thư trả lời",
+   "pos": "danh từ",
+   "note": "回 + 信.",
+   "ex": [
+    {
+     "cn": "收到信以后请马上回信。",
+     "py": "Shōudào xìn yǐhòu qǐng mǎshàng huíxìn.",
+     "vi": "Nhận được thư xin trả lời ngay."
+    }
+   ]
+  },
+  {
+   "w": "信号",
+   "py": "xìnhào",
+   "hv": "tín hiệu",
+   "vi": "tín hiệu, sóng",
+   "pos": "danh từ",
+   "note": "Chính là \"tín hiệu\". Mất sóng là 没信号.",
+   "ex": [
+    {
+     "cn": "山上手机没有信号。",
+     "py": "Shān shang shǒujī méiyǒu xìnhào.",
+     "vi": "Trên núi điện thoại không có sóng."
+    }
+   ]
+  },
+  {
+   "w": "扫码",
+   "py": "sǎomǎ",
+   "hv": "tảo mã",
+   "vi": "quét mã",
+   "pos": "động từ",
+   "note": "扫 (quét) + 码 (mã). Quét mã QR để thanh toán, kết bạn.",
+   "ex": [
+    {
+     "cn": "扫码就可以付钱。",
+     "py": "Sǎomǎ jiù kěyǐ fù qián.",
+     "vi": "Quét mã là trả tiền được."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Động từ + 不 / 得 + bổ ngữ: có thể hay không",
+   "b": "打不开 · 看得懂 · 听不清楚",
+   "d": "Chèn 得 (được) hoặc 不 (không) giữa động từ và kết quả để nói khả năng.",
+   "ex": [
+    {
+     "cn": "这个字太小，我看不清楚。",
+     "py": "Zhège zì tài xiǎo, wǒ kàn bu qīngchu.",
+     "vi": "Chữ nhỏ quá, tôi nhìn không rõ."
+    },
+    {
+     "cn": "你听得懂上海话吗？",
+     "py": "Nǐ tīng de dǒng Shànghǎi huà ma?",
+     "vi": "Bạn nghe hiểu tiếng Thượng Hải không?"
+    }
+   ]
+  },
+  {
+   "t": "Lượng từ 条 cho tin nhắn, tin tức",
+   "b": "一条消息 · 一条新闻 · 一条短信",
+   "d": "Tin nhắn, tin tức đếm bằng 条.",
+   "ex": [
+    {
+     "cn": "我收到一条短信。",
+     "py": "Wǒ shōudào yì tiáo duǎnxìn.",
+     "vi": "Tôi nhận được một tin nhắn."
+    },
+    {
+     "cn": "这条新闻是真的吗？",
+     "py": "Zhè tiáo xīnwén shì zhēn de ma?",
+     "vi": "Tin này có thật không?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "这个视频已经有一百万人看过了。",
+   "py": "Zhège shìpín yǐjīng yǒu yìbǎi wàn rén kàn guo le.",
+   "vi": "Video này đã có một triệu người xem."
+  },
+  {
+   "cn": "别随便转发没有确认的消息。",
+   "py": "Bié suíbiàn zhuǎnfā méiyǒu quèrèn de xiāoxi.",
+   "vi": "Đừng tuỳ tiện chia sẻ tin chưa được xác nhận."
+  },
+  {
+   "cn": "地下室信号不好。",
+   "py": "Dìxiàshì xìnhào bù hǎo.",
+   "vi": "Dưới tầng hầm sóng yếu."
+  },
+  {
+   "cn": "我们加个微信吧，你扫我。",
+   "py": "Wǒmen jiā ge Wēixìn ba, nǐ sǎo wǒ.",
+   "vi": "Mình kết bạn WeChat nhé, bạn quét mã của tôi."
+  }
+ ]
+}

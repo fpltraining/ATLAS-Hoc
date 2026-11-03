@@ -1,0 +1,216 @@
+{
+ "id": 166,
+ "cn": "青年和老年",
+ "title": "Các lứa tuổi",
+ "goal": "Gọi người theo tuổi và giới: cô gái, thanh niên, thiếu niên, trung niên, người già, quý ông, nam giới, nữ giới, tuổi thơ, cả đời.",
+ "words": [
+  {
+   "w": "姑娘",
+   "py": "gūniang",
+   "hv": "cô nương",
+   "vi": "cô gái",
+   "pos": "danh từ",
+   "note": "Chính là \"cô nương\". Gọi cô gái trẻ một cách thân mật.",
+   "ex": [
+    {
+     "cn": "那个姑娘是谁？",
+     "py": "Nàge gūniang shì shéi?",
+     "vi": "Cô gái kia là ai?"
+    }
+   ]
+  },
+  {
+   "w": "青年",
+   "py": "qīngnián",
+   "hv": "thanh niên",
+   "vi": "thanh niên",
+   "pos": "danh từ",
+   "note": "Chính là \"thanh niên\".",
+   "ex": [
+    {
+     "cn": "他是一个有理想的青年。",
+     "py": "Tā shì yí ge yǒu lǐxiǎng de qīngnián.",
+     "vi": "Anh ấy là một thanh niên có lý tưởng."
+    }
+   ]
+  },
+  {
+   "w": "少年",
+   "py": "shàonián",
+   "hv": "thiếu niên",
+   "vi": "thiếu niên",
+   "pos": "danh từ",
+   "note": "Chính là \"thiếu niên\". Chú ý 少 đọc thanh 4 (shào).",
+   "ex": [
+    {
+     "cn": "他少年时就很喜欢画画。",
+     "py": "Tā shàonián shí jiù hěn xǐhuan huà huà.",
+     "vi": "Từ thời thiếu niên anh ấy đã rất thích vẽ."
+    }
+   ]
+  },
+  {
+   "w": "中年",
+   "py": "zhōngnián",
+   "hv": "trung niên",
+   "vi": "trung niên",
+   "pos": "danh từ",
+   "note": "Chính là \"trung niên\".",
+   "ex": [
+    {
+     "cn": "一位中年男人走了进来。",
+     "py": "Yí wèi zhōngnián nánrén zǒu le jìnlai.",
+     "vi": "Một người đàn ông trung niên bước vào."
+    }
+   ]
+  },
+  {
+   "w": "老年",
+   "py": "lǎonián",
+   "hv": "lão niên",
+   "vi": "tuổi già",
+   "pos": "danh từ",
+   "note": "Người già là 老年人.",
+   "ex": [
+    {
+     "cn": "老年人要多注意身体。",
+     "py": "Lǎonián rén yào duō zhùyì shēntǐ.",
+     "vi": "Người già phải chú ý sức khoẻ nhiều hơn."
+    }
+   ]
+  },
+  {
+   "w": "男士",
+   "py": "nánshì",
+   "hv": "nam sĩ",
+   "vi": "quý ông",
+   "pos": "danh từ",
+   "note": "Cách gọi lịch sự, đối xứng với 女士.",
+   "ex": [
+    {
+     "cn": "这是男士用的。",
+     "py": "Zhè shì nánshì yòng de.",
+     "vi": "Cái này dành cho nam."
+    }
+   ]
+  },
+  {
+   "w": "男性",
+   "py": "nánxìng",
+   "hv": "nam tính",
+   "vi": "nam giới",
+   "pos": "danh từ",
+   "note": "Chú ý: không phải \"nam tính\" (vẻ đàn ông) tiếng Việt, mà là giới nam, dùng trong văn bản.",
+   "ex": [
+    {
+     "cn": "这个工作男性比较多。",
+     "py": "Zhège gōngzuò nánxìng bǐjiào duō.",
+     "vi": "Công việc này nam giới tương đối nhiều."
+    }
+   ]
+  },
+  {
+   "w": "女性",
+   "py": "nǚxìng",
+   "hv": "nữ tính",
+   "vi": "nữ giới",
+   "pos": "danh từ",
+   "note": "Giới nữ, dùng trong văn bản, thống kê.",
+   "ex": [
+    {
+     "cn": "越来越多的女性当了领导。",
+     "py": "Yuèláiyuè duō de nǚxìng dāng le lǐngdǎo.",
+     "vi": "Ngày càng nhiều phụ nữ làm lãnh đạo."
+    }
+   ]
+  },
+  {
+   "w": "童年",
+   "py": "tóngnián",
+   "hv": "đồng niên",
+   "vi": "tuổi thơ",
+   "pos": "danh từ",
+   "note": "童 = \"đồng\" trong \"nhi đồng\".",
+   "ex": [
+    {
+     "cn": "我的童年是在农村过的。",
+     "py": "Wǒ de tóngnián shì zài nóngcūn guò de.",
+     "vi": "Tuổi thơ tôi trải qua ở nông thôn."
+    }
+   ]
+  },
+  {
+   "w": "一生",
+   "py": "yìshēng",
+   "hv": "nhất sinh",
+   "vi": "cả đời",
+   "pos": "danh từ",
+   "note": "Chính là \"nhất sinh\" (một đời).",
+   "ex": [
+    {
+     "cn": "这是我一生中最快乐的一天。",
+     "py": "Zhè shì wǒ yìshēng zhōng zuì kuàilè de yì tiān.",
+     "vi": "Đây là ngày vui nhất trong đời tôi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "比较 + tính từ: tương đối",
+   "b": "比较多 · 比较难",
+   "d": "Diễn tả mức độ vừa phải, không so sánh với ai cụ thể.",
+   "ex": [
+    {
+     "cn": "今天比较冷。",
+     "py": "Jīntiān bǐjiào lěng.",
+     "vi": "Hôm nay tương đối lạnh."
+    },
+    {
+     "cn": "这个问题比较复杂。",
+     "py": "Zhège wèntí bǐjiào fùzá.",
+     "vi": "Vấn đề này khá phức tạp."
+    }
+   ]
+  },
+  {
+   "t": "是在…过的: tuổi thơ, thời gian trải qua ở đâu",
+   "b": "童年是在 + nơi + 过的",
+   "d": "Dùng 是…的 nhấn mạnh nơi chốn của việc đã qua.",
+   "ex": [
+    {
+     "cn": "我的大学时光是在北京过的。",
+     "py": "Wǒ de dàxué shíguāng shì zài Běijīng guò de.",
+     "vi": "Thời đại học của tôi trải qua ở Bắc Kinh."
+    },
+    {
+     "cn": "他的童年是在海边过的。",
+     "py": "Tā de tóngnián shì zài hǎibiān guò de.",
+     "vi": "Tuổi thơ anh ấy trải qua bên bờ biển."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "每个人都有难忘的童年。",
+   "py": "Měi ge rén dōu yǒu nánwàng de tóngnián.",
+   "vi": "Ai cũng có một tuổi thơ khó quên."
+  },
+  {
+   "cn": "青年人要有梦想。",
+   "py": "Qīngnián rén yào yǒu mèngxiǎng.",
+   "vi": "Người trẻ phải có ước mơ."
+  },
+  {
+   "cn": "女士们，先生们，晚上好！",
+   "py": "Nǚshìmen, xiānshengmen, wǎnshang hǎo!",
+   "vi": "Thưa quý bà, quý ông, chào buổi tối!"
+  },
+  {
+   "cn": "她把一生都献给了教育。",
+   "py": "Tā bǎ yìshēng dōu xiàn gěi le jiàoyù.",
+   "vi": "Bà ấy cống hiến cả đời cho giáo dục."
+  }
+ ]
+}

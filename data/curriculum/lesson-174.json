@@ -1,0 +1,216 @@
+{
+ "id": 174,
+ "cn": "今天零下五度",
+ "title": "Nhiệt độ",
+ "goal": "Nói về nhiệt độ không khí, nóng gay gắt, lạnh giá, âm độ, độ C, hạ nhiệt, giá lạnh, mát, thổi và thân nhiệt.",
+ "words": [
+  {
+   "w": "气温",
+   "py": "qìwēn",
+   "hv": "khí ôn",
+   "vi": "nhiệt độ không khí",
+   "pos": "danh từ",
+   "note": "气 (khí) + 温 (ấm, nhiệt).",
+   "ex": [
+    {
+     "cn": "今天气温很高。",
+     "py": "Jīntiān qìwēn hěn gāo.",
+     "vi": "Hôm nay nhiệt độ rất cao."
+    }
+   ]
+  },
+  {
+   "w": "高温",
+   "py": "gāowēn",
+   "hv": "cao ôn",
+   "vi": "nhiệt độ cao, nắng nóng",
+   "pos": "danh từ",
+   "note": "高 + 温.",
+   "ex": [
+    {
+     "cn": "高温天气要多喝水。",
+     "py": "Gāowēn tiānqì yào duō hē shuǐ.",
+     "vi": "Trời nắng nóng phải uống nhiều nước."
+    }
+   ]
+  },
+  {
+   "w": "低温",
+   "py": "dīwēn",
+   "hv": "đê ôn",
+   "vi": "nhiệt độ thấp",
+   "pos": "danh từ",
+   "note": "低 + 温.",
+   "ex": [
+    {
+     "cn": "这种药要低温保存。",
+     "py": "Zhè zhǒng yào yào dīwēn bǎocún.",
+     "vi": "Thuốc này phải bảo quản ở nhiệt độ thấp."
+    }
+   ]
+  },
+  {
+   "w": "零下",
+   "py": "líng xià",
+   "hv": "linh hạ",
+   "vi": "dưới không độ, âm",
+   "pos": "cụm từ",
+   "note": "零 (không) + 下 (dưới).",
+   "ex": [
+    {
+     "cn": "北京冬天常常零下十度。",
+     "py": "Běijīng dōngtiān chángcháng líng xià shí dù.",
+     "vi": "Mùa đông Bắc Kinh hay âm mười độ."
+    }
+   ]
+  },
+  {
+   "w": "摄氏度",
+   "py": "shèshìdù",
+   "hv": "nhiếp thị độ",
+   "vi": "độ C",
+   "pos": "lượng từ",
+   "note": "Phiên âm tên nhà khoa học Celsius. Nói tắt là 度.",
+   "ex": [
+    {
+     "cn": "今天最高气温三十五摄氏度。",
+     "py": "Jīntiān zuì gāo qìwēn sānshíwǔ shèshìdù.",
+     "vi": "Hôm nay nhiệt độ cao nhất 35 độ C."
+    }
+   ]
+  },
+  {
+   "w": "降温",
+   "py": "jiàngwēn",
+   "hv": "giáng ôn",
+   "vi": "hạ nhiệt, trời trở lạnh",
+   "pos": "động từ",
+   "note": "降 (hạ) + 温.",
+   "ex": [
+    {
+     "cn": "明天要降温了，多穿点儿衣服。",
+     "py": "Míngtiān yào jiàngwēn le, duō chuān diǎnr yīfu.",
+     "vi": "Mai trời trở lạnh, mặc thêm áo vào."
+    }
+   ]
+  },
+  {
+   "w": "寒冷",
+   "py": "hánlěng",
+   "hv": "hàn lãnh",
+   "vi": "giá lạnh",
+   "pos": "tính từ",
+   "note": "寒 = \"hàn\" trong \"hàn đới\".",
+   "ex": [
+    {
+     "cn": "寒冷的冬天快过去了。",
+     "py": "Hánlěng de dōngtiān kuài guòqu le.",
+     "vi": "Mùa đông giá lạnh sắp qua rồi."
+    }
+   ]
+  },
+  {
+   "w": "凉",
+   "py": "liáng",
+   "hv": "lương",
+   "vi": "mát, nguội",
+   "pos": "tính từ",
+   "note": "\"Lương\" trong \"thanh lương\" (mát mẻ). 凉快 là mát mẻ.",
+   "ex": [
+    {
+     "cn": "饭凉了，热一下再吃。",
+     "py": "Fàn liáng le, rè yíxià zài chī.",
+     "vi": "Cơm nguội rồi, hâm lại rồi ăn."
+    }
+   ]
+  },
+  {
+   "w": "吹",
+   "py": "chuī",
+   "hv": "xuy",
+   "vi": "thổi",
+   "pos": "động từ",
+   "note": "Có bộ 口. Gió thổi, thổi nến: 吹蜡烛.",
+   "ex": [
+    {
+     "cn": "海风吹在脸上很舒服。",
+     "py": "Hǎifēng chuī zài liǎn shang hěn shūfu.",
+     "vi": "Gió biển thổi vào mặt rất dễ chịu."
+    }
+   ]
+  },
+  {
+   "w": "体温",
+   "py": "tǐwēn",
+   "hv": "thể ôn",
+   "vi": "thân nhiệt",
+   "pos": "danh từ",
+   "note": "体 (cơ thể) + 温.",
+   "ex": [
+    {
+     "cn": "我量一下体温。",
+     "py": "Wǒ liáng yíxià tǐwēn.",
+     "vi": "Tôi đo thân nhiệt một chút."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Đọc nhiệt độ",
+   "b": "三十五度 · 零下五度 · 三十七度五",
+   "d": "Số + 度. Âm độ thêm 零下 phía trước. Số lẻ đặt sau 度: 37,5 độ là 三十七度五.",
+   "ex": [
+    {
+     "cn": "我发烧了，三十八度。",
+     "py": "Wǒ fāshāo le, sānshíbā dù.",
+     "vi": "Tôi sốt rồi, ba mươi tám độ."
+    },
+    {
+     "cn": "哈尔滨冬天零下二十多度。",
+     "py": "Hā'ěrbīn dōngtiān líng xià èrshí duō dù.",
+     "vi": "Mùa đông Cáp Nhĩ Tân âm hơn hai mươi độ."
+    }
+   ]
+  },
+  {
+   "t": "要…了: sắp",
+   "b": "要降温了 · 要下雨了",
+   "d": "Báo hiệu điều sắp xảy ra, giống 快要…了.",
+   "ex": [
+    {
+     "cn": "天要黑了，我们回去吧。",
+     "py": "Tiān yào hēi le, wǒmen huíqu ba.",
+     "vi": "Trời sắp tối rồi, mình về thôi."
+    },
+    {
+     "cn": "飞机要起飞了。",
+     "py": "Fēijī yào qǐfēi le.",
+     "vi": "Máy bay sắp cất cánh."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "今天的气温比昨天低。",
+   "py": "Jīntiān de qìwēn bǐ zuótiān dī.",
+   "vi": "Nhiệt độ hôm nay thấp hơn hôm qua."
+  },
+  {
+   "cn": "高温天气不要在外面待太久。",
+   "py": "Gāowēn tiānqì búyào zài wàimian dāi tài jiǔ.",
+   "vi": "Trời nắng nóng đừng ở ngoài quá lâu."
+  },
+  {
+   "cn": "晚上很凉快，我们出去走走。",
+   "py": "Wǎnshang hěn liángkuai, wǒmen chūqu zǒuzou.",
+   "vi": "Buổi tối mát mẻ, mình ra ngoài đi dạo."
+  },
+  {
+   "cn": "正常体温是三十七度左右。",
+   "py": "Zhèngcháng tǐwēn shì sānshíqī dù zuǒyòu.",
+   "vi": "Thân nhiệt bình thường khoảng 37 độ."
+  }
+ ]
+}

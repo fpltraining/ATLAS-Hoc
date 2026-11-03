@@ -1,0 +1,216 @@
+{
+ "id": 168,
+ "cn": "办手续",
+ "title": "Giấy tờ thủ tục",
+ "goal": "Nói về làm thủ tục, lo việc, điền đơn, giấy chứng nhận, giấy tờ, căn cước, đại sứ quán, văn bản, tài liệu và sách hướng dẫn.",
+ "words": [
+  {
+   "w": "办理",
+   "py": "bànlǐ",
+   "hv": "biện lý",
+   "vi": "làm (thủ tục), giải quyết",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 办.",
+   "ex": [
+    {
+     "cn": "我去银行办理信用卡。",
+     "py": "Wǒ qù yínháng bànlǐ xìnyòngkǎ.",
+     "vi": "Tôi đến ngân hàng làm thẻ tín dụng."
+    }
+   ]
+  },
+  {
+   "w": "办事",
+   "py": "bànshì",
+   "hv": "biện sự",
+   "vi": "làm việc, lo việc",
+   "pos": "động từ",
+   "note": "办 + 事.",
+   "ex": [
+    {
+     "cn": "他办事很认真。",
+     "py": "Tā bànshì hěn rènzhēn.",
+     "vi": "Anh ấy làm việc rất cẩn thận."
+    }
+   ]
+  },
+  {
+   "w": "填写",
+   "py": "tiánxiě",
+   "hv": "điền tả",
+   "vi": "điền (vào mẫu)",
+   "pos": "động từ",
+   "note": "填 (điền) + 写 (viết).",
+   "ex": [
+    {
+     "cn": "请填写这张表。",
+     "py": "Qǐng tiánxiě zhè zhāng biǎo.",
+     "vi": "Xin điền vào tờ khai này."
+    }
+   ]
+  },
+  {
+   "w": "证",
+   "py": "zhèng",
+   "hv": "chứng",
+   "vi": "giấy chứng nhận, thẻ",
+   "pos": "danh từ",
+   "note": "\"Chứng\" trong \"chứng chỉ\". Ghép: 学生证, 工作证.",
+   "ex": [
+    {
+     "cn": "请出示你的学生证。",
+     "py": "Qǐng chūshì nǐ de xuéshengzhèng.",
+     "vi": "Xin xuất trình thẻ sinh viên."
+    }
+   ]
+  },
+  {
+   "w": "证件",
+   "py": "zhèngjiàn",
+   "hv": "chứng kiện",
+   "vi": "giấy tờ tuỳ thân",
+   "pos": "danh từ",
+   "note": "Hộ chiếu, căn cước… đều là 证件.",
+   "ex": [
+    {
+     "cn": "坐飞机要带证件。",
+     "py": "Zuò fēijī yào dài zhèngjiàn.",
+     "vi": "Đi máy bay phải mang giấy tờ."
+    }
+   ]
+  },
+  {
+   "w": "身份证",
+   "py": "shēnfènzhèng",
+   "hv": "thân phận chứng",
+   "vi": "căn cước, chứng minh thư",
+   "pos": "danh từ",
+   "note": "身份 (thân phận) + 证.",
+   "ex": [
+    {
+     "cn": "我的身份证丢了。",
+     "py": "Wǒ de shēnfènzhèng diū le.",
+     "vi": "Tôi mất căn cước rồi."
+    }
+   ]
+  },
+  {
+   "w": "使馆",
+   "py": "shǐguǎn",
+   "hv": "sứ quán",
+   "vi": "đại sứ quán",
+   "pos": "danh từ",
+   "note": "Viết tắt của 大使馆. Chính là \"sứ quán\".",
+   "ex": [
+    {
+     "cn": "我去使馆办签证。",
+     "py": "Wǒ qù shǐguǎn bàn qiānzhèng.",
+     "vi": "Tôi đến sứ quán làm thị thực."
+    }
+   ]
+  },
+  {
+   "w": "文件",
+   "py": "wénjiàn",
+   "hv": "văn kiện",
+   "vi": "văn bản, tài liệu, tệp",
+   "pos": "danh từ",
+   "note": "Cũng là \"tệp\" trên máy tính.",
+   "ex": [
+    {
+     "cn": "请把文件发给我。",
+     "py": "Qǐng bǎ wénjiàn fā gěi wǒ.",
+     "vi": "Xin gửi tệp cho tôi."
+    }
+   ]
+  },
+  {
+   "w": "资料",
+   "py": "zīliào",
+   "hv": "tư liệu",
+   "vi": "tài liệu, tư liệu",
+   "pos": "danh từ",
+   "note": "Chính là \"tư liệu\".",
+   "ex": [
+    {
+     "cn": "我在图书馆查资料。",
+     "py": "Wǒ zài túshūguǎn chá zīliào.",
+     "vi": "Tôi tra tài liệu ở thư viện."
+    }
+   ]
+  },
+  {
+   "w": "说明书",
+   "py": "shuōmíngshū",
+   "hv": "thuyết minh thư",
+   "vi": "sách hướng dẫn sử dụng",
+   "pos": "danh từ",
+   "note": "说明 (giải thích) + 书.",
+   "ex": [
+    {
+     "cn": "用以前先看说明书。",
+     "py": "Yòng yǐqián xiān kàn shuōmíngshū.",
+     "vi": "Trước khi dùng hãy đọc hướng dẫn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "把 + vật + động từ + 给 + người",
+   "b": "把文件发给我 · 把书还给他",
+   "d": "Câu chữ 把 nhấn mạnh việc xử lý một vật cụ thể; vật đã xác định đứng sau 把.",
+   "ex": [
+    {
+     "cn": "请把护照给我看一下。",
+     "py": "Qǐng bǎ hùzhào gěi wǒ kàn yíxià.",
+     "vi": "Xin cho tôi xem hộ chiếu."
+    },
+    {
+     "cn": "我把资料放在桌子上了。",
+     "py": "Wǒ bǎ zīliào fàng zài zhuōzi shang le.",
+     "vi": "Tôi để tài liệu trên bàn rồi."
+    }
+   ]
+  },
+  {
+   "t": "张 cho vật mỏng phẳng",
+   "b": "一张表 · 一张纸 · 一张票 · 一张照片",
+   "d": "Giấy tờ, vé, ảnh, bàn đều đếm bằng 张.",
+   "ex": [
+    {
+     "cn": "请再给我一张表。",
+     "py": "Qǐng zài gěi wǒ yì zhāng biǎo.",
+     "vi": "Xin cho tôi thêm một tờ khai."
+    },
+    {
+     "cn": "我买了两张票。",
+     "py": "Wǒ mǎi le liǎng zhāng piào.",
+     "vi": "Tôi mua hai vé."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "办理手续要带身份证。",
+   "py": "Bànlǐ shǒuxù yào dài shēnfènzhèng.",
+   "vi": "Làm thủ tục phải mang căn cước."
+  },
+  {
+   "cn": "这份文件很重要，别丢了。",
+   "py": "Zhè fèn wénjiàn hěn zhòngyào, bié diū le.",
+   "vi": "Văn bản này rất quan trọng, đừng làm mất."
+  },
+  {
+   "cn": "说明书上写得很清楚。",
+   "py": "Shuōmíngshū shang xiě de hěn qīngchu.",
+   "vi": "Sách hướng dẫn viết rất rõ ràng."
+  },
+  {
+   "cn": "我在网上找到了很多资料。",
+   "py": "Wǒ zài wǎngshang zhǎodào le hěn duō zīliào.",
+   "vi": "Tôi tìm được nhiều tài liệu trên mạng."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 170,
+ "cn": "线上和线下",
+ "title": "Trực tuyến và trực tiếp",
+ "goal": "Nói về trực tuyến, trực tiếp, phát, nghe đài, xem, hình ảnh, chữ viết, máy in và chuyển phát nhanh.",
+ "words": [
+  {
+   "w": "线上",
+   "py": "xiànshàng",
+   "hv": "tuyến thượng",
+   "vi": "trực tuyến",
+   "pos": "danh từ",
+   "note": "线 (đường dây) + 上. Học online là 线上学习.",
+   "ex": [
+    {
+     "cn": "这个课程是线上的。",
+     "py": "Zhège kèchéng shì xiànshàng de.",
+     "vi": "Khoá học này học trực tuyến."
+    }
+   ]
+  },
+  {
+   "w": "线下",
+   "py": "xiànxià",
+   "hv": "tuyến hạ",
+   "vi": "trực tiếp (ngoài đời)",
+   "pos": "danh từ",
+   "note": "Đối lập với 线上. Cửa hàng truyền thống là 线下店.",
+   "ex": [
+    {
+     "cn": "我们下周线下见面吧。",
+     "py": "Wǒmen xià zhōu xiànxià jiànmiàn ba.",
+     "vi": "Tuần sau mình gặp trực tiếp nhé."
+    }
+   ]
+  },
+  {
+   "w": "播放",
+   "py": "bōfàng",
+   "hv": "bá phóng",
+   "vi": "phát (video, nhạc)",
+   "pos": "động từ",
+   "note": "播 = \"bá\" trong \"truyền bá\".",
+   "ex": [
+    {
+     "cn": "电视台正在播放新闻。",
+     "py": "Diànshìtái zhèngzài bōfàng xīnwén.",
+     "vi": "Đài truyền hình đang phát tin tức."
+    }
+   ]
+  },
+  {
+   "w": "收听",
+   "py": "shōutīng",
+   "hv": "thu thính",
+   "vi": "nghe (đài)",
+   "pos": "động từ",
+   "note": "收 (thu) + 听.",
+   "ex": [
+    {
+     "cn": "很多司机喜欢收听广播。",
+     "py": "Hěn duō sījī xǐhuan shōutīng guǎngbō.",
+     "vi": "Nhiều tài xế thích nghe đài."
+    }
+   ]
+  },
+  {
+   "w": "观看",
+   "py": "guānkàn",
+   "hv": "quan khán",
+   "vi": "xem (trang trọng)",
+   "pos": "động từ",
+   "note": "观 (quan sát) + 看.",
+   "ex": [
+    {
+     "cn": "欢迎大家观看今天的比赛。",
+     "py": "Huānyíng dàjiā guānkàn jīntiān de bǐsài.",
+     "vi": "Chào mừng mọi người xem trận đấu hôm nay."
+    }
+   ]
+  },
+  {
+   "w": "图片",
+   "py": "túpiàn",
+   "hv": "đồ phiến",
+   "vi": "hình ảnh",
+   "pos": "danh từ",
+   "note": "图 (hình) + 片 (tấm).",
+   "ex": [
+    {
+     "cn": "这张图片很清楚。",
+     "py": "Zhè zhāng túpiàn hěn qīngchu.",
+     "vi": "Tấm hình này rất rõ."
+    }
+   ]
+  },
+  {
+   "w": "图",
+   "py": "tú",
+   "hv": "đồ",
+   "vi": "hình, bản đồ, sơ đồ",
+   "pos": "danh từ",
+   "note": "\"Đồ\" trong \"bản đồ\", \"đồ hoạ\".",
+   "ex": [
+    {
+     "cn": "请看下面这张图。",
+     "py": "Qǐng kàn xiàmian zhè zhāng tú.",
+     "vi": "Mời xem hình dưới đây."
+    }
+   ]
+  },
+  {
+   "w": "文字",
+   "py": "wénzì",
+   "hv": "văn tự",
+   "vi": "chữ viết",
+   "pos": "danh từ",
+   "note": "Chính là \"văn tự\".",
+   "ex": [
+    {
+     "cn": "汉字是世界上最古老的文字之一。",
+     "py": "Hànzì shì shìjiè shang zuì gǔlǎo de wénzì zhī yī.",
+     "vi": "Chữ Hán là một trong những chữ viết cổ nhất thế giới."
+    }
+   ]
+  },
+  {
+   "w": "打印机",
+   "py": "dǎyìnjī",
+   "hv": "đả ấn cơ",
+   "vi": "máy in",
+   "pos": "danh từ",
+   "note": "打印 (in) + 机.",
+   "ex": [
+    {
+     "cn": "打印机没有纸了。",
+     "py": "Dǎyìnjī méiyǒu zhǐ le.",
+     "vi": "Máy in hết giấy rồi."
+    }
+   ]
+  },
+  {
+   "w": "快递",
+   "py": "kuàidì",
+   "hv": "khoái đệ",
+   "vi": "chuyển phát nhanh",
+   "pos": "danh từ",
+   "note": "快 (nhanh) + 递 (đưa). Người giao hàng là 快递员.",
+   "ex": [
+    {
+     "cn": "我的快递到了。",
+     "py": "Wǒ de kuàidì dào le.",
+     "vi": "Hàng chuyển phát của tôi đến rồi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "…之一: một trong những",
+   "b": "最…的 + danh từ + 之一",
+   "d": "Cấu trúc trang trọng nói \"một trong những… nhất\".",
+   "ex": [
+    {
+     "cn": "北京是中国最大的城市之一。",
+     "py": "Běijīng shì Zhōngguó zuì dà de chéngshì zhī yī.",
+     "vi": "Bắc Kinh là một trong những thành phố lớn nhất Trung Quốc."
+    },
+    {
+     "cn": "这是我最喜欢的电影之一。",
+     "py": "Zhè shì wǒ zuì xǐhuan de diànyǐng zhī yī.",
+     "vi": "Đây là một trong những bộ phim tôi thích nhất."
+    }
+   ]
+  },
+  {
+   "t": "正在 + động từ: đang",
+   "b": "正在播放 · 正在开会",
+   "d": "Nhấn mạnh việc đang diễn ra đúng lúc nói.",
+   "ex": [
+    {
+     "cn": "他正在打电话。",
+     "py": "Tā zhèngzài dǎ diànhuà.",
+     "vi": "Anh ấy đang gọi điện."
+    },
+    {
+     "cn": "比赛正在直播。",
+     "py": "Bǐsài zhèngzài zhíbō.",
+     "vi": "Trận đấu đang được truyền hình trực tiếp."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "现在很多课都可以线上上。",
+   "py": "Xiànzài hěn duō kè dōu kěyǐ xiànshàng shàng.",
+   "vi": "Bây giờ nhiều lớp có thể học trực tuyến."
+  },
+  {
+   "cn": "快递员把东西送到了门口。",
+   "py": "Kuàidìyuán bǎ dōngxi sòng dào le ménkǒu.",
+   "vi": "Người giao hàng đã mang đồ tới cửa."
+  },
+  {
+   "cn": "这本书有很多图片，孩子们很喜欢。",
+   "py": "Zhè běn shū yǒu hěn duō túpiàn, háizimen hěn xǐhuan.",
+   "vi": "Cuốn sách này có nhiều hình, trẻ con rất thích."
+  },
+  {
+   "cn": "线上买东西，线下取货。",
+   "py": "Xiànshàng mǎi dōngxi, xiànxià qǔ huò.",
+   "vi": "Mua hàng trực tuyến, nhận hàng tại cửa hàng."
+  }
+ ]
+}
