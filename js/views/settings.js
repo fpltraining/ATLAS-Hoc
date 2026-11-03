@@ -88,6 +88,7 @@ export async function renderSettings() {
     offlineBlock(),
     h('hr.divider'),
 
+    versionLine(),
     h('div.small.faint',
       h('p', h('b', 'ATLAS'), ': học tiếng Anh và tiếng Trung, đọc truyện song ngữ, viết bằng Apple Pencil. Chạy hoàn toàn trên máy bạn.'),
       h('p', 'Dữ liệu nét viết: hanzi-writer-data. Cấu tạo chữ: Make Me a Hanzi. Cả hai theo Arphic Public License. Âm Hán Việt: Unihan Database của Unicode.'),
@@ -99,6 +100,21 @@ export async function renderSettings() {
       h('button.btn.sm.ghost', { 'data-close': '' }, 'Đóng'),
     ),
   );
+}
+
+/* Phiên bản app đang chạy, lấy từ tên bộ nhớ đệm của service worker */
+function versionLine() {
+  const line = h('p.small.faint', 'Phiên bản: đang kiểm tra…');
+  (async () => {
+    try {
+      const keys = await caches.keys();
+      const v = keys.map((k) => (k.match(/^(atlas-v\d+)-core$/) || [])[1]).filter(Boolean).sort().pop();
+      line.textContent = v ? `Phiên bản: ${v}` : 'Phiên bản: chưa lưu offline';
+    } catch {
+      line.textContent = 'Phiên bản: không đọc được';
+    }
+  })();
+  return line;
 }
 
 /* Chọn giọng đọc trong số giọng máy đang có; giọng tốt nhất xếp đầu */
