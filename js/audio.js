@@ -10,18 +10,34 @@ let wantEn = '';   // tên giọng người dùng chọn trong Cài đặt, rỗ
 let wantZh = '';
 
 /* Điểm cho giọng: giọng Premium/Enhanced (bản tải về của iOS) nghe tự nhiên hơn hẳn bản Compact */
+/* Safari trên iPad thường chỉ ghi loại giọng trong voiceURI
+   (com.apple.voice.premium.en-US.Ava), tên chỉ là "Ava", nên xét cả hai */
+const idOf = (v) => `${v.name} ${v.voiceURI || ''}`;
+
+export function tierOf(v) {
+  const s = idOf(v);
+  if (/premium|cao cấp/i.test(s)) return 'Cao cấp';
+  if (/enhanced|nâng cao/i.test(s)) return 'Nâng cao';
+  if (/compact/i.test(s)) return 'Rút gọn';
+  return '';
+}
+
 function quality(v) {
   let q = 0;
-  if (/premium|cao cấp/i.test(v.name)) q += 30;
-  if (/enhanced|nâng cao/i.test(v.name)) q += 20;
-  if (/siri/i.test(v.name)) q += 15;
-  if (/compact|eloquence|novelty/i.test(v.name)) q -= 30;
+  const s = idOf(v);
+  const tier = tierOf(v);
+  if (tier === 'Cao cấp') q += 30;
+  if (tier === 'Nâng cao') q += 20;
+  if (/siri/i.test(s)) q += 15;
+  if (tier === 'Rút gọn' || /eloquence|novelty/i.test(s)) q -= 30;
   if (/^(bad news|bells|boing|bubbles|cellos|good news|jester|organ|superstar|trinoids|whisper|wobble|zarvox|albert|fred|junior|ralph|kathy|bahh)\b/i.test(v.name)) q -= 100;
   if (v.localService) q += 2;
   return q;
 }
 
 const best = (list, bonus) => list.slice().sort((a, b) => (quality(b) + bonus(b)) - (quality(a) + bonus(a)))[0] || null;
+
+export const label = (v) => `${v.name}${tierOf(v) ? ` (${tierOf(v)})` : ''} · ${v.lang}`;
 
 export function voiceList(lang) {
   const re = lang === 'en' ? /^en/i : /^zh/i;
@@ -34,10 +50,10 @@ function pickVoice() {
   const zh = voices.filter((v) => /^zh/i.test(v.lang));
   const en = voices.filter((v) => /^en/i.test(v.lang));
   // Tiếng Trung: ưu tiên giọng phổ thông đại lục (zh-CN) hơn Đài Loan/Hồng Kông
-  zhVoice = zh.find((v) => v.name === wantZh) ||
+  zhVoice = zh.find((v) => wantZh && (v.voiceURI === wantZh || v.name === wantZh)) ||
     best(zh, (v) => (/zh[-_]CN/i.test(v.lang) ? 50 : 0));
   // Tiếng Anh: ưu tiên giọng Mỹ
-  enVoice = en.find((v) => v.name === wantEn) ||
+  enVoice = en.find((v) => wantEn && (v.voiceURI === wantEn || v.name === wantEn)) ||
     best(en, (v) => (/en[-_]US/i.test(v.lang) ? 50 : 0) + (/samantha|ava|allison|nicky|aria|jenny|zoe|evan|nathan/i.test(v.name) ? 5 : 0));
   ready = true;
   return zhVoice;
@@ -70,11 +86,11 @@ export function hasEnVoice() {
 }
 
 export function voiceName() {
-  return zhVoice ? `${zhVoice.name} (${zhVoice.lang})` : '';
+  return zhVoice ? label(zhVoice) : '';
 }
 
 export function enVoiceName() {
-  return enVoice ? `${enVoice.name} (${enVoice.lang})` : '';
+  return enVoice ? label(enVoice) : '';
 }
 
 /**
