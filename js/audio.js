@@ -12,7 +12,7 @@ let wantZh = '';
 /* Điểm cho giọng: giọng Premium/Enhanced (bản tải về của iOS) nghe tự nhiên hơn hẳn bản Compact */
 function quality(v) {
   let q = 0;
-  if (/premium/i.test(v.name)) q += 30;
+  if (/premium|cao cấp/i.test(v.name)) q += 30;
   if (/enhanced|nâng cao/i.test(v.name)) q += 20;
   if (/siri/i.test(v.name)) q += 15;
   if (/compact|eloquence|novelty/i.test(v.name)) q -= 30;
