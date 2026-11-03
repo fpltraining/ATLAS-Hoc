@@ -1,0 +1,216 @@
+{
+ "id": 190,
+ "cn": "提出想法",
+ "title": "Nói và trao đổi ý kiến",
+ "goal": "Nói về đồng ý, trả lời, đưa ra, nhắc đến, chỉ ra, lấy ví dụ, ví dụ, cách nói, suy nghĩ và cách làm.",
+ "words": [
+  {
+   "w": "答应",
+   "py": "dāying",
+   "hv": "đáp ứng",
+   "vi": "đồng ý, nhận lời",
+   "pos": "động từ",
+   "note": "Chính là \"đáp ứng\".",
+   "ex": [
+    {
+     "cn": "他答应明天来帮忙。",
+     "py": "Tā dāying míngtiān lái bāngmáng.",
+     "vi": "Anh ấy nhận lời mai đến giúp."
+    }
+   ]
+  },
+  {
+   "w": "答",
+   "py": "dá",
+   "hv": "đáp",
+   "vi": "trả lời",
+   "pos": "động từ",
+   "note": "Chính là \"đáp\" trong \"đáp án\". 回答 là trả lời.",
+   "ex": [
+    {
+     "cn": "这个问题我答不上来。",
+     "py": "Zhège wèntí wǒ dá bu shànglái.",
+     "vi": "Câu hỏi này tôi không trả lời được."
+    }
+   ]
+  },
+  {
+   "w": "提出",
+   "py": "tíchū",
+   "hv": "đề xuất",
+   "vi": "đưa ra, đề xuất",
+   "pos": "động từ",
+   "note": "Chính là \"đề xuất\".",
+   "ex": [
+    {
+     "cn": "他提出了一个好建议。",
+     "py": "Tā tíchū le yí ge hǎo jiànyì.",
+     "vi": "Anh ấy đưa ra một đề xuất hay."
+    }
+   ]
+  },
+  {
+   "w": "提到",
+   "py": "tídào",
+   "hv": "đề đáo",
+   "vi": "nhắc đến",
+   "pos": "động từ",
+   "note": "提 + 到.",
+   "ex": [
+    {
+     "cn": "他在信里提到了你。",
+     "py": "Tā zài xìn lǐ tídào le nǐ.",
+     "vi": "Anh ấy có nhắc đến bạn trong thư."
+    }
+   ]
+  },
+  {
+   "w": "指出",
+   "py": "zhǐchū",
+   "hv": "chỉ xuất",
+   "vi": "chỉ ra",
+   "pos": "động từ",
+   "note": "指 (chỉ) + 出.",
+   "ex": [
+    {
+     "cn": "老师指出了我的错误。",
+     "py": "Lǎoshī zhǐchū le wǒ de cuòwù.",
+     "vi": "Thầy chỉ ra lỗi sai của tôi."
+    }
+   ]
+  },
+  {
+   "w": "举例",
+   "py": "jǔlì",
+   "hv": "cử lệ",
+   "vi": "nêu ví dụ",
+   "pos": "động từ",
+   "note": "举 (nêu) + 例 (lệ, ví dụ).",
+   "ex": [
+    {
+     "cn": "请举例说明。",
+     "py": "Qǐng jǔlì shuōmíng.",
+     "vi": "Xin nêu ví dụ để giải thích."
+    }
+   ]
+  },
+  {
+   "w": "例子",
+   "py": "lìzi",
+   "hv": "lệ tử",
+   "vi": "ví dụ",
+   "pos": "danh từ",
+   "note": "例 + 子.",
+   "ex": [
+    {
+     "cn": "你能举个例子吗？",
+     "py": "Nǐ néng jǔ ge lìzi ma?",
+     "vi": "Bạn có thể nêu một ví dụ không?"
+    }
+   ]
+  },
+  {
+   "w": "说法",
+   "py": "shuōfǎ",
+   "hv": "thuyết pháp",
+   "vi": "cách nói; ý kiến",
+   "pos": "danh từ",
+   "note": "Khác \"thuyết pháp\" (giảng đạo) tiếng Việt: 说法 là cách nói, quan điểm.",
+   "ex": [
+    {
+     "cn": "这种说法不对。",
+     "py": "Zhè zhǒng shuōfǎ bú duì.",
+     "vi": "Cách nói này không đúng."
+    }
+   ]
+  },
+  {
+   "w": "想法",
+   "py": "xiǎngfǎ",
+   "hv": "tưởng pháp",
+   "vi": "suy nghĩ, ý tưởng",
+   "pos": "danh từ",
+   "note": "想 + 法.",
+   "ex": [
+    {
+     "cn": "我有一个新想法。",
+     "py": "Wǒ yǒu yí ge xīn xiǎngfǎ.",
+     "vi": "Tôi có một ý tưởng mới."
+    }
+   ]
+  },
+  {
+   "w": "做法",
+   "py": "zuòfǎ",
+   "hv": "tố pháp",
+   "vi": "cách làm",
+   "pos": "danh từ",
+   "note": "做 + 法.",
+   "ex": [
+    {
+     "cn": "我不同意你的做法。",
+     "py": "Wǒ bù tóngyì nǐ de zuòfǎ.",
+     "vi": "Tôi không đồng ý cách làm của bạn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Động từ + 出: đưa ra, làm lộ ra",
+   "b": "提出 · 指出 · 说出 · 想出",
+   "d": "出 sau động từ cho biết điều gì đó được đưa ra ngoài.",
+   "ex": [
+    {
+     "cn": "他想出了一个好办法。",
+     "py": "Tā xiǎng chū le yí ge hǎo bànfǎ.",
+     "vi": "Anh ấy nghĩ ra một cách hay."
+    },
+    {
+     "cn": "你说出你的想法吧。",
+     "py": "Nǐ shuō chū nǐ de xiǎngfǎ ba.",
+     "vi": "Bạn nói ra suy nghĩ của mình đi."
+    }
+   ]
+  },
+  {
+   "t": "比如 / 例如: ví dụ như",
+   "b": "…，比如 + ví dụ",
+   "d": "Đưa ví dụ cụ thể sau một nhận định chung.",
+   "ex": [
+    {
+     "cn": "我喜欢运动，比如游泳和跑步。",
+     "py": "Wǒ xǐhuan yùndòng, bǐrú yóuyǒng hé pǎobù.",
+     "vi": "Tôi thích thể thao, ví dụ như bơi và chạy."
+    },
+    {
+     "cn": "很多水果对身体好，例如苹果。",
+     "py": "Hěn duō shuǐguǒ duì shēntǐ hǎo, lìrú píngguǒ.",
+     "vi": "Nhiều loại quả tốt cho sức khoẻ, ví dụ táo."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "大家对这个计划有什么想法？",
+   "py": "Dàjiā duì zhège jìhuà yǒu shénme xiǎngfǎ?",
+   "vi": "Mọi người có ý kiến gì về kế hoạch này?"
+  },
+  {
+   "cn": "他答应了我的要求。",
+   "py": "Tā dāying le wǒ de yāoqiú.",
+   "vi": "Anh ấy đồng ý yêu cầu của tôi."
+  },
+  {
+   "cn": "好的例子能帮助学生理解。",
+   "py": "Hǎo de lìzi néng bāngzhù xuésheng lǐjiě.",
+   "vi": "Ví dụ hay giúp học sinh hiểu bài."
+  },
+  {
+   "cn": "每个人的做法都不一样。",
+   "py": "Měi ge rén de zuòfǎ dōu bù yíyàng.",
+   "vi": "Cách làm của mỗi người đều khác nhau."
+  }
+ ]
+}

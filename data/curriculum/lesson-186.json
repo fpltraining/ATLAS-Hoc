@@ -1,0 +1,216 @@
+{
+ "id": 186,
+ "cn": "一顿饭",
+ "title": "Lượng từ thường gặp",
+ "goal": "Dùng đúng các lượng từ: bữa, món / đề, bức, bài hát, hạng mục, đoàn tàu, hàng, miếng / vùng, kỳ, bộ.",
+ "words": [
+  {
+   "w": "顿",
+   "py": "dùn",
+   "hv": "đốn",
+   "vi": "bữa, trận (lượng từ)",
+   "pos": "lượng từ",
+   "note": "Đếm bữa ăn: 一顿饭. Cũng dùng cho trận mắng: 骂了一顿.",
+   "ex": [
+    {
+     "cn": "我请你吃一顿饭。",
+     "py": "Wǒ qǐng nǐ chī yí dùn fàn.",
+     "vi": "Tôi mời bạn một bữa cơm."
+    }
+   ]
+  },
+  {
+   "w": "道",
+   "py": "dào",
+   "hv": "đạo",
+   "vi": "món ăn; câu (đề); đường (lượng từ)",
+   "pos": "lượng từ",
+   "note": "Đếm món ăn, câu hỏi bài thi: 一道菜, 一道题.",
+   "ex": [
+    {
+     "cn": "这道题很难。",
+     "py": "Zhè dào tí hěn nán.",
+     "vi": "Câu này khó quá."
+    }
+   ]
+  },
+  {
+   "w": "幅",
+   "py": "fú",
+   "hv": "bức",
+   "vi": "bức (tranh)",
+   "pos": "lượng từ",
+   "note": "Chính là \"bức\". 一幅画.",
+   "ex": [
+    {
+     "cn": "墙上挂着一幅画。",
+     "py": "Qiáng shang guà zhe yì fú huà.",
+     "vi": "Trên tường treo một bức tranh."
+    }
+   ]
+  },
+  {
+   "w": "首",
+   "py": "shǒu",
+   "hv": "thủ",
+   "vi": "bài (thơ, hát)",
+   "pos": "lượng từ",
+   "note": "\"Thủ\" trong \"thủ đô\" là nghĩa khác; ở đây là lượng từ cho bài hát, bài thơ.",
+   "ex": [
+    {
+     "cn": "我给你唱一首歌。",
+     "py": "Wǒ gěi nǐ chàng yì shǒu gē.",
+     "vi": "Tôi hát tặng bạn một bài."
+    }
+   ]
+  },
+  {
+   "w": "项",
+   "py": "xiàng",
+   "hv": "hạng",
+   "vi": "hạng mục, điều",
+   "pos": "lượng từ",
+   "note": "\"Hạng\" trong \"hạng mục\". 一项工作, 一项比赛.",
+   "ex": [
+    {
+     "cn": "这是一项重要的工作。",
+     "py": "Zhè shì yí xiàng zhòngyào de gōngzuò.",
+     "vi": "Đây là một công việc quan trọng."
+    }
+   ]
+  },
+  {
+   "w": "列",
+   "py": "liè",
+   "hv": "liệt",
+   "vi": "đoàn (tàu), hàng",
+   "pos": "lượng từ",
+   "note": "一列火车 (một đoàn tàu). Còn là động từ \"liệt kê\": 列出.",
+   "ex": [
+    {
+     "cn": "一列火车开过来了。",
+     "py": "Yí liè huǒchē kāi guòlai le.",
+     "vi": "Một đoàn tàu đang chạy tới."
+    }
+   ]
+  },
+  {
+   "w": "排",
+   "py": "pái",
+   "hv": "bài",
+   "vi": "hàng, dãy; xếp",
+   "pos": "lượng từ",
+   "note": "一排椅子 (một dãy ghế). Xếp hàng là 排队.",
+   "ex": [
+    {
+     "cn": "我坐在第一排。",
+     "py": "Wǒ zuò zài dì yī pái.",
+     "vi": "Tôi ngồi ở hàng đầu."
+    }
+   ]
+  },
+  {
+   "w": "片",
+   "py": "piàn",
+   "hv": "phiến",
+   "vi": "miếng, lát; vùng",
+   "pos": "lượng từ",
+   "note": "Vật mỏng: 一片面包. Vùng rộng: 一片树林.",
+   "ex": [
+    {
+     "cn": "我吃了两片面包。",
+     "py": "Wǒ chī le liǎng piàn miànbāo.",
+     "vi": "Tôi ăn hai lát bánh mì."
+    }
+   ]
+  },
+  {
+   "w": "期",
+   "py": "qī",
+   "hv": "kỳ",
+   "vi": "kỳ, số (báo, khoá)",
+   "pos": "lượng từ",
+   "note": "\"Kỳ\" trong \"học kỳ\". 第一期 (số đầu, khoá đầu).",
+   "ex": [
+    {
+     "cn": "这本杂志每月出一期。",
+     "py": "Zhè běn zázhì měi yuè chū yì qī.",
+     "vi": "Tạp chí này mỗi tháng ra một số."
+    }
+   ]
+  },
+  {
+   "w": "部",
+   "py": "bù",
+   "hv": "bộ",
+   "vi": "bộ (phim, sách); phần",
+   "pos": "lượng từ",
+   "note": "一部电影, 一部小说. Còn là danh từ \"phần\": 北部, 东部.",
+   "ex": [
+    {
+     "cn": "这部电影我看了三遍。",
+     "py": "Zhè bù diànyǐng wǒ kàn le sān biàn.",
+     "vi": "Bộ phim này tôi xem ba lần."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Chọn lượng từ theo danh từ",
+   "b": "一顿饭 · 一道菜 · 一首歌 · 一幅画 · 一部电影",
+   "d": "Mỗi danh từ có lượng từ quen dùng. Học danh từ thì học kèm lượng từ.",
+   "ex": [
+    {
+     "cn": "他写了一首诗。",
+     "py": "Tā xiě le yì shǒu shī.",
+     "vi": "Anh ấy viết một bài thơ."
+    },
+    {
+     "cn": "我们点了五道菜。",
+     "py": "Wǒmen diǎn le wǔ dào cài.",
+     "vi": "Chúng tôi gọi năm món."
+    }
+   ]
+  },
+  {
+   "t": "遍 và 次: số lần",
+   "b": "看了三遍 (từ đầu đến cuối) · 去了三次 (số lần)",
+   "d": "遍 nhấn mạnh làm trọn vẹn từ đầu đến cuối, 次 chỉ đếm số lần.",
+   "ex": [
+    {
+     "cn": "请再说一遍。",
+     "py": "Qǐng zài shuō yí biàn.",
+     "vi": "Xin nói lại một lần nữa."
+    },
+    {
+     "cn": "我去过北京两次。",
+     "py": "Wǒ qù guo Běijīng liǎng cì.",
+     "vi": "Tôi đã đến Bắc Kinh hai lần."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "中午我们好好吃一顿吧。",
+   "py": "Zhōngwǔ wǒmen hǎohǎo chī yí dùn ba.",
+   "vi": "Trưa nay mình ăn một bữa thật ngon nhé."
+  },
+  {
+   "cn": "这幅画是我爷爷画的。",
+   "py": "Zhè fú huà shì wǒ yéye huà de.",
+   "vi": "Bức tranh này do ông tôi vẽ."
+  },
+  {
+   "cn": "考试一共有五十道题。",
+   "py": "Kǎoshì yígòng yǒu wǔshí dào tí.",
+   "vi": "Bài thi tổng cộng có năm mươi câu."
+  },
+  {
+   "cn": "他最喜欢那部电视剧。",
+   "py": "Tā zuì xǐhuan nà bù diànshìjù.",
+   "vi": "Anh ấy thích nhất bộ phim truyền hình đó."
+  }
+ ]
+}

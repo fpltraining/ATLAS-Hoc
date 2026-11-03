@@ -1,0 +1,216 @@
+{
+ "id": 195,
+ "cn": "说得很流利",
+ "title": "Kỹ năng và khả năng",
+ "goal": "Nói về cẩn thận, thành thạo, khéo / trùng hợp, mạnh, chính xác, lưu loát, tích luỹ, có thể, có thể hay không, không thể.",
+ "words": [
+  {
+   "w": "细心",
+   "py": "xìxīn",
+   "hv": "tế tâm",
+   "vi": "cẩn thận, chu đáo",
+   "pos": "tính từ",
+   "note": "细 (tỉ mỉ) + 心.",
+   "ex": [
+    {
+     "cn": "她做事很细心。",
+     "py": "Tā zuò shì hěn xìxīn.",
+     "vi": "Cô ấy làm việc rất cẩn thận."
+    }
+   ]
+  },
+  {
+   "w": "熟",
+   "py": "shú",
+   "hv": "thục",
+   "vi": "chín; quen; thạo",
+   "pos": "tính từ",
+   "note": "\"Thục\" trong \"thành thục\". Cơm chín: 饭熟了; quen thuộc: 很熟.",
+   "ex": [
+    {
+     "cn": "这条路我很熟。",
+     "py": "Zhè tiáo lù wǒ hěn shú.",
+     "vi": "Con đường này tôi rất quen."
+    }
+   ]
+  },
+  {
+   "w": "巧",
+   "py": "qiǎo",
+   "hv": "xảo",
+   "vi": "khéo; trùng hợp",
+   "pos": "tính từ",
+   "note": "\"Xảo\" trong \"khéo xảo\". 真巧! (thật trùng hợp!).",
+   "ex": [
+    {
+     "cn": "真巧，我也要去那儿。",
+     "py": "Zhēn qiǎo, wǒ yě yào qù nàr.",
+     "vi": "Thật trùng hợp, tôi cũng định đi đó."
+    }
+   ]
+  },
+  {
+   "w": "强",
+   "py": "qiáng",
+   "hv": "cường",
+   "vi": "mạnh, giỏi",
+   "pos": "tính từ",
+   "note": "\"Cường\" trong \"cường quốc\".",
+   "ex": [
+    {
+     "cn": "他的学习能力很强。",
+     "py": "Tā de xuéxí nénglì hěn qiáng.",
+     "vi": "Khả năng học tập của anh ấy rất mạnh."
+    }
+   ]
+  },
+  {
+   "w": "准",
+   "py": "zhǔn",
+   "hv": "chuẩn",
+   "vi": "chính xác, đúng",
+   "pos": "tính từ",
+   "note": "Chính là \"chuẩn\".",
+   "ex": [
+    {
+     "cn": "我的表很准。",
+     "py": "Wǒ de biǎo hěn zhǔn.",
+     "vi": "Đồng hồ tôi rất chính xác."
+    }
+   ]
+  },
+  {
+   "w": "流利",
+   "py": "liúlì",
+   "hv": "lưu lợi",
+   "vi": "lưu loát",
+   "pos": "tính từ",
+   "note": "Chính là \"lưu loát\".",
+   "ex": [
+    {
+     "cn": "她的汉语说得很流利。",
+     "py": "Tā de Hànyǔ shuō de hěn liúlì.",
+     "vi": "Cô ấy nói tiếng Trung rất lưu loát."
+    }
+   ]
+  },
+  {
+   "w": "积累",
+   "py": "jīlěi",
+   "hv": "tích luỹ",
+   "vi": "tích luỹ",
+   "pos": "động từ",
+   "note": "Chính là \"tích luỹ\".",
+   "ex": [
+    {
+     "cn": "学外语要每天积累生词。",
+     "py": "Xué wàiyǔ yào měi tiān jīlěi shēngcí.",
+     "vi": "Học ngoại ngữ phải tích luỹ từ mới mỗi ngày."
+    }
+   ]
+  },
+  {
+   "w": "能够",
+   "py": "nénggòu",
+   "hv": "năng cấu",
+   "vi": "có thể",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 能.",
+   "ex": [
+    {
+     "cn": "我希望能够帮助你。",
+     "py": "Wǒ xīwàng nénggòu bāngzhù nǐ.",
+     "vi": "Tôi hy vọng có thể giúp bạn."
+    }
+   ]
+  },
+  {
+   "w": "能否",
+   "py": "néng fǒu",
+   "hv": "năng phủ",
+   "vi": "có thể hay không",
+   "pos": "cụm từ",
+   "note": "Văn viết của 能不能.",
+   "ex": [
+    {
+     "cn": "你能否明天来一下？",
+     "py": "Nǐ néng fǒu míngtiān lái yíxià?",
+     "vi": "Mai bạn có thể đến một chút không?"
+    }
+   ]
+  },
+  {
+   "w": "无法",
+   "py": "wúfǎ",
+   "hv": "vô pháp",
+   "vi": "không thể",
+   "pos": "động từ",
+   "note": "无 (không) + 法 (cách).",
+   "ex": [
+    {
+     "cn": "我无法相信这是真的。",
+     "py": "Wǒ wúfǎ xiāngxìn zhè shì zhēn de.",
+     "vi": "Tôi không thể tin đây là thật."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Động từ + 得 + 很 + tính từ: nhận xét kỹ năng",
+   "b": "说得很流利 · 写得很好",
+   "d": "Có tân ngữ thì lặp động từ: 说汉语说得很流利, hoặc đưa tân ngữ lên trước: 汉语说得很流利.",
+   "ex": [
+    {
+     "cn": "他开车开得很稳。",
+     "py": "Tā kāichē kāi de hěn wěn.",
+     "vi": "Anh ấy lái xe rất vững."
+    },
+    {
+     "cn": "她字写得很漂亮。",
+     "py": "Tā zì xiě de hěn piàoliang.",
+     "vi": "Cô ấy viết chữ rất đẹp."
+    }
+   ]
+  },
+  {
+   "t": "无法 / 不能: không thể",
+   "b": "无法 + động từ (văn viết) · 不能 + động từ (khẩu ngữ)",
+   "d": "无法 trang trọng, hay gặp trong văn bản, tin tức.",
+   "ex": [
+    {
+     "cn": "因为下雨，比赛无法进行。",
+     "py": "Yīnwèi xià yǔ, bǐsài wúfǎ jìnxíng.",
+     "vi": "Vì mưa, trận đấu không thể diễn ra."
+    },
+    {
+     "cn": "我今天不能去。",
+     "py": "Wǒ jīntiān bù néng qù.",
+     "vi": "Hôm nay tôi không đi được."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "只要每天积累，你的汉语一定会越来越流利。",
+   "py": "Zhǐyào měi tiān jīlěi, nǐ de Hànyǔ yídìng huì yuèláiyuè liúlì.",
+   "vi": "Chỉ cần tích luỹ mỗi ngày, tiếng Trung của bạn nhất định ngày càng lưu loát."
+  },
+  {
+   "cn": "我们俩很熟，是老朋友了。",
+   "py": "Wǒmen liǎ hěn shú, shì lǎo péngyou le.",
+   "vi": "Hai chúng tôi rất thân, là bạn cũ rồi."
+  },
+  {
+   "cn": "他的发音很准。",
+   "py": "Tā de fāyīn hěn zhǔn.",
+   "vi": "Phát âm của anh ấy rất chuẩn."
+  },
+  {
+   "cn": "细心的人很少犯错。",
+   "py": "Xìxīn de rén hěn shǎo fàncuò.",
+   "vi": "Người cẩn thận ít khi mắc lỗi."
+  }
+ ]
+}

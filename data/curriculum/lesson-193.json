@@ -1,0 +1,216 @@
+{
+ "id": 193,
+ "cn": "庆祝生日",
+ "title": "Sự kiện và gặp gỡ",
+ "goal": "Nói về ăn mừng, tụ họp, liên hoan, đến, chúc, chúc ngủ ngon, để lại, đi ngang qua, bỏ lỡ và kịp.",
+ "words": [
+  {
+   "w": "庆祝",
+   "py": "qìngzhù",
+   "hv": "khánh chúc",
+   "vi": "ăn mừng, chúc mừng",
+   "pos": "động từ",
+   "note": "Chính là \"khánh chúc\".",
+   "ex": [
+    {
+     "cn": "我们一起庆祝你的生日。",
+     "py": "Wǒmen yìqǐ qìngzhù nǐ de shēngrì.",
+     "vi": "Chúng ta cùng mừng sinh nhật bạn."
+    }
+   ]
+  },
+  {
+   "w": "聚",
+   "py": "jù",
+   "hv": "tụ",
+   "vi": "tụ họp",
+   "pos": "động từ",
+   "note": "\"Tụ\" trong \"hội tụ\". 聚会 là buổi tụ họp.",
+   "ex": [
+    {
+     "cn": "我们好久没聚了。",
+     "py": "Wǒmen hǎojiǔ méi jù le.",
+     "vi": "Lâu lắm rồi chúng ta không tụ tập."
+    }
+   ]
+  },
+  {
+   "w": "聚餐",
+   "py": "jùcān",
+   "hv": "tụ xan",
+   "vi": "liên hoan, ăn chung",
+   "pos": "động từ",
+   "note": "聚 + 餐.",
+   "ex": [
+    {
+     "cn": "周五晚上公司聚餐。",
+     "py": "Zhōuwǔ wǎnshang gōngsī jùcān.",
+     "vi": "Tối thứ Sáu công ty liên hoan."
+    }
+   ]
+  },
+  {
+   "w": "到来",
+   "py": "dàolái",
+   "hv": "đáo lai",
+   "vi": "đến, sự đến",
+   "pos": "động từ",
+   "note": "Trang trọng. 春天的到来 (mùa xuân đến).",
+   "ex": [
+    {
+     "cn": "欢迎您的到来。",
+     "py": "Huānyíng nín de dàolái.",
+     "vi": "Hoan nghênh ngài đã đến."
+    }
+   ]
+  },
+  {
+   "w": "祝",
+   "py": "zhù",
+   "hv": "chúc",
+   "vi": "chúc",
+   "pos": "động từ",
+   "note": "Chính là \"chúc\".",
+   "ex": [
+    {
+     "cn": "祝你生日快乐！",
+     "py": "Zhù nǐ shēngrì kuàilè!",
+     "vi": "Chúc bạn sinh nhật vui vẻ!"
+    }
+   ]
+  },
+  {
+   "w": "晚安",
+   "py": "wǎn'ān",
+   "hv": "vãn an",
+   "vi": "chúc ngủ ngon",
+   "pos": "động từ",
+   "note": "晚 + 安 (yên).",
+   "ex": [
+    {
+     "cn": "晚安，明天见。",
+     "py": "Wǎn'ān, míngtiān jiàn.",
+     "vi": "Ngủ ngon nhé, mai gặp."
+    }
+   ]
+  },
+  {
+   "w": "留下",
+   "py": "liúxia",
+   "hv": "lưu hạ",
+   "vi": "để lại, ở lại",
+   "pos": "động từ",
+   "note": "留 = \"lưu\" trong \"lưu giữ\".",
+   "ex": [
+    {
+     "cn": "他给我留下了很深的印象。",
+     "py": "Tā gěi wǒ liúxia le hěn shēn de yìnxiàng.",
+     "vi": "Anh ấy để lại cho tôi ấn tượng sâu sắc."
+    }
+   ]
+  },
+  {
+   "w": "路过",
+   "py": "lùguò",
+   "hv": "lộ quá",
+   "vi": "đi ngang qua",
+   "pos": "động từ",
+   "note": "路 + 过.",
+   "ex": [
+    {
+     "cn": "我路过书店，买了一本书。",
+     "py": "Wǒ lùguò shūdiàn, mǎi le yì běn shū.",
+     "vi": "Tôi đi ngang hiệu sách, mua một cuốn."
+    }
+   ]
+  },
+  {
+   "w": "错过",
+   "py": "cuòguò",
+   "hv": "thác quá",
+   "vi": "bỏ lỡ",
+   "pos": "động từ",
+   "note": "错 (sai) + 过.",
+   "ex": [
+    {
+     "cn": "别错过这次机会。",
+     "py": "Bié cuòguò zhè cì jīhuì.",
+     "vi": "Đừng bỏ lỡ cơ hội này."
+    }
+   ]
+  },
+  {
+   "w": "赶上",
+   "py": "gǎnshàng",
+   "hv": "cản thượng",
+   "vi": "kịp, đuổi kịp",
+   "pos": "động từ",
+   "note": "赶 (đuổi) + 上.",
+   "ex": [
+    {
+     "cn": "我们赶上了最后一班车。",
+     "py": "Wǒmen gǎnshàng le zuìhòu yì bān chē.",
+     "vi": "Chúng tôi kịp chuyến xe cuối cùng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "给 + người + 留下 + ấn tượng",
+   "b": "给我留下了好印象",
+   "d": "Ai để lại ấn tượng cho ai.",
+   "ex": [
+    {
+     "cn": "这次旅行给我留下了美好的回忆。",
+     "py": "Zhè cì lǚxíng gěi wǒ liúxia le měihǎo de huíyì.",
+     "vi": "Chuyến đi này để lại cho tôi kỷ niệm đẹp."
+    },
+    {
+     "cn": "你给老师留下了好印象。",
+     "py": "Nǐ gěi lǎoshī liúxia le hǎo yìnxiàng.",
+     "vi": "Bạn để lại ấn tượng tốt cho thầy."
+    }
+   ]
+  },
+  {
+   "t": "赶上 và 错过",
+   "b": "赶上 + chuyến xe / cơ hội (kịp) · 错过 + chuyến xe / cơ hội (lỡ)",
+   "d": "Hai động từ đối lập, đi với cùng loại danh từ.",
+   "ex": [
+    {
+     "cn": "如果不快点儿，就赶不上飞机了。",
+     "py": "Rúguǒ bú kuài diǎnr, jiù gǎn bu shàng fēijī le.",
+     "vi": "Nếu không nhanh lên thì không kịp máy bay."
+    },
+    {
+     "cn": "我错过了他的电话。",
+     "py": "Wǒ cuòguò le tā de diànhuà.",
+     "vi": "Tôi bỏ lỡ cuộc gọi của anh ấy."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我们去饭店庆祝一下吧。",
+   "py": "Wǒmen qù fàndiàn qìngzhù yíxià ba.",
+   "vi": "Chúng ta ra nhà hàng ăn mừng chút nhé."
+  },
+  {
+   "cn": "毕业以后，同学们很少聚在一起了。",
+   "py": "Bìyè yǐhòu, tóngxuémen hěn shǎo jù zài yìqǐ le.",
+   "vi": "Tốt nghiệp rồi, bạn học ít khi tụ tập."
+  },
+  {
+   "cn": "路过的时候进来坐坐吧。",
+   "py": "Lùguò de shíhou jìnlai zuòzuo ba.",
+   "vi": "Khi đi ngang qua thì vào ngồi chơi nhé."
+  },
+  {
+   "cn": "祝你一路平安！",
+   "py": "Zhù nǐ yí lù píng'ān!",
+   "vi": "Chúc bạn thượng lộ bình an!"
+  }
+ ]
+}

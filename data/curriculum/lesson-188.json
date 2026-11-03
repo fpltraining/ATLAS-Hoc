@@ -1,0 +1,216 @@
+{
+ "id": 188,
+ "cn": "比较",
+ "title": "So sánh",
+ "goal": "So sánh bằng 高于 / 低于, 相比, 不如, 同样, 更加, 大大, 稍, 基本, 基本上.",
+ "words": [
+  {
+   "w": "高于",
+   "py": "gāoyú",
+   "hv": "cao vu",
+   "vi": "cao hơn",
+   "pos": "động từ",
+   "note": "Văn viết: A 高于 B.",
+   "ex": [
+    {
+     "cn": "今年的收入高于去年。",
+     "py": "Jīnnián de shōurù gāoyú qùnián.",
+     "vi": "Thu nhập năm nay cao hơn năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "低于",
+   "py": "dīyú",
+   "hv": "đê vu",
+   "vi": "thấp hơn",
+   "pos": "động từ",
+   "note": "Văn viết: A 低于 B.",
+   "ex": [
+    {
+     "cn": "气温低于零度会结冰。",
+     "py": "Qìwēn dīyú líng dù huì jiébīng.",
+     "vi": "Nhiệt độ dưới không độ sẽ đóng băng."
+    }
+   ]
+  },
+  {
+   "w": "相比",
+   "py": "xiāngbǐ",
+   "hv": "tương tỷ",
+   "vi": "so với",
+   "pos": "động từ",
+   "note": "和…相比 (so với…).",
+   "ex": [
+    {
+     "cn": "和北京相比，上海更暖和。",
+     "py": "Hé Běijīng xiāngbǐ, Shànghǎi gèng nuǎnhuo.",
+     "vi": "So với Bắc Kinh, Thượng Hải ấm hơn."
+    }
+   ]
+  },
+  {
+   "w": "不如",
+   "py": "bùrú",
+   "hv": "bất như",
+   "vi": "không bằng",
+   "pos": "động từ",
+   "note": "A 不如 B: A không bằng B.",
+   "ex": [
+    {
+     "cn": "我的汉语不如他好。",
+     "py": "Wǒ de Hànyǔ bùrú tā hǎo.",
+     "vi": "Tiếng Trung của tôi không giỏi bằng anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "同样",
+   "py": "tóngyàng",
+   "hv": "đồng dạng",
+   "vi": "giống như vậy, cũng",
+   "pos": "tính từ",
+   "note": "同 (cùng) + 样.",
+   "ex": [
+    {
+     "cn": "我也遇到了同样的问题。",
+     "py": "Wǒ yě yùdào le tóngyàng de wèntí.",
+     "vi": "Tôi cũng gặp vấn đề tương tự."
+    }
+   ]
+  },
+  {
+   "w": "更加",
+   "py": "gèngjiā",
+   "hv": "cánh gia",
+   "vi": "càng thêm",
+   "pos": "phó từ",
+   "note": "Mạnh hơn 更.",
+   "ex": [
+    {
+     "cn": "下雨以后，空气更加新鲜了。",
+     "py": "Xià yǔ yǐhòu, kōngqì gèngjiā xīnxiān le.",
+     "vi": "Mưa xong, không khí càng trong lành hơn."
+    }
+   ]
+  },
+  {
+   "w": "大大",
+   "py": "dàdà",
+   "hv": "đại đại",
+   "vi": "rất nhiều, đáng kể",
+   "pos": "phó từ",
+   "note": "Đứng trước động từ: 大大提高 (nâng cao đáng kể).",
+   "ex": [
+    {
+     "cn": "新方法大大提高了速度。",
+     "py": "Xīn fāngfǎ dàdà tígāo le sùdù.",
+     "vi": "Phương pháp mới nâng cao tốc độ đáng kể."
+    }
+   ]
+  },
+  {
+   "w": "稍",
+   "py": "shāo",
+   "hv": "sảo",
+   "vi": "hơi, một chút",
+   "pos": "phó từ",
+   "note": "Trang trọng. 稍等 (xin đợi chút).",
+   "ex": [
+    {
+     "cn": "请稍等一下。",
+     "py": "Qǐng shāo děng yíxià.",
+     "vi": "Xin vui lòng đợi một chút."
+    }
+   ]
+  },
+  {
+   "w": "基本",
+   "py": "jīběn",
+   "hv": "cơ bản",
+   "vi": "cơ bản",
+   "pos": "tính từ",
+   "note": "Chính là \"cơ bản\".",
+   "ex": [
+    {
+     "cn": "这是最基本的知识。",
+     "py": "Zhè shì zuì jīběn de zhīshi.",
+     "vi": "Đây là kiến thức cơ bản nhất."
+    }
+   ]
+  },
+  {
+   "w": "基本上",
+   "py": "jīběnshàng",
+   "hv": "cơ bản thượng",
+   "vi": "về cơ bản",
+   "pos": "phó từ",
+   "note": "基本 + 上.",
+   "ex": [
+    {
+     "cn": "工作基本上完成了。",
+     "py": "Gōngzuò jīběnshàng wánchéng le.",
+     "vi": "Công việc về cơ bản đã xong."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "A 不如 B (+ tính từ)",
+   "b": "我不如他高 · 坐车不如走路",
+   "d": "A không bằng B; có thể bỏ tính từ khi ý đã rõ.",
+   "ex": [
+    {
+     "cn": "坐公交车不如骑车快。",
+     "py": "Zuò gōngjiāochē bùrú qí chē kuài.",
+     "vi": "Đi xe buýt không nhanh bằng đạp xe."
+    },
+    {
+     "cn": "看电视不如看书。",
+     "py": "Kàn diànshì bùrú kàn shū.",
+     "vi": "Xem TV không bằng đọc sách."
+    }
+   ]
+  },
+  {
+   "t": "和 / 跟 + A + 相比",
+   "b": "和去年相比 · 跟别人相比",
+   "d": "Đặt đầu câu để so sánh, vế sau nêu kết luận.",
+   "ex": [
+    {
+     "cn": "和去年相比，今年的游客多了很多。",
+     "py": "Hé qùnián xiāngbǐ, jīnnián de yóukè duō le hěn duō.",
+     "vi": "So với năm ngoái, năm nay du khách đông hơn nhiều."
+    },
+    {
+     "cn": "跟别人相比，他更加努力。",
+     "py": "Gēn biérén xiāngbǐ, tā gèngjiā nǔlì.",
+     "vi": "So với người khác, anh ấy cố gắng hơn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "这个月的销量高于上个月。",
+   "py": "Zhège yuè de xiāoliàng gāoyú shàng ge yuè.",
+   "vi": "Doanh số tháng này cao hơn tháng trước."
+  },
+  {
+   "cn": "稍等，我马上回来。",
+   "py": "Shāo děng, wǒ mǎshàng huílai.",
+   "vi": "Đợi chút, tôi quay lại ngay."
+  },
+  {
+   "cn": "网上买东西大大方便了我们的生活。",
+   "py": "Wǎngshang mǎi dōngxi dàdà fāngbiàn le wǒmen de shēnghuó.",
+   "vi": "Mua sắm trên mạng làm cuộc sống của chúng ta tiện lợi hơn nhiều."
+  },
+  {
+   "cn": "我基本上每天都跑步。",
+   "py": "Wǒ jīběnshàng měi tiān dōu pǎobù.",
+   "vi": "Về cơ bản ngày nào tôi cũng chạy bộ."
+  }
+ ]
+}

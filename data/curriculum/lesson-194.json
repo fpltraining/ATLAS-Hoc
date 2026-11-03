@@ -1,0 +1,216 @@
+{
+ "id": 194,
+ "cn": "换个牌子",
+ "title": "Đồ dùng và quần áo",
+ "goal": "Nói về nhãn hiệu, biển, áo khoác, áo len, giày da, đồng hồ, thời gian biểu, dầu, thô và mảnh.",
+ "words": [
+  {
+   "w": "牌子",
+   "py": "páizi",
+   "hv": "bài tử",
+   "vi": "nhãn hiệu; biển",
+   "pos": "danh từ",
+   "note": "Thương hiệu: 什么牌子? Còn là tấm biển.",
+   "ex": [
+    {
+     "cn": "你的手机是什么牌子的？",
+     "py": "Nǐ de shǒujī shì shénme páizi de?",
+     "vi": "Điện thoại của bạn hãng gì?"
+    }
+   ]
+  },
+  {
+   "w": "牌",
+   "py": "pái",
+   "hv": "bài",
+   "vi": "biển; thẻ; nhãn",
+   "pos": "danh từ",
+   "note": "Biển số xe 车牌, bài lá 扑克牌.",
+   "ex": [
+    {
+     "cn": "门口挂着一块牌。",
+     "py": "Ménkǒu guà zhe yí kuài pái.",
+     "vi": "Trước cửa treo một tấm biển."
+    }
+   ]
+  },
+  {
+   "w": "外套",
+   "py": "wàitào",
+   "hv": "ngoại sáo",
+   "vi": "áo khoác ngoài",
+   "pos": "danh từ",
+   "note": "外 + 套 (bao ngoài).",
+   "ex": [
+    {
+     "cn": "天冷了，带件外套吧。",
+     "py": "Tiān lěng le, dài jiàn wàitào ba.",
+     "vi": "Trời lạnh rồi, mang theo áo khoác nhé."
+    }
+   ]
+  },
+  {
+   "w": "毛衣",
+   "py": "máoyī",
+   "hv": "mao y",
+   "vi": "áo len",
+   "pos": "danh từ",
+   "note": "毛 (lông) + 衣.",
+   "ex": [
+    {
+     "cn": "妈妈给我织了一件毛衣。",
+     "py": "Māma gěi wǒ zhī le yí jiàn máoyī.",
+     "vi": "Mẹ đan cho tôi một chiếc áo len."
+    }
+   ]
+  },
+  {
+   "w": "皮鞋",
+   "py": "píxié",
+   "hv": "bì hài",
+   "vi": "giày da",
+   "pos": "danh từ",
+   "note": "皮 (da) + 鞋 (giày).",
+   "ex": [
+    {
+     "cn": "面试要穿皮鞋。",
+     "py": "Miànshì yào chuān píxié.",
+     "vi": "Đi phỏng vấn phải đi giày da."
+    }
+   ]
+  },
+  {
+   "w": "表",
+   "py": "biǎo",
+   "hv": "biểu",
+   "vi": "đồng hồ đeo tay; bảng",
+   "pos": "danh từ",
+   "note": "\"Biểu\" trong \"biểu đồ\". Đồng hồ đeo tay là 手表.",
+   "ex": [
+    {
+     "cn": "我的表慢了五分钟。",
+     "py": "Wǒ de biǎo màn le wǔ fēnzhōng.",
+     "vi": "Đồng hồ tôi chậm năm phút."
+    }
+   ]
+  },
+  {
+   "w": "时间表",
+   "py": "shíjiānbiǎo",
+   "hv": "thời gian biểu",
+   "vi": "thời gian biểu, lịch",
+   "pos": "danh từ",
+   "note": "Chính là \"thời gian biểu\".",
+   "ex": [
+    {
+     "cn": "我做了一个学习时间表。",
+     "py": "Wǒ zuò le yí ge xuéxí shíjiānbiǎo.",
+     "vi": "Tôi lập một thời gian biểu học tập."
+    }
+   ]
+  },
+  {
+   "w": "油",
+   "py": "yóu",
+   "hv": "du",
+   "vi": "dầu; xăng",
+   "pos": "danh từ",
+   "note": "Dầu ăn 油, xăng 汽油. Đổ xăng là 加油.",
+   "ex": [
+    {
+     "cn": "菜里油太多了。",
+     "py": "Cài lǐ yóu tài duō le.",
+     "vi": "Món ăn nhiều dầu quá."
+    }
+   ]
+  },
+  {
+   "w": "粗",
+   "py": "cū",
+   "hv": "thô",
+   "vi": "thô, to (sợi); cẩu thả",
+   "pos": "tính từ",
+   "note": "Chính là \"thô\". Đối lập với 细.",
+   "ex": [
+    {
+     "cn": "这根绳子很粗。",
+     "py": "Zhè gēn shéngzi hěn cū.",
+     "vi": "Sợi dây này rất to."
+    }
+   ]
+  },
+  {
+   "w": "细",
+   "py": "xì",
+   "hv": "tế",
+   "vi": "mảnh, nhỏ; tỉ mỉ",
+   "pos": "tính từ",
+   "note": "\"Tế\" trong \"tế bào\", \"tinh tế\".",
+   "ex": [
+    {
+     "cn": "她的手指又细又长。",
+     "py": "Tā de shǒuzhǐ yòu xì yòu cháng.",
+     "vi": "Ngón tay cô ấy vừa thon vừa dài."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Câu hỏi 什么牌子的 / 什么颜色的",
+   "b": "Danh từ + 是 + 什么 + … + 的？",
+   "d": "Hỏi đặc điểm bằng 什么 + danh từ + 的.",
+   "ex": [
+    {
+     "cn": "你的车是什么颜色的？",
+     "py": "Nǐ de chē shì shénme yánsè de?",
+     "vi": "Xe bạn màu gì?"
+    },
+    {
+     "cn": "这件毛衣是什么牌子的？",
+     "py": "Zhè jiàn máoyī shì shénme páizi de?",
+     "vi": "Áo len này hãng gì?"
+    }
+   ]
+  },
+  {
+   "t": "又…又…: vừa… vừa… (khẩu ngữ)",
+   "b": "又 + tính từ + 又 + tính từ",
+   "d": "Hai đặc điểm cùng chiều (cùng tốt hoặc cùng xấu).",
+   "ex": [
+    {
+     "cn": "这个苹果又大又甜。",
+     "py": "Zhège píngguǒ yòu dà yòu tián.",
+     "vi": "Quả táo này vừa to vừa ngọt."
+    },
+    {
+     "cn": "外面又冷又黑。",
+     "py": "Wàimian yòu lěng yòu hēi.",
+     "vi": "Bên ngoài vừa lạnh vừa tối."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我喜欢这个牌子的运动鞋。",
+   "py": "Wǒ xǐhuan zhège páizi de yùndòngxié.",
+   "vi": "Tôi thích giày thể thao hãng này."
+  },
+  {
+   "cn": "冬天我常穿毛衣和外套。",
+   "py": "Dōngtiān wǒ cháng chuān máoyī hé wàitào.",
+   "vi": "Mùa đông tôi hay mặc áo len và áo khoác."
+  },
+  {
+   "cn": "按照时间表，我们三点出发。",
+   "py": "Ànzhào shíjiānbiǎo, wǒmen sān diǎn chūfā.",
+   "vi": "Theo thời gian biểu, ba giờ chúng ta xuất phát."
+  },
+  {
+   "cn": "做事不能太粗，要细心一点儿。",
+   "py": "Zuò shì bù néng tài cū, yào xìxīn yìdiǎnr.",
+   "vi": "Làm việc không được cẩu thả, phải cẩn thận hơn."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 187,
+ "cn": "大多数人",
+ "title": "Số lượng",
+ "goal": "Nói về đa số, thiểu số, số lượng lớn, số lượng nhỏ, số người, toàn bộ, tất cả, tổng cộng, chỉ và chỉ có.",
+ "words": [
+  {
+   "w": "多数",
+   "py": "duōshù",
+   "hv": "đa số",
+   "vi": "đa số",
+   "pos": "danh từ",
+   "note": "Chính là \"đa số\". 大多数 là đại đa số.",
+   "ex": [
+    {
+     "cn": "多数人同意这个计划。",
+     "py": "Duōshù rén tóngyì zhège jìhuà.",
+     "vi": "Đa số người đồng ý kế hoạch này."
+    }
+   ]
+  },
+  {
+   "w": "少数",
+   "py": "shǎoshù",
+   "hv": "thiểu số",
+   "vi": "thiểu số",
+   "pos": "danh từ",
+   "note": "Chính là \"thiểu số\". Dân tộc thiểu số là 少数民族.",
+   "ex": [
+    {
+     "cn": "只有少数人反对。",
+     "py": "Zhǐyǒu shǎoshù rén fǎnduì.",
+     "vi": "Chỉ có số ít người phản đối."
+    }
+   ]
+  },
+  {
+   "w": "大量",
+   "py": "dàliàng",
+   "hv": "đại lượng",
+   "vi": "số lượng lớn",
+   "pos": "tính từ",
+   "note": "大 + 量.",
+   "ex": [
+    {
+     "cn": "学外语需要大量练习。",
+     "py": "Xué wàiyǔ xūyào dàliàng liànxí.",
+     "vi": "Học ngoại ngữ cần luyện tập rất nhiều."
+    }
+   ]
+  },
+  {
+   "w": "少量",
+   "py": "shǎoliàng",
+   "hv": "thiểu lượng",
+   "vi": "số lượng nhỏ",
+   "pos": "tính từ",
+   "note": "少 + 量.",
+   "ex": [
+    {
+     "cn": "菜里放少量的盐。",
+     "py": "Cài lǐ fàng shǎoliàng de yán.",
+     "vi": "Cho một ít muối vào món ăn."
+    }
+   ]
+  },
+  {
+   "w": "人数",
+   "py": "rénshù",
+   "hv": "nhân số",
+   "vi": "số người",
+   "pos": "danh từ",
+   "note": "人 + 数.",
+   "ex": [
+    {
+     "cn": "参加的人数比去年多。",
+     "py": "Cānjiā de rénshù bǐ qùnián duō.",
+     "vi": "Số người tham gia đông hơn năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "全",
+   "py": "quán",
+   "hv": "toàn",
+   "vi": "toàn bộ, đủ",
+   "pos": "tính từ",
+   "note": "\"Toàn\" trong \"toàn bộ\". Đứng trước danh từ: 全家, 全国.",
+   "ex": [
+    {
+     "cn": "全家人都很高兴。",
+     "py": "Quán jiā rén dōu hěn gāoxìng.",
+     "vi": "Cả nhà đều rất vui."
+    }
+   ]
+  },
+  {
+   "w": "全都",
+   "py": "quándōu",
+   "hv": "toàn đô",
+   "vi": "tất cả đều",
+   "pos": "phó từ",
+   "note": "全 + 都, nhấn mạnh hơn 都.",
+   "ex": [
+    {
+     "cn": "作业我全都做完了。",
+     "py": "Zuòyè wǒ quándōu zuò wán le.",
+     "vi": "Bài tập tôi làm xong hết rồi."
+    }
+   ]
+  },
+  {
+   "w": "共",
+   "py": "gòng",
+   "hv": "cộng",
+   "vi": "tổng cộng",
+   "pos": "phó từ",
+   "note": "Văn viết của 一共.",
+   "ex": [
+    {
+     "cn": "全班共有四十人。",
+     "py": "Quán bān gòng yǒu sìshí rén.",
+     "vi": "Cả lớp tổng cộng bốn mươi người."
+    }
+   ]
+  },
+  {
+   "w": "仅",
+   "py": "jǐn",
+   "hv": "cận",
+   "vi": "chỉ",
+   "pos": "phó từ",
+   "note": "Văn viết của 只.",
+   "ex": [
+    {
+     "cn": "这个机会仅有一次。",
+     "py": "Zhège jīhuì jǐn yǒu yí cì.",
+     "vi": "Cơ hội này chỉ có một lần."
+    }
+   ]
+  },
+  {
+   "w": "仅仅",
+   "py": "jǐnjǐn",
+   "hv": "cận cận",
+   "vi": "chỉ vẻn vẹn",
+   "pos": "phó từ",
+   "note": "Nhấn mạnh số lượng rất ít.",
+   "ex": [
+    {
+     "cn": "他仅仅用了一年就学会了汉语。",
+     "py": "Tā jǐnjǐn yòng le yì nián jiù xuéhuì le Hànyǔ.",
+     "vi": "Anh ấy chỉ mất vẻn vẹn một năm đã học được tiếng Trung."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "全 / 全都 / 都: tất cả",
+   "b": "全 + danh từ · 全都 + động từ",
+   "d": "全 đứng trước danh từ (全家, 全国), 全都 đứng trước động từ.",
+   "ex": [
+    {
+     "cn": "全国人民都在看这场比赛。",
+     "py": "Quán guó rénmín dōu zài kàn zhè chǎng bǐsài.",
+     "vi": "Nhân dân cả nước đều đang xem trận đấu này."
+    },
+    {
+     "cn": "他们全都来了。",
+     "py": "Tāmen quándōu lái le.",
+     "vi": "Họ đến đủ cả rồi."
+    }
+   ]
+  },
+  {
+   "t": "仅仅 / 只…就…: chỉ… đã…",
+   "b": "仅仅 + thời gian + 就 + kết quả",
+   "d": "Nhấn mạnh làm được nhanh hoặc ít.",
+   "ex": [
+    {
+     "cn": "他只用了十分钟就做完了。",
+     "py": "Tā zhǐ yòng le shí fēnzhōng jiù zuò wán le.",
+     "vi": "Anh ấy chỉ mất mười phút đã làm xong."
+    },
+    {
+     "cn": "仅仅一个月，他就瘦了五公斤。",
+     "py": "Jǐnjǐn yí ge yuè, tā jiù shòu le wǔ gōngjīn.",
+     "vi": "Chỉ một tháng, anh ấy đã giảm năm ký."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "大多数学生喜欢上体育课。",
+   "py": "Dàduōshù xuésheng xǐhuan shàng tǐyù kè.",
+   "vi": "Đa số học sinh thích giờ thể dục."
+  },
+  {
+   "cn": "今年报名的人数增加了很多。",
+   "py": "Jīnnián bàomíng de rénshù zēngjiā le hěn duō.",
+   "vi": "Năm nay số người đăng ký tăng nhiều."
+  },
+  {
+   "cn": "这个房间仅能住两个人。",
+   "py": "Zhège fángjiān jǐn néng zhù liǎng ge rén.",
+   "vi": "Phòng này chỉ ở được hai người."
+  },
+  {
+   "cn": "你说的我全都明白了。",
+   "py": "Nǐ shuō de wǒ quándōu míngbai le.",
+   "vi": "Những gì bạn nói tôi hiểu hết rồi."
+  }
+ ]
+}
