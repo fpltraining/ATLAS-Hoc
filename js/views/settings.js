@@ -84,19 +84,36 @@ export async function renderSettings() {
     !audio.hasVoice() ? h('div.note.seal', { style: { marginTop: '10px' } }, audio.NO_VOICE_HELP) : null,
 
     h('hr.divider'),
+    aiBlock(s, set),
+    h('hr.divider'),
     offlineBlock(),
     h('hr.divider'),
 
     h('div.small.faint',
       h('p', h('b', 'ATLAS'), ': học tiếng Anh và tiếng Trung, đọc truyện song ngữ, viết bằng Apple Pencil. Chạy hoàn toàn trên máy bạn.'),
       h('p', 'Dữ liệu nét viết: hanzi-writer-data. Cấu tạo chữ: Make Me a Hanzi. Cả hai theo Arphic Public License. Âm Hán Việt: Unihan Database của Unicode.'),
-      h('p', 'Không quảng cáo, không tài khoản, không gửi dữ liệu đi đâu cả.'),
+      h('p', 'Không quảng cáo, không tài khoản. Dữ liệu học nằm trên máy bạn; chỉ khi bạn bật Chấm bài bằng AI và tự bấm chấm thì bài đó mới được gửi tới máy chủ bạn đã điền.'),
     ),
 
     h('div.btn-row', { style: { marginTop: '14px' } },
       h('a.btn.sm', { href: '#/stats', onclick: () => setTimeout(closeSheet, 30) }, 'Sao lưu dữ liệu'),
       h('button.btn.sm.ghost', { 'data-close': '' }, 'Đóng'),
     ),
+  );
+}
+
+/* Chấm bài viết và bài nói bằng AI: tắt cho tới khi điền đủ địa chỉ hàm và khoá anon */
+function aiBlock(s, set) {
+  const field = (key, ph, type = 'text') => h('input.scribble', {
+    type, placeholder: ph, value: s[key] || '', autocapitalize: 'off', autocorrect: 'off', spellcheck: 'false',
+    style: { width: '100%', marginTop: '6px' },
+    onchange: (e) => set(key, e.target.value.trim()),
+  });
+  return h('div',
+    h('h4', 'Chấm bài bằng AI'),
+    h('p.small.faint', 'Tắt sẵn. Điền địa chỉ hàm "grade" trên Supabase và khoá anon của dự án để bật nút "Chấm bằng AI" ở mục Viết và Nói lại của tiếng Anh. Khoá Claude nằm trên máy chủ, không nằm trong app. Cách cài xem README.'),
+    field('aiUrl', 'https://<dự-án>.supabase.co/functions/v1/grade', 'url'),
+    field('aiKey', 'Khoá anon (public) của dự án Supabase', 'password'),
   );
 }
 

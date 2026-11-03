@@ -114,6 +114,19 @@ node tools/apply-patches.mjs
 
 `merge-data.mjs` cũng tự gọi bước này ở cuối, nên dựng lại dữ liệu không làm mất bản sửa. Phiên âm tiếng Anh theo giọng Mỹ. Đổi dữ liệu xong thì tăng `VERSION` trong `sw.js` để máy người dùng tải bản mới.
 
+## Chấm bài bằng AI
+
+Mục Viết và Nói lại của tiếng Anh có nút **Chấm bằng AI**: Claude chấm bài, cho điểm, trình độ CEFR thể hiện, lỗi cần sửa kèm lý do bằng tiếng Việt, và một bản sửa gợi ý. Bài nói được trình duyệt chuyển thành chữ trước khi chấm, nên AI chấm từ vựng, ngữ pháp và ý, không chấm phát âm.
+
+Tính năng tắt sẵn. App là trang tĩnh nên khoá Claude không được để trong app; nó nằm trong hàm `supabase/functions/grade` chạy trên Supabase.
+
+1. Tạo dự án Supabase, cài Supabase CLI, chạy `supabase link` trong thư mục repo.
+2. `supabase secrets set ANTHROPIC_API_KEY=sk-ant-...`
+3. `supabase functions deploy grade`
+4. Trong app: Cài đặt → **Chấm bài bằng AI**, điền `https://<dự-án>.supabase.co/functions/v1/grade` và khoá anon của dự án.
+
+Bài chỉ được gửi đi khi người học tự bấm nút. Hàm từ chối bài dài hơn 4.000 ký tự. Khoá anon là khoá công khai, ai có nó đều gọi được hàm, nên trước khi mở cho nhiều người dùng cần thêm đăng nhập hoặc giới hạn số lần chấm mỗi người để kiểm soát chi phí.
+
 ## Cấu trúc
 
 ```

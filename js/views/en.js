@@ -10,6 +10,7 @@ import { curSession, enBlocks, enTitle, weekOf, quotaToday, dayType } from '../p
 import { InkPad } from '../pen/inkpad.js';
 import { sayEn, sayBtn, pair, wordy, scribble, diff, micCheck, hasMic } from '../kit.js';
 import { h, toast, section, progressBar, pill } from '../ui.js';
+import { gradeButton } from '../ai.js';
 
 export async function render(route) {
   const sub = route.args[0];
@@ -165,6 +166,7 @@ async function activity(key) {
   const n = curSession(en, course);
   const i = n - 1;
   const w = st === 1 ? weekOf(n, course) : null;
+  const level = (course.stages[st] || {}).cefr || '';
 
   switch (key) {
     case 'sound': return soundBlock(course.sounds[i % 12]);
@@ -186,11 +188,11 @@ async function activity(key) {
     case 'book': return bookBlock(key, w);
     case 'write': return writeBlock(key, {
       title: `Tóm tắt chương ${w.n} của truyện The Slow Message bằng 5 câu tiếng Anh.`,
-      hint: course.gist[w.n] ? `Gợi nhớ: ${course.gist[w.n]}` : '', min: 50,
+      hint: course.gist[w.n] ? `Gợi nhớ: ${course.gist[w.n]}` : '', min: 50, level,
     });
     case 'write3': {
       const t = course.writeTasks[i % course.writeTasks.length];
-      return writeBlock(key, { title: t.t, hint: (t.struct || []).join(' · '), min: t.w, tag: t.g });
+      return writeBlock(key, { title: t.t, hint: (t.struct || []).join(' · '), min: t.w, tag: t.g, level });
     }
     case 'coll': {
       const th = course.colloc[i % course.colloc.length];
@@ -201,7 +203,7 @@ async function activity(key) {
       const s = course.shadow[i % course.shadow.length];
       return speakBlock(key, s.v.map((x) => [x, '']), s.t);
     }
-    case 'retell': return retellBlock(key, course.speakTasks[i % course.speakTasks.length]);
+    case 'retell': return retellBlock(key, course.speakTasks[i % course.speakTasks.length], level);
     default:
       return { title: 'Tiếng Anh', el: h('div.empty', h('p', 'Mục này chưa mở được.'), h('a.btn', { href: '#/en/session' }, 'Về buổi học')) };
   }
@@ -411,6 +413,7 @@ function writeBlock(key, t) {
   const box = scribble('Viết bằng Apple Pencil hoặc gõ vào đây', { long: true });
   const count = h('span.small.faint', '0 từ');
   box.style.minHeight = '220px';
+  let lastFeedback = null;
   box.addEventListener('input', () => { count.textContent = `${(box.value.match(/\S+/g) || []).length} từ`; });
   return {
     title: 'Viết',
@@ -422,10 +425,17 @@ function writeBlock(key, t) {
         h('p.small.faint', `Mục tiêu khoảng ${t.min} từ.`),
         box, count,
       ),
+      gradeButton(() => ((box.value.match(/\S+/g) || []).length < 5
+        ? 'Viết ít nhất vài câu rồi hãy chấm.'
+        : { kind: 'write', task: t.title, text: box.value, level: t.level, minWords: t.min }),
+      (r) => { lastFeedback = r; }),
       h('button.btn.jade.block', {
         onclick: async () => {
           if ((box.value.match(/\S+/g) || []).length < 3) return toast('Viết thêm vài từ đã nhé.');
-          await store.kvUpdate('writes', [], (all) => { all.push({ at: Date.now(), task: t.title, text: box.value }); return all; });
+          await store.kvUpdate('writes', [], (all) => {
+            all.push({ at: Date.now(), task: t.title, text: box.value, ai: lastFeedback || undefined });
+            return all;
+          });
           await finishBlock(key);
         },
       }, '✓ Lưu bài viết'),
@@ -450,7 +460,7 @@ function collBlock(key, title, rows) {
 }
 
 /* ---- nói lại bằng lời của mình ---- */
-function retellBlock(key, t) {
+function retellBlock(key, t, level) {
   const clock = h('div.score-big', `${t.sec}s`);
   let left = t.sec, timer = 0;
   const startBtn = h('button.btn.primary.block', {
@@ -464,15 +474,53 @@ function retellBlock(key, t) {
       }, 1000);
     },
   }, 'Bắt đầu nói');
+  const said = scribble('Lời bạn nói sẽ hiện ở đây, sửa được.', { long: true });
+  const rec = dictation(said);
   return {
     title: 'Nói lại',
     el: h('div.stack',
       h('div.card', h('h3', t.t), t.hint ? h('p.small.muted', { style: { marginTop: '6px' } }, t.hint) : null,
         h('div.center', { style: { margin: '14px 0' } }, clock), startBtn),
+      h('div.card.stack',
+        h('h4', 'Chấm bài nói bằng AI (không bắt buộc)'),
+        h('p.small.faint', hasMic
+          ? 'Bấm Ghi âm rồi nói, máy chuyển lời bạn thành chữ. Sửa chỗ máy nghe nhầm rồi bấm chấm. AI chấm từ vựng, ngữ pháp và ý, không chấm phát âm.'
+          : 'Trình duyệt này không chuyển giọng nói thành chữ được. Gõ lại điều bạn vừa nói rồi bấm chấm. AI không chấm phát âm.'),
+        rec.btn, said,
+        gradeButton(() => ((said.value.match(/\S+/g) || []).length < 5
+          ? 'Cần ít nhất vài câu để chấm.'
+          : { kind: 'speak', task: t.t, text: said.value, level })),
+      ),
       doneBtn(key),
     ),
-    cleanup: () => clearInterval(timer),
+    cleanup: () => { clearInterval(timer); rec.stop(); },
   };
+}
+
+/* Ghi lời nói thành chữ bằng nhận dạng giọng nói của trình duyệt, nối vào ô chữ */
+function dictation(target) {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let r = null;
+  const btn = h('button.btn.sm.ghost', {
+    hidden: !SR,
+    onclick: () => {
+      if (r) { r.stop(); return; }
+      r = new SR();
+      r.lang = 'en-US';
+      r.continuous = true;
+      r.interimResults = false;
+      r.onresult = (e) => {
+        for (let k = e.resultIndex; k < e.results.length; k++) {
+          if (e.results[k].isFinal) target.value = `${target.value} ${e.results[k][0].transcript}`.trim();
+        }
+      };
+      r.onerror = () => toast('Máy chưa nghe được. Thử lại, nói gần micro hơn.');
+      r.onend = () => { r = null; btn.textContent = '🎙 Ghi âm'; };
+      r.start();
+      btn.textContent = '■ Dừng ghi';
+    },
+  }, '🎙 Ghi âm');
+  return { btn, stop: () => { if (r) r.stop(); } };
 }
 
 /* ---------- kiểm tra xếp lớp ---------------------------------------------------- */
