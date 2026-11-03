@@ -87,6 +87,12 @@
 ? 牌子上写着什么？ | Trên tấm biển viết gì? | 欢迎问问题* | 今天休息 | 不要说话
 > Kể lại câu chuyện bằng tiếng Việt, rồi thử nói 2 câu tiếng Trung.
 
+! 不知道，就问一问。 | Bù zhīdào, jiù wèn yi wèn. | Không biết thì cứ hỏi.
+! 一个好问题，能帮助很多人。 | Yí ge hǎo wèntí, néng bāngzhù hěn duō rén. | Một câu hỏi hay có thể giúp được nhiều người.
+! 别人问你问题的时候， | Biérén wèn nǐ wèntí de shíhou, | Khi người khác hỏi bạn,
+! 先听一听，再说话。 | xiān tīng yi tīng, zài shuōhuà. | hãy nghe trước rồi hẵng nói.
+
+
 @id zh-teacher
 @lang zh
 @shelf ai
@@ -146,6 +152,12 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 
 ? 小兰从哪儿学到了新词？ | Tiểu Lan học được từ mới từ đâu? | 从同事那儿* | 从书上 | 从小明那儿
 > Kết truyện nói gì về AI và con người? Nói 1 câu tiếng Việt.
+
+! AI老师很好，可是不能代替朋友。 | AI lǎoshī hěn hǎo, kěshì bù néng dàitì péngyou. | Thầy AI rất tốt, nhưng không thay được bạn bè.
+! 听不懂没关系，问就可以了。 | Tīng bu dǒng méi guānxi, wèn jiù kěyǐ le. | Nghe không hiểu cũng không sao, hỏi là được.
+! 真正的语言，在人和人中间。 | Zhēnzhèng de yǔyán, zài rén hé rén zhōngjiān. | Ngôn ngữ thật nằm giữa con người với con người.
+! 学了以后，也要教别人。 | Xué le yǐhòu, yě yào jiāo biérén. | Học xong rồi, cũng hãy dạy lại người khác.
+
 
 @id zh-rabbit
 @lang zh

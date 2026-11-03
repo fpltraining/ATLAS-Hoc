@@ -125,6 +125,14 @@ He puts down his tools. | Ông đặt dụng cụ xuống.
 ? What does the new sign say? | Tấm biển mới ghi gì? | Every question is welcome* | No robots here | Closed today
 > Kể lại cả câu chuyện bằng 3 câu tiếng Anh.
 
+! Bo did not know the answer. | Bo không biết câu trả lời.
+! He only asked why. | Cậu chỉ hỏi tại sao.
+! A good question can find a problem early. | Một câu hỏi hay có thể tìm ra vấn đề sớm.
+! Do not be afraid to ask. | Đừng ngại hỏi.
+! And when someone asks you, | Và khi có người hỏi bạn,
+! try to listen before you say "not now." | hãy thử lắng nghe trước khi nói "để sau".
+
+
 @id coach-phone
 @shelf ai
 @level A2
@@ -272,6 +280,14 @@ He went to find Mr. Long. | Cậu đi tìm anh Long.
 
 ? What can Echo not read? | Echo không đọc được gì? | Khoa himself* | The map | The score
 > Khi huấn luyện đội, anh dùng AI vào việc gì và giữ lại việc gì cho mình?
+
+! A machine can read every game you play. | Một cỗ máy có thể đọc mọi ván bạn chơi.
+! It cannot read your fear, your pride, or your team. | Nó không đọc được nỗi sợ, lòng tự ái hay đội của bạn.
+! Use AI for numbers and patterns. | Hãy dùng AI cho con số và quy luật.
+! Keep people for trust and courage. | Hãy giữ con người cho niềm tin và lòng can đảm.
+! The best team uses both, | Đội giỏi nhất dùng cả hai,
+! and the players keep talking to each other. | và các thành viên luôn nói chuyện với nhau.
+
 
 @id model-no-lie
 @shelf ai
@@ -465,3 +481,10 @@ And then, very slowly, the first word appeared. | Rồi, thật chậm, chữ đ
 
 ? What did Thảo ask at the end? | Cuối cùng Thảo hỏi gì? | What else she should have asked* | Why the launch was late | How much money it made
 > Theo anh, chữ đầu tiên Vega viết là gì? Viết tiếp 2 câu bằng tiếng Anh.
+
+! Passing a test is not the same as being safe. | Qua được bài kiểm tra không giống với thật sự an toàn.
+! Thảo lost her job, but she kept her honesty. | Thảo mất việc, nhưng giữ được sự trung thực.
+! Sometimes the right choice costs money and comfort. | Đôi khi lựa chọn đúng phải trả bằng tiền bạc và sự thoải mái.
+! The questions we choose to ask | Những câu hỏi ta chọn để hỏi
+! decide the answers we can find. | quyết định những câu trả lời ta có thể tìm thấy.
+! Ask the question that you are afraid of. | Hãy hỏi câu mà bạn sợ hỏi.
