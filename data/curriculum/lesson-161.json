@@ -1,0 +1,216 @@
+{
+ "id": 161,
+ "cn": "中秋节吃月饼",
+ "title": "Đồ ăn thức uống",
+ "goal": "Nói về lá trà, rượu trắng, rượu vang, nước ngọt, sữa chua, đồ ăn vặt, màn thầu, bánh trung thu, nướng và tươi.",
+ "words": [
+  {
+   "w": "茶叶",
+   "py": "cháyè",
+   "hv": "trà diệp",
+   "vi": "lá trà",
+   "pos": "danh từ",
+   "note": "茶 + 叶 (lá).",
+   "ex": [
+    {
+     "cn": "这是云南的茶叶。",
+     "py": "Zhè shì Yúnnán de cháyè.",
+     "vi": "Đây là trà Vân Nam."
+    }
+   ]
+  },
+  {
+   "w": "白酒",
+   "py": "báijiǔ",
+   "hv": "bạch tửu",
+   "vi": "rượu trắng",
+   "pos": "danh từ",
+   "note": "Rượu mạnh trong suốt của Trung Quốc.",
+   "ex": [
+    {
+     "cn": "白酒很厉害，少喝点儿。",
+     "py": "Báijiǔ hěn lìhai, shǎo hē diǎnr.",
+     "vi": "Rượu trắng mạnh lắm, uống ít thôi."
+    }
+   ]
+  },
+  {
+   "w": "葡萄酒",
+   "py": "pútaojiǔ",
+   "hv": "bồ đào tửu",
+   "vi": "rượu vang",
+   "pos": "danh từ",
+   "note": "葡萄 (nho, \"bồ đào\") + 酒.",
+   "ex": [
+    {
+     "cn": "我们喝一杯葡萄酒吧。",
+     "py": "Wǒmen hē yì bēi pútaojiǔ ba.",
+     "vi": "Mình uống một ly rượu vang nhé."
+    }
+   ]
+  },
+  {
+   "w": "汽水",
+   "py": "qìshuǐ",
+   "hv": "khí thuỷ",
+   "vi": "nước ngọt có ga",
+   "pos": "danh từ",
+   "note": "汽 (hơi) + 水.",
+   "ex": [
+    {
+     "cn": "孩子们喜欢喝汽水。",
+     "py": "Háizimen xǐhuan hē qìshuǐ.",
+     "vi": "Bọn trẻ thích uống nước ngọt."
+    }
+   ]
+  },
+  {
+   "w": "酸奶",
+   "py": "suānnǎi",
+   "hv": "toan nãi",
+   "vi": "sữa chua",
+   "pos": "danh từ",
+   "note": "酸 (chua) + 奶 (sữa).",
+   "ex": [
+    {
+     "cn": "早上我喝一瓶酸奶。",
+     "py": "Zǎoshang wǒ hē yì píng suānnǎi.",
+     "vi": "Buổi sáng tôi uống một chai sữa chua."
+    }
+   ]
+  },
+  {
+   "w": "零食",
+   "py": "língshí",
+   "hv": "linh thực",
+   "vi": "đồ ăn vặt",
+   "pos": "danh từ",
+   "note": "零 (lẻ) + 食 (ăn).",
+   "ex": [
+    {
+     "cn": "少吃零食，多吃饭。",
+     "py": "Shǎo chī língshí, duō chī fàn.",
+     "vi": "Ăn ít đồ vặt, ăn nhiều cơm."
+    }
+   ]
+  },
+  {
+   "w": "馒头",
+   "py": "mántou",
+   "hv": "man đầu",
+   "vi": "bánh bao không nhân, màn thầu",
+   "pos": "danh từ",
+   "note": "Món chính của người miền Bắc Trung Quốc.",
+   "ex": [
+    {
+     "cn": "北方人常吃馒头。",
+     "py": "Běifāng rén cháng chī mántou.",
+     "vi": "Người miền Bắc hay ăn màn thầu."
+    }
+   ]
+  },
+  {
+   "w": "月饼",
+   "py": "yuèbing",
+   "hv": "nguyệt bính",
+   "vi": "bánh trung thu",
+   "pos": "danh từ",
+   "note": "月 (trăng) + 饼 (bánh).",
+   "ex": [
+    {
+     "cn": "中秋节我们一起吃月饼。",
+     "py": "Zhōngqiū Jié wǒmen yìqǐ chī yuèbing.",
+     "vi": "Tết Trung thu chúng tôi cùng ăn bánh trung thu."
+    }
+   ]
+  },
+  {
+   "w": "烤",
+   "py": "kǎo",
+   "hv": "khảo",
+   "vi": "nướng",
+   "pos": "động từ",
+   "note": "Có bộ 火. Vịt quay Bắc Kinh là 北京烤鸭.",
+   "ex": [
+    {
+     "cn": "我们晚上去吃烤肉吧。",
+     "py": "Wǒmen wǎnshang qù chī kǎoròu ba.",
+     "vi": "Tối nay mình đi ăn thịt nướng nhé."
+    }
+   ]
+  },
+  {
+   "w": "鲜",
+   "py": "xiān",
+   "hv": "tiên",
+   "vi": "tươi",
+   "pos": "tính từ",
+   "note": "\"Tiên\" trong \"tân tiên\" (tươi mới). Hải sản tươi là 海鲜.",
+   "ex": [
+    {
+     "cn": "这些鱼很鲜。",
+     "py": "Zhèxiē yú hěn xiān.",
+     "vi": "Những con cá này rất tươi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "少 / 多 + động từ: làm ít / làm nhiều",
+   "b": "少喝点儿 · 多吃点儿",
+   "d": "少, 多 đứng trước động từ để khuyên: làm ít đi, làm nhiều lên.",
+   "ex": [
+    {
+     "cn": "你太累了，多休息。",
+     "py": "Nǐ tài lèi le, duō xiūxi.",
+     "vi": "Bạn mệt quá rồi, nghỉ nhiều vào."
+    },
+    {
+     "cn": "少喝汽水，多喝水。",
+     "py": "Shǎo hē qìshuǐ, duō hē shuǐ.",
+     "vi": "Uống ít nước ngọt, uống nhiều nước lọc."
+    }
+   ]
+  },
+  {
+   "t": "Lượng từ cho đồ uống",
+   "b": "一杯茶 · 一瓶酒 · 一盒酸奶",
+   "d": "杯 (cốc), 瓶 (chai), 盒 (hộp), 碗 (bát).",
+   "ex": [
+    {
+     "cn": "请给我一杯茶。",
+     "py": "Qǐng gěi wǒ yì bēi chá.",
+     "vi": "Cho tôi một cốc trà."
+    },
+    {
+     "cn": "他买了两瓶葡萄酒。",
+     "py": "Tā mǎi le liǎng píng pútaojiǔ.",
+     "vi": "Anh ấy mua hai chai rượu vang."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "中国的茶叶很有名。",
+   "py": "Zhōngguó de cháyè hěn yǒumíng.",
+   "vi": "Trà Trung Quốc rất nổi tiếng."
+  },
+  {
+   "cn": "这家店的烤鸭特别好吃。",
+   "py": "Zhè jiā diàn de kǎoyā tèbié hǎochī.",
+   "vi": "Vịt quay quán này đặc biệt ngon."
+  },
+  {
+   "cn": "每年中秋节，奶奶都自己做月饼。",
+   "py": "Měi nián Zhōngqiū Jié, nǎinai dōu zìjǐ zuò yuèbing.",
+   "vi": "Năm nào Trung thu bà cũng tự làm bánh trung thu."
+  },
+  {
+   "cn": "海鲜要吃新鲜的。",
+   "py": "Hǎixiān yào chī xīnxiān de.",
+   "vi": "Hải sản phải ăn đồ tươi."
+  }
+ ]
+}

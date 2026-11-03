@@ -1,0 +1,216 @@
+{
+ "id": 165,
+ "cn": "我的家庭",
+ "title": "Gia đình",
+ "goal": "Gọi các quan hệ gia đình trang trọng: cha, cha mẹ, cha con, mẹ con, anh em, cháu gái, phụ huynh và gia đình.",
+ "words": [
+  {
+   "w": "父亲",
+   "py": "fùqīn",
+   "hv": "phụ thân",
+   "vi": "cha, bố",
+   "pos": "danh từ",
+   "note": "Chính là \"phụ thân\". Trang trọng hơn 爸爸.",
+   "ex": [
+    {
+     "cn": "我父亲是一名医生。",
+     "py": "Wǒ fùqīn shì yì míng yīshēng.",
+     "vi": "Cha tôi là bác sĩ."
+    }
+   ]
+  },
+  {
+   "w": "父母",
+   "py": "fùmǔ",
+   "hv": "phụ mẫu",
+   "vi": "cha mẹ",
+   "pos": "danh từ",
+   "note": "Chính là \"phụ mẫu\".",
+   "ex": [
+    {
+     "cn": "我的父母都退休了。",
+     "py": "Wǒ de fùmǔ dōu tuìxiū le.",
+     "vi": "Bố mẹ tôi đều nghỉ hưu rồi."
+    }
+   ]
+  },
+  {
+   "w": "父子",
+   "py": "fùzǐ",
+   "hv": "phụ tử",
+   "vi": "cha con (trai)",
+   "pos": "danh từ",
+   "note": "Chính là \"phụ tử\".",
+   "ex": [
+    {
+     "cn": "他们父子长得很像。",
+     "py": "Tāmen fùzǐ zhǎng de hěn xiàng.",
+     "vi": "Hai cha con họ trông rất giống nhau."
+    }
+   ]
+  },
+  {
+   "w": "父女",
+   "py": "fùnǚ",
+   "hv": "phụ nữ",
+   "vi": "cha con (gái)",
+   "pos": "danh từ",
+   "note": "Chú ý: không phải \"phụ nữ\" tiếng Việt (女人), mà là cha và con gái.",
+   "ex": [
+    {
+     "cn": "那对父女在公园散步。",
+     "py": "Nà duì fùnǚ zài gōngyuán sànbù.",
+     "vi": "Hai cha con gái kia đang đi dạo trong công viên."
+    }
+   ]
+  },
+  {
+   "w": "母子",
+   "py": "mǔzǐ",
+   "hv": "mẫu tử",
+   "vi": "mẹ con (trai)",
+   "pos": "danh từ",
+   "note": "Chính là \"mẫu tử\".",
+   "ex": [
+    {
+     "cn": "母子俩一起去旅行了。",
+     "py": "Mǔzǐ liǎ yìqǐ qù lǚxíng le.",
+     "vi": "Hai mẹ con cùng đi du lịch rồi."
+    }
+   ]
+  },
+  {
+   "w": "母女",
+   "py": "mǔnǚ",
+   "hv": "mẫu nữ",
+   "vi": "mẹ con (gái)",
+   "pos": "danh từ",
+   "note": "Mẹ và con gái.",
+   "ex": [
+    {
+     "cn": "她们母女关系很好。",
+     "py": "Tāmen mǔnǚ guānxì hěn hǎo.",
+     "vi": "Hai mẹ con cô ấy rất thân nhau."
+    }
+   ]
+  },
+  {
+   "w": "兄弟",
+   "py": "xiōngdì",
+   "hv": "huynh đệ",
+   "vi": "anh em trai",
+   "pos": "danh từ",
+   "note": "Chính là \"huynh đệ\". Bạn thân nam cũng gọi nhau là 兄弟.",
+   "ex": [
+    {
+     "cn": "我们是好兄弟。",
+     "py": "Wǒmen shì hǎo xiōngdì.",
+     "vi": "Chúng tôi là anh em tốt."
+    }
+   ]
+  },
+  {
+   "w": "孙女",
+   "py": "sūnnǚ",
+   "hv": "tôn nữ",
+   "vi": "cháu gái (nội)",
+   "pos": "danh từ",
+   "note": "孙 = \"tôn\" (cháu). Cháu trai là 孙子.",
+   "ex": [
+    {
+     "cn": "奶奶很爱她的孙女。",
+     "py": "Nǎinai hěn ài tā de sūnnǚ.",
+     "vi": "Bà rất thương cháu gái."
+    }
+   ]
+  },
+  {
+   "w": "家长",
+   "py": "jiāzhǎng",
+   "hv": "gia trưởng",
+   "vi": "phụ huynh",
+   "pos": "danh từ",
+   "note": "Ở trường, 家长 là phụ huynh học sinh. Họp phụ huynh: 家长会.",
+   "ex": [
+    {
+     "cn": "明天学校开家长会。",
+     "py": "Míngtiān xuéxiào kāi jiāzhǎnghuì.",
+     "vi": "Mai trường họp phụ huynh."
+    }
+   ]
+  },
+  {
+   "w": "家庭",
+   "py": "jiātíng",
+   "hv": "gia đình",
+   "vi": "gia đình",
+   "pos": "danh từ",
+   "note": "Chính là \"gia đình\".",
+   "ex": [
+    {
+     "cn": "我有一个幸福的家庭。",
+     "py": "Wǒ yǒu yí ge xìngfú de jiātíng.",
+     "vi": "Tôi có một gia đình hạnh phúc."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "长得 + 像 / 好看: ngoại hình",
+   "b": "A + 长得 + 很像 + B · 长得很高",
+   "d": "长得 (zhǎng de) dùng để tả ngoại hình.",
+   "ex": [
+    {
+     "cn": "你长得很像你妈妈。",
+     "py": "Nǐ zhǎng de hěn xiàng nǐ māma.",
+     "vi": "Bạn trông rất giống mẹ."
+    },
+    {
+     "cn": "他长得又高又帅。",
+     "py": "Tā zhǎng de yòu gāo yòu shuài.",
+     "vi": "Anh ấy vừa cao vừa đẹp trai."
+    }
+   ]
+  },
+  {
+   "t": "俩: hai người",
+   "b": "我们俩 · 母子俩 · 夫妻俩",
+   "d": "俩 (liǎ) = 两个, đứng sau danh từ chỉ người, không thêm 个.",
+   "ex": [
+    {
+     "cn": "我们俩是同学。",
+     "py": "Wǒmen liǎ shì tóngxué.",
+     "vi": "Hai chúng tôi là bạn cùng lớp."
+    },
+    {
+     "cn": "他们兄弟俩都很高。",
+     "py": "Tāmen xiōngdì liǎ dōu hěn gāo.",
+     "vi": "Hai anh em họ đều rất cao."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "父母是孩子最好的老师。",
+   "py": "Fùmǔ shì háizi zuì hǎo de lǎoshī.",
+   "vi": "Cha mẹ là người thầy tốt nhất của con."
+  },
+  {
+   "cn": "家长会上，老师和家长谈了很多。",
+   "py": "Jiāzhǎnghuì shang, lǎoshī hé jiāzhǎng tán le hěn duō.",
+   "vi": "Tại buổi họp phụ huynh, thầy cô và phụ huynh nói chuyện rất nhiều."
+  },
+  {
+   "cn": "我父亲年轻的时候当过兵。",
+   "py": "Wǒ fùqīn niánqīng de shíhou dāng guo bīng.",
+   "vi": "Hồi trẻ cha tôi từng đi lính."
+  },
+  {
+   "cn": "每个家庭都有自己的故事。",
+   "py": "Měi ge jiātíng dōu yǒu zìjǐ de gùshi.",
+   "vi": "Mỗi gia đình đều có câu chuyện riêng."
+  }
+ ]
+}

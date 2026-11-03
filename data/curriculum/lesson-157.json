@@ -1,0 +1,216 @@
+{
+ "id": 157,
+ "cn": "开车要小心",
+ "title": "Đường sá và lái xe",
+ "goal": "Nói về tốc độ, chỗ đỗ, bãi đỗ xe, xe điện, cảnh sát giao thông, ngã tư, đường lớn và cao tốc.",
+ "words": [
+  {
+   "w": "车速",
+   "py": "chēsù",
+   "hv": "xa tốc",
+   "vi": "tốc độ xe",
+   "pos": "danh từ",
+   "note": "车 + 速 (\"tốc\" trong \"tốc độ\").",
+   "ex": [
+    {
+     "cn": "下雨天要降低车速。",
+     "py": "Xià yǔ tiān yào jiàngdī chēsù.",
+     "vi": "Ngày mưa phải giảm tốc độ."
+    }
+   ]
+  },
+  {
+   "w": "车位",
+   "py": "chēwèi",
+   "hv": "xa vị",
+   "vi": "chỗ đỗ xe",
+   "pos": "danh từ",
+   "note": "车 + 位 (chỗ, vị trí).",
+   "ex": [
+    {
+     "cn": "这里没有车位了。",
+     "py": "Zhèlǐ méiyǒu chēwèi le.",
+     "vi": "Ở đây hết chỗ đỗ rồi."
+    }
+   ]
+  },
+  {
+   "w": "停车",
+   "py": "tíngchē",
+   "hv": "đình xa",
+   "vi": "đỗ xe",
+   "pos": "động từ",
+   "note": "停 = \"đình\" trong \"đình chỉ\".",
+   "ex": [
+    {
+     "cn": "这里不能停车。",
+     "py": "Zhèlǐ bù néng tíngchē.",
+     "vi": "Ở đây không được đỗ xe."
+    }
+   ]
+  },
+  {
+   "w": "停车场",
+   "py": "tíngchēchǎng",
+   "hv": "đình xa trường",
+   "vi": "bãi đỗ xe",
+   "pos": "danh từ",
+   "note": "停车 + 场 (bãi).",
+   "ex": [
+    {
+     "cn": "停车场在大楼下面。",
+     "py": "Tíngchēchǎng zài dàlóu xiàmian.",
+     "vi": "Bãi đỗ xe ở dưới toà nhà."
+    }
+   ]
+  },
+  {
+   "w": "电动车",
+   "py": "diàndòngchē",
+   "hv": "điện động xa",
+   "vi": "xe điện",
+   "pos": "danh từ",
+   "note": "电动 (chạy điện) + 车. Ở Trung Quốc thường là xe máy điện.",
+   "ex": [
+    {
+     "cn": "很多人骑电动车上班。",
+     "py": "Hěn duō rén qí diàndòngchē shàngbān.",
+     "vi": "Nhiều người đi xe máy điện đi làm."
+    }
+   ]
+  },
+  {
+   "w": "交警",
+   "py": "jiāojǐng",
+   "hv": "giao cảnh",
+   "vi": "cảnh sát giao thông",
+   "pos": "danh từ",
+   "note": "Viết tắt của 交通警察.",
+   "ex": [
+    {
+     "cn": "交警让他停车。",
+     "py": "Jiāojǐng ràng tā tíngchē.",
+     "vi": "Cảnh sát giao thông bảo anh ấy dừng xe."
+    }
+   ]
+  },
+  {
+   "w": "十字路口",
+   "py": "shízì lùkǒu",
+   "hv": "thập tự lộ khẩu",
+   "vi": "ngã tư",
+   "pos": "danh từ",
+   "note": "Nghĩa đen \"ngã đường hình chữ 十\".",
+   "ex": [
+    {
+     "cn": "在十字路口往左拐。",
+     "py": "Zài shízì lùkǒu wǎng zuǒ guǎi.",
+     "vi": "Đến ngã tư thì rẽ trái."
+    }
+   ]
+  },
+  {
+   "w": "公路",
+   "py": "gōnglù",
+   "hv": "công lộ",
+   "vi": "quốc lộ, đường lớn",
+   "pos": "danh từ",
+   "note": "Đường ô tô nối các thành phố.",
+   "ex": [
+    {
+     "cn": "这条公路通到海边。",
+     "py": "Zhè tiáo gōnglù tōng dào hǎibiān.",
+     "vi": "Con đường này dẫn ra biển."
+    }
+   ]
+  },
+  {
+   "w": "道路",
+   "py": "dàolù",
+   "hv": "đạo lộ",
+   "vi": "đường sá",
+   "pos": "danh từ",
+   "note": "Trang trọng hơn 路.",
+   "ex": [
+    {
+     "cn": "城市的道路越来越宽了。",
+     "py": "Chéngshì de dàolù yuèláiyuè kuān le.",
+     "vi": "Đường sá thành phố ngày càng rộng."
+    }
+   ]
+  },
+  {
+   "w": "高速",
+   "py": "gāosù",
+   "hv": "cao tốc",
+   "vi": "tốc độ cao; đường cao tốc",
+   "pos": "tính từ",
+   "note": "Chính là \"cao tốc\". Đường cao tốc là 高速公路.",
+   "ex": [
+    {
+     "cn": "我们走高速，两个小时就到。",
+     "py": "Wǒmen zǒu gāosù, liǎng ge xiǎoshí jiù dào.",
+     "vi": "Mình đi cao tốc, hai tiếng là tới."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "让 + người + động từ: bảo ai làm gì",
+   "b": "交警让他停车 · 妈妈让我早点儿回家",
+   "d": "让 nghĩa là \"bảo, để cho\"; người bị bảo đứng ngay sau 让.",
+   "ex": [
+    {
+     "cn": "老师让我们写作文。",
+     "py": "Lǎoshī ràng wǒmen xiě zuòwén.",
+     "vi": "Cô giáo bảo chúng tôi viết bài văn."
+    },
+    {
+     "cn": "请让我想一想。",
+     "py": "Qǐng ràng wǒ xiǎng yi xiǎng.",
+     "vi": "Để tôi nghĩ một chút."
+    }
+   ]
+  },
+  {
+   "t": "越来越 + tính từ: ngày càng",
+   "b": "越来越宽 · 越来越多",
+   "d": "Diễn tả mức độ tăng dần theo thời gian.",
+   "ex": [
+    {
+     "cn": "电动车越来越多了。",
+     "py": "Diàndòngchē yuèláiyuè duō le.",
+     "vi": "Xe điện ngày càng nhiều."
+    },
+    {
+     "cn": "天气越来越冷。",
+     "py": "Tiānqì yuèláiyuè lěng.",
+     "vi": "Thời tiết ngày càng lạnh."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "开车的时候不要看手机。",
+   "py": "Kāichē de shíhou búyào kàn shǒujī.",
+   "vi": "Lúc lái xe đừng xem điện thoại."
+  },
+  {
+   "cn": "商场的停车场很大。",
+   "py": "Shāngchǎng de tíngchēchǎng hěn dà.",
+   "vi": "Bãi đỗ xe của trung tâm thương mại rất rộng."
+  },
+  {
+   "cn": "高速公路上车速很快。",
+   "py": "Gāosù gōnglù shang chēsù hěn kuài.",
+   "vi": "Trên đường cao tốc xe chạy rất nhanh."
+  },
+  {
+   "cn": "下班的时候很难找到车位。",
+   "py": "Xiàbān de shíhou hěn nán zhǎodào chēwèi.",
+   "vi": "Giờ tan làm rất khó tìm chỗ đỗ xe."
+  }
+ ]
+}

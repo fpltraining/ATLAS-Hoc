@@ -1,0 +1,361 @@
+# Bài bổ sung cấp 4 theo chuẩn HSK 2025 (phần 1/5), học sau bài 118.
+
+@id 156
+@after 118
+@cn 登机
+@title Ở sân bay và nhà ga
+@goal Nói về kiểm tra an ninh, lên máy bay, nối chuyến, đi tàu xe, đổi tuyến và hành khách.
+W 安检 | ānjiǎn | an kiểm | kiểm tra an ninh | động từ | Viết tắt của 安全检查 (kiểm tra an toàn).
+E 过安检的时候要拿出电脑。 | Guò ānjiǎn de shíhou yào ná chū diànnǎo. | Lúc qua cửa an ninh phải lấy máy tính ra.
+W 登机 | dēngjī | đăng cơ | lên máy bay | động từ | 登 = "đăng" (lên, trèo) + 机. Thẻ lên máy bay là 登机牌.
+E 飞机九点开始登机。 | Fēijī jiǔ diǎn kāishǐ dēngjī. | Chín giờ bắt đầu lên máy bay.
+W 转机 | zhuǎnjī | chuyển cơ | nối chuyến bay | động từ | 转 (chuyển) + 机.
+E 我们要在广州转机。 | Wǒmen yào zài Guǎngzhōu zhuǎnjī. | Chúng tôi phải nối chuyến ở Quảng Châu.
+W 乘 | chéng | thừa | đi (phương tiện) | động từ | "Thừa" trong "thừa cơ". Trang trọng, nghĩa như 坐.
+E 请乘电梯到五楼。 | Qǐng chéng diàntī dào wǔ lóu. | Mời đi thang máy lên tầng năm.
+W 乘客 | chéngkè | thừa khách | hành khách | danh từ | Người đi tàu xe, máy bay.
+E 各位乘客，请系好安全带。 | Gèwèi chéngkè, qǐng jì hǎo ānquándài. | Quý hành khách, xin thắt dây an toàn.
+W 乘坐 | chéngzuò | thừa toạ | đi, ngồi (tàu xe) | động từ | Trang trọng, hay gặp trong thông báo.
+E 欢迎乘坐本次列车。 | Huānyíng chéngzuò běn cì lièchē. | Chào mừng quý khách đi chuyến tàu này.
+W 换乘 | huànchéng | hoán thừa | đổi tuyến, chuyển xe | động từ | 换 (đổi) + 乘. Hay dùng cho tàu điện ngầm.
+E 在这一站可以换乘二号线。 | Zài zhè yí zhàn kěyǐ huànchéng èr hào xiàn. | Ở ga này có thể chuyển sang tuyến số hai.
+W 动车 | dòngchē | động xa | tàu tốc hành (điện) | danh từ | Tàu nhanh chạy điện, chậm hơn 高铁 một chút.
+E 坐动车去杭州很方便。 | Zuò dòngchē qù Hángzhōu hěn fāngbiàn. | Đi tàu tốc hành đến Hàng Châu rất tiện.
+W 大巴 | dàbā | đại ba | xe khách lớn | danh từ | 巴 phiên âm từ "bus".
+E 机场有大巴去市中心。 | Jīchǎng yǒu dàbā qù shì zhōngxīn. | Sân bay có xe khách đi trung tâm thành phố.
+W 旅客 | lǚkè | lữ khách | hành khách, lữ khách | danh từ | Chính là "lữ khách".
+E 春节期间旅客很多。 | Chūnjié qījiān lǚkè hěn duō. | Dịp Tết hành khách rất đông.
+G Ngôn ngữ thông báo trang trọng | 各位乘客 · 乘坐 · 请… | Thông báo ở sân bay, nhà ga dùng từ trang trọng: 乘坐 thay 坐, 各位乘客 thay 大家.
+E 请旅客们到三号口登机。 | Qǐng lǚkèmen dào sān hào kǒu dēngjī. | Mời hành khách đến cửa số ba lên máy bay.
+E 本次航班将在十分钟后起飞。 | Běn cì hángbān jiāng zài shí fēnzhōng hòu qǐfēi. | Chuyến bay này sẽ cất cánh sau mười phút.
+G 在 + nơi + 换乘 / 转机 | 在北京转机 · 在这站换乘 | Nơi đổi chuyến đứng trước động từ.
+E 你在哪儿转机？ | Nǐ zài nǎr zhuǎnjī? | Bạn nối chuyến ở đâu?
+E 我们在人民广场换乘。 | Wǒmen zài Rénmín Guǎngchǎng huànchéng. | Chúng ta đổi tuyến ở Quảng trường Nhân Dân.
+S 安检排了很长的队。 | Ānjiǎn pái le hěn cháng de duì. | Chỗ kiểm tra an ninh xếp hàng rất dài.
+S 登机以前请关机。 | Dēngjī yǐqián qǐng guānjī. | Trước khi lên máy bay xin tắt máy.
+S 坐大巴比打车便宜多了。 | Zuò dàbā bǐ dǎchē piányi duō le. | Đi xe khách rẻ hơn gọi taxi nhiều.
+S 乘客们都上车了。 | Chéngkèmen dōu shàng chē le. | Hành khách đều lên xe rồi.
+
+@id 157
+@after 118
+@cn 开车要小心
+@title Đường sá và lái xe
+@goal Nói về tốc độ, chỗ đỗ, bãi đỗ xe, xe điện, cảnh sát giao thông, ngã tư, đường lớn và cao tốc.
+W 车速 | chēsù | xa tốc | tốc độ xe | danh từ | 车 + 速 ("tốc" trong "tốc độ").
+E 下雨天要降低车速。 | Xià yǔ tiān yào jiàngdī chēsù. | Ngày mưa phải giảm tốc độ.
+W 车位 | chēwèi | xa vị | chỗ đỗ xe | danh từ | 车 + 位 (chỗ, vị trí).
+E 这里没有车位了。 | Zhèlǐ méiyǒu chēwèi le. | Ở đây hết chỗ đỗ rồi.
+W 停车 | tíngchē | đình xa | đỗ xe | động từ | 停 = "đình" trong "đình chỉ".
+E 这里不能停车。 | Zhèlǐ bù néng tíngchē. | Ở đây không được đỗ xe.
+W 停车场 | tíngchēchǎng | đình xa trường | bãi đỗ xe | danh từ | 停车 + 场 (bãi).
+E 停车场在大楼下面。 | Tíngchēchǎng zài dàlóu xiàmian. | Bãi đỗ xe ở dưới toà nhà.
+W 电动车 | diàndòngchē | điện động xa | xe điện | danh từ | 电动 (chạy điện) + 车. Ở Trung Quốc thường là xe máy điện.
+E 很多人骑电动车上班。 | Hěn duō rén qí diàndòngchē shàngbān. | Nhiều người đi xe máy điện đi làm.
+W 交警 | jiāojǐng | giao cảnh | cảnh sát giao thông | danh từ | Viết tắt của 交通警察.
+E 交警让他停车。 | Jiāojǐng ràng tā tíngchē. | Cảnh sát giao thông bảo anh ấy dừng xe.
+W 十字路口 | shízì lùkǒu | thập tự lộ khẩu | ngã tư | danh từ | Nghĩa đen "ngã đường hình chữ 十".
+E 在十字路口往左拐。 | Zài shízì lùkǒu wǎng zuǒ guǎi. | Đến ngã tư thì rẽ trái.
+W 公路 | gōnglù | công lộ | quốc lộ, đường lớn | danh từ | Đường ô tô nối các thành phố.
+E 这条公路通到海边。 | Zhè tiáo gōnglù tōng dào hǎibiān. | Con đường này dẫn ra biển.
+W 道路 | dàolù | đạo lộ | đường sá | danh từ | Trang trọng hơn 路.
+E 城市的道路越来越宽了。 | Chéngshì de dàolù yuèláiyuè kuān le. | Đường sá thành phố ngày càng rộng.
+W 高速 | gāosù | cao tốc | tốc độ cao; đường cao tốc | tính từ | Chính là "cao tốc". Đường cao tốc là 高速公路.
+E 我们走高速，两个小时就到。 | Wǒmen zǒu gāosù, liǎng ge xiǎoshí jiù dào. | Mình đi cao tốc, hai tiếng là tới.
+G 让 + người + động từ: bảo ai làm gì | 交警让他停车 · 妈妈让我早点儿回家 | 让 nghĩa là "bảo, để cho"; người bị bảo đứng ngay sau 让.
+E 老师让我们写作文。 | Lǎoshī ràng wǒmen xiě zuòwén. | Cô giáo bảo chúng tôi viết bài văn.
+E 请让我想一想。 | Qǐng ràng wǒ xiǎng yi xiǎng. | Để tôi nghĩ một chút.
+G 越来越 + tính từ: ngày càng | 越来越宽 · 越来越多 | Diễn tả mức độ tăng dần theo thời gian.
+E 电动车越来越多了。 | Diàndòngchē yuèláiyuè duō le. | Xe điện ngày càng nhiều.
+E 天气越来越冷。 | Tiānqì yuèláiyuè lěng. | Thời tiết ngày càng lạnh.
+S 开车的时候不要看手机。 | Kāichē de shíhou búyào kàn shǒujī. | Lúc lái xe đừng xem điện thoại.
+S 商场的停车场很大。 | Shāngchǎng de tíngchēchǎng hěn dà. | Bãi đỗ xe của trung tâm thương mại rất rộng.
+S 高速公路上车速很快。 | Gāosù gōnglù shang chēsù hěn kuài. | Trên đường cao tốc xe chạy rất nhanh.
+S 下班的时候很难找到车位。 | Xiàbān de shíhou hěn nán zhǎodào chēwèi. | Giờ tan làm rất khó tìm chỗ đỗ xe.
+
+@id 158
+@after 118
+@cn 去哪儿度假？
+@title Du lịch
+@goal Nói về điểm tham quan, khu du lịch, cảnh đẹp, đi chơi, nghỉ dưỡng, nhà nghỉ, nhận phòng, điểm đến và đi lại.
+W 景点 | jǐngdiǎn | cảnh điểm | điểm tham quan | danh từ | 景 = "cảnh" trong "phong cảnh".
+E 北京有很多有名的景点。 | Běijīng yǒu hěn duō yǒumíng de jǐngdiǎn. | Bắc Kinh có nhiều điểm tham quan nổi tiếng.
+W 景区 | jǐngqū | cảnh khu | khu du lịch | danh từ | 景 + 区 (khu).
+E 这个景区的门票不贵。 | Zhège jǐngqū de ménpiào bú guì. | Vé vào khu du lịch này không đắt.
+W 美景 | měijǐng | mỹ cảnh | cảnh đẹp | danh từ | 美 (đẹp) + 景.
+E 山上的美景让人难忘。 | Shān shang de měijǐng ràng rén nánwàng. | Cảnh đẹp trên núi làm người ta khó quên.
+W 游玩 | yóuwán | du ngoạn | đi chơi, du ngoạn | động từ | Chính là "du ngoạn".
+E 周末我们去海边游玩。 | Zhōumò wǒmen qù hǎibiān yóuwán. | Cuối tuần chúng tôi ra biển chơi.
+W 度假 | dùjià | độ giả | đi nghỉ | động từ | 度 (trải qua) + 假 (kỳ nghỉ).
+E 他们去海南度假了。 | Tāmen qù Hǎinán dùjià le. | Họ đi nghỉ ở Hải Nam rồi.
+W 旅行 | lǚxíng | lữ hành | du lịch, đi xa | động từ | Chính là "lữ hành". Gần nghĩa 旅游.
+E 我喜欢一个人旅行。 | Wǒ xǐhuan yí ge rén lǚxíng. | Tôi thích đi du lịch một mình.
+W 旅馆 | lǚguǎn | lữ quán | nhà nghỉ, khách sạn nhỏ | danh từ | Chính là "lữ quán".
+E 我们住在一家小旅馆。 | Wǒmen zhù zài yì jiā xiǎo lǚguǎn. | Chúng tôi ở một nhà nghỉ nhỏ.
+W 入住 | rùzhù | nhập trú | nhận phòng, vào ở | động từ | 入 (vào) + 住 (ở).
+E 下午两点以后可以入住。 | Xiàwǔ liǎng diǎn yǐhòu kěyǐ rùzhù. | Sau hai giờ chiều mới được nhận phòng.
+W 目的地 | mùdìdì | mục đích địa | điểm đến | danh từ | 目的 (mục đích) + 地 (nơi).
+E 我们终于到了目的地。 | Wǒmen zhōngyú dào le mùdìdì. | Cuối cùng chúng tôi đã đến nơi.
+W 出行 | chūxíng | xuất hành | đi lại, ra ngoài đi xa | động từ | Chính là "xuất hành".
+E 节假日出行的人很多。 | Jiéjiàrì chūxíng de rén hěn duō. | Ngày lễ người đi lại rất đông.
+G 让人 + tính từ / động từ: khiến người ta | 让人难忘 · 让人高兴 | Chủ ngữ là sự vật, 让人 nghĩa "khiến người ta…".
+E 这个故事让人很感动。 | Zhège gùshi ràng rén hěn gǎndòng. | Câu chuyện này khiến người ta rất cảm động.
+E 那里的美食让人难忘。 | Nàlǐ de měishí ràng rén nánwàng. | Món ngon ở đó khiến người ta khó quên.
+G 终于: cuối cùng cũng | 终于 + động từ + 了 | Nhấn mạnh việc đạt được sau một thời gian chờ đợi.
+E 我终于找到旅馆了。 | Wǒ zhōngyú zhǎodào lǚguǎn le. | Cuối cùng tôi cũng tìm được nhà nghỉ.
+E 假期终于到了！ | Jiàqī zhōngyú dào le! | Kỳ nghỉ cuối cùng cũng đến!
+S 下龙湾是越南有名的景点。 | Xiàlóng Wān shì Yuènán yǒumíng de jǐngdiǎn. | Vịnh Hạ Long là điểm tham quan nổi tiếng của Việt Nam.
+S 这次旅行的目的地是西安。 | Zhè cì lǚxíng de mùdìdì shì Xī'ān. | Điểm đến của chuyến đi này là Tây An.
+S 景区里游客太多了。 | Jǐngqū lǐ yóukè tài duō le. | Trong khu du lịch đông khách quá.
+S 我们先去旅馆入住吧。 | Wǒmen xiān qù lǚguǎn rùzhù ba. | Chúng ta về nhà nghỉ nhận phòng trước nhé.
+
+@id 159
+@after 118
+@cn 网购
+@title Mua sắm và thanh toán
+@goal Nói về mua, hàng hoá, giá cả, giá rẻ, giá cao, giảm giá, mua trên mạng, tính tiền và trả tiền.
+W 购买 | gòumǎi | cấu mãi | mua | động từ | Trang trọng hơn 买.
+E 你可以在网上购买门票。 | Nǐ kěyǐ zài wǎngshang gòumǎi ménpiào. | Bạn có thể mua vé trên mạng.
+W 商品 | shāngpǐn | thương phẩm | hàng hoá | danh từ | Chính là "thương phẩm".
+E 这家超市的商品很多。 | Zhè jiā chāoshì de shāngpǐn hěn duō. | Siêu thị này có nhiều hàng hoá.
+W 价钱 | jiàqián | giá tiền | giá cả | danh từ | Khẩu ngữ, nghĩa như 价格.
+E 这个价钱太贵了。 | Zhège jiàqián tài guì le. | Giá này đắt quá.
+W 低价 | dījià | đê giá | giá thấp | danh từ | 低 (thấp) + 价.
+E 他们用低价卖旧手机。 | Tāmen yòng dījià mài jiù shǒujī. | Họ bán điện thoại cũ với giá thấp.
+W 高价 | gāojià | cao giá | giá cao | danh từ | 高 + 价.
+E 他高价买了一张票。 | Tā gāojià mǎi le yì zhāng piào. | Anh ấy mua một vé với giá cao.
+W 降价 | jiàngjià | giáng giá | giảm giá | động từ | 降 (hạ) + 价.
+E 这些衣服都降价了。 | Zhèxiē yīfu dōu jiàngjià le. | Những bộ quần áo này đều giảm giá rồi.
+W 网购 | wǎnggòu | võng cấu | mua hàng trên mạng | động từ | Viết tắt của 网上购物.
+E 现在很多人喜欢网购。 | Xiànzài hěn duō rén xǐhuan wǎnggòu. | Bây giờ nhiều người thích mua hàng trên mạng.
+W 结账 | jiézhàng | kết trướng | tính tiền, thanh toán | động từ | Ăn xong gọi tính tiền: 服务员，结账！
+E 服务员，我们结账。 | Fúwùyuán, wǒmen jiézhàng. | Phục vụ ơi, tính tiền cho chúng tôi.
+W 付 | fù | phó | trả (tiền) | động từ | "Phó" trong "giao phó". 付钱 là trả tiền.
+E 我来付钱。 | Wǒ lái fù qián. | Để tôi trả tiền.
+W 支付 | zhīfù | chi phó | thanh toán | động từ | Trang trọng. Thanh toán bằng điện thoại: 手机支付.
+E 在中国很多人用手机支付。 | Zài Zhōngguó hěn duō rén yòng shǒujī zhīfù. | Ở Trung Quốc nhiều người thanh toán bằng điện thoại.
+G 用 + phương tiện + động từ | 用手机支付 · 用低价卖 | 用 nói công cụ hay cách thức, đứng trước động từ chính.
+E 可以用银行卡付钱吗？ | Kěyǐ yòng yínhángkǎ fù qián ma? | Có thể trả bằng thẻ ngân hàng không?
+E 我用手机买票。 | Wǒ yòng shǒujī mǎi piào. | Tôi mua vé bằng điện thoại.
+G 我来 + động từ: để tôi làm | 我来付 · 我来介绍 | 来 trước động từ thể hiện chủ động nhận việc.
+E 我来介绍一下。 | Wǒ lái jièshào yíxià. | Để tôi giới thiệu một chút.
+E 这次我来结账吧。 | Zhè cì wǒ lái jiézhàng ba. | Lần này để tôi trả nhé.
+S 网购很方便，但是有时候质量不好。 | Wǎnggòu hěn fāngbiàn, dànshì yǒushíhou zhìliàng bù hǎo. | Mua trên mạng rất tiện, nhưng đôi khi chất lượng không tốt.
+S 周末商场的商品都降价了。 | Zhōumò shāngchǎng de shāngpǐn dōu jiàngjià le. | Cuối tuần hàng ở trung tâm thương mại đều giảm giá.
+S 这个价钱可以便宜一点儿吗？ | Zhège jiàqián kěyǐ piányi yìdiǎnr ma? | Giá này có thể bớt chút không?
+S 吃完饭我们去前台结账。 | Chī wán fàn wǒmen qù qiántái jiézhàng. | Ăn xong chúng ta ra quầy tính tiền.
+
+@id 160
+@after 118
+@cn 去餐厅吃饭
+@title Bữa ăn và nhà hàng
+@goal Nói về nhà hàng, đồ ăn nhanh, món Trung, bữa sáng, trưa, tối (trang trọng), nhà ăn, món ngon, thức ăn và thực phẩm.
+W 餐厅 | cāntīng | xan sảnh | nhà hàng, phòng ăn | danh từ | 餐 = bữa ăn ("xan"), 厅 = sảnh.
+E 酒店二楼有一个餐厅。 | Jiǔdiàn èr lóu yǒu yí ge cāntīng. | Tầng hai khách sạn có một nhà hàng.
+W 快餐 | kuàicān | khoái xan | đồ ăn nhanh | danh từ | 快 (nhanh) + 餐.
+E 快餐好吃，但是不太健康。 | Kuàicān hǎochī, dànshì bú tài jiànkāng. | Đồ ăn nhanh ngon, nhưng không lành mạnh lắm.
+W 中餐 | zhōngcān | trung xan | món Trung Quốc | danh từ | Món Tây là 西餐.
+E 你喜欢中餐还是西餐？ | Nǐ xǐhuan zhōngcān háishi xīcān? | Bạn thích món Trung hay món Tây?
+W 早餐 | zǎocān | tảo xan | bữa sáng | danh từ | Trang trọng hơn 早饭, hay gặp ở khách sạn.
+E 酒店的早餐是免费的。 | Jiǔdiàn de zǎocān shì miǎnfèi de. | Bữa sáng ở khách sạn miễn phí.
+W 午餐 | wǔcān | ngọ xan | bữa trưa | danh từ | Trang trọng hơn 午饭.
+E 午餐时间是十二点到一点。 | Wǔcān shíjiān shì shí'èr diǎn dào yì diǎn. | Giờ ăn trưa từ mười hai đến một giờ.
+W 晚餐 | wǎncān | vãn xan | bữa tối | danh từ | Trang trọng hơn 晚饭.
+E 我们一起吃晚餐吧。 | Wǒmen yìqǐ chī wǎncān ba. | Chúng ta cùng ăn tối nhé.
+W 食堂 | shítáng | thực đường | nhà ăn (tập thể) | danh từ | Nhà ăn của trường, công ty.
+E 学校食堂的饭很便宜。 | Xuéxiào shítáng de fàn hěn piányi. | Cơm ở nhà ăn trường rất rẻ.
+W 美食 | měishí | mỹ thực | món ngon, ẩm thực | danh từ | Chính là "mỹ thực".
+E 越南有很多美食。 | Yuènán yǒu hěn duō měishí. | Việt Nam có rất nhiều món ngon.
+W 食物 | shíwù | thực vật | thức ăn | danh từ | Chú ý: tiếng Việt "thực vật" là cây cỏ (植物), còn 食物 là đồ ăn.
+E 冰箱里没有食物了。 | Bīngxiāng lǐ méiyǒu shíwù le. | Trong tủ lạnh hết đồ ăn rồi.
+W 食品 | shípǐn | thực phẩm | thực phẩm | danh từ | Chính là "thực phẩm", thường là đồ ăn đóng gói.
+E 这种食品对身体不好。 | Zhè zhǒng shípǐn duì shēntǐ bù hǎo. | Loại thực phẩm này không tốt cho sức khoẻ.
+G Bữa ăn: 饭 (khẩu ngữ) và 餐 (trang trọng) | 早饭 / 早餐 · 午饭 / 午餐 · 晚饭 / 晚餐 | Nói chuyện hằng ngày dùng 饭, trên thực đơn, thông báo dùng 餐.
+E 早餐几点开始？ | Zǎocān jǐ diǎn kāishǐ? | Bữa sáng mấy giờ bắt đầu?
+E 你吃早饭了吗？ | Nǐ chī zǎofàn le ma? | Bạn ăn sáng chưa?
+G 对 + người / việc + 好 / 不好 | 对身体好 · 对学习不好 | Nói điều gì tốt hay xấu cho ai, cho việc gì.
+E 多吃水果对身体好。 | Duō chī shuǐguǒ duì shēntǐ hǎo. | Ăn nhiều hoa quả tốt cho sức khoẻ.
+E 熬夜对眼睛不好。 | Áoyè duì yǎnjing bù hǎo. | Thức khuya không tốt cho mắt.
+S 公司食堂的午餐很好吃。 | Gōngsī shítáng de wǔcān hěn hǎochī. | Bữa trưa ở nhà ăn công ty rất ngon.
+S 这家餐厅的中餐很有名。 | Zhè jiā cāntīng de zhōngcān hěn yǒumíng. | Món Trung của nhà hàng này rất nổi tiếng.
+S 别总吃快餐，对身体不好。 | Bié zǒng chī kuàicān, duì shēntǐ bù hǎo. | Đừng ăn đồ ăn nhanh suốt, không tốt cho sức khoẻ.
+S 旅行的时候我喜欢吃当地美食。 | Lǚxíng de shíhou wǒ xǐhuan chī dāngdì měishí. | Khi đi du lịch tôi thích ăn món ngon địa phương.
+
+@id 161
+@after 118
+@cn 中秋节吃月饼
+@title Đồ ăn thức uống
+@goal Nói về lá trà, rượu trắng, rượu vang, nước ngọt, sữa chua, đồ ăn vặt, màn thầu, bánh trung thu, nướng và tươi.
+W 茶叶 | cháyè | trà diệp | lá trà | danh từ | 茶 + 叶 (lá).
+E 这是云南的茶叶。 | Zhè shì Yúnnán de cháyè. | Đây là trà Vân Nam.
+W 白酒 | báijiǔ | bạch tửu | rượu trắng | danh từ | Rượu mạnh trong suốt của Trung Quốc.
+E 白酒很厉害，少喝点儿。 | Báijiǔ hěn lìhai, shǎo hē diǎnr. | Rượu trắng mạnh lắm, uống ít thôi.
+W 葡萄酒 | pútaojiǔ | bồ đào tửu | rượu vang | danh từ | 葡萄 (nho, "bồ đào") + 酒.
+E 我们喝一杯葡萄酒吧。 | Wǒmen hē yì bēi pútaojiǔ ba. | Mình uống một ly rượu vang nhé.
+W 汽水 | qìshuǐ | khí thuỷ | nước ngọt có ga | danh từ | 汽 (hơi) + 水.
+E 孩子们喜欢喝汽水。 | Háizimen xǐhuan hē qìshuǐ. | Bọn trẻ thích uống nước ngọt.
+W 酸奶 | suānnǎi | toan nãi | sữa chua | danh từ | 酸 (chua) + 奶 (sữa).
+E 早上我喝一瓶酸奶。 | Zǎoshang wǒ hē yì píng suānnǎi. | Buổi sáng tôi uống một chai sữa chua.
+W 零食 | língshí | linh thực | đồ ăn vặt | danh từ | 零 (lẻ) + 食 (ăn).
+E 少吃零食，多吃饭。 | Shǎo chī língshí, duō chī fàn. | Ăn ít đồ vặt, ăn nhiều cơm.
+W 馒头 | mántou | man đầu | bánh bao không nhân, màn thầu | danh từ | Món chính của người miền Bắc Trung Quốc.
+E 北方人常吃馒头。 | Běifāng rén cháng chī mántou. | Người miền Bắc hay ăn màn thầu.
+W 月饼 | yuèbing | nguyệt bính | bánh trung thu | danh từ | 月 (trăng) + 饼 (bánh).
+E 中秋节我们一起吃月饼。 | Zhōngqiū Jié wǒmen yìqǐ chī yuèbing. | Tết Trung thu chúng tôi cùng ăn bánh trung thu.
+W 烤 | kǎo | khảo | nướng | động từ | Có bộ 火. Vịt quay Bắc Kinh là 北京烤鸭.
+E 我们晚上去吃烤肉吧。 | Wǒmen wǎnshang qù chī kǎoròu ba. | Tối nay mình đi ăn thịt nướng nhé.
+W 鲜 | xiān | tiên | tươi | tính từ | "Tiên" trong "tân tiên" (tươi mới). Hải sản tươi là 海鲜.
+E 这些鱼很鲜。 | Zhèxiē yú hěn xiān. | Những con cá này rất tươi.
+G 少 / 多 + động từ: làm ít / làm nhiều | 少喝点儿 · 多吃点儿 | 少, 多 đứng trước động từ để khuyên: làm ít đi, làm nhiều lên.
+E 你太累了，多休息。 | Nǐ tài lèi le, duō xiūxi. | Bạn mệt quá rồi, nghỉ nhiều vào.
+E 少喝汽水，多喝水。 | Shǎo hē qìshuǐ, duō hē shuǐ. | Uống ít nước ngọt, uống nhiều nước lọc.
+G Lượng từ cho đồ uống | 一杯茶 · 一瓶酒 · 一盒酸奶 | 杯 (cốc), 瓶 (chai), 盒 (hộp), 碗 (bát).
+E 请给我一杯茶。 | Qǐng gěi wǒ yì bēi chá. | Cho tôi một cốc trà.
+E 他买了两瓶葡萄酒。 | Tā mǎi le liǎng píng pútaojiǔ. | Anh ấy mua hai chai rượu vang.
+S 中国的茶叶很有名。 | Zhōngguó de cháyè hěn yǒumíng. | Trà Trung Quốc rất nổi tiếng.
+S 这家店的烤鸭特别好吃。 | Zhè jiā diàn de kǎoyā tèbié hǎochī. | Vịt quay quán này đặc biệt ngon.
+S 每年中秋节，奶奶都自己做月饼。 | Měi nián Zhōngqiū Jié, nǎinai dōu zìjǐ zuò yuèbing. | Năm nào Trung thu bà cũng tự làm bánh trung thu.
+S 海鲜要吃新鲜的。 | Hǎixiān yào chī xīnxiān de. | Hải sản phải ăn đồ tươi.
+
+@id 162
+@after 118
+@cn 准备考试
+@title Thi cử
+@goal Nói về đăng ký thi, thi đại học, thí sinh, thi viết, phỏng vấn, đề thi, điểm số, nghe, nói và viết văn.
+W 报考 | bàokǎo | báo khảo | đăng ký thi | động từ | 报 (báo, đăng ký) + 考.
+E 他报考了北京大学。 | Tā bàokǎo le Běijīng Dàxué. | Cậu ấy đăng ký thi vào Đại học Bắc Kinh.
+W 高考 | gāokǎo | cao khảo | kỳ thi đại học | danh từ | Kỳ thi quan trọng nhất với học sinh Trung Quốc.
+E 今年的高考在六月。 | Jīnnián de gāokǎo zài liù yuè. | Kỳ thi đại học năm nay vào tháng sáu.
+W 考生 | kǎoshēng | khảo sinh | thí sinh | danh từ | Chính là "khảo sinh", "thí sinh".
+E 考生请带好身份证。 | Kǎoshēng qǐng dài hǎo shēnfènzhèng. | Thí sinh xin mang theo căn cước.
+W 笔试 | bǐshì | bút thí | thi viết | động từ | 笔 (bút) + 试 (thi).
+E 先笔试，再面试。 | Xiān bǐshì, zài miànshì. | Thi viết trước, rồi phỏng vấn.
+W 面试 | miànshì | diện thí | phỏng vấn | động từ | 面 (mặt đối mặt) + 试.
+E 明天我有一个面试。 | Míngtiān wǒ yǒu yí ge miànshì. | Mai tôi có một buổi phỏng vấn.
+W 试题 | shìtí | thí đề | đề thi | danh từ | Chính là "thí đề".
+E 这次的试题不太难。 | Zhè cì de shìtí bú tài nán. | Đề thi lần này không khó lắm.
+W 分数 | fēnshù | phân số | điểm số | danh từ | Ở đây không phải "phân số" toán học, mà là điểm số bài thi.
+E 你考了多少分数？ | Nǐ kǎo le duōshao fēnshù? | Bạn thi được bao nhiêu điểm?
+W 听力 | tīnglì | thính lực | (kỹ năng) nghe | danh từ | Phần nghe trong kỳ thi.
+E 我的听力不太好。 | Wǒ de tīnglì bú tài hǎo. | Kỹ năng nghe của tôi không tốt lắm.
+W 口语 | kǒuyǔ | khẩu ngữ | (kỹ năng) nói, khẩu ngữ | danh từ | Chính là "khẩu ngữ".
+E 他的口语说得很流利。 | Tā de kǒuyǔ shuō de hěn liúlì. | Anh ấy nói rất lưu loát.
+W 作文 | zuòwén | tác văn | bài văn; viết văn | danh từ | Bài văn ở trường, phần viết trong kỳ thi.
+E 老师让我们写一篇作文。 | Lǎoshī ràng wǒmen xiě yì piān zuòwén. | Cô giáo bảo chúng tôi viết một bài văn.
+G 先…再…: trước… rồi… | 先 + việc 1，再 + việc 2 | Diễn tả thứ tự hai việc. 再 nhấn mạnh việc sau xảy ra sau việc trước.
+E 先做练习，再看电视。 | Xiān zuò liànxí, zài kàn diànshì. | Làm bài tập trước, rồi xem TV.
+E 我们先吃饭，再去看电影。 | Wǒmen xiān chīfàn, zài qù kàn diànyǐng. | Chúng ta ăn cơm trước rồi đi xem phim.
+G Lượng từ 篇 cho bài viết | 一篇作文 · 一篇文章 | Bài văn, bài báo, bài luận đều đếm bằng 篇.
+E 这篇文章很有意思。 | Zhè piān wénzhāng hěn yǒu yìsi. | Bài báo này rất thú vị.
+E 我每周写一篇作文。 | Wǒ měi zhōu xiě yì piān zuòwén. | Mỗi tuần tôi viết một bài văn.
+S HSK考试有听力、阅读和写作。 | HSK kǎoshì yǒu tīnglì, yuèdú hé xiězuò. | Kỳ thi HSK có nghe, đọc và viết.
+S 高考的时候，考生都很紧张。 | Gāokǎo de shíhou, kǎoshēng dōu hěn jǐnzhāng. | Khi thi đại học, thí sinh đều rất căng thẳng.
+S 面试的时候要有礼貌。 | Miànshì de shíhou yào yǒu lǐmào. | Khi phỏng vấn phải lịch sự.
+S 多练口语，你的汉语会越来越好。 | Duō liàn kǒuyǔ, nǐ de Hànyǔ huì yuèláiyuè hǎo. | Luyện nói nhiều, tiếng Trung của bạn sẽ ngày càng giỏi.
+
+@id 163
+@after 118
+@cn 上课和自习
+@title Học trên lớp và tự học
+@goal Nói về chương trình học, lớp học, bài tập, tự học, giảng dạy, giáo viên, thầy trò, giữa kỳ và cuối kỳ.
+W 课程 | kèchéng | khoá trình | chương trình học, môn học | danh từ | Chính là "khoá trình".
+E 这学期的课程很多。 | Zhè xuéqī de kèchéng hěn duō. | Học kỳ này nhiều môn học.
+W 课堂 | kètáng | khoá đường | lớp học, giờ học | danh từ | 课 + 堂 (nhà, phòng).
+E 课堂上要认真听讲。 | Kètáng shang yào rènzhēn tīngjiǎng. | Trong giờ học phải chăm chú nghe giảng.
+W 功课 | gōngkè | công khoá | bài tập; bài học | danh từ | Gần nghĩa 作业.
+E 做完功课再玩儿。 | Zuò wán gōngkè zài wánr. | Làm xong bài tập rồi hãy chơi.
+W 自习 | zìxí | tự tập | tự học (ở lớp, thư viện) | động từ | Giờ tự học ở trường gọi là 自习课.
+E 晚上我们在教室自习。 | Wǎnshang wǒmen zài jiàoshì zìxí. | Buổi tối chúng tôi tự học ở lớp.
+W 自学 | zìxué | tự học | tự học (không có thầy) | động từ | Học một mình, không theo lớp.
+E 他自学了日语。 | Tā zìxué le Rìyǔ. | Anh ấy tự học tiếng Nhật.
+W 教学 | jiàoxué | giáo học | giảng dạy, dạy học | danh từ | 教 (dạy) + 学 (học).
+E 这个学校的教学质量很高。 | Zhège xuéxiào de jiàoxué zhìliàng hěn gāo. | Chất lượng giảng dạy trường này rất cao.
+W 教师 | jiàoshī | giáo sư | giáo viên | danh từ | Chú ý: 教师 là giáo viên nói chung, không phải "giáo sư" (教授).
+E 她是一名中学教师。 | Tā shì yì míng zhōngxué jiàoshī. | Cô ấy là một giáo viên trung học.
+W 师生 | shīshēng | sư sinh | thầy và trò | danh từ | 师 (thầy) + 生 (trò).
+E 全校师生都参加了运动会。 | Quán xiào shīshēng dōu cānjiā le yùndònghuì. | Toàn thể thầy trò đều tham gia hội thao.
+W 期中 | qīzhōng | kỳ trung | giữa kỳ | danh từ | Thi giữa kỳ là 期中考试.
+E 下周有期中考试。 | Xià zhōu yǒu qīzhōng kǎoshì. | Tuần sau có thi giữa kỳ.
+W 期末 | qīmò | kỳ mạt | cuối kỳ | danh từ | 末 = "mạt" (cuối). Thi cuối kỳ là 期末考试.
+E 期末考试考得怎么样？ | Qīmò kǎoshì kǎo de zěnmeyàng? | Thi cuối kỳ thế nào?
+G 动词 + 完: làm xong | 做完 · 吃完 · 看完 | 完 sau động từ báo việc đã làm xong hết. Phủ định: 没做完.
+E 作业你写完了吗？ | Zuòyè nǐ xiě wán le ma? | Bài tập bạn viết xong chưa?
+E 这本书我还没看完。 | Zhè běn shū wǒ hái méi kàn wán. | Cuốn sách này tôi chưa đọc xong.
+G 自习 và 自学 | 自习 = tự học trong giờ, ở trường · 自学 = tự học một mình, không có thầy | Hai từ dễ nhầm. Học sinh "giờ tự học" dùng 自习; người tự mày mò học dùng 自学.
+E 我是自学汉语的。 | Wǒ shì zìxué Hànyǔ de. | Tôi tự học tiếng Trung.
+E 下午第三节是自习课。 | Xiàwǔ dì sān jié shì zìxíkè. | Tiết ba buổi chiều là giờ tự học.
+S 期末考试以后就放假了。 | Qīmò kǎoshì yǐhòu jiù fàngjià le. | Thi cuối kỳ xong là được nghỉ.
+S 课堂上老师和学生常常一起讨论。 | Kètáng shang lǎoshī hé xuésheng chángcháng yìqǐ tǎolùn. | Trong lớp thầy và trò hay cùng thảo luận.
+S 这门课程对我很有用。 | Zhè mén kèchéng duì wǒ hěn yǒuyòng. | Môn học này rất có ích với tôi.
+S 我想当一名教师。 | Wǒ xiǎng dāng yì míng jiàoshī. | Tôi muốn làm giáo viên.
+
+@id 164
+@after 118
+@cn 读研究生
+@title Đại học và học bổng
+@goal Nói về đại học hệ chính quy, nghiên cứu sinh, học viện, sinh viên tốt nghiệp, nhập học, học phí, học bổng, viện trưởng, nghỉ hè và tri thức.
+W 本科 | běnkē | bản khoa | đại học (hệ cử nhân) | danh từ | Bậc đại học bốn năm. Sinh viên là 本科生.
+E 我本科学的是经济。 | Wǒ běnkē xué de shì jīngjì. | Đại học tôi học ngành kinh tế.
+W 研究生 | yánjiūshēng | nghiên cứu sinh | học viên cao học | danh từ | Ở Trung Quốc, 研究生 gồm thạc sĩ và tiến sĩ.
+E 她在读研究生。 | Tā zài dú yánjiūshēng. | Cô ấy đang học cao học.
+W 学院 | xuéyuàn | học viện | học viện; khoa | danh từ | Chính là "học viện". Trong đại học, 学院 cũng là một khoa lớn.
+E 他在外语学院学习。 | Tā zài wàiyǔ xuéyuàn xuéxí. | Anh ấy học ở khoa ngoại ngữ.
+W 毕业生 | bìyèshēng | tất nghiệp sinh | sinh viên tốt nghiệp | danh từ | 毕业 (tốt nghiệp) + 生.
+E 今年的毕业生很难找工作。 | Jīnnián de bìyèshēng hěn nán zhǎo gōngzuò. | Sinh viên tốt nghiệp năm nay rất khó tìm việc.
+W 入学 | rùxué | nhập học | nhập học | động từ | Chính là "nhập học".
+E 新生九月入学。 | Xīnshēng jiǔ yuè rùxué. | Tân sinh viên nhập học tháng chín.
+W 学费 | xuéfèi | học phí | học phí | danh từ | Chính là "học phí".
+E 这个大学的学费很贵。 | Zhège dàxué de xuéfèi hěn guì. | Học phí trường này rất đắt.
+W 奖学金 | jiǎngxuéjīn | tưởng học kim | học bổng | danh từ | 奖 (thưởng) + 学 + 金 (tiền).
+E 她拿到了全额奖学金。 | Tā ná dào le quán'é jiǎngxuéjīn. | Cô ấy nhận được học bổng toàn phần.
+W 院长 | yuànzhǎng | viện trưởng | viện trưởng, trưởng khoa | danh từ | 院 + 长 (trưởng).
+E 院长在大会上讲了话。 | Yuànzhǎng zài dàhuì shang jiǎng le huà. | Trưởng khoa đã phát biểu tại đại hội.
+W 暑假 | shǔjià | thử giả | nghỉ hè | danh từ | 暑 = nóng ("thử"). Nghỉ đông là 寒假.
+E 暑假你打算做什么？ | Shǔjià nǐ dǎsuàn zuò shénme? | Nghỉ hè bạn định làm gì?
+W 知识 | zhīshi | tri thức | kiến thức, tri thức | danh từ | Chính là "tri thức".
+E 读书可以增加知识。 | Dú shū kěyǐ zēngjiā zhīshi. | Đọc sách giúp tăng thêm kiến thức.
+G 是…的: nhấn mạnh thông tin | 我本科学的是经济 · 我是去年毕业的 | Dùng để nhấn mạnh một chi tiết (thời gian, cách thức, đối tượng) của việc đã xảy ra.
+E 我是二零二二年毕业的。 | Wǒ shì èr líng èr èr nián bìyè de. | Tôi tốt nghiệp năm 2022.
+E 你是怎么来的？ | Nǐ shì zěnme lái de? | Bạn đến bằng cách nào?
+G 打算 + động từ: định làm | 打算 + 做 / 去 / 学 | Nói kế hoạch sắp tới.
+E 我打算明年读研究生。 | Wǒ dǎsuàn míngnián dú yánjiūshēng. | Tôi định năm sau học cao học.
+E 暑假我打算去打工。 | Shǔjià wǒ dǎsuàn qù dǎgōng. | Nghỉ hè tôi định đi làm thêm.
+S 他是我们学院的研究生。 | Tā shì wǒmen xuéyuàn de yánjiūshēng. | Anh ấy là học viên cao học của khoa chúng tôi.
+S 有了奖学金，我不用担心学费了。 | Yǒu le jiǎngxuéjīn, wǒ búyòng dānxīn xuéfèi le. | Có học bổng rồi, tôi không phải lo học phí nữa.
+S 知识可以改变命运。 | Zhīshi kěyǐ gǎibiàn mìngyùn. | Tri thức có thể thay đổi số phận.
+S 暑假一共有两个月。 | Shǔjià yígòng yǒu liǎng ge yuè. | Nghỉ hè tổng cộng hai tháng.
+
+@id 165
+@after 118
+@cn 我的家庭
+@title Gia đình
+@goal Gọi các quan hệ gia đình trang trọng: cha, cha mẹ, cha con, mẹ con, anh em, cháu gái, phụ huynh và gia đình.
+W 父亲 | fùqīn | phụ thân | cha, bố | danh từ | Chính là "phụ thân". Trang trọng hơn 爸爸.
+E 我父亲是一名医生。 | Wǒ fùqīn shì yì míng yīshēng. | Cha tôi là bác sĩ.
+W 父母 | fùmǔ | phụ mẫu | cha mẹ | danh từ | Chính là "phụ mẫu".
+E 我的父母都退休了。 | Wǒ de fùmǔ dōu tuìxiū le. | Bố mẹ tôi đều nghỉ hưu rồi.
+W 父子 | fùzǐ | phụ tử | cha con (trai) | danh từ | Chính là "phụ tử".
+E 他们父子长得很像。 | Tāmen fùzǐ zhǎng de hěn xiàng. | Hai cha con họ trông rất giống nhau.
+W 父女 | fùnǚ | phụ nữ | cha con (gái) | danh từ | Chú ý: không phải "phụ nữ" tiếng Việt (女人), mà là cha và con gái.
+E 那对父女在公园散步。 | Nà duì fùnǚ zài gōngyuán sànbù. | Hai cha con gái kia đang đi dạo trong công viên.
+W 母子 | mǔzǐ | mẫu tử | mẹ con (trai) | danh từ | Chính là "mẫu tử".
+E 母子俩一起去旅行了。 | Mǔzǐ liǎ yìqǐ qù lǚxíng le. | Hai mẹ con cùng đi du lịch rồi.
+W 母女 | mǔnǚ | mẫu nữ | mẹ con (gái) | danh từ | Mẹ và con gái.
+E 她们母女关系很好。 | Tāmen mǔnǚ guānxì hěn hǎo. | Hai mẹ con cô ấy rất thân nhau.
+W 兄弟 | xiōngdì | huynh đệ | anh em trai | danh từ | Chính là "huynh đệ". Bạn thân nam cũng gọi nhau là 兄弟.
+E 我们是好兄弟。 | Wǒmen shì hǎo xiōngdì. | Chúng tôi là anh em tốt.
+W 孙女 | sūnnǚ | tôn nữ | cháu gái (nội) | danh từ | 孙 = "tôn" (cháu). Cháu trai là 孙子.
+E 奶奶很爱她的孙女。 | Nǎinai hěn ài tā de sūnnǚ. | Bà rất thương cháu gái.
+W 家长 | jiāzhǎng | gia trưởng | phụ huynh | danh từ | Ở trường, 家长 là phụ huynh học sinh. Họp phụ huynh: 家长会.
+E 明天学校开家长会。 | Míngtiān xuéxiào kāi jiāzhǎnghuì. | Mai trường họp phụ huynh.
+W 家庭 | jiātíng | gia đình | gia đình | danh từ | Chính là "gia đình".
+E 我有一个幸福的家庭。 | Wǒ yǒu yí ge xìngfú de jiātíng. | Tôi có một gia đình hạnh phúc.
+G 长得 + 像 / 好看: ngoại hình | A + 长得 + 很像 + B · 长得很高 | 长得 (zhǎng de) dùng để tả ngoại hình.
+E 你长得很像你妈妈。 | Nǐ zhǎng de hěn xiàng nǐ māma. | Bạn trông rất giống mẹ.
+E 他长得又高又帅。 | Tā zhǎng de yòu gāo yòu shuài. | Anh ấy vừa cao vừa đẹp trai.
+G 俩: hai người | 我们俩 · 母子俩 · 夫妻俩 | 俩 (liǎ) = 两个, đứng sau danh từ chỉ người, không thêm 个.
+E 我们俩是同学。 | Wǒmen liǎ shì tóngxué. | Hai chúng tôi là bạn cùng lớp.
+E 他们兄弟俩都很高。 | Tāmen xiōngdì liǎ dōu hěn gāo. | Hai anh em họ đều rất cao.
+S 父母是孩子最好的老师。 | Fùmǔ shì háizi zuì hǎo de lǎoshī. | Cha mẹ là người thầy tốt nhất của con.
+S 家长会上，老师和家长谈了很多。 | Jiāzhǎnghuì shang, lǎoshī hé jiāzhǎng tán le hěn duō. | Tại buổi họp phụ huynh, thầy cô và phụ huynh nói chuyện rất nhiều.
+S 我父亲年轻的时候当过兵。 | Wǒ fùqīn niánqīng de shíhou dāng guo bīng. | Hồi trẻ cha tôi từng đi lính.
+S 每个家庭都有自己的故事。 | Měi ge jiātíng dōu yǒu zìjǐ de gùshi. | Mỗi gia đình đều có câu chuyện riêng.

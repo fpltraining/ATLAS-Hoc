@@ -1,0 +1,216 @@
+{
+ "id": 156,
+ "cn": "登机",
+ "title": "Ở sân bay và nhà ga",
+ "goal": "Nói về kiểm tra an ninh, lên máy bay, nối chuyến, đi tàu xe, đổi tuyến và hành khách.",
+ "words": [
+  {
+   "w": "安检",
+   "py": "ānjiǎn",
+   "hv": "an kiểm",
+   "vi": "kiểm tra an ninh",
+   "pos": "động từ",
+   "note": "Viết tắt của 安全检查 (kiểm tra an toàn).",
+   "ex": [
+    {
+     "cn": "过安检的时候要拿出电脑。",
+     "py": "Guò ānjiǎn de shíhou yào ná chū diànnǎo.",
+     "vi": "Lúc qua cửa an ninh phải lấy máy tính ra."
+    }
+   ]
+  },
+  {
+   "w": "登机",
+   "py": "dēngjī",
+   "hv": "đăng cơ",
+   "vi": "lên máy bay",
+   "pos": "động từ",
+   "note": "登 = \"đăng\" (lên, trèo) + 机. Thẻ lên máy bay là 登机牌.",
+   "ex": [
+    {
+     "cn": "飞机九点开始登机。",
+     "py": "Fēijī jiǔ diǎn kāishǐ dēngjī.",
+     "vi": "Chín giờ bắt đầu lên máy bay."
+    }
+   ]
+  },
+  {
+   "w": "转机",
+   "py": "zhuǎnjī",
+   "hv": "chuyển cơ",
+   "vi": "nối chuyến bay",
+   "pos": "động từ",
+   "note": "转 (chuyển) + 机.",
+   "ex": [
+    {
+     "cn": "我们要在广州转机。",
+     "py": "Wǒmen yào zài Guǎngzhōu zhuǎnjī.",
+     "vi": "Chúng tôi phải nối chuyến ở Quảng Châu."
+    }
+   ]
+  },
+  {
+   "w": "乘",
+   "py": "chéng",
+   "hv": "thừa",
+   "vi": "đi (phương tiện)",
+   "pos": "động từ",
+   "note": "\"Thừa\" trong \"thừa cơ\". Trang trọng, nghĩa như 坐.",
+   "ex": [
+    {
+     "cn": "请乘电梯到五楼。",
+     "py": "Qǐng chéng diàntī dào wǔ lóu.",
+     "vi": "Mời đi thang máy lên tầng năm."
+    }
+   ]
+  },
+  {
+   "w": "乘客",
+   "py": "chéngkè",
+   "hv": "thừa khách",
+   "vi": "hành khách",
+   "pos": "danh từ",
+   "note": "Người đi tàu xe, máy bay.",
+   "ex": [
+    {
+     "cn": "各位乘客，请系好安全带。",
+     "py": "Gèwèi chéngkè, qǐng jì hǎo ānquándài.",
+     "vi": "Quý hành khách, xin thắt dây an toàn."
+    }
+   ]
+  },
+  {
+   "w": "乘坐",
+   "py": "chéngzuò",
+   "hv": "thừa toạ",
+   "vi": "đi, ngồi (tàu xe)",
+   "pos": "động từ",
+   "note": "Trang trọng, hay gặp trong thông báo.",
+   "ex": [
+    {
+     "cn": "欢迎乘坐本次列车。",
+     "py": "Huānyíng chéngzuò běn cì lièchē.",
+     "vi": "Chào mừng quý khách đi chuyến tàu này."
+    }
+   ]
+  },
+  {
+   "w": "换乘",
+   "py": "huànchéng",
+   "hv": "hoán thừa",
+   "vi": "đổi tuyến, chuyển xe",
+   "pos": "động từ",
+   "note": "换 (đổi) + 乘. Hay dùng cho tàu điện ngầm.",
+   "ex": [
+    {
+     "cn": "在这一站可以换乘二号线。",
+     "py": "Zài zhè yí zhàn kěyǐ huànchéng èr hào xiàn.",
+     "vi": "Ở ga này có thể chuyển sang tuyến số hai."
+    }
+   ]
+  },
+  {
+   "w": "动车",
+   "py": "dòngchē",
+   "hv": "động xa",
+   "vi": "tàu tốc hành (điện)",
+   "pos": "danh từ",
+   "note": "Tàu nhanh chạy điện, chậm hơn 高铁 một chút.",
+   "ex": [
+    {
+     "cn": "坐动车去杭州很方便。",
+     "py": "Zuò dòngchē qù Hángzhōu hěn fāngbiàn.",
+     "vi": "Đi tàu tốc hành đến Hàng Châu rất tiện."
+    }
+   ]
+  },
+  {
+   "w": "大巴",
+   "py": "dàbā",
+   "hv": "đại ba",
+   "vi": "xe khách lớn",
+   "pos": "danh từ",
+   "note": "巴 phiên âm từ \"bus\".",
+   "ex": [
+    {
+     "cn": "机场有大巴去市中心。",
+     "py": "Jīchǎng yǒu dàbā qù shì zhōngxīn.",
+     "vi": "Sân bay có xe khách đi trung tâm thành phố."
+    }
+   ]
+  },
+  {
+   "w": "旅客",
+   "py": "lǚkè",
+   "hv": "lữ khách",
+   "vi": "hành khách, lữ khách",
+   "pos": "danh từ",
+   "note": "Chính là \"lữ khách\".",
+   "ex": [
+    {
+     "cn": "春节期间旅客很多。",
+     "py": "Chūnjié qījiān lǚkè hěn duō.",
+     "vi": "Dịp Tết hành khách rất đông."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Ngôn ngữ thông báo trang trọng",
+   "b": "各位乘客 · 乘坐 · 请…",
+   "d": "Thông báo ở sân bay, nhà ga dùng từ trang trọng: 乘坐 thay 坐, 各位乘客 thay 大家.",
+   "ex": [
+    {
+     "cn": "请旅客们到三号口登机。",
+     "py": "Qǐng lǚkèmen dào sān hào kǒu dēngjī.",
+     "vi": "Mời hành khách đến cửa số ba lên máy bay."
+    },
+    {
+     "cn": "本次航班将在十分钟后起飞。",
+     "py": "Běn cì hángbān jiāng zài shí fēnzhōng hòu qǐfēi.",
+     "vi": "Chuyến bay này sẽ cất cánh sau mười phút."
+    }
+   ]
+  },
+  {
+   "t": "在 + nơi + 换乘 / 转机",
+   "b": "在北京转机 · 在这站换乘",
+   "d": "Nơi đổi chuyến đứng trước động từ.",
+   "ex": [
+    {
+     "cn": "你在哪儿转机？",
+     "py": "Nǐ zài nǎr zhuǎnjī?",
+     "vi": "Bạn nối chuyến ở đâu?"
+    },
+    {
+     "cn": "我们在人民广场换乘。",
+     "py": "Wǒmen zài Rénmín Guǎngchǎng huànchéng.",
+     "vi": "Chúng ta đổi tuyến ở Quảng trường Nhân Dân."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "安检排了很长的队。",
+   "py": "Ānjiǎn pái le hěn cháng de duì.",
+   "vi": "Chỗ kiểm tra an ninh xếp hàng rất dài."
+  },
+  {
+   "cn": "登机以前请关机。",
+   "py": "Dēngjī yǐqián qǐng guānjī.",
+   "vi": "Trước khi lên máy bay xin tắt máy."
+  },
+  {
+   "cn": "坐大巴比打车便宜多了。",
+   "py": "Zuò dàbā bǐ dǎchē piányi duō le.",
+   "vi": "Đi xe khách rẻ hơn gọi taxi nhiều."
+  },
+  {
+   "cn": "乘客们都上车了。",
+   "py": "Chéngkèmen dōu shàng chē le.",
+   "vi": "Hành khách đều lên xe rồi."
+  }
+ ]
+}

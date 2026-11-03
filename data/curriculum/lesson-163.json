@@ -1,0 +1,216 @@
+{
+ "id": 163,
+ "cn": "上课和自习",
+ "title": "Học trên lớp và tự học",
+ "goal": "Nói về chương trình học, lớp học, bài tập, tự học, giảng dạy, giáo viên, thầy trò, giữa kỳ và cuối kỳ.",
+ "words": [
+  {
+   "w": "课程",
+   "py": "kèchéng",
+   "hv": "khoá trình",
+   "vi": "chương trình học, môn học",
+   "pos": "danh từ",
+   "note": "Chính là \"khoá trình\".",
+   "ex": [
+    {
+     "cn": "这学期的课程很多。",
+     "py": "Zhè xuéqī de kèchéng hěn duō.",
+     "vi": "Học kỳ này nhiều môn học."
+    }
+   ]
+  },
+  {
+   "w": "课堂",
+   "py": "kètáng",
+   "hv": "khoá đường",
+   "vi": "lớp học, giờ học",
+   "pos": "danh từ",
+   "note": "课 + 堂 (nhà, phòng).",
+   "ex": [
+    {
+     "cn": "课堂上要认真听讲。",
+     "py": "Kètáng shang yào rènzhēn tīngjiǎng.",
+     "vi": "Trong giờ học phải chăm chú nghe giảng."
+    }
+   ]
+  },
+  {
+   "w": "功课",
+   "py": "gōngkè",
+   "hv": "công khoá",
+   "vi": "bài tập; bài học",
+   "pos": "danh từ",
+   "note": "Gần nghĩa 作业.",
+   "ex": [
+    {
+     "cn": "做完功课再玩儿。",
+     "py": "Zuò wán gōngkè zài wánr.",
+     "vi": "Làm xong bài tập rồi hãy chơi."
+    }
+   ]
+  },
+  {
+   "w": "自习",
+   "py": "zìxí",
+   "hv": "tự tập",
+   "vi": "tự học (ở lớp, thư viện)",
+   "pos": "động từ",
+   "note": "Giờ tự học ở trường gọi là 自习课.",
+   "ex": [
+    {
+     "cn": "晚上我们在教室自习。",
+     "py": "Wǎnshang wǒmen zài jiàoshì zìxí.",
+     "vi": "Buổi tối chúng tôi tự học ở lớp."
+    }
+   ]
+  },
+  {
+   "w": "自学",
+   "py": "zìxué",
+   "hv": "tự học",
+   "vi": "tự học (không có thầy)",
+   "pos": "động từ",
+   "note": "Học một mình, không theo lớp.",
+   "ex": [
+    {
+     "cn": "他自学了日语。",
+     "py": "Tā zìxué le Rìyǔ.",
+     "vi": "Anh ấy tự học tiếng Nhật."
+    }
+   ]
+  },
+  {
+   "w": "教学",
+   "py": "jiàoxué",
+   "hv": "giáo học",
+   "vi": "giảng dạy, dạy học",
+   "pos": "danh từ",
+   "note": "教 (dạy) + 学 (học).",
+   "ex": [
+    {
+     "cn": "这个学校的教学质量很高。",
+     "py": "Zhège xuéxiào de jiàoxué zhìliàng hěn gāo.",
+     "vi": "Chất lượng giảng dạy trường này rất cao."
+    }
+   ]
+  },
+  {
+   "w": "教师",
+   "py": "jiàoshī",
+   "hv": "giáo sư",
+   "vi": "giáo viên",
+   "pos": "danh từ",
+   "note": "Chú ý: 教师 là giáo viên nói chung, không phải \"giáo sư\" (教授).",
+   "ex": [
+    {
+     "cn": "她是一名中学教师。",
+     "py": "Tā shì yì míng zhōngxué jiàoshī.",
+     "vi": "Cô ấy là một giáo viên trung học."
+    }
+   ]
+  },
+  {
+   "w": "师生",
+   "py": "shīshēng",
+   "hv": "sư sinh",
+   "vi": "thầy và trò",
+   "pos": "danh từ",
+   "note": "师 (thầy) + 生 (trò).",
+   "ex": [
+    {
+     "cn": "全校师生都参加了运动会。",
+     "py": "Quán xiào shīshēng dōu cānjiā le yùndònghuì.",
+     "vi": "Toàn thể thầy trò đều tham gia hội thao."
+    }
+   ]
+  },
+  {
+   "w": "期中",
+   "py": "qīzhōng",
+   "hv": "kỳ trung",
+   "vi": "giữa kỳ",
+   "pos": "danh từ",
+   "note": "Thi giữa kỳ là 期中考试.",
+   "ex": [
+    {
+     "cn": "下周有期中考试。",
+     "py": "Xià zhōu yǒu qīzhōng kǎoshì.",
+     "vi": "Tuần sau có thi giữa kỳ."
+    }
+   ]
+  },
+  {
+   "w": "期末",
+   "py": "qīmò",
+   "hv": "kỳ mạt",
+   "vi": "cuối kỳ",
+   "pos": "danh từ",
+   "note": "末 = \"mạt\" (cuối). Thi cuối kỳ là 期末考试.",
+   "ex": [
+    {
+     "cn": "期末考试考得怎么样？",
+     "py": "Qīmò kǎoshì kǎo de zěnmeyàng?",
+     "vi": "Thi cuối kỳ thế nào?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "动词 + 完: làm xong",
+   "b": "做完 · 吃完 · 看完",
+   "d": "完 sau động từ báo việc đã làm xong hết. Phủ định: 没做完.",
+   "ex": [
+    {
+     "cn": "作业你写完了吗？",
+     "py": "Zuòyè nǐ xiě wán le ma?",
+     "vi": "Bài tập bạn viết xong chưa?"
+    },
+    {
+     "cn": "这本书我还没看完。",
+     "py": "Zhè běn shū wǒ hái méi kàn wán.",
+     "vi": "Cuốn sách này tôi chưa đọc xong."
+    }
+   ]
+  },
+  {
+   "t": "自习 và 自学",
+   "b": "自习 = tự học trong giờ, ở trường · 自学 = tự học một mình, không có thầy",
+   "d": "Hai từ dễ nhầm. Học sinh \"giờ tự học\" dùng 自习; người tự mày mò học dùng 自学.",
+   "ex": [
+    {
+     "cn": "我是自学汉语的。",
+     "py": "Wǒ shì zìxué Hànyǔ de.",
+     "vi": "Tôi tự học tiếng Trung."
+    },
+    {
+     "cn": "下午第三节是自习课。",
+     "py": "Xiàwǔ dì sān jié shì zìxíkè.",
+     "vi": "Tiết ba buổi chiều là giờ tự học."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "期末考试以后就放假了。",
+   "py": "Qīmò kǎoshì yǐhòu jiù fàngjià le.",
+   "vi": "Thi cuối kỳ xong là được nghỉ."
+  },
+  {
+   "cn": "课堂上老师和学生常常一起讨论。",
+   "py": "Kètáng shang lǎoshī hé xuésheng chángcháng yìqǐ tǎolùn.",
+   "vi": "Trong lớp thầy và trò hay cùng thảo luận."
+  },
+  {
+   "cn": "这门课程对我很有用。",
+   "py": "Zhè mén kèchéng duì wǒ hěn yǒuyòng.",
+   "vi": "Môn học này rất có ích với tôi."
+  },
+  {
+   "cn": "我想当一名教师。",
+   "py": "Wǒ xiǎng dāng yì míng jiàoshī.",
+   "vi": "Tôi muốn làm giáo viên."
+  }
+ ]
+}

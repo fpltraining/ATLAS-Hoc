@@ -1,0 +1,216 @@
+{
+ "id": 162,
+ "cn": "准备考试",
+ "title": "Thi cử",
+ "goal": "Nói về đăng ký thi, thi đại học, thí sinh, thi viết, phỏng vấn, đề thi, điểm số, nghe, nói và viết văn.",
+ "words": [
+  {
+   "w": "报考",
+   "py": "bàokǎo",
+   "hv": "báo khảo",
+   "vi": "đăng ký thi",
+   "pos": "động từ",
+   "note": "报 (báo, đăng ký) + 考.",
+   "ex": [
+    {
+     "cn": "他报考了北京大学。",
+     "py": "Tā bàokǎo le Běijīng Dàxué.",
+     "vi": "Cậu ấy đăng ký thi vào Đại học Bắc Kinh."
+    }
+   ]
+  },
+  {
+   "w": "高考",
+   "py": "gāokǎo",
+   "hv": "cao khảo",
+   "vi": "kỳ thi đại học",
+   "pos": "danh từ",
+   "note": "Kỳ thi quan trọng nhất với học sinh Trung Quốc.",
+   "ex": [
+    {
+     "cn": "今年的高考在六月。",
+     "py": "Jīnnián de gāokǎo zài liù yuè.",
+     "vi": "Kỳ thi đại học năm nay vào tháng sáu."
+    }
+   ]
+  },
+  {
+   "w": "考生",
+   "py": "kǎoshēng",
+   "hv": "khảo sinh",
+   "vi": "thí sinh",
+   "pos": "danh từ",
+   "note": "Chính là \"khảo sinh\", \"thí sinh\".",
+   "ex": [
+    {
+     "cn": "考生请带好身份证。",
+     "py": "Kǎoshēng qǐng dài hǎo shēnfènzhèng.",
+     "vi": "Thí sinh xin mang theo căn cước."
+    }
+   ]
+  },
+  {
+   "w": "笔试",
+   "py": "bǐshì",
+   "hv": "bút thí",
+   "vi": "thi viết",
+   "pos": "động từ",
+   "note": "笔 (bút) + 试 (thi).",
+   "ex": [
+    {
+     "cn": "先笔试，再面试。",
+     "py": "Xiān bǐshì, zài miànshì.",
+     "vi": "Thi viết trước, rồi phỏng vấn."
+    }
+   ]
+  },
+  {
+   "w": "面试",
+   "py": "miànshì",
+   "hv": "diện thí",
+   "vi": "phỏng vấn",
+   "pos": "động từ",
+   "note": "面 (mặt đối mặt) + 试.",
+   "ex": [
+    {
+     "cn": "明天我有一个面试。",
+     "py": "Míngtiān wǒ yǒu yí ge miànshì.",
+     "vi": "Mai tôi có một buổi phỏng vấn."
+    }
+   ]
+  },
+  {
+   "w": "试题",
+   "py": "shìtí",
+   "hv": "thí đề",
+   "vi": "đề thi",
+   "pos": "danh từ",
+   "note": "Chính là \"thí đề\".",
+   "ex": [
+    {
+     "cn": "这次的试题不太难。",
+     "py": "Zhè cì de shìtí bú tài nán.",
+     "vi": "Đề thi lần này không khó lắm."
+    }
+   ]
+  },
+  {
+   "w": "分数",
+   "py": "fēnshù",
+   "hv": "phân số",
+   "vi": "điểm số",
+   "pos": "danh từ",
+   "note": "Ở đây không phải \"phân số\" toán học, mà là điểm số bài thi.",
+   "ex": [
+    {
+     "cn": "你考了多少分数？",
+     "py": "Nǐ kǎo le duōshao fēnshù?",
+     "vi": "Bạn thi được bao nhiêu điểm?"
+    }
+   ]
+  },
+  {
+   "w": "听力",
+   "py": "tīnglì",
+   "hv": "thính lực",
+   "vi": "(kỹ năng) nghe",
+   "pos": "danh từ",
+   "note": "Phần nghe trong kỳ thi.",
+   "ex": [
+    {
+     "cn": "我的听力不太好。",
+     "py": "Wǒ de tīnglì bú tài hǎo.",
+     "vi": "Kỹ năng nghe của tôi không tốt lắm."
+    }
+   ]
+  },
+  {
+   "w": "口语",
+   "py": "kǒuyǔ",
+   "hv": "khẩu ngữ",
+   "vi": "(kỹ năng) nói, khẩu ngữ",
+   "pos": "danh từ",
+   "note": "Chính là \"khẩu ngữ\".",
+   "ex": [
+    {
+     "cn": "他的口语说得很流利。",
+     "py": "Tā de kǒuyǔ shuō de hěn liúlì.",
+     "vi": "Anh ấy nói rất lưu loát."
+    }
+   ]
+  },
+  {
+   "w": "作文",
+   "py": "zuòwén",
+   "hv": "tác văn",
+   "vi": "bài văn; viết văn",
+   "pos": "danh từ",
+   "note": "Bài văn ở trường, phần viết trong kỳ thi.",
+   "ex": [
+    {
+     "cn": "老师让我们写一篇作文。",
+     "py": "Lǎoshī ràng wǒmen xiě yì piān zuòwén.",
+     "vi": "Cô giáo bảo chúng tôi viết một bài văn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "先…再…: trước… rồi…",
+   "b": "先 + việc 1，再 + việc 2",
+   "d": "Diễn tả thứ tự hai việc. 再 nhấn mạnh việc sau xảy ra sau việc trước.",
+   "ex": [
+    {
+     "cn": "先做练习，再看电视。",
+     "py": "Xiān zuò liànxí, zài kàn diànshì.",
+     "vi": "Làm bài tập trước, rồi xem TV."
+    },
+    {
+     "cn": "我们先吃饭，再去看电影。",
+     "py": "Wǒmen xiān chīfàn, zài qù kàn diànyǐng.",
+     "vi": "Chúng ta ăn cơm trước rồi đi xem phim."
+    }
+   ]
+  },
+  {
+   "t": "Lượng từ 篇 cho bài viết",
+   "b": "一篇作文 · 一篇文章",
+   "d": "Bài văn, bài báo, bài luận đều đếm bằng 篇.",
+   "ex": [
+    {
+     "cn": "这篇文章很有意思。",
+     "py": "Zhè piān wénzhāng hěn yǒu yìsi.",
+     "vi": "Bài báo này rất thú vị."
+    },
+    {
+     "cn": "我每周写一篇作文。",
+     "py": "Wǒ měi zhōu xiě yì piān zuòwén.",
+     "vi": "Mỗi tuần tôi viết một bài văn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "HSK考试有听力、阅读和写作。",
+   "py": "HSK kǎoshì yǒu tīnglì, yuèdú hé xiězuò.",
+   "vi": "Kỳ thi HSK có nghe, đọc và viết."
+  },
+  {
+   "cn": "高考的时候，考生都很紧张。",
+   "py": "Gāokǎo de shíhou, kǎoshēng dōu hěn jǐnzhāng.",
+   "vi": "Khi thi đại học, thí sinh đều rất căng thẳng."
+  },
+  {
+   "cn": "面试的时候要有礼貌。",
+   "py": "Miànshì de shíhou yào yǒu lǐmào.",
+   "vi": "Khi phỏng vấn phải lịch sự."
+  },
+  {
+   "cn": "多练口语，你的汉语会越来越好。",
+   "py": "Duō liàn kǒuyǔ, nǐ de Hànyǔ huì yuèláiyuè hǎo.",
+   "vi": "Luyện nói nhiều, tiếng Trung của bạn sẽ ngày càng giỏi."
+  }
+ ]
+}

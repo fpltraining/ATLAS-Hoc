@@ -1,0 +1,216 @@
+{
+ "id": 158,
+ "cn": "去哪儿度假？",
+ "title": "Du lịch",
+ "goal": "Nói về điểm tham quan, khu du lịch, cảnh đẹp, đi chơi, nghỉ dưỡng, nhà nghỉ, nhận phòng, điểm đến và đi lại.",
+ "words": [
+  {
+   "w": "景点",
+   "py": "jǐngdiǎn",
+   "hv": "cảnh điểm",
+   "vi": "điểm tham quan",
+   "pos": "danh từ",
+   "note": "景 = \"cảnh\" trong \"phong cảnh\".",
+   "ex": [
+    {
+     "cn": "北京有很多有名的景点。",
+     "py": "Běijīng yǒu hěn duō yǒumíng de jǐngdiǎn.",
+     "vi": "Bắc Kinh có nhiều điểm tham quan nổi tiếng."
+    }
+   ]
+  },
+  {
+   "w": "景区",
+   "py": "jǐngqū",
+   "hv": "cảnh khu",
+   "vi": "khu du lịch",
+   "pos": "danh từ",
+   "note": "景 + 区 (khu).",
+   "ex": [
+    {
+     "cn": "这个景区的门票不贵。",
+     "py": "Zhège jǐngqū de ménpiào bú guì.",
+     "vi": "Vé vào khu du lịch này không đắt."
+    }
+   ]
+  },
+  {
+   "w": "美景",
+   "py": "měijǐng",
+   "hv": "mỹ cảnh",
+   "vi": "cảnh đẹp",
+   "pos": "danh từ",
+   "note": "美 (đẹp) + 景.",
+   "ex": [
+    {
+     "cn": "山上的美景让人难忘。",
+     "py": "Shān shang de měijǐng ràng rén nánwàng.",
+     "vi": "Cảnh đẹp trên núi làm người ta khó quên."
+    }
+   ]
+  },
+  {
+   "w": "游玩",
+   "py": "yóuwán",
+   "hv": "du ngoạn",
+   "vi": "đi chơi, du ngoạn",
+   "pos": "động từ",
+   "note": "Chính là \"du ngoạn\".",
+   "ex": [
+    {
+     "cn": "周末我们去海边游玩。",
+     "py": "Zhōumò wǒmen qù hǎibiān yóuwán.",
+     "vi": "Cuối tuần chúng tôi ra biển chơi."
+    }
+   ]
+  },
+  {
+   "w": "度假",
+   "py": "dùjià",
+   "hv": "độ giả",
+   "vi": "đi nghỉ",
+   "pos": "động từ",
+   "note": "度 (trải qua) + 假 (kỳ nghỉ).",
+   "ex": [
+    {
+     "cn": "他们去海南度假了。",
+     "py": "Tāmen qù Hǎinán dùjià le.",
+     "vi": "Họ đi nghỉ ở Hải Nam rồi."
+    }
+   ]
+  },
+  {
+   "w": "旅行",
+   "py": "lǚxíng",
+   "hv": "lữ hành",
+   "vi": "du lịch, đi xa",
+   "pos": "động từ",
+   "note": "Chính là \"lữ hành\". Gần nghĩa 旅游.",
+   "ex": [
+    {
+     "cn": "我喜欢一个人旅行。",
+     "py": "Wǒ xǐhuan yí ge rén lǚxíng.",
+     "vi": "Tôi thích đi du lịch một mình."
+    }
+   ]
+  },
+  {
+   "w": "旅馆",
+   "py": "lǚguǎn",
+   "hv": "lữ quán",
+   "vi": "nhà nghỉ, khách sạn nhỏ",
+   "pos": "danh từ",
+   "note": "Chính là \"lữ quán\".",
+   "ex": [
+    {
+     "cn": "我们住在一家小旅馆。",
+     "py": "Wǒmen zhù zài yì jiā xiǎo lǚguǎn.",
+     "vi": "Chúng tôi ở một nhà nghỉ nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "入住",
+   "py": "rùzhù",
+   "hv": "nhập trú",
+   "vi": "nhận phòng, vào ở",
+   "pos": "động từ",
+   "note": "入 (vào) + 住 (ở).",
+   "ex": [
+    {
+     "cn": "下午两点以后可以入住。",
+     "py": "Xiàwǔ liǎng diǎn yǐhòu kěyǐ rùzhù.",
+     "vi": "Sau hai giờ chiều mới được nhận phòng."
+    }
+   ]
+  },
+  {
+   "w": "目的地",
+   "py": "mùdìdì",
+   "hv": "mục đích địa",
+   "vi": "điểm đến",
+   "pos": "danh từ",
+   "note": "目的 (mục đích) + 地 (nơi).",
+   "ex": [
+    {
+     "cn": "我们终于到了目的地。",
+     "py": "Wǒmen zhōngyú dào le mùdìdì.",
+     "vi": "Cuối cùng chúng tôi đã đến nơi."
+    }
+   ]
+  },
+  {
+   "w": "出行",
+   "py": "chūxíng",
+   "hv": "xuất hành",
+   "vi": "đi lại, ra ngoài đi xa",
+   "pos": "động từ",
+   "note": "Chính là \"xuất hành\".",
+   "ex": [
+    {
+     "cn": "节假日出行的人很多。",
+     "py": "Jiéjiàrì chūxíng de rén hěn duō.",
+     "vi": "Ngày lễ người đi lại rất đông."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "让人 + tính từ / động từ: khiến người ta",
+   "b": "让人难忘 · 让人高兴",
+   "d": "Chủ ngữ là sự vật, 让人 nghĩa \"khiến người ta…\".",
+   "ex": [
+    {
+     "cn": "这个故事让人很感动。",
+     "py": "Zhège gùshi ràng rén hěn gǎndòng.",
+     "vi": "Câu chuyện này khiến người ta rất cảm động."
+    },
+    {
+     "cn": "那里的美食让人难忘。",
+     "py": "Nàlǐ de měishí ràng rén nánwàng.",
+     "vi": "Món ngon ở đó khiến người ta khó quên."
+    }
+   ]
+  },
+  {
+   "t": "终于: cuối cùng cũng",
+   "b": "终于 + động từ + 了",
+   "d": "Nhấn mạnh việc đạt được sau một thời gian chờ đợi.",
+   "ex": [
+    {
+     "cn": "我终于找到旅馆了。",
+     "py": "Wǒ zhōngyú zhǎodào lǚguǎn le.",
+     "vi": "Cuối cùng tôi cũng tìm được nhà nghỉ."
+    },
+    {
+     "cn": "假期终于到了！",
+     "py": "Jiàqī zhōngyú dào le!",
+     "vi": "Kỳ nghỉ cuối cùng cũng đến!"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "下龙湾是越南有名的景点。",
+   "py": "Xiàlóng Wān shì Yuènán yǒumíng de jǐngdiǎn.",
+   "vi": "Vịnh Hạ Long là điểm tham quan nổi tiếng của Việt Nam."
+  },
+  {
+   "cn": "这次旅行的目的地是西安。",
+   "py": "Zhè cì lǚxíng de mùdìdì shì Xī'ān.",
+   "vi": "Điểm đến của chuyến đi này là Tây An."
+  },
+  {
+   "cn": "景区里游客太多了。",
+   "py": "Jǐngqū lǐ yóukè tài duō le.",
+   "vi": "Trong khu du lịch đông khách quá."
+  },
+  {
+   "cn": "我们先去旅馆入住吧。",
+   "py": "Wǒmen xiān qù lǚguǎn rùzhù ba.",
+   "vi": "Chúng ta về nhà nghỉ nhận phòng trước nhé."
+  }
+ ]
+}
