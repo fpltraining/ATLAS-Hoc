@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v7';
+const VERSION = 'atlas-v8';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 
