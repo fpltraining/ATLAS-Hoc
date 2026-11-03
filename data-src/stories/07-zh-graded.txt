@@ -1,0 +1,803 @@
+@id zh-g1-day
+@lang zh
+@shelf graded
+@level HSK1
+@title 小明的一天
+@vi Một ngày của Tiểu Minh
+@blurb Truyện cấp 1: một ngày bình thường của Tiểu Minh, từ sáng đến tối.
+
+## 1 | 早上 | Buổi sáng
+小明是学生。 | Xiǎo Míng shì xuésheng. | Tiểu Minh là học sinh.
+他每天六点起床。 | Tā měi tiān liù diǎn qǐchuáng. | Ngày nào cậu cũng dậy lúc sáu giờ.
+他喝一杯水， | Tā hē yì bēi shuǐ, | Cậu uống một cốc nước,
+吃一点儿米饭。 | chī yìdiǎnr mǐfàn. | ăn một chút cơm.
+妈妈说：“小明，你早！” | Māma shuō: "Xiǎo Míng, nǐ zǎo!" | Mẹ nói: "Tiểu Minh, chào buổi sáng!"
+七点，他去学校。 | Qī diǎn, tā qù xuéxiào. | Bảy giờ, cậu đi đến trường.
+学校不远， | Xuéxiào bù yuǎn, | Trường không xa,
+他走路去。 | tā zǒulù qù. | cậu đi bộ.
+
+? 小明几点起床？ | Tiểu Minh dậy lúc mấy giờ? | 六点* | 七点 | 八点
+? 小明怎么去学校？ | Tiểu Minh đến trường bằng cách nào? | 走路* | 开车 | 坐火车
+> Nói bằng tiếng Trung: bạn mấy giờ dậy? (我…点起床)
+
+## 2 | 晚上 | Buổi tối
+下午五点，小明回家。 | Xiàwǔ wǔ diǎn, Xiǎo Míng huí jiā. | Năm giờ chiều, Tiểu Minh về nhà.
+他先看书，再写汉字。 | Tā xiān kàn shū, zài xiě Hànzì. | Cậu đọc sách trước, rồi viết chữ Hán.
+爸爸妈妈也回来了。 | Bàba māma yě huílai le. | Bố mẹ cũng về rồi.
+我们家一起吃晚饭。 | Wǒmen jiā yìqǐ chī wǎnfàn. | Nhà chúng tôi cùng ăn cơm tối.
+爸爸问：“今天你学了什么？” | Bàba wèn: "Jīntiān nǐ xué le shénme?" | Bố hỏi: "Hôm nay con học được gì?"
+小明说：“我学了十个汉字！” | Xiǎo Míng shuō: "Wǒ xué le shí ge Hànzì!" | Tiểu Minh nói: "Con học được mười chữ Hán!"
+爸爸很高兴。 | Bàba hěn gāoxìng. | Bố rất vui.
+晚上十点，小明睡觉了。 | Wǎnshang shí diǎn, Xiǎo Míng shuìjiào le. | Mười giờ tối, Tiểu Minh đi ngủ.
+
+! 每天学一点儿， | Měi tiān xué yìdiǎnr, | Mỗi ngày học một chút,
+! 一年就学了很多。 | yì nián jiù xué le hěn duō. | một năm là đã học được rất nhiều.
+
+? 小明今天学了几个汉字？ | Hôm nay Tiểu Minh học được mấy chữ Hán? | 十个* | 三个 | 一百个
+> Kể lại một ngày của bạn bằng 3 câu tiếng Trung.
+
+@id zh-g1-birthday
+@lang zh
+@shelf graded
+@level HSK1
+@title 生日快乐
+@vi Chúc mừng sinh nhật
+@blurb Truyện cấp 1: hôm nay là sinh nhật Tiểu Lan, nhưng hình như không ai nhớ.
+
+## 1 | 没有人说 | Không ai nói gì
+今天是小兰的生日。 | Jīntiān shì Xiǎo Lán de shēngrì. | Hôm nay là sinh nhật Tiểu Lan.
+她今年二十岁。 | Tā jīnnián èrshí suì. | Năm nay cô ấy hai mươi tuổi.
+早上，她去学校。 | Zǎoshang, tā qù xuéxiào. | Buổi sáng, cô ấy đến trường.
+同学们说：“你好！” | Tóngxuémen shuō: "Nǐ hǎo!" | Các bạn nói: "Chào cậu!"
+没有人说“生日快乐”。 | Méiyǒu rén shuō "shēngrì kuàilè". | Không ai nói "chúc mừng sinh nhật".
+小兰有点儿不高兴。 | Xiǎo Lán yǒudiǎnr bù gāoxìng. | Tiểu Lan hơi buồn.
+她想：“他们都不知道吗？” | Tā xiǎng: "Tāmen dōu bù zhīdào ma?" | Cô ấy nghĩ: "Họ đều không biết sao?"
+
+? 小兰今年多大？ | Tiểu Lan năm nay bao nhiêu tuổi? | 二十岁* | 十岁 | 三十岁
+? 小兰为什么不高兴？ | Vì sao Tiểu Lan không vui? | 没有人说“生日快乐”* | 她没有去学校 | 她病了
+> Đọc to câu "生日快乐" ba lần.
+
+## 2 | 晚上的饭店 | Nhà hàng buổi tối
+晚上，小明给小兰打电话。 | Wǎnshang, Xiǎo Míng gěi Xiǎo Lán dǎ diànhuà. | Buổi tối, Tiểu Minh gọi điện cho Tiểu Lan.
+“我们去饭店吃饭吧。” | "Wǒmen qù fàndiàn chīfàn ba." | "Chúng mình đi nhà hàng ăn cơm nhé."
+小兰来到饭店。 | Xiǎo Lán lái dào fàndiàn. | Tiểu Lan đến nhà hàng.
+很多同学都在那儿！ | Hěn duō tóngxué dōu zài nàr! | Rất nhiều bạn đều ở đó!
+大家都说：“生日快乐！” | Dàjiā dōu shuō: "Shēngrì kuàilè!" | Mọi người đều nói: "Chúc mừng sinh nhật!"
+小兰很高兴。 | Xiǎo Lán hěn gāoxìng. | Tiểu Lan rất vui.
+“谢谢你们！我太高兴了！” | "Xièxie nǐmen! Wǒ tài gāoxìng le!" | "Cảm ơn các cậu! Mình vui quá!"
+
+! 朋友不说，不是不知道。 | Péngyou bù shuō, bú shì bù zhīdào. | Bạn bè không nói, không có nghĩa là không biết.
+! 好事，有时要晚一点儿来。 | Hǎo shì, yǒushí yào wǎn yìdiǎnr lái. | Điều tốt đôi khi đến muộn một chút.
+
+? 晚上谁给小兰打电话？ | Buổi tối ai gọi điện cho Tiểu Lan? | 小明* | 妈妈 | 老师
+> Nói bằng tiếng Trung: sinh nhật bạn là ngày mấy tháng mấy?
+
+@id zh-g1-fruit
+@lang zh
+@shelf graded
+@level HSK1
+@title 买水果
+@vi Đi mua hoa quả
+@blurb Truyện cấp 1: Tiểu Minh đi mua táo cho mẹ và học được cách hỏi giá.
+
+## 1 | 多少钱？ | Bao nhiêu tiền?
+星期六，妈妈说： | Xīngqīliù, māma shuō: | Thứ Bảy, mẹ nói:
+“小明，你去买一些苹果吧。” | "Xiǎo Míng, nǐ qù mǎi yìxiē píngguǒ ba." | "Tiểu Minh, con đi mua ít táo nhé."
+妈妈给他五十块钱。 | Māma gěi tā wǔshí kuài qián. | Mẹ đưa cậu năm mươi đồng.
+小明去商店。 | Xiǎo Míng qù shāngdiàn. | Tiểu Minh đi đến cửa hàng.
+他问：“苹果多少钱？” | Tā wèn: "Píngguǒ duōshao qián?" | Cậu hỏi: "Táo bao nhiêu tiền?"
+“十块钱一个。” | "Shí kuài qián yí ge." | "Mười đồng một quả."
+“太贵了！” 小明想。 | "Tài guì le!" Xiǎo Míng xiǎng. | "Đắt quá!" Tiểu Minh nghĩ.
+
+? 妈妈给小明多少钱？ | Mẹ đưa Tiểu Minh bao nhiêu tiền? | 五十块* | 十块 | 一百块
+? 苹果多少钱一个？ | Táo bao nhiêu tiền một quả? | 十块* | 五块 | 五十块
+> Đọc to: 苹果多少钱？
+
+## 2 | 别的商店 | Cửa hàng khác
+他去了别的商店。 | Tā qù le bié de shāngdiàn. | Cậu đi sang cửa hàng khác.
+“苹果多少钱？” | "Píngguǒ duōshao qián?" | "Táo bao nhiêu tiền?"
+“五块钱一个。” | "Wǔ kuài qián yí ge." | "Năm đồng một quả."
+小明买了八个苹果。 | Xiǎo Míng mǎi le bā ge píngguǒ. | Tiểu Minh mua tám quả táo.
+他还有十块钱。 | Tā hái yǒu shí kuài qián. | Cậu còn mười đồng.
+回家后，他给妈妈苹果和钱。 | Huí jiā hòu, tā gěi māma píngguǒ hé qián. | Về nhà, cậu đưa mẹ táo và tiền.
+妈妈说：“你太好了！” | Māma shuō: "Nǐ tài hǎo le!" | Mẹ nói: "Con giỏi quá!"
+
+! 买东西以前，多问一问。 | Mǎi dōngxi yǐqián, duō wèn yi wèn. | Trước khi mua đồ, hãy hỏi nhiều nơi.
+! 一样的东西，可能不一样的钱。 | Yíyàng de dōngxi, kěnéng bù yíyàng de qián. | Cùng một món đồ, có thể khác giá.
+
+? 小明买了几个苹果？ | Tiểu Minh mua mấy quả táo? | 八个* | 五个 | 十个
+> Tính bằng tiếng Trung: 8 quả × 5 đồng = ? (八个，五块一个，一共…)
+
+@id zh-g1-rain
+@lang zh
+@shelf graded
+@level HSK1
+@title 下雨了
+@vi Trời mưa rồi
+@blurb Truyện cấp 1: một cơn mưa bất chợt và một chiếc ô.
+
+## 1 | 没有伞 | Không có ô
+今天下午，天气不太好。 | Jīntiān xiàwǔ, tiānqì bú tài hǎo. | Chiều nay, thời tiết không đẹp lắm.
+下课了，外边下雨了。 | Xiàkè le, wàibian xià yǔ le. | Tan học, bên ngoài mưa rồi.
+小兰没有伞。 | Xiǎo Lán méiyǒu sǎn. | Tiểu Lan không có ô.
+她在学校里看雨。 | Tā zài xuéxiào lǐ kàn yǔ. | Cô ấy đứng trong trường nhìn mưa.
+雨很大， | Yǔ hěn dà, | Mưa rất to,
+她有点儿冷。 | tā yǒudiǎnr lěng. | cô ấy hơi lạnh.
+
+? 小兰为什么在学校里？ | Vì sao Tiểu Lan còn ở trong trường? | 她没有伞* | 她在学习 | 她不想回家
+> Nói bằng tiếng Trung: hôm nay thời tiết thế nào? (今天天气…)
+
+## 2 | 一起走 | Cùng đi
+一个女同学来了。 | Yí ge nǚ tóngxué lái le. | Một bạn nữ đến.
+她说：“你好，你去哪儿？” | Tā shuō: "Nǐ hǎo, nǐ qù nǎr?" | Bạn ấy nói: "Chào cậu, cậu đi đâu?"
+“我回家，我没有伞。” | "Wǒ huí jiā, wǒ méiyǒu sǎn." | "Mình về nhà, mình không có ô."
+“我家也在那儿，你和我回去吧！” | "Wǒ jiā yě zài nàr, nǐ hé wǒ huíqu ba!" | "Nhà mình cũng ở đó, cậu về cùng mình nhé!"
+两个人在一个伞里回家。 | Liǎng ge rén zài yí ge sǎn lǐ huí jiā. | Hai người che chung một chiếc ô về nhà.
+她们说了很多。 | Tāmen shuō le hěn duō. | Họ nói chuyện rất nhiều.
+那天后， | Nà tiān hòu, | Sau hôm đó,
+她们是好朋友了。 | tāmen shì hǎo péngyou le. | họ thành bạn thân.
+
+! 你给别人一个伞， | Nǐ gěi biérén yí ge sǎn, | Bạn cho người khác che chung ô,
+! 别人给你一个朋友。 | biérén gěi nǐ yí ge péngyou. | người khác cho bạn một người bạn.
+
+? 下雨以后，她们怎么样了？ | Sau cơn mưa, hai người thế nào? | 是好朋友了* | 不说话了 | 都病了
+> Bằng tiếng Trung, hỏi đường một người: 你去哪儿？
+
+@id zh-g1-newfriend
+@lang zh
+@shelf graded
+@level HSK1
+@title 新同学
+@vi Bạn học mới
+@blurb Truyện cấp 1: lớp Tiểu Minh có một bạn mới từ Việt Nam sang.
+
+## 1 | 她是哪国人？ | Bạn ấy là người nước nào?
+今天，学校来了一个新同学。 | Jīntiān, xuéxiào lái le yí ge xīn tóngxué. | Hôm nay, trường có một bạn học mới.
+老师说：“这是阮兰。” | Lǎoshī shuō: "Zhè shì Ruǎn Lán." | Cô giáo nói: "Đây là Nguyễn Lan."
+阮兰说：“大家好！ | Ruǎn Lán shuō: "Dàjiā hǎo! | Nguyễn Lan nói: "Chào mọi người!
+我是越南人。 | Wǒ shì Yuènán rén. | Mình là người Việt Nam.
+我会说一点儿汉语。” | Wǒ huì shuō yìdiǎnr Hànyǔ." | Mình biết nói một chút tiếng Trung."
+同学们都看她。 | Tóngxuémen dōu kàn tā. | Các bạn đều nhìn bạn ấy.
+她不知道说什么。 | Tā bù zhīdào shuō shénme. | Bạn ấy không biết nói gì.
+
+? 新同学是哪国人？ | Bạn mới là người nước nào? | 越南人* | 中国人 | 美国人
+> Giới thiệu bản thân bằng tiếng Trung trong 3 câu.
+
+## 2 | 一起吃饭 | Cùng ăn cơm
+中午，阮兰一个人吃饭。 | Zhōngwǔ, Ruǎn Lán yí ge rén chīfàn. | Buổi trưa, Nguyễn Lan ăn cơm một mình.
+小明想了想， | Xiǎo Míng xiǎng le xiǎng, | Tiểu Minh nghĩ một lúc,
+去问她：“我可以坐这儿吗？” | qù wèn tā: "Wǒ kěyǐ zuò zhèr ma?" | đến hỏi bạn ấy: "Mình ngồi đây được không?"
+阮兰很高兴：“可以！” | Ruǎn Lán hěn gāoxìng: "Kěyǐ!" | Nguyễn Lan rất vui: "Được chứ!"
+小明问她很多越南的事。 | Xiǎo Míng wèn tā hěn duō Yuènán de shì. | Tiểu Minh hỏi bạn ấy nhiều chuyện về Việt Nam.
+阮兰也问他很多汉字。 | Ruǎn Lán yě wèn tā hěn duō Hànzì. | Nguyễn Lan cũng hỏi cậu nhiều chữ Hán.
+他们都学了很多。 | Tāmen dōu xué le hěn duō. | Cả hai đều học được nhiều điều.
+
+! 新朋友一个人的时候， | Xīn péngyou yí ge rén de shíhou, | Khi bạn mới ở một mình,
+! 去和他说说话。 | qù hé tā shuōshuo huà. | hãy đến nói chuyện với bạn ấy.
+! 你会有一个新朋友。 | Nǐ huì yǒu yí ge xīn péngyou. | Bạn sẽ có một người bạn mới.
+
+? 中午小明做了什么？ | Buổi trưa Tiểu Minh đã làm gì? | 和阮兰一起吃饭* | 一个人回家 | 去商店
+> Đọc to câu "我可以坐这儿吗？" và dùng nó với một bạn học.
+
+@id zh-g2-train
+@lang zh
+@shelf graded
+@level HSK2
+@title 第一次坐火车
+@vi Lần đầu đi tàu hoả
+@blurb Truyện cấp 2: Tiểu Lan lần đầu tự đi tàu một mình và suýt lỡ chuyến.
+
+## 1 | 去车站 | Ra ga
+小兰的奶奶住在北京。 | Xiǎo Lán de nǎinai zhù zài Běijīng. | Bà của Tiểu Lan sống ở Bắc Kinh.
+这个周末，小兰想去看奶奶。 | Zhège zhōumò, Xiǎo Lán xiǎng qù kàn nǎinai. | Cuối tuần này, Tiểu Lan muốn đi thăm bà.
+这是她第一次一个人坐火车。 | Zhè shì tā dì yī cì yí ge rén zuò huǒchē. | Đây là lần đầu cô ấy đi tàu một mình.
+她在网上买了票。 | Tā zài wǎngshang mǎi le piào. | Cô ấy mua vé trên mạng.
+火车九点开。 | Huǒchē jiǔ diǎn kāi. | Tàu chạy lúc chín giờ.
+早上，她八点才出门。 | Zǎoshang, tā bā diǎn cái chūmén. | Buổi sáng, tám giờ cô ấy mới ra khỏi nhà.
+路上车很多， | Lùshang chē hěn duō, | Trên đường rất đông xe,
+公交车走得很慢。 | gōngjiāochē zǒu de hěn màn. | xe buýt đi rất chậm.
+她有点儿急了。 | Tā yǒudiǎnr jí le. | Cô ấy hơi sốt ruột.
+
+? 火车几点开？ | Tàu chạy lúc mấy giờ? | 九点* | 八点 | 十点
+? 小兰为什么急了？ | Vì sao Tiểu Lan sốt ruột? | 路上车很多，公交车很慢* | 她没有票 | 她不想去
+> Nói bằng tiếng Trung: bạn đã bao giờ suýt trễ tàu xe chưa?
+
+## 2 | 还有五分钟 | Còn năm phút
+八点五十分，她到了车站。 | Bā diǎn wǔshí fēn, tā dào le chēzhàn. | Tám giờ năm mươi, cô ấy đến ga.
+车站里人很多，她不知道往哪儿走。 | Chēzhàn lǐ rén hěn duō, tā bù zhīdào wǎng nǎr zǒu. | Trong ga rất đông, cô ấy không biết đi lối nào.
+她问一个工作的人： | Tā wèn yí ge gōngzuò de rén: | Cô ấy hỏi một nhân viên:
+“请问，去北京的火车在哪儿？” | "Qǐngwèn, qù Běijīng de huǒchē zài nǎr?" | "Cho hỏi, tàu đi Bắc Kinh ở đâu?"
+“往前走，再往右，快跑吧！” | "Wǎng qián zǒu, zài wǎng yòu, kuài pǎo ba!" | "Đi thẳng, rồi rẽ phải, chạy nhanh lên!"
+小兰跑上了火车。 | Xiǎo Lán pǎo shàng le huǒchē. | Tiểu Lan chạy lên được tàu.
+一分钟以后，火车开了。 | Yì fēnzhōng yǐhòu, huǒchē kāi le. | Một phút sau, tàu chạy.
+她坐下来，笑了。 | Tā zuò xiàlai, xiào le. | Cô ấy ngồi xuống, bật cười.
+“下次我要早一点儿出门。” | "Xià cì wǒ yào zǎo yìdiǎnr chūmén." | "Lần sau mình phải ra khỏi nhà sớm hơn."
+
+! 不知道路，就问别人。 | Bù zhīdào lù, jiù wèn biérén. | Không biết đường thì cứ hỏi người khác.
+! 做重要的事，要早一点儿准备。 | Zuò zhòngyào de shì, yào zǎo yìdiǎnr zhǔnbèi. | Làm việc quan trọng thì phải chuẩn bị sớm hơn.
+
+? 小兰在车站做了什么？ | Tiểu Lan đã làm gì ở ga? | 问工作的人* | 回家了 | 买了新票
+> Bằng tiếng Trung, hỏi đường đến ga tàu: 请问，火车站怎么走？
+
+@id zh-g2-cat
+@lang zh
+@shelf graded
+@level HSK2
+@title 我的猫不见了
+@vi Con mèo của tôi biến mất rồi
+@blurb Truyện cấp 2: Tiểu Minh tìm khắp nơi không thấy con mèo, cho đến khi mở tủ quần áo.
+
+## 1 | 找猫 | Tìm mèo
+小明家有一只白色的猫。 | Xiǎo Míng jiā yǒu yì zhī báisè de māo. | Nhà Tiểu Minh có một con mèo trắng.
+它的名字叫“雪”。 | Tā de míngzi jiào "Xuě". | Tên nó là "Tuyết".
+一天下午，小明回家， | Yì tiān xiàwǔ, Xiǎo Míng huí jiā, | Một buổi chiều, Tiểu Minh về nhà,
+但是没看见雪。 | dànshì méi kànjiàn Xuě. | nhưng không thấy Tuyết đâu.
+他看了床下面，没有。 | Tā kàn le chuáng xiàmian, méiyǒu. | Cậu nhìn gầm giường, không có.
+他看了桌子下面，也没有。 | Tā kàn le zhuōzi xiàmian, yě méiyǒu. | Cậu nhìn gầm bàn, cũng không có.
+他出去找，问了很多人。 | Tā chūqu zhǎo, wèn le hěn duō rén. | Cậu ra ngoài tìm, hỏi rất nhiều người.
+大家都说没看见。 | Dàjiā dōu shuō méi kànjiàn. | Ai cũng nói không thấy.
+
+? 小明的猫是什么颜色的？ | Mèo của Tiểu Minh màu gì? | 白色* | 黑色 | 红色
+? 小明在哪儿找了猫？ | Tiểu Minh đã tìm mèo ở đâu? | 床下面和桌子下面* | 学校里 | 饭店里
+> Tả con vật bạn thích bằng 2 câu tiếng Trung.
+
+## 2 | 在衣服里 | Trong đống quần áo
+晚上，小明很不高兴。 | Wǎnshang, Xiǎo Míng hěn bù gāoxìng. | Buổi tối, Tiểu Minh rất buồn.
+他想给妈妈打电话。 | Tā xiǎng gěi māma dǎ diànhuà. | Cậu muốn gọi điện cho mẹ.
+这时候，他听见房间里有一点儿动静。 | Zhè shíhou, tā tīngjiàn fángjiān lǐ yǒu yìdiǎnr dòngjing. | Lúc này, cậu nghe thấy trong phòng có tiếng động nhỏ.
+他走进房间去看。 | Tā zǒu jìn fángjiān qù kàn. | Cậu đi vào phòng xem.
+他打开衣柜。 | Tā dǎkāi yīguì. | Cậu mở tủ quần áo.
+雪在里面睡觉呢！ | Xuě zài lǐmian shuìjiào ne! | Tuyết đang ngủ ở trong đó!
+早上，妈妈拿衣服的时候，没看见它。 | Zǎoshang, māma ná yīfu de shíhou, méi kànjiàn tā. | Buổi sáng, lúc mẹ lấy quần áo, không thấy nó.
+小明笑了，他拿起了雪。 | Xiǎo Míng xiào le, tā ná qǐ le Xuě. | Tiểu Minh bật cười, nhấc Tuyết lên.
+
+! 找东西的时候，别忘了家里。 | Zhǎo dōngxi de shíhou, bié wàng le jiā lǐ. | Khi tìm đồ, đừng quên tìm trong nhà.
+! 慢慢听，慢慢看。 | Mànmàn tīng, mànmàn kàn. | Hãy từ từ nghe, từ từ nhìn.
+
+? 雪在哪儿？ | Tuyết ở đâu? | 在衣柜里* | 在外面 | 在学校
+~ 衣柜 = tủ quần áo
+~ 动静 = tiếng động
+> Kể bằng tiếng Trung một lần bạn tìm thấy đồ ở chỗ không ngờ.
+
+@id zh-g2-football
+@lang zh
+@shelf graded
+@level HSK2
+@title 最后一个球
+@vi Quả bóng cuối cùng
+@blurb Truyện cấp 2: một trận bóng của lớp, và quyết định của đội trưởng ở phút cuối.
+
+## 1 | 比赛 | Trận đấu
+星期六下午，小明的班要踢足球。 | Xīngqīliù xiàwǔ, Xiǎo Míng de bān yào tī zúqiú. | Chiều thứ Bảy, lớp Tiểu Minh có trận bóng đá.
+他们和三班踢。 | Tāmen hé sān bān tī. | Họ đá với lớp ba.
+小明是队长。 | Xiǎo Míng shì duìzhǎng. | Tiểu Minh là đội trưởng.
+三班的人很高，跑得也很快。 | Sān bān de rén hěn gāo, pǎo de yě hěn kuài. | Lớp ba người cao, chạy cũng rất nhanh.
+到了最后五分钟， | Dào le zuìhòu wǔ fēnzhōng, | Đến năm phút cuối,
+还是一比一。 | háishi yī bǐ yī. | tỉ số vẫn là một đều.
+
+? 谁是队长？ | Ai là đội trưởng? | 小明* | 小兰 | 老师
+? 最后五分钟，比分是多少？ | Năm phút cuối, tỉ số là bao nhiêu? | 一比一* | 二比一 | 零比零
+~ 队长 = đội trưởng
+> Nói bằng tiếng Trung: bạn thích môn thể thao nào?
+
+## 2 | 给他 | Chuyền cho cậu ấy
+小明拿到了球。 | Xiǎo Míng ná dào le qiú. | Tiểu Minh có được bóng.
+他想自己踢进去。 | Tā xiǎng zìjǐ tī jìnqu. | Cậu muốn tự mình sút vào.
+但是前面有两个人。 | Dànshì qiánmian yǒu liǎng ge rén. | Nhưng phía trước có hai người.
+他看见左边的小王一个人站着。 | Tā kànjiàn zuǒbian de Xiǎo Wáng yí ge rén zhàn zhe. | Cậu thấy Tiểu Vương bên trái đang đứng một mình.
+小王踢得不太好。 | Xiǎo Wáng tī de bú tài hǎo. | Tiểu Vương đá không giỏi lắm.
+小明想了一下，把球给了他。 | Xiǎo Míng xiǎng le yíxià, bǎ qiú gěi le tā. | Tiểu Minh nghĩ một chút, rồi chuyền bóng cho cậu ấy.
+小王踢了，球进了！ | Xiǎo Wáng tī le, qiú jìn le! | Tiểu Vương sút, bóng vào rồi!
+大家都跑过来，非常高兴。 | Dàjiā dōu pǎo guòlai, fēicháng gāoxìng. | Mọi người chạy tới, vui vô cùng.
+
+! 足球不是一个人的。 | Zúqiú bú shì yí ge rén de. | Bóng đá không phải của một người.
+! 好的队长，会看见别人。 | Hǎo de duìzhǎng, huì kànjiàn biérén. | Đội trưởng giỏi là người nhìn thấy đồng đội.
+
+? 最后谁进了球？ | Cuối cùng ai ghi bàn? | 小王* | 小明 | 三班的人
+> Theo bạn, vì sao Tiểu Minh chuyền bóng? Trả lời bằng 1 câu tiếng Trung.
+
+@id zh-g2-mother
+@lang zh
+@shelf graded
+@level HSK2
+@title 妈妈的生日
+@vi Sinh nhật mẹ
+@blurb Truyện cấp 2: hai anh em muốn tặng mẹ một món quà, nhưng không có nhiều tiền.
+
+## 1 | 没有钱 | Không có tiền
+下个星期是妈妈的生日。 | Xià ge xīngqī shì māma de shēngrì. | Tuần sau là sinh nhật mẹ.
+小明和妹妹想送她一个东西。 | Xiǎo Míng hé mèimei xiǎng sòng tā yí ge dōngxi. | Tiểu Minh và em gái muốn tặng mẹ một món quà.
+他们去了商场。 | Tāmen qù le shāngchǎng. | Họ đi đến trung tâm thương mại.
+衣服很好看，但是太贵了。 | Yīfu hěn hǎokàn, dànshì tài guì le. | Quần áo rất đẹp, nhưng đắt quá.
+手表也很贵。 | Shǒubiǎo yě hěn guì. | Đồng hồ cũng rất đắt.
+他们只有八十块钱。 | Tāmen zhǐ yǒu bāshí kuài qián. | Họ chỉ có tám mươi đồng.
+妹妹说：“我们买什么呢？” | Mèimei shuō: "Wǒmen mǎi shénme ne?" | Em gái nói: "Chúng mình mua gì đây?"
+
+? 他们有多少钱？ | Họ có bao nhiêu tiền? | 八十块* | 八百块 | 十八块
+? 为什么他们没买衣服？ | Vì sao họ không mua quần áo? | 太贵了* | 不好看 | 妈妈不喜欢
+~ 送 = tặng
+> Nói bằng tiếng Trung: bạn từng tặng mẹ món quà gì?
+
+## 2 | 一顿饭 | Một bữa cơm
+小明想了想，说： | Xiǎo Míng xiǎng le xiǎng, shuō: | Tiểu Minh nghĩ một lúc rồi nói:
+“我们给妈妈做饭吧！” | "Wǒmen gěi māma zuò fàn ba!" | "Chúng mình nấu cơm cho mẹ đi!"
+他们买了鱼、鸡蛋和一些水果。 | Tāmen mǎi le yú, jīdàn hé yìxiē shuǐguǒ. | Họ mua cá, trứng và ít hoa quả.
+妈妈生日那天，他们很早就起床了。 | Māma shēngrì nà tiān, tāmen hěn zǎo jiù qǐchuáng le. | Hôm sinh nhật mẹ, họ dậy từ rất sớm.
+鱼做得不太好看， | Yú zuò de bú tài hǎokàn, | Món cá làm không đẹp lắm,
+鸡蛋也有点儿黑色。 | jīdàn yě yǒudiǎnr hēisè. | trứng cũng hơi cháy đen.
+但是妈妈吃了很多， | Dànshì māma chī le hěn duō, | Nhưng mẹ ăn rất nhiều,
+她说：“这是我吃过最好吃的饭。” | tā shuō: "Zhè shì wǒ chī guo zuì hǎochī de fàn." | mẹ nói: "Đây là bữa cơm ngon nhất mẹ từng ăn."
+
+! 最好的东西，不是最贵的东西。 | Zuì hǎo de dōngxi, bú shì zuì guì de dōngxi. | Món quà tốt nhất không phải là món đắt nhất.
+! 你为别人做的，别人都看得见。 | Nǐ wèi biérén zuò de, biérén dōu kàn de jiàn. | Những gì bạn làm vì người khác, họ đều nhìn thấy.
+
+? 他们送了妈妈什么？ | Họ tặng mẹ cái gì? | 自己做的饭* | 一件衣服 | 一个手表
+> Lên kế hoạch một món quà tự làm bằng 3 câu tiếng Trung.
+
+@id zh-g2-cook
+@lang zh
+@shelf graded
+@level HSK2
+@title 学做饭
+@vi Học nấu ăn
+@blurb Truyện cấp 2: Tiểu Lan ra ở riêng, lần đầu phải tự nấu ăn.
+
+## 1 | 方便面 | Mì gói
+小兰上大学了，一个人住。 | Xiǎo Lán shàng dàxué le, yí ge rén zhù. | Tiểu Lan lên đại học, ở một mình.
+她不会做饭。 | Tā bú huì zuò fàn. | Cô ấy không biết nấu ăn.
+第一个星期，她每天吃面条。 | Dì yī ge xīngqī, tā měi tiān chī miàntiáo. | Tuần đầu, ngày nào cô ấy cũng ăn mì.
+第二个星期，她还是吃面条。 | Dì èr ge xīngqī, tā háishi chī miàntiáo. | Tuần thứ hai, cô ấy vẫn ăn mì.
+她给妈妈打电话： | Tā gěi māma dǎ diànhuà: | Cô ấy gọi điện cho mẹ:
+“妈妈，我想吃你做的菜。” | "Māma, wǒ xiǎng chī nǐ zuò de cài." | "Mẹ ơi, con nhớ món mẹ nấu."
+妈妈说：“那你学做饭吧。我教你。” | Māma shuō: "Nà nǐ xué zuò fàn ba. Wǒ jiāo nǐ." | Mẹ nói: "Vậy con học nấu đi. Mẹ dạy con."
+
+? 小兰第一个星期每天吃什么？ | Tuần đầu Tiểu Lan ăn gì mỗi ngày? | 面条* | 米饭 | 鱼
+> Nói bằng tiếng Trung: bạn biết nấu món gì?
+
+## 2 | 一个菜 | Một món
+每天晚上，妈妈在手机上教她。 | Měi tiān wǎnshang, māma zài shǒujī shang jiāo tā. | Tối nào mẹ cũng dạy cô ấy qua điện thoại.
+第一天，她学做鸡蛋。 | Dì yī tiān, tā xué zuò jīdàn. | Ngày đầu, cô ấy học làm món trứng.
+鸡蛋太咸了。 | Jīdàn tài xián le. | Trứng mặn quá.
+第二天，鸡蛋没有那么咸了。 | Dì èr tiān, jīdàn méiyǒu nàme xián le. | Ngày thứ hai, trứng không mặn như thế nữa.
+一个月以后，她会做五个菜了。 | Yí ge yuè yǐhòu, tā huì zuò wǔ ge cài le. | Một tháng sau, cô ấy đã biết nấu năm món.
+周末，她请同学们来吃饭。 | Zhōumò, tā qǐng tóngxuémen lái chīfàn. | Cuối tuần, cô ấy mời các bạn đến ăn cơm.
+大家都说：“真不错！” | Dàjiā dōu shuō: "Zhēn búcuò!" | Mọi người đều nói: "Ngon thật đấy!"
+
+! 第一次做不好，没关系。 | Dì yī cì zuò bù hǎo, méi guānxi. | Lần đầu làm không tốt, không sao cả.
+! 每天做一点儿，就会越来越好。 | Měi tiān zuò yìdiǎnr, jiù huì yuèláiyuè hǎo. | Mỗi ngày làm một chút, sẽ ngày càng tốt hơn.
+
+? 一个月以后，小兰会做几个菜？ | Một tháng sau, Tiểu Lan biết nấu mấy món? | 五个* | 一个 | 十个
+~ 咸 = mặn
+> Kể bằng tiếng Trung một việc bạn làm tốt hơn nhờ luyện mỗi ngày.
+
+@id zh-g3-neighbor
+@lang zh
+@shelf graded
+@level HSK3
+@title 新邻居
+@vi Hàng xóm mới
+@blurb Truyện cấp 3: nhà bên cạnh có hàng xóm mới, đêm nào cũng ồn. Tiểu Lan quyết định sang gõ cửa.
+
+## 1 | 晚上的声音 | Tiếng ồn ban đêm
+小兰住在一个安静的小区。 | Xiǎo Lán zhù zài yí ge ānjìng de xiǎoqū. | Tiểu Lan sống ở một khu nhà yên tĩnh.
+上个月，旁边搬来了新邻居。 | Shàng ge yuè, pángbiān bān lái le xīn línjū. | Tháng trước, nhà bên chuyển đến hàng xóm mới.
+从那以后，每天晚上十一点， | Cóng nà yǐhòu, měi tiān wǎnshang shíyī diǎn, | Từ đó, tối nào cũng mười một giờ,
+旁边都会传来很大的声音。 | pángbiān dōu huì chuán lái hěn dà de shēngyīn. | nhà bên lại vọng sang tiếng ồn rất to.
+小兰第二天要早起上班， | Xiǎo Lán dì èr tiān yào zǎo qǐ shàngbān, | Tiểu Lan hôm sau phải dậy sớm đi làm,
+可是她怎么也睡不着。 | kěshì tā zěnme yě shuì bu zháo. | nhưng cô ấy thế nào cũng không ngủ được.
+她很生气，想给经理打电话。 | Tā hěn shēngqì, xiǎng gěi jīnglǐ dǎ diànhuà. | Cô ấy rất bực, muốn gọi cho ban quản lý.
+她的妈妈说： | Tā de māma shuō: | Mẹ cô ấy nói:
+“先去和邻居说一说吧。” | "Xiān qù hé línjū shuō yi shuō ba." | "Con sang nói chuyện với hàng xóm trước đã."
+
+? 新邻居什么时候搬来的？ | Hàng xóm mới chuyển đến khi nào? | 上个月* | 去年 | 昨天
+? 小兰为什么睡不着？ | Vì sao Tiểu Lan không ngủ được? | 旁边声音很大* | 她生病了 | 她喝了咖啡
+~ 传来 = vọng lại, truyền tới
+> Bằng tiếng Trung: nếu hàng xóm ồn ào, bạn sẽ làm gì?
+
+## 2 | 敲门 | Gõ cửa
+第二天晚上，小兰敲了邻居的门。 | Dì èr tiān wǎnshang, Xiǎo Lán qiāo le línjū de mén. | Tối hôm sau, Tiểu Lan gõ cửa nhà hàng xóm.
+开门的是一个年轻的男人， | Kāi mén de shì yí ge niánqīng de nánrén, | Người mở cửa là một chàng trai trẻ,
+他手里拿着一把吉他。 | tā shǒu lǐ ná zhe yì bǎ jítā. | tay cầm cây đàn ghi-ta.
+“对不起，打扰你了。 | "Duìbuqǐ, dǎrǎo nǐ le. | "Xin lỗi đã làm phiền anh.
+你每天晚上弹琴，我睡不着。” | Nǐ měi tiān wǎnshang tán qín, wǒ shuì bu zháo." | Tối nào anh cũng đàn, tôi không ngủ được."
+男人很不好意思： | Nánrén hěn bù hǎoyìsi: | Chàng trai rất ngại:
+“真对不起！我白天上班， | "Zhēn duìbuqǐ! Wǒ báitiān shàngbān, | "Thật xin lỗi! Ban ngày tôi đi làm,
+只有晚上有时间练习。 | zhǐyǒu wǎnshang yǒu shíjiān liànxí. | chỉ có buổi tối mới có thời gian luyện.
+我不知道声音这么大。” | Wǒ bù zhīdào shēngyīn zhème dà." | Tôi không biết tiếng lại to như vậy."
+他们说好了： | Tāmen shuō hǎo le: | Họ thoả thuận với nhau:
+以后他十点以前练习。 | yǐhòu tā shí diǎn yǐqián liànxí. | sau này anh ấy luyện trước mười giờ.
+周末，他还请小兰听他弹了一首歌。 | Zhōumò, tā hái qǐng Xiǎo Lán tīng tā tán le yì shǒu gē. | Cuối tuần, anh ấy còn mời Tiểu Lan nghe anh đàn một bài.
+
+! 生气的时候，先别打电话找经理。 | Shēngqì de shíhou, xiān bié dǎ diànhuà zhǎo jīnglǐ. | Khi bực, đừng vội gọi điện tìm ban quản lý.
+! 去敲一下门，好好说话。 | Qù qiāo yíxià mén, hǎohǎo shuōhuà. | Hãy sang gõ cửa, nói chuyện tử tế.
+! 很多问题，一句话就能解决。 | Hěn duō wèntí, yí jù huà jiù néng jiějué. | Nhiều vấn đề chỉ cần một câu nói là giải quyết được.
+
+? 他们说好了什么？ | Họ thoả thuận điều gì? | 十点以前练习* | 不再弹琴 | 他要搬家
+~ 吉他 = đàn ghi-ta
+~ 打扰 = làm phiền
+> Viết bằng tiếng Trung một câu nhờ hàng xóm giữ yên lặng thật lịch sự.
+
+@id zh-g3-phone
+@lang zh
+@shelf graded
+@level HSK3
+@title 放下手机
+@vi Đặt điện thoại xuống
+@blurb Truyện cấp 3: Tiểu Minh cầm điện thoại suốt ngày, cho đến khi cả nhà làm một thí nghiệm nhỏ.
+
+## 1 | 一直看手机 | Lúc nào cũng nhìn điện thoại
+小明今年十六岁。 | Xiǎo Míng jīnnián shíliù suì. | Tiểu Minh năm nay mười sáu tuổi.
+他一有时间就看手机。 | Tā yì yǒu shíjiān jiù kàn shǒujī. | Hễ có thời gian là cậu xem điện thoại.
+吃饭的时候看，走路的时候也看。 | Chīfàn de shíhou kàn, zǒulù de shíhou yě kàn. | Lúc ăn cơm xem, lúc đi đường cũng xem.
+晚上他常常一点才睡觉。 | Wǎnshang tā chángcháng yì diǎn cái shuìjiào. | Buổi tối cậu thường một giờ sáng mới ngủ.
+上课的时候，他总是很累。 | Shàngkè de shíhou, tā zǒngshì hěn lèi. | Trong giờ học, cậu lúc nào cũng mệt.
+这次考试，他的成绩下降了很多。 | Zhè cì kǎoshì, tā de chéngjì xiàjiàng le hěn duō. | Kỳ thi này, điểm của cậu giảm nhiều.
+爸爸没有生气， | Bàba méiyǒu shēngqì, | Bố không giận,
+他说：“我们全家一起做个试验吧。” | tā shuō: "Wǒmen quán jiā yìqǐ zuò ge shìyàn ba." | ông nói: "Cả nhà mình cùng làm một thí nghiệm nhé."
+
+? 小明晚上常常几点睡觉？ | Tiểu Minh buổi tối thường mấy giờ ngủ? | 一点* | 十点 | 九点
+? 爸爸听到成绩以后做了什么？ | Nghe điểm xong, bố làm gì? | 提出一个试验* | 很生气 | 拿走了手机
+~ 试验 = thí nghiệm, thử
+> Nói bằng tiếng Trung: mỗi ngày bạn dùng điện thoại mấy tiếng?
+
+## 2 | 一个星期 | Một tuần
+试验很简单： | Shìyàn hěn jiǎndān: | Thí nghiệm rất đơn giản:
+每天晚上八点以后， | měi tiān wǎnshang bā diǎn yǐhòu, | sau tám giờ tối mỗi ngày,
+全家人都不用手机。 | quán jiā rén dōu bú yòng shǒujī. | cả nhà đều không dùng điện thoại.
+爸爸妈妈也一样。 | Bàba māma yě yíyàng. | Bố mẹ cũng vậy.
+第一天，小明觉得很难受。 | Dì yī tiān, Xiǎo Míng juéde hěn nánshòu. | Ngày đầu, Tiểu Minh thấy rất khó chịu.
+第二天，他和爸爸下了一盘棋。 | Dì èr tiān, tā hé bàba xià le yì pán qí. | Ngày thứ hai, cậu chơi một ván cờ với bố.
+第三天，他看完了一本书。 | Dì sān tiān, tā kàn wán le yì běn shū. | Ngày thứ ba, cậu đọc xong một cuốn sách.
+一个星期以后，他每天十一点就睡了， | Yí ge xīngqī yǐhòu, tā měi tiān shíyī diǎn jiù shuì le, | Một tuần sau, cậu ngủ lúc mười một giờ,
+上课也不累了。 | shàngkè yě bú lèi le. | đi học cũng không mệt nữa.
+他说：“我以前不知道，晚上有这么长。” | Tā shuō: "Wǒ yǐqián bù zhīdào, wǎnshang yǒu zhème cháng." | Cậu nói: "Trước đây con không biết buổi tối dài đến thế."
+
+! 手机不是坏东西， | Shǒujī bú shì huài dōngxi, | Điện thoại không phải thứ xấu,
+! 可是它会拿走你的时间。 | kěshì tā huì ná zǒu nǐ de shíjiān. | nhưng nó sẽ lấy mất thời gian của bạn.
+! 想让孩子改变，大人先改变。 | Xiǎng ràng háizi gǎibiàn, dàren xiān gǎibiàn. | Muốn con thay đổi, người lớn hãy thay đổi trước.
+
+? 试验是什么？ | Thí nghiệm là gì? | 晚上八点以后不用手机* | 每天跑步 | 不去学校
+~ 难受 = khó chịu
+~ 下棋 = chơi cờ
+> Đặt một quy tắc dùng điện thoại cho bản thân bằng 2 câu tiếng Trung.
+
+@id zh-g3-exam
+@lang zh
+@shelf graded
+@level HSK3
+@title 考试以前
+@vi Trước kỳ thi
+@blurb Truyện cấp 3: Tiểu Lan sắp thi HSK, càng học càng lo, và một lời khuyên của cô giáo.
+
+## 1 | 越学越紧张 | Càng học càng căng thẳng
+下个月，小兰要参加汉语考试。 | Xià ge yuè, Xiǎo Lán yào cānjiā Hànyǔ kǎoshì. | Tháng sau, Tiểu Lan sẽ thi tiếng Trung.
+她每天学到很晚， | Tā měi tiān xué dào hěn wǎn, | Ngày nào cô ấy cũng học đến khuya,
+可是越学越紧张。 | kěshì yuè xué yuè jǐnzhāng. | nhưng càng học càng căng thẳng.
+她总觉得自己记不住生词。 | Tā zǒng juéde zìjǐ jì bu zhù shēngcí. | Cô ấy luôn thấy mình không nhớ được từ mới.
+有一天，她在课上哭了。 | Yǒu yì tiān, tā zài kè shang kū le. | Có một hôm, cô ấy khóc trong giờ học.
+下课以后，王老师请她留下来。 | Xiàkè yǐhòu, Wáng lǎoshī qǐng tā liú xiàlai. | Tan học, cô Vương mời cô ấy ở lại.
+
+? 小兰为什么紧张？ | Vì sao Tiểu Lan căng thẳng? | 她觉得记不住生词* | 她没有书 | 老师很生气
+> Nói bằng tiếng Trung: trước kỳ thi bạn thường cảm thấy thế nào?
+
+## 2 | 老师的办法 | Cách của cô giáo
+王老师拿出一张纸， | Wáng lǎoshī ná chū yì zhāng zhǐ, | Cô Vương lấy ra một tờ giấy,
+请小兰写下她认识的汉字。 | qǐng Xiǎo Lán xiě xià tā rènshi de Hànzì. | bảo Tiểu Lan viết ra những chữ Hán cô ấy biết.
+小兰写了十分钟，写了满满一张。 | Xiǎo Lán xiě le shí fēnzhōng, xiě le mǎnmǎn yì zhāng. | Tiểu Lan viết mười phút, kín cả một trang.
+老师笑着说： | Lǎoshī xiào zhe shuō: | Cô giáo cười nói:
+“你看，你已经会这么多了。 | "Nǐ kàn, nǐ yǐjīng huì zhème duō le. | "Em xem, em đã biết nhiều thế này rồi.
+你不是不会，是太累了。” | Nǐ bú shì bú huì, shì tài lèi le." | Em không phải là không biết, mà là quá mệt."
+老师让她每天十一点以前睡觉， | Lǎoshī ràng tā měi tiān shíyī diǎn yǐqián shuìjiào, | Cô bảo cô ấy mỗi ngày ngủ trước mười một giờ,
+每天做一套练习题，做完就休息。 | měi tiān zuò yí tào liànxí tí, zuò wán jiù xiūxi. | mỗi ngày làm một bộ đề luyện, làm xong là nghỉ.
+一个月以后，小兰考得很好。 | Yí ge yuè yǐhòu, Xiǎo Lán kǎo de hěn hǎo. | Một tháng sau, Tiểu Lan thi rất tốt.
+
+! 紧张的时候，看看自己已经会了什么。 | Jǐnzhāng de shíhou, kànkan zìjǐ yǐjīng huì le shénme. | Khi căng thẳng, hãy nhìn lại những gì mình đã biết.
+! 学得多不如学得好。 | Xué de duō bùrú xué de hǎo. | Học nhiều không bằng học tốt.
+! 睡好觉，也是在准备考试。 | Shuì hǎo jiào, yě shì zài zhǔnbèi kǎoshì. | Ngủ đủ giấc cũng là đang chuẩn bị cho kỳ thi.
+
+? 老师让小兰做什么？ | Cô giáo bảo Tiểu Lan làm gì? | 早点儿睡觉，每天做一套题* | 每天学到两点 | 不参加考试
+~ 满满 = đầy, kín
+> Lập kế hoạch ôn thi 1 tuần bằng 3 câu tiếng Trung.
+
+@id zh-g3-delivery
+@lang zh
+@shelf graded
+@level HSK3
+@title 送外卖的人
+@vi Người giao đồ ăn
+@blurb Truyện cấp 3: một đêm mưa, đồ ăn đến muộn, và câu chuyện phía sau cánh cửa.
+
+## 1 | 晚了二十分钟 | Muộn hai mươi phút
+那天晚上下着大雨。 | Nà tiān wǎnshang xià zhe dà yǔ. | Tối hôm đó trời mưa to.
+小明在网上叫了外卖。 | Xiǎo Míng zài wǎngshang jiào le wàimài. | Tiểu Minh đặt đồ ăn trên mạng.
+手机上说，三十分钟送到。 | Shǒujī shang shuō, sānshí fēnzhōng sòng dào. | Trên điện thoại báo ba mươi phút sẽ giao tới.
+可是五十分钟过去了，饭还没到。 | Kěshì wǔshí fēnzhōng guòqu le, fàn hái méi dào. | Nhưng năm mươi phút trôi qua, đồ ăn vẫn chưa tới.
+小明很饿，也很生气。 | Xiǎo Míng hěn è, yě hěn shēngqì. | Tiểu Minh rất đói, cũng rất bực.
+他想：“我要给他一个差评。” | Tā xiǎng: "Wǒ yào gěi tā yí ge chàpíng." | Cậu nghĩ: "Mình sẽ đánh giá xấu anh ta."
+
+? 外卖晚了多长时间？ | Đồ ăn đến muộn bao lâu? | 二十分钟* | 五十分钟 | 三十分钟
+~ 差评 = đánh giá xấu
+> Nói bằng tiếng Trung: bạn hay đặt đồ ăn gì?
+
+## 2 | 门外的人 | Người ngoài cửa
+有人敲门了。 | Yǒu rén qiāo mén le. | Có người gõ cửa.
+门外站着一个中年男人，全身都湿了。 | Mén wài zhàn zhe yí ge zhōngnián nánrén, quánshēn dōu shī le. | Ngoài cửa là một người đàn ông trung niên, ướt sũng cả người.
+可是他手里的饭一点儿也没湿。 | Kěshì tā shǒu lǐ de fàn yìdiǎnr yě méi shī. | Nhưng hộp cơm trong tay ông không ướt chút nào.
+“对不起，路上车坏了，我是走过来的。” | "Duìbuqǐ, lùshang chē huài le, wǒ shì zǒu guòlai de." | "Xin lỗi, xe tôi hỏng giữa đường, tôi đi bộ đến."
+小明看着他，不知道说什么。 | Xiǎo Míng kàn zhe tā, bù zhīdào shuō shénme. | Tiểu Minh nhìn ông, không biết nói gì.
+他给了那个人一条毛巾和一瓶热水。 | Tā gěi le nàge rén yì tiáo máojīn hé yì píng rè shuǐ. | Cậu đưa người đó một chiếc khăn và một chai nước nóng.
+那天，他给了一个好评。 | Nà tiān, tā gěi le yí ge hǎopíng. | Hôm đó, cậu đánh giá tốt.
+
+! 生气以前，先想一想别人遇到了什么。 | Shēngqì yǐqián, xiān xiǎng yi xiǎng biérén yùdào le shénme. | Trước khi nổi giận, hãy nghĩ xem người khác đã gặp chuyện gì.
+! 一句谢谢，一条毛巾， | Yí jù xièxie, yì tiáo máojīn, | Một lời cảm ơn, một chiếc khăn,
+! 能让别人的晚上不一样。 | néng ràng biérén de wǎnshang bù yíyàng. | có thể làm buổi tối của người khác khác đi.
+
+? 为什么外卖晚了？ | Vì sao đồ ăn đến muộn? | 车坏了，他走过来* | 他忘了 | 饭店关门了
+~ 湿 = ướt
+~ 毛巾 = khăn
+> Viết bằng tiếng Trung một lời cảm ơn gửi người giao hàng.
+
+@id zh-g3-grandma
+@lang zh
+@shelf graded
+@level HSK3
+@title 奶奶学用手机
+@vi Bà học dùng điện thoại
+@blurb Truyện cấp 3: bà bảy mươi tuổi muốn học gọi video, và cháu gái học được sự kiên nhẫn.
+
+## 1 | 我太老了 | Bà già quá rồi
+奶奶今年七十岁了。 | Nǎinai jīnnián qīshí suì le. | Bà năm nay bảy mươi tuổi.
+小兰给她买了一个新手机。 | Xiǎo Lán gěi tā mǎi le yí ge xīn shǒujī. | Tiểu Lan mua cho bà một chiếc điện thoại mới.
+奶奶想学怎么打视频电话， | Nǎinai xiǎng xué zěnme dǎ shìpín diànhuà, | Bà muốn học cách gọi video,
+因为她的儿子在外国工作。 | yīnwèi tā de érzi zài wàiguó gōngzuò. | vì con trai bà làm việc ở nước ngoài.
+小兰教了一次，奶奶忘了。 | Xiǎo Lán jiāo le yí cì, nǎinai wàng le. | Tiểu Lan dạy một lần, bà quên.
+又教了一次，奶奶又忘了。 | Yòu jiāo le yí cì, nǎinai yòu wàng le. | Dạy thêm lần nữa, bà lại quên.
+小兰有点儿不耐烦了。 | Xiǎo Lán yǒudiǎnr bú nàifán le. | Tiểu Lan bắt đầu hơi mất kiên nhẫn.
+奶奶说：“算了，我太老了，学不会。” | Nǎinai shuō: "Suàn le, wǒ tài lǎo le, xué bu huì." | Bà nói: "Thôi, bà già quá rồi, không học được."
+
+? 奶奶为什么想学打视频电话？ | Vì sao bà muốn học gọi video? | 她的儿子在外国* | 她想看电影 | 她想买东西
+~ 不耐烦 = mất kiên nhẫn
+> Nói bằng tiếng Trung: bạn từng dạy ai dùng điện thoại chưa?
+
+## 2 | 写在本子上 | Viết vào sổ
+小兰想起了小时候。 | Xiǎo Lán xiǎng qǐ le xiǎoshíhou. | Tiểu Lan nhớ lại hồi nhỏ.
+那时候，奶奶教她写字， | Nà shíhou, nǎinai jiāo tā xiě zì, | Hồi đó, bà dạy cô viết chữ,
+一个字教了很多遍，从来没有生气。 | yí ge zì jiāo le hěn duō biàn, cónglái méiyǒu shēngqì. | một chữ dạy rất nhiều lần, chưa bao giờ nổi giận.
+小兰拿来一个本子， | Xiǎo Lán ná lái yí ge běnzi, | Tiểu Lan lấy một cuốn sổ,
+把每一步都写下来，还画了图。 | bǎ měi yí bù dōu xiě xiàlai, hái huà le tú. | ghi lại từng bước, còn vẽ hình.
+“奶奶，忘了就看本子。” | "Nǎinai, wàng le jiù kàn běnzi." | "Bà ơi, quên thì xem sổ nhé."
+第二天晚上，小兰的手机响了。 | Dì èr tiān wǎnshang, Xiǎo Lán de shǒujī xiǎng le. | Tối hôm sau, điện thoại Tiểu Lan đổ chuông.
+是奶奶打来的视频电话！ | Shì nǎinai dǎ lái de shìpín diànhuà! | Là cuộc gọi video bà gọi tới!
+
+! 学东西没有太老的时候。 | Xué dōngxi méiyǒu tài lǎo de shíhou. | Học điều gì cũng không bao giờ là quá già.
+! 别人教我们的时候很耐心， | Biérén jiāo wǒmen de shíhou hěn nàixīn, | Khi người khác dạy ta, họ rất kiên nhẫn,
+! 我们教别人的时候也要耐心。 | wǒmen jiāo biérén de shíhou yě yào nàixīn. | khi ta dạy người khác cũng phải kiên nhẫn.
+
+? 小兰想了什么办法？ | Tiểu Lan nghĩ ra cách gì? | 把每一步写在本子上* | 不教了 | 买了一个新手机
+~ 响 = reo, kêu
+> Viết từng bước một việc bạn giỏi bằng 3 câu tiếng Trung.
+
+@id zh-g4-interview
+@lang zh
+@shelf graded
+@level HSK4
+@title 面试
+@vi Buổi phỏng vấn
+@blurb Truyện cấp 4: Tiểu Lan đi phỏng vấn việc đầu tiên và gặp một câu hỏi không có trong sách.
+
+## 1 | 准备 | Chuẩn bị
+小兰大学毕业了，正在找工作。 | Xiǎo Lán dàxué bìyè le, zhèngzài zhǎo gōngzuò. | Tiểu Lan tốt nghiệp đại học, đang tìm việc.
+她给二十家公司发了简历， | Tā gěi èrshí jiā gōngsī fā le jiǎnlì, | Cô ấy gửi hồ sơ cho hai mươi công ty,
+只有一家公司让她去面试。 | zhǐyǒu yì jiā gōngsī ràng tā qù miànshì. | chỉ một công ty gọi cô ấy đi phỏng vấn.
+面试以前，她在网上查了很多资料， | Miànshì yǐqián, tā zài wǎngshang chá le hěn duō zīliào, | Trước buổi phỏng vấn, cô ấy tra rất nhiều tài liệu trên mạng,
+把常见的问题和答案都背了下来。 | bǎ chángjiàn de wèntí hé dá'àn dōu bèi le xiàlai. | học thuộc hết các câu hỏi và câu trả lời thường gặp.
+那天早上，她穿上新买的皮鞋， | Nà tiān zǎoshang, tā chuān shang xīn mǎi de píxié, | Sáng hôm đó, cô ấy đi đôi giày da mới mua,
+提前半个小时到了公司。 | tíqián bàn ge xiǎoshí dào le gōngsī. | đến công ty sớm nửa tiếng.
+她心里非常紧张。 | Tā xīnlǐ fēicháng jǐnzhāng. | Trong lòng cô ấy vô cùng căng thẳng.
+
+? 有几家公司让小兰去面试？ | Có mấy công ty gọi Tiểu Lan đi phỏng vấn? | 一家* | 二十家 | 两家
+? 面试以前，小兰做了什么？ | Trước buổi phỏng vấn, Tiểu Lan làm gì? | 背了常见的问题和答案* | 去旅行 | 买了新手机
+~ 简历 = hồ sơ xin việc, CV
+~ 提前 = sớm hơn, trước
+> Nói bằng tiếng Trung: bạn sẽ chuẩn bị gì cho một buổi phỏng vấn?
+
+## 2 | 一个问题 | Một câu hỏi
+面试开始了。 | Miànshì kāishǐ le. | Buổi phỏng vấn bắt đầu.
+前面的问题，她都回答得很好。 | Qiánmian de wèntí, tā dōu huídá de hěn hǎo. | Các câu đầu, cô ấy đều trả lời rất tốt.
+最后，经理问： | Zuìhòu, jīnglǐ wèn: | Cuối cùng, giám đốc hỏi:
+“你说一个你失败的经历吧。” | "Nǐ shuō yí ge nǐ shībài de jīnglì ba." | "Em kể một lần em thất bại đi."
+网上没有这个问题的答案。 | Wǎngshang méiyǒu zhège wèntí de dá'àn. | Trên mạng không có đáp án cho câu này.
+小兰想了一会儿，说了真话： | Xiǎo Lán xiǎng le yíhuìr, shuō le zhēn huà: | Tiểu Lan nghĩ một lúc, rồi nói thật:
+“我第一次考HSK没有通过。 | "Wǒ dì yī cì kǎo HSK méiyǒu tōngguò. | "Lần đầu thi HSK em không đỗ.
+后来我改变了学习方法， | Hòulái wǒ gǎibiàn le xuéxí fāngfǎ, | Sau đó em đổi cách học,
+第二次考得很好。” | dì èr cì kǎo de hěn hǎo." | lần thứ hai thi rất tốt."
+经理点了点头。 | Jīnglǐ diǎn le diǎn tóu. | Giám đốc gật gật đầu.
+一个星期以后， | Yí ge xīngqī yǐhòu, | Một tuần sau,
+小兰收到了公司的通知。 | Xiǎo Lán shōudào le gōngsī de tōngzhī. | Tiểu Lan nhận được thông báo của công ty.
+
+! 背下来的答案，别人一听就知道。 | Bèi xiàlai de dá'àn, biérén yì tīng jiù zhīdào. | Câu trả lời học thuộc, người khác nghe là biết ngay.
+! 真实的经历，比完美的答案更有用。 | Zhēnshí de jīnglì, bǐ wánměi de dá'àn gèng yǒuyòng. | Trải nghiệm thật có ích hơn câu trả lời hoàn hảo.
+! 失败不可怕， | Shībài bù kěpà, | Thất bại không đáng sợ,
+! 重要的是从中学到了什么。 | zhòngyào de shì cóngzhōng xué dào le shénme. | quan trọng là học được gì từ đó.
+
+? 经理最后问了什么？ | Cuối cùng giám đốc hỏi gì? | 一个失败的经历* | 她的工资 | 她的家乡
+~ 经历 = trải nghiệm
+~ 通知 = thông báo
+> Kể bằng tiếng Trung một lần bạn thất bại và học được điều gì.
+
+@id zh-g4-parttime
+@lang zh
+@shelf graded
+@level HSK4
+@title 第一次打工
+@vi Lần đầu đi làm thêm
+@blurb Truyện cấp 4: Tiểu Minh làm thêm ở quán cà phê, làm vỡ một chiếc cốc vào ngày đầu tiên.
+
+## 1 | 打破了杯子 | Làm vỡ cốc
+暑假，小明在一家咖啡馆打工。 | Shǔjià, Xiǎo Míng zài yì jiā kāfēiguǎn dǎgōng. | Nghỉ hè, Tiểu Minh làm thêm ở một quán cà phê.
+这是他第一次工作， | Zhè shì tā dì yī cì gōngzuò, | Đây là lần đầu cậu đi làm,
+他很想表现得好一点儿。 | tā hěn xiǎng biǎoxiàn de hǎo yìdiǎnr. | cậu rất muốn thể hiện tốt.
+第一天中午，客人特别多。 | Dì yī tiān zhōngwǔ, kèrén tèbié duō. | Trưa ngày đầu, khách đặc biệt đông.
+他端着三杯咖啡走得太快， | Tā duān zhe sān bēi kāfēi zǒu de tài kuài, | Cậu bưng ba cốc cà phê đi quá nhanh,
+一不小心，杯子掉在了地上。 | yí bù xiǎoxīn, bēizi diào zài le dì shang. | sơ ý một cái, cốc rơi xuống đất.
+咖啡流了一地， | Kāfēi liú le yí dì, | Cà phê chảy lênh láng,
+一位顾客的衣服也脏了。 | yí wèi gùkè de yīfu yě zāng le. | áo của một vị khách cũng bị bẩn.
+小明的脸一下子红了。 | Xiǎo Míng de liǎn yíxiàzi hóng le. | Mặt Tiểu Minh lập tức đỏ bừng.
+
+? 小明在哪儿打工？ | Tiểu Minh làm thêm ở đâu? | 咖啡馆* | 饭店 | 超市
+? 杯子为什么掉了？ | Vì sao cốc bị rơi? | 他走得太快了* | 客人推了他 | 地上有水
+~ 端 = bưng
+> Nói bằng tiếng Trung: bạn đã từng làm thêm việc gì?
+
+## 2 | 经理的话 | Lời của quản lý
+小明马上向顾客道歉， | Xiǎo Míng mǎshàng xiàng gùkè dàoqiàn, | Tiểu Minh lập tức xin lỗi khách,
+又给她拿来了纸巾。 | yòu gěi tā ná lái le zhǐjīn. | lại mang khăn giấy đến cho cô ấy.
+他以为经理一定会批评他。 | Tā yǐwéi jīnglǐ yídìng huì pīpíng tā. | Cậu tưởng quản lý nhất định sẽ mắng cậu.
+可是下班以后，经理只说了一句话： | Kěshì xiàbān yǐhòu, jīnglǐ zhǐ shuō le yí jù huà: | Nhưng tan ca, quản lý chỉ nói một câu:
+“打破杯子没关系，你处理得很好。 | "Dǎpò bēizi méi guānxi, nǐ chǔlǐ de hěn hǎo. | "Làm vỡ cốc không sao, em xử lý rất tốt.
+明天开始，走慢一点儿。” | Míngtiān kāishǐ, zǒu màn yìdiǎnr." | Từ mai, đi chậm lại một chút."
+后来，小明再也没有打破过杯子。 | Hòulái, Xiǎo Míng zài yě méiyǒu dǎpò guo bēizi. | Về sau, Tiểu Minh không làm vỡ cốc lần nào nữa.
+他也明白了：犯错以后怎么做， | Tā yě míngbai le: fàncuò yǐhòu zěnme zuò, | Cậu cũng hiểu ra: làm gì sau khi mắc lỗi
+比犯错本身更重要。 | bǐ fàncuò běnshēn gèng zhòngyào. | quan trọng hơn chính cái lỗi.
+
+! 犯错以后，先道歉，再想办法。 | Fàncuò yǐhòu, xiān dàoqiàn, zài xiǎng bànfǎ. | Mắc lỗi rồi, xin lỗi trước, sau đó tìm cách.
+! 快不一定好，稳才能走得远。 | Kuài bù yídìng hǎo, wěn cái néng zǒu de yuǎn. | Nhanh chưa chắc đã tốt, vững mới đi được xa.
+
+? 经理对小明说了什么？ | Quản lý nói gì với Tiểu Minh? | 你处理得很好，以后走慢点儿* | 你明天不用来了 | 你要赔杯子
+~ 道歉 = xin lỗi
+~ 批评 = phê bình
+~ 处理 = xử lý
+> Bằng tiếng Trung, viết câu xin lỗi một khách hàng khi bạn làm sai.
+
+@id zh-g4-online
+@lang zh
+@shelf graded
+@level HSK4
+@title 网购的烦恼
+@vi Phiền toái khi mua hàng trên mạng
+@blurb Truyện cấp 4: một chiếc áo khoác giá rẻ bất ngờ, và bài học về ảnh trên mạng.
+
+## 1 | 便宜的外套 | Chiếc áo khoác rẻ
+冬天快到了，小兰想买一件外套。 | Dōngtiān kuài dào le, Xiǎo Lán xiǎng mǎi yí jiàn wàitào. | Mùa đông sắp đến, Tiểu Lan muốn mua một chiếc áo khoác.
+她在网上看到一件， | Tā zài wǎngshang kàndào yí jiàn, | Cô ấy thấy một chiếc trên mạng,
+图片上的外套非常好看， | túpiàn shang de wàitào fēicháng hǎokàn, | áo trong ảnh vô cùng đẹp,
+价钱只有商场的三分之一。 | jiàqián zhǐyǒu shāngchǎng de sān fēn zhī yī. | giá chỉ bằng một phần ba ở trung tâm thương mại.
+她没有多想，马上就付了钱。 | Tā méiyǒu duō xiǎng, mǎshàng jiù fù le qián. | Cô ấy không nghĩ nhiều, trả tiền ngay.
+三天以后，快递到了。 | Sān tiān yǐhòu, kuàidì dào le. | Ba ngày sau, hàng được giao tới.
+她打开一看，大吃一惊： | Tā dǎkāi yí kàn, dà chī yì jīng: | Cô ấy mở ra xem, giật mình kinh ngạc:
+外套又薄又小，颜色也不一样。 | wàitào yòu báo yòu xiǎo, yánsè yě bù yíyàng. | áo vừa mỏng vừa nhỏ, màu cũng khác.
+
+? 外套的价钱怎么样？ | Giá chiếc áo thế nào? | 只有商场的三分之一* | 比商场贵 | 和商场一样
+~ 大吃一惊 = giật mình kinh ngạc
+~ 薄 = mỏng
+> Nói bằng tiếng Trung: bạn từng mua phải đồ không giống ảnh chưa?
+
+## 2 | 退货 | Trả hàng
+小兰很生气，马上联系了卖家。 | Xiǎo Lán hěn shēngqì, mǎshàng liánxì le màijiā. | Tiểu Lan rất bực, lập tức liên hệ người bán.
+卖家开始不同意退货， | Màijiā kāishǐ bù tóngyì tuìhuò, | Lúc đầu người bán không đồng ý cho trả,
+说图片只是“参考”。 | shuō túpiàn zhǐshì "cānkǎo". | nói ảnh chỉ để "tham khảo".
+小兰没有放弃。 | Xiǎo Lán méiyǒu fàngqì. | Tiểu Lan không bỏ cuộc.
+她拍了照片，量了大小， | Tā pāi le zhàopiàn, liáng le dàxiǎo, | Cô ấy chụp ảnh, đo kích cỡ,
+把证据都发给了网站。 | bǎ zhèngjù dōu fā gěi le wǎngzhàn. | gửi hết bằng chứng cho trang web.
+最后，网站让卖家退了钱。 | Zuìhòu, wǎngzhàn ràng màijiā tuì le qián. | Cuối cùng, trang web buộc người bán hoàn tiền.
+从那以后，小兰网购以前， | Cóng nà yǐhòu, Xiǎo Lán wǎnggòu yǐqián, | Từ đó, trước khi mua hàng trên mạng,
+都会先看看别人的评价。 | dōu huì xiān kànkan biérén de píngjià. | Tiểu Lan đều xem đánh giá của người khác trước.
+
+! 太便宜的东西，要多想一想。 | Tài piányi de dōngxi, yào duō xiǎng yi xiǎng. | Đồ quá rẻ thì phải nghĩ kỹ.
+! 遇到问题，冷静地收集证据， | Yùdào wèntí, lěngjìng de shōují zhèngjù, | Gặp vấn đề, hãy bình tĩnh thu thập bằng chứng,
+! 比大声吵架有用得多。 | bǐ dà shēng chǎojià yǒuyòng de duō. | có ích hơn nhiều so với to tiếng cãi nhau.
+
+? 最后结果怎么样？ | Kết quả cuối cùng thế nào? | 卖家退了钱* | 小兰没有拿到钱 | 卖家送了一件新外套
+~ 退货 = trả hàng
+~ 证据 = bằng chứng
+~ 评价 = đánh giá
+> Viết bằng tiếng Trung 3 điều bạn kiểm tra trước khi mua hàng trên mạng.
+
+@id zh-g4-match
+@lang zh
+@shelf graded
+@level HSK4
+@title 输了的比赛
+@vi Trận đấu thua
+@blurb Truyện cấp 4: một đội tuyển thua trận quan trọng nhất năm, và cuộc họp sau trận của huấn luyện viên.
+
+## 1 | 零比三 | Không - ba
+这是全国大赛的最后一场比赛。 | Zhè shì quánguó dàsài de zuìhòu yì chǎng bǐsài. | Đây là trận cuối cùng của giải toàn quốc.
+小王的队准备了整整一年。 | Xiǎo Wáng de duì zhǔnbèi le zhěngzhěng yì nián. | Đội của Tiểu Vương đã chuẩn bị tròn một năm.
+可是比赛一开始，他们就很紧张， | Kěshì bǐsài yì kāishǐ, tāmen jiù hěn jǐnzhāng, | Nhưng trận vừa bắt đầu, họ đã rất căng thẳng,
+犯了很多平时不会犯的错。 | fàn le hěn duō píngshí bú huì fàn de cuò. | mắc nhiều lỗi mà bình thường không mắc.
+最后，他们零比三输了。 | Zuìhòu, tāmen líng bǐ sān shū le. | Cuối cùng, họ thua không - ba.
+队员们都低着头，没有人说话。 | Duìyuánmen dōu dī zhe tóu, méiyǒu rén shuōhuà. | Các thành viên đều cúi đầu, không ai nói gì.
+有人哭了，有人生自己的气。 | Yǒu rén kū le, yǒu rén shēng zìjǐ de qì. | Có người khóc, có người tự giận bản thân.
+
+? 他们输了几比几？ | Họ thua mấy - mấy? | 零比三* | 一比二 | 二比三
+? 比赛的时候他们怎么了？ | Trong trận họ bị làm sao? | 很紧张，犯了很多错* | 有人受伤了 | 迟到了
+> Nói bằng tiếng Trung: sau một trận thua, bạn thường làm gì?
+
+## 2 | 教练的会 | Buổi họp của huấn luyện viên
+第二天，教练把大家叫到一起。 | Dì èr tiān, jiàoliàn bǎ dàjiā jiào dào yìqǐ. | Hôm sau, huấn luyện viên gọi mọi người lại.
+大家以为他会批评每一个人。 | Dàjiā yǐwéi tā huì pīpíng měi yí ge rén. | Mọi người tưởng ông sẽ phê bình từng người.
+可是教练先说了自己的错： | Kěshì jiàoliàn xiān shuō le zìjǐ de cuò: | Nhưng huấn luyện viên nói lỗi của mình trước:
+“我给你们的压力太大了。” | "Wǒ gěi nǐmen de yālì tài dà le." | "Tôi tạo áp lực cho các em quá lớn."
+然后，他让每个队员写下三件事： | Ránhòu, tā ràng měi ge duìyuán xiě xià sān jiàn shì: | Sau đó, ông bảo mỗi thành viên viết ra ba điều:
+一件做得好的，一件做得不好的， | yí jiàn zuò de hǎo de, yí jiàn zuò de bù hǎo de, | một điều làm tốt, một điều làm chưa tốt,
+还有一件下次要改的。 | hái yǒu yí jiàn xià cì yào gǎi de. | và một điều lần sau phải sửa.
+他们一起看比赛的视频， | Tāmen yìqǐ kàn bǐsài de shìpín, | Họ cùng xem lại video trận đấu,
+一个问题一个问题地讨论。 | yí ge wèntí yí ge wèntí de tǎolùn. | thảo luận từng vấn đề một.
+第二年，他们拿了冠军。 | Dì èr nián, tāmen ná le guànjūn. | Năm sau, họ giành chức vô địch.
+
+! 输了以后，先找自己的问题， | Shū le yǐhòu, xiān zhǎo zìjǐ de wèntí, | Thua rồi, hãy tìm lỗi của mình trước,
+! 不找别人的问题。 | bù zhǎo biérén de wèntí. | đừng tìm lỗi người khác.
+! 好的领导，先承认自己的错。 | Hǎo de lǐngdǎo, xiān chéngrèn zìjǐ de cuò. | Người lãnh đạo giỏi nhận lỗi của mình trước.
+! 一次失败，如果认真总结， | Yí cì shībài, rúguǒ rènzhēn zǒngjié, | Một lần thất bại, nếu tổng kết nghiêm túc,
+! 就是下一次成功的开始。 | jiù shì xià yí cì chénggōng de kāishǐ. | sẽ là khởi đầu cho lần thành công tiếp theo.
+
+? 教练让每个队员写什么？ | Huấn luyện viên bảo mỗi người viết gì? | 好的、不好的、要改的三件事* | 一封信 | 自己的名字
+~ 冠军 = nhà vô địch
+~ 承认 = thừa nhận
+~ 总结 = tổng kết
+> Sau trận đấu gần nhất của bạn, viết ba điều theo cách của huấn luyện viên bằng tiếng Trung.
+
+@id zh-g4-home
+@lang zh
+@shelf graded
+@level HSK4
+@title 回老家过年
+@vi Về quê ăn Tết
+@blurb Truyện cấp 4: Tiểu Minh làm việc ở thành phố lớn, ba năm mới về quê ăn Tết một lần.
+
+## 1 | 三年 | Ba năm
+小明在上海工作已经三年了。 | Xiǎo Míng zài Shànghǎi gōngzuò yǐjīng sān nián le. | Tiểu Minh làm việc ở Thượng Hải đã ba năm.
+每年春节，他都说工作太忙， | Měi nián Chūnjié, tā dōu shuō gōngzuò tài máng, | Năm nào Tết đến, cậu cũng nói công việc quá bận,
+没有时间回老家。 | méiyǒu shíjiān huí lǎojiā. | không có thời gian về quê.
+今年，妈妈在电话里说： | Jīnnián, māma zài diànhuà lǐ shuō: | Năm nay, mẹ nói trong điện thoại:
+“你爸爸的身体不太好，你回来看看吧。” | "Nǐ bàba de shēntǐ bú tài hǎo, nǐ huílai kànkan ba." | "Sức khoẻ bố con không tốt lắm, con về thăm nhà đi."
+小明马上请了假，买了火车票。 | Xiǎo Míng mǎshàng qǐng le jià, mǎi le huǒchēpiào. | Tiểu Minh lập tức xin nghỉ, mua vé tàu.
+火车上人很多，他站了十个小时。 | Huǒchē shang rén hěn duō, tā zhàn le shí ge xiǎoshí. | Trên tàu rất đông, cậu đứng suốt mười tiếng.
+
+? 小明为什么三年没回家？ | Vì sao ba năm Tiểu Minh không về nhà? | 他说工作太忙* | 他不喜欢老家 | 他没有钱
+? 今年他为什么回家？ | Vì sao năm nay cậu về nhà? | 爸爸身体不太好* | 公司放假 | 他要结婚
+> Nói bằng tiếng Trung: lần gần nhất bạn về quê là khi nào?
+
+## 2 | 一桌饭 | Một mâm cơm
+到家的时候，已经是晚上了。 | Dào jiā de shíhou, yǐjīng shì wǎnshang le. | Về đến nhà, trời đã tối.
+爸爸站在门口等他， | Bàba zhàn zài ménkǒu děng tā, | Bố đứng ở cửa đợi cậu,
+看起来比以前老了很多。 | kàn qǐlai bǐ yǐqián lǎo le hěn duō. | trông già đi nhiều so với trước.
+妈妈做了一桌子菜， | Māma zuò le yì zhuōzi cài, | Mẹ nấu cả một mâm,
+都是他小时候最爱吃的。 | dōu shì tā xiǎoshíhou zuì ài chī de. | toàn món cậu thích nhất hồi nhỏ.
+吃饭的时候， | Chīfàn de shíhou, | Trong bữa ăn,
+爸爸一直问他工作累不累， | bàba yìzhí wèn tā gōngzuò lèi bu lèi, | bố cứ hỏi công việc có mệt không,
+却一句也没说自己的病。 | què yí jù yě méi shuō zìjǐ de bìng. | nhưng chẳng nói một câu nào về bệnh của mình.
+那天晚上，小明想了很久。 | Nà tiān wǎnshang, Xiǎo Míng xiǎng le hěn jiǔ. | Đêm hôm đó, Tiểu Minh nghĩ rất lâu.
+他决定，以后每个月 | Tā juédìng, yǐhòu měi ge yuè | Cậu quyết định từ nay mỗi tháng
+都给家里打视频电话， | dōu gěi jiā lǐ dǎ shìpín diànhuà, | đều gọi video về nhà,
+每年春节一定回来。 | měi nián Chūnjié yídìng huílai. | Tết năm nào cũng nhất định về.
+
+! 工作永远做不完， | Gōngzuò yǒngyuǎn zuò bu wán, | Công việc không bao giờ làm hết,
+! 可是父母会慢慢变老。 | kěshì fùmǔ huì mànmàn biàn lǎo. | nhưng cha mẹ sẽ dần già đi.
+! 最重要的人，不要总说"下次"。 | Zuì zhòngyào de rén, búyào zǒng shuō "xià cì". | Với những người quan trọng nhất, đừng mãi nói "lần sau".
+
+? 小明最后决定了什么？ | Cuối cùng Tiểu Minh quyết định gì? | 每月打视频电话，每年春节回家* | 换工作 | 搬回老家
+~ 却 = nhưng, lại
+~ 决定 = quyết định
+> Viết bằng tiếng Trung một lời nhắn gửi bố mẹ.

@@ -43,6 +43,7 @@ export const READ_ORDER = [
 ];
 
 export const SHELVES = [
+  { id: 'graded',  name: 'Đọc theo cấp HSK',       hint: 'Chuyện đời thường, chỉ dùng từ của đúng cấp', lang: 'zh' },
   { id: 'ai',      name: 'Truyện về AI',           hint: 'Truyện viết mới, chia theo trình độ' },
   { id: 'fable',   name: 'Chuyện thành ngữ',       hint: 'Thành ngữ cổ, kèm âm Hán Việt', lang: 'zh' },
   { id: 'true',    name: 'Chuyện có thật về AI',   hint: 'Những khoảnh khắc đã thay đổi lịch sử AI', lang: 'en' },

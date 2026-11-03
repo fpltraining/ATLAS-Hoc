@@ -183,12 +183,54 @@ export function buildStories({ quiet = false } = {}) {
   const order = [...oldIdx.map((s) => s.id).filter((id) => byId.has(id)), ...index.map((s) => s.id).filter((id) => !oldIdx.some((o) => o.id === id))];
   fs.writeFileSync(idxF, JSON.stringify(order.map((id) => byId.get(id))));
 
+  // Truyện tiếng Trung: bao nhiêu phần trăm chữ nằm trong từ thuộc đúng cấp HSK 2025 của truyện
+  const lvF = path.join(OUT, 'hsk2025.json');
+  const coverage = {};
+  if (fs.existsSync(lvF)) {
+    const lv = readJson(lvF);
+    const names = new Set(fs.readFileSync(path.join(ROOT, 'data-src', 'zh-extra.txt'), 'utf8').split(/\r?\n/)
+      .map((l) => l.split(' | ')).filter((p) => p.length === 4 && /tên|nước|họ/u.test(p[3])).map((p) => p[0]));
+    const lvNum = (w) => { const v = lv[w] || lv[w.replace(/儿$/, '')]; return v ? (v === '7-9' ? 7 : Number(v)) : null; };
+    for (const s of stories.filter((x) => x.lang === 'zh')) {
+      const max = Number(String(s.level).replace(/\D/g, '')) || 9;
+      let inLv = 0, all = 0;
+      const outside = new Set();
+      const lines = s.chapters.flatMap((c) => [...c.paras.flat(), ...(c.lesson || [])]).map(([t]) => t);
+      for (const line of lines) {
+        const chars = [...line];
+        let i = 0;
+        while (i < chars.length) {
+          if (!/[一-鿿]/u.test(chars[i])) { i++; continue; }
+          let len = Math.min(4, chars.length - i);
+          while (len > 1 && !lvNum(chars.slice(i, i + len).join('')) && !names.has(chars.slice(i, i + len).join(''))) len--;
+          const w = chars.slice(i, i + len).join('');
+          all += len;
+          const l = lvNum(w);
+          // Cụm ngoài cấp nhưng ghép được từ các từ trong cấp (个人 = 个 + 人) thì vẫn tính là đọc được
+          const parts = (x) => {
+            if (!x) return true;
+            for (let k = Math.min(4, [...x].length); k >= 1; k--) {
+              const head = [...x].slice(0, k).join(''), lh = lvNum(head);
+              if (lh && lh <= max && parts([...x].slice(k).join(''))) return true;
+            }
+            return false;
+          };
+          if (names.has(w) || (l && l <= max) || ([...w].length > 1 && parts(w))) inLv += len; else outside.add(w);
+          i += len;
+        }
+      }
+      coverage[s.id] = { pct: all ? Math.round((inLv / all) * 100) : 0, outside: [...outside] };
+    }
+  }
+
   if (!quiet) {
+    const cov = Object.entries(coverage).map(([id, c]) => `${id} ${c.pct}%${c.pct < 90 ? ` (ngoài cấp: ${c.outside.slice(0, 12).join('')})` : ''}`);
+    if (cov.length) console.log('Tỷ lệ chữ trong cấp:', `\n  ${cov.join('\n  ')}`);
     console.log('Bài đọc:', index.map((s) => `${s.id} ${s.chapters.length}ch ${s.words}${s.lang === 'zh' ? 'chữ' : 'w'}`).join(' | '));
     console.log('Dòng quá dài:', longLines.length ? `\n  ${longLines.join('\n  ')}` : 0);
     console.log('Chữ Hán chưa có dữ liệu nét:', [...noStroke].join('') || '(không có)');
   }
-  return { longLines, noStroke: [...noStroke] };
+  return { longLines, noStroke: [...noStroke], coverage };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) buildStories();

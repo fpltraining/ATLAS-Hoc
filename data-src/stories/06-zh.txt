@@ -1,7 +1,7 @@
 @id zh-robot
 @lang zh
 @shelf ai
-@level HSK1
+@level HSK4
 @title 爱问问题的机器人
 @vi Con robot hay hỏi
 @blurb Tiểu Ba là robot nhỏ trong một xưởng sửa xe. Cậu hỏi suốt ngày, cho tới một buổi sáng.
@@ -162,7 +162,7 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @id zh-rabbit
 @lang zh
 @shelf fable
-@level HSK2
+@level HSK3
 @title 守株待兔
 @vi Thủ chu đãi thố: Ôm cây đợi thỏ
 @blurb Thành ngữ hơn 2000 năm tuổi. Người Việt cũng dùng "ôm cây đợi thỏ". Nhưng ít ai biết người viết ra nó muốn chê điều gì.
@@ -252,7 +252,7 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @id zh-snake
 @lang zh
 @shelf fable
-@level HSK2
+@level HSK3
 @title 画蛇添足
 @vi Họa xà thiêm túc: Vẽ rắn thêm chân
 @blurb Vì sao làm thừa lại thành hỏng việc? Câu chuyện về một bình rượu, một con rắn có chân, và một vị tướng suýt mất tất cả.
@@ -327,7 +327,7 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @id zh-sheep
 @lang zh
 @shelf fable
-@level HSK3
+@level HSK4
 @title 亡羊补牢
 @vi Vong dương bổ lao: Mất dê mới vá chuồng
 @blurb Mất rồi mới sửa có muộn không? Thành ngữ này trả lời ngược với nhiều người nghĩ, và nó từng cứu cả một đất nước.
@@ -400,7 +400,7 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @id zh-universe
 @lang zh
 @shelf mystery
-@level HSK3
+@level HSK4
 @title 宇宙里有什么？
 @vi Trong vũ trụ có gì?
 @blurb Mọi thứ ta nhìn thấy chỉ chiếm khoảng 5% vũ trụ. Phần còn lại vẫn là bí ẩn, và chính những người dám nói "chưa biết" đã tìm ra điều đó.
@@ -544,7 +544,7 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @id zh-ocean
 @lang zh
 @shelf mystery
-@level HSK3
+@level HSK4
 @date 2026-04-01
 @title 海底有什么？
 @vi Dưới đáy biển có gì?
@@ -616,7 +616,7 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @id zh-news-law
 @lang zh
 @shelf news
-@level HSK3
+@level HSK4
 @date 2026-03-01
 @title 越南有了人工智能法
 @vi Việt Nam đã có luật trí tuệ nhân tạo
@@ -665,7 +665,7 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @id zh-news-robot
 @lang zh
 @shelf news
-@level HSK3
+@level HSK5
 @date 2026-08-12
 @title 机器人越来越便宜
 @vi Robot ngày càng rẻ
