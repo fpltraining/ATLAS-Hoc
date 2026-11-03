@@ -137,7 +137,7 @@ function voiceRow(lang, title, s, test) {
     },
   },
   h('option', { value: '' }, 'Tự chọn giọng tốt nhất'),
-  ...list.map((v) => h('option', { value: v.name, selected: v.name === s[key] }, `${v.name} · ${v.lang}`)));
+  ...list.map((v) => h('option', { value: v.voiceURI || v.name, selected: (v.voiceURI || v.name) === s[key] || v.name === s[key] }, audio.label(v))));
   return h('div.setting',
     h('div.grow', h('b', title), status, list.length ? sel : null),
     h('button.btn.sm', { onclick: test }, 'Thử'),
