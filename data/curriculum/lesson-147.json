@@ -1,0 +1,216 @@
+{
+ "id": 147,
+ "cn": "过节",
+ "title": "Lễ hội và tụ họp",
+ "goal": "Nói về đón lễ, dạ hội, mời khách, làm khách, họp, kỳ nghỉ, đại hội thể thao, du khách, và làm cùng nhau.",
+ "words": [
+  {
+   "w": "过节",
+   "py": "guòjié",
+   "hv": "quá tiết",
+   "vi": "đón lễ, ăn tết",
+   "pos": "động từ",
+   "note": "节 = \"tiết\" trong \"tiết Trung thu\", nghĩa là ngày lễ.",
+   "ex": [
+    {
+     "cn": "过节的时候，大家都回家。",
+     "py": "Guòjié de shíhou, dàjiā dōu huí jiā.",
+     "vi": "Dịp lễ, ai cũng về nhà."
+    }
+   ]
+  },
+  {
+   "w": "晚会",
+   "py": "wǎnhuì",
+   "hv": "vãn hội",
+   "vi": "dạ hội, buổi liên hoan tối",
+   "pos": "danh từ",
+   "note": "晚 (tối) + 会 (hội).",
+   "ex": [
+    {
+     "cn": "学校今晚有一个晚会。",
+     "py": "Xuéxiào jīn wǎn yǒu yí ge wǎnhuì.",
+     "vi": "Tối nay trường có một buổi liên hoan."
+    }
+   ]
+  },
+  {
+   "w": "请客",
+   "py": "qǐngkè",
+   "hv": "thỉnh khách",
+   "vi": "mời, đãi (trả tiền)",
+   "pos": "động từ",
+   "note": "Nói 今天我请客 nghĩa là \"hôm nay tôi mời, tôi trả tiền\".",
+   "ex": [
+    {
+     "cn": "今天我请客，大家别客气。",
+     "py": "Jīntiān wǒ qǐngkè, dàjiā bié kèqi.",
+     "vi": "Hôm nay tôi mời, mọi người đừng khách sáo."
+    }
+   ]
+  },
+  {
+   "w": "做客",
+   "py": "zuòkè",
+   "hv": "tố khách",
+   "vi": "làm khách, đến chơi nhà",
+   "pos": "động từ",
+   "note": "做 (làm) + 客 (khách).",
+   "ex": [
+    {
+     "cn": "欢迎你来我家做客。",
+     "py": "Huānyíng nǐ lái wǒ jiā zuòkè.",
+     "vi": "Hoan nghênh bạn đến nhà tôi chơi."
+    }
+   ]
+  },
+  {
+   "w": "开会",
+   "py": "kāihuì",
+   "hv": "khai hội",
+   "vi": "họp",
+   "pos": "động từ",
+   "note": "开 + 会 (cuộc họp).",
+   "ex": [
+    {
+     "cn": "经理在开会，请等一下。",
+     "py": "Jīnglǐ zài kāihuì, qǐng děng yíxià.",
+     "vi": "Giám đốc đang họp, xin đợi chút."
+    }
+   ]
+  },
+  {
+   "w": "假期",
+   "py": "jiàqī",
+   "hv": "giả kỳ",
+   "vi": "kỳ nghỉ",
+   "pos": "danh từ",
+   "note": "假 (nghỉ) + 期 (kỳ).",
+   "ex": [
+    {
+     "cn": "假期你有什么计划？",
+     "py": "Jiàqī nǐ yǒu shénme jìhuà?",
+     "vi": "Kỳ nghỉ bạn có kế hoạch gì?"
+    }
+   ]
+  },
+  {
+   "w": "休假",
+   "py": "xiūjià",
+   "hv": "hưu giả",
+   "vi": "nghỉ phép",
+   "pos": "động từ",
+   "note": "休 (nghỉ) + 假. Người đi làm nghỉ phép dùng 休假.",
+   "ex": [
+    {
+     "cn": "我下个月休假一个星期。",
+     "py": "Wǒ xià ge yuè xiūjià yí ge xīngqī.",
+     "vi": "Tháng sau tôi nghỉ phép một tuần."
+    }
+   ]
+  },
+  {
+   "w": "运动会",
+   "py": "yùndònghuì",
+   "hv": "vận động hội",
+   "vi": "đại hội thể thao",
+   "pos": "danh từ",
+   "note": "Chính là \"vận động hội\". Thế vận hội là 奥运会.",
+   "ex": [
+    {
+     "cn": "学校下周开运动会。",
+     "py": "Xuéxiào xià zhōu kāi yùndònghuì.",
+     "vi": "Tuần sau trường tổ chức hội thao."
+    }
+   ]
+  },
+  {
+   "w": "游客",
+   "py": "yóukè",
+   "hv": "du khách",
+   "vi": "du khách",
+   "pos": "danh từ",
+   "note": "Chính là \"du khách\".",
+   "ex": [
+    {
+     "cn": "这里每年有很多游客。",
+     "py": "Zhèlǐ měi nián yǒu hěn duō yóukè.",
+     "vi": "Ở đây mỗi năm có rất nhiều du khách."
+    }
+   ]
+  },
+  {
+   "w": "一块儿",
+   "py": "yíkuàir",
+   "hv": "nhất khối nhi",
+   "vi": "cùng nhau",
+   "pos": "phó từ",
+   "note": "Khẩu ngữ phương Bắc, nghĩa như 一起.",
+   "ex": [
+    {
+     "cn": "我们一块儿去吃饭吧。",
+     "py": "Wǒmen yíkuàir qù chīfàn ba.",
+     "vi": "Mình cùng đi ăn nhé."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "欢迎 + người + động từ",
+   "b": "欢迎你来做客 · 欢迎大家参加",
+   "d": "Mời ai đến làm gì một cách lịch sự.",
+   "ex": [
+    {
+     "cn": "欢迎大家来参加晚会。",
+     "py": "Huānyíng dàjiā lái cānjiā wǎnhuì.",
+     "vi": "Hoan nghênh mọi người đến dự buổi liên hoan."
+    },
+    {
+     "cn": "欢迎你再来。",
+     "py": "Huānyíng nǐ zài lái.",
+     "vi": "Mời bạn lại đến nhé."
+    }
+   ]
+  },
+  {
+   "t": "Chủ ngữ + 在 + động từ: đang",
+   "b": "他在开会 · 我在吃饭",
+   "d": "在 đứng trước động từ để nói việc đang diễn ra.",
+   "ex": [
+    {
+     "cn": "老师在上课，不能接电话。",
+     "py": "Lǎoshī zài shàngkè, bù néng jiē diànhuà.",
+     "vi": "Thầy đang dạy, không nghe điện thoại được."
+    },
+    {
+     "cn": "你在做什么？",
+     "py": "Nǐ zài zuò shénme?",
+     "vi": "Bạn đang làm gì?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "中秋节你们怎么过节？",
+   "py": "Zhōngqiū Jié nǐmen zěnme guòjié?",
+   "vi": "Trung thu các bạn đón lễ thế nào?"
+  },
+  {
+   "cn": "晚会上大家唱歌跳舞。",
+   "py": "Wǎnhuì shang dàjiā chànggē tiàowǔ.",
+   "vi": "Ở buổi liên hoan mọi người hát và nhảy."
+  },
+  {
+   "cn": "假期里游客特别多。",
+   "py": "Jiàqī lǐ yóukè tèbié duō.",
+   "vi": "Trong kỳ nghỉ du khách đặc biệt đông."
+  },
+  {
+   "cn": "周末来我家做客吧。",
+   "py": "Zhōumò lái wǒ jiā zuòkè ba.",
+   "vi": "Cuối tuần đến nhà tôi chơi nhé."
+  }
+ ]
+}

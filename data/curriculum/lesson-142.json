@@ -1,0 +1,216 @@
+{
+ "id": 142,
+ "cn": "练汉语",
+ "title": "Luyện ngoại ngữ",
+ "goal": "Nói về luyện tập, ghi nhớ, tra cứu, chọn lựa, câu, ngoại ngữ, hiểu biết và hứng thú.",
+ "words": [
+  {
+   "w": "练",
+   "py": "liàn",
+   "hv": "luyện",
+   "vi": "luyện, tập",
+   "pos": "động từ",
+   "note": "Chính là \"luyện\". 练习 là luyện tập; 练 đi một mình gọn hơn: 练口语.",
+   "ex": [
+    {
+     "cn": "我每天练一个小时口语。",
+     "py": "Wǒ měi tiān liàn yí ge xiǎoshí kǒuyǔ.",
+     "vi": "Mỗi ngày tôi luyện nói một tiếng."
+    }
+   ]
+  },
+  {
+   "w": "记",
+   "py": "jì",
+   "hv": "ký",
+   "vi": "nhớ; ghi",
+   "pos": "động từ",
+   "note": "\"Ký\" trong \"ký ức\", \"nhật ký\". 记住 là nhớ kỹ.",
+   "ex": [
+    {
+     "cn": "你记住我的电话号码了吗？",
+     "py": "Nǐ jìzhù wǒ de diànhuà hàomǎ le ma?",
+     "vi": "Bạn nhớ số điện thoại của tôi chưa?"
+    }
+   ]
+  },
+  {
+   "w": "查",
+   "py": "chá",
+   "hv": "tra",
+   "vi": "tra, kiểm tra",
+   "pos": "động từ",
+   "note": "Chính là \"tra\" trong \"tra cứu\", \"điều tra\".",
+   "ex": [
+    {
+     "cn": "我在网上查了一下。",
+     "py": "Wǒ zài wǎngshang chá le yíxià.",
+     "vi": "Tôi đã tra trên mạng một chút."
+    }
+   ]
+  },
+  {
+   "w": "选",
+   "py": "xuǎn",
+   "hv": "tuyển",
+   "vi": "chọn",
+   "pos": "động từ",
+   "note": "\"Tuyển\" trong \"tuyển chọn\", \"tuyển thủ\".",
+   "ex": [
+    {
+     "cn": "你选哪个？",
+     "py": "Nǐ xuǎn nǎge?",
+     "vi": "Bạn chọn cái nào?"
+    }
+   ]
+  },
+  {
+   "w": "句",
+   "py": "jù",
+   "hv": "cú",
+   "vi": "câu (lượng từ)",
+   "pos": "lượng từ",
+   "note": "\"Cú\" trong \"cú pháp\". Một câu nói: 一句话.",
+   "ex": [
+    {
+     "cn": "我只会说几句汉语。",
+     "py": "Wǒ zhǐ huì shuō jǐ jù Hànyǔ.",
+     "vi": "Tôi chỉ biết nói vài câu tiếng Trung."
+    }
+   ]
+  },
+  {
+   "w": "外语",
+   "py": "wàiyǔ",
+   "hv": "ngoại ngữ",
+   "vi": "ngoại ngữ",
+   "pos": "danh từ",
+   "note": "Chính là \"ngoại ngữ\".",
+   "ex": [
+    {
+     "cn": "你会几门外语？",
+     "py": "Nǐ huì jǐ mén wàiyǔ?",
+     "vi": "Bạn biết mấy ngoại ngữ?"
+    }
+   ]
+  },
+  {
+   "w": "懂得",
+   "py": "dǒngde",
+   "hv": "đổng đắc",
+   "vi": "hiểu, biết (đạo lý)",
+   "pos": "động từ",
+   "note": "Sâu hơn 懂: hiểu một đạo lý, biết cách làm.",
+   "ex": [
+    {
+     "cn": "他懂得怎么照顾别人。",
+     "py": "Tā dǒngde zěnme zhàogù biérén.",
+     "vi": "Anh ấy biết cách chăm sóc người khác."
+    }
+   ]
+  },
+  {
+   "w": "认得",
+   "py": "rènde",
+   "hv": "nhận đắc",
+   "vi": "nhận ra, biết mặt",
+   "pos": "động từ",
+   "note": "Gần nghĩa 认识, hay dùng cho chữ, đường, người.",
+   "ex": [
+    {
+     "cn": "你还认得我吗？",
+     "py": "Nǐ hái rènde wǒ ma?",
+     "vi": "Bạn còn nhận ra tôi không?"
+    }
+   ]
+  },
+  {
+   "w": "兴趣",
+   "py": "xìngqù",
+   "hv": "hứng thú",
+   "vi": "hứng thú, sở thích",
+   "pos": "danh từ",
+   "note": "Chính là \"hứng thú\". 对…有兴趣 là có hứng thú với…",
+   "ex": [
+    {
+     "cn": "我对中国文化很有兴趣。",
+     "py": "Wǒ duì Zhōngguó wénhuà hěn yǒu xìngqù.",
+     "vi": "Tôi rất có hứng thú với văn hoá Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "难题",
+   "py": "nántí",
+   "hv": "nan đề",
+   "vi": "bài khó, vấn đề nan giải",
+   "pos": "danh từ",
+   "note": "难 (khó, \"nan\") + 题 (đề).",
+   "ex": [
+    {
+     "cn": "这道难题我不会做。",
+     "py": "Zhè dào nántí wǒ bú huì zuò.",
+     "vi": "Bài khó này tôi không làm được."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "对 + đối tượng + 有兴趣",
+   "b": "对 A 有兴趣 / 感兴趣",
+   "d": "Đối tượng đứng giữa 对 và 有兴趣, khác tiếng Việt \"có hứng thú với A\".",
+   "ex": [
+    {
+     "cn": "他对足球没有兴趣。",
+     "py": "Tā duì zúqiú méiyǒu xìngqù.",
+     "vi": "Anh ấy không có hứng thú với bóng đá."
+    },
+    {
+     "cn": "你对什么有兴趣？",
+     "py": "Nǐ duì shénme yǒu xìngqù?",
+     "vi": "Bạn có hứng thú với cái gì?"
+    }
+   ]
+  },
+  {
+   "t": "Động từ + 住: giữ chắc kết quả",
+   "b": "记住 · 拿住 · 站住",
+   "d": "住 sau động từ cho biết kết quả được giữ chắc, không mất.",
+   "ex": [
+    {
+     "cn": "这些生词你要记住。",
+     "py": "Zhèxiē shēngcí nǐ yào jìzhù.",
+     "vi": "Những từ mới này bạn phải nhớ kỹ."
+    },
+    {
+     "cn": "站住！别跑！",
+     "py": "Zhànzhù! Bié pǎo!",
+     "vi": "Đứng lại! Đừng chạy!"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "学外语要多练多说。",
+   "py": "Xué wàiyǔ yào duō liàn duō shuō.",
+   "vi": "Học ngoại ngữ phải luyện nhiều, nói nhiều."
+  },
+  {
+   "cn": "这句话是什么意思？",
+   "py": "Zhè jù huà shì shénme yìsi?",
+   "vi": "Câu này nghĩa là gì?"
+  },
+  {
+   "cn": "他对学汉语很有兴趣。",
+   "py": "Tā duì xué Hànyǔ hěn yǒu xìngqù.",
+   "vi": "Anh ấy rất hứng thú với việc học tiếng Trung."
+  },
+  {
+   "cn": "这些汉字你都认得吗？",
+   "py": "Zhèxiē Hànzì nǐ dōu rènde ma?",
+   "vi": "Những chữ Hán này bạn đều nhận ra chứ?"
+  }
+ ]
+}

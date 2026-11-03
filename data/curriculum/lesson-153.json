@@ -1,0 +1,216 @@
+{
+ "id": 153,
+ "cn": "常常和总是",
+ "title": "Phó từ thường dùng",
+ "goal": "Phân biệt thường, luôn, chỉ là, chỉ có thể, không cần, không được, nên, nhưng, hoặc.",
+ "words": [
+  {
+   "w": "常",
+   "py": "cháng",
+   "hv": "thường",
+   "vi": "thường",
+   "pos": "phó từ",
+   "note": "Gọn hơn 常常, nghĩa như nhau.",
+   "ex": [
+    {
+     "cn": "我常去那家咖啡馆。",
+     "py": "Wǒ cháng qù nà jiā kāfēiguǎn.",
+     "vi": "Tôi hay đến quán cà phê đó."
+    }
+   ]
+  },
+  {
+   "w": "常常",
+   "py": "chángcháng",
+   "hv": "thường thường",
+   "vi": "thường thường, hay",
+   "pos": "phó từ",
+   "note": "Chính là \"thường thường\".",
+   "ex": [
+    {
+     "cn": "他常常迟到。",
+     "py": "Tā chángcháng chídào.",
+     "vi": "Anh ấy hay đến muộn."
+    }
+   ]
+  },
+  {
+   "w": "总",
+   "py": "zǒng",
+   "hv": "tổng",
+   "vi": "luôn, lúc nào cũng",
+   "pos": "phó từ",
+   "note": "Gọn hơn 总是, hay mang ý than phiền.",
+   "ex": [
+    {
+     "cn": "你怎么总不接电话？",
+     "py": "Nǐ zěnme zǒng bù jiē diànhuà?",
+     "vi": "Sao bạn lúc nào cũng không nghe máy?"
+    }
+   ]
+  },
+  {
+   "w": "只是",
+   "py": "zhǐshì",
+   "hv": "chỉ thị",
+   "vi": "chỉ là; có điều",
+   "pos": "phó từ",
+   "note": "Khác \"chỉ thị\" tiếng Việt: 只是 là \"chỉ là\", hoặc \"có điều\" ở đầu vế sau.",
+   "ex": [
+    {
+     "cn": "我只是开个玩笑。",
+     "py": "Wǒ zhǐshì kāi ge wánxiào.",
+     "vi": "Tôi chỉ đùa thôi."
+    }
+   ]
+  },
+  {
+   "w": "只能",
+   "py": "zhǐ néng",
+   "hv": "chỉ năng",
+   "vi": "chỉ có thể, đành",
+   "pos": "cụm từ",
+   "note": "只 (chỉ) + 能 (có thể).",
+   "ex": [
+    {
+     "cn": "没有车了，我们只能走路回去。",
+     "py": "Méiyǒu chē le, wǒmen zhǐ néng zǒulù huíqu.",
+     "vi": "Hết xe rồi, chúng ta đành đi bộ về."
+    }
+   ]
+  },
+  {
+   "w": "不用",
+   "py": "búyòng",
+   "hv": "bất dụng",
+   "vi": "không cần",
+   "pos": "phó từ",
+   "note": "Đáp lại lời cảm ơn: 不用谢 (không cần cảm ơn).",
+   "ex": [
+    {
+     "cn": "不用谢，这是我应该做的。",
+     "py": "Búyòng xiè, zhè shì wǒ yīnggāi zuò de.",
+     "vi": "Không cần cảm ơn, đó là việc tôi nên làm."
+    }
+   ]
+  },
+  {
+   "w": "不行",
+   "py": "bùxíng",
+   "hv": "bất hành",
+   "vi": "không được; kém",
+   "pos": "tính từ",
+   "note": "\"Không được phép\" hoặc \"kém, tồi\": 我的汉语还不行.",
+   "ex": [
+    {
+     "cn": "这样做不行。",
+     "py": "Zhèyàng zuò bùxíng.",
+     "vi": "Làm thế này không được."
+    }
+   ]
+  },
+  {
+   "w": "该",
+   "py": "gāi",
+   "hv": "cai",
+   "vi": "nên, phải; đến lượt",
+   "pos": "động từ",
+   "note": "Gọn hơn 应该. 该你了 là \"đến lượt bạn\".",
+   "ex": [
+    {
+     "cn": "时间不早了，我该走了。",
+     "py": "Shíjiān bù zǎo le, wǒ gāi zǒu le.",
+     "vi": "Không còn sớm nữa, tôi phải đi rồi."
+    }
+   ]
+  },
+  {
+   "w": "可",
+   "py": "kě",
+   "hv": "khả",
+   "vi": "nhưng; thật là",
+   "pos": "liên từ",
+   "note": "Như 可是 (nhưng). Trước tính từ còn để nhấn mạnh: 可好了.",
+   "ex": [
+    {
+     "cn": "我想去，可没有时间。",
+     "py": "Wǒ xiǎng qù, kě méiyǒu shíjiān.",
+     "vi": "Tôi muốn đi, nhưng không có thời gian."
+    }
+   ]
+  },
+  {
+   "w": "或",
+   "py": "huò",
+   "hv": "hoặc",
+   "vi": "hoặc",
+   "pos": "liên từ",
+   "note": "Chính là \"hoặc\". Gọn hơn 或者, dùng trong câu kể, không dùng trong câu hỏi.",
+   "ex": [
+    {
+     "cn": "你可以坐公交车或地铁。",
+     "py": "Nǐ kěyǐ zuò gōngjiāochē huò dìtiě.",
+     "vi": "Bạn có thể đi xe buýt hoặc tàu điện ngầm."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "或 (câu kể) và 还是 (câu hỏi)",
+   "b": "A 或 B (kể) · A 还是 B？ (hỏi)",
+   "d": "Cả hai đều nghĩa \"hoặc\", nhưng câu hỏi lựa chọn phải dùng 还是.",
+   "ex": [
+    {
+     "cn": "你喝茶还是喝咖啡？",
+     "py": "Nǐ hē chá háishi hē kāfēi?",
+     "vi": "Bạn uống trà hay cà phê?"
+    },
+    {
+     "cn": "喝茶或咖啡都可以。",
+     "py": "Hē chá huò kāfēi dōu kěyǐ.",
+     "vi": "Uống trà hay cà phê đều được."
+    }
+   ]
+  },
+  {
+   "t": "该…了: đến lúc phải",
+   "b": "该 + động từ + 了",
+   "d": "Báo đã đến giờ làm việc gì.",
+   "ex": [
+    {
+     "cn": "该吃饭了。",
+     "py": "Gāi chīfàn le.",
+     "vi": "Đến giờ ăn cơm rồi."
+    },
+    {
+     "cn": "十一点了，该睡觉了。",
+     "py": "Shíyī diǎn le, gāi shuìjiào le.",
+     "vi": "Mười một giờ rồi, phải đi ngủ thôi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "你不用担心，我能做好。",
+   "py": "Nǐ búyòng dānxīn, wǒ néng zuò hǎo.",
+   "vi": "Bạn không cần lo, tôi làm tốt được."
+  },
+  {
+   "cn": "他总说没时间。",
+   "py": "Tā zǒng shuō méi shíjiān.",
+   "vi": "Anh ấy lúc nào cũng nói không có thời gian."
+  },
+  {
+   "cn": "这个菜很好吃，只是有点儿辣。",
+   "py": "Zhège cài hěn hǎochī, zhǐshì yǒudiǎnr là.",
+   "vi": "Món này rất ngon, có điều hơi cay."
+  },
+  {
+   "cn": "我的汉语还不行，要多练习。",
+   "py": "Wǒ de Hànyǔ hái bùxíng, yào duō liànxí.",
+   "vi": "Tiếng Trung của tôi còn kém, phải luyện nhiều."
+  }
+ ]
+}

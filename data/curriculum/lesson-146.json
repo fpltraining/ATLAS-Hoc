@@ -1,0 +1,216 @@
+{
+ "id": 146,
+ "cn": "前天和后天",
+ "title": "Hôm kia, ngày kia",
+ "goal": "Nói các ngày, các năm trước sau, khoảng thời gian dài ngắn, ngày làm việc và năm mới.",
+ "words": [
+  {
+   "w": "前天",
+   "py": "qiántiān",
+   "hv": "tiền thiên",
+   "vi": "hôm kia",
+   "pos": "danh từ",
+   "note": "前 (trước) + 天. Hôm qua là 昨天, hôm kia là 前天.",
+   "ex": [
+    {
+     "cn": "我前天去了北京。",
+     "py": "Wǒ qiántiān qù le Běijīng.",
+     "vi": "Hôm kia tôi đi Bắc Kinh."
+    }
+   ]
+  },
+  {
+   "w": "后天",
+   "py": "hòutiān",
+   "hv": "hậu thiên",
+   "vi": "ngày kia",
+   "pos": "danh từ",
+   "note": "后 (sau) + 天. Ngày mai là 明天, ngày kia là 后天.",
+   "ex": [
+    {
+     "cn": "后天是我的生日。",
+     "py": "Hòutiān shì wǒ de shēngrì.",
+     "vi": "Ngày kia là sinh nhật tôi."
+    }
+   ]
+  },
+  {
+   "w": "前年",
+   "py": "qiánnián",
+   "hv": "tiền niên",
+   "vi": "năm kia",
+   "pos": "danh từ",
+   "note": "Năm ngoái là 去年, năm kia là 前年.",
+   "ex": [
+    {
+     "cn": "我前年来的中国。",
+     "py": "Wǒ qiánnián lái de Zhōngguó.",
+     "vi": "Tôi đến Trung Quốc từ năm kia."
+    }
+   ]
+  },
+  {
+   "w": "后年",
+   "py": "hòunián",
+   "hv": "hậu niên",
+   "vi": "năm kia (tương lai), hai năm nữa",
+   "pos": "danh từ",
+   "note": "Năm sau là 明年, hai năm nữa là 后年.",
+   "ex": [
+    {
+     "cn": "后年我就大学毕业了。",
+     "py": "Hòunián wǒ jiù dàxué bìyè le.",
+     "vi": "Hai năm nữa tôi tốt nghiệp đại học."
+    }
+   ]
+  },
+  {
+   "w": "半天",
+   "py": "bàntiān",
+   "hv": "bán thiên",
+   "vi": "nửa ngày; mãi, lâu lắm",
+   "pos": "số lượng từ",
+   "note": "Ngoài nghĩa \"nửa ngày\", khẩu ngữ còn dùng để than \"lâu lắm\": 等了半天.",
+   "ex": [
+    {
+     "cn": "我等了你半天了！",
+     "py": "Wǒ děng le nǐ bàntiān le!",
+     "vi": "Tôi đợi bạn mãi rồi đấy!"
+    }
+   ]
+  },
+  {
+   "w": "好久",
+   "py": "hǎojiǔ",
+   "hv": "hảo cửu",
+   "vi": "rất lâu",
+   "pos": "tính từ",
+   "note": "好 ở đây là \"rất\". Câu chào quen thuộc: 好久不见 (lâu lắm không gặp).",
+   "ex": [
+    {
+     "cn": "好久不见，你好吗？",
+     "py": "Hǎojiǔ bú jiàn, nǐ hǎo ma?",
+     "vi": "Lâu lắm không gặp, bạn khoẻ không?"
+    }
+   ]
+  },
+  {
+   "w": "不久",
+   "py": "bùjiǔ",
+   "hv": "bất cửu",
+   "vi": "không lâu, chẳng bao lâu",
+   "pos": "tính từ",
+   "note": "久 = \"cửu\" trong \"vĩnh cửu\". 不久以后 là \"không lâu sau\".",
+   "ex": [
+    {
+     "cn": "不久以后他就回来了。",
+     "py": "Bùjiǔ yǐhòu tā jiù huílai le.",
+     "vi": "Không lâu sau anh ấy đã quay về."
+    }
+   ]
+  },
+  {
+   "w": "刚刚",
+   "py": "gānggāng",
+   "hv": "cương cương",
+   "vi": "vừa mới",
+   "pos": "phó từ",
+   "note": "Nhấn mạnh hơn 刚: vừa xong ngay lúc nãy.",
+   "ex": [
+    {
+     "cn": "他刚刚出去。",
+     "py": "Tā gānggāng chūqu.",
+     "vi": "Anh ấy vừa mới ra ngoài."
+    }
+   ]
+  },
+  {
+   "w": "工作日",
+   "py": "gōngzuòrì",
+   "hv": "công tác nhật",
+   "vi": "ngày làm việc",
+   "pos": "danh từ",
+   "note": "工作 + 日 (ngày). Cuối tuần là 周末.",
+   "ex": [
+    {
+     "cn": "银行工作日九点开门。",
+     "py": "Yínháng gōngzuòrì jiǔ diǎn kāimén.",
+     "vi": "Ngày làm việc ngân hàng mở cửa lúc chín giờ."
+    }
+   ]
+  },
+  {
+   "w": "新年",
+   "py": "xīnnián",
+   "hv": "tân niên",
+   "vi": "năm mới",
+   "pos": "danh từ",
+   "note": "Chúc mừng năm mới: 新年快乐.",
+   "ex": [
+    {
+     "cn": "新年快乐！",
+     "py": "Xīnnián kuàilè!",
+     "vi": "Chúc mừng năm mới!"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Dãy ngày và dãy năm",
+   "b": "前天 · 昨天 · 今天 · 明天 · 后天 / 前年 · 去年 · 今年 · 明年 · 后年",
+   "d": "Học theo dãy cho dễ nhớ. Chú ý \"năm ngoái\" là 去年, không phải 昨年.",
+   "ex": [
+    {
+     "cn": "去年我在上海，今年在北京。",
+     "py": "Qùnián wǒ zài Shànghǎi, jīnnián zài Běijīng.",
+     "vi": "Năm ngoái tôi ở Thượng Hải, năm nay ở Bắc Kinh."
+    },
+    {
+     "cn": "我们后天见。",
+     "py": "Wǒmen hòutiān jiàn.",
+     "vi": "Ngày kia chúng ta gặp nhé."
+    }
+   ]
+  },
+  {
+   "t": "Động từ + khoảng thời gian",
+   "b": "等了半天 · 学了两年 · 睡了八个小时",
+   "d": "Thời lượng đứng SAU động từ, khác mốc thời gian đứng trước động từ.",
+   "ex": [
+    {
+     "cn": "我学了三年汉语。",
+     "py": "Wǒ xué le sān nián Hànyǔ.",
+     "vi": "Tôi đã học tiếng Trung ba năm."
+    },
+    {
+     "cn": "他睡了好久。",
+     "py": "Tā shuì le hǎojiǔ.",
+     "vi": "Anh ấy ngủ rất lâu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "好久不见，你最近怎么样？",
+   "py": "Hǎojiǔ bú jiàn, nǐ zuìjìn zěnmeyàng?",
+   "vi": "Lâu lắm không gặp, dạo này bạn thế nào?"
+  },
+  {
+   "cn": "我刚刚吃完饭。",
+   "py": "Wǒ gānggāng chī wán fàn.",
+   "vi": "Tôi vừa ăn cơm xong."
+  },
+  {
+   "cn": "工作日我很忙，周末才有时间。",
+   "py": "Gōngzuòrì wǒ hěn máng, zhōumò cái yǒu shíjiān.",
+   "vi": "Ngày thường tôi bận, cuối tuần mới có thời gian."
+  },
+  {
+   "cn": "新年的时候，我们全家一起吃饭。",
+   "py": "Xīnnián de shíhou, wǒmen quán jiā yìqǐ chīfàn.",
+   "vi": "Dịp năm mới, cả nhà chúng tôi cùng ăn cơm."
+  }
+ ]
+}

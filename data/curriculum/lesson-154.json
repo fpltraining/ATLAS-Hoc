@@ -1,0 +1,216 @@
+{
+ "id": 154,
+ "cn": "怎么办？",
+ "title": "Hỏi cách làm và nối câu",
+ "goal": "Hỏi phải làm sao, như thế nào; nói \"nếu… thì\", \"cho đến khi\", sau này, dưới, ngoài ra, cái khác, làm và lo việc.",
+ "words": [
+  {
+   "w": "怎么办",
+   "py": "zěnme bàn",
+   "hv": "chẩm ma biện",
+   "vi": "làm sao bây giờ",
+   "pos": "cụm từ",
+   "note": "怎么 (thế nào) + 办 (làm). Câu cửa miệng khi gặp rắc rối.",
+   "ex": [
+    {
+     "cn": "我的钱包丢了，怎么办？",
+     "py": "Wǒ de qiánbāo diū le, zěnme bàn?",
+     "vi": "Mất ví rồi, làm sao đây?"
+    }
+   ]
+  },
+  {
+   "w": "怎样",
+   "py": "zěnyàng",
+   "hv": "chẩm dạng",
+   "vi": "thế nào, ra sao",
+   "pos": "đại từ",
+   "note": "Trang trọng hơn 怎么样.",
+   "ex": [
+    {
+     "cn": "你觉得这个计划怎样？",
+     "py": "Nǐ juéde zhège jìhuà zěnyàng?",
+     "vi": "Bạn thấy kế hoạch này thế nào?"
+    }
+   ]
+  },
+  {
+   "w": "的话",
+   "py": "dehuà",
+   "hv": "đích thoại",
+   "vi": "nếu… thì",
+   "pos": "trợ từ",
+   "note": "Đặt cuối vế điều kiện: 有时间的话 (nếu có thời gian).",
+   "ex": [
+    {
+     "cn": "有时间的话，来我家玩儿。",
+     "py": "Yǒu shíjiān dehuà, lái wǒ jiā wánr.",
+     "vi": "Nếu có thời gian thì đến nhà tôi chơi."
+    }
+   ]
+  },
+  {
+   "w": "直到",
+   "py": "zhídào",
+   "hv": "trực đáo",
+   "vi": "mãi cho đến",
+   "pos": "động từ",
+   "note": "直 (thẳng) + 到 (đến).",
+   "ex": [
+    {
+     "cn": "他直到晚上十点才回家。",
+     "py": "Tā zhídào wǎnshang shí diǎn cái huí jiā.",
+     "vi": "Mãi đến mười giờ tối anh ấy mới về nhà."
+    }
+   ]
+  },
+  {
+   "w": "以后",
+   "py": "yǐhòu",
+   "hv": "dĩ hậu",
+   "vi": "sau này; sau khi",
+   "pos": "danh từ",
+   "note": "Đứng một mình là \"sau này\"; sau một việc là \"sau khi\": 下课以后.",
+   "ex": [
+    {
+     "cn": "以后我想当医生。",
+     "py": "Yǐhòu wǒ xiǎng dāng yīshēng.",
+     "vi": "Sau này tôi muốn làm bác sĩ."
+    }
+   ]
+  },
+  {
+   "w": "以下",
+   "py": "yǐxià",
+   "hv": "dĩ hạ",
+   "vi": "dưới, trở xuống; sau đây",
+   "pos": "danh từ",
+   "note": "十岁以下 (từ mười tuổi trở xuống). Đầu câu: 以下 là \"sau đây\".",
+   "ex": [
+    {
+     "cn": "六岁以下的孩子不用买票。",
+     "py": "Liù suì yǐxià de háizi búyòng mǎi piào.",
+     "vi": "Trẻ từ sáu tuổi trở xuống không cần mua vé."
+    }
+   ]
+  },
+  {
+   "w": "以外",
+   "py": "yǐwài",
+   "hv": "dĩ ngoại",
+   "vi": "ngoài ra, ngoài",
+   "pos": "danh từ",
+   "note": "除了…以外 là \"ngoài… ra\".",
+   "ex": [
+    {
+     "cn": "除了汉语以外，我还会说英语。",
+     "py": "Chúle Hànyǔ yǐwài, wǒ hái huì shuō Yīngyǔ.",
+     "vi": "Ngoài tiếng Trung ra, tôi còn nói được tiếng Anh."
+    }
+   ]
+  },
+  {
+   "w": "别的",
+   "py": "biéde",
+   "hv": "biệt đích",
+   "vi": "cái khác, khác",
+   "pos": "đại từ",
+   "note": "别 = \"biệt\" trong \"khác biệt\".",
+   "ex": [
+    {
+     "cn": "你还要别的吗？",
+     "py": "Nǐ hái yào biéde ma?",
+     "vi": "Bạn còn cần gì khác không?"
+    }
+   ]
+  },
+  {
+   "w": "办",
+   "py": "bàn",
+   "hv": "biện",
+   "vi": "làm, lo (việc)",
+   "pos": "động từ",
+   "note": "\"Biện\" trong \"biện pháp\". 办事 (lo việc), 办手续 (làm thủ tục).",
+   "ex": [
+    {
+     "cn": "我去银行办点儿事。",
+     "py": "Wǒ qù yínháng bàn diǎnr shì.",
+     "vi": "Tôi ra ngân hàng làm chút việc."
+    }
+   ]
+  },
+  {
+   "w": "干",
+   "py": "gàn",
+   "hv": "cán",
+   "vi": "làm",
+   "pos": "động từ",
+   "note": "Khẩu ngữ, nghĩa như 做: 你在干什么？",
+   "ex": [
+    {
+     "cn": "你在干什么呢？",
+     "py": "Nǐ zài gàn shénme ne?",
+     "vi": "Bạn đang làm gì đấy?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "…的话: nếu",
+   "b": "(如果) + điều kiện + 的话，+ kết quả",
+   "d": "Có thể dùng 的话 một mình hoặc đi cùng 如果. Vế sau hay có 就.",
+   "ex": [
+    {
+     "cn": "明天下雨的话，我们就不去了。",
+     "py": "Míngtiān xià yǔ dehuà, wǒmen jiù bú qù le.",
+     "vi": "Nếu mai mưa thì chúng ta không đi nữa."
+    },
+    {
+     "cn": "如果你忙的话，我自己去。",
+     "py": "Rúguǒ nǐ máng dehuà, wǒ zìjǐ qù.",
+     "vi": "Nếu bạn bận thì tôi tự đi."
+    }
+   ]
+  },
+  {
+   "t": "除了…以外，还 / 都",
+   "b": "除了 A 以外，还 B (cộng thêm) · 除了 A 以外，都 B (trừ ra)",
+   "d": "还 là \"ngoài A còn B\"; 都 là \"trừ A, tất cả đều B\".",
+   "ex": [
+    {
+     "cn": "除了他以外，大家都来了。",
+     "py": "Chúle tā yǐwài, dàjiā dōu lái le.",
+     "vi": "Trừ anh ấy ra, mọi người đều đến rồi."
+    },
+    {
+     "cn": "除了足球以外，我还喜欢篮球。",
+     "py": "Chúle zúqiú yǐwài, wǒ hái xǐhuan lánqiú.",
+     "vi": "Ngoài bóng đá ra, tôi còn thích bóng rổ."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "车坏了，怎么办？",
+   "py": "Chē huài le, zěnme bàn?",
+   "vi": "Xe hỏng rồi, làm sao đây?"
+  },
+  {
+   "cn": "你不喜欢这个的话，可以选别的。",
+   "py": "Nǐ bù xǐhuan zhège dehuà, kěyǐ xuǎn biéde.",
+   "vi": "Nếu bạn không thích cái này thì có thể chọn cái khác."
+  },
+  {
+   "cn": "以下是这次考试的名单。",
+   "py": "Yǐxià shì zhè cì kǎoshì de míngdān.",
+   "vi": "Sau đây là danh sách kỳ thi lần này."
+  },
+  {
+   "cn": "他每天从早干到晚。",
+   "py": "Tā měi tiān cóng zǎo gàn dào wǎn.",
+   "vi": "Ngày nào anh ấy cũng làm từ sáng đến tối."
+  }
+ ]
+}

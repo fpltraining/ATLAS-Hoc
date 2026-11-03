@@ -1,0 +1,216 @@
+{
+ "id": 139,
+ "cn": "动物园",
+ "title": "Thiên nhiên và động vật",
+ "goal": "Nói về núi, sông, bãi cỏ, vườn hoa, hoa nở, và các con vật quen thuộc.",
+ "words": [
+  {
+   "w": "山",
+   "py": "shān",
+   "hv": "sơn",
+   "vi": "núi",
+   "pos": "danh từ",
+   "note": "Chữ tượng hình: ba đỉnh núi. \"Sơn\" trong \"giang sơn\".",
+   "ex": [
+    {
+     "cn": "我们周末去爬山。",
+     "py": "Wǒmen zhōumò qù pá shān.",
+     "vi": "Cuối tuần chúng tôi đi leo núi."
+    }
+   ]
+  },
+  {
+   "w": "河",
+   "py": "hé",
+   "hv": "hà",
+   "vi": "sông",
+   "pos": "danh từ",
+   "note": "\"Hà\" trong \"sơn hà\", \"Hà Nội\" (thành phố trong sông).",
+   "ex": [
+    {
+     "cn": "河里有很多鱼。",
+     "py": "Hé lǐ yǒu hěn duō yú.",
+     "vi": "Dưới sông có nhiều cá."
+    }
+   ]
+  },
+  {
+   "w": "草地",
+   "py": "cǎodì",
+   "hv": "thảo địa",
+   "vi": "bãi cỏ",
+   "pos": "danh từ",
+   "note": "草 = \"thảo\" trong \"thảo nguyên\".",
+   "ex": [
+    {
+     "cn": "孩子们在草地上玩儿。",
+     "py": "Háizimen zài cǎodì shang wánr.",
+     "vi": "Bọn trẻ chơi trên bãi cỏ."
+    }
+   ]
+  },
+  {
+   "w": "花园",
+   "py": "huāyuán",
+   "hv": "hoa viên",
+   "vi": "vườn hoa",
+   "pos": "danh từ",
+   "note": "Chính là \"hoa viên\".",
+   "ex": [
+    {
+     "cn": "我家后面有一个小花园。",
+     "py": "Wǒ jiā hòumian yǒu yí ge xiǎo huāyuán.",
+     "vi": "Sau nhà tôi có một vườn hoa nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "开花",
+   "py": "kāihuā",
+   "hv": "khai hoa",
+   "vi": "nở hoa",
+   "pos": "động từ",
+   "note": "开 (mở) + 花.",
+   "ex": [
+    {
+     "cn": "春天到了，树都开花了。",
+     "py": "Chūntiān dào le, shù dōu kāihuā le.",
+     "vi": "Mùa xuân đến, cây đều nở hoa."
+    }
+   ]
+  },
+  {
+   "w": "牛",
+   "py": "niú",
+   "hv": "ngưu",
+   "vi": "con bò, con trâu",
+   "pos": "danh từ",
+   "note": "\"Ngưu\" trong \"Ngưu Lang\". Thịt bò là 牛肉, sữa bò là 牛奶.",
+   "ex": [
+    {
+     "cn": "农民家里有两头牛。",
+     "py": "Nóngmín jiā lǐ yǒu liǎng tóu niú.",
+     "vi": "Nhà nông dân có hai con bò."
+    }
+   ]
+  },
+  {
+   "w": "羊",
+   "py": "yáng",
+   "hv": "dương",
+   "vi": "con dê, con cừu",
+   "pos": "danh từ",
+   "note": "\"Dương\" trong \"sơn dương\".",
+   "ex": [
+    {
+     "cn": "草地上有很多羊。",
+     "py": "Cǎodì shang yǒu hěn duō yáng.",
+     "vi": "Trên bãi cỏ có nhiều cừu."
+    }
+   ]
+  },
+  {
+   "w": "鸡",
+   "py": "jī",
+   "hv": "kê",
+   "vi": "con gà",
+   "pos": "danh từ",
+   "note": "\"Kê\" trong \"kê gia\". Thịt gà là 鸡肉, trứng gà là 鸡蛋.",
+   "ex": [
+    {
+     "cn": "我奶奶养了很多鸡。",
+     "py": "Wǒ nǎinai yǎng le hěn duō jī.",
+     "vi": "Bà tôi nuôi nhiều gà."
+    }
+   ]
+  },
+  {
+   "w": "大熊猫",
+   "py": "dàxióngmāo",
+   "hv": "đại hùng miêu",
+   "vi": "gấu trúc lớn",
+   "pos": "danh từ",
+   "note": "Nghĩa đen \"con mèo gấu lớn\". Biểu tượng của Trung Quốc.",
+   "ex": [
+    {
+     "cn": "大熊猫很可爱。",
+     "py": "Dàxióngmāo hěn kě'ài.",
+     "vi": "Gấu trúc rất đáng yêu."
+    }
+   ]
+  },
+  {
+   "w": "动物园",
+   "py": "dòngwùyuán",
+   "hv": "động vật viên",
+   "vi": "vườn thú",
+   "pos": "danh từ",
+   "note": "动物 (động vật) + 园 (vườn).",
+   "ex": [
+    {
+     "cn": "我们带孩子去动物园吧。",
+     "py": "Wǒmen dài háizi qù dòngwùyuán ba.",
+     "vi": "Mình dẫn con đi sở thú nhé."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Lượng từ cho động vật",
+   "b": "一头牛 · 一只羊 / 鸡 / 熊猫 · 一条鱼",
+   "d": "Bò, lợn to dùng 头; gà, chim, mèo, phần lớn con vật dùng 只; cá và rắn dùng 条.",
+   "ex": [
+    {
+     "cn": "那只鸡在草地上走。",
+     "py": "Nà zhī jī zài cǎodì shang zǒu.",
+     "vi": "Con gà kia đi trên bãi cỏ."
+    },
+    {
+     "cn": "河里有一条大鱼。",
+     "py": "Hé lǐ yǒu yì tiáo dà yú.",
+     "vi": "Dưới sông có một con cá to."
+    }
+   ]
+  },
+  {
+   "t": "带 + người + 去 + nơi",
+   "b": "带孩子去动物园",
+   "d": "Dẫn ai đi đâu: 带 + người + 去 + nơi chốn.",
+   "ex": [
+    {
+     "cn": "爸爸带我去爬山。",
+     "py": "Bàba dài wǒ qù pá shān.",
+     "vi": "Bố dẫn tôi đi leo núi."
+    },
+    {
+     "cn": "你可以带我去花园看看吗？",
+     "py": "Nǐ kěyǐ dài wǒ qù huāyuán kànkan ma?",
+     "vi": "Bạn dẫn tôi ra vườn hoa xem được không?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "山上的风景很美。",
+   "py": "Shān shang de fēngjǐng hěn měi.",
+   "vi": "Phong cảnh trên núi rất đẹp."
+  },
+  {
+   "cn": "动物园里有大熊猫吗？",
+   "py": "Dòngwùyuán lǐ yǒu dàxióngmāo ma?",
+   "vi": "Trong sở thú có gấu trúc không?"
+  },
+  {
+   "cn": "春天花园里的花都开了。",
+   "py": "Chūntiān huāyuán lǐ de huā dōu kāi le.",
+   "vi": "Mùa xuân hoa trong vườn nở hết rồi."
+  },
+  {
+   "cn": "小时候我常在河边玩儿。",
+   "py": "Xiǎoshíhou wǒ cháng zài hébiān wánr.",
+   "vi": "Hồi nhỏ tôi hay chơi ở bờ sông."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 141,
+ "cn": "放学以后",
+ "title": "Ở trường",
+ "goal": "Nói về lớp học, cấp hai, sách giáo khoa, bài khoá, ghi chép, từ điển, khuôn viên, du học sinh, tan học và nghỉ lễ.",
+ "words": [
+  {
+   "w": "班级",
+   "py": "bānjí",
+   "hv": "ban cấp",
+   "vi": "lớp học (tập thể lớp)",
+   "pos": "danh từ",
+   "note": "Trang trọng hơn 班.",
+   "ex": [
+    {
+     "cn": "我们班级有三十个学生。",
+     "py": "Wǒmen bānjí yǒu sānshí ge xuésheng.",
+     "vi": "Lớp chúng tôi có ba mươi học sinh."
+    }
+   ]
+  },
+  {
+   "w": "初中",
+   "py": "chūzhōng",
+   "hv": "sơ trung",
+   "vi": "trung học cơ sở, cấp hai",
+   "pos": "danh từ",
+   "note": "初 = \"sơ\" trong \"sơ cấp\". Cấp ba là 高中.",
+   "ex": [
+    {
+     "cn": "我弟弟在上初中。",
+     "py": "Wǒ dìdi zài shàng chūzhōng.",
+     "vi": "Em trai tôi đang học cấp hai."
+    }
+   ]
+  },
+  {
+   "w": "课本",
+   "py": "kèběn",
+   "hv": "khoá bản",
+   "vi": "sách giáo khoa",
+   "pos": "danh từ",
+   "note": "课 (bài học) + 本 (sách).",
+   "ex": [
+    {
+     "cn": "请打开课本。",
+     "py": "Qǐng dǎkāi kèběn.",
+     "vi": "Mời mở sách giáo khoa."
+    }
+   ]
+  },
+  {
+   "w": "课文",
+   "py": "kèwén",
+   "hv": "khoá văn",
+   "vi": "bài khoá, bài đọc",
+   "pos": "danh từ",
+   "note": "课 + 文 (văn).",
+   "ex": [
+    {
+     "cn": "请大家读一下课文。",
+     "py": "Qǐng dàjiā dú yíxià kèwén.",
+     "vi": "Mời mọi người đọc bài khoá."
+    }
+   ]
+  },
+  {
+   "w": "笔记",
+   "py": "bǐjì",
+   "hv": "bút ký",
+   "vi": "ghi chép, vở ghi",
+   "pos": "danh từ",
+   "note": "Chính là \"bút ký\". Ghi chép là 记笔记.",
+   "ex": [
+    {
+     "cn": "上课的时候要记笔记。",
+     "py": "Shàngkè de shíhou yào jì bǐjì.",
+     "vi": "Trong giờ học phải ghi chép."
+    }
+   ]
+  },
+  {
+   "w": "字典",
+   "py": "zìdiǎn",
+   "hv": "tự điển",
+   "vi": "từ điển (tra chữ)",
+   "pos": "danh từ",
+   "note": "Chính là \"tự điển\". 词典 là từ điển tra từ.",
+   "ex": [
+    {
+     "cn": "不认识的字可以查字典。",
+     "py": "Bú rènshi de zì kěyǐ chá zìdiǎn.",
+     "vi": "Chữ không biết có thể tra từ điển."
+    }
+   ]
+  },
+  {
+   "w": "校园",
+   "py": "xiàoyuán",
+   "hv": "hiệu viên",
+   "vi": "khuôn viên trường",
+   "pos": "danh từ",
+   "note": "校 (trường, \"hiệu\" trong \"hiệu trưởng\") + 园.",
+   "ex": [
+    {
+     "cn": "我们的校园很漂亮。",
+     "py": "Wǒmen de xiàoyuán hěn piàoliang.",
+     "vi": "Khuôn viên trường chúng tôi rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "留学生",
+   "py": "liúxuéshēng",
+   "hv": "lưu học sinh",
+   "vi": "du học sinh",
+   "pos": "danh từ",
+   "note": "Chính là \"lưu học sinh\".",
+   "ex": [
+    {
+     "cn": "这个大学有很多留学生。",
+     "py": "Zhège dàxué yǒu hěn duō liúxuéshēng.",
+     "vi": "Trường đại học này có nhiều du học sinh."
+    }
+   ]
+  },
+  {
+   "w": "放学",
+   "py": "fàngxué",
+   "hv": "phóng học",
+   "vi": "tan học (cả trường)",
+   "pos": "động từ",
+   "note": "放 = thả. Khác 下课 (hết một tiết), 放学 là hết buổi học, ra về.",
+   "ex": [
+    {
+     "cn": "放学以后我去踢足球。",
+     "py": "Fàngxué yǐhòu wǒ qù tī zúqiú.",
+     "vi": "Tan học tôi đi đá bóng."
+    }
+   ]
+  },
+  {
+   "w": "放假",
+   "py": "fàngjià",
+   "hv": "phóng giả",
+   "vi": "được nghỉ (lễ, hè)",
+   "pos": "động từ",
+   "note": "假 (jià) = kỳ nghỉ. Nghỉ hè là 放暑假.",
+   "ex": [
+    {
+     "cn": "我们下个星期放假。",
+     "py": "Wǒmen xià ge xīngqī fàngjià.",
+     "vi": "Tuần sau chúng tôi được nghỉ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "下课 và 放学",
+   "b": "下课 = hết một tiết · 放学 = hết buổi, ra về",
+   "d": "Một ngày có nhiều lần 下课 nhưng chỉ một lần 放学.",
+   "ex": [
+    {
+     "cn": "下课了，我们休息十分钟。",
+     "py": "Xiàkè le, wǒmen xiūxi shí fēnzhōng.",
+     "vi": "Hết tiết rồi, chúng ta nghỉ mười phút."
+    },
+    {
+     "cn": "四点半放学，妈妈来接我。",
+     "py": "Sì diǎn bàn fàngxué, māma lái jiē wǒ.",
+     "vi": "Bốn rưỡi tan học, mẹ đến đón tôi."
+    }
+   ]
+  },
+  {
+   "t": "记 / 查 + tân ngữ",
+   "b": "记笔记 · 记生词 · 查字典",
+   "d": "Ghi nhớ hay ghi chép dùng 记; tra cứu dùng 查.",
+   "ex": [
+    {
+     "cn": "我每天记十个生词。",
+     "py": "Wǒ měi tiān jì shí ge shēngcí.",
+     "vi": "Mỗi ngày tôi ghi nhớ mười từ mới."
+    },
+    {
+     "cn": "这个词我查了字典。",
+     "py": "Zhège cí wǒ chá le zìdiǎn.",
+     "vi": "Từ này tôi đã tra từ điển."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "留学生的宿舍在校园东边。",
+   "py": "Liúxuéshēng de sùshè zài xiàoyuán dōngbian.",
+   "vi": "Ký túc xá du học sinh ở phía đông khuôn viên trường."
+  },
+  {
+   "cn": "你的笔记能借我看看吗？",
+   "py": "Nǐ de bǐjì néng jiè wǒ kànkan ma?",
+   "vi": "Cho tôi mượn vở ghi của bạn xem được không?"
+  },
+  {
+   "cn": "课文里有很多新词。",
+   "py": "Kèwén lǐ yǒu hěn duō xīn cí.",
+   "vi": "Trong bài khoá có nhiều từ mới."
+  },
+  {
+   "cn": "放假的时候你想去哪儿？",
+   "py": "Fàngjià de shíhou nǐ xiǎng qù nǎr?",
+   "vi": "Kỳ nghỉ bạn muốn đi đâu?"
+  }
+ ]
+}

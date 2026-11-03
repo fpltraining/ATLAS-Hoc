@@ -1,0 +1,246 @@
+{
+ "id": 155,
+ "cn": "写信",
+ "title": "Thư từ và nghề nghiệp",
+ "goal": "Nói về thư, phong thư, âm thanh, hoạ sĩ, phục vụ, tách ra, vườn, nhân viên, hậu tố 子, màu vàng, tán gẫu và chiều cao.",
+ "words": [
+  {
+   "w": "信",
+   "py": "xìn",
+   "hv": "tín",
+   "vi": "thư; tin",
+   "pos": "danh từ",
+   "note": "\"Tín\" trong \"tín nhiệm\". Vừa là lá thư, vừa là tin tưởng: 相信.",
+   "ex": [
+    {
+     "cn": "我给奶奶写了一封信。",
+     "py": "Wǒ gěi nǎinai xiě le yì fēng xìn.",
+     "vi": "Tôi viết cho bà một lá thư."
+    }
+   ]
+  },
+  {
+   "w": "封",
+   "py": "fēng",
+   "hv": "phong",
+   "vi": "phong, lá (lượng từ cho thư)",
+   "pos": "lượng từ",
+   "note": "\"Phong\" trong \"phong bì\". Một lá thư: 一封信.",
+   "ex": [
+    {
+     "cn": "我收到了两封邮件。",
+     "py": "Wǒ shōudào le liǎng fēng yóujiàn.",
+     "vi": "Tôi nhận được hai email."
+    }
+   ]
+  },
+  {
+   "w": "声",
+   "py": "shēng",
+   "hv": "thanh",
+   "vi": "tiếng, âm thanh",
+   "pos": "danh từ",
+   "note": "\"Thanh\" trong \"âm thanh\", \"thanh điệu\". 大声 là to tiếng.",
+   "ex": [
+    {
+     "cn": "请大声一点儿。",
+     "py": "Qǐng dà shēng yìdiǎnr.",
+     "vi": "Xin nói to lên một chút."
+    }
+   ]
+  },
+  {
+   "w": "画家",
+   "py": "huàjiā",
+   "hv": "hoạ gia",
+   "vi": "hoạ sĩ",
+   "pos": "danh từ",
+   "note": "画 (vẽ) + 家 (nhà chuyên môn).",
+   "ex": [
+    {
+     "cn": "他是一位有名的画家。",
+     "py": "Tā shì yí wèi yǒumíng de huàjiā.",
+     "vi": "Ông ấy là một hoạ sĩ nổi tiếng."
+    }
+   ]
+  },
+  {
+   "w": "服务",
+   "py": "fúwù",
+   "hv": "phục vụ",
+   "vi": "phục vụ",
+   "pos": "động từ",
+   "note": "Chính là \"phục vụ\". Nhân viên phục vụ là 服务员.",
+   "ex": [
+    {
+     "cn": "这家饭店的服务很好。",
+     "py": "Zhè jiā fàndiàn de fúwù hěn hǎo.",
+     "vi": "Nhà hàng này phục vụ rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "分开",
+   "py": "fēnkāi",
+   "hv": "phân khai",
+   "vi": "tách ra, chia ra",
+   "pos": "động từ",
+   "note": "分 (chia) + 开.",
+   "ex": [
+    {
+     "cn": "我们分开走吧。",
+     "py": "Wǒmen fēnkāi zǒu ba.",
+     "vi": "Chúng ta tách ra mà đi nhé."
+    }
+   ]
+  },
+  {
+   "w": "园",
+   "py": "yuán",
+   "hv": "viên",
+   "vi": "vườn",
+   "pos": "danh từ",
+   "note": "\"Viên\" trong \"hoa viên\", \"công viên\". Ghép: 公园, 花园, 动物园.",
+   "ex": [
+    {
+     "cn": "这个公园里有很多花。",
+     "py": "Zhège gōngyuán lǐ yǒu hěn duō huā.",
+     "vi": "Công viên này có rất nhiều hoa."
+    }
+   ]
+  },
+  {
+   "w": "员",
+   "py": "yuán",
+   "hv": "viên",
+   "vi": "nhân viên (hậu tố chỉ người)",
+   "pos": "hậu tố",
+   "note": "\"Viên\" trong \"nhân viên\", \"đảng viên\". Ghép: 服务员, 运动员, 售货员.",
+   "ex": [
+    {
+     "cn": "我姐姐是银行职员。",
+     "py": "Wǒ jiějie shì yínháng zhíyuán.",
+     "vi": "Chị tôi là nhân viên ngân hàng."
+    }
+   ]
+  },
+  {
+   "w": "子",
+   "py": "zi",
+   "hv": "tử",
+   "vi": "(hậu tố danh từ)",
+   "pos": "hậu tố",
+   "note": "Đọc nhẹ. Gắn sau một chữ để thành danh từ: 桌子, 椅子, 本子, 箱子.",
+   "ex": [
+    {
+     "cn": "桌子上有一个杯子。",
+     "py": "Zhuōzi shang yǒu yí ge bēizi.",
+     "vi": "Trên bàn có một cái cốc."
+    }
+   ]
+  },
+  {
+   "w": "黄色",
+   "py": "huángsè",
+   "hv": "hoàng sắc",
+   "vi": "màu vàng",
+   "pos": "danh từ",
+   "note": "黄 = \"hoàng\" (vàng) trong \"Hoàng Hà\".",
+   "ex": [
+    {
+     "cn": "秋天树叶变成了黄色。",
+     "py": "Qiūtiān shùyè biànchéng le huángsè.",
+     "vi": "Mùa thu lá cây chuyển sang màu vàng."
+    }
+   ]
+  },
+  {
+   "w": "聊",
+   "py": "liáo",
+   "hv": "liêu",
+   "vi": "tán gẫu, nói chuyện",
+   "pos": "động từ",
+   "note": "Hay gặp trong 聊天 (tán gẫu).",
+   "ex": [
+    {
+     "cn": "我们边喝茶边聊吧。",
+     "py": "Wǒmen biān hē chá biān liáo ba.",
+     "vi": "Mình vừa uống trà vừa nói chuyện nhé."
+    }
+   ]
+  },
+  {
+   "w": "身高",
+   "py": "shēngāo",
+   "hv": "thân cao",
+   "vi": "chiều cao (người)",
+   "pos": "danh từ",
+   "note": "身 (thân) + 高 (cao).",
+   "ex": [
+    {
+     "cn": "他的身高是一米八。",
+     "py": "Tā de shēngāo shì yì mǐ bā.",
+     "vi": "Anh ấy cao một mét tám."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Hậu tố 员 và 家 chỉ người",
+   "b": "员 = nhân viên, người làm · 家 = chuyên gia, người có tài",
+   "d": "服务员, 运动员 là làm công việc đó; 画家, 作家 là người giỏi trong lĩnh vực.",
+   "ex": [
+    {
+     "cn": "我哥哥是运动员，我姐姐是画家。",
+     "py": "Wǒ gēge shì yùndòngyuán, wǒ jiějie shì huàjiā.",
+     "vi": "Anh tôi là vận động viên, chị tôi là hoạ sĩ."
+    },
+    {
+     "cn": "服务员，请给我一杯水。",
+     "py": "Fúwùyuán, qǐng gěi wǒ yì bēi shuǐ.",
+     "vi": "Phục vụ ơi, cho tôi một cốc nước."
+    }
+   ]
+  },
+  {
+   "t": "边…边…: vừa… vừa…",
+   "b": "边 + động từ 1 + 边 + động từ 2",
+   "d": "Làm hai việc cùng lúc. Cũng nói 一边…一边….",
+   "ex": [
+    {
+     "cn": "他边走边唱。",
+     "py": "Tā biān zǒu biān chàng.",
+     "vi": "Anh ấy vừa đi vừa hát."
+    },
+    {
+     "cn": "我们一边吃饭一边聊天。",
+     "py": "Wǒmen yìbiān chīfàn yìbiān liáotiān.",
+     "vi": "Chúng tôi vừa ăn cơm vừa trò chuyện."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "现在很少有人写信了。",
+   "py": "Xiànzài hěn shǎo yǒu rén xiě xìn le.",
+   "vi": "Bây giờ ít người viết thư lắm rồi."
+  },
+  {
+   "cn": "我听见外面有人说话的声音。",
+   "py": "Wǒ tīngjiàn wàimian yǒu rén shuōhuà de shēngyīn.",
+   "vi": "Tôi nghe thấy tiếng người nói chuyện bên ngoài."
+  },
+  {
+   "cn": "他身高一米九，很适合打篮球。",
+   "py": "Tā shēngāo yì mǐ jiǔ, hěn shìhé dǎ lánqiú.",
+   "vi": "Anh ấy cao một mét chín, rất hợp chơi bóng rổ."
+  },
+  {
+   "cn": "我们两个人聊了一个晚上。",
+   "py": "Wǒmen liǎng ge rén liáo le yí ge wǎnshang.",
+   "vi": "Hai chúng tôi nói chuyện cả buổi tối."
+  }
+ ]
+}

@@ -1,0 +1,216 @@
+{
+ "id": 144,
+ "cn": "叫外卖",
+ "title": "Mua sắm và ăn uống",
+ "goal": "Nói về thẻ, thẻ ngân hàng, đồ ăn giao tận nơi, mì gói, cân, thêm, chai, giấy, rượu và kem.",
+ "words": [
+  {
+   "w": "卡",
+   "py": "kǎ",
+   "hv": "ca",
+   "vi": "thẻ",
+   "pos": "danh từ",
+   "note": "Mượn âm tiếng Anh \"card\". Thẻ xe buýt 公交卡, thẻ ngân hàng 银行卡.",
+   "ex": [
+    {
+     "cn": "可以刷卡吗？",
+     "py": "Kěyǐ shuā kǎ ma?",
+     "vi": "Quẹt thẻ được không?"
+    }
+   ]
+  },
+  {
+   "w": "银行卡",
+   "py": "yínhángkǎ",
+   "hv": "ngân hàng ca",
+   "vi": "thẻ ngân hàng",
+   "pos": "danh từ",
+   "note": "银行 + 卡.",
+   "ex": [
+    {
+     "cn": "我的银行卡找不到了。",
+     "py": "Wǒ de yínhángkǎ zhǎo bu dào le.",
+     "vi": "Tôi không tìm thấy thẻ ngân hàng."
+    }
+   ]
+  },
+  {
+   "w": "外卖",
+   "py": "wàimài",
+   "hv": "ngoại mại",
+   "vi": "đồ ăn mang về, giao đồ ăn",
+   "pos": "danh từ",
+   "note": "Nghĩa đen \"bán ra ngoài\". Gọi đồ ăn là 点外卖 hoặc 叫外卖.",
+   "ex": [
+    {
+     "cn": "今天太累了，我们叫外卖吧。",
+     "py": "Jīntiān tài lèi le, wǒmen jiào wàimài ba.",
+     "vi": "Hôm nay mệt quá, mình gọi đồ ăn về nhé."
+    }
+   ]
+  },
+  {
+   "w": "方便面",
+   "py": "fāngbiànmiàn",
+   "hv": "phương tiện diện",
+   "vi": "mì ăn liền",
+   "pos": "danh từ",
+   "note": "Nghĩa đen \"mì tiện lợi\". 方便 = tiện lợi.",
+   "ex": [
+    {
+     "cn": "别总吃方便面。",
+     "py": "Bié zǒng chī fāngbiànmiàn.",
+     "vi": "Đừng ăn mì gói suốt."
+    }
+   ]
+  },
+  {
+   "w": "斤",
+   "py": "jīn",
+   "hv": "cân",
+   "vi": "cân (nửa ký)",
+   "pos": "lượng từ",
+   "note": "Chú ý: 一斤 = 500 gam, không phải 1 kg. Một ký là 一公斤.",
+   "ex": [
+    {
+     "cn": "苹果多少钱一斤？",
+     "py": "Píngguǒ duōshao qián yì jīn?",
+     "vi": "Táo bao nhiêu tiền một cân?"
+    }
+   ]
+  },
+  {
+   "w": "加",
+   "py": "jiā",
+   "hv": "gia",
+   "vi": "thêm, cộng",
+   "pos": "động từ",
+   "note": "\"Gia\" trong \"gia tăng\". 加冰 (thêm đá), 加油 (cố lên).",
+   "ex": [
+    {
+     "cn": "咖啡里要加糖吗？",
+     "py": "Kāfēi lǐ yào jiā táng ma?",
+     "vi": "Cà phê có cần thêm đường không?"
+    }
+   ]
+  },
+  {
+   "w": "瓶子",
+   "py": "píngzi",
+   "hv": "bình tử",
+   "vi": "cái chai, cái lọ",
+   "pos": "danh từ",
+   "note": "瓶 = \"bình\". Làm lượng từ: 一瓶水.",
+   "ex": [
+    {
+     "cn": "这个瓶子是空的。",
+     "py": "Zhège píngzi shì kōng de.",
+     "vi": "Cái chai này rỗng."
+    }
+   ]
+  },
+  {
+   "w": "纸",
+   "py": "zhǐ",
+   "hv": "chỉ",
+   "vi": "giấy",
+   "pos": "danh từ",
+   "note": "Có bộ 纟 (sợi): giấy xưa làm từ sợi. Đếm bằng 张: 一张纸.",
+   "ex": [
+    {
+     "cn": "给我一张纸，我写一下。",
+     "py": "Gěi wǒ yì zhāng zhǐ, wǒ xiě yíxià.",
+     "vi": "Đưa tôi một tờ giấy, tôi viết chút."
+    }
+   ]
+  },
+  {
+   "w": "酒",
+   "py": "jiǔ",
+   "hv": "tửu",
+   "vi": "rượu",
+   "pos": "danh từ",
+   "note": "\"Tửu\" trong \"tửu lượng\". Bia là 啤酒, rượu vang là 葡萄酒.",
+   "ex": [
+    {
+     "cn": "开车不能喝酒。",
+     "py": "Kāichē bù néng hē jiǔ.",
+     "vi": "Lái xe không được uống rượu."
+    }
+   ]
+  },
+  {
+   "w": "冰激凌",
+   "py": "bīngjīlíng",
+   "hv": "băng kích lăng",
+   "vi": "kem (ăn)",
+   "pos": "danh từ",
+   "note": "Phiên âm từ \"ice cream\", có chữ 冰 (băng).",
+   "ex": [
+    {
+     "cn": "夏天我最喜欢吃冰激凌。",
+     "py": "Xiàtiān wǒ zuì xǐhuan chī bīngjīlíng.",
+     "vi": "Mùa hè tôi thích ăn kem nhất."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Hỏi giá theo đơn vị",
+   "b": "多少钱一斤 / 一瓶 / 一个？",
+   "d": "Người Trung Quốc đặt giá trước, đơn vị sau: 多少钱一斤 (bao nhiêu tiền một cân).",
+   "ex": [
+    {
+     "cn": "这种水多少钱一瓶？",
+     "py": "Zhè zhǒng shuǐ duōshao qián yì píng?",
+     "vi": "Loại nước này bao nhiêu tiền một chai?"
+    },
+    {
+     "cn": "鸡蛋五块钱一斤。",
+     "py": "Jīdàn wǔ kuài qián yì jīn.",
+     "vi": "Trứng năm tệ một cân."
+    }
+   ]
+  },
+  {
+   "t": "别总 + động từ",
+   "b": "别总 + 吃 / 玩 / 说",
+   "d": "总 là \"suốt, lúc nào cũng\". 别总… nghĩa là \"đừng cứ… mãi\".",
+   "ex": [
+    {
+     "cn": "别总玩手机。",
+     "py": "Bié zǒng wán shǒujī.",
+     "vi": "Đừng chơi điện thoại suốt thế."
+    },
+    {
+     "cn": "你别总说\"不行\"。",
+     "py": "Nǐ bié zǒng shuō \"bù xíng\".",
+     "vi": "Bạn đừng cứ nói \"không được\" mãi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我想要一杯咖啡，加冰，不加糖。",
+   "py": "Wǒ xiǎng yào yì bēi kāfēi, jiā bīng, bù jiā táng.",
+   "vi": "Tôi muốn một cốc cà phê, thêm đá, không đường."
+  },
+  {
+   "cn": "外卖三十分钟就到。",
+   "py": "Wàimài sānshí fēnzhōng jiù dào.",
+   "vi": "Đồ ăn ba mươi phút là tới."
+  },
+  {
+   "cn": "我买了两斤苹果。",
+   "py": "Wǒ mǎi le liǎng jīn píngguǒ.",
+   "vi": "Tôi mua hai cân táo."
+  },
+  {
+   "cn": "这里可以用银行卡吗？",
+   "py": "Zhèlǐ kěyǐ yòng yínhángkǎ ma?",
+   "vi": "Ở đây dùng thẻ ngân hàng được không?"
+  }
+ ]
+}
