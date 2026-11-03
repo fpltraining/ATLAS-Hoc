@@ -8,6 +8,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
+import { applyAll as applyPatches } from './apply-patches.mjs';
+import { buildStories } from './build-stories.mjs';
 
 const SRC = path.resolve(process.argv[2] || '../_src');
 const ROOT = process.cwd();
@@ -157,7 +159,7 @@ function ban(s) {
   return s.replace(/(?<![\p{L}])([Aa])nh(?![\p{L}])/gu, (m, c, at) => {
     const before = s.slice(Math.max(0, at - 8), at).toLowerCase();
     const after = s.slice(at + 3, at + 9);
-    if (/(tiếng|học|nước|người) $/u.test(before)) return m;
+    if (/(tiếng|học|nước|người|bảng|nhà) $/u.test(before)) return m;
     if (/^ (Long|ấy|ta)/u.test(after)) return m;
     return c === 'A' ? 'Bạn' : 'bạn';
   });
@@ -512,3 +514,8 @@ if (process.argv.includes('--long')) console.log(longLines.join('\n'));
 const perStory = {};
 for (const l of longLines) { const k = l.split(' ')[0]; perStory[k] = (perStory[k] || 0) + 1; }
 console.log(perStory);
+
+/* Dựng lại bài đọc bằng cùng công cụ với tools/build-stories.mjs (hỗ trợ phần "Điều rút ra"),
+   rồi áp các bản sửa trong data-src/patches/ (lỗi Hán Việt, phiên âm, từ bổ sung) */
+buildStories({ quiet: true });
+applyPatches();

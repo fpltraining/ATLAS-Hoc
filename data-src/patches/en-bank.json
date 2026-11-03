@@ -1,0 +1,2711 @@
+{
+"_note": "Chuẩn hoá kho từ tiếng Anh: w = viết thường (giữ hoa cho tên riêng, tháng, thứ, I), ipa = đổi sang giọng Mỹ, vi = sửa nghĩa. Khoá là từ viết thường. Nghĩa tiếng Việt cũng viết thường chữ đầu cho đồng bộ.",
+"words": {
+"hello": {
+"w": "hello",
+"vi": "xin chào"
+},
+"good morning": {
+"w": "good morning",
+"vi": "chào buổi sáng"
+},
+"good night": {
+"w": "good night",
+"vi": "chúc ngủ ngon"
+},
+"goodbye": {
+"w": "goodbye",
+"vi": "tạm biệt"
+},
+"nice to meet you": {
+"w": "nice to meet you",
+"vi": "rất vui được gặp bạn"
+},
+"how are you": {
+"w": "how are you",
+"vi": "bạn khỏe không"
+},
+"my name is": {
+"w": "my name is",
+"vi": "tên tôi là"
+},
+"please": {
+"w": "please",
+"vi": "làm ơn / xin mời"
+},
+"sorry": {
+"w": "sorry",
+"ipa": "/ˈsɑːri/",
+"vi": "xin lỗi"
+},
+"thank you": {
+"w": "thank you",
+"vi": "cảm ơn"
+},
+"father": {
+"w": "father",
+"vi": "bố / cha"
+},
+"mother": {
+"w": "mother",
+"vi": "mẹ"
+},
+"brother": {
+"w": "brother",
+"vi": "anh / em trai"
+},
+"sister": {
+"w": "sister",
+"vi": "chị / em gái"
+},
+"friend": {
+"w": "friend",
+"ipa": "/frend/",
+"vi": "bạn bè"
+},
+"eat": {
+"w": "eat",
+"vi": "ăn"
+},
+"drink": {
+"w": "drink",
+"vi": "uống"
+},
+"tea": {
+"w": "tea",
+"vi": "trà"
+},
+"delicious": {
+"w": "delicious",
+"vi": "ngon miệng"
+},
+"hungry": {
+"w": "hungry",
+"vi": "đói bụng"
+},
+"restaurant": {
+"w": "restaurant",
+"ipa": "/ˈrestərɑːnt/",
+"vi": "nhà hàng"
+},
+"menu": {
+"w": "menu",
+"ipa": "/ˈmenjuː/",
+"vi": "thực đơn"
+},
+"how much": {
+"w": "how much",
+"vi": "bao nhiêu tiền"
+},
+"where": {
+"w": "where",
+"ipa": "/wer/",
+"vi": "ở đâu"
+},
+"left": {
+"w": "left",
+"ipa": "/left/",
+"vi": "bên trái"
+},
+"straight": {
+"w": "straight",
+"vi": "thẳng"
+},
+"airport": {
+"w": "airport",
+"ipa": "/ˈerpɔːrt/",
+"vi": "sân bay"
+},
+"hotel": {
+"w": "hotel",
+"ipa": "/hoʊˈtel/",
+"vi": "khách sạn"
+},
+"ticket": {
+"w": "ticket",
+"vi": "vé"
+},
+"map": {
+"w": "map",
+"vi": "bản đồ"
+},
+"taxi": {
+"w": "taxi",
+"vi": "xe taxi"
+},
+"train station": {
+"w": "train station",
+"vi": "ga tàu"
+},
+"busy": {
+"w": "busy",
+"vi": "bận rộn"
+},
+"homework": {
+"w": "homework",
+"vi": "bài tập về nhà"
+},
+"happy": {
+"w": "happy",
+"vi": "vui vẻ / hạnh phúc"
+},
+"sad": {
+"w": "sad",
+"vi": "buồn"
+},
+"angry": {
+"w": "angry",
+"vi": "tức giận"
+},
+"tired": {
+"w": "tired",
+"vi": "mệt mỏi"
+},
+"excited": {
+"w": "excited",
+"vi": "hào hứng"
+},
+"worried": {
+"w": "worried",
+"vi": "lo lắng"
+},
+"kind": {
+"w": "kind",
+"vi": "tốt bụng"
+},
+"funny": {
+"w": "funny",
+"vi": "hài hước"
+},
+"brave": {
+"w": "brave",
+"vi": "dũng cảm"
+},
+"patient": {
+"w": "patient",
+"vi": "kiên nhẫn"
+},
+"sick": {
+"w": "sick",
+"vi": "ốm / bệnh"
+},
+"medicine": {
+"w": "medicine",
+"ipa": "/ˈmedɪsɪn/",
+"vi": "thuốc"
+},
+"headache": {
+"w": "headache",
+"ipa": "/ˈhedeɪk/",
+"vi": "đau đầu"
+},
+"fever": {
+"w": "fever",
+"vi": "sốt"
+},
+"rest": {
+"w": "rest",
+"ipa": "/rest/",
+"vi": "nghỉ ngơi"
+},
+"healthy": {
+"w": "healthy",
+"ipa": "/ˈhelθi/",
+"vi": "khỏe mạnh"
+},
+"exercise": {
+"w": "exercise",
+"ipa": "/ˈeksərsaɪz/",
+"vi": "tập thể dục"
+},
+"pharmacy": {
+"w": "pharmacy",
+"vi": "hiệu thuốc"
+},
+"suggest": {
+"w": "suggest",
+"ipa": "/səˈdʒest/",
+"vi": "đề xuất / gợi ý"
+},
+"decision": {
+"w": "decision",
+"vi": "quyết định"
+},
+"rain": {
+"w": "rain",
+"vi": "mưa"
+},
+"sunny": {
+"w": "sunny",
+"vi": "nắng"
+},
+"wind": {
+"w": "wind",
+"vi": "gió"
+},
+"hot": {
+"w": "hot",
+"ipa": "/hɑːt/",
+"vi": "nóng"
+},
+"snow": {
+"w": "snow",
+"vi": "tuyết"
+},
+"sky": {
+"w": "sky",
+"vi": "bầu trời"
+},
+"season": {
+"w": "season",
+"vi": "mùa"
+},
+"room": {
+"w": "room",
+"vi": "căn phòng"
+},
+"door": {
+"w": "door",
+"vi": "cửa ra vào"
+},
+"window": {
+"w": "window",
+"vi": "cửa sổ"
+},
+"table": {
+"w": "table",
+"ipa": "/ˈteɪbəl/",
+"vi": "cái bàn"
+},
+"chair": {
+"w": "chair",
+"ipa": "/tʃer/",
+"vi": "cái ghế"
+},
+"bed": {
+"w": "bed",
+"ipa": "/bed/",
+"vi": "cái giường"
+},
+"kitchen": {
+"w": "kitchen",
+"vi": "nhà bếp"
+},
+"bathroom": {
+"w": "bathroom",
+"vi": "phòng tắm"
+},
+"key": {
+"w": "key",
+"vi": "chìa khóa"
+},
+"red": {
+"w": "red",
+"ipa": "/red/",
+"vi": "màu đỏ"
+},
+"blue": {
+"w": "blue",
+"vi": "màu xanh dương"
+},
+"black": {
+"w": "black",
+"vi": "màu đen"
+},
+"white": {
+"w": "white",
+"vi": "màu trắng"
+},
+"color": {
+"w": "color",
+"vi": "màu sắc"
+},
+"shirt": {
+"w": "shirt",
+"vi": "áo sơ mi"
+},
+"pants": {
+"w": "pants",
+"vi": "quần dài"
+},
+"shoes": {
+"w": "shoes",
+"vi": "giày"
+},
+"hat": {
+"w": "hat",
+"vi": "cái mũ"
+},
+"dress": {
+"w": "dress",
+"ipa": "/dres/",
+"vi": "váy đầm"
+},
+"head": {
+"w": "head",
+"ipa": "/hed/",
+"vi": "cái đầu"
+},
+"eye": {
+"w": "eye",
+"vi": "mắt"
+},
+"ear": {
+"w": "ear",
+"ipa": "/ɪr/",
+"vi": "tai"
+},
+"mouth": {
+"w": "mouth",
+"vi": "miệng"
+},
+"hand": {
+"w": "hand",
+"vi": "bàn tay"
+},
+"foot": {
+"w": "foot",
+"vi": "bàn chân"
+},
+"hair": {
+"w": "hair",
+"ipa": "/her/",
+"vi": "tóc"
+},
+"face": {
+"w": "face",
+"vi": "khuôn mặt"
+},
+"heart": {
+"w": "heart",
+"vi": "trái tim"
+},
+"stomach": {
+"w": "stomach",
+"vi": "bụng / dạ dày"
+},
+"dog": {
+"w": "dog",
+"ipa": "/dɔːɡ/",
+"vi": "con chó"
+},
+"cat": {
+"w": "cat",
+"vi": "con mèo"
+},
+"bird": {
+"w": "bird",
+"vi": "con chim"
+},
+"fish": {
+"w": "fish",
+"vi": "con cá"
+},
+"chicken": {
+"w": "chicken",
+"vi": "con gà"
+},
+"cow": {
+"w": "cow",
+"vi": "con bò"
+},
+"pig": {
+"w": "pig",
+"vi": "con lợn"
+},
+"horse": {
+"w": "horse",
+"vi": "con ngựa"
+},
+"monkey": {
+"w": "monkey",
+"vi": "con khỉ"
+},
+"elephant": {
+"w": "elephant",
+"ipa": "/ˈelɪfənt/",
+"vi": "con voi"
+},
+"apple": {
+"w": "apple",
+"ipa": "/ˈæpəl/",
+"vi": "quả táo"
+},
+"banana": {
+"w": "banana",
+"vi": "quả chuối"
+},
+"orange": {
+"w": "orange",
+"ipa": "/ˈɔːrɪndʒ/",
+"vi": "quả cam"
+},
+"mango": {
+"w": "mango",
+"vi": "quả xoài"
+},
+"grape": {
+"w": "grape",
+"vi": "quả nho"
+},
+"vegetable": {
+"w": "vegetable",
+"ipa": "/ˈvedʒtəbəl/",
+"vi": "rau củ"
+},
+"potato": {
+"w": "potato",
+"vi": "khoai tây"
+},
+"tomato": {
+"w": "tomato",
+"vi": "cà chua"
+},
+"carrot": {
+"w": "carrot",
+"vi": "cà rốt"
+},
+"onion": {
+"w": "onion",
+"vi": "hành tây"
+},
+"bus": {
+"w": "bus",
+"vi": "xe buýt"
+},
+"bicycle": {
+"w": "bicycle",
+"ipa": "/ˈbaɪsɪkəl/",
+"vi": "xe đạp"
+},
+"motorbike": {
+"w": "motorbike",
+"vi": "xe máy"
+},
+"drive": {
+"w": "drive",
+"vi": "lái xe"
+},
+"message": {
+"w": "message",
+"ipa": "/ˈmesɪdʒ/",
+"vi": "tin nhắn"
+},
+"call": {
+"w": "call",
+"vi": "gọi điện"
+},
+"wifi": {
+"w": "wifi",
+"vi": "mạng không dây"
+},
+"photo": {
+"w": "photo",
+"vi": "bức ảnh"
+},
+"video": {
+"w": "video",
+"vi": "video"
+},
+"hobby": {
+"w": "hobby",
+"ipa": "/ˈhɑːbi/",
+"vi": "sở thích"
+},
+"music": {
+"w": "music",
+"vi": "âm nhạc"
+},
+"movie": {
+"w": "movie",
+"vi": "bộ phim"
+},
+"book": {
+"w": "book",
+"vi": "quyển sách"
+},
+"game": {
+"w": "game",
+"vi": "trò chơi"
+},
+"sing": {
+"w": "sing",
+"vi": "hát"
+},
+"dance": {
+"w": "dance",
+"vi": "nhảy múa"
+},
+"draw": {
+"w": "draw",
+"vi": "vẽ"
+},
+"travel": {
+"w": "travel",
+"ipa": "/ˈtrævəl/",
+"vi": "du lịch"
+},
+"sport": {
+"w": "sport",
+"vi": "thể thao"
+},
+"football": {
+"w": "football",
+"vi": "bóng đá"
+},
+"basketball": {
+"w": "basketball",
+"vi": "bóng rổ"
+},
+"swim": {
+"w": "swim",
+"vi": "bơi"
+},
+"walk": {
+"w": "walk",
+"vi": "đi bộ"
+},
+"gym": {
+"w": "gym",
+"vi": "phòng tập"
+},
+"waiter": {
+"w": "waiter",
+"vi": "người phục vụ"
+},
+"breakfast": {
+"w": "breakfast",
+"ipa": "/ˈbrekfəst/",
+"vi": "bữa sáng"
+},
+"lunch": {
+"w": "lunch",
+"vi": "bữa trưa"
+},
+"dinner": {
+"w": "dinner",
+"vi": "bữa tối"
+},
+"soup": {
+"w": "soup",
+"vi": "món súp / canh"
+},
+"meat": {
+"w": "meat",
+"vi": "thịt"
+},
+"spicy": {
+"w": "spicy",
+"vi": "cay"
+},
+"atm": {
+"ipa": "/ˌeɪtiːˈem/"
+},
+"love": {
+"w": "love",
+"vi": "yêu"
+},
+"like": {
+"w": "like",
+"vi": "thích"
+},
+"miss": {
+"w": "miss",
+"vi": "nhớ (ai đó)"
+},
+"gift": {
+"w": "gift",
+"vi": "món quà"
+},
+"smile": {
+"w": "smile",
+"vi": "nụ cười / mỉm cười"
+},
+"hug": {
+"w": "hug",
+"vi": "cái ôm"
+},
+"together": {
+"w": "together",
+"ipa": "/təˈɡeðər/",
+"vi": "cùng nhau"
+},
+"forever": {
+"w": "forever",
+"ipa": "/fərˈevər/",
+"vi": "mãi mãi"
+},
+"new year": {
+"ipa": "/nuː jɪr/"
+},
+"festival": {
+"w": "festival",
+"ipa": "/ˈfestɪvəl/",
+"vi": "lễ hội"
+},
+"celebrate": {
+"w": "celebrate",
+"ipa": "/ˈselɪbreɪt/",
+"vi": "ăn mừng"
+},
+"lucky": {
+"w": "lucky",
+"vi": "may mắn"
+},
+"danger": {
+"w": "danger",
+"vi": "nguy hiểm"
+},
+"careful": {
+"w": "careful",
+"ipa": "/ˈkerfʊl/",
+"vi": "cẩn thận"
+},
+"lost": {
+"w": "lost",
+"ipa": "/lɔːst/",
+"vi": "bị lạc / mất"
+},
+"accident": {
+"w": "accident",
+"vi": "tai nạn"
+},
+"ambulance": {
+"w": "ambulance",
+"vi": "xe cứu thương"
+},
+"emergency": {
+"w": "emergency",
+"vi": "khẩn cấp"
+},
+"river": {
+"w": "river",
+"vi": "dòng sông"
+},
+"mountain": {
+"w": "mountain",
+"vi": "ngọn núi"
+},
+"newspaper": {
+"w": "newspaper",
+"vi": "báo"
+},
+"perhaps": {
+"w": "perhaps",
+"vi": "có lẽ"
+},
+"certainly": {
+"w": "certainly",
+"vi": "chắc chắn"
+},
+"of course": {
+"w": "of course",
+"vi": "tất nhiên rồi"
+},
+"no problem": {
+"w": "no problem",
+"ipa": "/noʊ ˈprɑːbləm/",
+"vi": "không vấn đề gì"
+},
+"take care": {
+"w": "take care",
+"ipa": "/teɪk ker/",
+"vi": "giữ gìn sức khỏe nhé"
+},
+"good luck": {
+"w": "good luck",
+"vi": "chúc may mắn"
+},
+"well done": {
+"w": "well done",
+"ipa": "/wel dʌn/",
+"vi": "làm tốt lắm"
+},
+"never mind": {
+"w": "never mind",
+"ipa": "/ˈnevər maɪnd/",
+"vi": "không sao đâu"
+},
+"hold on": {
+"w": "hold on",
+"ipa": "/hoʊld ɑːn/",
+"vi": "chờ chút"
+},
+"by the way": {
+"w": "by the way",
+"vi": "nhân tiện"
+},
+"what a pity": {
+"w": "what a pity",
+"ipa": "/wʌt ə ˈpɪti/",
+"vi": "thật đáng tiếc"
+},
+"long time no see": {
+"w": "long time no see",
+"ipa": "/lɔːŋ taɪm noʊ siː/",
+"vi": "lâu rồi không gặp"
+},
+"pen": {
+"w": "pen",
+"ipa": "/pen/",
+"vi": "bút mực"
+},
+"pencil": {
+"w": "pencil",
+"ipa": "/ˈpensəl/",
+"vi": "bút chì"
+},
+"paper": {
+"w": "paper",
+"vi": "giấy"
+},
+"notebook": {
+"w": "notebook",
+"vi": "vở / sổ tay"
+},
+"class": {
+"w": "class",
+"vi": "lớp học"
+},
+"exam": {
+"w": "exam",
+"vi": "kỳ thi"
+},
+"teach": {
+"w": "teach",
+"vi": "dạy"
+},
+"street": {
+"w": "street",
+"vi": "con phố"
+},
+"park": {
+"w": "park",
+"vi": "công viên"
+},
+"supermarket": {
+"w": "supermarket",
+"vi": "siêu thị"
+},
+"post office": {
+"w": "post office",
+"ipa": "/poʊst ˈɔːfɪs/",
+"vi": "bưu điện"
+},
+"library": {
+"w": "library",
+"vi": "thư viện"
+},
+"museum": {
+"w": "museum",
+"vi": "bảo tàng"
+},
+"bridge": {
+"w": "bridge",
+"vi": "cây cầu"
+},
+"building": {
+"w": "building",
+"vi": "tòa nhà"
+},
+"tall": {
+"w": "tall",
+"vi": "cao"
+},
+"thin": {
+"w": "thin",
+"vi": "gầy"
+},
+"fat": {
+"w": "fat",
+"vi": "béo"
+},
+"handsome": {
+"w": "handsome",
+"vi": "đẹp trai"
+},
+"pretty": {
+"w": "pretty",
+"vi": "xinh xắn"
+},
+"smart": {
+"w": "smart",
+"vi": "thông minh"
+},
+"heavy": {
+"w": "heavy",
+"ipa": "/ˈhevi/",
+"vi": "nặng"
+},
+"light": {
+"w": "light",
+"vi": "nhẹ / ánh sáng"
+},
+"round": {
+"w": "round",
+"vi": "tròn"
+},
+"dirty": {
+"w": "dirty",
+"vi": "bẩn"
+},
+"broken": {
+"w": "broken",
+"vi": "bị hỏng"
+},
+"go": {
+"w": "go",
+"vi": "đi"
+},
+"come": {
+"w": "come",
+"vi": "đến"
+},
+"sit": {
+"w": "sit",
+"vi": "ngồi"
+},
+"stand": {
+"w": "stand",
+"vi": "đứng"
+},
+"put": {
+"w": "put",
+"vi": "đặt / để"
+},
+"bring": {
+"w": "bring",
+"vi": "mang đến"
+},
+"forget": {
+"w": "forget",
+"ipa": "/fərˈɡet/",
+"vi": "quên"
+},
+"remember": {
+"w": "remember",
+"ipa": "/rɪˈmembər/",
+"vi": "nhớ"
+},
+"speak": {
+"w": "speak",
+"vi": "nói (ngôn ngữ)"
+},
+"listen": {
+"w": "listen",
+"vi": "lắng nghe"
+},
+"wait": {
+"w": "wait",
+"vi": "đợi"
+},
+"ask": {
+"w": "ask",
+"vi": "hỏi"
+},
+"what": {
+"w": "what",
+"ipa": "/wʌt/",
+"vi": "cái gì"
+},
+"who": {
+"w": "who",
+"vi": "ai"
+},
+"why": {
+"w": "why",
+"vi": "tại sao"
+},
+"how": {
+"w": "how",
+"vi": "như thế nào"
+},
+"which": {
+"w": "which",
+"vi": "cái nào"
+},
+"yes": {
+"w": "yes",
+"ipa": "/jes/",
+"vi": "vâng / có"
+},
+"no": {
+"w": "no",
+"vi": "không"
+},
+"really": {
+"w": "really",
+"ipa": "/ˈriːəli/",
+"vi": "thật sao / thực sự"
+},
+"up": {
+"w": "up",
+"vi": "lên trên"
+},
+"down": {
+"w": "down",
+"vi": "xuống dưới"
+},
+"inside": {
+"w": "inside",
+"vi": "bên trong"
+},
+"outside": {
+"w": "outside",
+"vi": "bên ngoài"
+},
+"near": {
+"w": "near",
+"ipa": "/nɪr/",
+"vi": "gần"
+},
+"far": {
+"w": "far",
+"vi": "xa"
+},
+"behind": {
+"w": "behind",
+"vi": "phía sau"
+},
+"in front of": {
+"w": "in front of",
+"vi": "phía trước"
+},
+"next to": {
+"w": "next to",
+"ipa": "/nekst tuː/",
+"vi": "bên cạnh"
+},
+"reserve": {
+"w": "reserve",
+"vi": "đặt trước"
+},
+"check in": {
+"w": "check in",
+"ipa": "/tʃek ɪn/",
+"vi": "nhận phòng"
+},
+"check out": {
+"w": "check out",
+"ipa": "/tʃek aʊt/",
+"vi": "trả phòng"
+},
+"reception": {
+"w": "reception",
+"ipa": "/rɪˈsepʃən/",
+"vi": "quầy lễ tân"
+},
+"luggage": {
+"w": "luggage",
+"vi": "hành lý"
+},
+"towel": {
+"w": "towel",
+"vi": "khăn tắm"
+},
+"blanket": {
+"w": "blanket",
+"vi": "chăn"
+},
+"air conditioner": {
+"w": "air conditioner",
+"ipa": "/er kənˈdɪʃənər/",
+"vi": "máy lạnh"
+},
+"floor": {
+"w": "floor",
+"vi": "tầng / sàn nhà"
+},
+"elevator": {
+"w": "elevator",
+"ipa": "/ˈelɪveɪtər/",
+"vi": "thang máy"
+},
+"flight": {
+"w": "flight",
+"vi": "chuyến bay"
+},
+"boarding pass": {
+"w": "boarding pass",
+"vi": "thẻ lên máy bay"
+},
+"gate": {
+"w": "gate",
+"vi": "cổng (lên máy bay)"
+},
+"arrive": {
+"w": "arrive",
+"vi": "đến nơi"
+},
+"depart": {
+"w": "depart",
+"vi": "khởi hành"
+},
+"cough": {
+"w": "cough",
+"ipa": "/kɔːf/",
+"vi": "ho"
+},
+"flu": {
+"w": "flu",
+"vi": "cúm"
+},
+"pain": {
+"w": "pain",
+"vi": "cơn đau"
+},
+"toothache": {
+"w": "toothache",
+"vi": "đau răng"
+},
+"stomachache": {
+"w": "stomachache",
+"vi": "đau bụng"
+},
+"dizzy": {
+"w": "dizzy",
+"vi": "chóng mặt"
+},
+"sneeze": {
+"w": "sneeze",
+"vi": "hắt hơi"
+},
+"allergy": {
+"w": "allergy",
+"vi": "dị ứng"
+},
+"injection": {
+"w": "injection",
+"ipa": "/ɪnˈdʒekʃən/",
+"vi": "tiêm"
+},
+"blood": {
+"w": "blood",
+"vi": "máu"
+},
+"wash": {
+"w": "wash",
+"ipa": "/wɑːʃ/",
+"vi": "rửa / giặt"
+},
+"shower": {
+"w": "shower",
+"vi": "tắm vòi sen"
+},
+"brush teeth": {
+"w": "brush teeth",
+"vi": "đánh răng"
+},
+"soap": {
+"w": "soap",
+"vi": "xà phòng"
+},
+"shampoo": {
+"w": "shampoo",
+"vi": "dầu gội"
+},
+"toothbrush": {
+"w": "toothbrush",
+"vi": "bàn chải đánh răng"
+},
+"mirror": {
+"w": "mirror",
+"vi": "gương"
+},
+"comb": {
+"w": "comb",
+"vi": "cái lược"
+},
+"haircut": {
+"w": "haircut",
+"ipa": "/ˈherkʌt/",
+"vi": "cắt tóc"
+},
+"makeup": {
+"w": "makeup",
+"vi": "trang điểm"
+},
+"cook": {
+"w": "cook",
+"vi": "nấu ăn"
+},
+"boil": {
+"w": "boil",
+"vi": "luộc / đun sôi"
+},
+"fry": {
+"w": "fry",
+"vi": "chiên / rán"
+},
+"salt": {
+"w": "salt",
+"vi": "muối"
+},
+"sugar": {
+"w": "sugar",
+"vi": "đường"
+},
+"pepper": {
+"w": "pepper",
+"ipa": "/ˈpepər/",
+"vi": "hạt tiêu / ớt chuông"
+},
+"sauce": {
+"w": "sauce",
+"vi": "nước sốt / nước chấm"
+},
+"sweet": {
+"w": "sweet",
+"vi": "ngọt"
+},
+"sour": {
+"w": "sour",
+"vi": "chua"
+},
+"milk": {
+"w": "milk",
+"vi": "sữa"
+},
+"juice": {
+"w": "juice",
+"vi": "nước ép"
+},
+"beer": {
+"w": "beer",
+"ipa": "/bɪr/",
+"vi": "bia"
+},
+"wine": {
+"w": "wine",
+"vi": "rượu vang"
+},
+"soda": {
+"w": "soda",
+"vi": "nước ngọt có ga"
+},
+"ice": {
+"w": "ice",
+"vi": "đá lạnh"
+},
+"milk tea": {
+"w": "milk tea",
+"vi": "trà sữa"
+},
+"cup": {
+"w": "cup",
+"vi": "cái cốc / tách"
+},
+"bottle": {
+"w": "bottle",
+"ipa": "/ˈbɑːtəl/",
+"vi": "cái chai"
+},
+"straw": {
+"w": "straw",
+"vi": "ống hút"
+},
+"word": {
+"w": "word",
+"vi": "từ (vựng)"
+},
+"sentence": {
+"w": "sentence",
+"ipa": "/ˈsentəns/",
+"vi": "câu"
+},
+"grammar": {
+"w": "grammar",
+"vi": "ngữ pháp"
+},
+"pronunciation": {
+"w": "pronunciation",
+"vi": "phát âm"
+},
+"practice": {
+"w": "practice",
+"vi": "luyện tập"
+},
+"repeat": {
+"w": "repeat",
+"vi": "nhắc lại"
+},
+"translate": {
+"w": "translate",
+"vi": "dịch"
+},
+"mean": {
+"w": "mean",
+"vi": "có nghĩa là"
+},
+"fluent": {
+"w": "fluent",
+"vi": "trôi chảy"
+},
+"difficult": {
+"w": "difficult",
+"vi": "khó"
+},
+"interesting": {
+"w": "interesting",
+"vi": "thú vị"
+},
+"boring": {
+"w": "boring",
+"vi": "nhàm chán"
+},
+"great": {
+"w": "great",
+"vi": "tuyệt vời"
+},
+"terrible": {
+"w": "terrible",
+"ipa": "/ˈterəbəl/",
+"vi": "kinh khủng"
+},
+"strange": {
+"w": "strange",
+"vi": "kỳ lạ"
+},
+"special": {
+"w": "special",
+"ipa": "/ˈspeʃəl/",
+"vi": "đặc biệt"
+},
+"nurse": {
+"w": "nurse",
+"vi": "y tá"
+},
+"farmer": {
+"w": "farmer",
+"vi": "nông dân"
+},
+"driver": {
+"w": "driver",
+"vi": "tài xế"
+},
+"chef": {
+"w": "chef",
+"ipa": "/ʃef/",
+"vi": "đầu bếp"
+},
+"singer": {
+"w": "singer",
+"vi": "ca sĩ"
+},
+"police officer": {
+"w": "police officer",
+"ipa": "/pəˈliːs ˈɔːfɪsər/",
+"vi": "cảnh sát (người)"
+},
+"businessman": {
+"w": "businessman",
+"vi": "doanh nhân"
+},
+"vietnam": {
+"ipa": "/ˌviːetˈnɑːm/"
+},
+"america": {
+"ipa": "/əˈmerɪkə/"
+},
+"language": {
+"w": "language",
+"vi": "ngôn ngữ"
+},
+"foreigner": {
+"w": "foreigner",
+"ipa": "/ˈfɔːrənər/",
+"vi": "người nước ngoài"
+},
+"please speak slowly": {
+"w": "please speak slowly",
+"vi": "vui lòng nói chậm lại"
+},
+"can you repeat": {
+"w": "can you repeat",
+"vi": "bạn nhắc lại được không"
+},
+"what does it mean": {
+"w": "what does it mean",
+"ipa": "/wʌt dʌz ɪt miːn/",
+"vi": "nó nghĩa là gì"
+},
+"how do you say": {
+"w": "how do you say",
+"vi": "nói thế nào"
+},
+"excuse me": {
+"w": "excuse me",
+"vi": "xin lỗi (gây chú ý)"
+},
+"help me please": {
+"w": "help me please",
+"ipa": "/help miː pliːz/",
+"vi": "làm ơn giúp tôi"
+},
+"where is the toilet": {
+"w": "where is the toilet",
+"ipa": "/wer ɪz ðə ˈtɔɪlət/",
+"vi": "nhà vệ sinh ở đâu"
+},
+"see you later": {
+"w": "see you later",
+"vi": "hẹn gặp lại"
+},
+"grandfather": {
+"w": "grandfather",
+"vi": "ông"
+},
+"grandmother": {
+"w": "grandmother",
+"vi": "bà"
+},
+"uncle": {
+"w": "uncle",
+"ipa": "/ˈʌŋkəl/",
+"vi": "chú / bác / cậu"
+},
+"aunt": {
+"w": "aunt",
+"vi": "cô / dì / bác gái"
+},
+"cousin": {
+"w": "cousin",
+"vi": "anh chị em họ"
+},
+"son": {
+"w": "son",
+"vi": "con trai (con)"
+},
+"daughter": {
+"w": "daughter",
+"vi": "con gái (con)"
+},
+"wife": {
+"w": "wife",
+"vi": "vợ"
+},
+"husband": {
+"w": "husband",
+"vi": "chồng"
+},
+"parents": {
+"w": "parents",
+"ipa": "/ˈperənts/",
+"vi": "bố mẹ"
+},
+"habit": {
+"w": "habit",
+"vi": "thói quen"
+},
+"wake up": {
+"w": "wake up",
+"vi": "thức dậy"
+},
+"get up": {
+"w": "get up",
+"ipa": "/ɡet ʌp/",
+"vi": "ra khỏi giường"
+},
+"sleep": {
+"w": "sleep",
+"vi": "ngủ"
+},
+"usually": {
+"w": "usually",
+"vi": "thường thường"
+},
+"always": {
+"w": "always",
+"vi": "luôn luôn"
+},
+"sometimes": {
+"w": "sometimes",
+"vi": "thỉnh thoảng"
+},
+"never": {
+"w": "never",
+"ipa": "/ˈnevər/",
+"vi": "không bao giờ"
+},
+"meter": {
+"w": "meter",
+"vi": "mét"
+},
+"kilometer": {
+"w": "kilometer",
+"ipa": "/kɪˈlɑːmɪtər/",
+"vi": "ki-lô-mét"
+},
+"kilogram": {
+"w": "kilogram",
+"vi": "ki-lô-gam"
+},
+"liter": {
+"w": "liter",
+"vi": "lít"
+},
+"free time": {
+"w": "free time",
+"vi": "thời gian rảnh"
+},
+"invite": {
+"w": "invite",
+"vi": "mời"
+},
+"attend": {
+"w": "attend",
+"ipa": "/əˈtend/",
+"vi": "tham dự"
+},
+"address": {
+"w": "address",
+"ipa": "/əˈdres/",
+"vi": "địa chỉ"
+},
+"cart": {
+"w": "cart",
+"vi": "giỏ hàng"
+},
+"comment": {
+"w": "comment",
+"ipa": "/ˈkɑːment/",
+"vi": "bình luận"
+},
+"follow": {
+"w": "follow",
+"ipa": "/ˈfɑːloʊ/",
+"vi": "theo dõi"
+},
+"upload": {
+"w": "upload",
+"vi": "tải lên"
+},
+"chat": {
+"w": "chat",
+"vi": "trò chuyện (nhắn tin)"
+},
+"notification": {
+"w": "notification",
+"vi": "thông báo"
+},
+"song": {
+"w": "song",
+"ipa": "/sɔːŋ/",
+"vi": "bài hát"
+},
+"concert": {
+"w": "concert",
+"ipa": "/ˈkɑːnsərt/",
+"vi": "buổi hòa nhạc"
+},
+"actor": {
+"w": "actor",
+"vi": "diễn viên"
+},
+"camera": {
+"w": "camera",
+"vi": "máy ảnh / máy quay"
+},
+"stage": {
+"w": "stage",
+"vi": "sân khấu"
+},
+"audience": {
+"w": "audience",
+"vi": "khán giả"
+},
+"famous": {
+"w": "famous",
+"vi": "nổi tiếng"
+},
+"popular": {
+"w": "popular",
+"ipa": "/ˈpɑːpjələr/",
+"vi": "được ưa chuộng"
+},
+"show": {
+"w": "show",
+"vi": "chương trình / buổi diễn"
+},
+"television": {
+"w": "television",
+"ipa": "/ˈtelɪvɪʒən/",
+"vi": "ti vi"
+},
+"fridge": {
+"w": "fridge",
+"vi": "tủ lạnh"
+},
+"washing machine": {
+"w": "washing machine",
+"ipa": "/ˈwɑːʃɪŋ məˌʃiːn/",
+"vi": "máy giặt"
+},
+"fan": {
+"w": "fan",
+"vi": "quạt"
+},
+"lamp": {
+"w": "lamp",
+"vi": "đèn bàn"
+},
+"microwave": {
+"w": "microwave",
+"vi": "lò vi sóng"
+},
+"stove": {
+"w": "stove",
+"vi": "bếp nấu"
+},
+"remote control": {
+"w": "remote control",
+"vi": "điều khiển từ xa"
+},
+"plug": {
+"w": "plug",
+"vi": "phích cắm"
+},
+"disappointed": {
+"w": "disappointed",
+"vi": "thất vọng"
+},
+"proud": {
+"w": "proud",
+"vi": "tự hào"
+},
+"embarrassed": {
+"w": "embarrassed",
+"vi": "xấu hổ / ngượng"
+},
+"nervous": {
+"w": "nervous",
+"vi": "hồi hộp / lo lắng"
+},
+"surprised": {
+"w": "surprised",
+"vi": "ngạc nhiên"
+},
+"jealous": {
+"w": "jealous",
+"ipa": "/ˈdʒeləs/",
+"vi": "ghen tị"
+},
+"lonely": {
+"w": "lonely",
+"vi": "cô đơn"
+},
+"grateful": {
+"w": "grateful",
+"vi": "biết ơn"
+},
+"confident": {
+"w": "confident",
+"ipa": "/ˈkɑːnfɪdənt/",
+"vi": "tự tin"
+},
+"calm": {
+"w": "calm",
+"vi": "bình tĩnh"
+},
+"break": {
+"w": "break",
+"vi": "giờ nghỉ giải lao"
+},
+"then": {
+"w": "then",
+"ipa": "/ðen/",
+"vi": "sau đó"
+},
+"pick up": {
+"w": "pick up",
+"vi": "nhặt lên / đón"
+},
+"hold": {
+"w": "hold",
+"vi": "cầm / giữ"
+},
+"send": {
+"w": "send",
+"ipa": "/send/",
+"vi": "gửi"
+},
+"receive": {
+"w": "receive",
+"vi": "nhận"
+},
+"drop": {
+"w": "drop",
+"ipa": "/drɑːp/",
+"vi": "đánh rơi"
+},
+"carry": {
+"w": "carry",
+"vi": "mang / xách"
+},
+"push": {
+"w": "push",
+"vi": "đẩy"
+},
+"pull": {
+"w": "pull",
+"vi": "kéo"
+},
+"throw": {
+"w": "throw",
+"vi": "ném / vứt"
+},
+"wide": {
+"w": "wide",
+"vi": "rộng"
+},
+"narrow": {
+"w": "narrow",
+"vi": "hẹp"
+},
+"deep": {
+"w": "deep",
+"vi": "sâu"
+},
+"shallow": {
+"w": "shallow",
+"vi": "nông"
+},
+"thick": {
+"w": "thick",
+"vi": "dày"
+},
+"soft": {
+"w": "soft",
+"ipa": "/sɔːft/",
+"vi": "mềm"
+},
+"wet": {
+"w": "wet",
+"ipa": "/wet/",
+"vi": "ướt"
+},
+"dry": {
+"w": "dry",
+"vi": "khô"
+},
+"cheaper": {
+"w": "cheaper",
+"vi": "rẻ hơn"
+},
+"size": {
+"w": "size",
+"vi": "kích cỡ"
+},
+"try on": {
+"w": "try on",
+"ipa": "/traɪ ɑːn/",
+"vi": "mặc thử"
+},
+"landlord": {
+"w": "landlord",
+"vi": "chủ nhà"
+},
+"lease": {
+"w": "lease",
+"vi": "hợp đồng thuê nhà"
+},
+"leak": {
+"w": "leak",
+"vi": "rò rỉ (nước)"
+},
+"repair": {
+"w": "repair",
+"ipa": "/rɪˈper/",
+"vi": "sửa chữa"
+},
+"furniture": {
+"w": "furniture",
+"vi": "đồ nội thất"
+},
+"keyboard": {
+"w": "keyboard",
+"vi": "bàn phím"
+},
+"mouse": {
+"w": "mouse",
+"vi": "chuột (máy tính)"
+},
+"folder": {
+"w": "folder",
+"vi": "thư mục"
+},
+"restart": {
+"w": "restart",
+"vi": "khởi động lại"
+},
+"delete": {
+"w": "delete",
+"vi": "xóa"
+},
+"print": {
+"w": "print",
+"vi": "in"
+},
+"copy": {
+"w": "copy",
+"ipa": "/ˈkɑːpi/",
+"vi": "sao chép"
+},
+"paste": {
+"w": "paste",
+"vi": "dán"
+},
+"earthquake": {
+"w": "earthquake",
+"vi": "động đất"
+},
+"lightning": {
+"w": "lightning",
+"vi": "sét"
+},
+"escape": {
+"w": "escape",
+"vi": "thoát ra"
+},
+"warning": {
+"w": "warning",
+"vi": "cảnh báo"
+},
+"rescue": {
+"w": "rescue",
+"ipa": "/ˈreskjuː/",
+"vi": "cứu hộ"
+},
+"shelter": {
+"w": "shelter",
+"ipa": "/ˈʃeltər/",
+"vi": "nơi trú ẩn"
+},
+"prepare": {
+"w": "prepare",
+"ipa": "/prɪˈper/",
+"vi": "chuẩn bị"
+},
+"wedding": {
+"w": "wedding",
+"ipa": "/ˈwedɪŋ/",
+"vi": "đám cưới"
+},
+"bride": {
+"w": "bride",
+"vi": "cô dâu"
+},
+"groom": {
+"w": "groom",
+"vi": "chú rể"
+},
+"guest": {
+"w": "guest",
+"ipa": "/ɡest/",
+"vi": "khách mời"
+},
+"ceremony": {
+"w": "ceremony",
+"ipa": "/ˈserəmoʊni/",
+"vi": "buổi lễ"
+},
+"ring": {
+"w": "ring",
+"vi": "chiếc nhẫn"
+},
+"invitation": {
+"w": "invitation",
+"vi": "thiệp mời"
+},
+"decorate": {
+"w": "decorate",
+"ipa": "/ˈdekəreɪt/",
+"vi": "trang trí"
+},
+"toast": {
+"w": "toast",
+"vi": "nâng ly chúc mừng"
+},
+"honeymoon": {
+"w": "honeymoon",
+"vi": "tuần trăng mật"
+},
+"welcome": {
+"w": "welcome",
+"ipa": "/ˈwelkəm/",
+"vi": "chào mừng"
+},
+"have a nice day": {
+"w": "have a nice day",
+"vi": "chúc một ngày tốt lành"
+},
+"bless you": {
+"w": "bless you",
+"ipa": "/bles juː/",
+"vi": "cầu chúc bạn (khi hắt hơi)"
+},
+"my pleasure": {
+"w": "my pleasure",
+"ipa": "/maɪ ˈpleʒər/",
+"vi": "rất hân hạnh"
+},
+"after you": {
+"w": "after you",
+"vi": "mời bạn trước"
+},
+"get well soon": {
+"w": "get well soon",
+"ipa": "/ɡet wel suːn/",
+"vi": "mau khỏe nhé"
+},
+"best wishes": {
+"w": "best wishes",
+"ipa": "/best ˈwɪʃɪz/",
+"vi": "chúc mọi điều tốt đẹp"
+},
+"cheers": {
+"w": "cheers",
+"ipa": "/tʃɪrz/",
+"vi": "cạn ly / cảm ơn (thân mật)"
+},
+"keep it up": {
+"w": "keep it up",
+"vi": "cứ phát huy nhé"
+},
+"enjoy your meal": {
+"w": "enjoy your meal",
+"vi": "chúc ngon miệng"
+},
+"dream": {
+"w": "dream",
+"vi": "ước mơ"
+},
+"hope": {
+"w": "hope",
+"vi": "hy vọng"
+},
+"future": {
+"w": "future",
+"vi": "tương lai"
+},
+"effort": {
+"w": "effort",
+"ipa": "/ˈefərt/",
+"vi": "nỗ lực"
+},
+"achieve": {
+"w": "achieve",
+"vi": "đạt được"
+},
+"give up": {
+"w": "give up",
+"vi": "bỏ cuộc"
+},
+"pot": {
+"w": "pot",
+"ipa": "/pɑːt/",
+"vi": "cái nồi"
+},
+"pan": {
+"w": "pan",
+"vi": "cái chảo"
+},
+"bowl": {
+"w": "bowl",
+"vi": "cái bát"
+},
+"plate": {
+"w": "plate",
+"vi": "cái đĩa"
+},
+"chopsticks": {
+"w": "chopsticks",
+"ipa": "/ˈtʃɑːpstɪks/",
+"vi": "đôi đũa"
+},
+"spoon": {
+"w": "spoon",
+"vi": "cái thìa"
+},
+"fork": {
+"w": "fork",
+"vi": "cái dĩa (nĩa)"
+},
+"knife": {
+"w": "knife",
+"vi": "con dao"
+},
+"kettle": {
+"w": "kettle",
+"ipa": "/ˈketəl/",
+"vi": "ấm đun nước"
+},
+"cutting board": {
+"w": "cutting board",
+"vi": "cái thớt"
+},
+"past": {
+"w": "past",
+"vi": "quá khứ"
+},
+"moment": {
+"w": "moment",
+"vi": "khoảnh khắc"
+},
+"soon": {
+"w": "soon",
+"vi": "sớm thôi"
+},
+"suddenly": {
+"w": "suddenly",
+"vi": "đột nhiên"
+},
+"immediately": {
+"w": "immediately",
+"vi": "ngay lập tức"
+},
+"someday": {
+"w": "someday",
+"vi": "một ngày nào đó"
+},
+"register": {
+"w": "register",
+"ipa": "/ˈredʒɪstər/",
+"vi": "đăng ký"
+},
+"graduate": {
+"w": "graduate",
+"vi": "tốt nghiệp"
+},
+"degree": {
+"w": "degree",
+"vi": "bằng cấp"
+},
+"lecture": {
+"w": "lecture",
+"ipa": "/ˈlektʃər/",
+"vi": "bài giảng"
+},
+"semester": {
+"w": "semester",
+"ipa": "/sɪˈmestər/",
+"vi": "học kỳ"
+},
+"dormitory": {
+"w": "dormitory",
+"vi": "ký túc xá"
+},
+"relax": {
+"w": "relax",
+"vi": "thư giãn"
+},
+"meditation": {
+"w": "meditation",
+"ipa": "/ˌmedɪˈteɪʃən/",
+"vi": "thiền"
+},
+"breathe": {
+"w": "breathe",
+"vi": "hít thở"
+},
+"balance": {
+"w": "balance",
+"vi": "cân bằng"
+},
+"positive": {
+"w": "positive",
+"ipa": "/ˈpɑːzɪtɪv/",
+"vi": "tích cực"
+},
+"negative": {
+"w": "negative",
+"ipa": "/ˈneɡətɪv/",
+"vi": "tiêu cực"
+},
+"mood": {
+"w": "mood",
+"vi": "tâm trạng"
+},
+"therapy": {
+"w": "therapy",
+"ipa": "/ˈθerəpi/",
+"vi": "trị liệu"
+},
+"trouble": {
+"w": "trouble",
+"ipa": "/ˈtrʌbəl/",
+"vi": "rắc rối / phiền muộn"
+},
+"trash": {
+"w": "trash",
+"vi": "rác"
+},
+"reuse": {
+"w": "reuse",
+"vi": "tái sử dụng"
+},
+"bin": {
+"w": "bin",
+"vi": "thùng rác"
+},
+"sort": {
+"w": "sort",
+"vi": "phân loại"
+},
+"clean up": {
+"w": "clean up",
+"vi": "dọn dẹp"
+},
+"eco-friendly": {
+"w": "eco-friendly",
+"ipa": "/ˌiːkoʊ ˈfrendli/",
+"vi": "thân thiện môi trường"
+},
+"litter": {
+"w": "litter",
+"vi": "xả rác bừa bãi"
+},
+"square": {
+"w": "square",
+"ipa": "/skwer/",
+"vi": "hình vuông"
+},
+"circle": {
+"w": "circle",
+"ipa": "/ˈsɜːrkəl/",
+"vi": "hình tròn"
+},
+"triangle": {
+"w": "triangle",
+"ipa": "/ˈtraɪæŋɡəl/",
+"vi": "hình tam giác"
+},
+"line": {
+"w": "line",
+"vi": "đường kẻ / hàng"
+},
+"wood": {
+"w": "wood",
+"vi": "gỗ"
+},
+"metal": {
+"w": "metal",
+"ipa": "/ˈmetəl/",
+"vi": "kim loại"
+},
+"glass": {
+"w": "glass",
+"vi": "thủy tinh / cốc thủy tinh"
+},
+"leather": {
+"w": "leather",
+"ipa": "/ˈleðər/",
+"vi": "da (thuộc)"
+},
+"cotton": {
+"w": "cotton",
+"ipa": "/ˈkɑːtən/",
+"vi": "vải cotton / bông"
+},
+"baby": {
+"w": "baby",
+"vi": "em bé"
+},
+"toy": {
+"w": "toy",
+"vi": "đồ chơi"
+},
+"kindergarten": {
+"w": "kindergarten",
+"ipa": "/ˈkɪndərɡɑːrtən/",
+"vi": "trường mẫu giáo"
+},
+"grow up": {
+"w": "grow up",
+"vi": "lớn lên"
+},
+"take care of": {
+"w": "take care of",
+"ipa": "/teɪk ker əv/",
+"vi": "chăm sóc"
+},
+"feed": {
+"w": "feed",
+"vi": "cho ăn"
+},
+"naughty": {
+"w": "naughty",
+"vi": "nghịch ngợm"
+},
+"gentle": {
+"w": "gentle",
+"ipa": "/ˈdʒentəl/",
+"vi": "dịu dàng / nhẹ nhàng"
+},
+"praise": {
+"w": "praise",
+"vi": "khen ngợi"
+},
+"spoil": {
+"w": "spoil",
+"vi": "nuông chiều"
+},
+"forbid": {
+"w": "forbid",
+"vi": "cấm"
+},
+"queue": {
+"w": "queue",
+"vi": "xếp hàng"
+},
+"obey": {
+"w": "obey",
+"vi": "tuân theo"
+},
+"duty": {
+"w": "duty",
+"vi": "nghĩa vụ"
+},
+"a little": {
+"w": "a little",
+"ipa": "/ə ˈlɪtəl/",
+"vi": "một chút"
+},
+"a lot": {
+"w": "a lot",
+"ipa": "/ə lɑːt/",
+"vi": "rất nhiều"
+},
+"enough": {
+"w": "enough",
+"vi": "đủ"
+},
+"too much": {
+"w": "too much",
+"vi": "quá nhiều"
+},
+"wow": {
+"w": "wow",
+"vi": "ồ / tuyệt quá"
+},
+"oh no": {
+"w": "oh no",
+"vi": "ôi không"
+},
+"unbelievable": {
+"w": "unbelievable",
+"ipa": "/ˌʌnbɪˈliːvəbəl/",
+"vi": "không thể tin nổi"
+},
+"watch out": {
+"w": "watch out",
+"ipa": "/wɑːtʃ aʊt/",
+"vi": "coi chừng"
+},
+"hurry up": {
+"w": "hurry up",
+"vi": "nhanh lên"
+},
+"calm down": {
+"w": "calm down",
+"vi": "bình tĩnh nào"
+},
+"no way": {
+"w": "no way",
+"vi": "không đời nào / thật á"
+},
+"awesome": {
+"w": "awesome",
+"vi": "đỉnh quá / tuyệt vời"
+},
+"poor thing": {
+"w": "poor thing",
+"ipa": "/pʊr θɪŋ/",
+"vi": "tội nghiệp quá"
+},
+"lucky you": {
+"w": "lucky you",
+"vi": "bạn may mắn thật"
+},
+"field": {
+"w": "field",
+"vi": "cánh đồng"
+},
+"plant": {
+"w": "plant",
+"vi": "trồng / cây trồng"
+},
+"soil": {
+"w": "soil",
+"vi": "đất (thổ nhưỡng)"
+},
+"fertilizer": {
+"w": "fertilizer",
+"vi": "phân bón"
+},
+"countryside": {
+"w": "countryside",
+"vi": "vùng quê"
+},
+"planet": {
+"w": "planet",
+"vi": "hành tinh"
+},
+"moon": {
+"w": "moon",
+"vi": "mặt trăng"
+},
+"star": {
+"w": "star",
+"vi": "ngôi sao"
+},
+"rocket": {
+"w": "rocket",
+"ipa": "/ˈrɑːkɪt/",
+"vi": "tên lửa"
+},
+"astronaut": {
+"w": "astronaut",
+"vi": "phi hành gia"
+},
+"gravity": {
+"w": "gravity",
+"vi": "trọng lực"
+},
+"experiment": {
+"w": "experiment",
+"ipa": "/ɪkˈsperɪmənt/",
+"vi": "thí nghiệm"
+},
+"discover": {
+"w": "discover",
+"vi": "khám phá"
+},
+"history": {
+"w": "history",
+"vi": "lịch sử"
+},
+"ancient": {
+"w": "ancient",
+"vi": "cổ đại"
+},
+"dynasty": {
+"w": "dynasty",
+"vi": "triều đại"
+},
+"temple": {
+"w": "temple",
+"ipa": "/ˈtempəl/",
+"vi": "đền / chùa"
+},
+"hero": {
+"w": "hero",
+"ipa": "/ˈhɪroʊ/",
+"vi": "anh hùng"
+},
+"legend": {
+"w": "legend",
+"ipa": "/ˈledʒənd/",
+"vi": "truyền thuyết"
+},
+"custom": {
+"w": "custom",
+"vi": "phong tục"
+},
+"founder": {
+"w": "founder",
+"vi": "nhà sáng lập"
+},
+"contrast": {
+"w": "contrast",
+"ipa": "/ˈkɑːntræst/",
+"vi": "đối chiếu / tương phản"
+},
+"define": {
+"w": "define",
+"vi": "định nghĩa"
+},
+"summarize": {
+"w": "summarize",
+"vi": "tóm tắt"
+},
+"conclude": {
+"w": "conclude",
+"vi": "kết luận"
+},
+"predict": {
+"w": "predict",
+"vi": "dự đoán"
+},
+"identify": {
+"w": "identify",
+"ipa": "/aɪˈdentɪfaɪ/",
+"vi": "xác định"
+},
+"proportion": {
+"w": "proportion",
+"vi": "tỷ lệ"
+},
+"figure": {
+"w": "figure",
+"vi": "con số / hình"
+},
+"phenomenon": {
+"w": "phenomenon",
+"ipa": "/fɪˈnɑːmɪnən/",
+"vi": "hiện tượng"
+},
+"arrange": {
+"w": "arrange",
+"vi": "sắp xếp"
+},
+"require": {
+"w": "require",
+"vi": "yêu cầu"
+},
+"complete": {
+"w": "complete",
+"vi": "hoàn thành"
+},
+"prevent": {
+"w": "prevent",
+"ipa": "/prɪˈvent/",
+"vi": "ngăn ngừa"
+},
+"accept": {
+"w": "accept",
+"ipa": "/əkˈsept/",
+"vi": "chấp nhận"
+},
+"refuse": {
+"w": "refuse",
+"vi": "từ chối"
+},
+"essential": {
+"w": "essential",
+"ipa": "/ɪˈsenʃəl/",
+"vi": "thiết yếu"
+},
+"necessary": {
+"w": "necessary",
+"ipa": "/ˈnesəseri/",
+"vi": "cần thiết"
+},
+"common": {
+"w": "common",
+"ipa": "/ˈkɑːmən/",
+"vi": "phổ biến"
+},
+"modern": {
+"w": "modern",
+"ipa": "/ˈmɑːdərn/",
+"vi": "hiện đại"
+},
+"traditional": {
+"w": "traditional",
+"ipa": "/trəˈdɪʃənəl/",
+"vi": "truyền thống"
+},
+"effective": {
+"w": "effective",
+"ipa": "/ɪˈfektɪv/",
+"vi": "hiệu quả"
+},
+"various": {
+"w": "various",
+"ipa": "/ˈveriəs/",
+"vi": "đa dạng / nhiều loại"
+},
+"it depends": {
+"w": "it depends",
+"ipa": "/ɪt dɪˈpendz/",
+"vi": "còn tùy"
+},
+"in my opinion": {
+"w": "in my opinion",
+"vi": "theo tôi"
+},
+"to be honest": {
+"w": "to be honest",
+"ipa": "/tə bi ˈɑːnɪst/",
+"vi": "thành thật mà nói"
+},
+"more and more": {
+"w": "more and more",
+"vi": "ngày càng"
+},
+"step by step": {
+"w": "step by step",
+"ipa": "/step baɪ step/",
+"vi": "từng bước một"
+},
+"prompt": {
+"w": "prompt",
+"ipa": "/prɑːmpt/",
+"vi": "câu lệnh / yêu cầu gửi cho AI"
+},
+"model": {
+"w": "model",
+"ipa": "/ˈmɑːdəl/",
+"vi": "mô hình AI"
+},
+"token": {
+"w": "token",
+"vi": "đơn vị văn bản AI xử lý"
+},
+"context": {
+"w": "context",
+"ipa": "/ˈkɑːntekst/",
+"vi": "ngữ cảnh / bối cảnh hội thoại"
+},
+"agent": {
+"w": "agent",
+"vi": "tác nhân AI tự hành động"
+},
+"artifact": {
+"w": "artifact",
+"vi": "sản phẩm AI tạo ra (file, app...)"
+},
+"memory": {
+"w": "memory",
+"ipa": "/ˈmeməri/",
+"vi": "bộ nhớ (AI ghi nhớ thông tin)"
+},
+"session": {
+"w": "session",
+"ipa": "/ˈseʃən/",
+"vi": "phiên làm việc"
+},
+"response": {
+"w": "response",
+"ipa": "/rɪˈspɑːns/",
+"vi": "câu trả lời / phản hồi"
+},
+"generate": {
+"w": "generate",
+"ipa": "/ˈdʒenəreɪt/",
+"vi": "tạo sinh (văn bản, ảnh, code)"
+},
+"command": {
+"w": "command",
+"vi": "lệnh"
+},
+"settings": {
+"w": "settings",
+"ipa": "/ˈsetɪŋz/",
+"vi": "cài đặt"
+},
+"version": {
+"w": "version",
+"vi": "phiên bản"
+},
+"assistant": {
+"w": "assistant",
+"vi": "trợ lý"
+},
+"twenty-one": {
+"w": "twenty-one",
+"ipa": "/ˈtwenti wʌn/",
+"vi": "số hai mươi mốt (21)"
+},
+"ninety-nine": {
+"w": "ninety-nine",
+"vi": "số chín mươi chín (99)"
+},
+"tonight": {
+"w": "tonight",
+"vi": "tối nay"
+},
+"this week": {
+"w": "this week",
+"vi": "tuần này"
+},
+"next week": {
+"w": "next week",
+"ipa": "/nekst wiːk/",
+"vi": "tuần sau"
+},
+"last week": {
+"w": "last week",
+"vi": "tuần trước"
+},
+"every day": {
+"w": "every day",
+"ipa": "/ˈevri deɪ/",
+"vi": "mỗi ngày"
+},
+"camping": {
+"w": "camping",
+"vi": "cắm trại"
+},
+"sunrise": {
+"w": "sunrise",
+"vi": "bình minh"
+},
+"sunset": {
+"w": "sunset",
+"ipa": "/ˈsʌnset/",
+"vi": "hoàng hôn"
+},
+"breeze": {
+"w": "breeze",
+"vi": "làn gió nhẹ"
+},
+"snowman": {
+"w": "snowman",
+"vi": "người tuyết"
+},
+"picnic": {
+"w": "picnic",
+"vi": "dã ngoại"
+},
+"half price": {
+"w": "half price",
+"vi": "nửa giá"
+},
+"let's go": {
+"w": "let's go",
+"ipa": "/lets ɡoʊ/",
+"vi": "đi thôi"
+},
+"wait a minute": {
+"w": "wait a minute",
+"vi": "đợi một chút"
+},
+"me too": {
+"w": "me too",
+"vi": "tôi cũng vậy"
+},
+"not yet": {
+"w": "not yet",
+"ipa": "/nɑːt jet/",
+"vi": "chưa"
+},
+"almost done": {
+"w": "almost done",
+"vi": "sắp xong rồi"
+},
+"come in": {
+"w": "come in",
+"vi": "mời vào"
+},
+"sit down": {
+"w": "sit down",
+"vi": "ngồi xuống"
+},
+"follow me": {
+"w": "follow me",
+"ipa": "/ˈfɑːloʊ miː/",
+"vi": "đi theo tôi"
+},
+"be careful": {
+"w": "be careful",
+"ipa": "/bi ˈkerfʊl/",
+"vi": "cẩn thận nhé"
+},
+"firstly": {
+"w": "firstly",
+"vi": "thứ nhất"
+},
+"secondly": {
+"w": "secondly",
+"ipa": "/ˈsekəndli/",
+"vi": "thứ hai"
+},
+"finally": {
+"w": "finally",
+"vi": "cuối cùng"
+},
+"moreover": {
+"w": "moreover",
+"vi": "hơn nữa"
+},
+"thus": {
+"w": "thus",
+"vi": "do vậy"
+},
+"in conclusion": {
+"w": "in conclusion",
+"vi": "tóm lại"
+},
+"instead": {
+"w": "instead",
+"ipa": "/ɪnˈsted/",
+"vi": "thay vào đó"
+},
+"despite": {
+"w": "despite",
+"vi": "bất chấp / mặc dù"
+},
+"overall": {
+"w": "overall",
+"vi": "nhìn tổng thể"
+},
+"certificate": {
+"w": "certificate",
+"vi": "chứng chỉ"
+},
+"score": {
+"w": "score",
+"vi": "điểm số"
+},
+"test": {
+"w": "test",
+"ipa": "/test/",
+"vi": "bài kiểm tra"
+},
+"listening": {
+"w": "listening",
+"vi": "kỹ năng nghe"
+},
+"reading": {
+"w": "reading",
+"vi": "kỹ năng đọc"
+},
+"writing": {
+"w": "writing",
+"vi": "kỹ năng viết"
+},
+"speaking": {
+"w": "speaking",
+"vi": "kỹ năng nói"
+},
+"vocabulary": {
+"w": "vocabulary",
+"vi": "vốn từ vựng"
+},
+"achievement": {
+"w": "achievement",
+"vi": "thành tựu"
+},
+"the": {
+"vi": "mạo từ xác định (dùng cho người, vật đã biết)"
+},
+"few": {
+"vi": "ít (gần như không có)"
+},
+"hungry for": {
+"vi": "khao khát, thèm"
+},
+"answer (v)": {
+"vi": "trả lời; nghe máy"
+},
+"scarcely": {
+"vi": "hầu như không"
+},
+"deliberately": {
+"vi": "cố ý, có chủ đích"
+},
+"confused": {
+"vi": "bối rối, rối trí"
+},
+"cold": {
+"w": "cold",
+"vi": "lạnh"
+},
+"sea": {
+"w": "sea",
+"vi": "biển"
+}
+}
+}

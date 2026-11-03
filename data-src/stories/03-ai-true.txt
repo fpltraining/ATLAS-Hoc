@@ -3,180 +3,552 @@
 @level A2
 @title Can Machines Think?
 @vi Máy có biết nghĩ không?
-@blurb Năm 1950, Alan Turing đặt một câu hỏi mà đến giờ người ta vẫn còn cãi nhau.
+@blurb Năm 1950, Alan Turing đặt một câu hỏi mà đến giờ người ta vẫn còn cãi nhau. Câu chuyện về một bộ óc lớn và một cuộc đời ngắn.
+@source Turing (1950), Computing Machinery and Intelligence | https://doi.org/10.1093/mind/LIX.236.433
+@source Wikipedia: Turing test | https://en.wikipedia.org/wiki/Turing_test
+@source Wikipedia: Alan Turing | https://en.wikipedia.org/wiki/Alan_Turing
 
-## 1 | The Question | Câu hỏi
-In 1950, a British scientist named Alan Turing | Năm 1950, một nhà khoa học Anh tên Alan Turing
-wrote a famous paper. | viết một bài báo nổi tiếng.
-It began with a simple question: | Nó mở đầu bằng một câu hỏi đơn giản:
-"Can machines think?" | "Máy có thể suy nghĩ không?"
+## 1 | The Code Breaker | Người giải mã
+Alan Turing was born in London in 1912. | Alan Turing sinh ra ở London năm 1912.
+As a boy, he loved numbers and puzzles. | Hồi nhỏ, cậu mê con số và câu đố.
+His teachers did not always understand him. | Thầy cô không phải lúc nào cũng hiểu cậu.
+He was quiet, a little strange, | Cậu ít nói, hơi khác người,
+and very, very curious. | và cực kỳ tò mò.
 
-At that time, computers were as big as rooms. | Khi đó, máy tính to bằng cả căn phòng.
+During the Second World War, | Trong Chiến tranh thế giới thứ hai,
+he worked in secret at a place called Bletchley Park. | ông làm việc bí mật ở một nơi tên Bletchley Park.
+The German army sent messages in a secret code. | Quân đội Đức gửi tin bằng một loại mật mã.
+The code was called Enigma. | Mật mã đó tên là Enigma.
+It changed every day. | Nó thay đổi mỗi ngày.
+
+Turing and his team built machines | Turing và đồng đội chế tạo những cỗ máy
+that helped read these messages. | giúp đọc được các bức tin đó.
+Their work was secret for many years. | Công việc của họ được giữ bí mật nhiều năm.
+Today, many historians believe | Ngày nay, nhiều nhà sử học tin rằng
+it helped end the war sooner | nó giúp chiến tranh kết thúc sớm hơn
+and saved many lives. | và cứu được nhiều mạng người.
+
+? Where did Turing work during the war? | Trong chiến tranh, Turing làm việc ở đâu? | Bletchley Park* | A bank in London | A school
+? What was Enigma? | Enigma là gì? | A secret code* | A computer game | A ship
+~ puzzle = câu đố
+~ code = mật mã
+> Kể bằng tiếng Anh: hồi nhỏ ông ấy thích gì? Còn bạn thì sao?
+
+## 2 | The Imitation Game | Trò chơi bắt chước
+After the war, the first computers appeared. | Sau chiến tranh, những chiếc máy tính đầu tiên ra đời.
+They were as big as rooms. | Chúng to bằng cả căn phòng.
 They could only do simple math. | Chúng chỉ làm được phép tính đơn giản.
-Many people thought the question was silly. | Nhiều người thấy câu hỏi đó ngớ ngẩn.
 
-Turing knew that "think" was hard to define, | Turing biết rằng "suy nghĩ" rất khó định nghĩa,
-so he suggested a game. | nên ông đề xuất một trò chơi.
-A person talks by text | Một người nhắn tin trò chuyện
-with a human and a machine. | với một người thật và một cái máy.
-If the person cannot tell which is which, | Nếu người đó không phân biệt được ai là ai,
-maybe the machine is thinking. | có lẽ cái máy đang suy nghĩ.
+In 1950, Turing wrote a famous paper. | Năm 1950, Turing viết một bài báo nổi tiếng.
+It began with a simple question: | Nó mở đầu bằng một câu hỏi đơn giản:
+"Can machines think?" | "Máy có biết nghĩ không?"
+Many people thought the question was silly. | Nhiều người cho rằng câu hỏi thật ngớ ngẩn.
 
-Today we call it the Turing test. | Ngày nay ta gọi đó là phép thử Turing.
-Modern AI can often pass versions of it. | AI hiện đại thường qua được các phiên bản của nó.
-But people still argue about the real question. | Nhưng người ta vẫn cãi nhau về câu hỏi thật sự.
-Does a machine that talks like us | Một cái máy nói chuyện như ta
-really think like us? | có thật sự suy nghĩ như ta không?
+Turing knew that "think" was hard to define. | Turing biết chữ "nghĩ" rất khó định nghĩa.
+So he changed the question into a game. | Vì vậy ông biến câu hỏi thành một trò chơi.
+He called it the imitation game. | Ông gọi nó là trò chơi bắt chước.
+A judge sends written messages | Một giám khảo gửi các tin nhắn viết
+to a human and to a machine. | cho một người và một cỗ máy.
+The judge cannot see them. | Giám khảo không nhìn thấy họ.
+If the judge cannot tell which is which, | Nếu giám khảo không phân biệt được ai là ai,
+maybe we should say the machine thinks. | có lẽ nên nói rằng cỗ máy biết nghĩ.
 
-? What was Turing's test about? | Phép thử của Turing nói về gì? | Telling a human from a machine* | Doing fast math | Building big rooms
-> Theo anh, AI bây giờ có "suy nghĩ" không? Trả lời 1 câu tiếng Anh.
+Turing guessed that by about the year 2000, | Turing đoán rằng khoảng năm 2000,
+machines would often fool people | máy móc sẽ thường xuyên đánh lừa được người
+in short conversations. | trong những cuộc trò chuyện ngắn.
+Today we call his game the Turing test. | Ngày nay ta gọi trò chơi đó là phép thử Turing.
+
+? Why did Turing change his question into a game? | Vì sao Turing biến câu hỏi thành trò chơi? | "Think" is hard to define* | He liked games more than math | Computers were too small
+? What must the judge do in the game? | Giám khảo phải làm gì trong trò chơi? | Find out which one is the machine* | Build a computer | Write a paper
+~ paper = bài báo khoa học
+~ imitation = sự bắt chước
+~ judge = giám khảo
+~ fool = đánh lừa
+> Nếu bạn là giám khảo, bạn sẽ hỏi cỗ máy câu gì? Viết bằng tiếng Anh.
+
+## 3 | A Short Life, a Long Question | Một đời ngắn, một câu hỏi dài
+Turing's life did not end well. | Cuộc đời Turing không có kết thúc đẹp.
+In 1952, he was punished by the law | Năm 1952, ông bị pháp luật trừng phạt
+because he was gay. | vì ông là người đồng tính.
+At that time, this was a crime in Britain. | Thời đó, đây là tội ở nước Anh.
+He died two years later, at only 41. | Hai năm sau ông qua đời, mới 41 tuổi.
+
+Many years later, Britain said sorry. | Nhiều năm sau, nước Anh đã xin lỗi.
+In 2013, he was officially pardoned. | Năm 2013, ông chính thức được ân xá.
+In 2021, his face appeared | Năm 2021, gương mặt ông xuất hiện
+on the British fifty-pound note. | trên tờ tiền năm mươi bảng Anh.
+
+His question is still alive. | Câu hỏi của ông vẫn còn sống.
+Today, AI chatbots can talk like people. | Ngày nay, chatbot AI nói chuyện được như người.
+In some tests, many judges cannot tell them apart. | Trong vài thử nghiệm, nhiều giám khảo không phân biệt nổi.
+But people still argue. | Nhưng người ta vẫn tranh cãi.
+Does a machine that talks like us | Một cỗ máy nói giống ta
+really think like us? | có thật sự nghĩ giống ta không?
+Or is it just very good at copying? | Hay nó chỉ bắt chước rất giỏi?
+
+! A big question becomes useful | Một câu hỏi lớn trở nên hữu ích
+! when you turn it into something you can test. | khi ta biến nó thành thứ có thể kiểm tra.
+! Turing did not wait for a perfect answer. | Turing không chờ một câu trả lời hoàn hảo.
+! He asked a better question. | Ông đặt ra một câu hỏi tốt hơn.
+! His story also reminds us | Câu chuyện của ông cũng nhắc ta
+! to judge people by their work and their heart, | hãy đánh giá con người qua việc họ làm và tấm lòng,
+! not by who they love. | chứ không phải qua người họ yêu.
+
+? What happened in 2021? | Năm 2021 có chuyện gì? | Turing appeared on a banknote* | Turing won a prize | A new test was made
+? What do people still argue about? | Người ta vẫn tranh cãi điều gì? | Whether talking like us means thinking like us* | Whether Turing was smart | Whether computers exist
+~ crime = tội
+~ pardon = ân xá
+~ argue = tranh cãi
+> Bạn nghĩ chatbot ngày nay có "biết nghĩ" không? Viết 3 câu tiếng Anh nêu lý do.
 
 @id true-eliza
 @shelf true
 @level A2
 @title The Secretary and the Machine
 @vi Cô thư ký và cái máy
-@blurb Năm 1966, một chương trình rất đơn giản đã khiến người ta muốn tâm sự với nó. Người tạo ra nó thấy sợ.
+@blurb Năm 1966, một chương trình rất đơn giản đã khiến người ta muốn tâm sự với nó. Người tạo ra nó thấy sợ, và dành phần đời còn lại để cảnh báo.
+@source Wikipedia: ELIZA | https://en.wikipedia.org/wiki/ELIZA
+@source Wikipedia: ELIZA effect | https://en.wikipedia.org/wiki/ELIZA_effect
+@source Wikipedia: Joseph Weizenbaum | https://en.wikipedia.org/wiki/Joseph_Weizenbaum
 
-## 1 | ELIZA | ELIZA
-In the 1960s, at MIT in America, | Vào những năm 1960, tại MIT ở Mỹ,
-a scientist named Joseph Weizenbaum | một nhà khoa học tên Joseph Weizenbaum
-made a small program called ELIZA. | tạo ra một chương trình nhỏ tên ELIZA.
+## 1 | A Very Simple Program | Một chương trình rất đơn giản
+Joseph Weizenbaum was born in Germany in 1923. | Joseph Weizenbaum sinh ở Đức năm 1923.
+His family was Jewish. | Gia đình ông là người Do Thái.
+When he was a boy, they escaped to America. | Khi ông còn nhỏ, cả nhà chạy sang Mỹ.
+He grew up, studied math, | Ông lớn lên, học toán,
+and became a computer scientist at MIT. | và trở thành nhà khoa học máy tính ở MIT.
+
+In the 1960s, he made a small program. | Vào những năm 1960, ông viết một chương trình nhỏ.
+He named it ELIZA. | Ông đặt tên nó là ELIZA.
+You typed a sentence, and ELIZA answered. | Bạn gõ một câu, và ELIZA trả lời.
+Its most famous version acted | Phiên bản nổi tiếng nhất của nó đóng vai
+like a calm therapist. | một nhà trị liệu điềm tĩnh.
 
 ELIZA was not smart. | ELIZA không thông minh.
 It understood nothing. | Nó chẳng hiểu gì cả.
-It only followed simple rules. | Nó chỉ làm theo những quy tắc đơn giản.
-If you typed, "I am sad," | Nếu anh gõ "Tôi buồn",
-it answered, "Why are you sad?" | nó đáp "Vì sao bạn buồn?"
-It turned your words into questions, | Nó biến lời anh thành câu hỏi,
-like a quiet doctor. | như một bác sĩ ít nói.
+It only looked for key words | Nó chỉ tìm các từ khoá
+and followed simple rules. | rồi làm theo những quy tắc đơn giản.
+If you typed, "I am sad," | Nếu bạn gõ: "I am sad,"
+it answered, "Why are you sad?" | nó đáp: "Why are you sad?"
+If you wrote about your mother, | Nếu bạn viết về mẹ mình,
+it said, "Tell me more about your family." | nó nói: "Kể thêm về gia đình bạn đi."
 
+? What did ELIZA really do? | ELIZA thật ra làm gì? | Followed simple rules* | Understood feelings | Read people's minds
+? Where did Weizenbaum work? | Weizenbaum làm việc ở đâu? | At MIT* | At a hospital | At a bank
+~ therapist = nhà trị liệu tâm lý
+~ key word = từ khoá
+> Thử đóng vai ELIZA: biến câu "I am tired" thành một câu hỏi tiếng Anh.
+
+## 2 | Please Leave the Room | Xin ông ra ngoài
 Then something strange happened. | Rồi một chuyện lạ xảy ra.
-People began to tell it their secrets. | Người ta bắt đầu kể bí mật cho nó.
+People loved talking to ELIZA. | Người ta rất thích trò chuyện với ELIZA.
+They told it about their problems, | Họ kể với nó về những rắc rối của mình,
+their fears, and their secrets. | nỗi sợ, và cả những bí mật.
+
 One day, Weizenbaum's own secretary | Một hôm, chính cô thư ký của Weizenbaum
 was talking to ELIZA. | đang trò chuyện với ELIZA.
-She knew it was only a program. | Cô biết đó chỉ là một chương trình.
-Still, she asked him to leave the room. | Vậy mà cô vẫn nhờ ông ra khỏi phòng.
-She wanted to be private. | Cô muốn được riêng tư.
+She had watched him build it. | Cô đã chứng kiến ông viết ra nó.
+She knew it was only a program. | Cô biết nó chỉ là một chương trình.
+Still, after a few sentences, | Vậy mà, sau vài câu,
+she asked him to leave the room. | cô xin ông ra khỏi phòng.
+She wanted to talk to ELIZA alone. | Cô muốn được nói chuyện riêng với ELIZA.
 
-Weizenbaum was shocked. | Weizenbaum bị sốc.
-He spent years warning people | Ông dành nhiều năm cảnh báo mọi người
-not to trust machines too easily. | đừng quá dễ tin vào máy móc.
-Today, we still fall for the same trick. | Ngày nay, ta vẫn mắc đúng cái bẫy đó.
-It even has a name: the ELIZA effect. | Nó còn có tên: hiệu ứng ELIZA.
+Weizenbaum was shocked. | Weizenbaum bàng hoàng.
+Some doctors even said | Một số bác sĩ còn nói
+programs like ELIZA could replace therapists. | các chương trình như ELIZA có thể thay nhà trị liệu.
+He thought this idea was dangerous. | Ông cho rằng ý tưởng đó nguy hiểm.
+A machine that only copies words | Một cỗ máy chỉ lặp lại lời nói
+cannot truly care about you. | không thể thật lòng quan tâm đến bạn.
 
-? Why did the secretary ask him to leave? | Vì sao cô thư ký nhờ ông ra ngoài? | She wanted to talk privately* | The room was cold | She was angry
-> Anh có từng thấy mình nói chuyện với AI như với người thật không?
+? What did the secretary ask Weizenbaum to do? | Cô thư ký nhờ Weizenbaum làm gì? | Leave the room* | Fix the program | Turn off the computer
+? Why was Weizenbaum shocked? | Vì sao Weizenbaum bàng hoàng? | People trusted a simple program too much* | ELIZA broke down | Nobody used ELIZA
+~ secret = bí mật
+~ shocked = bàng hoàng
+~ replace = thay thế
+> Bạn đã bao giờ kể chuyện riêng với một chatbot chưa? Cảm giác thế nào?
+
+## 3 | The ELIZA Effect | Hiệu ứng ELIZA
+Weizenbaum spent the rest of his life | Weizenbaum dành phần đời còn lại
+warning people about computers. | để cảnh báo mọi người về máy tính.
+In 1976, he wrote a book about it. | Năm 1976, ông viết một cuốn sách về điều đó.
+He said that some decisions | Ông nói có những quyết định
+should always be made by humans. | lúc nào cũng phải do con người đưa ra.
+
+Today, his name lives on | Ngày nay, tên ông vẫn còn được nhắc
+in an idea called the ELIZA effect. | qua một khái niệm gọi là hiệu ứng ELIZA.
+It means that when a machine uses our words, | Nghĩa là khi một cỗ máy dùng lời nói của ta,
+we easily believe it understands us. | ta dễ dàng tin rằng nó hiểu ta.
+
+Modern chatbots are far stronger than ELIZA. | Chatbot ngày nay mạnh hơn ELIZA rất nhiều.
+They can help us learn, write, and think. | Chúng giúp ta học, viết và suy nghĩ.
+But the old question is still important. | Nhưng câu hỏi cũ vẫn còn quan trọng.
+When a machine sounds kind, | Khi một cỗ máy nghe có vẻ tử tế,
+what is really happening inside? | bên trong nó thật sự đang diễn ra điều gì?
+
+! Sounding smart is not the same as understanding. | Nghe có vẻ thông minh không giống với thật sự hiểu.
+! We are built to trust anything that talks like a person. | Con người vốn dễ tin bất cứ thứ gì nói năng như người.
+! Use AI as a tool, and use it well. | Hãy dùng AI như một công cụ, và dùng cho giỏi.
+! But for real care and real advice, | Nhưng khi cần sự quan tâm và lời khuyên thật,
+! keep real people close. | hãy giữ những người thật ở bên mình.
+
+? What is the ELIZA effect? | Hiệu ứng ELIZA là gì? | Believing a machine understands us* | A computer that breaks easily | A kind of therapy
+? What did Weizenbaum believe? | Weizenbaum tin vào điều gì? | Some decisions must stay with humans* | Computers should do all jobs | ELIZA was very smart
+~ warn = cảnh báo
+~ effect = hiệu ứng
+> Viết 3 câu tiếng Anh: việc gì bạn sẽ nhờ AI, việc gì bạn sẽ hỏi một người thật?
 
 @id true-kasparov
 @shelf true
 @level A2
 @title The Day Kasparov Lost
 @vi Ngày Kasparov thua
-@blurb Năm 1997, người chơi cờ giỏi nhất thế giới thua một cái máy. Ông rời bàn cờ trong giận dữ.
+@blurb Năm 1997, người chơi cờ giỏi nhất thế giới thua một cái máy. Ông giận dữ nhiều năm, rồi tìm ra một điều bất ngờ: người và máy cùng chơi còn mạnh hơn.
+@source Wikipedia: Deep Blue versus Garry Kasparov | https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov
+@source IBM: Deep Blue | https://www.ibm.com/history/deep-blue
+@source Wikipedia: Advanced chess | https://en.wikipedia.org/wiki/Advanced_chess
 
-## 1 | Man Against Machine | Người đấu với máy
-Garry Kasparov was the best chess player in the world. | Garry Kasparov là kỳ thủ giỏi nhất thế giới.
-In 1996, he played a match | Năm 1996, ông thi đấu một trận
-against an IBM computer called Deep Blue. | với máy tính của IBM tên Deep Blue.
-He lost one game, | Ông thua một ván,
-but he won the match. | nhưng thắng cả trận.
+## 1 | The Champion and the Machine | Nhà vô địch và cỗ máy
+Garry Kasparov became world chess champion in 1985. | Garry Kasparov trở thành vua cờ thế giới năm 1985.
+He was only 22 years old. | Khi đó ông mới 22 tuổi.
+He was fast, brave, and very proud. | Ông nhanh, táo bạo, và rất kiêu hãnh.
+For many years, nobody could beat him. | Suốt nhiều năm, không ai thắng nổi ông.
 
-One year later, they played again in New York. | Một năm sau, họ đấu lại ở New York.
-Deep Blue was now much stronger. | Deep Blue giờ đã mạnh hơn nhiều.
-It could look at 200 million chess positions | Nó có thể xem xét 200 triệu thế cờ
+At the same time, a company called IBM | Cùng lúc đó, một công ty tên IBM
+was building a chess computer. | đang chế tạo một chiếc máy chơi cờ.
+They called it Deep Blue. | Họ gọi nó là Deep Blue.
+It could look at about 200 million positions | Nó có thể xem xét khoảng 200 triệu thế cờ
 in one second. | trong một giây.
 
-The match was very close. | Trận đấu rất sát sao.
-Before the last game, the score was equal. | Trước ván cuối, tỉ số đang hoà.
-Then, in May 1997, | Rồi vào tháng 5 năm 1997,
-Kasparov lost the final game in only 19 moves. | Kasparov thua ván cuối chỉ sau 19 nước.
-He stood up and walked away with his arms open. | Ông đứng dậy, dang tay rồi bỏ đi.
-
-It was the first time a world champion | Đây là lần đầu một nhà vô địch thế giới
-lost a match to a computer | thua cả trận trước máy tính
+In 1996, Kasparov played Deep Blue | Năm 1996, Kasparov đấu với Deep Blue
+in a six-game match in Philadelphia. | một trận sáu ván ở Philadelphia.
+He lost the first game. | Ông thua ván đầu tiên.
+It was the first time a world champion | Đó là lần đầu một nhà vô địch thế giới
+lost a game to a computer | thua một ván trước máy tính
 under normal tournament rules. | theo luật thi đấu thông thường.
+But then he won three games and drew two. | Nhưng sau đó ông thắng ba ván và hoà hai.
+He won the match, four to two. | Ông thắng cả trận, bốn hai.
 
+? What happened in the first game in 1996? | Ván đầu năm 1996 có chuyện gì? | Kasparov lost* | Kasparov won easily | The computer broke
+? Who won the 1996 match? | Ai thắng trận năm 1996? | Kasparov* | Deep Blue | Nobody
+~ champion = nhà vô địch
+~ proud = kiêu hãnh
+~ draw = hoà
+> Kể bằng tiếng Anh về một lần bạn thua trận đầu nhưng vẫn thắng chung cuộc.
+
+## 2 | The Rematch | Trận tái đấu
+One year later, in May 1997, | Một năm sau, tháng 5 năm 1997,
+they played again in New York. | họ đấu lại ở New York.
+IBM had made Deep Blue much stronger. | IBM đã làm Deep Blue mạnh hơn nhiều.
+
+Kasparov won the first game. | Kasparov thắng ván đầu.
+In the second game, Deep Blue played | Ở ván hai, Deep Blue đi
+a quiet, careful move. | một nước đi lặng lẽ, thận trọng.
+It looked like a human idea, not a machine idea. | Nó trông như ý tưởng của người, không phải của máy.
+Kasparov was upset. | Kasparov bị rối trí.
+He began to wonder if humans were helping the computer. | Ông bắt đầu nghi có người đang giúp chiếc máy.
+He lost that game, | Ông thua ván đó,
+and he never felt calm again in the match. | và suốt trận ông không còn bình tĩnh nữa.
+
+Before the last game, the score was equal. | Trước ván cuối, tỉ số đang hoà.
+In the sixth game, Kasparov made an early mistake. | Ở ván sáu, Kasparov mắc sai lầm từ sớm.
+He lost in only 19 moves. | Ông thua chỉ sau 19 nước.
+He stood up and walked away, | Ông đứng dậy bỏ đi,
+throwing his arms in the air. | hai tay giơ lên trời.
+
+For the first time, a world champion | Lần đầu tiên, một nhà vô địch thế giới
+lost a whole match to a computer. | thua cả một trận trước máy tính.
+Kasparov asked for another match. | Kasparov đòi đấu thêm trận nữa.
+IBM said no, and Deep Blue was retired. | IBM từ chối, và Deep Blue được cho nghỉ hưu.
+
+? Why was Kasparov upset in game two? | Vì sao Kasparov rối trí ở ván hai? | The move looked too human* | The room was too loud | He was sick
+? How many moves did the last game last? | Ván cuối kéo dài bao nhiêu nước? | 19* | 37 | 100
+~ rematch = trận tái đấu
+~ upset = rối trí, bực bội
+~ mistake = sai lầm
+> Khi bị rối trí trong trận đấu, bạn làm gì để bình tĩnh lại? Viết 2 câu tiếng Anh.
+
+## 3 | Better Together | Cùng nhau mạnh hơn
 For years, Kasparov was angry. | Suốt nhiều năm, Kasparov vẫn giận.
-Later, he changed his mind. | Về sau, ông đổi ý.
-He said that people and machines | Ông nói con người và máy móc
-are stronger when they work together. | mạnh hơn khi làm việc cùng nhau.
+But he was also curious. | Nhưng ông cũng tò mò.
+In 1998, he tried a new kind of chess. | Năm 1998, ông thử một kiểu cờ mới.
+Each player could use a computer during the game. | Mỗi người được dùng máy tính ngay trong ván cờ.
+He called it advanced chess. | Ông gọi nó là cờ nâng cao.
 
-? What could Deep Blue do? | Deep Blue làm được gì? | Check 200 million positions a second* | Talk to Kasparov | Walk away
-> Anh đồng ý với Kasparov không? Trả lời bằng tiếng Anh.
+In 2005, there was an online tournament | Năm 2005, có một giải đấu trực tuyến
+where anyone could use computers. | nơi ai cũng được dùng máy tính.
+Strong players joined. | Các kỳ thủ mạnh tham gia.
+Strong computers joined. | Các máy cờ mạnh cũng tham gia.
+The winners were a surprise: | Người thắng thật bất ngờ:
+two amateur players from America | hai kỳ thủ nghiệp dư người Mỹ
+with three normal home computers. | với ba chiếc máy tính bình thường ở nhà.
+
+They were not the best players. | Họ không phải người chơi giỏi nhất.
+They did not have the best machines. | Họ không có máy mạnh nhất.
+But they had the best way of working together. | Nhưng họ có cách phối hợp tốt nhất.
+Kasparov wrote about this many times. | Kasparov đã viết về điều này nhiều lần.
+He said a good process | Ông nói một quy trình tốt
+can beat a stronger player or a stronger machine. | có thể thắng người mạnh hơn hay máy mạnh hơn.
+
+! Losing can make you angry. | Thua có thể khiến ta tức giận.
+! Kasparov stayed curious, and that changed everything. | Kasparov vẫn giữ sự tò mò, và điều đó thay đổi tất cả.
+! The best team is not always the most talented. | Đội giỏi nhất không phải lúc nào cũng tài năng nhất.
+! It is the team that works together best. | Mà là đội phối hợp với nhau tốt nhất.
+! People plus machines, with a good plan, | Con người cộng máy móc, với một kế hoạch tốt,
+! can be stronger than either one alone. | có thể mạnh hơn từng bên đứng riêng.
+
+? Who won the 2005 tournament? | Ai thắng giải năm 2005? | Two amateurs with home computers* | Kasparov | Deep Blue
+? What did Kasparov say matters most? | Theo Kasparov, điều gì quan trọng nhất? | A good way of working together* | The fastest computer | Being world champion
+~ amateur = nghiệp dư
+~ tournament = giải đấu
+~ process = quy trình
+> Đội của bạn phối hợp tốt nhất khi nào? Viết 3 câu tiếng Anh.
 
 @id true-move37
 @shelf true
 @level A2
 @title Move 37
 @vi Nước đi 37
-@blurb Năm 2016, ở Seoul, một AI đi một nước cờ mà không ai hiểu. Về sau người ta gọi nó là đẹp.
+@blurb Năm 2016, ở Seoul, một AI đi một nước cờ mà không ai hiểu. Kỳ thủ giỏi nhất thời đó thua, rồi tìm ra cách thắng lại một ván.
+@source Wikipedia: AlphaGo versus Lee Sedol | https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol
+@source Shin et al. (2023), PNAS: Superhuman AI can improve human decision-making | https://doi.org/10.1073/pnas.2214840120
 
-## 1 | The Strange Move | Nước đi kỳ lạ
+## 1 | The Man Who Expected to Win | Người tin mình sẽ thắng
 Go is an old game from China. | Cờ vây là trò chơi cổ của Trung Quốc.
+Two players put black and white stones | Hai người lần lượt đặt quân đen và trắng
+on a board, one by one. | lên bàn cờ, từng quân một.
 The rules are simple, | Luật chơi đơn giản,
 but the game is incredibly deep. | nhưng trò chơi sâu vô cùng.
 There are more possible positions | Số thế cờ có thể có còn nhiều hơn
 than atoms in the universe. | số nguyên tử trong vũ trụ.
 
+For many years, people said | Suốt nhiều năm, người ta nói
+that computers would never beat a top Go player. | máy tính sẽ không bao giờ thắng nổi kỳ thủ cờ vây hàng đầu.
+Chess was about calculation. | Cờ vua là chuyện tính toán.
+Go, they said, needed feeling. | Còn cờ vây, họ nói, cần cảm giác.
+
 In March 2016, in Seoul, | Tháng 3 năm 2016, tại Seoul,
-the great player Lee Sedol | kỳ thủ lừng danh Lee Sedol
-played an AI called AlphaGo. | đấu với một AI tên AlphaGo.
-Most experts thought Lee would win easily. | Đa số chuyên gia nghĩ Lee sẽ thắng dễ.
+the Korean player Lee Sedol | kỳ thủ Hàn Quốc Lee Sedol
+agreed to play five games | nhận lời đấu năm ván
+against an AI called AlphaGo. | với một AI tên AlphaGo.
+Lee was one of the best players in the world. | Lee là một trong những kỳ thủ giỏi nhất thế giới.
+Before the match, he was confident. | Trước trận, anh ấy rất tự tin.
+He said he would probably win five to zero, | Anh ấy nói có lẽ mình sẽ thắng năm không,
+or maybe four to one. | hoặc cùng lắm là bốn một.
 
-In the second game, AlphaGo played its 37th move. | Ở ván hai, AlphaGo đi nước thứ 37.
-The experts thought it was a mistake. | Các chuyên gia tưởng đó là nước sai.
-No good human would play there. | Không kỳ thủ giỏi nào đi vào chỗ đó.
+Then he lost the first game. | Rồi anh ấy thua ván đầu tiên.
+Millions of people were watching. | Hàng triệu người đang theo dõi.
+Nobody could quite believe it. | Không ai tin nổi.
+
+? What did Lee expect before the match? | Trước trận, Lee nghĩ gì? | To win easily* | To lose every game | To stop playing Go
+? Why did people think Go was hard for computers? | Vì sao người ta nghĩ cờ vây khó với máy tính? | It needs feeling, not only calculation* | The board is too small | It has no rules
+~ confident = tự tin
+~ position = thế cờ
+> Kể bằng tiếng Anh một lần anh quá tự tin trước một trận đấu.
+
+## 2 | The Strange Move | Nước đi kỳ lạ
+The second game began. | Ván thứ hai bắt đầu.
+Lee was out of the room for a short break | Lee ra ngoài nghỉ một lát
+when AlphaGo played its 37th move. | đúng lúc AlphaGo đi nước thứ 37.
+It put a black stone | Nó đặt một quân đen
+in a place no expert would choose. | vào chỗ không chuyên gia nào chọn.
+
+The commentators were confused. | Các bình luận viên bối rối.
+One of them thought it was a mistake. | Một người nghĩ đó là nước sai.
+Later, the AlphaGo team found something interesting. | Về sau, nhóm làm AlphaGo phát hiện một điều thú vị.
 AlphaGo itself had guessed | Chính AlphaGo đã ước tính
-that only one human in ten thousand would. | chỉ một người trong mười nghìn sẽ đi vậy.
-Lee left the room to think. | Lee rời phòng để suy nghĩ.
+that only one human in ten thousand | chỉ một người trong mười nghìn
+would play that move. | sẽ đi nước đó.
+It played it anyway. | Nó vẫn đi.
 
-Move 37 helped AlphaGo win that game. | Nước 37 giúp AlphaGo thắng ván đó.
-People who had played for a lifetime | Những người chơi cả đời
-called it beautiful. | gọi nó là đẹp.
+Lee came back and sat down. | Lee quay lại và ngồi xuống.
+He looked at the board for a long time. | Anh ấy nhìn bàn cờ rất lâu.
+He thought for almost fifteen minutes | Anh ấy nghĩ gần mười lăm phút
+before he answered. | rồi mới đi nước tiếp.
 
-Lee lost the match, four games to one. | Lee thua chung cuộc, bốn ván một.
-But he won game four, | Nhưng ông thắng ván bốn,
-with his own surprising move. | bằng một nước đi bất ngờ của chính mình.
-It remains the only game | Đó vẫn là ván duy nhất
-that a human ever won against that AlphaGo. | mà con người từng thắng phiên bản AlphaGo đó.
-In 2019 he retired from the game. | Năm 2019, ông giải nghệ.
+Fan Hui, a European champion, | Phàn Huy, nhà vô địch châu Âu,
+was watching in the room. | đang theo dõi trong phòng.
+He said it was not a human move. | Ông nói đó không phải nước đi của con người.
+Then he said, "So beautiful." | Rồi ông nói: "Đẹp quá."
 
-? Why did experts think Move 37 was a mistake? | Vì sao chuyên gia tưởng nước 37 là sai? | No good human would play it* | It broke the rules | It was too slow
-> AI tìm ra thứ mà con người chưa nghĩ tới. Điều đó làm anh thấy thế nào?
+As the game went on, | Ván cờ càng đi tiếp,
+the strange stone became stronger and stronger. | quân cờ lạ ấy càng mạnh lên.
+AlphaGo won the second game. | AlphaGo thắng ván hai.
+
+? Where was Lee when Move 37 was played? | Lee ở đâu khi nước 37 được đi? | Outside the room* | At home | Next to Fan Hui
+? What did Fan Hui call the move? | Phàn Huy gọi nước đi đó là gì? | Beautiful* | Boring | Easy
+~ commentator = bình luận viên
+~ anyway = dù vậy vẫn
+> Theo anh, một nước đi "đẹp" là thế nào? Trả lời bằng 2 câu tiếng Anh.
+
+## 3 | Game Four | Ván thứ tư
+AlphaGo also won the third game. | AlphaGo thắng luôn ván thứ ba.
+The match was over. | Trận đấu đã ngã ngũ.
+Lee had lost three games in a row. | Lee đã thua ba ván liên tiếp.
+
+At the press conference, he looked tired. | Trong buổi họp báo, anh ấy trông mệt mỏi.
+He apologized to the people of Korea. | Anh ấy xin lỗi người dân Hàn Quốc.
+"I'm sorry I was so powerless," he said. | "Tôi xin lỗi vì đã bất lực như vậy," anh ấy nói.
+But he did not stop. | Nhưng anh ấy không dừng lại.
+He still had two games to play. | Anh ấy vẫn còn hai ván phải đấu.
+
+Lee studied the games he had lost. | Lee nghiên cứu những ván mình đã thua.
+He looked for a weakness. | Anh ấy tìm một điểm yếu.
+In the fourth game, at move 78, | Ở ván thứ tư, tại nước 78,
+he played a stone in the middle of the board. | anh ấy đặt một quân vào giữa bàn cờ.
+It was a move that few people expected. | Đó là nước đi ít ai ngờ tới.
+
+This time, AlphaGo was the one who was confused. | Lần này, đến lượt AlphaGo bối rối.
+Its next moves were weak. | Mấy nước tiếp theo của nó rất yếu.
+After a long fight, AlphaGo resigned. | Sau một trận dài, AlphaGo xin thua.
+The room filled with cheers. | Cả khán phòng reo hò.
+People called Lee's move "God's touch." | Người ta gọi nước đi của Lee là "nước đi của thần".
+
+Lee lost the last game, | Lee thua ván cuối,
+so the final score was four to one. | nên tỉ số chung cuộc là bốn một.
+But game four is still famous. | Nhưng ván bốn đến giờ vẫn nổi tiếng.
+It is the only game | Đó là ván duy nhất
+a human ever won against that AlphaGo. | mà con người từng thắng phiên bản AlphaGo đó.
+
+? What did Lee do after three losses? | Lee làm gì sau ba trận thua? | Studied his lost games* | Went home | Stopped playing
+? What happened at move 78 of game four? | Chuyện gì xảy ra ở nước 78 ván bốn? | Lee played a surprising move* | AlphaGo broke down | The game ended in a draw
+~ press conference = buổi họp báo
+~ powerless = bất lực
+~ resign = xin thua, đầu hàng
+> Bằng tiếng Anh: sau một trận thua, anh làm gì đầu tiên?
+
+## 4 | What Came After | Chuyện sau đó
+In 2019, Lee Sedol retired from Go. | Năm 2019, Lee Sedol giải nghệ.
+He said that AI was something | Anh ấy nói AI là một thứ
+that could not be defeated. | không thể bị đánh bại.
+
+But for other players, | Nhưng với những kỳ thủ khác,
+the story did not end there. | câu chuyện không dừng ở đó.
+They started to study AI games. | Họ bắt đầu nghiên cứu các ván cờ của AI.
+Moves that looked wrong for centuries | Những nước bị coi là sai suốt hàng trăm năm
+turned out to be good. | hoá ra lại là nước hay.
+Young players copied them, | Các kỳ thủ trẻ học theo,
+then made their own new ideas. | rồi tự nghĩ ra ý tưởng mới.
+
+In 2023, a group of scientists | Năm 2023, một nhóm nhà khoa học
+looked at millions of human moves. | xem xét hàng triệu nước đi của con người.
+They found that after AlphaGo, | Họ thấy rằng sau AlphaGo,
+human players made better decisions | các kỳ thủ đưa ra quyết định tốt hơn
+and played more new moves than before. | và đi nhiều nước mới hơn trước.
+The machine did not end the game. | Cỗ máy không giết chết trò chơi.
+It made people play better. | Nó khiến con người chơi giỏi hơn.
+
+! A new idea often looks like a mistake at first. | Ý tưởng mới thường trông như một sai lầm lúc đầu.
+! Losing to someone stronger is painful, | Thua người mạnh hơn thì đau,
+! but it shows you what you have not seen yet. | nhưng nó cho anh thấy điều mình chưa thấy.
+! Lee did not win the match, | Lee không thắng cả trận,
+! but he studied, changed his plan, and won one game. | nhưng anh ấy đã học, đổi cách đánh và thắng một ván.
+! Players who learned from AI got better. | Những người chịu học từ AI đã giỏi lên.
+! The question is not "Can I beat it?" | Câu hỏi không phải "Mình có thắng nổi nó không?"
+! The question is "What can I learn from it?" | mà là "Mình học được gì từ nó?"
+
+? What did human players do after AlphaGo? | Kỳ thủ làm gì sau AlphaGo? | Learned from AI moves* | Stopped playing | Banned computers
+? What did the 2023 study find? | Nghiên cứu năm 2023 phát hiện điều gì? | Humans made better decisions* | Humans played worse | Nothing changed
+~ retire = giải nghệ
+~ defeat = đánh bại
+~ decision = quyết định
+> Viết 3 câu tiếng Anh: anh học được gì từ một đối thủ mạnh hơn mình?
 
 @id true-alphafold
 @shelf true
 @level A2
 @title The Fifty-Year Problem
 @vi Bài toán năm mươi năm
-@blurb Hình dạng của protein là câu đố làm các nhà khoa học đau đầu suốt nửa thế kỷ. Rồi AI giải được phần lớn.
+@blurb Hình dạng của protein là câu đố làm các nhà khoa học đau đầu suốt nửa thế kỷ. Rồi AI giải được phần lớn, và những người làm ra nó đã tặng kết quả cho cả thế giới.
+@source Nobel Prize in Chemistry 2024 | https://www.nobelprize.org/prizes/chemistry/2024/summary/
+@source Wikipedia: AlphaFold | https://en.wikipedia.org/wiki/AlphaFold
+@source AlphaFold Protein Structure Database | https://alphafold.ebi.ac.uk/
 
-## 1 | The Shape of Life | Hình dạng của sự sống
-Your body is full of proteins. | Cơ thể anh đầy protein.
-They carry oxygen, fight sickness, and build muscle. | Chúng mang oxy, chống bệnh và xây cơ bắp.
-Each protein folds into a special shape, | Mỗi protein gập thành một hình dạng riêng,
-and the shape decides what it can do. | và hình dạng quyết định nó làm được gì.
+## 1 | Tiny Machines | Những cỗ máy tí hon
+Your body is full of proteins. | Cơ thể bạn đầy protein.
+They are like tiny machines. | Chúng giống như những cỗ máy tí hon.
+Some carry oxygen in your blood. | Có loại chở oxy trong máu.
+Some fight sickness. | Có loại chống lại bệnh tật.
+Some build your muscles and your hair. | Có loại xây nên cơ bắp và tóc.
 
-For about fifty years, scientists had a problem. | Suốt khoảng năm mươi năm, giới khoa học có một bài toán.
-Finding the shape of one protein | Tìm hình dạng của một protein
-could take years of hard work in a lab. | có thể mất nhiều năm làm việc trong phòng thí nghiệm.
-Could a computer simply predict it? | Máy tính có thể đoán ra được không?
+Each protein starts as a long chain. | Mỗi protein lúc đầu là một chuỗi dài.
+Then it folds into a special shape, | Rồi nó gấp lại thành một hình dạng riêng,
+like a piece of paper folded into a bird. | như tờ giấy gấp thành con chim.
+The shape decides what the protein can do. | Hình dạng quyết định protein làm được gì.
+If the shape is wrong, | Nếu hình dạng sai,
+we can get sick. | ta có thể bị bệnh.
 
-In 2020, a company called DeepMind | Năm 2020, một công ty tên DeepMind
-showed that its AI, AlphaFold, | cho thấy AI của họ, AlphaFold,
-could predict many shapes | có thể đoán nhiều hình dạng
-almost as well as lab work. | gần chính xác như làm thí nghiệm.
+In the 1970s, scientists understood | Vào những năm 1970, các nhà khoa học hiểu ra
+that the chain contains the plan for its shape. | rằng chuỗi đã chứa sẵn bản vẽ cho hình dạng của nó.
+So a new question was born: | Thế là một câu hỏi mới ra đời:
+if we know the chain, | nếu biết chuỗi,
+can we predict the shape? | ta có đoán được hình dạng không?
 
-Then they did something generous. | Rồi họ làm một việc hào phóng.
-They shared more than 200 million protein shapes | Họ chia sẻ hơn 200 triệu hình dạng protein
-for free, for scientists everywhere. | miễn phí, cho các nhà khoa học khắp nơi.
+? What decides what a protein can do? | Điều gì quyết định protein làm được gì? | Its shape* | Its color | Its age
+? What does a protein look like at first? | Lúc đầu protein trông như thế nào? | A long chain* | A small ball | A bird
+~ chain = chuỗi
+~ fold = gấp lại
+~ predict = dự đoán
+> Giải thích bằng tiếng Anh cho một người bạn: protein là gì?
+
+## 2 | Years in the Lab | Nhiều năm trong phòng thí nghiệm
+It sounded simple, but it was very hard. | Nghe thì đơn giản, nhưng cực kỳ khó.
+A chain can fold in a huge number of ways. | Một chuỗi có thể gấp theo vô số cách.
+To find the real shape, | Muốn tìm ra hình dạng thật,
+scientists used difficult lab methods. | các nhà khoa học dùng những phương pháp rất khó.
+One protein could take years of work. | Một protein có thể tốn nhiều năm làm việc.
+Some could never be done at all. | Có những protein không làm được.
+
+In 1994, scientists started a competition. | Năm 1994, giới khoa học mở một cuộc thi.
+Every two years, teams tried to predict shapes | Cứ hai năm một lần, các đội thử đoán hình dạng
+that the lab already knew but kept secret. | mà phòng thí nghiệm đã biết nhưng giữ kín.
+For many years, the results were not very good. | Suốt nhiều năm, kết quả không tốt lắm.
+
+Then a company called DeepMind joined. | Rồi một công ty tên DeepMind tham gia.
+Its leader, Demis Hassabis, | Người đứng đầu là Demis Hassabis,
+had been a chess champion as a child | hồi nhỏ từng là nhà vô địch cờ vua
+and a video game designer as a teenager. | và lúc tuổi teen từng thiết kế trò chơi điện tử.
+His team built an AI called AlphaFold. | Nhóm của ông làm ra một AI tên AlphaFold.
+In 2020, its predictions were almost as good | Năm 2020, dự đoán của nó gần tốt bằng
+as years of lab work. | kết quả nhiều năm trong phòng thí nghiệm.
+One of the organizers said | Một người tổ chức cuộc thi nói
+that, in a way, the problem was solved. | rằng theo một nghĩa nào đó, bài toán đã được giải.
+
+? How long could one protein take in the lab? | Một protein có thể tốn bao lâu trong phòng thí nghiệm? | Years* | One hour | One day
+? What happened in 2020? | Năm 2020 có chuyện gì? | AlphaFold predicted shapes very well* | DeepMind stopped working | The competition ended forever
+~ competition = cuộc thi
+~ method = phương pháp
+~ organizer = người tổ chức
+> Bạn từng mất rất lâu để làm xong việc gì? Kể bằng tiếng Anh.
+
+## 3 | A Gift to the World | Món quà cho thế giới
+DeepMind could have kept AlphaFold for itself. | DeepMind có thể giữ AlphaFold cho riêng mình.
+Instead, it did something generous. | Thay vào đó, họ làm một việc hào phóng.
+With a European science lab, | Cùng một phòng thí nghiệm khoa học châu Âu,
+it shared the shapes of more than 200 million proteins. | họ công bố hình dạng của hơn 200 triệu protein.
+Anyone in the world could use them for free. | Ai trên thế giới cũng được dùng miễn phí.
+
+Scientists now use them | Các nhà khoa học giờ dùng chúng
+to study diseases, make new medicines, | để nghiên cứu bệnh, làm thuốc mới,
+and understand how life works. | và hiểu sự sống vận hành ra sao.
+Work that took years can now start in minutes. | Việc từng mất nhiều năm giờ có thể bắt đầu sau vài phút.
 
 In 2024, Demis Hassabis and John Jumper | Năm 2024, Demis Hassabis và John Jumper
-shared the Nobel Prize in Chemistry | cùng nhận giải Nobel Hoá học
-with David Baker, | với David Baker,
-for their work on proteins. | nhờ công trình về protein.
-AI had helped to win a Nobel Prize. | AI đã góp phần đoạt một giải Nobel.
+won the Nobel Prize in Chemistry. | đoạt giải Nobel Hoá học.
+They shared it with David Baker, | Họ nhận giải cùng David Baker,
+who uses computers to design new proteins. | người dùng máy tính để thiết kế protein mới.
+AI had helped to win a Nobel Prize. | AI đã góp phần giành một giải Nobel.
 
-? What did AlphaFold predict? | AlphaFold dự đoán gì? | The shape of proteins* | The weather | Chess moves
-> Vì sao chia sẻ miễn phí lại quan trọng? Trả lời 1–2 câu.
+! Some problems take fifty years. | Có những bài toán phải mất năm mươi năm.
+! Every team that tried and failed | Mỗi đội từng thử và thất bại
+! made the road a little shorter. | đều làm con đường ngắn lại một chút.
+! Skills from one area can solve problems in another: | Kỹ năng ở lĩnh vực này có thể giải bài toán ở lĩnh vực khác:
+! games and chess led to medicine. | trò chơi và cờ vua đã dẫn tới y học.
+! And when you share what you know, | Và khi ta chia sẻ điều mình biết,
+! many more people can build on it. | nhiều người hơn nữa có thể phát triển tiếp.
+
+? What did DeepMind share for free? | DeepMind chia sẻ miễn phí điều gì? | Shapes of over 200 million proteins* | Its computers | Its money
+? Who shared the 2024 Nobel Prize with Hassabis and Jumper? | Ai cùng nhận giải Nobel 2024 với Hassabis và Jumper? | David Baker* | Garry Kasparov | Alan Turing
+~ generous = hào phóng
+~ disease = bệnh
+~ medicine = thuốc
+> Bạn sẵn sàng chia sẻ kinh nghiệm gì cho người khác? Viết 3 câu tiếng Anh.

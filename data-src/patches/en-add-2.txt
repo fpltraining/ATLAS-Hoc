@@ -1,0 +1,220 @@
+irritated | /ˈɪrɪteɪtɪd/ | adj | She was irritated by the noise. | Cô ấy bực bội vì tiếng ồn.
+annoyed | /əˈnɔɪd/ | adj | I'm annoyed with my brother. | Tôi đang khó chịu với em trai.
+resentful | /rɪˈzentfəl/ | adj | He felt resentful about the decision. | Anh ấy hậm hực về quyết định đó.
+bitter | /ˈbɪtər/ | adj | She is still bitter about the divorce. | Cô ấy vẫn còn cay đắng vì vụ ly hôn.
+hostile | /ˈhɑːstəl/ | adj | The crowd was hostile. | Đám đông tỏ ra thù địch.
+impatient | /ɪmˈpeɪʃənt/ | adj | Don't be so impatient. | Đừng nóng vội thế.
+devastated | /ˈdevəsteɪtɪd/ | adj | They were devastated by the news. | Họ suy sụp khi nghe tin.
+heartbroken | /ˈhɑːrtbroʊkən/ | adj | She was heartbroken when her dog died. | Cô ấy đau lòng khi con chó chết.
+miserable | /ˈmɪzərəbəl/ | adj | I feel miserable with this cold. | Bị cảm thế này tôi khổ sở quá.
+gloomy | /ˈɡluːmi/ | adj | It was a gloomy day. | Đó là một ngày u ám.
+sorrowful | /ˈsɑːroʊfəl/ | adj | She gave a sorrowful smile. | Cô ấy mỉm cười buồn bã.
+desperate | /ˈdespərət/ | adj | He was desperate for a job. | Anh ấy đang cần việc đến tuyệt vọng.
+hopeless | /ˈhoʊpləs/ | adj | The situation seemed hopeless. | Tình hình có vẻ vô vọng.
+numb | /nʌm/ | adj | My fingers are numb with cold. | Ngón tay tôi tê cóng vì lạnh.
+delighted | /dɪˈlaɪtɪd/ | adj | I'm delighted to meet you. | Tôi rất vui được gặp bạn.
+thrilled | /θrɪld/ | adj | The kids were thrilled with their gifts. | Bọn trẻ phấn khích với quà của mình.
+relieved | /rɪˈliːvd/ | adj | I was relieved to hear you're safe. | Tôi nhẹ nhõm khi biết bạn an toàn.
+hopeful | /ˈhoʊpfəl/ | adj | We are hopeful about the future. | Chúng tôi đầy hy vọng về tương lai.
+terrified | /ˈterəfaɪd/ | adj | She is terrified of spiders. | Cô ấy sợ nhện khiếp vía.
+frightened | /ˈfraɪtənd/ | adj | The child was frightened by the storm. | Đứa trẻ sợ hãi vì cơn bão.
+uneasy | /ʌnˈiːzi/ | adj | I felt uneasy in the dark street. | Tôi thấy bất an trên con phố tối.
+alarmed | /əˈlɑːrmd/ | adj | Don't be alarmed, it's only a test. | Đừng hoảng, chỉ là thử nghiệm thôi.
+panicked | /ˈpænɪkt/ | adj | He panicked when he lost his passport. | Anh ấy hoảng loạn khi mất hộ chiếu.
+startled | /ˈstɑːrtəld/ | adj | The loud noise startled me. | Tiếng động lớn làm tôi giật mình.
+cautious | /ˈkɔːʃəs/ | adj | Be cautious with strangers online. | Hãy thận trọng với người lạ trên mạng.
+ashamed | /əˈʃeɪmd/ | adj | He was ashamed of his mistake. | Anh ấy xấu hổ vì lỗi của mình.
+guilty | /ˈɡɪlti/ | adj | I feel guilty for not calling Mom. | Tôi thấy có lỗi vì không gọi cho mẹ.
+humiliated | /hjuːˈmɪlieɪtɪd/ | adj | She felt humiliated in front of everyone. | Cô ấy thấy bẽ mặt trước mọi người.
+regret | /rɪˈɡret/ | v | I regret saying that. | Tôi hối hận vì đã nói câu đó.
+remorse | /rɪˈmɔːrs/ | n | He showed no remorse. | Hắn không tỏ ra chút ăn năn nào.
+shame | /ʃeɪm/ | n | There is no shame in asking for help. | Nhờ giúp đỡ chẳng có gì đáng xấu hổ.
+pride | /praɪd/ | n | She looked at her son with pride. | Bà nhìn con trai đầy tự hào.
+astonished | /əˈstɑːnɪʃt/ | adj | I was astonished by her talent. | Tôi kinh ngạc trước tài năng của cô ấy.
+amazed | /əˈmeɪzd/ | adj | We were amazed at the view. | Chúng tôi sửng sốt trước cảnh đẹp.
+puzzled | /ˈpʌzəld/ | adj | He looked puzzled by the question. | Anh ấy trông bối rối trước câu hỏi.
+confused | /kənˈfjuːzd/ | adj | I'm confused, can you explain again? | Tôi rối quá, bạn giải thích lại được không?
+curious | /ˈkjʊriəs/ | adj | Children are curious about everything. | Trẻ con tò mò về mọi thứ.
+suspicious | /səˈspɪʃəs/ | adj | That email looks suspicious. | Email đó trông đáng ngờ.
+doubtful | /ˈdaʊtfəl/ | adj | I'm doubtful that he will come. | Tôi nghi là anh ấy sẽ không đến.
+hesitate | /ˈhezɪteɪt/ | v | Don't hesitate to ask me. | Đừng ngần ngại hỏi tôi.
+insist | /ɪnˈsɪst/ | v | She insisted on paying. | Cô ấy nhất quyết đòi trả tiền.
+conceal | /kənˈsiːl/ | v | He tried to conceal his fear. | Anh ấy cố che giấu nỗi sợ.
+confess | /kənˈfes/ | v | He confessed that he lied. | Anh ấy thú nhận mình đã nói dối.
+apologize | /əˈpɑːlədʒaɪz/ | v | I apologize for the delay. | Tôi xin lỗi vì sự chậm trễ.
+comfort | /ˈkʌmfərt/ | v | She comforted her crying friend. | Cô ấy an ủi người bạn đang khóc.
+encourage | /ɪnˈkɜːrɪdʒ/ | v | My parents always encourage me. | Bố mẹ luôn động viên tôi.
+blame | /bleɪm/ | v | Don't blame yourself. | Đừng tự trách mình.
+as soon as | /æz suːn æz/ | conj | Call me as soon as you arrive. | Đến nơi thì gọi tôi ngay nhé.
+in the middle of | /ɪn ðə ˈmɪdəl ʌv/ | phr | My phone rang in the middle of the meeting. | Điện thoại tôi đổ chuông giữa cuộc họp.
+for the first time | /fɔːr ðə fɜːrst taɪm/ | phr | I saw snow for the first time. | Lần đầu tiên tôi nhìn thấy tuyết.
+make up one's mind | /meɪk ʌp wʌnz maɪnd/ | phr | I can't make up my mind. | Tôi không quyết được.
+on purpose | /ɑːn ˈpɜːrpəs/ | phr | Did you do that on purpose? | Bạn cố tình làm vậy à?
+by accident | /baɪ ˈæksɪdənt/ | phr | I deleted the file by accident. | Tôi lỡ tay xoá mất tệp.
+at once | /æt wʌns/ | phr | Come here at once! | Lại đây ngay!
+all of a sudden | /ɔːl ʌv ə ˈsʌdən/ | phr | All of a sudden, the lights went out. | Đột nhiên đèn tắt phụt.
+by the time | /baɪ ðə taɪm/ | conj | By the time we arrived, the film had started. | Lúc chúng tôi đến thì phim đã chiếu rồi.
+no longer | /noʊ ˈlɔːŋɡər/ | adv | He no longer lives here. | Anh ấy không còn sống ở đây nữa.
+as if | /æz ɪf/ | conj | He talks as if he knows everything. | Anh ta nói như thể biết hết mọi thứ.
+as though | /æz ðoʊ/ | conj | It looks as though it will rain. | Trông như thể trời sắp mưa.
+in spite of | /ɪn spaɪt ʌv/ | prep | We went out in spite of the rain. | Chúng tôi vẫn ra ngoài bất chấp trời mưa.
+instead of | /ɪnˈsted ʌv/ | prep | I drink tea instead of coffee. | Tôi uống trà thay vì cà phê.
+apart from | /əˈpɑːrt frʌm/ | prep | Apart from Tom, everyone came. | Ngoài Tom ra, ai cũng đến.
+as well as | /æz wel æz/ | conj | She speaks French as well as English. | Cô ấy nói tiếng Pháp cũng như tiếng Anh.
+due to | /duː tuː/ | prep | The flight was late due to bad weather. | Chuyến bay bị trễ do thời tiết xấu.
+thanks to | /θæŋks tuː/ | prep | Thanks to you, I passed the test. | Nhờ có bạn mà tôi qua bài kiểm tra.
+in order to | /ɪn ˈɔːrdər tuː/ | phr | He works hard in order to save money. | Anh ấy làm việc chăm chỉ để tiết kiệm tiền.
+so as to | /soʊ æz tuː/ | phr | Leave early so as to avoid traffic. | Đi sớm để tránh tắc đường.
+rather than | /ˈræðər ðæn/ | prep | I'd walk rather than wait for the bus. | Tôi thà đi bộ còn hơn chờ xe buýt.
+other than | /ˈʌðər ðæn/ | prep | I have no shoes other than these. | Ngoài đôi này ra tôi không có giày nào khác.
+at most | /æt moʊst/ | phr | It will take an hour at most. | Mất nhiều nhất một tiếng.
+more or less | /mɔːr ɔːr les/ | phr | The work is more or less finished. | Công việc gần như xong rồi.
+sooner or later | /ˈsuːnər ɔːr ˈleɪtər/ | phr | Sooner or later, he will find out. | Sớm muộn gì anh ấy cũng biết.
+now and then | /naʊ ənd ðen/ | phr | I see her now and then. | Thỉnh thoảng tôi có gặp cô ấy.
+once in a while | /wʌns ɪn ə waɪl/ | phr | We eat out once in a while. | Thỉnh thoảng chúng tôi ăn ngoài.
+from time to time | /frʌm taɪm tə taɪm/ | phr | He calls me from time to time. | Lâu lâu anh ấy lại gọi cho tôi.
+for good | /fɔːr ɡʊd/ | phr | She left the city for good. | Cô ấy rời thành phố mãi mãi.
+as a matter of fact | /æz ə ˈmætər ʌv fækt/ | phr | As a matter of fact, I've been there. | Thật ra thì tôi từng đến đó rồi.
+to tell the truth | /tə tel ðə truːθ/ | phr | To tell the truth, I don't like it. | Nói thật thì tôi không thích nó.
+in other words | /ɪn ˈʌðər wɜːrdz/ | phr | In other words, we have no money. | Nói cách khác, chúng ta hết tiền.
+that is to say | /ðæt ɪz tə seɪ/ | phr | We leave on Friday, that is to say, in two days. | Thứ Sáu chúng ta đi, tức là hai ngày nữa.
+for instance | /fɔːr ˈɪnstəns/ | phr | Some fruits, for instance mangoes, are very sweet. | Một số loại quả, ví dụ như xoài, rất ngọt.
+take place | /teɪk pleɪs/ | v | The wedding will take place in May. | Đám cưới sẽ diễn ra vào tháng Năm.
+take part in | /teɪk pɑːrt ɪn/ | v | I took part in a running race. | Tôi đã tham gia một cuộc thi chạy.
+take advantage of | /teɪk ədˈvæntɪdʒ ʌv/ | v | Take advantage of the sale. | Hãy tận dụng đợt giảm giá.
+make sense | /meɪk sens/ | v | Your plan makes sense. | Kế hoạch của bạn hợp lý.
+make a difference | /meɪk ə ˈdɪfərəns/ | v | Small changes can make a difference. | Những thay đổi nhỏ có thể tạo ra khác biệt.
+make progress | /meɪk ˈprɑːɡres/ | v | You are making good progress. | Bạn đang tiến bộ tốt.
+make an effort | /meɪk ən ˈefərt/ | v | Please make an effort to be on time. | Làm ơn cố gắng đến đúng giờ.
+pay attention | /peɪ əˈtenʃən/ | v | Pay attention to the teacher. | Hãy chú ý nghe giáo viên.
+keep in mind | /kiːp ɪn maɪnd/ | v | Keep in mind that the shop closes at nine. | Nhớ là cửa hàng đóng cửa lúc chín giờ.
+bear in mind | /ber ɪn maɪnd/ | v | Bear in mind that prices may change. | Lưu ý rằng giá có thể thay đổi.
+have in common | /hæv ɪn ˈkɑːmən/ | v | We have a lot in common. | Chúng tôi có nhiều điểm chung.
+get rid of | /ɡet rɪd ʌv/ | v | I want to get rid of these old clothes. | Tôi muốn bỏ mấy bộ quần áo cũ này đi.
+get used to | /ɡet juːst tuː/ | v | I can't get used to the cold. | Tôi không quen được với cái lạnh.
+be about to | /biː əˈbaʊt tuː/ | v | The train is about to leave. | Tàu sắp chạy rồi.
+be supposed to | /biː səˈpoʊzd tuː/ | v | You were supposed to call me. | Lẽ ra bạn phải gọi cho tôi.
+used to | /ˈjuːst tuː/ | modal | I used to live in Hue. | Tôi từng sống ở Huế.
+would rather | /wʊd ˈræðər/ | modal | I would rather stay home tonight. | Tối nay tôi thà ở nhà còn hơn.
+had better | /hæd ˈbetər/ | modal | You had better hurry. | Bạn nên nhanh lên thì hơn.
+might as well | /maɪt æz wel/ | phr | The bus is late, we might as well walk. | Xe buýt trễ rồi, chi bằng mình đi bộ.
+find out | /faɪnd aʊt/ | v | I need to find out the truth. | Tôi cần tìm ra sự thật.
+turn out | /tɜːrn aʊt/ | v | The test turned out to be easy. | Bài kiểm tra hoá ra lại dễ.
+carry on | /ˈkæri ɑːn/ | v | Carry on, I'm listening. | Bạn cứ nói tiếp, tôi đang nghe.
+point out | /pɔɪnt aʊt/ | v | She pointed out my mistake. | Cô ấy chỉ ra lỗi sai của tôi.
+look after | /lʊk ˈæftər/ | v | Can you look after my cat? | Bạn trông con mèo giúp tôi được không?
+run into | /rʌn ˈɪntuː/ | v | I ran into an old friend today. | Hôm nay tôi tình cờ gặp một người bạn cũ.
+put off | /pʊt ɔːf/ | v | Don't put off your homework. | Đừng trì hoãn bài tập về nhà.
+come across | /kʌm əˈkrɔːs/ | v | I came across an old photo. | Tôi tình cờ thấy một tấm ảnh cũ.
+bring up | /brɪŋ ʌp/ | v | She brought up three children alone. | Bà ấy một mình nuôi ba đứa con.
+figure out | /ˈfɪɡjər aʊt/ | v | I can't figure out this problem. | Tôi không nghĩ ra cách giải bài này.
+work out | /wɜːrk aʊt/ | v | Don't worry, it will work out. | Đừng lo, rồi mọi chuyện sẽ ổn.
+turn down | /tɜːrn daʊn/ | v | Please turn down the music. | Làm ơn vặn nhỏ nhạc.
+take off | /teɪk ɔːf/ | v | The plane takes off at noon. | Máy bay cất cánh lúc trưa.
+call off | /kɔːl ɔːf/ | v | They called off the match. | Họ đã huỷ trận đấu.
+go on | /ɡoʊ ɑːn/ | v | The party went on until midnight. | Bữa tiệc kéo dài đến nửa đêm.
+get along | /ɡet əˈlɔːŋ/ | v | I get along well with my coworkers. | Tôi hoà thuận với đồng nghiệp.
+look forward to | /lʊk ˈfɔːrwərd tuː/ | v | I look forward to seeing you. | Tôi mong được gặp bạn.
+give in | /ɡɪv ɪn/ | v | He finally gave in and said yes. | Cuối cùng anh ấy nhượng bộ và đồng ý.
+break down | /breɪk daʊn/ | v | My car broke down on the way. | Xe tôi bị hỏng giữa đường.
+break up | /breɪk ʌp/ | v | They broke up last month. | Họ chia tay tháng trước.
+make up | /meɪk ʌp/ | v | He made up an excuse. | Anh ta bịa ra một lý do.
+show up | /ʃoʊ ʌp/ | v | He didn't show up at the meeting. | Anh ấy không đến cuộc họp.
+turn up | /tɜːrn ʌp/ | v | She turned up late as usual. | Cô ấy lại xuất hiện muộn như mọi khi.
+end up | /end ʌp/ | v | We ended up eating at home. | Rốt cuộc chúng tôi ăn ở nhà.
+come up with | /kʌm ʌp wɪð/ | v | She came up with a great idea. | Cô ấy nghĩ ra một ý tưởng hay.
+put up with | /pʊt ʌp wɪð/ | v | I can't put up with the noise. | Tôi không chịu nổi tiếng ồn.
+get over | /ɡet ˈoʊvər/ | v | It took her months to get over him. | Cô ấy mất nhiều tháng mới quên được anh ta.
+look into | /lʊk ˈɪntuː/ | v | The police are looking into the case. | Cảnh sát đang điều tra vụ việc.
+look up to | /lʊk ʌp tuː/ | v | I look up to my father. | Tôi ngưỡng mộ bố tôi.
+look down on | /lʊk daʊn ɑːn/ | v | Don't look down on others. | Đừng coi thường người khác.
+count on | /kaʊnt ɑːn/ | v | You can count on me. | Bạn có thể trông cậy vào tôi.
+use up | /juːz ʌp/ | v | We used up all the milk. | Chúng tôi dùng hết sạch sữa rồi.
+set off | /set ɔːf/ | v | We set off at dawn. | Chúng tôi khởi hành lúc bình minh.
+take up | /teɪk ʌp/ | v | I took up yoga last year. | Năm ngoái tôi bắt đầu tập yoga.
+drop off | /drɑːp ɔːf/ | v | Can you drop me off at the station? | Bạn thả tôi xuống ở ga được không?
+hand in | /hænd ɪn/ | v | Hand in your homework on Monday. | Nộp bài tập vào thứ Hai nhé.
+hand out | /hænd aʊt/ | v | The teacher handed out the tests. | Cô giáo phát bài kiểm tra.
+turn into | /tɜːrn ˈɪntuː/ | v | The rain turned into snow. | Mưa chuyển thành tuyết.
+fill in | /fɪl ɪn/ | v | Please fill in this form. | Làm ơn điền vào mẫu đơn này.
+leave out | /liːv aʊt/ | v | Don't leave out any details. | Đừng bỏ sót chi tiết nào.
+sort out | /sɔːrt aʊt/ | v | I need to sort out my papers. | Tôi cần sắp xếp lại giấy tờ.
+back up | /bæk ʌp/ | v | Always back up your files. | Luôn sao lưu dữ liệu của bạn.
+stand out | /stænd aʊt/ | v | Her red dress stood out in the crowd. | Chiếc váy đỏ của cô ấy nổi bật giữa đám đông.
+stand for | /stænd fɔːr/ | v | What does "AI" stand for? | "AI" là viết tắt của gì?
+stick to | /stɪk tuː/ | v | Stick to the plan. | Cứ bám theo kế hoạch.
+give away | /ɡɪv əˈweɪ/ | v | She gave away her old books. | Cô ấy đem cho hết sách cũ.
+keep up with | /kiːp ʌp wɪð/ | v | I can't keep up with him. | Tôi không theo kịp anh ấy.
+catch up | /kætʃ ʌp/ | v | Go ahead, I'll catch up. | Bạn cứ đi trước, tôi sẽ đuổi kịp.
+cut down on | /kʌt daʊn ɑːn/ | v | I'm cutting down on sugar. | Tôi đang cắt giảm đường.
+go through | /ɡoʊ θruː/ | v | She went through a hard time. | Cô ấy đã trải qua một thời gian khó khăn.
+go over | /ɡoʊ ˈoʊvər/ | v | Let's go over the plan again. | Mình xem lại kế hoạch lần nữa nhé.
+come down to | /kʌm daʊn tuː/ | v | It all comes down to money. | Rốt cuộc mọi chuyện đều quy về tiền.
+put together | /pʊt təˈɡeðər/ | v | He put together the new desk. | Anh ấy lắp ráp cái bàn mới.
+realize | /ˈriːəlaɪz/ | v | I didn't realize it was so late. | Tôi không nhận ra đã muộn như vậy.
+recognize | /ˈrekəɡnaɪz/ | v | I didn't recognize you! | Tôi không nhận ra bạn đấy!
+suppose | /səˈpoʊz/ | v | I suppose you're right. | Tôi cho là bạn đúng.
+suspect | /səˈspekt/ | v | I suspect he is lying. | Tôi ngờ là anh ta đang nói dối.
+doubt | /daʊt/ | v | I doubt it will rain. | Tôi không nghĩ trời sẽ mưa.
+convince | /kənˈvɪns/ | v | She convinced me to try again. | Cô ấy thuyết phục tôi thử lại.
+remind | /rɪˈmaɪnd/ | v | Remind me to buy milk. | Nhắc tôi mua sữa nhé.
+recall | /rɪˈkɔːl/ | v | I can't recall his name. | Tôi không nhớ ra tên anh ấy.
+consider | /kənˈsɪdər/ | v | We are considering moving to Da Nang. | Chúng tôi đang cân nhắc chuyển vào Đà Nẵng.
+determine | /dɪˈtɜːrmɪn/ | v | Tests will determine the cause. | Các xét nghiệm sẽ xác định nguyên nhân.
+intend | /ɪnˈtend/ | v | I intend to study abroad. | Tôi dự định đi du học.
+imagine | /ɪˈmædʒɪn/ | v | Imagine a world without phones. | Hãy tưởng tượng một thế giới không có điện thoại.
+reflect | /rɪˈflekt/ | v | Take time to reflect on your day. | Dành thời gian ngẫm lại một ngày của bạn.
+admit | /ədˈmɪt/ | v | He admitted his mistake. | Anh ấy thừa nhận sai lầm.
+mention | /ˈmenʃən/ | v | She didn't mention the price. | Cô ấy không nhắc đến giá.
+declare | /dɪˈkler/ | v | The country declared independence in 1945. | Đất nước tuyên bố độc lập năm 1945.
+advise | /ədˈvaɪz/ | v | The doctor advised me to rest. | Bác sĩ khuyên tôi nghỉ ngơi.
+object | /əbˈdʒekt/ | v | Nobody objected to the plan. | Không ai phản đối kế hoạch.
+beg | /beɡ/ | v | He begged her to stay. | Anh ấy van xin cô ở lại.
+betray | /bɪˈtreɪ/ | v | He betrayed his best friend. | Hắn phản bội người bạn thân nhất.
+forgive | /fərˈɡɪv/ | v | Please forgive me. | Xin hãy tha thứ cho tôi.
+pretend | /prɪˈtend/ | v | She pretended to be asleep. | Cô bé giả vờ ngủ.
+whisper back | /ˈwɪspər bæk/ | v | "I know," she whispered back. | "Tớ biết," cô ấy khẽ đáp lại.
+meanwhile | /ˈmiːnwaɪl/ | adv | Meanwhile, the kids were playing outside. | Trong khi đó, bọn trẻ chơi ở ngoài.
+afterwards | /ˈæftərwərdz/ | adv | We had dinner and went home afterwards. | Chúng tôi ăn tối rồi sau đó về nhà.
+eventually | /ɪˈventʃuəli/ | adv | Eventually, he found a job. | Cuối cùng anh ấy cũng tìm được việc.
+gradually | /ˈɡrædʒuəli/ | adv | The weather gradually got warmer. | Thời tiết dần ấm lên.
+previously | /ˈpriːviəsli/ | adv | She previously worked in a bank. | Trước đó cô ấy làm ở ngân hàng.
+formerly | /ˈfɔːrmərli/ | adv | Ho Chi Minh City was formerly called Saigon. | Thành phố Hồ Chí Minh trước kia tên là Sài Gòn.
+lately | /ˈleɪtli/ | adv | I've been very tired lately. | Dạo này tôi rất mệt.
+nowadays | /ˈnaʊədeɪz/ | adv | Nowadays, everyone has a smartphone. | Ngày nay ai cũng có điện thoại thông minh.
+by then | /baɪ ðen/ | phr | Come at nine. I'll be ready by then. | Chín giờ hãy đến. Lúc đó tôi sẽ sẵn sàng.
+ever since | /ˈevər sɪns/ | conj | We've been friends ever since we met. | Chúng tôi là bạn kể từ khi gặp nhau.
+at first | /æt fɜːrst/ | phr | At first, I didn't like him. | Lúc đầu tôi không thích anh ấy.
+in the end | /ɪn ðə end/ | phr | In the end, we stayed home. | Rốt cuộc chúng tôi ở nhà.
+moments later | /ˈmoʊmənts ˈleɪtər/ | phr | Moments later, the phone rang. | Lát sau, điện thoại reo.
+shortly after | /ˈʃɔːrtli ˈæftər/ | phr | She left shortly after lunch. | Cô ấy đi ngay sau bữa trưa.
+long before | /lɔːŋ bɪˈfɔːr/ | phr | People lived here long before the city was built. | Con người đã sống ở đây từ rất lâu trước khi thành phố được xây.
+the moment | /ðə ˈmoʊmənt/ | conj | The moment I saw her, I knew. | Ngay khi thấy cô ấy, tôi đã biết.
+until then | /ənˈtɪl ðen/ | phr | The shop opens at ten. Wait until then. | Mười giờ cửa hàng mới mở. Chờ đến lúc đó nhé.
+from then on | /frʌm ðen ɑːn/ | phr | From then on, he never lied again. | Từ đó trở đi, anh ấy không bao giờ nói dối nữa.
+whenever | /wenˈevər/ | conj | Call me whenever you need help. | Cần giúp lúc nào thì cứ gọi tôi.
+dawn | /dɔːn/ | n | We left at dawn. | Chúng tôi lên đường lúc bình minh.
+dusk | /dʌsk/ | n | The streetlights come on at dusk. | Đèn đường bật lên lúc chạng vạng.
+era | /ˈɪrə/ | n | We live in the era of AI. | Chúng ta sống trong thời đại AI.
+instant | /ˈɪnstənt/ | n | For an instant, I forgot his name. | Trong một tích tắc, tôi quên mất tên anh ấy.
+period | /ˈpɪriəd/ | n | It was a difficult period of my life. | Đó là một giai đoạn khó khăn trong đời tôi.
+occasion | /əˈkeɪʒən/ | n | This dress is for special occasions. | Chiếc váy này dành cho những dịp đặc biệt.
+incident | /ˈɪnsɪdənt/ | n | The police are looking into the incident. | Cảnh sát đang điều tra sự việc.
+event | /ɪˈvent/ | n | The event starts at seven. | Sự kiện bắt đầu lúc bảy giờ.
+circumstance | /ˈsɜːrkəmstæns/ | n | Under no circumstances should you open it. | Dù thế nào cũng không được mở nó ra.
+condition | /kənˈdɪʃən/ | n | The car is in good condition. | Chiếc xe còn tốt.
+outcome | /ˈaʊtkʌm/ | n | We are waiting for the outcome. | Chúng tôi đang chờ kết quả.
+proceed | /proʊˈsiːd/ | v | Please proceed to gate five. | Xin mời đến cổng số năm.
+resume | /rɪˈzuːm/ | v | The game will resume after the rain. | Trận đấu sẽ tiếp tục sau cơn mưa.
+pause | /pɔːz/ | v | She paused before answering. | Cô ấy ngừng một chút rồi mới trả lời.
+cease | /siːs/ | v | The factory ceased production. | Nhà máy đã ngừng sản xuất.
+remain | /rɪˈmeɪn/ | v | Please remain seated. | Xin hãy ngồi yên tại chỗ.
+occur | /əˈkɜːr/ | v | The accident occurred at night. | Vụ tai nạn xảy ra vào ban đêm.
+arise | /əˈraɪz/ | v | Problems may arise later. | Vấn đề có thể nảy sinh về sau.
+emerge | /ɪˈmɜːrdʒ/ | v | The sun emerged from the clouds. | Mặt trời ló ra khỏi đám mây.
+vanish | /ˈvænɪʃ/ | v | The cat vanished into the night. | Con mèo biến mất vào màn đêm.
+approach | /əˈproʊtʃ/ | v | A man approached me on the street. | Một người đàn ông tiến lại gần tôi trên phố.
+encounter | /ɪnˈkaʊntər/ | v | We encountered many problems. | Chúng tôi gặp phải nhiều vấn đề.
+witness | /ˈwɪtnəs/ | v | Did anyone witness the accident? | Có ai chứng kiến vụ tai nạn không?
+anticipate | /ænˈtɪsɪpeɪt/ | v | We didn't anticipate so many guests. | Chúng tôi không lường trước được nhiều khách như vậy.
+linger | /ˈlɪŋɡər/ | v | The smell lingered for days. | Mùi đó còn vương lại nhiều ngày.

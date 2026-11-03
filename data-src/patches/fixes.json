@@ -1,0 +1,45 @@
+{
+  "_note": "Sửa lỗi nội dung tiếng Trung bằng cách thay đúng một chuỗi trong một tệp của data/. tools/apply-patches.mjs chạy lại được nhiều lần, chuỗi nào đã sửa thì bỏ qua. Bài đọc thì sửa thẳng trong data-src/stories/ rồi chạy tools/build-stories.mjs.",
+  "replace": [
+    {
+      "file": "curriculum/lesson-85.json",
+      "find": "\"hv\": \"hàng lạc\"",
+      "to": "\"hv\": \"giáng lạc\""
+    },
+    {
+      "file": "curriculum/lesson-85.json",
+      "find": "Tiếng Việt: \\\"hạ cánh\\\", \\\"giáng cấp\\\".",
+      "to": "Đọc Hán Việt là \\\"giáng\\\" như trong \\\"giáng cấp\\\", \\\"giáng sinh\\\". Âm \\\"hàng\\\" chỉ dùng khi 降 nghĩa là đầu hàng (投降)."
+    },
+    {
+      "file": "zh-dict.json",
+      "find": "\"降落\":[\"jiàngluò\",\"hàng lạc\"",
+      "to": "\"降落\":[\"jiàngluò\",\"giáng lạc\""
+    },
+    {
+      "file": "curriculum/lesson-70.json",
+      "find": "Tiếng Việt nói \\\"khán giả\\\", cùng chữ 观.",
+      "to": "观 đọc là \\\"quan\\\" như trong \\\"quan sát\\\", \\\"tham quan\\\". Chữ \\\"khán\\\" trong \\\"khán giả\\\" là chữ khác: 看."
+    },
+    {
+      "file": "curriculum/lesson-75.json",
+      "find": "\"hv\": \"phục ấn\"",
+      "to": "\"hv\": \"phức ấn\""
+    },
+    {
+      "file": "curriculum/lesson-75.json",
+      "find": "复 (lặp lại, bài 36 trong 复习) + 印 (in). Nghĩa đen: in lại.",
+      "to": "复 ở đây là chữ 複 (phức, nhân ra nhiều bản, như \\\"phức tạp\\\") + 印 (in). Nghĩa đen: in ra thêm bản. Khác 复 trong 复习 (bài 36), vốn là chữ 復 (phục, làm lại)."
+    },
+    {
+      "file": "zh-dict.json",
+      "find": "\"复印\":[\"fùyìn\",\"phục ấn\"",
+      "to": "\"复印\":[\"fùyìn\",\"phức ấn\""
+    },
+    {
+      "file": "curriculum/lesson-17.json",
+      "find": "Nhớ dùng 很累, đừng nói trống 累.",
+      "to": "Khi tả trạng thái, câu kể thường có 很 đứng trước: 我很累. Nói 累了, 累死了 cũng rất tự nhiên."
+    }
+  ]
+}

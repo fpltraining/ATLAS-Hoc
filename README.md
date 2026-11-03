@@ -32,7 +32,20 @@ Máy chủ in ra địa chỉ cho máy tính và cho iPad cùng mạng Wi-Fi. Kh
 
 ## Thêm bài đọc mới
 
-Thêm vào một tệp trong `data-src/stories/`, rồi dựng lại dữ liệu:
+Thêm vào một tệp trong `data-src/stories/`, rồi dựng lại riêng phần bài đọc (không cần `../_src`):
+
+```bash
+node tools/build-stories.mjs
+```
+
+Chữ Hán mới chưa có dữ liệu nét thì lấy từ gói hanzi-writer-data:
+
+```bash
+npm pack hanzi-writer-data@2.0.1 && tar -xzf hanzi-writer-data-2.0.1.tgz
+node tools/add-strokes.mjs package
+```
+
+Hoặc dựng lại toàn bộ dữ liệu từ 5 app cũ:
 
 ```bash
 node tools/merge-data.mjs ../_src
@@ -58,12 +71,35 @@ then the next short line. | rồi tới dòng ngắn tiếp theo.
 
 ? Câu hỏi tiếng Anh? | Câu hỏi tiếng Việt? | Đáp án đúng* | Đáp án sai | Đáp án sai
 ~ từ khó = nghĩa của từ
+! Một dòng của phần Điều rút ra. | Một dòng của phần Điều rút ra.
 > Gợi ý nói hoặc viết sau khi đọc.
 ```
+
+Dòng bắt đầu bằng `!` là phần **Điều rút ra**, hiện thành khung riêng ở cuối chương. Ở các kệ `true`, `news`, `mystery`, chữ "anh" trong nghĩa tiếng Việt tự đổi thành "bạn" để nói với người đọc, nên khi nói về nhân vật thì viết "anh ấy", "ông", "cô".
 
 Tiếng Trung thêm `@lang zh`, mỗi dòng là `chữ Hán | pinyin | tiếng Việt`. Chữ Hán mới cần thêm vào `data-src/strokes-extra.json` để viết được bằng bút, và từ mới thêm vào `data-src/zh-extra.txt` để chạm vào là tra được.
 
 `@shelf` nhận `ai`, `true`, `news`, `mystery`, `long`, và `fable` cho tiếng Trung.
+
+## Sửa nội dung
+
+Lỗi nội dung sửa trong `data-src/patches/`, không sửa tay vào `data/`:
+
+| Tệp | Dùng để |
+|---|---|
+| `fixes.json` | Thay đúng một chuỗi trong một tệp của `data/` (Hán Việt, ghi chú, câu sai trong bài đọc) |
+| `en-add-*.txt` | Bổ sung từ tiếng Anh, mỗi dòng `từ \| phiên âm \| từ loại \| câu ví dụ \| nghĩa câu ví dụ` |
+| `pos.txt` | Từ loại cho các từ còn thiếu, mỗi dòng `từ loại: từ ; từ ; ...` |
+| `en-bank.json` | Viết thường, phiên âm giọng Mỹ, sửa nghĩa của kho từ |
+| `topics-ipa.json` | Phiên âm giọng Mỹ cho mục Chủ đề |
+
+Nguồn của bài đọc ghi bằng dòng `@source` trong `data-src/stories/`. Sau khi sửa:
+
+```bash
+node tools/apply-patches.mjs
+```
+
+`merge-data.mjs` cũng tự gọi bước này ở cuối, nên dựng lại dữ liệu không làm mất bản sửa. Phiên âm tiếng Anh theo giọng Mỹ. Đổi dữ liệu xong thì tăng `VERSION` trong `sw.js` để máy người dùng tải bản mới.
 
 ## Cấu trúc
 
