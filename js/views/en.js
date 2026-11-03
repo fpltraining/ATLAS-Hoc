@@ -170,6 +170,12 @@ async function activity(key) {
     case 'sound': return soundBlock(course.sounds[i % 12]);
     case 'core': return wordsBlock(key, course.core[i] || course.core.at(-1), st, n);
     case 'vocab': return wordsBlock(key, w.words.slice(((n - 1) % 7) * 9, ((n - 1) % 7) * 9 + 9), st, n);
+    case 'vocab2': {
+      // Chặng 2: mỗi buổi 10 từ B1–B2 theo thứ tự trong danh sách
+      const list = course.vocabB2 || [];
+      const from = Math.min(i * 10, Math.max(0, list.length - 10));
+      return wordsBlock(key, list.slice(from, from + 10), st, n);
+    }
     case 'gram': return gramBlock(key, course.gram[i] || course.gram.at(-1));
     case 'gram2': return gramBlock(key, course.gramB2[i % course.gramB2.length]);
     case 'gram3': return gramBlock(key, course.gramC1[i % course.gramC1.length]);

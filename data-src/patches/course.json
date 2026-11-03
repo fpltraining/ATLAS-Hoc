@@ -1,10 +1,62 @@
 {
-  "_note": "Ghi chú trạng thái cho từng chặng tiếng Anh (khoá là số chặng). note hiện dưới chặng; ready=false nghĩa là nội dung chặng chưa đủ, app nói rõ với người học.",
+  "_note": "Ghi chú trạng thái cho từng chặng tiếng Anh (khoá là số chặng). note hiện dưới chặng; ready=false nghĩa là nội dung chặng chưa đủ, app nói rõ với người học. blocks thay danh sách mục của buổi học theo chặng (chặng 2 thêm mục từ mới B1–B2).",
   "stages": {
-    "0": { "ready": true },
-    "1": { "ready": true },
-    "2": { "ready": true, "note": "Nội dung chính: 24 bài ngữ pháp B2, cụm từ cố định, kho từ B1–B2 và bài đọc B1–B2." },
-    "3": { "ready": false, "note": "Chặng này đang được soạn. Hiện các buổi lặp lại ngữ pháp và bài viết của chặng 2, chưa đủ để cam kết đạt B2 vững." },
-    "4": { "ready": false, "note": "Chặng này đang được soạn. Chưa có kho từ C1 và bài đọc bản gốc, chưa nên dùng để luyện thi C1." }
+    "0": {
+      "ready": true
+    },
+    "1": {
+      "ready": true
+    },
+    "2": {
+      "ready": true,
+      "note": "Nội dung chính: 24 bài ngữ pháp B2, cụm từ cố định, kho từ B1–B2 và bài đọc B1–B2."
+    },
+    "3": {
+      "ready": false,
+      "note": "Chặng này đang được soạn. Hiện các buổi lặp lại ngữ pháp và bài viết của chặng 2, chưa đủ để cam kết đạt B2 vững."
+    },
+    "4": {
+      "ready": false,
+      "note": "Chặng này đang được soạn. Chưa có kho từ C1 và bài đọc bản gốc, chưa nên dùng để luyện thi C1."
+    }
+  },
+  "blocks": {
+    "2": [
+      [
+        "Đọc bài của bạn",
+        18,
+        "mytext"
+      ],
+      [
+        "Từ mới B1–B2",
+        9,
+        "vocab2"
+      ],
+      [
+        "Cụm cố định",
+        9,
+        "coll"
+      ],
+      [
+        "Ôn từ cũ",
+        9,
+        "review"
+      ],
+      [
+        "Ngữ pháp B2",
+        8,
+        "gram2"
+      ],
+      [
+        "Nói theo câu mẫu",
+        8,
+        "shadow"
+      ],
+      [
+        "Nói lại bằng lời mình",
+        8,
+        "retell"
+      ]
+    ]
   }
 }

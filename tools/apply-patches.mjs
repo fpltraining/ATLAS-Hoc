@@ -84,6 +84,45 @@ export function applyEnBank() {
   log.push(`Kho từ tiếng Anh: đổi ${n} ô`);
 }
 
+/* 2b. Từ mới B1–B2: thêm vào kho từ và lập danh sách học theo buổi cho chặng 2.
+   en-new-*.txt: từ | phiên âm | từ loại | nghĩa | câu ví dụ | nghĩa câu ví dụ
+   Dòng "@lv 3" hoặc "@lv 4" đặt cấp cho các dòng phía dưới (3 = B1, 4 = B2). */
+export function applyEnNew() {
+  const files = fs.readdirSync(PATCH).filter((x) => /^en-new-.*\.txt$/.test(x)).sort();
+  if (!files.length) return;
+  const bankF = path.join(OUT, 'en', 'bank.json');
+  const dictF = path.join(OUT, 'en', 'dict.json');
+  const courseF = path.join(OUT, 'en', 'course.json');
+  const bank = readJson(bankF);
+  const dict = readJson(dictF);
+  const course = readJson(courseF);
+  const have = new Map(bank.map((r) => [key(r[0]), r]));
+  const list = [];
+  let added = 0;
+  for (const name of files) {
+    let lv = 4;
+    fs.readFileSync(path.join(PATCH, name), 'utf8').split(/\r?\n/).forEach((line, i) => {
+      const t = line.trim();
+      if (!t || t.startsWith('#')) return;
+      if (t.startsWith('@lv')) { lv = Number(t.slice(3)); return; }
+      const p = t.split(' | ').map((x) => x.trim());
+      if (p.length !== 6) throw new Error(`${name}:${i + 1} cần đủ 6 cột: ${t}`);
+      const [w, ipa, pos, vi, ex, exVi] = p;
+      const k = key(w);
+      const row = [w, ipa, pos, vi, ex, exVi, 'b1b2', lv];
+      if (have.has(k)) { const r = have.get(k); if (r[6] === 'b1b2') row.forEach((v, j) => { r[j] = v; }); }
+      else { bank.push(row); have.set(k, row); added++; }
+      dict[k] = [vi, ipa];
+      list.push([w, vi]);
+    });
+  }
+  course.vocabB2 = list;
+  fs.writeFileSync(bankF, JSON.stringify(bank));
+  fs.writeFileSync(dictF, JSON.stringify(dict));
+  fs.writeFileSync(courseF, JSON.stringify(course));
+  log.push(`Từ mới B1–B2: ${list.length} từ (thêm mới ${added})`);
+}
+
 /* 3. Phiên âm trong chủ đề: thay theo bảng từ -> IPA */
 export function applyTopicIpa() {
   const f = path.join(PATCH, 'topics-ipa.json');
@@ -108,12 +147,15 @@ export function applyCourse() {
   const cf = path.join(OUT, 'en', 'course.json');
   const course = readJson(cf);
   course.stages.forEach((st, i) => { if (fix[i]) Object.assign(st, fix[i]); });
+  const blocks = readJson(f).blocks || {};
+  for (const [k, v] of Object.entries(blocks)) course.blocks[k] = v;
   fs.writeFileSync(cf, JSON.stringify(course));
   log.push(`Chặng tiếng Anh: ${Object.keys(fix).length} ghi chú`);
 }
 
 export function applyAll() {
   applyReplace();
+  applyEnNew();
   applyEnBank();
   applyTopicIpa();
   applyCourse();
