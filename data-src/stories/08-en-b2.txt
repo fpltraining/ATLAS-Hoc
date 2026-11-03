@@ -1,0 +1,422 @@
+@id b2-habits
+@shelf essay
+@level B2
+@title How Habits Really Work
+@vi Thói quen thật sự hình thành thế nào
+@blurb Vì sao quyết tâm thôi là chưa đủ, và cách xây thói quen bền hơn.
+
+## 1 | The Loop | Vòng lặp
+Most of what we do each day is not a decision. | Phần lớn việc ta làm mỗi ngày không phải là quyết định.
+It is a habit. | Đó là thói quen.
+We brush our teeth, check our phones, | Ta đánh răng, xem điện thoại,
+and take the same road to work | và đi cùng một con đường đến chỗ làm
+without really thinking about it. | mà gần như không nghĩ ngợi gì.
+
+Psychologists often describe a habit as a loop. | Các nhà tâm lý học thường mô tả thói quen như một vòng lặp.
+First comes a cue, something that triggers the behavior. | Đầu tiên là tín hiệu, thứ kích hoạt hành vi.
+Then comes the routine, the behavior itself. | Sau đó là hành động, tức chính hành vi đó.
+Finally there is a reward, | Cuối cùng là phần thưởng,
+a small feeling of pleasure or relief. | một cảm giác dễ chịu hoặc nhẹ nhõm nho nhỏ.
+
+The reward is the part we tend to ignore. | Phần thưởng là phần ta hay bỏ qua.
+Yet it is the reason the loop repeats. | Thế nhưng nó chính là lý do vòng lặp lặp lại.
+Your phone buzzes, which is the cue. | Điện thoại rung, đó là tín hiệu.
+You check it, which is the routine. | Bạn mở ra xem, đó là hành động.
+You see a new message, which is the reward. | Bạn thấy tin nhắn mới, đó là phần thưởng.
+After hundreds of repetitions, | Sau hàng trăm lần lặp lại,
+the brain links the cue to the reward | não nối tín hiệu với phần thưởng
+and starts the routine almost automatically. | và tự bắt đầu hành động gần như tự động.
+
+This explains why willpower alone rarely lasts. | Điều này giải thích vì sao chỉ ý chí thì hiếm khi bền.
+On a calm morning you may resist the cake. | Vào một buổi sáng thư thái, bạn có thể cưỡng lại miếng bánh.
+On a stressful evening, the old loop wins. | Vào một buổi tối căng thẳng, vòng lặp cũ lại thắng.
+
+~ cue = tín hiệu, thứ kích hoạt
+~ routine = hành động lặp lại
+~ willpower = ý chí, sức tự chủ
+? What keeps a habit loop repeating? | Điều gì làm vòng lặp thói quen lặp lại? | The reward* | The cue alone | A strong decision
+? Why does willpower often fail? | Vì sao ý chí thường thất bại? | Stress makes the old loop stronger* | People are lazy by nature | Habits cannot change
+! A habit is not a weakness. | Thói quen không phải là sự yếu đuối.
+! It is a shortcut your brain has learned. | Đó là lối tắt não bạn đã học được.
+! To change it, study the cue and the reward, | Muốn đổi nó, hãy xem xét tín hiệu và phần thưởng,
+! not only the action. | chứ không chỉ hành động.
+> Chọn một thói quen của bạn. Tín hiệu, hành động và phần thưởng của nó là gì?
+
+## 2 | Building a Better Loop | Xây vòng lặp tốt hơn
+If habits are loops, | Nếu thói quen là vòng lặp,
+we can design new ones on purpose. | ta có thể chủ động thiết kế vòng lặp mới.
+
+Start with a clear and visible cue. | Hãy bắt đầu bằng một tín hiệu rõ ràng, dễ thấy.
+"I will study more" is too vague. | "Tôi sẽ học nhiều hơn" thì quá mơ hồ.
+"After I pour my morning coffee, | "Sau khi rót cà phê buổi sáng,
+I will review ten words" is specific. | tôi sẽ ôn mười từ" thì cụ thể.
+The coffee becomes the cue. | Ly cà phê trở thành tín hiệu.
+
+Next, make the routine small at first. | Tiếp theo, ban đầu hãy làm hành động thật nhỏ.
+Two minutes of practice is enough. | Hai phút luyện tập là đủ.
+It sounds ridiculous, | Nghe thì có vẻ buồn cười,
+but the goal is to become the kind of person | nhưng mục tiêu là trở thành kiểu người
+who shows up every day. | ngày nào cũng có mặt.
+You can extend the time later. | Bạn có thể kéo dài thời gian sau.
+
+Finally, give yourself an immediate reward. | Cuối cùng, hãy tự thưởng ngay lập tức.
+Tick a box, add a streak, | Đánh dấu một ô, cộng thêm một ngày liên tiếp,
+or simply notice that you kept your promise. | hoặc chỉ cần nhận ra rằng bạn đã giữ lời hứa.
+Long-term rewards, like fluent English, | Phần thưởng dài hạn như nói tiếng Anh trôi chảy
+are too far away to motivate the brain today. | ở quá xa để thúc đẩy não ngay hôm nay.
+
+Missing one day is not a disaster. | Lỡ một ngày không phải là thảm họa.
+Research on habits suggests | Các nghiên cứu về thói quen cho thấy
+that a single miss has little effect. | một lần bỏ lỡ ảnh hưởng rất ít.
+The danger is missing twice, | Điều nguy hiểm là bỏ lỡ hai lần,
+because then a new loop begins to form. | vì khi đó một vòng lặp mới bắt đầu hình thành.
+
+~ vague = mơ hồ
+~ streak = chuỗi ngày liên tiếp
+~ on purpose = có chủ đích
+? Which goal is specific enough? | Mục tiêu nào đủ cụ thể? | After coffee, I will review ten words* | I will study more | I will be better at English
+? What does the text say about missing one day? | Bài nói gì về việc lỡ một ngày? | It has little effect, but avoid missing twice* | It ruins the whole habit | You must start again from zero
+! Small and daily beats big and rare. | Nhỏ mà đều đặn thắng lớn mà thất thường.
+! Never miss twice in a row. | Đừng bao giờ bỏ lỡ hai lần liên tiếp.
+> Viết một câu "Sau khi ..., tôi sẽ ..." cho thói quen học tiếng Anh của bạn.
+
+@id b2-sleep
+@shelf essay
+@level B2
+@title Sleep: The Skill Nobody Teaches
+@vi Giấc ngủ: kỹ năng không ai dạy
+@blurb Ngủ không phải thời gian chết. Đó là lúc não sắp xếp lại những gì bạn vừa học.
+
+## 1 | The Night Shift | Ca làm đêm
+Many students treat sleep as wasted time. | Nhiều học sinh coi giấc ngủ là thời gian lãng phí.
+Before an exam, they stay up late, | Trước kỳ thi, họ thức khuya,
+hoping to squeeze in a few more pages. | mong nhồi thêm vài trang.
+Scientists now believe this is a poor trade. | Giới khoa học nay cho rằng đây là một cuộc đổi chác tồi.
+
+While you sleep, your brain is far from idle. | Khi bạn ngủ, não không hề ngồi không.
+It replays parts of the day | Nó phát lại những phần của ngày hôm đó
+and strengthens some new connections. | và củng cố một số kết nối mới.
+Many studies suggest that people remember | Nhiều nghiên cứu cho thấy người ta nhớ
+new words and skills better after a night of sleep | từ mới và kỹ năng tốt hơn sau một đêm ngủ
+than after the same hours awake. | so với cùng số giờ thức.
+
+Sleep also seems to help the brain clean itself. | Giấc ngủ dường như cũng giúp não tự làm sạch.
+During deep sleep, fluid flows around brain cells | Trong giấc ngủ sâu, chất dịch chảy quanh tế bào não
+and may carry away waste. | và có thể cuốn đi chất thải.
+This is still an active area of research, | Đây vẫn là lĩnh vực đang được nghiên cứu sôi nổi,
+but the direction is clear: | nhưng hướng đi đã rõ:
+sleep is maintenance, not a pause. | ngủ là bảo trì, không phải tạm dừng.
+
+~ idle = không hoạt động, ngồi không
+~ maintenance = sự bảo trì
+~ squeeze in = cố nhét thêm vào
+? According to the text, what does the brain do during sleep? | Theo bài, não làm gì khi ngủ? | Replays the day and strengthens memories* | Shuts down completely | Forgets new words
+? How certain is the cleaning effect? | Tác dụng làm sạch chắc chắn đến đâu? | It is still being researched* | It is fully proven | It has been disproved
+! Staying up to study can cost you | Thức khuya để học có thể làm bạn mất
+! the very memories you just made. | chính những gì vừa học.
+> Tuần trước bạn ngủ trung bình bao nhiêu tiếng mỗi đêm? Bạn có thấy khác biệt khi ngủ đủ không?
+
+## 2 | Protecting Your Sleep | Bảo vệ giấc ngủ
+Knowing that sleep matters is easy. | Biết giấc ngủ quan trọng thì dễ.
+Getting enough of it is harder. | Ngủ đủ thì khó hơn.
+
+The first rule is consistency. | Quy tắc đầu tiên là sự đều đặn.
+Going to bed and waking up at similar times | Đi ngủ và thức dậy vào giờ gần giống nhau
+helps your body clock stay stable, | giúp đồng hồ sinh học ổn định,
+even on weekends. | kể cả cuối tuần.
+
+The second is light. | Quy tắc thứ hai là ánh sáng.
+Bright screens late at night | Màn hình sáng vào đêm khuya
+can delay the feeling of sleepiness. | có thể làm cơn buồn ngủ đến muộn hơn.
+Morning sunlight does the opposite: | Nắng buổi sáng thì ngược lại:
+it tells your body that the day has begun. | nó báo cho cơ thể rằng ngày mới đã bắt đầu.
+
+The third is caffeine. | Quy tắc thứ ba là chất cafein.
+Its effects can last for many hours, | Tác dụng của nó có thể kéo dài nhiều giờ,
+so an afternoon coffee may still be active | nên ly cà phê buổi chiều có thể vẫn còn tác dụng
+when you are trying to fall asleep. | khi bạn đang cố ngủ.
+
+None of this requires money or equipment. | Không điều nào trong số này cần tiền hay thiết bị.
+It only requires treating sleep | Nó chỉ cần bạn coi giấc ngủ
+as part of your study plan, | là một phần của kế hoạch học tập,
+not as the thing you sacrifice for it. | chứ không phải thứ để hy sinh cho việc học.
+
+~ consistency = sự đều đặn, nhất quán
+~ body clock = đồng hồ sinh học
+~ sacrifice = hy sinh
+? What does morning sunlight do? | Nắng buổi sáng có tác dụng gì? | Tells the body the day has begun* | Makes you sleepy | Delays sleepiness
+? Why avoid afternoon coffee? | Vì sao nên tránh cà phê buổi chiều? | Its effect can last many hours* | It is too expensive | It causes headaches
+! Sleep is part of the study plan, not its enemy. | Giấc ngủ là một phần của kế hoạch học, không phải kẻ thù của nó.
+> Chọn một thay đổi nhỏ về giấc ngủ bạn sẽ thử trong tuần này.
+
+@id b2-adult-learner
+@shelf essay
+@level B2
+@title Is It Too Late to Learn a Language?
+@vi Học ngoại ngữ khi lớn có muộn không?
+@blurb Người lớn học chậm hơn trẻ con ở vài mặt, nhưng nhanh hơn ở nhiều mặt khác.
+
+## 1 | The Myth of the Closed Door | Huyền thoại cánh cửa đã đóng
+"Children learn languages like sponges. | "Trẻ con học ngôn ngữ như bọt biển.
+Adults are too old." | Người lớn thì quá già rồi."
+You have probably heard this many times. | Có lẽ bạn đã nghe câu này nhiều lần.
+Like many popular beliefs, | Giống nhiều niềm tin phổ biến khác,
+it is partly true and partly a myth. | nó đúng một phần và là huyền thoại một phần.
+
+Children who grow up with a language | Trẻ lớn lên cùng một ngôn ngữ
+usually develop a native accent. | thường có giọng bản xứ.
+Adults rarely do. | Người lớn hiếm khi được như vậy.
+In that narrow sense, | Theo nghĩa hẹp đó,
+age does make a difference. | tuổi tác có tạo ra khác biệt.
+
+But accent is only one part of a language. | Nhưng giọng chỉ là một phần của ngôn ngữ.
+Adults have real advantages. | Người lớn có những lợi thế thật sự.
+They can read, take notes, and use a dictionary. | Họ biết đọc, ghi chép và dùng từ điển.
+They understand grammar as a system. | Họ hiểu ngữ pháp như một hệ thống.
+They can plan their study | Họ có thể lên kế hoạch học
+and connect new words to things they already know. | và nối từ mới với những gì đã biết.
+Studies of classroom learners often find | Các nghiên cứu về người học trong lớp thường thấy
+that older beginners make faster progress at first. | người bắt đầu lớn tuổi hơn tiến bộ nhanh hơn lúc đầu.
+
+~ myth = huyền thoại, quan niệm sai
+~ accent = giọng (nói)
+~ advantage = lợi thế
+? What is the main advantage of children? | Lợi thế chính của trẻ em là gì? | A native-like accent* | Better grammar knowledge | Faster progress in class
+? What can adults do that young children cannot? | Người lớn làm được gì mà trẻ nhỏ chưa làm được? | Plan study and use a dictionary* | Develop a native accent | Learn without effort
+! Age changes how you learn, not whether you can learn. | Tuổi tác thay đổi cách bạn học, không quyết định bạn có học được hay không.
+> Bạn có tin "người lớn học ngoại ngữ khó hơn" không? Vì sao?
+
+## 2 | Learning Like an Adult | Học theo cách của người lớn
+So how should an adult learn? | Vậy người lớn nên học thế nào?
+Not by copying children. | Không phải bằng cách bắt chước trẻ con.
+
+Children spend thousands of hours | Trẻ con dành hàng nghìn giờ
+surrounded by a language. | được bao quanh bởi ngôn ngữ.
+Most adults do not have that time. | Hầu hết người lớn không có thời gian đó.
+Instead, they need to use their hours efficiently. | Thay vào đó, họ cần dùng thời gian hiệu quả.
+
+That means spaced review, | Nghĩa là ôn tập giãn cách,
+so words return just before you forget them. | để từ quay lại ngay trước khi bạn quên.
+It means a lot of listening and reading | Nghĩa là nghe và đọc thật nhiều
+at a level you can mostly understand. | ở mức bạn hiểu được phần lớn.
+And it means speaking early, | Và nghĩa là nói sớm,
+even when you feel embarrassed. | kể cả khi bạn thấy ngại.
+
+The biggest obstacle for adults is rarely the brain. | Trở ngại lớn nhất của người lớn hiếm khi là bộ não.
+It is fear of looking foolish, | Đó là nỗi sợ trông ngớ ngẩn,
+and the belief that it is already too late. | và niềm tin rằng đã quá muộn.
+Both can be overcome. | Cả hai đều có thể vượt qua.
+
+~ efficiently = một cách hiệu quả
+~ spaced review = ôn tập giãn cách
+~ obstacle = trở ngại
+? What does spaced review do? | Ôn tập giãn cách có tác dụng gì? | Brings words back before you forget them* | Teaches a native accent | Replaces listening
+? What is the biggest obstacle for adults, according to the text? | Theo bài, trở ngại lớn nhất của người lớn là gì? | Fear and the belief it is too late* | A weak memory | Lack of grammar
+! You cannot buy a child's hours, | Bạn không mua được thời gian của trẻ con,
+! but you can use your own hours better. | nhưng có thể dùng thời gian của mình tốt hơn.
+> Kể một lần bạn ngại nói tiếng Anh. Lần tới bạn sẽ làm gì khác?
+
+@id b2-compound
+@shelf essay
+@level B2
+@title The Quiet Power of Compound Growth
+@vi Sức mạnh thầm lặng của tăng trưởng kép
+@blurb Vì sao những thay đổi rất nhỏ, lặp lại đủ lâu, lại tạo ra kết quả khổng lồ.
+
+## 1 | Money That Grows on Itself | Tiền tự sinh ra tiền
+Imagine you save one million dong | Hãy tưởng tượng bạn để dành một triệu đồng
+and it earns 8 percent a year. | và nó sinh lãi 8% mỗi năm.
+After one year you have 1.08 million. | Sau một năm bạn có 1,08 triệu.
+That does not sound exciting. | Nghe chẳng có gì hấp dẫn.
+
+But in the second year, | Nhưng sang năm thứ hai,
+you earn interest on the interest as well. | bạn được lãi trên cả tiền lãi.
+This is called compound growth. | Đây gọi là tăng trưởng kép.
+At 8 percent, money roughly doubles | Với lãi 8%, tiền tăng gần gấp đôi
+in about nine years. | sau khoảng chín năm.
+After 36 years it has doubled four times, | Sau 36 năm, nó đã nhân đôi bốn lần,
+so it is around sixteen times bigger. | nên lớn gấp khoảng mười sáu lần.
+
+A simple shortcut is the "rule of 72". | Một mẹo nhanh là "quy tắc 72".
+Divide 72 by the yearly rate | Lấy 72 chia cho lãi suất hằng năm
+to estimate how long doubling takes. | để ước tính bao lâu thì tiền nhân đôi.
+At 6 percent, it takes about twelve years. | Với 6%, mất khoảng mười hai năm.
+
+The lesson is not about getting rich quickly. | Bài học không phải là làm giàu nhanh.
+It is the opposite. | Mà ngược lại.
+Compound growth is slow at the start | Tăng trưởng kép chậm lúc đầu
+and dramatic only at the end. | và chỉ bùng nổ ở cuối.
+Most people give up before the curve rises. | Hầu hết mọi người bỏ cuộc trước khi đường cong đi lên.
+
+~ interest = tiền lãi
+~ compound = kép, gộp lại
+~ estimate = ước tính
+? How long does money take to double at 8 percent? | Với lãi 8%, bao lâu tiền nhân đôi? | About nine years* | About four years | About sixteen years
+? What does the rule of 72 estimate? | Quy tắc 72 dùng để ước tính gì? | How long doubling takes* | The best bank to use | How much tax you pay
+! Compound growth punishes impatience and rewards time. | Tăng trưởng kép phạt sự nóng vội và thưởng cho thời gian.
+> Dùng quy tắc 72: với lãi 9% một năm, bao lâu thì tiền nhân đôi?
+
+## 2 | Compounding Beyond Money | Tăng trưởng kép ngoài chuyện tiền
+The same idea applies to skills. | Ý tưởng này cũng đúng với kỹ năng.
+
+Each new English word makes the next text | Mỗi từ tiếng Anh mới làm bài đọc kế tiếp
+a little easier to read. | dễ đọc hơn một chút.
+Easier reading means you read more, | Đọc dễ hơn thì bạn đọc nhiều hơn,
+and reading more teaches you more words. | và đọc nhiều hơn lại dạy bạn thêm từ.
+Knowledge builds on knowledge. | Kiến thức xây trên kiến thức.
+
+The same is true for a team. | Một đội cũng vậy.
+A player who improves a little every week | Một tuyển thủ tiến bộ một chút mỗi tuần
+does not look different after a month. | trông chẳng khác gì sau một tháng.
+After two years, they may be unrecognizable. | Sau hai năm, có thể bạn không nhận ra họ nữa.
+
+Compounding also works in the wrong direction. | Tăng trưởng kép cũng chạy theo chiều xấu.
+Small debts grow. | Nợ nhỏ lớn dần.
+Small bad habits become a lifestyle. | Thói quen xấu nhỏ thành lối sống.
+That is why tiny daily choices | Đó là lý do những lựa chọn nhỏ mỗi ngày
+deserve more attention than big plans. | đáng được chú ý hơn những kế hoạch lớn.
+
+~ unrecognizable = không thể nhận ra
+~ debt = nợ
+~ lifestyle = lối sống
+? Why does learning words compound? | Vì sao học từ vựng có tính kép? | Each word makes reading easier, so you read more* | Words are cheap | Teachers give more homework
+? What is the danger mentioned in the text? | Bài nhắc đến mối nguy nào? | Debts and bad habits also compound* | You learn too fast | Teams become too strong
+! Don't ask "How much today?" | Đừng hỏi "Hôm nay được bao nhiêu?"
+! Ask "Can I keep this up for years?" | Hãy hỏi "Mình có duy trì được nhiều năm không?"
+> Kể một kỹ năng của bạn đã tăng trưởng kép theo thời gian.
+
+@id b2-check-news
+@shelf essay
+@level B2
+@title How to Check a Story Before You Share It
+@vi Kiểm tra một tin trước khi chia sẻ
+@blurb Vài thói quen đơn giản giúp bạn không vô tình lan truyền tin giả.
+
+## 1 | Why Fake Stories Spread | Vì sao tin giả lan nhanh
+False stories often travel faster than true ones. | Tin sai thường lan nhanh hơn tin thật.
+One reason is emotion. | Một lý do là cảm xúc.
+A story that makes us angry or afraid | Một tin khiến ta tức giận hay sợ hãi
+pushes us to react immediately. | thúc ta phản ứng ngay lập tức.
+We share first and think later. | Ta chia sẻ trước rồi mới nghĩ sau.
+
+Another reason is that false stories are often simpler. | Lý do khác là tin sai thường đơn giản hơn.
+The truth tends to be complicated, | Sự thật thường phức tạp,
+full of "maybe" and "it depends". | đầy những "có thể" và "còn tùy".
+A fake headline promises a clear villain | Một tiêu đề giả hứa hẹn một kẻ xấu rõ ràng
+and a shocking secret. | và một bí mật gây sốc.
+
+Most people who share false stories | Phần lớn người chia sẻ tin sai
+are not trying to deceive anyone. | không hề có ý lừa ai.
+They simply did not check. | Họ chỉ đơn giản là không kiểm tra.
+That is good news, | Đó là tin tốt,
+because checking is a skill that can be learned. | vì kiểm tra là kỹ năng có thể học được.
+
+~ deceive = lừa dối
+~ villain = kẻ xấu, phản diện
+~ headline = tiêu đề tin
+? Why do angry stories spread quickly? | Vì sao tin gây tức giận lan nhanh? | Emotion pushes us to react immediately* | They are always true | They are shorter
+? Why do most people share false stories? | Vì sao đa số người chia sẻ tin sai? | They did not check* | They want to deceive | They are paid to
+! Strong emotion is a signal to slow down, not to share. | Cảm xúc mạnh là tín hiệu để chậm lại, không phải để chia sẻ.
+> Lần gần nhất bạn thấy một tin khiến bạn rất tức giận là khi nào? Bạn đã làm gì?
+
+## 2 | Four Quick Checks | Bốn bước kiểm tra nhanh
+Fact-checkers often use a few quick habits. | Những người kiểm chứng tin thường dùng vài thói quen nhanh.
+You can apply them in under a minute. | Bạn có thể áp dụng chúng trong chưa đầy một phút.
+
+First, stop. | Thứ nhất, dừng lại.
+Notice how the story makes you feel. | Để ý xem tin đó làm bạn cảm thấy thế nào.
+
+Second, investigate the source. | Thứ hai, tìm hiểu nguồn tin.
+Who published it? | Ai đăng nó?
+Is it a known news organization, | Đó là một cơ quan báo chí có tên tuổi,
+or a page you have never heard of? | hay một trang bạn chưa từng nghe đến?
+
+Third, look for other coverage. | Thứ ba, tìm xem nơi khác có đưa tin không.
+If something truly important happened, | Nếu điều gì thật sự quan trọng đã xảy ra,
+several reliable outlets will report it. | nhiều nguồn đáng tin sẽ đưa tin.
+If only one strange site has it, be careful. | Nếu chỉ một trang lạ có tin đó, hãy cẩn thận.
+
+Fourth, trace it to the original. | Thứ tư, lần về bản gốc.
+Quotes, photos and numbers | Trích dẫn, hình ảnh và con số
+are often taken out of context. | thường bị lấy ra khỏi ngữ cảnh.
+An old photo can be presented as new. | Một bức ảnh cũ có thể bị giới thiệu như ảnh mới.
+
+These steps will not make you perfect. | Những bước này không làm bạn hoàn hảo.
+But they will make you part of the solution | Nhưng chúng giúp bạn trở thành một phần của giải pháp
+rather than part of the problem. | thay vì một phần của vấn đề.
+
+~ reliable = đáng tin cậy
+~ outlet = cơ quan truyền thông
+~ out of context = bị tách khỏi ngữ cảnh
+? What should you do if only one strange site reports a story? | Nếu chỉ một trang lạ đưa tin, bạn nên làm gì? | Be careful* | Share it quickly | Trust it more
+? What is a common trick with photos? | Mánh khóe thường gặp với ảnh là gì? | An old photo is presented as new* | Photos are always fake | Photos have no source
+! Before you share, find who said it first. | Trước khi chia sẻ, hãy tìm xem ai nói điều đó đầu tiên.
+> Chọn một tin bạn thấy hôm nay và thử bốn bước trên. Kết quả thế nào?
+
+@id b2-feedback
+@shelf essay
+@level B2
+@title Giving Feedback That People Can Use
+@vi Góp ý sao cho người khác dùng được
+@blurb Góp ý tốt không phải là nói nhẹ nhàng hay nói thẳng, mà là nói cụ thể.
+
+## 1 | Why Feedback Fails | Vì sao góp ý thất bại
+Almost everyone says they want feedback. | Hầu như ai cũng nói mình muốn được góp ý.
+Yet most feedback changes nothing. | Thế nhưng phần lớn lời góp ý chẳng thay đổi được gì.
+
+Often the problem is that it is too general. | Thường thì vấn đề là nó quá chung chung.
+"Play better" or "be more confident" | "Chơi tốt hơn" hay "tự tin hơn"
+tells a person that something is wrong, | cho người ta biết có gì đó sai,
+but not what to do next. | nhưng không nói phải làm gì tiếp.
+
+Another problem is timing. | Một vấn đề khác là thời điểm.
+Feedback given weeks later | Lời góp ý đưa ra vài tuần sau
+is hard to connect to the moment it describes. | khó nối với khoảnh khắc nó nói đến.
+The details have faded. | Các chi tiết đã phai mờ.
+
+A third problem is emotion. | Vấn đề thứ ba là cảm xúc.
+When people feel attacked, | Khi người ta cảm thấy bị tấn công,
+they defend themselves instead of listening. | họ tự vệ thay vì lắng nghe.
+Even good advice is wasted | Ngay cả lời khuyên hay cũng phí
+if it arrives as an insult. | nếu nó đến dưới dạng một lời xúc phạm.
+
+~ general = chung chung
+~ timing = thời điểm
+~ defend = tự vệ, bảo vệ
+? What is wrong with "be more confident"? | Câu "tự tin hơn" có vấn đề gì? | It does not say what to do next* | It is too long | It is too specific
+? What happens when people feel attacked? | Khi cảm thấy bị tấn công, người ta làm gì? | They defend themselves instead of listening* | They listen more carefully | They thank you
+! Feedback is only useful | Góp ý chỉ có ích
+! if the other person can act on it. | khi người kia làm theo được.
+> Nhớ lại một lời góp ý chung chung bạn từng nhận. Nó nên được nói cụ thể thế nào?
+
+## 2 | A Simple Structure | Một cấu trúc đơn giản
+Many coaches use a simple structure: | Nhiều huấn luyện viên dùng một cấu trúc đơn giản:
+situation, behavior, impact. | tình huống, hành vi, tác động.
+
+Situation: describe when and where. | Tình huống: nói rõ khi nào và ở đâu.
+"In the third game yesterday, at minute twelve…" | "Ở ván thứ ba hôm qua, phút mười hai…"
+
+Behavior: describe what the person did, | Hành vi: tả lại người đó đã làm gì,
+not what kind of person they are. | chứ không phải họ là người thế nào.
+"…you moved to the river alone…" | "…em đi xuống sông một mình…"
+is better than "you are careless". | thì tốt hơn "em cẩu thả".
+
+Impact: explain the result. | Tác động: giải thích kết quả.
+"…so we lost the fight four against five." | "…nên đội mình giao tranh bốn đánh năm."
+
+Then add one clear request for next time, | Sau đó thêm một yêu cầu rõ ràng cho lần sau,
+and listen to their side. | và lắng nghe phía người kia.
+They may have seen something you missed. | Có thể họ đã thấy điều bạn bỏ sót.
+
+Good feedback is not soft or harsh. | Góp ý tốt không phải là mềm mỏng hay gay gắt.
+It is specific, timely and respectful. | Nó cụ thể, đúng lúc và tôn trọng.
+Above all, it is about the work, | Trên hết, nó nói về công việc,
+not about the person's worth. | chứ không nói về giá trị con người.
+
+~ impact = tác động
+~ harsh = gay gắt
+~ timely = đúng lúc
+? Which sentence describes behavior, not character? | Câu nào tả hành vi, không phải tính cách? | You moved to the river alone* | You are careless | You are a bad player
+? What should you do after giving feedback? | Sau khi góp ý, bạn nên làm gì? | Listen to their side* | Leave immediately | Repeat it louder
+! Talk about what happened, not about who someone is. | Nói về điều đã xảy ra, không nói về con người họ.
+> Viết một lời góp ý theo cấu trúc tình huống – hành vi – tác động cho một việc gần đây.

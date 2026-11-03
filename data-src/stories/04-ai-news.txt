@@ -5,7 +5,6 @@
 @title Microsoft: AI Agents Can Act Like Insiders
 @vi Microsoft: Tác tử AI có thể hành xử như "người trong nhà"
 @blurb Không cần tin tặc, một tác tử AI được cấp quá nhiều quyền vẫn có thể gây rủi ro.
-@source Dark Reading | https://darkreading.com/cybersecurity-operations/ai-agents-insider-threats-inside-microsoft-unified-security-stack
 
 ## 1 | The Risk Inside | Rủi ro từ bên trong
 On 19 October 2026, Microsoft published two security blog posts | Ngày 19/10/2026, Microsoft đăng hai bài blog về bảo mật
@@ -78,8 +77,6 @@ But it is a good reason to read carefully. | Nhưng đó là lý do tốt để 
 @title Europe Gives Companies More Time on High-Risk AI
 @vi Châu Âu cho doanh nghiệp thêm thời gian với AI rủi ro cao
 @blurb Những quy định khắt khe nhất của Đạo luật AI châu Âu bị lùi tới cuối năm 2027 và năm 2028.
-@source National Law Review | https://natlawreview.com/article/eu-digital-omnibus-ai-enters-force
-@source Lewis Silkin | https://www.lewissilkin.com/insights/2026/07/27/the-digital-omnibus-on-ai-enters-into-force-today-102nedo
 
 ## 1 | The New Dates | Các mốc mới
 Europe has one of the world's biggest laws on AI. | Châu Âu có một trong những đạo luật về AI lớn nhất thế giới.
@@ -150,8 +147,6 @@ is a skill you will use all your life. | là kỹ năng bạn sẽ dùng cả đ
 @title Vietnam's First AI Law Is Now in Force
 @vi Luật AI đầu tiên của Việt Nam đã có hiệu lực
 @blurb Từ 1/3/2026, Việt Nam có luật riêng về trí tuệ nhân tạo. Nó ảnh hưởng tới cả nội dung do AI tạo ra.
-@source Baker McKenzie | https://connectontech.bakermckenzie.com/vietnams-first-standalone-ai-law-an-overview-of-key-provisions-future-implications/
-@source Duane Morris | https://blogs.duanemorris.com/vietnam/2026/03/03/vietnam-the-first-law-on-artificial-intelligence-what-you-must-know/
 
 ## 1 | Three Levels of Risk | Ba mức rủi ro
 Vietnam now has its own law on artificial intelligence. | Việt Nam giờ đã có luật riêng về trí tuệ nhân tạo.
@@ -224,8 +219,6 @@ if AI made it look real, say so. | nếu AI làm nó trông như thật, hãy n�
 @title Robots Could Use as Much Power as France's Nuclear Plants
 @vi Robot có thể ngốn điện gần bằng toàn bộ điện hạt nhân của Pháp
 @blurb Một dự báo mới cho thấy robot sẽ cần rất nhiều điện, và giá robot hình người đang giảm rất nhanh.
-@source Robotics & Automation News | https://roboticsandautomationnews.com/2026/08/12/robots-could-consume-as-much-electricity-as-35-million-us-homes-by-2035/104073/
-@source Wood Mackenzie | https://www.woodmac.com/press-releases/wood-mackenzie-forecasts-global-robotics-power-demand-to-reach-363-twh-by-2035-approaching-frances-entire-nuclear-output/
 
 ## 1 | The Hungry Machines | Những cỗ máy đói điện
 We often talk about the electricity that AI uses. | Ta thường nói về lượng điện mà AI dùng.
@@ -297,7 +290,6 @@ will find it easier to move. | sẽ dễ chuyển hướng hơn.
 @title AI Is Driving a Jump in Data Center Electricity
 @vi AI đẩy điện năng của trung tâm dữ liệu tăng vọt
 @blurb Gartner dự báo trung tâm dữ liệu dùng thêm khoảng một phần tư lượng điện chỉ trong một năm.
-@source Gartner | https://www.gartner.com/en/newsroom/press-releases/2026-06-10-gartner-says-data-center-electricity-demand-to-grow-26-percent-in-2026
 
 ## 1 | More Power Every Year | Mỗi năm một nhiều điện hơn
 Every question you ask an AI | Mỗi câu anh hỏi AI
@@ -366,8 +358,6 @@ and a little energy too. | và cả một chút năng lượng.
 @title A Drug Designed with AI Reaches a Big Test
 @vi Một loại thuốc thiết kế bằng AI bước vào thử nghiệm lớn
 @blurb Rentosertib, thuốc trị bệnh phổi được AI giúp tìm ra, là một phép thử thật cho AI trong y học.
-@source BioSpace (thông cáo của Insilico về nghiên cứu Nature Medicine) | https://www.biospace.com/press-releases/insilico-medicine-announces-nature-medicine-publication-of-phase-iia-results-evaluating-rentosertib-the-novel-tnik-inhibitor-for-idiopathic-pulmonary-fibrosis-ipf-discovered-and-designed-with-a-pioneering-ai-approach
-@source Let's Data Science | https://letsdatascience.com/news/insilico-reports-younger-proteomic-age-with-rentosertib-56d08fc7
 
 ## 1 | From Computer to Patient | Từ máy tính đến bệnh nhân
 Making a new medicine usually takes many years. | Làm ra một loại thuốc mới thường mất nhiều năm.

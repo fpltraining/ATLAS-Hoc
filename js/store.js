@@ -135,6 +135,8 @@ export const DEFAULTS = {
   readSize: 22,           // cỡ chữ tiếng Anh trong bài đọc
   readMode: 'both',       // both: Anh trên Việt dưới · hide: che tiếng Việt
   theme: 'auto',
+  aiUrl: '',             // địa chỉ hàm chấm bài trên Supabase, để trống là tắt
+  aiKey: '',             // khoá anon của dự án Supabase
 };
 
 let cachedSettings = null;

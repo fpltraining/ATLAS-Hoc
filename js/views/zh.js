@@ -39,6 +39,7 @@ export async function render() {
   ));
 
   el.append(h('div.hub-grid',
+    tile('#/exam', '考', 'Thi thử HSK', 'Đề luyện cấp 1–4, chấm điểm'),
     tile('#/pinyin', 'ā', 'Pinyin', 'Thanh điệu, vần, biến điệu'),
     tile('#/radicals', '部', 'Bộ thủ', 'Mảnh ghép của chữ Hán'),
   ));

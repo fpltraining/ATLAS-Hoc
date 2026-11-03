@@ -4,9 +4,6 @@
 @title Most of the Universe Is Missing
 @vi Phần lớn vũ trụ đang mất tích
 @blurb Mọi thứ bạn từng nhìn thấy chỉ chiếm khoảng 5% vũ trụ. Phần còn lại là gì, chưa ai biết. Câu chuyện về những người dám nói "chúng tôi không hiểu".
-@source NASA: Dark Matter & Dark Energy | https://science.nasa.gov/universe/dark-matter-dark-energy/
-@source Wikipedia: Vera Rubin | https://en.wikipedia.org/wiki/Vera_Rubin
-@source Nobel Prize in Physics 2011 | https://www.nobelprize.org/prizes/physics/2011/summary/
 
 ## 1 | The Missing Weight | Khối lượng bị thiếu
 Look at everything you know. | Hãy nhìn mọi thứ bạn biết.
@@ -99,8 +96,6 @@ That is also possible. | Điều đó cũng có thể lắm.
 @title We Have Better Maps of Mars
 @vi Bản đồ sao Hỏa còn rõ hơn đáy biển
 @blurb Hơn 70% đáy đại dương vẫn chưa được lập bản đồ chi tiết. Một dự án toàn cầu đang thay đổi điều đó, nhờ cả những con tàu bình thường.
-@source Seabed 2030 / IHO | https://iho.int/en/global-seabed-mapping-reaches-new-milestone-as-five-million-square-kilometres-added-in-a-year
-@source Wikipedia: Seabed 2030 | https://en.wikipedia.org/wiki/Seabed_2030
 
 ## 1 | The Dark Floor | Đáy biển tối
 The ocean covers about 70 percent of our planet. | Đại dương phủ khoảng 70% hành tinh của ta.
@@ -192,9 +187,6 @@ Even now, more than 70 percent is still unknown. | Đến giờ, hơn 70% vẫn 
 @title Why Is There Anyone Inside?
 @vi Vì sao bên trong lại có "ai đó"?
 @blurb Não là các tế bào gửi tín hiệu. Vậy tại sao ta lại cảm thấy mình đang tồn tại? Một vụ đánh cược 25 năm, và câu hỏi AI có cảm thấy gì không.
-@source Chalmers (1995), Facing Up to the Problem of Consciousness | https://consc.net/papers/facing.html
-@source Wikipedia: Hard problem of consciousness | https://en.wikipedia.org/wiki/Hard_problem_of_consciousness
-@source Wikipedia: Christof Koch | https://en.wikipedia.org/wiki/Christof_Koch
 
 ## 1 | The Easy Problems | Những bài toán "dễ"
 Your brain has about 86 billion nerve cells. | Não bạn có khoảng 86 tỉ tế bào thần kinh.
@@ -290,9 +282,6 @@ They say the question deserves care. | Họ nói câu hỏi này đáng được
 @title How Did Life Begin?
 @vi Sự sống bắt đầu thế nào?
 @blurb Từ đá, nước và hoá chất, bằng cách nào đó, đã có thứ biết tự sao chép. Một cậu nghiên cứu sinh, một chiếc bình thuỷ tinh, và câu hỏi lớn nhất của sinh học.
-@source Wikipedia: Abiogenesis | https://en.wikipedia.org/wiki/Abiogenesis
-@source Wikipedia: Miller–Urey experiment | https://en.wikipedia.org/wiki/Miller%E2%80%93Urey_experiment
-@source Wikipedia: Hydrothermal vent | https://en.wikipedia.org/wiki/Hydrothermal_vent
 
 ## 1 | A World Without Life | Một thế giới không có sự sống
 The Earth is about 4.5 billion years old. | Trái Đất khoảng 4,5 tỉ năm tuổi.
@@ -387,8 +376,6 @@ maybe we are very rare. | có lẽ chúng ta cực kỳ hiếm hoi.
 @title The Wow! Signal
 @vi Tín hiệu "Wow!"
 @blurb 72 giây năm 1977. Một tình nguyện viên viết chữ "Wow!" bên lề tờ giấy. Tín hiệu đó không bao giờ quay lại, và gần 50 năm sau người ta vẫn tìm lời giải.
-@source Wikipedia: Wow! signal | https://en.wikipedia.org/wiki/Wow!_signal
-@source Wikipedia: Big Ear (telescope) | https://en.wikipedia.org/wiki/Big_Ear_(telescope)
 
 ## 1 | The Big Ear | Cái Tai Lớn
 In Ohio, in America, | Ở bang Ohio, nước Mỹ,
@@ -479,9 +466,6 @@ but it is not proven either. | nhưng cũng chưa được chứng minh.
 @title Where Is Everybody?
 @vi Mọi người đâu cả rồi?
 @blurb Vũ trụ có hàng tỉ tỉ ngôi sao. Vậy tại sao bầu trời lại im lặng đến vậy? Một câu hỏi bật ra trong bữa trưa, và điều nó nhắc chúng ta về chính mình.
-@source Wikipedia: Fermi paradox | https://en.wikipedia.org/wiki/Fermi_paradox
-@source Wikipedia: Drake equation | https://en.wikipedia.org/wiki/Drake_equation
-@source Wikipedia: Great Filter | https://en.wikipedia.org/wiki/Great_Filter
 
 ## 1 | A Question at Lunch | Câu hỏi trong bữa trưa
 In the summer of 1950, | Mùa hè năm 1950,
@@ -581,8 +565,6 @@ But the question asks us to look at ourselves. | Nhưng câu hỏi khiến ta ph
 @title The Book Nobody Can Read
 @vi Cuốn sách không ai đọc được
 @blurb Hơn 200 trang chữ lạ, cây lạ và hình vẽ lạ, viết từ hơn 600 năm trước. Những bộ óc giải mã giỏi nhất thế giới đã thử. Ai cũng thất bại.
-@source Wikipedia: Voynich manuscript | https://en.wikipedia.org/wiki/Voynich_manuscript
-@source Wikipedia: William F. Friedman | https://en.wikipedia.org/wiki/William_F._Friedman
 
 ## 1 | A Box of Old Books | Một thùng sách cũ
 In 1912, a book dealer named Wilfrid Voynich | Năm 1912, một người buôn sách tên Wilfrid Voynich
@@ -679,9 +661,6 @@ We do not know. | Chúng ta không biết.
 @title Why Do We Sleep?
 @vi Vì sao chúng ta ngủ?
 @blurb Ta dành khoảng một phần ba cuộc đời để ngủ, nằm bất động và không biết gì. Lý do thật sự vẫn chưa rõ, nhưng ta biết chắc một điều: thiếu ngủ thì học kém, chơi kém.
-@source NIH NINDS: Brain Basics, Understanding Sleep | https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-understanding-sleep
-@source Wikipedia: Randy Gardner's sleep deprivation experiment | https://en.wikipedia.org/wiki/Randy_Gardner_sleep_deprivation_experiment
-@source Wikipedia: Glymphatic system | https://en.wikipedia.org/wiki/Glymphatic_system
 
 ## 1 | A Dangerous Habit | Một thói quen nguy hiểm
 You will spend about one third of your life asleep. | Bạn sẽ dành khoảng một phần ba cuộc đời để ngủ.
@@ -778,9 +757,6 @@ And we still do not really know why we dream. | Và ta vẫn chưa thật sự h
 @title We Use It Every Day and Don't Know Why
 @vi Ngày nào cũng dùng mà không biết vì sao
 @blurb Thuốc gây mê được dùng từ năm 1846. Đến nay, y học vẫn chưa giải thích được đầy đủ vì sao nó làm ta mất ý thức. Và người đầu tiên dùng nó đã muốn giữ bí mật.
-@source Wikipedia: Ether Day | https://en.wikipedia.org/wiki/Ether_Day
-@source Wikipedia: William T. G. Morton | https://en.wikipedia.org/wiki/William_T._G._Morton
-@source Wikipedia: Theories of general anaesthetic action | https://en.wikipedia.org/wiki/Theories_of_general_anaesthetic_action
 
 ## 1 | Surgery Before 1846 | Phẫu thuật trước năm 1846
 Imagine surgery without any medicine for pain. | Hãy tưởng tượng phẫu thuật mà không có thuốc giảm đau.
@@ -878,8 +854,6 @@ when you cannot explain what it is. | khi không giải thích được nó là 
 @title The People Who Build AI Don't Fully Understand It
 @vi Người làm ra AI cũng chưa hiểu hết nó
 @blurb AI hiện đại không được lập trình từng dòng, nó được "nuôi lớn". Vì thế bên trong nó vẫn là một bí ẩn, và các nhà nghiên cứu đang tìm cách soi vào.
-@source Anthropic: Mapping the Mind of a Large Language Model | https://www.anthropic.com/research/mapping-mind-language-model
-@source Wikipedia: Mechanistic interpretability | https://en.wikipedia.org/wiki/Mechanistic_interpretability
 
 ## 1 | Written or Grown? | Viết ra hay nuôi lớn?
 A normal computer program is written by people, line by line. | Một chương trình máy tính bình thường do con người viết, từng dòng một.

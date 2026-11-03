@@ -1,0 +1,439 @@
+{
+  "_note": "Câu hỏi của bài kiểm tra xếp lớp tiếng Anh, soạn tay theo CEFR. lv: 1 = A1, 2 = A2, 3 = B1, 4 = B2. a là vị trí đáp án đúng (đếm từ 0). tools/build-placement.mjs ghi ra data/en/placement.json.",
+  "grammar": [
+    {
+      "lv": 1,
+      "q": "She ___ a teacher.",
+      "opts": [
+        "is",
+        "are",
+        "am",
+        "be"
+      ],
+      "a": 0,
+      "why": "Chủ ngữ số ít she đi với is."
+    },
+    {
+      "lv": 1,
+      "q": "I ___ coffee every morning.",
+      "opts": [
+        "drinks",
+        "drink",
+        "drinking",
+        "am drink"
+      ],
+      "a": 1,
+      "why": "Hiện tại đơn, chủ ngữ I: động từ nguyên mẫu."
+    },
+    {
+      "lv": 1,
+      "q": "___ you speak English?",
+      "opts": [
+        "Does",
+        "Are",
+        "Do",
+        "Is"
+      ],
+      "a": 2,
+      "why": "Câu hỏi hiện tại đơn với you dùng Do."
+    },
+    {
+      "lv": 1,
+      "q": "There ___ two books on the table.",
+      "opts": [
+        "is",
+        "are",
+        "be",
+        "has"
+      ],
+      "a": 1,
+      "why": "Hai quyển sách là số nhiều: there are."
+    },
+    {
+      "lv": 1,
+      "q": "He doesn't ___ meat.",
+      "opts": [
+        "eats",
+        "eating",
+        "eat",
+        "ate"
+      ],
+      "a": 2,
+      "why": "Sau doesn't dùng động từ nguyên mẫu."
+    },
+    {
+      "lv": 2,
+      "q": "Yesterday I ___ to the market.",
+      "opts": [
+        "go",
+        "went",
+        "gone",
+        "going"
+      ],
+      "a": 1,
+      "why": "Yesterday: quá khứ đơn, go → went."
+    },
+    {
+      "lv": 2,
+      "q": "Look! It ___ outside.",
+      "opts": [
+        "rains",
+        "rained",
+        "is raining",
+        "rain"
+      ],
+      "a": 2,
+      "why": "Look! báo việc đang xảy ra: hiện tại tiếp diễn."
+    },
+    {
+      "lv": 2,
+      "q": "This bag is ___ than that one.",
+      "opts": [
+        "cheap",
+        "cheaper",
+        "cheapest",
+        "more cheap"
+      ],
+      "a": 1,
+      "why": "So sánh hơn của tính từ ngắn: thêm -er."
+    },
+    {
+      "lv": 2,
+      "q": "I'm going ___ my grandmother this weekend.",
+      "opts": [
+        "visit",
+        "visiting",
+        "to visit",
+        "visited"
+      ],
+      "a": 2,
+      "why": "be going to + động từ nguyên mẫu: dự định."
+    },
+    {
+      "lv": 2,
+      "q": "We don't have ___ milk left.",
+      "opts": [
+        "some",
+        "many",
+        "any",
+        "a"
+      ],
+      "a": 2,
+      "why": "Câu phủ định dùng any."
+    },
+    {
+      "lv": 3,
+      "q": "I have lived here ___ 2019.",
+      "opts": [
+        "for",
+        "since",
+        "from",
+        "in"
+      ],
+      "a": 1,
+      "why": "Since + mốc thời gian, for + khoảng thời gian."
+    },
+    {
+      "lv": 3,
+      "q": "If it rains tomorrow, we ___ at home.",
+      "opts": [
+        "stay",
+        "will stay",
+        "would stay",
+        "stayed"
+      ],
+      "a": 1,
+      "why": "Câu điều kiện loại 1: if + hiện tại đơn, will + động từ."
+    },
+    {
+      "lv": 3,
+      "q": "The man ___ lives next door is a doctor.",
+      "opts": [
+        "which",
+        "who",
+        "whose",
+        "what"
+      ],
+      "a": 1,
+      "why": "Đại từ quan hệ chỉ người làm chủ ngữ: who."
+    },
+    {
+      "lv": 3,
+      "q": "This bridge ___ in 1990.",
+      "opts": [
+        "built",
+        "was built",
+        "has built",
+        "is building"
+      ],
+      "a": 1,
+      "why": "Bị động quá khứ: was/were + V3."
+    },
+    {
+      "lv": 3,
+      "q": "I'm not used to ___ up so early.",
+      "opts": [
+        "get",
+        "getting",
+        "got",
+        "gets"
+      ],
+      "a": 1,
+      "why": "be used to + V-ing: đã quen với."
+    },
+    {
+      "lv": 4,
+      "q": "If I ___ you, I would accept the offer.",
+      "opts": [
+        "am",
+        "was being",
+        "were",
+        "had"
+      ],
+      "a": 2,
+      "why": "Điều kiện loại 2 (không có thật): if I were you."
+    },
+    {
+      "lv": 4,
+      "q": "By the time we arrived, the film ___.",
+      "opts": [
+        "already started",
+        "has already started",
+        "had already started",
+        "was already start"
+      ],
+      "a": 2,
+      "why": "Việc xảy ra trước một mốc quá khứ: quá khứ hoàn thành."
+    },
+    {
+      "lv": 4,
+      "q": "Can you tell me where ___?",
+      "opts": [
+        "is the station",
+        "the station is",
+        "does the station",
+        "is station"
+      ],
+      "a": 1,
+      "why": "Câu hỏi gián tiếp giữ trật tự câu kể: the station is."
+    },
+    {
+      "lv": 4,
+      "q": "He must ___ the bus. He's never this late.",
+      "opts": [
+        "miss",
+        "have missed",
+        "missing",
+        "had missed"
+      ],
+      "a": 1,
+      "why": "Suy đoán chắc chắn về quá khứ: must have + V3."
+    },
+    {
+      "lv": 4,
+      "q": "I wish I ___ more time to travel.",
+      "opts": [
+        "have",
+        "will have",
+        "had",
+        "having"
+      ],
+      "a": 2,
+      "why": "Ước điều trái hiện tại: wish + quá khứ đơn."
+    }
+  ],
+  "vocab": [
+    {
+      "lv": 1,
+      "q": "\"kitchen\" nghĩa là gì?",
+      "ex": "The kitchen is next to the living room.",
+      "opts": [
+        "nhà bếp",
+        "phòng ngủ",
+        "cửa sổ",
+        "sân"
+      ],
+      "a": 0
+    },
+    {
+      "lv": 1,
+      "q": "\"hungry\" nghĩa là gì?",
+      "ex": "I am hungry. Let's eat.",
+      "opts": [
+        "khát",
+        "buồn ngủ",
+        "đói",
+        "mệt"
+      ],
+      "a": 2
+    },
+    {
+      "lv": 1,
+      "q": "\"cheap\" nghĩa là gì?",
+      "ex": "This shirt is very cheap.",
+      "opts": [
+        "đắt",
+        "rẻ",
+        "mới",
+        "cũ"
+      ],
+      "a": 1
+    },
+    {
+      "lv": 1,
+      "q": "\"arrive\" nghĩa là gì?",
+      "ex": "The train arrives at six.",
+      "opts": [
+        "rời đi",
+        "đến nơi",
+        "dừng lại",
+        "chạy nhanh"
+      ],
+      "a": 1
+    },
+    {
+      "lv": 2,
+      "q": "\"borrow\" nghĩa là gì?",
+      "ex": "Can I borrow your pen?",
+      "opts": [
+        "cho mượn",
+        "mượn",
+        "mua",
+        "đánh rơi"
+      ],
+      "a": 1
+    },
+    {
+      "lv": 2,
+      "q": "\"healthy\" nghĩa là gì?",
+      "ex": "Fruit is healthy food.",
+      "opts": [
+        "lành mạnh, tốt cho sức khoẻ",
+        "ngon",
+        "đắt tiền",
+        "nhanh"
+      ],
+      "a": 0
+    },
+    {
+      "lv": 2,
+      "q": "\"neighbor\" nghĩa là gì?",
+      "ex": "My neighbor has a big dog.",
+      "opts": [
+        "đồng nghiệp",
+        "người thân",
+        "hàng xóm",
+        "khách hàng"
+      ],
+      "a": 2
+    },
+    {
+      "lv": 2,
+      "q": "\"decide\" nghĩa là gì?",
+      "ex": "I can't decide what to wear.",
+      "opts": [
+        "quyết định",
+        "nhớ ra",
+        "mặc thử",
+        "hỏi"
+      ],
+      "a": 0
+    },
+    {
+      "lv": 3,
+      "q": "\"improve\" nghĩa là gì?",
+      "ex": "I want to improve my English.",
+      "opts": [
+        "luyện thi",
+        "cải thiện",
+        "dạy",
+        "quên"
+      ],
+      "a": 1
+    },
+    {
+      "lv": 3,
+      "q": "\"reliable\" nghĩa là gì?",
+      "ex": "He is a reliable friend.",
+      "opts": [
+        "đáng tin cậy",
+        "vui tính",
+        "giàu có",
+        "nổi tiếng"
+      ],
+      "a": 0
+    },
+    {
+      "lv": 3,
+      "q": "\"achieve\" nghĩa là gì?",
+      "ex": "She achieved her goal.",
+      "opts": [
+        "từ bỏ",
+        "đặt ra",
+        "đạt được",
+        "thay đổi"
+      ],
+      "a": 2
+    },
+    {
+      "lv": 3,
+      "q": "\"complain\" nghĩa là gì?",
+      "ex": "He always complains about the food.",
+      "opts": [
+        "khen ngợi",
+        "phàn nàn",
+        "nấu",
+        "gọi món"
+      ],
+      "a": 1
+    },
+    {
+      "lv": 4,
+      "q": "\"reluctant\" nghĩa là gì?",
+      "ex": "She was reluctant to leave.",
+      "opts": [
+        "háo hức",
+        "miễn cưỡng",
+        "vội vàng",
+        "tự hào"
+      ],
+      "a": 1
+    },
+    {
+      "lv": 4,
+      "q": "\"undermine\" nghĩa là gì?",
+      "ex": "Lack of sleep can undermine your health.",
+      "opts": [
+        "củng cố",
+        "đo lường",
+        "làm suy yếu",
+        "phục hồi"
+      ],
+      "a": 2
+    },
+    {
+      "lv": 4,
+      "q": "\"thorough\" nghĩa là gì?",
+      "ex": "The doctor did a thorough check.",
+      "opts": [
+        "kỹ lưỡng",
+        "nhanh gọn",
+        "đắt đỏ",
+        "đơn giản"
+      ],
+      "a": 0
+    },
+    {
+      "lv": 4,
+      "q": "\"controversial\" nghĩa là gì?",
+      "ex": "It was a controversial decision.",
+      "opts": [
+        "gây tranh cãi",
+        "bất ngờ",
+        "hợp pháp",
+        "tạm thời"
+      ],
+      "a": 0
+    }
+  ]
+}
