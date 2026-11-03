@@ -1,0 +1,216 @@
+{
+ "id": 177,
+ "cn": "我的家乡",
+ "title": "Quê hương và vùng miền",
+ "goal": "Nói về quê hương, quê nhà, thành, nội thành, chợ, khu vực, các nơi, và miền đông, tây, nam.",
+ "words": [
+  {
+   "w": "家乡",
+   "py": "jiāxiāng",
+   "hv": "gia hương",
+   "vi": "quê hương",
+   "pos": "danh từ",
+   "note": "Chính là \"gia hương\".",
+   "ex": [
+    {
+     "cn": "我的家乡在越南北部。",
+     "py": "Wǒ de jiāxiāng zài Yuènán běibù.",
+     "vi": "Quê tôi ở miền Bắc Việt Nam."
+    }
+   ]
+  },
+  {
+   "w": "老家",
+   "py": "lǎojiā",
+   "hv": "lão gia",
+   "vi": "quê nhà, quê gốc",
+   "pos": "danh từ",
+   "note": "Khác \"lão gia\" (ông chủ) trong phim: 老家 là quê gốc.",
+   "ex": [
+    {
+     "cn": "过年我回老家。",
+     "py": "Guònián wǒ huí lǎojiā.",
+     "vi": "Tết tôi về quê."
+    }
+   ]
+  },
+  {
+   "w": "城",
+   "py": "chéng",
+   "hv": "thành",
+   "vi": "thành, thành phố",
+   "pos": "danh từ",
+   "note": "\"Thành\" trong \"thành phố\". Vạn Lý Trường Thành là 长城.",
+   "ex": [
+    {
+     "cn": "他从小在城里长大。",
+     "py": "Tā cóngxiǎo zài chéng lǐ zhǎngdà.",
+     "vi": "Anh ấy lớn lên ở thành phố từ nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "市区",
+   "py": "shìqū",
+   "hv": "thị khu",
+   "vi": "nội thành",
+   "pos": "danh từ",
+   "note": "市 + 区.",
+   "ex": [
+    {
+     "cn": "我家离市区不远。",
+     "py": "Wǒ jiā lí shìqū bù yuǎn.",
+     "vi": "Nhà tôi cách nội thành không xa."
+    }
+   ]
+  },
+  {
+   "w": "市场",
+   "py": "shìchǎng",
+   "hv": "thị trường",
+   "vi": "chợ; thị trường",
+   "pos": "danh từ",
+   "note": "Chính là \"thị trường\", cũng là chợ.",
+   "ex": [
+    {
+     "cn": "我每天早上去市场买菜。",
+     "py": "Wǒ měi tiān zǎoshang qù shìchǎng mǎi cài.",
+     "vi": "Sáng nào tôi cũng ra chợ mua rau."
+    }
+   ]
+  },
+  {
+   "w": "区",
+   "py": "qū",
+   "hv": "khu",
+   "vi": "khu, quận",
+   "pos": "danh từ",
+   "note": "\"Khu\" trong \"khu vực\". Quận ở thành phố cũng là 区.",
+   "ex": [
+    {
+     "cn": "他住在海淀区。",
+     "py": "Tā zhù zài Hǎidiàn Qū.",
+     "vi": "Anh ấy sống ở quận Hải Điến."
+    }
+   ]
+  },
+  {
+   "w": "各地",
+   "py": "gèdì",
+   "hv": "các địa",
+   "vi": "các nơi",
+   "pos": "danh từ",
+   "note": "各 (các) + 地.",
+   "ex": [
+    {
+     "cn": "世界各地的游客都来这里。",
+     "py": "Shìjiè gèdì de yóukè dōu lái zhèlǐ.",
+     "vi": "Du khách khắp nơi trên thế giới đều đến đây."
+    }
+   ]
+  },
+  {
+   "w": "东部",
+   "py": "dōngbù",
+   "hv": "đông bộ",
+   "vi": "miền đông",
+   "pos": "danh từ",
+   "note": "东 + 部 (phần). Chú ý: 北部 là miền Bắc.",
+   "ex": [
+    {
+     "cn": "中国东部经济很发达。",
+     "py": "Zhōngguó dōngbù jīngjì hěn fādá.",
+     "vi": "Kinh tế miền đông Trung Quốc rất phát triển."
+    }
+   ]
+  },
+  {
+   "w": "西部",
+   "py": "xībù",
+   "hv": "tây bộ",
+   "vi": "miền tây",
+   "pos": "danh từ",
+   "note": "西 + 部.",
+   "ex": [
+    {
+     "cn": "西部有很多高山。",
+     "py": "Xībù yǒu hěn duō gāo shān.",
+     "vi": "Miền tây có nhiều núi cao."
+    }
+   ]
+  },
+  {
+   "w": "南部",
+   "py": "nánbù",
+   "hv": "nam bộ",
+   "vi": "miền nam",
+   "pos": "danh từ",
+   "note": "Chính là \"Nam Bộ\".",
+   "ex": [
+    {
+     "cn": "越南南部的天气很热。",
+     "py": "Yuènán nánbù de tiānqì hěn rè.",
+     "vi": "Thời tiết miền Nam Việt Nam rất nóng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "在 + nơi + 长大: lớn lên ở",
+   "b": "在农村长大 · 在城里长大",
+   "d": "长大 (zhǎngdà) là lớn lên.",
+   "ex": [
+    {
+     "cn": "我在河内长大。",
+     "py": "Wǒ zài Hénèi zhǎngdà.",
+     "vi": "Tôi lớn lên ở Hà Nội."
+    },
+    {
+     "cn": "你是在哪儿长大的？",
+     "py": "Nǐ shì zài nǎr zhǎngdà de?",
+     "vi": "Bạn lớn lên ở đâu?"
+    }
+   ]
+  },
+  {
+   "t": "各 + danh từ / lượng từ: các, mỗi",
+   "b": "各地 · 各国 · 各位 · 各种",
+   "d": "各 nhấn mạnh từng thành phần trong một tập hợp.",
+   "ex": [
+    {
+     "cn": "各国的代表都来了。",
+     "py": "Gè guó de dàibiǎo dōu lái le.",
+     "vi": "Đại biểu các nước đều đến."
+    },
+    {
+     "cn": "各位，请安静。",
+     "py": "Gèwèi, qǐng ānjìng.",
+     "vi": "Thưa quý vị, xin giữ trật tự."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我的家乡有很多好吃的东西。",
+   "py": "Wǒ de jiāxiāng yǒu hěn duō hǎochī de dōngxi.",
+   "vi": "Quê tôi có nhiều món ngon."
+  },
+  {
+   "cn": "每年春节我都回老家看父母。",
+   "py": "Měi nián Chūnjié wǒ dōu huí lǎojiā kàn fùmǔ.",
+   "vi": "Tết năm nào tôi cũng về quê thăm bố mẹ."
+  },
+  {
+   "cn": "市区的房子比郊区贵。",
+   "py": "Shìqū de fángzi bǐ jiāoqū guì.",
+   "vi": "Nhà trong nội thành đắt hơn ngoại ô."
+  },
+  {
+   "cn": "早上的市场非常热闹。",
+   "py": "Zǎoshang de shìchǎng fēicháng rènao.",
+   "vi": "Chợ buổi sáng rất náo nhiệt."
+  }
+ ]
+}

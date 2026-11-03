@@ -1,0 +1,216 @@
+{
+ "id": 178,
+ "cn": "保护环境",
+ "title": "Môi trường và vệ sinh",
+ "goal": "Nói về bảo vệ môi trường, rác, nhựa, túi, thùng, khăn giấy, vệ sinh, nhà vệ sinh, khói và hút.",
+ "words": [
+  {
+   "w": "环保",
+   "py": "huánbǎo",
+   "hv": "hoàn bảo",
+   "vi": "bảo vệ môi trường",
+   "pos": "danh từ",
+   "note": "Viết tắt của 环境保护. Cũng là tính từ: 环保袋 (túi thân thiện môi trường).",
+   "ex": [
+    {
+     "cn": "我们要有环保意识。",
+     "py": "Wǒmen yào yǒu huánbǎo yìshi.",
+     "vi": "Chúng ta phải có ý thức bảo vệ môi trường."
+    }
+   ]
+  },
+  {
+   "w": "垃圾",
+   "py": "lājī",
+   "hv": "lạp cấp",
+   "vi": "rác",
+   "pos": "danh từ",
+   "note": "Thùng rác là 垃圾桶.",
+   "ex": [
+    {
+     "cn": "请把垃圾扔进垃圾桶。",
+     "py": "Qǐng bǎ lājī rēng jìn lājītǒng.",
+     "vi": "Xin bỏ rác vào thùng rác."
+    }
+   ]
+  },
+  {
+   "w": "塑料",
+   "py": "sùliào",
+   "hv": "tố liệu",
+   "vi": "nhựa",
+   "pos": "danh từ",
+   "note": "Túi nhựa là 塑料袋.",
+   "ex": [
+    {
+     "cn": "少用塑料袋。",
+     "py": "Shǎo yòng sùliàodài.",
+     "vi": "Dùng ít túi nhựa thôi."
+    }
+   ]
+  },
+  {
+   "w": "袋子",
+   "py": "dàizi",
+   "hv": "đại tử",
+   "vi": "cái túi",
+   "pos": "danh từ",
+   "note": "袋 = túi. Làm lượng từ: 一袋米.",
+   "ex": [
+    {
+     "cn": "你有袋子吗？",
+     "py": "Nǐ yǒu dàizi ma?",
+     "vi": "Bạn có túi không?"
+    }
+   ]
+  },
+  {
+   "w": "桶",
+   "py": "tǒng",
+   "hv": "dũng",
+   "vi": "cái thùng, xô",
+   "pos": "danh từ",
+   "note": "Thùng rác 垃圾桶, xô nước 水桶.",
+   "ex": [
+    {
+     "cn": "门口有一个大桶。",
+     "py": "Ménkǒu yǒu yí ge dà tǒng.",
+     "vi": "Trước cửa có một cái thùng lớn."
+    }
+   ]
+  },
+  {
+   "w": "纸巾",
+   "py": "zhǐjīn",
+   "hv": "chỉ cân",
+   "vi": "khăn giấy",
+   "pos": "danh từ",
+   "note": "纸 + 巾 (khăn).",
+   "ex": [
+    {
+     "cn": "你有纸巾吗？",
+     "py": "Nǐ yǒu zhǐjīn ma?",
+     "vi": "Bạn có khăn giấy không?"
+    }
+   ]
+  },
+  {
+   "w": "卫生",
+   "py": "wèishēng",
+   "hv": "vệ sinh",
+   "vi": "vệ sinh, sạch sẽ",
+   "pos": "danh từ",
+   "note": "Chính là \"vệ sinh\".",
+   "ex": [
+    {
+     "cn": "这家饭店很卫生。",
+     "py": "Zhè jiā fàndiàn hěn wèishēng.",
+     "vi": "Nhà hàng này rất vệ sinh."
+    }
+   ]
+  },
+  {
+   "w": "厕所",
+   "py": "cèsuǒ",
+   "hv": "xí sở",
+   "vi": "nhà vệ sinh",
+   "pos": "danh từ",
+   "note": "Từ thông thường; lịch sự hơn là 洗手间, 卫生间.",
+   "ex": [
+    {
+     "cn": "请问厕所在哪儿？",
+     "py": "Qǐngwèn cèsuǒ zài nǎr?",
+     "vi": "Cho hỏi nhà vệ sinh ở đâu?"
+    }
+   ]
+  },
+  {
+   "w": "烟",
+   "py": "yān",
+   "hv": "yên",
+   "vi": "khói; thuốc lá",
+   "pos": "danh từ",
+   "note": "\"Yên\" trong \"yên vụ\" (khói sương). Hút thuốc là 抽烟 / 吸烟.",
+   "ex": [
+    {
+     "cn": "这里不能吸烟。",
+     "py": "Zhèlǐ bù néng xīyān.",
+     "vi": "Ở đây không được hút thuốc."
+    }
+   ]
+  },
+  {
+   "w": "吸",
+   "py": "xī",
+   "hv": "hấp",
+   "vi": "hút, hít",
+   "pos": "động từ",
+   "note": "\"Hấp\" trong \"hô hấp\", \"hấp thụ\".",
+   "ex": [
+    {
+     "cn": "深吸一口气。",
+     "py": "Shēn xī yì kǒu qì.",
+     "vi": "Hít một hơi thật sâu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "把 + vật + 扔进 / 放进 + nơi",
+   "b": "把垃圾扔进垃圾桶",
+   "d": "Động từ + 进 chỉ hướng đi vào bên trong.",
+   "ex": [
+    {
+     "cn": "把衣服放进洗衣机。",
+     "py": "Bǎ yīfu fàng jìn xǐyījī.",
+     "vi": "Bỏ quần áo vào máy giặt."
+    },
+    {
+     "cn": "他把书放进了书包。",
+     "py": "Tā bǎ shū fàng jìn le shūbāo.",
+     "vi": "Cậu ấy cho sách vào cặp."
+    }
+   ]
+  },
+  {
+   "t": "不能 + động từ: không được phép",
+   "b": "不能吸烟 · 不能停车",
+   "d": "Dùng trên biển cấm và lời nhắc nhở.",
+   "ex": [
+    {
+     "cn": "上课不能玩手机。",
+     "py": "Shàngkè bù néng wán shǒujī.",
+     "vi": "Trong giờ học không được chơi điện thoại."
+    },
+    {
+     "cn": "这里不能拍照。",
+     "py": "Zhèlǐ bù néng pāizhào.",
+     "vi": "Ở đây không được chụp ảnh."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "垃圾要分类。",
+   "py": "Lājī yào fēnlèi.",
+   "vi": "Rác phải phân loại."
+  },
+  {
+   "cn": "去超市买东西，我带自己的袋子。",
+   "py": "Qù chāoshì mǎi dōngxi, wǒ dài zìjǐ de dàizi.",
+   "vi": "Đi siêu thị mua đồ, tôi mang túi riêng."
+  },
+  {
+   "cn": "吸烟对身体不好。",
+   "py": "Xīyān duì shēntǐ bù hǎo.",
+   "vi": "Hút thuốc không tốt cho sức khoẻ."
+  },
+  {
+   "cn": "饭前要洗手，注意卫生。",
+   "py": "Fàn qián yào xǐ shǒu, zhùyì wèishēng.",
+   "vi": "Trước bữa ăn phải rửa tay, giữ vệ sinh."
+  }
+ ]
+}

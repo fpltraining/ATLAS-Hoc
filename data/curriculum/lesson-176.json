@@ -1,0 +1,216 @@
+{
+ "id": 176,
+ "cn": "大自然",
+ "title": "Thiên nhiên và làng quê",
+ "goal": "Nói về thiên nhiên, thực vật, rừng cây, hoa tươi, sao, sông lớn, gấu, đất, làng và nông thôn.",
+ "words": [
+  {
+   "w": "大自然",
+   "py": "dàzìrán",
+   "hv": "đại tự nhiên",
+   "vi": "thiên nhiên",
+   "pos": "danh từ",
+   "note": "大 + 自然 (tự nhiên).",
+   "ex": [
+    {
+     "cn": "我们要保护大自然。",
+     "py": "Wǒmen yào bǎohù dàzìrán.",
+     "vi": "Chúng ta phải bảo vệ thiên nhiên."
+    }
+   ]
+  },
+  {
+   "w": "植物",
+   "py": "zhíwù",
+   "hv": "thực vật",
+   "vi": "thực vật, cây cỏ",
+   "pos": "danh từ",
+   "note": "Chính là \"thực vật\" tiếng Việt. Đừng nhầm với 食物 (đồ ăn).",
+   "ex": [
+    {
+     "cn": "这个花园里有很多植物。",
+     "py": "Zhège huāyuán lǐ yǒu hěn duō zhíwù.",
+     "vi": "Vườn hoa này có nhiều loại cây."
+    }
+   ]
+  },
+  {
+   "w": "树林",
+   "py": "shùlín",
+   "hv": "thụ lâm",
+   "vi": "rừng cây",
+   "pos": "danh từ",
+   "note": "树 (cây) + 林 (rừng, \"lâm\").",
+   "ex": [
+    {
+     "cn": "小路通向一片树林。",
+     "py": "Xiǎo lù tōng xiàng yí piàn shùlín.",
+     "vi": "Con đường nhỏ dẫn tới một khu rừng."
+    }
+   ]
+  },
+  {
+   "w": "鲜花",
+   "py": "xiānhuā",
+   "hv": "tiên hoa",
+   "vi": "hoa tươi",
+   "pos": "danh từ",
+   "note": "鲜 (tươi) + 花.",
+   "ex": [
+    {
+     "cn": "他送了我一束鲜花。",
+     "py": "Tā sòng le wǒ yí shù xiānhuā.",
+     "vi": "Anh ấy tặng tôi một bó hoa tươi."
+    }
+   ]
+  },
+  {
+   "w": "星星",
+   "py": "xīngxing",
+   "hv": "tinh tinh",
+   "vi": "ngôi sao",
+   "pos": "danh từ",
+   "note": "星 = \"tinh\" trong \"hành tinh\".",
+   "ex": [
+    {
+     "cn": "晚上天上有很多星星。",
+     "py": "Wǎnshang tiān shang yǒu hěn duō xīngxing.",
+     "vi": "Buổi tối trên trời có nhiều sao."
+    }
+   ]
+  },
+  {
+   "w": "江",
+   "py": "jiāng",
+   "hv": "giang",
+   "vi": "sông lớn",
+   "pos": "danh từ",
+   "note": "\"Giang\" trong \"giang sơn\". Sông Trường Giang là 长江.",
+   "ex": [
+    {
+     "cn": "长江是中国最长的河。",
+     "py": "Chángjiāng shì Zhōngguó zuì cháng de hé.",
+     "vi": "Trường Giang là con sông dài nhất Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "熊",
+   "py": "xióng",
+   "hv": "hùng",
+   "vi": "con gấu",
+   "pos": "danh từ",
+   "note": "Gấu trúc 熊猫 có chữ này.",
+   "ex": [
+    {
+     "cn": "动物园里有一只大熊。",
+     "py": "Dòngwùyuán lǐ yǒu yì zhī dà xióng.",
+     "vi": "Trong sở thú có một con gấu lớn."
+    }
+   ]
+  },
+  {
+   "w": "土",
+   "py": "tǔ",
+   "hv": "thổ",
+   "vi": "đất",
+   "pos": "danh từ",
+   "note": "\"Thổ\" trong \"thổ địa\", \"lãnh thổ\".",
+   "ex": [
+    {
+     "cn": "植物需要土和水。",
+     "py": "Zhíwù xūyào tǔ hé shuǐ.",
+     "vi": "Cây cần đất và nước."
+    }
+   ]
+  },
+  {
+   "w": "村",
+   "py": "cūn",
+   "hv": "thôn",
+   "vi": "làng",
+   "pos": "danh từ",
+   "note": "Chính là \"thôn\" (làng).",
+   "ex": [
+    {
+     "cn": "我奶奶住在一个小村里。",
+     "py": "Wǒ nǎinai zhù zài yí ge xiǎo cūn lǐ.",
+     "vi": "Bà tôi sống ở một làng nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "农村",
+   "py": "nóngcūn",
+   "hv": "nông thôn",
+   "vi": "nông thôn",
+   "pos": "danh từ",
+   "note": "Chính là \"nông thôn\".",
+   "ex": [
+    {
+     "cn": "现在农村的生活越来越好了。",
+     "py": "Xiànzài nóngcūn de shēnghuó yuèláiyuè hǎo le.",
+     "vi": "Bây giờ cuộc sống ở nông thôn ngày càng tốt."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Lượng từ cho thiên nhiên",
+   "b": "一片树林 · 一束鲜花 · 一颗星星 · 一条江",
+   "d": "片 cho vùng rộng, 束 cho bó, 颗 cho vật nhỏ tròn.",
+   "ex": [
+    {
+     "cn": "天上有一颗很亮的星星。",
+     "py": "Tiān shang yǒu yì kē hěn liàng de xīngxing.",
+     "vi": "Trên trời có một ngôi sao rất sáng."
+    },
+    {
+     "cn": "山下有一片树林。",
+     "py": "Shān xià yǒu yí piàn shùlín.",
+     "vi": "Dưới núi có một khu rừng."
+    }
+   ]
+  },
+  {
+   "t": "通向 / 通到: dẫn tới",
+   "b": "Đường + 通向 / 通到 + nơi",
+   "d": "通 là thông, dẫn tới.",
+   "ex": [
+    {
+     "cn": "这条路通到火车站。",
+     "py": "Zhè tiáo lù tōng dào huǒchēzhàn.",
+     "vi": "Con đường này dẫn tới ga tàu."
+    },
+    {
+     "cn": "这扇门通向花园。",
+     "py": "Zhè shàn mén tōng xiàng huāyuán.",
+     "vi": "Cánh cửa này dẫn ra vườn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "城市里很少能看到星星。",
+   "py": "Chéngshì lǐ hěn shǎo néng kàndào xīngxing.",
+   "vi": "Ở thành phố hiếm khi nhìn thấy sao."
+  },
+  {
+   "cn": "我喜欢周末去农村走走。",
+   "py": "Wǒ xǐhuan zhōumò qù nóngcūn zǒuzou.",
+   "vi": "Tôi thích cuối tuần về nông thôn đi dạo."
+  },
+  {
+   "cn": "大自然是最好的老师。",
+   "py": "Dàzìrán shì zuì hǎo de lǎoshī.",
+   "vi": "Thiên nhiên là người thầy tốt nhất."
+  },
+  {
+   "cn": "这种植物不需要很多水。",
+   "py": "Zhè zhǒng zhíwù bù xūyào hěn duō shuǐ.",
+   "vi": "Loại cây này không cần nhiều nước."
+  }
+ ]
+}

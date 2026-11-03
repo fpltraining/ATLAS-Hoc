@@ -1,0 +1,216 @@
+{
+ "id": 180,
+ "cn": "发红包",
+ "title": "Tiền bạc và buôn bán",
+ "goal": "Nói về phí, chi phí, thu phí, tiền lẻ, tiền tiêu vặt, lì xì, việc buôn bán, hàng hoá, gam và ký.",
+ "words": [
+  {
+   "w": "费",
+   "py": "fèi",
+   "hv": "phí",
+   "vi": "phí, tiền",
+   "pos": "danh từ",
+   "note": "Chính là \"phí\". Ghép: 学费, 电费, 水费.",
+   "ex": [
+    {
+     "cn": "这个月的电费很高。",
+     "py": "Zhège yuè de diànfèi hěn gāo.",
+     "vi": "Tiền điện tháng này cao."
+    }
+   ]
+  },
+  {
+   "w": "费用",
+   "py": "fèiyong",
+   "hv": "phí dụng",
+   "vi": "chi phí",
+   "pos": "danh từ",
+   "note": "Chính là \"phí dụng\".",
+   "ex": [
+    {
+     "cn": "旅行的费用一共五千块。",
+     "py": "Lǚxíng de fèiyong yígòng wǔqiān kuài.",
+     "vi": "Chi phí chuyến đi tổng cộng năm nghìn tệ."
+    }
+   ]
+  },
+  {
+   "w": "收费",
+   "py": "shōufèi",
+   "hv": "thu phí",
+   "vi": "thu phí",
+   "pos": "động từ",
+   "note": "Chính là \"thu phí\".",
+   "ex": [
+    {
+     "cn": "这个停车场收费吗？",
+     "py": "Zhège tíngchēchǎng shōufèi ma?",
+     "vi": "Bãi đỗ xe này có thu phí không?"
+    }
+   ]
+  },
+  {
+   "w": "零钱",
+   "py": "língqián",
+   "hv": "linh tiền",
+   "vi": "tiền lẻ",
+   "pos": "danh từ",
+   "note": "零 (lẻ) + 钱.",
+   "ex": [
+    {
+     "cn": "你有零钱吗？",
+     "py": "Nǐ yǒu língqián ma?",
+     "vi": "Bạn có tiền lẻ không?"
+    }
+   ]
+  },
+  {
+   "w": "零花钱",
+   "py": "línghuāqián",
+   "hv": "linh hoa tiền",
+   "vi": "tiền tiêu vặt",
+   "pos": "danh từ",
+   "note": "零 + 花 (tiêu) + 钱.",
+   "ex": [
+    {
+     "cn": "妈妈每周给我一百块零花钱。",
+     "py": "Māma měi zhōu gěi wǒ yìbǎi kuài línghuāqián.",
+     "vi": "Mẹ mỗi tuần cho tôi một trăm tệ tiêu vặt."
+    }
+   ]
+  },
+  {
+   "w": "红包",
+   "py": "hóngbāo",
+   "hv": "hồng bao",
+   "vi": "bao lì xì",
+   "pos": "danh từ",
+   "note": "Phong bao đỏ đựng tiền. Ngày nay có cả lì xì qua điện thoại.",
+   "ex": [
+    {
+     "cn": "过年的时候孩子们收到很多红包。",
+     "py": "Guònián de shíhou háizimen shōudào hěn duō hóngbāo.",
+     "vi": "Dịp Tết bọn trẻ nhận được nhiều lì xì."
+    }
+   ]
+  },
+  {
+   "w": "生意",
+   "py": "shēngyi",
+   "hv": "sinh ý",
+   "vi": "việc buôn bán, làm ăn",
+   "pos": "danh từ",
+   "note": "Làm ăn là 做生意.",
+   "ex": [
+    {
+     "cn": "他在越南做生意。",
+     "py": "Tā zài Yuènán zuò shēngyi.",
+     "vi": "Anh ấy làm ăn ở Việt Nam."
+    }
+   ]
+  },
+  {
+   "w": "货",
+   "py": "huò",
+   "hv": "hoá",
+   "vi": "hàng hoá",
+   "pos": "danh từ",
+   "note": "\"Hoá\" trong \"hàng hoá\". Giao hàng là 送货.",
+   "ex": [
+    {
+     "cn": "这批货明天到。",
+     "py": "Zhè pī huò míngtiān dào.",
+     "vi": "Lô hàng này mai đến."
+    }
+   ]
+  },
+  {
+   "w": "克",
+   "py": "kè",
+   "hv": "khắc",
+   "vi": "gam",
+   "pos": "lượng từ",
+   "note": "Phiên âm từ \"gram\". 一百克 = 100 gam.",
+   "ex": [
+    {
+     "cn": "这块巧克力一百克。",
+     "py": "Zhè kuài qiǎokèlì yìbǎi kè.",
+     "vi": "Thanh sô-cô-la này 100 gam."
+    }
+   ]
+  },
+  {
+   "w": "千克",
+   "py": "qiānkè",
+   "hv": "thiên khắc",
+   "vi": "ki-lô-gam",
+   "pos": "lượng từ",
+   "note": "千 (nghìn) + 克. Khẩu ngữ hay nói 公斤.",
+   "ex": [
+    {
+     "cn": "这个箱子二十千克。",
+     "py": "Zhège xiāngzi èrshí qiānkè.",
+     "vi": "Cái vali này hai mươi ký."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "一共: tổng cộng",
+   "b": "一共 + số lượng",
+   "d": "Đứng trước con số tổng.",
+   "ex": [
+    {
+     "cn": "一共多少钱？",
+     "py": "Yígòng duōshao qián?",
+     "vi": "Tổng cộng bao nhiêu tiền?"
+    },
+    {
+     "cn": "我们班一共有三十个学生。",
+     "py": "Wǒmen bān yígòng yǒu sānshí ge xuésheng.",
+     "vi": "Lớp chúng tôi tổng cộng ba mươi học sinh."
+    }
+   ]
+  },
+  {
+   "t": "Đơn vị đo lường",
+   "b": "克 · 千克 / 公斤 · 斤 · 米 · 公里",
+   "d": "1 公斤 = 2 斤 = 1000 克. Ở chợ Trung Quốc người ta hay tính bằng 斤.",
+   "ex": [
+    {
+     "cn": "我体重六十公斤。",
+     "py": "Wǒ tǐzhòng liùshí gōngjīn.",
+     "vi": "Tôi nặng sáu mươi ký."
+    },
+    {
+     "cn": "一公斤等于两斤。",
+     "py": "Yì gōngjīn děngyú liǎng jīn.",
+     "vi": "Một ký bằng hai cân."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "上大学的费用越来越高。",
+   "py": "Shàng dàxué de fèiyong yuèláiyuè gāo.",
+   "vi": "Chi phí học đại học ngày càng cao."
+  },
+  {
+   "cn": "现在很多人用手机发红包。",
+   "py": "Xiànzài hěn duō rén yòng shǒujī fā hóngbāo.",
+   "vi": "Bây giờ nhiều người lì xì qua điện thoại."
+  },
+  {
+   "cn": "他的生意做得很大。",
+   "py": "Tā de shēngyi zuò de hěn dà.",
+   "vi": "Anh ấy làm ăn rất lớn."
+  },
+  {
+   "cn": "坐飞机行李不能超过二十千克。",
+   "py": "Zuò fēijī xíngli bù néng chāoguò èrshí qiānkè.",
+   "vi": "Đi máy bay hành lý không được quá hai mươi ký."
+  }
+ ]
+}
