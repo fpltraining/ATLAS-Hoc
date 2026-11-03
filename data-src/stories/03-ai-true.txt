@@ -4,9 +4,6 @@
 @title Can Machines Think?
 @vi Máy có biết nghĩ không?
 @blurb Năm 1950, Alan Turing đặt một câu hỏi mà đến giờ người ta vẫn còn cãi nhau. Câu chuyện về một bộ óc lớn và một cuộc đời ngắn.
-@source Turing (1950), Computing Machinery and Intelligence | https://doi.org/10.1093/mind/LIX.236.433
-@source Wikipedia: Turing test | https://en.wikipedia.org/wiki/Turing_test
-@source Wikipedia: Alan Turing | https://en.wikipedia.org/wiki/Alan_Turing
 
 ## 1 | The Code Breaker | Người giải mã
 Alan Turing was born in London in 1912. | Alan Turing sinh ra ở London năm 1912.
@@ -107,9 +104,6 @@ Or is it just very good at copying? | Hay nó chỉ bắt chước rất giỏi?
 @title The Secretary and the Machine
 @vi Cô thư ký và cái máy
 @blurb Năm 1966, một chương trình rất đơn giản đã khiến người ta muốn tâm sự với nó. Người tạo ra nó thấy sợ, và dành phần đời còn lại để cảnh báo.
-@source Wikipedia: ELIZA | https://en.wikipedia.org/wiki/ELIZA
-@source Wikipedia: ELIZA effect | https://en.wikipedia.org/wiki/ELIZA_effect
-@source Wikipedia: Joseph Weizenbaum | https://en.wikipedia.org/wiki/Joseph_Weizenbaum
 
 ## 1 | A Very Simple Program | Một chương trình rất đơn giản
 Joseph Weizenbaum was born in Germany in 1923. | Joseph Weizenbaum sinh ở Đức năm 1923.
@@ -203,9 +197,6 @@ what is really happening inside? | bên trong nó thật sự đang diễn ra đ
 @title The Day Kasparov Lost
 @vi Ngày Kasparov thua
 @blurb Năm 1997, người chơi cờ giỏi nhất thế giới thua một cái máy. Ông giận dữ nhiều năm, rồi tìm ra một điều bất ngờ: người và máy cùng chơi còn mạnh hơn.
-@source Wikipedia: Deep Blue versus Garry Kasparov | https://en.wikipedia.org/wiki/Deep_Blue_versus_Garry_Kasparov
-@source IBM: Deep Blue | https://www.ibm.com/history/deep-blue
-@source Wikipedia: Advanced chess | https://en.wikipedia.org/wiki/Advanced_chess
 
 ## 1 | The Champion and the Machine | Nhà vô địch và cỗ máy
 Garry Kasparov became world chess champion in 1985. | Garry Kasparov trở thành vua cờ thế giới năm 1985.
@@ -309,8 +300,6 @@ can beat a stronger player or a stronger machine. | có thể thắng người m
 @title Move 37
 @vi Nước đi 37
 @blurb Năm 2016, ở Seoul, một AI đi một nước cờ mà không ai hiểu. Kỳ thủ giỏi nhất thời đó thua, rồi tìm ra cách thắng lại một ván.
-@source Wikipedia: AlphaGo versus Lee Sedol | https://en.wikipedia.org/wiki/AlphaGo_versus_Lee_Sedol
-@source Shin et al. (2023), PNAS: Superhuman AI can improve human decision-making | https://doi.org/10.1073/pnas.2214840120
 
 ## 1 | The Man Who Expected to Win | Người tin mình sẽ thắng
 Go is an old game from China. | Cờ vây là trò chơi cổ của Trung Quốc.
@@ -459,9 +448,6 @@ It made people play better. | Nó khiến con người chơi giỏi hơn.
 @title The Fifty-Year Problem
 @vi Bài toán năm mươi năm
 @blurb Hình dạng của protein là câu đố làm các nhà khoa học đau đầu suốt nửa thế kỷ. Rồi AI giải được phần lớn, và những người làm ra nó đã tặng kết quả cho cả thế giới.
-@source Nobel Prize in Chemistry 2024 | https://www.nobelprize.org/prizes/chemistry/2024/summary/
-@source Wikipedia: AlphaFold | https://en.wikipedia.org/wiki/AlphaFold
-@source AlphaFold Protein Structure Database | https://alphafold.ebi.ac.uk/
 
 ## 1 | Tiny Machines | Những cỗ máy tí hon
 Your body is full of proteins. | Cơ thể bạn đầy protein.

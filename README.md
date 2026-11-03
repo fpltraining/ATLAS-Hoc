@@ -63,7 +63,6 @@ Tiếng Anh, mỗi dòng là `tiếng Anh | tiếng Việt`:
 @title Tiêu đề tiếng Anh
 @vi Tiêu đề tiếng Việt
 @blurb Một câu giới thiệu.
-@source Tên nguồn | https://dia-chi-nguon
 
 ## 1 | Tên phần | Tên phần tiếng Việt
 A short line of English, | Một dòng tiếng Anh ngắn,
@@ -106,7 +105,7 @@ Lỗi nội dung sửa trong `data-src/patches/`, không sửa tay vào `data/`:
 | `en-bank.json` | Viết thường, phiên âm giọng Mỹ, sửa nghĩa của kho từ |
 | `topics-ipa.json` | Phiên âm giọng Mỹ cho mục Chủ đề |
 
-Nguồn của bài đọc ghi bằng dòng `@source` trong `data-src/stories/`. Sau khi sửa:
+Sau khi sửa:
 
 ```bash
 node tools/apply-patches.mjs

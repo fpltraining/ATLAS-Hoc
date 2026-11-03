@@ -159,14 +159,10 @@ export async function render(route) {
     }
   }
 
-  if (story.sources?.length || story.date) {
+  if (story.date) {
     after.append(h('div.source',
       story.date ? h('div', `Cập nhật: ${fmtDate(story.date)}`) : null,
-      story.sources?.length ? h('div', 'Nguồn: ', ...story.sources.flatMap((s, i) => [
-        i ? ' · ' : '',
-        h('a', { href: s.url, target: '_blank', rel: 'noopener' }, s.name),
-      ])) : null,
-      h('div.faint', 'Bài do ATLAS viết lại bằng ngôn ngữ dễ. Số liệu theo nguồn đã ghi, nên đối chiếu nguồn gốc trước khi trích dẫn.'),
+      h('div.faint', 'Bài do ATLAS viết lại bằng ngôn ngữ dễ.'),
     ));
   }
 

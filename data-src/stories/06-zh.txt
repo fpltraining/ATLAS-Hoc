@@ -404,8 +404,6 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @title 宇宙里有什么？
 @vi Trong vũ trụ có gì?
 @blurb Mọi thứ ta nhìn thấy chỉ chiếm khoảng 5% vũ trụ. Phần còn lại vẫn là bí ẩn, và chính những người dám nói "chưa biết" đã tìm ra điều đó.
-@source NASA: Dark Matter & Dark Energy | https://science.nasa.gov/universe/dark-matter-dark-energy/
-@source Wikipedia: Vera Rubin | https://en.wikipedia.org/wiki/Vera_Rubin
 
 ## 1 | 百分之五 | Năm phần trăm
 我们能看到太阳、月亮和星星。 | Wǒmen néng kàn dào tàiyáng, yuèliang hé xīngxing. | Ta có thể thấy mặt trời, mặt trăng và các vì sao.
@@ -475,8 +473,6 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @title 为什么要睡觉？
 @vi Vì sao phải ngủ?
 @blurb Một phần ba đời người là để ngủ, vậy mà khoa học vẫn chưa trả lời trọn vẹn vì sao. Nhưng có một điều chắc chắn: thiếu ngủ thì học kém.
-@source NIH NINDS: Brain Basics, Understanding Sleep | https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-understanding-sleep
-@source Wikipedia: Randy Gardner's sleep deprivation experiment | https://en.wikipedia.org/wiki/Randy_Gardner_sleep_deprivation_experiment
 
 ## 1 | 三分之一 | Một phần ba
 人的一生， | Rén de yìshēng, | Một đời người,
@@ -549,8 +545,6 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @title 海底有什么？
 @vi Dưới đáy biển có gì?
 @blurb Hơn 70% đáy đại dương vẫn chưa có bản đồ chi tiết. Một dự án toàn cầu đang vẽ lại nó, nhờ dữ liệu của rất nhiều con tàu.
-@source Seabed 2030 / IHO | https://iho.int/en/global-seabed-mapping-reaches-new-milestone-as-five-million-square-kilometres-added-in-a-year
-@source Wikipedia: Seabed 2030 | https://en.wikipedia.org/wiki/Seabed_2030
 
 ## 1 | 没有地图的地方 | Nơi chưa có bản đồ
 地球的大部分是海。 | Dìqiú de dà bùfen shì hǎi. | Phần lớn Trái Đất là biển.
@@ -621,8 +615,6 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @title 越南有了人工智能法
 @vi Việt Nam đã có luật trí tuệ nhân tạo
 @blurb Từ 1/3/2026, Việt Nam có luật riêng về AI. Bản tin viết lại bằng tiếng Trung dễ.
-@source Baker McKenzie | https://connectontech.bakermckenzie.com/vietnams-first-standalone-ai-law-an-overview-of-key-provisions-future-implications/
-@source Asia IP | https://asiaiplaw.com/article/first-in-southeast-asia-vietnam-enacts-standalone-ai-law
 
 ## 1 | 三类风险 | Ba loại rủi ro
 从二零二六年三月一日开始， | Cóng èr líng èr liù nián sān yuè yī rì kāishǐ, | Từ ngày 1/3/2026,
@@ -670,7 +662,6 @@ AI老师叫小明。 | AI lǎoshī jiào Xiǎo Míng. | Giáo viên AI tên là 
 @title 机器人越来越便宜
 @vi Robot ngày càng rẻ
 @blurb Giá robot hình người đã giảm 93% trong 5 năm, theo một dự báo của Wood Mackenzie.
-@source Robotics & Automation News | https://roboticsandautomationnews.com/2026/08/12/robots-could-consume-as-much-electricity-as-35-million-us-homes-by-2035/104073/
 
 ## 1 | 便宜了百分之九十三 | Rẻ đi 93%
 人形机器人越来越便宜了。 | Rénxíng jīqìrén yuèláiyuè piányi le. | Robot hình người ngày càng rẻ.
