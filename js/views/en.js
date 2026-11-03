@@ -11,6 +11,7 @@ import { InkPad } from '../pen/inkpad.js';
 import { sayEn, sayBtn, pair, wordy, scribble, diff, micCheck, hasMic } from '../kit.js';
 import { h, toast, section, progressBar, pill } from '../ui.js';
 import { gradeButton } from '../ai.js';
+import { cardSummary } from '../progress.js';
 
 export async function render(route) {
   const sub = route.args[0];
@@ -61,6 +62,8 @@ async function hub() {
   el.append(h('div.hub-grid',
     tile('#/en/placement', '?', 'Kiểm tra xếp lớp', en.placed ? `Lần trước: ${en.placed.level}` : '36 câu, gợi ý chặng phù hợp'),
   ));
+
+  if (enCards.length) el.append(cardSummary(enCards, '#/review?lang=en', 'Thẻ ôn tiếng Anh'));
 
   /* ---- lộ trình các chặng ---- */
   const path = h('div.stack');

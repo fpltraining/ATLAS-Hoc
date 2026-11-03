@@ -229,3 +229,39 @@ textarea.scribble.long { min-height: 104px; font-size: 16.5px; }
 .week-bar { height: 96px; display: flex; align-items: flex-end; justify-content: center; }
 .week-bar i { display: block; width: 62%; min-height: 2px; background: var(--jade); border-radius: 5px 5px 0 0; }
 .book-host { display: block; }
+
+/* ---- chuỗi ngày, tóm tắt thẻ, thử thách, bản đồ chữ ---- */
+.streak { margin-top: 6px; font-size: 14px; opacity: .92; }
+.streak b { font-size: 17px; }
+.stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.stat-box { background: var(--paper-2); border-radius: 12px; padding: 10px 6px; text-align: center; }
+.stat-box b { display: block; font-size: 22px; line-height: 1.2; }
+.stat-box span { font-size: 12.5px; color: var(--ink-soft); }
+.stat-box.seal b { color: var(--seal); }
+.stat-box.jade b { color: var(--jade); }
+.jade-text { color: var(--jade); font-weight: 600; margin-right: 6px; }
+.challenge-card { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
+.char-path { display: flex; flex-direction: column; align-items: center; padding: 8px 0 4px; position: relative; }
+.char-step { display: flex; flex-direction: column; align-items: center; margin: 6px 0; }
+.char-step.left { transform: translateX(-46px); }
+.char-step.right { transform: translateX(46px); }
+.char-step + .char-step::before {
+  content: ''; display: block; width: 3px; height: 18px; margin-bottom: 6px;
+  background: repeating-linear-gradient(var(--line) 0 5px, transparent 5px 9px);
+}
+.char-node {
+  position: relative; width: 92px; height: 92px; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border: 3px solid var(--line); background: var(--card); color: var(--ink); cursor: pointer;
+}
+.char-node .cn { font-size: 38px; line-height: 1; }
+.char-node .py { font-size: 13px; color: var(--ink-soft); }
+.char-node.now { background: var(--jade); border-color: var(--jade-soft); color: #fff; box-shadow: 0 0 0 8px var(--jade-soft); }
+.char-node.now .py { color: #fff; }
+.char-node.done { border-color: var(--jade); }
+.char-node.lock { opacity: .45; }
+.char-lock { position: absolute; right: -2px; bottom: -2px; font-size: 16px; }
+.char-score { position: absolute; right: -6px; bottom: -4px; background: var(--jade); color: #fff; font-size: 11px; font-weight: 700; border-radius: 99px; padding: 2px 6px; }
+.char-now { margin-bottom: 6px; }
+.char-continue { display: flex; align-items: center; justify-content: center; }
+@media (max-width: 420px) { .stat-box b { font-size: 19px; } .char-step.left { transform: translateX(-30px); } .char-step.right { transform: translateX(30px); } }

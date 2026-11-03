@@ -5,6 +5,7 @@ import * as data from '../data.js';
 import * as store from '../store.js';
 import * as content from '../content.js';
 import { h, section, progressBar, plural } from '../ui.js';
+import { cardSummary, mastery } from '../progress.js';
 
 export async function render() {
   const [idx, cards, progress, read, stories] = await Promise.all([
@@ -33,7 +34,7 @@ export async function render() {
   /* ---- bốn việc chính, xếp giống hệt mục Tiếng Anh ---- */
   el.append(h('div.hub-grid',
     tile('#/read/zh', '读', 'Đọc truyện', nx ? nx.story.title : `${zhStories.length} truyện`),
-    tile(`#/write/lesson-${next.id}`, '写', 'Viết bằng bút', `Chấm từng nét · ${plural(Object.keys(scores).length, 'chữ')} đã viết`),
+    tile(`#/charmap/${next.id}`, '写', 'Viết bằng bút', `Chấm từng nét · ${plural(Object.keys(scores).length, 'chữ')} đã viết`),
     tile('#/review?lang=zh', '↻', 'Ôn thẻ', due ? `${due} thẻ tới hạn` : 'Chưa có thẻ tới hạn'),
     tile('#/lib/topics?lang=zh', '题', 'Theo chủ đề', '99 chủ đề đời sống'),
   ));
@@ -44,7 +45,12 @@ export async function render() {
     tile('#/radicals', '部', 'Bộ thủ', 'Mảnh ghép của chữ Hán'),
   ));
 
+  /* ---- tóm tắt thẻ ôn ---- */
+  el.append(cardSummary(zhCards, '#/review?lang=zh', 'Thẻ ôn tiếng Trung'));
+
   /* ---- lộ trình HSK ---- */
+  const byLesson = {};
+  for (const c of zhCards) (byLesson[c.lesson] = byLesson[c.lesson] || []).push(c);
   const levels = idx.levels || [...new Set(idx.lessons.map((l) => l.level || 1))].sort();
   for (const lv of levels) {
     const inLevel = idx.lessons.filter((l) => (l.level || 1) === lv);
@@ -62,6 +68,7 @@ export async function render() {
           h('div.row', { style: { gap: '7px' } }, h('b', l.title), h('span.cn.faint', { style: { fontSize: '14px' } }, l.cn)),
           h('div.small.faint', `${l.wordCount} từ · ${plural(l.newChars.length, 'chữ mới')}`),
         ),
+        byLesson[l.id] ? h('span.small.jade-text', `${Math.round(mastery(byLesson[l.id]) * 100)}%`) : null,
         h('span.faint', '›'),
       ));
     }

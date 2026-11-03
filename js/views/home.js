@@ -5,11 +5,13 @@ import * as data from '../data.js';
 import * as content from '../content.js';
 import { buildToday, DAY_NAME, curSession } from '../plan.js';
 import { h, progressBar } from '../ui.js';
+import { streak } from '../progress.js';
 
 const WEEKDAY = ['Chủ nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
 
 export async function render() {
-  const plan = await buildToday();
+  const [plan, st, challenges] = await Promise.all([buildToday(), streak(), store.kvGet('challenge', {})]);
+  const ch = challenges[store.dayKey()];
   const el = h('div.stack');
 
   const totalSecs = Object.values(plan.day.secs || {}).reduce((a, b) => a + b, 0);
@@ -24,6 +26,9 @@ export async function render() {
     h('div.row.spread',
       h('div',
         h('div.small.hero-sub', `${WEEKDAY[now.getDay()]}, ${now.getDate()}/${now.getMonth() + 1} · ${DAY_NAME[plan.type]}`),
+        h('div.streak', { title: `Chuỗi dài nhất: ${st.best} ngày` },
+          '🔥 ', h('b', String(st.cur)), st.cur ? ' ngày liên tiếp' : ' Học hôm nay để bắt đầu chuỗi',
+          st.cur && !st.todayOn ? h('span.small', ' · học hôm nay để giữ chuỗi') : null),
         h('h1.today-title', doneCount === plan.steps.length ? 'Xong hết việc hôm nay' : `Hôm nay, ${planned} phút`),
       ),
       h('div.today-time', h('b', String(minsToday)), h('span', `/${planned} phút`)),
@@ -56,6 +61,14 @@ export async function render() {
     ));
   }
   el.append(h('div.card', { style: { padding: '6px 14px' } }, list));
+
+  /* ---- thử thách 10 câu ---- */
+  el.append(h('a.card.challenge-card', { href: '#/challenge' },
+    h('span.hub-mark', '🎯'),
+    h('div.grow', h('b', 'Thử thách hôm nay'),
+      h('div.small.faint', ch ? `Đã làm: đúng ${ch.right}/${ch.n} câu. Làm lại để ôn thêm.` : '10 câu trắc nghiệm nhanh từ những từ đã học, 2–3 phút')),
+    h('span.pill.jade', ch ? `${ch.right}/${ch.n}` : '10 câu ›'),
+  ));
 
   /* ---- đang ở đâu ---- */
   el.append(await whereAmI());

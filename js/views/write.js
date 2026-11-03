@@ -1,6 +1,7 @@
 /* Màn hình luyện viết — trái tim của app.
 
-   Bốn chế độ, khó dần:
+   Năm chế độ:
+     0. Nhiều lượt   — viết một chữ 5 lượt, gợi ý mờ dần từ đồ chữ tới ô trống
      1. Xem mẫu      — chữ tự viết ra theo đúng thứ tự nét
      2. Đồ chữ       — có chữ mờ bên dưới, chấm từng nét
      3. Có gợi ý     — ô trống; sai hai lần mới hiện nét mờ
@@ -16,10 +17,21 @@ import { gradeInOrder, gradeWhole, verdict, STRICTNESS } from '../pen/grade.js';
 import { h, frag, toast, readingLine, pill } from '../ui.js';
 
 const MODES = [
+  { id: 'luot',    label: 'Nhiều lượt' },
   { id: 'xem',     label: 'Xem mẫu' },
   { id: 'do',      label: 'Đồ chữ' },
   { id: 'goi-y',   label: 'Gợi ý' },
   { id: 'tri-nho', label: 'Trí nhớ' },
+];
+
+/* Các lượt của chế độ Nhiều lượt: gợi ý bớt dần.
+   miss = sai bao nhiêu lần thì hiện mũi tên của nét đang viết. */
+const ROUNDS = [
+  { ghost: true,  arrow: true,  miss: 0, text: 'Có chữ mờ và mũi tên chiều nét' },
+  { ghost: true,  arrow: true,  miss: 0, text: 'Có chữ mờ và mũi tên chiều nét' },
+  { ghost: true,  arrow: false, miss: 1, text: 'Chỉ còn chữ mờ, sai một lần mới hiện mũi tên' },
+  { ghost: false, arrow: false, miss: 1, text: 'Ô trống, sai một lần hiện mũi tên' },
+  { ghost: false, arrow: false, miss: 2, text: 'Ô trống, tự viết theo trí nhớ; sai hai lần mới hiện mũi tên' },
 ];
 
 export async function render(route) {
@@ -57,10 +69,14 @@ export async function render(route) {
     return { title, el: h('div.empty', 'Không có dữ liệu nét cho chữ này.') };
   }
 
+  const backMap = route.query.map || '';
+
   /* ---- trạng thái ---- */
   const S = {
-    i: 0,
-    mode: route.query.mode || 'do',
+    i: Math.max(0, Math.min(chars.length - 1, Number(route.query.start) || 0)),
+    mode: route.query.mode || 'luot',
+    round: 0,
+    roundScores: [],
     expect: 0,
     attempts: 0,
     results: [],
@@ -136,6 +152,12 @@ export async function render(route) {
   }
 
   function resetChar() {
+    S.round = 0;
+    S.roundScores = [];
+    resetRound();
+  }
+
+  function resetRound() {
     stopAnimation();
     S.expect = 0;
     S.attempts = 0;
@@ -150,7 +172,14 @@ export async function render(route) {
   function applyHint() {
     const ch = current();
     if (!ch) return;
-    if (S.mode === 'xem') {
+    if (S.mode === 'luot') {
+      const r = ROUNDS[S.round];
+      pad.setHint({
+        ghost: r.ghost,
+        upTo: S.expect,
+        median: r.arrow || S.attempts >= r.miss ? S.expect : null,
+      });
+    } else if (S.mode === 'xem') {
       pad.setHint({ ghost: true, numbers: false });
     } else if (S.mode === 'do') {
       pad.setHint({ ghost: true, upTo: S.expect, median: S.expect });
@@ -172,7 +201,9 @@ export async function render(route) {
     readEl.replaceChildren(readingLine(data.pyOf(ch), data.hvOf(ch)));
     const dc = data.decompOf(ch);
     meaningEl.textContent = dc?.vi || '';
-    counterEl.textContent = `${S.i + 1}/${chars.length}`;
+    counterEl.textContent = S.mode === 'luot'
+      ? `Lượt ${Math.min(S.round + 1, ROUNDS.length)}/${ROUNDS.length} · chữ ${S.i + 1}/${chars.length}`
+      : `${S.i + 1}/${chars.length}`;
 
     dotsEl.replaceChildren();
     for (let i = 0; i < d.medians.length; i++) {
@@ -202,7 +233,9 @@ export async function render(route) {
         : `Nét ${S.expect + 1} / ${d.medians.length}`;
       if (!S.results.length) {
         feedbackEl.className = 'note';
-        feedbackEl.textContent = S.mode === 'do'
+        feedbackEl.textContent = S.mode === 'luot'
+          ? `Lượt ${S.round + 1}/${ROUNDS.length}: ${ROUNDS[S.round].text}.`
+          : S.mode === 'do'
           ? 'Đồ theo nét mờ. Chấm tròn đỏ là chỗ đặt bút, mũi tên là chiều viết.'
           : 'Viết vào ô trống. Sai hai lần sẽ hiện gợi ý.';
       }
@@ -233,8 +266,10 @@ export async function render(route) {
         h('b', `Nét ${S.expect}: ${v.text} `),
         h('span.small', `(${res.score}/100)`),
       );
-      if (S.expect >= d.medians.length) finishChar();
-      else { applyHint(); renderInfo(); }
+      if (S.expect >= d.medians.length) {
+        if (S.mode === 'luot') finishRound();
+        else finishChar();
+      } else { applyHint(); renderInfo(); }
       return;
     }
 
@@ -245,14 +280,33 @@ export async function render(route) {
     feedbackEl.className = res.kind === 'order' ? 'note' : 'note seal';
     feedbackEl.replaceChildren(frag(
       h('b', `Nét ${S.expect + 1}: `), msg,
-      S.attempts >= 2 && S.mode === 'goi-y' ? h('div.small', { style: { marginTop: '4px' } }, 'Đã hiện gợi ý bên dưới.') : null,
+      (S.attempts >= 2 && S.mode === 'goi-y') || (S.mode === 'luot' && !ROUNDS[S.round].arrow && S.attempts === ROUNDS[S.round].miss)
+        ? h('div.small', { style: { marginTop: '4px' } }, 'Đã hiện gợi ý bên dưới.') : null,
     ));
     applyHint();
   }
 
+  /* Xong một lượt: ghi điểm lượt rồi tự sang lượt sau với ít gợi ý hơn */
+  function finishRound() {
+    const avg = Math.round(S.results.reduce((s, r) => s + r.score, 0) / S.results.length);
+    S.roundScores.push(avg);
+    if (S.round >= ROUNDS.length - 1) { finishChar(); return; }
+    feedbackEl.className = 'note jade';
+    feedbackEl.replaceChildren(h('b', `Xong lượt ${S.round + 1}/${ROUNDS.length} · ${avg} điểm. `),
+      `Lượt sau: ${ROUNDS[S.round + 1].text.toLowerCase()}.`);
+    pad.lock(true);
+    setTimeout(() => {
+      S.round++;
+      pad.lock(false);
+      resetRound();
+    }, 900);
+  }
+
   async function finishChar() {
     pad.setHint({ ghost: false });
-    const avg = Math.round(S.results.reduce((s, r) => s + r.score, 0) / S.results.length);
+    const avg = S.mode === 'luot'
+      ? Math.round(S.roundScores.reduce((s, x) => s + x, 0) / S.roundScores.length)
+      : Math.round(S.results.reduce((s, r) => s + r.score, 0) / S.results.length);
     S.scores.push(avg);
     S.done++;
     const v = verdict(avg);
@@ -260,7 +314,9 @@ export async function render(route) {
     feedbackEl.replaceChildren(
       h('div.row', { style: { gap: '10px', alignItems: 'baseline' } },
         h('span.score-big', String(avg)),
-        h('div', h('b', v.text), h('div.small', `Xong chữ ${chars[S.i]} · ${S.results.length} nét`)),
+        h('div', h('b', v.text), h('div.small', S.mode === 'luot'
+          ? `Xong chữ ${chars[S.i]} · ${ROUNDS.length} lượt (${S.roundScores.join(' · ')})`
+          : `Xong chữ ${chars[S.i]} · ${S.results.length} nét`)),
       ),
     );
     renderInfo();
@@ -329,7 +385,9 @@ export async function render(route) {
       ),
       h('div.btn-row', { style: { marginTop: '18px' } },
         h('button.btn', { onclick: () => location.reload() }, '↻ Luyện lại'),
-        lessonId
+        backMap
+          ? h('a.btn.primary', { href: `#/charmap/${backMap}` }, 'Về bản đồ chữ')
+          : lessonId
           ? h('a.btn.primary', { href: `#/lesson/${lessonId}` }, 'Về bài học')
           : h('a.btn.primary', { href: '#/home' }, 'Về trang chủ'),
       ),
