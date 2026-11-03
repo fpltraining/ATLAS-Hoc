@@ -9,7 +9,7 @@ Gộp từ 5 app: Bút Hán, Inklish, ATLAS bản cũ, Song Ngữ và Han's Engl
 | Mục | Nội dung |
 |---|---|
 | Hôm nay | Việc cần làm theo thứ tự, chia theo quỹ 30 phút đến 2 tiếng, có nhật ký |
-| Tiếng Anh | 5 chặng từ A0 đến C1, truyện và tin song ngữ, viết bằng bút, ôn thẻ, tiếng Anh nghề, sổ tay ngữ pháp |
+| Tiếng Anh | Bài xếp lớp, 5 chặng: A0 → B2 đủ nội dung (chặng 2 có 1.134 từ B1–B2 mới và bài đọc B2), chặng 3–4 (B2 vững, C1) đang soạn; truyện và tin song ngữ, viết bằng bút, ôn thẻ, tiếng Anh nghề, sổ tay ngữ pháp |
 | Tiếng Trung | 205 bài HSK 1–4 theo chuẩn 2025 (đủ 100% từ cấp 1–4), truyện song ngữ có pinyin, viết chấm từng nét, ôn thẻ, pinyin, bộ thủ |
 | Chủ đề | 99 chủ đề song song hai ngôn ngữ, từ theo lĩnh vực, kiến thức, đọc số và tiền, sổ ghi |
 | Tiến độ | Thời gian thật theo từng khối, nhật ký, sao lưu và nhập từ app cũ |
@@ -100,6 +100,8 @@ Lỗi nội dung sửa trong `data-src/patches/`, không sửa tay vào `data/`:
 |---|---|
 | `fixes.json` | Thay đúng một chuỗi trong một tệp của `data/` (Hán Việt, ghi chú, câu sai trong bài đọc) |
 | `en-add-*.txt` | Bổ sung từ tiếng Anh, mỗi dòng `từ \| phiên âm \| từ loại \| câu ví dụ \| nghĩa câu ví dụ` |
+| `en-new-*.txt` | Từ mới B1–B2 cho chặng 2, mỗi dòng `từ \| phiên âm \| từ loại \| nghĩa \| câu ví dụ \| nghĩa câu ví dụ`, dòng `@lv N` đặt cấp. Thứ tự trong tệp là thứ tự học, 10 từ mỗi buổi |
+| `course.json` | Ghi chú, trạng thái và danh sách mục của từng chặng tiếng Anh |
 | `pos.txt` | Từ loại cho các từ còn thiếu, mỗi dòng `từ loại: từ ; từ ; ...` |
 | `en-bank.json` | Viết thường, phiên âm giọng Mỹ, sửa nghĩa của kho từ |
 | `topics-ipa.json` | Phiên âm giọng Mỹ cho mục Chủ đề |

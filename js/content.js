@@ -49,6 +49,7 @@ export const SHELVES = [
   { id: 'true',    name: 'Chuyện có thật về AI',   hint: 'Những khoảnh khắc đã thay đổi lịch sử AI', lang: 'en' },
   { id: 'news',    name: 'Tin AI',                 hint: 'Tin thật, có ngày và nguồn, viết lại bằng ngôn ngữ dễ' },
   { id: 'mystery', name: 'Điều chưa ai biết',      hint: 'Những câu hỏi khoa học chưa có lời giải' },
+  { id: 'essay',   name: 'Bài đọc B2',             hint: 'Bài viết về thói quen, học tập, tiền bạc, tin tức, dùng từ B1–B2', lang: 'en' },
   { id: 'long',    name: 'Truyện dài',             hint: 'Hai cuốn liền mạch từ A1 đến B1', lang: 'en' },
 ];
 
