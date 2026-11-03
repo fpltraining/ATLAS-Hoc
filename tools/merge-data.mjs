@@ -159,7 +159,7 @@ function ban(s) {
   return s.replace(/(?<![\p{L}])([Aa])nh(?![\p{L}])/gu, (m, c, at) => {
     const before = s.slice(Math.max(0, at - 8), at).toLowerCase();
     const after = s.slice(at + 3, at + 9);
-    if (/(tiếng|học|nước|người) $/u.test(before)) return m;
+    if (/(tiếng|học|nước|người|bảng|nhà) $/u.test(before)) return m;
     if (/^ (Long|ấy|ta)/u.test(after)) return m;
     return c === 'A' ? 'Bạn' : 'bạn';
   });
