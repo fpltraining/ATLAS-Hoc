@@ -1,0 +1,236 @@
+{
+ "id": 124,
+ "cn": "请问，您是哪国人？",
+ "title": "Làm quen",
+ "goal": "Chào hỏi lịch sự với 你好, 请问, giới thiệu người thân, bạn bè, quốc gia, và đếm thứ tự bằng 第.",
+ "words": [
+  {
+   "w": "你好",
+   "py": "nǐ hǎo",
+   "hv": "nễ hảo",
+   "vi": "xin chào",
+   "pos": "cụm từ",
+   "note": "Hai thanh 3 đi liền nên 你 đọc thanh 2: ní hǎo. Lịch sự hơn thì nói 您好.",
+   "ex": [
+    {
+     "cn": "你好！我叫小明。",
+     "py": "Nǐ hǎo! Wǒ jiào Xiǎomíng.",
+     "vi": "Xin chào! Tôi tên Tiểu Minh."
+    }
+   ]
+  },
+  {
+   "w": "请问",
+   "py": "qǐngwèn",
+   "hv": "thỉnh vấn",
+   "vi": "xin hỏi, cho hỏi",
+   "pos": "động từ",
+   "note": "请 (xin) + 问 (hỏi). Mở đầu câu hỏi người lạ, giống \"cho tôi hỏi\".",
+   "ex": [
+    {
+     "cn": "请问，洗手间在哪里？",
+     "py": "Qǐngwèn, xǐshǒujiān zài nǎlǐ?",
+     "vi": "Cho hỏi, nhà vệ sinh ở đâu?"
+    }
+   ]
+  },
+  {
+   "w": "国",
+   "py": "guó",
+   "hv": "quốc",
+   "vi": "nước, quốc gia",
+   "pos": "danh từ",
+   "note": "\"Quốc\" trong \"quốc gia\". Bên trong là chữ 玉 (ngọc) được bao bởi bức tường.",
+   "ex": [
+    {
+     "cn": "你是哪国人？",
+     "py": "Nǐ shì nǎ guó rén?",
+     "vi": "Bạn là người nước nào?"
+    }
+   ]
+  },
+  {
+   "w": "家人",
+   "py": "jiārén",
+   "hv": "gia nhân",
+   "vi": "người nhà, gia đình",
+   "pos": "danh từ",
+   "note": "Khác \"gia nhân\" (người hầu) của tiếng Việt: 家人 là người thân trong nhà.",
+   "ex": [
+    {
+     "cn": "我的家人都在越南。",
+     "py": "Wǒ de jiārén dōu zài Yuènán.",
+     "vi": "Người nhà tôi đều ở Việt Nam."
+    }
+   ]
+  },
+  {
+   "w": "小朋友",
+   "py": "xiǎopéngyǒu",
+   "hv": "tiểu bằng hữu",
+   "vi": "bạn nhỏ, em bé",
+   "pos": "danh từ",
+   "note": "Người lớn gọi trẻ em là 小朋友, thân thiện như \"bạn nhỏ\" trong tiếng Việt.",
+   "ex": [
+    {
+     "cn": "小朋友，你几岁了？",
+     "py": "Xiǎopéngyǒu, nǐ jǐ suì le?",
+     "vi": "Bạn nhỏ ơi, cháu mấy tuổi rồi?"
+    }
+   ]
+  },
+  {
+   "w": "男朋友",
+   "py": "nánpéngyou",
+   "hv": "nam bằng hữu",
+   "vi": "bạn trai, người yêu (nam)",
+   "pos": "danh từ",
+   "note": "男 (nam) + 朋友. Chỉ người yêu, không phải \"bạn là con trai\".",
+   "ex": [
+    {
+     "cn": "她有男朋友了。",
+     "py": "Tā yǒu nánpéngyou le.",
+     "vi": "Cô ấy có bạn trai rồi."
+    }
+   ]
+  },
+  {
+   "w": "女朋友",
+   "py": "nǚpéngyou",
+   "hv": "nữ bằng hữu",
+   "vi": "bạn gái, người yêu (nữ)",
+   "pos": "danh từ",
+   "note": "Đối xứng với 男朋友.",
+   "ex": [
+    {
+     "cn": "这是我女朋友。",
+     "py": "Zhè shì wǒ nǚpéngyou.",
+     "vi": "Đây là bạn gái tôi."
+    }
+   ]
+  },
+  {
+   "w": "女士",
+   "py": "nǚshì",
+   "hv": "nữ sĩ",
+   "vi": "quý bà, cô (cách gọi lịch sự)",
+   "pos": "danh từ",
+   "note": "Đặt sau họ: 王女士 (bà Vương). Trên thông báo: 女士们，先生们 (thưa quý bà, quý ông).",
+   "ex": [
+    {
+     "cn": "李女士，您好！",
+     "py": "Lǐ nǚshì, nín hǎo!",
+     "vi": "Chào bà Lý!"
+    }
+   ]
+  },
+  {
+   "w": "读书",
+   "py": "dúshū",
+   "hv": "độc thư",
+   "vi": "đọc sách; đi học",
+   "pos": "động từ",
+   "note": "\"Độc thư\" là đọc sách, nhưng khẩu ngữ còn có nghĩa là đang đi học: 他在大学读书.",
+   "ex": [
+    {
+     "cn": "我喜欢读书。",
+     "py": "Wǒ xǐhuan dúshū.",
+     "vi": "Tôi thích đọc sách."
+    }
+   ]
+  },
+  {
+   "w": "汉字",
+   "py": "Hànzì",
+   "hv": "Hán tự",
+   "vi": "chữ Hán",
+   "pos": "danh từ",
+   "note": "Chính là \"Hán tự\". Người Việt biết âm Hán Việt nên học chữ Hán nhanh hơn người phương Tây.",
+   "ex": [
+    {
+     "cn": "汉字不难，很有意思。",
+     "py": "Hànzì bù nán, hěn yǒu yìsi.",
+     "vi": "Chữ Hán không khó, rất thú vị."
+    }
+   ]
+  },
+  {
+   "w": "第",
+   "py": "dì",
+   "hv": "đệ",
+   "vi": "thứ (số thứ tự)",
+   "pos": "tiền tố",
+   "note": "\"Đệ nhất\" là 第一. Đặt 第 trước số đếm để thành số thứ tự.",
+   "ex": [
+    {
+     "cn": "这是我第一次来北京。",
+     "py": "Zhè shì wǒ dì yī cì lái Běijīng.",
+     "vi": "Đây là lần đầu tôi đến Bắc Kinh."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "第 + số = số thứ tự",
+   "b": "第一 · 第二 · 第三 · 第一次",
+   "d": "Giống \"đệ nhất\", \"đệ nhị\" của tiếng Việt. Muốn đếm thêm danh từ thì thêm lượng từ: 第一个人, 第二天.",
+   "ex": [
+    {
+     "cn": "他是第一个来的。",
+     "py": "Tā shì dì yī ge lái de.",
+     "vi": "Anh ấy là người đến đầu tiên."
+    },
+    {
+     "cn": "第二天我们去了长城。",
+     "py": "Dì èr tiān wǒmen qù le Chángchéng.",
+     "vi": "Ngày hôm sau chúng tôi đi Vạn Lý Trường Thành."
+    }
+   ]
+  },
+  {
+   "t": "请问 mở đầu câu hỏi lịch sự",
+   "b": "请问 + câu hỏi",
+   "d": "Với người lạ, người lớn tuổi, nhân viên phục vụ, nên mở đầu bằng 请问. Câu sau vẫn giữ nguyên là câu hỏi bình thường.",
+   "ex": [
+    {
+     "cn": "请问，现在几点？",
+     "py": "Qǐngwèn, xiànzài jǐ diǎn?",
+     "vi": "Cho hỏi, bây giờ mấy giờ?"
+    },
+    {
+     "cn": "请问，您贵姓？",
+     "py": "Qǐngwèn, nín guì xìng?",
+     "vi": "Xin hỏi, ông họ gì ạ?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "你好，请问你是哪国人？",
+   "py": "Nǐ hǎo, qǐngwèn nǐ shì nǎ guó rén?",
+   "vi": "Xin chào, cho hỏi bạn là người nước nào?"
+  },
+  {
+   "cn": "我是越南人，我在中国读书。",
+   "py": "Wǒ shì Yuènán rén, wǒ zài Zhōngguó dúshū.",
+   "vi": "Tôi là người Việt Nam, tôi đang đi học ở Trung Quốc."
+  },
+  {
+   "cn": "这是我第一次学汉字。",
+   "py": "Zhè shì wǒ dì yī cì xué Hànzì.",
+   "vi": "Đây là lần đầu tôi học chữ Hán."
+  },
+  {
+   "cn": "我的家人都很好。",
+   "py": "Wǒ de jiārén dōu hěn hǎo.",
+   "vi": "Người nhà tôi đều khoẻ."
+  },
+  {
+   "cn": "你有女朋友吗？",
+   "py": "Nǐ yǒu nǚpéngyou ma?",
+   "vi": "Bạn có bạn gái chưa?"
+  }
+ ]
+}

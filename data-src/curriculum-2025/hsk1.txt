@@ -1,0 +1,306 @@
+# Bài bổ sung cấp 1 theo chuẩn HSK 2025 (84 từ), học ngay sau bài 15.
+# Định dạng xem đầu tệp tools/build-curriculum.mjs.
+
+@id 119
+@after 15
+@cn 他们和这些
+@title Họ, cái này, những cái kia
+@goal Nói số nhiều bằng 们, và chỉ người, vật bằng 这个 / 那个 / 哪个, 这些 / 那些 / 哪些.
+W 们 | men | môn | (hậu tố số nhiều cho người) | hậu tố | Gắn sau đại từ hoặc danh từ chỉ người để thành số nhiều: 我们, 老师们. Không dùng 们 khi đã có số đếm: nói 三个学生, không nói 三个学生们.
+E 同学们好！ | Tóngxuémen hǎo! | Chào các bạn!
+W 你们 | nǐmen | nễ môn | các bạn, các anh chị | đại từ | 你 + 们. Dùng khi nói với từ hai người trở lên.
+E 你们是学生吗？ | Nǐmen shì xuésheng ma? | Các bạn là học sinh à?
+W 他们 | tāmen | tha môn | họ, các anh ấy | đại từ | Nhóm có cả nam lẫn nữ cũng dùng 他们.
+E 他们是我的朋友。 | Tāmen shì wǒ de péngyou. | Họ là bạn của tôi.
+W 她们 | tāmen | tha môn | họ (toàn nữ), các cô ấy | đại từ | Đọc giống hệt 他们, chỉ khác khi viết: cả nhóm đều là nữ mới dùng 她们.
+E 她们都是老师。 | Tāmen dōu shì lǎoshī. | Các cô ấy đều là giáo viên.
+W 它们 | tāmen | tha môn | chúng nó (con vật, đồ vật) | đại từ | 它 dùng cho con vật, đồ vật. Ba chữ 他们, 她们, 它们 đọc như nhau.
+E 我家有两只猫，它们很可爱。 | Wǒ jiā yǒu liǎng zhī māo, tāmen hěn kě'ài. | Nhà tôi có hai con mèo, chúng rất đáng yêu.
+W 这个 | zhège | giá cá | cái này, người này | đại từ | 这 (này) + 个 (lượng từ chung). Trong khẩu ngữ hay đọc zhèige.
+E 这个多少钱？ | Zhège duōshao qián? | Cái này bao nhiêu tiền?
+W 那个 | nàge | na cá | cái kia, người kia | đại từ | 那 (kia) + 个. Khẩu ngữ hay đọc nèige. Người Trung Quốc còn nói 那个… khi đang nghĩ, giống "ờ…" của người Việt.
+E 那个人是谁？ | Nàge rén shì shéi? | Người kia là ai?
+W 哪个 | nǎge | na cá | cái nào, người nào | đại từ | Chú ý thanh điệu: 哪 thanh 3 (nǎ) là "nào", 那 thanh 4 (nà) là "kia". Chữ 哪 có thêm bộ 口.
+E 你喜欢哪个？ | Nǐ xǐhuan nǎge? | Bạn thích cái nào?
+W 这些 | zhèxiē | giá ta | những cái này | đại từ | 些 là "một vài, những". Sau 这些 không cần lượng từ: 这些书.
+E 这些书都是我的。 | Zhèxiē shū dōu shì wǒ de. | Những cuốn sách này đều là của tôi.
+W 那些 | nàxiē | na ta | những cái kia | đại từ | Đối xứng với 这些.
+E 那些苹果很好吃。 | Nàxiē píngguǒ hěn hǎochī. | Những quả táo kia rất ngon.
+W 哪些 | nǎxiē | na ta | những cái nào | đại từ | Hỏi khi câu trả lời có thể là nhiều thứ.
+E 你会说哪些语言？ | Nǐ huì shuō nǎxiē yǔyán? | Bạn nói được những thứ tiếng nào?
+G 们 — số nhiều cho người | đại từ / danh từ chỉ người + 们 | Tiếng Trung không đổi hình thức danh từ theo số nhiều. Chỉ người mới thêm 们, và không thêm khi đã có số đếm hay từ chỉ số lượng.
+E 老师们都很忙。 | Lǎoshīmen dōu hěn máng. | Các thầy cô đều rất bận.
+E 我有三个朋友。 | Wǒ yǒu sān ge péngyou. | Tôi có ba người bạn.
+G 这 / 那 / 哪 + 个 hoặc 些 | 这个 cái này · 那个 cái kia · 哪个 cái nào · 这些 / 那些 / 哪些 nhiều cái | Một cái thì dùng 个 (hoặc lượng từ riêng), nhiều cái thì dùng 些. Câu hỏi với 哪 không cần thêm 吗.
+E 你要这个还是那个？ | Nǐ yào zhège háishi nàge? | Bạn lấy cái này hay cái kia?
+E 哪些是你的？ | Nǎxiē shì nǐ de? | Những cái nào là của bạn?
+S 你们好！ | Nǐmen hǎo! | Chào các bạn!
+S 他们是哪国人？ | Tāmen shì nǎ guó rén? | Họ là người nước nào?
+S 这个是我的，那个是你的。 | Zhège shì wǒ de, nàge shì nǐ de. | Cái này của tôi, cái kia của bạn.
+S 这些都是新的。 | Zhèxiē dōu shì xīn de. | Những cái này đều mới.
+S 你喜欢哪些菜？ | Nǐ xǐhuan nǎxiē cài? | Bạn thích những món nào?
+
+@id 120
+@after 15
+@cn 这里和那里
+@title Ở đây, ở kia
+@goal Chỉ nơi chốn bằng 这里 / 那里 / 哪里, 这边 / 那边, và nói trước, sau, bên ngoài.
+W 这里 | zhèlǐ | giá lý | ở đây, chỗ này | đại từ | 里 ở đây là "chỗ, nơi". Miền Bắc Trung Quốc hay nói 这儿, nghĩa như nhau.
+E 这里是我的学校。 | Zhèlǐ shì wǒ de xuéxiào. | Đây là trường của tôi.
+W 那里 | nàlǐ | na lý | ở đó, ở kia | đại từ | Tương đương 那儿.
+E 那里有很多人。 | Nàlǐ yǒu hěn duō rén. | Ở đó có rất nhiều người.
+W 哪里 | nǎlǐ | na lý | ở đâu | đại từ | Hai thanh 3 đi liền nên đọc thành nálǐ. Khi được khen, người Trung Quốc hay đáp 哪里哪里 nghĩa là "đâu có, đâu có".
+E 你家在哪里？ | Nǐ jiā zài nǎlǐ? | Nhà bạn ở đâu?
+W 这边 | zhèbiān | giá biên | bên này, phía này | đại từ | 边 là "bên, phía". Hay dùng khi chỉ đường: 请这边走 (mời đi lối này).
+E 请这边走。 | Qǐng zhèbiān zǒu. | Mời đi lối này.
+W 那边 | nàbiān | na biên | bên kia, phía kia | đại từ | Đối xứng với 这边.
+E 洗手间在那边。 | Xǐshǒujiān zài nàbiān. | Nhà vệ sinh ở phía kia.
+W 外边 | wàibian | ngoại biên | bên ngoài | danh từ | 外 = "ngoại" trong "ngoại quốc". Chữ 边 ở đây đọc nhẹ.
+E 外边下雨了。 | Wàibian xià yǔ le. | Bên ngoài mưa rồi.
+W 前 | qián | tiền | phía trước; trước (thời gian) | danh từ | "Tiền" trong "tiền sảnh", "trước tiên". Dùng cả cho chỗ lẫn thời gian: 三天前 (ba ngày trước).
+E 学校前有一个商店。 | Xuéxiào qián yǒu yí ge shāngdiàn. | Trước trường có một cửa hàng.
+W 后 | hòu | hậu | phía sau; sau (thời gian) | danh từ | "Hậu" trong "hậu quả", "hậu phương". 以后 là "sau này".
+E 吃饭后我们去看电影。 | Chīfàn hòu wǒmen qù kàn diànyǐng. | Ăn cơm xong chúng ta đi xem phim.
+W 边 | biān | biên | bên, phía, cạnh | danh từ | "Biên" trong "biên giới". Ghép với phương hướng: 左边, 右边, 旁边.
+E 我坐在他旁边。 | Wǒ zuò zài tā pángbiān. | Tôi ngồi cạnh anh ấy.
+W 有的 | yǒude | hữu đích | có cái, có người, một số | đại từ | Dùng để chia một nhóm: 有的…有的… (có người thì…, có người thì…).
+E 有的人喜欢茶，有的人喜欢咖啡。 | Yǒude rén xǐhuan chá, yǒude rén xǐhuan kāfēi. | Có người thích trà, có người thích cà phê.
+G 在 + nơi chốn | Người / vật + 在 + 这里 / 那里 / 哪里 | Hỏi "ở đâu" thì chỉ cần đặt 哪里 vào đúng chỗ của câu trả lời, không cần đảo trật tự như tiếng Anh.
+E 你在哪里？ | Nǐ zài nǎlǐ? | Bạn đang ở đâu?
+E 我在这里。 | Wǒ zài zhèlǐ. | Tôi ở đây.
+G Danh từ + 前 / 后 / 边 | 学校前 · 吃饭后 · 门边 | Từ chỉ phương hướng đứng SAU danh từ, ngược với tiếng Việt: tiếng Việt nói "trước trường", tiếng Trung nói "trường trước" (学校前).
+E 银行在医院后边。 | Yínháng zài yīyuàn hòubian. | Ngân hàng ở phía sau bệnh viện.
+E 下课后我去图书馆。 | Xiàkè hòu wǒ qù túshūguǎn. | Tan học tôi đi thư viện.
+S 这里是哪里？ | Zhèlǐ shì nǎlǐ? | Đây là đâu?
+S 我在那边等你。 | Wǒ zài nàbiān děng nǐ. | Tôi đợi bạn ở bên kia.
+S 外边很冷，你多穿一点儿。 | Wàibian hěn lěng, nǐ duō chuān yìdiǎnr. | Bên ngoài lạnh lắm, bạn mặc thêm vào.
+S 我家前边有一个公园。 | Wǒ jiā qiánbian yǒu yí ge gōngyuán. | Trước nhà tôi có một công viên.
+S 有的同学来了，有的还没来。 | Yǒude tóngxué lái le, yǒude hái méi lái. | Có bạn đến rồi, có bạn chưa đến.
+
+@id 121
+@after 15
+@cn 今天和明年
+@title Ngày, năm, sớm, muộn
+@goal Nói về ngày tháng năm, buổi trong ngày, và nói sớm muộn, một nửa, một chút.
+W 天 | tiān | thiên | ngày; trời | danh từ | Vừa là "trời" vừa là "ngày": 今天, 三天. Cũng làm lượng từ: 一天 (một ngày).
+E 我学了三天汉语。 | Wǒ xué le sān tiān Hànyǔ. | Tôi đã học tiếng Trung ba ngày.
+W 白天 | báitiān | bạch thiên | ban ngày | danh từ | 白 (trắng, sáng) + 天 (ngày) = lúc trời sáng.
+E 白天我工作，晚上我学习。 | Báitiān wǒ gōngzuò, wǎnshang wǒ xuéxí. | Ban ngày tôi làm việc, buổi tối tôi học.
+W 今年 | jīnnián | kim niên | năm nay | danh từ | 今 = "kim" trong "kim cổ", "hiện kim": bây giờ. 今天 hôm nay, 今年 năm nay.
+E 我今年二十岁。 | Wǒ jīnnián èrshí suì. | Năm nay tôi hai mươi tuổi.
+W 明年 | míngnián | minh niên | năm sau | danh từ | Giống 明天 (ngày mai): 明 ở đây nghĩa là "kế tiếp".
+E 明年我想去中国。 | Míngnián wǒ xiǎng qù Zhōngguó. | Năm sau tôi muốn đi Trung Quốc.
+W 星期天 | xīngqītiān | tinh kỳ thiên | Chủ nhật | danh từ | Thứ Hai đến thứ Bảy là 星期一 đến 星期六. Chủ nhật không phải "星期七" mà là 星期天.
+E 星期天我不上班。 | Xīngqītiān wǒ bú shàngbān. | Chủ nhật tôi không đi làm.
+W 星期日 | xīngqīrì | tinh kỳ nhật | Chủ nhật | danh từ | Cùng nghĩa với 星期天 nhưng trang trọng hơn, hay gặp trên lịch và văn bản.
+E 星期日商店也开门。 | Xīngqīrì shāngdiàn yě kāimén. | Chủ nhật cửa hàng cũng mở cửa.
+W 早 | zǎo | tảo | sớm; chào buổi sáng | tính từ | Chữ 日 (mặt trời) trên 十: mặt trời vừa lên. Gặp nhau buổi sáng có thể chỉ nói 早！
+E 你早！今天你来得很早。 | Nǐ zǎo! Jīntiān nǐ lái de hěn zǎo. | Chào buổi sáng! Hôm nay bạn đến sớm thế.
+W 晚 | wǎn | vãn | muộn; buổi tối | tính từ | "Vãn" trong "vãn hồi", "vãn bối". Đối lập với 早.
+E 对不起，我来晚了。 | Duìbuqǐ, wǒ lái wǎn le. | Xin lỗi, tôi đến muộn.
+W 一半 | yíbàn | nhất bán | một nửa | số từ | 半 = "bán" trong "bán cầu", "bán kết".
+E 这个西瓜，我们一人一半。 | Zhège xīguā, wǒmen yì rén yíbàn. | Quả dưa hấu này, mỗi người một nửa.
+W 一下 | yíxià | nhất hạ | một chút, một lát | số lượng từ | Đặt sau động từ để câu mềm và lịch sự hơn: 等一下 (đợi chút), 看一下 (xem qua).
+E 请等一下。 | Qǐng děng yíxià. | Xin đợi một chút.
+G Thời gian đứng trước động từ | Chủ ngữ + thời gian + động từ · Thời gian + chủ ngữ + động từ | Mốc thời gian (今年, 明天, 白天…) luôn đứng TRƯỚC động từ, không đặt cuối câu như tiếng Việt hay nói "tôi đi Trung Quốc năm sau".
+E 我明年去中国。 | Wǒ míngnián qù Zhōngguó. | Năm sau tôi đi Trung Quốc.
+E 星期天我们去公园吧。 | Xīngqītiān wǒmen qù gōngyuán ba. | Chủ nhật mình đi công viên nhé.
+G Động từ + 一下 | 看一下 · 等一下 · 试一下 | Làm việc gì đó trong thời gian ngắn hoặc nói cho nhẹ nhàng. Hai thanh 4 đi liền nên 一 đọc thanh 2: yíxià.
+E 你看一下这个。 | Nǐ kàn yíxià zhège. | Bạn xem qua cái này nhé.
+E 我们休息一下吧。 | Wǒmen xiūxi yíxià ba. | Chúng ta nghỉ một lát đi.
+S 你今年多大？ | Nǐ jīnnián duō dà? | Năm nay bạn bao nhiêu tuổi?
+S 我每天早上六点起床，很早。 | Wǒ měi tiān zǎoshang liù diǎn qǐchuáng, hěn zǎo. | Sáng nào tôi cũng dậy lúc sáu giờ, rất sớm.
+S 太晚了，我们回家吧。 | Tài wǎn le, wǒmen huí jiā ba. | Muộn quá rồi, mình về nhà thôi.
+S 这本书我看了一半。 | Zhè běn shū wǒ kàn le yíbàn. | Cuốn sách này tôi đọc được một nửa.
+S 星期天你有时间吗？ | Xīngqītiān nǐ yǒu shíjiān ma? | Chủ nhật bạn có thời gian không?
+
+@id 122
+@after 15
+@cn 吃饭了吗？
+@title Ba bữa cơm
+@goal Nói về bữa sáng, trưa, tối, nấu ăn, và các nơi bán đồ ăn, bán sách.
+W 饭 | fàn | phạn | cơm; bữa ăn | danh từ | "Phạn" trong "phạn điếm". Người Trung Quốc chào nhau bằng 吃饭了吗？ (ăn cơm chưa?), giống người Việt.
+E 你吃饭了吗？ | Nǐ chīfàn le ma? | Bạn ăn cơm chưa?
+W 早饭 | zǎofàn | tảo phạn | bữa sáng | danh từ | 早 (sớm) + 饭 (bữa ăn).
+E 我七点吃早饭。 | Wǒ qī diǎn chī zǎofàn. | Tôi ăn sáng lúc bảy giờ.
+W 午饭 | wǔfàn | ngọ phạn | bữa trưa | danh từ | 午 = "ngọ" trong "giờ Ngọ", "chính ngọ": giữa trưa.
+E 我们一起吃午饭吧。 | Wǒmen yìqǐ chī wǔfàn ba. | Chúng mình cùng ăn trưa nhé.
+W 晚饭 | wǎnfàn | vãn phạn | bữa tối | danh từ | 晚 (tối) + 饭.
+E 晚饭吃什么？ | Wǎnfàn chī shénme? | Bữa tối ăn gì?
+W 做饭 | zuò fàn | tố phạn | nấu cơm, nấu ăn | động từ | 做 = làm. Tiếng Trung "làm cơm" chứ không "nấu cơm".
+E 妈妈在做饭。 | Māma zài zuò fàn. | Mẹ đang nấu cơm.
+W 面条儿 | miàntiáor | diện điều nhi | mì sợi | danh từ | 面 (bột mì) + 条 (sợi dài). Âm 儿 cuối là giọng Bắc Kinh, viết 面条 cũng được.
+E 我想吃一碗面条儿。 | Wǒ xiǎng chī yì wǎn miàntiáor. | Tôi muốn ăn một bát mì.
+W 饭店 | fàndiàn | phạn điếm | nhà hàng; khách sạn | danh từ | Vừa là nhà hàng, vừa có thể là khách sạn lớn (北京饭店 là khách sạn).
+E 这家饭店的菜很好吃。 | Zhè jiā fàndiàn de cài hěn hǎochī. | Món ăn của nhà hàng này rất ngon.
+W 店 | diàn | điếm | cửa hàng, quán | danh từ | "Điếm" trong "tửu điếm", "khách điếm". Đếm bằng 家: 一家店.
+E 这家店几点开门？ | Zhè jiā diàn jǐ diǎn kāimén? | Quán này mấy giờ mở cửa?
+W 书店 | shūdiàn | thư điếm | hiệu sách | danh từ | 书 (sách) + 店 (cửa hàng). Cứ thế ghép: 花店, 鞋店…
+E 学校旁边有一个书店。 | Xuéxiào pángbiān yǒu yí ge shūdiàn. | Cạnh trường có một hiệu sách.
+W 一些 | yìxiē | nhất ta | một ít, một vài | số lượng từ | Dùng cho số lượng không xác định, không nhiều: 买一些水果.
+E 我去买一些水果。 | Wǒ qù mǎi yìxiē shuǐguǒ. | Tôi đi mua ít hoa quả.
+G Ăn bữa nào thì dùng 吃 | 吃 + 早饭 / 午饭 / 晚饭 | Không cần "ăn bữa", chỉ cần 吃早饭. Hỏi "ăn chưa" thì thêm 了吗.
+E 你吃早饭了吗？ | Nǐ chī zǎofàn le ma? | Bạn ăn sáng chưa?
+E 我还没吃午饭。 | Wǒ hái méi chī wǔfàn. | Tôi vẫn chưa ăn trưa.
+G Lượng từ 家 cho cửa hàng, công ty | 一家 + 店 / 饭店 / 书店 / 公司 | Nơi kinh doanh đếm bằng 家, giống tiếng Việt nói "một nhà hàng".
+E 这里有两家书店。 | Zhèlǐ yǒu liǎng jiā shūdiàn. | Ở đây có hai hiệu sách.
+E 那家饭店很贵。 | Nà jiā fàndiàn hěn guì. | Nhà hàng kia rất đắt.
+S 你会做饭吗？ | Nǐ huì zuò fàn ma? | Bạn biết nấu ăn không?
+S 我们晚上去饭店吃饭吧。 | Wǒmen wǎnshang qù fàndiàn chīfàn ba. | Tối nay chúng ta ra nhà hàng ăn nhé.
+S 早饭我喝牛奶，吃面包。 | Zǎofàn wǒ hē niúnǎi, chī miànbāo. | Bữa sáng tôi uống sữa, ăn bánh mì.
+S 这家店的面条儿很便宜。 | Zhè jiā diàn de miàntiáor hěn piányi. | Mì ở quán này rất rẻ.
+S 我在书店买了一些书。 | Wǒ zài shūdiàn mǎi le yìxiē shū. | Tôi đã mua vài cuốn sách ở hiệu sách.
+
+@id 123
+@after 15
+@cn 上学和上课
+@title Đi học
+@goal Nói về đi học, vào lớp, tan học, và các cấp trường từ tiểu học tới đại học.
+W 学 | xué | học | học | động từ | "Học" trong "học sinh". Đi một mình nghĩa như 学习 nhưng gọn hơn: 学汉语, 学开车.
+E 我在学汉语。 | Wǒ zài xué Hànyǔ. | Tôi đang học tiếng Trung.
+W 上学 | shàngxué | thượng học | đi học | động từ | 上 ở đây là "đi tới": 上学 (đến trường), 上班 (đi làm).
+E 我弟弟每天走路上学。 | Wǒ dìdi měi tiān zǒulù shàngxué. | Em trai tôi ngày nào cũng đi bộ đến trường.
+W 上课 | shàngkè | thượng khoá | vào lớp, lên lớp | động từ | 课 = "khoá" trong "khoá học". Thầy dạy hay trò học đều dùng 上课.
+E 我们八点上课。 | Wǒmen bā diǎn shàngkè. | Tám giờ chúng tôi vào học.
+W 下课 | xiàkè | hạ khoá | tan học, hết giờ | động từ | 上 là bắt đầu, 下 là kết thúc: 上课 / 下课, 上班 / 下班.
+E 下课以后你去哪儿？ | Xiàkè yǐhòu nǐ qù nǎr? | Tan học bạn đi đâu?
+W 小学 | xiǎoxué | tiểu học | trường tiểu học | danh từ | Chính là "tiểu học" tiếng Việt.
+E 我妹妹在上小学。 | Wǒ mèimei zài shàng xiǎoxué. | Em gái tôi đang học tiểu học.
+W 小学生 | xiǎoxuéshēng | tiểu học sinh | học sinh tiểu học | danh từ | 小学 + 生 (người học).
+E 那些小学生很可爱。 | Nàxiē xiǎoxuéshēng hěn kě'ài. | Mấy em học sinh tiểu học kia rất đáng yêu.
+W 中学 | zhōngxué | trung học | trường trung học | danh từ | Gồm cả cấp hai (初中) và cấp ba (高中).
+E 他在一所中学当老师。 | Tā zài yì suǒ zhōngxué dāng lǎoshī. | Anh ấy làm giáo viên ở một trường trung học.
+W 中学生 | zhōngxuéshēng | trung học sinh | học sinh trung học | danh từ | 中学 + 生.
+E 我是中学生。 | Wǒ shì zhōngxuéshēng. | Tôi là học sinh trung học.
+W 大学 | dàxué | đại học | trường đại học | danh từ | Chính là "đại học". Đếm trường bằng 所: 一所大学.
+E 你在哪个大学学习？ | Nǐ zài nǎge dàxué xuéxí? | Bạn học ở trường đại học nào?
+W 大学生 | dàxuéshēng | đại học sinh | sinh viên đại học | danh từ | Tiếng Việt nói "sinh viên", tiếng Trung nói 大学生.
+E 我哥哥是大学生。 | Wǒ gēge shì dàxuéshēng. | Anh trai tôi là sinh viên.
+G 上 / 下 + danh từ: bắt đầu và kết thúc | 上学 · 上课 · 上班 / 下课 · 下班 | 上 nghĩa là đi tới hoặc bắt đầu, 下 là rời đi hoặc kết thúc. Nhớ một cặp là nhớ được cả nhóm.
+E 你几点下课？ | Nǐ jǐ diǎn xiàkè? | Mấy giờ bạn tan học?
+E 我八点上课，十二点下课。 | Wǒ bā diǎn shàngkè, shí'èr diǎn xiàkè. | Tôi vào học lúc tám giờ, tan lúc mười hai giờ.
+G 上 + cấp học | 上小学 · 上中学 · 上大学 | Nói "đang học cấp nào" thì dùng 上 + tên cấp học, giống "lên đại học" của tiếng Việt.
+E 她明年上大学。 | Tā míngnián shàng dàxué. | Năm sau cô ấy lên đại học.
+E 你孩子上小学了吗？ | Nǐ háizi shàng xiǎoxué le ma? | Con bạn đi học tiểu học chưa?
+S 我每天七点半上学。 | Wǒ měi tiān qī diǎn bàn shàngxué. | Ngày nào tôi cũng đi học lúc bảy rưỡi.
+S 下课了，我们去吃饭吧。 | Xiàkè le, wǒmen qù chīfàn ba. | Tan học rồi, mình đi ăn thôi.
+S 他是北京大学的大学生。 | Tā shì Běijīng Dàxué de dàxuéshēng. | Anh ấy là sinh viên Đại học Bắc Kinh.
+S 中学生每天都很忙。 | Zhōngxuéshēng měi tiān dōu hěn máng. | Học sinh trung học ngày nào cũng rất bận.
+S 我想学开车。 | Wǒ xiǎng xué kāichē. | Tôi muốn học lái xe.
+
+@id 124
+@after 15
+@cn 请问，您是哪国人？
+@title Làm quen
+@goal Chào hỏi lịch sự với 你好, 请问, giới thiệu người thân, bạn bè, quốc gia, và đếm thứ tự bằng 第.
+W 你好 | nǐ hǎo | nễ hảo | xin chào | cụm từ | Hai thanh 3 đi liền nên 你 đọc thanh 2: ní hǎo. Lịch sự hơn thì nói 您好.
+E 你好！我叫小明。 | Nǐ hǎo! Wǒ jiào Xiǎomíng. | Xin chào! Tôi tên Tiểu Minh.
+W 请问 | qǐngwèn | thỉnh vấn | xin hỏi, cho hỏi | động từ | 请 (xin) + 问 (hỏi). Mở đầu câu hỏi người lạ, giống "cho tôi hỏi".
+E 请问，洗手间在哪里？ | Qǐngwèn, xǐshǒujiān zài nǎlǐ? | Cho hỏi, nhà vệ sinh ở đâu?
+W 国 | guó | quốc | nước, quốc gia | danh từ | "Quốc" trong "quốc gia". Bên trong là chữ 玉 (ngọc) được bao bởi bức tường.
+E 你是哪国人？ | Nǐ shì nǎ guó rén? | Bạn là người nước nào?
+W 家人 | jiārén | gia nhân | người nhà, gia đình | danh từ | Khác "gia nhân" (người hầu) của tiếng Việt: 家人 là người thân trong nhà.
+E 我的家人都在越南。 | Wǒ de jiārén dōu zài Yuènán. | Người nhà tôi đều ở Việt Nam.
+W 小朋友 | xiǎopéngyǒu | tiểu bằng hữu | bạn nhỏ, em bé | danh từ | Người lớn gọi trẻ em là 小朋友, thân thiện như "bạn nhỏ" trong tiếng Việt.
+E 小朋友，你几岁了？ | Xiǎopéngyǒu, nǐ jǐ suì le? | Bạn nhỏ ơi, cháu mấy tuổi rồi?
+W 男朋友 | nánpéngyou | nam bằng hữu | bạn trai, người yêu (nam) | danh từ | 男 (nam) + 朋友. Chỉ người yêu, không phải "bạn là con trai".
+E 她有男朋友了。 | Tā yǒu nánpéngyou le. | Cô ấy có bạn trai rồi.
+W 女朋友 | nǚpéngyou | nữ bằng hữu | bạn gái, người yêu (nữ) | danh từ | Đối xứng với 男朋友.
+E 这是我女朋友。 | Zhè shì wǒ nǚpéngyou. | Đây là bạn gái tôi.
+W 女士 | nǚshì | nữ sĩ | quý bà, cô (cách gọi lịch sự) | danh từ | Đặt sau họ: 王女士 (bà Vương). Trên thông báo: 女士们，先生们 (thưa quý bà, quý ông).
+E 李女士，您好！ | Lǐ nǚshì, nín hǎo! | Chào bà Lý!
+W 读书 | dúshū | độc thư | đọc sách; đi học | động từ | "Độc thư" là đọc sách, nhưng khẩu ngữ còn có nghĩa là đang đi học: 他在大学读书.
+E 我喜欢读书。 | Wǒ xǐhuan dúshū. | Tôi thích đọc sách.
+W 汉字 | Hànzì | Hán tự | chữ Hán | danh từ | Chính là "Hán tự". Người Việt biết âm Hán Việt nên học chữ Hán nhanh hơn người phương Tây.
+E 汉字不难，很有意思。 | Hànzì bù nán, hěn yǒu yìsi. | Chữ Hán không khó, rất thú vị.
+W 第 | dì | đệ | thứ (số thứ tự) | tiền tố | "Đệ nhất" là 第一. Đặt 第 trước số đếm để thành số thứ tự.
+E 这是我第一次来北京。 | Zhè shì wǒ dì yī cì lái Běijīng. | Đây là lần đầu tôi đến Bắc Kinh.
+G 第 + số = số thứ tự | 第一 · 第二 · 第三 · 第一次 | Giống "đệ nhất", "đệ nhị" của tiếng Việt. Muốn đếm thêm danh từ thì thêm lượng từ: 第一个人, 第二天.
+E 他是第一个来的。 | Tā shì dì yī ge lái de. | Anh ấy là người đến đầu tiên.
+E 第二天我们去了长城。 | Dì èr tiān wǒmen qù le Chángchéng. | Ngày hôm sau chúng tôi đi Vạn Lý Trường Thành.
+G 请问 mở đầu câu hỏi lịch sự | 请问 + câu hỏi | Với người lạ, người lớn tuổi, nhân viên phục vụ, nên mở đầu bằng 请问. Câu sau vẫn giữ nguyên là câu hỏi bình thường.
+E 请问，现在几点？ | Qǐngwèn, xiànzài jǐ diǎn? | Cho hỏi, bây giờ mấy giờ?
+E 请问，您贵姓？ | Qǐngwèn, nín guì xìng? | Xin hỏi, ông họ gì ạ?
+S 你好，请问你是哪国人？ | Nǐ hǎo, qǐngwèn nǐ shì nǎ guó rén? | Xin chào, cho hỏi bạn là người nước nào?
+S 我是越南人，我在中国读书。 | Wǒ shì Yuènán rén, wǒ zài Zhōngguó dúshū. | Tôi là người Việt Nam, tôi đang đi học ở Trung Quốc.
+S 这是我第一次学汉字。 | Zhè shì wǒ dì yī cì xué Hànzì. | Đây là lần đầu tôi học chữ Hán.
+S 我的家人都很好。 | Wǒ de jiārén dōu hěn hǎo. | Người nhà tôi đều khoẻ.
+S 你有女朋友吗？ | Nǐ yǒu nǚpéngyou ma? | Bạn có bạn gái chưa?
+
+@id 125
+@after 15
+@cn 坐火车
+@title Xe, điện thoại, ca hát
+@goal Nói về đi xe, lái xe, tan làm, gọi điện, nghe thấy, gặp nhau, và hát.
+W 车 | chē | xa | xe | danh từ | Chữ tượng hình: nhìn từ trên xuống thấy bánh xe và trục. "Xa" trong "xa lộ" là chữ này.
+E 我的车是红色的。 | Wǒ de chē shì hóngsè de. | Xe của tôi màu đỏ.
+W 火车 | huǒchē | hoả xa | tàu hoả | danh từ | Chính là "hoả xa": xe chạy bằng lửa, vì tàu xưa chạy bằng hơi nước đốt than.
+E 我们坐火车去上海。 | Wǒmen zuò huǒchē qù Shànghǎi. | Chúng tôi đi tàu hoả đến Thượng Hải.
+W 开车 | kāichē | khai xa | lái xe | động từ | 开 = mở, vận hành. Lái ô tô dùng 开车, đi xe đạp thì dùng 骑.
+E 我爸爸开车上班。 | Wǒ bàba kāichē shàngbān. | Bố tôi lái xe đi làm.
+W 下班 | xiàbān | hạ ban | tan làm | động từ | 班 = ca làm. 上班 đi làm, 下班 tan làm.
+E 你几点下班？ | Nǐ jǐ diǎn xiàbān? | Mấy giờ bạn tan làm?
+W 电话 | diànhuà | điện thoại | điện thoại; cuộc gọi | danh từ | Chính là "điện thoại". Gọi điện là 打电话.
+E 我给妈妈打电话。 | Wǒ gěi māma dǎ diànhuà. | Tôi gọi điện cho mẹ.
+W 见 | jiàn | kiến | gặp; thấy | động từ | "Kiến" trong "kiến thức", "hội kiến". Đã gặp trong 再见.
+E 明天见！ | Míngtiān jiàn! | Mai gặp nhé!
+W 听见 | tīngjiàn | thính kiến | nghe thấy | động từ | 听 là nghe (hành động), 听见 là nghe THẤY (có kết quả). Giống 看 và 看见.
+E 你听见了吗？ | Nǐ tīngjiàn le ma? | Bạn có nghe thấy không?
+W 唱 | chàng | xướng | hát | động từ | "Xướng" trong "đề xướng", "xướng ca". Có bộ 口 (miệng).
+E 她唱得很好。 | Tā chàng de hěn hǎo. | Cô ấy hát rất hay.
+W 歌 | gē | ca | bài hát | danh từ | "Ca" trong "ca sĩ", "ca khúc". Hát là 唱歌.
+E 我们一起唱歌吧。 | Wǒmen yìqǐ chànggē ba. | Chúng mình cùng hát nhé.
+W 好听 | hǎotīng | hảo thính | hay, dễ nghe | tính từ | 好 + 听: nghe thấy hay. Dùng cho bài hát, giọng nói, cái tên.
+E 这首歌很好听。 | Zhè shǒu gē hěn hǎotīng. | Bài hát này rất hay.
+G 看 / 听 + 见: có kết quả | 看 → 看见 · 听 → 听见 | 看, 听 chỉ là hành động. Thêm 见 thì nghĩa là đã thấy, đã nghe được. Phủ định dùng 没: 没听见 (không nghe thấy).
+E 我看了，可是没看见他。 | Wǒ kàn le, kěshì méi kànjiàn tā. | Tôi đã nhìn, nhưng không thấy anh ấy.
+E 对不起，我没听见。 | Duìbuqǐ, wǒ méi tīngjiàn. | Xin lỗi, tôi không nghe thấy.
+G 给 + người + 打电话 | Chủ ngữ + 给 + người + 打电话 | Tiếng Trung đặt người nhận lên trước động từ bằng 给, không nói 打电话给 trong câu đơn giản.
+E 晚上我给你打电话。 | Wǎnshang wǒ gěi nǐ dǎ diànhuà. | Tối tôi gọi điện cho bạn.
+E 你给他打电话了吗？ | Nǐ gěi tā dǎ diànhuà le ma? | Bạn gọi cho anh ấy chưa?
+S 我下班以后坐火车回家。 | Wǒ xiàbān yǐhòu zuò huǒchē huí jiā. | Tan làm tôi đi tàu hoả về nhà.
+S 你会开车吗？ | Nǐ huì kāichē ma? | Bạn biết lái xe không?
+S 我很喜欢唱中国歌。 | Wǒ hěn xǐhuan chàng Zhōngguó gē. | Tôi rất thích hát bài hát tiếng Trung.
+S 我听见有人叫我。 | Wǒ tīngjiàn yǒu rén jiào wǒ. | Tôi nghe thấy có người gọi tôi.
+S 好的，明天见！ | Hǎo de, míngtiān jiàn! | Được rồi, mai gặp nhé!
+
+@id 126
+@after 15
+@cn 有点儿不舒服
+@title Vui chơi, ốm, mưa
+@goal Khen hay, đẹp, vui; nói có việc hay không có việc; nói hơi ốm, đi khám, ngủ, và trời mưa.
+W 好看 | hǎokàn | hảo khán | đẹp, hay (để xem) | tính từ | 好 + 看: xem thấy hay. Dùng cho người, quần áo, phim ảnh.
+E 这个电影很好看。 | Zhège diànyǐng hěn hǎokàn. | Bộ phim này rất hay.
+W 好玩儿 | hǎowánr | hảo ngoạn nhi | vui, thú vị (để chơi) | tính từ | 好 + 玩 (chơi). Nói về nơi chốn, trò chơi, hoạt động.
+E 北京很好玩儿。 | Běijīng hěn hǎowánr. | Bắc Kinh chơi vui lắm.
+W 电影院 | diànyǐngyuàn | điện ảnh viện | rạp chiếu phim | danh từ | 电影 (điện ảnh) + 院 (viện): như 医院 (y viện, bệnh viện).
+E 我们去电影院看电影吧。 | Wǒmen qù diànyǐngyuàn kàn diànyǐng ba. | Mình ra rạp xem phim đi.
+W 事 | shì | sự | việc, chuyện | danh từ | "Sự" trong "sự việc", "sự kiện". Hỏi "có chuyện gì không" là 有事吗？
+E 你找我有事吗？ | Nǐ zhǎo wǒ yǒu shì ma? | Bạn tìm tôi có việc gì không?
+W 没事 | méishì | một sự | không sao; rảnh | động từ | Hai nghĩa: "không sao đâu" (khi ai xin lỗi) và "không có việc gì, đang rảnh".
+E 没事，没事，别担心。 | Méishì, méishì, bié dānxīn. | Không sao, không sao, đừng lo.
+W 有点儿 | yǒudiǎnr | hữu điểm nhi | hơi, có chút | phó từ | Đứng trước tính từ, thường cho điều không vừa ý: 有点儿贵 (hơi đắt), 有点儿累 (hơi mệt).
+E 今天有点儿冷。 | Jīntiān yǒudiǎnr lěng. | Hôm nay hơi lạnh.
+W 有些 | yǒuxiē | hữu ta | một số; hơi | đại từ | Như 有的: 有些人 (một số người). Đứng trước tính từ thì giống 有点儿.
+E 有些同学还没来。 | Yǒuxiē tóngxué hái méi lái. | Một số bạn vẫn chưa đến.
+W 病 | bìng | bệnh | bệnh; bị ốm | danh từ | "Bệnh" tiếng Việt chính là chữ này. Bộ 疒 (bệnh) ở bên ngoài.
+E 他病了，今天没来上课。 | Tā bìng le, jīntiān méi lái shàngkè. | Anh ấy ốm rồi, hôm nay không đến lớp.
+W 看病 | kànbìng | khán bệnh | đi khám bệnh; khám bệnh | động từ | Bệnh nhân đi khám hay bác sĩ khám đều dùng 看病.
+E 我下午去医院看病。 | Wǒ xiàwǔ qù yīyuàn kànbìng. | Chiều nay tôi đi bệnh viện khám.
+W 睡 | shuì | thuỵ | ngủ | động từ | "Thuỵ" trong "thuỵ miên". Có bộ 目 (mắt). Đi một mình hay gặp trong 睡吧, 睡了.
+E 太晚了，快睡吧。 | Tài wǎn le, kuài shuì ba. | Muộn quá rồi, ngủ nhanh đi.
+W 雨 | yǔ | vũ | mưa | danh từ | Chữ tượng hình: những giọt mưa rơi dưới bầu trời. "Vũ" trong "phong vũ".
+E 外边在下雨。 | Wàibian zài xià yǔ. | Bên ngoài đang mưa.
+W 不要 | búyào | bất yếu | đừng; không cần | phó từ | Đứng trước động từ để khuyên ngăn: 不要说话 (đừng nói chuyện). Mạnh hơn 别 một chút.
+E 不要在这里吃东西。 | Búyào zài zhèlǐ chī dōngxi. | Đừng ăn uống ở đây.
+G 有点儿 + tính từ | 有点儿 + 贵 / 累 / 冷 | Nói "hơi…" về điều không như ý. Nói điều tốt thì dùng 比较 hoặc 很, không dùng 有点儿: nói 有点儿贵 nhưng không nói 有点儿便宜.
+E 这件衣服有点儿贵。 | Zhè jiàn yīfu yǒudiǎnr guì. | Bộ quần áo này hơi đắt.
+E 我有点儿累，想休息一下。 | Wǒ yǒudiǎnr lèi, xiǎng xiūxi yíxià. | Tôi hơi mệt, muốn nghỉ một lát.
+G 不要 + động từ: khuyên đừng làm | 不要 + động từ (+ 了) | Dùng để nhắc nhở, cấm đoán. Trong biển báo, thông báo rất hay gặp.
+E 不要哭了。 | Búyào kū le. | Đừng khóc nữa.
+E 下雨了，不要出去。 | Xià yǔ le, búyào chūqu. | Trời mưa rồi, đừng ra ngoài.
+S 你怎么了？有点儿不舒服吗？ | Nǐ zěnme le? Yǒudiǎnr bù shūfu ma? | Bạn sao thế? Hơi khó chịu à?
+S 我病了，要去看病。 | Wǒ bìng le, yào qù kànbìng. | Tôi bị ốm, phải đi khám.
+S 下雨了，我们在家看电影吧。 | Xià yǔ le, wǒmen zài jiā kàn diànyǐng ba. | Trời mưa rồi, mình ở nhà xem phim nhé.
+S 你的衣服很好看。 | Nǐ de yīfu hěn hǎokàn. | Quần áo của bạn đẹp lắm.
+S 我昨天睡得很晚。 | Wǒ zuótiān shuì de hěn wǎn. | Hôm qua tôi ngủ rất muộn.

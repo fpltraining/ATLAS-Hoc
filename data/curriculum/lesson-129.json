@@ -1,0 +1,221 @@
+{
+ "id": 129,
+ "cn": "左边还是右边？",
+ "title": "Trái, phải, ở đâu",
+ "goal": "Chỉ đường bằng 左 / 右, nói về cửa, trên đường, trên mạng, và các nơi như trung tâm thương mại, hiệu thuốc, khách sạn.",
+ "words": [
+  {
+   "w": "左",
+   "py": "zuǒ",
+   "hv": "tả",
+   "vi": "bên trái",
+   "pos": "danh từ",
+   "note": "\"Tả\" trong \"tả hữu\". Hay dùng 左边.",
+   "ex": [
+    {
+     "cn": "往左走。",
+     "py": "Wǎng zuǒ zǒu.",
+     "vi": "Đi về bên trái."
+    }
+   ]
+  },
+  {
+   "w": "右",
+   "py": "yòu",
+   "hv": "hữu",
+   "vi": "bên phải",
+   "pos": "danh từ",
+   "note": "\"Hữu\" trong \"tả hữu\". 右边 là bên phải.",
+   "ex": [
+    {
+     "cn": "银行在右边。",
+     "py": "Yínháng zài yòubian.",
+     "vi": "Ngân hàng ở bên phải."
+    }
+   ]
+  },
+  {
+   "w": "门口",
+   "py": "ménkǒu",
+   "hv": "môn khẩu",
+   "vi": "cổng, trước cửa",
+   "pos": "danh từ",
+   "note": "门 (cửa) + 口 (miệng, lối vào).",
+   "ex": [
+    {
+     "cn": "我在学校门口等你。",
+     "py": "Wǒ zài xuéxiào ménkǒu děng nǐ.",
+     "vi": "Tôi đợi bạn ở cổng trường."
+    }
+   ]
+  },
+  {
+   "w": "路上",
+   "py": "lùshang",
+   "hv": "lộ thượng",
+   "vi": "trên đường, dọc đường",
+   "pos": "danh từ",
+   "note": "Nói khi đang di chuyển: 我在路上 (tôi đang trên đường tới).",
+   "ex": [
+    {
+     "cn": "别急，我在路上了。",
+     "py": "Bié jí, wǒ zài lùshang le.",
+     "vi": "Đừng vội, tôi đang trên đường rồi."
+    }
+   ]
+  },
+  {
+   "w": "网上",
+   "py": "wǎngshang",
+   "hv": "võng thượng",
+   "vi": "trên mạng",
+   "pos": "danh từ",
+   "note": "网 = \"võng\" (lưới), nghĩa mới là mạng internet.",
+   "ex": [
+    {
+     "cn": "我在网上买了一本书。",
+     "py": "Wǒ zài wǎngshang mǎi le yì běn shū.",
+     "vi": "Tôi đã mua một cuốn sách trên mạng."
+    }
+   ]
+  },
+  {
+   "w": "商场",
+   "py": "shāngchǎng",
+   "hv": "thương trường",
+   "vi": "trung tâm thương mại",
+   "pos": "danh từ",
+   "note": "Chính là \"thương trường\" nhưng nghĩa cụ thể là toà nhà mua sắm lớn.",
+   "ex": [
+    {
+     "cn": "周末商场里人很多。",
+     "py": "Zhōumò shāngchǎng lǐ rén hěn duō.",
+     "vi": "Cuối tuần trong trung tâm thương mại rất đông."
+    }
+   ]
+  },
+  {
+   "w": "药店",
+   "py": "yàodiàn",
+   "hv": "dược điếm",
+   "vi": "hiệu thuốc",
+   "pos": "danh từ",
+   "note": "药 (thuốc, \"dược\") + 店.",
+   "ex": [
+    {
+     "cn": "前面有一家药店。",
+     "py": "Qiánmian yǒu yì jiā yàodiàn.",
+     "vi": "Phía trước có một hiệu thuốc."
+    }
+   ]
+  },
+  {
+   "w": "酒店",
+   "py": "jiǔdiàn",
+   "hv": "tửu điếm",
+   "vi": "khách sạn",
+   "pos": "danh từ",
+   "note": "Nghĩa gốc là quán rượu, nay chủ yếu là khách sạn.",
+   "ex": [
+    {
+     "cn": "我们住在这家酒店。",
+     "py": "Wǒmen zhù zài zhè jiā jiǔdiàn.",
+     "vi": "Chúng tôi ở khách sạn này."
+    }
+   ]
+  },
+  {
+   "w": "床",
+   "py": "chuáng",
+   "hv": "sàng",
+   "vi": "cái giường",
+   "pos": "danh từ",
+   "note": "\"Sàng\" trong \"long sàng\" (giường vua). 起床 là rời giường.",
+   "ex": [
+    {
+     "cn": "我的床很舒服。",
+     "py": "Wǒ de chuáng hěn shūfu.",
+     "vi": "Giường của tôi rất êm."
+    }
+   ]
+  },
+  {
+   "w": "间",
+   "py": "jiān",
+   "hv": "gian",
+   "vi": "gian, phòng (lượng từ)",
+   "pos": "lượng từ",
+   "note": "\"Gian\" trong \"không gian\", \"gian phòng\". Đếm phòng: 一间房间.",
+   "ex": [
+    {
+     "cn": "这个房子有三间房间。",
+     "py": "Zhège fángzi yǒu sān jiān fángjiān.",
+     "vi": "Căn nhà này có ba phòng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "往 + phương hướng + động từ",
+   "b": "往左走 · 往右拐 · 往前走",
+   "d": "Chỉ đường: 往 nghĩa là \"về phía\". Câu chỉ đường điển hình: 一直往前走，然后往右拐.",
+   "ex": [
+    {
+     "cn": "一直往前走，然后往左拐。",
+     "py": "Yìzhí wǎng qián zǒu, ránhòu wǎng zuǒ guǎi.",
+     "vi": "Đi thẳng về phía trước, rồi rẽ trái."
+    },
+    {
+     "cn": "药店在路的右边。",
+     "py": "Yàodiàn zài lù de yòubian.",
+     "vi": "Hiệu thuốc ở bên phải đường."
+    }
+   ]
+  },
+  {
+   "t": "在 + nơi chốn + động từ",
+   "b": "在网上买 · 在门口等 · 在路上吃",
+   "d": "Nơi diễn ra hành động đứng TRƯỚC động từ, với 在.",
+   "ex": [
+    {
+     "cn": "我们在门口见吧。",
+     "py": "Wǒmen zài ménkǒu jiàn ba.",
+     "vi": "Mình gặp nhau ở cổng nhé."
+    },
+    {
+     "cn": "他在路上吃早饭。",
+     "py": "Tā zài lùshang chī zǎofàn.",
+     "vi": "Anh ấy ăn sáng trên đường đi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "请问，商场怎么走？",
+   "py": "Qǐngwèn, shāngchǎng zěnme zǒu?",
+   "vi": "Cho hỏi, đến trung tâm thương mại đi thế nào?"
+  },
+  {
+   "cn": "酒店的房间很大，床也很大。",
+   "py": "Jiǔdiàn de fángjiān hěn dà, chuáng yě hěn dà.",
+   "vi": "Phòng khách sạn rất rộng, giường cũng rất to."
+  },
+  {
+   "cn": "现在很多人在网上买东西。",
+   "py": "Xiànzài hěn duō rén zài wǎngshang mǎi dōngxi.",
+   "vi": "Bây giờ rất nhiều người mua đồ trên mạng."
+  },
+  {
+   "cn": "左边是药店，右边是书店。",
+   "py": "Zuǒbian shì yàodiàn, yòubian shì shūdiàn.",
+   "vi": "Bên trái là hiệu thuốc, bên phải là hiệu sách."
+  },
+  {
+   "cn": "我已经在路上了，十分钟到。",
+   "py": "Wǒ yǐjīng zài lùshang le, shí fēnzhōng dào.",
+   "vi": "Tôi đang trên đường rồi, mười phút nữa tới."
+  }
+ ]
+}

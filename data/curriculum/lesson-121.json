@@ -1,0 +1,221 @@
+{
+ "id": 121,
+ "cn": "今天和明年",
+ "title": "Ngày, năm, sớm, muộn",
+ "goal": "Nói về ngày tháng năm, buổi trong ngày, và nói sớm muộn, một nửa, một chút.",
+ "words": [
+  {
+   "w": "天",
+   "py": "tiān",
+   "hv": "thiên",
+   "vi": "ngày; trời",
+   "pos": "danh từ",
+   "note": "Vừa là \"trời\" vừa là \"ngày\": 今天, 三天. Cũng làm lượng từ: 一天 (một ngày).",
+   "ex": [
+    {
+     "cn": "我学了三天汉语。",
+     "py": "Wǒ xué le sān tiān Hànyǔ.",
+     "vi": "Tôi đã học tiếng Trung ba ngày."
+    }
+   ]
+  },
+  {
+   "w": "白天",
+   "py": "báitiān",
+   "hv": "bạch thiên",
+   "vi": "ban ngày",
+   "pos": "danh từ",
+   "note": "白 (trắng, sáng) + 天 (ngày) = lúc trời sáng.",
+   "ex": [
+    {
+     "cn": "白天我工作，晚上我学习。",
+     "py": "Báitiān wǒ gōngzuò, wǎnshang wǒ xuéxí.",
+     "vi": "Ban ngày tôi làm việc, buổi tối tôi học."
+    }
+   ]
+  },
+  {
+   "w": "今年",
+   "py": "jīnnián",
+   "hv": "kim niên",
+   "vi": "năm nay",
+   "pos": "danh từ",
+   "note": "今 = \"kim\" trong \"kim cổ\", \"hiện kim\": bây giờ. 今天 hôm nay, 今年 năm nay.",
+   "ex": [
+    {
+     "cn": "我今年二十岁。",
+     "py": "Wǒ jīnnián èrshí suì.",
+     "vi": "Năm nay tôi hai mươi tuổi."
+    }
+   ]
+  },
+  {
+   "w": "明年",
+   "py": "míngnián",
+   "hv": "minh niên",
+   "vi": "năm sau",
+   "pos": "danh từ",
+   "note": "Giống 明天 (ngày mai): 明 ở đây nghĩa là \"kế tiếp\".",
+   "ex": [
+    {
+     "cn": "明年我想去中国。",
+     "py": "Míngnián wǒ xiǎng qù Zhōngguó.",
+     "vi": "Năm sau tôi muốn đi Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "星期天",
+   "py": "xīngqītiān",
+   "hv": "tinh kỳ thiên",
+   "vi": "Chủ nhật",
+   "pos": "danh từ",
+   "note": "Thứ Hai đến thứ Bảy là 星期一 đến 星期六. Chủ nhật không phải \"星期七\" mà là 星期天.",
+   "ex": [
+    {
+     "cn": "星期天我不上班。",
+     "py": "Xīngqītiān wǒ bú shàngbān.",
+     "vi": "Chủ nhật tôi không đi làm."
+    }
+   ]
+  },
+  {
+   "w": "星期日",
+   "py": "xīngqīrì",
+   "hv": "tinh kỳ nhật",
+   "vi": "Chủ nhật",
+   "pos": "danh từ",
+   "note": "Cùng nghĩa với 星期天 nhưng trang trọng hơn, hay gặp trên lịch và văn bản.",
+   "ex": [
+    {
+     "cn": "星期日商店也开门。",
+     "py": "Xīngqīrì shāngdiàn yě kāimén.",
+     "vi": "Chủ nhật cửa hàng cũng mở cửa."
+    }
+   ]
+  },
+  {
+   "w": "早",
+   "py": "zǎo",
+   "hv": "tảo",
+   "vi": "sớm; chào buổi sáng",
+   "pos": "tính từ",
+   "note": "Chữ 日 (mặt trời) trên 十: mặt trời vừa lên. Gặp nhau buổi sáng có thể chỉ nói 早！",
+   "ex": [
+    {
+     "cn": "你早！今天你来得很早。",
+     "py": "Nǐ zǎo! Jīntiān nǐ lái de hěn zǎo.",
+     "vi": "Chào buổi sáng! Hôm nay bạn đến sớm thế."
+    }
+   ]
+  },
+  {
+   "w": "晚",
+   "py": "wǎn",
+   "hv": "vãn",
+   "vi": "muộn; buổi tối",
+   "pos": "tính từ",
+   "note": "\"Vãn\" trong \"vãn hồi\", \"vãn bối\". Đối lập với 早.",
+   "ex": [
+    {
+     "cn": "对不起，我来晚了。",
+     "py": "Duìbuqǐ, wǒ lái wǎn le.",
+     "vi": "Xin lỗi, tôi đến muộn."
+    }
+   ]
+  },
+  {
+   "w": "一半",
+   "py": "yíbàn",
+   "hv": "nhất bán",
+   "vi": "một nửa",
+   "pos": "số từ",
+   "note": "半 = \"bán\" trong \"bán cầu\", \"bán kết\".",
+   "ex": [
+    {
+     "cn": "这个西瓜，我们一人一半。",
+     "py": "Zhège xīguā, wǒmen yì rén yíbàn.",
+     "vi": "Quả dưa hấu này, mỗi người một nửa."
+    }
+   ]
+  },
+  {
+   "w": "一下",
+   "py": "yíxià",
+   "hv": "nhất hạ",
+   "vi": "một chút, một lát",
+   "pos": "số lượng từ",
+   "note": "Đặt sau động từ để câu mềm và lịch sự hơn: 等一下 (đợi chút), 看一下 (xem qua).",
+   "ex": [
+    {
+     "cn": "请等一下。",
+     "py": "Qǐng děng yíxià.",
+     "vi": "Xin đợi một chút."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Thời gian đứng trước động từ",
+   "b": "Chủ ngữ + thời gian + động từ · Thời gian + chủ ngữ + động từ",
+   "d": "Mốc thời gian (今年, 明天, 白天…) luôn đứng TRƯỚC động từ, không đặt cuối câu như tiếng Việt hay nói \"tôi đi Trung Quốc năm sau\".",
+   "ex": [
+    {
+     "cn": "我明年去中国。",
+     "py": "Wǒ míngnián qù Zhōngguó.",
+     "vi": "Năm sau tôi đi Trung Quốc."
+    },
+    {
+     "cn": "星期天我们去公园吧。",
+     "py": "Xīngqītiān wǒmen qù gōngyuán ba.",
+     "vi": "Chủ nhật mình đi công viên nhé."
+    }
+   ]
+  },
+  {
+   "t": "Động từ + 一下",
+   "b": "看一下 · 等一下 · 试一下",
+   "d": "Làm việc gì đó trong thời gian ngắn hoặc nói cho nhẹ nhàng. Hai thanh 4 đi liền nên 一 đọc thanh 2: yíxià.",
+   "ex": [
+    {
+     "cn": "你看一下这个。",
+     "py": "Nǐ kàn yíxià zhège.",
+     "vi": "Bạn xem qua cái này nhé."
+    },
+    {
+     "cn": "我们休息一下吧。",
+     "py": "Wǒmen xiūxi yíxià ba.",
+     "vi": "Chúng ta nghỉ một lát đi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "你今年多大？",
+   "py": "Nǐ jīnnián duō dà?",
+   "vi": "Năm nay bạn bao nhiêu tuổi?"
+  },
+  {
+   "cn": "我每天早上六点起床，很早。",
+   "py": "Wǒ měi tiān zǎoshang liù diǎn qǐchuáng, hěn zǎo.",
+   "vi": "Sáng nào tôi cũng dậy lúc sáu giờ, rất sớm."
+  },
+  {
+   "cn": "太晚了，我们回家吧。",
+   "py": "Tài wǎn le, wǒmen huí jiā ba.",
+   "vi": "Muộn quá rồi, mình về nhà thôi."
+  },
+  {
+   "cn": "这本书我看了一半。",
+   "py": "Zhè běn shū wǒ kàn le yíbàn.",
+   "vi": "Cuốn sách này tôi đọc được một nửa."
+  },
+  {
+   "cn": "星期天你有时间吗？",
+   "py": "Xīngqītiān nǐ yǒu shíjiān ma?",
+   "vi": "Chủ nhật bạn có thời gian không?"
+  }
+ ]
+}

@@ -10,6 +10,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import { applyAll as applyPatches } from './apply-patches.mjs';
 import { buildStories } from './build-stories.mjs';
+import { buildCurriculum } from './build-curriculum.mjs';
 
 const SRC = path.resolve(process.argv[2] || '../_src');
 const ROOT = process.cwd();
@@ -517,5 +518,6 @@ console.log(perStory);
 
 /* Dựng lại bài đọc bằng cùng công cụ với tools/build-stories.mjs (hỗ trợ phần "Điều rút ra"),
    rồi áp các bản sửa trong data-src/patches/ (lỗi Hán Việt, phiên âm, từ bổ sung) */
+buildCurriculum({ quiet: true });
 buildStories({ quiet: true });
 applyPatches();

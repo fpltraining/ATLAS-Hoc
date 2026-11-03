@@ -1,0 +1,221 @@
+{
+ "id": 125,
+ "cn": "坐火车",
+ "title": "Xe, điện thoại, ca hát",
+ "goal": "Nói về đi xe, lái xe, tan làm, gọi điện, nghe thấy, gặp nhau, và hát.",
+ "words": [
+  {
+   "w": "车",
+   "py": "chē",
+   "hv": "xa",
+   "vi": "xe",
+   "pos": "danh từ",
+   "note": "Chữ tượng hình: nhìn từ trên xuống thấy bánh xe và trục. \"Xa\" trong \"xa lộ\" là chữ này.",
+   "ex": [
+    {
+     "cn": "我的车是红色的。",
+     "py": "Wǒ de chē shì hóngsè de.",
+     "vi": "Xe của tôi màu đỏ."
+    }
+   ]
+  },
+  {
+   "w": "火车",
+   "py": "huǒchē",
+   "hv": "hoả xa",
+   "vi": "tàu hoả",
+   "pos": "danh từ",
+   "note": "Chính là \"hoả xa\": xe chạy bằng lửa, vì tàu xưa chạy bằng hơi nước đốt than.",
+   "ex": [
+    {
+     "cn": "我们坐火车去上海。",
+     "py": "Wǒmen zuò huǒchē qù Shànghǎi.",
+     "vi": "Chúng tôi đi tàu hoả đến Thượng Hải."
+    }
+   ]
+  },
+  {
+   "w": "开车",
+   "py": "kāichē",
+   "hv": "khai xa",
+   "vi": "lái xe",
+   "pos": "động từ",
+   "note": "开 = mở, vận hành. Lái ô tô dùng 开车, đi xe đạp thì dùng 骑.",
+   "ex": [
+    {
+     "cn": "我爸爸开车上班。",
+     "py": "Wǒ bàba kāichē shàngbān.",
+     "vi": "Bố tôi lái xe đi làm."
+    }
+   ]
+  },
+  {
+   "w": "下班",
+   "py": "xiàbān",
+   "hv": "hạ ban",
+   "vi": "tan làm",
+   "pos": "động từ",
+   "note": "班 = ca làm. 上班 đi làm, 下班 tan làm.",
+   "ex": [
+    {
+     "cn": "你几点下班？",
+     "py": "Nǐ jǐ diǎn xiàbān?",
+     "vi": "Mấy giờ bạn tan làm?"
+    }
+   ]
+  },
+  {
+   "w": "电话",
+   "py": "diànhuà",
+   "hv": "điện thoại",
+   "vi": "điện thoại; cuộc gọi",
+   "pos": "danh từ",
+   "note": "Chính là \"điện thoại\". Gọi điện là 打电话.",
+   "ex": [
+    {
+     "cn": "我给妈妈打电话。",
+     "py": "Wǒ gěi māma dǎ diànhuà.",
+     "vi": "Tôi gọi điện cho mẹ."
+    }
+   ]
+  },
+  {
+   "w": "见",
+   "py": "jiàn",
+   "hv": "kiến",
+   "vi": "gặp; thấy",
+   "pos": "động từ",
+   "note": "\"Kiến\" trong \"kiến thức\", \"hội kiến\". Đã gặp trong 再见.",
+   "ex": [
+    {
+     "cn": "明天见！",
+     "py": "Míngtiān jiàn!",
+     "vi": "Mai gặp nhé!"
+    }
+   ]
+  },
+  {
+   "w": "听见",
+   "py": "tīngjiàn",
+   "hv": "thính kiến",
+   "vi": "nghe thấy",
+   "pos": "động từ",
+   "note": "听 là nghe (hành động), 听见 là nghe THẤY (có kết quả). Giống 看 và 看见.",
+   "ex": [
+    {
+     "cn": "你听见了吗？",
+     "py": "Nǐ tīngjiàn le ma?",
+     "vi": "Bạn có nghe thấy không?"
+    }
+   ]
+  },
+  {
+   "w": "唱",
+   "py": "chàng",
+   "hv": "xướng",
+   "vi": "hát",
+   "pos": "động từ",
+   "note": "\"Xướng\" trong \"đề xướng\", \"xướng ca\". Có bộ 口 (miệng).",
+   "ex": [
+    {
+     "cn": "她唱得很好。",
+     "py": "Tā chàng de hěn hǎo.",
+     "vi": "Cô ấy hát rất hay."
+    }
+   ]
+  },
+  {
+   "w": "歌",
+   "py": "gē",
+   "hv": "ca",
+   "vi": "bài hát",
+   "pos": "danh từ",
+   "note": "\"Ca\" trong \"ca sĩ\", \"ca khúc\". Hát là 唱歌.",
+   "ex": [
+    {
+     "cn": "我们一起唱歌吧。",
+     "py": "Wǒmen yìqǐ chànggē ba.",
+     "vi": "Chúng mình cùng hát nhé."
+    }
+   ]
+  },
+  {
+   "w": "好听",
+   "py": "hǎotīng",
+   "hv": "hảo thính",
+   "vi": "hay, dễ nghe",
+   "pos": "tính từ",
+   "note": "好 + 听: nghe thấy hay. Dùng cho bài hát, giọng nói, cái tên.",
+   "ex": [
+    {
+     "cn": "这首歌很好听。",
+     "py": "Zhè shǒu gē hěn hǎotīng.",
+     "vi": "Bài hát này rất hay."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "看 / 听 + 见: có kết quả",
+   "b": "看 → 看见 · 听 → 听见",
+   "d": "看, 听 chỉ là hành động. Thêm 见 thì nghĩa là đã thấy, đã nghe được. Phủ định dùng 没: 没听见 (không nghe thấy).",
+   "ex": [
+    {
+     "cn": "我看了，可是没看见他。",
+     "py": "Wǒ kàn le, kěshì méi kànjiàn tā.",
+     "vi": "Tôi đã nhìn, nhưng không thấy anh ấy."
+    },
+    {
+     "cn": "对不起，我没听见。",
+     "py": "Duìbuqǐ, wǒ méi tīngjiàn.",
+     "vi": "Xin lỗi, tôi không nghe thấy."
+    }
+   ]
+  },
+  {
+   "t": "给 + người + 打电话",
+   "b": "Chủ ngữ + 给 + người + 打电话",
+   "d": "Tiếng Trung đặt người nhận lên trước động từ bằng 给, không nói 打电话给 trong câu đơn giản.",
+   "ex": [
+    {
+     "cn": "晚上我给你打电话。",
+     "py": "Wǎnshang wǒ gěi nǐ dǎ diànhuà.",
+     "vi": "Tối tôi gọi điện cho bạn."
+    },
+    {
+     "cn": "你给他打电话了吗？",
+     "py": "Nǐ gěi tā dǎ diànhuà le ma?",
+     "vi": "Bạn gọi cho anh ấy chưa?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我下班以后坐火车回家。",
+   "py": "Wǒ xiàbān yǐhòu zuò huǒchē huí jiā.",
+   "vi": "Tan làm tôi đi tàu hoả về nhà."
+  },
+  {
+   "cn": "你会开车吗？",
+   "py": "Nǐ huì kāichē ma?",
+   "vi": "Bạn biết lái xe không?"
+  },
+  {
+   "cn": "我很喜欢唱中国歌。",
+   "py": "Wǒ hěn xǐhuan chàng Zhōngguó gē.",
+   "vi": "Tôi rất thích hát bài hát tiếng Trung."
+  },
+  {
+   "cn": "我听见有人叫我。",
+   "py": "Wǒ tīngjiàn yǒu rén jiào wǒ.",
+   "vi": "Tôi nghe thấy có người gọi tôi."
+  },
+  {
+   "cn": "好的，明天见！",
+   "py": "Hǎo de, míngtiān jiàn!",
+   "vi": "Được rồi, mai gặp nhé!"
+  }
+ ]
+}

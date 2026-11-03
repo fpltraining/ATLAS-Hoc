@@ -1,0 +1,191 @@
+{
+ "id": 130,
+ "cn": "红茶还是绿茶？",
+ "title": "Màu sắc và đồ uống",
+ "goal": "Gọi tên màu bằng 色, chọn đồ uống trà đỏ, trà xanh, trà sữa, và nói về món thịt.",
+ "words": [
+  {
+   "w": "红色",
+   "py": "hóngsè",
+   "hv": "hồng sắc",
+   "vi": "màu đỏ",
+   "pos": "danh từ",
+   "note": "红 là đỏ (không phải hồng như tiếng Việt). Màu hồng là 粉色. 色 = \"sắc\" trong \"màu sắc\".",
+   "ex": [
+    {
+     "cn": "我喜欢红色。",
+     "py": "Wǒ xǐhuan hóngsè.",
+     "vi": "Tôi thích màu đỏ."
+    }
+   ]
+  },
+  {
+   "w": "白色",
+   "py": "báisè",
+   "hv": "bạch sắc",
+   "vi": "màu trắng",
+   "pos": "danh từ",
+   "note": "白 = \"bạch\" trong \"bạch tuyết\".",
+   "ex": [
+    {
+     "cn": "她穿了一件白色的衣服。",
+     "py": "Tā chuān le yí jiàn báisè de yīfu.",
+     "vi": "Cô ấy mặc một bộ đồ màu trắng."
+    }
+   ]
+  },
+  {
+   "w": "黑色",
+   "py": "hēisè",
+   "hv": "hắc sắc",
+   "vi": "màu đen",
+   "pos": "danh từ",
+   "note": "黑 = \"hắc\" trong \"hắc ám\".",
+   "ex": [
+    {
+     "cn": "我的手机是黑色的。",
+     "py": "Wǒ de shǒujī shì hēisè de.",
+     "vi": "Điện thoại của tôi màu đen."
+    }
+   ]
+  },
+  {
+   "w": "绿色",
+   "py": "lǜsè",
+   "hv": "lục sắc",
+   "vi": "màu xanh lá",
+   "pos": "danh từ",
+   "note": "绿 = \"lục\" trong \"lục diệp\" (lá xanh). Xanh da trời là 蓝色.",
+   "ex": [
+    {
+     "cn": "春天到了，到处都是绿色。",
+     "py": "Chūntiān dào le, dàochù dōu shì lǜsè.",
+     "vi": "Mùa xuân đến, khắp nơi đều xanh."
+    }
+   ]
+  },
+  {
+   "w": "红茶",
+   "py": "hóngchá",
+   "hv": "hồng trà",
+   "vi": "trà đen",
+   "pos": "danh từ",
+   "note": "Chú ý: tiếng Anh gọi là \"black tea\" theo màu lá, tiếng Trung gọi 红茶 theo màu nước đỏ.",
+   "ex": [
+    {
+     "cn": "我要一杯红茶。",
+     "py": "Wǒ yào yì bēi hóngchá.",
+     "vi": "Tôi muốn một cốc trà đen."
+    }
+   ]
+  },
+  {
+   "w": "绿茶",
+   "py": "lǜchá",
+   "hv": "lục trà",
+   "vi": "trà xanh",
+   "pos": "danh từ",
+   "note": "Trà xanh của Việt Nam cũng là 绿茶.",
+   "ex": [
+    {
+     "cn": "越南人很喜欢喝绿茶。",
+     "py": "Yuènán rén hěn xǐhuan hē lǜchá.",
+     "vi": "Người Việt rất thích uống trà xanh."
+    }
+   ]
+  },
+  {
+   "w": "奶茶",
+   "py": "nǎichá",
+   "hv": "nãi trà",
+   "vi": "trà sữa",
+   "pos": "danh từ",
+   "note": "奶 (sữa) + 茶 (trà).",
+   "ex": [
+    {
+     "cn": "我们去喝奶茶吧！",
+     "py": "Wǒmen qù hē nǎichá ba!",
+     "vi": "Mình đi uống trà sữa đi!"
+    }
+   ]
+  },
+  {
+   "w": "肉",
+   "py": "ròu",
+   "hv": "nhục",
+   "vi": "thịt",
+   "pos": "danh từ",
+   "note": "\"Nhục\" trong \"nhục thể\". Thịt lợn 猪肉, thịt bò 牛肉, thịt gà 鸡肉.",
+   "ex": [
+    {
+     "cn": "我不吃肉，我吃菜。",
+     "py": "Wǒ bù chī ròu, wǒ chī cài.",
+     "vi": "Tôi không ăn thịt, tôi ăn rau."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Màu + 的 + danh từ",
+   "b": "红色的衣服 · 黑色的车",
+   "d": "Màu sắc đứng trước danh từ, thường có 的. Nói ngắn có thể bỏ 色: 红衣服, 白车.",
+   "ex": [
+    {
+     "cn": "我想买一辆白色的车。",
+     "py": "Wǒ xiǎng mǎi yí liàng báisè de chē.",
+     "vi": "Tôi muốn mua một chiếc xe màu trắng."
+    },
+    {
+     "cn": "那件黑色的衣服是谁的？",
+     "py": "Nà jiàn hēisè de yīfu shì shéi de?",
+     "vi": "Bộ đồ màu đen kia là của ai?"
+    }
+   ]
+  },
+  {
+   "t": "A 还是 B: hỏi chọn một",
+   "b": "Động từ + A + 还是 + B？",
+   "d": "Câu hỏi lựa chọn dùng 还是, không thêm 吗 ở cuối.",
+   "ex": [
+    {
+     "cn": "你喝红茶还是绿茶？",
+     "py": "Nǐ hē hóngchá háishi lǜchá?",
+     "vi": "Bạn uống trà đen hay trà xanh?"
+    },
+    {
+     "cn": "你喜欢红色还是白色？",
+     "py": "Nǐ xǐhuan hóngsè háishi báisè?",
+     "vi": "Bạn thích màu đỏ hay màu trắng?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "服务员，我要一杯奶茶。",
+   "py": "Fúwùyuán, wǒ yào yì bēi nǎichá.",
+   "vi": "Phục vụ ơi, cho tôi một cốc trà sữa."
+  },
+  {
+   "cn": "中国人结婚的时候喜欢红色。",
+   "py": "Zhōngguó rén jiéhūn de shíhou xǐhuan hóngsè.",
+   "vi": "Người Trung Quốc thích màu đỏ trong đám cưới."
+  },
+  {
+   "cn": "这个菜里有很多肉。",
+   "py": "Zhège cài lǐ yǒu hěn duō ròu.",
+   "vi": "Món này có nhiều thịt."
+  },
+  {
+   "cn": "白色和黑色，你要哪个？",
+   "py": "Báisè hé hēisè, nǐ yào nǎge?",
+   "vi": "Trắng và đen, bạn lấy cái nào?"
+  },
+  {
+   "cn": "早上喝一杯绿茶很舒服。",
+   "py": "Zǎoshang hē yì bēi lǜchá hěn shūfu.",
+   "vi": "Buổi sáng uống một cốc trà xanh rất dễ chịu."
+  }
+ ]
+}

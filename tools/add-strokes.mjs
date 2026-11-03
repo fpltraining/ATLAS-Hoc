@@ -16,13 +16,21 @@ if (!pkg) { console.error('Thiếu đường dẫn tới thư mục package củ
 const extraF = path.join(ROOT, 'data-src', 'strokes-extra.json');
 const extra = JSON.parse(fs.readFileSync(extraF, 'utf8'));
 const index = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'strokes', 'index.json'), 'utf8'));
-const dir = path.join(ROOT, 'data-src', 'stories');
 const chars = new Set();
+const addFrom = (s) => { for (const c of s) if (/[一-鿿]/u.test(c)) chars.add(c); };
+// Bài đọc: cột đầu của dòng nội dung và dòng "!"
+const dir = path.join(ROOT, 'data-src', 'stories');
 for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.txt'))) {
   for (const line of fs.readFileSync(path.join(dir, f), 'utf8').split(/\r?\n/)) {
-    if (/^[^@#?~>]/.test(line.trim()) || line.trim().startsWith('!')) {
-      const first = line.replace(/^!/, '').split(' | ')[0];
-      for (const c of first) if (/[一-鿿]/u.test(c)) chars.add(c);
+    if (/^[^@#?~>]/.test(line.trim()) || line.trim().startsWith('!')) addFrom(line.replace(/^!/, '').split(' | ')[0]);
+  }
+}
+// Bài bổ sung chuẩn 2025: cột đầu của dòng W, E, S
+const cdir = path.join(ROOT, 'data-src', 'curriculum-2025');
+if (fs.existsSync(cdir)) {
+  for (const f of fs.readdirSync(cdir).filter((x) => x.endsWith('.txt'))) {
+    for (const line of fs.readFileSync(path.join(cdir, f), 'utf8').split(/\r?\n/)) {
+      if (/^[WES] /.test(line.trim())) addFrom(line.trim().slice(2).split(' | ')[0]);
     }
   }
 }

@@ -23,7 +23,7 @@ export async function render() {
 
   /* ---- bài đang học ---- */
   el.append(h('div.card.today-hero',
-    h('div.small.hero-sub', `HSK ${next.level} · bài ${next.id}/${idx.lessons.length}`),
+    h('div.small.hero-sub', `HSK ${next.level} · bài ${next.no ?? next.id}/${idx.lessons.length}`),
     h('h1.today-title', next.title),
     h('div.cn.hero-cn', next.cn),
     h('div', { style: { marginTop: '12px' } }, progressBar(doneCount / idx.lessons.length)),
@@ -56,7 +56,7 @@ export async function render() {
         href: `#/lesson/${l.id}`,
         style: { padding: '12px 0', borderBottom: '1px solid var(--line)' },
       },
-        h('div.lesson-no', p.done ? '✓' : String(l.id)),
+        h('div.lesson-no', p.done ? '✓' : String(l.no ?? l.id)),
         h('div.grow',
           h('div.row', { style: { gap: '7px' } }, h('b', l.title), h('span.cn.faint', { style: { fontSize: '14px' } }, l.cn)),
           h('div.small.faint', `${l.wordCount} từ · ${plural(l.newChars.length, 'chữ mới')}`),
@@ -66,7 +66,7 @@ export async function render() {
     }
     const open = inLevel.some((l) => l.id === next.id);
     el.append(h('details.card.fold', { open },
-      h('summary', h('b', `HSK ${lv}`), h('span.small.faint', ` · ${doneHere}/${inLevel.length} bài · ${inLevel.reduce((s, l) => s + l.wordCount, 0)} từ`)),
+      h('summary', h('b', `HSK ${lv}`), h('span.small.faint', ' (chuẩn 2025)'), h('span.small.faint', ` · ${doneHere}/${inLevel.length} bài · ${inLevel.reduce((s, l) => s + l.wordCount, 0)} từ`)),
       list,
     ));
   }

@@ -1,0 +1,221 @@
+{
+ "id": 123,
+ "cn": "上学和上课",
+ "title": "Đi học",
+ "goal": "Nói về đi học, vào lớp, tan học, và các cấp trường từ tiểu học tới đại học.",
+ "words": [
+  {
+   "w": "学",
+   "py": "xué",
+   "hv": "học",
+   "vi": "học",
+   "pos": "động từ",
+   "note": "\"Học\" trong \"học sinh\". Đi một mình nghĩa như 学习 nhưng gọn hơn: 学汉语, 学开车.",
+   "ex": [
+    {
+     "cn": "我在学汉语。",
+     "py": "Wǒ zài xué Hànyǔ.",
+     "vi": "Tôi đang học tiếng Trung."
+    }
+   ]
+  },
+  {
+   "w": "上学",
+   "py": "shàngxué",
+   "hv": "thượng học",
+   "vi": "đi học",
+   "pos": "động từ",
+   "note": "上 ở đây là \"đi tới\": 上学 (đến trường), 上班 (đi làm).",
+   "ex": [
+    {
+     "cn": "我弟弟每天走路上学。",
+     "py": "Wǒ dìdi měi tiān zǒulù shàngxué.",
+     "vi": "Em trai tôi ngày nào cũng đi bộ đến trường."
+    }
+   ]
+  },
+  {
+   "w": "上课",
+   "py": "shàngkè",
+   "hv": "thượng khoá",
+   "vi": "vào lớp, lên lớp",
+   "pos": "động từ",
+   "note": "课 = \"khoá\" trong \"khoá học\". Thầy dạy hay trò học đều dùng 上课.",
+   "ex": [
+    {
+     "cn": "我们八点上课。",
+     "py": "Wǒmen bā diǎn shàngkè.",
+     "vi": "Tám giờ chúng tôi vào học."
+    }
+   ]
+  },
+  {
+   "w": "下课",
+   "py": "xiàkè",
+   "hv": "hạ khoá",
+   "vi": "tan học, hết giờ",
+   "pos": "động từ",
+   "note": "上 là bắt đầu, 下 là kết thúc: 上课 / 下课, 上班 / 下班.",
+   "ex": [
+    {
+     "cn": "下课以后你去哪儿？",
+     "py": "Xiàkè yǐhòu nǐ qù nǎr?",
+     "vi": "Tan học bạn đi đâu?"
+    }
+   ]
+  },
+  {
+   "w": "小学",
+   "py": "xiǎoxué",
+   "hv": "tiểu học",
+   "vi": "trường tiểu học",
+   "pos": "danh từ",
+   "note": "Chính là \"tiểu học\" tiếng Việt.",
+   "ex": [
+    {
+     "cn": "我妹妹在上小学。",
+     "py": "Wǒ mèimei zài shàng xiǎoxué.",
+     "vi": "Em gái tôi đang học tiểu học."
+    }
+   ]
+  },
+  {
+   "w": "小学生",
+   "py": "xiǎoxuéshēng",
+   "hv": "tiểu học sinh",
+   "vi": "học sinh tiểu học",
+   "pos": "danh từ",
+   "note": "小学 + 生 (người học).",
+   "ex": [
+    {
+     "cn": "那些小学生很可爱。",
+     "py": "Nàxiē xiǎoxuéshēng hěn kě'ài.",
+     "vi": "Mấy em học sinh tiểu học kia rất đáng yêu."
+    }
+   ]
+  },
+  {
+   "w": "中学",
+   "py": "zhōngxué",
+   "hv": "trung học",
+   "vi": "trường trung học",
+   "pos": "danh từ",
+   "note": "Gồm cả cấp hai (初中) và cấp ba (高中).",
+   "ex": [
+    {
+     "cn": "他在一所中学当老师。",
+     "py": "Tā zài yì suǒ zhōngxué dāng lǎoshī.",
+     "vi": "Anh ấy làm giáo viên ở một trường trung học."
+    }
+   ]
+  },
+  {
+   "w": "中学生",
+   "py": "zhōngxuéshēng",
+   "hv": "trung học sinh",
+   "vi": "học sinh trung học",
+   "pos": "danh từ",
+   "note": "中学 + 生.",
+   "ex": [
+    {
+     "cn": "我是中学生。",
+     "py": "Wǒ shì zhōngxuéshēng.",
+     "vi": "Tôi là học sinh trung học."
+    }
+   ]
+  },
+  {
+   "w": "大学",
+   "py": "dàxué",
+   "hv": "đại học",
+   "vi": "trường đại học",
+   "pos": "danh từ",
+   "note": "Chính là \"đại học\". Đếm trường bằng 所: 一所大学.",
+   "ex": [
+    {
+     "cn": "你在哪个大学学习？",
+     "py": "Nǐ zài nǎge dàxué xuéxí?",
+     "vi": "Bạn học ở trường đại học nào?"
+    }
+   ]
+  },
+  {
+   "w": "大学生",
+   "py": "dàxuéshēng",
+   "hv": "đại học sinh",
+   "vi": "sinh viên đại học",
+   "pos": "danh từ",
+   "note": "Tiếng Việt nói \"sinh viên\", tiếng Trung nói 大学生.",
+   "ex": [
+    {
+     "cn": "我哥哥是大学生。",
+     "py": "Wǒ gēge shì dàxuéshēng.",
+     "vi": "Anh trai tôi là sinh viên."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "上 / 下 + danh từ: bắt đầu và kết thúc",
+   "b": "上学 · 上课 · 上班 / 下课 · 下班",
+   "d": "上 nghĩa là đi tới hoặc bắt đầu, 下 là rời đi hoặc kết thúc. Nhớ một cặp là nhớ được cả nhóm.",
+   "ex": [
+    {
+     "cn": "你几点下课？",
+     "py": "Nǐ jǐ diǎn xiàkè?",
+     "vi": "Mấy giờ bạn tan học?"
+    },
+    {
+     "cn": "我八点上课，十二点下课。",
+     "py": "Wǒ bā diǎn shàngkè, shí'èr diǎn xiàkè.",
+     "vi": "Tôi vào học lúc tám giờ, tan lúc mười hai giờ."
+    }
+   ]
+  },
+  {
+   "t": "上 + cấp học",
+   "b": "上小学 · 上中学 · 上大学",
+   "d": "Nói \"đang học cấp nào\" thì dùng 上 + tên cấp học, giống \"lên đại học\" của tiếng Việt.",
+   "ex": [
+    {
+     "cn": "她明年上大学。",
+     "py": "Tā míngnián shàng dàxué.",
+     "vi": "Năm sau cô ấy lên đại học."
+    },
+    {
+     "cn": "你孩子上小学了吗？",
+     "py": "Nǐ háizi shàng xiǎoxué le ma?",
+     "vi": "Con bạn đi học tiểu học chưa?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我每天七点半上学。",
+   "py": "Wǒ měi tiān qī diǎn bàn shàngxué.",
+   "vi": "Ngày nào tôi cũng đi học lúc bảy rưỡi."
+  },
+  {
+   "cn": "下课了，我们去吃饭吧。",
+   "py": "Xiàkè le, wǒmen qù chīfàn ba.",
+   "vi": "Tan học rồi, mình đi ăn thôi."
+  },
+  {
+   "cn": "他是北京大学的大学生。",
+   "py": "Tā shì Běijīng Dàxué de dàxuéshēng.",
+   "vi": "Anh ấy là sinh viên Đại học Bắc Kinh."
+  },
+  {
+   "cn": "中学生每天都很忙。",
+   "py": "Zhōngxuéshēng měi tiān dōu hěn máng.",
+   "vi": "Học sinh trung học ngày nào cũng rất bận."
+  },
+  {
+   "cn": "我想学开车。",
+   "py": "Wǒ xiǎng xué kāichē.",
+   "vi": "Tôi muốn học lái xe."
+  }
+ ]
+}

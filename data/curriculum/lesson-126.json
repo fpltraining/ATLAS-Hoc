@@ -1,0 +1,251 @@
+{
+ "id": 126,
+ "cn": "有点儿不舒服",
+ "title": "Vui chơi, ốm, mưa",
+ "goal": "Khen hay, đẹp, vui; nói có việc hay không có việc; nói hơi ốm, đi khám, ngủ, và trời mưa.",
+ "words": [
+  {
+   "w": "好看",
+   "py": "hǎokàn",
+   "hv": "hảo khán",
+   "vi": "đẹp, hay (để xem)",
+   "pos": "tính từ",
+   "note": "好 + 看: xem thấy hay. Dùng cho người, quần áo, phim ảnh.",
+   "ex": [
+    {
+     "cn": "这个电影很好看。",
+     "py": "Zhège diànyǐng hěn hǎokàn.",
+     "vi": "Bộ phim này rất hay."
+    }
+   ]
+  },
+  {
+   "w": "好玩儿",
+   "py": "hǎowánr",
+   "hv": "hảo ngoạn nhi",
+   "vi": "vui, thú vị (để chơi)",
+   "pos": "tính từ",
+   "note": "好 + 玩 (chơi). Nói về nơi chốn, trò chơi, hoạt động.",
+   "ex": [
+    {
+     "cn": "北京很好玩儿。",
+     "py": "Běijīng hěn hǎowánr.",
+     "vi": "Bắc Kinh chơi vui lắm."
+    }
+   ]
+  },
+  {
+   "w": "电影院",
+   "py": "diànyǐngyuàn",
+   "hv": "điện ảnh viện",
+   "vi": "rạp chiếu phim",
+   "pos": "danh từ",
+   "note": "电影 (điện ảnh) + 院 (viện): như 医院 (y viện, bệnh viện).",
+   "ex": [
+    {
+     "cn": "我们去电影院看电影吧。",
+     "py": "Wǒmen qù diànyǐngyuàn kàn diànyǐng ba.",
+     "vi": "Mình ra rạp xem phim đi."
+    }
+   ]
+  },
+  {
+   "w": "事",
+   "py": "shì",
+   "hv": "sự",
+   "vi": "việc, chuyện",
+   "pos": "danh từ",
+   "note": "\"Sự\" trong \"sự việc\", \"sự kiện\". Hỏi \"có chuyện gì không\" là 有事吗？",
+   "ex": [
+    {
+     "cn": "你找我有事吗？",
+     "py": "Nǐ zhǎo wǒ yǒu shì ma?",
+     "vi": "Bạn tìm tôi có việc gì không?"
+    }
+   ]
+  },
+  {
+   "w": "没事",
+   "py": "méishì",
+   "hv": "một sự",
+   "vi": "không sao; rảnh",
+   "pos": "động từ",
+   "note": "Hai nghĩa: \"không sao đâu\" (khi ai xin lỗi) và \"không có việc gì, đang rảnh\".",
+   "ex": [
+    {
+     "cn": "没事，没事，别担心。",
+     "py": "Méishì, méishì, bié dānxīn.",
+     "vi": "Không sao, không sao, đừng lo."
+    }
+   ]
+  },
+  {
+   "w": "有点儿",
+   "py": "yǒudiǎnr",
+   "hv": "hữu điểm nhi",
+   "vi": "hơi, có chút",
+   "pos": "phó từ",
+   "note": "Đứng trước tính từ, thường cho điều không vừa ý: 有点儿贵 (hơi đắt), 有点儿累 (hơi mệt).",
+   "ex": [
+    {
+     "cn": "今天有点儿冷。",
+     "py": "Jīntiān yǒudiǎnr lěng.",
+     "vi": "Hôm nay hơi lạnh."
+    }
+   ]
+  },
+  {
+   "w": "有些",
+   "py": "yǒuxiē",
+   "hv": "hữu ta",
+   "vi": "một số; hơi",
+   "pos": "đại từ",
+   "note": "Như 有的: 有些人 (một số người). Đứng trước tính từ thì giống 有点儿.",
+   "ex": [
+    {
+     "cn": "有些同学还没来。",
+     "py": "Yǒuxiē tóngxué hái méi lái.",
+     "vi": "Một số bạn vẫn chưa đến."
+    }
+   ]
+  },
+  {
+   "w": "病",
+   "py": "bìng",
+   "hv": "bệnh",
+   "vi": "bệnh; bị ốm",
+   "pos": "danh từ",
+   "note": "\"Bệnh\" tiếng Việt chính là chữ này. Bộ 疒 (bệnh) ở bên ngoài.",
+   "ex": [
+    {
+     "cn": "他病了，今天没来上课。",
+     "py": "Tā bìng le, jīntiān méi lái shàngkè.",
+     "vi": "Anh ấy ốm rồi, hôm nay không đến lớp."
+    }
+   ]
+  },
+  {
+   "w": "看病",
+   "py": "kànbìng",
+   "hv": "khán bệnh",
+   "vi": "đi khám bệnh; khám bệnh",
+   "pos": "động từ",
+   "note": "Bệnh nhân đi khám hay bác sĩ khám đều dùng 看病.",
+   "ex": [
+    {
+     "cn": "我下午去医院看病。",
+     "py": "Wǒ xiàwǔ qù yīyuàn kànbìng.",
+     "vi": "Chiều nay tôi đi bệnh viện khám."
+    }
+   ]
+  },
+  {
+   "w": "睡",
+   "py": "shuì",
+   "hv": "thuỵ",
+   "vi": "ngủ",
+   "pos": "động từ",
+   "note": "\"Thuỵ\" trong \"thuỵ miên\". Có bộ 目 (mắt). Đi một mình hay gặp trong 睡吧, 睡了.",
+   "ex": [
+    {
+     "cn": "太晚了，快睡吧。",
+     "py": "Tài wǎn le, kuài shuì ba.",
+     "vi": "Muộn quá rồi, ngủ nhanh đi."
+    }
+   ]
+  },
+  {
+   "w": "雨",
+   "py": "yǔ",
+   "hv": "vũ",
+   "vi": "mưa",
+   "pos": "danh từ",
+   "note": "Chữ tượng hình: những giọt mưa rơi dưới bầu trời. \"Vũ\" trong \"phong vũ\".",
+   "ex": [
+    {
+     "cn": "外边在下雨。",
+     "py": "Wàibian zài xià yǔ.",
+     "vi": "Bên ngoài đang mưa."
+    }
+   ]
+  },
+  {
+   "w": "不要",
+   "py": "búyào",
+   "hv": "bất yếu",
+   "vi": "đừng; không cần",
+   "pos": "phó từ",
+   "note": "Đứng trước động từ để khuyên ngăn: 不要说话 (đừng nói chuyện). Mạnh hơn 别 một chút.",
+   "ex": [
+    {
+     "cn": "不要在这里吃东西。",
+     "py": "Búyào zài zhèlǐ chī dōngxi.",
+     "vi": "Đừng ăn uống ở đây."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "有点儿 + tính từ",
+   "b": "有点儿 + 贵 / 累 / 冷",
+   "d": "Nói \"hơi…\" về điều không như ý. Nói điều tốt thì dùng 比较 hoặc 很, không dùng 有点儿: nói 有点儿贵 nhưng không nói 有点儿便宜.",
+   "ex": [
+    {
+     "cn": "这件衣服有点儿贵。",
+     "py": "Zhè jiàn yīfu yǒudiǎnr guì.",
+     "vi": "Bộ quần áo này hơi đắt."
+    },
+    {
+     "cn": "我有点儿累，想休息一下。",
+     "py": "Wǒ yǒudiǎnr lèi, xiǎng xiūxi yíxià.",
+     "vi": "Tôi hơi mệt, muốn nghỉ một lát."
+    }
+   ]
+  },
+  {
+   "t": "不要 + động từ: khuyên đừng làm",
+   "b": "不要 + động từ (+ 了)",
+   "d": "Dùng để nhắc nhở, cấm đoán. Trong biển báo, thông báo rất hay gặp.",
+   "ex": [
+    {
+     "cn": "不要哭了。",
+     "py": "Búyào kū le.",
+     "vi": "Đừng khóc nữa."
+    },
+    {
+     "cn": "下雨了，不要出去。",
+     "py": "Xià yǔ le, búyào chūqu.",
+     "vi": "Trời mưa rồi, đừng ra ngoài."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "你怎么了？有点儿不舒服吗？",
+   "py": "Nǐ zěnme le? Yǒudiǎnr bù shūfu ma?",
+   "vi": "Bạn sao thế? Hơi khó chịu à?"
+  },
+  {
+   "cn": "我病了，要去看病。",
+   "py": "Wǒ bìng le, yào qù kànbìng.",
+   "vi": "Tôi bị ốm, phải đi khám."
+  },
+  {
+   "cn": "下雨了，我们在家看电影吧。",
+   "py": "Xià yǔ le, wǒmen zài jiā kàn diànyǐng ba.",
+   "vi": "Trời mưa rồi, mình ở nhà xem phim nhé."
+  },
+  {
+   "cn": "你的衣服很好看。",
+   "py": "Nǐ de yīfu hěn hǎokàn.",
+   "vi": "Quần áo của bạn đẹp lắm."
+  },
+  {
+   "cn": "我昨天睡得很晚。",
+   "py": "Wǒ zuótiān shuì de hěn wǎn.",
+   "vi": "Hôm qua tôi ngủ rất muộn."
+  }
+ ]
+}

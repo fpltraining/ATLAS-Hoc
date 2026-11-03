@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v2';
+const VERSION = 'atlas-v3';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 
@@ -16,7 +16,7 @@ const CORE_FILES = [
   'js/pen/canvas.js', 'js/pen/brush.js', 'js/pen/grid.js', 'js/pen/grade.js', 'js/pen/sound.js', 'js/pen/inkpad.js',
   ...['home', 'en', 'zh', 'read', 'reader', 'lesson', 'write', 'review', 'radicals', 'pinyin', 'char', 'penen',
     'work', 'know', 'lib', 'drill', 'numbers', 'notes', 'book', 'stats', 'settings'].map((v) => `js/views/${v}.js`),
-  'data/curriculum/index.json', 'data/strokes/index.json', 'data/radicals.json',
+  'data/curriculum/index.json', 'data/hsk2025.json', 'data/strokes/index.json', 'data/radicals.json',
   'data/hanviet.json', 'data/decomp.json',
   'data/stories/index.json', 'data/en/course.json', 'data/en/dict.json', 'data/zh-dict.json',
   'data/work.json', 'data/know.json',

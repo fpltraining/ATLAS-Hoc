@@ -1,0 +1,221 @@
+{
+ "id": 132,
+ "cn": "踢足球",
+ "title": "Thể thao và cơ thể",
+ "goal": "Nói về đá bóng, chơi bóng rổ, chạy, bơi, và tay, đầu, cử động.",
+ "words": [
+  {
+   "w": "球",
+   "py": "qiú",
+   "hv": "cầu",
+   "vi": "quả bóng; bóng (môn chơi)",
+   "pos": "danh từ",
+   "note": "\"Cầu\" trong \"địa cầu\", \"bóng đá\" tiếng Việt cũ là \"túc cầu\".",
+   "ex": [
+    {
+     "cn": "我们去打球吧。",
+     "py": "Wǒmen qù dǎ qiú ba.",
+     "vi": "Mình đi chơi bóng nhé."
+    }
+   ]
+  },
+  {
+   "w": "足球",
+   "py": "zúqiú",
+   "hv": "túc cầu",
+   "vi": "bóng đá",
+   "pos": "danh từ",
+   "note": "足 = chân (\"túc\"), nghĩa đen \"bóng chân\".",
+   "ex": [
+    {
+     "cn": "他是足球运动员。",
+     "py": "Tā shì zúqiú yùndòngyuán.",
+     "vi": "Anh ấy là cầu thủ bóng đá."
+    }
+   ]
+  },
+  {
+   "w": "篮球",
+   "py": "lánqiú",
+   "hv": "lam cầu",
+   "vi": "bóng rổ",
+   "pos": "danh từ",
+   "note": "篮 = cái rổ (\"lam\").",
+   "ex": [
+    {
+     "cn": "他个子很高，篮球打得很好。",
+     "py": "Tā gèzi hěn gāo, lánqiú dǎ de hěn hǎo.",
+     "vi": "Cậu ấy cao, chơi bóng rổ rất giỏi."
+    }
+   ]
+  },
+  {
+   "w": "踢",
+   "py": "tī",
+   "hv": "thích",
+   "vi": "đá (bằng chân)",
+   "pos": "động từ",
+   "note": "Có bộ 足 (chân). Đá bóng là 踢足球.",
+   "ex": [
+    {
+     "cn": "周末我们踢足球。",
+     "py": "Zhōumò wǒmen tī zúqiú.",
+     "vi": "Cuối tuần chúng tôi đá bóng."
+    }
+   ]
+  },
+  {
+   "w": "打",
+   "py": "dǎ",
+   "hv": "đả",
+   "vi": "đánh; chơi (bóng bằng tay)",
+   "pos": "động từ",
+   "note": "\"Đả\" trong \"đả kích\". Chơi bóng bằng tay dùng 打: 打篮球. Cũng dùng trong 打电话.",
+   "ex": [
+    {
+     "cn": "你会打篮球吗？",
+     "py": "Nǐ huì dǎ lánqiú ma?",
+     "vi": "Bạn biết chơi bóng rổ không?"
+    }
+   ]
+  },
+  {
+   "w": "跑",
+   "py": "pǎo",
+   "hv": "bào",
+   "vi": "chạy",
+   "pos": "động từ",
+   "note": "Có bộ 足. Chạy bộ là 跑步.",
+   "ex": [
+    {
+     "cn": "他跑得很快。",
+     "py": "Tā pǎo de hěn kuài.",
+     "vi": "Anh ấy chạy rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "游",
+   "py": "yóu",
+   "hv": "du",
+   "vi": "bơi",
+   "pos": "động từ",
+   "note": "\"Du\" trong \"du lịch\", \"du thuyền\". Bơi lội là 游泳.",
+   "ex": [
+    {
+     "cn": "鱼在水里游。",
+     "py": "Yú zài shuǐ lǐ yóu.",
+     "vi": "Cá bơi trong nước."
+    }
+   ]
+  },
+  {
+   "w": "手",
+   "py": "shǒu",
+   "hv": "thủ",
+   "vi": "tay",
+   "pos": "danh từ",
+   "note": "\"Thủ\" trong \"thủ công\", \"cao thủ\". Điện thoại 手机 là \"máy cầm tay\".",
+   "ex": [
+    {
+     "cn": "吃饭以前要洗手。",
+     "py": "Chīfàn yǐqián yào xǐ shǒu.",
+     "vi": "Trước khi ăn phải rửa tay."
+    }
+   ]
+  },
+  {
+   "w": "头",
+   "py": "tóu",
+   "hv": "đầu",
+   "vi": "đầu",
+   "pos": "danh từ",
+   "note": "Chính là \"đầu\" tiếng Việt. Đau đầu là 头疼.",
+   "ex": [
+    {
+     "cn": "我头有点儿疼。",
+     "py": "Wǒ tóu yǒudiǎnr téng.",
+     "vi": "Tôi hơi đau đầu."
+    }
+   ]
+  },
+  {
+   "w": "动",
+   "py": "dòng",
+   "hv": "động",
+   "vi": "cử động, động đậy",
+   "pos": "động từ",
+   "note": "\"Động\" trong \"vận động\", \"hoạt động\". 别动 là \"đừng động đậy\".",
+   "ex": [
+    {
+     "cn": "别动，我给你拍张照片。",
+     "py": "Bié dòng, wǒ gěi nǐ pāi zhāng zhàopiàn.",
+     "vi": "Đừng động đậy, tôi chụp cho bạn tấm ảnh."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "踢 hay 打?",
+   "b": "踢 + bóng dùng chân · 打 + bóng dùng tay",
+   "d": "Đá bóng: 踢足球. Bóng rổ, bóng chuyền, cầu lông, bóng bàn: 打篮球, 打排球, 打羽毛球, 打乒乓球.",
+   "ex": [
+    {
+     "cn": "你喜欢踢足球还是打篮球？",
+     "py": "Nǐ xǐhuan tī zúqiú háishi dǎ lánqiú?",
+     "vi": "Bạn thích đá bóng hay chơi bóng rổ?"
+    },
+    {
+     "cn": "我们下午打羽毛球吧。",
+     "py": "Wǒmen xiàwǔ dǎ yǔmáoqiú ba.",
+     "vi": "Chiều nay mình đánh cầu lông nhé."
+    }
+   ]
+  },
+  {
+   "t": "Động từ + 得 + đánh giá",
+   "b": "跑得很快 · 踢得很好",
+   "d": "Nhận xét một hành động: đặt 得 sau động từ, rồi tính từ. Phủ định đặt 不 sau 得: 跑得不快.",
+   "ex": [
+    {
+     "cn": "她游得很好。",
+     "py": "Tā yóu de hěn hǎo.",
+     "vi": "Cô ấy bơi rất giỏi."
+    },
+    {
+     "cn": "我踢得不好。",
+     "py": "Wǒ tī de bù hǎo.",
+     "vi": "Tôi đá không giỏi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我最喜欢踢足球。",
+   "py": "Wǒ zuì xǐhuan tī zúqiú.",
+   "vi": "Tôi thích nhất là đá bóng."
+  },
+  {
+   "cn": "他每天早上跑步。",
+   "py": "Tā měi tiān zǎoshang pǎobù.",
+   "vi": "Sáng nào anh ấy cũng chạy bộ."
+  },
+  {
+   "cn": "你的手怎么了？",
+   "py": "Nǐ de shǒu zěnme le?",
+   "vi": "Tay bạn sao thế?"
+  },
+  {
+   "cn": "他打篮球打得很好。",
+   "py": "Tā dǎ lánqiú dǎ de hěn hǎo.",
+   "vi": "Cậu ấy chơi bóng rổ rất giỏi."
+  },
+  {
+   "cn": "天气热，我们去游泳吧。",
+   "py": "Tiānqì rè, wǒmen qù yóuyǒng ba.",
+   "vi": "Trời nóng, mình đi bơi nhé."
+  }
+ ]
+}

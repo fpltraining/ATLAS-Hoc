@@ -14,9 +14,10 @@ export async function render(route) {
   const meta = idx.lessons.find((l) => l.id === id);
   if (!meta) return { title: 'Không thấy bài', el: h('div.empty', 'Không tìm thấy bài học này.') };
 
-  const [L, progress, settings] = await Promise.all([
-    data.lesson(meta.file), store.lessonProgress(), store.settings(),
+  const [L, progress, settings, lv25] = await Promise.all([
+    data.lesson(meta.file), store.lessonProgress(), store.settings(), data.hsk2025(),
   ]);
+  const levelOf = (w) => lv25[w] || lv25[w.replace(/儿$/, '')];
   await data.preloadChars(meta.newChars);
 
   const p = progress[id] || {};
@@ -31,7 +32,7 @@ export async function render(route) {
   el.append(h('div.card',
     h('div.row.spread',
       h('div',
-        h('div.small.faint', `Bài ${L.id}`),
+        h('div.small.faint', `Bài ${meta.no ?? L.id} · HSK ${meta.level} chuẩn 2025`),
         h('h1.cn', L.cn),
         h('div.muted', L.title),
       ),
@@ -93,7 +94,7 @@ export async function render(route) {
       h('div.word-body',
         readingLine(w.py, w.hv),
         h('div', w.vi),
-        h('div.small.faint', w.pos),
+        h('div.small.faint', [w.pos, levelOf(w.w) ? `HSK ${levelOf(w.w)} chuẩn 2025` : 'ngoài HSK 1–9'].filter(Boolean).join(' · ')),
         w.note && h('div.note', { style: { marginTop: '8px' } }, w.note),
         ...(w.ex || []).map((e) => h('div.small.muted', { style: { marginTop: '6px' } },
           h('span.cn', e.cn), ' · ', h('i', e.vi))),
@@ -156,7 +157,7 @@ export async function render(route) {
     next ? h('a.btn.ghost', { href: `#/lesson/${next.id}` }, 'Bài ', String(next.id), ' ›') : null,
   ));
 
-  return { title: `Bài ${L.id} · ${L.title}`, el };
+  return { title: `Bài ${meta.no ?? L.id} · ${L.title}`, el };
 }
 
 /** Thêm từ của bài vào bộ ôn, không vượt hạn mức từ mới hôm nay. */

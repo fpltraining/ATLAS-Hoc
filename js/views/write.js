@@ -37,7 +37,7 @@ export async function render(route) {
     lessonId = Number(target.slice(7));
     const idx = await data.curriculum();
     const meta = idx.lessons.find((l) => l.id === lessonId);
-    if (meta) { chars = meta.newChars.slice(); title = `Viết · Bài ${lessonId}`; }
+    if (meta) { chars = meta.newChars.slice(); title = `Viết · Bài ${meta.no ?? lessonId}`; }
   } else if (target.startsWith('rad-')) {
     const rads = await data.radicals();
     chars = rads.groups.flatMap((g) => g.items.map((i) => i.std));
