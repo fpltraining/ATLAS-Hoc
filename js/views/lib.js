@@ -41,6 +41,7 @@ async function home() {
         tile('#/notes', '✎', 'Sổ ghi', 'Dự án, tài sản, sổ tư duy'),
       )),
       section('Công cụ', h('div.hub-grid',
+        tile('#/search', '⌕', 'Tra từ', 'Chữ Hán, pinyin, tiếng Việt, tiếng Anh'),
         tile('#/numbers', '123', 'Đọc số và tiền', 'Tiếng Anh, tiếng Trung, tiếng Việt'),
         tile('#/lib/mine', '★', 'Sổ tay của tôi', 'Những từ bạn đã lưu'),
       )),
