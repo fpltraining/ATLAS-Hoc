@@ -8,10 +8,10 @@ Gộp từ 5 app: Bút Hán, Inklish, ATLAS bản cũ, Song Ngữ và Han's Engl
 
 | Mục | Nội dung |
 |---|---|
-| Hôm nay | Việc cần làm theo thứ tự, chia theo quỹ 30 phút đến 2 tiếng, có nhật ký |
+| Hôm nay | Việc cần làm theo thứ tự, chia theo quỹ 30 phút đến 2 tiếng, chuỗi ngày học, thử thách 10 câu, nhật ký |
 | Tiếng Anh | Bài xếp lớp, 5 chặng: A0 → B2 đủ nội dung (chặng 2 có 1.134 từ B1–B2 mới và bài đọc B2), chặng 3–4 (B2 vững, C1) đang soạn; truyện và tin song ngữ, viết bằng bút, ôn thẻ, tiếng Anh nghề, sổ tay ngữ pháp |
-| Tiếng Trung | 205 bài HSK 1–4 theo chuẩn 2025 (đủ 100% từ cấp 1–4), truyện song ngữ có pinyin, viết chấm từng nét, ôn thẻ, pinyin, bộ thủ |
-| Chủ đề | 99 chủ đề song song hai ngôn ngữ, từ theo lĩnh vực, kiến thức, đọc số và tiền, sổ ghi |
+| Tiếng Trung | 205 bài HSK 1–4 theo chuẩn 2025 (đủ 100% từ cấp 1–4), truyện song ngữ có pinyin, viết nhiều lượt chấm từng nét, bản đồ chữ, ôn thẻ, thi thử HSK, từ vựng HSK 3.0 cấp 1–9 có nghĩa chi tiết, 5 trò ôn nhanh, pinyin, bộ thủ |
+| Chủ đề | Tra từ Anh–Trung–Việt, 99 chủ đề song song hai ngôn ngữ, từ theo lĩnh vực, kiến thức, đọc số và tiền, sổ ghi |
 | Tiến độ | Thời gian thật theo từng khối, nhật ký, sao lưu và nhập từ app cũ |
 
 ## Quy tắc đọc song ngữ

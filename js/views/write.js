@@ -252,6 +252,9 @@ export async function render(route) {
       return;
     }
 
+    // Đã viết đủ nét (đang chờ sang lượt hoặc chữ sau): bỏ nét thừa
+    if (S.expect >= d.medians.length) { pad.undo(); return; }
+
     const res = gradeInOrder(units, d.mediansView, S.expect, settings.strictness);
 
     if (res.pass) {
@@ -291,12 +294,16 @@ export async function render(route) {
     const avg = Math.round(S.results.reduce((s, r) => s + r.score, 0) / S.results.length);
     S.roundScores.push(avg);
     if (S.round >= ROUNDS.length - 1) { finishChar(); return; }
+    // Hai lượt đầu đã viết rất tốt (từ 90 điểm) thì bỏ lượt chỉ có chữ mờ, sang luôn ô trống
+    const skip = S.round === 1 && (S.roundScores[0] + S.roundScores[1]) / 2 >= 90;
+    const nextR = S.round + (skip ? 2 : 1);
     feedbackEl.className = 'note jade';
     feedbackEl.replaceChildren(h('b', `Xong lượt ${S.round + 1}/${ROUNDS.length} · ${avg} điểm. `),
-      `Lượt sau: ${ROUNDS[S.round + 1].text.toLowerCase()}.`);
+      skip ? 'Viết tốt nên bỏ qua lượt 3. ' : '',
+      `Lượt ${nextR + 1}: ${ROUNDS[nextR].text.toLowerCase()}.`);
     pad.lock(true);
     setTimeout(() => {
-      S.round++;
+      S.round += skip ? 2 : 1;
       pad.lock(false);
       resetRound();
     }, 900);
@@ -315,7 +322,7 @@ export async function render(route) {
       h('div.row', { style: { gap: '10px', alignItems: 'baseline' } },
         h('span.score-big', String(avg)),
         h('div', h('b', v.text), h('div.small', S.mode === 'luot'
-          ? `Xong chữ ${chars[S.i]} · ${ROUNDS.length} lượt (${S.roundScores.join(' · ')})`
+          ? `Xong chữ ${chars[S.i]} · ${S.roundScores.length} lượt (${S.roundScores.join(' · ')})`
           : `Xong chữ ${chars[S.i]} · ${S.results.length} nét`)),
       ),
     );
@@ -356,11 +363,11 @@ export async function render(route) {
   }
 
   async function saveScore(ch, score) {
-    const key = 'writeScores';
-    const all = await store.kvGet(key, {});
-    const prev = all[ch] || { n: 0, best: 0, last: 0 };
-    all[ch] = { n: prev.n + 1, best: Math.max(prev.best, score), last: score, at: Date.now() };
-    await store.kvSet(key, all);
+    await store.kvUpdate('writeScores', {}, (all) => {
+      const prev = all[ch] || { n: 0, best: 0, last: 0 };
+      all[ch] = { n: prev.n + 1, best: Math.max(prev.best, score), last: score, at: Date.now() };
+      return all;
+    });
     await store.logReview({ kind: 'write', word: ch, score });
   }
 

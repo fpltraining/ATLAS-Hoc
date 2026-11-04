@@ -52,14 +52,10 @@ async function hub() {
     tile('#/penen', '✎', 'Viết bằng bút', 'Đồ, chép, viết trí nhớ'),
     tile('#/review?lang=en', '↻', 'Ôn thẻ', due ? `${due} thẻ tới hạn` : 'Chưa có thẻ tới hạn'),
     tile('#/lib/topics?lang=en', '#', 'Theo chủ đề', '99 chủ đề đời sống'),
-  ));
-  el.append(h('div.hub-grid',
     tile('#/work', '★', 'Tiếng Anh nghề', 'Bán hàng, huấn luyện, TikTok'),
     tile('#/book', '¶', 'Sổ tay ngữ pháp', 'B1 đến B2, có bài tập'),
     tile('#/lib/irreg', 'V', 'Động từ bất quy tắc', 'Theo nhóm dễ nhớ'),
     tile('#/lib/sentences', '“', 'Câu mẫu', 'Luyện nghe và viết'),
-  ));
-  el.append(h('div.hub-grid',
     tile('#/en/placement', '?', 'Kiểm tra xếp lớp', en.placed ? `Lần trước: ${en.placed.level}` : '36 câu, gợi ý chặng phù hợp'),
   ));
 
