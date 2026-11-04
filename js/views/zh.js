@@ -36,15 +36,12 @@ export async function render() {
     tile('#/read/zh', '读', 'Đọc truyện', nx ? nx.story.title : `${zhStories.length} truyện`),
     tile(`#/charmap/${next.id}`, '写', 'Viết bằng bút', `Chấm từng nét · ${plural(Object.keys(scores).length, 'chữ')} đã viết`),
     tile('#/review?lang=zh', '↻', 'Ôn thẻ', due ? `${due} thẻ tới hạn` : 'Chưa có thẻ tới hạn'),
-    tile('#/lib/topics?lang=zh', '题', 'Theo chủ đề', '99 chủ đề đời sống'),
-  ));
-
-  el.append(h('div.hub-grid',
+    tile('#/hsk/1', '词', 'Từ vựng HSK 3.0', 'Đủ cấp 1 đến 7–9, nghĩa chi tiết'),
+    tile('#/games', '戏', 'Trò ôn nhanh', 'Nghe chọn chữ, phản xạ, nối cặp, ghép chữ'),
     tile('#/exam', '考', 'Thi thử HSK', 'Đề luyện cấp 1–4, chấm điểm'),
     tile('#/pinyin', 'ā', 'Pinyin', 'Thanh điệu, vần, biến điệu'),
     tile('#/radicals', '部', 'Bộ thủ', 'Mảnh ghép của chữ Hán'),
-    tile('#/hsk/1', '词', 'Từ vựng HSK 3.0', 'Đủ cấp 1 đến 7–9, nghĩa chi tiết'),
-    tile('#/games', '戏', 'Trò ôn nhanh', 'Nghe chọn chữ, phản xạ, nối cặp, ghép chữ'),
+    tile('#/lib/topics?lang=zh', '题', 'Theo chủ đề', '99 chủ đề đời sống'),
   ));
 
   /* ---- tóm tắt thẻ ôn ---- */

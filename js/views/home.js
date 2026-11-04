@@ -27,7 +27,7 @@ export async function render() {
       h('div',
         h('div.small.hero-sub', `${WEEKDAY[now.getDay()]}, ${now.getDate()}/${now.getMonth() + 1} · ${DAY_NAME[plan.type]}`),
         h('div.streak', { title: `Chuỗi dài nhất: ${st.best} ngày` },
-          '🔥 ', h('b', String(st.cur)), st.cur ? ' ngày liên tiếp' : ' Học hôm nay để bắt đầu chuỗi',
+          '🔥 ', st.cur ? h('b', String(st.cur)) : null, st.cur ? ' ngày học liên tiếp' : 'Học hôm nay để bắt đầu chuỗi ngày',
           st.cur && !st.todayOn ? h('span.small', ' · học hôm nay để giữ chuỗi') : null),
         h('h1.today-title', doneCount === plan.steps.length ? 'Xong hết việc hôm nay' : `Hôm nay, ${planned} phút`),
       ),
