@@ -143,6 +143,17 @@ data/            dữ liệu đã gộp, do tools/merge-data.mjs sinh ra
 data-src/        bài đọc gốc, từ và nét bổ sung
 ```
 
+## Từ điển HSK 3.0 nhiều nghĩa
+
+`data/zh-full.json` lọc từ CVDICT các từ trong danh sách HSK 3.0 (cấp 1 đến 7–9) và các chữ tạo nên chúng:
+
+```bash
+git clone --depth 1 https://github.com/ph0ngp/cvdict ../cvdict
+node tools/build-cvdict.mjs ../cvdict/CVDICT.u8
+```
+
+CVDICT được dịch bằng AI rồi rà soát tay, nên có thể còn sót lỗi.
+
 ## Nguồn dữ liệu
 
 | Nguồn | Dùng để | Giấy phép |
@@ -150,3 +161,4 @@ data-src/        bài đọc gốc, từ và nét bổ sung
 | hanzi-writer-data 2.0.1 | dữ liệu nét viết | Arphic Public License |
 | Make Me a Hanzi | cấu tạo chữ | Arphic Public License |
 | Unihan Database | âm Hán Việt, pinyin | Unicode License |
+| CVDICT (Phong Phan, dịch từ CC-CEDICT) | nghĩa chi tiết các từ HSK 3.0, tệp `data/zh-full.json` | CC BY-SA 4.0; tệp `data/zh-full.json` cũng theo giấy phép này |

@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v11';
+const VERSION = 'atlas-v12';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 
@@ -15,7 +15,7 @@ const CORE_FILES = [
   'js/audio.js', 'js/content.js', 'js/kit.js', 'js/ai.js', 'js/progress.js', 'js/pool.js',
   'js/pen/canvas.js', 'js/pen/brush.js', 'js/pen/grid.js', 'js/pen/grade.js', 'js/pen/sound.js', 'js/pen/inkpad.js',
   ...['home', 'en', 'zh', 'read', 'reader', 'lesson', 'write', 'review', 'radicals', 'pinyin', 'char', 'penen',
-    'work', 'know', 'lib', 'drill', 'numbers', 'notes', 'book', 'stats', 'settings', 'exam', 'charmap', 'challenge', 'games', 'search'].map((v) => `js/views/${v}.js`),
+    'work', 'know', 'lib', 'drill', 'numbers', 'notes', 'book', 'stats', 'settings', 'exam', 'charmap', 'challenge', 'games', 'search', 'word'].map((v) => `js/views/${v}.js`),
   'data/curriculum/index.json', 'data/hsk2025.json', 'data/strokes/index.json', 'data/radicals.json',
   'data/hanviet.json', 'data/decomp.json',
   'data/stories/index.json', 'data/en/course.json', 'data/en/dict.json', 'data/zh-dict.json',
@@ -24,7 +24,7 @@ const CORE_FILES = [
 ];
 
 /* Tải sau, chạy ngầm: nhiều và nặng hơn nhưng không cần ngay lúc mở app */
-const EXTRA_FILES = ['data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json'];
+const EXTRA_FILES = ['data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {

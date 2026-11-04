@@ -29,6 +29,7 @@ export const know       = () => get('data/know.json');
 export const storyIndex = () => get('data/stories/index.json');
 export const story      = (id) => get(`data/stories/${id}.json`);
 export const zhDict     = () => get('data/zh-dict.json');
+export const zhFull     = () => get('data/zh-full.json');
 
 /* Thứ tự đọc gợi ý: dễ trước, xen kẽ truyện AI, chuyện có thật, bí ẩn và tin tức.
    Bài mới thêm vào data-src mà chưa có ở đây sẽ tự xếp sau cùng, mới nhất trước. */
