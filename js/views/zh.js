@@ -43,6 +43,7 @@ export async function render() {
     tile('#/exam', '考', 'Thi thử HSK', 'Đề luyện cấp 1–4, chấm điểm'),
     tile('#/pinyin', 'ā', 'Pinyin', 'Thanh điệu, vần, biến điệu'),
     tile('#/radicals', '部', 'Bộ thủ', 'Mảnh ghép của chữ Hán'),
+    tile('#/hsk/1', '词', 'Từ vựng HSK 3.0', 'Đủ cấp 1 đến 7–9, nghĩa chi tiết'),
     tile('#/games', '戏', 'Trò ôn nhanh', 'Nghe chọn chữ, phản xạ, nối cặp, ghép chữ'),
   ));
 

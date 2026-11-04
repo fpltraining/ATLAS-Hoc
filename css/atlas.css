@@ -293,3 +293,14 @@ a.icon-btn { text-decoration: none; }
 .time-bar { height: 8px; background: var(--paper-2); border-radius: 99px; overflow: hidden; margin: 10px 0; }
 .time-bar i { display: block; height: 100%; width: 100%; background: var(--seal); border-radius: 99px; }
 @media (min-width: 700px) { .match-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---- từ vựng HSK 3.0 và trang từ ---- */
+.level-tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.level-tab { flex: 0 0 auto; border: 2px solid var(--line); border-radius: 14px; padding: 8px 12px; text-align: center; color: var(--ink); text-decoration: none; background: var(--card); }
+.level-tab b { display: block; }
+.level-tab span { font-size: 12px; color: var(--ink-soft); }
+.level-tab.on { border-color: var(--seal); background: var(--seal-soft); }
+.word-row { display: flex; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; }
+.word-row:last-child { border-bottom: 0; }
+ol.senses { margin: 0; padding-left: 22px; }
+ol.senses li { margin: 4px 0; line-height: 1.45; }

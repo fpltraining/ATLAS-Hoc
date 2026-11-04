@@ -36,16 +36,18 @@ const routes = {
   challenge: () => import('./views/challenge.js'),
   games:    () => import('./views/games.js'),
   search:   () => import('./views/search.js'),
+  word:     () => import('./views/word.js'),
+  hsk:      () => import('./views/word.js'),
 };
 
 /* Màn hình nào thuộc khối học nào, để đếm thời gian và sáng đúng mục trên thanh điều hướng */
 const TRACK = {
   review: 'review', en: 'en', read: 'read', reader: 'read', lesson: 'zh', write: 'zh',
-  char: 'zh', radicals: 'zh', pinyin: 'zh', zh: 'zh', exam: 'zh', charmap: 'zh', challenge: 'review', games: 'zh', penen: 'en', work: 'work', know: 'know', book: 'en',
+  char: 'zh', radicals: 'zh', pinyin: 'zh', zh: 'zh', exam: 'zh', charmap: 'zh', challenge: 'review', games: 'zh', word: 'zh', hsk: 'zh', penen: 'en', work: 'work', know: 'know', book: 'en',
 };
 const TAB = {
   home: 'home', review: 'home', en: 'en', penen: 'en', work: 'en', book: 'en',
-  zh: 'zh', lesson: 'zh', write: 'zh', char: 'zh', radicals: 'zh', pinyin: 'zh', exam: 'zh', charmap: 'zh', challenge: 'home', games: 'zh', search: 'lib',
+  zh: 'zh', lesson: 'zh', write: 'zh', char: 'zh', radicals: 'zh', pinyin: 'zh', exam: 'zh', charmap: 'zh', challenge: 'home', games: 'zh', search: 'lib', word: 'zh', hsk: 'zh',
   lib: 'lib', drill: 'lib', numbers: 'lib', notes: 'lib', know: 'lib', stats: 'stats',
 };
 

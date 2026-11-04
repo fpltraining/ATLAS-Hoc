@@ -20,11 +20,18 @@ const pyKey = (s) => fold(s).replace(/[^a-z]/g, '');
 let index = null;
 async function buildIndex() {
   if (index) return index;
-  const [zh, en, lv] = await Promise.all([content.zhDict(), content.dict(), data.hsk2025()]);
+  const [zh, en, lv, full] = await Promise.all([content.zhDict(), content.dict(), data.hsk2025(), content.zhFull().catch(() => ({}))]);
   const zhRows = Object.entries(zh).map(([w, [py, hv, vi]]) => ({
     lang: 'zh', w, py: py || '', hv: hv || '', vi: vi || '',
     pyk: pyKey(py || ''), vik: fold(vi || ''), lv: lv[w] || '',
   }));
+  // Từ HSK 3.0 chưa có trong từ điển ngắn: lấy nghĩa từ CVDICT
+  for (const w of Object.keys(lv)) {
+    if (zh[w] || !full[w]) continue;
+    const [py, senses] = full[w][0];
+    const vi = senses.filter((s) => !/^(Lượng từ|biến thể|dùng trong)/.test(s)).slice(0, 3).join('; ');
+    zhRows.push({ lang: 'zh', w, py, hv: data.hvOfWord(w) || '', vi, pyk: pyKey(py), vik: fold(vi), lv: lv[w] });
+  }
   const enRows = Object.entries(en).map(([w, [vi, ipa]]) => ({
     lang: 'en', w, vi: vi || '', ipa: ipa || '', wk: w.toLowerCase(), vik: fold(vi || ''),
   }));
@@ -94,7 +101,8 @@ export async function render(route) {
     const actions = h('div.row.wrap', { style: { gap: '8px', marginTop: '8px' } },
       h('button.btn.sm', { onclick: () => say(r) }, '🔊 Nghe'));
     if (r.lang === 'zh') {
-      for (const ch of [...r.w].filter(data.isHan)) {
+      actions.append(h('a.btn.sm.jade', { href: `#/word/${encodeURIComponent(r.w)}` }, 'Nghĩa chi tiết ›'));
+      for (const ch of new Set([...r.w].filter(data.isHan))) {
         actions.append(h('a.btn.sm.ghost', { href: `#/char/${encodeURIComponent(ch)}` }, `${ch} · cấu tạo, viết`));
       }
     } else {
