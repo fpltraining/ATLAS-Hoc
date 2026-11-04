@@ -265,3 +265,31 @@ textarea.scribble.long { min-height: 104px; font-size: 16.5px; }
 .char-now { margin-bottom: 6px; }
 .char-continue { display: flex; align-items: center; justify-content: center; }
 @media (max-width: 420px) { .stat-box b { font-size: 19px; } .char-step.left { transform: translateX(-30px); } .char-step.right { transform: translateX(30px); } }
+
+/* ---- tra từ và trò ôn nhanh ---- */
+a.icon-btn { text-decoration: none; }
+.search-input { width: 100%; font-size: 18px; }
+.game-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.game-grid.six { grid-template-columns: repeat(3, 1fr); }
+.game-grid.five { grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.game-tile {
+  min-height: 72px; border: 2px solid var(--line); border-radius: 14px; background: var(--card);
+  color: var(--ink); font-size: 16px; padding: 8px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+}
+.game-tile.cn { font-size: 32px; }
+.game-grid.five .game-tile.cn { font-size: 26px; min-height: 64px; padding: 4px; }
+.game-tile.static { cursor: default; }
+.game-tile.hole { border-style: dashed; color: var(--ink-faint); font-size: 26px; }
+.game-tile.ok { background: var(--jade-soft); border-color: var(--jade); }
+.game-tile.no { background: var(--seal-soft); border-color: var(--seal); }
+.game-tile.sel { border-color: var(--gold); background: var(--amber-soft); }
+.game-tile:disabled { opacity: .35; }
+.match-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+.match-tile { min-height: 78px; font-size: 15px; transition: opacity .25s, transform .25s; }
+.match-tile.cn { font-size: 30px; }
+.match-tile.gone { opacity: 0; transform: scale(.85); pointer-events: none; }
+.slot { width: 58px; height: 58px; border: 2px dashed var(--line); border-radius: 12px; display: grid; place-items: center; font-size: 30px; }
+.time-bar { height: 8px; background: var(--paper-2); border-radius: 99px; overflow: hidden; margin: 10px 0; }
+.time-bar i { display: block; height: 100%; width: 100%; background: var(--seal); border-radius: 99px; }
+@media (min-width: 700px) { .match-grid { grid-template-columns: repeat(4, 1fr); } }

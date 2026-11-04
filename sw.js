@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v10';
+const VERSION = 'atlas-v11';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 
@@ -12,10 +12,10 @@ const CORE_FILES = [
   './', 'index.html', 'manifest.webmanifest',
   'css/app.css', 'css/atlas.css',
   'js/app.js', 'js/ui.js', 'js/data.js', 'js/store.js', 'js/srs.js', 'js/plan.js',
-  'js/audio.js', 'js/content.js', 'js/kit.js', 'js/ai.js', 'js/progress.js',
+  'js/audio.js', 'js/content.js', 'js/kit.js', 'js/ai.js', 'js/progress.js', 'js/pool.js',
   'js/pen/canvas.js', 'js/pen/brush.js', 'js/pen/grid.js', 'js/pen/grade.js', 'js/pen/sound.js', 'js/pen/inkpad.js',
   ...['home', 'en', 'zh', 'read', 'reader', 'lesson', 'write', 'review', 'radicals', 'pinyin', 'char', 'penen',
-    'work', 'know', 'lib', 'drill', 'numbers', 'notes', 'book', 'stats', 'settings', 'exam', 'charmap', 'challenge'].map((v) => `js/views/${v}.js`),
+    'work', 'know', 'lib', 'drill', 'numbers', 'notes', 'book', 'stats', 'settings', 'exam', 'charmap', 'challenge', 'games', 'search'].map((v) => `js/views/${v}.js`),
   'data/curriculum/index.json', 'data/hsk2025.json', 'data/strokes/index.json', 'data/radicals.json',
   'data/hanviet.json', 'data/decomp.json',
   'data/stories/index.json', 'data/en/course.json', 'data/en/dict.json', 'data/zh-dict.json',

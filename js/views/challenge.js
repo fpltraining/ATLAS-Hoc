@@ -1,44 +1,16 @@
 /* Thử thách hôm nay: 10 câu trắc nghiệm nhanh, trộn từ đã học của cả hai ngôn ngữ.
 
-   Lấy từ trong thẻ ôn (đã có nghĩa). Chưa đủ thẻ thì lấy thêm từ bài tiếng Trung
-   đang học. Kết quả lưu theo ngày để trang Hôm nay biết đã làm chưa. */
+   Lấy từ đã học (xem pool.js). Kết quả lưu theo ngày để trang Hôm nay biết đã làm chưa. */
 
-import * as data from '../data.js';
 import * as store from '../store.js';
 import * as audio from '../audio.js';
 import { sayEn, shuffle } from '../kit.js';
 import { h, pill, progressBar } from '../ui.js';
+import { learnedWords } from '../pool.js';
 
 const N = 10;
 
-async function pool() {
-  const cards = await store.allCards();
-  const seen = new Set();
-  const words = [];
-  for (const c of cards) {
-    if ((c.lang !== 'en' && c.lang !== 'zh' && c.lang) || !c.vi) continue;
-    const lang = c.lang === 'en' ? 'en' : 'zh';
-    const key = `${lang}:${c.word}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    words.push({ lang, w: c.word, vi: c.vi, py: c.py || '', ipa: c.ipa || '' });
-  }
-  // Chưa đủ từ: lấy thêm từ bài tiếng Trung đang học và các bài trước đó
-  if (words.length < 16) {
-    const [idx, progress] = await Promise.all([data.curriculum(), store.lessonProgress()]);
-    const upto = Math.max(0, idx.lessons.findIndex((l) => !progress[l.id]?.done));
-    for (const meta of idx.lessons.slice(Math.max(0, upto - 2), upto + 1)) {
-      const L = await data.lesson(meta.file);
-      for (const w of L.words) {
-        const key = `zh:${w.w}`;
-        if (seen.has(key) || !w.vi) continue;
-        seen.add(key);
-        words.push({ lang: 'zh', w: w.w, vi: w.vi, py: w.py || '' });
-      }
-    }
-  }
-  return words;
-}
+const pool = () => learnedWords('all');
 
 function makeQuestions(words) {
   const qs = [];
