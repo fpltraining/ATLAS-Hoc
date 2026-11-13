@@ -211,7 +211,8 @@ export const updateKnow = (fn) => kvUpdate('know', { done: {} }, fn);
 
 /* ---------- sao lưu / khôi phục ------------------------------------------ */
 
-const KV_KEYS = ['settings', 'lessons', 'days', 'en', 'read', 'work', 'know', 'notes', 'writes', 'writeScores', 'bookWork', 'bookScore', 'bookPage', 'lastBackup'];
+const KV_KEYS = ['settings', 'lessons', 'days', 'en', 'read', 'work', 'know', 'notes', 'writes', 'writeScores', 'bookWork', 'bookScore', 'bookPage', 'lastBackup',
+  'challenge', 'games', 'examResults', 'speakScores'];
 
 export async function exportAll() {
   const [cards, logs] = await Promise.all([allCards(), allLogs()]);

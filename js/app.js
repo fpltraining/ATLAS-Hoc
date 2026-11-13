@@ -37,6 +37,7 @@ const routes = {
   games:    () => import('./views/games.js'),
   search:   () => import('./views/search.js'),
   word:     () => import('./views/word.js'),
+  speak:    () => import('./views/speak.js'),
   hsk:      () => import('./views/word.js'),
 };
 
@@ -47,7 +48,7 @@ const TRACK = {
 };
 const TAB = {
   home: 'home', review: 'home', en: 'en', penen: 'en', work: 'en', book: 'en',
-  zh: 'zh', lesson: 'zh', write: 'zh', char: 'zh', radicals: 'zh', pinyin: 'zh', exam: 'zh', charmap: 'zh', challenge: 'home', games: 'zh', search: 'lib', word: 'zh', hsk: 'zh',
+  zh: 'zh', lesson: 'zh', write: 'zh', char: 'zh', radicals: 'zh', pinyin: 'zh', exam: 'zh', charmap: 'zh', challenge: 'home', games: 'zh', search: 'lib', word: 'zh', hsk: 'zh', speak: 'home',
   lib: 'lib', drill: 'lib', numbers: 'lib', notes: 'lib', know: 'lib', stats: 'stats',
 };
 
@@ -93,7 +94,7 @@ async function router() {
   try { currentCleanup?.(); } catch { /* bỏ qua */ }
   currentCleanup = null;
   audio.stop();
-  currentTrack = TRACK[route.name] || null;
+  currentTrack = route.name === 'speak' ? (route.args[0] === 'zh' ? 'zh' : 'en') : TRACK[route.name] || null;
 
   viewEl.replaceChildren(h('div.empty', h('span.spin')));
   viewEl.className = 'view';

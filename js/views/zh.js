@@ -41,7 +41,7 @@ export async function render() {
     tile('#/exam', '考', 'Thi thử HSK', 'Đề luyện cấp 1–4, chấm điểm'),
     tile('#/pinyin', 'ā', 'Pinyin', 'Thanh điệu, vần, biến điệu'),
     tile('#/radicals', '部', 'Bộ thủ', 'Mảnh ghép của chữ Hán'),
-    tile('#/lib/topics?lang=zh', '题', 'Theo chủ đề', '99 chủ đề đời sống'),
+    tile('#/speak', '声', 'Luyện phát âm', 'Nói vào micro, máy chấm điểm'),
   ));
 
   /* ---- tóm tắt thẻ ôn ---- */
