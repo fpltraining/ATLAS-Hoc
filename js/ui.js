@@ -60,7 +60,7 @@ export function toast(msg, ms = 2400) {
 export function sheet(...content) {
   const wrap = document.getElementById('sheet');
   const panel = document.getElementById('sheet-panel');
-  panel.replaceChildren(h('div.sheet-grip'), ...content);
+  panel.replaceChildren(h('div.sheet-grip'), ...content.filter((c) => c !== null && c !== undefined && c !== false));
   wrap.hidden = false;
 
   const close = () => {
