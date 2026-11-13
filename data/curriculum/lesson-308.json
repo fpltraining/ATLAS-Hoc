@@ -1,0 +1,219 @@
+{
+ "id": 308,
+ "cn": "评价和行为",
+ "title": "Đánh giá và hành vi",
+ "goal": "Nói về điểm yếu, có chứa, kịp/và, dựa vào, mạng sống, đánh giá, thủ đoạn, vở kịch, cục tẩy, hành vi, cần và giải trí.",
+ "words": [
+  {
+   "w": "短处",
+   "py": "duǎnchu",
+   "hv": "đoản xứ",
+   "vi": "điểm yếu",
+   "pos": "danh từ",
+   "note": "Trái nghĩa 长处 (điểm mạnh).",
+   "ex": [
+    {
+     "cn": "每个人都有长处和短处。",
+     "py": "Měi ge rén dōu yǒu chángchu hé duǎnchu.",
+     "vi": "Ai cũng có điểm mạnh và điểm yếu."
+    }
+   ]
+  },
+  {
+   "w": "含有",
+   "py": "hányǒu",
+   "hv": "hàm hữu",
+   "vi": "có chứa",
+   "pos": "động từ",
+   "note": "含有维生素 (có chứa vitamin).",
+   "ex": [
+    {
+     "cn": "这种饮料含有咖啡因。",
+     "py": "Zhè zhǒng yǐnliào hányǒu kāfēiyīn.",
+     "vi": "Đồ uống này có chứa caffeine."
+    }
+   ]
+  },
+  {
+   "w": "及",
+   "py": "jí",
+   "hv": "cập",
+   "vi": "và; kịp",
+   "pos": "liên từ, động từ",
+   "note": "来不及 (không kịp).",
+   "ex": [
+    {
+     "cn": "时间来不及了，快走吧！",
+     "py": "Shíjiān lái bu jí le, kuài zǒu ba!",
+     "vi": "Không kịp giờ rồi, đi nhanh lên!"
+    }
+   ]
+  },
+  {
+   "w": "靠",
+   "py": "kào",
+   "hv": "kháo",
+   "vi": "dựa vào; tựa",
+   "pos": "động từ",
+   "note": "靠自己 (dựa vào chính mình).",
+   "ex": [
+    {
+     "cn": "成功只能靠自己。",
+     "py": "Chénggōng zhǐ néng kào zìjǐ.",
+     "vi": "Thành công chỉ có thể dựa vào bản thân."
+    }
+   ]
+  },
+  {
+   "w": "命",
+   "py": "mìng",
+   "hv": "mệnh",
+   "vi": "mạng sống; số phận",
+   "pos": "danh từ",
+   "note": "救命 (cứu mạng).",
+   "ex": [
+    {
+     "cn": "医生救了他的命。",
+     "py": "Yīshēng jiù le tā de mìng.",
+     "vi": "Bác sĩ đã cứu mạng anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "评价",
+   "py": "píngjià",
+   "hv": "bình giá",
+   "vi": "đánh giá",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"bình giá\".",
+   "ex": [
+    {
+     "cn": "观众对这场比赛的评价很高。",
+     "py": "Guānzhòng duì zhè chǎng bǐsài de píngjià hěn gāo.",
+     "vi": "Khán giả đánh giá trận đấu này rất cao."
+    }
+   ]
+  },
+  {
+   "w": "手段",
+   "py": "shǒuduàn",
+   "hv": "thủ đoạn",
+   "vi": "cách thức, biện pháp",
+   "pos": "danh từ",
+   "note": "Trung tính: biện pháp; xấu: thủ đoạn.",
+   "ex": [
+    {
+     "cn": "教育不能只靠批评的手段。",
+     "py": "Jiàoyù bù néng zhǐ kào pīpíng de shǒuduàn.",
+     "vi": "Giáo dục không thể chỉ dựa vào cách phê bình."
+    }
+   ]
+  },
+  {
+   "w": "戏",
+   "py": "xì",
+   "hv": "hí",
+   "vi": "kịch, tuồng; trò",
+   "pos": "danh từ",
+   "note": "看戏 (xem kịch), 京戏 (kinh kịch).",
+   "ex": [
+    {
+     "cn": "奶奶喜欢看京戏。",
+     "py": "Nǎinai xǐhuan kàn jīngxì.",
+     "vi": "Bà nội thích xem kinh kịch."
+    }
+   ]
+  },
+  {
+   "w": "橡皮",
+   "py": "xiàngpí",
+   "hv": "tượng bì",
+   "vi": "cục tẩy",
+   "pos": "danh từ",
+   "note": "橡 là cao su.",
+   "ex": [
+    {
+     "cn": "我可以借你的橡皮吗？",
+     "py": "Wǒ kěyǐ jiè nǐ de xiàngpí ma?",
+     "vi": "Tôi mượn cục tẩy của bạn được không?"
+    }
+   ]
+  },
+  {
+   "w": "行为",
+   "py": "xíngwéi",
+   "hv": "hành vi",
+   "vi": "hành vi",
+   "pos": "danh từ",
+   "note": "Chính là \"hành vi\".",
+   "ex": [
+    {
+     "cn": "这种行为是不对的。",
+     "py": "Zhè zhǒng xíngwéi shì bú duì de.",
+     "vi": "Hành vi này là sai."
+    }
+   ]
+  },
+  {
+   "w": "需",
+   "py": "xū",
+   "hv": "nhu",
+   "vi": "cần",
+   "pos": "động từ",
+   "note": "Văn viết của 需要.",
+   "ex": [
+    {
+     "cn": "报名需带身份证。",
+     "py": "Bàomíng xū dài shēnfènzhèng.",
+     "vi": "Đăng ký cần mang căn cước."
+    }
+   ]
+  },
+  {
+   "w": "娱乐",
+   "py": "yúlè",
+   "hv": "ngu lạc",
+   "vi": "giải trí",
+   "pos": "danh từ, động từ",
+   "note": "娱乐活动 (hoạt động giải trí).",
+   "ex": [
+    {
+     "cn": "周末是我们的娱乐时间。",
+     "py": "Zhōumò shì wǒmen de yúlè shíjiān.",
+     "vi": "Cuối tuần là thời gian giải trí của chúng tôi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 不及 / 得及",
+   "b": "来不及 · 来得及",
+   "d": "Kịp / không kịp làm gì.",
+   "ex": [
+    {
+     "cn": "现在出发还来得及。",
+     "py": "Xiànzài chūfā hái lái de jí.",
+     "vi": "Xuất phát bây giờ vẫn còn kịp."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "了解自己的短处，才能不断进步。",
+   "py": "Liǎojiě zìjǐ de duǎnchu, cái néng búduàn jìnbù.",
+   "vi": "Hiểu điểm yếu của mình mới tiến bộ không ngừng."
+  },
+  {
+   "cn": "电竞已经不只是娱乐，而是一种职业。",
+   "py": "Diànjìng yǐjīng bù zhǐ shì yúlè, ér shì yì zhǒng zhíyè.",
+   "vi": "Thể thao điện tử không còn chỉ là giải trí, mà là một nghề."
+  },
+  {
+   "cn": "别人的评价很重要，但更重要的是自己的努力。",
+   "py": "Biérén de píngjià hěn zhòngyào, dàn gèng zhòngyào de shì zìjǐ de nǔlì.",
+   "vi": "Đánh giá của người khác quan trọng, nhưng quan trọng hơn là nỗ lực của bản thân."
+  }
+ ]
+}

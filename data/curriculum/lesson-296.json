@@ -1,0 +1,264 @@
+{
+ "id": 296,
+ "cn": "一个字的动词",
+ "title": "Động từ một chữ (1)",
+ "goal": "Dùng các động từ một chữ: gọi là, truyền, thay, điều chuyển, chống lại, khép, tan, ngậm, tập, thắt, kết, phối, chạm, phê và ghép.",
+ "words": [
+  {
+   "w": "称",
+   "py": "chēng",
+   "hv": "xưng",
+   "vi": "gọi là; cân",
+   "pos": "động từ",
+   "note": "称他为…… (gọi anh ấy là...).",
+   "ex": [
+    {
+     "cn": "大家都称他为\"大神\"。",
+     "py": "Dàjiā dōu chēng tā wéi \"dàshén\".",
+     "vi": "Mọi người đều gọi anh ấy là \"đại thần\"."
+    }
+   ]
+  },
+  {
+   "w": "传",
+   "py": "chuán",
+   "hv": "truyền",
+   "vi": "truyền, chuyền",
+   "pos": "động từ",
+   "note": "传球 (chuyền bóng), 传消息 (truyền tin).",
+   "ex": [
+    {
+     "cn": "好消息很快就传开了。",
+     "py": "Hǎo xiāoxi hěn kuài jiù chuán kāi le.",
+     "vi": "Tin vui lan đi rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "代",
+   "py": "dài",
+   "hv": "đại",
+   "vi": "thay; đời, thế hệ",
+   "pos": "động từ, danh từ",
+   "note": "代我问好 (thay tôi gửi lời hỏi thăm).",
+   "ex": [
+    {
+     "cn": "请代我向你父母问好。",
+     "py": "Qǐng dài wǒ xiàng nǐ fùmǔ wènhǎo.",
+     "vi": "Cho tôi gửi lời hỏi thăm bố mẹ bạn."
+    }
+   ]
+  },
+  {
+   "w": "调",
+   "py": "diào",
+   "hv": "điệu",
+   "vi": "điều chuyển; giọng điệu",
+   "pos": "động từ, danh từ",
+   "note": "调到别的部门 (chuyển sang phòng khác).",
+   "ex": [
+    {
+     "cn": "他被调到了上海工作。",
+     "py": "Tā bèi diào dào le Shànghǎi gōngzuò.",
+     "vi": "Anh ấy được điều sang Thượng Hải làm việc."
+    }
+   ]
+  },
+  {
+   "w": "反",
+   "py": "fǎn",
+   "hv": "phản",
+   "vi": "ngược; chống",
+   "pos": "tính từ, động từ",
+   "note": "反了 (ngược rồi).",
+   "ex": [
+    {
+     "cn": "你把衣服穿反了。",
+     "py": "Nǐ bǎ yīfu chuān fǎn le.",
+     "vi": "Bạn mặc áo ngược rồi."
+    }
+   ]
+  },
+  {
+   "w": "合",
+   "py": "hé",
+   "hv": "hợp",
+   "vi": "khép, gộp; hợp",
+   "pos": "động từ",
+   "note": "合上书 (gấp sách lại).",
+   "ex": [
+    {
+     "cn": "请把书合上。",
+     "py": "Qǐng bǎ shū hé shàng.",
+     "vi": "Xin gấp sách lại."
+    }
+   ]
+  },
+  {
+   "w": "化",
+   "py": "huà",
+   "hv": "hoá",
+   "vi": "tan; hoá",
+   "pos": "động từ",
+   "note": "雪化了 (tuyết tan).",
+   "ex": [
+    {
+     "cn": "太阳出来，雪就化了。",
+     "py": "Tàiyáng chūlái, xuě jiù huà le.",
+     "vi": "Mặt trời lên, tuyết tan."
+    }
+   ]
+  },
+  {
+   "w": "含",
+   "py": "hán",
+   "hv": "hàm",
+   "vi": "ngậm; chứa",
+   "pos": "động từ",
+   "note": "含在嘴里 (ngậm trong miệng).",
+   "ex": [
+    {
+     "cn": "这种水果含很多维生素。",
+     "py": "Zhè zhǒng shuǐguǒ hán hěn duō wéishēngsù.",
+     "vi": "Loại quả này chứa nhiều vitamin."
+    }
+   ]
+  },
+  {
+   "w": "集",
+   "py": "jí",
+   "hv": "tập",
+   "vi": "tập (phim); gom",
+   "pos": "lượng từ, động từ",
+   "note": "第一集 (tập một).",
+   "ex": [
+    {
+     "cn": "这部电视剧一共有四十集。",
+     "py": "Zhè bù diànshìjù yígòng yǒu sìshí jí.",
+     "vi": "Bộ phim truyền hình này có bốn mươi tập."
+    }
+   ]
+  },
+  {
+   "w": "系",
+   "py": "xì",
+   "hv": "hệ",
+   "vi": "khoa (đại học); hệ",
+   "pos": "danh từ",
+   "note": "中文系 (khoa tiếng Trung).",
+   "ex": [
+    {
+     "cn": "她是中文系的学生。",
+     "py": "Tā shì Zhōngwén xì de xuésheng.",
+     "vi": "Cô ấy là sinh viên khoa tiếng Trung."
+    }
+   ]
+  },
+  {
+   "w": "结",
+   "py": "jié",
+   "hv": "kết",
+   "vi": "thắt, kết; nút",
+   "pos": "động từ, danh từ",
+   "note": "结婚 (kết hôn), 打结 (thắt nút).",
+   "ex": [
+    {
+     "cn": "他们去年结了婚。",
+     "py": "Tāmen qùnián jié le hūn.",
+     "vi": "Họ cưới nhau năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "配",
+   "py": "pèi",
+   "hv": "phối",
+   "vi": "phối, kết hợp; xứng",
+   "pos": "động từ",
+   "note": "配菜 (món ăn kèm).",
+   "ex": [
+    {
+     "cn": "这条裤子配什么鞋好看？",
+     "py": "Zhè tiáo kùzi pèi shénme xié hǎokàn?",
+     "vi": "Quần này đi giày gì đẹp?"
+    }
+   ]
+  },
+  {
+   "w": "碰",
+   "py": "pèng",
+   "hv": "bính",
+   "vi": "chạm, đụng; gặp",
+   "pos": "động từ",
+   "note": "碰到 (gặp phải).",
+   "ex": [
+    {
+     "cn": "别碰那个，很危险。",
+     "py": "Bié pèng nàge, hěn wēixiǎn.",
+     "vi": "Đừng chạm vào cái đó, nguy hiểm lắm."
+    }
+   ]
+  },
+  {
+   "w": "批",
+   "py": "pī",
+   "hv": "phê",
+   "vi": "lô, đợt; phê duyệt",
+   "pos": "lượng từ, động từ",
+   "note": "一批新人 (một lứa người mới).",
+   "ex": [
+    {
+     "cn": "俱乐部来了一批新选手。",
+     "py": "Jùlèbù lái le yì pī xīn xuǎnshǒu.",
+     "vi": "Câu lạc bộ đón một lứa tuyển thủ mới."
+    }
+   ]
+  },
+  {
+   "w": "拼",
+   "py": "pīn",
+   "hv": "bính",
+   "vi": "ghép; liều, dốc sức",
+   "pos": "động từ",
+   "note": "拼命 (liều mạng), 拼图 (ghép hình).",
+   "ex": [
+    {
+     "cn": "最后一局，大家都拼了。",
+     "py": "Zuìhòu yì jú, dàjiā dōu pīn le.",
+     "vi": "Ván cuối, mọi người đều dốc hết sức."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "称 + ai + 为 + danh xưng",
+   "b": "称他为大神",
+   "d": "Gọi ai là gì (văn viết).",
+   "ex": [
+    {
+     "cn": "人们称河内为\"千年文化之都\"。",
+     "py": "Rénmen chēng Hénèi wéi \"qiānnián wénhuà zhī dū\".",
+     "vi": "Người ta gọi Hà Nội là \"thủ đô ngàn năm văn hiến\"."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "消息传得真快，大家都知道了。",
+   "py": "Xiāoxi chuán de zhēn kuài, dàjiā dōu zhīdào le.",
+   "vi": "Tin lan nhanh thật, ai cũng biết rồi."
+  },
+  {
+   "cn": "只要拼一把，就有机会。",
+   "py": "Zhǐyào pīn yì bǎ, jiù yǒu jīhuì.",
+   "vi": "Chỉ cần liều một phen là có cơ hội."
+  },
+  {
+   "cn": "这批新人里有几个很有天赋。",
+   "py": "Zhè pī xīnrén li yǒu jǐ ge hěn yǒu tiānfù.",
+   "vi": "Trong lứa người mới này có vài người rất có năng khiếu."
+  }
+ ]
+}

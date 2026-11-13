@@ -1,0 +1,264 @@
+{
+ "id": 299,
+ "cn": "一颗心",
+ "title": "Danh từ và lượng từ một chữ",
+ "goal": "Dùng: báu vật, cọng/rễ, cấp, giá/khung, kho, viên/hạt, con (ngựa), bộ, bó, trận/cơn, dân tộc, kiểu, phẩm, sức và nước mắt.",
+ "words": [
+  {
+   "w": "宝",
+   "py": "bǎo",
+   "hv": "bảo",
+   "vi": "báu vật; cưng",
+   "pos": "danh từ",
+   "note": "宝贝 (cục cưng).",
+   "ex": [
+    {
+     "cn": "孩子是父母的宝。",
+     "py": "Háizi shì fùmǔ de bǎo.",
+     "vi": "Con cái là báu vật của cha mẹ."
+    }
+   ]
+  },
+  {
+   "w": "根",
+   "py": "gēn",
+   "hv": "căn",
+   "vi": "rễ; cây, cọng (lượng từ)",
+   "pos": "danh từ, lượng từ",
+   "note": "一根香蕉 (một quả chuối).",
+   "ex": [
+    {
+     "cn": "请给我一根筷子。",
+     "py": "Qǐng gěi wǒ yì gēn kuàizi.",
+     "vi": "Cho tôi một chiếc đũa."
+    }
+   ]
+  },
+  {
+   "w": "级",
+   "py": "jí",
+   "hv": "cấp",
+   "vi": "cấp, bậc",
+   "pos": "danh từ, lượng từ",
+   "note": "HSK五级 (HSK cấp 5).",
+   "ex": [
+    {
+     "cn": "我想考HSK五级。",
+     "py": "Wǒ xiǎng kǎo HSK wǔ jí.",
+     "vi": "Tôi muốn thi HSK cấp 5."
+    }
+   ]
+  },
+  {
+   "w": "架",
+   "py": "jià",
+   "hv": "giá",
+   "vi": "khung, giá; chiếc (máy bay)",
+   "pos": "danh từ, lượng từ",
+   "note": "一架飞机 (một chiếc máy bay).",
+   "ex": [
+    {
+     "cn": "天上飞过一架飞机。",
+     "py": "Tiānshàng fēi guo yí jià fēijī.",
+     "vi": "Một chiếc máy bay bay ngang trời."
+    }
+   ]
+  },
+  {
+   "w": "库",
+   "py": "kù",
+   "hv": "khố",
+   "vi": "kho",
+   "pos": "danh từ",
+   "note": "仓库 (nhà kho).",
+   "ex": [
+    {
+     "cn": "东西都放在仓库里。",
+     "py": "Dōngxi dōu fàng zài cāngkù li.",
+     "vi": "Đồ đạc đều để trong kho."
+    }
+   ]
+  },
+  {
+   "w": "颗",
+   "py": "kē",
+   "hv": "khoả",
+   "vi": "viên, hạt (lượng từ)",
+   "pos": "lượng từ",
+   "note": "一颗心 (một trái tim).",
+   "ex": [
+    {
+     "cn": "天上有一颗很亮的星星。",
+     "py": "Tiānshàng yǒu yì kē hěn liàng de xīngxing.",
+     "vi": "Trên trời có một ngôi sao rất sáng."
+    }
+   ]
+  },
+  {
+   "w": "匹",
+   "py": "pǐ",
+   "hv": "thất",
+   "vi": "con (ngựa)",
+   "pos": "lượng từ",
+   "note": "一匹马 (một con ngựa).",
+   "ex": [
+    {
+     "cn": "草地上有一匹白马。",
+     "py": "Cǎodì shang yǒu yì pǐ bái mǎ.",
+     "vi": "Trên bãi cỏ có một con ngựa trắng."
+    }
+   ]
+  },
+  {
+   "w": "套",
+   "py": "tào",
+   "hv": "sáo",
+   "vi": "bộ (lượng từ); bao",
+   "pos": "lượng từ, danh từ",
+   "note": "一套衣服 (một bộ quần áo).",
+   "ex": [
+    {
+     "cn": "他买了一套新房子。",
+     "py": "Tā mǎi le yí tào xīn fángzi.",
+     "vi": "Anh ấy mua một căn nhà mới."
+    }
+   ]
+  },
+  {
+   "w": "束",
+   "py": "shù",
+   "hv": "thúc",
+   "vi": "bó (lượng từ)",
+   "pos": "lượng từ",
+   "note": "一束花 (một bó hoa).",
+   "ex": [
+    {
+     "cn": "粉丝送了他一束鲜花。",
+     "py": "Fěnsī sòng le tā yí shù xiānhuā.",
+     "vi": "Fan tặng anh ấy một bó hoa tươi."
+    }
+   ]
+  },
+  {
+   "w": "阵",
+   "py": "zhèn",
+   "hv": "trận",
+   "vi": "cơn, trận (lượng từ)",
+   "pos": "lượng từ",
+   "note": "一阵雨 (một cơn mưa).",
+   "ex": [
+    {
+     "cn": "外面下了一阵雨。",
+     "py": "Wàimiàn xià le yí zhèn yǔ.",
+     "vi": "Bên ngoài vừa có một cơn mưa."
+    }
+   ]
+  },
+  {
+   "w": "族",
+   "py": "zú",
+   "hv": "tộc",
+   "vi": "dân tộc; nhóm người",
+   "pos": "danh từ",
+   "note": "上班族 (dân công sở).",
+   "ex": [
+    {
+     "cn": "越南有五十四个民族。",
+     "py": "Yuènán yǒu wǔshísì ge mínzú.",
+     "vi": "Việt Nam có năm mươi tư dân tộc."
+    }
+   ]
+  },
+  {
+   "w": "式",
+   "py": "shì",
+   "hv": "thức",
+   "vi": "kiểu, lối",
+   "pos": "danh từ",
+   "note": "中式 (kiểu Trung), 西式 (kiểu Tây).",
+   "ex": [
+    {
+     "cn": "我更喜欢中式早餐。",
+     "py": "Wǒ gèng xǐhuan zhōngshì zǎocān.",
+     "vi": "Tôi thích bữa sáng kiểu Trung hơn."
+    }
+   ]
+  },
+  {
+   "w": "品",
+   "py": "pǐn",
+   "hv": "phẩm",
+   "vi": "sản phẩm; phẩm chất; nếm",
+   "pos": "danh từ, động từ",
+   "note": "品茶 (thưởng trà).",
+   "ex": [
+    {
+     "cn": "爷爷喜欢品茶。",
+     "py": "Yéye xǐhuan pǐn chá.",
+     "vi": "Ông nội thích thưởng trà."
+    }
+   ]
+  },
+  {
+   "w": "力",
+   "py": "lì",
+   "hv": "lực",
+   "vi": "sức, lực",
+   "pos": "danh từ",
+   "note": "用力 (dùng sức), 能力 (năng lực).",
+   "ex": [
+    {
+     "cn": "他全身都没有力了。",
+     "py": "Tā quánshēn dōu méiyǒu lì le.",
+     "vi": "Anh ấy kiệt sức cả người."
+    }
+   ]
+  },
+  {
+   "w": "泪",
+   "py": "lèi",
+   "hv": "lệ",
+   "vi": "nước mắt",
+   "pos": "danh từ",
+   "note": "流泪 (rơi lệ).",
+   "ex": [
+    {
+     "cn": "听到这个消息，她流下了泪。",
+     "py": "Tīngdào zhège xiāoxi, tā liú xià le lèi.",
+     "vi": "Nghe tin này, cô ấy rơi nước mắt."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Lượng từ đặc biệt",
+   "b": "一颗星 · 一匹马 · 一束花 · 一阵雨 · 一架飞机",
+   "d": "Mỗi loại vật có lượng từ riêng.",
+   "ex": [
+    {
+     "cn": "他送给妈妈一束花和一套茶具。",
+     "py": "Tā sòng gěi māma yí shù huā hé yí tào chájù.",
+     "vi": "Anh ấy tặng mẹ một bó hoa và một bộ ấm chén."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "每个人心里都有一颗冠军的心。",
+   "py": "Měi ge rén xīn li dōu yǒu yì kē guànjūn de xīn.",
+   "vi": "Ai trong lòng cũng có một trái tim nhà vô địch."
+  },
+  {
+   "cn": "这次比赛分三个级别。",
+   "py": "Zhè cì bǐsài fēn sān ge jíbié.",
+   "vi": "Giải lần này chia làm ba cấp độ."
+  },
+  {
+   "cn": "下了一阵雨，天气凉快多了。",
+   "py": "Xià le yí zhèn yǔ, tiānqì liángkuai duō le.",
+   "vi": "Mưa một trận, thời tiết mát hơn nhiều."
+  }
+ ]
+}

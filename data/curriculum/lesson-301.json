@@ -1,0 +1,264 @@
+{
+ "id": 301,
+ "cn": "寻找答案",
+ "title": "Động tác đời thường",
+ "goal": "Dùng: lăn, đi vòng, vẩy nước, quạt, thưởng, dán, gánh/lựa, dâng lên, chiếm, tranh, chữa, cắt, nhớ/đọc, mê và tìm kiếm.",
+ "words": [
+  {
+   "w": "滚",
+   "py": "gǔn",
+   "hv": "cổn",
+   "vi": "lăn; cút",
+   "pos": "động từ",
+   "note": "滚出去 (cút ra).",
+   "ex": [
+    {
+     "cn": "球滚到了桌子下面。",
+     "py": "Qiú gǔn dào le zhuōzi xiàmiàn.",
+     "vi": "Quả bóng lăn xuống gầm bàn."
+    }
+   ]
+  },
+  {
+   "w": "绕",
+   "py": "rào",
+   "hv": "nhiễu",
+   "vi": "đi vòng; quấn",
+   "pos": "động từ",
+   "note": "绕路 (đi đường vòng).",
+   "ex": [
+    {
+     "cn": "前面修路，我们绕过去吧。",
+     "py": "Qiánmiàn xiū lù, wǒmen rào guòqù ba.",
+     "vi": "Phía trước sửa đường, mình đi vòng nhé."
+    }
+   ]
+  },
+  {
+   "w": "洒",
+   "py": "sǎ",
+   "hv": "sái",
+   "vi": "rưới, vẩy; làm đổ",
+   "pos": "động từ",
+   "note": "洒水 (tưới nước).",
+   "ex": [
+    {
+     "cn": "咖啡洒在桌子上了。",
+     "py": "Kāfēi sǎ zài zhuōzi shang le.",
+     "vi": "Cà phê đổ ra bàn rồi."
+    }
+   ]
+  },
+  {
+   "w": "扇",
+   "py": "shān",
+   "hv": "phiến",
+   "vi": "quạt",
+   "pos": "động từ",
+   "note": "扇风 (quạt gió).",
+   "ex": [
+    {
+     "cn": "她用书扇了扇风。",
+     "py": "Tā yòng shū shān le shān fēng.",
+     "vi": "Cô ấy lấy sách quạt mấy cái."
+    }
+   ]
+  },
+  {
+   "w": "赏",
+   "py": "shǎng",
+   "hv": "thưởng",
+   "vi": "thưởng; ngắm",
+   "pos": "động từ",
+   "note": "赏月 (ngắm trăng).",
+   "ex": [
+    {
+     "cn": "中秋节我们一起赏月。",
+     "py": "Zhōngqiū Jié wǒmen yìqǐ shǎng yuè.",
+     "vi": "Trung thu chúng ta cùng ngắm trăng."
+    }
+   ]
+  },
+  {
+   "w": "贴",
+   "py": "tiē",
+   "hv": "thiếp",
+   "vi": "dán",
+   "pos": "động từ",
+   "note": "贴照片 (dán ảnh).",
+   "ex": [
+    {
+     "cn": "墙上贴着比赛的海报。",
+     "py": "Qiáng shang tiē zhe bǐsài de hǎibào.",
+     "vi": "Trên tường dán áp phích giải đấu."
+    }
+   ]
+  },
+  {
+   "w": "挑",
+   "py": "tiāo",
+   "hv": "thiêu",
+   "vi": "lựa chọn; gánh",
+   "pos": "động từ",
+   "note": "挑一个 (chọn một cái).",
+   "ex": [
+    {
+     "cn": "你挑一个你最喜欢的英雄。",
+     "py": "Nǐ tiāo yí ge nǐ zuì xǐhuan de yīngxióng.",
+     "vi": "Bạn chọn một vị tướng bạn thích nhất."
+    }
+   ]
+  },
+  {
+   "w": "涨",
+   "py": "zhǎng",
+   "hv": "trướng",
+   "vi": "dâng, tăng",
+   "pos": "động từ",
+   "note": "水涨了 (nước dâng).",
+   "ex": [
+    {
+     "cn": "下了一夜雨，河水涨了。",
+     "py": "Xià le yí yè yǔ, héshuǐ zhǎng le.",
+     "vi": "Mưa cả đêm, nước sông dâng lên."
+    }
+   ]
+  },
+  {
+   "w": "占",
+   "py": "zhàn",
+   "hv": "chiếm",
+   "vi": "chiếm",
+   "pos": "động từ",
+   "note": "占座 (giữ chỗ).",
+   "ex": [
+    {
+     "cn": "女生占了全班的一半。",
+     "py": "Nǚshēng zhàn le quán bān de yíbàn.",
+     "vi": "Nữ sinh chiếm một nửa lớp."
+    }
+   ]
+  },
+  {
+   "w": "争",
+   "py": "zhēng",
+   "hv": "tranh",
+   "vi": "tranh giành; cãi",
+   "pos": "động từ",
+   "note": "争第一 (tranh hạng nhất).",
+   "ex": [
+    {
+     "cn": "两个孩子在争一个玩具。",
+     "py": "Liǎng ge háizi zài zhēng yí ge wánjù.",
+     "vi": "Hai đứa trẻ đang giành một món đồ chơi."
+    }
+   ]
+  },
+  {
+   "w": "治",
+   "py": "zhì",
+   "hv": "trị",
+   "vi": "chữa; trị",
+   "pos": "động từ",
+   "note": "治病 (chữa bệnh).",
+   "ex": [
+    {
+     "cn": "这种病能治好吗？",
+     "py": "Zhè zhǒng bìng néng zhì hǎo ma?",
+     "vi": "Bệnh này chữa khỏi được không?"
+    }
+   ]
+  },
+  {
+   "w": "切",
+   "py": "qiē",
+   "hv": "thiết",
+   "vi": "cắt, thái",
+   "pos": "động từ",
+   "note": "切菜 (thái rau).",
+   "ex": [
+    {
+     "cn": "妈妈在厨房切菜。",
+     "py": "Māma zài chúfáng qiē cài.",
+     "vi": "Mẹ đang thái rau trong bếp."
+    }
+   ]
+  },
+  {
+   "w": "念",
+   "py": "niàn",
+   "hv": "niệm",
+   "vi": "đọc (to); nhớ",
+   "pos": "động từ",
+   "note": "念书 (đi học), 想念 (nhớ nhung).",
+   "ex": [
+    {
+     "cn": "请把这段话念一遍。",
+     "py": "Qǐng bǎ zhè duàn huà niàn yí biàn.",
+     "vi": "Hãy đọc đoạn này một lượt."
+    }
+   ]
+  },
+  {
+   "w": "迷",
+   "py": "mí",
+   "hv": "mê",
+   "vi": "mê; lạc",
+   "pos": "động từ, danh từ",
+   "note": "球迷 (fan bóng đá), 迷路 (lạc đường).",
+   "ex": [
+    {
+     "cn": "他是一个游戏迷。",
+     "py": "Tā shì yí ge yóuxì mí.",
+     "vi": "Anh ấy là một người mê game."
+    }
+   ]
+  },
+  {
+   "w": "寻找",
+   "py": "xúnzhǎo",
+   "hv": "tầm trảo",
+   "vi": "tìm kiếm",
+   "pos": "động từ",
+   "note": "Văn viết của 找.",
+   "ex": [
+    {
+     "cn": "我们一直在寻找新的打法。",
+     "py": "Wǒmen yìzhí zài xúnzhǎo xīn de dǎfǎ.",
+     "vi": "Chúng tôi luôn tìm lối đánh mới."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "占 + phần",
+   "b": "占一半 · 占百分之三十",
+   "d": "Chiếm bao nhiêu phần.",
+   "ex": [
+    {
+     "cn": "年轻人占观众的百分之八十。",
+     "py": "Niánqīngrén zhàn guānzhòng de bǎi fēnzhī bāshí.",
+     "vi": "Người trẻ chiếm 80% khán giả."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我们要争第一，不要满足于第二。",
+   "py": "Wǒmen yào zhēng dì yī, bú yào mǎnzú yú dì èr.",
+   "vi": "Chúng ta phải giành hạng nhất, đừng hài lòng với hạng hai."
+  },
+  {
+   "cn": "他从小就是个足球迷。",
+   "py": "Tā cóngxiǎo jiù shì ge zúqiú mí.",
+   "vi": "Từ nhỏ anh ấy đã là fan bóng đá."
+  },
+  {
+   "cn": "遇到问题，要主动寻找答案。",
+   "py": "Yùdào wèntí, yào zhǔdòng xúnzhǎo dá'àn.",
+   "vi": "Gặp vấn đề phải chủ động tìm lời giải."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 297,
+ "cn": "一个字的动词二",
+ "title": "Động từ một chữ (2)",
+ "goal": "Dùng: dẫn, ra lệnh, cử, đánh giá, nhận, lên, thay, ném, lùi, vây, dời, chở, làm ra, tăng và tặng.",
+ "words": [
+  {
+   "w": "领",
+   "py": "lǐng",
+   "hv": "lĩnh",
+   "vi": "dẫn; nhận",
+   "pos": "động từ",
+   "note": "领路 (dẫn đường), 领奖 (nhận giải).",
+   "ex": [
+    {
+     "cn": "他领着我们参观了基地。",
+     "py": "Tā lǐng zhe wǒmen cānguān le jīdì.",
+     "vi": "Anh ấy dẫn chúng tôi tham quan căn cứ."
+    }
+   ]
+  },
+  {
+   "w": "令",
+   "py": "lìng",
+   "hv": "lệnh",
+   "vi": "khiến, làm cho",
+   "pos": "động từ",
+   "note": "令人感动 (khiến người ta cảm động).",
+   "ex": [
+    {
+     "cn": "他的表现令人吃惊。",
+     "py": "Tā de biǎoxiàn lìng rén chījīng.",
+     "vi": "Màn thể hiện của anh ấy khiến người ta kinh ngạc."
+    }
+   ]
+  },
+  {
+   "w": "派",
+   "py": "pài",
+   "hv": "phái",
+   "vi": "cử, phái",
+   "pos": "động từ",
+   "note": "派人去 (cử người đi).",
+   "ex": [
+    {
+     "cn": "公司派他去北京工作。",
+     "py": "Gōngsī pài tā qù Běijīng gōngzuò.",
+     "vi": "Công ty cử anh ấy đi Bắc Kinh làm việc."
+    }
+   ]
+  },
+  {
+   "w": "评",
+   "py": "píng",
+   "hv": "bình",
+   "vi": "đánh giá, chấm",
+   "pos": "động từ",
+   "note": "评为 (được bình chọn là).",
+   "ex": [
+    {
+     "cn": "他被评为最佳选手。",
+     "py": "Tā bèi píng wéi zuì jiā xuǎnshǒu.",
+     "vi": "Anh ấy được bình chọn là tuyển thủ xuất sắc nhất."
+    }
+   ]
+  },
+  {
+   "w": "认",
+   "py": "rèn",
+   "hv": "nhận",
+   "vi": "nhận ra; thừa nhận",
+   "pos": "động từ",
+   "note": "认错 (nhận lỗi), 认出 (nhận ra).",
+   "ex": [
+    {
+     "cn": "好久不见，我差点儿没认出你。",
+     "py": "Hǎo jiǔ bú jiàn, wǒ chàdiǎnr méi rèn chū nǐ.",
+     "vi": "Lâu không gặp, tôi suýt không nhận ra bạn."
+    }
+   ]
+  },
+  {
+   "w": "升",
+   "py": "shēng",
+   "hv": "thăng",
+   "vi": "lên, tăng",
+   "pos": "động từ",
+   "note": "升到 (lên tới).",
+   "ex": [
+    {
+     "cn": "我们的排名升到了第二。",
+     "py": "Wǒmen de páimíng shēng dào le dì èr.",
+     "vi": "Thứ hạng của chúng tôi lên thứ hai."
+    }
+   ]
+  },
+  {
+   "w": "替",
+   "py": "tì",
+   "hv": "thế",
+   "vi": "thay",
+   "pos": "động từ, giới từ",
+   "note": "替我 (thay tôi).",
+   "ex": [
+    {
+     "cn": "今天你替我上场吧。",
+     "py": "Jīntiān nǐ tì wǒ shàngchǎng ba.",
+     "vi": "Hôm nay bạn vào sân thay tôi nhé."
+    }
+   ]
+  },
+  {
+   "w": "投",
+   "py": "tóu",
+   "hv": "đầu",
+   "vi": "ném; bỏ (phiếu); gửi",
+   "pos": "động từ",
+   "note": "投票 (bỏ phiếu).",
+   "ex": [
+    {
+     "cn": "大家投票选出了队长。",
+     "py": "Dàjiā tóupiào xuǎn chū le duìzhǎng.",
+     "vi": "Mọi người bỏ phiếu bầu đội trưởng."
+    }
+   ]
+  },
+  {
+   "w": "退",
+   "py": "tuì",
+   "hv": "thoái",
+   "vi": "lùi; trả lại",
+   "pos": "động từ",
+   "note": "退票 (trả vé), 后退 (lùi lại).",
+   "ex": [
+    {
+     "cn": "血太少了，快退回去！",
+     "py": "Xuè tài shǎo le, kuài tuì huíqù!",
+     "vi": "Máu ít quá, lùi về nhanh!"
+    }
+   ]
+  },
+  {
+   "w": "围",
+   "py": "wéi",
+   "hv": "vi",
+   "vi": "vây quanh",
+   "pos": "động từ",
+   "note": "围在一起 (quây quần).",
+   "ex": [
+    {
+     "cn": "大家围在一起看比赛。",
+     "py": "Dàjiā wéi zài yìqǐ kàn bǐsài.",
+     "vi": "Mọi người quây quần xem thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "移",
+   "py": "yí",
+   "hv": "di",
+   "vi": "dời, chuyển",
+   "pos": "động từ",
+   "note": "移开 (dời đi).",
+   "ex": [
+    {
+     "cn": "请把桌子移到那边。",
+     "py": "Qǐng bǎ zhuōzi yí dào nàbiān.",
+     "vi": "Xin dời cái bàn sang bên kia."
+    }
+   ]
+  },
+  {
+   "w": "运",
+   "py": "yùn",
+   "hv": "vận",
+   "vi": "chở, vận chuyển",
+   "pos": "động từ",
+   "note": "运货 (chở hàng).",
+   "ex": [
+    {
+     "cn": "这辆车运了很多水果。",
+     "py": "Zhè liàng chē yùn le hěn duō shuǐguǒ.",
+     "vi": "Xe này chở rất nhiều hoa quả."
+    }
+   ]
+  },
+  {
+   "w": "造",
+   "py": "zào",
+   "hv": "tạo",
+   "vi": "làm ra, chế tạo",
+   "pos": "động từ",
+   "note": "造船 (đóng tàu).",
+   "ex": [
+    {
+     "cn": "这个城市造了一座新桥。",
+     "py": "Zhège chéngshì zào le yí zuò xīn qiáo.",
+     "vi": "Thành phố này làm một cây cầu mới."
+    }
+   ]
+  },
+  {
+   "w": "增",
+   "py": "zēng",
+   "hv": "tăng",
+   "vi": "tăng",
+   "pos": "động từ",
+   "note": "增加 (tăng thêm).",
+   "ex": [
+    {
+     "cn": "今年粉丝人数增了一倍。",
+     "py": "Jīnnián fěnsī rénshù zēng le yí bèi.",
+     "vi": "Năm nay số fan tăng gấp đôi."
+    }
+   ]
+  },
+  {
+   "w": "赠",
+   "py": "zèng",
+   "hv": "tặng",
+   "vi": "tặng",
+   "pos": "động từ",
+   "note": "赠品 (quà tặng kèm).",
+   "ex": [
+    {
+     "cn": "买手机赠一个耳机。",
+     "py": "Mǎi shǒujī zèng yí ge ěrjī.",
+     "vi": "Mua điện thoại tặng một tai nghe."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "令 + 人 + cảm xúc",
+   "b": "令人感动 · 令人吃惊",
+   "d": "Khiến người ta cảm thấy (văn viết).",
+   "ex": [
+    {
+     "cn": "这场比赛令人难忘。",
+     "py": "Zhè chǎng bǐsài lìng rén nánwàng.",
+     "vi": "Trận đấu này khiến người ta khó quên."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "他被评为本赛季最佳新人。",
+   "py": "Tā bèi píng wéi běn sàijì zuì jiā xīnrén.",
+   "vi": "Anh ấy được bình chọn tân binh xuất sắc nhất mùa."
+  },
+  {
+   "cn": "状态不好的时候，可以让替补替你上场。",
+   "py": "Zhuàngtài bù hǎo de shíhou, kěyǐ ràng tìbǔ tì nǐ shàngchǎng.",
+   "vi": "Khi phong độ kém, có thể để dự bị vào thay."
+  },
+  {
+   "cn": "选手们的努力令人感动。",
+   "py": "Xuǎnshǒumen de nǔlì lìng rén gǎndòng.",
+   "vi": "Sự nỗ lực của các tuyển thủ khiến người ta cảm động."
+  }
+ ]
+}

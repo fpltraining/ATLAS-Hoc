@@ -1,0 +1,264 @@
+{
+ "id": 302,
+ "cn": "把训练当成比赛",
+ "title": "Coi là và thuộc về",
+ "goal": "Dùng: coi như, xem là, coi là, được gọi là, thuộc về, ở vào, tồn tại, nằm ở, không liên quan, không khớp, khiến cho, gây ra, đưa ra và căn cứ.",
+ "words": [
+  {
+   "w": "当成",
+   "py": "dàngchéng",
+   "hv": "đáng thành",
+   "vi": "coi như, xem là",
+   "pos": "động từ",
+   "note": "把A当成B (coi A là B).",
+   "ex": [
+    {
+     "cn": "他把训练当成真正的比赛。",
+     "py": "Tā bǎ xùnliàn dàngchéng zhēnzhèng de bǐsài.",
+     "vi": "Anh ấy coi buổi tập như trận đấu thật."
+    }
+   ]
+  },
+  {
+   "w": "当作",
+   "py": "dàngzuò",
+   "hv": "đáng tác",
+   "vi": "coi là",
+   "pos": "động từ",
+   "note": "Giống 当成.",
+   "ex": [
+    {
+     "cn": "我把他当作亲哥哥。",
+     "py": "Wǒ bǎ tā dàngzuò qīn gēge.",
+     "vi": "Tôi coi anh ấy như anh ruột."
+    }
+   ]
+  },
+  {
+   "w": "看作",
+   "py": "kànzuò",
+   "hv": "khán tác",
+   "vi": "xem là",
+   "pos": "động từ",
+   "note": "看作朋友 (xem là bạn).",
+   "ex": [
+    {
+     "cn": "很多人把他看作偶像。",
+     "py": "Hěn duō rén bǎ tā kànzuò ǒuxiàng.",
+     "vi": "Nhiều người xem anh ấy là thần tượng."
+    }
+   ]
+  },
+  {
+   "w": "视为",
+   "py": "shìwéi",
+   "hv": "thị vi",
+   "vi": "coi là (văn viết)",
+   "pos": "động từ",
+   "note": "视为对手 (coi là đối thủ).",
+   "ex": [
+    {
+     "cn": "他们被视为夺冠热门。",
+     "py": "Tāmen bèi shìwéi duóguàn rèmén.",
+     "vi": "Họ được coi là ứng viên vô địch."
+    }
+   ]
+  },
+  {
+   "w": "称为",
+   "py": "chēngwéi",
+   "hv": "xưng vi",
+   "vi": "được gọi là",
+   "pos": "động từ",
+   "note": "被称为 (được gọi là).",
+   "ex": [
+    {
+     "cn": "河内被称为\"千湖之城\"。",
+     "py": "Hénèi bèi chēngwéi \"qiān hú zhī chéng\".",
+     "vi": "Hà Nội được gọi là \"thành phố ngàn hồ\"."
+    }
+   ]
+  },
+  {
+   "w": "属于",
+   "py": "shǔyú",
+   "hv": "thuộc vu",
+   "vi": "thuộc về",
+   "pos": "động từ",
+   "note": "属于我们 (thuộc về chúng ta).",
+   "ex": [
+    {
+     "cn": "这个冠军属于每一个人。",
+     "py": "Zhège guànjūn shǔyú měi yí ge rén.",
+     "vi": "Chức vô địch này thuộc về mọi người."
+    }
+   ]
+  },
+  {
+   "w": "处于",
+   "py": "chǔyú",
+   "hv": "xử vu",
+   "vi": "ở vào (trạng thái)",
+   "pos": "động từ",
+   "note": "处于领先 (đang dẫn trước).",
+   "ex": [
+    {
+     "cn": "我们现在处于领先地位。",
+     "py": "Wǒmen xiànzài chǔyú lǐngxiān dìwèi.",
+     "vi": "Chúng ta hiện đang ở thế dẫn đầu."
+    }
+   ]
+  },
+  {
+   "w": "存在",
+   "py": "cúnzài",
+   "hv": "tồn tại",
+   "vi": "tồn tại",
+   "pos": "động từ",
+   "note": "存在问题 (tồn tại vấn đề).",
+   "ex": [
+    {
+     "cn": "我们的配合还存在一些问题。",
+     "py": "Wǒmen de pèihé hái cúnzài yìxiē wèntí.",
+     "vi": "Sự phối hợp của chúng ta vẫn còn một số vấn đề."
+    }
+   ]
+  },
+  {
+   "w": "在于",
+   "py": "zàiyú",
+   "hv": "tại vu",
+   "vi": "nằm ở, là ở",
+   "pos": "động từ",
+   "note": "关键在于 (mấu chốt là ở).",
+   "ex": [
+    {
+     "cn": "成功的关键在于坚持。",
+     "py": "Chénggōng de guānjiàn zàiyú jiānchí.",
+     "vi": "Mấu chốt thành công nằm ở sự kiên trì."
+    }
+   ]
+  },
+  {
+   "w": "无关",
+   "py": "wúguān",
+   "hv": "vô quan",
+   "vi": "không liên quan",
+   "pos": "động từ",
+   "note": "与此无关 (không liên quan việc này).",
+   "ex": [
+    {
+     "cn": "这件事与你无关。",
+     "py": "Zhè jiàn shì yǔ nǐ wúguān.",
+     "vi": "Việc này không liên quan đến bạn."
+    }
+   ]
+  },
+  {
+   "w": "不符",
+   "py": "bùfú",
+   "hv": "bất phù",
+   "vi": "không khớp",
+   "pos": "động từ",
+   "note": "与事实不符 (không khớp sự thật).",
+   "ex": [
+    {
+     "cn": "他说的和事实不符。",
+     "py": "Tā shuō de hé shìshí bùfú.",
+     "vi": "Lời anh ta nói không khớp với sự thật."
+    }
+   ]
+  },
+  {
+   "w": "使得",
+   "py": "shǐde",
+   "hv": "sử đắc",
+   "vi": "khiến cho",
+   "pos": "động từ",
+   "note": "Văn viết của 让.",
+   "ex": [
+    {
+     "cn": "他的失误使得我们输了比赛。",
+     "py": "Tā de shīwù shǐde wǒmen shū le bǐsài.",
+     "vi": "Sai lầm của anh ấy khiến chúng ta thua trận."
+    }
+   ]
+  },
+  {
+   "w": "造成",
+   "py": "zàochéng",
+   "hv": "tạo thành",
+   "vi": "gây ra",
+   "pos": "động từ",
+   "note": "造成损失 (gây tổn thất).",
+   "ex": [
+    {
+     "cn": "大雨造成了交通堵塞。",
+     "py": "Dàyǔ zàochéng le jiāotōng dǔsè.",
+     "vi": "Mưa lớn gây ùn tắc giao thông."
+    }
+   ]
+  },
+  {
+   "w": "作出",
+   "py": "zuòchū",
+   "hv": "tác xuất",
+   "vi": "đưa ra (quyết định)",
+   "pos": "động từ",
+   "note": "作出决定 (đưa ra quyết định).",
+   "ex": [
+    {
+     "cn": "教练作出了一个大胆的决定。",
+     "py": "Jiàoliàn zuòchū le yí ge dàdǎn de juédìng.",
+     "vi": "Huấn luyện viên đưa ra một quyết định táo bạo."
+    }
+   ]
+  },
+  {
+   "w": "依据",
+   "py": "yījù",
+   "hv": "y cứ",
+   "vi": "căn cứ",
+   "pos": "danh từ, giới từ",
+   "note": "依据规定 (theo quy định).",
+   "ex": [
+    {
+     "cn": "你这样说有什么依据？",
+     "py": "Nǐ zhèyàng shuō yǒu shénme yījù?",
+     "vi": "Bạn nói vậy có căn cứ gì?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "把 A 当成/当作/看作 B",
+   "b": "把训练当成比赛",
+   "d": "Coi A như B.",
+   "ex": [
+    {
+     "cn": "不要把失败看作结束。",
+     "py": "Bú yào bǎ shībài kànzuò jiéshù.",
+     "vi": "Đừng coi thất bại là kết thúc."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "把每次训练都当成决赛来打。",
+   "py": "Bǎ měi cì xùnliàn dōu dàngchéng juésài lái dǎ.",
+   "vi": "Hãy coi mỗi buổi tập như trận chung kết mà đánh."
+  },
+  {
+   "cn": "问题不在于对手多强，而在于我们自己。",
+   "py": "Wèntí bú zàiyú duìshǒu duō qiáng, ér zàiyú wǒmen zìjǐ.",
+   "vi": "Vấn đề không nằm ở đối thủ mạnh đến đâu, mà ở chính chúng ta."
+  },
+  {
+   "cn": "这次失败使得大家更团结了。",
+   "py": "Zhè cì shībài shǐde dàjiā gèng tuánjié le.",
+   "vi": "Lần thất bại này khiến mọi người đoàn kết hơn."
+  }
+ ]
+}
