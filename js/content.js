@@ -36,7 +36,7 @@ export const zhFull     = () => get('data/zh-full.json');
 export const READ_ORDER = [
   'robot-why', 'man-numbers', 'true-turing', 'myst-dark', 'coach-phone', 'myst-wow',
   'true-eliza', 'myst-life', 'true-kasparov', 'myst-ocean', 'true-move37', 'myst-voynich',
-  'true-alphafold', 'myst-sleep', 'model-no-lie', 'news-vn-law', 'myst-conscious',
+  'true-alphafold', 'myst-sleep', 'model-no-lie', 'long-night-final', 'news-vn-law', 'myst-conscious',
   'news-ms-agents', 'myst-blackbox', 'news-eu-delay', 'myst-fermi', 'news-robots-power',
   'myst-anesthesia', 'news-datacenter', 'news-ai-drug', 'slow-message',
   'zh-robot', 'zh-rabbit', 'zh-teacher', 'zh-snake', 'zh-sheep', 'zh-universe',
