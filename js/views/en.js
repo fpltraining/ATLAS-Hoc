@@ -9,6 +9,7 @@ import * as content from '../content.js';
 import { curSession, enBlocks, enTitle, weekOf, quotaToday, dayType } from '../plan.js';
 import { InkPad } from '../pen/inkpad.js';
 import { sayEn, sayBtn, pair, wordy, scribble, diff, micCheck, hasMic } from '../kit.js';
+import { wordPic, sentencePics } from '../pics.js';
 import { h, toast, section, progressBar, pill } from '../ui.js';
 import { gradeButton, aiConfig } from '../ai.js';
 import { cardSummary } from '../progress.js';
@@ -306,11 +307,16 @@ async function wordsBlock(key, words, st, n) {
     const hint = h('div.small.faint', { style: { minHeight: '22px' } });
     el.replaceChildren(h('div.card',
       h('div.row.spread', pill(`${i + 1} / ${pass.length}`, 'plain'), sayBtn(w)),
-      h('div.word-big', { style: { marginTop: '10px' } }, w),
-      r[1] ? h('div.faint', r[1]) : null,
-      h('div.word-mean', vi),
+      h('div.row', { style: { gap: '16px', alignItems: 'center', marginTop: '10px' } },
+        wordPic(w, { size: 84 }),
+        h('div.grow',
+          h('div.word-big', w),
+          r[1] ? h('div.faint', r[1]) : null,
+          h('div.word-mean', vi),
+        ),
+      ),
       r[4] ? h('div.pair', { style: { marginTop: '6px' } },
-        h('div.grow', h('div.pair-en', wordy(r[4])), r[5] && h('div.pair-vi', r[5])),
+        h('div.grow', h('div.pair-en', wordy(r[4])), r[5] && h('div.pair-vi', r[5]), sentencePics(r[4], { skip: w })),
         h('div.pair-act', sayBtn(r[4]))) : null,
       h('div.small.faint', { style: { margin: '10px 0 6px' } }, 'Đồ theo chữ mờ bằng Apple Pencil:'),
       padHost, hint,

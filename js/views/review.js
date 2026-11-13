@@ -14,6 +14,7 @@ import { WritingPad } from '../pen/canvas.js';
 import { InkPad } from '../pen/inkpad.js';
 import { gradeWhole, verdict } from '../pen/grade.js';
 import { sayEn, scribble, diff, wordy, mcq } from '../kit.js';
+import { wordPic, sentencePics } from '../pics.js';
 import { h, readingLine, pill, empty } from '../ui.js';
 import { refreshDueBadge } from '../app.js';
 
@@ -275,11 +276,13 @@ export async function render(route) {
     const answer = c.lang === 'en'
       ? h('div.card', { style: { marginTop: '12px' } },
         h('div.row.spread',
-          h('div', h('div.rev-en.left', c.word), c.ipa ? h('div.faint', c.ipa) : null, h('div', c.vi || '')),
+          h('div.row', { style: { gap: '14px', alignItems: 'center' } },
+            wordPic(c.word, { size: 64 }),
+            h('div', h('div.rev-en.left', c.word), c.ipa ? h('div.faint', c.ipa) : null, h('div', c.vi || ''))),
           h('button.speak-btn', { onclick: () => sayEn(c.word) }, '🔊'),
         ),
         c.ex ? h('div.pair', { style: { marginTop: '8px' } },
-          h('div.grow', h('div.pair-en', wordy(c.ex)), c.exVi ? h('div.pair-vi', c.exVi) : null),
+          h('div.grow', h('div.pair-en', wordy(c.ex)), c.exVi ? h('div.pair-vi', c.exVi) : null, sentencePics(c.ex, { skip: c.word })),
           h('div.pair-act', h('button.speak-btn', { onclick: () => sayEn(c.ex) }, '🔊'))) : null,
         extra || null,
       )

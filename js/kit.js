@@ -5,6 +5,7 @@ import * as store from './store.js';
 import * as audio from './audio.js';
 import * as content from './content.js';
 import { h, toast, sheet, closeSheet } from './ui.js';
+import { wordPic, sentencePics } from './pics.js';
 
 /* ---------- nghe ---------------------------------------------------------- */
 
@@ -27,11 +28,12 @@ export function sayBtn(text, lang = 'en') {
 /* ---------- một dòng song ngữ ---------------------------------------------- */
 
 /** Dòng Anh–Việt chuẩn của cả app. Chạm vào từ để tra, nút loa để nghe cả dòng. */
-export function pair(en, vi, { actions = [], lang = 'en' } = {}) {
+export function pair(en, vi, { actions = [], lang = 'en', pics = true } = {}) {
   return h('div.pair',
     h('div.grow',
       h(lang === 'en' ? 'div.pair-en' : 'div.pair-en.cn', lang === 'en' ? wordy(en) : en),
       vi && h('div.pair-vi', vi),
+      lang === 'en' && pics ? sentencePics(en) : null,
     ),
     h('div.pair-act', sayBtn(en, lang), ...actions),
   );
@@ -58,9 +60,12 @@ export async function wordSheet(word, gloss = {}, source = 'đọc') {
   const viInput = found.vi ? null : h('input.scribble.sm', { placeholder: 'Nghĩa tiếng Việt (nếu bạn biết)' });
   sheet(
     h('div.row.spread',
-      h('div',
-        h('div.word-big', found.w || word),
-        found.ipa && h('div.faint', found.ipa),
+      h('div.row', { style: { gap: '14px', alignItems: 'center' } },
+        wordPic(found.w || word, { size: 56 }),
+        h('div',
+          h('div.word-big', found.w || word),
+          found.ipa && h('div.faint', found.ipa),
+        ),
       ),
       sayBtn(found.w || word),
     ),

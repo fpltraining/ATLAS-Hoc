@@ -8,6 +8,7 @@ import { STRICTNESS } from '../pen/grade.js';
 import { sayEn } from '../kit.js';
 import { applyTheme } from '../app.js';
 import { h, toast, closeSheet } from '../ui.js';
+import { picsOn, setPicsOn } from '../pics.js';
 
 export async function renderSettings() {
   const s = await store.settings();
@@ -76,6 +77,9 @@ export async function renderSettings() {
       seg('strictness', Object.entries(STRICTNESS).map(([k, v]) => [k, v.label]), s.strictness)),
     row('Kiểu ngòi bút chữ Hán', 'Bút lông đổi độ dày theo lực nhấn.', seg('brush', [['but-chi', 'Bút chì'], ['but-long', 'Bút lông']], s.brush)),
     row('Ô kẻ tập viết chữ Hán', '田 chia tư · 米 thêm đường chéo.', seg('grid', [['tian', '田'], ['mi', '米'], ['none', 'Trơn']], s.grid)),
+
+    row('Tranh minh hoạ từ và câu', 'Hình nhỏ kiểu thẻ học cạnh từ mới và dưới câu tiếng Anh.',
+      h('label.switch', h('input', { type: 'checkbox', checked: picsOn(), onchange: (e) => setPicsOn(e.target.checked) }), h('i'))),
 
     h('h4', 'Giọng đọc'),
     row('Giọng AI tự nhiên', 'Từ và câu trong bài đọc bằng giọng AI. Tắt để dùng giọng của máy.', toggle('aiVoice', s.aiVoice !== false)),

@@ -327,3 +327,10 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 .debate-sides { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 @media (max-width: 620px) { .debate-sides { grid-template-columns: 1fr; } }
 .orig-text p { font-size: 18px; line-height: 1.6; margin: 0 0 12px; }
+
+/* tranh minh hoạ kiểu thẻ học */
+.pic-tile { flex: none; display: grid; place-items: center; border-radius: 18px; padding: 10px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.05); }
+.pic-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.pic-mini { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 7px 9px 5px; border-radius: 12px; min-width: 58px; }
+.pic-mini span { font-size: 11px; color: #4c5372; line-height: 1.1; }
+:root[data-theme="dark"] .pic-tile, :root[data-theme="dark"] .pic-mini { filter: saturate(.9) brightness(.92); }
