@@ -1,0 +1,264 @@
+{
+ "id": 276,
+ "cn": "中医和西医",
+ "title": "Y học và dinh dưỡng",
+ "goal": "Nói về thuốc, dược phẩm, y tế, y học, điều trị, chẩn đoán, thuốc Bắc, Đông y, dinh dưỡng, ăn uống, tiêu hoá, dạ dày, hấp thụ, phòng ngừa và bị cảm lạnh.",
+ "words": [
+  {
+   "w": "药品",
+   "py": "yàopǐn",
+   "hv": "dược phẩm",
+   "vi": "thuốc, dược phẩm",
+   "pos": "danh từ",
+   "note": "Chính là \"dược phẩm\".",
+   "ex": [
+    {
+     "cn": "药品要放在孩子拿不到的地方。",
+     "py": "Yàopǐn yào fàng zài háizi ná bu dào de dìfang.",
+     "vi": "Thuốc phải để chỗ trẻ con không với tới."
+    }
+   ]
+  },
+  {
+   "w": "药物",
+   "py": "yàowù",
+   "hv": "dược vật",
+   "vi": "thuốc men",
+   "pos": "danh từ",
+   "note": "Văn viết, chỉ chung các loại thuốc.",
+   "ex": [
+    {
+     "cn": "这种药物有副作用。",
+     "py": "Zhè zhǒng yàowù yǒu fùzuòyòng.",
+     "vi": "Loại thuốc này có tác dụng phụ."
+    }
+   ]
+  },
+  {
+   "w": "医疗",
+   "py": "yīliáo",
+   "hv": "y liệu",
+   "vi": "y tế, chữa bệnh",
+   "pos": "danh từ",
+   "note": "医疗保险 (bảo hiểm y tế).",
+   "ex": [
+    {
+     "cn": "这里的医疗条件很好。",
+     "py": "Zhèlǐ de yīliáo tiáojiàn hěn hǎo.",
+     "vi": "Điều kiện y tế ở đây rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "医学",
+   "py": "yīxué",
+   "hv": "y học",
+   "vi": "y học",
+   "pos": "danh từ",
+   "note": "Chính là \"y học\".",
+   "ex": [
+    {
+     "cn": "她在大学学医学。",
+     "py": "Tā zài dàxué xué yīxué.",
+     "vi": "Cô ấy học y ở trường đại học."
+    }
+   ]
+  },
+  {
+   "w": "治疗",
+   "py": "zhìliáo",
+   "hv": "trị liệu",
+   "vi": "điều trị",
+   "pos": "động từ",
+   "note": "Chính là \"trị liệu\".",
+   "ex": [
+    {
+     "cn": "他的病需要长期治疗。",
+     "py": "Tā de bìng xūyào chángqī zhìliáo.",
+     "vi": "Bệnh của anh ấy cần điều trị lâu dài."
+    }
+   ]
+  },
+  {
+   "w": "诊断",
+   "py": "zhěnduàn",
+   "hv": "chẩn đoán",
+   "vi": "chẩn đoán",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"chẩn đoán\".",
+   "ex": [
+    {
+     "cn": "医生诊断他得了流感。",
+     "py": "Yīshēng zhěnduàn tā dé le liúgǎn.",
+     "vi": "Bác sĩ chẩn đoán anh ấy bị cúm."
+    }
+   ]
+  },
+  {
+   "w": "中药",
+   "py": "zhōngyào",
+   "hv": "trung dược",
+   "vi": "thuốc Bắc",
+   "pos": "danh từ",
+   "note": "Thuốc y học cổ truyền Trung Quốc.",
+   "ex": [
+    {
+     "cn": "中药很苦，但是很有效。",
+     "py": "Zhōngyào hěn kǔ, dànshì hěn yǒuxiào.",
+     "vi": "Thuốc Bắc đắng nhưng rất hiệu quả."
+    }
+   ]
+  },
+  {
+   "w": "中医",
+   "py": "zhōngyī",
+   "hv": "trung y",
+   "vi": "Đông y",
+   "pos": "danh từ",
+   "note": "Trái với 西医 (Tây y).",
+   "ex": [
+    {
+     "cn": "我奶奶相信中医。",
+     "py": "Wǒ nǎinai xiāngxìn zhōngyī.",
+     "vi": "Bà nội tôi tin Đông y."
+    }
+   ]
+  },
+  {
+   "w": "营养",
+   "py": "yíngyǎng",
+   "hv": "doanh dưỡng",
+   "vi": "dinh dưỡng",
+   "pos": "danh từ",
+   "note": "有营养 (bổ dưỡng).",
+   "ex": [
+    {
+     "cn": "鸡蛋很有营养。",
+     "py": "Jīdàn hěn yǒu yíngyǎng.",
+     "vi": "Trứng gà rất bổ."
+    }
+   ]
+  },
+  {
+   "w": "饮食",
+   "py": "yǐnshí",
+   "hv": "ẩm thực",
+   "vi": "ăn uống",
+   "pos": "danh từ",
+   "note": "Chính là \"ẩm thực\".",
+   "ex": [
+    {
+     "cn": "选手要注意饮食健康。",
+     "py": "Xuǎnshǒu yào zhùyì yǐnshí jiànkāng.",
+     "vi": "Tuyển thủ phải chú ý ăn uống lành mạnh."
+    }
+   ]
+  },
+  {
+   "w": "消化",
+   "py": "xiāohuà",
+   "hv": "tiêu hoá",
+   "vi": "tiêu hoá",
+   "pos": "động từ",
+   "note": "Chính là \"tiêu hoá\".",
+   "ex": [
+    {
+     "cn": "吃得太快不好消化。",
+     "py": "Chī de tài kuài bù hǎo xiāohuà.",
+     "vi": "Ăn quá nhanh khó tiêu."
+    }
+   ]
+  },
+  {
+   "w": "胃",
+   "py": "wèi",
+   "hv": "vị",
+   "vi": "dạ dày",
+   "pos": "danh từ",
+   "note": "胃疼 (đau dạ dày).",
+   "ex": [
+    {
+     "cn": "我的胃不太好。",
+     "py": "Wǒ de wèi bú tài hǎo.",
+     "vi": "Dạ dày tôi không tốt lắm."
+    }
+   ]
+  },
+  {
+   "w": "吸收",
+   "py": "xīshōu",
+   "hv": "hấp thu",
+   "vi": "hấp thụ, tiếp thu",
+   "pos": "động từ",
+   "note": "吸收营养 (hấp thụ dinh dưỡng).",
+   "ex": [
+    {
+     "cn": "他很快就吸收了新知识。",
+     "py": "Tā hěn kuài jiù xīshōu le xīn zhīshi.",
+     "vi": "Anh ấy tiếp thu kiến thức mới rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "预防",
+   "py": "yùfáng",
+   "hv": "dự phòng",
+   "vi": "phòng ngừa",
+   "pos": "động từ",
+   "note": "预防感冒 (phòng cảm cúm).",
+   "ex": [
+    {
+     "cn": "预防比治疗更重要。",
+     "py": "Yùfáng bǐ zhìliáo gèng zhòngyào.",
+     "vi": "Phòng bệnh quan trọng hơn chữa bệnh."
+    }
+   ]
+  },
+  {
+   "w": "着凉",
+   "py": "zháoliáng",
+   "hv": "trước lương",
+   "vi": "bị cảm lạnh",
+   "pos": "động từ",
+   "note": "着 ở đây đọc zháo.",
+   "ex": [
+    {
+     "cn": "晚上开空调别着凉了。",
+     "py": "Wǎnshang kāi kōngtiáo bié zháoliáng le.",
+     "vi": "Tối bật điều hoà đừng để bị lạnh."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "别 + V + 了",
+   "b": "别着凉了 · 别迟到了",
+   "d": "Nhắc nhở đừng để chuyện xấu xảy ra.",
+   "ex": [
+    {
+     "cn": "外面下雨，别忘了带伞。",
+     "py": "Wàimiàn xià yǔ, bié wàng le dài sǎn.",
+     "vi": "Ngoài trời mưa, đừng quên mang ô."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "好的饮食习惯可以预防很多疾病。",
+   "py": "Hǎo de yǐnshí xíguàn kěyǐ yùfáng hěn duō jíbìng.",
+   "vi": "Thói quen ăn uống tốt phòng được nhiều bệnh."
+  },
+  {
+   "cn": "中医和西医各有优点。",
+   "py": "Zhōngyī hé xīyī gè yǒu yōudiǎn.",
+   "vi": "Đông y và Tây y đều có ưu điểm riêng."
+  },
+  {
+   "cn": "经过一个月的治疗，他的胃好多了。",
+   "py": "Jīngguò yí ge yuè de zhìliáo, tā de wèi hǎo duō le.",
+   "vi": "Sau một tháng điều trị, dạ dày anh ấy đỡ nhiều."
+  }
+ ]
+}

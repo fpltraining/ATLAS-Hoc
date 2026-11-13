@@ -1,0 +1,264 @@
+{
+ "id": 284,
+ "cn": "抓紧时间",
+ "title": "Động tác và việc tay chân",
+ "goal": "Nói về nấu, hái, bắt, tranh thủ, đuổi theo, đâm vào, cắn, nắm, lắc, kiếm tiền, tặng, sửa sang nhà, trang trí, xây dựng và nghiên cứu chế tạo.",
+ "words": [
+  {
+   "w": "煮",
+   "py": "zhǔ",
+   "hv": "chử",
+   "vi": "nấu, luộc",
+   "pos": "động từ",
+   "note": "煮面条 (nấu mì).",
+   "ex": [
+    {
+     "cn": "我给你煮碗面吧。",
+     "py": "Wǒ gěi nǐ zhǔ wǎn miàn ba.",
+     "vi": "Để tôi nấu cho bạn bát mì."
+    }
+   ]
+  },
+  {
+   "w": "摘",
+   "py": "zhāi",
+   "hv": "trích",
+   "vi": "hái; tháo",
+   "pos": "động từ",
+   "note": "摘苹果 (hái táo).",
+   "ex": [
+    {
+     "cn": "我们去果园摘水果。",
+     "py": "Wǒmen qù guǒyuán zhāi shuǐguǒ.",
+     "vi": "Chúng tôi đi vườn hái hoa quả."
+    }
+   ]
+  },
+  {
+   "w": "抓",
+   "py": "zhuā",
+   "hv": "trảo",
+   "vi": "bắt, nắm",
+   "pos": "động từ",
+   "note": "抓住机会 (nắm lấy cơ hội).",
+   "ex": [
+    {
+     "cn": "我们要抓住每一个机会。",
+     "py": "Wǒmen yào zhuā zhù měi yí ge jīhuì.",
+     "vi": "Chúng ta phải nắm lấy mọi cơ hội."
+    }
+   ]
+  },
+  {
+   "w": "抓紧",
+   "py": "zhuājǐn",
+   "hv": "trảo khẩn",
+   "vi": "tranh thủ, khẩn trương",
+   "pos": "động từ",
+   "note": "抓紧时间 (tranh thủ thời gian).",
+   "ex": [
+    {
+     "cn": "抓紧时间练习吧。",
+     "py": "Zhuājǐn shíjiān liànxí ba.",
+     "vi": "Tranh thủ thời gian luyện tập đi."
+    }
+   ]
+  },
+  {
+   "w": "追",
+   "py": "zhuī",
+   "hv": "truy",
+   "vi": "đuổi theo",
+   "pos": "động từ",
+   "note": "追上 (đuổi kịp).",
+   "ex": [
+    {
+     "cn": "他一直追到对方的塔下。",
+     "py": "Tā yìzhí zhuī dào duìfāng de tǎ xià.",
+     "vi": "Anh ấy đuổi theo tận dưới trụ đối phương."
+    }
+   ]
+  },
+  {
+   "w": "撞",
+   "py": "zhuàng",
+   "hv": "chàng",
+   "vi": "đâm, va",
+   "pos": "động từ",
+   "note": "撞车 (đâm xe).",
+   "ex": [
+    {
+     "cn": "他不小心撞到了门上。",
+     "py": "Tā bù xiǎoxīn zhuàng dào le mén shang.",
+     "vi": "Anh ấy lỡ va vào cửa."
+    }
+   ]
+  },
+  {
+   "w": "咬",
+   "py": "yǎo",
+   "hv": "giảo",
+   "vi": "cắn",
+   "pos": "động từ",
+   "note": "被狗咬了 (bị chó cắn).",
+   "ex": [
+    {
+     "cn": "他咬了一口苹果。",
+     "py": "Tā yǎo le yì kǒu píngguǒ.",
+     "vi": "Anh ấy cắn một miếng táo."
+    }
+   ]
+  },
+  {
+   "w": "握",
+   "py": "wò",
+   "hv": "ác",
+   "vi": "nắm",
+   "pos": "động từ",
+   "note": "握紧拳头 (nắm chặt tay).",
+   "ex": [
+    {
+     "cn": "他紧紧地握着我的手。",
+     "py": "Tā jǐnjǐn de wò zhe wǒ de shǒu.",
+     "vi": "Anh ấy nắm chặt tay tôi."
+    }
+   ]
+  },
+  {
+   "w": "摇",
+   "py": "yáo",
+   "hv": "dao",
+   "vi": "lắc, vẫy",
+   "pos": "động từ",
+   "note": "摇头 (lắc đầu).",
+   "ex": [
+    {
+     "cn": "他摇了摇头，说不知道。",
+     "py": "Tā yáo le yáo tóu, shuō bù zhīdào.",
+     "vi": "Anh ấy lắc đầu, nói không biết."
+    }
+   ]
+  },
+  {
+   "w": "挣",
+   "py": "zhèng",
+   "hv": "tránh",
+   "vi": "kiếm (tiền)",
+   "pos": "động từ",
+   "note": "挣钱 (kiếm tiền).",
+   "ex": [
+    {
+     "cn": "他每个月挣一万块。",
+     "py": "Tā měi ge yuè zhèng yí wàn kuài.",
+     "vi": "Mỗi tháng anh ấy kiếm mười nghìn tệ."
+    }
+   ]
+  },
+  {
+   "w": "赠送",
+   "py": "zèngsòng",
+   "hv": "tặng tống",
+   "vi": "tặng",
+   "pos": "động từ",
+   "note": "免费赠送 (tặng miễn phí).",
+   "ex": [
+    {
+     "cn": "买一送一，免费赠送一杯咖啡。",
+     "py": "Mǎi yī sòng yī, miǎnfèi zèngsòng yì bēi kāfēi.",
+     "vi": "Mua một tặng một, tặng miễn phí một cốc cà phê."
+    }
+   ]
+  },
+  {
+   "w": "装修",
+   "py": "zhuāngxiū",
+   "hv": "trang tu",
+   "vi": "sửa sang (nhà)",
+   "pos": "động từ",
+   "note": "装修房子 (sửa nhà).",
+   "ex": [
+    {
+     "cn": "我们的新家正在装修。",
+     "py": "Wǒmen de xīn jiā zhèngzài zhuāngxiū.",
+     "vi": "Nhà mới của chúng tôi đang sửa sang."
+    }
+   ]
+  },
+  {
+   "w": "装饰",
+   "py": "zhuāngshì",
+   "hv": "trang sức",
+   "vi": "trang trí",
+   "pos": "động từ, danh từ",
+   "note": "Khác \"trang sức\" (đồ đeo) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "过年的时候，家里装饰得很漂亮。",
+     "py": "Guònián de shíhou, jiā li zhuāngshì de hěn piàoliang.",
+     "vi": "Tết đến, nhà được trang trí rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "修建",
+   "py": "xiūjiàn",
+   "hv": "tu kiến",
+   "vi": "xây dựng",
+   "pos": "động từ",
+   "note": "修建公路 (xây đường).",
+   "ex": [
+    {
+     "cn": "政府正在修建一座新桥。",
+     "py": "Zhèngfǔ zhèngzài xiūjiàn yí zuò xīn qiáo.",
+     "vi": "Chính phủ đang xây một cây cầu mới."
+    }
+   ]
+  },
+  {
+   "w": "研制",
+   "py": "yánzhì",
+   "hv": "nghiên chế",
+   "vi": "nghiên cứu chế tạo",
+   "pos": "động từ",
+   "note": "研制新药 (chế tạo thuốc mới).",
+   "ex": [
+    {
+     "cn": "科学家们研制出了新药。",
+     "py": "Kēxuéjiāmen yánzhì chū le xīn yào.",
+     "vi": "Các nhà khoa học đã chế ra thuốc mới."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 住 (giữ chặt)",
+   "b": "抓住 · 握住 · 记住",
+   "d": "Kết quả: giữ lại, cố định.",
+   "ex": [
+    {
+     "cn": "记住，比赛中一定要冷静。",
+     "py": "Jìzhù, bǐsài zhōng yídìng yào lěngjìng.",
+     "vi": "Nhớ kỹ, trong trận nhất định phải bình tĩnh."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "机会来了一定要抓住。",
+   "py": "Jīhuì lái le yídìng yào zhuā zhù.",
+   "vi": "Cơ hội đến nhất định phải nắm lấy."
+  },
+  {
+   "cn": "离比赛只有三天了，大家抓紧时间训练。",
+   "py": "Lí bǐsài zhǐyǒu sān tiān le, dàjiā zhuājǐn shíjiān xùnliàn.",
+   "vi": "Chỉ còn ba ngày đến trận, mọi người tranh thủ tập."
+  },
+  {
+   "cn": "他靠打比赛挣钱，帮助家里。",
+   "py": "Tā kào dǎ bǐsài zhèng qián, bāngzhù jiā li.",
+   "vi": "Anh ấy kiếm tiền nhờ thi đấu, phụ giúp gia đình."
+  }
+ ]
+}

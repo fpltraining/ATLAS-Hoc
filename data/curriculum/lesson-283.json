@@ -1,0 +1,264 @@
+{
+ "id": 283,
+ "cn": "真诚的谈话",
+ "title": "Trò chuyện và trao đổi",
+ "goal": "Nói về cuộc trò chuyện, giọng điệu, giọng nói, âm lượng, tiếng động, chuyển lời, tư vấn, tán thành, nhất trí, thắc mắc, chân thành, giao hẹn, nhắc tới, miêu tả và tuyên bố.",
+ "words": [
+  {
+   "w": "谈话",
+   "py": "tánhuà",
+   "hv": "đàm thoại",
+   "vi": "trò chuyện, nói chuyện",
+   "pos": "động từ, danh từ",
+   "note": "个别谈话 (nói chuyện riêng).",
+   "ex": [
+    {
+     "cn": "教练找我谈话了。",
+     "py": "Jiàoliàn zhǎo wǒ tánhuà le.",
+     "vi": "Huấn luyện viên gọi tôi nói chuyện."
+    }
+   ]
+  },
+  {
+   "w": "语气",
+   "py": "yǔqì",
+   "hv": "ngữ khí",
+   "vi": "giọng điệu",
+   "pos": "danh từ",
+   "note": "语气很重 (giọng nặng nề).",
+   "ex": [
+    {
+     "cn": "他说话的语气很温和。",
+     "py": "Tā shuōhuà de yǔqì hěn wēnhé.",
+     "vi": "Giọng điệu anh ấy rất ôn hoà."
+    }
+   ]
+  },
+  {
+   "w": "语音",
+   "py": "yǔyīn",
+   "hv": "ngữ âm",
+   "vi": "giọng nói; tin nhắn thoại",
+   "pos": "danh từ",
+   "note": "发语音 (gửi tin thoại).",
+   "ex": [
+    {
+     "cn": "我给你发了一条语音。",
+     "py": "Wǒ gěi nǐ fā le yì tiáo yǔyīn.",
+     "vi": "Tôi gửi bạn một tin nhắn thoại."
+    }
+   ]
+  },
+  {
+   "w": "音量",
+   "py": "yīnliàng",
+   "hv": "âm lượng",
+   "vi": "âm lượng",
+   "pos": "danh từ",
+   "note": "调低音量 (vặn nhỏ tiếng).",
+   "ex": [
+    {
+     "cn": "请把音量调小一点儿。",
+     "py": "Qǐng bǎ yīnliàng tiáo xiǎo yìdiǎnr.",
+     "vi": "Xin vặn nhỏ âm lượng một chút."
+    }
+   ]
+  },
+  {
+   "w": "响声",
+   "py": "xiǎngshēng",
+   "hv": "hưởng thanh",
+   "vi": "tiếng động",
+   "pos": "danh từ",
+   "note": "很大的响声 (tiếng động lớn).",
+   "ex": [
+    {
+     "cn": "外面传来很大的响声。",
+     "py": "Wàimiàn chuán lái hěn dà de xiǎngshēng.",
+     "vi": "Bên ngoài vọng vào tiếng động lớn."
+    }
+   ]
+  },
+  {
+   "w": "转告",
+   "py": "zhuǎngào",
+   "hv": "chuyển cáo",
+   "vi": "chuyển lời",
+   "pos": "động từ",
+   "note": "请转告他 (nhắn lại với anh ấy giúp).",
+   "ex": [
+    {
+     "cn": "请转告他明天八点集合。",
+     "py": "Qǐng zhuǎngào tā míngtiān bā diǎn jíhé.",
+     "vi": "Nhắn giúp anh ấy mai tám giờ tập trung."
+    }
+   ]
+  },
+  {
+   "w": "咨询",
+   "py": "zīxún",
+   "hv": "tư tuân",
+   "vi": "tư vấn, hỏi ý kiến",
+   "pos": "động từ",
+   "note": "咨询电话 (số tư vấn).",
+   "ex": [
+    {
+     "cn": "有问题可以打电话咨询。",
+     "py": "Yǒu wèntí kěyǐ dǎ diànhuà zīxún.",
+     "vi": "Có thắc mắc có thể gọi điện tư vấn."
+    }
+   ]
+  },
+  {
+   "w": "赞成",
+   "py": "zànchéng",
+   "hv": "tán thành",
+   "vi": "tán thành",
+   "pos": "động từ",
+   "note": "Chính là \"tán thành\".",
+   "ex": [
+    {
+     "cn": "我赞成你的意见。",
+     "py": "Wǒ zànchéng nǐ de yìjiàn.",
+     "vi": "Tôi tán thành ý kiến của bạn."
+    }
+   ]
+  },
+  {
+   "w": "一致",
+   "py": "yízhì",
+   "hv": "nhất trí",
+   "vi": "nhất trí",
+   "pos": "tính từ",
+   "note": "意见一致 (ý kiến thống nhất).",
+   "ex": [
+    {
+     "cn": "大家一致同意这个方案。",
+     "py": "Dàjiā yízhì tóngyì zhège fāng'àn.",
+     "vi": "Mọi người nhất trí đồng ý phương án này."
+    }
+   ]
+  },
+  {
+   "w": "疑问",
+   "py": "yíwèn",
+   "hv": "nghi vấn",
+   "vi": "thắc mắc",
+   "pos": "danh từ",
+   "note": "有疑问 (có thắc mắc).",
+   "ex": [
+    {
+     "cn": "大家还有什么疑问吗？",
+     "py": "Dàjiā hái yǒu shénme yíwèn ma?",
+     "vi": "Mọi người còn thắc mắc gì không?"
+    }
+   ]
+  },
+  {
+   "w": "真诚",
+   "py": "zhēnchéng",
+   "hv": "chân thành",
+   "vi": "chân thành",
+   "pos": "tính từ",
+   "note": "Chính là \"chân thành\".",
+   "ex": [
+    {
+     "cn": "他是一个真诚的人。",
+     "py": "Tā shì yí ge zhēnchéng de rén.",
+     "vi": "Anh ấy là người chân thành."
+    }
+   ]
+  },
+  {
+   "w": "约定",
+   "py": "yuēdìng",
+   "hv": "ước định",
+   "vi": "hẹn ước",
+   "pos": "động từ, danh từ",
+   "note": "我们约定好了 (chúng ta hẹn rồi đấy).",
+   "ex": [
+    {
+     "cn": "我们约定明年再见。",
+     "py": "Wǒmen yuēdìng míngnián zài jiàn.",
+     "vi": "Chúng tôi hẹn sang năm gặp lại."
+    }
+   ]
+  },
+  {
+   "w": "提起",
+   "py": "tíqǐ",
+   "hv": "đề khởi",
+   "vi": "nhắc tới",
+   "pos": "động từ",
+   "note": "提起这件事 (nhắc chuyện này).",
+   "ex": [
+    {
+     "cn": "他从来不提起自己的过去。",
+     "py": "Tā cónglái bù tíqǐ zìjǐ de guòqù.",
+     "vi": "Anh ấy không bao giờ nhắc đến quá khứ."
+    }
+   ]
+  },
+  {
+   "w": "形容",
+   "py": "xíngróng",
+   "hv": "hình dung",
+   "vi": "miêu tả, diễn tả",
+   "pos": "động từ",
+   "note": "Khác \"hình dung\" (tưởng tượng) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "我不知道怎么形容那种感觉。",
+     "py": "Wǒ bù zhīdào zěnme xíngróng nà zhǒng gǎnjué.",
+     "vi": "Tôi không biết diễn tả cảm giác đó thế nào."
+    }
+   ]
+  },
+  {
+   "w": "宣布",
+   "py": "xuānbù",
+   "hv": "tuyên bố",
+   "vi": "tuyên bố, công bố",
+   "pos": "động từ",
+   "note": "Chính là \"tuyên bố\".",
+   "ex": [
+    {
+     "cn": "裁判宣布比赛开始。",
+     "py": "Cáipàn xuānbù bǐsài kāishǐ.",
+     "vi": "Trọng tài tuyên bố trận đấu bắt đầu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "把 + vật + 调 + 大/小/高/低",
+   "b": "把音量调小",
+   "d": "Điều chỉnh mức của vật gì.",
+   "ex": [
+    {
+     "cn": "把空调温度调高一点儿。",
+     "py": "Bǎ kōngtiáo wēndù tiáo gāo yìdiǎnr.",
+     "vi": "Chỉnh nhiệt độ điều hoà cao lên chút."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "真诚的谈话可以解决很多矛盾。",
+   "py": "Zhēnchéng de tánhuà kěyǐ jiějué hěn duō máodùn.",
+   "vi": "Trò chuyện chân thành giải quyết được nhiều mâu thuẫn."
+  },
+  {
+   "cn": "比赛的时候，语气要冷静，不要骂人。",
+   "py": "Bǐsài de shíhou, yǔqì yào lěngjìng, bú yào mà rén.",
+   "vi": "Khi thi đấu giọng phải bình tĩnh, đừng chửi nhau."
+  },
+  {
+   "cn": "主办方宣布了冠军的名字。",
+   "py": "Zhǔbànfāng xuānbù le guànjūn de míngzi.",
+   "vi": "Ban tổ chức công bố tên nhà vô địch."
+  }
+ ]
+}

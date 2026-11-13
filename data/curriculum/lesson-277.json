@@ -1,0 +1,264 @@
+{
+ "id": 277,
+ "cn": "网上预订",
+ "title": "Đặt chỗ và tài khoản",
+ "goal": "Nói về đặt trước, hẹn trước, dự tính, dự báo, dự đoán, ưu đãi, giảm giá, tăng giá, phí vận chuyển, gửi bưu điện, tem, tài khoản và đăng ký.",
+ "words": [
+  {
+   "w": "预订",
+   "py": "yùdìng",
+   "hv": "dự đính",
+   "vi": "đặt trước",
+   "pos": "động từ",
+   "note": "预订酒店 (đặt khách sạn).",
+   "ex": [
+    {
+     "cn": "我已经在网上预订了酒店。",
+     "py": "Wǒ yǐjīng zài wǎngshang yùdìng le jiǔdiàn.",
+     "vi": "Tôi đã đặt khách sạn trên mạng."
+    }
+   ]
+  },
+  {
+   "w": "预约",
+   "py": "yùyuē",
+   "hv": "dự ước",
+   "vi": "hẹn trước",
+   "pos": "động từ",
+   "note": "预约医生 (đặt lịch khám).",
+   "ex": [
+    {
+     "cn": "看这个医生要先预约。",
+     "py": "Kàn zhège yīshēng yào xiān yùyuē.",
+     "vi": "Khám bác sĩ này phải hẹn trước."
+    }
+   ]
+  },
+  {
+   "w": "预计",
+   "py": "yùjì",
+   "hv": "dự kế",
+   "vi": "dự tính",
+   "pos": "động từ",
+   "note": "预计明天到 (dự tính mai đến).",
+   "ex": [
+    {
+     "cn": "飞机预计十点到达。",
+     "py": "Fēijī yùjì shí diǎn dàodá.",
+     "vi": "Máy bay dự kiến tới lúc mười giờ."
+    }
+   ]
+  },
+  {
+   "w": "预报",
+   "py": "yùbào",
+   "hv": "dự báo",
+   "vi": "dự báo",
+   "pos": "động từ, danh từ",
+   "note": "天气预报 (dự báo thời tiết).",
+   "ex": [
+    {
+     "cn": "天气预报说明天有雨。",
+     "py": "Tiānqì yùbào shuō míngtiān yǒu yǔ.",
+     "vi": "Dự báo thời tiết nói mai có mưa."
+    }
+   ]
+  },
+  {
+   "w": "预测",
+   "py": "yùcè",
+   "hv": "dự trắc",
+   "vi": "dự đoán",
+   "pos": "động từ",
+   "note": "预测结果 (dự đoán kết quả).",
+   "ex": [
+    {
+     "cn": "很难预测谁会赢。",
+     "py": "Hěn nán yùcè shéi huì yíng.",
+     "vi": "Rất khó đoán ai sẽ thắng."
+    }
+   ]
+  },
+  {
+   "w": "优惠",
+   "py": "yōuhuì",
+   "hv": "ưu huệ",
+   "vi": "ưu đãi",
+   "pos": "tính từ, danh từ",
+   "note": "优惠价 (giá ưu đãi).",
+   "ex": [
+    {
+     "cn": "学生买票有优惠。",
+     "py": "Xuésheng mǎi piào yǒu yōuhuì.",
+     "vi": "Học sinh mua vé được ưu đãi."
+    }
+   ]
+  },
+  {
+   "w": "折扣",
+   "py": "zhékòu",
+   "hv": "chiết khấu",
+   "vi": "giảm giá",
+   "pos": "danh từ",
+   "note": "打折扣 (giảm giá).",
+   "ex": [
+    {
+     "cn": "这家店现在有八折折扣。",
+     "py": "Zhè jiā diàn xiànzài yǒu bā zhé zhékòu.",
+     "vi": "Cửa hàng này đang giảm 20%."
+    }
+   ]
+  },
+  {
+   "w": "涨价",
+   "py": "zhǎngjià",
+   "hv": "trướng giá",
+   "vi": "tăng giá",
+   "pos": "động từ",
+   "note": "涨 + 价.",
+   "ex": [
+    {
+     "cn": "下个月电费要涨价。",
+     "py": "Xià ge yuè diànfèi yào zhǎngjià.",
+     "vi": "Tháng sau tiền điện tăng giá."
+    }
+   ]
+  },
+  {
+   "w": "运费",
+   "py": "yùnfèi",
+   "hv": "vận phí",
+   "vi": "phí vận chuyển",
+   "pos": "danh từ",
+   "note": "免运费 (miễn phí ship).",
+   "ex": [
+    {
+     "cn": "买两件以上免运费。",
+     "py": "Mǎi liǎng jiàn yǐshàng miǎn yùnfèi.",
+     "vi": "Mua từ hai món trở lên miễn phí vận chuyển."
+    }
+   ]
+  },
+  {
+   "w": "邮寄",
+   "py": "yóujì",
+   "hv": "bưu ký",
+   "vi": "gửi bưu điện",
+   "pos": "động từ",
+   "note": "邮寄包裹 (gửi bưu kiện).",
+   "ex": [
+    {
+     "cn": "我把礼物邮寄给你了。",
+     "py": "Wǒ bǎ lǐwù yóujì gěi nǐ le.",
+     "vi": "Tôi gửi quà qua bưu điện cho bạn rồi."
+    }
+   ]
+  },
+  {
+   "w": "邮票",
+   "py": "yóupiào",
+   "hv": "bưu phiếu",
+   "vi": "tem thư",
+   "pos": "danh từ",
+   "note": "集邮票 (sưu tầm tem).",
+   "ex": [
+    {
+     "cn": "他喜欢集邮票。",
+     "py": "Tā xǐhuan jí yóupiào.",
+     "vi": "Anh ấy thích sưu tầm tem."
+    }
+   ]
+  },
+  {
+   "w": "账号",
+   "py": "zhànghào",
+   "hv": "trướng hiệu",
+   "vi": "tài khoản (mạng)",
+   "pos": "danh từ",
+   "note": "游戏账号 (tài khoản game).",
+   "ex": [
+    {
+     "cn": "你的游戏账号是什么？",
+     "py": "Nǐ de yóuxì zhànghào shì shénme?",
+     "vi": "Tài khoản game của bạn là gì?"
+    }
+   ]
+  },
+  {
+   "w": "账户",
+   "py": "zhànghù",
+   "hv": "trướng hộ",
+   "vi": "tài khoản (ngân hàng)",
+   "pos": "danh từ",
+   "note": "银行账户 (tài khoản ngân hàng).",
+   "ex": [
+    {
+     "cn": "钱已经转到你的账户里了。",
+     "py": "Qián yǐjīng zhuǎn dào nǐ de zhànghù li le.",
+     "vi": "Tiền đã chuyển vào tài khoản của bạn."
+    }
+   ]
+  },
+  {
+   "w": "注册",
+   "py": "zhùcè",
+   "hv": "chú sách",
+   "vi": "đăng ký (tài khoản)",
+   "pos": "động từ",
+   "note": "注册账号 (đăng ký tài khoản).",
+   "ex": [
+    {
+     "cn": "用手机号就可以注册。",
+     "py": "Yòng shǒujīhào jiù kěyǐ zhùcè.",
+     "vi": "Dùng số điện thoại là đăng ký được."
+    }
+   ]
+  },
+  {
+   "w": "在线",
+   "py": "zàixiàn",
+   "hv": "tại tuyến",
+   "vi": "trực tuyến",
+   "pos": "tính từ",
+   "note": "在线学习 (học trực tuyến).",
+   "ex": [
+    {
+     "cn": "现在有很多人在线学习中文。",
+     "py": "Xiànzài yǒu hěn duō rén zàixiàn xuéxí Zhōngwén.",
+     "vi": "Bây giờ nhiều người học tiếng Trung trực tuyến."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "打 + số + 折",
+   "b": "打八折 (giảm 20%) · 打五折 (giảm 50%)",
+   "d": "Số càng nhỏ càng giảm nhiều.",
+   "ex": [
+    {
+     "cn": "这件衣服打五折，只要一百块。",
+     "py": "Zhè jiàn yīfu dǎ wǔ zhé, zhǐ yào yìbǎi kuài.",
+     "vi": "Áo này giảm một nửa, chỉ một trăm tệ."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "去比赛的机票和酒店都预订好了。",
+   "py": "Qù bǐsài de jīpiào hé jiǔdiàn dōu yùdìng hǎo le.",
+   "vi": "Vé máy bay và khách sạn đi thi đấu đều đã đặt xong."
+  },
+  {
+   "cn": "现在注册可以享受新用户优惠。",
+   "py": "Xiànzài zhùcè kěyǐ xiǎngshòu xīn yònghù yōuhuì.",
+   "vi": "Đăng ký bây giờ được hưởng ưu đãi người dùng mới."
+  },
+  {
+   "cn": "请不要把账号密码告诉别人。",
+   "py": "Qǐng bú yào bǎ zhànghào mìmǎ gàosu biérén.",
+   "vi": "Xin đừng cho người khác biết mật khẩu tài khoản."
+  }
+ ]
+}

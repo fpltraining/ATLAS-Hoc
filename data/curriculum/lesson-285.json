@@ -1,0 +1,264 @@
+{
+ "id": 285,
+ "cn": "总之一句话",
+ "title": "Liên từ và phó từ văn viết",
+ "goal": "Dùng: một khi, lỡ như, hay là, nếu không phải, cùng với, từ trước đến nay, do đó, từ đó suy ra, kể từ, đến nay, từ lâu, tóm lại, đúng như, tròn và đủ.",
+ "words": [
+  {
+   "w": "一旦",
+   "py": "yídàn",
+   "hv": "nhất đán",
+   "vi": "một khi",
+   "pos": "phó từ",
+   "note": "一旦……就…… (một khi... thì...).",
+   "ex": [
+    {
+     "cn": "一旦决定了，就不要后悔。",
+     "py": "Yídàn juédìng le, jiù bú yào hòuhuǐ.",
+     "vi": "Một khi đã quyết thì đừng hối hận."
+    }
+   ]
+  },
+  {
+   "w": "万一",
+   "py": "wànyī",
+   "hv": "vạn nhất",
+   "vi": "lỡ như",
+   "pos": "liên từ",
+   "note": "Khả năng nhỏ nhưng có thể xảy ra.",
+   "ex": [
+    {
+     "cn": "万一下雨怎么办？",
+     "py": "Wànyī xià yǔ zěnme bàn?",
+     "vi": "Lỡ trời mưa thì sao?"
+    }
+   ]
+  },
+  {
+   "w": "要不",
+   "py": "yàobù",
+   "hv": "yếu bất",
+   "vi": "hay là; nếu không",
+   "pos": "liên từ",
+   "note": "要不我们走吧 (hay là mình đi nhé).",
+   "ex": [
+    {
+     "cn": "要不我们改天再去吧。",
+     "py": "Yàobù wǒmen gǎitiān zài qù ba.",
+     "vi": "Hay là hôm khác mình đi nhé."
+    }
+   ]
+  },
+  {
+   "w": "要不是",
+   "py": "yàobúshì",
+   "hv": "yếu bất thị",
+   "vi": "nếu không phải vì",
+   "pos": "liên từ",
+   "note": "要不是你，我就输了 (không có bạn thì tôi thua rồi).",
+   "ex": [
+    {
+     "cn": "要不是你帮我，我早就放弃了。",
+     "py": "Yàobúshì nǐ bāng wǒ, wǒ zǎo jiù fàngqì le.",
+     "vi": "Nếu không có bạn giúp, tôi đã bỏ cuộc từ lâu."
+    }
+   ]
+  },
+  {
+   "w": "以及",
+   "py": "yǐjí",
+   "hv": "dĩ cập",
+   "vi": "và, cùng với",
+   "pos": "liên từ",
+   "note": "Văn viết của 和.",
+   "ex": [
+    {
+     "cn": "选手、教练以及工作人员都到了。",
+     "py": "Xuǎnshǒu, jiàoliàn yǐjí gōngzuò rényuán dōu dào le.",
+     "vi": "Tuyển thủ, huấn luyện viên cùng nhân viên đều đã đến."
+    }
+   ]
+  },
+  {
+   "w": "以来",
+   "py": "yǐlái",
+   "hv": "dĩ lai",
+   "vi": "kể từ (đến nay)",
+   "pos": "danh từ",
+   "note": "今年以来 (từ đầu năm đến nay).",
+   "ex": [
+    {
+     "cn": "今年以来，我们赢了二十场。",
+     "py": "Jīnnián yǐlái, wǒmen yíng le èrshí chǎng.",
+     "vi": "Từ đầu năm đến nay chúng tôi thắng hai mươi trận."
+    }
+   ]
+  },
+  {
+   "w": "因而",
+   "py": "yīn'ér",
+   "hv": "nhân nhi",
+   "vi": "vì thế",
+   "pos": "liên từ",
+   "note": "Văn viết của 所以.",
+   "ex": [
+    {
+     "cn": "他训练很刻苦，因而进步很快。",
+     "py": "Tā xùnliàn hěn kèkǔ, yīn'ér jìnbù hěn kuài.",
+     "vi": "Anh ấy tập rất chăm, vì thế tiến bộ nhanh."
+    }
+   ]
+  },
+  {
+   "w": "由此",
+   "py": "yóucǐ",
+   "hv": "do thử",
+   "vi": "từ đó, do đó",
+   "pos": "liên từ",
+   "note": "由此可见 (từ đó có thể thấy).",
+   "ex": [
+    {
+     "cn": "由此可见，坚持是成功的关键。",
+     "py": "Yóucǐ kějiàn, jiānchí shì chénggōng de guānjiàn.",
+     "vi": "Từ đó có thể thấy, kiên trì là chìa khoá thành công."
+    }
+   ]
+  },
+  {
+   "w": "自从",
+   "py": "zìcóng",
+   "hv": "tự tòng",
+   "vi": "kể từ khi",
+   "pos": "giới từ",
+   "note": "自从……以后 (từ khi... về sau).",
+   "ex": [
+    {
+     "cn": "自从来到这个队，他变了很多。",
+     "py": "Zìcóng láidào zhège duì, tā biàn le hěn duō.",
+     "vi": "Từ khi về đội này, anh ấy thay đổi nhiều."
+    }
+   ]
+  },
+  {
+   "w": "至今",
+   "py": "zhìjīn",
+   "hv": "chí kim",
+   "vi": "đến nay",
+   "pos": "phó từ",
+   "note": "至今还记得 (đến nay vẫn nhớ).",
+   "ex": [
+    {
+     "cn": "那场比赛我至今还记得。",
+     "py": "Nà chǎng bǐsài wǒ zhìjīn hái jìde.",
+     "vi": "Trận đấu ấy đến giờ tôi vẫn nhớ."
+    }
+   ]
+  },
+  {
+   "w": "早已",
+   "py": "zǎoyǐ",
+   "hv": "tảo dĩ",
+   "vi": "từ lâu đã",
+   "pos": "phó từ",
+   "note": "Văn viết của 早就.",
+   "ex": [
+    {
+     "cn": "他早已不是当年的新人了。",
+     "py": "Tā zǎoyǐ bú shì dāngnián de xīnrén le.",
+     "vi": "Anh ấy từ lâu đã không còn là tân binh ngày nào."
+    }
+   ]
+  },
+  {
+   "w": "总之",
+   "py": "zǒngzhī",
+   "hv": "tổng chi",
+   "vi": "tóm lại",
+   "pos": "liên từ",
+   "note": "Dùng để kết luận.",
+   "ex": [
+    {
+     "cn": "总之，我们下次一定要赢。",
+     "py": "Zǒngzhī, wǒmen xià cì yídìng yào yíng.",
+     "vi": "Tóm lại, lần sau chúng ta nhất định phải thắng."
+    }
+   ]
+  },
+  {
+   "w": "正如",
+   "py": "zhèngrú",
+   "hv": "chính như",
+   "vi": "đúng như",
+   "pos": "động từ",
+   "note": "正如……所说 (đúng như... đã nói).",
+   "ex": [
+    {
+     "cn": "正如教练所说，细节决定成败。",
+     "py": "Zhèngrú jiàoliàn suǒ shuō, xìjié juédìng chéngbài.",
+     "vi": "Đúng như huấn luyện viên nói, chi tiết quyết định thành bại."
+    }
+   ]
+  },
+  {
+   "w": "整整",
+   "py": "zhěngzhěng",
+   "hv": "chỉnh chỉnh",
+   "vi": "tròn, trọn",
+   "pos": "phó từ",
+   "note": "整整一天 (trọn một ngày).",
+   "ex": [
+    {
+     "cn": "我整整等了你两个小时。",
+     "py": "Wǒ zhěngzhěng děng le nǐ liǎng ge xiǎoshí.",
+     "vi": "Tôi đợi bạn tròn hai tiếng."
+    }
+   ]
+  },
+  {
+   "w": "足够",
+   "py": "zúgòu",
+   "hv": "túc cấu",
+   "vi": "đủ",
+   "pos": "tính từ",
+   "note": "足够的时间 (đủ thời gian).",
+   "ex": [
+    {
+     "cn": "我们有足够的时间准备。",
+     "py": "Wǒmen yǒu zúgòu de shíjiān zhǔnbèi.",
+     "vi": "Chúng ta có đủ thời gian chuẩn bị."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "一旦……就……",
+   "b": "一旦开始，就不能停",
+   "d": "Một khi điều kiện xảy ra thì kết quả theo sau.",
+   "ex": [
+    {
+     "cn": "一旦失去信心，就很难赢了。",
+     "py": "Yídàn shīqù xìnxīn, jiù hěn nán yíng le.",
+     "vi": "Một khi mất tự tin thì rất khó thắng."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "要不是大家一起努力，我们不可能拿冠军。",
+   "py": "Yàobúshì dàjiā yìqǐ nǔlì, wǒmen bù kěnéng ná guànjūn.",
+   "vi": "Nếu không nhờ mọi người cùng cố gắng, chúng ta không thể vô địch."
+  },
+  {
+   "cn": "自从开始学中文，我每天都听中文歌。",
+   "py": "Zìcóng kāishǐ xué Zhōngwén, wǒ měi tiān dōu tīng Zhōngwén gē.",
+   "vi": "Từ khi bắt đầu học tiếng Trung, ngày nào tôi cũng nghe nhạc Trung."
+  },
+  {
+   "cn": "总之，只要坚持，就一定会进步。",
+   "py": "Zǒngzhī, zhǐyào jiānchí, jiù yídìng huì jìnbù.",
+   "vi": "Tóm lại, chỉ cần kiên trì thì nhất định sẽ tiến bộ."
+  }
+ ]
+}
