@@ -9,8 +9,8 @@ Gộp từ 5 app: Bút Hán, Inklish, ATLAS bản cũ, Song Ngữ và Han's Engl
 | Mục | Nội dung |
 |---|---|
 | Hôm nay | Việc cần làm theo thứ tự, chia theo quỹ 30 phút đến 2 tiếng, chuỗi ngày học, thử thách 10 câu, nhật ký |
-| Tiếng Anh | Bài xếp lớp, 5 chặng: A0 → B2 đủ nội dung (chặng 2 có 1.134 từ B1–B2 mới và bài đọc B2), chặng 3–4 (B2 vững, C1) đang soạn; truyện và tin song ngữ, viết bằng bút, ôn thẻ, tiếng Anh nghề, sổ tay ngữ pháp |
-| Tiếng Trung | 205 bài HSK 1–4 theo chuẩn 2025 (đủ 100% từ cấp 1–4), truyện song ngữ có pinyin, viết nhiều lượt chấm từng nét, bản đồ chữ, ôn thẻ, thi thử HSK, từ vựng HSK 3.0 cấp 1–9 có nghĩa chi tiết, 5 trò ôn nhanh, pinyin, bộ thủ |
+| Tiếng Anh | Bài xếp lớp, luyện phát âm có chấm điểm, 5 chặng: A0 → B2 đủ nội dung (chặng 2 có 1.134 từ B1–B2 mới và bài đọc B2), chặng 3–4 (B2 vững, C1) đang soạn; truyện và tin song ngữ, viết bằng bút, ôn thẻ, tiếng Anh nghề, sổ tay ngữ pháp |
+| Tiếng Trung | 205 bài HSK 1–4 theo chuẩn 2025 (đủ 100% từ cấp 1–4), truyện song ngữ có pinyin, viết nhiều lượt chấm từng nét, bản đồ chữ, ôn thẻ, thi thử HSK, từ vựng HSK 3.0 cấp 1–9 có nghĩa chi tiết, 5 trò ôn nhanh, luyện phát âm và thanh điệu có chấm điểm, pinyin, bộ thủ |
 | Chủ đề | Tra từ Anh–Trung–Việt, 99 chủ đề song song hai ngôn ngữ, từ theo lĩnh vực, kiến thức, đọc số và tiền, sổ ghi |
 | Tiến độ | Thời gian thật theo từng khối, nhật ký, sao lưu và nhập từ app cũ |
 
@@ -112,6 +112,17 @@ node tools/apply-patches.mjs
 ```
 
 `merge-data.mjs` cũng tự gọi bước này ở cuối, nên dựng lại dữ liệu không làm mất bản sửa. Phiên âm tiếng Anh theo giọng Mỹ. Đổi dữ liệu xong thì tăng `VERSION` trong `sw.js` để máy người dùng tải bản mới.
+
+## Đăng nhập và đồng bộ (Supabase)
+
+Mỗi người học một tài khoản (email + mật khẩu), tiến độ lưu lên Supabase nên đổi máy không mất. Nhiều người dùng chung một iPad cũng không lẫn dữ liệu: mỗi tài khoản có cơ sở dữ liệu riêng trên máy. Người đăng nhập đầu tiên trên một máy nhận luôn dữ liệu học đang có.
+
+1. Trong dự án Supabase: SQL Editor → chạy `supabase/migrations/20261113_atlas_state.sql`.
+2. Authentication → Sign In / Providers → Email: bật. Muốn tạo tài khoản dùng ngay không cần bấm link xác nhận thì tắt "Confirm email".
+3. Authentication → URL Configuration: Site URL đặt bằng địa chỉ app trên GitHub Pages (link quên mật khẩu sẽ quay về đây).
+4. Điền `SUPABASE_URL` và `SUPABASE_ANON_KEY` trong `js/config.js`. Khoá anon là khoá công khai; bảng đã bật Row Level Security nên mỗi người chỉ đọc ghi được dữ liệu của mình.
+
+Để trống `js/config.js` thì app chạy như cũ, không đăng nhập. Thư viện `js/vendor/supabase-2.119.0.js` là bản UMD của supabase-js (MIT), để sẵn trong repo cho app mở được khi offline.
 
 ## Chấm bài bằng AI
 

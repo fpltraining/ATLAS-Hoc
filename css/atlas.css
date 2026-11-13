@@ -314,3 +314,11 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 .speak-units span.cn { font-size: 24px; }
 .u-ok { background: var(--jade-soft); color: var(--jade); }
 .u-miss { background: var(--amber-soft); color: var(--gold); }
+
+/* ---- đăng nhập ---- */
+.login-card { width: min(380px, calc(100vw - 32px)); margin-top: 18px; display: flex; flex-direction: column; gap: 10px; text-align: left; }
+.login-card h2 { margin: 0; }
+.login-card p { color: var(--ink-soft); margin: 0 0 4px; }
+.login-input { width: 100%; font-size: 17px; }
+.login-msg { min-height: 20px; color: var(--ink-soft); }
+.login-msg.bad { color: var(--seal); }

@@ -1,11 +1,25 @@
 /* Lưu trữ cục bộ bằng IndexedDB: thẻ ôn, tiến độ, nhật ký, cài đặt.
-   Không có máy chủ — toàn bộ dữ liệu học nằm trên chính iPad của bạn. */
+   Mỗi tài khoản có một cơ sở dữ liệu riêng trên máy (useDatabase), nên nhiều người
+   dùng chung một iPad không lẫn tiến độ. Đồng bộ lên mạng nằm ở sync.js. */
 
 import { newCard } from './srs.js';
 
-const DB_NAME = 'atlas';
+let DB_NAME = 'atlas';
 const DB_VER = 1;
 let dbp = null;
+
+/** Chọn cơ sở dữ liệu trước khi đọc ghi lần đầu (mỗi tài khoản một cái). */
+export function useDatabase(name) {
+  if (name === DB_NAME) return;
+  if (dbp) dbp.then((db) => db.close()).catch(() => {});
+  DB_NAME = name;
+  dbp = null;
+  cachedSettings = null;
+}
+
+/* Báo cho phần đồng bộ mỗi khi dữ liệu học thay đổi */
+let onChange = null;
+export const setChangeListener = (fn) => { onChange = fn; };
 
 function open() {
   if (dbp) return dbp;
@@ -32,7 +46,10 @@ function tx(store, mode, fn) {
     const s = t.objectStore(store);
     let result;
     try { result = fn(s); } catch (e) { reject(e); return; }
-    t.oncomplete = () => resolve(result instanceof IDBRequest ? result.result : result);
+    t.oncomplete = () => {
+      if (mode === 'readwrite' && onChange) { try { onChange(); } catch { /* bỏ qua */ } }
+      resolve(result instanceof IDBRequest ? result.result : result);
+    };
     t.onerror = () => reject(t.error);
     t.onabort = () => reject(t.error);
   }));
@@ -214,12 +231,21 @@ export const updateKnow = (fn) => kvUpdate('know', { done: {} }, fn);
 const KV_KEYS = ['settings', 'lessons', 'days', 'en', 'read', 'work', 'know', 'notes', 'writes', 'writeScores', 'bookWork', 'bookScore', 'bookPage', 'lastBackup',
   'challenge', 'games', 'examResults', 'speakScores'];
 
-export async function exportAll() {
+export async function exportAll({ mark = true } = {}) {
   const [cards, logs] = await Promise.all([allCards(), allLogs()]);
   const kv = {};
   for (const k of KV_KEYS) kv[k] = await kvGet(k);
-  await kvSet('lastBackup', dayKey());
+  if (mark) await kvSet('lastBackup', dayKey());
   return { app: 'atlas', version: 1, exportedAt: new Date().toISOString(), cards, logs, kv };
+}
+
+/** Thay toàn bộ dữ liệu trên máy bằng bản lấy từ mạng (khác importAll là xoá trước). */
+export async function replaceAll(data) {
+  await tx('cards', 'readwrite', (s) => s.clear());
+  await tx('log', 'readwrite', (s) => s.clear());
+  await tx('kv', 'readwrite', (s) => { for (const k of KV_KEYS) s.delete(k); });
+  cachedSettings = null;
+  return importAll(data);
 }
 
 /**

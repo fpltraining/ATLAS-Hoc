@@ -1,5 +1,7 @@
 /* Bảng cài đặt, mở từ nút bánh răng trên góc phải. */
 
+import * as auth from '../auth.js';
+import * as sync from '../sync.js';
 import * as store from '../store.js';
 import * as audio from '../audio.js';
 import { STRICTNESS } from '../pen/grade.js';
@@ -82,6 +84,7 @@ export async function renderSettings() {
     h('div.note', { style: { marginTop: '10px' } }, audio.BETTER_VOICE_HELP),
     !audio.hasVoice() ? h('div.note.seal', { style: { marginTop: '10px' } }, audio.NO_VOICE_HELP) : null,
 
+    accountBlock(),
     h('hr.divider'),
     aiBlock(s, set),
     h('hr.divider'),
@@ -141,6 +144,31 @@ function voiceRow(lang, title, s, test) {
   return h('div.setting',
     h('div.grow', h('b', title), status, list.length ? sel : null),
     h('button.btn.sm', { onclick: test }, 'Thử'),
+  );
+}
+
+/* Tài khoản và đồng bộ (chỉ hiện khi đã bật đăng nhập) */
+function accountBlock() {
+  const u = auth.currentUser();
+  if (!auth.configured() || !u) return null;
+  const line = h('p.small.faint');
+  const show = (st) => { line.textContent = `${st.status}${st.at ? ` · lần cuối ${sync.vnTime(st.at)}` : ''}`; };
+  show(sync.syncState());
+  const off = sync.onSync(show);
+  setTimeout(() => { if (!line.isConnected) off(); }, 600000);
+  return h('div',
+    h('hr.divider'),
+    h('h4', 'Tài khoản'),
+    h('div.setting', h('div.grow', h('b', u.email), line),
+      h('div.row', { style: { gap: '8px' } },
+        h('button.btn.sm', { onclick: () => sync.sync() }, 'Đồng bộ ngay'),
+        h('button.btn.sm.ghost', {
+          onclick: async () => {
+            if (!confirm('Đăng xuất khỏi máy này? Tiến độ đã được lưu lên mạng.')) return;
+            await sync.push();
+            await auth.signOut();
+          },
+        }, 'Đăng xuất'))),
   );
 }
 

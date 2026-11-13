@@ -5,6 +5,8 @@
    việc mở file lên sửa rồi tải lại trang.
 */
 
+import * as auth from './auth.js';
+import * as sync from './sync.js';
 import * as data from './data.js';
 import * as store from './store.js';
 import * as audio from './audio.js';
@@ -194,6 +196,14 @@ export function applyTheme(theme) {
 
 async function boot() {
   try {
+    // Đăng nhập (chỉ khi đã cấu hình Supabase), chọn dữ liệu của đúng tài khoản rồi đồng bộ
+    if (auth.configured()) {
+      bootMsg.textContent = '';
+      const user = await auth.ensureLogin(bootEl);
+      store.useDatabase(auth.dbNameFor(user.id));
+      bootMsg.textContent = 'Đang đồng bộ tiến độ…';
+      await sync.start(user.id);
+    }
     bootMsg.textContent = 'Đang tải giáo trình…';
     const [settings] = await Promise.all([store.settings(), data.curriculum()]);
     applyTheme(settings.theme);
