@@ -1,0 +1,264 @@
+{
+ "id": 253,
+ "cn": "年夜饭",
+ "title": "Đồ dùng trong nhà",
+ "goal": "Gọi tên đồng hồ báo thức, quần bò, cà vạt, túi áo, chậu, tường, gỗ, bóng bay, hoa hồng, chuông, xăng, lịch, đồ dùng hằng ngày, nước sôi và bữa cơm tất niên.",
+ "words": [
+  {
+   "w": "闹钟",
+   "py": "nàozhōng",
+   "hv": "náo chung",
+   "vi": "đồng hồ báo thức",
+   "pos": "danh từ",
+   "note": "闹 (kêu) + 钟.",
+   "ex": [
+    {
+     "cn": "我每天早上六点的闹钟。",
+     "py": "Wǒ měi tiān zǎoshang liù diǎn de nàozhōng.",
+     "vi": "Báo thức của tôi là sáu giờ sáng mỗi ngày."
+    }
+   ]
+  },
+  {
+   "w": "牛仔裤",
+   "py": "niúzǎikù",
+   "hv": "ngưu tể khố",
+   "vi": "quần bò",
+   "pos": "danh từ",
+   "note": "牛仔 là cao bồi.",
+   "ex": [
+    {
+     "cn": "他喜欢穿牛仔裤。",
+     "py": "Tā xǐhuan chuān niúzǎikù.",
+     "vi": "Anh ấy thích mặc quần bò."
+    }
+   ]
+  },
+  {
+   "w": "领带",
+   "py": "lǐngdài",
+   "hv": "lĩnh đới",
+   "vi": "cà vạt",
+   "pos": "danh từ",
+   "note": "领 là cổ áo.",
+   "ex": [
+    {
+     "cn": "今天要穿西装打领带。",
+     "py": "Jīntiān yào chuān xīzhuāng dǎ lǐngdài.",
+     "vi": "Hôm nay phải mặc vest thắt cà vạt."
+    }
+   ]
+  },
+  {
+   "w": "口袋",
+   "py": "kǒudai",
+   "hv": "khẩu đại",
+   "vi": "túi (áo, quần)",
+   "pos": "danh từ",
+   "note": "袋 là túi.",
+   "ex": [
+    {
+     "cn": "钥匙在我的口袋里。",
+     "py": "Yàoshi zài wǒ de kǒudai li.",
+     "vi": "Chìa khoá trong túi tôi."
+    }
+   ]
+  },
+  {
+   "w": "盆",
+   "py": "pén",
+   "hv": "bồn",
+   "vi": "chậu",
+   "pos": "danh từ, lượng từ",
+   "note": "花盆 (chậu hoa).",
+   "ex": [
+    {
+     "cn": "阳台上有几盆花。",
+     "py": "Yángtái shang yǒu jǐ pén huā.",
+     "vi": "Ngoài ban công có mấy chậu hoa."
+    }
+   ]
+  },
+  {
+   "w": "墙",
+   "py": "qiáng",
+   "hv": "tường",
+   "vi": "bức tường",
+   "pos": "danh từ",
+   "note": "墙上 (trên tường).",
+   "ex": [
+    {
+     "cn": "墙上挂着一张地图。",
+     "py": "Qiáng shang guà zhe yì zhāng dìtú.",
+     "vi": "Trên tường treo một tấm bản đồ."
+    }
+   ]
+  },
+  {
+   "w": "木头",
+   "py": "mùtou",
+   "hv": "mộc đầu",
+   "vi": "gỗ",
+   "pos": "danh từ",
+   "note": "木 là \"mộc\".",
+   "ex": [
+    {
+     "cn": "这张桌子是木头做的。",
+     "py": "Zhè zhāng zhuōzi shì mùtou zuò de.",
+     "vi": "Cái bàn này làm bằng gỗ."
+    }
+   ]
+  },
+  {
+   "w": "气球",
+   "py": "qìqiú",
+   "hv": "khí cầu",
+   "vi": "bóng bay",
+   "pos": "danh từ",
+   "note": "Quả bóng chứa khí.",
+   "ex": [
+    {
+     "cn": "孩子手里拿着一个红气球。",
+     "py": "Háizi shǒu li ná zhe yí ge hóng qìqiú.",
+     "vi": "Đứa trẻ cầm một quả bóng bay đỏ."
+    }
+   ]
+  },
+  {
+   "w": "玫瑰",
+   "py": "méigui",
+   "hv": "mai khôi",
+   "vi": "hoa hồng",
+   "pos": "danh từ",
+   "note": "一朵玫瑰 (một bông hồng).",
+   "ex": [
+    {
+     "cn": "他送了她九十九朵玫瑰。",
+     "py": "Tā sòng le tā jiǔshíjiǔ duǒ méigui.",
+     "vi": "Anh ấy tặng cô ấy chín mươi chín bông hồng."
+    }
+   ]
+  },
+  {
+   "w": "铃",
+   "py": "líng",
+   "hv": "linh",
+   "vi": "chuông",
+   "pos": "danh từ",
+   "note": "门铃 (chuông cửa).",
+   "ex": [
+    {
+     "cn": "门铃响了，快去开门。",
+     "py": "Ménlíng xiǎng le, kuài qù kāi mén.",
+     "vi": "Chuông cửa reo rồi, ra mở cửa đi."
+    }
+   ]
+  },
+  {
+   "w": "汽油",
+   "py": "qìyóu",
+   "hv": "khí du",
+   "vi": "xăng",
+   "pos": "danh từ",
+   "note": "加汽油 (đổ xăng).",
+   "ex": [
+    {
+     "cn": "汽油又涨价了。",
+     "py": "Qìyóu yòu zhǎngjià le.",
+     "vi": "Xăng lại tăng giá rồi."
+    }
+   ]
+  },
+  {
+   "w": "日历",
+   "py": "rìlì",
+   "hv": "nhật lịch",
+   "vi": "lịch",
+   "pos": "danh từ",
+   "note": "历 là \"lịch\".",
+   "ex": [
+    {
+     "cn": "我在日历上写下了比赛时间。",
+     "py": "Wǒ zài rìlì shang xiě xià le bǐsài shíjiān.",
+     "vi": "Tôi ghi lịch thi đấu lên tờ lịch."
+    }
+   ]
+  },
+  {
+   "w": "日用品",
+   "py": "rìyòngpǐn",
+   "hv": "nhật dụng phẩm",
+   "vi": "đồ dùng hằng ngày",
+   "pos": "danh từ",
+   "note": "日用 + 品.",
+   "ex": [
+    {
+     "cn": "超市里什么日用品都有。",
+     "py": "Chāoshì li shénme rìyòngpǐn dōu yǒu.",
+     "vi": "Siêu thị có đủ mọi đồ dùng hằng ngày."
+    }
+   ]
+  },
+  {
+   "w": "开水",
+   "py": "kāishuǐ",
+   "hv": "khai thuỷ",
+   "vi": "nước sôi",
+   "pos": "danh từ",
+   "note": "开 ở đây là sôi.",
+   "ex": [
+    {
+     "cn": "多喝开水对身体好。",
+     "py": "Duō hē kāishuǐ duì shēntǐ hǎo.",
+     "vi": "Uống nhiều nước đun sôi tốt cho sức khoẻ."
+    }
+   ]
+  },
+  {
+   "w": "年夜饭",
+   "py": "niányèfàn",
+   "hv": "niên dạ phạn",
+   "vi": "bữa cơm tất niên",
+   "pos": "danh từ",
+   "note": "Bữa tối đêm giao thừa.",
+   "ex": [
+    {
+     "cn": "全家人一起吃年夜饭。",
+     "py": "Quán jiā rén yìqǐ chī niányèfàn.",
+     "vi": "Cả nhà cùng ăn cơm tất niên."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Nơi + V + 着 + vật",
+   "b": "墙上挂着一张地图",
+   "d": "Câu tồn hiện: ở đâu có gì đang ở trạng thái nào.",
+   "ex": [
+    {
+     "cn": "桌子上放着一个闹钟。",
+     "py": "Zhuōzi shang fàng zhe yí ge nàozhōng.",
+     "vi": "Trên bàn đặt một chiếc đồng hồ báo thức."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "闹钟响了三次，我才起床。",
+   "py": "Nàozhōng xiǎng le sān cì, wǒ cái qǐchuáng.",
+   "vi": "Báo thức kêu ba lần tôi mới dậy."
+  },
+  {
+   "cn": "除夕晚上，我们一家人吃年夜饭。",
+   "py": "Chúxī wǎnshang, wǒmen yì jiā rén chī niányèfàn.",
+   "vi": "Đêm giao thừa cả nhà tôi ăn cơm tất niên."
+  },
+  {
+   "cn": "墙上挂着我们队的冠军照片。",
+   "py": "Qiáng shang guà zhe wǒmen duì de guànjūn zhàopiàn.",
+   "vi": "Trên tường treo ảnh vô địch của đội chúng tôi."
+  }
+ ]
+}

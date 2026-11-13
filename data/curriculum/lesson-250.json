@@ -1,0 +1,264 @@
+{
+ "id": 250,
+ "cn": "强烈的感觉",
+ "title": "Mức độ và tính chất",
+ "goal": "Mô tả hùng mạnh, nhấn mạnh, cường độ, mãnh liệt, to lớn, rõ ràng, tuyệt đối, mơ hồ, cân bằng, trung bình, đậm, nhạt và toàn diện.",
+ "words": [
+  {
+   "w": "强大",
+   "py": "qiángdà",
+   "hv": "cường đại",
+   "vi": "hùng mạnh",
+   "pos": "tính từ",
+   "note": "Chính là \"cường đại\".",
+   "ex": [
+    {
+     "cn": "这是一支强大的队伍。",
+     "py": "Zhè shì yì zhī qiángdà de duìwu.",
+     "vi": "Đây là một đội hùng mạnh."
+    }
+   ]
+  },
+  {
+   "w": "强调",
+   "py": "qiángdiào",
+   "hv": "cường điệu",
+   "vi": "nhấn mạnh",
+   "pos": "động từ",
+   "note": "Khác \"cường điệu\" (phóng đại) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "教练一直强调团队合作。",
+     "py": "Jiàoliàn yìzhí qiángdiào tuánduì hézuò.",
+     "vi": "Huấn luyện viên luôn nhấn mạnh tinh thần đồng đội."
+    }
+   ]
+  },
+  {
+   "w": "强度",
+   "py": "qiángdù",
+   "hv": "cường độ",
+   "vi": "cường độ",
+   "pos": "danh từ",
+   "note": "训练强度 (cường độ tập).",
+   "ex": [
+    {
+     "cn": "这周的训练强度很大。",
+     "py": "Zhè zhōu de xùnliàn qiángdù hěn dà.",
+     "vi": "Cường độ tập tuần này rất cao."
+    }
+   ]
+  },
+  {
+   "w": "强烈",
+   "py": "qiángliè",
+   "hv": "cường liệt",
+   "vi": "mãnh liệt",
+   "pos": "tính từ",
+   "note": "强烈要求 (yêu cầu mạnh mẽ).",
+   "ex": [
+    {
+     "cn": "我有一种强烈的感觉，我们会赢。",
+     "py": "Wǒ yǒu yì zhǒng qiángliè de gǎnjué, wǒmen huì yíng.",
+     "vi": "Tôi có cảm giác mãnh liệt rằng chúng ta sẽ thắng."
+    }
+   ]
+  },
+  {
+   "w": "热烈",
+   "py": "rèliè",
+   "hv": "nhiệt liệt",
+   "vi": "nhiệt liệt",
+   "pos": "tính từ",
+   "note": "热烈欢迎 (nhiệt liệt chào mừng).",
+   "ex": [
+    {
+     "cn": "热烈欢迎新队员！",
+     "py": "Rèliè huānyíng xīn duìyuán!",
+     "vi": "Nhiệt liệt chào mừng thành viên mới!"
+    }
+   ]
+  },
+  {
+   "w": "巨大",
+   "py": "jùdà",
+   "hv": "cự đại",
+   "vi": "to lớn",
+   "pos": "tính từ",
+   "note": "巨大的变化 (thay đổi to lớn).",
+   "ex": [
+    {
+     "cn": "这几年城市发生了巨大的变化。",
+     "py": "Zhè jǐ nián chéngshì fāshēng le jùdà de biànhuà.",
+     "vi": "Mấy năm nay thành phố thay đổi to lớn."
+    }
+   ]
+  },
+  {
+   "w": "明显",
+   "py": "míngxiǎn",
+   "hv": "minh hiển",
+   "vi": "rõ ràng",
+   "pos": "tính từ",
+   "note": "明显进步 (tiến bộ rõ).",
+   "ex": [
+    {
+     "cn": "他的水平明显提高了。",
+     "py": "Tā de shuǐpíng míngxiǎn tígāo le.",
+     "vi": "Trình độ của anh ấy tăng rõ rệt."
+    }
+   ]
+  },
+  {
+   "w": "明确",
+   "py": "míngquè",
+   "hv": "minh xác",
+   "vi": "rõ ràng, xác định",
+   "pos": "tính từ, động từ",
+   "note": "明确目标 (xác định mục tiêu).",
+   "ex": [
+    {
+     "cn": "我们的目标很明确。",
+     "py": "Wǒmen de mùbiāo hěn míngquè.",
+     "vi": "Mục tiêu của chúng ta rất rõ ràng."
+    }
+   ]
+  },
+  {
+   "w": "绝对",
+   "py": "juéduì",
+   "hv": "tuyệt đối",
+   "vi": "tuyệt đối",
+   "pos": "phó từ, tính từ",
+   "note": "Chính là \"tuyệt đối\".",
+   "ex": [
+    {
+     "cn": "我绝对不会放弃。",
+     "py": "Wǒ juéduì bú huì fàngqì.",
+     "vi": "Tôi tuyệt đối không bỏ cuộc."
+    }
+   ]
+  },
+  {
+   "w": "模糊",
+   "py": "móhu",
+   "hv": "mô hồ",
+   "vi": "mơ hồ, nhoè",
+   "pos": "tính từ",
+   "note": "Chính là \"mơ hồ\".",
+   "ex": [
+    {
+     "cn": "照片有点儿模糊。",
+     "py": "Zhàopiàn yǒudiǎnr móhu.",
+     "vi": "Ảnh hơi nhoè."
+    }
+   ]
+  },
+  {
+   "w": "平衡",
+   "py": "pínghéng",
+   "hv": "bình hành",
+   "vi": "cân bằng",
+   "pos": "danh từ, tính từ",
+   "note": "保持平衡 (giữ thăng bằng).",
+   "ex": [
+    {
+     "cn": "要平衡好工作和生活。",
+     "py": "Yào pínghéng hǎo gōngzuò hé shēnghuó.",
+     "vi": "Phải cân bằng tốt công việc và cuộc sống."
+    }
+   ]
+  },
+  {
+   "w": "平均",
+   "py": "píngjūn",
+   "hv": "bình quân",
+   "vi": "trung bình",
+   "pos": "tính từ",
+   "note": "平均分 (điểm trung bình).",
+   "ex": [
+    {
+     "cn": "我们每场比赛平均二十分钟。",
+     "py": "Wǒmen měi chǎng bǐsài píngjūn èrshí fēnzhōng.",
+     "vi": "Mỗi trận của chúng tôi trung bình hai mươi phút."
+    }
+   ]
+  },
+  {
+   "w": "浓",
+   "py": "nóng",
+   "hv": "nùng",
+   "vi": "đậm, đặc",
+   "pos": "tính từ",
+   "note": "浓茶 (trà đặc).",
+   "ex": [
+    {
+     "cn": "我喜欢喝浓咖啡。",
+     "py": "Wǒ xǐhuan hē nóng kāfēi.",
+     "vi": "Tôi thích uống cà phê đậm."
+    }
+   ]
+  },
+  {
+   "w": "浅",
+   "py": "qiǎn",
+   "hv": "thiển",
+   "vi": "nông; nhạt (màu)",
+   "pos": "tính từ",
+   "note": "浅蓝色 (xanh nhạt).",
+   "ex": [
+    {
+     "cn": "这条河很浅。",
+     "py": "Zhè tiáo hé hěn qiǎn.",
+     "vi": "Con sông này rất nông."
+    }
+   ]
+  },
+  {
+   "w": "全面",
+   "py": "quánmiàn",
+   "hv": "toàn diện",
+   "vi": "toàn diện",
+   "pos": "tính từ",
+   "note": "全面发展 (phát triển toàn diện).",
+   "ex": [
+    {
+     "cn": "他是一个全面的选手。",
+     "py": "Tā shì yí ge quánmiàn de xuǎnshǒu.",
+     "vi": "Anh ấy là tuyển thủ toàn diện."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "明显 + động từ",
+   "b": "明显提高 · 明显变化",
+   "d": "明显 làm trạng ngữ, nghĩa \"rõ rệt\".",
+   "ex": [
+    {
+     "cn": "吃了药以后，病明显好了。",
+     "py": "Chī le yào yǐhòu, bìng míngxiǎn hǎo le.",
+     "vi": "Uống thuốc xong, bệnh đỡ rõ rệt."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "强大的对手让我们变得更强。",
+   "py": "Qiángdà de duìshǒu ràng wǒmen biàn de gèng qiáng.",
+   "vi": "Đối thủ mạnh khiến chúng ta mạnh hơn."
+  },
+  {
+   "cn": "训练强度太大，要注意休息。",
+   "py": "Xùnliàn qiángdù tài dà, yào zhùyì xiūxi.",
+   "vi": "Cường độ tập quá cao, phải chú ý nghỉ ngơi."
+  },
+  {
+   "cn": "好的选手会全面分析比赛。",
+   "py": "Hǎo de xuǎnshǒu huì quánmiàn fēnxī bǐsài.",
+   "vi": "Tuyển thủ giỏi sẽ phân tích trận đấu toàn diện."
+  }
+ ]
+}

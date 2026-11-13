@@ -1,0 +1,264 @@
+{
+ "id": 252,
+ "cn": "平安是福",
+ "title": "Sự cố và an toàn",
+ "goal": "Nói về phá hoại, cướp, cấp cứu, cứu, rò rỉ, cháy, bồi thường, nợ, tật xấu, cúm, phòng khám, đồn công an, bình an và hậu quả.",
+ "words": [
+  {
+   "w": "破坏",
+   "py": "pòhuài",
+   "hv": "phá hoại",
+   "vi": "phá hoại, làm hỏng",
+   "pos": "động từ",
+   "note": "Chính là \"phá hoại\".",
+   "ex": [
+    {
+     "cn": "不要破坏环境。",
+     "py": "Bú yào pòhuài huánjìng.",
+     "vi": "Đừng phá hoại môi trường."
+    }
+   ]
+  },
+  {
+   "w": "抢",
+   "py": "qiǎng",
+   "hv": "thưởng",
+   "vi": "cướp, giành",
+   "pos": "động từ",
+   "note": "抢龙 (giành rồng).",
+   "ex": [
+    {
+     "cn": "我们在第十分钟抢到了龙。",
+     "py": "Wǒmen zài dì shí fēnzhōng qiǎng dào le lóng.",
+     "vi": "Phút thứ mười chúng tôi giành được rồng."
+    }
+   ]
+  },
+  {
+   "w": "抢救",
+   "py": "qiǎngjiù",
+   "hv": "thưởng cứu",
+   "vi": "cấp cứu",
+   "pos": "động từ",
+   "note": "抢 (gấp) + 救 (cứu).",
+   "ex": [
+    {
+     "cn": "医生正在抢救病人。",
+     "py": "Yīshēng zhèngzài qiǎngjiù bìngrén.",
+     "vi": "Bác sĩ đang cấp cứu bệnh nhân."
+    }
+   ]
+  },
+  {
+   "w": "救",
+   "py": "jiù",
+   "hv": "cứu",
+   "vi": "cứu",
+   "pos": "động từ",
+   "note": "救命！ (Cứu với!).",
+   "ex": [
+    {
+     "cn": "是他救了我的命。",
+     "py": "Shì tā jiù le wǒ de mìng.",
+     "vi": "Chính anh ấy đã cứu mạng tôi."
+    }
+   ]
+  },
+  {
+   "w": "漏",
+   "py": "lòu",
+   "hv": "lậu",
+   "vi": "rò, dột; bỏ sót",
+   "pos": "động từ",
+   "note": "漏水 (rò nước).",
+   "ex": [
+    {
+     "cn": "房间的屋顶漏水了。",
+     "py": "Fángjiān de wūdǐng lòu shuǐ le.",
+     "vi": "Mái phòng bị dột."
+    }
+   ]
+  },
+  {
+   "w": "燃烧",
+   "py": "ránshāo",
+   "hv": "nhiên thiêu",
+   "vi": "cháy, bùng cháy",
+   "pos": "động từ",
+   "note": "燃 là \"nhiên\" (đốt).",
+   "ex": [
+    {
+     "cn": "大火燃烧了一整夜。",
+     "py": "Dàhuǒ ránshāo le yì zhěng yè.",
+     "vi": "Đám cháy lớn kéo dài suốt đêm."
+    }
+   ]
+  },
+  {
+   "w": "赔",
+   "py": "péi",
+   "hv": "bồi",
+   "vi": "bồi thường; lỗ",
+   "pos": "động từ",
+   "note": "赔钱 (đền tiền).",
+   "ex": [
+    {
+     "cn": "你弄坏了要赔。",
+     "py": "Nǐ nòng huài le yào péi.",
+     "vi": "Bạn làm hỏng thì phải đền."
+    }
+   ]
+  },
+  {
+   "w": "欠",
+   "py": "qiàn",
+   "hv": "khiếm",
+   "vi": "nợ",
+   "pos": "động từ",
+   "note": "欠钱 (nợ tiền).",
+   "ex": [
+    {
+     "cn": "我还欠他一百块钱。",
+     "py": "Wǒ hái qiàn tā yìbǎi kuài qián.",
+     "vi": "Tôi còn nợ anh ấy một trăm tệ."
+    }
+   ]
+  },
+  {
+   "w": "毛病",
+   "py": "máobìng",
+   "hv": "mao bệnh",
+   "vi": "tật xấu; trục trặc",
+   "pos": "danh từ",
+   "note": "车有毛病 (xe trục trặc).",
+   "ex": [
+    {
+     "cn": "我的电脑出毛病了。",
+     "py": "Wǒ de diànnǎo chū máobìng le.",
+     "vi": "Máy tính của tôi bị trục trặc."
+    }
+   ]
+  },
+  {
+   "w": "流感",
+   "py": "liúgǎn",
+   "hv": "lưu cảm",
+   "vi": "cúm",
+   "pos": "danh từ",
+   "note": "流行性感冒 viết tắt.",
+   "ex": [
+    {
+     "cn": "最近很多人得了流感。",
+     "py": "Zuìjìn hěn duō rén dé le liúgǎn.",
+     "vi": "Gần đây nhiều người bị cúm."
+    }
+   ]
+  },
+  {
+   "w": "门诊",
+   "py": "ménzhěn",
+   "hv": "môn chẩn",
+   "vi": "khám ngoại trú, phòng khám",
+   "pos": "danh từ",
+   "note": "Khám bệnh không nằm viện.",
+   "ex": [
+    {
+     "cn": "门诊早上八点开始。",
+     "py": "Ménzhěn zǎoshang bā diǎn kāishǐ.",
+     "vi": "Phòng khám bắt đầu lúc tám giờ sáng."
+    }
+   ]
+  },
+  {
+   "w": "派出所",
+   "py": "pàichūsuǒ",
+   "hv": "phái xuất sở",
+   "vi": "đồn công an",
+   "pos": "danh từ",
+   "note": "Đồn cảnh sát khu vực.",
+   "ex": [
+    {
+     "cn": "丢了护照要去派出所报案。",
+     "py": "Diū le hùzhào yào qù pàichūsuǒ bào'àn.",
+     "vi": "Mất hộ chiếu phải đến đồn công an trình báo."
+    }
+   ]
+  },
+  {
+   "w": "平安",
+   "py": "píng'ān",
+   "hv": "bình an",
+   "vi": "bình an",
+   "pos": "tính từ",
+   "note": "一路平安 (thượng lộ bình an).",
+   "ex": [
+    {
+     "cn": "祝你一路平安！",
+     "py": "Zhù nǐ yílù píng'ān!",
+     "vi": "Chúc bạn thượng lộ bình an!"
+    }
+   ]
+  },
+  {
+   "w": "确保",
+   "py": "quèbǎo",
+   "hv": "xác bảo",
+   "vi": "đảm bảo",
+   "pos": "động từ",
+   "note": "确保安全 (đảm bảo an toàn).",
+   "ex": [
+    {
+     "cn": "我们要确保每个人的安全。",
+     "py": "Wǒmen yào quèbǎo měi ge rén de ānquán.",
+     "vi": "Chúng ta phải đảm bảo an toàn cho mọi người."
+    }
+   ]
+  },
+  {
+   "w": "后果",
+   "py": "hòuguǒ",
+   "hv": "hậu quả",
+   "vi": "hậu quả",
+   "pos": "danh từ",
+   "note": "Chính là \"hậu quả\".",
+   "ex": [
+    {
+     "cn": "你想过这样做的后果吗？",
+     "py": "Nǐ xiǎng guo zhèyàng zuò de hòuguǒ ma?",
+     "vi": "Bạn đã nghĩ tới hậu quả của việc này chưa?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 坏 / 破",
+   "b": "弄坏 · 摔坏 · 打破",
+   "d": "Kết quả làm hỏng, vỡ.",
+   "ex": [
+    {
+     "cn": "小心别把手机摔坏了。",
+     "py": "Xiǎoxīn bié bǎ shǒujī shuāi huài le.",
+     "vi": "Cẩn thận đừng làm rơi hỏng điện thoại."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "经过抢救，病人终于脱离了危险。",
+   "py": "Jīngguò qiǎngjiù, bìngrén zhōngyú tuōlí le wēixiǎn.",
+   "vi": "Sau khi cấp cứu, bệnh nhân cuối cùng thoát nguy hiểm."
+  },
+  {
+   "cn": "平安就是福。",
+   "py": "Píng'ān jiù shì fú.",
+   "vi": "Bình an là phúc."
+  },
+  {
+   "cn": "做事之前要想清楚后果。",
+   "py": "Zuò shì zhīqián yào xiǎng qīngchu hòuguǒ.",
+   "vi": "Trước khi làm gì phải nghĩ rõ hậu quả."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 251,
+ "cn": "人才和人力",
+ "title": "Con người và xã hội",
+ "goal": "Nói về nhân tài, nhân tạo, quan hệ giữa người với người, dân số, nhân loại, nhân lực, nhân dân, đám đông, nhân vật, nông dân và doanh nghiệp.",
+ "words": [
+  {
+   "w": "人才",
+   "py": "réncái",
+   "hv": "nhân tài",
+   "vi": "nhân tài",
+   "pos": "danh từ",
+   "note": "Chính là \"nhân tài\".",
+   "ex": [
+    {
+     "cn": "公司需要更多的人才。",
+     "py": "Gōngsī xūyào gèng duō de réncái.",
+     "vi": "Công ty cần thêm nhiều nhân tài."
+    }
+   ]
+  },
+  {
+   "w": "人工",
+   "py": "réngōng",
+   "hv": "nhân công",
+   "vi": "nhân tạo; sức người",
+   "pos": "tính từ, danh từ",
+   "note": "人工智能 (trí tuệ nhân tạo).",
+   "ex": [
+    {
+     "cn": "人工智能发展得很快。",
+     "py": "Réngōng zhìnéng fāzhǎn de hěn kuài.",
+     "vi": "Trí tuệ nhân tạo phát triển rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "人际",
+   "py": "rénjì",
+   "hv": "nhân tế",
+   "vi": "giữa người với người",
+   "pos": "tính từ",
+   "note": "人际关系 (quan hệ xã hội).",
+   "ex": [
+    {
+     "cn": "他的人际关系很好。",
+     "py": "Tā de rénjì guānxi hěn hǎo.",
+     "vi": "Anh ấy có quan hệ xã hội rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "人口",
+   "py": "rénkǒu",
+   "hv": "nhân khẩu",
+   "vi": "dân số",
+   "pos": "danh từ",
+   "note": "Chính là \"nhân khẩu\".",
+   "ex": [
+    {
+     "cn": "越南的人口超过一亿。",
+     "py": "Yuènán de rénkǒu chāoguò yí yì.",
+     "vi": "Dân số Việt Nam vượt một trăm triệu."
+    }
+   ]
+  },
+  {
+   "w": "人类",
+   "py": "rénlèi",
+   "hv": "nhân loại",
+   "vi": "loài người",
+   "pos": "danh từ",
+   "note": "Chính là \"nhân loại\".",
+   "ex": [
+    {
+     "cn": "水对人类非常重要。",
+     "py": "Shuǐ duì rénlèi fēicháng zhòngyào.",
+     "vi": "Nước vô cùng quan trọng với loài người."
+    }
+   ]
+  },
+  {
+   "w": "人力",
+   "py": "rénlì",
+   "hv": "nhân lực",
+   "vi": "nhân lực",
+   "pos": "danh từ",
+   "note": "人力资源 (nguồn nhân lực).",
+   "ex": [
+    {
+     "cn": "她在人力资源部工作。",
+     "py": "Tā zài rénlì zīyuán bù gōngzuò.",
+     "vi": "Cô ấy làm ở phòng nhân sự."
+    }
+   ]
+  },
+  {
+   "w": "人民",
+   "py": "rénmín",
+   "hv": "nhân dân",
+   "vi": "nhân dân",
+   "pos": "danh từ",
+   "note": "Chính là \"nhân dân\".",
+   "ex": [
+    {
+     "cn": "人民的生活越来越好。",
+     "py": "Rénmín de shēnghuó yuè lái yuè hǎo.",
+     "vi": "Đời sống nhân dân ngày càng tốt."
+    }
+   ]
+  },
+  {
+   "w": "人群",
+   "py": "rénqún",
+   "hv": "nhân quần",
+   "vi": "đám đông",
+   "pos": "danh từ",
+   "note": "群 là bầy, đám.",
+   "ex": [
+    {
+     "cn": "他消失在人群中。",
+     "py": "Tā xiāoshī zài rénqún zhōng.",
+     "vi": "Anh ấy biến mất trong đám đông."
+    }
+   ]
+  },
+  {
+   "w": "人体",
+   "py": "réntǐ",
+   "hv": "nhân thể",
+   "vi": "cơ thể người",
+   "pos": "danh từ",
+   "note": "Chính là \"nhân thể\".",
+   "ex": [
+    {
+     "cn": "人体需要多种营养。",
+     "py": "Réntǐ xūyào duō zhǒng yíngyǎng.",
+     "vi": "Cơ thể người cần nhiều loại dinh dưỡng."
+    }
+   ]
+  },
+  {
+   "w": "人物",
+   "py": "rénwù",
+   "hv": "nhân vật",
+   "vi": "nhân vật",
+   "pos": "danh từ",
+   "note": "Chính là \"nhân vật\".",
+   "ex": [
+    {
+     "cn": "他是电竞圈的重要人物。",
+     "py": "Tā shì diànjìng quān de zhòngyào rénwù.",
+     "vi": "Anh ấy là nhân vật quan trọng của giới eSports."
+    }
+   ]
+  },
+  {
+   "w": "群体",
+   "py": "qúntǐ",
+   "hv": "quần thể",
+   "vi": "nhóm, cộng đồng",
+   "pos": "danh từ",
+   "note": "年轻群体 (nhóm người trẻ).",
+   "ex": [
+    {
+     "cn": "这款游戏在学生群体中很流行。",
+     "py": "Zhè kuǎn yóuxì zài xuésheng qúntǐ zhōng hěn liúxíng.",
+     "vi": "Trò chơi này rất phổ biến trong giới học sinh."
+    }
+   ]
+  },
+  {
+   "w": "农民",
+   "py": "nóngmín",
+   "hv": "nông dân",
+   "vi": "nông dân",
+   "pos": "danh từ",
+   "note": "Chính là \"nông dân\".",
+   "ex": [
+    {
+     "cn": "农民每天很早就起床。",
+     "py": "Nóngmín měi tiān hěn zǎo jiù qǐchuáng.",
+     "vi": "Nông dân ngày nào cũng dậy rất sớm."
+    }
+   ]
+  },
+  {
+   "w": "农业",
+   "py": "nóngyè",
+   "hv": "nông nghiệp",
+   "vi": "nông nghiệp",
+   "pos": "danh từ",
+   "note": "Chính là \"nông nghiệp\".",
+   "ex": [
+    {
+     "cn": "越南是一个农业大国。",
+     "py": "Yuènán shì yí ge nóngyè dàguó.",
+     "vi": "Việt Nam là một nước nông nghiệp lớn."
+    }
+   ]
+  },
+  {
+   "w": "企业",
+   "py": "qǐyè",
+   "hv": "xí nghiệp",
+   "vi": "doanh nghiệp",
+   "pos": "danh từ",
+   "note": "Khác \"xí nghiệp\" (nhà máy) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "他在一家大企业工作。",
+     "py": "Tā zài yì jiā dà qǐyè gōngzuò.",
+     "vi": "Anh ấy làm ở một doanh nghiệp lớn."
+    }
+   ]
+  },
+  {
+   "w": "区域",
+   "py": "qūyù",
+   "hv": "khu vực",
+   "vi": "khu vực",
+   "pos": "danh từ",
+   "note": "区域赛 (giải khu vực).",
+   "ex": [
+    {
+     "cn": "这是东南亚区域的比赛。",
+     "py": "Zhè shì Dōngnányà qūyù de bǐsài.",
+     "vi": "Đây là giải đấu khu vực Đông Nam Á."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "在 + nhóm + 中",
+   "b": "在学生群体中 · 在人群中",
+   "d": "Trong phạm vi một nhóm.",
+   "ex": [
+    {
+     "cn": "这首歌在年轻人中很受欢迎。",
+     "py": "Zhè shǒu gē zài niánqīngrén zhōng hěn shòu huānyíng.",
+     "vi": "Bài hát này rất được giới trẻ yêu thích."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "人工智能会改变很多行业。",
+   "py": "Réngōng zhìnéng huì gǎibiàn hěn duō hángyè.",
+   "vi": "Trí tuệ nhân tạo sẽ thay đổi nhiều ngành nghề."
+  },
+  {
+   "cn": "企业之间的竞争越来越激烈。",
+   "py": "Qǐyè zhījiān de jìngzhēng yuè lái yuè jīliè.",
+   "vi": "Cạnh tranh giữa các doanh nghiệp ngày càng gay gắt."
+  },
+  {
+   "cn": "好的人际关系对工作很有帮助。",
+   "py": "Hǎo de rénjì guānxi duì gōngzuò hěn yǒu bāngzhù.",
+   "vi": "Quan hệ xã hội tốt rất có ích cho công việc."
+  }
+ ]
+}

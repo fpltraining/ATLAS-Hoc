@@ -1,0 +1,264 @@
+{
+ "id": 247,
+ "cn": "认真请教",
+ "title": "Học tập và ngôn ngữ",
+ "goal": "Nói về phát âm, cách đọc, bính âm, giáo trình, luận văn, trúng tuyển, đào tạo, bồi dưỡng, thỉnh giáo, logic, mô tả và kể lại.",
+ "words": [
+  {
+   "w": "发音",
+   "py": "fāyīn",
+   "hv": "phát âm",
+   "vi": "phát âm",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"phát âm\".",
+   "ex": [
+    {
+     "cn": "你的中文发音很标准。",
+     "py": "Nǐ de Zhōngwén fāyīn hěn biāozhǔn.",
+     "vi": "Phát âm tiếng Trung của bạn rất chuẩn."
+    }
+   ]
+  },
+  {
+   "w": "读音",
+   "py": "dúyīn",
+   "hv": "độc âm",
+   "vi": "cách đọc",
+   "pos": "danh từ",
+   "note": "这个字的读音 (cách đọc chữ này).",
+   "ex": [
+    {
+     "cn": "这个字有两个读音。",
+     "py": "Zhège zì yǒu liǎng ge dúyīn.",
+     "vi": "Chữ này có hai cách đọc."
+    }
+   ]
+  },
+  {
+   "w": "拼音",
+   "py": "pīnyīn",
+   "hv": "bính âm",
+   "vi": "phiên âm pinyin",
+   "pos": "danh từ",
+   "note": "Chính là \"bính âm\".",
+   "ex": [
+    {
+     "cn": "初学者先学拼音。",
+     "py": "Chūxuézhě xiān xué pīnyīn.",
+     "vi": "Người mới học thì học pinyin trước."
+    }
+   ]
+  },
+  {
+   "w": "教材",
+   "py": "jiàocái",
+   "hv": "giáo tài",
+   "vi": "giáo trình",
+   "pos": "danh từ",
+   "note": "材 là \"tài liệu\".",
+   "ex": [
+    {
+     "cn": "这本教材很适合自学。",
+     "py": "Zhè běn jiàocái hěn shìhé zìxué.",
+     "vi": "Giáo trình này rất hợp để tự học."
+    }
+   ]
+  },
+  {
+   "w": "论文",
+   "py": "lùnwén",
+   "hv": "luận văn",
+   "vi": "luận văn, bài báo khoa học",
+   "pos": "danh từ",
+   "note": "毕业论文 (luận văn tốt nghiệp).",
+   "ex": [
+    {
+     "cn": "我正在写毕业论文。",
+     "py": "Wǒ zhèngzài xiě bìyè lùnwén.",
+     "vi": "Tôi đang viết luận văn tốt nghiệp."
+    }
+   ]
+  },
+  {
+   "w": "录取",
+   "py": "lùqǔ",
+   "hv": "lục thủ",
+   "vi": "trúng tuyển, tuyển",
+   "pos": "động từ",
+   "note": "被大学录取 (đỗ đại học).",
+   "ex": [
+    {
+     "cn": "她被北京大学录取了。",
+     "py": "Tā bèi Běijīng Dàxué lùqǔ le.",
+     "vi": "Cô ấy trúng tuyển Đại học Bắc Kinh."
+    }
+   ]
+  },
+  {
+   "w": "培训",
+   "py": "péixùn",
+   "hv": "bồi huấn",
+   "vi": "đào tạo, huấn luyện",
+   "pos": "động từ",
+   "note": "培训班 (lớp đào tạo).",
+   "ex": [
+    {
+     "cn": "新员工要参加一周的培训。",
+     "py": "Xīn yuángōng yào cānjiā yì zhōu de péixùn.",
+     "vi": "Nhân viên mới phải học một tuần đào tạo."
+    }
+   ]
+  },
+  {
+   "w": "培养",
+   "py": "péiyǎng",
+   "hv": "bồi dưỡng",
+   "vi": "bồi dưỡng, nuôi dưỡng",
+   "pos": "động từ",
+   "note": "培养人才 (đào tạo nhân tài).",
+   "ex": [
+    {
+     "cn": "俱乐部很重视培养年轻选手。",
+     "py": "Jùlèbù hěn zhòngshì péiyǎng niánqīng xuǎnshǒu.",
+     "vi": "Câu lạc bộ rất chú trọng bồi dưỡng tuyển thủ trẻ."
+    }
+   ]
+  },
+  {
+   "w": "请教",
+   "py": "qǐngjiào",
+   "hv": "thỉnh giáo",
+   "vi": "xin chỉ giáo",
+   "pos": "động từ",
+   "note": "向老师请教 (hỏi thầy).",
+   "ex": [
+    {
+     "cn": "我想向您请教一个问题。",
+     "py": "Wǒ xiǎng xiàng nín qǐngjiào yí ge wèntí.",
+     "vi": "Tôi muốn xin ông chỉ giáo một vấn đề."
+    }
+   ]
+  },
+  {
+   "w": "毛笔",
+   "py": "máobǐ",
+   "hv": "mao bút",
+   "vi": "bút lông",
+   "pos": "danh từ",
+   "note": "毛 là lông.",
+   "ex": [
+    {
+     "cn": "他会用毛笔写字。",
+     "py": "Tā huì yòng máobǐ xiě zì.",
+     "vi": "Anh ấy biết viết chữ bằng bút lông."
+    }
+   ]
+  },
+  {
+   "w": "逻辑",
+   "py": "luójí",
+   "hv": "la tập",
+   "vi": "logic",
+   "pos": "danh từ",
+   "note": "Phiên âm \"logic\".",
+   "ex": [
+    {
+     "cn": "他说话很有逻辑。",
+     "py": "Tā shuōhuà hěn yǒu luójí.",
+     "vi": "Anh ấy nói chuyện rất logic."
+    }
+   ]
+  },
+  {
+   "w": "描述",
+   "py": "miáoshù",
+   "hv": "miêu thuật",
+   "vi": "mô tả",
+   "pos": "động từ",
+   "note": "Chính là \"miêu tả\".",
+   "ex": [
+    {
+     "cn": "请描述一下你的家乡。",
+     "py": "Qǐng miáoshù yíxià nǐ de jiāxiāng.",
+     "vi": "Hãy mô tả quê hương của bạn."
+    }
+   ]
+  },
+  {
+   "w": "讲述",
+   "py": "jiǎngshù",
+   "hv": "giảng thuật",
+   "vi": "kể lại, thuật lại",
+   "pos": "động từ",
+   "note": "讲述故事 (kể chuyện).",
+   "ex": [
+    {
+     "cn": "这部电影讲述了一个感人的故事。",
+     "py": "Zhè bù diànyǐng jiǎngshù le yí ge gǎnrén de gùshi.",
+     "vi": "Bộ phim kể một câu chuyện cảm động."
+    }
+   ]
+  },
+  {
+   "w": "记载",
+   "py": "jìzǎi",
+   "hv": "ký tải",
+   "vi": "ghi chép (trong sách sử)",
+   "pos": "động từ",
+   "note": "历史记载 (sử sách ghi lại).",
+   "ex": [
+    {
+     "cn": "书上记载了这件事。",
+     "py": "Shū shang jìzǎi le zhè jiàn shì.",
+     "vi": "Trong sách có ghi lại việc này."
+    }
+   ]
+  },
+  {
+   "w": "勤奋",
+   "py": "qínfèn",
+   "hv": "cần phấn",
+   "vi": "chăm chỉ, cần cù",
+   "pos": "tính từ",
+   "note": "Chính là \"cần phấn\".",
+   "ex": [
+    {
+     "cn": "他是一个勤奋的学生。",
+     "py": "Tā shì yí ge qínfèn de xuésheng.",
+     "vi": "Cậu ấy là học sinh chăm chỉ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "向 + người + 请教/学习",
+   "b": "向老师请教",
+   "d": "Hướng tới ai để học hỏi.",
+   "ex": [
+    {
+     "cn": "我们要向冠军队学习。",
+     "py": "Wǒmen yào xiàng guànjūnduì xuéxí.",
+     "vi": "Chúng ta phải học hỏi đội vô địch."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "学中文，发音和声调都很重要。",
+   "py": "Xué Zhōngwén, fāyīn hé shēngdiào dōu hěn zhòngyào.",
+   "vi": "Học tiếng Trung, phát âm và thanh điệu đều quan trọng."
+  },
+  {
+   "cn": "勤奋的人总会有收获。",
+   "py": "Qínfèn de rén zǒng huì yǒu shōuhuò.",
+   "vi": "Người chăm chỉ luôn có thu hoạch."
+  },
+  {
+   "cn": "不懂就要多向别人请教。",
+   "py": "Bù dǒng jiù yào duō xiàng biérén qǐngjiào.",
+   "vi": "Không hiểu thì hỏi người khác nhiều vào."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 248,
+ "cn": "控制情绪",
+ "title": "Cảm xúc và tâm trạng",
+ "goal": "Nói về tình cảm, cảm xúc, cảnh tượng, tình thân, nhạy cảm, nhịn, mắng, ầm ĩ, mâu thuẫn, bình tĩnh, hài lòng và mong đợi.",
+ "words": [
+  {
+   "w": "情感",
+   "py": "qínggǎn",
+   "hv": "tình cảm",
+   "vi": "tình cảm",
+   "pos": "danh từ",
+   "note": "Chính là \"tình cảm\".",
+   "ex": [
+    {
+     "cn": "这首歌表达了很深的情感。",
+     "py": "Zhè shǒu gē biǎodá le hěn shēn de qínggǎn.",
+     "vi": "Bài hát này thể hiện tình cảm sâu sắc."
+    }
+   ]
+  },
+  {
+   "w": "情绪",
+   "py": "qíngxù",
+   "hv": "tình tự",
+   "vi": "cảm xúc, tâm trạng",
+   "pos": "danh từ",
+   "note": "控制情绪 (kiểm soát cảm xúc).",
+   "ex": [
+    {
+     "cn": "比赛中要控制好自己的情绪。",
+     "py": "Bǐsài zhōng yào kòngzhì hǎo zìjǐ de qíngxù.",
+     "vi": "Trong trận phải kiểm soát tốt cảm xúc."
+    }
+   ]
+  },
+  {
+   "w": "情景",
+   "py": "qíngjǐng",
+   "hv": "tình cảnh",
+   "vi": "cảnh tượng, tình huống",
+   "pos": "danh từ",
+   "note": "当时的情景 (cảnh lúc đó).",
+   "ex": [
+    {
+     "cn": "我还记得第一次比赛的情景。",
+     "py": "Wǒ hái jìde dì yī cì bǐsài de qíngjǐng.",
+     "vi": "Tôi vẫn nhớ cảnh trận đấu đầu tiên."
+    }
+   ]
+  },
+  {
+   "w": "亲情",
+   "py": "qīnqíng",
+   "hv": "thân tình",
+   "vi": "tình thân",
+   "pos": "danh từ",
+   "note": "Tình cảm gia đình.",
+   "ex": [
+    {
+     "cn": "亲情是最珍贵的。",
+     "py": "Qīnqíng shì zuì zhēnguì de.",
+     "vi": "Tình thân là quý giá nhất."
+    }
+   ]
+  },
+  {
+   "w": "敏感",
+   "py": "mǐngǎn",
+   "hv": "mẫn cảm",
+   "vi": "nhạy cảm",
+   "pos": "tính từ",
+   "note": "Chính là \"mẫn cảm\".",
+   "ex": [
+    {
+     "cn": "这是一个敏感的话题。",
+     "py": "Zhè shì yí ge mǐngǎn de huàtí.",
+     "vi": "Đây là một chủ đề nhạy cảm."
+    }
+   ]
+  },
+  {
+   "w": "忍",
+   "py": "rěn",
+   "hv": "nhẫn",
+   "vi": "nhịn, chịu",
+   "pos": "động từ",
+   "note": "忍不住 (không nhịn được).",
+   "ex": [
+    {
+     "cn": "我忍不住笑了。",
+     "py": "Wǒ rěn bu zhù xiào le.",
+     "vi": "Tôi không nhịn được cười."
+    }
+   ]
+  },
+  {
+   "w": "骂",
+   "py": "mà",
+   "hv": "mạ",
+   "vi": "mắng, chửi",
+   "pos": "động từ",
+   "note": "骂人 (chửi người).",
+   "ex": [
+    {
+     "cn": "输了比赛也不要骂队友。",
+     "py": "Shū le bǐsài yě bú yào mà duìyǒu.",
+     "vi": "Thua trận cũng đừng mắng đồng đội."
+    }
+   ]
+  },
+  {
+   "w": "闹",
+   "py": "nào",
+   "hv": "náo",
+   "vi": "ầm ĩ; làm loạn",
+   "pos": "động từ, tính từ",
+   "note": "热闹 (náo nhiệt), 闹矛盾 (xích mích).",
+   "ex": [
+    {
+     "cn": "孩子们在外面闹得很厉害。",
+     "py": "Háizimen zài wàimiàn nào de hěn lìhai.",
+     "vi": "Bọn trẻ ở ngoài làm ầm lên."
+    }
+   ]
+  },
+  {
+   "w": "矛盾",
+   "py": "máodùn",
+   "hv": "mâu thuẫn",
+   "vi": "mâu thuẫn",
+   "pos": "danh từ, tính từ",
+   "note": "Chính là \"mâu thuẫn\".",
+   "ex": [
+    {
+     "cn": "他们之间有一些矛盾。",
+     "py": "Tāmen zhījiān yǒu yìxiē máodùn.",
+     "vi": "Giữa họ có chút mâu thuẫn."
+    }
+   ]
+  },
+  {
+   "w": "平静",
+   "py": "píngjìng",
+   "hv": "bình tĩnh",
+   "vi": "yên bình, bình tĩnh",
+   "pos": "tính từ",
+   "note": "心情平静 (lòng thanh thản).",
+   "ex": [
+    {
+     "cn": "听完音乐，我的心情平静了很多。",
+     "py": "Tīng wán yīnyuè, wǒ de xīnqíng píngjìng le hěn duō.",
+     "vi": "Nghe nhạc xong, lòng tôi bình tĩnh hơn nhiều."
+    }
+   ]
+  },
+  {
+   "w": "满足",
+   "py": "mǎnzú",
+   "hv": "mãn túc",
+   "vi": "hài lòng; đáp ứng",
+   "pos": "động từ, tính từ",
+   "note": "满足要求 (đáp ứng yêu cầu).",
+   "ex": [
+    {
+     "cn": "我对现在的生活很满足。",
+     "py": "Wǒ duì xiànzài de shēnghuó hěn mǎnzú.",
+     "vi": "Tôi rất hài lòng với cuộc sống hiện tại."
+    }
+   ]
+  },
+  {
+   "w": "难得",
+   "py": "nándé",
+   "hv": "nan đắc",
+   "vi": "hiếm có",
+   "pos": "tính từ",
+   "note": "难得的机会 (cơ hội hiếm có).",
+   "ex": [
+    {
+     "cn": "这是一个难得的机会。",
+     "py": "Zhè shì yí ge nándé de jīhuì.",
+     "vi": "Đây là cơ hội hiếm có."
+    }
+   ]
+  },
+  {
+   "w": "期待",
+   "py": "qīdài",
+   "hv": "kỳ đãi",
+   "vi": "mong đợi",
+   "pos": "động từ",
+   "note": "Chính là \"kỳ vọng, chờ đợi\".",
+   "ex": [
+    {
+     "cn": "我很期待明天的比赛。",
+     "py": "Wǒ hěn qīdài míngtiān de bǐsài.",
+     "vi": "Tôi rất mong chờ trận đấu ngày mai."
+    }
+   ]
+  },
+  {
+   "w": "悄悄",
+   "py": "qiāoqiāo",
+   "hv": "tiễu tiễu",
+   "vi": "lặng lẽ, khe khẽ",
+   "pos": "phó từ",
+   "note": "悄悄地走 (lặng lẽ đi).",
+   "ex": [
+    {
+     "cn": "他悄悄地离开了房间。",
+     "py": "Tā qiāoqiāo de líkāi le fángjiān.",
+     "vi": "Anh ấy lặng lẽ rời khỏi phòng."
+    }
+   ]
+  },
+  {
+   "w": "脸色",
+   "py": "liǎnsè",
+   "hv": "kiểm sắc",
+   "vi": "sắc mặt",
+   "pos": "danh từ",
+   "note": "脸色不好 (sắc mặt kém).",
+   "ex": [
+    {
+     "cn": "你今天脸色不太好，生病了吗？",
+     "py": "Nǐ jīntiān liǎnsè bú tài hǎo, shēngbìng le ma?",
+     "vi": "Hôm nay sắc mặt bạn không tốt, ốm à?"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 不住",
+   "b": "忍不住 · 记不住 · 站不住",
+   "d": "Không giữ nổi, không kìm được.",
+   "ex": [
+    {
+     "cn": "看到这个结果，他忍不住哭了。",
+     "py": "Kàndào zhège jiéguǒ, tā rěn bu zhù kū le.",
+     "vi": "Thấy kết quả này, anh ấy không kìm được khóc."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "输了比赛，大家的情绪都不太好。",
+   "py": "Shū le bǐsài, dàjiā de qíngxù dōu bú tài hǎo.",
+   "vi": "Thua trận, tâm trạng mọi người đều không tốt."
+  },
+  {
+   "cn": "有矛盾的时候要好好沟通。",
+   "py": "Yǒu máodùn de shíhou yào hǎohǎo gōutōng.",
+   "vi": "Có mâu thuẫn thì phải trao đổi đàng hoàng."
+  },
+  {
+   "cn": "大家都很期待这次决赛。",
+   "py": "Dàjiā dōu hěn qīdài zhè cì juésài.",
+   "vi": "Mọi người đều rất mong chờ trận chung kết này."
+  }
+ ]
+}
