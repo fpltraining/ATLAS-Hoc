@@ -145,7 +145,6 @@ function loginForm(host, c) {
 
     const form = h('div.login-card',
       h('h2', 'Đăng nhập'),
-      h('p.small', 'Mỗi người một tài khoản. Tiến độ học được lưu lên mạng, đổi máy không mất.'),
       email, pass,
       h('button.btn.seal.block', { onclick: login }, 'Đăng nhập'),
       h('button.btn.block', { onclick: signup }, 'Tạo tài khoản mới'),

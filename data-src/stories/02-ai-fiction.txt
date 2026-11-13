@@ -488,3 +488,283 @@ And then, very slowly, the first word appeared. | Rồi, thật chậm, chữ đ
 ! The questions we choose to ask | Những câu hỏi ta chọn để hỏi
 ! decide the answers we can find. | quyết định những câu trả lời ta có thể tìm thấy.
 ! Ask the question that you are afraid of. | Hãy hỏi câu mà bạn sợ hỏi.
+
+@id long-night-final
+@shelf ai
+@level B1
+@title The Night Before the Final
+@vi Đêm trước trận chung kết
+@blurb Một chương dài: đêm trước chung kết Liên Quân, AI đưa ra đội hình "hoàn hảo". Huấn luyện viên phải chọn giữa con số và con người.
+
+## 1 | The Night Before the Final | Đêm trước trận chung kết
+It was eleven o'clock at night, | Lúc đó là mười một giờ đêm,
+and the training house was finally quiet. | và nhà tập cuối cùng cũng yên tĩnh.
+Tomorrow, at three in the afternoon, | Ngày mai, lúc ba giờ chiều,
+the team would play the final. | đội sẽ đá trận chung kết.
+Mr. Long sat alone in the analysis room | Anh Long ngồi một mình trong phòng phân tích
+with two screens, a cold coffee, | với hai màn hình, một ly cà phê nguội,
+and the same old notebook. | và cuốn sổ cũ quen thuộc.
+
+On the left screen was Echo, | Màn hình bên trái là Echo,
+the AI the team had used all season. | con AI cả đội đã dùng suốt mùa giải.
+On the right screen were five faces, | Màn hình bên phải là năm gương mặt,
+photos from the first day of training. | ảnh chụp từ ngày tập đầu tiên.
+Khoa was in the middle, | Khoa ở chính giữa,
+younger and thinner than he was now. | trẻ hơn và gầy hơn bây giờ.
+
+"Give me your final plan," Long typed. | "Đưa tôi kế hoạch cuối cùng," Long gõ.
+Echo answered in two seconds. | Echo trả lời sau hai giây.
+It had studied every game of the other team, | Nó đã nghiên cứu mọi ván của đội bạn,
+four hundred and twelve games in total. | tổng cộng bốn trăm mười hai ván.
+It showed their favorite heroes, | Nó chỉ ra những tướng họ hay chọn,
+the minute they usually attacked the dragon, | phút họ thường đánh rồng,
+and the player who panicked under pressure. | và người chơi hay hoảng khi bị ép.
+
+Then it showed something Long did not expect. | Rồi nó đưa ra một điều Long không ngờ.
+"Recommended change," the screen said. | "Đề xuất thay đổi," màn hình viết.
+"Replace the jungler for the final. | "Thay người đi rừng cho trận chung kết.
+Use the substitute player, Minh." | Dùng người dự bị, Minh."
+
+Long read the line three times. | Long đọc dòng đó ba lần.
+The jungler was Khoa. | Người đi rừng là Khoa.
+
+~ substitute = người dự bị
+~ panic = hoảng loạn
+~ recommend = đề xuất, khuyên dùng
+? Why was Long surprised? | Vì sao Long bất ngờ? | Echo wanted to replace Khoa* | Echo refused to answer | The final was cancelled
+
+"Explain," he typed. | "Giải thích đi," anh gõ.
+Echo explained, clearly and politely. | Echo giải thích, rõ ràng và lịch sự.
+In the last three weeks, | Trong ba tuần gần đây,
+Khoa's reaction time was slower. | thời gian phản xạ của Khoa chậm hơn.
+He died earlier in the game. | Cậu chết sớm hơn trong trận.
+He followed his own plan | Cậu đi theo kế hoạch của riêng mình
+more often than the team's plan. | nhiều hơn kế hoạch của đội.
+Minh, on the other hand, | Còn Minh thì ngược lại,
+had perfect numbers in practice. | có chỉ số hoàn hảo khi tập.
+"With Minh," Echo wrote, | "Với Minh," Echo viết,
+"your chance of winning rises | "khả năng thắng của anh tăng
+from fifty-two to fifty-eight percent." | từ năm mươi hai lên năm mươi tám phần trăm."
+
+Six percent. | Sáu phần trăm.
+In a final, six percent was a lot. | Trong một trận chung kết, sáu phần trăm là rất nhiều.
+Long leaned back in his chair. | Long ngả người ra ghế.
+He knew Echo was usually right about numbers. | Anh biết Echo thường đúng về con số.
+That was the problem. | Đó mới là vấn đề.
+
+He opened his notebook. | Anh mở cuốn sổ.
+Three weeks ago, he had written one line: | Ba tuần trước, anh đã ghi một dòng:
+"Khoa's mother is in hospital." | "Mẹ của Khoa đang nằm viện."
+Echo did not know that. | Echo không biết điều đó.
+Nobody had told Echo, | Không ai nói với Echo,
+because it was not in any game. | vì nó không nằm trong ván đấu nào.
+
+~ reaction time = thời gian phản xạ
+~ lean back = ngả người ra sau
+? What did the notebook know that Echo did not? | Cuốn sổ biết điều gì mà Echo không biết? | Khoa's mother was in hospital* | Minh was injured | The other team changed players
+
+Long stood up and walked to the window. | Long đứng dậy, đi tới bên cửa sổ.
+Outside, the street was still busy. | Bên ngoài, đường phố vẫn còn đông.
+Motorbikes passed with their lights on, | Xe máy chạy qua, đèn bật sáng,
+and a woman was selling bánh mì | và một người phụ nữ đang bán bánh mì
+on the corner. | ở góc đường.
+He thought about the first day Khoa came. | Anh nghĩ về ngày đầu Khoa đến.
+The boy had almost no money, | Cậu bé gần như không có tiền,
+a broken phone, | một chiếc điện thoại hỏng,
+and the fastest hands Long had ever seen. | và đôi tay nhanh nhất Long từng thấy.
+
+He also thought about Minh. | Anh cũng nghĩ về Minh.
+Minh had trained hard all year | Minh đã tập chăm chỉ cả năm
+and had played only four official games. | mà mới chỉ đá bốn trận chính thức.
+He never complained. | Cậu chưa bao giờ phàn nàn.
+He came early and left late. | Cậu đến sớm và về muộn.
+If Long chose Minh tomorrow, | Nếu ngày mai Long chọn Minh,
+it would not be unfair. | thì cũng không phải là bất công.
+It might even be fair for the first time. | Có khi đó lại là lần đầu tiên công bằng.
+
+This was the hard part of coaching. | Đây là phần khó của nghề huấn luyện.
+There was no answer that was only kind. | Không có câu trả lời nào chỉ toàn tử tế.
+Every choice would hurt someone. | Lựa chọn nào cũng làm ai đó tổn thương.
+
+~ complain = phàn nàn
+~ unfair = bất công
+? What made the decision difficult? | Điều gì làm quyết định trở nên khó? | Every choice would hurt someone* | Echo stopped working | Minh did not want to play
+
+At midnight, there was a knock on the door. | Nửa đêm, có tiếng gõ cửa.
+It was Khoa. | Đó là Khoa.
+His eyes were red, | Mắt cậu đỏ hoe,
+and he was holding his phone. | và cậu đang cầm điện thoại.
+"I saw the plan," he said quietly. | "Em thấy kế hoạch rồi," cậu nói khẽ.
+The team shared the same Echo account. | Cả đội dùng chung một tài khoản Echo.
+Long had forgotten that. | Long đã quên mất điều đó.
+
+For a moment, neither of them spoke. | Trong một lúc, không ai nói gì.
+Then Khoa sat down on the floor, | Rồi Khoa ngồi xuống sàn,
+with his back against the wall. | lưng tựa vào tường.
+"Echo is right," he said. | "Echo nói đúng," cậu nói.
+"I am slower. I know it. | "Em chậm hơn. Em biết mà.
+I play games at night in the hospital, | Đêm nào em cũng chơi trong bệnh viện,
+next to my mother's bed, | bên cạnh giường của mẹ,
+because I cannot sleep there." | vì ở đó em không ngủ được."
+
+Long sat down on the floor next to him. | Long ngồi xuống sàn cạnh cậu.
+"How is she?" he asked. | "Mẹ em sao rồi?" anh hỏi.
+"Better," said Khoa. | "Đỡ hơn rồi ạ," Khoa nói.
+"The doctor says she can go home next week. | "Bác sĩ bảo tuần sau mẹ được về nhà.
+She wants to watch the final on TV. | Mẹ muốn xem chung kết trên tivi.
+She told all the nurses about it." | Mẹ khoe với tất cả các cô y tá."
+
+Long laughed, and so did Khoa. | Long bật cười, và Khoa cũng vậy.
+It was the first time they had laughed | Đó là lần đầu tiên họ cùng cười
+in three weeks. | sau ba tuần.
+
+~ knock = tiếng gõ (cửa)
+~ nurse = y tá
+? Why was Khoa playing slower? | Vì sao Khoa chơi chậm hơn? | He played at night in the hospital and could not sleep* | He did not like the team | He was learning a new hero
+
+"Can I ask you something?" Khoa said. | "Em hỏi anh một câu được không?" Khoa nói.
+"If you were me, | "Nếu anh là em,
+would you want to play tomorrow?" | anh có muốn đá ngày mai không?"
+Long thought about it for a long time. | Long suy nghĩ rất lâu.
+"I would want to play," he said. | "Anh sẽ muốn đá," anh nói.
+"But that is not the right question. | "Nhưng đó không phải câu hỏi đúng.
+The right question is | Câu hỏi đúng là
+what is best for the five people | điều gì tốt nhất cho năm người
+who will sit on that stage." | sẽ ngồi trên sân khấu đó."
+
+Khoa nodded slowly. | Khoa chậm rãi gật đầu.
+"Then ask them," he said. | "Vậy thì anh hỏi họ đi," cậu nói.
+"Not Echo. Them." | "Đừng hỏi Echo. Hỏi họ."
+
+At half past midnight, | Lúc mười hai giờ rưỡi đêm,
+the whole team was in the analysis room, | cả đội có mặt trong phòng phân tích,
+in pyjamas, sleepy and confused. | mặc đồ ngủ, ngái ngủ và bối rối.
+Minh came last. | Minh đến cuối cùng.
+He had seen the plan too. | Cậu cũng đã thấy kế hoạch.
+
+Long put both screens on the wall. | Long chiếu cả hai màn hình lên tường.
+On one side, Echo's numbers. | Một bên là con số của Echo.
+On the other side, a blank page. | Bên kia là một trang trắng.
+"Echo has done its job," he said. | "Echo đã làm xong việc của nó," anh nói.
+"Now we do ours. | "Giờ đến lượt chúng ta.
+Tell me what the numbers cannot see." | Nói cho anh biết những gì con số không thấy."
+
+~ pyjamas = đồ ngủ
+~ blank = trống, chưa viết gì
+? What did Long ask the team to do? | Long yêu cầu cả đội làm gì? | Say what the numbers cannot see* | Go back to sleep | Choose a new coach
+
+At first, nobody spoke. | Lúc đầu, không ai lên tiếng.
+Then the support player raised her hand. | Rồi cô bạn đi trợ thủ giơ tay.
+"Khoa makes us brave," she said. | "Khoa làm bọn em dám đánh," cô nói.
+"When he goes in, we follow. | "Khi cậu ấy lao vào, bọn em theo.
+The numbers say he dies early. | Con số bảo cậu ấy chết sớm.
+They do not say | Nó không nói rằng
+that we win the fight after he dies." | bọn em thắng giao tranh sau khi cậu ấy chết."
+
+The mid laner spoke next. | Người đi đường giữa nói tiếp.
+"Minh is calmer. | "Minh điềm tĩnh hơn.
+Against this team, | Gặp đội này,
+calm might be more important than brave." | điềm tĩnh có khi quan trọng hơn liều."
+Nobody argued with that either. | Cũng không ai cãi lại điều đó.
+
+They talked for an hour. | Họ nói chuyện suốt một tiếng.
+They wrote on the blank page: | Họ viết lên trang trắng:
+who talks most in fights, | ai nói nhiều nhất khi giao tranh,
+who calms the others after a mistake, | ai giúp mọi người bình tĩnh sau một lỗi,
+who is tired, who is scared, | ai đang mệt, ai đang sợ,
+who has something to prove. | ai đang có điều cần chứng minh.
+Echo had none of these things. | Echo không có những điều đó.
+It had only what happened inside the game. | Nó chỉ có những gì xảy ra trong ván đấu.
+
+Finally, Minh stood up. | Cuối cùng, Minh đứng dậy.
+"I have a suggestion," he said. | "Em có một đề xuất," cậu nói.
+"The final is best of five. | "Chung kết đánh năm ván.
+Let Khoa start. | Để Khoa đá chính.
+If we lose the first two games, | Nếu thua hai ván đầu,
+I come in, and we change the plan. | em vào, và mình đổi kế hoạch.
+They prepared for one jungler. | Họ đã chuẩn bị để gặp một người đi rừng.
+Let's give them two." | Mình cho họ gặp tận hai."
+
+The room was silent. | Cả phòng im lặng.
+Then Long smiled. | Rồi Long mỉm cười.
+It was a better plan than his, | Đó là kế hoạch hay hơn của anh,
+and a better plan than Echo's. | và hay hơn cả của Echo.
+
+~ best of five = đánh năm ván, ai thắng ba trước là thắng
+~ suggestion = đề xuất, gợi ý
+~ prove = chứng minh
+? What was Minh's idea? | Ý tưởng của Minh là gì? | Khoa starts, and Minh comes in if they lose two games* | Minh plays every game | The team uses no jungler
+
+Before everyone went to bed, | Trước khi mọi người đi ngủ,
+Long typed one more message to Echo. | Long gõ thêm một tin cho Echo.
+"New plan: Khoa starts. | "Kế hoạch mới: Khoa đá chính.
+Minh is ready for games three to five. | Minh sẵn sàng cho ván ba đến ván năm.
+Prepare both." | Chuẩn bị cả hai."
+
+Echo did not argue. | Echo không cãi.
+It never argued. | Nó chưa bao giờ cãi.
+In four minutes, | Trong bốn phút,
+it prepared two complete plans, | nó soạn xong hai kế hoạch đầy đủ,
+one for each jungler, | mỗi kế hoạch cho một người đi rừng,
+with a list of every enemy hero | kèm danh sách mọi tướng địch
+and the best answer to each one. | và cách khắc chế tốt nhất từng tướng.
+No human could do that in four minutes. | Không con người nào làm được thế trong bốn phút.
+That, Long thought, is what it is for. | Long nghĩ, đó mới là việc của nó.
+
+~ enemy = đối thủ, phe địch
+? How did Echo help after the meeting? | Sau cuộc họp, Echo giúp thế nào? | It prepared two complete plans in four minutes* | It chose the players | It played the final
+
+The next day, they lost the first game. | Hôm sau, họ thua ván đầu.
+They won the second | Họ thắng ván hai
+because Khoa stole the dragon | nhờ Khoa cướp được rồng
+in the last second. | ở giây cuối cùng.
+They lost the third with Minh, | Họ thua ván ba khi có Minh,
+but the other team looked confused. | nhưng đội bạn trông rất lúng túng.
+They had to change everything | Họ phải thay đổi mọi thứ
+in the middle of a final. | giữa trận chung kết.
+In the fourth game, Minh played perfectly. | Ở ván bốn, Minh chơi hoàn hảo.
+Two games to two. | Hai đều.
+
+The fifth game was the longest of the season. | Ván năm là ván dài nhất mùa giải.
+Thirty-four minutes. | Ba mươi tư phút.
+Long did not remember most of it. | Long không nhớ được phần lớn ván đó.
+He remembered only the end: | Anh chỉ nhớ đoạn cuối:
+Khoa going in first, as always, | Khoa lao vào trước, như mọi khi,
+dying first, as Echo had said, | chết trước, đúng như Echo nói,
+and four players following him anyway | và bốn người vẫn lao theo cậu
+and winning the fight. | rồi thắng pha giao tranh.
+
+~ steal = cướp, lấy mất
+? Who played in the fifth game? | Ai đá ván năm? | Khoa* | Minh | Nobody
+
+They won. | Họ đã thắng.
+On the stage, there was noise and light, | Trên sân khấu, tiếng reo và ánh đèn,
+and somebody was crying. | và có ai đó đang khóc.
+Long looked at the camera | Long nhìn vào ống kính
+and thought about a woman in a hospital bed, | và nghĩ đến một người phụ nữ trên giường bệnh,
+telling all the nurses to watch. | đang bảo tất cả các cô y tá cùng xem.
+
+That night, a journalist asked him | Tối đó, một nhà báo hỏi anh
+the question everyone asks now. | câu mà bây giờ ai cũng hỏi.
+"Did AI win you this final?" | "AI có giúp anh vô địch không?"
+Long thought for a moment. | Long nghĩ một lúc.
+"AI won us four minutes," he said. | "AI giúp chúng tôi có được bốn phút," anh nói.
+"Those four minutes were very important. | "Bốn phút đó rất quan trọng.
+But the hour before them | Nhưng một tiếng trước đó
+was more important." | còn quan trọng hơn."
+
+The journalist did not understand. | Nhà báo không hiểu.
+Long did not explain. | Long không giải thích.
+The five players behind him understood, | Năm cầu thủ phía sau anh đều hiểu,
+and that was enough. | và như vậy là đủ.
+
+~ journalist = nhà báo
+? What did Long mean by "the hour before them"? | Long muốn nói gì qua "một tiếng trước đó"? | The team talk at midnight* | The warm-up before the game | The time Echo needed
+
+! Data tells you what happened. | Dữ liệu cho bạn biết điều gì đã xảy ra.
+! People can tell you why it happened. | Con người cho bạn biết vì sao nó xảy ra.
+! A good decision needs both. | Một quyết định tốt cần cả hai.
+! When the choice is hard, | Khi lựa chọn khó khăn,
+! do not decide alone in a dark room. | đừng quyết định một mình trong căn phòng tối.
+! Ask the people the decision will change. | Hãy hỏi những người mà quyết định đó sẽ thay đổi.
+> Lần gần nhất anh phải chọn giữa số liệu và cảm nhận về một người là khi nào? Anh đã chọn thế nào?
