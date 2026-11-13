@@ -13,6 +13,8 @@ from kokoro import KPipeline, KModel
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 OUT = os.path.join(ROOT, 'audio')
+# AUDIO_TMP: ghi tệp mới ra thư mục tạm (ngoài repo) trong lúc tạo; tệp đã có trong audio/ vẫn được bỏ qua
+TMP = os.environ.get('AUDIO_TMP') or OUT
 SR = 24000
 SPEED = 0.95
 torch.set_num_threads(os.cpu_count() or 4)
@@ -48,24 +50,26 @@ def write_manifest():
     json.dump(have, open(os.path.join(ROOT, 'data', 'audio.json'), 'w'), separators=(',', ':'))
     return have
 
-todo = [it for it in items if (not only or it['lang'] == only)
-        and not os.path.exists(os.path.join(OUT, it['lang'], it['key'] + '.mp3'))]
+def exists(it):
+    return any(os.path.exists(os.path.join(d, it['lang'], it['key'] + '.mp3')) for d in (OUT, TMP))
+todo = [it for it in items if (not only or it['lang'] == only) and not exists(it)]
 print(f'Cần tạo {len(todo)} / {len(items)} câu', flush=True)
 t0 = time.time()
 for n, it in enumerate(todo, 1):
-    os.makedirs(os.path.join(OUT, it['lang']), exist_ok=True)
+    os.makedirs(os.path.join(TMP, it['lang']), exist_ok=True)
     try:
         chunks = [r.audio.numpy() for r in pipe(it['lang'])(it['text'], voice=it['voice'], speed=SPEED) if r.audio is not None]
         if not chunks:
             continue
         # thêm 0,15 giây lặng ở cuối cho đỡ cụt
         audio = np.concatenate(chunks + [np.zeros(int(SR * 0.15), dtype=np.float32)])
-        mp3(os.path.join(OUT, it['lang'], it['key'] + '.mp3'), audio)
+        mp3(os.path.join(TMP, it['lang'], it['key'] + '.mp3'), audio)
     except Exception as e:  # một câu lỗi không làm dừng cả đợt
         print(f'Lỗi {it["key"]} {it["text"][:40]!r}: {e}', flush=True)
     if n % 200 == 0:
         el = time.time() - t0
         print(f'{n}/{len(todo)} · {el/60:.1f} phút · còn khoảng {el/n*(len(todo)-n)/60:.0f} phút', flush=True)
-        write_manifest()
-h = write_manifest()
+        if TMP == OUT:
+            write_manifest()
+h = write_manifest() if TMP == OUT else {'en': [], 'zh': []}
 print(f'Xong. Có tệp: en {len(h["en"])}, zh {len(h["zh"])}', flush=True)
