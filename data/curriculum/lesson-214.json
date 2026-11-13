@@ -1,0 +1,264 @@
+{
+ "id": 214,
+ "cn": "家里的东西",
+ "title": "Đồ vật trong nhà",
+ "goal": "Gọi tên đồ dùng trong nhà, đồ ăn, thú cưng và việc sạc điện thoại.",
+ "words": [
+  {
+   "w": "被子",
+   "py": "bèizi",
+   "hv": "bị tử",
+   "vi": "chăn",
+   "pos": "danh từ",
+   "note": "Khác 杯子 (cái cốc, thanh 1).",
+   "ex": [
+    {
+     "cn": "天冷了，换一条厚被子吧。",
+     "py": "Tiān lěng le, huàn yì tiáo hòu bèizi ba.",
+     "vi": "Trời lạnh rồi, đổi cái chăn dày đi."
+    }
+   ]
+  },
+  {
+   "w": "床单",
+   "py": "chuángdān",
+   "hv": "sàng đơn",
+   "vi": "ga trải giường",
+   "pos": "danh từ",
+   "note": "单 là tấm vải đơn.",
+   "ex": [
+    {
+     "cn": "我每周换一次床单。",
+     "py": "Wǒ měi zhōu huàn yí cì chuángdān.",
+     "vi": "Mỗi tuần tôi thay ga giường một lần."
+    }
+   ]
+  },
+  {
+   "w": "窗台",
+   "py": "chuāngtái",
+   "hv": "song đài",
+   "vi": "bệ cửa sổ",
+   "pos": "danh từ",
+   "note": "窗 + 台.",
+   "ex": [
+    {
+     "cn": "窗台上放着几盆花。",
+     "py": "Chuāngtái shang fàng zhe jǐ pén huā.",
+     "vi": "Trên bệ cửa sổ đặt mấy chậu hoa."
+    }
+   ]
+  },
+  {
+   "w": "玻璃",
+   "py": "bōli",
+   "hv": "pha lê",
+   "vi": "kính, thuỷ tinh",
+   "pos": "danh từ",
+   "note": "Khác \"pha lê\" tiếng Việt (水晶).",
+   "ex": [
+    {
+     "cn": "小心，地上有碎玻璃。",
+     "py": "Xiǎoxīn, dìshang yǒu suì bōli.",
+     "vi": "Cẩn thận, dưới đất có kính vỡ."
+    }
+   ]
+  },
+  {
+   "w": "饼",
+   "py": "bǐng",
+   "hv": "bính",
+   "vi": "bánh (dẹt)",
+   "pos": "danh từ",
+   "note": "月饼 (bánh trung thu).",
+   "ex": [
+    {
+     "cn": "中秋节我们吃月饼。",
+     "py": "Zhōngqiū Jié wǒmen chī yuèbǐng.",
+     "vi": "Tết trung thu chúng tôi ăn bánh trung thu."
+    }
+   ]
+  },
+  {
+   "w": "叉子",
+   "py": "chāzi",
+   "hv": "xoa tử",
+   "vi": "cái nĩa",
+   "pos": "danh từ",
+   "note": "叉 là \"chĩa\".",
+   "ex": [
+    {
+     "cn": "我不会用筷子，给我一把叉子吧。",
+     "py": "Wǒ bú huì yòng kuàizi, gěi wǒ yì bǎ chāzi ba.",
+     "vi": "Tôi không biết dùng đũa, cho tôi cái nĩa nhé."
+    }
+   ]
+  },
+  {
+   "w": "尺子",
+   "py": "chǐzi",
+   "hv": "xích tử",
+   "vi": "cái thước",
+   "pos": "danh từ",
+   "note": "尺 là \"thước\".",
+   "ex": [
+    {
+     "cn": "用尺子画一条直线。",
+     "py": "Yòng chǐzi huà yì tiáo zhíxiàn.",
+     "vi": "Dùng thước kẻ một đường thẳng."
+    }
+   ]
+  },
+  {
+   "w": "橙子",
+   "py": "chéngzi",
+   "hv": "chanh tử",
+   "vi": "quả cam",
+   "pos": "danh từ",
+   "note": "橙汁 (nước cam).",
+   "ex": [
+    {
+     "cn": "我每天早上吃一个橙子。",
+     "py": "Wǒ měi tiān zǎoshang chī yí ge chéngzi.",
+     "vi": "Sáng nào tôi cũng ăn một quả cam."
+    }
+   ]
+  },
+  {
+   "w": "宠物",
+   "py": "chǒngwù",
+   "hv": "sủng vật",
+   "vi": "thú cưng",
+   "pos": "danh từ",
+   "note": "宠 là \"sủng\" (cưng chiều).",
+   "ex": [
+    {
+     "cn": "你家养宠物吗？",
+     "py": "Nǐ jiā yǎng chǒngwù ma?",
+     "vi": "Nhà bạn có nuôi thú cưng không?"
+    }
+   ]
+  },
+  {
+   "w": "虫子",
+   "py": "chóngzi",
+   "hv": "trùng tử",
+   "vi": "sâu, côn trùng",
+   "pos": "danh từ",
+   "note": "虫 là \"trùng\".",
+   "ex": [
+    {
+     "cn": "菜叶上有一条虫子。",
+     "py": "Cài yè shang yǒu yì tiáo chóngzi.",
+     "vi": "Trên lá rau có một con sâu."
+    }
+   ]
+  },
+  {
+   "w": "翅膀",
+   "py": "chìbǎng",
+   "hv": "sí bàng",
+   "vi": "cánh",
+   "pos": "danh từ",
+   "note": "Cánh chim, cánh máy bay.",
+   "ex": [
+    {
+     "cn": "小鸟的翅膀受伤了。",
+     "py": "Xiǎo niǎo de chìbǎng shòushāng le.",
+     "vi": "Cánh con chim nhỏ bị thương."
+    }
+   ]
+  },
+  {
+   "w": "册",
+   "py": "cè",
+   "hv": "sách",
+   "vi": "quyển, tập",
+   "pos": "lượng từ",
+   "note": "Dùng cho sách: 第一册 (tập một).",
+   "ex": [
+    {
+     "cn": "这套书一共有五册。",
+     "py": "Zhè tào shū yígòng yǒu wǔ cè.",
+     "vi": "Bộ sách này có tổng cộng năm tập."
+    }
+   ]
+  },
+  {
+   "w": "池",
+   "py": "chí",
+   "hv": "trì",
+   "vi": "ao, bể",
+   "pos": "danh từ",
+   "note": "游泳池 (bể bơi).",
+   "ex": [
+    {
+     "cn": "酒店里有一个游泳池。",
+     "py": "Jiǔdiàn li yǒu yí ge yóuyǒngchí.",
+     "vi": "Trong khách sạn có một bể bơi."
+    }
+   ]
+  },
+  {
+   "w": "炒",
+   "py": "chǎo",
+   "hv": "sao",
+   "vi": "xào",
+   "pos": "động từ",
+   "note": "炒饭 (cơm rang).",
+   "ex": [
+    {
+     "cn": "妈妈炒了一盘青菜。",
+     "py": "Māma chǎo le yì pán qīngcài.",
+     "vi": "Mẹ xào một đĩa rau."
+    }
+   ]
+  },
+  {
+   "w": "充电",
+   "py": "chōngdiàn",
+   "hv": "sung điện",
+   "vi": "sạc điện",
+   "pos": "động từ",
+   "note": "充电器 (cục sạc).",
+   "ex": [
+    {
+     "cn": "我的手机没电了，要充电。",
+     "py": "Wǒ de shǒujī méi diàn le, yào chōngdiàn.",
+     "vi": "Điện thoại tôi hết pin, phải sạc."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Lượng từ cho đồ vật",
+   "b": "一条被子 · 一把叉子 · 一盆花 · 一条虫子",
+   "d": "条 cho vật dài mềm, 把 cho vật có tay cầm, 盆 cho chậu.",
+   "ex": [
+    {
+     "cn": "桌子上有一把尺子和一条毛巾。",
+     "py": "Zhuōzi shang yǒu yì bǎ chǐzi hé yì tiáo máojīn.",
+     "vi": "Trên bàn có một cây thước và một cái khăn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "睡觉以前别忘了给手机充电。",
+   "py": "Shuìjiào yǐqián bié wàng le gěi shǒujī chōngdiàn.",
+   "vi": "Trước khi ngủ đừng quên sạc điện thoại."
+  },
+  {
+   "cn": "养宠物可以让人心情变好。",
+   "py": "Yǎng chǒngwù kěyǐ ràng rén xīnqíng biàn hǎo.",
+   "vi": "Nuôi thú cưng giúp tâm trạng tốt lên."
+  },
+  {
+   "cn": "我最喜欢吃妈妈做的炒饭。",
+   "py": "Wǒ zuì xǐhuan chī māma zuò de chǎofàn.",
+   "vi": "Tôi thích nhất cơm rang mẹ làm."
+  }
+ ]
+}

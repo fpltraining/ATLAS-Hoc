@@ -1,0 +1,264 @@
+{
+ "id": 213,
+ "cn": "从前和此后",
+ "title": "Thời gian và quá trình",
+ "goal": "Nói về trước đây, từ đó, giai đoạn đầu, lâu dài, liên tục và rốt cuộc.",
+ "words": [
+  {
+   "w": "曾",
+   "py": "céng",
+   "hv": "tằng",
+   "vi": "đã từng",
+   "pos": "phó từ",
+   "note": "Văn viết của 曾经.",
+   "ex": [
+    {
+     "cn": "我曾在北京工作过一年。",
+     "py": "Wǒ céng zài Běijīng gōngzuò guo yì nián.",
+     "vi": "Tôi từng làm việc ở Bắc Kinh một năm."
+    }
+   ]
+  },
+  {
+   "w": "曾经",
+   "py": "céngjīng",
+   "hv": "tằng kinh",
+   "vi": "đã từng",
+   "pos": "phó từ",
+   "note": "Đi với 过.",
+   "ex": [
+    {
+     "cn": "他曾经是一名职业选手。",
+     "py": "Tā céngjīng shì yì míng zhíyè xuǎnshǒu.",
+     "vi": "Anh ấy từng là tuyển thủ chuyên nghiệp."
+    }
+   ]
+  },
+  {
+   "w": "此后",
+   "py": "cǐhòu",
+   "hv": "thử hậu",
+   "vi": "từ đó về sau",
+   "pos": "danh từ",
+   "note": "Văn viết.",
+   "ex": [
+    {
+     "cn": "此后，他再也没迟到过。",
+     "py": "Cǐhòu, tā zài yě méi chídào guo.",
+     "vi": "Từ đó về sau, anh ấy không đi muộn nữa."
+    }
+   ]
+  },
+  {
+   "w": "此前",
+   "py": "cǐqián",
+   "hv": "thử tiền",
+   "vi": "trước đó",
+   "pos": "danh từ",
+   "note": "Văn viết.",
+   "ex": [
+    {
+     "cn": "此前我们从来没赢过他们。",
+     "py": "Cǐqián wǒmen cónglái méi yíng guo tāmen.",
+     "vi": "Trước đó chúng tôi chưa từng thắng họ."
+    }
+   ]
+  },
+  {
+   "w": "此时",
+   "py": "cǐshí",
+   "hv": "thử thời",
+   "vi": "lúc này",
+   "pos": "danh từ",
+   "note": "Văn viết của 这时.",
+   "ex": [
+    {
+     "cn": "此时，观众都站了起来。",
+     "py": "Cǐshí, guānzhòng dōu zhàn le qǐlái.",
+     "vi": "Lúc này, khán giả đều đứng dậy."
+    }
+   ]
+  },
+  {
+   "w": "从前",
+   "py": "cóngqián",
+   "hv": "tòng tiền",
+   "vi": "ngày trước",
+   "pos": "danh từ",
+   "note": "Mở đầu truyện cổ: 从前有一个……",
+   "ex": [
+    {
+     "cn": "从前，这里是一片森林。",
+     "py": "Cóngqián, zhèlǐ shì yí piàn sēnlín.",
+     "vi": "Ngày trước nơi đây là một khu rừng."
+    }
+   ]
+  },
+  {
+   "w": "初",
+   "py": "chū",
+   "hv": "sơ",
+   "vi": "đầu, ban đầu",
+   "pos": "danh từ",
+   "note": "月初 (đầu tháng), 初中 (cấp hai).",
+   "ex": [
+    {
+     "cn": "我们月初开会。",
+     "py": "Wǒmen yuèchū kāihuì.",
+     "vi": "Chúng tôi họp vào đầu tháng."
+    }
+   ]
+  },
+  {
+   "w": "初级",
+   "py": "chūjí",
+   "hv": "sơ cấp",
+   "vi": "sơ cấp",
+   "pos": "tính từ",
+   "note": "Chính là \"sơ cấp\".",
+   "ex": [
+    {
+     "cn": "我在学初级汉语。",
+     "py": "Wǒ zài xué chūjí Hànyǔ.",
+     "vi": "Tôi đang học tiếng Trung sơ cấp."
+    }
+   ]
+  },
+  {
+   "w": "初期",
+   "py": "chūqī",
+   "hv": "sơ kỳ",
+   "vi": "giai đoạn đầu",
+   "pos": "danh từ",
+   "note": "比赛初期 (đầu trận).",
+   "ex": [
+    {
+     "cn": "比赛初期我们打得不好。",
+     "py": "Bǐsài chūqī wǒmen dǎ de bù hǎo.",
+     "vi": "Đầu trận chúng tôi chơi không tốt."
+    }
+   ]
+  },
+  {
+   "w": "长久",
+   "py": "chángjiǔ",
+   "hv": "trường cửu",
+   "vi": "lâu dài",
+   "pos": "tính từ",
+   "note": "Chính là \"trường cửu\".",
+   "ex": [
+    {
+     "cn": "这不是长久的办法。",
+     "py": "Zhè bú shì chángjiǔ de bànfǎ.",
+     "vi": "Đây không phải cách lâu dài."
+    }
+   ]
+  },
+  {
+   "w": "长期",
+   "py": "chángqī",
+   "hv": "trường kỳ",
+   "vi": "dài hạn",
+   "pos": "danh từ, tính từ",
+   "note": "Trái nghĩa 短期.",
+   "ex": [
+    {
+     "cn": "学语言需要长期坚持。",
+     "py": "Xué yǔyán xūyào chángqī jiānchí.",
+     "vi": "Học ngoại ngữ cần kiên trì lâu dài."
+    }
+   ]
+  },
+  {
+   "w": "长远",
+   "py": "chángyuǎn",
+   "hv": "trường viễn",
+   "vi": "lâu dài, xa",
+   "pos": "tính từ",
+   "note": "长远目标 (mục tiêu dài hạn).",
+   "ex": [
+    {
+     "cn": "我们要有长远的眼光。",
+     "py": "Wǒmen yào yǒu chángyuǎn de yǎnguāng.",
+     "vi": "Chúng ta phải có tầm nhìn xa."
+    }
+   ]
+  },
+  {
+   "w": "持续",
+   "py": "chíxù",
+   "hv": "trì tục",
+   "vi": "kéo dài, liên tục",
+   "pos": "động từ",
+   "note": "Chính là \"trì tục\" (liên tục).",
+   "ex": [
+    {
+     "cn": "大雨持续了三天。",
+     "py": "Dà yǔ chíxù le sān tiān.",
+     "vi": "Mưa lớn kéo dài ba ngày."
+    }
+   ]
+  },
+  {
+   "w": "毕竟",
+   "py": "bìjìng",
+   "hv": "tất cánh",
+   "vi": "rốt cuộc, dù sao",
+   "pos": "phó từ",
+   "note": "Nêu lý do quan trọng nhất.",
+   "ex": [
+    {
+     "cn": "别怪他了，他毕竟还是个孩子。",
+     "py": "Bié guài tā le, tā bìjìng hái shì ge háizi.",
+     "vi": "Đừng trách nó, dù sao nó vẫn là đứa trẻ."
+    }
+   ]
+  },
+  {
+   "w": "必然",
+   "py": "bìrán",
+   "hv": "tất nhiên",
+   "vi": "tất yếu",
+   "pos": "tính từ",
+   "note": "Khác \"tất nhiên\" khẩu ngữ tiếng Việt (当然).",
+   "ex": [
+    {
+     "cn": "不努力，失败是必然的。",
+     "py": "Bù nǔlì, shībài shì bìrán de.",
+     "vi": "Không cố gắng thì thất bại là tất yếu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "毕竟",
+   "b": "……，毕竟 + lý do",
+   "d": "Đưa ra lý do then chốt để người nghe thông cảm.",
+   "ex": [
+    {
+     "cn": "他输了也正常，毕竟是第一次比赛。",
+     "py": "Tā shū le yě zhèngcháng, bìjìng shì dì yī cì bǐsài.",
+     "vi": "Cậu ấy thua cũng bình thường, dù sao cũng là trận đầu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "他曾经失败过很多次，但从来没放弃。",
+   "py": "Tā céngjīng shībài guo hěn duō cì, dàn cónglái méi fàngqì.",
+   "vi": "Anh ấy từng thất bại nhiều lần nhưng chưa bao giờ bỏ cuộc."
+  },
+  {
+   "cn": "学习是一个长期持续的过程。",
+   "py": "Xuéxí shì yí ge chángqī chíxù de guòchéng.",
+   "vi": "Học tập là một quá trình lâu dài và liên tục."
+  },
+  {
+   "cn": "从前的他很害羞，现在成熟多了。",
+   "py": "Cóngqián de tā hěn hàixiū, xiànzài chéngshú duō le.",
+   "vi": "Ngày trước anh ấy rất ngại ngùng, giờ chín chắn hơn nhiều."
+  }
+ ]
+}

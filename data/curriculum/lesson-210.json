@@ -1,0 +1,264 @@
+{
+ "id": 210,
+ "cn": "差距不大",
+ "title": "Mức độ và so sánh",
+ "goal": "So sánh, nói về tỷ lệ, khoảng cách, mức độ, đủ hay thiếu.",
+ "words": [
+  {
+   "w": "比分",
+   "py": "bǐfēn",
+   "hv": "tỉ phân",
+   "vi": "tỉ số",
+   "pos": "danh từ",
+   "note": "Tỉ số trận đấu.",
+   "ex": [
+    {
+     "cn": "现在的比分是二比一。",
+     "py": "Xiànzài de bǐfēn shì èr bǐ yī.",
+     "vi": "Tỉ số hiện tại là hai một."
+    }
+   ]
+  },
+  {
+   "w": "比例",
+   "py": "bǐlì",
+   "hv": "tỉ lệ",
+   "vi": "tỉ lệ",
+   "pos": "danh từ",
+   "note": "Chính là \"tỉ lệ\".",
+   "ex": [
+    {
+     "cn": "我们班男女比例是一比一。",
+     "py": "Wǒmen bān nán nǚ bǐlì shì yī bǐ yī.",
+     "vi": "Tỉ lệ nam nữ lớp tôi là một một."
+    }
+   ]
+  },
+  {
+   "w": "差别",
+   "py": "chābié",
+   "hv": "sai biệt",
+   "vi": "sự khác biệt",
+   "pos": "danh từ",
+   "note": "没什么差别 (chẳng khác gì).",
+   "ex": [
+    {
+     "cn": "这两个手机没有什么差别。",
+     "py": "Zhè liǎng ge shǒujī méiyǒu shénme chābié.",
+     "vi": "Hai điện thoại này chẳng khác gì nhau."
+    }
+   ]
+  },
+  {
+   "w": "差距",
+   "py": "chājù",
+   "hv": "sai cự",
+   "vi": "khoảng cách, chênh lệch",
+   "pos": "danh từ",
+   "note": "Khoảng cách trình độ.",
+   "ex": [
+    {
+     "cn": "我们和冠军队的差距不大。",
+     "py": "Wǒmen hé guànjūn duì de chājù bú dà.",
+     "vi": "Khoảng cách giữa chúng tôi và đội vô địch không lớn."
+    }
+   ]
+  },
+  {
+   "w": "程度",
+   "py": "chéngdù",
+   "hv": "trình độ",
+   "vi": "mức độ",
+   "pos": "danh từ",
+   "note": "Chú ý: \"trình độ\" tiếng Việt thường là 水平.",
+   "ex": [
+    {
+     "cn": "他的病已经到了很严重的程度。",
+     "py": "Tā de bìng yǐjīng dào le hěn yánzhòng de chéngdù.",
+     "vi": "Bệnh của ông ấy đã tới mức rất nặng."
+    }
+   ]
+  },
+  {
+   "w": "彻底",
+   "py": "chèdǐ",
+   "hv": "triệt để",
+   "vi": "triệt để, hoàn toàn",
+   "pos": "tính từ",
+   "note": "Chính là \"triệt để\".",
+   "ex": [
+    {
+     "cn": "我们要彻底解决这个问题。",
+     "py": "Wǒmen yào chèdǐ jiějué zhège wèntí.",
+     "vi": "Chúng ta phải giải quyết triệt để vấn đề này."
+    }
+   ]
+  },
+  {
+   "w": "充分",
+   "py": "chōngfèn",
+   "hv": "sung phần",
+   "vi": "đầy đủ, tối đa",
+   "pos": "tính từ",
+   "note": "充分准备 (chuẩn bị kỹ).",
+   "ex": [
+    {
+     "cn": "比赛前我们做了充分的准备。",
+     "py": "Bǐsài qián wǒmen zuò le chōngfèn de zhǔnbèi.",
+     "vi": "Trước trận chúng tôi đã chuẩn bị kỹ càng."
+    }
+   ]
+  },
+  {
+   "w": "充足",
+   "py": "chōngzú",
+   "hv": "sung túc",
+   "vi": "đầy đủ, dồi dào",
+   "pos": "tính từ",
+   "note": "Thời gian, ánh sáng đầy đủ.",
+   "ex": [
+    {
+     "cn": "每天要保证充足的睡眠。",
+     "py": "Měi tiān yào bǎozhèng chōngzú de shuìmián.",
+     "vi": "Mỗi ngày phải đảm bảo ngủ đủ giấc."
+    }
+   ]
+  },
+  {
+   "w": "不足",
+   "py": "bùzú",
+   "hv": "bất túc",
+   "vi": "không đủ; thiếu sót",
+   "pos": "tính từ, danh từ",
+   "note": "Chính là \"bất túc\".",
+   "ex": [
+    {
+     "cn": "我们的经验还有些不足。",
+     "py": "Wǒmen de jīngyàn hái yǒuxiē bùzú.",
+     "vi": "Kinh nghiệm của chúng tôi vẫn còn thiếu."
+    }
+   ]
+  },
+  {
+   "w": "超",
+   "py": "chāo",
+   "hv": "siêu",
+   "vi": "vượt; siêu",
+   "pos": "động từ, phó từ",
+   "note": "Khẩu ngữ: 超好吃 (siêu ngon).",
+   "ex": [
+    {
+     "cn": "这家店的菜超好吃！",
+     "py": "Zhè jiā diàn de cài chāo hǎochī!",
+     "vi": "Món của quán này siêu ngon!"
+    }
+   ]
+  },
+  {
+   "w": "超出",
+   "py": "chāochū",
+   "hv": "siêu xuất",
+   "vi": "vượt quá",
+   "pos": "động từ",
+   "note": "超出预算 (vượt ngân sách).",
+   "ex": [
+    {
+     "cn": "结果超出了我们的想象。",
+     "py": "Jiéguǒ chāochū le wǒmen de xiǎngxiàng.",
+     "vi": "Kết quả vượt ngoài tưởng tượng của chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "超级",
+   "py": "chāojí",
+   "hv": "siêu cấp",
+   "vi": "siêu, cực kỳ",
+   "pos": "tính từ",
+   "note": "超级市场 (siêu thị).",
+   "ex": [
+    {
+     "cn": "他是一个超级球迷。",
+     "py": "Tā shì yí ge chāojí qiúmí.",
+     "vi": "Anh ấy là một siêu cổ động viên."
+    }
+   ]
+  },
+  {
+   "w": "长度",
+   "py": "chángdù",
+   "hv": "trường độ",
+   "vi": "chiều dài",
+   "pos": "danh từ",
+   "note": "长 + 度.",
+   "ex": [
+    {
+     "cn": "这条河的长度是多少？",
+     "py": "Zhè tiáo hé de chángdù shì duōshao?",
+     "vi": "Con sông này dài bao nhiêu?"
+    }
+   ]
+  },
+  {
+   "w": "长处",
+   "py": "chángchu",
+   "hv": "trường xứ",
+   "vi": "sở trường, điểm mạnh",
+   "pos": "danh từ",
+   "note": "Trái nghĩa 短处.",
+   "ex": [
+    {
+     "cn": "每个人都有自己的长处。",
+     "py": "Měi ge rén dōu yǒu zìjǐ de chángchu.",
+     "vi": "Ai cũng có điểm mạnh riêng."
+    }
+   ]
+  },
+  {
+   "w": "表面",
+   "py": "biǎomiàn",
+   "hv": "biểu diện",
+   "vi": "bề mặt, bề ngoài",
+   "pos": "danh từ",
+   "note": "表面上 (bề ngoài thì).",
+   "ex": [
+    {
+     "cn": "他表面上很平静，其实很紧张。",
+     "py": "Tā biǎomiàn shang hěn píngjìng, qíshí hěn jǐnzhāng.",
+     "vi": "Bề ngoài anh ấy bình tĩnh, thật ra rất căng thẳng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "表面上……，其实……",
+   "b": "Bề ngoài thì…, thực ra…",
+   "d": "Đối lập vẻ ngoài và sự thật.",
+   "ex": [
+    {
+     "cn": "表面上很简单，其实很难。",
+     "py": "Biǎomiàn shang hěn jiǎndān, qíshí hěn nán.",
+     "vi": "Bề ngoài thì đơn giản, thực ra rất khó."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我们和对手的差距在于经验。",
+   "py": "Wǒmen hé duìshǒu de chājù zàiyú jīngyàn.",
+   "vi": "Khoảng cách giữa chúng tôi và đối thủ nằm ở kinh nghiệm."
+  },
+  {
+   "cn": "发挥自己的长处，改正自己的不足。",
+   "py": "Fāhuī zìjǐ de chángchu, gǎizhèng zìjǐ de bùzú.",
+   "vi": "Phát huy điểm mạnh, sửa chữa thiếu sót của mình."
+  },
+  {
+   "cn": "最后的比分超出了所有人的想象。",
+   "py": "Zuìhòu de bǐfēn chāochū le suǒyǒu rén de xiǎngxiàng.",
+   "vi": "Tỉ số cuối cùng vượt ngoài tưởng tượng của mọi người."
+  }
+ ]
+}

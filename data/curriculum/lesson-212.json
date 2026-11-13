@@ -1,0 +1,264 @@
+{
+ "id": 212,
+ "cn": "新产品上市",
+ "title": "Sản phẩm và kinh doanh",
+ "goal": "Nói về sản xuất, sản phẩm, khuyến mãi, bán, dịch vụ ăn uống và vận hành.",
+ "words": [
+  {
+   "w": "产",
+   "py": "chǎn",
+   "hv": "sản",
+   "vi": "sản xuất, ra",
+   "pos": "động từ",
+   "note": "这里产茶 (nơi này sản xuất chè).",
+   "ex": [
+    {
+     "cn": "这个地方产大米。",
+     "py": "Zhège dìfang chǎn dàmǐ.",
+     "vi": "Vùng này sản xuất gạo."
+    }
+   ]
+  },
+  {
+   "w": "产量",
+   "py": "chǎnliàng",
+   "hv": "sản lượng",
+   "vi": "sản lượng",
+   "pos": "danh từ",
+   "note": "Chính là \"sản lượng\".",
+   "ex": [
+    {
+     "cn": "今年的产量比去年高。",
+     "py": "Jīnnián de chǎnliàng bǐ qùnián gāo.",
+     "vi": "Sản lượng năm nay cao hơn năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "产品",
+   "py": "chǎnpǐn",
+   "hv": "sản phẩm",
+   "vi": "sản phẩm",
+   "pos": "danh từ",
+   "note": "Chính là \"sản phẩm\".",
+   "ex": [
+    {
+     "cn": "这家公司的产品质量很好。",
+     "py": "Zhè jiā gōngsī de chǎnpǐn zhìliàng hěn hǎo.",
+     "vi": "Sản phẩm của công ty này chất lượng tốt."
+    }
+   ]
+  },
+  {
+   "w": "产业",
+   "py": "chǎnyè",
+   "hv": "sản nghiệp",
+   "vi": "ngành công nghiệp",
+   "pos": "danh từ",
+   "note": "电竞产业 (ngành thể thao điện tử).",
+   "ex": [
+    {
+     "cn": "电竞产业发展得很快。",
+     "py": "Diànjìng chǎnyè fāzhǎn de hěn kuài.",
+     "vi": "Ngành thể thao điện tử phát triển rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "促进",
+   "py": "cùjìn",
+   "hv": "xúc tiến",
+   "vi": "thúc đẩy",
+   "pos": "động từ",
+   "note": "Chính là \"xúc tiến\".",
+   "ex": [
+    {
+     "cn": "运动可以促进健康。",
+     "py": "Yùndòng kěyǐ cùjìn jiànkāng.",
+     "vi": "Vận động có thể thúc đẩy sức khoẻ."
+    }
+   ]
+  },
+  {
+   "w": "促使",
+   "py": "cùshǐ",
+   "hv": "xúc sử",
+   "vi": "khiến, thúc giục",
+   "pos": "động từ",
+   "note": "促使 + người + làm gì.",
+   "ex": [
+    {
+     "cn": "失败促使我们改变方法。",
+     "py": "Shībài cùshǐ wǒmen gǎibiàn fāngfǎ.",
+     "vi": "Thất bại khiến chúng tôi đổi cách làm."
+    }
+   ]
+  },
+  {
+   "w": "促销",
+   "py": "cùxiāo",
+   "hv": "xúc tiêu",
+   "vi": "khuyến mãi",
+   "pos": "động từ, danh từ",
+   "note": "促 + 销 (bán).",
+   "ex": [
+    {
+     "cn": "超市正在搞促销活动。",
+     "py": "Chāoshì zhèngzài gǎo cùxiāo huódòng.",
+     "vi": "Siêu thị đang có chương trình khuyến mãi."
+    }
+   ]
+  },
+  {
+   "w": "出售",
+   "py": "chūshòu",
+   "hv": "xuất thụ",
+   "vi": "bán ra",
+   "pos": "động từ",
+   "note": "Văn viết của 卖.",
+   "ex": [
+    {
+     "cn": "这套房子正在出售。",
+     "py": "Zhè tào fángzi zhèngzài chūshòu.",
+     "vi": "Căn nhà này đang được rao bán."
+    }
+   ]
+  },
+  {
+   "w": "餐饮",
+   "py": "cānyǐn",
+   "hv": "xan ẩm",
+   "vi": "ăn uống (ngành)",
+   "pos": "danh từ",
+   "note": "餐饮业 (ngành nhà hàng).",
+   "ex": [
+    {
+     "cn": "他在餐饮行业工作了十年。",
+     "py": "Tā zài cānyǐn hángyè gōngzuò le shí nián.",
+     "vi": "Anh ấy làm ngành nhà hàng mười năm."
+    }
+   ]
+  },
+  {
+   "w": "便利",
+   "py": "biànlì",
+   "hv": "tiện lợi",
+   "vi": "tiện lợi",
+   "pos": "tính từ",
+   "note": "Chính là \"tiện lợi\".",
+   "ex": [
+    {
+     "cn": "这里交通很便利。",
+     "py": "Zhèlǐ jiāotōng hěn biànlì.",
+     "vi": "Giao thông ở đây rất thuận tiện."
+    }
+   ]
+  },
+  {
+   "w": "便利店",
+   "py": "biànlìdiàn",
+   "hv": "tiện lợi điếm",
+   "vi": "cửa hàng tiện lợi",
+   "pos": "danh từ",
+   "note": "店 là \"điếm\".",
+   "ex": [
+    {
+     "cn": "楼下有一家便利店。",
+     "py": "Lóu xià yǒu yì jiā biànlìdiàn.",
+     "vi": "Dưới nhà có một cửa hàng tiện lợi."
+    }
+   ]
+  },
+  {
+   "w": "采取",
+   "py": "cǎiqǔ",
+   "hv": "thải thủ",
+   "vi": "áp dụng (biện pháp)",
+   "pos": "động từ",
+   "note": "采取措施 (áp dụng biện pháp).",
+   "ex": [
+    {
+     "cn": "政府采取了新的措施。",
+     "py": "Zhèngfǔ cǎiqǔ le xīn de cuòshī.",
+     "vi": "Chính phủ áp dụng biện pháp mới."
+    }
+   ]
+  },
+  {
+   "w": "采用",
+   "py": "cǎiyòng",
+   "hv": "thải dụng",
+   "vi": "sử dụng, áp dụng",
+   "pos": "động từ",
+   "note": "Dùng phương pháp, công nghệ.",
+   "ex": [
+    {
+     "cn": "我们采用了新的训练方法。",
+     "py": "Wǒmen cǎiyòng le xīn de xùnliàn fāngfǎ.",
+     "vi": "Chúng tôi áp dụng phương pháp tập luyện mới."
+    }
+   ]
+  },
+  {
+   "w": "操作",
+   "py": "cāozuò",
+   "hv": "thao tác",
+   "vi": "thao tác, vận hành",
+   "pos": "động từ",
+   "note": "操作 (micro trong game).",
+   "ex": [
+    {
+     "cn": "这个选手的操作非常好。",
+     "py": "Zhège xuǎnshǒu de cāozuò fēicháng hǎo.",
+     "vi": "Thao tác của tuyển thủ này rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "程序",
+   "py": "chéngxù",
+   "hv": "trình tự",
+   "vi": "trình tự; chương trình",
+   "pos": "danh từ",
+   "note": "电脑程序 (chương trình máy tính).",
+   "ex": [
+    {
+     "cn": "办签证有一定的程序。",
+     "py": "Bàn qiānzhèng yǒu yídìng de chéngxù.",
+     "vi": "Làm thị thực có trình tự nhất định."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "采取 và 采用",
+   "b": "采取 + 措施/行动; 采用 + 方法/技术",
+   "d": "采取 đi với biện pháp, hành động; 采用 đi với phương pháp, công nghệ.",
+   "ex": [
+    {
+     "cn": "我们采取了行动，也采用了新技术。",
+     "py": "Wǒmen cǎiqǔ le xíngdòng, yě cǎiyòng le xīn jìshù.",
+     "vi": "Chúng tôi đã hành động và cũng áp dụng công nghệ mới."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "新产品上市以前，公司搞了很多促销活动。",
+   "py": "Xīn chǎnpǐn shàngshì yǐqián, gōngsī gǎo le hěn duō cùxiāo huódòng.",
+   "vi": "Trước khi ra mắt sản phẩm mới, công ty làm nhiều chương trình khuyến mãi."
+  },
+  {
+   "cn": "好的操作来自大量的练习。",
+   "py": "Hǎo de cāozuò láizì dàliàng de liànxí.",
+   "vi": "Thao tác tốt đến từ luyện tập nhiều."
+  },
+  {
+   "cn": "降低成本，提高产量，是工厂的目标。",
+   "py": "Jiàngdī chéngběn, tígāo chǎnliàng, shì gōngchǎng de mùbiāo.",
+   "vi": "Giảm chi phí, tăng sản lượng là mục tiêu của nhà máy."
+  }
+ ]
+}

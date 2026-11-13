@@ -1,0 +1,264 @@
+{
+ "id": 211,
+ "cn": "创业不容易",
+ "title": "Sự nghiệp và khởi nghiệp",
+ "goal": "Nói về gánh vác, thừa nhận, chịu đựng, thành quả, sáng tạo và thôi việc.",
+ "words": [
+  {
+   "w": "承担",
+   "py": "chéngdān",
+   "hv": "thừa đảm",
+   "vi": "gánh vác, chịu (trách nhiệm)",
+   "pos": "động từ",
+   "note": "承担责任 (chịu trách nhiệm).",
+   "ex": [
+    {
+     "cn": "这件事我来承担责任。",
+     "py": "Zhè jiàn shì wǒ lái chéngdān zérèn.",
+     "vi": "Việc này để tôi chịu trách nhiệm."
+    }
+   ]
+  },
+  {
+   "w": "承认",
+   "py": "chéngrèn",
+   "hv": "thừa nhận",
+   "vi": "thừa nhận",
+   "pos": "động từ",
+   "note": "Chính là \"thừa nhận\".",
+   "ex": [
+    {
+     "cn": "他承认自己错了。",
+     "py": "Tā chéngrèn zìjǐ cuò le.",
+     "vi": "Anh ấy thừa nhận mình sai."
+    }
+   ]
+  },
+  {
+   "w": "承受",
+   "py": "chéngshòu",
+   "hv": "thừa thụ",
+   "vi": "chịu đựng",
+   "pos": "động từ",
+   "note": "承受压力 (chịu áp lực).",
+   "ex": [
+    {
+     "cn": "职业选手要承受很大的压力。",
+     "py": "Zhíyè xuǎnshǒu yào chéngshòu hěn dà de yālì.",
+     "vi": "Tuyển thủ chuyên nghiệp phải chịu áp lực rất lớn."
+    }
+   ]
+  },
+  {
+   "w": "成本",
+   "py": "chéngběn",
+   "hv": "thành bản",
+   "vi": "chi phí, giá thành",
+   "pos": "danh từ",
+   "note": "Giá vốn sản phẩm.",
+   "ex": [
+    {
+     "cn": "我们要降低成本。",
+     "py": "Wǒmen yào jiàngdī chéngběn.",
+     "vi": "Chúng ta phải giảm chi phí."
+    }
+   ]
+  },
+  {
+   "w": "成果",
+   "py": "chéngguǒ",
+   "hv": "thành quả",
+   "vi": "thành quả",
+   "pos": "danh từ",
+   "note": "Chính là \"thành quả\".",
+   "ex": [
+    {
+     "cn": "这是大家努力的成果。",
+     "py": "Zhè shì dàjiā nǔlì de chéngguǒ.",
+     "vi": "Đây là thành quả nỗ lực của mọi người."
+    }
+   ]
+  },
+  {
+   "w": "成就",
+   "py": "chéngjiù",
+   "hv": "thành tựu",
+   "vi": "thành tựu",
+   "pos": "danh từ",
+   "note": "Chính là \"thành tựu\".",
+   "ex": [
+    {
+     "cn": "他在事业上取得了很大的成就。",
+     "py": "Tā zài shìyè shang qǔdé le hěn dà de chéngjiù.",
+     "vi": "Ông ấy đạt thành tựu lớn trong sự nghiệp."
+    }
+   ]
+  },
+  {
+   "w": "成立",
+   "py": "chénglì",
+   "hv": "thành lập",
+   "vi": "thành lập",
+   "pos": "động từ",
+   "note": "Chính là \"thành lập\".",
+   "ex": [
+    {
+     "cn": "我们的战队是去年成立的。",
+     "py": "Wǒmen de zhànduì shì qùnián chénglì de.",
+     "vi": "Đội tuyển của chúng tôi thành lập năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "成员",
+   "py": "chéngyuán",
+   "hv": "thành viên",
+   "vi": "thành viên",
+   "pos": "danh từ",
+   "note": "Chính là \"thành viên\".",
+   "ex": [
+    {
+     "cn": "每个成员都很重要。",
+     "py": "Měi ge chéngyuán dōu hěn zhòngyào.",
+     "vi": "Mỗi thành viên đều quan trọng."
+    }
+   ]
+  },
+  {
+   "w": "成长",
+   "py": "chéngzhǎng",
+   "hv": "thành trưởng",
+   "vi": "trưởng thành, lớn lên",
+   "pos": "động từ",
+   "note": "Chính là \"trưởng thành\".",
+   "ex": [
+    {
+     "cn": "失败让我们成长。",
+     "py": "Shībài ràng wǒmen chéngzhǎng.",
+     "vi": "Thất bại giúp chúng ta trưởng thành."
+    }
+   ]
+  },
+  {
+   "w": "成熟",
+   "py": "chéngshú",
+   "hv": "thành thục",
+   "vi": "chín; chín chắn",
+   "pos": "tính từ",
+   "note": "Trái cây chín; người chín chắn.",
+   "ex": [
+    {
+     "cn": "这次比赛他打得很成熟。",
+     "py": "Zhè cì bǐsài tā dǎ de hěn chéngshú.",
+     "vi": "Trận này cậu ấy chơi rất chín chắn."
+    }
+   ]
+  },
+  {
+   "w": "创新",
+   "py": "chuàngxīn",
+   "hv": "sáng tân",
+   "vi": "đổi mới, sáng tạo cái mới",
+   "pos": "động từ, danh từ",
+   "note": "创 + 新.",
+   "ex": [
+    {
+     "cn": "公司需要不断创新。",
+     "py": "Gōngsī xūyào búduàn chuàngxīn.",
+     "vi": "Công ty cần không ngừng đổi mới."
+    }
+   ]
+  },
+  {
+   "w": "创业",
+   "py": "chuàngyè",
+   "hv": "sáng nghiệp",
+   "vi": "khởi nghiệp",
+   "pos": "động từ",
+   "note": "Chính là \"sáng nghiệp\".",
+   "ex": [
+    {
+     "cn": "他大学毕业后开始创业。",
+     "py": "Tā dàxué bìyè hòu kāishǐ chuàngyè.",
+     "vi": "Tốt nghiệp đại học, anh ấy bắt đầu khởi nghiệp."
+    }
+   ]
+  },
+  {
+   "w": "创造",
+   "py": "chuàngzào",
+   "hv": "sáng tạo",
+   "vi": "tạo ra, sáng tạo",
+   "pos": "động từ",
+   "note": "创造纪录 (lập kỷ lục).",
+   "ex": [
+    {
+     "cn": "他们创造了新的纪录。",
+     "py": "Tāmen chuàngzào le xīn de jìlù.",
+     "vi": "Họ đã lập kỷ lục mới."
+    }
+   ]
+  },
+  {
+   "w": "创作",
+   "py": "chuàngzuò",
+   "hv": "sáng tác",
+   "vi": "sáng tác",
+   "pos": "động từ",
+   "note": "Chính là \"sáng tác\".",
+   "ex": [
+    {
+     "cn": "这首歌是他自己创作的。",
+     "py": "Zhè shǒu gē shì tā zìjǐ chuàngzuò de.",
+     "vi": "Bài hát này do anh ấy tự sáng tác."
+    }
+   ]
+  },
+  {
+   "w": "辞职",
+   "py": "cízhí",
+   "hv": "từ chức",
+   "vi": "thôi việc, từ chức",
+   "pos": "động từ",
+   "note": "辞 (từ) + 职 (chức).",
+   "ex": [
+    {
+     "cn": "她辞职去国外读书了。",
+     "py": "Tā cízhí qù guówài dúshū le.",
+     "vi": "Cô ấy nghỉ việc ra nước ngoài du học."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "是……的 nhấn mạnh thời gian",
+   "b": "战队是去年成立的",
+   "d": "Nhấn mạnh thời điểm, nơi chốn, cách thức của việc đã xảy ra.",
+   "ex": [
+    {
+     "cn": "我是坐飞机来的。",
+     "py": "Wǒ shì zuò fēijī lái de.",
+     "vi": "Tôi đến bằng máy bay."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "创业很难，要承受很多压力。",
+   "py": "Chuàngyè hěn nán, yào chéngshòu hěn duō yālì.",
+   "vi": "Khởi nghiệp rất khó, phải chịu nhiều áp lực."
+  },
+  {
+   "cn": "敢于承认错误的人才能真正成长。",
+   "py": "Gǎnyú chéngrèn cuòwù de rén cái néng zhēnzhèng chéngzhǎng.",
+   "vi": "Người dám thừa nhận sai lầm mới thực sự trưởng thành."
+  },
+  {
+   "cn": "这个成果属于我们团队的每一个成员。",
+   "py": "Zhège chéngguǒ shǔyú wǒmen tuánduì de měi yí ge chéngyuán.",
+   "vi": "Thành quả này thuộc về mỗi thành viên của đội."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 209,
+ "cn": "新闻报道",
+ "title": "Báo chí và truyền thông",
+ "goal": "Nói về đưa tin, phỏng vấn, xuất bản, lan truyền, truyền thống và cách diễn đạt.",
+ "words": [
+  {
+   "w": "报道",
+   "py": "bàodào",
+   "hv": "báo đạo",
+   "vi": "đưa tin; bài báo",
+   "pos": "động từ, danh từ",
+   "note": "新闻报道 (bản tin).",
+   "ex": [
+    {
+     "cn": "电视上报道了这次比赛。",
+     "py": "Diànshì shang bàodào le zhè cì bǐsài.",
+     "vi": "Truyền hình đã đưa tin trận đấu này."
+    }
+   ]
+  },
+  {
+   "w": "报到",
+   "py": "bàodào",
+   "hv": "báo đáo",
+   "vi": "đến trình diện, đăng ký có mặt",
+   "pos": "động từ",
+   "note": "Phát âm giống 报道 nhưng khác nghĩa.",
+   "ex": [
+    {
+     "cn": "新同学明天来学校报到。",
+     "py": "Xīn tóngxué míngtiān lái xuéxiào bàodào.",
+     "vi": "Học sinh mới mai đến trường làm thủ tục nhập học."
+    }
+   ]
+  },
+  {
+   "w": "报告",
+   "py": "bàogào",
+   "hv": "báo cáo",
+   "vi": "báo cáo",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"báo cáo\".",
+   "ex": [
+    {
+     "cn": "我写完了这个月的工作报告。",
+     "py": "Wǒ xiě wán le zhège yuè de gōngzuò bàogào.",
+     "vi": "Tôi viết xong báo cáo công việc tháng này."
+    }
+   ]
+  },
+  {
+   "w": "标题",
+   "py": "biāotí",
+   "hv": "tiêu đề",
+   "vi": "tiêu đề",
+   "pos": "danh từ",
+   "note": "Chính là \"tiêu đề\".",
+   "ex": [
+    {
+     "cn": "这篇文章的标题很吸引人。",
+     "py": "Zhè piān wénzhāng de biāotí hěn xīyǐn rén.",
+     "vi": "Tiêu đề bài này rất thu hút."
+    }
+   ]
+  },
+  {
+   "w": "标志",
+   "py": "biāozhì",
+   "hv": "tiêu chí",
+   "vi": "biểu tượng, dấu hiệu",
+   "pos": "danh từ",
+   "note": "Logo, ký hiệu.",
+   "ex": [
+    {
+     "cn": "这是我们队的标志。",
+     "py": "Zhè shì wǒmen duì de biāozhì.",
+     "vi": "Đây là biểu tượng của đội chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "采访",
+   "py": "cǎifǎng",
+   "hv": "thải phỏng",
+   "vi": "phỏng vấn",
+   "pos": "động từ",
+   "note": "Nhà báo phỏng vấn.",
+   "ex": [
+    {
+     "cn": "记者采访了冠军队的教练。",
+     "py": "Jìzhě cǎifǎng le guànjūn duì de jiàoliàn.",
+     "vi": "Phóng viên phỏng vấn huấn luyện viên đội vô địch."
+    }
+   ]
+  },
+  {
+   "w": "出版",
+   "py": "chūbǎn",
+   "hv": "xuất bản",
+   "vi": "xuất bản",
+   "pos": "động từ",
+   "note": "Chính là \"xuất bản\".",
+   "ex": [
+    {
+     "cn": "这本书去年出版了。",
+     "py": "Zhè běn shū qùnián chūbǎn le.",
+     "vi": "Cuốn sách này xuất bản năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "传播",
+   "py": "chuánbō",
+   "hv": "truyền bá",
+   "vi": "lan truyền",
+   "pos": "động từ",
+   "note": "Tin tức, bệnh tật lan truyền.",
+   "ex": [
+    {
+     "cn": "网上的消息传播得很快。",
+     "py": "Wǎngshang de xiāoxi chuánbō de hěn kuài.",
+     "vi": "Tin trên mạng lan truyền rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "传递",
+   "py": "chuándì",
+   "hv": "truyền đệ",
+   "vi": "chuyển, truyền đi",
+   "pos": "động từ",
+   "note": "Truyền đồ vật hoặc thông điệp.",
+   "ex": [
+    {
+     "cn": "这部电影传递了一种正能量。",
+     "py": "Zhè bù diànyǐng chuándì le yì zhǒng zhèng néngliàng.",
+     "vi": "Bộ phim truyền đi năng lượng tích cực."
+    }
+   ]
+  },
+  {
+   "w": "传说",
+   "py": "chuánshuō",
+   "hv": "truyền thuyết",
+   "vi": "truyền thuyết",
+   "pos": "danh từ",
+   "note": "Chính là \"truyền thuyết\".",
+   "ex": [
+    {
+     "cn": "关于这座山有一个美丽的传说。",
+     "py": "Guānyú zhè zuò shān yǒu yí ge měilì de chuánshuō.",
+     "vi": "Về ngọn núi này có một truyền thuyết đẹp."
+    }
+   ]
+  },
+  {
+   "w": "传统",
+   "py": "chuántǒng",
+   "hv": "truyền thống",
+   "vi": "truyền thống",
+   "pos": "danh từ, tính từ",
+   "note": "Chính là \"truyền thống\".",
+   "ex": [
+    {
+     "cn": "春节是中国最重要的传统节日。",
+     "py": "Chūnjié shì Zhōngguó zuì zhòngyào de chuántǒng jiérì.",
+     "vi": "Tết là lễ truyền thống quan trọng nhất của Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "词汇",
+   "py": "cíhuì",
+   "hv": "từ vựng",
+   "vi": "từ vựng",
+   "pos": "danh từ",
+   "note": "汇 là \"hội tụ\".",
+   "ex": [
+    {
+     "cn": "多看书可以增加词汇量。",
+     "py": "Duō kàn shū kěyǐ zēngjiā cíhuìliàng.",
+     "vi": "Đọc nhiều sách giúp tăng vốn từ."
+    }
+   ]
+  },
+  {
+   "w": "参考",
+   "py": "cānkǎo",
+   "hv": "tham khảo",
+   "vi": "tham khảo",
+   "pos": "động từ",
+   "note": "Chính là \"tham khảo\".",
+   "ex": [
+    {
+     "cn": "这些资料可以给你参考。",
+     "py": "Zhèxiē zīliào kěyǐ gěi nǐ cānkǎo.",
+     "vi": "Những tài liệu này cho bạn tham khảo."
+    }
+   ]
+  },
+  {
+   "w": "表达",
+   "py": "biǎodá",
+   "hv": "biểu đạt",
+   "vi": "diễn đạt, bày tỏ",
+   "pos": "động từ",
+   "note": "表达感情 (bày tỏ tình cảm).",
+   "ex": [
+    {
+     "cn": "他不太会表达自己的想法。",
+     "py": "Tā bú tài huì biǎodá zìjǐ de xiǎngfǎ.",
+     "vi": "Anh ấy không giỏi diễn đạt suy nghĩ của mình."
+    }
+   ]
+  },
+  {
+   "w": "比喻",
+   "py": "bǐyù",
+   "hv": "tỉ dụ",
+   "vi": "phép so sánh, ví von",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"tỉ dụ\".",
+   "ex": [
+    {
+     "cn": "老师用了一个很好的比喻。",
+     "py": "Lǎoshī yòng le yí ge hěn hǎo de bǐyù.",
+     "vi": "Thầy dùng một phép so sánh rất hay."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "报道 và 报到",
+   "b": "Cùng đọc bàodào: 报道 là đưa tin, 报到 là đến trình diện",
+   "d": "Nhìn chữ thứ hai: 道 (nói) và 到 (đến).",
+   "ex": [
+    {
+     "cn": "记者报道了运动员报到的情况。",
+     "py": "Jìzhě bàodào le yùndòngyuán bàodào de qíngkuàng.",
+     "vi": "Phóng viên đưa tin về việc các vận động viên đến trình diện."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "这个消息在网上传播得非常快。",
+   "py": "Zhège xiāoxi zài wǎngshang chuánbō de fēicháng kuài.",
+   "vi": "Tin này lan truyền trên mạng rất nhanh."
+  },
+  {
+   "cn": "学外语，表达比语法更重要。",
+   "py": "Xué wàiyǔ, biǎodá bǐ yǔfǎ gèng zhòngyào.",
+   "vi": "Học ngoại ngữ, diễn đạt quan trọng hơn ngữ pháp."
+  },
+  {
+   "cn": "比赛结束后，很多记者来采访我们。",
+   "py": "Bǐsài jiéshù hòu, hěn duō jìzhě lái cǎifǎng wǒmen.",
+   "vi": "Trận đấu kết thúc, nhiều phóng viên đến phỏng vấn chúng tôi."
+  }
+ ]
+}
