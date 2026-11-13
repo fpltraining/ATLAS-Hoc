@@ -1,0 +1,264 @@
+{
+ "id": 220,
+ "cn": "分析问题",
+ "title": "Tư duy và phân tích",
+ "goal": "Nói về bản chất, kỹ năng, kiến thức chung, đạo lý, khái niệm, phân tích, so sánh, phong cách và rủi ro.",
+ "words": [
+  {
+   "w": "本质",
+   "py": "běnzhì",
+   "hv": "bản chất",
+   "vi": "bản chất",
+   "pos": "danh từ",
+   "note": "Chính là \"bản chất\".",
+   "ex": [
+    {
+     "cn": "我们要看到问题的本质。",
+     "py": "Wǒmen yào kàndào wèntí de běnzhì.",
+     "vi": "Chúng ta phải nhìn thấy bản chất vấn đề."
+    }
+   ]
+  },
+  {
+   "w": "本领",
+   "py": "běnlǐng",
+   "hv": "bản lĩnh",
+   "vi": "bản lĩnh, tài năng",
+   "pos": "danh từ",
+   "note": "Khác \"bản lĩnh\" tiếng Việt (gan dạ): ở đây là kỹ năng.",
+   "ex": [
+    {
+     "cn": "他学会了很多本领。",
+     "py": "Tā xuéhuì le hěn duō běnlǐng.",
+     "vi": "Anh ấy học được nhiều tài nghệ."
+    }
+   ]
+  },
+  {
+   "w": "常识",
+   "py": "chángshí",
+   "hv": "thường thức",
+   "vi": "kiến thức phổ thông",
+   "pos": "danh từ",
+   "note": "生活常识 (hiểu biết đời sống).",
+   "ex": [
+    {
+     "cn": "这是一个生活常识。",
+     "py": "Zhè shì yí ge shēnghuó chángshí.",
+     "vi": "Đây là hiểu biết đời sống cơ bản."
+    }
+   ]
+  },
+  {
+   "w": "道理",
+   "py": "dàolǐ",
+   "hv": "đạo lý",
+   "vi": "lý lẽ, đạo lý",
+   "pos": "danh từ",
+   "note": "有道理 (có lý).",
+   "ex": [
+    {
+     "cn": "你说的很有道理。",
+     "py": "Nǐ shuō de hěn yǒu dàolǐ.",
+     "vi": "Bạn nói rất có lý."
+    }
+   ]
+  },
+  {
+   "w": "概念",
+   "py": "gàiniàn",
+   "hv": "khái niệm",
+   "vi": "khái niệm",
+   "pos": "danh từ",
+   "note": "Chính là \"khái niệm\".",
+   "ex": [
+    {
+     "cn": "这个概念很难理解。",
+     "py": "Zhège gàiniàn hěn nán lǐjiě.",
+     "vi": "Khái niệm này rất khó hiểu."
+    }
+   ]
+  },
+  {
+   "w": "概括",
+   "py": "gàikuò",
+   "hv": "khái quát",
+   "vi": "khái quát, tóm tắt",
+   "pos": "động từ",
+   "note": "Chính là \"khái quát\".",
+   "ex": [
+    {
+     "cn": "请用一句话概括这篇文章。",
+     "py": "Qǐng yòng yí jù huà gàikuò zhè piān wénzhāng.",
+     "vi": "Hãy tóm tắt bài này trong một câu."
+    }
+   ]
+  },
+  {
+   "w": "分析",
+   "py": "fēnxī",
+   "hv": "phân tích",
+   "vi": "phân tích",
+   "pos": "động từ",
+   "note": "Chính là \"phân tích\".",
+   "ex": [
+    {
+     "cn": "教练分析了对手的打法。",
+     "py": "Jiàoliàn fēnxī le duìshǒu de dǎfǎ.",
+     "vi": "Huấn luyện viên phân tích lối đánh của đối thủ."
+    }
+   ]
+  },
+  {
+   "w": "对比",
+   "py": "duìbǐ",
+   "hv": "đối tỉ",
+   "vi": "so sánh, đối chiếu",
+   "pos": "động từ",
+   "note": "Đặt hai thứ cạnh nhau để so.",
+   "ex": [
+    {
+     "cn": "对比一下这两个方案。",
+     "py": "Duìbǐ yíxià zhè liǎng ge fāng'àn.",
+     "vi": "So sánh hai phương án này xem."
+    }
+   ]
+  },
+  {
+   "w": "成分",
+   "py": "chéngfèn",
+   "hv": "thành phần",
+   "vi": "thành phần",
+   "pos": "danh từ",
+   "note": "Thành phần thực phẩm, hoá chất.",
+   "ex": [
+    {
+     "cn": "这种饮料含有什么成分？",
+     "py": "Zhè zhǒng yǐnliào hányǒu shénme chéngfèn?",
+     "vi": "Đồ uống này có thành phần gì?"
+    }
+   ]
+  },
+  {
+   "w": "风格",
+   "py": "fēnggé",
+   "hv": "phong cách",
+   "vi": "phong cách",
+   "pos": "danh từ",
+   "note": "Chính là \"phong cách\".",
+   "ex": [
+    {
+     "cn": "每个选手都有自己的风格。",
+     "py": "Měi ge xuǎnshǒu dōu yǒu zìjǐ de fēnggé.",
+     "vi": "Mỗi tuyển thủ đều có phong cách riêng."
+    }
+   ]
+  },
+  {
+   "w": "风俗",
+   "py": "fēngsú",
+   "hv": "phong tục",
+   "vi": "phong tục",
+   "pos": "danh từ",
+   "note": "Chính là \"phong tục\".",
+   "ex": [
+    {
+     "cn": "每个地方的风俗都不一样。",
+     "py": "Měi ge dìfang de fēngsú dōu bù yíyàng.",
+     "vi": "Phong tục mỗi nơi đều khác nhau."
+    }
+   ]
+  },
+  {
+   "w": "风险",
+   "py": "fēngxiǎn",
+   "hv": "phong hiểm",
+   "vi": "rủi ro",
+   "pos": "danh từ",
+   "note": "冒风险 (mạo hiểm).",
+   "ex": [
+    {
+     "cn": "投资有风险。",
+     "py": "Tóuzī yǒu fēngxiǎn.",
+     "vi": "Đầu tư có rủi ro."
+    }
+   ]
+  },
+  {
+   "w": "范围",
+   "py": "fànwéi",
+   "hv": "phạm vi",
+   "vi": "phạm vi",
+   "pos": "danh từ",
+   "note": "Chính là \"phạm vi\".",
+   "ex": [
+    {
+     "cn": "这次考试的范围很大。",
+     "py": "Zhè cì kǎoshì de fànwéi hěn dà.",
+     "vi": "Phạm vi kỳ thi lần này rất rộng."
+    }
+   ]
+  },
+  {
+   "w": "地位",
+   "py": "dìwèi",
+   "hv": "địa vị",
+   "vi": "địa vị",
+   "pos": "danh từ",
+   "note": "Chính là \"địa vị\".",
+   "ex": [
+    {
+     "cn": "他在队里的地位很高。",
+     "py": "Tā zài duì li de dìwèi hěn gāo.",
+     "vi": "Anh ấy có vị trí rất cao trong đội."
+    }
+   ]
+  },
+  {
+   "w": "度",
+   "py": "dù",
+   "hv": "độ",
+   "vi": "độ (nhiệt, góc); mức",
+   "pos": "danh từ, lượng từ",
+   "note": "三十度 (ba mươi độ).",
+   "ex": [
+    {
+     "cn": "今天三十五度，热死了。",
+     "py": "Jīntiān sānshíwǔ dù, rè sǐ le.",
+     "vi": "Hôm nay ba mươi lăm độ, nóng chết mất."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "有道理 / 没道理",
+   "b": "你说的有道理",
+   "d": "Có lý / vô lý; thêm 很 để nhấn mạnh.",
+   "ex": [
+    {
+     "cn": "他的话一点儿道理也没有。",
+     "py": "Tā de huà yìdiǎnr dàolǐ yě méiyǒu.",
+     "vi": "Lời anh ta chẳng có chút lý nào."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "比赛以后我们一起分析了录像。",
+   "py": "Bǐsài yǐhòu wǒmen yìqǐ fēnxī le lùxiàng.",
+   "vi": "Sau trận chúng tôi cùng phân tích băng ghi hình."
+  },
+  {
+   "cn": "每种方法都有风险，关键是怎么控制。",
+   "py": "Měi zhǒng fāngfǎ dōu yǒu fēngxiǎn, guānjiàn shì zěnme kòngzhì.",
+   "vi": "Cách nào cũng có rủi ro, mấu chốt là kiểm soát thế nào."
+  },
+  {
+   "cn": "他的风格很稳，很少犯错。",
+   "py": "Tā de fēnggé hěn wěn, hěn shǎo fàn cuò.",
+   "vi": "Phong cách của anh ấy rất chắc chắn, hiếm khi mắc lỗi."
+  }
+ ]
+}

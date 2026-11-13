@@ -1,0 +1,264 @@
+{
+ "id": 218,
+ "cn": "本地和外地",
+ "title": "Nơi chốn và khu vực",
+ "goal": "Nói về địa phương, khu vực, mặt đất, dưới lòng đất, bảo tàng, toà nhà và nhà cửa.",
+ "words": [
+  {
+   "w": "本地",
+   "py": "běndì",
+   "hv": "bản địa",
+   "vi": "địa phương này, bản địa",
+   "pos": "danh từ",
+   "note": "本地人 (người bản xứ).",
+   "ex": [
+    {
+     "cn": "他是本地人，很熟悉这里。",
+     "py": "Tā shì běndìrén, hěn shúxī zhèlǐ.",
+     "vi": "Anh ấy là người địa phương, rất rành nơi này."
+    }
+   ]
+  },
+  {
+   "w": "当地",
+   "py": "dāngdì",
+   "hv": "đương địa",
+   "vi": "địa phương (nơi đó)",
+   "pos": "danh từ",
+   "note": "Nói về nơi đang nhắc tới.",
+   "ex": [
+    {
+     "cn": "我们尝了当地的小吃。",
+     "py": "Wǒmen cháng le dāngdì de xiǎochī.",
+     "vi": "Chúng tôi nếm món ăn vặt địa phương."
+    }
+   ]
+  },
+  {
+   "w": "城区",
+   "py": "chéngqū",
+   "hv": "thành khu",
+   "vi": "khu nội thành",
+   "pos": "danh từ",
+   "note": "Trái với 郊区 (ngoại ô).",
+   "ex": [
+    {
+     "cn": "城区的房子比较贵。",
+     "py": "Chéngqū de fángzi bǐjiào guì.",
+     "vi": "Nhà trong nội thành khá đắt."
+    }
+   ]
+  },
+  {
+   "w": "地区",
+   "py": "dìqū",
+   "hv": "địa khu",
+   "vi": "khu vực, vùng",
+   "pos": "danh từ",
+   "note": "东南亚地区 (khu vực Đông Nam Á).",
+   "ex": [
+    {
+     "cn": "这个地区经常下雨。",
+     "py": "Zhège dìqū jīngcháng xià yǔ.",
+     "vi": "Khu vực này hay mưa."
+    }
+   ]
+  },
+  {
+   "w": "地理",
+   "py": "dìlǐ",
+   "hv": "địa lý",
+   "vi": "địa lý",
+   "pos": "danh từ",
+   "note": "Chính là \"địa lý\".",
+   "ex": [
+    {
+     "cn": "我对地理很感兴趣。",
+     "py": "Wǒ duì dìlǐ hěn gǎn xìngqù.",
+     "vi": "Tôi rất thích môn địa lý."
+    }
+   ]
+  },
+  {
+   "w": "地面",
+   "py": "dìmiàn",
+   "hv": "địa diện",
+   "vi": "mặt đất, mặt sàn",
+   "pos": "danh từ",
+   "note": "地 + 面.",
+   "ex": [
+    {
+     "cn": "下雨后地面很滑。",
+     "py": "Xià yǔ hòu dìmiàn hěn huá.",
+     "vi": "Mưa xong mặt đất rất trơn."
+    }
+   ]
+  },
+  {
+   "w": "地下",
+   "py": "dìxià",
+   "hv": "địa hạ",
+   "vi": "dưới đất, ngầm",
+   "pos": "danh từ",
+   "note": "地下室 (tầng hầm).",
+   "ex": [
+    {
+     "cn": "车停在地下停车场。",
+     "py": "Chē tíng zài dìxià tíngchēchǎng.",
+     "vi": "Xe đỗ ở bãi đỗ xe ngầm."
+    }
+   ]
+  },
+  {
+   "w": "场所",
+   "py": "chǎngsuǒ",
+   "hv": "trường sở",
+   "vi": "nơi, địa điểm",
+   "pos": "danh từ",
+   "note": "公共场所 (nơi công cộng).",
+   "ex": [
+    {
+     "cn": "公共场所不能吸烟。",
+     "py": "Gōnggòng chǎngsuǒ bù néng xīyān.",
+     "vi": "Không được hút thuốc ở nơi công cộng."
+    }
+   ]
+  },
+  {
+   "w": "博物馆",
+   "py": "bówùguǎn",
+   "hv": "bác vật quán",
+   "vi": "bảo tàng",
+   "pos": "danh từ",
+   "note": "Chính là \"bác vật quán\".",
+   "ex": [
+    {
+     "cn": "周末我们去博物馆吧。",
+     "py": "Zhōumò wǒmen qù bówùguǎn ba.",
+     "vi": "Cuối tuần mình đi bảo tàng nhé."
+    }
+   ]
+  },
+  {
+   "w": "大厦",
+   "py": "dàshà",
+   "hv": "đại hạ",
+   "vi": "toà nhà lớn",
+   "pos": "danh từ",
+   "note": "Toà cao ốc.",
+   "ex": [
+    {
+     "cn": "公司在一座高大的大厦里。",
+     "py": "Gōngsī zài yí zuò gāodà de dàshà li.",
+     "vi": "Công ty nằm trong một toà cao ốc lớn."
+    }
+   ]
+  },
+  {
+   "w": "房屋",
+   "py": "fángwū",
+   "hv": "phòng ốc",
+   "vi": "nhà cửa",
+   "pos": "danh từ",
+   "note": "Văn viết của 房子.",
+   "ex": [
+    {
+     "cn": "地震让很多房屋倒了。",
+     "py": "Dìzhèn ràng hěn duō fángwū dǎo le.",
+     "vi": "Động đất làm nhiều nhà sập."
+    }
+   ]
+  },
+  {
+   "w": "非洲",
+   "py": "Fēizhōu",
+   "hv": "Phi châu",
+   "vi": "châu Phi",
+   "pos": "danh từ riêng",
+   "note": "洲 là \"châu\".",
+   "ex": [
+    {
+     "cn": "他去过非洲旅游。",
+     "py": "Tā qù guo Fēizhōu lǚyóu.",
+     "vi": "Anh ấy từng đi du lịch châu Phi."
+    }
+   ]
+  },
+  {
+   "w": "单元",
+   "py": "dānyuán",
+   "hv": "đơn nguyên",
+   "vi": "đơn nguyên (toà nhà); bài (sách)",
+   "pos": "danh từ",
+   "note": "三单元 (đơn nguyên 3), 第一单元 (bài 1).",
+   "ex": [
+    {
+     "cn": "我家住在二单元五楼。",
+     "py": "Wǒ jiā zhù zài èr dānyuán wǔ lóu.",
+     "vi": "Nhà tôi ở đơn nguyên hai, tầng năm."
+    }
+   ]
+  },
+  {
+   "w": "处",
+   "py": "chù",
+   "hv": "xứ",
+   "vi": "nơi, chỗ; phòng (ban)",
+   "pos": "danh từ",
+   "note": "好处 (điểm tốt), 住处 (chỗ ở).",
+   "ex": [
+    {
+     "cn": "运动有很多好处。",
+     "py": "Yùndòng yǒu hěn duō hǎochu.",
+     "vi": "Vận động có rất nhiều lợi ích."
+    }
+   ]
+  },
+  {
+   "w": "方",
+   "py": "fāng",
+   "hv": "phương",
+   "vi": "phía, bên",
+   "pos": "danh từ",
+   "note": "双方 (hai bên), 对方.",
+   "ex": [
+    {
+     "cn": "比赛双方都很努力。",
+     "py": "Bǐsài shuāngfāng dōu hěn nǔlì.",
+     "vi": "Cả hai bên thi đấu đều rất cố gắng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "当地 và 本地",
+   "b": "本地 là nơi mình đang ở; 当地 là nơi được nhắc tới",
+   "d": "我是本地人 / 当地人很热情.",
+   "ex": [
+    {
+     "cn": "到了越南，你一定要尝尝当地的咖啡。",
+     "py": "Dào le Yuènán, nǐ yídìng yào chángchang dāngdì de kāfēi.",
+     "vi": "Đến Việt Nam nhất định phải thử cà phê địa phương."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "在公共场所要注意自己的行为。",
+   "py": "Zài gōnggòng chǎngsuǒ yào zhùyì zìjǐ de xíngwéi.",
+   "vi": "Ở nơi công cộng phải chú ý hành vi của mình."
+  },
+  {
+   "cn": "这个地区的人口越来越多。",
+   "py": "Zhège dìqū de rénkǒu yuè lái yuè duō.",
+   "vi": "Dân số khu vực này ngày càng đông."
+  },
+  {
+   "cn": "当地人告诉我们怎么去博物馆。",
+   "py": "Dāngdìrén gàosu wǒmen zěnme qù bówùguǎn.",
+   "vi": "Người địa phương chỉ chúng tôi đường tới bảo tàng."
+  }
+ ]
+}

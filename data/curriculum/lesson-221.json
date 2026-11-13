@@ -1,0 +1,264 @@
+{
+ "id": 221,
+ "cn": "尝试新方法",
+ "title": "Thử, tham gia và thay thế",
+ "goal": "Nói về bổ sung, thử, tham gia, đảm nhiệm, thay thế, kéo theo, đạt được, phá vỡ và chờ đợi.",
+ "words": [
+  {
+   "w": "补充",
+   "py": "bǔchōng",
+   "hv": "bổ sung",
+   "vi": "bổ sung",
+   "pos": "động từ",
+   "note": "Chính là \"bổ sung\".",
+   "ex": [
+    {
+     "cn": "我再补充一点。",
+     "py": "Wǒ zài bǔchōng yì diǎn.",
+     "vi": "Tôi bổ sung thêm một ý."
+    }
+   ]
+  },
+  {
+   "w": "尝试",
+   "py": "chángshì",
+   "hv": "thường thí",
+   "vi": "thử",
+   "pos": "động từ, danh từ",
+   "note": "Trang trọng hơn 试试.",
+   "ex": [
+    {
+     "cn": "我们可以尝试一种新的打法。",
+     "py": "Wǒmen kěyǐ chángshì yì zhǒng xīn de dǎfǎ.",
+     "vi": "Chúng ta có thể thử một lối đánh mới."
+    }
+   ]
+  },
+  {
+   "w": "参与",
+   "py": "cānyù",
+   "hv": "tham dự",
+   "vi": "tham gia",
+   "pos": "động từ",
+   "note": "Tham gia vào việc gì.",
+   "ex": [
+    {
+     "cn": "大家都参与了这个项目。",
+     "py": "Dàjiā dōu cānyù le zhège xiàngmù.",
+     "vi": "Mọi người đều tham gia dự án này."
+    }
+   ]
+  },
+  {
+   "w": "担任",
+   "py": "dānrèn",
+   "hv": "đảm nhiệm",
+   "vi": "đảm nhiệm",
+   "pos": "động từ",
+   "note": "Chính là \"đảm nhiệm\".",
+   "ex": [
+    {
+     "cn": "他担任队长已经两年了。",
+     "py": "Tā dānrèn duìzhǎng yǐjīng liǎng nián le.",
+     "vi": "Anh ấy làm đội trưởng đã hai năm."
+    }
+   ]
+  },
+  {
+   "w": "代替",
+   "py": "dàitì",
+   "hv": "đại thế",
+   "vi": "thay thế",
+   "pos": "động từ",
+   "note": "Chính là \"đại thế\".",
+   "ex": [
+    {
+     "cn": "机器不能完全代替人。",
+     "py": "Jīqì bù néng wánquán dàitì rén.",
+     "vi": "Máy móc không thể thay thế hoàn toàn con người."
+    }
+   ]
+  },
+  {
+   "w": "带动",
+   "py": "dàidòng",
+   "hv": "đới động",
+   "vi": "kéo theo, thúc đẩy",
+   "pos": "động từ",
+   "note": "带动大家 (kéo mọi người cùng làm).",
+   "ex": [
+    {
+     "cn": "他的热情带动了全队。",
+     "py": "Tā de rèqíng dàidòng le quán duì.",
+     "vi": "Nhiệt huyết của anh ấy kéo cả đội lên."
+    }
+   ]
+  },
+  {
+   "w": "达成",
+   "py": "dáchéng",
+   "hv": "đạt thành",
+   "vi": "đạt được (thoả thuận)",
+   "pos": "động từ",
+   "note": "达成协议 (đạt thoả thuận).",
+   "ex": [
+    {
+     "cn": "双方达成了一致。",
+     "py": "Shuāngfāng dáchéng le yízhì.",
+     "vi": "Hai bên đã đạt đồng thuận."
+    }
+   ]
+  },
+  {
+   "w": "打破",
+   "py": "dǎpò",
+   "hv": "đả phá",
+   "vi": "phá vỡ",
+   "pos": "động từ",
+   "note": "打破纪录 (phá kỷ lục).",
+   "ex": [
+    {
+     "cn": "她打破了世界纪录。",
+     "py": "Tā dǎpò le shìjiè jìlù.",
+     "vi": "Cô ấy phá kỷ lục thế giới."
+    }
+   ]
+  },
+  {
+   "w": "打听",
+   "py": "dǎting",
+   "hv": "đả thính",
+   "vi": "hỏi thăm, dò hỏi",
+   "pos": "động từ",
+   "note": "Hỏi để biết tin.",
+   "ex": [
+    {
+     "cn": "我去打听一下比赛的时间。",
+     "py": "Wǒ qù dǎting yíxià bǐsài de shíjiān.",
+     "vi": "Tôi đi hỏi thử thời gian thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "登记",
+   "py": "dēngjì",
+   "hv": "đăng ký",
+   "vi": "đăng ký, ghi tên",
+   "pos": "động từ",
+   "note": "Chính là \"đăng ký\".",
+   "ex": [
+    {
+     "cn": "住酒店要先登记。",
+     "py": "Zhù jiǔdiàn yào xiān dēngjì.",
+     "vi": "Ở khách sạn phải đăng ký trước."
+    }
+   ]
+  },
+  {
+   "w": "等待",
+   "py": "děngdài",
+   "hv": "đẳng đãi",
+   "vi": "chờ đợi",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 等.",
+   "ex": [
+    {
+     "cn": "我们在等待比赛开始。",
+     "py": "Wǒmen zài děngdài bǐsài kāishǐ.",
+     "vi": "Chúng tôi đang chờ trận đấu bắt đầu."
+    }
+   ]
+  },
+  {
+   "w": "等候",
+   "py": "děnghòu",
+   "hv": "đẳng hậu",
+   "vi": "chờ đợi",
+   "pos": "động từ",
+   "note": "Thường ở nơi công cộng: 请在此等候.",
+   "ex": [
+    {
+     "cn": "请在这里等候。",
+     "py": "Qǐng zài zhèlǐ děnghòu.",
+     "vi": "Xin chờ ở đây."
+    }
+   ]
+  },
+  {
+   "w": "到达",
+   "py": "dàodá",
+   "hv": "đáo đạt",
+   "vi": "đến nơi",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 到.",
+   "ex": [
+    {
+     "cn": "飞机晚上八点到达上海。",
+     "py": "Fēijī wǎnshang bā diǎn dàodá Shànghǎi.",
+     "vi": "Máy bay tới Thượng Hải lúc tám giờ tối."
+    }
+   ]
+  },
+  {
+   "w": "到期",
+   "py": "dàoqī",
+   "hv": "đáo kỳ",
+   "vi": "đến hạn, hết hạn",
+   "pos": "động từ",
+   "note": "合同到期 (hợp đồng hết hạn).",
+   "ex": [
+    {
+     "cn": "我的签证下个月到期。",
+     "py": "Wǒ de qiānzhèng xià ge yuè dàoqī.",
+     "vi": "Thị thực của tôi hết hạn tháng sau."
+    }
+   ]
+  },
+  {
+   "w": "返回",
+   "py": "fǎnhuí",
+   "hv": "phản hồi",
+   "vi": "trở về",
+   "pos": "động từ",
+   "note": "Khác \"phản hồi\" tiếng Việt (回应).",
+   "ex": [
+    {
+     "cn": "我们明天返回河内。",
+     "py": "Wǒmen míngtiān fǎnhuí Hénèi.",
+     "vi": "Mai chúng tôi trở về Hà Nội."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "代替 + người/vật + làm gì",
+   "b": "他代替我去开会",
+   "d": "Ai thay ai làm việc gì.",
+   "ex": [
+    {
+     "cn": "你能代替我参加比赛吗？",
+     "py": "Nǐ néng dàitì wǒ cānjiā bǐsài ma?",
+     "vi": "Bạn có thể thay tôi đi thi đấu không?"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "不要害怕失败，要敢于尝试。",
+   "py": "Bú yào hàipà shībài, yào gǎnyú chángshì.",
+   "vi": "Đừng sợ thất bại, phải dám thử."
+  },
+  {
+   "cn": "队长的努力带动了每一个队员。",
+   "py": "Duìzhǎng de nǔlì dàidòng le měi yí ge duìyuán.",
+   "vi": "Sự nỗ lực của đội trưởng kéo theo mọi thành viên."
+  },
+  {
+   "cn": "他们终于打破了连败的纪录。",
+   "py": "Tāmen zhōngyú dǎpò le liánbài de jìlù.",
+   "vi": "Cuối cùng họ đã chấm dứt chuỗi thua liên tiếp."
+  }
+ ]
+}

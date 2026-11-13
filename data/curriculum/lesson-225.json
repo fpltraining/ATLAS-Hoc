@@ -1,0 +1,264 @@
+{
+ "id": 225,
+ "cn": "独特的风格",
+ "title": "Tính cách và phẩm chất",
+ "goal": "Mô tả gan dạ, nhút nhát, độc lập, độc đáo, một mình, xuất sắc, cảm động, điên cuồng và giàu có.",
+ "words": [
+  {
+   "w": "大胆",
+   "py": "dàdǎn",
+   "hv": "đại đảm",
+   "vi": "mạnh dạn, táo bạo",
+   "pos": "tính từ",
+   "note": "胆 là \"đảm\" (mật, gan).",
+   "ex": [
+    {
+     "cn": "你可以大胆地说出你的想法。",
+     "py": "Nǐ kěyǐ dàdǎn de shuōchū nǐ de xiǎngfǎ.",
+     "vi": "Bạn có thể mạnh dạn nói ra suy nghĩ của mình."
+    }
+   ]
+  },
+  {
+   "w": "胆小",
+   "py": "dǎnxiǎo",
+   "hv": "đảm tiểu",
+   "vi": "nhát gan",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 大胆.",
+   "ex": [
+    {
+     "cn": "我小时候很胆小。",
+     "py": "Wǒ xiǎoshíhou hěn dǎnxiǎo.",
+     "vi": "Hồi nhỏ tôi rất nhát."
+    }
+   ]
+  },
+  {
+   "w": "独立",
+   "py": "dúlì",
+   "hv": "độc lập",
+   "vi": "độc lập",
+   "pos": "tính từ, động từ",
+   "note": "Chính là \"độc lập\".",
+   "ex": [
+    {
+     "cn": "她十八岁就开始独立生活。",
+     "py": "Tā shíbā suì jiù kāishǐ dúlì shēnghuó.",
+     "vi": "Mười tám tuổi cô ấy đã sống tự lập."
+    }
+   ]
+  },
+  {
+   "w": "独特",
+   "py": "dútè",
+   "hv": "độc đặc",
+   "vi": "độc đáo",
+   "pos": "tính từ",
+   "note": "独特的风格 (phong cách độc đáo).",
+   "ex": [
+    {
+     "cn": "这道菜的味道很独特。",
+     "py": "Zhè dào cài de wèidào hěn dútè.",
+     "vi": "Món này có hương vị độc đáo."
+    }
+   ]
+  },
+  {
+   "w": "独自",
+   "py": "dúzì",
+   "hv": "độc tự",
+   "vi": "một mình",
+   "pos": "phó từ",
+   "note": "Tự mình làm.",
+   "ex": [
+    {
+     "cn": "他独自一人去旅行。",
+     "py": "Tā dúzì yì rén qù lǚxíng.",
+     "vi": "Anh ấy đi du lịch một mình."
+    }
+   ]
+  },
+  {
+   "w": "单独",
+   "py": "dāndú",
+   "hv": "đơn độc",
+   "vi": "riêng, một mình",
+   "pos": "phó từ, tính từ",
+   "note": "单独谈谈 (nói chuyện riêng).",
+   "ex": [
+    {
+     "cn": "我想跟你单独谈谈。",
+     "py": "Wǒ xiǎng gēn nǐ dāndú tántan.",
+     "vi": "Tôi muốn nói chuyện riêng với bạn."
+    }
+   ]
+  },
+  {
+   "w": "单一",
+   "py": "dānyī",
+   "hv": "đơn nhất",
+   "vi": "đơn điệu, một loại",
+   "pos": "tính từ",
+   "note": "打法太单一 (lối đánh quá đơn điệu).",
+   "ex": [
+    {
+     "cn": "我们的打法太单一了。",
+     "py": "Wǒmen de dǎfǎ tài dānyī le.",
+     "vi": "Lối đánh của chúng ta quá đơn điệu."
+    }
+   ]
+  },
+  {
+   "w": "出色",
+   "py": "chūsè",
+   "hv": "xuất sắc",
+   "vi": "xuất sắc",
+   "pos": "tính từ",
+   "note": "Chính là \"xuất sắc\".",
+   "ex": [
+    {
+     "cn": "他在比赛中表现很出色。",
+     "py": "Tā zài bǐsài zhōng biǎoxiàn hěn chūsè.",
+     "vi": "Anh ấy thể hiện xuất sắc trong trận đấu."
+    }
+   ]
+  },
+  {
+   "w": "动人",
+   "py": "dòngrén",
+   "hv": "động nhân",
+   "vi": "cảm động, xúc động",
+   "pos": "tính từ",
+   "note": "Làm lay động lòng người.",
+   "ex": [
+    {
+     "cn": "这是一个动人的故事。",
+     "py": "Zhè shì yí ge dòngrén de gùshi.",
+     "vi": "Đây là một câu chuyện cảm động."
+    }
+   ]
+  },
+  {
+   "w": "疯狂",
+   "py": "fēngkuáng",
+   "hv": "phong cuồng",
+   "vi": "điên cuồng",
+   "pos": "tính từ",
+   "note": "疯狂的粉丝 (fan cuồng).",
+   "ex": [
+    {
+     "cn": "粉丝们疯狂地喊着他的名字。",
+     "py": "Fěnsīmen fēngkuáng de hǎn zhe tā de míngzi.",
+     "vi": "Người hâm mộ điên cuồng hô tên anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "丰富多彩",
+   "py": "fēngfù duōcǎi",
+   "hv": "phong phú đa thái",
+   "vi": "phong phú, muôn màu",
+   "pos": "thành ngữ",
+   "note": "丰富 + 多彩.",
+   "ex": [
+    {
+     "cn": "大学生活丰富多彩。",
+     "py": "Dàxué shēnghuó fēngfù duōcǎi.",
+     "vi": "Cuộc sống đại học phong phú muôn màu."
+    }
+   ]
+  },
+  {
+   "w": "富有",
+   "py": "fùyǒu",
+   "hv": "phú hữu",
+   "vi": "giàu có; giàu (tính chất)",
+   "pos": "tính từ, động từ",
+   "note": "富有经验 (giàu kinh nghiệm).",
+   "ex": [
+    {
+     "cn": "她是一个富有经验的教练。",
+     "py": "Tā shì yí ge fùyǒu jīngyàn de jiàoliàn.",
+     "vi": "Cô ấy là huấn luyện viên giàu kinh nghiệm."
+    }
+   ]
+  },
+  {
+   "w": "高大",
+   "py": "gāodà",
+   "hv": "cao đại",
+   "vi": "cao lớn",
+   "pos": "tính từ",
+   "note": "Người hoặc toà nhà.",
+   "ex": [
+    {
+     "cn": "他长得很高大。",
+     "py": "Tā zhǎng de hěn gāodà.",
+     "vi": "Anh ấy trông rất cao lớn."
+    }
+   ]
+  },
+  {
+   "w": "高档",
+   "py": "gāodàng",
+   "hv": "cao đáng",
+   "vi": "cao cấp",
+   "pos": "tính từ",
+   "note": "高档餐厅 (nhà hàng sang).",
+   "ex": [
+    {
+     "cn": "这家酒店很高档。",
+     "py": "Zhè jiā jiǔdiàn hěn gāodàng.",
+     "vi": "Khách sạn này rất cao cấp."
+    }
+   ]
+  },
+  {
+   "w": "高效",
+   "py": "gāoxiào",
+   "hv": "cao hiệu",
+   "vi": "hiệu quả cao",
+   "pos": "tính từ",
+   "note": "高效率.",
+   "ex": [
+    {
+     "cn": "我们需要一个高效的团队。",
+     "py": "Wǒmen xūyào yí ge gāoxiào de tuánduì.",
+     "vi": "Chúng ta cần một đội làm việc hiệu quả."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Tính từ + 地 + động từ",
+   "b": "大胆地说 · 疯狂地喊",
+   "d": "地 (de) nối trạng ngữ với động từ.",
+   "ex": [
+    {
+     "cn": "他认真地回答了每一个问题。",
+     "py": "Tā rènzhēn de huídá le měi yí ge wèntí.",
+     "vi": "Anh ấy trả lời nghiêm túc từng câu hỏi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "一个出色的选手要有独特的风格。",
+   "py": "Yí ge chūsè de xuǎnshǒu yào yǒu dútè de fēnggé.",
+   "vi": "Một tuyển thủ xuất sắc phải có phong cách riêng."
+  },
+  {
+   "cn": "别胆小，大胆地去试试吧。",
+   "py": "Bié dǎnxiǎo, dàdǎn de qù shìshi ba.",
+   "vi": "Đừng nhát, mạnh dạn thử đi."
+  },
+  {
+   "cn": "独自生活让他变得更独立了。",
+   "py": "Dúzì shēnghuó ràng tā biàn de gèng dúlì le.",
+   "vi": "Sống một mình giúp anh ấy tự lập hơn."
+  }
+ ]
+}

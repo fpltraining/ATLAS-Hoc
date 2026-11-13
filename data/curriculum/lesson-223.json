@@ -1,0 +1,264 @@
+{
+ "id": 223,
+ "cn": "不断改进",
+ "title": "Thay đổi và phát triển",
+ "goal": "Nói về cải cách, cải tiến, cải thiện, sửa sai, phát huy, phát minh, công bố, phồn vinh và phấn đấu.",
+ "words": [
+  {
+   "w": "改革",
+   "py": "gǎigé",
+   "hv": "cải cách",
+   "vi": "cải cách",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"cải cách\".",
+   "ex": [
+    {
+     "cn": "学校进行了教育改革。",
+     "py": "Xuéxiào jìnxíng le jiàoyù gǎigé.",
+     "vi": "Nhà trường tiến hành cải cách giáo dục."
+    }
+   ]
+  },
+  {
+   "w": "改进",
+   "py": "gǎijìn",
+   "hv": "cải tiến",
+   "vi": "cải tiến",
+   "pos": "động từ",
+   "note": "Chính là \"cải tiến\".",
+   "ex": [
+    {
+     "cn": "我们的训练方法还需要改进。",
+     "py": "Wǒmen de xùnliàn fāngfǎ hái xūyào gǎijìn.",
+     "vi": "Phương pháp tập luyện của chúng ta còn cần cải tiến."
+    }
+   ]
+  },
+  {
+   "w": "改善",
+   "py": "gǎishàn",
+   "hv": "cải thiện",
+   "vi": "cải thiện",
+   "pos": "động từ",
+   "note": "Chính là \"cải thiện\".",
+   "ex": [
+    {
+     "cn": "他们的生活改善了很多。",
+     "py": "Tāmen de shēnghuó gǎishàn le hěn duō.",
+     "vi": "Cuộc sống của họ cải thiện nhiều."
+    }
+   ]
+  },
+  {
+   "w": "改正",
+   "py": "gǎizhèng",
+   "hv": "cải chính",
+   "vi": "sửa (lỗi)",
+   "pos": "động từ",
+   "note": "改正错误 (sửa sai).",
+   "ex": [
+    {
+     "cn": "有错误就要改正。",
+     "py": "Yǒu cuòwù jiù yào gǎizhèng.",
+     "vi": "Có lỗi thì phải sửa."
+    }
+   ]
+  },
+  {
+   "w": "发挥",
+   "py": "fāhuī",
+   "hv": "phát huy",
+   "vi": "phát huy; thể hiện",
+   "pos": "động từ",
+   "note": "发挥得好 (chơi tốt).",
+   "ex": [
+    {
+     "cn": "他今天发挥得非常好。",
+     "py": "Tā jīntiān fāhuī de fēicháng hǎo.",
+     "vi": "Hôm nay anh ấy thể hiện rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "发明",
+   "py": "fāmíng",
+   "hv": "phát minh",
+   "vi": "phát minh",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"phát minh\".",
+   "ex": [
+    {
+     "cn": "纸是中国人发明的。",
+     "py": "Zhǐ shì Zhōngguórén fāmíng de.",
+     "vi": "Giấy do người Trung Quốc phát minh."
+    }
+   ]
+  },
+  {
+   "w": "发起",
+   "py": "fāqǐ",
+   "hv": "phát khởi",
+   "vi": "khởi xướng; phát động",
+   "pos": "động từ",
+   "note": "发起进攻 (phát động tấn công).",
+   "ex": [
+    {
+     "cn": "他们在第十分钟发起了进攻。",
+     "py": "Tāmen zài dì shí fēnzhōng fāqǐ le jìngōng.",
+     "vi": "Họ phát động tấn công ở phút thứ mười."
+    }
+   ]
+  },
+  {
+   "w": "发布",
+   "py": "fābù",
+   "hv": "phát bố",
+   "vi": "công bố, phát hành",
+   "pos": "động từ",
+   "note": "发布会 (buổi ra mắt).",
+   "ex": [
+    {
+     "cn": "公司发布了新版本。",
+     "py": "Gōngsī fābù le xīn bǎnběn.",
+     "vi": "Công ty phát hành phiên bản mới."
+    }
+   ]
+  },
+  {
+   "w": "发表",
+   "py": "fābiǎo",
+   "hv": "phát biểu",
+   "vi": "đăng (bài); phát biểu (ý kiến)",
+   "pos": "động từ",
+   "note": "发表文章 (đăng bài).",
+   "ex": [
+    {
+     "cn": "他在杂志上发表了一篇文章。",
+     "py": "Tā zài zázhì shang fābiǎo le yì piān wénzhāng.",
+     "vi": "Anh ấy đăng một bài trên tạp chí."
+    }
+   ]
+  },
+  {
+   "w": "发言",
+   "py": "fāyán",
+   "hv": "phát ngôn",
+   "vi": "phát biểu (trong họp)",
+   "pos": "động từ",
+   "note": "发言人 (người phát ngôn).",
+   "ex": [
+    {
+     "cn": "每个人都可以发言。",
+     "py": "Měi ge rén dōu kěyǐ fāyán.",
+     "vi": "Ai cũng có thể phát biểu."
+    }
+   ]
+  },
+  {
+   "w": "发达",
+   "py": "fādá",
+   "hv": "phát đạt",
+   "vi": "phát triển",
+   "pos": "tính từ",
+   "note": "发达国家 (nước phát triển).",
+   "ex": [
+    {
+     "cn": "这里的交通很发达。",
+     "py": "Zhèlǐ de jiāotōng hěn fādá.",
+     "vi": "Giao thông ở đây rất phát triển."
+    }
+   ]
+  },
+  {
+   "w": "繁荣",
+   "py": "fánróng",
+   "hv": "phồn vinh",
+   "vi": "phồn vinh",
+   "pos": "tính từ",
+   "note": "Chính là \"phồn vinh\".",
+   "ex": [
+    {
+     "cn": "这个城市越来越繁荣。",
+     "py": "Zhège chéngshì yuè lái yuè fánróng.",
+     "vi": "Thành phố này ngày càng phồn vinh."
+    }
+   ]
+  },
+  {
+   "w": "奋斗",
+   "py": "fèndòu",
+   "hv": "phấn đấu",
+   "vi": "phấn đấu",
+   "pos": "động từ",
+   "note": "Chính là \"phấn đấu\".",
+   "ex": [
+    {
+     "cn": "为了梦想，我们一起奋斗。",
+     "py": "Wèile mèngxiǎng, wǒmen yìqǐ fèndòu.",
+     "vi": "Vì ước mơ, chúng ta cùng phấn đấu."
+    }
+   ]
+  },
+  {
+   "w": "付出",
+   "py": "fùchū",
+   "hv": "phó xuất",
+   "vi": "bỏ ra, cống hiến",
+   "pos": "động từ",
+   "note": "付出努力 (bỏ công sức).",
+   "ex": [
+    {
+     "cn": "成功需要付出很多努力。",
+     "py": "Chénggōng xūyào fùchū hěn duō nǔlì.",
+     "vi": "Thành công cần bỏ ra rất nhiều nỗ lực."
+    }
+   ]
+  },
+  {
+   "w": "导致",
+   "py": "dǎozhì",
+   "hv": "đạo trí",
+   "vi": "dẫn đến (kết quả xấu)",
+   "pos": "động từ",
+   "note": "Thường đi với hậu quả không tốt.",
+   "ex": [
+    {
+     "cn": "一个小错误导致了失败。",
+     "py": "Yí ge xiǎo cuòwù dǎozhì le shībài.",
+     "vi": "Một lỗi nhỏ dẫn đến thất bại."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "发表 và 发布",
+   "b": "发表 đi với bài viết, ý kiến; 发布 đi với tin tức, sản phẩm, phiên bản",
+   "d": "发表文章 · 发布消息.",
+   "ex": [
+    {
+     "cn": "官方发布了比赛的时间表。",
+     "py": "Guānfāng fābù le bǐsài de shíjiānbiǎo.",
+     "vi": "Phía chính thức công bố lịch thi đấu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "只有不断改进，才能一直进步。",
+   "py": "Zhǐyǒu búduàn gǎijìn, cái néng yìzhí jìnbù.",
+   "vi": "Chỉ có không ngừng cải tiến mới tiến bộ mãi."
+  },
+  {
+   "cn": "压力太大会导致发挥不好。",
+   "py": "Yālì tài dà huì dǎozhì fāhuī bù hǎo.",
+   "vi": "Áp lực quá lớn sẽ khiến thể hiện không tốt."
+  },
+  {
+   "cn": "每一次成功背后都有很多付出。",
+   "py": "Měi yí cì chénggōng bèihòu dōu yǒu hěn duō fùchū.",
+   "vi": "Đằng sau mỗi thành công đều có rất nhiều sự hy sinh."
+  }
+ ]
+}

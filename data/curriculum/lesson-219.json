@@ -1,0 +1,264 @@
+{
+ "id": 219,
+ "cn": "大爷和大妈",
+ "title": "Con người trong xã hội",
+ "goal": "Nói về bản thân, lẫn nhau, người lớn, các cô các bác, công chúng, vợ chồng, con cái và nghề nghiệp.",
+ "words": [
+  {
+   "w": "本人",
+   "py": "běnrén",
+   "hv": "bản nhân",
+   "vi": "bản thân tôi; chính người đó",
+   "pos": "đại từ",
+   "note": "Trang trọng: 本人同意 (bản thân tôi đồng ý).",
+   "ex": [
+    {
+     "cn": "这件事需要本人签字。",
+     "py": "Zhè jiàn shì xūyào běnrén qiānzì.",
+     "vi": "Việc này cần chính chủ ký tên."
+    }
+   ]
+  },
+  {
+   "w": "彼此",
+   "py": "bǐcǐ",
+   "hv": "bỉ thử",
+   "vi": "lẫn nhau",
+   "pos": "đại từ",
+   "note": "彼 (kia) + 此 (này).",
+   "ex": [
+    {
+     "cn": "队员之间要彼此信任。",
+     "py": "Duìyuán zhījiān yào bǐcǐ xìnrèn.",
+     "vi": "Các thành viên phải tin tưởng lẫn nhau."
+    }
+   ]
+  },
+  {
+   "w": "成年",
+   "py": "chéngnián",
+   "hv": "thành niên",
+   "vi": "trưởng thành, đủ tuổi",
+   "pos": "động từ",
+   "note": "成年人 (người lớn).",
+   "ex": [
+    {
+     "cn": "他已经成年了。",
+     "py": "Tā yǐjīng chéngnián le.",
+     "vi": "Cậu ấy đã đủ tuổi trưởng thành."
+    }
+   ]
+  },
+  {
+   "w": "成人",
+   "py": "chéngrén",
+   "hv": "thành nhân",
+   "vi": "người lớn",
+   "pos": "danh từ",
+   "note": "成人教育 (giáo dục người lớn).",
+   "ex": [
+    {
+     "cn": "这本书适合成人阅读。",
+     "py": "Zhè běn shū shìhé chéngrén yuèdú.",
+     "vi": "Cuốn sách này hợp với người lớn."
+    }
+   ]
+  },
+  {
+   "w": "大妈",
+   "py": "dàmā",
+   "hv": "đại ma",
+   "vi": "bác gái, cô (lớn tuổi)",
+   "pos": "danh từ",
+   "note": "Cách gọi thân mật phụ nữ trung niên.",
+   "ex": [
+    {
+     "cn": "广场上很多大妈在跳舞。",
+     "py": "Guǎngchǎng shang hěn duō dàmā zài tiàowǔ.",
+     "vi": "Trên quảng trường nhiều bác gái đang nhảy múa."
+    }
+   ]
+  },
+  {
+   "w": "大爷",
+   "py": "dàye",
+   "hv": "đại gia",
+   "vi": "bác trai, ông (lớn tuổi)",
+   "pos": "danh từ",
+   "note": "Khác \"đại gia\" tiếng Việt (người giàu).",
+   "ex": [
+    {
+     "cn": "大爷，请问去车站怎么走？",
+     "py": "Dàye, qǐngwèn qù chēzhàn zěnme zǒu?",
+     "vi": "Bác ơi, cho cháu hỏi đường ra bến xe."
+    }
+   ]
+  },
+  {
+   "w": "大众",
+   "py": "dàzhòng",
+   "hv": "đại chúng",
+   "vi": "đại chúng, công chúng",
+   "pos": "danh từ",
+   "note": "Chính là \"đại chúng\".",
+   "ex": [
+    {
+     "cn": "电竞已经被大众接受了。",
+     "py": "Diànjìng yǐjīng bèi dàzhòng jiēshòu le.",
+     "vi": "Thể thao điện tử đã được công chúng chấp nhận."
+    }
+   ]
+  },
+  {
+   "w": "夫妇",
+   "py": "fūfù",
+   "hv": "phu phụ",
+   "vi": "vợ chồng",
+   "pos": "danh từ",
+   "note": "Trang trọng: 王先生夫妇 (ông bà Vương).",
+   "ex": [
+    {
+     "cn": "这对夫妇结婚十年了。",
+     "py": "Zhè duì fūfù jiéhūn shí nián le.",
+     "vi": "Cặp vợ chồng này cưới nhau mười năm rồi."
+    }
+   ]
+  },
+  {
+   "w": "妇女",
+   "py": "fùnǚ",
+   "hv": "phụ nữ",
+   "vi": "phụ nữ",
+   "pos": "danh từ",
+   "note": "三八妇女节 (ngày 8/3).",
+   "ex": [
+    {
+     "cn": "三月八日是国际妇女节。",
+     "py": "Sān yuè bā rì shì Guójì Fùnǚ Jié.",
+     "vi": "Mùng 8 tháng 3 là Ngày Quốc tế Phụ nữ."
+    }
+   ]
+  },
+  {
+   "w": "儿女",
+   "py": "érnǚ",
+   "hv": "nhi nữ",
+   "vi": "con cái",
+   "pos": "danh từ",
+   "note": "Con trai và con gái.",
+   "ex": [
+    {
+     "cn": "父母总是为儿女着想。",
+     "py": "Fùmǔ zǒngshì wèi érnǚ zhuóxiǎng.",
+     "vi": "Cha mẹ luôn nghĩ cho con cái."
+    }
+   ]
+  },
+  {
+   "w": "队伍",
+   "py": "duìwu",
+   "hv": "đội ngũ",
+   "vi": "đội ngũ, đội",
+   "pos": "danh từ",
+   "note": "Chính là \"đội ngũ\".",
+   "ex": [
+    {
+     "cn": "我们的队伍越来越强大。",
+     "py": "Wǒmen de duìwu yuè lái yuè qiángdà.",
+     "vi": "Đội ngũ chúng tôi ngày càng mạnh."
+    }
+   ]
+  },
+  {
+   "w": "对象",
+   "py": "duìxiàng",
+   "hv": "đối tượng",
+   "vi": "đối tượng; người yêu",
+   "pos": "danh từ",
+   "note": "Khẩu ngữ: 找对象 (tìm người yêu).",
+   "ex": [
+    {
+     "cn": "这本书的对象是初学者。",
+     "py": "Zhè běn shū de duìxiàng shì chūxuézhě.",
+     "vi": "Đối tượng của cuốn sách là người mới học."
+    }
+   ]
+  },
+  {
+   "w": "飞行员",
+   "py": "fēixíngyuán",
+   "hv": "phi hành viên",
+   "vi": "phi công",
+   "pos": "danh từ",
+   "note": "飞行 + 员.",
+   "ex": [
+    {
+     "cn": "他小时候想当飞行员。",
+     "py": "Tā xiǎoshíhou xiǎng dāng fēixíngyuán.",
+     "vi": "Hồi nhỏ anh ấy muốn làm phi công."
+    }
+   ]
+  },
+  {
+   "w": "导演",
+   "py": "dǎoyǎn",
+   "hv": "đạo diễn",
+   "vi": "đạo diễn",
+   "pos": "danh từ",
+   "note": "Chính là \"đạo diễn\".",
+   "ex": [
+    {
+     "cn": "这部电影的导演很有名。",
+     "py": "Zhè bù diànyǐng de dǎoyǎn hěn yǒumíng.",
+     "vi": "Đạo diễn bộ phim này rất nổi tiếng."
+    }
+   ]
+  },
+  {
+   "w": "代表",
+   "py": "dàibiǎo",
+   "hv": "đại biểu",
+   "vi": "đại diện, đại biểu",
+   "pos": "danh từ, động từ",
+   "note": "代表团队 (đại diện cho đội).",
+   "ex": [
+    {
+     "cn": "他代表我们队去领奖。",
+     "py": "Tā dàibiǎo wǒmen duì qù lǐng jiǎng.",
+     "vi": "Anh ấy đại diện đội đi nhận giải."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "彼此",
+   "b": "A和B彼此 + động từ",
+   "d": "Hai bên cùng làm với nhau.",
+   "ex": [
+    {
+     "cn": "我们彼此帮助，一起进步。",
+     "py": "Wǒmen bǐcǐ bāngzhù, yìqǐ jìnbù.",
+     "vi": "Chúng tôi giúp đỡ nhau, cùng tiến bộ."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "一个好的队伍，成员之间要彼此了解。",
+   "py": "Yí ge hǎo de duìwu, chéngyuán zhījiān yào bǐcǐ liǎojiě.",
+   "vi": "Một đội tốt, các thành viên phải hiểu nhau."
+  },
+  {
+   "cn": "他代表全队感谢大家的支持。",
+   "py": "Tā dàibiǎo quán duì gǎnxiè dàjiā de zhīchí.",
+   "vi": "Anh ấy thay mặt cả đội cảm ơn sự ủng hộ của mọi người."
+  },
+  {
+   "cn": "公园里有很多大爷大妈在锻炼身体。",
+   "py": "Gōngyuán li yǒu hěn duō dàye dàmā zài duànliàn shēntǐ.",
+   "vi": "Trong công viên có nhiều ông bà đang tập thể dục."
+  }
+ ]
+}

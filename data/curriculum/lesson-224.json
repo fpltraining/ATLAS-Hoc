@@ -1,0 +1,264 @@
+{
+ "id": 224,
+ "cn": "番茄炒蛋",
+ "title": "Ăn uống và đồ vật",
+ "goal": "Gọi tên món ăn, mô tả vị nhạt, đông lạnh, mỏng, chất đống và dùng lượng từ tấn, bông.",
+ "words": [
+  {
+   "w": "大米",
+   "py": "dàmǐ",
+   "hv": "đại mễ",
+   "vi": "gạo",
+   "pos": "danh từ",
+   "note": "米 là \"mễ\" (gạo).",
+   "ex": [
+    {
+     "cn": "越南出口很多大米。",
+     "py": "Yuènán chūkǒu hěn duō dàmǐ.",
+     "vi": "Việt Nam xuất khẩu nhiều gạo."
+    }
+   ]
+  },
+  {
+   "w": "点心",
+   "py": "diǎnxin",
+   "hv": "điểm tâm",
+   "vi": "bánh ngọt, đồ ăn nhẹ",
+   "pos": "danh từ",
+   "note": "Khác \"điểm tâm\" tiếng Việt (bữa sáng).",
+   "ex": [
+    {
+     "cn": "下午我们吃了一些点心。",
+     "py": "Xiàwǔ wǒmen chī le yìxiē diǎnxin.",
+     "vi": "Buổi chiều chúng tôi ăn chút bánh ngọt."
+    }
+   ]
+  },
+  {
+   "w": "豆腐",
+   "py": "dòufu",
+   "hv": "đậu hủ",
+   "vi": "đậu phụ",
+   "pos": "danh từ",
+   "note": "腐 là \"hủ\".",
+   "ex": [
+    {
+     "cn": "我最喜欢吃麻婆豆腐。",
+     "py": "Wǒ zuì xǐhuan chī mápó dòufu.",
+     "vi": "Tôi thích nhất món đậu phụ Tứ Xuyên."
+    }
+   ]
+  },
+  {
+   "w": "豆浆",
+   "py": "dòujiāng",
+   "hv": "đậu tương",
+   "vi": "sữa đậu nành",
+   "pos": "danh từ",
+   "note": "浆 là chất lỏng sệt.",
+   "ex": [
+    {
+     "cn": "早上我喝一杯豆浆。",
+     "py": "Zǎoshang wǒ hē yì bēi dòujiāng.",
+     "vi": "Buổi sáng tôi uống một cốc sữa đậu nành."
+    }
+   ]
+  },
+  {
+   "w": "番茄",
+   "py": "fānqié",
+   "hv": "phiên già",
+   "vi": "cà chua",
+   "pos": "danh từ",
+   "note": "Giống 西红柿.",
+   "ex": [
+    {
+     "cn": "番茄炒蛋是家常菜。",
+     "py": "Fānqié chǎo dàn shì jiāchángcài.",
+     "vi": "Cà chua xào trứng là món ăn gia đình."
+    }
+   ]
+  },
+  {
+   "w": "淡",
+   "py": "dàn",
+   "hv": "đạm",
+   "vi": "nhạt",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 咸 (mặn), 浓 (đậm).",
+   "ex": [
+    {
+     "cn": "这个汤有点儿淡。",
+     "py": "Zhège tāng yǒudiǎnr dàn.",
+     "vi": "Canh này hơi nhạt."
+    }
+   ]
+  },
+  {
+   "w": "冻",
+   "py": "dòng",
+   "hv": "đống",
+   "vi": "đông lạnh; rét",
+   "pos": "động từ",
+   "note": "冻肉 (thịt đông lạnh).",
+   "ex": [
+    {
+     "cn": "外面太冷了，手都冻红了。",
+     "py": "Wàimiàn tài lěng le, shǒu dōu dòng hóng le.",
+     "vi": "Ngoài trời lạnh quá, tay cóng đỏ cả lên."
+    }
+   ]
+  },
+  {
+   "w": "薄",
+   "py": "báo",
+   "hv": "bạc",
+   "vi": "mỏng",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 厚.",
+   "ex": [
+    {
+     "cn": "天冷了，别穿这么薄。",
+     "py": "Tiān lěng le, bié chuān zhème báo.",
+     "vi": "Trời lạnh rồi, đừng mặc mỏng thế."
+    }
+   ]
+  },
+  {
+   "w": "堆",
+   "py": "duī",
+   "hv": "đôi",
+   "vi": "đống; chất đống",
+   "pos": "danh từ, động từ, lượng từ",
+   "note": "一堆书 (một đống sách).",
+   "ex": [
+    {
+     "cn": "桌子上堆着很多书。",
+     "py": "Zhuōzi shang duī zhe hěn duō shū.",
+     "vi": "Trên bàn chất đống sách."
+    }
+   ]
+  },
+  {
+   "w": "吨",
+   "py": "dūn",
+   "hv": "đốn",
+   "vi": "tấn",
+   "pos": "lượng từ",
+   "note": "一吨 = 1000 kg.",
+   "ex": [
+    {
+     "cn": "这辆车能装五吨货。",
+     "py": "Zhè liàng chē néng zhuāng wǔ dūn huò.",
+     "vi": "Xe này chở được năm tấn hàng."
+    }
+   ]
+  },
+  {
+   "w": "朵",
+   "py": "duǒ",
+   "hv": "đoá",
+   "vi": "bông, đoá",
+   "pos": "lượng từ",
+   "note": "一朵花 (một bông hoa).",
+   "ex": [
+    {
+     "cn": "他送给她一朵红花。",
+     "py": "Tā sòng gěi tā yì duǒ hóng huā.",
+     "vi": "Anh ấy tặng cô ấy một bông hoa đỏ."
+    }
+   ]
+  },
+  {
+   "w": "盖",
+   "py": "gài",
+   "hv": "cái",
+   "vi": "nắp; đậy; xây",
+   "pos": "danh từ, động từ",
+   "note": "盖房子 (xây nhà).",
+   "ex": [
+    {
+     "cn": "他们在这里盖了一座新楼。",
+     "py": "Tāmen zài zhèlǐ gài le yí zuò xīn lóu.",
+     "vi": "Họ xây một toà nhà mới ở đây."
+    }
+   ]
+  },
+  {
+   "w": "灯光",
+   "py": "dēngguāng",
+   "hv": "đăng quang",
+   "vi": "ánh đèn",
+   "pos": "danh từ",
+   "note": "Khác \"đăng quang\" tiếng Việt (lên ngôi).",
+   "ex": [
+    {
+     "cn": "舞台上的灯光很漂亮。",
+     "py": "Wǔtái shang de dēngguāng hěn piàoliang.",
+     "vi": "Ánh đèn trên sân khấu rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "彩色",
+   "py": "cǎisè",
+   "hv": "thái sắc",
+   "vi": "màu sắc, có màu",
+   "pos": "tính từ",
+   "note": "Trái với 黑白 (đen trắng).",
+   "ex": [
+    {
+     "cn": "这是一张彩色照片。",
+     "py": "Zhè shì yì zhāng cǎisè zhàopiàn.",
+     "vi": "Đây là một tấm ảnh màu."
+    }
+   ]
+  },
+  {
+   "w": "服装",
+   "py": "fúzhuāng",
+   "hv": "phục trang",
+   "vi": "quần áo, trang phục",
+   "pos": "danh từ",
+   "note": "服装店 (cửa hàng quần áo).",
+   "ex": [
+    {
+     "cn": "选手们穿着统一的服装。",
+     "py": "Xuǎnshǒumen chuān zhe tǒngyī de fúzhuāng.",
+     "vi": "Các tuyển thủ mặc trang phục đồng bộ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "薄 và 薄",
+   "b": "Đọc báo khi chỉ độ mỏng (khẩu ngữ); đọc bó trong từ ghép văn viết: 薄弱",
+   "d": "Ở cấp này nhớ cách đọc báo.",
+   "ex": [
+    {
+     "cn": "这本书很薄。",
+     "py": "Zhè běn shū hěn báo.",
+     "vi": "Cuốn sách này rất mỏng."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "越南人每天都吃大米。",
+   "py": "Yuènánrén měi tiān dōu chī dàmǐ.",
+   "vi": "Người Việt ngày nào cũng ăn cơm gạo."
+  },
+  {
+   "cn": "吃得淡一点儿对身体好。",
+   "py": "Chī de dàn yìdiǎnr duì shēntǐ hǎo.",
+   "vi": "Ăn nhạt một chút tốt cho sức khoẻ."
+  },
+  {
+   "cn": "灯光一亮，比赛就开始了。",
+   "py": "Dēngguāng yí liàng, bǐsài jiù kāishǐ le.",
+   "vi": "Đèn vừa sáng lên, trận đấu bắt đầu."
+  }
+ ]
+}

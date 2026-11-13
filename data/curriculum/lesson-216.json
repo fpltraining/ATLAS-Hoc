@@ -1,0 +1,264 @@
+{
+ "id": 216,
+ "cn": "扫二维码",
+ "title": "Cuộc sống số",
+ "goal": "Nói về nạp tiền, sạc pin, mua bán online, đăng nhập, thả tim, mã QR và chia sẻ.",
+ "words": [
+  {
+   "w": "充值",
+   "py": "chōngzhí",
+   "hv": "sung trị",
+   "vi": "nạp tiền",
+   "pos": "động từ",
+   "note": "Nạp tiền điện thoại, nạp game.",
+   "ex": [
+    {
+     "cn": "我给手机充值了一百块。",
+     "py": "Wǒ gěi shǒujī chōngzhí le yìbǎi kuài.",
+     "vi": "Tôi nạp một trăm tệ vào điện thoại."
+    }
+   ]
+  },
+  {
+   "w": "电池",
+   "py": "diànchí",
+   "hv": "điện trì",
+   "vi": "pin",
+   "pos": "danh từ",
+   "note": "池 là \"bể\": bể chứa điện.",
+   "ex": [
+    {
+     "cn": "手机电池用不了一天。",
+     "py": "Shǒujī diànchí yòng bu liǎo yì tiān.",
+     "vi": "Pin điện thoại dùng không nổi một ngày."
+    }
+   ]
+  },
+  {
+   "w": "电动",
+   "py": "diàndòng",
+   "hv": "điện động",
+   "vi": "chạy điện",
+   "pos": "tính từ",
+   "note": "电动车 (xe điện).",
+   "ex": [
+    {
+     "cn": "越来越多的人骑电动车。",
+     "py": "Yuè lái yuè duō de rén qí diàndòngchē.",
+     "vi": "Càng ngày càng nhiều người đi xe điện."
+    }
+   ]
+  },
+  {
+   "w": "电器",
+   "py": "diànqì",
+   "hv": "điện khí",
+   "vi": "đồ điện",
+   "pos": "danh từ",
+   "note": "家用电器 (đồ điện gia dụng).",
+   "ex": [
+    {
+     "cn": "出门前要关掉所有电器。",
+     "py": "Chūmén qián yào guān diào suǒyǒu diànqì.",
+     "vi": "Trước khi ra ngoài phải tắt hết đồ điện."
+    }
+   ]
+  },
+  {
+   "w": "电商",
+   "py": "diànshāng",
+   "hv": "điện thương",
+   "vi": "thương mại điện tử",
+   "pos": "danh từ",
+   "note": "Viết tắt của 电子商务.",
+   "ex": [
+    {
+     "cn": "他在一家电商公司工作。",
+     "py": "Tā zài yì jiā diànshāng gōngsī gōngzuò.",
+     "vi": "Anh ấy làm ở một công ty thương mại điện tử."
+    }
+   ]
+  },
+  {
+   "w": "电视台",
+   "py": "diànshìtái",
+   "hv": "điện thị đài",
+   "vi": "đài truyền hình",
+   "pos": "danh từ",
+   "note": "台 là \"đài\".",
+   "ex": [
+    {
+     "cn": "电视台直播了这场决赛。",
+     "py": "Diànshìtái zhíbō le zhè chǎng juésài.",
+     "vi": "Đài truyền hình phát trực tiếp trận chung kết."
+    }
+   ]
+  },
+  {
+   "w": "电子版",
+   "py": "diànzǐbǎn",
+   "hv": "điện tử bản",
+   "vi": "bản điện tử",
+   "pos": "danh từ",
+   "note": "Trái với 纸质版 (bản giấy).",
+   "ex": [
+    {
+     "cn": "请把报告的电子版发给我。",
+     "py": "Qǐng bǎ bàogào de diànzǐbǎn fā gěi wǒ.",
+     "vi": "Xin gửi tôi bản điện tử của báo cáo."
+    }
+   ]
+  },
+  {
+   "w": "登录",
+   "py": "dēnglù",
+   "hv": "đăng lục",
+   "vi": "đăng nhập",
+   "pos": "động từ",
+   "note": "登录账号 (đăng nhập tài khoản).",
+   "ex": [
+    {
+     "cn": "请先登录你的账号。",
+     "py": "Qǐng xiān dēnglù nǐ de zhànghào.",
+     "vi": "Xin đăng nhập tài khoản trước."
+    }
+   ]
+  },
+  {
+   "w": "点赞",
+   "py": "diǎnzàn",
+   "hv": "điểm tán",
+   "vi": "bấm thích, thả tim",
+   "pos": "động từ",
+   "note": "赞 là \"tán\" (khen).",
+   "ex": [
+    {
+     "cn": "我的视频有一千个人点赞。",
+     "py": "Wǒ de shìpín yǒu yìqiān ge rén diǎnzàn.",
+     "vi": "Video của tôi có một nghìn người thả tim."
+    }
+   ]
+  },
+  {
+   "w": "二维码",
+   "py": "èrwéimǎ",
+   "hv": "nhị duy mã",
+   "vi": "mã QR",
+   "pos": "danh từ",
+   "note": "Mã hai chiều.",
+   "ex": [
+    {
+     "cn": "扫一下二维码就可以付钱。",
+     "py": "Sǎo yíxià èrwéimǎ jiù kěyǐ fù qián.",
+     "vi": "Quét mã QR là trả tiền được."
+    }
+   ]
+  },
+  {
+   "w": "二手",
+   "py": "èrshǒu",
+   "hv": "nhị thủ",
+   "vi": "đồ cũ, đã qua sử dụng",
+   "pos": "tính từ",
+   "note": "二手车 (xe cũ).",
+   "ex": [
+    {
+     "cn": "他买了一辆二手车。",
+     "py": "Tā mǎi le yí liàng èrshǒuchē.",
+     "vi": "Anh ấy mua một chiếc xe cũ."
+    }
+   ]
+  },
+  {
+   "w": "动画",
+   "py": "dònghuà",
+   "hv": "động hoạ",
+   "vi": "phim hoạt hình",
+   "pos": "danh từ",
+   "note": "动画片.",
+   "ex": [
+    {
+     "cn": "孩子们喜欢看动画片。",
+     "py": "Háizimen xǐhuan kàn dònghuàpiàn.",
+     "vi": "Trẻ con thích xem phim hoạt hình."
+    }
+   ]
+  },
+  {
+   "w": "复制",
+   "py": "fùzhì",
+   "hv": "phục chế",
+   "vi": "sao chép",
+   "pos": "động từ",
+   "note": "复制粘贴 (copy paste).",
+   "ex": [
+    {
+     "cn": "你可以复制这段文字。",
+     "py": "Nǐ kěyǐ fùzhì zhè duàn wénzì.",
+     "vi": "Bạn có thể sao chép đoạn chữ này."
+    }
+   ]
+  },
+  {
+   "w": "分享",
+   "py": "fēnxiǎng",
+   "hv": "phân hưởng",
+   "vi": "chia sẻ",
+   "pos": "động từ",
+   "note": "分享经验 (chia sẻ kinh nghiệm).",
+   "ex": [
+    {
+     "cn": "谢谢你和我们分享你的故事。",
+     "py": "Xièxie nǐ hé wǒmen fēnxiǎng nǐ de gùshi.",
+     "vi": "Cảm ơn bạn chia sẻ câu chuyện với chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "打包",
+   "py": "dǎbāo",
+   "hv": "đả bao",
+   "vi": "gói lại; gói mang về",
+   "pos": "động từ",
+   "note": "Ở nhà hàng: 打包带走.",
+   "ex": [
+    {
+     "cn": "这些菜吃不完，打包吧。",
+     "py": "Zhèxiē cài chī bu wán, dǎbāo ba.",
+     "vi": "Ăn không hết mấy món này, gói mang về đi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 不了",
+   "b": "用不了 · 吃不了",
+   "d": "Không thể làm được (vì quá nhiều, quá khó).",
+   "ex": [
+    {
+     "cn": "这么多菜我们吃不了。",
+     "py": "Zhème duō cài wǒmen chī bu liǎo.",
+     "vi": "Nhiều món thế này chúng tôi ăn không hết."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "现在买东西，扫二维码就行了。",
+   "py": "Xiànzài mǎi dōngxi, sǎo èrwéimǎ jiù xíng le.",
+   "vi": "Bây giờ mua đồ, quét mã QR là xong."
+  },
+  {
+   "cn": "他把比赛视频分享到了网上。",
+   "py": "Tā bǎ bǐsài shìpín fēnxiǎng dào le wǎngshang.",
+   "vi": "Anh ấy chia sẻ video trận đấu lên mạng."
+  },
+  {
+   "cn": "记得给电动车充电。",
+   "py": "Jìde gěi diàndòngchē chōngdiàn.",
+   "vi": "Nhớ sạc điện cho xe điện."
+  }
+ ]
+}
