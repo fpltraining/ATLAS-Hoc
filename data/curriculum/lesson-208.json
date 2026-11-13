@@ -1,0 +1,264 @@
+{
+ "id": 208,
+ "cn": "保存好资料",
+ "title": "Giữ gìn và bảo vệ",
+ "goal": "Nói về bảo vệ, giữ gìn, lưu lại, bảo hiểm, gói hàng và lắp đặt.",
+ "words": [
+  {
+   "w": "爱护",
+   "py": "àihù",
+   "hv": "ái hộ",
+   "vi": "yêu quý và giữ gìn",
+   "pos": "động từ",
+   "note": "爱护环境 (bảo vệ môi trường).",
+   "ex": [
+    {
+     "cn": "我们要爱护公共财产。",
+     "py": "Wǒmen yào àihù gōnggòng cáichǎn.",
+     "vi": "Chúng ta phải giữ gìn tài sản công."
+    }
+   ]
+  },
+  {
+   "w": "保",
+   "py": "bǎo",
+   "hv": "bảo",
+   "vi": "giữ, bảo vệ",
+   "pos": "động từ",
+   "note": "Thường ghép: 保证, 保护.",
+   "ex": [
+    {
+     "cn": "这件衣服很保暖。",
+     "py": "Zhè jiàn yīfu hěn bǎonuǎn.",
+     "vi": "Cái áo này giữ ấm rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "保安",
+   "py": "bǎo'ān",
+   "hv": "bảo an",
+   "vi": "bảo vệ (người)",
+   "pos": "danh từ",
+   "note": "Nhân viên bảo vệ toà nhà.",
+   "ex": [
+    {
+     "cn": "门口的保安很热情。",
+     "py": "Ménkǒu de bǎo'ān hěn rèqíng.",
+     "vi": "Bác bảo vệ ở cổng rất nhiệt tình."
+    }
+   ]
+  },
+  {
+   "w": "保持",
+   "py": "bǎochí",
+   "hv": "bảo trì",
+   "vi": "giữ, duy trì",
+   "pos": "động từ",
+   "note": "保持联系 (giữ liên lạc).",
+   "ex": [
+    {
+     "cn": "比赛中要保持冷静。",
+     "py": "Bǐsài zhōng yào bǎochí lěngjìng.",
+     "vi": "Trong trận đấu phải giữ bình tĩnh."
+    }
+   ]
+  },
+  {
+   "w": "保存",
+   "py": "bǎocún",
+   "hv": "bảo tồn",
+   "vi": "lưu giữ, lưu (tệp)",
+   "pos": "động từ",
+   "note": "保存文件 (lưu tệp).",
+   "ex": [
+    {
+     "cn": "别忘了保存文件。",
+     "py": "Bié wàng le bǎocún wénjiàn.",
+     "vi": "Đừng quên lưu tệp."
+    }
+   ]
+  },
+  {
+   "w": "保留",
+   "py": "bǎoliú",
+   "hv": "bảo lưu",
+   "vi": "giữ lại",
+   "pos": "động từ",
+   "note": "保留意见 (giữ ý kiến riêng).",
+   "ex": [
+    {
+     "cn": "这个老房子保留了原来的样子。",
+     "py": "Zhège lǎo fángzi bǎoliú le yuánlái de yàngzi.",
+     "vi": "Ngôi nhà cũ giữ lại dáng vẻ ban đầu."
+    }
+   ]
+  },
+  {
+   "w": "保险",
+   "py": "bǎoxiǎn",
+   "hv": "bảo hiểm",
+   "vi": "bảo hiểm; chắc chắn",
+   "pos": "danh từ, tính từ",
+   "note": "买保险 (mua bảo hiểm).",
+   "ex": [
+    {
+     "cn": "为了保险，我们再检查一遍。",
+     "py": "Wèile bǎoxiǎn, wǒmen zài jiǎnchá yí biàn.",
+     "vi": "Cho chắc ăn, chúng ta kiểm tra lại một lượt."
+    }
+   ]
+  },
+  {
+   "w": "保质期",
+   "py": "bǎozhìqī",
+   "hv": "bảo chất kỳ",
+   "vi": "hạn sử dụng",
+   "pos": "danh từ",
+   "note": "In trên bao bì thực phẩm.",
+   "ex": [
+    {
+     "cn": "这瓶牛奶过了保质期。",
+     "py": "Zhè píng niúnǎi guò le bǎozhìqī.",
+     "vi": "Chai sữa này đã quá hạn sử dụng."
+    }
+   ]
+  },
+  {
+   "w": "包裹",
+   "py": "bāoguǒ",
+   "hv": "bao khoả",
+   "vi": "bưu kiện, gói hàng",
+   "pos": "danh từ",
+   "note": "Hàng gửi qua bưu điện.",
+   "ex": [
+    {
+     "cn": "我去邮局取包裹。",
+     "py": "Wǒ qù yóujú qǔ bāoguǒ.",
+     "vi": "Tôi ra bưu điện lấy bưu kiện."
+    }
+   ]
+  },
+  {
+   "w": "包装",
+   "py": "bāozhuāng",
+   "hv": "bao trang",
+   "vi": "bao bì; đóng gói",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"bao trang\".",
+   "ex": [
+    {
+     "cn": "这个礼物的包装很漂亮。",
+     "py": "Zhège lǐwù de bāozhuāng hěn piàoliang.",
+     "vi": "Bao bì món quà này rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "包含",
+   "py": "bāohán",
+   "hv": "bao hàm",
+   "vi": "bao gồm, chứa",
+   "pos": "động từ",
+   "note": "Chính là \"bao hàm\".",
+   "ex": [
+    {
+     "cn": "价格包含早餐。",
+     "py": "Jiàgé bāohán zǎocān.",
+     "vi": "Giá đã gồm bữa sáng."
+    }
+   ]
+  },
+  {
+   "w": "包括",
+   "py": "bāokuò",
+   "hv": "bao quát",
+   "vi": "bao gồm",
+   "pos": "động từ",
+   "note": "Liệt kê: 包括A和B.",
+   "ex": [
+    {
+     "cn": "参加比赛的人包括我和他。",
+     "py": "Cānjiā bǐsài de rén bāokuò wǒ hé tā.",
+     "vi": "Người tham gia thi đấu gồm tôi và anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "安装",
+   "py": "ānzhuāng",
+   "hv": "an trang",
+   "vi": "lắp đặt, cài đặt",
+   "pos": "động từ",
+   "note": "安装软件 (cài phần mềm).",
+   "ex": [
+    {
+     "cn": "我帮你安装这个软件。",
+     "py": "Wǒ bāng nǐ ānzhuāng zhège ruǎnjiàn.",
+     "vi": "Tôi giúp bạn cài phần mềm này."
+    }
+   ]
+  },
+  {
+   "w": "宝贝",
+   "py": "bǎobèi",
+   "hv": "bảo bối",
+   "vi": "bảo bối; cục cưng",
+   "pos": "danh từ",
+   "note": "Gọi con cái thân mật.",
+   "ex": [
+    {
+     "cn": "宝贝，快来吃饭。",
+     "py": "Bǎobèi, kuài lái chī fàn.",
+     "vi": "Cục cưng ơi, mau vào ăn cơm."
+    }
+   ]
+  },
+  {
+   "w": "宝贵",
+   "py": "bǎoguì",
+   "hv": "bảo quý",
+   "vi": "quý báu",
+   "pos": "tính từ",
+   "note": "宝贵的经验 (kinh nghiệm quý).",
+   "ex": [
+    {
+     "cn": "谢谢你宝贵的意见。",
+     "py": "Xièxie nǐ bǎoguì de yìjiàn.",
+     "vi": "Cảm ơn ý kiến quý báu của bạn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "包括 và 包含",
+   "b": "包括 dùng để liệt kê các thành phần; 包含 nhấn mạnh \"chứa bên trong\"",
+   "d": "Liệt kê người, việc cụ thể thì dùng 包括.",
+   "ex": [
+    {
+     "cn": "这本书包含很多有用的信息。",
+     "py": "Zhè běn shū bāohán hěn duō yǒuyòng de xìnxī.",
+     "vi": "Cuốn sách này chứa nhiều thông tin hữu ích."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "时间是最宝贵的东西。",
+   "py": "Shíjiān shì zuì bǎoguì de dōngxi.",
+   "vi": "Thời gian là thứ quý báu nhất."
+  },
+  {
+   "cn": "毕业以后我们也要保持联系。",
+   "py": "Bìyè yǐhòu wǒmen yě yào bǎochí liánxì.",
+   "vi": "Tốt nghiệp rồi chúng ta cũng phải giữ liên lạc."
+  },
+  {
+   "cn": "买东西的时候要看清楚保质期。",
+   "py": "Mǎi dōngxi de shíhou yào kàn qīngchu bǎozhìqī.",
+   "vi": "Khi mua đồ phải xem kỹ hạn sử dụng."
+  }
+ ]
+}

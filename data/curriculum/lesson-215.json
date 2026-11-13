@@ -1,0 +1,264 @@
+{
+ "id": 215,
+ "cn": "别熬夜了",
+ "title": "Hành động thường ngày",
+ "goal": "Nói về thức khuya, nắm chắc, tránh, thay đổi, giấu, đo, kiểm tra, cắm, tháo và rút.",
+ "words": [
+  {
+   "w": "熬夜",
+   "py": "áoyè",
+   "hv": "ngao dạ",
+   "vi": "thức khuya",
+   "pos": "động từ",
+   "note": "熬 là \"nấu lâu, chịu đựng\".",
+   "ex": [
+    {
+     "cn": "别熬夜了，对身体不好。",
+     "py": "Bié áoyè le, duì shēntǐ bù hǎo.",
+     "vi": "Đừng thức khuya nữa, không tốt cho sức khoẻ."
+    }
+   ]
+  },
+  {
+   "w": "把握",
+   "py": "bǎwò",
+   "hv": "bả ác",
+   "vi": "nắm chắc; sự tự tin",
+   "pos": "động từ, danh từ",
+   "note": "有把握 (chắc chắn).",
+   "ex": [
+    {
+     "cn": "这场比赛我们有把握赢。",
+     "py": "Zhè chǎng bǐsài wǒmen yǒu bǎwò yíng.",
+     "vi": "Trận này chúng tôi chắc chắn thắng."
+    }
+   ]
+  },
+  {
+   "w": "避免",
+   "py": "bìmiǎn",
+   "hv": "tị miễn",
+   "vi": "tránh",
+   "pos": "động từ",
+   "note": "避免错误 (tránh sai lầm).",
+   "ex": [
+    {
+     "cn": "我们要避免同样的错误。",
+     "py": "Wǒmen yào bìmiǎn tóngyàng de cuòwù.",
+     "vi": "Chúng ta phải tránh mắc lại lỗi đó."
+    }
+   ]
+  },
+  {
+   "w": "变动",
+   "py": "biàndòng",
+   "hv": "biến động",
+   "vi": "thay đổi, biến động",
+   "pos": "động từ, danh từ",
+   "note": "人员变动 (thay đổi nhân sự).",
+   "ex": [
+    {
+     "cn": "队伍的人员有一些变动。",
+     "py": "Duìwu de rényuán yǒu yìxiē biàndòng.",
+     "vi": "Nhân sự của đội có vài thay đổi."
+    }
+   ]
+  },
+  {
+   "w": "表明",
+   "py": "biǎomíng",
+   "hv": "biểu minh",
+   "vi": "cho thấy, bày tỏ rõ",
+   "pos": "động từ",
+   "note": "表明态度 (bày tỏ thái độ).",
+   "ex": [
+    {
+     "cn": "调查表明，年轻人睡得太少。",
+     "py": "Diàochá biǎomíng, niánqīngrén shuì de tài shǎo.",
+     "vi": "Khảo sát cho thấy người trẻ ngủ quá ít."
+    }
+   ]
+  },
+  {
+   "w": "表情",
+   "py": "biǎoqíng",
+   "hv": "biểu tình",
+   "vi": "nét mặt, biểu cảm",
+   "pos": "danh từ",
+   "note": "Khác \"biểu tình\" (biểu tình phản đối là 示威).",
+   "ex": [
+    {
+     "cn": "看他的表情，他好像不太高兴。",
+     "py": "Kàn tā de biǎoqíng, tā hǎoxiàng bú tài gāoxìng.",
+     "vi": "Nhìn nét mặt anh ấy, hình như không vui lắm."
+    }
+   ]
+  },
+  {
+   "w": "安",
+   "py": "ān",
+   "hv": "an",
+   "vi": "yên; lắp",
+   "pos": "tính từ, động từ",
+   "note": "安心 (yên tâm), 安门 (lắp cửa).",
+   "ex": [
+    {
+     "cn": "你放心，一路平安。",
+     "py": "Nǐ fàngxīn, yí lù píng'ān.",
+     "vi": "Bạn yên tâm, thượng lộ bình an."
+    }
+   ]
+  },
+  {
+   "w": "暗",
+   "py": "àn",
+   "hv": "ám",
+   "vi": "tối",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 亮.",
+   "ex": [
+    {
+     "cn": "房间里太暗了，开灯吧。",
+     "py": "Fángjiān li tài àn le, kāi dēng ba.",
+     "vi": "Trong phòng tối quá, bật đèn đi."
+    }
+   ]
+  },
+  {
+   "w": "藏",
+   "py": "cáng",
+   "hv": "tàng",
+   "vi": "giấu, cất",
+   "pos": "động từ",
+   "note": "捉迷藏 (chơi trốn tìm).",
+   "ex": [
+    {
+     "cn": "他把礼物藏在了床下。",
+     "py": "Tā bǎ lǐwù cáng zài le chuáng xià.",
+     "vi": "Anh ấy giấu quà dưới gầm giường."
+    }
+   ]
+  },
+  {
+   "w": "测",
+   "py": "cè",
+   "hv": "trắc",
+   "vi": "đo",
+   "pos": "động từ",
+   "note": "测体温 (đo nhiệt độ).",
+   "ex": [
+    {
+     "cn": "护士给我测了体温。",
+     "py": "Hùshi gěi wǒ cè le tǐwēn.",
+     "vi": "Y tá đo nhiệt độ cho tôi."
+    }
+   ]
+  },
+  {
+   "w": "测试",
+   "py": "cèshì",
+   "hv": "trắc thí",
+   "vi": "kiểm tra, thử nghiệm",
+   "pos": "động từ, danh từ",
+   "note": "Kiểm tra năng lực, phần mềm.",
+   "ex": [
+    {
+     "cn": "新版本还在测试中。",
+     "py": "Xīn bǎnběn hái zài cèshì zhōng.",
+     "vi": "Phiên bản mới vẫn đang thử nghiệm."
+    }
+   ]
+  },
+  {
+   "w": "插",
+   "py": "chā",
+   "hv": "sáp",
+   "vi": "cắm, chen",
+   "pos": "động từ",
+   "note": "插电 (cắm điện), 插话 (chen ngang).",
+   "ex": [
+    {
+     "cn": "请别插话，让他说完。",
+     "py": "Qǐng bié chāhuà, ràng tā shuō wán.",
+     "vi": "Xin đừng chen ngang, để anh ấy nói xong."
+    }
+   ]
+  },
+  {
+   "w": "拆",
+   "py": "chāi",
+   "hv": "sách",
+   "vi": "tháo, dỡ",
+   "pos": "động từ",
+   "note": "拆开 (mở ra, tháo ra).",
+   "ex": [
+    {
+     "cn": "他迫不及待地拆开了礼物。",
+     "py": "Tā pòbùjídài de chāi kāi le lǐwù.",
+     "vi": "Anh ấy nóng lòng mở món quà."
+    }
+   ]
+  },
+  {
+   "w": "沉",
+   "py": "chén",
+   "hv": "trầm",
+   "vi": "chìm; nặng",
+   "pos": "động từ, tính từ",
+   "note": "Hành lý nặng: 行李很沉.",
+   "ex": [
+    {
+     "cn": "这个箱子太沉了。",
+     "py": "Zhège xiāngzi tài chén le.",
+     "vi": "Cái va li này nặng quá."
+    }
+   ]
+  },
+  {
+   "w": "抽",
+   "py": "chōu",
+   "hv": "trừu",
+   "vi": "rút; hút (thuốc)",
+   "pos": "động từ",
+   "note": "抽时间 (dành thời gian).",
+   "ex": [
+    {
+     "cn": "我每天抽一个小时学汉语。",
+     "py": "Wǒ měi tiān chōu yí ge xiǎoshí xué Hànyǔ.",
+     "vi": "Mỗi ngày tôi dành một tiếng học tiếng Trung."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "有把握 + động từ",
+   "b": "有把握赢 · 没有把握",
+   "d": "Diễn tả mức tự tin vào kết quả.",
+   "ex": [
+    {
+     "cn": "这次考试我没有把握。",
+     "py": "Zhè cì kǎoshì wǒ méiyǒu bǎwò.",
+     "vi": "Kỳ thi này tôi không chắc."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "熬夜打比赛对身体伤害很大。",
+   "py": "Áoyè dǎ bǐsài duì shēntǐ shānghài hěn dà.",
+   "vi": "Thức khuya thi đấu hại sức khoẻ rất nhiều."
+  },
+  {
+   "cn": "再忙也要抽时间陪家人。",
+   "py": "Zài máng yě yào chōu shíjiān péi jiārén.",
+   "vi": "Bận mấy cũng phải dành thời gian bên gia đình."
+  },
+  {
+   "cn": "为了避免误会，最好把话说清楚。",
+   "py": "Wèile bìmiǎn wùhuì, zuìhǎo bǎ huà shuō qīngchu.",
+   "vi": "Để tránh hiểu lầm, tốt nhất nói rõ ràng."
+  }
+ ]
+}

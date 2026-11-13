@@ -1,0 +1,264 @@
+{
+ "id": 206,
+ "cn": "哎呀，不得了",
+ "title": "Cảm xúc và phản ứng",
+ "goal": "Bày tỏ ngạc nhiên, than thở, an ủi, khen ngợi và phàn nàn.",
+ "words": [
+  {
+   "w": "哎",
+   "py": "āi",
+   "hv": "ai",
+   "vi": "ơ, này (thán từ)",
+   "pos": "thán từ",
+   "note": "Dùng để gọi hoặc tỏ ngạc nhiên nhẹ.",
+   "ex": [
+    {
+     "cn": "哎，你怎么还没走？",
+     "py": "Āi, nǐ zěnme hái méi zǒu?",
+     "vi": "Ơ, sao bạn vẫn chưa đi?"
+    }
+   ]
+  },
+  {
+   "w": "哎呀",
+   "py": "āiyā",
+   "hv": "ai nha",
+   "vi": "ôi chao",
+   "pos": "thán từ",
+   "note": "Ngạc nhiên hoặc tiếc nuối.",
+   "ex": [
+    {
+     "cn": "哎呀，我忘带钥匙了！",
+     "py": "Āiyā, wǒ wàng dài yàoshi le!",
+     "vi": "Ôi chao, tôi quên mang chìa khoá rồi!"
+    }
+   ]
+  },
+  {
+   "w": "唉",
+   "py": "ài",
+   "hv": "ai",
+   "vi": "haizz (thở dài)",
+   "pos": "thán từ",
+   "note": "Tiếng thở dài, buồn hoặc bất lực.",
+   "ex": [
+    {
+     "cn": "唉，又输了一场。",
+     "py": "Ài, yòu shū le yì chǎng.",
+     "vi": "Haizz, lại thua thêm một trận."
+    }
+   ]
+  },
+  {
+   "w": "不得了",
+   "py": "bùdéliǎo",
+   "hv": "bất đắc liễu",
+   "vi": "ghê gớm, nguy rồi",
+   "pos": "tính từ",
+   "note": "Sau 得 nghĩa là \"cực kỳ\": 高兴得不得了.",
+   "ex": [
+    {
+     "cn": "听到这个消息，他高兴得不得了。",
+     "py": "Tīngdào zhège xiāoxi, tā gāoxìng de bùdéliǎo.",
+     "vi": "Nghe tin này, anh ấy vui không tả xiết."
+    }
+   ]
+  },
+  {
+   "w": "不要紧",
+   "py": "bú yàojǐn",
+   "hv": "bất yếu khẩn",
+   "vi": "không sao, không quan trọng",
+   "pos": "cụm từ",
+   "note": "Dùng để trấn an.",
+   "ex": [
+    {
+     "cn": "不要紧，下次再来。",
+     "py": "Bú yàojǐn, xià cì zài lái.",
+     "vi": "Không sao, lần sau lại đến."
+    }
+   ]
+  },
+  {
+   "w": "不幸",
+   "py": "búxìng",
+   "hv": "bất hạnh",
+   "vi": "không may",
+   "pos": "tính từ",
+   "note": "Chính là \"bất hạnh\".",
+   "ex": [
+    {
+     "cn": "他不幸受了伤。",
+     "py": "Tā búxìng shòu le shāng.",
+     "vi": "Anh ấy không may bị thương."
+    }
+   ]
+  },
+  {
+   "w": "安慰",
+   "py": "ānwèi",
+   "hv": "an uỷ",
+   "vi": "an ủi",
+   "pos": "động từ",
+   "note": "Chính là \"an ủi\".",
+   "ex": [
+    {
+     "cn": "朋友输了比赛，我去安慰他。",
+     "py": "Péngyou shū le bǐsài, wǒ qù ānwèi tā.",
+     "vi": "Bạn thua trận, tôi đi an ủi anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "抱怨",
+   "py": "bàoyuàn",
+   "hv": "bão oán",
+   "vi": "phàn nàn, oán trách",
+   "pos": "động từ",
+   "note": "抱 (ôm) + 怨 (oán): ôm lòng oán.",
+   "ex": [
+    {
+     "cn": "他总是抱怨工作太累。",
+     "py": "Tā zǒngshì bàoyuàn gōngzuò tài lèi.",
+     "vi": "Anh ấy luôn phàn nàn công việc quá mệt."
+    }
+   ]
+  },
+  {
+   "w": "称赞",
+   "py": "chēngzàn",
+   "hv": "xưng tán",
+   "vi": "khen ngợi",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 夸.",
+   "ex": [
+    {
+     "cn": "老师称赞了她的作文。",
+     "py": "Lǎoshī chēngzàn le tā de zuòwén.",
+     "vi": "Cô giáo khen bài văn của cô ấy."
+    }
+   ]
+  },
+  {
+   "w": "沉默",
+   "py": "chénmò",
+   "hv": "trầm mặc",
+   "vi": "im lặng",
+   "pos": "tính từ, động từ",
+   "note": "Chính là \"trầm mặc\".",
+   "ex": [
+    {
+     "cn": "听了这句话，大家都沉默了。",
+     "py": "Tīng le zhè jù huà, dàjiā dōu chénmò le.",
+     "vi": "Nghe câu đó, mọi người đều im lặng."
+    }
+   ]
+  },
+  {
+   "w": "吵",
+   "py": "chǎo",
+   "hv": "sảo",
+   "vi": "ồn ào; cãi nhau",
+   "pos": "tính từ, động từ",
+   "note": "吵架 (cãi nhau).",
+   "ex": [
+    {
+     "cn": "外面太吵了，我睡不着。",
+     "py": "Wàimiàn tài chǎo le, wǒ shuì bu zháo.",
+     "vi": "Bên ngoài ồn quá, tôi không ngủ được."
+    }
+   ]
+  },
+  {
+   "w": "催",
+   "py": "cuī",
+   "hv": "thôi",
+   "vi": "giục",
+   "pos": "động từ",
+   "note": "催人 (giục người).",
+   "ex": [
+    {
+     "cn": "妈妈一直催我早点儿睡觉。",
+     "py": "Māma yìzhí cuī wǒ zǎo diǎnr shuìjiào.",
+     "vi": "Mẹ cứ giục tôi đi ngủ sớm."
+    }
+   ]
+  },
+  {
+   "w": "刺激",
+   "py": "cìjī",
+   "hv": "thích kích",
+   "vi": "kích thích, gay cấn",
+   "pos": "động từ, tính từ",
+   "note": "Trận đấu gay cấn: 比赛很刺激.",
+   "ex": [
+    {
+     "cn": "这场比赛太刺激了！",
+     "py": "Zhè chǎng bǐsài tài cìjī le!",
+     "vi": "Trận đấu này gay cấn quá!"
+    }
+   ]
+  },
+  {
+   "w": "臭",
+   "py": "chòu",
+   "hv": "xú",
+   "vi": "hôi, thối",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 香.",
+   "ex": [
+    {
+     "cn": "这个垃圾桶很臭。",
+     "py": "Zhège lājītǒng hěn chòu.",
+     "vi": "Thùng rác này rất hôi."
+    }
+   ]
+  },
+  {
+   "w": "丑",
+   "py": "chǒu",
+   "hv": "xú",
+   "vi": "xấu xí",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 漂亮.",
+   "ex": [
+    {
+     "cn": "我觉得这件衣服有点儿丑。",
+     "py": "Wǒ juéde zhè jiàn yīfu yǒudiǎnr chǒu.",
+     "vi": "Tôi thấy cái áo này hơi xấu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Tính từ + 得不得了",
+   "b": "高兴得不得了 · 累得不得了",
+   "d": "Diễn tả mức độ cực cao, khẩu ngữ.",
+   "ex": [
+    {
+     "cn": "今天热得不得了。",
+     "py": "Jīntiān rè de bùdéliǎo.",
+     "vi": "Hôm nay nóng kinh khủng."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "哎呀，比赛快开始了，快点儿！",
+   "py": "Āiyā, bǐsài kuài kāishǐ le, kuài diǎnr!",
+   "vi": "Ôi chao, trận đấu sắp bắt đầu rồi, nhanh lên!"
+  },
+  {
+   "cn": "输了也不要紧，重要的是学到东西。",
+   "py": "Shū le yě bú yàojǐn, zhòngyào de shì xuédào dōngxi.",
+   "vi": "Thua cũng không sao, quan trọng là học được điều gì đó."
+  },
+  {
+   "cn": "与其抱怨，不如想办法解决问题。",
+   "py": "Yǔqí bàoyuàn, bùrú xiǎng bànfǎ jiějué wèntí.",
+   "vi": "Thay vì phàn nàn, chi bằng nghĩ cách giải quyết vấn đề."
+  }
+ ]
+}

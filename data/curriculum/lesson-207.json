@@ -1,0 +1,264 @@
+{
+ "id": 207,
+ "cn": "系好安全带",
+ "title": "An toàn trên đường",
+ "goal": "Nói về đi lại an toàn, tai nạn, báo cảnh sát và thời tiết xấu.",
+ "words": [
+  {
+   "w": "安全带",
+   "py": "ānquándài",
+   "hv": "an toàn đới",
+   "vi": "dây an toàn",
+   "pos": "danh từ",
+   "note": "带 là \"đai\".",
+   "ex": [
+    {
+     "cn": "上车以后请系好安全带。",
+     "py": "Shàng chē yǐhòu qǐng jì hǎo ānquándài.",
+     "vi": "Lên xe rồi xin thắt dây an toàn."
+    }
+   ]
+  },
+  {
+   "w": "超速",
+   "py": "chāosù",
+   "hv": "siêu tốc",
+   "vi": "chạy quá tốc độ",
+   "pos": "động từ",
+   "note": "超 (vượt) + 速 (tốc độ).",
+   "ex": [
+    {
+     "cn": "他因为超速被罚了款。",
+     "py": "Tā yīnwèi chāosù bèi fá le kuǎn.",
+     "vi": "Anh ấy bị phạt vì chạy quá tốc độ."
+    }
+   ]
+  },
+  {
+   "w": "车祸",
+   "py": "chēhuò",
+   "hv": "xa hoạ",
+   "vi": "tai nạn xe",
+   "pos": "danh từ",
+   "note": "祸 là \"hoạ\".",
+   "ex": [
+    {
+     "cn": "昨天这条路上发生了车祸。",
+     "py": "Zuótiān zhè tiáo lù shang fāshēng le chēhuò.",
+     "vi": "Hôm qua trên đường này xảy ra tai nạn."
+    }
+   ]
+  },
+  {
+   "w": "车辆",
+   "py": "chēliàng",
+   "hv": "xa lượng",
+   "vi": "xe cộ",
+   "pos": "danh từ",
+   "note": "Văn viết, chỉ chung các loại xe.",
+   "ex": [
+    {
+     "cn": "节日期间车辆很多。",
+     "py": "Jiérì qījiān chēliàng hěn duō.",
+     "vi": "Dịp lễ xe cộ rất đông."
+    }
+   ]
+  },
+  {
+   "w": "车库",
+   "py": "chēkù",
+   "hv": "xa khố",
+   "vi": "nhà để xe",
+   "pos": "danh từ",
+   "note": "库 là \"kho\".",
+   "ex": [
+    {
+     "cn": "他把车停在车库里。",
+     "py": "Tā bǎ chē tíng zài chēkù li.",
+     "vi": "Anh ấy đỗ xe trong nhà để xe."
+    }
+   ]
+  },
+  {
+   "w": "车厢",
+   "py": "chēxiāng",
+   "hv": "xa sương",
+   "vi": "toa xe",
+   "pos": "danh từ",
+   "note": "Toa tàu, khoang xe.",
+   "ex": [
+    {
+     "cn": "这节车厢的人不多。",
+     "py": "Zhè jié chēxiāng de rén bù duō.",
+     "vi": "Toa này không đông người."
+    }
+   ]
+  },
+  {
+   "w": "车主",
+   "py": "chēzhǔ",
+   "hv": "xa chủ",
+   "vi": "chủ xe",
+   "pos": "danh từ",
+   "note": "Chính là \"chủ xe\".",
+   "ex": [
+    {
+     "cn": "请车主马上把车开走。",
+     "py": "Qǐng chēzhǔ mǎshàng bǎ chē kāi zǒu.",
+     "vi": "Xin chủ xe lập tức lái xe đi."
+    }
+   ]
+  },
+  {
+   "w": "乘务员",
+   "py": "chéngwùyuán",
+   "hv": "thừa vụ viên",
+   "vi": "tiếp viên",
+   "pos": "danh từ",
+   "note": "Trên tàu, máy bay.",
+   "ex": [
+    {
+     "cn": "乘务员给我们送来了水。",
+     "py": "Chéngwùyuán gěi wǒmen sòng lái le shuǐ.",
+     "vi": "Tiếp viên mang nước đến cho chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "长途",
+   "py": "chángtú",
+   "hv": "trường đồ",
+   "vi": "đường dài",
+   "pos": "tính từ",
+   "note": "长途汽车 (xe khách đường dài).",
+   "ex": [
+    {
+     "cn": "长途旅行很累。",
+     "py": "Chángtú lǚxíng hěn lèi.",
+     "vi": "Đi xa rất mệt."
+    }
+   ]
+  },
+  {
+   "w": "步行",
+   "py": "bùxíng",
+   "hv": "bộ hành",
+   "vi": "đi bộ",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 走路.",
+   "ex": [
+    {
+     "cn": "从这儿步行到车站要十分钟。",
+     "py": "Cóng zhèr bùxíng dào chēzhàn yào shí fēnzhōng.",
+     "vi": "Từ đây đi bộ tới bến xe mất mười phút."
+    }
+   ]
+  },
+  {
+   "w": "报警",
+   "py": "bàojǐng",
+   "hv": "báo cảnh",
+   "vi": "báo cảnh sát",
+   "pos": "động từ",
+   "note": "Ở Trung Quốc gọi số 110.",
+   "ex": [
+    {
+     "cn": "发现有人偷东西，我马上报警了。",
+     "py": "Fāxiàn yǒu rén tōu dōngxi, wǒ mǎshàng bàojǐng le.",
+     "vi": "Thấy có người trộm đồ, tôi báo cảnh sát ngay."
+    }
+   ]
+  },
+  {
+   "w": "拨打",
+   "py": "bōdǎ",
+   "hv": "bát đả",
+   "vi": "bấm gọi (số điện thoại)",
+   "pos": "động từ",
+   "note": "拨打电话 (gọi điện).",
+   "ex": [
+    {
+     "cn": "有问题请拨打这个电话。",
+     "py": "Yǒu wèntí qǐng bōdǎ zhège diànhuà.",
+     "vi": "Có vấn đề xin gọi số này."
+    }
+   ]
+  },
+  {
+   "w": "暴雨",
+   "py": "bàoyǔ",
+   "hv": "bạo vũ",
+   "vi": "mưa lớn, mưa bão",
+   "pos": "danh từ",
+   "note": "暴 là \"bạo\", dữ dội.",
+   "ex": [
+    {
+     "cn": "明天有暴雨，别出门了。",
+     "py": "Míngtiān yǒu bàoyǔ, bié chūmén le.",
+     "vi": "Mai có mưa to, đừng ra ngoài."
+    }
+   ]
+  },
+  {
+   "w": "半夜",
+   "py": "bànyè",
+   "hv": "bán dạ",
+   "vi": "nửa đêm",
+   "pos": "danh từ",
+   "note": "Chính là \"bán dạ\".",
+   "ex": [
+    {
+     "cn": "他半夜还在打游戏。",
+     "py": "Tā bànyè hái zài dǎ yóuxì.",
+     "vi": "Nửa đêm anh ấy vẫn còn chơi game."
+    }
+   ]
+  },
+  {
+   "w": "傍晚",
+   "py": "bàngwǎn",
+   "hv": "bạng vãn",
+   "vi": "chiều tối, chạng vạng",
+   "pos": "danh từ",
+   "note": "Lúc mặt trời sắp lặn.",
+   "ex": [
+    {
+     "cn": "我们傍晚去海边散步。",
+     "py": "Wǒmen bàngwǎn qù hǎibiān sànbù.",
+     "vi": "Chúng tôi đi dạo bờ biển lúc chạng vạng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "因为……被……",
+   "b": "因为超速被罚款",
+   "d": "Nêu lý do rồi dùng câu bị động.",
+   "ex": [
+    {
+     "cn": "他因为迟到被老师批评了。",
+     "py": "Tā yīnwèi chídào bèi lǎoshī pīpíng le.",
+     "vi": "Anh ấy bị thầy phê bình vì đi muộn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "开车的时候不要超速，也不要看手机。",
+   "py": "Kāichē de shíhou bú yào chāosù, yě bú yào kàn shǒujī.",
+   "vi": "Khi lái xe đừng chạy quá tốc độ, cũng đừng xem điện thoại."
+  },
+  {
+   "cn": "如果发生车祸，要马上报警。",
+   "py": "Rúguǒ fāshēng chēhuò, yào mǎshàng bàojǐng.",
+   "vi": "Nếu xảy ra tai nạn, phải báo cảnh sát ngay."
+  },
+  {
+   "cn": "坐长途车的时候一定要系好安全带。",
+   "py": "Zuò chángtú chē de shíhou yídìng yào jì hǎo ānquándài.",
+   "vi": "Khi đi xe đường dài nhất định phải thắt dây an toàn."
+  }
+ ]
+}
