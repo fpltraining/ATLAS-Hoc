@@ -124,6 +124,17 @@ Mỗi người học một tài khoản (email + mật khẩu), tiến độ lư
 
 Để trống `js/config.js` thì app chạy như cũ, không đăng nhập. Thư viện `js/vendor/supabase-2.119.0.js` là bản UMD của supabase-js (MIT), để sẵn trong repo cho app mở được khi offline.
 
+## Giọng đọc AI
+
+Từ và câu trong app có sẵn tệp âm thanh giọng AI tự nhiên, tạo bằng Kokoro (mô hình mã nguồn mở, giấy phép Apache 2.0) ngay trên máy, không tốn phí. Giọng nam là chính (Michael cho tiếng Anh, giọng nam số 10 cho tiếng Trung), câu mẫu và hội thoại đọc xen kẽ với giọng nữ (Heart, giọng nữ số 1). Câu không có tệp (câu tự gõ, từ HSK 5–9) vẫn đọc bằng giọng của máy. Tắt được trong Cài đặt → Giọng AI tự nhiên.
+
+```bash
+node tools/build-audio-list.mjs                 # danh sách câu → data-src/audio-list.json
+python tools/tts/make_audio.py                  # tạo audio/<en|zh>/<khoá>.mp3 và data/audio.json
+```
+
+Tên tệp là khoá của câu (`js/audiokey.js`), nên thêm bài mới chỉ cần chạy lại hai lệnh trên: câu đã có tệp được bỏ qua. Tệp âm thanh được lưu trong máy ở lần nghe đầu và giữ qua các lần cập nhật app.
+
 ## Chấm bài bằng AI
 
 Mục Viết và Nói lại của tiếng Anh có nút **Chấm bằng AI**: Claude chấm bài, cho điểm, trình độ CEFR thể hiện, lỗi cần sửa kèm lý do bằng tiếng Việt, và một bản sửa gợi ý. Bài nói được trình duyệt chuyển thành chữ trước khi chấm, nên AI chấm từ vựng, ngữ pháp và ý, không chấm phát âm.

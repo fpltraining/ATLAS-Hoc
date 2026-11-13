@@ -209,6 +209,7 @@ async function boot() {
     applyTheme(settings.theme);
 
     audio.setVoices({ en: settings.enVoice, zh: settings.zhVoice });
+    audio.setAiVoice(settings.aiVoice !== false);
     audio.initVoices();
 
     // Mở khoá âm thanh ở lần chạm đầu tiên (yêu cầu bắt buộc của iOS)

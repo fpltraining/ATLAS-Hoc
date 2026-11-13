@@ -152,6 +152,7 @@ export const DEFAULTS = {
   readSize: 22,           // cỡ chữ tiếng Anh trong bài đọc
   readMode: 'both',       // both: Anh trên Việt dưới · hide: che tiếng Việt
   theme: 'auto',
+  aiVoice: true,          // phát giọng AI có sẵn thay cho giọng máy
   enVoice: '',           // tên giọng tiếng Anh đã chọn, rỗng là tự chọn giọng tốt nhất
   zhVoice: '',           // tên giọng tiếng Trung đã chọn
   aiUrl: '',             // địa chỉ hàm chấm bài trên Supabase, để trống là tắt
