@@ -1,0 +1,85 @@
+# Thành ngữ và cách nói tự nhiên C1 (đợt 2): cụm động từ nghĩa bóng và cách nói trong công việc.
+@lv 6
+bounce back |  | phrasal verb | hồi phục sau thất bại | The team bounced back after two losses. | Đội hồi phục sau hai trận thua.
+brush up on |  | phrasal verb | ôn lại | I need to brush up on my grammar. | Tôi cần ôn lại ngữ pháp.
+come across as |  | phrasal verb | tạo ấn tượng là | He comes across as confident. | Anh ấy tạo ấn tượng là người tự tin.
+come up with |  | phrasal verb | nghĩ ra | She came up with a clever plan. | Cô ấy nghĩ ra một kế hoạch thông minh.
+cut back on |  | phrasal verb | cắt giảm | We should cut back on costs. | Chúng ta nên cắt giảm chi phí.
+deal with |  | phrasal verb | xử lý | How do you deal with pressure? | Bạn xử lý áp lực thế nào?
+drag on |  | phrasal verb | kéo dài lê thê | The meeting dragged on for hours. | Cuộc họp kéo dài hàng giờ.
+draw on |  | phrasal verb | dựa vào (kinh nghiệm) | He drew on years of experience. | Anh ấy dựa vào nhiều năm kinh nghiệm.
+fall apart |  | phrasal verb | đổ vỡ, tan rã | The team fell apart after the loss. | Đội tan rã sau trận thua.
+fall through |  | phrasal verb | đổ bể (kế hoạch) | The deal fell through. | Thương vụ đổ bể.
+figure out |  | phrasal verb | tìm ra, hiểu ra | We need to figure out why we lost. | Chúng ta cần hiểu vì sao thua.
+follow through |  | phrasal verb | làm đến cùng | He never follows through on his promises. | Anh ta chẳng bao giờ làm đến cùng điều đã hứa.
+get across |  | phrasal verb | truyền đạt rõ | I couldn't get my point across. | Tôi không truyền đạt được ý mình.
+get around to |  | phrasal verb | cuối cùng cũng làm | I finally got around to reading it. | Cuối cùng tôi cũng đọc nó.
+get by |  | phrasal verb | xoay xở được | I can get by in Chinese. | Tôi xoay xở được bằng tiếng Trung.
+give in |  | phrasal verb | chịu thua, nhượng bộ | Don't give in to pressure. | Đừng nhượng bộ trước áp lực.
+hold back |  | phrasal verb | kìm lại, ngần ngại | Don't hold back your ideas. | Đừng ngại đưa ra ý tưởng.
+iron out |  | phrasal verb | giải quyết (vấn đề nhỏ) | We need to iron out a few details. | Chúng ta cần giải quyết vài chi tiết.
+keep up with |  | phrasal verb | theo kịp | It's hard to keep up with the changes. | Khó mà theo kịp các thay đổi.
+lay off |  | phrasal verb | sa thải | The company laid off fifty staff. | Công ty sa thải năm mươi nhân viên.
+look into |  | phrasal verb | xem xét, điều tra | We will look into the problem. | Chúng tôi sẽ xem xét vấn đề.
+make up for |  | phrasal verb | bù đắp | Hard work can make up for lack of talent. | Chăm chỉ có thể bù đắp sự thiếu tài năng.
+miss out on |  | phrasal verb | bỏ lỡ | Don't miss out on this chance. | Đừng bỏ lỡ cơ hội này.
+narrow down |  | phrasal verb | thu hẹp | Let's narrow down the options. | Hãy thu hẹp các lựa chọn.
+opt for |  | phrasal verb | chọn | They opted for a safer draft. | Họ chọn đội hình an toàn hơn.
+phase out |  | phrasal verb | loại bỏ dần | The old system will be phased out. | Hệ thống cũ sẽ bị loại bỏ dần.
+pick up on |  | phrasal verb | nhận ra (tín hiệu nhỏ) | Good coaches pick up on small signs. | Huấn luyện viên giỏi nhận ra những dấu hiệu nhỏ.
+point out |  | phrasal verb | chỉ ra | She pointed out a mistake. | Cô ấy chỉ ra một lỗi.
+pull off |  | phrasal verb | làm được (việc khó) | They pulled off an amazing comeback. | Họ đã lội ngược dòng ngoạn mục.
+put forward |  | phrasal verb | đưa ra (đề xuất) | He put forward a new idea. | Anh ấy đưa ra một ý tưởng mới.
+rule out |  | phrasal verb | loại trừ | We can't rule out an injury. | Chúng ta không thể loại trừ khả năng chấn thương.
+run into |  | phrasal verb | gặp phải | We ran into some problems. | Chúng tôi gặp phải vài vấn đề.
+set back |  | phrasal verb | làm chậm lại | The injury set him back a month. | Chấn thương làm anh ấy chậm lại một tháng.
+settle for |  | phrasal verb | chấp nhận (cái kém hơn) | Don't settle for second place. | Đừng chấp nhận vị trí thứ hai.
+sort out |  | phrasal verb | giải quyết, sắp xếp | I'll sort out the schedule. | Tôi sẽ sắp xếp lịch.
+stand out |  | phrasal verb | nổi bật | Her performance stood out. | Phần thể hiện của cô ấy nổi bật.
+step down |  | phrasal verb | từ chức | The coach stepped down after the season. | Huấn luyện viên từ chức sau mùa giải.
+step up |  | phrasal verb | đẩy mạnh; đứng ra gánh vác | Someone needs to step up and lead. | Cần có người đứng ra dẫn dắt.
+take on |  | phrasal verb | đảm nhận; đối đầu | We take on the champions tomorrow. | Ngày mai chúng ta đối đầu nhà vô địch.
+take over |  | phrasal verb | tiếp quản | She took over as team captain. | Cô ấy tiếp quản vai trò đội trưởng.
+talk someone into |  | phrasal verb | thuyết phục ai làm gì | He talked me into joining the team. | Anh ấy thuyết phục tôi vào đội.
+think through |  | phrasal verb | suy nghĩ thấu đáo | Think it through before you decide. | Hãy nghĩ kỹ trước khi quyết định.
+turn down |  | phrasal verb | từ chối | She turned down the offer. | Cô ấy từ chối lời đề nghị.
+wind down |  | phrasal verb | thư giãn; giảm dần | I read to wind down at night. | Tôi đọc sách để thư giãn buổi tối.
+work out |  | phrasal verb | tìm ra; diễn ra tốt | Things worked out in the end. | Cuối cùng mọi chuyện ổn cả.
+a ballpark figure |  | idiom | con số ước chừng | Give me a ballpark figure. | Cho tôi con số ước chừng.
+a game changer |  | idiom | nhân tố thay đổi cuộc chơi | The new hero is a game changer. | Tướng mới là nhân tố thay đổi cuộc chơi.
+a long shot |  | idiom | khả năng thấp | Winning the title is a long shot. | Vô địch là khả năng thấp.
+a red flag |  | idiom | dấu hiệu cảnh báo | Constant excuses are a red flag. | Liên tục bào chữa là dấu hiệu đáng lo.
+a safe bet |  | idiom | lựa chọn chắc ăn | Practice is always a safe bet. | Luyện tập luôn là lựa chọn chắc ăn.
+a slippery slope |  | idiom | con dốc trơn, dễ trượt dài | Cheating once is a slippery slope. | Gian lận một lần là bắt đầu trượt dài.
+back to the drawing board |  | idiom | làm lại từ đầu | The idea failed; back to the drawing board. | Ý tưởng thất bại, làm lại từ đầu thôi.
+ballpark |  | adj | ước chừng | That's a ballpark estimate. | Đó là ước tính sơ bộ.
+bottleneck |  | n | nút thắt cổ chai | Communication is our bottleneck. | Giao tiếp là nút thắt của đội.
+by the same token |  | phrase | tương tự như vậy | By the same token, we must reward effort. | Tương tự như vậy, chúng ta phải ghi nhận nỗ lực.
+catch-22 |  | n | tình thế tiến thoái lưỡng nan | It's a catch-22: no experience, no job. | Đó là thế lưỡng nan: không kinh nghiệm thì không có việc.
+double-edged sword |  | idiom | con dao hai lưỡi | Fame is a double-edged sword. | Danh tiếng là con dao hai lưỡi.
+ever since |  | phrase | kể từ đó | Ever since the final, he has been quiet. | Kể từ trận chung kết, anh ấy trầm hẳn.
+first and foremost |  | phrase | trước hết và quan trọng nhất | First and foremost, stay healthy. | Trước hết, hãy giữ sức khoẻ.
+for the time being |  | phrase | trong lúc này | For the time being, we keep the same roster. | Lúc này chúng ta giữ nguyên đội hình.
+from scratch |  | idiom | từ con số không | We rebuilt the team from scratch. | Chúng tôi xây lại đội từ con số không.
+go back to basics |  | idiom | quay về những điều cơ bản | When in doubt, go back to basics. | Khi phân vân, hãy quay về điều cơ bản.
+hands-on |  | adj | thực hành, trực tiếp | She is a hands-on manager. | Cô ấy là quản lý sát sao, làm trực tiếp.
+in the pipeline |  | idiom | đang được chuẩn bị | New features are in the pipeline. | Tính năng mới đang được chuẩn bị.
+in the spotlight |  | idiom | được chú ý | The young player is in the spotlight. | Tuyển thủ trẻ đang được chú ý.
+low-hanging fruit |  | idiom | việc dễ làm trước | Fix the low-hanging fruit first. | Sửa những việc dễ trước.
+make or break |  | idiom | quyết định thành bại | This match is make or break. | Trận này quyết định thành bại.
+needless to say |  | phrase | khỏi phải nói | Needless to say, we were thrilled. | Khỏi phải nói, chúng tôi vui sướng thế nào.
+not to mention |  | phrase | chưa kể | It's expensive, not to mention slow. | Nó đắt, chưa kể còn chậm.
+on the fence |  | idiom | còn phân vân | I'm still on the fence about it. | Tôi vẫn còn phân vân.
+on top of that |  | phrase | thêm vào đó | On top of that, it rained. | Thêm vào đó, trời còn mưa.
+par for the course |  | idiom | chuyện bình thường, dễ đoán | Delays are par for the course. | Trễ hẹn là chuyện bình thường.
+put it bluntly |  | phrase | nói thẳng ra | To put it bluntly, we played badly. | Nói thẳng ra, chúng ta chơi tệ.
+quick win |  | n | thành quả nhanh | We need a quick win to build morale. | Chúng ta cần thành quả nhanh để vực tinh thần.
+second nature |  | idiom | thành phản xạ tự nhiên | Practice until it becomes second nature. | Tập tới khi thành phản xạ.
+so to speak |  | phrase | có thể nói là | He is the brain of the team, so to speak. | Có thể nói anh ấy là bộ não của đội.
+take a step back |  | idiom | lùi lại để nhìn tổng thể | Let's take a step back and look at the data. | Hãy lùi lại xem tổng thể số liệu.
+the bottom line |  | idiom | điều cốt lõi; lợi nhuận | The bottom line is we need to win. | Điều cốt lõi là phải thắng.
+the big picture |  | idiom | bức tranh tổng thể | Don't lose sight of the big picture. | Đừng quên bức tranh tổng thể.
+to a certain extent |  | phrase | ở một mức độ nào đó | I agree to a certain extent. | Tôi đồng ý ở một mức độ nào đó.
+trial and error |  | idiom | thử và sai | We found the best draft by trial and error. | Chúng tôi tìm ra đội hình tốt nhất qua thử và sai.
+up and running |  | idiom | đi vào hoạt động | The new system is up and running. | Hệ thống mới đã đi vào hoạt động.
+work in progress |  | idiom | việc đang làm dở | The new strategy is a work in progress. | Chiến thuật mới vẫn đang hoàn thiện.

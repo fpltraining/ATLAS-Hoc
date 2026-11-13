@@ -199,6 +199,21 @@ async function activity(key) {
       const from = Math.min(i * 6, Math.max(0, list.length - 6));
       return wordsBlock(key, list.slice(from, from + 6), st, n);
     }
+    case 'orig': return origBlock(key);
+    case 'idiom': {
+      // Chặng 4: mỗi buổi 3 thành ngữ, cụm nói tự nhiên C1
+      const list = course.idiomC1 || [];
+      const from = Math.min(i * 3, Math.max(0, list.length - 3));
+      return wordsBlock(key, list.slice(from, from + 3), st, n);
+    }
+    case 'talk': {
+      const t = course.talk4[i % course.talk4.length];
+      return retellBlock(key, { t: t.t, hint: [t.vi, '', ...t.struct].join('\n'), sec: 300 }, level);
+    }
+    case 'write4': {
+      const t = course.writeTasks4[i % course.writeTasks4.length];
+      return writeBlock(key, { title: t.t, hint: [...t.struct, '', 'Tự soát: ' + (t.check || []).join(' · ')].join('\n'), min: t.w, tag: t.g, level });
+    }
     case 'coll3': {
       const th = course.colloc3[i % course.colloc3.length];
       const k = Math.floor(i / course.colloc3.length) % 3;
@@ -472,6 +487,47 @@ function collBlock(key, title, rows) {
     }));
   }
   return { title: 'Cụm từ cố định', el: h('div.stack', h('h2', title), list, doneBtn(key)) };
+}
+
+/* ---- đọc bản gốc: dán bài thật, chạm để tra từ, rồi tóm tắt ---- */
+function origBlock(key) {
+  const box = scribble('Dán vào đây một bài báo, bài blog hoặc chương sách tiếng Anh gốc (300–1.500 từ)', { long: true });
+  box.style.minHeight = '160px';
+  const reader = h('div.orig-text');
+  const count = h('span.small.faint');
+  const sum = scribble('Tóm tắt bài vừa đọc trong 3–5 câu, bằng lời của bạn', { long: true });
+  const stage = h('div.stack');
+  const wc = (t) => (t.match(/[A-Za-z]+/g) || []).length;
+  const t0 = Date.now();
+
+  const show = () => {
+    const text = box.value.trim();
+    if (wc(text) < 80) return toast('Dán một bài dài hơn một chút nhé (ít nhất 80 từ).');
+    reader.replaceChildren(...text.split(/\n\s*\n|\n/).filter(Boolean).map((p) => h('p', wordy(p))));
+    count.textContent = `${wc(text)} từ. Chạm vào từ lạ để xem nghĩa và thêm vào thẻ ôn. Đọc hết một lượt trước, đừng tra từng từ.`;
+    stage.replaceChildren(
+      h('div.card', count, reader),
+      h('div.card', h('h4', 'Tóm tắt'), sum),
+      h('button.btn.jade.block', {
+        onclick: async () => {
+          if (wc(sum.value) < 15) return toast('Viết tóm tắt dài hơn một chút nhé.');
+          await store.kvUpdate('origReads', [], (all) => {
+            all.push({ at: Date.now(), words: wc(text), mins: Math.round((Date.now() - t0) / 60000), head: text.slice(0, 120), summary: sum.value });
+            return all;
+          });
+          await finishBlock(key);
+        },
+      }, '✓ Lưu bài đọc và tóm tắt'),
+    );
+  };
+
+  stage.append(box, h('button.btn.primary.block', { onclick: show }, 'Đọc bài này ›'));
+  return {
+    title: 'Đọc bản gốc',
+    el: h('div.stack',
+      h('p.small.muted', 'Chọn bài bạn thật sự muốn đọc: tin thể thao, công nghệ, kinh doanh. Đọc không rút gọn là cách nhanh nhất để lên C1.'),
+      stage),
+  };
 }
 
 /* ---- tranh luận: đọc hai phía, chọn phe, nói 4 phút ---- */

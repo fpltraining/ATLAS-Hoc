@@ -326,3 +326,4 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 /* ---- tranh luận chặng 3 ---- */
 .debate-sides { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 @media (max-width: 620px) { .debate-sides { grid-template-columns: 1fr; } }
+.orig-text p { font-size: 18px; line-height: 1.6; margin: 0 0 12px; }

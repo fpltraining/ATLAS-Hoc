@@ -90,6 +90,7 @@ export function applyEnBank() {
 export function applyEnNew() {
   applyWordList(/^en-new-.*\.txt$/, 'b1b2', 'vocabB2', 4, 'Từ mới B1–B2');
   applyWordList(/^en-c1-.*\.txt$/, 'b2c1', 'vocabC1', 5, 'Từ mới B2–C1');
+  applyWordList(/^en-idiom-.*\.txt$/, 'idiom', 'idiomC1', 6, 'Thành ngữ C1');
 }
 
 function applyWordList(pattern, tag, courseKey, defLv, label) {
@@ -155,7 +156,7 @@ export function applyCourse() {
   const blocks = readJson(f).blocks || {};
   for (const [k, v] of Object.entries(blocks)) course.blocks[k] = v;
   // Nội dung chặng 3: ngôn ngữ tranh luận, đề tranh luận, đề viết luận
-  const S3 = { colloc3: 'stage3-colloc.json', debate3: 'stage3-debate.json', writeTasks3: 'stage3-write.json' };
+  const S3 = { colloc3: 'stage3-colloc.json', debate3: 'stage3-debate.json', writeTasks3: 'stage3-write.json', talk4: 'stage4-talk.json', writeTasks4: 'stage4-write.json' };
   const CHECK = ['Mỗi đoạn có một câu chủ đề rõ ràng không', 'Có dùng ít nhất ba cụm từ tranh luận đã học không',
     'Câu nào dài quá 25 từ thì cắt đôi', 'Động từ có chia đúng với chủ ngữ số ít, số nhiều không'];
   for (const [k, file] of Object.entries(S3)) {
@@ -163,6 +164,7 @@ export function applyCourse() {
     if (!fs.existsSync(p)) continue;
     course[k] = readJson(p);
     if (k === 'writeTasks3') course[k] = course[k].map((t, i) => ({ id: `w3-${i + 1}`, check: CHECK, ...t }));
+    if (k === 'writeTasks4') course[k] = course[k].map((t, i) => ({ id: `w4-${i + 1}`, check: [...CHECK, 'Có ít nhất hai câu dùng cấu trúc nâng cao (đảo ngữ, câu chẻ, mệnh đề phân từ) không', 'Có tránh lặp từ bằng từ đồng nghĩa không'], ...t }));
   }
   fs.writeFileSync(cf, JSON.stringify(course));
   log.push(`Chặng tiếng Anh: ${Object.keys(fix).length} ghi chú`);

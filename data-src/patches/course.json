@@ -16,8 +16,8 @@
       "note": "Nội dung chính: 483 từ B2–C1 (6 từ mỗi buổi), 135 cụm từ tranh luận, 30 đề tranh luận nói 4 phút, 30 đề viết luận và báo cáo, 12 bài ngữ pháp nâng cao."
     },
     "4": {
-      "ready": false,
-      "note": "Chặng này đang được soạn. Chưa có kho từ C1 và bài đọc bản gốc, chưa nên dùng để luyện thi C1."
+      "ready": true,
+      "note": "Cốt lõi là đọc bản gốc: mỗi buổi dán một bài báo, blog hoặc chương sách tiếng Anh thật bạn muốn đọc, tra từ ngay trong bài rồi tóm tắt. Kèm 180 thành ngữ và cách nói tự nhiên, 24 đề thuyết trình 5 phút, 24 đề viết C1 và ngữ pháp nâng cao."
     }
   },
   "blocks": {
@@ -93,6 +93,38 @@
         "Viết luận",
         12,
         "write3b"
+      ]
+    ],
+    "4": [
+      [
+        "Đọc bản gốc",
+        25,
+        "orig"
+      ],
+      [
+        "Thành ngữ C1",
+        8,
+        "idiom"
+      ],
+      [
+        "Ôn từ cũ",
+        8,
+        "review"
+      ],
+      [
+        "Ngữ pháp nâng cao",
+        8,
+        "gram3"
+      ],
+      [
+        "Thuyết trình",
+        12,
+        "talk"
+      ],
+      [
+        "Viết C1",
+        15,
+        "write4"
       ]
     ]
   }
