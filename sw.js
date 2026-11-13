@@ -4,15 +4,17 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v15';
+const VERSION = 'atlas-v16';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
+/* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
+const AUDIO = 'atlas-audio';
 
 const CORE_FILES = [
   './', 'index.html', 'manifest.webmanifest',
   'css/app.css', 'css/atlas.css',
   'js/app.js', 'js/ui.js', 'js/data.js', 'js/store.js', 'js/srs.js', 'js/plan.js',
-  'js/audio.js', 'js/content.js', 'js/kit.js', 'js/ai.js', 'js/progress.js', 'js/pool.js', 'js/speech.js', 'js/auth.js', 'js/sync.js', 'js/config.js', 'js/vendor/supabase-2.119.0.js',
+  'js/audio.js', 'js/content.js', 'js/kit.js', 'js/ai.js', 'js/progress.js', 'js/pool.js', 'js/speech.js', 'js/audiokey.js', 'js/auth.js', 'js/sync.js', 'js/config.js', 'js/vendor/supabase-2.119.0.js',
   'js/pen/canvas.js', 'js/pen/brush.js', 'js/pen/grid.js', 'js/pen/grade.js', 'js/pen/sound.js', 'js/pen/inkpad.js',
   ...['home', 'en', 'zh', 'read', 'reader', 'lesson', 'write', 'review', 'radicals', 'pinyin', 'char', 'penen',
     'work', 'know', 'lib', 'drill', 'numbers', 'notes', 'book', 'stats', 'settings', 'exam', 'charmap', 'challenge', 'games', 'search', 'word', 'speak'].map((v) => `js/views/${v}.js`),
@@ -24,7 +26,7 @@ const CORE_FILES = [
 ];
 
 /* Tải sau, chạy ngầm: nhiều và nặng hơn nhưng không cần ngay lúc mở app */
-const EXTRA_FILES = ['data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json'];
+const EXTRA_FILES = ['data/audio.json', 'data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {
@@ -40,7 +42,7 @@ self.addEventListener('activate', (e) => {
     // Chỉ dọn bản cũ của chính app này. Các app khác cùng tên miền fpltraining.github.io
     // (Bút Hán, ATLAS cũ...) dùng chung kho cache, xoá nhầm là chúng mất chế độ offline.
     const keys = await caches.keys();
-    await Promise.all(keys.filter((k) => k.startsWith('atlas-') && !k.startsWith(VERSION)).map((k) => caches.delete(k)));
+    await Promise.all(keys.filter((k) => k.startsWith('atlas-') && k !== AUDIO && !k.startsWith(VERSION)).map((k) => caches.delete(k)));
     await self.clients.claim();
     fillContentCache();
   })());
@@ -114,6 +116,19 @@ self.addEventListener('fetch', (e) => {
         return res;
       }).catch(() => null);
       return cached || (await fresh) || Response.error();
+    })());
+    return;
+  }
+
+  // Âm thanh giọng AI: có trong máy thì dùng luôn, chưa có thì tải một lần rồi giữ
+  if (url.pathname.includes('/audio/')) {
+    e.respondWith((async () => {
+      const cache = await caches.open(AUDIO);
+      const hit = await cache.match(req);
+      if (hit) return hit;
+      const res = await fetch(req).catch(() => null);
+      if (res && res.ok) cache.put(req, res.clone());
+      return res || new Response('Offline', { status: 503 });
     })());
     return;
   }

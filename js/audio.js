@@ -1,6 +1,8 @@
 /* Giọng đọc có sẵn của iPad (Web Speech API), cả tiếng Trung lẫn tiếng Anh.
    Miễn phí và chạy offline sau khi iOS đã tải giọng về. */
 
+import { audioKey } from './audiokey.js';
+
 let zhVoice = null;
 let enVoice = null;
 let ready = false;
@@ -98,7 +100,16 @@ export function enVoiceName() {
  * Gọi hàm này trong sự kiện chạm để "mở khoá" âm thanh cho cả phiên.
  */
 export function unlock() {
-  if (unlocked || !('speechSynthesis' in window)) return;
+  if (unlocked) return;
+  loadManifest();
+  try {
+    // Mở khoá thẻ audio dùng chung bằng một tiếng lặng
+    const a = getPlayer();
+    a.src = SILENT;
+    const p = a.play();
+    if (p?.catch) p.catch(() => {});
+  } catch { /* bỏ qua */ }
+  if (!('speechSynthesis' in window)) { unlocked = true; return; }
   try {
     const u = new SpeechSynthesisUtterance('');
     u.volume = 0;
@@ -107,8 +118,64 @@ export function unlock() {
   } catch { /* bỏ qua */ }
 }
 
-/** Đọc một chuỗi. lang 'zh' mặc định; rate 1 = bình thường, 0.6 = chậm để tập nghe. */
-export function speak(text, { rate = 0.85, onEnd, lang = 'zh' } = {}) {
+/* ---------- giọng AI có sẵn (tệp mp3 tạo bằng Kokoro) ---------- */
+
+let aiOn = true;
+let have = null;        // { en: Set, zh: Set } khoá các câu đã có tệp
+let player = null;      // một thẻ audio dùng chung: iOS chỉ cho phát sau lần chạm đầu
+const SILENT = 'data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjYwLjE2LjEwMAAAAAAAAAAAAAAA//OEwAAAAAAAAAAAAEluZm8AAAAPAAAABwAAA2AAVVVVVVVVVVVVVVVVVVVxcXFxcXFxcXFxcXFxcY6Ojo6Ojo6Ojo6Ojo6Oqqqqqqqqqqqqqqqqqqqqx8fHx8fHx8fHx8fHx8fj4+Pj4+Pj4+Pj4+Pj4///////////////////AAAAAExhdmM2MC4zMQAAAAAAAAAAAAAAACQEIAAAAAAAAANgmVBi7QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//NExAAAAANIAAAAAExBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExFMAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKYAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVTEFNRTMu//NExKwAAANIAAAAADEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NExKwAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV//NExKwAAANIAAAAAFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV';
+
+export function setAiVoice(on) { aiOn = on !== false; }
+
+function loadManifest() {
+  if (have) return;
+  have = { en: new Set(), zh: new Set() };
+  fetch('data/audio.json').then((r) => r.json()).then((m) => {
+    have = { en: new Set(m.en || []), zh: new Set(m.zh || []) };
+  }).catch(() => {});
+}
+
+function getPlayer() {
+  if (!player) {
+    player = new Audio();
+    player.preload = 'auto';
+    if ('preservesPitch' in player) player.preservesPitch = true;
+  }
+  return player;
+}
+
+/* Phát tệp giọng AI nếu có. Trả về true nếu đã phát. */
+function playAi(text, { rate, onEnd, lang }) {
+  if (!aiOn || !have) return false;
+  const key = audioKey(lang, text);
+  if (!have[lang]?.has(key)) return false;
+  const a = getPlayer();
+  try { speechSynthesis.cancel(); } catch { /* bỏ qua */ }
+  a.onended = null; a.onerror = null;
+  a.pause();
+  a.src = `audio/${lang}/${key}.mp3`;
+  // Tốc độ trong Cài đặt (0,85 là bình thường) quy về tốc độ phát của tệp
+  a.playbackRate = Math.max(0.5, Math.min(1.5, rate / 0.85));
+  let fellBack = false;
+  const fallback = () => { if (fellBack) return; fellBack = true; speakTts(text, { rate, onEnd, lang }); };
+  a.onended = () => onEnd?.();
+  a.onerror = fallback;           // tệp hỏng hoặc mất mạng khi chưa lưu: đọc bằng giọng máy
+  const p = a.play();
+  if (p?.catch) p.catch(fallback);
+  return true;
+}
+
+/** Đọc một chuỗi. lang 'zh' mặc định; rate 0.85 = bình thường, 0.6 = chậm để tập nghe.
+    Có tệp giọng AI thì phát tệp, không thì dùng giọng có sẵn của máy. */
+export function speak(text, opts = {}) {
+  const o = { rate: 0.85, lang: 'zh', ...opts };
+  if (!text) return false;
+  loadManifest();
+  if (playAi(text, o)) return true;
+  return speakTts(text, o);
+}
+
+function speakTts(text, { rate = 0.85, onEnd, lang = 'zh' } = {}) {
   if (!('speechSynthesis' in window) || !text) return false;
   if (!ready) pickVoice();
   try {
@@ -129,6 +196,7 @@ export function speak(text, { rate = 0.85, onEnd, lang = 'zh' } = {}) {
 
 export function stop() {
   try { speechSynthesis.cancel(); } catch { /* bỏ qua */ }
+  if (player) { player.onended = null; player.pause(); }
 }
 
 /** Hướng dẫn hiện cho người dùng khi iPad chưa có giọng tiếng Trung. */

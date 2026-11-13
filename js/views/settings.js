@@ -15,6 +15,7 @@ export async function renderSettings() {
   const set = async (k, v) => {
     await store.setSetting(k, v);
     if (k === 'theme') applyTheme(v);
+    if (k === 'aiVoice') audio.setAiVoice(v);
     toast('Đã lưu.', 1400);
   };
 
@@ -77,11 +78,11 @@ export async function renderSettings() {
     row('Ô kẻ tập viết chữ Hán', '田 chia tư · 米 thêm đường chéo.', seg('grid', [['tian', '田'], ['mi', '米'], ['none', 'Trơn']], s.grid)),
 
     h('h4', 'Giọng đọc'),
+    row('Giọng AI tự nhiên', 'Từ và câu trong bài đọc bằng giọng AI. Tắt để dùng giọng của máy.', toggle('aiVoice', s.aiVoice !== false)),
     rate('enRate', 'Tốc độ giọng tiếng Anh'),
     voiceRow('en', 'Giọng tiếng Anh', s, () => sayEn('Hello, nice to meet you. How was your day?')),
     rate('speechRate', 'Tốc độ giọng tiếng Trung'),
     voiceRow('zh', 'Giọng tiếng Trung', s, () => audio.speak('你好，很高兴认识你。今天过得怎么样？', { rate: s.speechRate })),
-    h('div.note', { style: { marginTop: '10px' } }, audio.BETTER_VOICE_HELP),
     !audio.hasVoice() ? h('div.note.seal', { style: { marginTop: '10px' } }, audio.NO_VOICE_HELP) : null,
 
     accountBlock(),
