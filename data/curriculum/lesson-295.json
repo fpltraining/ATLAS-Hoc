@@ -1,0 +1,264 @@
+{
+ "id": 295,
+ "cn": "中华文化",
+ "title": "Văn hoá và tri thức",
+ "goal": "Nói về thơ, nhà thơ, ngữ văn, chữ cái, triết học, sách vở, in ấn, mẫu giáo, chứng chỉ, nổi tiếng, vĩ đại, duy nhất, Trung Hoa, dân tộc Trung Hoa và tự do.",
+ "words": [
+  {
+   "w": "诗",
+   "py": "shī",
+   "hv": "thi",
+   "vi": "thơ",
+   "pos": "danh từ",
+   "note": "一首诗 (một bài thơ).",
+   "ex": [
+    {
+     "cn": "我会背几首唐诗。",
+     "py": "Wǒ huì bèi jǐ shǒu Tángshī.",
+     "vi": "Tôi thuộc vài bài thơ Đường."
+    }
+   ]
+  },
+  {
+   "w": "诗人",
+   "py": "shīrén",
+   "hv": "thi nhân",
+   "vi": "nhà thơ",
+   "pos": "danh từ",
+   "note": "Chính là \"thi nhân\".",
+   "ex": [
+    {
+     "cn": "李白是中国有名的诗人。",
+     "py": "Lǐ Bái shì Zhōngguó yǒumíng de shīrén.",
+     "vi": "Lý Bạch là nhà thơ nổi tiếng của Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "语文",
+   "py": "yǔwén",
+   "hv": "ngữ văn",
+   "vi": "môn ngữ văn",
+   "pos": "danh từ",
+   "note": "Môn tiếng mẹ đẻ ở trường.",
+   "ex": [
+    {
+     "cn": "他的语文成绩最好。",
+     "py": "Tā de yǔwén chéngjì zuì hǎo.",
+     "vi": "Điểm ngữ văn của cậu ấy cao nhất."
+    }
+   ]
+  },
+  {
+   "w": "字母",
+   "py": "zìmǔ",
+   "hv": "tự mẫu",
+   "vi": "chữ cái",
+   "pos": "danh từ",
+   "note": "英文字母 (chữ cái tiếng Anh).",
+   "ex": [
+    {
+     "cn": "越南语用拉丁字母。",
+     "py": "Yuènányǔ yòng Lādīng zìmǔ.",
+     "vi": "Tiếng Việt dùng chữ cái Latinh."
+    }
+   ]
+  },
+  {
+   "w": "哲学",
+   "py": "zhéxué",
+   "hv": "triết học",
+   "vi": "triết học",
+   "pos": "danh từ",
+   "note": "Chính là \"triết học\".",
+   "ex": [
+    {
+     "cn": "他对哲学很感兴趣。",
+     "py": "Tā duì zhéxué hěn gǎn xìngqù.",
+     "vi": "Anh ấy rất thích triết học."
+    }
+   ]
+  },
+  {
+   "w": "图书",
+   "py": "túshū",
+   "hv": "đồ thư",
+   "vi": "sách",
+   "pos": "danh từ",
+   "note": "图书馆 (thư viện).",
+   "ex": [
+    {
+     "cn": "这家店卖各种图书。",
+     "py": "Zhè jiā diàn mài gè zhǒng túshū.",
+     "vi": "Cửa hàng này bán đủ loại sách."
+    }
+   ]
+  },
+  {
+   "w": "印刷",
+   "py": "yìnshuā",
+   "hv": "ấn loát",
+   "vi": "in ấn",
+   "pos": "động từ",
+   "note": "印刷术 (kỹ thuật in).",
+   "ex": [
+    {
+     "cn": "印刷术是中国古代的四大发明之一。",
+     "py": "Yìnshuāshù shì Zhōngguó gǔdài de sì dà fāmíng zhī yī.",
+     "vi": "Kỹ thuật in là một trong tứ đại phát minh thời cổ Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "幼儿园",
+   "py": "yòu'éryuán",
+   "hv": "ấu nhi viên",
+   "vi": "trường mẫu giáo",
+   "pos": "danh từ",
+   "note": "幼儿 (trẻ nhỏ) + 园.",
+   "ex": [
+    {
+     "cn": "我妹妹在上幼儿园。",
+     "py": "Wǒ mèimei zài shàng yòu'éryuán.",
+     "vi": "Em gái tôi đang học mẫu giáo."
+    }
+   ]
+  },
+  {
+   "w": "证书",
+   "py": "zhèngshū",
+   "hv": "chứng thư",
+   "vi": "chứng chỉ",
+   "pos": "danh từ",
+   "note": "HSK证书 (chứng chỉ HSK).",
+   "ex": [
+    {
+     "cn": "我拿到了HSK四级证书。",
+     "py": "Wǒ ná dào le HSK sì jí zhèngshū.",
+     "vi": "Tôi đã lấy chứng chỉ HSK cấp 4."
+    }
+   ]
+  },
+  {
+   "w": "知名",
+   "py": "zhīmíng",
+   "hv": "tri danh",
+   "vi": "nổi tiếng",
+   "pos": "tính từ",
+   "note": "知名品牌 (thương hiệu nổi tiếng).",
+   "ex": [
+    {
+     "cn": "他是一位知名的教练。",
+     "py": "Tā shì yí wèi zhīmíng de jiàoliàn.",
+     "vi": "Ông ấy là một huấn luyện viên nổi tiếng."
+    }
+   ]
+  },
+  {
+   "w": "伟大",
+   "py": "wěidà",
+   "hv": "vĩ đại",
+   "vi": "vĩ đại",
+   "pos": "tính từ",
+   "note": "Chính là \"vĩ đại\".",
+   "ex": [
+    {
+     "cn": "母爱是伟大的。",
+     "py": "Mǔ'ài shì wěidà de.",
+     "vi": "Tình mẹ thật vĩ đại."
+    }
+   ]
+  },
+  {
+   "w": "唯一",
+   "py": "wéiyī",
+   "hv": "duy nhất",
+   "vi": "duy nhất",
+   "pos": "tính từ",
+   "note": "Chính là \"duy nhất\".",
+   "ex": [
+    {
+     "cn": "他是队里唯一的老将。",
+     "py": "Tā shì duì li wéiyī de lǎojiàng.",
+     "vi": "Anh ấy là lão tướng duy nhất trong đội."
+    }
+   ]
+  },
+  {
+   "w": "中华",
+   "py": "Zhōnghuá",
+   "hv": "Trung Hoa",
+   "vi": "Trung Hoa",
+   "pos": "danh từ",
+   "note": "中华文化 (văn hoá Trung Hoa).",
+   "ex": [
+    {
+     "cn": "中华文化有五千年的历史。",
+     "py": "Zhōnghuá wénhuà yǒu wǔqiān nián de lìshǐ.",
+     "vi": "Văn hoá Trung Hoa có năm nghìn năm lịch sử."
+    }
+   ]
+  },
+  {
+   "w": "中华民族",
+   "py": "Zhōnghuá mínzú",
+   "hv": "Trung Hoa dân tộc",
+   "vi": "dân tộc Trung Hoa",
+   "pos": "danh từ",
+   "note": "Chỉ chung các dân tộc ở Trung Quốc.",
+   "ex": [
+    {
+     "cn": "春节是中华民族最重要的节日。",
+     "py": "Chūnjié shì Zhōnghuá mínzú zuì zhòngyào de jiérì.",
+     "vi": "Tết là lễ quan trọng nhất của dân tộc Trung Hoa."
+    }
+   ]
+  },
+  {
+   "w": "自由",
+   "py": "zìyóu",
+   "hv": "tự do",
+   "vi": "tự do",
+   "pos": "danh từ, tính từ",
+   "note": "Chính là \"tự do\".",
+   "ex": [
+    {
+     "cn": "周末是我的自由时间。",
+     "py": "Zhōumò shì wǒ de zìyóu shíjiān.",
+     "vi": "Cuối tuần là thời gian tự do của tôi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "……之一",
+   "b": "四大发明之一",
+   "d": "Một trong số...",
+   "ex": [
+    {
+     "cn": "他是世界上最好的选手之一。",
+     "py": "Tā shì shìjiè shang zuì hǎo de xuǎnshǒu zhī yī.",
+     "vi": "Anh ấy là một trong những tuyển thủ giỏi nhất thế giới."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "学中文可以了解中华文化。",
+   "py": "Xué Zhōngwén kěyǐ liǎojiě Zhōnghuá wénhuà.",
+   "vi": "Học tiếng Trung giúp hiểu văn hoá Trung Hoa."
+  },
+  {
+   "cn": "拿到证书只是开始，会用才是关键。",
+   "py": "Ná dào zhèngshū zhǐ shì kāishǐ, huì yòng cái shì guānjiàn.",
+   "vi": "Lấy chứng chỉ chỉ là bắt đầu, dùng được mới là mấu chốt."
+  },
+  {
+   "cn": "他是我们队唯一去过世界赛的选手。",
+   "py": "Tā shì wǒmen duì wéiyī qù guo shìjièsài de xuǎnshǒu.",
+   "vi": "Anh ấy là tuyển thủ duy nhất của đội từng dự giải thế giới."
+  }
+ ]
+}

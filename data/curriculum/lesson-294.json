@@ -1,0 +1,264 @@
+{
+ "id": 294,
+ "cn": "周年纪念",
+ "title": "Thời kỳ và mốc thời gian",
+ "goal": "Nói về thời kỳ đầu, giữa kỳ, ngắn hạn, ban đầu, sớm muộn, tròn năm, Tết Dương lịch, con giáp, lần lượt, thông thường, trung cấp, ban đêm, một thế hệ, có mặt và Trung Quốc với nước ngoài.",
+ "words": [
+  {
+   "w": "早期",
+   "py": "zǎoqī",
+   "hv": "tảo kỳ",
+   "vi": "thời kỳ đầu",
+   "pos": "danh từ",
+   "note": "早期作品 (tác phẩm thời đầu).",
+   "ex": [
+    {
+     "cn": "他早期的比赛很精彩。",
+     "py": "Tā zǎoqī de bǐsài hěn jīngcǎi.",
+     "vi": "Những trận đầu sự nghiệp của anh ấy rất hay."
+    }
+   ]
+  },
+  {
+   "w": "中期",
+   "py": "zhōngqī",
+   "hv": "trung kỳ",
+   "vi": "giai đoạn giữa",
+   "pos": "danh từ",
+   "note": "游戏中期 (giữa trận).",
+   "ex": [
+    {
+     "cn": "比赛中期我们开始领先。",
+     "py": "Bǐsài zhōngqī wǒmen kāishǐ lǐngxiān.",
+     "vi": "Giữa trận chúng tôi bắt đầu dẫn trước."
+    }
+   ]
+  },
+  {
+   "w": "短期",
+   "py": "duǎnqī",
+   "hv": "đoản kỳ",
+   "vi": "ngắn hạn",
+   "pos": "danh từ",
+   "note": "短期目标 (mục tiêu ngắn hạn).",
+   "ex": [
+    {
+     "cn": "我们的短期目标是进入前四。",
+     "py": "Wǒmen de duǎnqī mùbiāo shì jìnrù qián sì.",
+     "vi": "Mục tiêu ngắn hạn của chúng tôi là vào top bốn."
+    }
+   ]
+  },
+  {
+   "w": "最初",
+   "py": "zuìchū",
+   "hv": "tối sơ",
+   "vi": "ban đầu",
+   "pos": "danh từ",
+   "note": "最初的梦想 (ước mơ ban đầu).",
+   "ex": [
+    {
+     "cn": "不要忘记最初的梦想。",
+     "py": "Bú yào wàngjì zuìchū de mèngxiǎng.",
+     "vi": "Đừng quên ước mơ ban đầu."
+    }
+   ]
+  },
+  {
+   "w": "早晚",
+   "py": "zǎowǎn",
+   "hv": "tảo vãn",
+   "vi": "sáng tối; sớm muộn",
+   "pos": "danh từ, phó từ",
+   "note": "早晚会 (sớm muộn sẽ).",
+   "ex": [
+    {
+     "cn": "只要努力，早晚会成功。",
+     "py": "Zhǐyào nǔlì, zǎowǎn huì chénggōng.",
+     "vi": "Chỉ cần cố gắng, sớm muộn sẽ thành công."
+    }
+   ]
+  },
+  {
+   "w": "周年",
+   "py": "zhōunián",
+   "hv": "chu niên",
+   "vi": "tròn năm (kỷ niệm)",
+   "pos": "danh từ",
+   "note": "十周年 (kỷ niệm mười năm).",
+   "ex": [
+    {
+     "cn": "今天是俱乐部成立五周年。",
+     "py": "Jīntiān shì jùlèbù chénglì wǔ zhōunián.",
+     "vi": "Hôm nay là kỷ niệm năm năm thành lập câu lạc bộ."
+    }
+   ]
+  },
+  {
+   "w": "元旦",
+   "py": "Yuándàn",
+   "hv": "Nguyên đán",
+   "vi": "Tết Dương lịch",
+   "pos": "danh từ",
+   "note": "Ngày 1/1. Khác \"Nguyên đán\" (Tết âm) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "元旦放假一天。",
+     "py": "Yuándàn fàngjià yì tiān.",
+     "vi": "Tết Dương lịch được nghỉ một ngày."
+    }
+   ]
+  },
+  {
+   "w": "生肖",
+   "py": "shēngxiào",
+   "hv": "sinh tiếu",
+   "vi": "con giáp",
+   "pos": "danh từ",
+   "note": "十二生肖 (mười hai con giáp).",
+   "ex": [
+    {
+     "cn": "你的生肖是什么？",
+     "py": "Nǐ de shēngxiào shì shénme?",
+     "vi": "Bạn tuổi con gì?"
+    }
+   ]
+  },
+  {
+   "w": "先后",
+   "py": "xiānhòu",
+   "hv": "tiên hậu",
+   "vi": "lần lượt; trước sau",
+   "pos": "phó từ",
+   "note": "先后获得 (lần lượt giành).",
+   "ex": [
+    {
+     "cn": "他先后去过十个国家。",
+     "py": "Tā xiānhòu qù guo shí ge guójiā.",
+     "vi": "Anh ấy lần lượt đã đến mười nước."
+    }
+   ]
+  },
+  {
+   "w": "通常",
+   "py": "tōngcháng",
+   "hv": "thông thường",
+   "vi": "thông thường",
+   "pos": "phó từ, tính từ",
+   "note": "Chính là \"thông thường\".",
+   "ex": [
+    {
+     "cn": "我通常早上七点起床。",
+     "py": "Wǒ tōngcháng zǎoshang qī diǎn qǐchuáng.",
+     "vi": "Thường thì tôi dậy lúc bảy giờ sáng."
+    }
+   ]
+  },
+  {
+   "w": "中级",
+   "py": "zhōngjí",
+   "hv": "trung cấp",
+   "vi": "trung cấp",
+   "pos": "tính từ",
+   "note": "中级水平 (trình độ trung cấp).",
+   "ex": [
+    {
+     "cn": "我的中文已经达到中级水平了。",
+     "py": "Wǒ de Zhōngwén yǐjīng dádào zhōngjí shuǐpíng le.",
+     "vi": "Tiếng Trung của tôi đã đạt trình độ trung cấp."
+    }
+   ]
+  },
+  {
+   "w": "夜间",
+   "py": "yèjiān",
+   "hv": "dạ gian",
+   "vi": "ban đêm",
+   "pos": "danh từ",
+   "note": "夜间模式 (chế độ ban đêm).",
+   "ex": [
+    {
+     "cn": "晚上用手机最好开夜间模式。",
+     "py": "Wǎnshang yòng shǒujī zuì hǎo kāi yèjiān móshì.",
+     "vi": "Buổi tối dùng điện thoại nên bật chế độ ban đêm."
+    }
+   ]
+  },
+  {
+   "w": "一代",
+   "py": "yídài",
+   "hv": "nhất đại",
+   "vi": "một thế hệ",
+   "pos": "danh từ",
+   "note": "新一代 (thế hệ mới).",
+   "ex": [
+    {
+     "cn": "新一代选手越来越强。",
+     "py": "Xīn yídài xuǎnshǒu yuè lái yuè qiáng.",
+     "vi": "Thế hệ tuyển thủ mới ngày càng mạnh."
+    }
+   ]
+  },
+  {
+   "w": "在场",
+   "py": "zàichǎng",
+   "hv": "tại trường",
+   "vi": "có mặt tại chỗ",
+   "pos": "động từ",
+   "note": "在场的人 (người có mặt).",
+   "ex": [
+    {
+     "cn": "在场的每个人都很激动。",
+     "py": "Zàichǎng de měi ge rén dōu hěn jīdòng.",
+     "vi": "Ai có mặt cũng đều xúc động."
+    }
+   ]
+  },
+  {
+   "w": "中外",
+   "py": "zhōngwài",
+   "hv": "trung ngoại",
+   "vi": "Trung Quốc và nước ngoài",
+   "pos": "danh từ",
+   "note": "中外游客 (du khách trong và ngoài nước).",
+   "ex": [
+    {
+     "cn": "这里吸引了很多中外游客。",
+     "py": "Zhèlǐ xīyǐn le hěn duō zhōngwài yóukè.",
+     "vi": "Nơi đây thu hút nhiều du khách trong và ngoài nước."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "先后 + V",
+   "b": "先后去过 · 先后获得",
+   "d": "Lần lượt làm nhiều lần theo thứ tự thời gian.",
+   "ex": [
+    {
+     "cn": "他们先后拿了三个冠军。",
+     "py": "Tāmen xiānhòu ná le sān ge guànjūn.",
+     "vi": "Họ lần lượt giành ba chức vô địch."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "不忘最初的梦想，才能走得更远。",
+   "py": "Bú wàng zuìchū de mèngxiǎng, cái néng zǒu de gèng yuǎn.",
+   "vi": "Không quên ước mơ ban đầu mới đi được xa hơn."
+  },
+  {
+   "cn": "游戏中期是最关键的阶段。",
+   "py": "Yóuxì zhōngqī shì zuì guānjiàn de jiēduàn.",
+   "vi": "Giữa trận là giai đoạn then chốt nhất."
+  },
+  {
+   "cn": "新一代选手正在走上世界舞台。",
+   "py": "Xīn yídài xuǎnshǒu zhèngzài zǒu shàng shìjiè wǔtái.",
+   "vi": "Thế hệ tuyển thủ mới đang bước lên sân khấu thế giới."
+  }
+ ]
+}

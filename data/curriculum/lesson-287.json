@@ -1,0 +1,264 @@
+{
+ "id": 287,
+ "cn": "智能手机",
+ "title": "Ứng dụng và sáng tạo",
+ "goal": "Nói về cách dùng, người dùng, dùng sức, đồ dùng, công dụng, ứng dụng, vận dụng, phần cứng, thông minh, tự động, dùng một lần, livestream, chế tác, thiết kế và nhiếp ảnh.",
+ "words": [
+  {
+   "w": "用法",
+   "py": "yòngfǎ",
+   "hv": "dụng pháp",
+   "vi": "cách dùng",
+   "pos": "danh từ",
+   "note": "这个词的用法 (cách dùng từ này).",
+   "ex": [
+    {
+     "cn": "这个词的用法有点儿难。",
+     "py": "Zhège cí de yòngfǎ yǒudiǎnr nán.",
+     "vi": "Cách dùng từ này hơi khó."
+    }
+   ]
+  },
+  {
+   "w": "用户",
+   "py": "yònghù",
+   "hv": "dụng hộ",
+   "vi": "người dùng",
+   "pos": "danh từ",
+   "note": "新用户 (người dùng mới).",
+   "ex": [
+    {
+     "cn": "这个应用有一亿用户。",
+     "py": "Zhège yìngyòng yǒu yí yì yònghù.",
+     "vi": "Ứng dụng này có một trăm triệu người dùng."
+    }
+   ]
+  },
+  {
+   "w": "用力",
+   "py": "yònglì",
+   "hv": "dụng lực",
+   "vi": "dùng sức",
+   "pos": "động từ",
+   "note": "用力推 (đẩy mạnh).",
+   "ex": [
+    {
+     "cn": "他用力推开了门。",
+     "py": "Tā yònglì tuī kāi le mén.",
+     "vi": "Anh ấy dùng sức đẩy cửa ra."
+    }
+   ]
+  },
+  {
+   "w": "用品",
+   "py": "yòngpǐn",
+   "hv": "dụng phẩm",
+   "vi": "đồ dùng",
+   "pos": "danh từ",
+   "note": "体育用品 (đồ thể thao).",
+   "ex": [
+    {
+     "cn": "这家店卖体育用品。",
+     "py": "Zhè jiā diàn mài tǐyù yòngpǐn.",
+     "vi": "Cửa hàng này bán đồ thể thao."
+    }
+   ]
+  },
+  {
+   "w": "用途",
+   "py": "yòngtú",
+   "hv": "dụng đồ",
+   "vi": "công dụng",
+   "pos": "danh từ",
+   "note": "用途很广 (công dụng rộng).",
+   "ex": [
+    {
+     "cn": "这种材料用途很广。",
+     "py": "Zhè zhǒng cáiliào yòngtú hěn guǎng.",
+     "vi": "Loại vật liệu này có nhiều công dụng."
+    }
+   ]
+  },
+  {
+   "w": "应用",
+   "py": "yìngyòng",
+   "hv": "ứng dụng",
+   "vi": "ứng dụng",
+   "pos": "danh từ, động từ",
+   "note": "手机应用 (app điện thoại).",
+   "ex": [
+    {
+     "cn": "我下载了一个学中文的应用。",
+     "py": "Wǒ xiàzài le yí ge xué Zhōngwén de yìngyòng.",
+     "vi": "Tôi tải một ứng dụng học tiếng Trung."
+    }
+   ]
+  },
+  {
+   "w": "运用",
+   "py": "yùnyòng",
+   "hv": "vận dụng",
+   "vi": "vận dụng",
+   "pos": "động từ",
+   "note": "Chính là \"vận dụng\".",
+   "ex": [
+    {
+     "cn": "学了就要会运用。",
+     "py": "Xué le jiù yào huì yùnyòng.",
+     "vi": "Học rồi phải biết vận dụng."
+    }
+   ]
+  },
+  {
+   "w": "硬件",
+   "py": "yìngjiàn",
+   "hv": "ngạnh kiện",
+   "vi": "phần cứng",
+   "pos": "danh từ",
+   "note": "Trái với 软件.",
+   "ex": [
+    {
+     "cn": "电脑的硬件需要升级了。",
+     "py": "Diànnǎo de yìngjiàn xūyào shēngjí le.",
+     "vi": "Phần cứng máy tính cần nâng cấp rồi."
+    }
+   ]
+  },
+  {
+   "w": "智能",
+   "py": "zhìnéng",
+   "hv": "trí năng",
+   "vi": "thông minh (máy)",
+   "pos": "tính từ",
+   "note": "智能手机 (smartphone).",
+   "ex": [
+    {
+     "cn": "现在人人都有智能手机。",
+     "py": "Xiànzài rénrén dōu yǒu zhìnéng shǒujī.",
+     "vi": "Bây giờ ai cũng có điện thoại thông minh."
+    }
+   ]
+  },
+  {
+   "w": "自动",
+   "py": "zìdòng",
+   "hv": "tự động",
+   "vi": "tự động",
+   "pos": "tính từ",
+   "note": "自动门 (cửa tự động).",
+   "ex": [
+    {
+     "cn": "门会自动打开。",
+     "py": "Mén huì zìdòng dǎkāi.",
+     "vi": "Cửa sẽ tự động mở."
+    }
+   ]
+  },
+  {
+   "w": "一次性",
+   "py": "yícìxìng",
+   "hv": "nhất thứ tính",
+   "vi": "dùng một lần; một lần duy nhất",
+   "pos": "tính từ",
+   "note": "一次性筷子 (đũa dùng một lần).",
+   "ex": [
+    {
+     "cn": "少用一次性筷子。",
+     "py": "Shǎo yòng yícìxìng kuàizi.",
+     "vi": "Hạn chế dùng đũa dùng một lần."
+    }
+   ]
+  },
+  {
+   "w": "直播",
+   "py": "zhíbō",
+   "hv": "trực bá",
+   "vi": "phát trực tiếp, livestream",
+   "pos": "động từ, danh từ",
+   "note": "看直播 (xem live).",
+   "ex": [
+    {
+     "cn": "今晚的决赛会在网上直播。",
+     "py": "Jīnwǎn de juésài huì zài wǎngshang zhíbō.",
+     "vi": "Trận chung kết tối nay sẽ phát trực tiếp trên mạng."
+    }
+   ]
+  },
+  {
+   "w": "制作",
+   "py": "zhìzuò",
+   "hv": "chế tác",
+   "vi": "làm, chế tác",
+   "pos": "động từ",
+   "note": "制作视频 (làm video).",
+   "ex": [
+    {
+     "cn": "他会制作很好看的视频。",
+     "py": "Tā huì zhìzuò hěn hǎokàn de shìpín.",
+     "vi": "Anh ấy biết làm video rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "设计",
+   "py": "shèjì",
+   "hv": "thiết kế",
+   "vi": "thiết kế",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"thiết kế\".",
+   "ex": [
+    {
+     "cn": "这件衣服是她自己设计的。",
+     "py": "Zhè jiàn yīfu shì tā zìjǐ shèjì de.",
+     "vi": "Bộ quần áo này do cô ấy tự thiết kế."
+    }
+   ]
+  },
+  {
+   "w": "摄影",
+   "py": "shèyǐng",
+   "hv": "nhiếp ảnh",
+   "vi": "nhiếp ảnh",
+   "pos": "danh từ, động từ",
+   "note": "摄影师 (nhiếp ảnh gia).",
+   "ex": [
+    {
+     "cn": "他是我们队的摄影师。",
+     "py": "Tā shì wǒmen duì de shèyǐngshī.",
+     "vi": "Anh ấy là nhiếp ảnh gia của đội."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "学了就要 + V",
+   "b": "学了就要会运用",
+   "d": "Đã làm A thì phải làm được B.",
+   "ex": [
+    {
+     "cn": "说了就要做到。",
+     "py": "Shuō le jiù yào zuòdào.",
+     "vi": "Đã nói thì phải làm được."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "每天都有很多人看我们的直播。",
+   "py": "Měi tiān dōu yǒu hěn duō rén kàn wǒmen de zhíbō.",
+   "vi": "Ngày nào cũng có nhiều người xem live của chúng tôi."
+  },
+  {
+   "cn": "好的设计要考虑用户的需求。",
+   "py": "Hǎo de shèjì yào kǎolǜ yònghù de xūqiú.",
+   "vi": "Thiết kế tốt phải tính đến nhu cầu người dùng."
+  },
+  {
+   "cn": "学过的知识要在比赛里运用出来。",
+   "py": "Xué guo de zhīshi yào zài bǐsài li yùnyòng chūlái.",
+   "vi": "Kiến thức đã học phải vận dụng được trong trận đấu."
+  }
+ ]
+}

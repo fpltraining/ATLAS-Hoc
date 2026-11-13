@@ -1,0 +1,264 @@
+{
+ "id": 288,
+ "cn": "酸甜苦辣",
+ "title": "Ăn uống và khẩu vị",
+ "goal": "Nói về đồ nướng, quẩy, ngô, lương thực, khẩu vị, món chính, chua ngọt đắng cay, ăn được, chiên, nấu nướng, quán bar, say, miệng, hạt giống và trồng trọt.",
+ "words": [
+  {
+   "w": "烧烤",
+   "py": "shāokǎo",
+   "hv": "thiêu khảo",
+   "vi": "đồ nướng; nướng",
+   "pos": "danh từ",
+   "note": "Đồ nướng BBQ.",
+   "ex": [
+    {
+     "cn": "晚上我们去吃烧烤吧。",
+     "py": "Wǎnshang wǒmen qù chī shāokǎo ba.",
+     "vi": "Tối mình đi ăn đồ nướng nhé."
+    }
+   ]
+  },
+  {
+   "w": "油条",
+   "py": "yóutiáo",
+   "hv": "du điều",
+   "vi": "quẩy",
+   "pos": "danh từ",
+   "note": "Cái quẩy chiên.",
+   "ex": [
+    {
+     "cn": "早饭我吃了豆浆和油条。",
+     "py": "Zǎofàn wǒ chī le dòujiāng hé yóutiáo.",
+     "vi": "Bữa sáng tôi ăn sữa đậu nành với quẩy."
+    }
+   ]
+  },
+  {
+   "w": "玉米",
+   "py": "yùmǐ",
+   "hv": "ngọc mễ",
+   "vi": "ngô, bắp",
+   "pos": "danh từ",
+   "note": "Hạt như ngọc.",
+   "ex": [
+    {
+     "cn": "路边有人卖烤玉米。",
+     "py": "Lù biān yǒu rén mài kǎo yùmǐ.",
+     "vi": "Ven đường có người bán ngô nướng."
+    }
+   ]
+  },
+  {
+   "w": "粮食",
+   "py": "liángshi",
+   "hv": "lương thực",
+   "vi": "lương thực",
+   "pos": "danh từ",
+   "note": "Chính là \"lương thực\".",
+   "ex": [
+    {
+     "cn": "不要浪费粮食。",
+     "py": "Bú yào làngfèi liángshi.",
+     "vi": "Đừng lãng phí lương thực."
+    }
+   ]
+  },
+  {
+   "w": "口味",
+   "py": "kǒuwèi",
+   "hv": "khẩu vị",
+   "vi": "khẩu vị",
+   "pos": "danh từ",
+   "note": "Chính là \"khẩu vị\".",
+   "ex": [
+    {
+     "cn": "这道菜很合我的口味。",
+     "py": "Zhè dào cài hěn hé wǒ de kǒuwèi.",
+     "vi": "Món này rất hợp khẩu vị tôi."
+    }
+   ]
+  },
+  {
+   "w": "主食",
+   "py": "zhǔshí",
+   "hv": "chủ thực",
+   "vi": "món chính (cơm, mì)",
+   "pos": "danh từ",
+   "note": "Thức ăn chính.",
+   "ex": [
+    {
+     "cn": "越南人的主食是米饭。",
+     "py": "Yuènánrén de zhǔshí shì mǐfàn.",
+     "vi": "Món chính của người Việt là cơm."
+    }
+   ]
+  },
+  {
+   "w": "酸甜苦辣",
+   "py": "suān tián kǔ là",
+   "hv": "toan điềm khổ lạt",
+   "vi": "chua ngọt đắng cay (mọi vị đời)",
+   "pos": "thành ngữ",
+   "note": "Nghĩa bóng: mọi trải nghiệm.",
+   "ex": [
+    {
+     "cn": "生活中有酸甜苦辣。",
+     "py": "Shēnghuó zhōng yǒu suān tián kǔ là.",
+     "vi": "Cuộc sống có đủ ngọt bùi đắng cay."
+    }
+   ]
+  },
+  {
+   "w": "食用",
+   "py": "shíyòng",
+   "hv": "thực dụng",
+   "vi": "ăn, dùng làm thức ăn",
+   "pos": "động từ",
+   "note": "可以食用 (ăn được).",
+   "ex": [
+    {
+     "cn": "这种花可以食用。",
+     "py": "Zhè zhǒng huā kěyǐ shíyòng.",
+     "vi": "Loại hoa này ăn được."
+    }
+   ]
+  },
+  {
+   "w": "炸",
+   "py": "zhá",
+   "hv": "tạc",
+   "vi": "chiên rán",
+   "pos": "động từ",
+   "note": "炸鸡 (gà rán).",
+   "ex": [
+    {
+     "cn": "我们点了一份炸鸡。",
+     "py": "Wǒmen diǎn le yí fèn zhájī.",
+     "vi": "Chúng tôi gọi một phần gà rán."
+    }
+   ]
+  },
+  {
+   "w": "烧",
+   "py": "shāo",
+   "hv": "thiêu",
+   "vi": "đốt; nấu; sốt",
+   "pos": "động từ",
+   "note": "发烧 (sốt), 红烧 (kho).",
+   "ex": [
+    {
+     "cn": "妈妈烧了一桌好菜。",
+     "py": "Māma shāo le yì zhuō hǎo cài.",
+     "vi": "Mẹ nấu cả một bàn món ngon."
+    }
+   ]
+  },
+  {
+   "w": "酒吧",
+   "py": "jiǔbā",
+   "hv": "tửu ba",
+   "vi": "quán bar",
+   "pos": "danh từ",
+   "note": "吧 phiên âm \"bar\".",
+   "ex": [
+    {
+     "cn": "他们晚上去酒吧听音乐。",
+     "py": "Tāmen wǎnshang qù jiǔbā tīng yīnyuè.",
+     "vi": "Tối họ đi bar nghe nhạc."
+    }
+   ]
+  },
+  {
+   "w": "醉",
+   "py": "zuì",
+   "hv": "tuý",
+   "vi": "say",
+   "pos": "động từ",
+   "note": "喝醉了 (say rồi).",
+   "ex": [
+    {
+     "cn": "他喝了三杯就醉了。",
+     "py": "Tā hē le sān bēi jiù zuì le.",
+     "vi": "Anh ấy uống ba ly đã say."
+    }
+   ]
+  },
+  {
+   "w": "嘴巴",
+   "py": "zuǐba",
+   "hv": "chuỷ ba",
+   "vi": "miệng",
+   "pos": "danh từ",
+   "note": "Khẩu ngữ của 嘴.",
+   "ex": [
+    {
+     "cn": "张开嘴巴，让医生看看。",
+     "py": "Zhāngkāi zuǐba, ràng yīshēng kànkan.",
+     "vi": "Há miệng ra cho bác sĩ xem."
+    }
+   ]
+  },
+  {
+   "w": "种子",
+   "py": "zhǒngzi",
+   "hv": "chủng tử",
+   "vi": "hạt giống",
+   "pos": "danh từ",
+   "note": "种 ở đây đọc zhǒng.",
+   "ex": [
+    {
+     "cn": "春天是播种子的季节。",
+     "py": "Chūntiān shì bō zhǒngzi de jìjié.",
+     "vi": "Mùa xuân là mùa gieo hạt."
+    }
+   ]
+  },
+  {
+   "w": "种植",
+   "py": "zhòngzhí",
+   "hv": "chủng thực",
+   "vi": "trồng trọt",
+   "pos": "động từ",
+   "note": "种 ở đây đọc zhòng.",
+   "ex": [
+    {
+     "cn": "这里种植了很多咖啡。",
+     "py": "Zhèlǐ zhòngzhí le hěn duō kāfēi.",
+     "vi": "Ở đây trồng rất nhiều cà phê."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "种 có hai cách đọc",
+   "b": "zhǒng: loại, hạt (种子, 一种) · zhòng: trồng (种植, 种花)",
+   "d": "Nhớ theo nghĩa.",
+   "ex": [
+    {
+     "cn": "爷爷在院子里种了很多花。",
+     "py": "Yéye zài yuànzi li zhòng le hěn duō huā.",
+     "vi": "Ông trồng nhiều hoa trong sân."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "每个地方的口味都不一样。",
+   "py": "Měi ge dìfang de kǒuwèi dōu bù yíyàng.",
+   "vi": "Khẩu vị mỗi nơi đều khác nhau."
+  },
+  {
+   "cn": "比赛前一天晚上不要喝酒。",
+   "py": "Bǐsài qián yì tiān wǎnshang bú yào hē jiǔ.",
+   "vi": "Tối trước ngày thi đấu đừng uống rượu."
+  },
+  {
+   "cn": "当选手的酸甜苦辣只有自己知道。",
+   "py": "Dāng xuǎnshǒu de suān tián kǔ là zhǐyǒu zìjǐ zhīdào.",
+   "vi": "Ngọt bùi đắng cay của nghề tuyển thủ chỉ mình mới biết."
+  }
+ ]
+}

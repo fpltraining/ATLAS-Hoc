@@ -1,0 +1,264 @@
+{
+ "id": 286,
+ "cn": "细节决定成败",
+ "title": "Sự việc và chi tiết",
+ "goal": "Nói về sự cố, sự kiện, sự thật, sự vật, sự nghiệp, bằng chứng, chân thật, bất ngờ, yếu tố, chi tiết, trọng đại, dự án, trung tâm, nội bộ và bên ngoài.",
+ "words": [
+  {
+   "w": "事故",
+   "py": "shìgù",
+   "hv": "sự cố",
+   "vi": "tai nạn, sự cố",
+   "pos": "danh từ",
+   "note": "交通事故 (tai nạn giao thông).",
+   "ex": [
+    {
+     "cn": "路上发生了一起交通事故。",
+     "py": "Lùshang fāshēng le yì qǐ jiāotōng shìgù.",
+     "vi": "Trên đường xảy ra một vụ tai nạn giao thông."
+    }
+   ]
+  },
+  {
+   "w": "事件",
+   "py": "shìjiàn",
+   "hv": "sự kiện",
+   "vi": "sự kiện, vụ việc",
+   "pos": "danh từ",
+   "note": "重大事件 (sự kiện lớn).",
+   "ex": [
+    {
+     "cn": "这是今年最重要的事件。",
+     "py": "Zhè shì jīnnián zuì zhòngyào de shìjiàn.",
+     "vi": "Đây là sự kiện quan trọng nhất năm nay."
+    }
+   ]
+  },
+  {
+   "w": "事实",
+   "py": "shìshí",
+   "hv": "sự thật",
+   "vi": "sự thật",
+   "pos": "danh từ",
+   "note": "事实上 (trên thực tế).",
+   "ex": [
+    {
+     "cn": "事实上，他早就知道了。",
+     "py": "Shìshí shang, tā zǎo jiù zhīdào le.",
+     "vi": "Thực ra anh ấy biết từ lâu rồi."
+    }
+   ]
+  },
+  {
+   "w": "事物",
+   "py": "shìwù",
+   "hv": "sự vật",
+   "vi": "sự vật",
+   "pos": "danh từ",
+   "note": "新事物 (cái mới).",
+   "ex": [
+    {
+     "cn": "年轻人喜欢接受新事物。",
+     "py": "Niánqīngrén xǐhuan jiēshòu xīn shìwù.",
+     "vi": "Người trẻ thích đón nhận cái mới."
+    }
+   ]
+  },
+  {
+   "w": "事业",
+   "py": "shìyè",
+   "hv": "sự nghiệp",
+   "vi": "sự nghiệp",
+   "pos": "danh từ",
+   "note": "Chính là \"sự nghiệp\".",
+   "ex": [
+    {
+     "cn": "他把电竞当作自己的事业。",
+     "py": "Tā bǎ diànjìng dàngzuò zìjǐ de shìyè.",
+     "vi": "Anh ấy coi thể thao điện tử là sự nghiệp."
+    }
+   ]
+  },
+  {
+   "w": "证据",
+   "py": "zhèngjù",
+   "hv": "chứng cứ",
+   "vi": "bằng chứng",
+   "pos": "danh từ",
+   "note": "Chính là \"chứng cứ\".",
+   "ex": [
+    {
+     "cn": "你有证据吗？",
+     "py": "Nǐ yǒu zhèngjù ma?",
+     "vi": "Bạn có bằng chứng không?"
+    }
+   ]
+  },
+  {
+   "w": "真实",
+   "py": "zhēnshí",
+   "hv": "chân thực",
+   "vi": "chân thật",
+   "pos": "tính từ",
+   "note": "真实的故事 (chuyện có thật).",
+   "ex": [
+    {
+     "cn": "这部电影是根据真实故事拍的。",
+     "py": "Zhè bù diànyǐng shì gēnjù zhēnshí gùshi pāi de.",
+     "vi": "Bộ phim dựa trên chuyện có thật."
+    }
+   ]
+  },
+  {
+   "w": "意外",
+   "py": "yìwài",
+   "hv": "ý ngoại",
+   "vi": "bất ngờ; tai nạn",
+   "pos": "tính từ, danh từ",
+   "note": "很意外 (rất bất ngờ).",
+   "ex": [
+    {
+     "cn": "这个结果让大家很意外。",
+     "py": "Zhège jiéguǒ ràng dàjiā hěn yìwài.",
+     "vi": "Kết quả này khiến mọi người bất ngờ."
+    }
+   ]
+  },
+  {
+   "w": "因素",
+   "py": "yīnsù",
+   "hv": "nhân tố",
+   "vi": "yếu tố",
+   "pos": "danh từ",
+   "note": "Chính là \"nhân tố\".",
+   "ex": [
+    {
+     "cn": "心态是比赛中很重要的因素。",
+     "py": "Xīntài shì bǐsài zhōng hěn zhòngyào de yīnsù.",
+     "vi": "Tâm lý là yếu tố rất quan trọng trong thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "细节",
+   "py": "xìjié",
+   "hv": "tế tiết",
+   "vi": "chi tiết",
+   "pos": "danh từ",
+   "note": "Chính là \"chi tiết\".",
+   "ex": [
+    {
+     "cn": "细节决定成败。",
+     "py": "Xìjié juédìng chéngbài.",
+     "vi": "Chi tiết quyết định thành bại."
+    }
+   ]
+  },
+  {
+   "w": "重大",
+   "py": "zhòngdà",
+   "hv": "trọng đại",
+   "vi": "trọng đại",
+   "pos": "tính từ",
+   "note": "重大变化 (thay đổi lớn).",
+   "ex": [
+    {
+     "cn": "这是一个重大的决定。",
+     "py": "Zhè shì yí ge zhòngdà de juédìng.",
+     "vi": "Đây là một quyết định trọng đại."
+    }
+   ]
+  },
+  {
+   "w": "项目",
+   "py": "xiàngmù",
+   "hv": "hạng mục",
+   "vi": "dự án; môn (thi đấu)",
+   "pos": "danh từ",
+   "note": "比赛项目 (môn thi).",
+   "ex": [
+    {
+     "cn": "电竞已经成为亚运会的比赛项目。",
+     "py": "Diànjìng yǐjīng chéngwéi Yàyùnhuì de bǐsài xiàngmù.",
+     "vi": "Thể thao điện tử đã thành môn thi đấu của ASIAD."
+    }
+   ]
+  },
+  {
+   "w": "中心",
+   "py": "zhōngxīn",
+   "hv": "trung tâm",
+   "vi": "trung tâm",
+   "pos": "danh từ",
+   "note": "Chính là \"trung tâm\".",
+   "ex": [
+    {
+     "cn": "我们住在市中心。",
+     "py": "Wǒmen zhù zài shì zhōngxīn.",
+     "vi": "Chúng tôi sống ở trung tâm thành phố."
+    }
+   ]
+  },
+  {
+   "w": "内部",
+   "py": "nèibù",
+   "hv": "nội bộ",
+   "vi": "bên trong, nội bộ",
+   "pos": "danh từ",
+   "note": "Chính là \"nội bộ\".",
+   "ex": [
+    {
+     "cn": "这是我们队内部的问题。",
+     "py": "Zhè shì wǒmen duì nèibù de wèntí.",
+     "vi": "Đây là vấn đề nội bộ của đội."
+    }
+   ]
+  },
+  {
+   "w": "外部",
+   "py": "wàibù",
+   "hv": "ngoại bộ",
+   "vi": "bên ngoài",
+   "pos": "danh từ",
+   "note": "Trái nghĩa 内部.",
+   "ex": [
+    {
+     "cn": "外部的压力也很大。",
+     "py": "Wàibù de yālì yě hěn dà.",
+     "vi": "Áp lực từ bên ngoài cũng rất lớn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "事实上",
+   "b": "Đứng đầu câu, nghĩa \"thực tế là\"",
+   "d": "Dùng để đính chính.",
+   "ex": [
+    {
+     "cn": "大家以为他很轻松，事实上他压力很大。",
+     "py": "Dàjiā yǐwéi tā hěn qīngsōng, shìshí shang tā yālì hěn dà.",
+     "vi": "Mọi người tưởng anh ấy thoải mái, thực ra áp lực rất lớn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "教练很注意每一个细节。",
+   "py": "Jiàoliàn hěn zhùyì měi yí ge xìjié.",
+   "vi": "Huấn luyện viên rất chú ý từng chi tiết."
+  },
+  {
+   "cn": "影响比赛结果的因素有很多。",
+   "py": "Yǐngxiǎng bǐsài jiéguǒ de yīnsù yǒu hěn duō.",
+   "vi": "Có nhiều yếu tố ảnh hưởng đến kết quả trận đấu."
+  },
+  {
+   "cn": "内部的问题要在内部解决。",
+   "py": "Nèibù de wèntí yào zài nèibù jiějué.",
+   "vi": "Vấn đề nội bộ phải giải quyết trong nội bộ."
+  }
+ ]
+}

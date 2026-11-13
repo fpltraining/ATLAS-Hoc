@@ -1,0 +1,264 @@
+{
+ "id": 289,
+ "cn": "一路顺风",
+ "title": "Chỗ ở và đường xa",
+ "goal": "Nói về nhà ở, chỗ trọ, địa chỉ, tiền thuê, sân ga, ban công, quảng trường, suốt đường, thuận buồm xuôi gió, bầu trời, sương mù, nước mưa, tỉnh và tỉnh lỵ.",
+ "words": [
+  {
+   "w": "住房",
+   "py": "zhùfáng",
+   "hv": "trú phòng",
+   "vi": "nhà ở",
+   "pos": "danh từ",
+   "note": "住房问题 (vấn đề nhà ở).",
+   "ex": [
+    {
+     "cn": "大城市的住房很贵。",
+     "py": "Dà chéngshì de zhùfáng hěn guì.",
+     "vi": "Nhà ở thành phố lớn rất đắt."
+    }
+   ]
+  },
+  {
+   "w": "住宿",
+   "py": "zhùsù",
+   "hv": "trú túc",
+   "vi": "chỗ ngủ, lưu trú",
+   "pos": "danh từ, động từ",
+   "note": "住宿费 (tiền phòng).",
+   "ex": [
+    {
+     "cn": "主办方负责选手的住宿。",
+     "py": "Zhǔbànfāng fùzé xuǎnshǒu de zhùsù.",
+     "vi": "Ban tổ chức lo chỗ ở cho tuyển thủ."
+    }
+   ]
+  },
+  {
+   "w": "住址",
+   "py": "zhùzhǐ",
+   "hv": "trú chỉ",
+   "vi": "địa chỉ nhà",
+   "pos": "danh từ",
+   "note": "址 là chỗ.",
+   "ex": [
+    {
+     "cn": "请写下你的住址。",
+     "py": "Qǐng xiě xià nǐ de zhùzhǐ.",
+     "vi": "Xin ghi địa chỉ của bạn."
+    }
+   ]
+  },
+  {
+   "w": "租金",
+   "py": "zūjīn",
+   "hv": "tô kim",
+   "vi": "tiền thuê",
+   "pos": "danh từ",
+   "note": "房子的租金 (tiền thuê nhà).",
+   "ex": [
+    {
+     "cn": "这套房子的租金不贵。",
+     "py": "Zhè tào fángzi de zūjīn bú guì.",
+     "vi": "Tiền thuê căn nhà này không đắt."
+    }
+   ]
+  },
+  {
+   "w": "站台",
+   "py": "zhàntái",
+   "hv": "trạm đài",
+   "vi": "sân ga",
+   "pos": "danh từ",
+   "note": "站 + 台.",
+   "ex": [
+    {
+     "cn": "我在三号站台等你。",
+     "py": "Wǒ zài sān hào zhàntái děng nǐ.",
+     "vi": "Tôi đợi bạn ở sân ga số ba."
+    }
+   ]
+  },
+  {
+   "w": "阳台",
+   "py": "yángtái",
+   "hv": "dương đài",
+   "vi": "ban công",
+   "pos": "danh từ",
+   "note": "Nơi đón nắng.",
+   "ex": [
+    {
+     "cn": "我喜欢在阳台上喝咖啡。",
+     "py": "Wǒ xǐhuan zài yángtái shang hē kāfēi.",
+     "vi": "Tôi thích uống cà phê ngoài ban công."
+    }
+   ]
+  },
+  {
+   "w": "广场",
+   "py": "guǎngchǎng",
+   "hv": "quảng trường",
+   "vi": "quảng trường",
+   "pos": "danh từ",
+   "note": "Chính là \"quảng trường\".",
+   "ex": [
+    {
+     "cn": "晚上广场上有很多人。",
+     "py": "Wǎnshang guǎngchǎng shang yǒu hěn duō rén.",
+     "vi": "Buổi tối quảng trường rất đông."
+    }
+   ]
+  },
+  {
+   "w": "一路",
+   "py": "yílù",
+   "hv": "nhất lộ",
+   "vi": "suốt dọc đường",
+   "pos": "danh từ",
+   "note": "一路上 (trên đường đi).",
+   "ex": [
+    {
+     "cn": "一路上我们聊了很多。",
+     "py": "Yílù shang wǒmen liáo le hěn duō.",
+     "vi": "Suốt đường đi chúng tôi trò chuyện nhiều."
+    }
+   ]
+  },
+  {
+   "w": "一路顺风",
+   "py": "yílù shùnfēng",
+   "hv": "nhất lộ thuận phong",
+   "vi": "thượng lộ bình an",
+   "pos": "thành ngữ",
+   "note": "Lời chúc người đi xa.",
+   "ex": [
+    {
+     "cn": "祝你一路顺风！",
+     "py": "Zhù nǐ yílù shùnfēng!",
+     "vi": "Chúc bạn thượng lộ bình an!"
+    }
+   ]
+  },
+  {
+   "w": "天空",
+   "py": "tiānkōng",
+   "hv": "thiên không",
+   "vi": "bầu trời",
+   "pos": "danh từ",
+   "note": "Chính là \"thiên không\".",
+   "ex": [
+    {
+     "cn": "天空中有很多星星。",
+     "py": "Tiānkōng zhōng yǒu hěn duō xīngxing.",
+     "vi": "Trên bầu trời có nhiều sao."
+    }
+   ]
+  },
+  {
+   "w": "天上",
+   "py": "tiānshàng",
+   "hv": "thiên thượng",
+   "vi": "trên trời",
+   "pos": "danh từ",
+   "note": "天 + 上.",
+   "ex": [
+    {
+     "cn": "天上飞着一只风筝。",
+     "py": "Tiānshàng fēi zhe yì zhī fēngzheng.",
+     "vi": "Trên trời bay một con diều."
+    }
+   ]
+  },
+  {
+   "w": "雾",
+   "py": "wù",
+   "hv": "vụ",
+   "vi": "sương mù",
+   "pos": "danh từ",
+   "note": "大雾 (sương mù dày).",
+   "ex": [
+    {
+     "cn": "今天早上雾很大。",
+     "py": "Jīntiān zǎoshang wù hěn dà.",
+     "vi": "Sáng nay sương mù dày."
+    }
+   ]
+  },
+  {
+   "w": "雨水",
+   "py": "yǔshuǐ",
+   "hv": "vũ thuỷ",
+   "vi": "nước mưa",
+   "pos": "danh từ",
+   "note": "雨 + 水.",
+   "ex": [
+    {
+     "cn": "今年雨水很多。",
+     "py": "Jīnnián yǔshuǐ hěn duō.",
+     "vi": "Năm nay mưa nhiều."
+    }
+   ]
+  },
+  {
+   "w": "省份",
+   "py": "shěngfèn",
+   "hv": "tỉnh phần",
+   "vi": "tỉnh",
+   "pos": "danh từ",
+   "note": "省 + 份.",
+   "ex": [
+    {
+     "cn": "越南有很多省份。",
+     "py": "Yuènán yǒu hěn duō shěngfèn.",
+     "vi": "Việt Nam có nhiều tỉnh."
+    }
+   ]
+  },
+  {
+   "w": "省会",
+   "py": "shěnghuì",
+   "hv": "tỉnh hội",
+   "vi": "tỉnh lỵ",
+   "pos": "danh từ",
+   "note": "Thủ phủ của tỉnh.",
+   "ex": [
+    {
+     "cn": "广州是广东省的省会。",
+     "py": "Guǎngzhōu shì Guǎngdōng Shěng de shěnghuì.",
+     "vi": "Quảng Châu là tỉnh lỵ tỉnh Quảng Đông."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "一路上",
+   "b": "Suốt dọc đường",
+   "d": "Đứng đầu câu để kể chuyện trên đường.",
+   "ex": [
+    {
+     "cn": "一路上风景都很美。",
+     "py": "Yílù shang fēngjǐng dōu hěn měi.",
+     "vi": "Suốt dọc đường phong cảnh đều đẹp."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "比赛期间的住宿由俱乐部安排。",
+   "py": "Bǐsài qījiān de zhùsù yóu jùlèbù ānpái.",
+   "vi": "Chỗ ở trong thời gian thi đấu do câu lạc bộ sắp xếp."
+  },
+  {
+   "cn": "雾太大了，飞机推迟起飞。",
+   "py": "Wù tài dà le, fēijī tuīchí qǐfēi.",
+   "vi": "Sương mù dày quá, máy bay hoãn cất cánh."
+  },
+  {
+   "cn": "送你到车站，祝你一路顺风。",
+   "py": "Sòng nǐ dào chēzhàn, zhù nǐ yílù shùnfēng.",
+   "vi": "Tiễn bạn ra ga, chúc thượng lộ bình an."
+  }
+ ]
+}

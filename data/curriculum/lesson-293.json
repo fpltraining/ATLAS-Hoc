@@ -1,0 +1,264 @@
+{
+ "id": 293,
+ "cn": "总共多少",
+ "title": "Số lượng và kích thước",
+ "goal": "Nói về tổng cộng, tổng số, tổng thể, chỉnh thể, đông đảo, đa số, trăm triệu, trọng lượng, diện tích, độ cao, độ dày, hàm lượng, chủng loại, tổng hợp và hoàn toàn mới.",
+ "words": [
+  {
+   "w": "总共",
+   "py": "zǒnggòng",
+   "hv": "tổng cộng",
+   "vi": "tổng cộng",
+   "pos": "phó từ",
+   "note": "Chính là \"tổng cộng\".",
+   "ex": [
+    {
+     "cn": "我们队总共有六名选手。",
+     "py": "Wǒmen duì zǒnggòng yǒu liù míng xuǎnshǒu.",
+     "vi": "Đội chúng tôi tổng cộng có sáu tuyển thủ."
+    }
+   ]
+  },
+  {
+   "w": "总数",
+   "py": "zǒngshù",
+   "hv": "tổng số",
+   "vi": "tổng số",
+   "pos": "danh từ",
+   "note": "Chính là \"tổng số\".",
+   "ex": [
+    {
+     "cn": "参赛队伍的总数是十二支。",
+     "py": "Cānsài duìwu de zǒngshù shì shí'èr zhī.",
+     "vi": "Tổng số đội tham dự là mười hai."
+    }
+   ]
+  },
+  {
+   "w": "总体",
+   "py": "zǒngtǐ",
+   "hv": "tổng thể",
+   "vi": "tổng thể",
+   "pos": "danh từ",
+   "note": "总体来说 (nhìn chung).",
+   "ex": [
+    {
+     "cn": "总体来说，这次比赛打得不错。",
+     "py": "Zǒngtǐ lái shuō, zhè cì bǐsài dǎ de búcuò.",
+     "vi": "Nhìn chung, trận này đánh khá tốt."
+    }
+   ]
+  },
+  {
+   "w": "整体",
+   "py": "zhěngtǐ",
+   "hv": "chỉnh thể",
+   "vi": "toàn bộ, tổng thể",
+   "pos": "danh từ",
+   "note": "整体实力 (thực lực tổng thể).",
+   "ex": [
+    {
+     "cn": "我们的整体实力更强。",
+     "py": "Wǒmen de zhěngtǐ shílì gèng qiáng.",
+     "vi": "Thực lực tổng thể của chúng ta mạnh hơn."
+    }
+   ]
+  },
+  {
+   "w": "众多",
+   "py": "zhòngduō",
+   "hv": "chúng đa",
+   "vi": "đông đảo",
+   "pos": "tính từ",
+   "note": "众多粉丝 (đông đảo người hâm mộ).",
+   "ex": [
+    {
+     "cn": "众多粉丝来到了现场。",
+     "py": "Zhòngduō fěnsī láidào le xiànchǎng.",
+     "vi": "Đông đảo fan đã đến tận nơi."
+    }
+   ]
+  },
+  {
+   "w": "大多",
+   "py": "dàduō",
+   "hv": "đại đa",
+   "vi": "phần lớn",
+   "pos": "phó từ",
+   "note": "大多数 (đa số).",
+   "ex": [
+    {
+     "cn": "来看比赛的大多是年轻人。",
+     "py": "Lái kàn bǐsài de dàduō shì niánqīngrén.",
+     "vi": "Người đến xem thi đấu phần lớn là người trẻ."
+    }
+   ]
+  },
+  {
+   "w": "亿",
+   "py": "yì",
+   "hv": "ức",
+   "vi": "trăm triệu",
+   "pos": "số từ",
+   "note": "一亿 = 100.000.000.",
+   "ex": [
+    {
+     "cn": "中国有十四亿人口。",
+     "py": "Zhōngguó yǒu shísì yì rénkǒu.",
+     "vi": "Trung Quốc có một tỷ bốn trăm triệu dân."
+    }
+   ]
+  },
+  {
+   "w": "重量",
+   "py": "zhòngliàng",
+   "hv": "trọng lượng",
+   "vi": "trọng lượng",
+   "pos": "danh từ",
+   "note": "Chính là \"trọng lượng\".",
+   "ex": [
+    {
+     "cn": "行李的重量不能超过二十公斤。",
+     "py": "Xíngli de zhòngliàng bù néng chāoguò èrshí gōngjīn.",
+     "vi": "Hành lý không được quá hai mươi cân."
+    }
+   ]
+  },
+  {
+   "w": "面积",
+   "py": "miànjī",
+   "hv": "diện tích",
+   "vi": "diện tích",
+   "pos": "danh từ",
+   "note": "Chính là \"diện tích\".",
+   "ex": [
+    {
+     "cn": "这个房间的面积是二十平方米。",
+     "py": "Zhège fángjiān de miànjī shì èrshí píngfāngmǐ.",
+     "vi": "Diện tích căn phòng này là hai mươi mét vuông."
+    }
+   ]
+  },
+  {
+   "w": "高度",
+   "py": "gāodù",
+   "hv": "cao độ",
+   "vi": "độ cao; mức cao",
+   "pos": "danh từ",
+   "note": "高度重视 (hết sức coi trọng).",
+   "ex": [
+    {
+     "cn": "这座山的高度是三千米。",
+     "py": "Zhè zuò shān de gāodù shì sānqiān mǐ.",
+     "vi": "Ngọn núi này cao ba nghìn mét."
+    }
+   ]
+  },
+  {
+   "w": "厚度",
+   "py": "hòudù",
+   "hv": "hậu độ",
+   "vi": "độ dày",
+   "pos": "danh từ",
+   "note": "厚 (dày) + 度.",
+   "ex": [
+    {
+     "cn": "这本书的厚度有五厘米。",
+     "py": "Zhè běn shū de hòudù yǒu wǔ límǐ.",
+     "vi": "Cuốn sách này dày năm phân."
+    }
+   ]
+  },
+  {
+   "w": "含量",
+   "py": "hánliàng",
+   "hv": "hàm lượng",
+   "vi": "hàm lượng",
+   "pos": "danh từ",
+   "note": "Chính là \"hàm lượng\".",
+   "ex": [
+    {
+     "cn": "这种饮料的糖含量很高。",
+     "py": "Zhè zhǒng yǐnliào de táng hánliàng hěn gāo.",
+     "vi": "Hàm lượng đường của đồ uống này rất cao."
+    }
+   ]
+  },
+  {
+   "w": "种类",
+   "py": "zhǒnglèi",
+   "hv": "chủng loại",
+   "vi": "chủng loại",
+   "pos": "danh từ",
+   "note": "Chính là \"chủng loại\".",
+   "ex": [
+    {
+     "cn": "超市里水果的种类很多。",
+     "py": "Chāoshì li shuǐguǒ de zhǒnglèi hěn duō.",
+     "vi": "Siêu thị có nhiều loại hoa quả."
+    }
+   ]
+  },
+  {
+   "w": "综合",
+   "py": "zōnghé",
+   "hv": "tổng hợp",
+   "vi": "tổng hợp",
+   "pos": "động từ, tính từ",
+   "note": "综合能力 (năng lực tổng hợp).",
+   "ex": [
+    {
+     "cn": "他的综合能力很强。",
+     "py": "Tā de zōnghé nénglì hěn qiáng.",
+     "vi": "Năng lực tổng hợp của anh ấy rất mạnh."
+    }
+   ]
+  },
+  {
+   "w": "全新",
+   "py": "quánxīn",
+   "hv": "toàn tân",
+   "vi": "hoàn toàn mới",
+   "pos": "tính từ",
+   "note": "全新的开始 (khởi đầu mới).",
+   "ex": [
+    {
+     "cn": "新赛季是一个全新的开始。",
+     "py": "Xīn sàijì shì yí ge quánxīn de kāishǐ.",
+     "vi": "Mùa giải mới là một khởi đầu hoàn toàn mới."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "总体来说 / 相对来说 / 一般来说",
+   "b": "……来说 đặt đầu câu",
+   "d": "Nói chung, nói tương đối, thông thường.",
+   "ex": [
+    {
+     "cn": "一般来说，早上训练效果最好。",
+     "py": "Yìbān lái shuō, zǎoshang xùnliàn xiàoguǒ zuì hǎo.",
+     "vi": "Thông thường, tập buổi sáng hiệu quả nhất."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我们总共打了五局，赢了三局。",
+   "py": "Wǒmen zǒnggòng dǎ le wǔ jú, yíng le sān jú.",
+   "vi": "Chúng tôi đánh tổng cộng năm ván, thắng ba."
+  },
+  {
+   "cn": "比赛看的是整体，不是一个人。",
+   "py": "Bǐsài kàn de shì zhěngtǐ, bú shì yí ge rén.",
+   "vi": "Thi đấu là chuyện của cả tập thể, không phải một người."
+  },
+  {
+   "cn": "众多粉丝在网上为我们加油。",
+   "py": "Zhòngduō fěnsī zài wǎngshang wèi wǒmen jiāyóu.",
+   "vi": "Đông đảo fan cổ vũ chúng tôi trên mạng."
+  }
+ ]
+}
