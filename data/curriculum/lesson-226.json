@@ -1,0 +1,264 @@
+{
+ "id": 226,
+ "cn": "热烈鼓掌",
+ "title": "Sân khấu và giải trí",
+ "goal": "Nói về bài hát, lời bài hát, khách mời, nhà vô địch, phim tài liệu, kỷ lục, chủ đề và tương tác.",
+ "words": [
+  {
+   "w": "歌曲",
+   "py": "gēqǔ",
+   "hv": "ca khúc",
+   "vi": "bài hát",
+   "pos": "danh từ",
+   "note": "Chính là \"ca khúc\".",
+   "ex": [
+    {
+     "cn": "这首歌曲很受欢迎。",
+     "py": "Zhè shǒu gēqǔ hěn shòu huānyíng.",
+     "vi": "Bài hát này rất được yêu thích."
+    }
+   ]
+  },
+  {
+   "w": "歌词",
+   "py": "gēcí",
+   "hv": "ca từ",
+   "vi": "lời bài hát",
+   "pos": "danh từ",
+   "note": "词 là \"từ\", lời.",
+   "ex": [
+    {
+     "cn": "我记不住这首歌的歌词。",
+     "py": "Wǒ jì bu zhù zhè shǒu gē de gēcí.",
+     "vi": "Tôi không nhớ nổi lời bài hát này."
+    }
+   ]
+  },
+  {
+   "w": "鼓",
+   "py": "gǔ",
+   "hv": "cổ",
+   "vi": "cái trống",
+   "pos": "danh từ",
+   "note": "打鼓 (đánh trống).",
+   "ex": [
+    {
+     "cn": "他在乐队里打鼓。",
+     "py": "Tā zài yuèduì li dǎ gǔ.",
+     "vi": "Anh ấy đánh trống trong ban nhạc."
+    }
+   ]
+  },
+  {
+   "w": "鼓掌",
+   "py": "gǔzhǎng",
+   "hv": "cổ chưởng",
+   "vi": "vỗ tay",
+   "pos": "động từ",
+   "note": "掌 là bàn tay.",
+   "ex": [
+    {
+     "cn": "观众热烈鼓掌。",
+     "py": "Guānzhòng rèliè gǔzhǎng.",
+     "vi": "Khán giả vỗ tay nồng nhiệt."
+    }
+   ]
+  },
+  {
+   "w": "冠军",
+   "py": "guànjūn",
+   "hv": "quán quân",
+   "vi": "nhà vô địch",
+   "pos": "danh từ",
+   "note": "Chính là \"quán quân\".",
+   "ex": [
+    {
+     "cn": "我们的目标是拿冠军。",
+     "py": "Wǒmen de mùbiāo shì ná guànjūn.",
+     "vi": "Mục tiêu của chúng ta là giành chức vô địch."
+    }
+   ]
+  },
+  {
+   "w": "嘉宾",
+   "py": "jiābīn",
+   "hv": "gia tân",
+   "vi": "khách mời",
+   "pos": "danh từ",
+   "note": "Khách quý trong chương trình.",
+   "ex": [
+    {
+     "cn": "今天的嘉宾是一位有名的教练。",
+     "py": "Jīntiān de jiābīn shì yí wèi yǒumíng de jiàoliàn.",
+     "vi": "Khách mời hôm nay là một huấn luyện viên nổi tiếng."
+    }
+   ]
+  },
+  {
+   "w": "纪录片",
+   "py": "jìlùpiàn",
+   "hv": "kỷ lục phiến",
+   "vi": "phim tài liệu",
+   "pos": "danh từ",
+   "note": "纪录 + 片 (phim).",
+   "ex": [
+    {
+     "cn": "我昨天看了一部关于大海的纪录片。",
+     "py": "Wǒ zuótiān kàn le yí bù guānyú dàhǎi de jìlùpiàn.",
+     "vi": "Hôm qua tôi xem một phim tài liệu về biển."
+    }
+   ]
+  },
+  {
+   "w": "纪录",
+   "py": "jìlù",
+   "hv": "kỷ lục",
+   "vi": "kỷ lục",
+   "pos": "danh từ",
+   "note": "打破纪录 (phá kỷ lục).",
+   "ex": [
+    {
+     "cn": "他创造了新的世界纪录。",
+     "py": "Tā chuàngzào le xīn de shìjiè jìlù.",
+     "vi": "Anh ấy lập kỷ lục thế giới mới."
+    }
+   ]
+  },
+  {
+   "w": "记录",
+   "py": "jìlù",
+   "hv": "ký lục",
+   "vi": "ghi chép; biên bản",
+   "pos": "động từ, danh từ",
+   "note": "Khác 纪录 (kỷ lục), cùng âm.",
+   "ex": [
+    {
+     "cn": "请把会议内容记录下来。",
+     "py": "Qǐng bǎ huìyì nèiróng jìlù xiàlái.",
+     "vi": "Hãy ghi lại nội dung cuộc họp."
+    }
+   ]
+  },
+  {
+   "w": "画面",
+   "py": "huàmiàn",
+   "hv": "hoạ diện",
+   "vi": "hình ảnh, khung hình",
+   "pos": "danh từ",
+   "note": "Hình ảnh trên màn hình.",
+   "ex": [
+    {
+     "cn": "这个游戏的画面很漂亮。",
+     "py": "Zhège yóuxì de huàmiàn hěn piàoliang.",
+     "vi": "Đồ hoạ của game này rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "话题",
+   "py": "huàtí",
+   "hv": "thoại đề",
+   "vi": "chủ đề (câu chuyện)",
+   "pos": "danh từ",
+   "note": "换个话题 (đổi chủ đề).",
+   "ex": [
+    {
+     "cn": "我们换个话题吧。",
+     "py": "Wǒmen huàn ge huàtí ba.",
+     "vi": "Mình đổi chủ đề đi."
+    }
+   ]
+  },
+  {
+   "w": "互动",
+   "py": "hùdòng",
+   "hv": "hỗ động",
+   "vi": "tương tác",
+   "pos": "động từ",
+   "note": "和粉丝互动 (tương tác với fan).",
+   "ex": [
+    {
+     "cn": "主播经常和观众互动。",
+     "py": "Zhǔbō jīngcháng hé guānzhòng hùdòng.",
+     "vi": "Người dẫn livestream hay tương tác với người xem."
+    }
+   ]
+  },
+  {
+   "w": "合影",
+   "py": "héyǐng",
+   "hv": "hợp ảnh",
+   "vi": "chụp ảnh chung; ảnh chung",
+   "pos": "động từ, danh từ",
+   "note": "影 là ảnh.",
+   "ex": [
+    {
+     "cn": "比赛结束后我们一起合影。",
+     "py": "Bǐsài jiéshù hòu wǒmen yìqǐ héyǐng.",
+     "vi": "Hết trận chúng tôi cùng chụp ảnh chung."
+    }
+   ]
+  },
+  {
+   "w": "好评",
+   "py": "hǎopíng",
+   "hv": "hảo bình",
+   "vi": "đánh giá tốt",
+   "pos": "danh từ",
+   "note": "Trái nghĩa 差评.",
+   "ex": [
+    {
+     "cn": "这部电影得到了很多好评。",
+     "py": "Zhè bù diànyǐng dédào le hěn duō hǎopíng.",
+     "vi": "Bộ phim này nhận nhiều đánh giá tốt."
+    }
+   ]
+  },
+  {
+   "w": "国画",
+   "py": "guóhuà",
+   "hv": "quốc hoạ",
+   "vi": "tranh truyền thống Trung Quốc",
+   "pos": "danh từ",
+   "note": "Tranh thuỷ mặc.",
+   "ex": [
+    {
+     "cn": "她从小学习国画。",
+     "py": "Tā cóngxiǎo xuéxí guóhuà.",
+     "vi": "Cô ấy học vẽ tranh quốc hoạ từ nhỏ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "纪录 và 记录",
+   "b": "纪录 là kỷ lục; 记录 là ghi chép",
+   "d": "Cùng đọc jìlù, chú ý chữ viết.",
+   "ex": [
+    {
+     "cn": "他把每场比赛的数据都记录下来了。",
+     "py": "Tā bǎ měi chǎng bǐsài de shùjù dōu jìlù xiàlái le.",
+     "vi": "Anh ấy ghi lại số liệu từng trận đấu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "冠军队伍上台的时候，全场观众都在鼓掌。",
+   "py": "Guànjūn duìwu shàng tái de shíhou, quán chǎng guānzhòng dōu zài gǔzhǎng.",
+   "vi": "Khi đội vô địch lên sân khấu, cả khán đài đều vỗ tay."
+  },
+  {
+   "cn": "这个话题在网上引起了很多讨论。",
+   "py": "Zhège huàtí zài wǎngshang yǐnqǐ le hěn duō tǎolùn.",
+   "vi": "Chủ đề này gây ra nhiều bàn luận trên mạng."
+  },
+  {
+   "cn": "比赛以后选手们和粉丝合影留念。",
+   "py": "Bǐsài yǐhòu xuǎnshǒumen hé fěnsī héyǐng liúniàn.",
+   "vi": "Sau trận các tuyển thủ chụp ảnh lưu niệm với fan."
+  }
+ ]
+}

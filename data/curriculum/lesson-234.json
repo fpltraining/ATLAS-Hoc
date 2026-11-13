@@ -1,0 +1,264 @@
+{
+ "id": 234,
+ "cn": "动手建设",
+ "title": "Hành động và xây dựng",
+ "goal": "Nói về làm, vẫy, vạch, ngăn, chặn, đưa, lật, tắc, mất, cất giữ, leo lên và xây dựng.",
+ "words": [
+  {
+   "w": "搞",
+   "py": "gǎo",
+   "hv": "cảo",
+   "vi": "làm (khẩu ngữ)",
+   "pos": "động từ",
+   "note": "搞清楚 (làm rõ).",
+   "ex": [
+    {
+     "cn": "我们先搞清楚问题在哪儿。",
+     "py": "Wǒmen xiān gǎo qīngchu wèntí zài nǎr.",
+     "vi": "Trước hết làm rõ vấn đề nằm ở đâu."
+    }
+   ]
+  },
+  {
+   "w": "挥",
+   "py": "huī",
+   "hv": "huy",
+   "vi": "vẫy, vung",
+   "pos": "động từ",
+   "note": "挥手 (vẫy tay).",
+   "ex": [
+    {
+     "cn": "她向我们挥手告别。",
+     "py": "Tā xiàng wǒmen huī shǒu gàobié.",
+     "vi": "Cô ấy vẫy tay chào tạm biệt chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "划",
+   "py": "huá",
+   "hv": "hoa",
+   "vi": "chèo (thuyền); rạch",
+   "pos": "động từ",
+   "note": "划船 (chèo thuyền).",
+   "ex": [
+    {
+     "cn": "周末我们去湖上划船。",
+     "py": "Zhōumò wǒmen qù hú shang huá chuán.",
+     "vi": "Cuối tuần chúng tôi đi chèo thuyền trên hồ."
+    }
+   ]
+  },
+  {
+   "w": "隔",
+   "py": "gé",
+   "hv": "cách",
+   "vi": "cách, ngăn",
+   "pos": "động từ",
+   "note": "隔壁 (nhà bên), 隔一天 (cách một ngày).",
+   "ex": [
+    {
+     "cn": "他住在我家隔壁。",
+     "py": "Tā zhù zài wǒ jiā gébì.",
+     "vi": "Anh ấy ở nhà bên cạnh tôi."
+    }
+   ]
+  },
+  {
+   "w": "挡",
+   "py": "dǎng",
+   "hv": "đáng",
+   "vi": "chắn, cản",
+   "pos": "động từ",
+   "note": "挡住 (chắn lại).",
+   "ex": [
+    {
+     "cn": "前面的人挡住了我的视线。",
+     "py": "Qiánmiàn de rén dǎng zhù le wǒ de shìxiàn.",
+     "vi": "Người phía trước chắn tầm nhìn của tôi."
+    }
+   ]
+  },
+  {
+   "w": "递",
+   "py": "dì",
+   "hv": "đệ",
+   "vi": "đưa, chuyển",
+   "pos": "động từ",
+   "note": "递给 (đưa cho).",
+   "ex": [
+    {
+     "cn": "请把水递给我。",
+     "py": "Qǐng bǎ shuǐ dì gěi wǒ.",
+     "vi": "Đưa giúp tôi chai nước."
+    }
+   ]
+  },
+  {
+   "w": "翻",
+   "py": "fān",
+   "hv": "phiên",
+   "vi": "lật; dịch",
+   "pos": "động từ",
+   "note": "翻书 (lật sách), 翻译 (dịch).",
+   "ex": [
+    {
+     "cn": "请把书翻到第十页。",
+     "py": "Qǐng bǎ shū fān dào dì shí yè.",
+     "vi": "Hãy mở sách tới trang mười."
+    }
+   ]
+  },
+  {
+   "w": "堵",
+   "py": "dǔ",
+   "hv": "đổ",
+   "vi": "chặn, tắc",
+   "pos": "động từ",
+   "note": "堵车 (tắc đường).",
+   "ex": [
+    {
+     "cn": "下班的时候经常堵车。",
+     "py": "Xiàbān de shíhou jīngcháng dǔchē.",
+     "vi": "Giờ tan tầm hay tắc đường."
+    }
+   ]
+  },
+  {
+   "w": "丢失",
+   "py": "diūshī",
+   "hv": "đâu thất",
+   "vi": "đánh mất",
+   "pos": "động từ",
+   "note": "Văn viết của 丢.",
+   "ex": [
+    {
+     "cn": "我的行李在机场丢失了。",
+     "py": "Wǒ de xíngli zài jīchǎng diūshī le.",
+     "vi": "Hành lý của tôi bị thất lạc ở sân bay."
+    }
+   ]
+  },
+  {
+   "w": "存放",
+   "py": "cúnfàng",
+   "hv": "tồn phóng",
+   "vi": "cất giữ, gửi",
+   "pos": "động từ",
+   "note": "存放行李 (gửi hành lý).",
+   "ex": [
+    {
+     "cn": "行李可以存放在酒店。",
+     "py": "Xíngli kěyǐ cúnfàng zài jiǔdiàn.",
+     "vi": "Hành lý có thể gửi ở khách sạn."
+    }
+   ]
+  },
+  {
+   "w": "登",
+   "py": "dēng",
+   "hv": "đăng",
+   "vi": "leo, trèo; đăng (báo)",
+   "pos": "động từ",
+   "note": "登山 (leo núi).",
+   "ex": [
+    {
+     "cn": "他们登上了山顶。",
+     "py": "Tāmen dēng shàng le shāndǐng.",
+     "vi": "Họ đã lên tới đỉnh núi."
+    }
+   ]
+  },
+  {
+   "w": "建",
+   "py": "jiàn",
+   "hv": "kiến",
+   "vi": "xây",
+   "pos": "động từ",
+   "note": "建房子 (xây nhà).",
+   "ex": [
+    {
+     "cn": "这里要建一座新体育馆。",
+     "py": "Zhèlǐ yào jiàn yí zuò xīn tǐyùguǎn.",
+     "vi": "Ở đây sẽ xây một nhà thi đấu mới."
+    }
+   ]
+  },
+  {
+   "w": "建立",
+   "py": "jiànlì",
+   "hv": "kiến lập",
+   "vi": "thành lập, xây dựng",
+   "pos": "động từ",
+   "note": "建立关系 (xây dựng quan hệ).",
+   "ex": [
+    {
+     "cn": "这个俱乐部是二〇一八年建立的。",
+     "py": "Zhège jùlèbù shì èr líng yī bā nián jiànlì de.",
+     "vi": "Câu lạc bộ này thành lập năm 2018."
+    }
+   ]
+  },
+  {
+   "w": "建设",
+   "py": "jiànshè",
+   "hv": "kiến thiết",
+   "vi": "xây dựng (quy mô lớn)",
+   "pos": "động từ",
+   "note": "建设国家 (xây dựng đất nước).",
+   "ex": [
+    {
+     "cn": "城市建设得越来越漂亮。",
+     "py": "Chéngshì jiànshè de yuè lái yuè piàoliang.",
+     "vi": "Thành phố được xây dựng ngày càng đẹp."
+    }
+   ]
+  },
+  {
+   "w": "建造",
+   "py": "jiànzào",
+   "hv": "kiến tạo",
+   "vi": "xây dựng (công trình)",
+   "pos": "động từ",
+   "note": "建造大桥 (xây cầu).",
+   "ex": [
+    {
+     "cn": "这座桥建造了三年。",
+     "py": "Zhè zuò qiáo jiànzào le sān nián.",
+     "vi": "Cây cầu này xây mất ba năm."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "把 + vật + 递/翻 + 到/给 + …",
+   "b": "把书翻到第十页",
+   "d": "Câu 把 với bổ ngữ chỉ đích đến.",
+   "ex": [
+    {
+     "cn": "请把文件递给教练。",
+     "py": "Qǐng bǎ wénjiàn dì gěi jiàoliàn.",
+     "vi": "Hãy đưa tài liệu cho huấn luyện viên."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "我们要建立一支有冠军精神的队伍。",
+   "py": "Wǒmen yào jiànlì yì zhī yǒu guànjūn jīngshén de duìwu.",
+   "vi": "Chúng ta phải xây dựng một đội có tinh thần vô địch."
+  },
+  {
+   "cn": "路上堵车，我晚到了半个小时。",
+   "py": "Lùshang dǔchē, wǒ wǎn dào le bàn ge xiǎoshí.",
+   "vi": "Đường tắc, tôi đến muộn nửa tiếng."
+  },
+  {
+   "cn": "他用身体挡住了对方的进攻。",
+   "py": "Tā yòng shēntǐ dǎng zhù le duìfāng de jìngōng.",
+   "vi": "Anh ấy dùng thân mình chặn đợt tấn công của đối phương."
+  }
+ ]
+}

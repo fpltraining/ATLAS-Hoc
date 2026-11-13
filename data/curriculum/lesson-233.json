@@ -1,0 +1,264 @@
+{
+ "id": 233,
+ "cn": "公平的规则",
+ "title": "Luật lệ và quy định",
+ "goal": "Nói về quy luật, quy tắc, công bằng, hợp pháp, hợp lý, công bố, thay mới, cố định, hết hạn và tập trung.",
+ "words": [
+  {
+   "w": "规律",
+   "py": "guīlǜ",
+   "hv": "quy luật",
+   "vi": "quy luật; điều độ",
+   "pos": "danh từ, tính từ",
+   "note": "生活很有规律 (sống điều độ).",
+   "ex": [
+    {
+     "cn": "他的生活很有规律。",
+     "py": "Tā de shēnghuó hěn yǒu guīlǜ.",
+     "vi": "Anh ấy sống rất điều độ."
+    }
+   ]
+  },
+  {
+   "w": "规则",
+   "py": "guīzé",
+   "hv": "quy tắc",
+   "vi": "luật, quy tắc",
+   "pos": "danh từ",
+   "note": "比赛规则 (luật thi đấu).",
+   "ex": [
+    {
+     "cn": "每个选手都要遵守比赛规则。",
+     "py": "Měi ge xuǎnshǒu dōu yào zūnshǒu bǐsài guīzé.",
+     "vi": "Mọi tuyển thủ đều phải tuân thủ luật thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "公平",
+   "py": "gōngpíng",
+   "hv": "công bình",
+   "vi": "công bằng",
+   "pos": "tính từ",
+   "note": "Chính là \"công bằng\".",
+   "ex": [
+    {
+     "cn": "这个决定不公平。",
+     "py": "Zhège juédìng bù gōngpíng.",
+     "vi": "Quyết định này không công bằng."
+    }
+   ]
+  },
+  {
+   "w": "合法",
+   "py": "héfǎ",
+   "hv": "hợp pháp",
+   "vi": "hợp pháp",
+   "pos": "tính từ",
+   "note": "Chính là \"hợp pháp\".",
+   "ex": [
+    {
+     "cn": "这样做合法吗？",
+     "py": "Zhèyàng zuò héfǎ ma?",
+     "vi": "Làm như vậy có hợp pháp không?"
+    }
+   ]
+  },
+  {
+   "w": "合理",
+   "py": "hélǐ",
+   "hv": "hợp lý",
+   "vi": "hợp lý",
+   "pos": "tính từ",
+   "note": "Chính là \"hợp lý\".",
+   "ex": [
+    {
+     "cn": "价格很合理。",
+     "py": "Jiàgé hěn hélǐ.",
+     "vi": "Giá cả rất hợp lý."
+    }
+   ]
+  },
+  {
+   "w": "公布",
+   "py": "gōngbù",
+   "hv": "công bố",
+   "vi": "công bố",
+   "pos": "động từ",
+   "note": "Chính là \"công bố\".",
+   "ex": [
+    {
+     "cn": "比赛结果明天公布。",
+     "py": "Bǐsài jiéguǒ míngtiān gōngbù.",
+     "vi": "Kết quả thi đấu mai công bố."
+    }
+   ]
+  },
+  {
+   "w": "更换",
+   "py": "gēnghuàn",
+   "hv": "canh hoán",
+   "vi": "thay, đổi",
+   "pos": "động từ",
+   "note": "更换选手 (thay người).",
+   "ex": [
+    {
+     "cn": "第二局我们更换了一名选手。",
+     "py": "Dì èr jú wǒmen gēnghuàn le yì míng xuǎnshǒu.",
+     "vi": "Ván hai chúng tôi thay một tuyển thủ."
+    }
+   ]
+  },
+  {
+   "w": "更新",
+   "py": "gēngxīn",
+   "hv": "canh tân",
+   "vi": "cập nhật",
+   "pos": "động từ",
+   "note": "更新版本 (cập nhật phiên bản).",
+   "ex": [
+    {
+     "cn": "游戏又更新了。",
+     "py": "Yóuxì yòu gēngxīn le.",
+     "vi": "Game lại cập nhật rồi."
+    }
+   ]
+  },
+  {
+   "w": "固定",
+   "py": "gùdìng",
+   "hv": "cố định",
+   "vi": "cố định",
+   "pos": "tính từ, động từ",
+   "note": "Chính là \"cố định\".",
+   "ex": [
+    {
+     "cn": "我们每天有固定的训练时间。",
+     "py": "Wǒmen měi tiān yǒu gùdìng de xùnliàn shíjiān.",
+     "vi": "Mỗi ngày chúng tôi có giờ tập cố định."
+    }
+   ]
+  },
+  {
+   "w": "定期",
+   "py": "dìngqī",
+   "hv": "định kỳ",
+   "vi": "định kỳ",
+   "pos": "tính từ",
+   "note": "定期检查 (kiểm tra định kỳ).",
+   "ex": [
+    {
+     "cn": "要定期检查身体。",
+     "py": "Yào dìngqī jiǎnchá shēntǐ.",
+     "vi": "Cần khám sức khoẻ định kỳ."
+    }
+   ]
+  },
+  {
+   "w": "关闭",
+   "py": "guānbì",
+   "hv": "quan bế",
+   "vi": "đóng, tắt",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 关.",
+   "ex": [
+    {
+     "cn": "这家商店已经关闭了。",
+     "py": "Zhè jiā shāngdiàn yǐjīng guānbì le.",
+     "vi": "Cửa hàng này đã đóng cửa."
+    }
+   ]
+  },
+  {
+   "w": "过期",
+   "py": "guòqī",
+   "hv": "quá kỳ",
+   "vi": "quá hạn",
+   "pos": "động từ",
+   "note": "牛奶过期了 (sữa quá hạn).",
+   "ex": [
+    {
+     "cn": "这瓶牛奶过期了。",
+     "py": "Zhè píng niúnǎi guòqī le.",
+     "vi": "Chai sữa này quá hạn rồi."
+    }
+   ]
+  },
+  {
+   "w": "及格",
+   "py": "jígé",
+   "hv": "cập cách",
+   "vi": "đạt (điểm qua)",
+   "pos": "động từ",
+   "note": "考试及格 (thi đạt).",
+   "ex": [
+    {
+     "cn": "这次考试我终于及格了。",
+     "py": "Zhè cì kǎoshì wǒ zhōngyú jígé le.",
+     "vi": "Lần thi này cuối cùng tôi cũng qua."
+    }
+   ]
+  },
+  {
+   "w": "集合",
+   "py": "jíhé",
+   "hv": "tập hợp",
+   "vi": "tập hợp",
+   "pos": "động từ",
+   "note": "八点集合 (tám giờ tập trung).",
+   "ex": [
+    {
+     "cn": "我们八点在门口集合。",
+     "py": "Wǒmen bā diǎn zài ménkǒu jíhé.",
+     "vi": "Tám giờ chúng ta tập trung ở cửa."
+    }
+   ]
+  },
+  {
+   "w": "集中",
+   "py": "jízhōng",
+   "hv": "tập trung",
+   "vi": "tập trung",
+   "pos": "động từ, tính từ",
+   "note": "集中注意力 (tập trung chú ý).",
+   "ex": [
+    {
+     "cn": "比赛的时候要集中注意力。",
+     "py": "Bǐsài de shíhou yào jízhōng zhùyìlì.",
+     "vi": "Khi thi đấu phải tập trung."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "遵守 + 规则/时间/纪律",
+   "b": "遵守比赛规则",
+   "d": "Tuân thủ quy định gì.",
+   "ex": [
+    {
+     "cn": "我们要遵守训练时间。",
+     "py": "Wǒmen yào zūnshǒu xùnliàn shíjiān.",
+     "vi": "Chúng ta phải tuân thủ giờ tập."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "规则对每个人都是公平的。",
+   "py": "Guīzé duì měi ge rén dōu shì gōngpíng de.",
+   "vi": "Luật lệ công bằng với mọi người."
+  },
+  {
+   "cn": "生活有规律，身体才会好。",
+   "py": "Shēnghuó yǒu guīlǜ, shēntǐ cái huì hǎo.",
+   "vi": "Sống điều độ thì sức khoẻ mới tốt."
+  },
+  {
+   "cn": "游戏更新以后，很多英雄都变了。",
+   "py": "Yóuxì gēngxīn yǐhòu, hěn duō yīngxióng dōu biàn le.",
+   "vi": "Sau khi game cập nhật, nhiều tướng đã thay đổi."
+  }
+ ]
+}

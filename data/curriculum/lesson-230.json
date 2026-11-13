@@ -1,0 +1,264 @@
+{
+ "id": 230,
+ "cn": "恭喜发财",
+ "title": "Lễ tết và truyền thống",
+ "goal": "Nói về đêm giao thừa, quốc khánh, chữ Phúc, chúc mừng, đám cưới, kỷ niệm, quê hương, thời xưa và chào đón khách.",
+ "words": [
+  {
+   "w": "除夕",
+   "py": "chúxī",
+   "hv": "trừ tịch",
+   "vi": "đêm giao thừa",
+   "pos": "danh từ",
+   "note": "Đêm cuối năm âm lịch.",
+   "ex": [
+    {
+     "cn": "除夕晚上全家人一起吃饭。",
+     "py": "Chúxī wǎnshang quán jiā rén yìqǐ chī fàn.",
+     "vi": "Đêm giao thừa cả nhà cùng ăn cơm."
+    }
+   ]
+  },
+  {
+   "w": "国庆",
+   "py": "guóqìng",
+   "hv": "quốc khánh",
+   "vi": "quốc khánh",
+   "pos": "danh từ",
+   "note": "国庆节 (ngày Quốc khánh).",
+   "ex": [
+    {
+     "cn": "国庆节放假七天。",
+     "py": "Guóqìng Jié fàngjià qī tiān.",
+     "vi": "Quốc khánh được nghỉ bảy ngày."
+    }
+   ]
+  },
+  {
+   "w": "福",
+   "py": "fú",
+   "hv": "phúc",
+   "vi": "phúc, may mắn",
+   "pos": "danh từ",
+   "note": "Dán chữ 福 ngày Tết.",
+   "ex": [
+    {
+     "cn": "过年的时候，家家门上都贴着福字。",
+     "py": "Guònián de shíhou, jiājiā mén shang dōu tiē zhe fú zì.",
+     "vi": "Tết đến, cửa nhà nào cũng dán chữ Phúc."
+    }
+   ]
+  },
+  {
+   "w": "恭喜",
+   "py": "gōngxǐ",
+   "hv": "cung hỉ",
+   "vi": "chúc mừng",
+   "pos": "động từ",
+   "note": "恭喜发财 (chúc phát tài).",
+   "ex": [
+    {
+     "cn": "恭喜你们赢得了比赛！",
+     "py": "Gōngxǐ nǐmen yíngdé le bǐsài!",
+     "vi": "Chúc mừng các bạn thắng trận!"
+    }
+   ]
+  },
+  {
+   "w": "婚礼",
+   "py": "hūnlǐ",
+   "hv": "hôn lễ",
+   "vi": "đám cưới",
+   "pos": "danh từ",
+   "note": "Chính là \"hôn lễ\".",
+   "ex": [
+    {
+     "cn": "下个月我要参加朋友的婚礼。",
+     "py": "Xià ge yuè wǒ yào cānjiā péngyou de hūnlǐ.",
+     "vi": "Tháng sau tôi đi đám cưới bạn."
+    }
+   ]
+  },
+  {
+   "w": "纪念",
+   "py": "jìniàn",
+   "hv": "kỷ niệm",
+   "vi": "kỷ niệm; tưởng nhớ",
+   "pos": "động từ, danh từ",
+   "note": "留作纪念 (giữ làm kỷ niệm).",
+   "ex": [
+    {
+     "cn": "这张照片我留作纪念。",
+     "py": "Zhè zhāng zhàopiàn wǒ liú zuò jìniàn.",
+     "vi": "Tấm ảnh này tôi giữ làm kỷ niệm."
+    }
+   ]
+  },
+  {
+   "w": "纪念日",
+   "py": "jìniànrì",
+   "hv": "kỷ niệm nhật",
+   "vi": "ngày kỷ niệm",
+   "pos": "danh từ",
+   "note": "结婚纪念日.",
+   "ex": [
+    {
+     "cn": "今天是我们的结婚纪念日。",
+     "py": "Jīntiān shì wǒmen de jiéhūn jìniànrì.",
+     "vi": "Hôm nay là ngày kỷ niệm cưới của chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "故乡",
+   "py": "gùxiāng",
+   "hv": "cố hương",
+   "vi": "quê hương",
+   "pos": "danh từ",
+   "note": "Chính là \"cố hương\".",
+   "ex": [
+    {
+     "cn": "他很想念自己的故乡。",
+     "py": "Tā hěn xiǎngniàn zìjǐ de gùxiāng.",
+     "vi": "Anh ấy rất nhớ quê hương."
+    }
+   ]
+  },
+  {
+   "w": "古",
+   "py": "gǔ",
+   "hv": "cổ",
+   "vi": "xưa, cổ",
+   "pos": "tính từ",
+   "note": "古城 (thành cổ).",
+   "ex": [
+    {
+     "cn": "会安是一座古城。",
+     "py": "Huì'ān shì yí zuò gǔchéng.",
+     "vi": "Hội An là một thành cổ."
+    }
+   ]
+  },
+  {
+   "w": "古代",
+   "py": "gǔdài",
+   "hv": "cổ đại",
+   "vi": "thời xưa",
+   "pos": "danh từ",
+   "note": "Chính là \"cổ đại\".",
+   "ex": [
+    {
+     "cn": "古代的人怎么过新年？",
+     "py": "Gǔdài de rén zěnme guò xīnnián?",
+     "vi": "Người xưa đón năm mới thế nào?"
+    }
+   ]
+  },
+  {
+   "w": "古老",
+   "py": "gǔlǎo",
+   "hv": "cổ lão",
+   "vi": "cổ xưa, lâu đời",
+   "pos": "tính từ",
+   "note": "古老的传统 (truyền thống lâu đời).",
+   "ex": [
+    {
+     "cn": "这是一个古老的传说。",
+     "py": "Zhè shì yí ge gǔlǎo de chuánshuō.",
+     "vi": "Đây là một truyền thuyết cổ xưa."
+    }
+   ]
+  },
+  {
+   "w": "胡同",
+   "py": "hútòng",
+   "hv": "hồ đồng",
+   "vi": "ngõ nhỏ (Bắc Kinh)",
+   "pos": "danh từ",
+   "note": "Ngõ hẻm kiểu Bắc Kinh.",
+   "ex": [
+    {
+     "cn": "我们在北京的胡同里散步。",
+     "py": "Wǒmen zài Běijīng de hútòng li sànbù.",
+     "vi": "Chúng tôi đi dạo trong ngõ nhỏ Bắc Kinh."
+    }
+   ]
+  },
+  {
+   "w": "光临",
+   "py": "guānglín",
+   "hv": "quang lâm",
+   "vi": "ghé thăm (lời mời khách)",
+   "pos": "động từ",
+   "note": "欢迎光临 (hân hạnh chào đón).",
+   "ex": [
+    {
+     "cn": "欢迎光临！请进。",
+     "py": "Huānyíng guānglín! Qǐng jìn.",
+     "vi": "Xin chào quý khách! Mời vào."
+    }
+   ]
+  },
+  {
+   "w": "贵姓",
+   "py": "guìxìng",
+   "hv": "quý tính",
+   "vi": "quý danh (hỏi họ)",
+   "pos": "danh từ",
+   "note": "您贵姓？ (Ông/bà họ gì?).",
+   "ex": [
+    {
+     "cn": "您贵姓？——我姓阮。",
+     "py": "Nín guìxìng? —— Wǒ xìng Ruǎn.",
+     "vi": "Ông họ gì ạ? — Tôi họ Nguyễn."
+    }
+   ]
+  },
+  {
+   "w": "告别",
+   "py": "gàobié",
+   "hv": "cáo biệt",
+   "vi": "chia tay, từ biệt",
+   "pos": "động từ",
+   "note": "告别仪式 (lễ chia tay).",
+   "ex": [
+    {
+     "cn": "他在比赛后告别了球迷。",
+     "py": "Tā zài bǐsài hòu gàobié le qiúmí.",
+     "vi": "Sau trận anh ấy chia tay người hâm mộ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "恭喜 + người + 事",
+   "b": "恭喜你考上大学",
+   "d": "Chúc mừng ai về việc gì.",
+   "ex": [
+    {
+     "cn": "恭喜你找到了新工作！",
+     "py": "Gōngxǐ nǐ zhǎodào le xīn gōngzuò!",
+     "vi": "Chúc mừng bạn tìm được việc mới!"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "除夕夜，大家一边看电视一边包饺子。",
+   "py": "Chúxī yè, dàjiā yìbiān kàn diànshì yìbiān bāo jiǎozi.",
+   "vi": "Đêm giao thừa mọi người vừa xem tivi vừa gói sủi cảo."
+  },
+  {
+   "cn": "每次回到故乡，我都觉得很放松。",
+   "py": "Měi cì huídào gùxiāng, wǒ dōu juéde hěn fàngsōng.",
+   "vi": "Mỗi lần về quê tôi đều thấy thư thái."
+  },
+  {
+   "cn": "恭喜发财，新年快乐！",
+   "py": "Gōngxǐ fācái, xīnnián kuàilè!",
+   "vi": "Chúc phát tài, năm mới vui vẻ!"
+  }
+ ]
+}

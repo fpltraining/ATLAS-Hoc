@@ -1,0 +1,264 @@
+{
+ "id": 235,
+ "cn": "果然赢了",
+ "title": "Mức độ và thời điểm",
+ "goal": "Dùng phó từ: đặc biệt, quả nhiên, quá mức, cực kỳ, quả thực, dần dần, gần, sắp, vội vàng, có lẽ, vừa vặn.",
+ "words": [
+  {
+   "w": "格外",
+   "py": "géwài",
+   "hv": "cách ngoại",
+   "vi": "đặc biệt, hơn hẳn",
+   "pos": "phó từ",
+   "note": "格外漂亮 (đẹp lạ thường).",
+   "ex": [
+    {
+     "cn": "今天的天气格外好。",
+     "py": "Jīntiān de tiānqì géwài hǎo.",
+     "vi": "Thời tiết hôm nay đẹp lạ thường."
+    }
+   ]
+  },
+  {
+   "w": "果然",
+   "py": "guǒrán",
+   "hv": "quả nhiên",
+   "vi": "quả nhiên",
+   "pos": "phó từ",
+   "note": "Đúng như dự đoán.",
+   "ex": [
+    {
+     "cn": "他说会下雨，果然下雨了。",
+     "py": "Tā shuō huì xià yǔ, guǒrán xià yǔ le.",
+     "vi": "Anh ấy nói sẽ mưa, quả nhiên mưa thật."
+    }
+   ]
+  },
+  {
+   "w": "过度",
+   "py": "guòdù",
+   "hv": "quá độ",
+   "vi": "quá mức",
+   "pos": "tính từ",
+   "note": "过度训练 (tập quá sức).",
+   "ex": [
+    {
+     "cn": "过度训练容易受伤。",
+     "py": "Guòdù xùnliàn róngyì shòushāng.",
+     "vi": "Tập quá sức dễ chấn thương."
+    }
+   ]
+  },
+  {
+   "w": "过分",
+   "py": "guòfèn",
+   "hv": "quá phận",
+   "vi": "quá đáng",
+   "pos": "tính từ",
+   "note": "太过分了 (quá đáng lắm).",
+   "ex": [
+    {
+     "cn": "你这样说太过分了。",
+     "py": "Nǐ zhèyàng shuō tài guòfèn le.",
+     "vi": "Bạn nói vậy quá đáng lắm."
+    }
+   ]
+  },
+  {
+   "w": "过于",
+   "py": "guòyú",
+   "hv": "quá ư",
+   "vi": "quá (văn viết)",
+   "pos": "phó từ",
+   "note": "过于紧张 (quá căng thẳng).",
+   "ex": [
+    {
+     "cn": "你不要过于担心。",
+     "py": "Nǐ bú yào guòyú dānxīn.",
+     "vi": "Bạn đừng lo lắng quá."
+    }
+   ]
+  },
+  {
+   "w": "极其",
+   "py": "jíqí",
+   "hv": "cực kỳ",
+   "vi": "cực kỳ",
+   "pos": "phó từ",
+   "note": "Văn viết, mạnh hơn 非常.",
+   "ex": [
+    {
+     "cn": "这场比赛极其重要。",
+     "py": "Zhè chǎng bǐsài jíqí zhòngyào.",
+     "vi": "Trận này cực kỳ quan trọng."
+    }
+   ]
+  },
+  {
+   "w": "简直",
+   "py": "jiǎnzhí",
+   "hv": "giản trực",
+   "vi": "quả thực, đúng là",
+   "pos": "phó từ",
+   "note": "Nhấn mạnh, có ý cường điệu.",
+   "ex": [
+    {
+     "cn": "这简直太不可思议了！",
+     "py": "Zhè jiǎnzhí tài bù kě sīyì le!",
+     "vi": "Thật đúng là không thể tin nổi!"
+    }
+   ]
+  },
+  {
+   "w": "渐渐",
+   "py": "jiànjiàn",
+   "hv": "tiệm tiệm",
+   "vi": "dần dần",
+   "pos": "phó từ",
+   "note": "Giống 慢慢 nhưng văn viết.",
+   "ex": [
+    {
+     "cn": "天渐渐黑了。",
+     "py": "Tiān jiànjiàn hēi le.",
+     "vi": "Trời dần tối."
+    }
+   ]
+  },
+  {
+   "w": "将近",
+   "py": "jiāngjìn",
+   "hv": "tương cận",
+   "vi": "gần, xấp xỉ",
+   "pos": "phó từ",
+   "note": "将近一百人 (gần trăm người).",
+   "ex": [
+    {
+     "cn": "将近一万人来看比赛。",
+     "py": "Jiāngjìn yí wàn rén lái kàn bǐsài.",
+     "vi": "Gần mười nghìn người đến xem trận đấu."
+    }
+   ]
+  },
+  {
+   "w": "即将",
+   "py": "jíjiāng",
+   "hv": "tức tương",
+   "vi": "sắp sửa",
+   "pos": "phó từ",
+   "note": "Văn viết của 快要.",
+   "ex": [
+    {
+     "cn": "比赛即将开始。",
+     "py": "Bǐsài jíjiāng kāishǐ.",
+     "vi": "Trận đấu sắp bắt đầu."
+    }
+   ]
+  },
+  {
+   "w": "急忙",
+   "py": "jímáng",
+   "hv": "cấp mang",
+   "vi": "vội vàng",
+   "pos": "phó từ",
+   "note": "急忙跑过去 (vội chạy tới).",
+   "ex": [
+    {
+     "cn": "听到消息，他急忙赶回家。",
+     "py": "Tīngdào xiāoxi, tā jímáng gǎn huí jiā.",
+     "vi": "Nghe tin, anh ấy vội vàng về nhà."
+    }
+   ]
+  },
+  {
+   "w": "或许",
+   "py": "huòxǔ",
+   "hv": "hoặc hứa",
+   "vi": "có lẽ",
+   "pos": "phó từ",
+   "note": "Giống 也许.",
+   "ex": [
+    {
+     "cn": "或许他今天不会来了。",
+     "py": "Huòxǔ tā jīntiān bú huì lái le.",
+     "vi": "Có lẽ hôm nay anh ấy không đến."
+    }
+   ]
+  },
+  {
+   "w": "或是",
+   "py": "huòshì",
+   "hv": "hoặc thị",
+   "vi": "hoặc là",
+   "pos": "liên từ",
+   "note": "Giống 或者.",
+   "ex": [
+    {
+     "cn": "你可以坐地铁或是坐出租车。",
+     "py": "Nǐ kěyǐ zuò dìtiě huòshì zuò chūzūchē.",
+     "vi": "Bạn có thể đi tàu điện hoặc taxi."
+    }
+   ]
+  },
+  {
+   "w": "刚好",
+   "py": "gānghǎo",
+   "hv": "cương hảo",
+   "vi": "vừa vặn, vừa đúng lúc",
+   "pos": "phó từ, tính từ",
+   "note": "刚好赶上 (vừa kịp).",
+   "ex": [
+    {
+     "cn": "我到的时候，车刚好开走了。",
+     "py": "Wǒ dào de shíhou, chē gānghǎo kāi zǒu le.",
+     "vi": "Lúc tôi đến, xe vừa đúng lúc chạy mất."
+    }
+   ]
+  },
+  {
+   "w": "改天",
+   "py": "gǎitiān",
+   "hv": "cải thiên",
+   "vi": "hôm khác",
+   "pos": "phó từ",
+   "note": "改天再聊 (hôm khác nói tiếp).",
+   "ex": [
+    {
+     "cn": "今天太忙了，改天再聊吧。",
+     "py": "Jīntiān tài máng le, gǎitiān zài liáo ba.",
+     "vi": "Hôm nay bận quá, hôm khác nói chuyện nhé."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "果然 và 居然",
+   "b": "果然: đúng như dự đoán; 居然: ngoài dự đoán",
+   "d": "他果然来了 · 他居然来了.",
+   "ex": [
+    {
+     "cn": "教练说他们会改变打法，他们果然改了。",
+     "py": "Jiàoliàn shuō tāmen huì gǎibiàn dǎfǎ, tāmen guǒrán gǎi le.",
+     "vi": "Huấn luyện viên nói họ sẽ đổi lối đánh, quả nhiên họ đổi thật."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "比赛即将开始，请大家回到座位。",
+   "py": "Bǐsài jíjiāng kāishǐ, qǐng dàjiā huídào zuòwèi.",
+   "vi": "Trận đấu sắp bắt đầu, mời mọi người về chỗ."
+  },
+  {
+   "cn": "他简直就是天才！",
+   "py": "Tā jiǎnzhí jiù shì tiāncái!",
+   "vi": "Cậu ấy đúng là thiên tài!"
+  },
+  {
+   "cn": "渐渐地，我开始听懂中文了。",
+   "py": "Jiànjiàn de, wǒ kāishǐ tīng dǒng Zhōngwén le.",
+   "vi": "Dần dần, tôi bắt đầu nghe hiểu tiếng Trung."
+  }
+ ]
+}

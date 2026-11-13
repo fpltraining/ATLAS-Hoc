@@ -1,0 +1,264 @@
+{
+ "id": 228,
+ "cn": "吃火锅",
+ "title": "Đời sống hằng ngày",
+ "goal": "Nói về căn hộ, tủ, nồi, đồ điện gia dụng, việc nhà, cơm hộp, lẩu, hải sản, cắt, nhặt và khám bệnh.",
+ "words": [
+  {
+   "w": "公寓",
+   "py": "gōngyù",
+   "hv": "công ngụ",
+   "vi": "căn hộ chung cư",
+   "pos": "danh từ",
+   "note": "寓 là \"ngụ\" (chỗ ở).",
+   "ex": [
+    {
+     "cn": "我们住在一套小公寓里。",
+     "py": "Wǒmen zhù zài yí tào xiǎo gōngyù li.",
+     "vi": "Chúng tôi ở trong một căn hộ nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "柜子",
+   "py": "guìzi",
+   "hv": "quỹ tử",
+   "vi": "cái tủ",
+   "pos": "danh từ",
+   "note": "衣柜 (tủ quần áo).",
+   "ex": [
+    {
+     "cn": "衣服都放在柜子里。",
+     "py": "Yīfu dōu fàng zài guìzi li.",
+     "vi": "Quần áo đều để trong tủ."
+    }
+   ]
+  },
+  {
+   "w": "锅",
+   "py": "guō",
+   "hv": "oa",
+   "vi": "cái nồi, chảo",
+   "pos": "danh từ",
+   "note": "火锅 (lẩu).",
+   "ex": [
+    {
+     "cn": "锅里的汤开了。",
+     "py": "Guō li de tāng kāi le.",
+     "vi": "Canh trong nồi sôi rồi."
+    }
+   ]
+  },
+  {
+   "w": "家电",
+   "py": "jiādiàn",
+   "hv": "gia điện",
+   "vi": "đồ điện gia dụng",
+   "pos": "danh từ",
+   "note": "家用电器 viết tắt.",
+   "ex": [
+    {
+     "cn": "新家需要买很多家电。",
+     "py": "Xīn jiā xūyào mǎi hěn duō jiādiàn.",
+     "vi": "Nhà mới cần mua nhiều đồ điện."
+    }
+   ]
+  },
+  {
+   "w": "家务",
+   "py": "jiāwù",
+   "hv": "gia vụ",
+   "vi": "việc nhà",
+   "pos": "danh từ",
+   "note": "做家务 (làm việc nhà).",
+   "ex": [
+    {
+     "cn": "周末我们一起做家务。",
+     "py": "Zhōumò wǒmen yìqǐ zuò jiāwù.",
+     "vi": "Cuối tuần chúng tôi cùng làm việc nhà."
+    }
+   ]
+  },
+  {
+   "w": "盒饭",
+   "py": "héfàn",
+   "hv": "hạp phạn",
+   "vi": "cơm hộp",
+   "pos": "danh từ",
+   "note": "盒 là cái hộp.",
+   "ex": [
+    {
+     "cn": "中午我们吃盒饭。",
+     "py": "Zhōngwǔ wǒmen chī héfàn.",
+     "vi": "Buổi trưa chúng tôi ăn cơm hộp."
+    }
+   ]
+  },
+  {
+   "w": "火锅",
+   "py": "huǒguō",
+   "hv": "hoả oa",
+   "vi": "lẩu",
+   "pos": "danh từ",
+   "note": "Nồi có lửa.",
+   "ex": [
+    {
+     "cn": "天冷的时候吃火锅最舒服。",
+     "py": "Tiān lěng de shíhou chī huǒguō zuì shūfu.",
+     "vi": "Trời lạnh ăn lẩu là sướng nhất."
+    }
+   ]
+  },
+  {
+   "w": "海鲜",
+   "py": "hǎixiān",
+   "hv": "hải tiên",
+   "vi": "hải sản",
+   "pos": "danh từ",
+   "note": "鲜 là tươi.",
+   "ex": [
+    {
+     "cn": "这家饭馆的海鲜很新鲜。",
+     "py": "Zhè jiā fànguǎn de hǎixiān hěn xīnxiān.",
+     "vi": "Hải sản quán này rất tươi."
+    }
+   ]
+  },
+  {
+   "w": "黄瓜",
+   "py": "huánggua",
+   "hv": "hoàng qua",
+   "vi": "dưa chuột",
+   "pos": "danh từ",
+   "note": "Quả màu vàng khi chín.",
+   "ex": [
+    {
+     "cn": "夏天我喜欢吃凉拌黄瓜。",
+     "py": "Xiàtiān wǒ xǐhuan chī liángbàn huánggua.",
+     "vi": "Mùa hè tôi thích ăn dưa chuột trộn."
+    }
+   ]
+  },
+  {
+   "w": "加热",
+   "py": "jiārè",
+   "hv": "gia nhiệt",
+   "vi": "hâm nóng",
+   "pos": "động từ",
+   "note": "加 (thêm) + 热 (nóng).",
+   "ex": [
+    {
+     "cn": "饭凉了，用微波炉加热一下。",
+     "py": "Fàn liáng le, yòng wēibōlú jiārè yíxià.",
+     "vi": "Cơm nguội rồi, hâm lò vi sóng một chút."
+    }
+   ]
+  },
+  {
+   "w": "剪",
+   "py": "jiǎn",
+   "hv": "tiễn",
+   "vi": "cắt (bằng kéo)",
+   "pos": "động từ",
+   "note": "剪头发 (cắt tóc).",
+   "ex": [
+    {
+     "cn": "我明天去剪头发。",
+     "py": "Wǒ míngtiān qù jiǎn tóufa.",
+     "vi": "Mai tôi đi cắt tóc."
+    }
+   ]
+  },
+  {
+   "w": "剪刀",
+   "py": "jiǎndāo",
+   "hv": "tiễn đao",
+   "vi": "cái kéo",
+   "pos": "danh từ",
+   "note": "Dao để cắt.",
+   "ex": [
+    {
+     "cn": "请把剪刀递给我。",
+     "py": "Qǐng bǎ jiǎndāo dì gěi wǒ.",
+     "vi": "Đưa giúp tôi cái kéo."
+    }
+   ]
+  },
+  {
+   "w": "捡",
+   "py": "jiǎn",
+   "hv": "kiểm",
+   "vi": "nhặt",
+   "pos": "động từ",
+   "note": "Nhặt từ dưới đất lên.",
+   "ex": [
+    {
+     "cn": "他在路上捡到一个钱包。",
+     "py": "Tā zài lùshang jiǎn dào yí ge qiánbāo.",
+     "vi": "Anh ấy nhặt được một cái ví trên đường."
+    }
+   ]
+  },
+  {
+   "w": "挂号",
+   "py": "guàhào",
+   "hv": "quải hiệu",
+   "vi": "lấy số khám bệnh; gửi bảo đảm",
+   "pos": "động từ",
+   "note": "Đăng ký khám ở bệnh viện.",
+   "ex": [
+    {
+     "cn": "看病要先挂号。",
+     "py": "Kàn bìng yào xiān guàhào.",
+     "vi": "Đi khám phải lấy số trước."
+    }
+   ]
+  },
+  {
+   "w": "急诊",
+   "py": "jízhěn",
+   "hv": "cấp chẩn",
+   "vi": "cấp cứu",
+   "pos": "danh từ",
+   "note": "急 (gấp) + 诊 (khám).",
+   "ex": [
+    {
+     "cn": "他半夜去医院看急诊。",
+     "py": "Tā bànyè qù yīyuàn kàn jízhěn.",
+     "vi": "Nửa đêm anh ấy vào viện cấp cứu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 到 (kết quả)",
+   "b": "捡到 · 找到 · 买到",
+   "d": "Đạt được kết quả của hành động.",
+   "ex": [
+    {
+     "cn": "我终于买到了那本书。",
+     "py": "Wǒ zhōngyú mǎi dào le nà běn shū.",
+     "vi": "Cuối cùng tôi cũng mua được cuốn sách đó."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "做家务也是一种锻炼。",
+   "py": "Zuò jiāwù yě shì yì zhǒng duànliàn.",
+   "vi": "Làm việc nhà cũng là một cách tập luyện."
+  },
+  {
+   "cn": "比赛以后全队一起去吃火锅。",
+   "py": "Bǐsài yǐhòu quán duì yìqǐ qù chī huǒguō.",
+   "vi": "Sau trận cả đội cùng đi ăn lẩu."
+  },
+  {
+   "cn": "他捡到钱包以后马上交给了警察。",
+   "py": "Tā jiǎn dào qiánbāo yǐhòu mǎshàng jiāo gěi le jǐngchá.",
+   "vi": "Nhặt được ví, anh ấy lập tức giao cho cảnh sát."
+  }
+ ]
+}
