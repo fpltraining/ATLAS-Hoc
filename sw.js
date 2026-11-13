@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v28';
+const VERSION = 'atlas-v29';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
@@ -14,7 +14,7 @@ const CORE_FILES = [
   './', 'index.html', 'manifest.webmanifest',
   'css/app.css', 'css/atlas.css',
   'js/app.js', 'js/ui.js', 'js/data.js', 'js/store.js', 'js/srs.js', 'js/plan.js',
-  'js/audio.js', 'js/content.js', 'js/kit.js', 'js/ai.js', 'js/progress.js', 'js/pool.js', 'js/speech.js', 'js/audiokey.js', 'js/auth.js', 'js/sync.js', 'js/config.js', 'js/vendor/supabase-2.119.0.js',
+  'js/audio.js', 'js/content.js', 'js/kit.js', 'js/ai.js', 'js/progress.js', 'js/pool.js', 'js/speech.js', 'js/audiokey.js', 'js/pics.js', 'js/auth.js', 'js/sync.js', 'js/config.js', 'js/vendor/supabase-2.119.0.js',
   'js/pen/canvas.js', 'js/pen/brush.js', 'js/pen/grid.js', 'js/pen/grade.js', 'js/pen/sound.js', 'js/pen/inkpad.js',
   ...['home', 'en', 'zh', 'read', 'reader', 'lesson', 'write', 'review', 'radicals', 'pinyin', 'char', 'penen',
     'work', 'know', 'lib', 'drill', 'numbers', 'notes', 'book', 'stats', 'settings', 'exam', 'charmap', 'challenge', 'games', 'search', 'word', 'speak'].map((v) => `js/views/${v}.js`),
@@ -26,7 +26,7 @@ const CORE_FILES = [
 ];
 
 /* Tải sau, chạy ngầm: nhiều và nặng hơn nhưng không cần ngay lúc mở app */
-const EXTRA_FILES = ['data/audio.json', 'data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json'];
+const EXTRA_FILES = ['data/audio.json', 'data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json', 'data/pics/en.json'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {
