@@ -1,0 +1,264 @@
+{
+ "id": 227,
+ "cn": "各行各业",
+ "title": "Nghề nghiệp và hợp tác",
+ "goal": "Nói về kỹ sư, công cụ, chức năng, công chức, ngành nghề, sơ yếu lý lịch, đãi ngộ, hợp đồng và giao tiếp.",
+ "words": [
+  {
+   "w": "工程",
+   "py": "gōngchéng",
+   "hv": "công trình",
+   "vi": "công trình; kỹ thuật",
+   "pos": "danh từ",
+   "note": "软件工程 (kỹ thuật phần mềm).",
+   "ex": [
+    {
+     "cn": "这个工程明年完成。",
+     "py": "Zhège gōngchéng míngnián wánchéng.",
+     "vi": "Công trình này sang năm hoàn thành."
+    }
+   ]
+  },
+  {
+   "w": "工程师",
+   "py": "gōngchéngshī",
+   "hv": "công trình sư",
+   "vi": "kỹ sư",
+   "pos": "danh từ",
+   "note": "师 là \"sư\" (người thầy, người chuyên môn).",
+   "ex": [
+    {
+     "cn": "我哥哥是一名软件工程师。",
+     "py": "Wǒ gēge shì yì míng ruǎnjiàn gōngchéngshī.",
+     "vi": "Anh tôi là kỹ sư phần mềm."
+    }
+   ]
+  },
+  {
+   "w": "工具",
+   "py": "gōngjù",
+   "hv": "công cụ",
+   "vi": "công cụ",
+   "pos": "danh từ",
+   "note": "Chính là \"công cụ\".",
+   "ex": [
+    {
+     "cn": "语言是交流的工具。",
+     "py": "Yǔyán shì jiāoliú de gōngjù.",
+     "vi": "Ngôn ngữ là công cụ giao tiếp."
+    }
+   ]
+  },
+  {
+   "w": "功能",
+   "py": "gōngnéng",
+   "hv": "công năng",
+   "vi": "chức năng",
+   "pos": "danh từ",
+   "note": "Chính là \"công năng\".",
+   "ex": [
+    {
+     "cn": "这个手机有很多新功能。",
+     "py": "Zhège shǒujī yǒu hěn duō xīn gōngnéng.",
+     "vi": "Điện thoại này có nhiều chức năng mới."
+    }
+   ]
+  },
+  {
+   "w": "公务员",
+   "py": "gōngwùyuán",
+   "hv": "công vụ viên",
+   "vi": "công chức",
+   "pos": "danh từ",
+   "note": "Người làm việc nhà nước.",
+   "ex": [
+    {
+     "cn": "她考上了公务员。",
+     "py": "Tā kǎo shàng le gōngwùyuán.",
+     "vi": "Cô ấy thi đỗ công chức."
+    }
+   ]
+  },
+  {
+   "w": "工业",
+   "py": "gōngyè",
+   "hv": "công nghiệp",
+   "vi": "công nghiệp",
+   "pos": "danh từ",
+   "note": "Chính là \"công nghiệp\".",
+   "ex": [
+    {
+     "cn": "这个城市的工业很发达。",
+     "py": "Zhège chéngshì de gōngyè hěn fādá.",
+     "vi": "Công nghiệp thành phố này rất phát triển."
+    }
+   ]
+  },
+  {
+   "w": "工艺",
+   "py": "gōngyì",
+   "hv": "công nghệ",
+   "vi": "thủ công, kỹ nghệ",
+   "pos": "danh từ",
+   "note": "工艺品 (đồ thủ công mỹ nghệ).",
+   "ex": [
+    {
+     "cn": "这些都是手工工艺品。",
+     "py": "Zhèxiē dōu shì shǒugōng gōngyìpǐn.",
+     "vi": "Đây đều là đồ thủ công mỹ nghệ."
+    }
+   ]
+  },
+  {
+   "w": "行业",
+   "py": "hángyè",
+   "hv": "hàng nghiệp",
+   "vi": "ngành nghề",
+   "pos": "danh từ",
+   "note": "行 ở đây đọc háng.",
+   "ex": [
+    {
+     "cn": "电竞行业发展得很快。",
+     "py": "Diànjìng hángyè fāzhǎn de hěn kuài.",
+     "vi": "Ngành thể thao điện tử phát triển rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "各行各业",
+   "py": "gèháng gèyè",
+   "hv": "các hàng các nghiệp",
+   "vi": "mọi ngành nghề",
+   "pos": "thành ngữ",
+   "note": "Mỗi ngành mỗi nghề.",
+   "ex": [
+    {
+     "cn": "各行各业都需要人才。",
+     "py": "Gèháng gèyè dōu xūyào réncái.",
+     "vi": "Ngành nghề nào cũng cần nhân tài."
+    }
+   ]
+  },
+  {
+   "w": "简历",
+   "py": "jiǎnlì",
+   "hv": "giản lịch",
+   "vi": "sơ yếu lý lịch, CV",
+   "pos": "danh từ",
+   "note": "简 (giản) + 历 (lịch sử bản thân).",
+   "ex": [
+    {
+     "cn": "我给三家公司发了简历。",
+     "py": "Wǒ gěi sān jiā gōngsī fā le jiǎnlì.",
+     "vi": "Tôi gửi CV cho ba công ty."
+    }
+   ]
+  },
+  {
+   "w": "待遇",
+   "py": "dàiyù",
+   "hv": "đãi ngộ",
+   "vi": "đãi ngộ, lương thưởng",
+   "pos": "danh từ",
+   "note": "Chính là \"đãi ngộ\".",
+   "ex": [
+    {
+     "cn": "这家公司的待遇很好。",
+     "py": "Zhè jiā gōngsī de dàiyù hěn hǎo.",
+     "vi": "Đãi ngộ của công ty này rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "合同",
+   "py": "hétong",
+   "hv": "hợp đồng",
+   "vi": "hợp đồng",
+   "pos": "danh từ",
+   "note": "签合同 (ký hợp đồng).",
+   "ex": [
+    {
+     "cn": "他和俱乐部签了两年的合同。",
+     "py": "Tā hé jùlèbù qiān le liǎng nián de hétong.",
+     "vi": "Anh ấy ký hợp đồng hai năm với câu lạc bộ."
+    }
+   ]
+  },
+  {
+   "w": "合作",
+   "py": "hézuò",
+   "hv": "hợp tác",
+   "vi": "hợp tác",
+   "pos": "động từ",
+   "note": "Chính là \"hợp tác\".",
+   "ex": [
+    {
+     "cn": "希望我们以后多多合作。",
+     "py": "Xīwàng wǒmen yǐhòu duōduō hézuò.",
+     "vi": "Mong sau này chúng ta hợp tác nhiều hơn."
+    }
+   ]
+  },
+  {
+   "w": "伙伴",
+   "py": "huǒbàn",
+   "hv": "hoả bạn",
+   "vi": "bạn đồng hành, đối tác",
+   "pos": "danh từ",
+   "note": "合作伙伴 (đối tác).",
+   "ex": [
+    {
+     "cn": "他是我最好的合作伙伴。",
+     "py": "Tā shì wǒ zuì hǎo de hézuò huǒbàn.",
+     "vi": "Anh ấy là đối tác tốt nhất của tôi."
+    }
+   ]
+  },
+  {
+   "w": "沟通",
+   "py": "gōutōng",
+   "hv": "câu thông",
+   "vi": "giao tiếp, trao đổi",
+   "pos": "động từ",
+   "note": "沟 là rãnh, 通 là thông.",
+   "ex": [
+    {
+     "cn": "队员之间要多沟通。",
+     "py": "Duìyuán zhījiān yào duō gōutōng.",
+     "vi": "Các thành viên cần trao đổi nhiều hơn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "和 + người + 签/合作/沟通",
+   "b": "和俱乐部签合同",
+   "d": "Làm việc gì cùng với ai.",
+   "ex": [
+    {
+     "cn": "我想和你沟通一下比赛的安排。",
+     "py": "Wǒ xiǎng hé nǐ gōutōng yíxià bǐsài de ānpái.",
+     "vi": "Tôi muốn trao đổi với bạn về sắp xếp trận đấu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "好的沟通是合作成功的关键。",
+   "py": "Hǎo de gōutōng shì hézuò chénggōng de guānjiàn.",
+   "vi": "Giao tiếp tốt là chìa khoá hợp tác thành công."
+  },
+  {
+   "cn": "找工作的时候，简历一定要写清楚。",
+   "py": "Zhǎo gōngzuò de shíhou, jiǎnlì yídìng yào xiě qīngchu.",
+   "vi": "Khi tìm việc, CV nhất định phải viết rõ ràng."
+  },
+  {
+   "cn": "合同到期以后，他决定去别的俱乐部。",
+   "py": "Hétong dàoqī yǐhòu, tā juédìng qù bié de jùlèbù.",
+   "vi": "Hết hợp đồng, anh ấy quyết định sang câu lạc bộ khác."
+  }
+ ]
+}

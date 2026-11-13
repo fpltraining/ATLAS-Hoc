@@ -1,0 +1,264 @@
+{
+ "id": 231,
+ "cn": "汇率变了",
+ "title": "Tiền bạc và kinh tế",
+ "goal": "Nói về tiền gửi, tỷ giá, vàng, giá trị, chi phí, hải quan, hàng hoá, gia công, quý và quy mô.",
+ "words": [
+  {
+   "w": "存款",
+   "py": "cúnkuǎn",
+   "hv": "tồn khoản",
+   "vi": "tiền gửi tiết kiệm; gửi tiền",
+   "pos": "danh từ, động từ",
+   "note": "存 (giữ) + 款 (khoản tiền).",
+   "ex": [
+    {
+     "cn": "他每个月都存一部分钱，现在有不少存款。",
+     "py": "Tā měi ge yuè dōu cún yí bùfen qián, xiànzài yǒu bù shǎo cúnkuǎn.",
+     "vi": "Tháng nào anh ấy cũng để dành một phần, giờ có khá nhiều tiền tiết kiệm."
+    }
+   ]
+  },
+  {
+   "w": "汇率",
+   "py": "huìlǜ",
+   "hv": "hối suất",
+   "vi": "tỷ giá",
+   "pos": "danh từ",
+   "note": "率 đọc lǜ.",
+   "ex": [
+    {
+     "cn": "今天人民币和越南盾的汇率是多少？",
+     "py": "Jīntiān Rénmínbì hé Yuènán dùn de huìlǜ shì duōshao?",
+     "vi": "Tỷ giá nhân dân tệ với đồng Việt Nam hôm nay bao nhiêu?"
+    }
+   ]
+  },
+  {
+   "w": "黄金",
+   "py": "huángjīn",
+   "hv": "hoàng kim",
+   "vi": "vàng",
+   "pos": "danh từ",
+   "note": "黄金时间 (giờ vàng).",
+   "ex": [
+    {
+     "cn": "很多人喜欢买黄金。",
+     "py": "Hěn duō rén xǐhuan mǎi huángjīn.",
+     "vi": "Nhiều người thích mua vàng."
+    }
+   ]
+  },
+  {
+   "w": "价值",
+   "py": "jiàzhí",
+   "hv": "giá trị",
+   "vi": "giá trị",
+   "pos": "danh từ",
+   "note": "Chính là \"giá trị\".",
+   "ex": [
+    {
+     "cn": "这次失败对我们很有价值。",
+     "py": "Zhè cì shībài duì wǒmen hěn yǒu jiàzhí.",
+     "vi": "Lần thất bại này rất có giá trị với chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "花费",
+   "py": "huāfèi",
+   "hv": "hoa phí",
+   "vi": "chi phí; tiêu tốn",
+   "pos": "danh từ, động từ",
+   "note": "花 (tiêu) + 费 (phí).",
+   "ex": [
+    {
+     "cn": "这次旅行花费了不少钱。",
+     "py": "Zhè cì lǚxíng huāfèi le bù shǎo qián.",
+     "vi": "Chuyến đi này tốn không ít tiền."
+    }
+   ]
+  },
+  {
+   "w": "话费",
+   "py": "huàfèi",
+   "hv": "thoại phí",
+   "vi": "cước điện thoại",
+   "pos": "danh từ",
+   "note": "交话费 (nộp cước).",
+   "ex": [
+    {
+     "cn": "这个月的话费有点儿高。",
+     "py": "Zhège yuè de huàfèi yǒudiǎnr gāo.",
+     "vi": "Cước điện thoại tháng này hơi cao."
+    }
+   ]
+  },
+  {
+   "w": "海关",
+   "py": "hǎiguān",
+   "hv": "hải quan",
+   "vi": "hải quan",
+   "pos": "danh từ",
+   "note": "Chính là \"hải quan\".",
+   "ex": [
+    {
+     "cn": "过海关的时候要打开行李。",
+     "py": "Guò hǎiguān de shíhou yào dǎkāi xíngli.",
+     "vi": "Qua hải quan phải mở hành lý."
+    }
+   ]
+  },
+  {
+   "w": "海外",
+   "py": "hǎiwài",
+   "hv": "hải ngoại",
+   "vi": "nước ngoài",
+   "pos": "danh từ",
+   "note": "Chính là \"hải ngoại\".",
+   "ex": [
+    {
+     "cn": "他在海外生活了十年。",
+     "py": "Tā zài hǎiwài shēnghuó le shí nián.",
+     "vi": "Anh ấy sống ở nước ngoài mười năm."
+    }
+   ]
+  },
+  {
+   "w": "货物",
+   "py": "huòwù",
+   "hv": "hoá vật",
+   "vi": "hàng hoá",
+   "pos": "danh từ",
+   "note": "货 là \"hoá\" (hàng).",
+   "ex": [
+    {
+     "cn": "这批货物明天到。",
+     "py": "Zhè pī huòwù míngtiān dào.",
+     "vi": "Lô hàng này mai đến."
+    }
+   ]
+  },
+  {
+   "w": "加工",
+   "py": "jiāgōng",
+   "hv": "gia công",
+   "vi": "gia công, chế biến",
+   "pos": "động từ",
+   "note": "食品加工 (chế biến thực phẩm).",
+   "ex": [
+    {
+     "cn": "这些水果要加工成果汁。",
+     "py": "Zhèxiē shuǐguǒ yào jiāgōng chéng guǒzhī.",
+     "vi": "Số hoa quả này sẽ chế biến thành nước ép."
+    }
+   ]
+  },
+  {
+   "w": "季度",
+   "py": "jìdù",
+   "hv": "quý độ",
+   "vi": "quý (ba tháng)",
+   "pos": "danh từ",
+   "note": "第一季度 (quý một).",
+   "ex": [
+    {
+     "cn": "公司第三季度的收入增加了。",
+     "py": "Gōngsī dì sān jìdù de shōurù zēngjiā le.",
+     "vi": "Thu nhập quý ba của công ty tăng."
+    }
+   ]
+  },
+  {
+   "w": "规模",
+   "py": "guīmó",
+   "hv": "quy mô",
+   "vi": "quy mô",
+   "pos": "danh từ",
+   "note": "Chính là \"quy mô\".",
+   "ex": [
+    {
+     "cn": "这次比赛的规模很大。",
+     "py": "Zhè cì bǐsài de guīmó hěn dà.",
+     "vi": "Giải đấu lần này có quy mô rất lớn."
+    }
+   ]
+  },
+  {
+   "w": "大批",
+   "py": "dàpī",
+   "hv": "đại phê",
+   "vi": "số lượng lớn",
+   "pos": "tính từ",
+   "note": "大批游客 (đông đảo du khách).",
+   "ex": [
+    {
+     "cn": "大批游客来到这里。",
+     "py": "Dàpī yóukè láidào zhèlǐ.",
+     "vi": "Rất đông du khách đến đây."
+    }
+   ]
+  },
+  {
+   "w": "大型",
+   "py": "dàxíng",
+   "hv": "đại hình",
+   "vi": "cỡ lớn",
+   "pos": "tính từ",
+   "note": "大型比赛 (giải đấu lớn).",
+   "ex": [
+    {
+     "cn": "这是我第一次参加大型比赛。",
+     "py": "Zhè shì wǒ dì yī cì cānjiā dàxíng bǐsài.",
+     "vi": "Đây là lần đầu tôi tham gia giải đấu lớn."
+    }
+   ]
+  },
+  {
+   "w": "机构",
+   "py": "jīgòu",
+   "hv": "cơ cấu",
+   "vi": "cơ quan, tổ chức",
+   "pos": "danh từ",
+   "note": "教育机构 (cơ sở giáo dục).",
+   "ex": [
+    {
+     "cn": "他在一家培训机构工作。",
+     "py": "Tā zài yì jiā péixùn jīgòu gōngzuò.",
+     "vi": "Anh ấy làm ở một trung tâm đào tạo."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "对 + ai + 有价值/有帮助",
+   "b": "对我们很有价值",
+   "d": "Có giá trị, có ích với ai.",
+   "ex": [
+    {
+     "cn": "这些数据对教练很有帮助。",
+     "py": "Zhèxiē shùjù duì jiàoliàn hěn yǒu bāngzhù.",
+     "vi": "Những số liệu này rất có ích cho huấn luyện viên."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "汇率每天都在变化。",
+   "py": "Huìlǜ měi tiān dōu zài biànhuà.",
+   "vi": "Tỷ giá thay đổi mỗi ngày."
+  },
+  {
+   "cn": "比赛的规模越来越大，奖金也越来越高。",
+   "py": "Bǐsài de guīmó yuè lái yuè dà, jiǎngjīn yě yuè lái yuè gāo.",
+   "vi": "Quy mô giải đấu ngày càng lớn, tiền thưởng cũng ngày càng cao."
+  },
+  {
+   "cn": "留学的花费比我想的多。",
+   "py": "Liúxué de huāfèi bǐ wǒ xiǎng de duō.",
+   "vi": "Chi phí du học nhiều hơn tôi nghĩ."
+  }
+ ]
+}

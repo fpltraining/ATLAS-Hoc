@@ -1,0 +1,264 @@
+{
+ "id": 232,
+ "cn": "我的观点",
+ "title": "Quan điểm và tranh luận",
+ "goal": "Trình bày quan điểm, phương án, phản ứng, phủ nhận, lặp lại và nói về cá nhân, cá tính.",
+ "words": [
+  {
+   "w": "观点",
+   "py": "guāndiǎn",
+   "hv": "quan điểm",
+   "vi": "quan điểm",
+   "pos": "danh từ",
+   "note": "Chính là \"quan điểm\".",
+   "ex": [
+    {
+     "cn": "我同意你的观点。",
+     "py": "Wǒ tóngyì nǐ de guāndiǎn.",
+     "vi": "Tôi đồng ý với quan điểm của bạn."
+    }
+   ]
+  },
+  {
+   "w": "观念",
+   "py": "guānniàn",
+   "hv": "quan niệm",
+   "vi": "quan niệm",
+   "pos": "danh từ",
+   "note": "传统观念 (quan niệm truyền thống).",
+   "ex": [
+    {
+     "cn": "年轻人的观念变了很多。",
+     "py": "Niánqīngrén de guānniàn biàn le hěn duō.",
+     "vi": "Quan niệm của người trẻ đã thay đổi nhiều."
+    }
+   ]
+  },
+  {
+   "w": "方案",
+   "py": "fāng'àn",
+   "hv": "phương án",
+   "vi": "phương án",
+   "pos": "danh từ",
+   "note": "Chính là \"phương án\".",
+   "ex": [
+    {
+     "cn": "我们准备了两个方案。",
+     "py": "Wǒmen zhǔnbèi le liǎng ge fāng'àn.",
+     "vi": "Chúng tôi chuẩn bị hai phương án."
+    }
+   ]
+  },
+  {
+   "w": "否定",
+   "py": "fǒudìng",
+   "hv": "phủ định",
+   "vi": "phủ định, bác bỏ",
+   "pos": "động từ",
+   "note": "Chính là \"phủ định\".",
+   "ex": [
+    {
+     "cn": "不要完全否定自己。",
+     "py": "Bú yào wánquán fǒudìng zìjǐ.",
+     "vi": "Đừng phủ định hoàn toàn bản thân."
+    }
+   ]
+  },
+  {
+   "w": "否认",
+   "py": "fǒurèn",
+   "hv": "phủ nhận",
+   "vi": "phủ nhận",
+   "pos": "động từ",
+   "note": "Chính là \"phủ nhận\".",
+   "ex": [
+    {
+     "cn": "他否认了这个消息。",
+     "py": "Tā fǒurèn le zhège xiāoxi.",
+     "vi": "Anh ấy phủ nhận tin này."
+    }
+   ]
+  },
+  {
+   "w": "反应",
+   "py": "fǎnyìng",
+   "hv": "phản ứng",
+   "vi": "phản ứng; phản xạ",
+   "pos": "danh từ, động từ",
+   "note": "反应很快 (phản xạ nhanh).",
+   "ex": [
+    {
+     "cn": "他的反应特别快。",
+     "py": "Tā de fǎnyìng tèbié kuài.",
+     "vi": "Phản xạ của anh ấy cực nhanh."
+    }
+   ]
+  },
+  {
+   "w": "反映",
+   "py": "fǎnyìng",
+   "hv": "phản ánh",
+   "vi": "phản ánh",
+   "pos": "động từ",
+   "note": "Khác 反应; cùng âm.",
+   "ex": [
+    {
+     "cn": "这个结果反映了我们的问题。",
+     "py": "Zhège jiéguǒ fǎnyìng le wǒmen de wèntí.",
+     "vi": "Kết quả này phản ánh vấn đề của chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "反复",
+   "py": "fǎnfù",
+   "hv": "phản phục",
+   "vi": "lặp đi lặp lại",
+   "pos": "phó từ",
+   "note": "反复练习 (luyện đi luyện lại).",
+   "ex": [
+    {
+     "cn": "这个动作要反复练习。",
+     "py": "Zhège dòngzuò yào fǎnfù liànxí.",
+     "vi": "Động tác này phải luyện đi luyện lại."
+    }
+   ]
+  },
+  {
+   "w": "重复",
+   "py": "chóngfù",
+   "hv": "trùng phục",
+   "vi": "lặp lại",
+   "pos": "động từ",
+   "note": "重 ở đây đọc chóng.",
+   "ex": [
+    {
+     "cn": "请再重复一遍。",
+     "py": "Qǐng zài chóngfù yí biàn.",
+     "vi": "Xin nhắc lại một lần nữa."
+    }
+   ]
+  },
+  {
+   "w": "根本",
+   "py": "gēnběn",
+   "hv": "căn bản",
+   "vi": "căn bản; hoàn toàn (không)",
+   "pos": "danh từ, phó từ",
+   "note": "根本不知道 (hoàn toàn không biết).",
+   "ex": [
+    {
+     "cn": "我根本不认识他。",
+     "py": "Wǒ gēnběn bú rènshi tā.",
+     "vi": "Tôi hoàn toàn không quen anh ta."
+    }
+   ]
+  },
+  {
+   "w": "个别",
+   "py": "gèbié",
+   "hv": "cá biệt",
+   "vi": "cá biệt, số ít",
+   "pos": "tính từ",
+   "note": "个别情况 (trường hợp cá biệt).",
+   "ex": [
+    {
+     "cn": "只有个别同学没来。",
+     "py": "Zhǐyǒu gèbié tóngxué méi lái.",
+     "vi": "Chỉ có vài bạn không đến."
+    }
+   ]
+  },
+  {
+   "w": "个人",
+   "py": "gèrén",
+   "hv": "cá nhân",
+   "vi": "cá nhân",
+   "pos": "danh từ",
+   "note": "Chính là \"cá nhân\".",
+   "ex": [
+    {
+     "cn": "这是我个人的看法。",
+     "py": "Zhè shì wǒ gèrén de kànfǎ.",
+     "vi": "Đây là quan điểm cá nhân tôi."
+    }
+   ]
+  },
+  {
+   "w": "个性",
+   "py": "gèxìng",
+   "hv": "cá tính",
+   "vi": "cá tính",
+   "pos": "danh từ",
+   "note": "Chính là \"cá tính\".",
+   "ex": [
+    {
+     "cn": "她很有个性。",
+     "py": "Tā hěn yǒu gèxìng.",
+     "vi": "Cô ấy rất có cá tính."
+    }
+   ]
+  },
+  {
+   "w": "各自",
+   "py": "gèzì",
+   "hv": "các tự",
+   "vi": "mỗi người, tự mỗi bên",
+   "pos": "đại từ",
+   "note": "各自负责 (mỗi người tự lo).",
+   "ex": [
+    {
+     "cn": "每个人都有各自的任务。",
+     "py": "Měi ge rén dōu yǒu gèzì de rènwu.",
+     "vi": "Mỗi người đều có nhiệm vụ riêng."
+    }
+   ]
+  },
+  {
+   "w": "广泛",
+   "py": "guǎngfàn",
+   "hv": "quảng phiếm",
+   "vi": "rộng rãi",
+   "pos": "tính từ",
+   "note": "广泛关注 (được quan tâm rộng rãi).",
+   "ex": [
+    {
+     "cn": "这件事引起了广泛的关注。",
+     "py": "Zhè jiàn shì yǐnqǐ le guǎngfàn de guānzhù.",
+     "vi": "Việc này thu hút sự chú ý rộng rãi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "根本 + 不/没",
+   "b": "根本不知道",
+   "d": "Nhấn mạnh phủ định hoàn toàn.",
+   "ex": [
+    {
+     "cn": "我根本没想到会赢。",
+     "py": "Wǒ gēnběn méi xiǎngdào huì yíng.",
+     "vi": "Tôi hoàn toàn không nghĩ sẽ thắng."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "每个人都有表达观点的权利。",
+   "py": "Měi ge rén dōu yǒu biǎodá guāndiǎn de quánlì.",
+   "vi": "Ai cũng có quyền bày tỏ quan điểm."
+  },
+  {
+   "cn": "如果这个方案不行，我们就用第二个。",
+   "py": "Rúguǒ zhège fāng'àn bù xíng, wǒmen jiù yòng dì èr ge.",
+   "vi": "Nếu phương án này không ổn thì dùng phương án hai."
+  },
+  {
+   "cn": "好的选手反应快，判断也准。",
+   "py": "Hǎo de xuǎnshǒu fǎnyìng kuài, pànduàn yě zhǔn.",
+   "vi": "Tuyển thủ giỏi phản xạ nhanh, phán đoán cũng chuẩn."
+  }
+ ]
+}

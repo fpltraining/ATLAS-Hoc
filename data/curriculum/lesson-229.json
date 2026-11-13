@@ -1,0 +1,264 @@
+{
+ "id": 229,
+ "cn": "深呼吸",
+ "title": "Cơ thể và sức khoẻ",
+ "goal": "Nói về não, cơ bắp, hơi thở, bệnh tật, dị ứng, hồi phục, mồ hôi, trí nhớ và các động tác cơ thể.",
+ "words": [
+  {
+   "w": "大脑",
+   "py": "dànǎo",
+   "hv": "đại não",
+   "vi": "não",
+   "pos": "danh từ",
+   "note": "Chính là \"đại não\".",
+   "ex": [
+    {
+     "cn": "睡觉可以让大脑休息。",
+     "py": "Shuìjiào kěyǐ ràng dànǎo xiūxi.",
+     "vi": "Ngủ giúp não nghỉ ngơi."
+    }
+   ]
+  },
+  {
+   "w": "肌肉",
+   "py": "jīròu",
+   "hv": "cơ nhục",
+   "vi": "cơ bắp",
+   "pos": "danh từ",
+   "note": "肌 là \"cơ\".",
+   "ex": [
+    {
+     "cn": "他每天锻炼，肌肉很发达。",
+     "py": "Tā měi tiān duànliàn, jīròu hěn fādá.",
+     "vi": "Anh ấy tập mỗi ngày, cơ bắp rất phát triển."
+    }
+   ]
+  },
+  {
+   "w": "呼吸",
+   "py": "hūxī",
+   "hv": "hô hấp",
+   "vi": "hít thở",
+   "pos": "động từ",
+   "note": "Chính là \"hô hấp\".",
+   "ex": [
+    {
+     "cn": "紧张的时候先深呼吸。",
+     "py": "Jǐnzhāng de shíhou xiān shēn hūxī.",
+     "vi": "Lúc căng thẳng hãy hít thở sâu trước."
+    }
+   ]
+  },
+  {
+   "w": "疾病",
+   "py": "jíbìng",
+   "hv": "tật bệnh",
+   "vi": "bệnh tật",
+   "pos": "danh từ",
+   "note": "Văn viết của 病.",
+   "ex": [
+    {
+     "cn": "运动可以预防很多疾病。",
+     "py": "Yùndòng kěyǐ yùfáng hěn duō jíbìng.",
+     "vi": "Vận động có thể phòng nhiều bệnh."
+    }
+   ]
+  },
+  {
+   "w": "过敏",
+   "py": "guòmǐn",
+   "hv": "quá mẫn",
+   "vi": "dị ứng",
+   "pos": "động từ",
+   "note": "对……过敏 (dị ứng với...).",
+   "ex": [
+    {
+     "cn": "我对海鲜过敏。",
+     "py": "Wǒ duì hǎixiān guòmǐn.",
+     "vi": "Tôi dị ứng hải sản."
+    }
+   ]
+  },
+  {
+   "w": "缓解",
+   "py": "huǎnjiě",
+   "hv": "hoãn giải",
+   "vi": "làm dịu, giảm bớt",
+   "pos": "động từ",
+   "note": "缓解压力 (giảm áp lực).",
+   "ex": [
+    {
+     "cn": "听音乐可以缓解压力。",
+     "py": "Tīng yīnyuè kěyǐ huǎnjiě yālì.",
+     "vi": "Nghe nhạc giúp giảm áp lực."
+    }
+   ]
+  },
+  {
+   "w": "恢复",
+   "py": "huīfù",
+   "hv": "khôi phục",
+   "vi": "hồi phục",
+   "pos": "động từ",
+   "note": "Chính là \"khôi phục\".",
+   "ex": [
+    {
+     "cn": "他的伤已经恢复了。",
+     "py": "Tā de shāng yǐjīng huīfù le.",
+     "vi": "Chấn thương của anh ấy đã hồi phục."
+    }
+   ]
+  },
+  {
+   "w": "好转",
+   "py": "hǎozhuǎn",
+   "hv": "hảo chuyển",
+   "vi": "chuyển biến tốt",
+   "pos": "động từ",
+   "note": "病情好转 (bệnh đỡ hơn).",
+   "ex": [
+    {
+     "cn": "吃了药以后，情况好转了。",
+     "py": "Chī le yào yǐhòu, qíngkuàng hǎozhuǎn le.",
+     "vi": "Uống thuốc xong tình hình đỡ hơn."
+    }
+   ]
+  },
+  {
+   "w": "汗水",
+   "py": "hànshuǐ",
+   "hv": "hãn thuỷ",
+   "vi": "mồ hôi",
+   "pos": "danh từ",
+   "note": "汗 là mồ hôi.",
+   "ex": [
+    {
+     "cn": "成功是用汗水换来的。",
+     "py": "Chénggōng shì yòng hànshuǐ huàn lái de.",
+     "vi": "Thành công đổi bằng mồ hôi."
+    }
+   ]
+  },
+  {
+   "w": "低头",
+   "py": "dī tóu",
+   "hv": "đê đầu",
+   "vi": "cúi đầu",
+   "pos": "động từ",
+   "note": "低 (thấp) + 头.",
+   "ex": [
+    {
+     "cn": "别总是低头看手机。",
+     "py": "Bié zǒngshì dī tóu kàn shǒujī.",
+     "vi": "Đừng suốt ngày cúi đầu xem điện thoại."
+    }
+   ]
+  },
+  {
+   "w": "挤",
+   "py": "jǐ",
+   "hv": "tễ",
+   "vi": "chen chúc; chật",
+   "pos": "động từ, tính từ",
+   "note": "地铁很挤 (tàu điện rất chật).",
+   "ex": [
+    {
+     "cn": "早上的地铁特别挤。",
+     "py": "Zǎoshang de dìtiě tèbié jǐ.",
+     "vi": "Tàu điện ngầm buổi sáng chật cực kỳ."
+    }
+   ]
+  },
+  {
+   "w": "滑",
+   "py": "huá",
+   "hv": "hoạt",
+   "vi": "trơn; trượt",
+   "pos": "tính từ, động từ",
+   "note": "滑冰 (trượt băng).",
+   "ex": [
+    {
+     "cn": "小心，地上很滑。",
+     "py": "Xiǎoxīn, dìshang hěn huá.",
+     "vi": "Cẩn thận, sàn rất trơn."
+    }
+   ]
+  },
+  {
+   "w": "躲",
+   "py": "duǒ",
+   "hv": "đoá",
+   "vi": "trốn, né",
+   "pos": "động từ",
+   "note": "躲开 (né ra).",
+   "ex": [
+    {
+     "cn": "他躲开了对方的技能。",
+     "py": "Tā duǒ kāi le duìfāng de jìnéng.",
+     "vi": "Anh ấy né được kỹ năng của đối phương."
+    }
+   ]
+  },
+  {
+   "w": "扶",
+   "py": "fú",
+   "hv": "phù",
+   "vi": "đỡ, vịn",
+   "pos": "động từ",
+   "note": "扶老人 (dìu người già).",
+   "ex": [
+    {
+     "cn": "他扶着老人过马路。",
+     "py": "Tā fú zhe lǎorén guò mǎlù.",
+     "vi": "Anh ấy dìu cụ già qua đường."
+    }
+   ]
+  },
+  {
+   "w": "记忆",
+   "py": "jìyì",
+   "hv": "ký ức",
+   "vi": "trí nhớ; ký ức",
+   "pos": "danh từ",
+   "note": "记忆力 (khả năng ghi nhớ).",
+   "ex": [
+    {
+     "cn": "我的记忆力越来越差了。",
+     "py": "Wǒ de jìyìlì yuè lái yuè chà le.",
+     "vi": "Trí nhớ của tôi càng ngày càng kém."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "对 + vật + 过敏 / 感兴趣",
+   "b": "我对海鲜过敏",
+   "d": "对 giới thiệu đối tượng của cảm giác.",
+   "ex": [
+    {
+     "cn": "很多人对花粉过敏。",
+     "py": "Hěn duō rén duì huāfěn guòmǐn.",
+     "vi": "Nhiều người dị ứng phấn hoa."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "比赛前深呼吸，可以缓解紧张。",
+   "py": "Bǐsài qián shēn hūxī, kěyǐ huǎnjiě jǐnzhāng.",
+   "vi": "Hít thở sâu trước trận giúp giảm căng thẳng."
+  },
+  {
+   "cn": "受伤以后，他花了三个月才恢复。",
+   "py": "Shòushāng yǐhòu, tā huā le sān ge yuè cái huīfù.",
+   "vi": "Sau chấn thương, anh ấy mất ba tháng mới hồi phục."
+  },
+  {
+   "cn": "每一滴汗水都不会白流。",
+   "py": "Měi yì dī hànshuǐ dōu bú huì bái liú.",
+   "vi": "Mỗi giọt mồ hôi đều không đổ ra vô ích."
+  }
+ ]
+}
