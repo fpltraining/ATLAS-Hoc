@@ -304,3 +304,21 @@ a.icon-btn { text-decoration: none; }
 .word-row:last-child { border-bottom: 0; }
 ol.senses { margin: 0; padding-left: 22px; }
 ol.senses li { margin: 4px 0; line-height: 1.45; }
+
+/* ---- luyện phát âm ---- */
+.mic-btn { width: 92px; height: 92px; border-radius: 50%; border: 0; background: var(--jade); color: #fff; font-size: 38px; cursor: pointer; box-shadow: 0 0 0 8px var(--jade-soft); }
+.mic-btn.on { background: var(--seal); box-shadow: 0 0 0 10px var(--seal-soft); animation: micpulse 1.2s infinite; }
+@keyframes micpulse { 50% { box-shadow: 0 0 0 16px var(--seal-soft); } }
+.speak-units { display: flex; flex-wrap: wrap; gap: 6px; }
+.speak-units span { padding: 2px 8px; border-radius: 8px; font-size: 17px; }
+.speak-units span.cn { font-size: 24px; }
+.u-ok { background: var(--jade-soft); color: var(--jade); }
+.u-miss { background: var(--amber-soft); color: var(--gold); }
+
+/* ---- đăng nhập ---- */
+.login-card { width: min(380px, calc(100vw - 32px)); margin-top: 18px; display: flex; flex-direction: column; gap: 10px; text-align: left; }
+.login-card h2 { margin: 0; }
+.login-card p { color: var(--ink-soft); margin: 0 0 4px; }
+.login-input { width: 100%; font-size: 17px; }
+.login-msg { min-height: 20px; color: var(--ink-soft); }
+.login-msg.bad { color: var(--seal); }

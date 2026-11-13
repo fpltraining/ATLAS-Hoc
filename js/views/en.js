@@ -51,7 +51,7 @@ async function hub() {
     tile('#/read/en', '❡', 'Đọc truyện', nx ? nx.story.title : `${enStories.length} bài`),
     tile('#/penen', '✎', 'Viết bằng bút', 'Đồ, chép, viết trí nhớ'),
     tile('#/review?lang=en', '↻', 'Ôn thẻ', due ? `${due} thẻ tới hạn` : 'Chưa có thẻ tới hạn'),
-    tile('#/lib/topics?lang=en', '#', 'Theo chủ đề', '99 chủ đề đời sống'),
+    tile('#/speak', '🗣', 'Luyện phát âm', 'Nói vào micro, máy chấm điểm'),
     tile('#/work', '★', 'Tiếng Anh nghề', 'Bán hàng, huấn luyện, TikTok'),
     tile('#/book', '¶', 'Sổ tay ngữ pháp', 'B1 đến B2, có bài tập'),
     tile('#/lib/irreg', 'V', 'Động từ bất quy tắc', 'Theo nhóm dễ nhớ'),

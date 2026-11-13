@@ -5,6 +5,8 @@
    việc mở file lên sửa rồi tải lại trang.
 */
 
+import * as auth from './auth.js';
+import * as sync from './sync.js';
 import * as data from './data.js';
 import * as store from './store.js';
 import * as audio from './audio.js';
@@ -37,6 +39,7 @@ const routes = {
   games:    () => import('./views/games.js'),
   search:   () => import('./views/search.js'),
   word:     () => import('./views/word.js'),
+  speak:    () => import('./views/speak.js'),
   hsk:      () => import('./views/word.js'),
 };
 
@@ -47,7 +50,7 @@ const TRACK = {
 };
 const TAB = {
   home: 'home', review: 'home', en: 'en', penen: 'en', work: 'en', book: 'en',
-  zh: 'zh', lesson: 'zh', write: 'zh', char: 'zh', radicals: 'zh', pinyin: 'zh', exam: 'zh', charmap: 'zh', challenge: 'home', games: 'zh', search: 'lib', word: 'zh', hsk: 'zh',
+  zh: 'zh', lesson: 'zh', write: 'zh', char: 'zh', radicals: 'zh', pinyin: 'zh', exam: 'zh', charmap: 'zh', challenge: 'home', games: 'zh', search: 'lib', word: 'zh', hsk: 'zh', speak: 'home',
   lib: 'lib', drill: 'lib', numbers: 'lib', notes: 'lib', know: 'lib', stats: 'stats',
 };
 
@@ -93,7 +96,7 @@ async function router() {
   try { currentCleanup?.(); } catch { /* bỏ qua */ }
   currentCleanup = null;
   audio.stop();
-  currentTrack = TRACK[route.name] || null;
+  currentTrack = route.name === 'speak' ? (route.args[0] === 'zh' ? 'zh' : 'en') : TRACK[route.name] || null;
 
   viewEl.replaceChildren(h('div.empty', h('span.spin')));
   viewEl.className = 'view';
@@ -193,6 +196,14 @@ export function applyTheme(theme) {
 
 async function boot() {
   try {
+    // Đăng nhập (chỉ khi đã cấu hình Supabase), chọn dữ liệu của đúng tài khoản rồi đồng bộ
+    if (auth.configured()) {
+      bootMsg.textContent = '';
+      const user = await auth.ensureLogin(bootEl);
+      store.useDatabase(auth.dbNameFor(user.id));
+      bootMsg.textContent = 'Đang đồng bộ tiến độ…';
+      await sync.start(user.id);
+    }
     bootMsg.textContent = 'Đang tải giáo trình…';
     const [settings] = await Promise.all([store.settings(), data.curriculum()]);
     applyTheme(settings.theme);
