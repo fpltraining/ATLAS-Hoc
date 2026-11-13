@@ -1,0 +1,264 @@
+{
+ "id": 300,
+ "cn": "朝前看",
+ "title": "Hư từ một chữ",
+ "goal": "Dùng: hướng về, đơn/chỉ, phó, giáp, ất, của nó, mà, như, lấy/để, đến, tuỳ theo, dừng, chi, ha và ồ.",
+ "words": [
+  {
+   "w": "朝",
+   "py": "cháo",
+   "hv": "triều",
+   "vi": "hướng về",
+   "pos": "giới từ, động từ",
+   "note": "朝前看 (nhìn về phía trước).",
+   "ex": [
+    {
+     "cn": "我们要朝前看。",
+     "py": "Wǒmen yào cháo qián kàn.",
+     "vi": "Chúng ta phải nhìn về phía trước."
+    }
+   ]
+  },
+  {
+   "w": "单",
+   "py": "dān",
+   "hv": "đơn",
+   "vi": "đơn, một; tờ (danh sách)",
+   "pos": "tính từ, danh từ",
+   "note": "菜单 (thực đơn), 单人 (một người).",
+   "ex": [
+    {
+     "cn": "服务员，请给我菜单。",
+     "py": "Fúwùyuán, qǐng gěi wǒ càidān.",
+     "vi": "Phục vụ ơi, cho tôi xin thực đơn."
+    }
+   ]
+  },
+  {
+   "w": "副",
+   "py": "fù",
+   "hv": "phó",
+   "vi": "phó; đôi, cặp (lượng từ)",
+   "pos": "tính từ, lượng từ",
+   "note": "副队长 (đội phó), 一副眼镜 (một cặp kính).",
+   "ex": [
+    {
+     "cn": "他是我们的副队长。",
+     "py": "Tā shì wǒmen de fù duìzhǎng.",
+     "vi": "Anh ấy là đội phó của chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "甲",
+   "py": "jiǎ",
+   "hv": "giáp",
+   "vi": "A, thứ nhất",
+   "pos": "danh từ",
+   "note": "甲方 (bên A).",
+   "ex": [
+    {
+     "cn": "合同里的甲方是我们公司。",
+     "py": "Hétong li de jiǎfāng shì wǒmen gōngsī.",
+     "vi": "Bên A trong hợp đồng là công ty chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "乙",
+   "py": "yǐ",
+   "hv": "ất",
+   "vi": "B, thứ hai",
+   "pos": "danh từ",
+   "note": "乙方 (bên B).",
+   "ex": [
+    {
+     "cn": "甲队和乙队打成了平局。",
+     "py": "Jiǎ duì hé yǐ duì dǎ chéng le píngjú.",
+     "vi": "Đội A và đội B hoà nhau."
+    }
+   ]
+  },
+  {
+   "w": "其",
+   "py": "qí",
+   "hv": "kỳ",
+   "vi": "của nó, cái đó",
+   "pos": "đại từ",
+   "note": "其中 (trong đó), 其他 (khác).",
+   "ex": [
+    {
+     "cn": "我有三个朋友，其中一个是中国人。",
+     "py": "Wǒ yǒu sān ge péngyou, qízhōng yí ge shì Zhōngguórén.",
+     "vi": "Tôi có ba người bạn, trong đó một người là người Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "所",
+   "py": "suǒ",
+   "hv": "sở",
+   "vi": "cái mà; nơi (lượng từ trường)",
+   "pos": "trợ từ, lượng từ",
+   "note": "所说 (điều đã nói), 一所学校 (một ngôi trường).",
+   "ex": [
+    {
+     "cn": "这是一所很有名的大学。",
+     "py": "Zhè shì yì suǒ hěn yǒumíng de dàxué.",
+     "vi": "Đây là một trường đại học rất nổi tiếng."
+    }
+   ]
+  },
+  {
+   "w": "如",
+   "py": "rú",
+   "hv": "như",
+   "vi": "như; nếu",
+   "pos": "động từ, liên từ",
+   "note": "如果 (nếu), 例如 (ví dụ như).",
+   "ex": [
+    {
+     "cn": "如有问题，请联系我们。",
+     "py": "Rú yǒu wèntí, qǐng liánxì wǒmen.",
+     "vi": "Nếu có vấn đề, xin liên hệ chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "以",
+   "py": "yǐ",
+   "hv": "dĩ",
+   "vi": "lấy, bằng; để",
+   "pos": "giới từ",
+   "note": "以……为…… (lấy... làm...).",
+   "ex": [
+    {
+     "cn": "我们以团队合作为第一。",
+     "py": "Wǒmen yǐ tuánduì hézuò wéi dì yī.",
+     "vi": "Chúng tôi coi tinh thần đồng đội là trên hết."
+    }
+   ]
+  },
+  {
+   "w": "至",
+   "py": "zhì",
+   "hv": "chí",
+   "vi": "đến",
+   "pos": "động từ, giới từ",
+   "note": "从早至晚 (từ sáng đến tối).",
+   "ex": [
+    {
+     "cn": "比赛时间：下午两点至六点。",
+     "py": "Bǐsài shíjiān: xiàwǔ liǎng diǎn zhì liù diǎn.",
+     "vi": "Thời gian thi đấu: từ hai đến sáu giờ chiều."
+    }
+   ]
+  },
+  {
+   "w": "随",
+   "py": "suí",
+   "hv": "tuỳ",
+   "vi": "theo; tuỳ",
+   "pos": "động từ, giới từ",
+   "note": "随你 (tuỳ bạn).",
+   "ex": [
+    {
+     "cn": "吃什么都行，随你。",
+     "py": "Chī shénme dōu xíng, suí nǐ.",
+     "vi": "Ăn gì cũng được, tuỳ bạn."
+    }
+   ]
+  },
+  {
+   "w": "止",
+   "py": "zhǐ",
+   "hv": "chỉ",
+   "vi": "dừng, đến (hạn)",
+   "pos": "động từ",
+   "note": "到此为止 (dừng ở đây), 截止 (hạn chót).",
+   "ex": [
+    {
+     "cn": "报名到周五为止。",
+     "py": "Bàomíng dào zhōuwǔ wéizhǐ.",
+     "vi": "Đăng ký đến hết thứ Sáu."
+    }
+   ]
+  },
+  {
+   "w": "支",
+   "py": "zhī",
+   "hv": "chi",
+   "vi": "chi, đội (lượng từ); ủng hộ",
+   "pos": "lượng từ, động từ",
+   "note": "一支队伍 (một đội), 一支笔 (một cây bút).",
+   "ex": [
+    {
+     "cn": "这是一支年轻的队伍。",
+     "py": "Zhè shì yì zhī niánqīng de duìwu.",
+     "vi": "Đây là một đội trẻ."
+    }
+   ]
+  },
+  {
+   "w": "哈",
+   "py": "hā",
+   "hv": "ha",
+   "vi": "ha (tiếng cười)",
+   "pos": "thán từ",
+   "note": "哈哈 (haha).",
+   "ex": [
+    {
+     "cn": "哈哈，你真有意思！",
+     "py": "Hāha, nǐ zhēn yǒu yìsi!",
+     "vi": "Haha, bạn thú vị thật!"
+    }
+   ]
+  },
+  {
+   "w": "哦",
+   "py": "ò",
+   "hv": "ồ",
+   "vi": "ồ, à (hiểu ra)",
+   "pos": "thán từ",
+   "note": "Biểu thị hiểu ra.",
+   "ex": [
+    {
+     "cn": "哦，原来是这样！",
+     "py": "Ò, yuánlái shì zhèyàng!",
+     "vi": "À, hoá ra là vậy!"
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "以 A 为 B",
+   "b": "以团队为第一",
+   "d": "Lấy A làm B (văn viết).",
+   "ex": [
+    {
+     "cn": "他以教练为榜样。",
+     "py": "Tā yǐ jiàoliàn wéi bǎngyàng.",
+     "vi": "Anh ấy lấy huấn luyện viên làm tấm gương."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "不管结果怎么样，我们都要朝前看。",
+   "py": "Bùguǎn jiéguǒ zěnmeyàng, wǒmen dōu yào cháo qián kàn.",
+   "vi": "Dù kết quả thế nào, chúng ta đều phải nhìn về phía trước."
+  },
+  {
+   "cn": "今天的训练到此为止。",
+   "py": "Jīntiān de xùnliàn dào cǐ wéizhǐ.",
+   "vi": "Buổi tập hôm nay dừng ở đây."
+  },
+  {
+   "cn": "参加比赛的有八支队伍，其中三支来自越南。",
+   "py": "Cānjiā bǐsài de yǒu bā zhī duìwu, qízhōng sān zhī láizì Yuènán.",
+   "vi": "Có tám đội dự giải, trong đó ba đội đến từ Việt Nam."
+  }
+ ]
+}

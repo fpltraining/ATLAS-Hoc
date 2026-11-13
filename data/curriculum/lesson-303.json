@@ -1,0 +1,264 @@
+{
+ "id": 303,
+ "cn": "好运气",
+ "title": "Con người và vận may",
+ "goal": "Nói về nam giới, nữ giới, con cái, người khác, riêng tư, thân phận, tổng thống, bạn bè, may mắn, vận may, thất tình, nước mắt, ánh mắt, tư thế và com-lê.",
+ "words": [
+  {
+   "w": "男子",
+   "py": "nánzǐ",
+   "hv": "nam tử",
+   "vi": "nam giới",
+   "pos": "danh từ",
+   "note": "男子组 (bảng nam).",
+   "ex": [
+    {
+     "cn": "他获得了男子组冠军。",
+     "py": "Tā huòdé le nánzǐ zǔ guànjūn.",
+     "vi": "Anh ấy vô địch bảng nam."
+    }
+   ]
+  },
+  {
+   "w": "女子",
+   "py": "nǚzǐ",
+   "hv": "nữ tử",
+   "vi": "nữ giới",
+   "pos": "danh từ",
+   "note": "女子比赛 (giải nữ).",
+   "ex": [
+    {
+     "cn": "女子比赛下午开始。",
+     "py": "Nǚzǐ bǐsài xiàwǔ kāishǐ.",
+     "vi": "Giải nữ bắt đầu buổi chiều."
+    }
+   ]
+  },
+  {
+   "w": "子女",
+   "py": "zǐnǚ",
+   "hv": "tử nữ",
+   "vi": "con cái",
+   "pos": "danh từ",
+   "note": "Con trai và con gái.",
+   "ex": [
+    {
+     "cn": "父母都希望子女幸福。",
+     "py": "Fùmǔ dōu xīwàng zǐnǚ xìngfú.",
+     "vi": "Cha mẹ nào cũng mong con cái hạnh phúc."
+    }
+   ]
+  },
+  {
+   "w": "他人",
+   "py": "tārén",
+   "hv": "tha nhân",
+   "vi": "người khác",
+   "pos": "danh từ",
+   "note": "Văn viết của 别人.",
+   "ex": [
+    {
+     "cn": "不要随便评价他人。",
+     "py": "Bú yào suíbiàn píngjià tārén.",
+     "vi": "Đừng tuỳ tiện đánh giá người khác."
+    }
+   ]
+  },
+  {
+   "w": "私人",
+   "py": "sīrén",
+   "hv": "tư nhân",
+   "vi": "riêng tư, cá nhân",
+   "pos": "tính từ",
+   "note": "私人时间 (thời gian riêng).",
+   "ex": [
+    {
+     "cn": "这是我的私人问题。",
+     "py": "Zhè shì wǒ de sīrén wèntí.",
+     "vi": "Đây là chuyện riêng của tôi."
+    }
+   ]
+  },
+  {
+   "w": "身份",
+   "py": "shēnfèn",
+   "hv": "thân phận",
+   "vi": "thân phận, danh tính",
+   "pos": "danh từ",
+   "note": "身份证 (căn cước).",
+   "ex": [
+    {
+     "cn": "请出示你的身份证。",
+     "py": "Qǐng chūshì nǐ de shēnfènzhèng.",
+     "vi": "Xin xuất trình căn cước."
+    }
+   ]
+  },
+  {
+   "w": "总统",
+   "py": "zǒngtǒng",
+   "hv": "tổng thống",
+   "vi": "tổng thống",
+   "pos": "danh từ",
+   "note": "Chính là \"tổng thống\".",
+   "ex": [
+    {
+     "cn": "总统发表了新年讲话。",
+     "py": "Zǒngtǒng fābiǎo le xīnnián jiǎnghuà.",
+     "vi": "Tổng thống có bài phát biểu năm mới."
+    }
+   ]
+  },
+  {
+   "w": "伙",
+   "py": "huǒ",
+   "hv": "hoả",
+   "vi": "nhóm, bọn",
+   "pos": "lượng từ, danh từ",
+   "note": "一伙人 (một nhóm người); 伙伴.",
+   "ex": [
+    {
+     "cn": "门口站着一伙年轻人。",
+     "py": "Ménkǒu zhàn zhe yì huǒ niánqīngrén.",
+     "vi": "Ngoài cửa có một nhóm thanh niên đứng."
+    }
+   ]
+  },
+  {
+   "w": "好运",
+   "py": "hǎoyùn",
+   "hv": "hảo vận",
+   "vi": "may mắn",
+   "pos": "danh từ",
+   "note": "祝你好运 (chúc may mắn).",
+   "ex": [
+    {
+     "cn": "祝你考试好运！",
+     "py": "Zhù nǐ kǎoshì hǎoyùn!",
+     "vi": "Chúc bạn thi may mắn!"
+    }
+   ]
+  },
+  {
+   "w": "运气",
+   "py": "yùnqi",
+   "hv": "vận khí",
+   "vi": "vận may",
+   "pos": "danh từ",
+   "note": "运气好 (may).",
+   "ex": [
+    {
+     "cn": "今天运气不太好。",
+     "py": "Jīntiān yùnqi bú tài hǎo.",
+     "vi": "Hôm nay không may lắm."
+    }
+   ]
+  },
+  {
+   "w": "失恋",
+   "py": "shīliàn",
+   "hv": "thất luyến",
+   "vi": "thất tình",
+   "pos": "động từ",
+   "note": "Chính là \"thất tình\".",
+   "ex": [
+    {
+     "cn": "他失恋了，心情很不好。",
+     "py": "Tā shīliàn le, xīnqíng hěn bù hǎo.",
+     "vi": "Anh ấy thất tình, tâm trạng rất tệ."
+    }
+   ]
+  },
+  {
+   "w": "眼泪",
+   "py": "yǎnlèi",
+   "hv": "nhãn lệ",
+   "vi": "nước mắt",
+   "pos": "danh từ",
+   "note": "流眼泪 (chảy nước mắt).",
+   "ex": [
+    {
+     "cn": "她激动得流下了眼泪。",
+     "py": "Tā jīdòng de liú xià le yǎnlèi.",
+     "vi": "Cô ấy xúc động rơi nước mắt."
+    }
+   ]
+  },
+  {
+   "w": "目光",
+   "py": "mùguāng",
+   "hv": "mục quang",
+   "vi": "ánh mắt; tầm nhìn",
+   "pos": "danh từ",
+   "note": "目光长远 (tầm nhìn xa).",
+   "ex": [
+    {
+     "cn": "所有人的目光都看向他。",
+     "py": "Suǒyǒu rén de mùguāng dōu kàn xiàng tā.",
+     "vi": "Mọi ánh mắt đều đổ dồn vào anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "姿势",
+   "py": "zīshì",
+   "hv": "tư thế",
+   "vi": "tư thế",
+   "pos": "danh từ",
+   "note": "坐姿 (tư thế ngồi).",
+   "ex": [
+    {
+     "cn": "打游戏的时候要注意坐的姿势。",
+     "py": "Dǎ yóuxì de shíhou yào zhùyì zuò de zīshì.",
+     "vi": "Khi chơi game phải chú ý tư thế ngồi."
+    }
+   ]
+  },
+  {
+   "w": "西装",
+   "py": "xīzhuāng",
+   "hv": "tây trang",
+   "vi": "com-lê, vest",
+   "pos": "danh từ",
+   "note": "穿西装 (mặc vest).",
+   "ex": [
+    {
+     "cn": "颁奖典礼上他穿了一身西装。",
+     "py": "Bānjiǎng diǎnlǐ shang tā chuān le yì shēn xīzhuāng.",
+     "vi": "Ở lễ trao giải anh ấy mặc bộ vest."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "运气 + 好/不好 · 祝 + ai + 好运",
+   "b": "运气真好 · 祝你好运",
+   "d": "Nói về may rủi.",
+   "ex": [
+    {
+     "cn": "光靠运气是赢不了比赛的。",
+     "py": "Guāng kào yùnqi shì yíng bu liǎo bǐsài de.",
+     "vi": "Chỉ dựa vào may mắn thì không thắng nổi trận đấu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "赢比赛靠实力，也要一点儿运气。",
+   "py": "Yíng bǐsài kào shílì, yě yào yìdiǎnr yùnqi.",
+   "vi": "Thắng trận dựa vào thực lực, cũng cần chút may mắn."
+  },
+  {
+   "cn": "选手也有自己的私人生活。",
+   "py": "Xuǎnshǒu yě yǒu zìjǐ de sīrén shēnghuó.",
+   "vi": "Tuyển thủ cũng có cuộc sống riêng."
+  },
+  {
+   "cn": "拿到冠军的那一刻，大家都流下了眼泪。",
+   "py": "Ná dào guànjūn de nà yí kè, dàjiā dōu liú xià le yǎnlèi.",
+   "vi": "Khoảnh khắc giành chức vô địch, ai cũng rơi nước mắt."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 306,
+ "cn": "广大地区",
+ "title": "Không gian và lĩnh vực",
+ "goal": "Nói về đằng sau, bên trong, ngoài trời, không gian, lĩnh vực, đất đai, châu Âu, làng quê, rộng lớn, phân bố, phân loại, tách rời, việc lớn, ra sức và kiến trúc.",
+ "words": [
+  {
+   "w": "背后",
+   "py": "bèihòu",
+   "hv": "bối hậu",
+   "vi": "đằng sau",
+   "pos": "danh từ",
+   "note": "成功的背后 (đằng sau thành công).",
+   "ex": [
+    {
+     "cn": "每个冠军背后都有很多汗水。",
+     "py": "Měi ge guànjūn bèihòu dōu yǒu hěn duō hànshuǐ.",
+     "vi": "Đằng sau mỗi chức vô địch là rất nhiều mồ hôi."
+    }
+   ]
+  },
+  {
+   "w": "里头",
+   "py": "lǐtou",
+   "hv": "lý đầu",
+   "vi": "bên trong",
+   "pos": "danh từ",
+   "note": "Khẩu ngữ của 里面.",
+   "ex": [
+    {
+     "cn": "盒子里头有什么？",
+     "py": "Hézi lǐtou yǒu shénme?",
+     "vi": "Trong hộp có gì?"
+    }
+   ]
+  },
+  {
+   "w": "户外",
+   "py": "hùwài",
+   "hv": "hộ ngoại",
+   "vi": "ngoài trời",
+   "pos": "danh từ",
+   "note": "户外运动 (thể thao ngoài trời).",
+   "ex": [
+    {
+     "cn": "周末我们去户外走走。",
+     "py": "Zhōumò wǒmen qù hùwài zǒuzou.",
+     "vi": "Cuối tuần mình ra ngoài trời đi dạo nhé."
+    }
+   ]
+  },
+  {
+   "w": "空间",
+   "py": "kōngjiān",
+   "hv": "không gian",
+   "vi": "không gian",
+   "pos": "danh từ",
+   "note": "进步空间 (dư địa tiến bộ).",
+   "ex": [
+    {
+     "cn": "他还有很大的进步空间。",
+     "py": "Tā hái yǒu hěn dà de jìnbù kōngjiān.",
+     "vi": "Anh ấy còn nhiều dư địa để tiến bộ."
+    }
+   ]
+  },
+  {
+   "w": "领域",
+   "py": "lǐngyù",
+   "hv": "lĩnh vực",
+   "vi": "lĩnh vực",
+   "pos": "danh từ",
+   "note": "Chính là \"lĩnh vực\".",
+   "ex": [
+    {
+     "cn": "他是这个领域的专家。",
+     "py": "Tā shì zhège lǐngyù de zhuānjiā.",
+     "vi": "Ông ấy là chuyên gia lĩnh vực này."
+    }
+   ]
+  },
+  {
+   "w": "土地",
+   "py": "tǔdì",
+   "hv": "thổ địa",
+   "vi": "đất đai",
+   "pos": "danh từ",
+   "note": "Khác \"thổ địa\" (thần đất) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "这里的土地很适合种水稻。",
+     "py": "Zhèlǐ de tǔdì hěn shìhé zhòng shuǐdào.",
+     "vi": "Đất ở đây rất hợp trồng lúa."
+    }
+   ]
+  },
+  {
+   "w": "欧洲",
+   "py": "Ōuzhōu",
+   "hv": "Âu châu",
+   "vi": "châu Âu",
+   "pos": "danh từ riêng",
+   "note": "Chính là \"Âu châu\".",
+   "ex": [
+    {
+     "cn": "他明年想去欧洲旅游。",
+     "py": "Tā míngnián xiǎng qù Ōuzhōu lǚyóu.",
+     "vi": "Sang năm anh ấy muốn đi du lịch châu Âu."
+    }
+   ]
+  },
+  {
+   "w": "乡",
+   "py": "xiāng",
+   "hv": "hương",
+   "vi": "làng quê; xã",
+   "pos": "danh từ",
+   "note": "家乡 (quê hương), 乡下 (nông thôn).",
+   "ex": [
+    {
+     "cn": "他小时候住在乡下。",
+     "py": "Tā xiǎoshíhou zhù zài xiāngxia.",
+     "vi": "Hồi nhỏ anh ấy sống ở quê."
+    }
+   ]
+  },
+  {
+   "w": "广大",
+   "py": "guǎngdà",
+   "hv": "quảng đại",
+   "vi": "rộng lớn; đông đảo",
+   "pos": "tính từ",
+   "note": "广大观众 (đông đảo khán giả).",
+   "ex": [
+    {
+     "cn": "感谢广大粉丝的支持。",
+     "py": "Gǎnxiè guǎngdà fěnsī de zhīchí.",
+     "vi": "Cảm ơn sự ủng hộ của đông đảo người hâm mộ."
+    }
+   ]
+  },
+  {
+   "w": "分布",
+   "py": "fēnbù",
+   "hv": "phân bố",
+   "vi": "phân bố",
+   "pos": "động từ",
+   "note": "Chính là \"phân bố\".",
+   "ex": [
+    {
+     "cn": "我们的粉丝分布在全国各地。",
+     "py": "Wǒmen de fěnsī fēnbù zài quánguó gè dì.",
+     "vi": "Fan của chúng tôi phân bố khắp cả nước."
+    }
+   ]
+  },
+  {
+   "w": "分类",
+   "py": "fēnlèi",
+   "hv": "phân loại",
+   "vi": "phân loại",
+   "pos": "động từ",
+   "note": "垃圾分类 (phân loại rác).",
+   "ex": [
+    {
+     "cn": "请把垃圾分类。",
+     "py": "Qǐng bǎ lājī fēnlèi.",
+     "vi": "Xin phân loại rác."
+    }
+   ]
+  },
+  {
+   "w": "分离",
+   "py": "fēnlí",
+   "hv": "phân ly",
+   "vi": "chia lìa, tách rời",
+   "pos": "động từ",
+   "note": "Chính là \"phân ly\".",
+   "ex": [
+    {
+     "cn": "他们分离了十年才见面。",
+     "py": "Tāmen fēnlí le shí nián cái jiànmiàn.",
+     "vi": "Họ xa cách mười năm mới gặp lại."
+    }
+   ]
+  },
+  {
+   "w": "大事",
+   "py": "dàshì",
+   "hv": "đại sự",
+   "vi": "việc lớn",
+   "pos": "danh từ",
+   "note": "人生大事 (việc hệ trọng của đời người).",
+   "ex": [
+    {
+     "cn": "结婚是人生大事。",
+     "py": "Jiéhūn shì rénshēng dàshì.",
+     "vi": "Kết hôn là việc hệ trọng của đời người."
+    }
+   ]
+  },
+  {
+   "w": "大力",
+   "py": "dàlì",
+   "hv": "đại lực",
+   "vi": "ra sức, mạnh mẽ",
+   "pos": "phó từ",
+   "note": "大力支持 (hết sức ủng hộ).",
+   "ex": [
+    {
+     "cn": "政府大力发展电竞产业。",
+     "py": "Zhèngfǔ dàlì fāzhǎn diànjìng chǎnyè.",
+     "vi": "Chính phủ ra sức phát triển ngành eSports."
+    }
+   ]
+  },
+  {
+   "w": "建筑",
+   "py": "jiànzhù",
+   "hv": "kiến trúc",
+   "vi": "công trình, kiến trúc",
+   "pos": "danh từ, động từ",
+   "note": "古老的建筑 (công trình cổ).",
+   "ex": [
+    {
+     "cn": "这座建筑有一百年的历史。",
+     "py": "Zhè zuò jiànzhù yǒu yìbǎi nián de lìshǐ.",
+     "vi": "Công trình này có lịch sử một trăm năm."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "分布在 + nơi",
+   "b": "分布在全国各地",
+   "d": "Phân bố ở đâu.",
+   "ex": [
+    {
+     "cn": "这种植物主要分布在南方。",
+     "py": "Zhè zhǒng zhíwù zhǔyào fēnbù zài nánfāng.",
+     "vi": "Loài cây này chủ yếu phân bố ở phía Nam."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "每个成功的选手背后，都有一个好教练。",
+   "py": "Měi ge chénggōng de xuǎnshǒu bèihòu, dōu yǒu yí ge hǎo jiàoliàn.",
+   "vi": "Đằng sau mỗi tuyển thủ thành công đều có một huấn luyện viên giỏi."
+  },
+  {
+   "cn": "年轻选手的进步空间很大。",
+   "py": "Niánqīng xuǎnshǒu de jìnbù kōngjiān hěn dà.",
+   "vi": "Tuyển thủ trẻ có nhiều dư địa tiến bộ."
+  },
+  {
+   "cn": "我们要感谢广大观众的支持。",
+   "py": "Wǒmen yào gǎnxiè guǎngdà guānzhòng de zhīchí.",
+   "vi": "Chúng ta phải cảm ơn sự ủng hộ của đông đảo khán giả."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 298,
+ "cn": "糟糕",
+ "title": "Tính từ một chữ",
+ "goal": "Mô tả: lạ, rộng, yên tĩnh, chặt, mềm, hẹp, bằng, đều, thẳng, rảnh, thuận, xanh, tím, tệ và gay go.",
+ "words": [
+  {
+   "w": "怪",
+   "py": "guài",
+   "hv": "quái",
+   "vi": "lạ; trách",
+   "pos": "tính từ, động từ",
+   "note": "奇怪 (kỳ lạ), 别怪我 (đừng trách tôi).",
+   "ex": [
+    {
+     "cn": "这件事不能怪他。",
+     "py": "Zhè jiàn shì bù néng guài tā.",
+     "vi": "Việc này không thể trách anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "广",
+   "py": "guǎng",
+   "hv": "quảng",
+   "vi": "rộng",
+   "pos": "tính từ",
+   "note": "知识面广 (hiểu biết rộng).",
+   "ex": [
+    {
+     "cn": "他的知识面很广。",
+     "py": "Tā de zhīshi miàn hěn guǎng.",
+     "vi": "Kiến thức của anh ấy rất rộng."
+    }
+   ]
+  },
+  {
+   "w": "静",
+   "py": "jìng",
+   "hv": "tĩnh",
+   "vi": "yên tĩnh",
+   "pos": "tính từ",
+   "note": "安静 (yên lặng).",
+   "ex": [
+    {
+     "cn": "夜里很静。",
+     "py": "Yè li hěn jìng.",
+     "vi": "Ban đêm rất yên tĩnh."
+    }
+   ]
+  },
+  {
+   "w": "紧",
+   "py": "jǐn",
+   "hv": "khẩn",
+   "vi": "chặt; gấp",
+   "pos": "tính từ",
+   "note": "时间很紧 (thời gian gấp).",
+   "ex": [
+    {
+     "cn": "鞋子有点儿紧。",
+     "py": "Xiézi yǒudiǎnr jǐn.",
+     "vi": "Giày hơi chật."
+    }
+   ]
+  },
+  {
+   "w": "软",
+   "py": "ruǎn",
+   "hv": "nhuyễn",
+   "vi": "mềm",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 硬.",
+   "ex": [
+    {
+     "cn": "这张床很软。",
+     "py": "Zhè zhāng chuáng hěn ruǎn.",
+     "vi": "Chiếc giường này rất mềm."
+    }
+   ]
+  },
+  {
+   "w": "窄",
+   "py": "zhǎi",
+   "hv": "trách",
+   "vi": "hẹp",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 宽.",
+   "ex": [
+    {
+     "cn": "这条路太窄了，车过不去。",
+     "py": "Zhè tiáo lù tài zhǎi le, chē guò bu qù.",
+     "vi": "Đường hẹp quá, xe không qua được."
+    }
+   ]
+  },
+  {
+   "w": "平",
+   "py": "píng",
+   "hv": "bình",
+   "vi": "bằng phẳng; hoà",
+   "pos": "tính từ",
+   "note": "打平 (hoà).",
+   "ex": [
+    {
+     "cn": "两队打平了。",
+     "py": "Liǎng duì dǎ píng le.",
+     "vi": "Hai đội hoà nhau."
+    }
+   ]
+  },
+  {
+   "w": "齐",
+   "py": "qí",
+   "hv": "tề",
+   "vi": "đều, đủ",
+   "pos": "tính từ",
+   "note": "人到齐了 (người đến đủ rồi).",
+   "ex": [
+    {
+     "cn": "人都到齐了，我们开始吧。",
+     "py": "Rén dōu dào qí le, wǒmen kāishǐ ba.",
+     "vi": "Mọi người đến đủ rồi, bắt đầu thôi."
+    }
+   ]
+  },
+  {
+   "w": "直",
+   "py": "zhí",
+   "hv": "trực",
+   "vi": "thẳng",
+   "pos": "tính từ, phó từ",
+   "note": "一直走 (đi thẳng).",
+   "ex": [
+    {
+     "cn": "这条路很直。",
+     "py": "Zhè tiáo lù hěn zhí.",
+     "vi": "Con đường này rất thẳng."
+    }
+   ]
+  },
+  {
+   "w": "闲",
+   "py": "xián",
+   "hv": "nhàn",
+   "vi": "rảnh",
+   "pos": "tính từ",
+   "note": "有空闲 (có lúc rảnh).",
+   "ex": [
+    {
+     "cn": "你闲的时候来找我吧。",
+     "py": "Nǐ xián de shíhou lái zhǎo wǒ ba.",
+     "vi": "Lúc nào rảnh thì đến tìm tôi nhé."
+    }
+   ]
+  },
+  {
+   "w": "顺",
+   "py": "shùn",
+   "hv": "thuận",
+   "vi": "thuận lợi; xuôi",
+   "pos": "tính từ",
+   "note": "很顺 (suôn sẻ).",
+   "ex": [
+    {
+     "cn": "今天的比赛打得很顺。",
+     "py": "Jīntiān de bǐsài dǎ de hěn shùn.",
+     "vi": "Trận hôm nay đánh rất suôn sẻ."
+    }
+   ]
+  },
+  {
+   "w": "青",
+   "py": "qīng",
+   "hv": "thanh",
+   "vi": "xanh (lá, lam)",
+   "pos": "tính từ",
+   "note": "青菜 (rau xanh).",
+   "ex": [
+    {
+     "cn": "我每天都吃青菜。",
+     "py": "Wǒ měi tiān dōu chī qīngcài.",
+     "vi": "Ngày nào tôi cũng ăn rau xanh."
+    }
+   ]
+  },
+  {
+   "w": "紫",
+   "py": "zǐ",
+   "hv": "tử",
+   "vi": "tím",
+   "pos": "tính từ",
+   "note": "紫色 (màu tím).",
+   "ex": [
+    {
+     "cn": "她穿了一条紫色的裙子。",
+     "py": "Tā chuān le yì tiáo zǐsè de qúnzi.",
+     "vi": "Cô ấy mặc chiếc váy màu tím."
+    }
+   ]
+  },
+  {
+   "w": "糟",
+   "py": "zāo",
+   "hv": "tao",
+   "vi": "tệ, hỏng",
+   "pos": "tính từ",
+   "note": "糟了！ (Hỏng rồi!).",
+   "ex": [
+    {
+     "cn": "糟了，我忘带钥匙了！",
+     "py": "Zāo le, wǒ wàng dài yàoshi le!",
+     "vi": "Chết rồi, tôi quên mang chìa khoá!"
+    }
+   ]
+  },
+  {
+   "w": "糟糕",
+   "py": "zāogāo",
+   "hv": "tao cao",
+   "vi": "tồi tệ, gay go",
+   "pos": "tính từ",
+   "note": "太糟糕了 (tệ quá).",
+   "ex": [
+    {
+     "cn": "今天的天气真糟糕。",
+     "py": "Jīntiān de tiānqì zhēn zāogāo.",
+     "vi": "Thời tiết hôm nay tệ thật."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "Động từ + 齐 / 平 / 直",
+   "b": "到齐 · 打平 · 站直",
+   "d": "Tính từ làm bổ ngữ kết quả.",
+   "ex": [
+    {
+     "cn": "请大家站直。",
+     "py": "Qǐng dàjiā zhàn zhí.",
+     "vi": "Mời mọi người đứng thẳng."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "时间很紧，我们要快一点儿。",
+   "py": "Shíjiān hěn jǐn, wǒmen yào kuài yìdiǎnr.",
+   "vi": "Thời gian gấp, chúng ta phải nhanh hơn."
+  },
+  {
+   "cn": "输了别怪队友，先看看自己。",
+   "py": "Shū le bié guài duìyǒu, xiān kànkan zìjǐ.",
+   "vi": "Thua rồi đừng trách đồng đội, hãy nhìn lại mình trước."
+  },
+  {
+   "cn": "情况很糟糕，但是我们还有机会。",
+   "py": "Qíngkuàng hěn zāogāo, dànshì wǒmen hái yǒu jīhuì.",
+   "vi": "Tình hình rất tệ nhưng chúng ta vẫn còn cơ hội."
+  }
+ ]
+}

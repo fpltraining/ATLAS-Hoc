@@ -1,0 +1,264 @@
+{
+ "id": 305,
+ "cn": "最佳选手",
+ "title": "Tính chất và đánh giá",
+ "goal": "Mô tả: đáng tin cậy, mật thiết, chặt chẽ, tươi sáng, trọn vẹn, ngay ngắn, nổi bật, không tốt, bất lợi, cùng một, giống, vốn, sẵn có, tốt nhất và khá.",
+ "words": [
+  {
+   "w": "可靠",
+   "py": "kěkào",
+   "hv": "khả kháo",
+   "vi": "đáng tin cậy",
+   "pos": "tính từ",
+   "note": "可靠的消息 (tin đáng tin).",
+   "ex": [
+    {
+     "cn": "他是一个很可靠的队友。",
+     "py": "Tā shì yí ge hěn kěkào de duìyǒu.",
+     "vi": "Anh ấy là đồng đội rất đáng tin cậy."
+    }
+   ]
+  },
+  {
+   "w": "密切",
+   "py": "mìqiè",
+   "hv": "mật thiết",
+   "vi": "mật thiết, sát sao",
+   "pos": "tính từ",
+   "note": "密切关注 (theo dõi sát).",
+   "ex": [
+    {
+     "cn": "我们和赞助商保持密切联系。",
+     "py": "Wǒmen hé zànzhùshāng bǎochí mìqiè liánxì.",
+     "vi": "Chúng tôi giữ liên lạc mật thiết với nhà tài trợ."
+    }
+   ]
+  },
+  {
+   "w": "紧密",
+   "py": "jǐnmì",
+   "hv": "khẩn mật",
+   "vi": "chặt chẽ",
+   "pos": "tính từ",
+   "note": "紧密配合 (phối hợp chặt chẽ).",
+   "ex": [
+    {
+     "cn": "队员之间配合得很紧密。",
+     "py": "Duìyuán zhījiān pèihé de hěn jǐnmì.",
+     "vi": "Các thành viên phối hợp rất chặt chẽ."
+    }
+   ]
+  },
+  {
+   "w": "光明",
+   "py": "guāngmíng",
+   "hv": "quang minh",
+   "vi": "sáng sủa, tươi sáng",
+   "pos": "tính từ",
+   "note": "光明的未来 (tương lai tươi sáng).",
+   "ex": [
+    {
+     "cn": "年轻人有光明的未来。",
+     "py": "Niánqīngrén yǒu guāngmíng de wèilái.",
+     "vi": "Người trẻ có tương lai tươi sáng."
+    }
+   ]
+  },
+  {
+   "w": "完整",
+   "py": "wánzhěng",
+   "hv": "hoàn chỉnh",
+   "vi": "trọn vẹn, đầy đủ",
+   "pos": "tính từ",
+   "note": "Chính là \"hoàn chỉnh\".",
+   "ex": [
+    {
+     "cn": "请说一个完整的句子。",
+     "py": "Qǐng shuō yí ge wánzhěng de jùzi.",
+     "vi": "Hãy nói một câu hoàn chỉnh."
+    }
+   ]
+  },
+  {
+   "w": "整齐",
+   "py": "zhěngqí",
+   "hv": "chỉnh tề",
+   "vi": "ngay ngắn, gọn gàng",
+   "pos": "tính từ",
+   "note": "Chính là \"chỉnh tề\".",
+   "ex": [
+    {
+     "cn": "他的房间很整齐。",
+     "py": "Tā de fángjiān hěn zhěngqí.",
+     "vi": "Phòng anh ấy rất gọn gàng."
+    }
+   ]
+  },
+  {
+   "w": "突出",
+   "py": "tūchū",
+   "hv": "đột xuất",
+   "vi": "nổi bật",
+   "pos": "tính từ, động từ",
+   "note": "Khác \"đột xuất\" (bất ngờ) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "他在这次比赛中表现很突出。",
+     "py": "Tā zài zhè cì bǐsài zhōng biǎoxiàn hěn tūchū.",
+     "vi": "Anh ấy thể hiện nổi bật trong giải này."
+    }
+   ]
+  },
+  {
+   "w": "不良",
+   "py": "bùliáng",
+   "hv": "bất lương",
+   "vi": "không tốt",
+   "pos": "tính từ",
+   "note": "不良习惯 (thói quen xấu).",
+   "ex": [
+    {
+     "cn": "要改掉不良习惯。",
+     "py": "Yào gǎi diào bùliáng xíguàn.",
+     "vi": "Phải bỏ thói quen xấu."
+    }
+   ]
+  },
+  {
+   "w": "不利",
+   "py": "búlì",
+   "hv": "bất lợi",
+   "vi": "bất lợi",
+   "pos": "tính từ",
+   "note": "Chính là \"bất lợi\".",
+   "ex": [
+    {
+     "cn": "天气对我们很不利。",
+     "py": "Tiānqì duì wǒmen hěn búlì.",
+     "vi": "Thời tiết rất bất lợi cho chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "同一",
+   "py": "tóngyī",
+   "hv": "đồng nhất",
+   "vi": "cùng một",
+   "pos": "tính từ",
+   "note": "同一个人 (cùng một người).",
+   "ex": [
+    {
+     "cn": "我们在同一个城市长大。",
+     "py": "Wǒmen zài tóng yí ge chéngshì zhǎngdà.",
+     "vi": "Chúng tôi lớn lên cùng một thành phố."
+    }
+   ]
+  },
+  {
+   "w": "同",
+   "py": "tóng",
+   "hv": "đồng",
+   "vi": "giống, cùng; với",
+   "pos": "tính từ, giới từ",
+   "note": "同年 (cùng năm), 同……一样 (giống như...).",
+   "ex": [
+    {
+     "cn": "我同他一样大。",
+     "py": "Wǒ tóng tā yíyàng dà.",
+     "vi": "Tôi bằng tuổi anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "原",
+   "py": "yuán",
+   "hv": "nguyên",
+   "vi": "vốn, ban đầu",
+   "pos": "tính từ",
+   "note": "原来 (vốn dĩ), 原计划 (kế hoạch ban đầu).",
+   "ex": [
+    {
+     "cn": "按原计划进行。",
+     "py": "Àn yuán jìhuà jìnxíng.",
+     "vi": "Tiến hành theo kế hoạch ban đầu."
+    }
+   ]
+  },
+  {
+   "w": "原有",
+   "py": "yuányǒu",
+   "hv": "nguyên hữu",
+   "vi": "vốn có",
+   "pos": "tính từ",
+   "note": "原有的基础 (nền tảng sẵn có).",
+   "ex": [
+    {
+     "cn": "在原有的基础上继续提高。",
+     "py": "Zài yuányǒu de jīchǔ shang jìxù tígāo.",
+     "vi": "Tiếp tục nâng cao trên nền tảng sẵn có."
+    }
+   ]
+  },
+  {
+   "w": "最佳",
+   "py": "zuìjiā",
+   "hv": "tối giai",
+   "vi": "tốt nhất",
+   "pos": "tính từ",
+   "note": "最佳选手 (tuyển thủ xuất sắc nhất).",
+   "ex": [
+    {
+     "cn": "他获得了本场最佳选手。",
+     "py": "Tā huòdé le běn chǎng zuìjiā xuǎnshǒu.",
+     "vi": "Anh ấy nhận danh hiệu tuyển thủ xuất sắc trận này."
+    }
+   ]
+  },
+  {
+   "w": "较",
+   "py": "jiào",
+   "hv": "giảo",
+   "vi": "khá, tương đối",
+   "pos": "phó từ",
+   "note": "Văn viết của 比较.",
+   "ex": [
+    {
+     "cn": "今天的对手实力较强。",
+     "py": "Jīntiān de duìshǒu shílì jiào qiáng.",
+     "vi": "Đối thủ hôm nay khá mạnh."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "在 + 基础 + 上",
+   "b": "在原有的基础上",
+   "d": "Trên nền tảng gì.",
+   "ex": [
+    {
+     "cn": "我们要在现在的基础上继续努力。",
+     "py": "Wǒmen yào zài xiànzài de jīchǔ shang jìxù nǔlì.",
+     "vi": "Chúng ta phải tiếp tục cố gắng trên nền tảng hiện tại."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "可靠的队友比明星选手更重要。",
+   "py": "Kěkào de duìyǒu bǐ míngxīng xuǎnshǒu gèng zhòngyào.",
+   "vi": "Đồng đội đáng tin quan trọng hơn ngôi sao."
+  },
+  {
+   "cn": "虽然形势不利，我们还是赢了。",
+   "py": "Suīrán xíngshì búlì, wǒmen háishi yíng le.",
+   "vi": "Dù tình thế bất lợi, chúng tôi vẫn thắng."
+  },
+  {
+   "cn": "他的表现很突出，被评为最佳选手。",
+   "py": "Tā de biǎoxiàn hěn tūchū, bèi píng wéi zuìjiā xuǎnshǒu.",
+   "vi": "Anh ấy thể hiện nổi bật, được chọn là tuyển thủ xuất sắc nhất."
+  }
+ ]
+}

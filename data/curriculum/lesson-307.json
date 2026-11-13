@@ -1,0 +1,264 @@
+{
+ "id": 307,
+ "cn": "充满信心",
+ "title": "Tràn đầy và hướng lên",
+ "goal": "Nói về tràn đầy, xuất phát từ, cần gấp, cầu kỳ, quyên góp, tiến bộ, lưu truyền, nặng nhẹ, nóng lên, tiện tay, tuỳ ý, xoay quanh, hướng lên, nhỏ hơn và bao gồm.",
+ "words": [
+  {
+   "w": "充满",
+   "py": "chōngmǎn",
+   "hv": "sung mãn",
+   "vi": "tràn đầy",
+   "pos": "động từ",
+   "note": "充满信心 (đầy tự tin).",
+   "ex": [
+    {
+     "cn": "我们对决赛充满信心。",
+     "py": "Wǒmen duì juésài chōngmǎn xìnxīn.",
+     "vi": "Chúng tôi đầy tự tin cho trận chung kết."
+    }
+   ]
+  },
+  {
+   "w": "出自",
+   "py": "chūzì",
+   "hv": "xuất tự",
+   "vi": "xuất phát từ",
+   "pos": "động từ",
+   "note": "出自……之手 (do... tạo ra).",
+   "ex": [
+    {
+     "cn": "这句话出自一本古书。",
+     "py": "Zhè jù huà chūzì yì běn gǔshū.",
+     "vi": "Câu này xuất phát từ một cuốn sách cổ."
+    }
+   ]
+  },
+  {
+   "w": "急需",
+   "py": "jíxū",
+   "hv": "cấp nhu",
+   "vi": "cần gấp",
+   "pos": "động từ",
+   "note": "Cần ngay.",
+   "ex": [
+    {
+     "cn": "我们急需一名好的辅助。",
+     "py": "Wǒmen jíxū yì míng hǎo de fǔzhù.",
+     "vi": "Chúng tôi cần gấp một tuyển thủ hỗ trợ giỏi."
+    }
+   ]
+  },
+  {
+   "w": "讲究",
+   "py": "jiǎngjiu",
+   "hv": "giảng cứu",
+   "vi": "cầu kỳ, chú trọng",
+   "pos": "động từ, tính từ",
+   "note": "讲究吃 (sành ăn).",
+   "ex": [
+    {
+     "cn": "他吃东西很讲究。",
+     "py": "Tā chī dōngxi hěn jiǎngjiu.",
+     "vi": "Anh ấy ăn uống rất cầu kỳ."
+    }
+   ]
+  },
+  {
+   "w": "捐",
+   "py": "juān",
+   "hv": "quyên",
+   "vi": "quyên góp",
+   "pos": "động từ",
+   "note": "捐钱 (quyên tiền).",
+   "ex": [
+    {
+     "cn": "他把奖金捐给了山区的学校。",
+     "py": "Tā bǎ jiǎngjīn juān gěi le shānqū de xuéxiào.",
+     "vi": "Anh ấy quyên tiền thưởng cho trường vùng núi."
+    }
+   ]
+  },
+  {
+   "w": "进步",
+   "py": "jìnbù",
+   "hv": "tiến bộ",
+   "vi": "tiến bộ",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"tiến bộ\".",
+   "ex": [
+    {
+     "cn": "你的中文进步得很快。",
+     "py": "Nǐ de Zhōngwén jìnbù de hěn kuài.",
+     "vi": "Tiếng Trung của bạn tiến bộ rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "流传",
+   "py": "liúchuán",
+   "hv": "lưu truyền",
+   "vi": "lưu truyền",
+   "pos": "động từ",
+   "note": "Chính là \"lưu truyền\".",
+   "ex": [
+    {
+     "cn": "这个故事流传了几百年。",
+     "py": "Zhège gùshi liúchuán le jǐ bǎi nián.",
+     "vi": "Câu chuyện này lưu truyền mấy trăm năm."
+    }
+   ]
+  },
+  {
+   "w": "轻重",
+   "py": "qīngzhòng",
+   "hv": "khinh trọng",
+   "vi": "nặng nhẹ; mức quan trọng",
+   "pos": "danh từ",
+   "note": "分清轻重 (biết việc nào quan trọng).",
+   "ex": [
+    {
+     "cn": "做事要分清轻重。",
+     "py": "Zuò shì yào fēnqīng qīngzhòng.",
+     "vi": "Làm việc phải biết việc nào nặng việc nào nhẹ."
+    }
+   ]
+  },
+  {
+   "w": "升温",
+   "py": "shēngwēn",
+   "hv": "thăng ôn",
+   "vi": "nóng lên; tăng nhiệt",
+   "pos": "động từ",
+   "note": "气温升高; nghĩa bóng: sôi động lên.",
+   "ex": [
+    {
+     "cn": "比赛的热度不断升温。",
+     "py": "Bǐsài de rèdù búduàn shēngwēn.",
+     "vi": "Sức nóng giải đấu không ngừng tăng."
+    }
+   ]
+  },
+  {
+   "w": "随手",
+   "py": "suíshǒu",
+   "hv": "tuỳ thủ",
+   "vi": "tiện tay",
+   "pos": "phó từ",
+   "note": "随手关门 (tiện tay đóng cửa).",
+   "ex": [
+    {
+     "cn": "出门请随手关灯。",
+     "py": "Chūmén qǐng suíshǒu guān dēng.",
+     "vi": "Ra ngoài xin tiện tay tắt đèn."
+    }
+   ]
+  },
+  {
+   "w": "随意",
+   "py": "suíyì",
+   "hv": "tuỳ ý",
+   "vi": "tuỳ ý, tuỳ tiện",
+   "pos": "tính từ",
+   "note": "请随意 (xin cứ tự nhiên).",
+   "ex": [
+    {
+     "cn": "大家随意坐。",
+     "py": "Dàjiā suíyì zuò.",
+     "vi": "Mọi người cứ ngồi tự nhiên."
+    }
+   ]
+  },
+  {
+   "w": "围绕",
+   "py": "wéirào",
+   "hv": "vi nhiễu",
+   "vi": "xoay quanh",
+   "pos": "động từ",
+   "note": "围绕主题 (xoay quanh chủ đề).",
+   "ex": [
+    {
+     "cn": "今天的会议围绕新赛季展开。",
+     "py": "Jīntiān de huìyì wéirào xīn sàijì zhǎnkāi.",
+     "vi": "Cuộc họp hôm nay xoay quanh mùa giải mới."
+    }
+   ]
+  },
+  {
+   "w": "向上",
+   "py": "xiàngshàng",
+   "hv": "hướng thượng",
+   "vi": "hướng lên, cầu tiến",
+   "pos": "động từ",
+   "note": "积极向上 (tích cực cầu tiến).",
+   "ex": [
+    {
+     "cn": "他是一个积极向上的人。",
+     "py": "Tā shì yí ge jījí xiàngshàng de rén.",
+     "vi": "Anh ấy là người tích cực cầu tiến."
+    }
+   ]
+  },
+  {
+   "w": "小于",
+   "py": "xiǎoyú",
+   "hv": "tiểu vu",
+   "vi": "nhỏ hơn",
+   "pos": "động từ",
+   "note": "Trái nghĩa 大于.",
+   "ex": [
+    {
+     "cn": "五小于八。",
+     "py": "Wǔ xiǎoyú bā.",
+     "vi": "Năm nhỏ hơn tám."
+    }
+   ]
+  },
+  {
+   "w": "在内",
+   "py": "zàinèi",
+   "hv": "tại nội",
+   "vi": "bao gồm cả",
+   "pos": "động từ",
+   "note": "包括……在内 (kể cả...).",
+   "ex": [
+    {
+     "cn": "包括教练在内，我们一共十个人。",
+     "py": "Bāokuò jiàoliàn zàinèi, wǒmen yígòng shí ge rén.",
+     "vi": "Kể cả huấn luyện viên, chúng tôi có mười người."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "包括 + … + 在内",
+   "b": "包括我在内",
+   "d": "Kể cả ai/cái gì.",
+   "ex": [
+    {
+     "cn": "包括周末在内，我们每天都训练。",
+     "py": "Bāokuò zhōumò zàinèi, wǒmen měi tiān dōu xùnliàn.",
+     "vi": "Kể cả cuối tuần, ngày nào chúng tôi cũng tập."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "年轻的选手充满了活力。",
+   "py": "Niánqīng de xuǎnshǒu chōngmǎn le huólì.",
+   "vi": "Các tuyển thủ trẻ tràn đầy sức sống."
+  },
+  {
+   "cn": "每天进步一点点，就是成功。",
+   "py": "Měi tiān jìnbù yì diǎndiǎn, jiù shì chénggōng.",
+   "vi": "Mỗi ngày tiến bộ một chút chính là thành công."
+  },
+  {
+   "cn": "做事要分清轻重，先做最重要的。",
+   "py": "Zuò shì yào fēnqīng qīngzhòng, xiān zuò zuì zhòngyào de.",
+   "vi": "Làm việc phải phân rõ nặng nhẹ, làm việc quan trọng nhất trước."
+  }
+ ]
+}

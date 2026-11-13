@@ -1,0 +1,264 @@
+{
+ "id": 304,
+ "cn": "亲自体验",
+ "title": "Tìm hiểu và trải nghiệm",
+ "goal": "Nói về thu thập, xem (truyền hình), quan sát, khảo sát nghiên cứu, tiếp xúc, trao đổi, thỉnh cầu, trải nghiệm, chỉ đạo, du nhập, đẩy mạnh, thành lập, thu hồi, bắt tay làm và làm sâu sắc.",
+ "words": [
+  {
+   "w": "收集",
+   "py": "shōují",
+   "hv": "thu tập",
+   "vi": "thu thập, sưu tầm",
+   "pos": "động từ",
+   "note": "收集资料 (thu thập tài liệu).",
+   "ex": [
+    {
+     "cn": "我们收集了对手的比赛资料。",
+     "py": "Wǒmen shōují le duìshǒu de bǐsài zīliào.",
+     "vi": "Chúng tôi thu thập dữ liệu thi đấu của đối thủ."
+    }
+   ]
+  },
+  {
+   "w": "收看",
+   "py": "shōukàn",
+   "hv": "thu khán",
+   "vi": "xem (truyền hình)",
+   "pos": "động từ",
+   "note": "收看节目 (xem chương trình).",
+   "ex": [
+    {
+     "cn": "欢迎收看今天的节目。",
+     "py": "Huānyíng shōukàn jīntiān de jiémù.",
+     "vi": "Chào mừng quý vị đến với chương trình hôm nay."
+    }
+   ]
+  },
+  {
+   "w": "观察",
+   "py": "guānchá",
+   "hv": "quan sát",
+   "vi": "quan sát",
+   "pos": "động từ",
+   "note": "Chính là \"quan sát\".",
+   "ex": [
+    {
+     "cn": "教练在旁边观察每个人的表现。",
+     "py": "Jiàoliàn zài pángbiān guānchá měi ge rén de biǎoxiàn.",
+     "vi": "Huấn luyện viên đứng bên quan sát biểu hiện từng người."
+    }
+   ]
+  },
+  {
+   "w": "调研",
+   "py": "diàoyán",
+   "hv": "điệu nghiên",
+   "vi": "khảo sát nghiên cứu",
+   "pos": "động từ, danh từ",
+   "note": "调查研究 viết tắt.",
+   "ex": [
+    {
+     "cn": "公司做了一次市场调研。",
+     "py": "Gōngsī zuò le yí cì shìchǎng diàoyán.",
+     "vi": "Công ty làm một đợt khảo sát thị trường."
+    }
+   ]
+  },
+  {
+   "w": "接触",
+   "py": "jiēchù",
+   "hv": "tiếp xúc",
+   "vi": "tiếp xúc",
+   "pos": "động từ",
+   "note": "Chính là \"tiếp xúc\".",
+   "ex": [
+    {
+     "cn": "我第一次接触这个游戏是在大学。",
+     "py": "Wǒ dì yī cì jiēchù zhège yóuxì shì zài dàxué.",
+     "vi": "Lần đầu tôi tiếp xúc trò chơi này là hồi đại học."
+    }
+   ]
+  },
+  {
+   "w": "交换",
+   "py": "jiāohuàn",
+   "hv": "giao hoán",
+   "vi": "trao đổi",
+   "pos": "động từ",
+   "note": "交换意见 (trao đổi ý kiến).",
+   "ex": [
+    {
+     "cn": "比赛前我们交换了意见。",
+     "py": "Bǐsài qián wǒmen jiāohuàn le yìjiàn.",
+     "vi": "Trước trận chúng tôi trao đổi ý kiến."
+    }
+   ]
+  },
+  {
+   "w": "请求",
+   "py": "qǐngqiú",
+   "hv": "thỉnh cầu",
+   "vi": "yêu cầu, xin",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"thỉnh cầu\".",
+   "ex": [
+    {
+     "cn": "他请求教练再给他一次机会。",
+     "py": "Tā qǐngqiú jiàoliàn zài gěi tā yí cì jīhuì.",
+     "vi": "Anh ấy xin huấn luyện viên cho thêm một cơ hội."
+    }
+   ]
+  },
+  {
+   "w": "体验",
+   "py": "tǐyàn",
+   "hv": "thể nghiệm",
+   "vi": "trải nghiệm",
+   "pos": "động từ, danh từ",
+   "note": "亲自体验 (tự mình trải nghiệm).",
+   "ex": [
+    {
+     "cn": "我想体验一下职业选手的生活。",
+     "py": "Wǒ xiǎng tǐyàn yíxià zhíyè xuǎnshǒu de shēnghuó.",
+     "vi": "Tôi muốn trải nghiệm cuộc sống tuyển thủ chuyên nghiệp."
+    }
+   ]
+  },
+  {
+   "w": "指导",
+   "py": "zhǐdǎo",
+   "hv": "chỉ đạo",
+   "vi": "hướng dẫn, chỉ đạo",
+   "pos": "động từ, danh từ",
+   "note": "指导老师 (giáo viên hướng dẫn).",
+   "ex": [
+    {
+     "cn": "谢谢教练的指导。",
+     "py": "Xièxie jiàoliàn de zhǐdǎo.",
+     "vi": "Cảm ơn sự chỉ dẫn của huấn luyện viên."
+    }
+   ]
+  },
+  {
+   "w": "引进",
+   "py": "yǐnjìn",
+   "hv": "dẫn tiến",
+   "vi": "du nhập, đưa vào",
+   "pos": "động từ",
+   "note": "引进人才 (thu hút nhân tài).",
+   "ex": [
+    {
+     "cn": "俱乐部引进了两名外援。",
+     "py": "Jùlèbù yǐnjìn le liǎng míng wàiyuán.",
+     "vi": "Câu lạc bộ chiêu mộ hai ngoại binh."
+    }
+   ]
+  },
+  {
+   "w": "推进",
+   "py": "tuījìn",
+   "hv": "thôi tiến",
+   "vi": "đẩy (tới); thúc đẩy",
+   "pos": "động từ",
+   "note": "推进计划 (thúc đẩy kế hoạch).",
+   "ex": [
+    {
+     "cn": "我们要往中路推进。",
+     "py": "Wǒmen yào wǎng zhōnglù tuījìn.",
+     "vi": "Chúng ta phải đẩy lên đường giữa."
+    }
+   ]
+  },
+  {
+   "w": "设立",
+   "py": "shèlì",
+   "hv": "thiết lập",
+   "vi": "thành lập",
+   "pos": "động từ",
+   "note": "设立奖金 (lập quỹ thưởng).",
+   "ex": [
+    {
+     "cn": "学校设立了一个电竞俱乐部。",
+     "py": "Xuéxiào shèlì le yí ge diànjìng jùlèbù.",
+     "vi": "Nhà trường thành lập một câu lạc bộ eSports."
+    }
+   ]
+  },
+  {
+   "w": "回收",
+   "py": "huíshōu",
+   "hv": "hồi thu",
+   "vi": "thu hồi, tái chế",
+   "pos": "động từ",
+   "note": "垃圾回收 (tái chế rác).",
+   "ex": [
+    {
+     "cn": "这些瓶子可以回收。",
+     "py": "Zhèxiē píngzi kěyǐ huíshōu.",
+     "vi": "Những chai này có thể tái chế."
+    }
+   ]
+  },
+  {
+   "w": "动手",
+   "py": "dòngshǒu",
+   "hv": "động thủ",
+   "vi": "bắt tay làm; ra tay",
+   "pos": "động từ",
+   "note": "自己动手 (tự làm).",
+   "ex": [
+    {
+     "cn": "别光说，快动手吧。",
+     "py": "Bié guāng shuō, kuài dòngshǒu ba.",
+     "vi": "Đừng chỉ nói, bắt tay vào làm đi."
+    }
+   ]
+  },
+  {
+   "w": "加深",
+   "py": "jiāshēn",
+   "hv": "gia thâm",
+   "vi": "làm sâu thêm",
+   "pos": "động từ",
+   "note": "加深理解 (hiểu sâu hơn).",
+   "ex": [
+    {
+     "cn": "多看比赛可以加深对游戏的理解。",
+     "py": "Duō kàn bǐsài kěyǐ jiāshēn duì yóuxì de lǐjiě.",
+     "vi": "Xem nhiều trận giúp hiểu game sâu hơn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "亲自 + 体验/动手",
+   "b": "亲自体验一下",
+   "d": "Tự mình làm lấy.",
+   "ex": [
+    {
+     "cn": "有些东西只有亲自体验才能明白。",
+     "py": "Yǒuxiē dōngxi zhǐyǒu qīnzì tǐyàn cái néng míngbai.",
+     "vi": "Có những thứ chỉ tự trải nghiệm mới hiểu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "好的教练善于观察选手的变化。",
+   "py": "Hǎo de jiàoliàn shànyú guānchá xuǎnshǒu de biànhuà.",
+   "vi": "Huấn luyện viên giỏi biết quan sát sự thay đổi của tuyển thủ."
+  },
+  {
+   "cn": "赛后大家交换了各自的看法。",
+   "py": "Sài hòu dàjiā jiāohuàn le gèzì de kànfǎ.",
+   "vi": "Sau trận, mọi người trao đổi quan điểm của mình."
+  },
+  {
+   "cn": "想学会，就要自己动手。",
+   "py": "Xiǎng xuéhuì, jiù yào zìjǐ dòngshǒu.",
+   "vi": "Muốn học được thì phải tự bắt tay làm."
+  }
+ ]
+}
