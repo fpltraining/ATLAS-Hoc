@@ -1,0 +1,264 @@
+{
+ "id": 255,
+ "cn": "哪怕再难",
+ "title": "Từ nối văn viết",
+ "goal": "Dùng: cho dù, như vậy, thế nào, ngày nay, giống như, như sau, còn lại, nào đó, dựa vào, tình cờ, khó mà, không cách nào, dễ dàng và tiến thêm một bước.",
+ "words": [
+  {
+   "w": "哪怕",
+   "py": "nǎpà",
+   "hv": "ná phạ",
+   "vi": "cho dù",
+   "pos": "liên từ",
+   "note": "哪怕……也…… (dù... cũng...).",
+   "ex": [
+    {
+     "cn": "哪怕再累，我也要坚持。",
+     "py": "Nǎpà zài lèi, wǒ yě yào jiānchí.",
+     "vi": "Dù mệt mấy tôi cũng phải kiên trì."
+    }
+   ]
+  },
+  {
+   "w": "如此",
+   "py": "rúcǐ",
+   "hv": "như thử",
+   "vi": "như vậy",
+   "pos": "đại từ",
+   "note": "Văn viết của 这样.",
+   "ex": [
+    {
+     "cn": "没想到他如此厉害。",
+     "py": "Méi xiǎngdào tā rúcǐ lìhai.",
+     "vi": "Không ngờ anh ấy giỏi đến vậy."
+    }
+   ]
+  },
+  {
+   "w": "如何",
+   "py": "rúhé",
+   "hv": "như hà",
+   "vi": "thế nào",
+   "pos": "đại từ",
+   "note": "Văn viết của 怎么样.",
+   "ex": [
+    {
+     "cn": "如何提高中文水平？",
+     "py": "Rúhé tígāo Zhōngwén shuǐpíng?",
+     "vi": "Làm thế nào để nâng trình độ tiếng Trung?"
+    }
+   ]
+  },
+  {
+   "w": "如今",
+   "py": "rújīn",
+   "hv": "như kim",
+   "vi": "ngày nay",
+   "pos": "danh từ",
+   "note": "Văn viết của 现在.",
+   "ex": [
+    {
+     "cn": "如今，人人都有手机。",
+     "py": "Rújīn, rénrén dōu yǒu shǒujī.",
+     "vi": "Ngày nay ai cũng có điện thoại."
+    }
+   ]
+  },
+  {
+   "w": "如同",
+   "py": "rútóng",
+   "hv": "như đồng",
+   "vi": "giống như",
+   "pos": "động từ",
+   "note": "Văn viết của 像.",
+   "ex": [
+    {
+     "cn": "他对我如同亲兄弟。",
+     "py": "Tā duì wǒ rútóng qīn xiōngdì.",
+     "vi": "Anh ấy đối với tôi như anh em ruột."
+    }
+   ]
+  },
+  {
+   "w": "如下",
+   "py": "rúxià",
+   "hv": "như hạ",
+   "vi": "như sau",
+   "pos": "động từ",
+   "note": "内容如下 (nội dung như sau).",
+   "ex": [
+    {
+     "cn": "比赛安排如下。",
+     "py": "Bǐsài ānpái rúxià.",
+     "vi": "Lịch thi đấu như sau."
+    }
+   ]
+  },
+  {
+   "w": "其余",
+   "py": "qíyú",
+   "hv": "kỳ dư",
+   "vi": "còn lại",
+   "pos": "đại từ",
+   "note": "其余的人 (những người còn lại).",
+   "ex": [
+    {
+     "cn": "除了他，其余的人都到了。",
+     "py": "Chúle tā, qíyú de rén dōu dào le.",
+     "vi": "Trừ anh ấy, những người còn lại đều đến rồi."
+    }
+   ]
+  },
+  {
+   "w": "某",
+   "py": "mǒu",
+   "hv": "mỗ",
+   "vi": "nào đó",
+   "pos": "đại từ",
+   "note": "某人 (người nào đó), 某天.",
+   "ex": [
+    {
+     "cn": "某天，他突然给我打电话。",
+     "py": "Mǒu tiān, tā tūrán gěi wǒ dǎ diànhuà.",
+     "vi": "Một ngày nọ, anh ấy đột nhiên gọi cho tôi."
+    }
+   ]
+  },
+  {
+   "w": "凭",
+   "py": "píng",
+   "hv": "bằng",
+   "vi": "dựa vào; bằng",
+   "pos": "giới từ",
+   "note": "凭票入场 (vào cửa bằng vé).",
+   "ex": [
+    {
+     "cn": "请凭票入场。",
+     "py": "Qǐng píng piào rùchǎng.",
+     "vi": "Xin vào cửa bằng vé."
+    }
+   ]
+  },
+  {
+   "w": "凭借",
+   "py": "píngjiè",
+   "hv": "bằng tạ",
+   "vi": "nhờ vào",
+   "pos": "giới từ",
+   "note": "凭借努力 (nhờ nỗ lực).",
+   "ex": [
+    {
+     "cn": "他凭借自己的努力成为了职业选手。",
+     "py": "Tā píngjiè zìjǐ de nǔlì chéngwéi le zhíyè xuǎnshǒu.",
+     "vi": "Nhờ nỗ lực của mình, anh ấy trở thành tuyển thủ chuyên nghiệp."
+    }
+   ]
+  },
+  {
+   "w": "偶然",
+   "py": "ǒurán",
+   "hv": "ngẫu nhiên",
+   "vi": "tình cờ",
+   "pos": "tính từ, phó từ",
+   "note": "偶然的机会 (cơ hội tình cờ).",
+   "ex": [
+    {
+     "cn": "我是偶然知道这件事的。",
+     "py": "Wǒ shì ǒurán zhīdào zhè jiàn shì de.",
+     "vi": "Tôi tình cờ biết chuyện này."
+    }
+   ]
+  },
+  {
+   "w": "难以",
+   "py": "nányǐ",
+   "hv": "nan dĩ",
+   "vi": "khó mà",
+   "pos": "phó từ",
+   "note": "难以相信 (khó tin).",
+   "ex": [
+    {
+     "cn": "这个结果让人难以相信。",
+     "py": "Zhège jiéguǒ ràng rén nányǐ xiāngxìn.",
+     "vi": "Kết quả này khiến người ta khó tin."
+    }
+   ]
+  },
+  {
+   "w": "没法儿",
+   "py": "méi fǎr",
+   "hv": "một pháp nhi",
+   "vi": "không có cách nào",
+   "pos": "động từ",
+   "note": "Khẩu ngữ.",
+   "ex": [
+    {
+     "cn": "太吵了，我没法儿睡觉。",
+     "py": "Tài chǎo le, wǒ méi fǎr shuìjiào.",
+     "vi": "Ồn quá, tôi không sao ngủ được."
+    }
+   ]
+  },
+  {
+   "w": "轻易",
+   "py": "qīngyì",
+   "hv": "khinh dị",
+   "vi": "dễ dàng; tuỳ tiện",
+   "pos": "phó từ",
+   "note": "不要轻易放弃 (đừng dễ dàng bỏ cuộc).",
+   "ex": [
+    {
+     "cn": "不要轻易相信陌生人。",
+     "py": "Bú yào qīngyì xiāngxìn mòshēngrén.",
+     "vi": "Đừng dễ dàng tin người lạ."
+    }
+   ]
+  },
+  {
+   "w": "进一步",
+   "py": "jìnyíbù",
+   "hv": "tiến nhất bộ",
+   "vi": "thêm một bước, sâu hơn",
+   "pos": "phó từ",
+   "note": "进一步了解 (hiểu sâu hơn).",
+   "ex": [
+    {
+     "cn": "我们需要进一步讨论这个问题。",
+     "py": "Wǒmen xūyào jìnyíbù tǎolùn zhège wèntí.",
+     "vi": "Chúng ta cần bàn sâu hơn vấn đề này."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "哪怕……也……",
+   "b": "哪怕再难也要试",
+   "d": "Dù (điều kiện cực đoan) cũng vẫn.",
+   "ex": [
+    {
+     "cn": "哪怕只有一点儿希望，我们也不放弃。",
+     "py": "Nǎpà zhǐyǒu yìdiǎnr xīwàng, wǒmen yě bú fàngqì.",
+     "vi": "Dù chỉ còn chút hy vọng, chúng ta cũng không bỏ cuộc."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "如今学中文的越南人越来越多。",
+   "py": "Rújīn xué Zhōngwén de Yuènánrén yuè lái yuè duō.",
+   "vi": "Ngày nay người Việt học tiếng Trung ngày càng nhiều."
+  },
+  {
+   "cn": "他凭借出色的表现拿到了最佳选手。",
+   "py": "Tā píngjiè chūsè de biǎoxiàn ná dào le zuì jiā xuǎnshǒu.",
+   "vi": "Nhờ màn thể hiện xuất sắc, anh ấy nhận danh hiệu tuyển thủ xuất sắc nhất."
+  },
+  {
+   "cn": "不要轻易放弃你的梦想。",
+   "py": "Bú yào qīngyì fàngqì nǐ de mèngxiǎng.",
+   "vi": "Đừng dễ dàng từ bỏ ước mơ của bạn."
+  }
+ ]
+}

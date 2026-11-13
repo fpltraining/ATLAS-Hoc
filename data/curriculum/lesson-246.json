@@ -1,0 +1,264 @@
+{
+ "id": 246,
+ "cn": "拍摄视频",
+ "title": "Truyền thông và thương hiệu",
+ "goal": "Nói về truyền thông, quay phim, ghi âm, màn hình, nền tảng, hàng hiệu, thương hiệu, tên gọi, danh thiếp, sức hút và ánh sáng.",
+ "words": [
+  {
+   "w": "媒体",
+   "py": "méitǐ",
+   "hv": "môi thể",
+   "vi": "truyền thông",
+   "pos": "danh từ",
+   "note": "社交媒体 (mạng xã hội).",
+   "ex": [
+    {
+     "cn": "这件事上了很多媒体。",
+     "py": "Zhè jiàn shì shàng le hěn duō méitǐ.",
+     "vi": "Chuyện này lên nhiều báo đài."
+    }
+   ]
+  },
+  {
+   "w": "拍摄",
+   "py": "pāishè",
+   "hv": "phách nhiếp",
+   "vi": "quay, chụp",
+   "pos": "động từ",
+   "note": "拍摄电影 (quay phim).",
+   "ex": [
+    {
+     "cn": "这部电影是在越南拍摄的。",
+     "py": "Zhè bù diànyǐng shì zài Yuènán pāishè de.",
+     "vi": "Bộ phim này quay ở Việt Nam."
+    }
+   ]
+  },
+  {
+   "w": "录音",
+   "py": "lùyīn",
+   "hv": "lục âm",
+   "vi": "ghi âm; bản ghi âm",
+   "pos": "động từ, danh từ",
+   "note": "录 (ghi) + 音.",
+   "ex": [
+    {
+     "cn": "请听录音，然后回答问题。",
+     "py": "Qǐng tīng lùyīn, ránhòu huídá wèntí.",
+     "vi": "Hãy nghe ghi âm rồi trả lời câu hỏi."
+    }
+   ]
+  },
+  {
+   "w": "录",
+   "py": "lù",
+   "hv": "lục",
+   "vi": "ghi (âm, hình)",
+   "pos": "động từ",
+   "note": "录视频 (quay video).",
+   "ex": [
+    {
+     "cn": "我把比赛录下来了。",
+     "py": "Wǒ bǎ bǐsài lù xiàlái le.",
+     "vi": "Tôi đã ghi lại trận đấu."
+    }
+   ]
+  },
+  {
+   "w": "屏幕",
+   "py": "píngmù",
+   "hv": "bình mạc",
+   "vi": "màn hình",
+   "pos": "danh từ",
+   "note": "大屏幕 (màn hình lớn).",
+   "ex": [
+    {
+     "cn": "手机屏幕摔坏了。",
+     "py": "Shǒujī píngmù shuāi huài le.",
+     "vi": "Màn hình điện thoại bị rơi vỡ."
+    }
+   ]
+  },
+  {
+   "w": "平台",
+   "py": "píngtái",
+   "hv": "bình đài",
+   "vi": "nền tảng",
+   "pos": "danh từ",
+   "note": "直播平台 (nền tảng livestream).",
+   "ex": [
+    {
+     "cn": "他在直播平台上很有名。",
+     "py": "Tā zài zhíbō píngtái shang hěn yǒumíng.",
+     "vi": "Anh ấy rất nổi tiếng trên nền tảng livestream."
+    }
+   ]
+  },
+  {
+   "w": "名牌",
+   "py": "míngpái",
+   "hv": "danh bài",
+   "vi": "hàng hiệu",
+   "pos": "danh từ",
+   "note": "名牌大学 (trường danh tiếng).",
+   "ex": [
+    {
+     "cn": "她喜欢买名牌包。",
+     "py": "Tā xǐhuan mǎi míngpái bāo.",
+     "vi": "Cô ấy thích mua túi hàng hiệu."
+    }
+   ]
+  },
+  {
+   "w": "品牌",
+   "py": "pǐnpái",
+   "hv": "phẩm bài",
+   "vi": "thương hiệu",
+   "pos": "danh từ",
+   "note": "品牌形象 (hình ảnh thương hiệu).",
+   "ex": [
+    {
+     "cn": "这是一个越南品牌。",
+     "py": "Zhè shì yí ge Yuènán pǐnpái.",
+     "vi": "Đây là một thương hiệu Việt Nam."
+    }
+   ]
+  },
+  {
+   "w": "名称",
+   "py": "míngchēng",
+   "hv": "danh xưng",
+   "vi": "tên gọi",
+   "pos": "danh từ",
+   "note": "Tên của vật, tổ chức.",
+   "ex": [
+    {
+     "cn": "这个产品的名称很好记。",
+     "py": "Zhège chǎnpǐn de míngchēng hěn hǎo jì.",
+     "vi": "Tên sản phẩm này rất dễ nhớ."
+    }
+   ]
+  },
+  {
+   "w": "名片",
+   "py": "míngpiàn",
+   "hv": "danh phiến",
+   "vi": "danh thiếp",
+   "pos": "danh từ",
+   "note": "Chính là \"danh thiếp\".",
+   "ex": [
+    {
+     "cn": "这是我的名片，有事联系我。",
+     "py": "Zhè shì wǒ de míngpiàn, yǒu shì liánxì wǒ.",
+     "vi": "Đây là danh thiếp của tôi, có việc cứ liên hệ."
+    }
+   ]
+  },
+  {
+   "w": "魅力",
+   "py": "mèilì",
+   "hv": "mị lực",
+   "vi": "sức hút",
+   "pos": "danh từ",
+   "note": "有魅力 (cuốn hút).",
+   "ex": [
+    {
+     "cn": "他是一个很有魅力的人。",
+     "py": "Tā shì yí ge hěn yǒu mèilì de rén.",
+     "vi": "Anh ấy là người rất cuốn hút."
+    }
+   ]
+  },
+  {
+   "w": "经典",
+   "py": "jīngdiǎn",
+   "hv": "kinh điển",
+   "vi": "kinh điển",
+   "pos": "tính từ, danh từ",
+   "note": "经典比赛 (trận đấu kinh điển).",
+   "ex": [
+    {
+     "cn": "这是一场经典的比赛。",
+     "py": "Zhè shì yì chǎng jīngdiǎn de bǐsài.",
+     "vi": "Đây là một trận đấu kinh điển."
+    }
+   ]
+  },
+  {
+   "w": "背景",
+   "py": "bèijǐng",
+   "hv": "bối cảnh",
+   "vi": "phông nền; bối cảnh",
+   "pos": "danh từ",
+   "note": "背景音乐 (nhạc nền).",
+   "ex": [
+    {
+     "cn": "这首背景音乐很好听。",
+     "py": "Zhè shǒu bèijǐng yīnyuè hěn hǎotīng.",
+     "vi": "Bản nhạc nền này rất hay."
+    }
+   ]
+  },
+  {
+   "w": "光线",
+   "py": "guāngxiàn",
+   "hv": "quang tuyến",
+   "vi": "ánh sáng",
+   "pos": "danh từ",
+   "note": "光线太暗 (thiếu sáng).",
+   "ex": [
+    {
+     "cn": "这里光线太暗，拍不清楚。",
+     "py": "Zhèlǐ guāngxiàn tài àn, pāi bu qīngchu.",
+     "vi": "Chỗ này thiếu sáng, chụp không rõ."
+    }
+   ]
+  },
+  {
+   "w": "美术",
+   "py": "měishù",
+   "hv": "mỹ thuật",
+   "vi": "mỹ thuật",
+   "pos": "danh từ",
+   "note": "Chính là \"mỹ thuật\".",
+   "ex": [
+    {
+     "cn": "她是美术老师。",
+     "py": "Tā shì měishù lǎoshī.",
+     "vi": "Cô ấy là giáo viên mỹ thuật."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 下来 (lưu lại)",
+   "b": "录下来 · 记下来 · 拍下来",
+   "d": "Giữ lại kết quả của hành động.",
+   "ex": [
+    {
+     "cn": "把这个美丽的画面拍下来吧。",
+     "py": "Bǎ zhège měilì de huàmiàn pāi xiàlái ba.",
+     "vi": "Chụp lại khung cảnh đẹp này đi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "社交媒体改变了我们的生活。",
+   "py": "Shèjiāo méitǐ gǎibiàn le wǒmen de shēnghuó.",
+   "vi": "Mạng xã hội đã thay đổi cuộc sống chúng ta."
+  },
+  {
+   "cn": "一个好品牌需要很多年才能建立。",
+   "py": "Yí ge hǎo pǐnpái xūyào hěn duō nián cái néng jiànlì.",
+   "vi": "Một thương hiệu tốt cần nhiều năm mới gây dựng được."
+  },
+  {
+   "cn": "我们要把每场比赛都录下来分析。",
+   "py": "Wǒmen yào bǎ měi chǎng bǐsài dōu lù xiàlái fēnxī.",
+   "vi": "Chúng ta phải ghi lại từng trận để phân tích."
+  }
+ ]
+}

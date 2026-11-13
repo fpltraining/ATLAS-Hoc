@@ -1,0 +1,264 @@
+{
+ "id": 254,
+ "cn": "签合同",
+ "title": "Thủ tục và giấy tờ",
+ "goal": "Nói về ký, ký kết, chữ ký, phê duyệt, mời làm việc, xác định, xác nhận, quyền lợi, giao hàng, mua bán, công ty du lịch, lộ trình và đi đến.",
+ "words": [
+  {
+   "w": "签",
+   "py": "qiān",
+   "hv": "thiêm",
+   "vi": "ký",
+   "pos": "động từ",
+   "note": "签合同 (ký hợp đồng).",
+   "ex": [
+    {
+     "cn": "请在这里签一下。",
+     "py": "Qǐng zài zhèlǐ qiān yíxià.",
+     "vi": "Xin ký vào đây."
+    }
+   ]
+  },
+  {
+   "w": "签订",
+   "py": "qiāndìng",
+   "hv": "thiêm đính",
+   "vi": "ký kết",
+   "pos": "động từ",
+   "note": "签订协议 (ký thoả thuận).",
+   "ex": [
+    {
+     "cn": "两家公司签订了合作协议。",
+     "py": "Liǎng jiā gōngsī qiāndìng le hézuò xiéyì.",
+     "vi": "Hai công ty ký kết thoả thuận hợp tác."
+    }
+   ]
+  },
+  {
+   "w": "签名",
+   "py": "qiānmíng",
+   "hv": "thiêm danh",
+   "vi": "chữ ký; ký tên",
+   "pos": "danh từ, động từ",
+   "note": "要签名 (xin chữ ký).",
+   "ex": [
+    {
+     "cn": "很多粉丝请他签名。",
+     "py": "Hěn duō fěnsī qǐng tā qiānmíng.",
+     "vi": "Nhiều fan xin chữ ký anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "签字",
+   "py": "qiānzì",
+   "hv": "thiêm tự",
+   "vi": "ký tên (giấy tờ)",
+   "pos": "động từ",
+   "note": "Ký vào văn bản.",
+   "ex": [
+    {
+     "cn": "父母要在通知书上签字。",
+     "py": "Fùmǔ yào zài tōngzhīshū shang qiānzì.",
+     "vi": "Bố mẹ phải ký vào giấy thông báo."
+    }
+   ]
+  },
+  {
+   "w": "批准",
+   "py": "pīzhǔn",
+   "hv": "phê chuẩn",
+   "vi": "phê duyệt",
+   "pos": "động từ",
+   "note": "Chính là \"phê chuẩn\".",
+   "ex": [
+    {
+     "cn": "经理批准了我的请假。",
+     "py": "Jīnglǐ pīzhǔn le wǒ de qǐngjià.",
+     "vi": "Giám đốc duyệt đơn xin nghỉ của tôi."
+    }
+   ]
+  },
+  {
+   "w": "聘请",
+   "py": "pìnqǐng",
+   "hv": "sính thỉnh",
+   "vi": "mời làm việc, thuê",
+   "pos": "động từ",
+   "note": "聘请教练 (thuê huấn luyện viên).",
+   "ex": [
+    {
+     "cn": "俱乐部聘请了一位新教练。",
+     "py": "Jùlèbù pìnqǐng le yí wèi xīn jiàoliàn.",
+     "vi": "Câu lạc bộ mời một huấn luyện viên mới."
+    }
+   ]
+  },
+  {
+   "w": "确定",
+   "py": "quèdìng",
+   "hv": "xác định",
+   "vi": "xác định, chắc chắn",
+   "pos": "động từ, tính từ",
+   "note": "你确定吗？ (Bạn chắc không?).",
+   "ex": [
+    {
+     "cn": "比赛时间还没确定。",
+     "py": "Bǐsài shíjiān hái méi quèdìng.",
+     "vi": "Thời gian thi đấu chưa được xác định."
+    }
+   ]
+  },
+  {
+   "w": "确认",
+   "py": "quèrèn",
+   "hv": "xác nhận",
+   "vi": "xác nhận",
+   "pos": "động từ",
+   "note": "Chính là \"xác nhận\".",
+   "ex": [
+    {
+     "cn": "请确认一下你的信息。",
+     "py": "Qǐng quèrèn yíxià nǐ de xìnxī.",
+     "vi": "Hãy xác nhận thông tin của bạn."
+    }
+   ]
+  },
+  {
+   "w": "权利",
+   "py": "quánlì",
+   "hv": "quyền lợi",
+   "vi": "quyền",
+   "pos": "danh từ",
+   "note": "权利和义务 (quyền và nghĩa vụ).",
+   "ex": [
+    {
+     "cn": "每个人都有受教育的权利。",
+     "py": "Měi ge rén dōu yǒu shòu jiàoyù de quánlì.",
+     "vi": "Ai cũng có quyền được học hành."
+    }
+   ]
+  },
+  {
+   "w": "权",
+   "py": "quán",
+   "hv": "quyền",
+   "vi": "quyền",
+   "pos": "danh từ",
+   "note": "选择权 (quyền lựa chọn).",
+   "ex": [
+    {
+     "cn": "我们有第一选择权。",
+     "py": "Wǒmen yǒu dì yī xuǎnzéquán.",
+     "vi": "Chúng tôi có quyền chọn trước."
+    }
+   ]
+  },
+  {
+   "w": "配送",
+   "py": "pèisòng",
+   "hv": "phối tống",
+   "vi": "giao hàng",
+   "pos": "động từ",
+   "note": "免费配送 (giao hàng miễn phí).",
+   "ex": [
+    {
+     "cn": "这家店提供免费配送。",
+     "py": "Zhè jiā diàn tígōng miǎnfèi pèisòng.",
+     "vi": "Cửa hàng này giao hàng miễn phí."
+    }
+   ]
+  },
+  {
+   "w": "买卖",
+   "py": "mǎimai",
+   "hv": "mãi mại",
+   "vi": "mua bán, làm ăn",
+   "pos": "danh từ",
+   "note": "做买卖 (buôn bán).",
+   "ex": [
+    {
+     "cn": "他在市场做买卖。",
+     "py": "Tā zài shìchǎng zuò mǎimai.",
+     "vi": "Anh ấy buôn bán ở chợ."
+    }
+   ]
+  },
+  {
+   "w": "旅行社",
+   "py": "lǚxíngshè",
+   "hv": "lữ hành xã",
+   "vi": "công ty du lịch",
+   "pos": "danh từ",
+   "note": "社 là \"xã\" (hội, công ty).",
+   "ex": [
+    {
+     "cn": "我们通过旅行社订了机票。",
+     "py": "Wǒmen tōngguò lǚxíngshè dìng le jīpiào.",
+     "vi": "Chúng tôi đặt vé qua công ty du lịch."
+    }
+   ]
+  },
+  {
+   "w": "路线",
+   "py": "lùxiàn",
+   "hv": "lộ tuyến",
+   "vi": "lộ trình, tuyến đường",
+   "pos": "danh từ",
+   "note": "旅游路线 (tuyến du lịch).",
+   "ex": [
+    {
+     "cn": "这条路线最快。",
+     "py": "Zhè tiáo lùxiàn zuì kuài.",
+     "vi": "Tuyến đường này nhanh nhất."
+    }
+   ]
+  },
+  {
+   "w": "前往",
+   "py": "qiánwǎng",
+   "hv": "tiền vãng",
+   "vi": "đi đến",
+   "pos": "động từ",
+   "note": "Văn viết của 去.",
+   "ex": [
+    {
+     "cn": "全队明天前往上海比赛。",
+     "py": "Quán duì míngtiān qiánwǎng Shànghǎi bǐsài.",
+     "vi": "Cả đội mai đi Thượng Hải thi đấu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "通过 + cách thức",
+   "b": "通过旅行社订票",
+   "d": "Thông qua, bằng cách.",
+   "ex": [
+    {
+     "cn": "我通过朋友认识了他。",
+     "py": "Wǒ tōngguò péngyou rènshi le tā.",
+     "vi": "Tôi quen anh ấy qua một người bạn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "签合同以前，一定要看清楚每一条。",
+   "py": "Qiān hétong yǐqián, yídìng yào kàn qīngchu měi yì tiáo.",
+   "vi": "Trước khi ký hợp đồng nhất định phải đọc kỹ từng điều."
+  },
+  {
+   "cn": "请确认比赛时间，然后通知大家。",
+   "py": "Qǐng quèrèn bǐsài shíjiān, ránhòu tōngzhī dàjiā.",
+   "vi": "Hãy xác nhận giờ thi đấu rồi báo mọi người."
+  },
+  {
+   "cn": "选人的时候，我们有第一选择权。",
+   "py": "Xuǎn rén de shíhou, wǒmen yǒu dì yī xuǎnzéquán.",
+   "vi": "Khi chọn tướng, chúng tôi có quyền chọn trước."
+  }
+ ]
+}

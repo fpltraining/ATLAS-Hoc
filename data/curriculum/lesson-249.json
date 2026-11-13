@@ -1,0 +1,264 @@
+{
+ "id": 249,
+ "cn": "亲朋好友",
+ "title": "Người thân và người quen",
+ "goal": "Nói về người thân, thân yêu, họ hàng bạn bè, thân thiện, tự mình, đồng hành, tình cờ gặp, xa lạ, người đi đường, tuổi tác và khuyên nhủ.",
+ "words": [
+  {
+   "w": "亲",
+   "py": "qīn",
+   "hv": "thân",
+   "vi": "ruột, thân; hôn",
+   "pos": "tính từ, động từ",
+   "note": "亲兄弟 (anh em ruột).",
+   "ex": [
+    {
+     "cn": "他们是亲兄弟。",
+     "py": "Tāmen shì qīn xiōngdì.",
+     "vi": "Họ là anh em ruột."
+    }
+   ]
+  },
+  {
+   "w": "亲爱",
+   "py": "qīn'ài",
+   "hv": "thân ái",
+   "vi": "thân yêu",
+   "pos": "tính từ",
+   "note": "亲爱的 (người thân yêu).",
+   "ex": [
+    {
+     "cn": "亲爱的朋友们，新年快乐！",
+     "py": "Qīn'ài de péngyoumen, xīnnián kuàilè!",
+     "vi": "Các bạn thân mến, chúc mừng năm mới!"
+    }
+   ]
+  },
+  {
+   "w": "亲朋好友",
+   "py": "qīnpéng hǎoyǒu",
+   "hv": "thân bằng hảo hữu",
+   "vi": "người thân bạn bè",
+   "pos": "thành ngữ",
+   "note": "Họ hàng và bạn bè.",
+   "ex": [
+    {
+     "cn": "婚礼上来了很多亲朋好友。",
+     "py": "Hūnlǐ shang lái le hěn duō qīnpéng hǎoyǒu.",
+     "vi": "Đám cưới có nhiều họ hàng bạn bè đến."
+    }
+   ]
+  },
+  {
+   "w": "亲切",
+   "py": "qīnqiè",
+   "hv": "thân thiết",
+   "vi": "thân thiện, ân cần",
+   "pos": "tính từ",
+   "note": "亲切的笑容 (nụ cười thân thiện).",
+   "ex": [
+    {
+     "cn": "老师对我们很亲切。",
+     "py": "Lǎoshī duì wǒmen hěn qīnqiè.",
+     "vi": "Thầy rất ân cần với chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "亲人",
+   "py": "qīnrén",
+   "hv": "thân nhân",
+   "vi": "người thân",
+   "pos": "danh từ",
+   "note": "Chính là \"thân nhân\".",
+   "ex": [
+    {
+     "cn": "过年的时候想回家看看亲人。",
+     "py": "Guònián de shíhou xiǎng huí jiā kànkan qīnrén.",
+     "vi": "Tết đến muốn về nhà thăm người thân."
+    }
+   ]
+  },
+  {
+   "w": "亲自",
+   "py": "qīnzì",
+   "hv": "thân tự",
+   "vi": "đích thân",
+   "pos": "phó từ",
+   "note": "亲自来 (đích thân đến).",
+   "ex": [
+    {
+     "cn": "总经理亲自来看我们比赛。",
+     "py": "Zǒngjīnglǐ qīnzì lái kàn wǒmen bǐsài.",
+     "vi": "Tổng giám đốc đích thân đến xem chúng tôi thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "陪伴",
+   "py": "péibàn",
+   "hv": "bồi bạn",
+   "vi": "ở bên, đồng hành",
+   "pos": "động từ",
+   "note": "谢谢你的陪伴 (cảm ơn đã đồng hành).",
+   "ex": [
+    {
+     "cn": "谢谢你一直陪伴着我。",
+     "py": "Xièxie nǐ yìzhí péibàn zhe wǒ.",
+     "vi": "Cảm ơn bạn đã luôn ở bên tôi."
+    }
+   ]
+  },
+  {
+   "w": "碰见",
+   "py": "pèngjiàn",
+   "hv": "bính kiến",
+   "vi": "tình cờ gặp",
+   "pos": "động từ",
+   "note": "Giống 遇见.",
+   "ex": [
+    {
+     "cn": "我在超市碰见了老同学。",
+     "py": "Wǒ zài chāoshì pèngjiàn le lǎo tóngxué.",
+     "vi": "Tôi tình cờ gặp bạn cũ ở siêu thị."
+    }
+   ]
+  },
+  {
+   "w": "陌生",
+   "py": "mòshēng",
+   "hv": "mạch sinh",
+   "vi": "xa lạ",
+   "pos": "tính từ",
+   "note": "陌生人 (người lạ).",
+   "ex": [
+    {
+     "cn": "别给陌生人开门。",
+     "py": "Bié gěi mòshēngrén kāi mén.",
+     "vi": "Đừng mở cửa cho người lạ."
+    }
+   ]
+  },
+  {
+   "w": "路人",
+   "py": "lùrén",
+   "hv": "lộ nhân",
+   "vi": "người qua đường",
+   "pos": "danh từ",
+   "note": "路 + 人.",
+   "ex": [
+    {
+     "cn": "一个路人帮我们拍了照片。",
+     "py": "Yí ge lùrén bāng wǒmen pāi le zhàopiàn.",
+     "vi": "Một người qua đường chụp ảnh giúp chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "年纪",
+   "py": "niánjì",
+   "hv": "niên kỷ",
+   "vi": "tuổi tác",
+   "pos": "danh từ",
+   "note": "您多大年纪了？ (Bác bao nhiêu tuổi?).",
+   "ex": [
+    {
+     "cn": "爷爷年纪大了，走路很慢。",
+     "py": "Yéye niánjì dà le, zǒulù hěn màn.",
+     "vi": "Ông nội lớn tuổi rồi, đi lại chậm."
+    }
+   ]
+  },
+  {
+   "w": "去世",
+   "py": "qùshì",
+   "hv": "khứ thế",
+   "vi": "qua đời",
+   "pos": "động từ",
+   "note": "Nói tránh của 死.",
+   "ex": [
+    {
+     "cn": "他的爷爷去年去世了。",
+     "py": "Tā de yéye qùnián qùshì le.",
+     "vi": "Ông nội anh ấy qua đời năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "劝",
+   "py": "quàn",
+   "hv": "khuyến",
+   "vi": "khuyên",
+   "pos": "động từ",
+   "note": "劝他别喝酒 (khuyên anh ấy đừng uống rượu).",
+   "ex": [
+    {
+     "cn": "我劝他早点儿休息。",
+     "py": "Wǒ quàn tā zǎo diǎnr xiūxi.",
+     "vi": "Tôi khuyên anh ấy nghỉ sớm."
+    }
+   ]
+  },
+  {
+   "w": "热心",
+   "py": "rèxīn",
+   "hv": "nhiệt tâm",
+   "vi": "nhiệt tình",
+   "pos": "tính từ",
+   "note": "热心人 (người nhiệt tình).",
+   "ex": [
+    {
+     "cn": "邻居都很热心。",
+     "py": "Línjū dōu hěn rèxīn.",
+     "vi": "Hàng xóm đều rất nhiệt tình."
+    }
+   ]
+  },
+  {
+   "w": "秘书",
+   "py": "mìshū",
+   "hv": "bí thư",
+   "vi": "thư ký",
+   "pos": "danh từ",
+   "note": "Khác \"bí thư\" (chức Đảng) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "有事可以找我的秘书。",
+     "py": "Yǒu shì kěyǐ zhǎo wǒ de mìshū.",
+     "vi": "Có việc có thể gặp thư ký của tôi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "劝 + người + (别) + làm gì",
+   "b": "我劝他别生气",
+   "d": "Khuyên ai làm/đừng làm gì.",
+   "ex": [
+    {
+     "cn": "朋友劝我多运动。",
+     "py": "Péngyou quàn wǒ duō yùndòng.",
+     "vi": "Bạn khuyên tôi vận động nhiều hơn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "亲人的陪伴是最好的礼物。",
+   "py": "Qīnrén de péibàn shì zuì hǎo de lǐwù.",
+   "vi": "Sự đồng hành của người thân là món quà tốt nhất."
+  },
+  {
+   "cn": "在陌生的城市，一个热心的路人帮了我。",
+   "py": "Zài mòshēng de chéngshì, yí ge rèxīn de lùrén bāng le wǒ.",
+   "vi": "Ở thành phố lạ, một người qua đường nhiệt tình đã giúp tôi."
+  },
+  {
+   "cn": "教练亲自给我们做示范。",
+   "py": "Jiàoliàn qīnzì gěi wǒmen zuò shìfàn.",
+   "vi": "Huấn luyện viên đích thân làm mẫu cho chúng tôi."
+  }
+ ]
+}
