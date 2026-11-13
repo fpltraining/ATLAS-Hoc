@@ -55,6 +55,13 @@ c.a1sent.forEach((t, i) => add('en', t, alt(i)));
 for (const v of Object.values(c.sent)) v.forEach((s, i) => add('en', s.en, alt(i)));
 for (const s of c.shadow) s.v.forEach((t, i) => add('en', t, alt(i)));
 for (const [w] of c.vocabB2 || []) add('en', w);
+for (const [w] of c.vocabC1 || []) add('en', w);
+for (const th of c.colloc3 || []) th.v.forEach(([t], i) => add('en', t, alt(i)));
+for (const d of c.debate3 || []) {
+  add('en', d.t);
+  d.for.forEach(([t]) => add('en', t, 'm'));
+  d.against.forEach(([t]) => add('en', t, 'f'));
+}
 const work = J('data/work.json');
 for (const d of work.days) d.phrases.forEach((p, i) => add('en', p.en, alt(i)));
 for (const cv of work.convos) for (const l of cv.lines) add('en', l.en, /^han$/i.test(l.sp) ? 'm' : 'f');

@@ -9,7 +9,7 @@ Gộp từ 5 app: Bút Hán, Inklish, ATLAS bản cũ, Song Ngữ và Han's Engl
 | Mục | Nội dung |
 |---|---|
 | Hôm nay | Việc cần làm theo thứ tự, chia theo quỹ 30 phút đến 2 tiếng, chuỗi ngày học, thử thách 10 câu, nhật ký |
-| Tiếng Anh | Bài xếp lớp, luyện phát âm có chấm điểm, 5 chặng: A0 → B2 đủ nội dung (chặng 2 có 1.134 từ B1–B2 mới và bài đọc B2), chặng 3–4 (B2 vững, C1) đang soạn; truyện và tin song ngữ, viết bằng bút, ôn thẻ, tiếng Anh nghề, sổ tay ngữ pháp |
+| Tiếng Anh | Bài xếp lớp, luyện phát âm có chấm điểm, 5 chặng: A0 → B2 đủ nội dung (chặng 2 có 1.134 từ B1–B2 mới và bài đọc B2), chặng 3 (B2 vững: 483 từ B2–C1, tranh luận, viết luận) đủ nội dung, chặng 4 (C1) đang soạn; truyện và tin song ngữ, viết bằng bút, ôn thẻ, tiếng Anh nghề, sổ tay ngữ pháp |
 | Tiếng Trung | 205 bài HSK 1–4 theo chuẩn 2025 (đủ 100% từ cấp 1–4), truyện song ngữ có pinyin, viết nhiều lượt chấm từng nét, bản đồ chữ, ôn thẻ, thi thử HSK, từ vựng HSK 3.0 cấp 1–9 có nghĩa chi tiết, 5 trò ôn nhanh, luyện phát âm và thanh điệu có chấm điểm, pinyin, bộ thủ |
 | Chủ đề | Tra từ Anh–Trung–Việt, 99 chủ đề song song hai ngôn ngữ, từ theo lĩnh vực, kiến thức, đọc số và tiền, sổ ghi |
 | Tiến độ | Thời gian thật theo từng khối, nhật ký, sao lưu và nhập từ app cũ |
@@ -99,6 +99,8 @@ Lỗi nội dung sửa trong `data-src/patches/`, không sửa tay vào `data/`:
 |---|---|
 | `fixes.json` | Thay đúng một chuỗi trong một tệp của `data/` (Hán Việt, ghi chú, câu sai trong bài đọc) |
 | `en-add-*.txt` | Bổ sung từ tiếng Anh, mỗi dòng `từ \| phiên âm \| từ loại \| câu ví dụ \| nghĩa câu ví dụ` |
+| `en-c1-*.txt` | Từ mới B2–C1 cho chặng 3, cùng định dạng với `en-new-*.txt`, 6 từ mỗi buổi |
+| `stage3-*.json` | Chặng 3: cụm từ tranh luận, đề tranh luận, đề viết luận |
 | `en-new-*.txt` | Từ mới B1–B2 cho chặng 2, mỗi dòng `từ \| phiên âm \| từ loại \| nghĩa \| câu ví dụ \| nghĩa câu ví dụ`, dòng `@lv N` đặt cấp. Thứ tự trong tệp là thứ tự học, 10 từ mỗi buổi |
 | `course.json` | Ghi chú, trạng thái và danh sách mục của từng chặng tiếng Anh |
 | `pos.txt` | Từ loại cho các từ còn thiếu, mỗi dòng `từ loại: từ ; từ ; ...` |

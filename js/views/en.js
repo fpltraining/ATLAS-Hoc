@@ -10,7 +10,7 @@ import { curSession, enBlocks, enTitle, weekOf, quotaToday, dayType } from '../p
 import { InkPad } from '../pen/inkpad.js';
 import { sayEn, sayBtn, pair, wordy, scribble, diff, micCheck, hasMic } from '../kit.js';
 import { h, toast, section, progressBar, pill } from '../ui.js';
-import { gradeButton } from '../ai.js';
+import { gradeButton, aiConfig } from '../ai.js';
 import { cardSummary } from '../progress.js';
 
 export async function render(route) {
@@ -192,6 +192,12 @@ async function activity(key) {
     case 'write3': {
       const t = course.writeTasks[i % course.writeTasks.length];
       return writeBlock(key, { title: t.t, hint: (t.struct || []).join(' · '), min: t.w, tag: t.g, level });
+    }
+    case 'vocab3': {
+      // Chặng 3: mỗi buổi 6 từ B2–C1
+      const list = course.vocabC1 || [];
+      const from = Math.min(i * 6, Math.max(0, list.length - 6));
+      return wordsBlock(key, list.slice(from, from + 6), st, n);
     }
     case 'coll3': {
       const th = course.colloc3[i % course.colloc3.length];
@@ -505,14 +511,16 @@ function retellBlock(key, t, level) {
     },
   }, 'Bắt đầu nói');
   const said = scribble('Lời bạn nói sẽ hiện ở đây, sửa được.', { long: true });
+  let aiCard = null;
+  aiConfig().then((cfg) => { if (!cfg) aiCard?.remove(); }).catch(() => {});
   const rec = dictation(said);
   return {
     title: 'Nói lại',
     el: h('div.stack',
       h('div.card', h('h3', t.t), t.hint ? h('p.small.muted', { style: { marginTop: '6px', whiteSpace: 'pre-wrap' } }, t.hint) : null,
         h('div.center', { style: { margin: '14px 0' } }, clock), startBtn),
-      h('div.card.stack',
-        h('h4', 'Chấm bài nói bằng AI (không bắt buộc)'),
+      aiCard = h('div.card.stack',
+        h('h4', 'Chấm bài nói bằng AI'),
         h('p.small.faint', hasMic
           ? 'Bấm Ghi âm rồi nói, máy chuyển lời bạn thành chữ. Sửa chỗ máy nghe nhầm rồi bấm chấm. AI chấm từ vựng, ngữ pháp và ý, không chấm phát âm.'
           : 'Trình duyệt này không chuyển giọng nói thành chữ được. Gõ lại điều bạn vừa nói rồi bấm chấm. AI không chấm phát âm.'),
