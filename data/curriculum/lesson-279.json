@@ -1,0 +1,264 @@
+{
+ "id": 279,
+ "cn": "展览会",
+ "title": "Triển lãm và trình diễn",
+ "goal": "Nói về trưng bày, mở ra, triển lãm, trình bày, thể hiện, triệu tập, dẫn chương trình, chủ đề, chủ tịch, phim, điện ảnh truyền hình, tràng vỗ tay, đón tiếp và tham quan.",
+ "words": [
+  {
+   "w": "展出",
+   "py": "zhǎnchū",
+   "hv": "triển xuất",
+   "vi": "trưng bày",
+   "pos": "động từ",
+   "note": "展出作品 (trưng bày tác phẩm).",
+   "ex": [
+    {
+     "cn": "博物馆展出了很多古代文物。",
+     "py": "Bówùguǎn zhǎnchū le hěn duō gǔdài wénwù.",
+     "vi": "Bảo tàng trưng bày nhiều cổ vật."
+    }
+   ]
+  },
+  {
+   "w": "展开",
+   "py": "zhǎnkāi",
+   "hv": "triển khai",
+   "vi": "mở ra; triển khai",
+   "pos": "động từ",
+   "note": "展开讨论 (mở cuộc thảo luận).",
+   "ex": [
+    {
+     "cn": "双方展开了激烈的争夺。",
+     "py": "Shuāngfāng zhǎnkāi le jīliè de zhēngduó.",
+     "vi": "Hai bên mở màn cuộc tranh đoạt gay gắt."
+    }
+   ]
+  },
+  {
+   "w": "展览",
+   "py": "zhǎnlǎn",
+   "hv": "triển lãm",
+   "vi": "triển lãm",
+   "pos": "danh từ, động từ",
+   "note": "展览会 (hội chợ triển lãm).",
+   "ex": [
+    {
+     "cn": "这个周末有一个游戏展览。",
+     "py": "Zhège zhōumò yǒu yí ge yóuxì zhǎnlǎn.",
+     "vi": "Cuối tuần này có triển lãm game."
+    }
+   ]
+  },
+  {
+   "w": "展示",
+   "py": "zhǎnshì",
+   "hv": "triển thị",
+   "vi": "trình bày, giới thiệu",
+   "pos": "động từ",
+   "note": "展示产品 (giới thiệu sản phẩm).",
+   "ex": [
+    {
+     "cn": "他向大家展示了新英雄。",
+     "py": "Tā xiàng dàjiā zhǎnshì le xīn yīngxióng.",
+     "vi": "Anh ấy giới thiệu tướng mới với mọi người."
+    }
+   ]
+  },
+  {
+   "w": "展现",
+   "py": "zhǎnxiàn",
+   "hv": "triển hiện",
+   "vi": "thể hiện ra",
+   "pos": "động từ",
+   "note": "展现实力 (thể hiện thực lực).",
+   "ex": [
+    {
+     "cn": "他们在决赛中展现了冠军实力。",
+     "py": "Tāmen zài juésài zhōng zhǎnxiàn le guànjūn shílì.",
+     "vi": "Họ thể hiện thực lực nhà vô địch trong chung kết."
+    }
+   ]
+  },
+  {
+   "w": "召开",
+   "py": "zhàokāi",
+   "hv": "triệu khai",
+   "vi": "triệu tập, tổ chức (họp)",
+   "pos": "động từ",
+   "note": "召开会议 (tổ chức họp).",
+   "ex": [
+    {
+     "cn": "公司明天召开大会。",
+     "py": "Gōngsī míngtiān zhàokāi dàhuì.",
+     "vi": "Công ty mai tổ chức đại hội."
+    }
+   ]
+  },
+  {
+   "w": "主持",
+   "py": "zhǔchí",
+   "hv": "chủ trì",
+   "vi": "dẫn chương trình; chủ trì",
+   "pos": "động từ",
+   "note": "主持人 (MC).",
+   "ex": [
+    {
+     "cn": "她主持了这次颁奖典礼。",
+     "py": "Tā zhǔchí le zhè cì bānjiǎng diǎnlǐ.",
+     "vi": "Cô ấy dẫn lễ trao giải lần này."
+    }
+   ]
+  },
+  {
+   "w": "主题",
+   "py": "zhǔtí",
+   "hv": "chủ đề",
+   "vi": "chủ đề",
+   "pos": "danh từ",
+   "note": "Chính là \"chủ đề\".",
+   "ex": [
+    {
+     "cn": "今天讨论的主题是团队合作。",
+     "py": "Jīntiān tǎolùn de zhǔtí shì tuánduì hézuò.",
+     "vi": "Chủ đề thảo luận hôm nay là làm việc nhóm."
+    }
+   ]
+  },
+  {
+   "w": "主席",
+   "py": "zhǔxí",
+   "hv": "chủ tịch",
+   "vi": "chủ tịch",
+   "pos": "danh từ",
+   "note": "Chính là \"chủ tịch\".",
+   "ex": [
+    {
+     "cn": "主席在会上讲了话。",
+     "py": "Zhǔxí zài huì shang jiǎng le huà.",
+     "vi": "Chủ tịch phát biểu trong cuộc họp."
+    }
+   ]
+  },
+  {
+   "w": "影片",
+   "py": "yǐngpiàn",
+   "hv": "ảnh phiến",
+   "vi": "bộ phim",
+   "pos": "danh từ",
+   "note": "Văn viết của 电影.",
+   "ex": [
+    {
+     "cn": "这部影片获得了大奖。",
+     "py": "Zhè bù yǐngpiàn huòdé le dàjiǎng.",
+     "vi": "Bộ phim này giành giải lớn."
+    }
+   ]
+  },
+  {
+   "w": "影视",
+   "py": "yǐngshì",
+   "hv": "ảnh thị",
+   "vi": "điện ảnh truyền hình",
+   "pos": "danh từ",
+   "note": "影视作品 (tác phẩm phim ảnh).",
+   "ex": [
+    {
+     "cn": "他在一家影视公司工作。",
+     "py": "Tā zài yì jiā yǐngshì gōngsī gōngzuò.",
+     "vi": "Anh ấy làm ở một công ty phim ảnh."
+    }
+   ]
+  },
+  {
+   "w": "掌声",
+   "py": "zhǎngshēng",
+   "hv": "chưởng thanh",
+   "vi": "tràng vỗ tay",
+   "pos": "danh từ",
+   "note": "热烈的掌声 (vỗ tay nồng nhiệt).",
+   "ex": [
+    {
+     "cn": "让我们用掌声欢迎他！",
+     "py": "Ràng wǒmen yòng zhǎngshēng huānyíng tā!",
+     "vi": "Hãy cho một tràng pháo tay chào đón anh ấy!"
+    }
+   ]
+  },
+  {
+   "w": "迎接",
+   "py": "yíngjiē",
+   "hv": "nghênh tiếp",
+   "vi": "đón tiếp",
+   "pos": "động từ",
+   "note": "迎接新年 (đón năm mới).",
+   "ex": [
+    {
+     "cn": "很多粉丝去机场迎接冠军队。",
+     "py": "Hěn duō fěnsī qù jīchǎng yíngjiē guànjūnduì.",
+     "vi": "Nhiều fan ra sân bay đón đội vô địch."
+    }
+   ]
+  },
+  {
+   "w": "迎",
+   "py": "yíng",
+   "hv": "nghênh",
+   "vi": "đón",
+   "pos": "động từ",
+   "note": "欢迎 (hoan nghênh).",
+   "ex": [
+    {
+     "cn": "他笑着迎了上来。",
+     "py": "Tā xiào zhe yíng le shànglái.",
+     "vi": "Anh ấy mỉm cười đón lại."
+    }
+   ]
+  },
+  {
+   "w": "游览",
+   "py": "yóulǎn",
+   "hv": "du lãm",
+   "vi": "tham quan",
+   "pos": "động từ",
+   "note": "游览名胜 (tham quan danh thắng).",
+   "ex": [
+    {
+     "cn": "我们游览了故宫。",
+     "py": "Wǒmen yóulǎn le Gùgōng.",
+     "vi": "Chúng tôi tham quan Cố Cung."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "让我们 + V",
+   "b": "让我们用掌声欢迎",
+   "d": "Lời kêu gọi trang trọng: hãy cùng...",
+   "ex": [
+    {
+     "cn": "让我们一起努力吧！",
+     "py": "Ràng wǒmen yìqǐ nǔlì ba!",
+     "vi": "Hãy cùng nhau cố gắng!"
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "冠军上台的时候，全场响起了热烈的掌声。",
+   "py": "Guànjūn shàng tái de shíhou, quán chǎng xiǎngqǐ le rèliè de zhǎngshēng.",
+   "vi": "Khi nhà vô địch lên sân khấu, cả khán đài vang tiếng vỗ tay."
+  },
+  {
+   "cn": "这次展览展示了很多新技术。",
+   "py": "Zhè cì zhǎnlǎn zhǎnshì le hěn duō xīn jìshù.",
+   "vi": "Triển lãm lần này giới thiệu nhiều công nghệ mới."
+  },
+  {
+   "cn": "我们去北京的时候游览了长城。",
+   "py": "Wǒmen qù Běijīng de shíhou yóulǎn le Chángchéng.",
+   "vi": "Khi đến Bắc Kinh chúng tôi đã tham quan Vạn Lý Trường Thành."
+  }
+ ]
+}

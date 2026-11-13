@@ -1,0 +1,264 @@
+{
+ "id": 278,
+ "cn": "发挥优势",
+ "title": "Ưu thế và giá trị",
+ "goal": "Nói về ưu thế, chất lượng cao, tốt đẹp, lâu đời, có lợi, có ích, có hại, mạnh mẽ, có hạn, giúp ích, quý giá, trân trọng, hoàn mỹ và hoàn thiện.",
+ "words": [
+  {
+   "w": "优势",
+   "py": "yōushì",
+   "hv": "ưu thế",
+   "vi": "ưu thế, lợi thế",
+   "pos": "danh từ",
+   "note": "发挥优势 (phát huy ưu thế).",
+   "ex": [
+    {
+     "cn": "我们的优势是配合。",
+     "py": "Wǒmen de yōushì shì pèihé.",
+     "vi": "Lợi thế của chúng tôi là phối hợp."
+    }
+   ]
+  },
+  {
+   "w": "优质",
+   "py": "yōuzhì",
+   "hv": "ưu chất",
+   "vi": "chất lượng cao",
+   "pos": "tính từ",
+   "note": "优质服务 (dịch vụ chất lượng).",
+   "ex": [
+    {
+     "cn": "这家酒店提供优质服务。",
+     "py": "Zhè jiā jiǔdiàn tígōng yōuzhì fúwù.",
+     "vi": "Khách sạn này cung cấp dịch vụ chất lượng cao."
+    }
+   ]
+  },
+  {
+   "w": "优良",
+   "py": "yōuliáng",
+   "hv": "ưu lương",
+   "vi": "tốt, ưu tú",
+   "pos": "tính từ",
+   "note": "优良传统 (truyền thống tốt đẹp).",
+   "ex": [
+    {
+     "cn": "勤劳是我们的优良传统。",
+     "py": "Qínláo shì wǒmen de yōuliáng chuántǒng.",
+     "vi": "Cần cù là truyền thống tốt đẹp của chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "优美",
+   "py": "yōuměi",
+   "hv": "ưu mỹ",
+   "vi": "đẹp, duyên dáng",
+   "pos": "tính từ",
+   "note": "风景优美 (cảnh đẹp).",
+   "ex": [
+    {
+     "cn": "这里风景优美。",
+     "py": "Zhèlǐ fēngjǐng yōuměi.",
+     "vi": "Phong cảnh ở đây rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "悠久",
+   "py": "yōujiǔ",
+   "hv": "du cửu",
+   "vi": "lâu đời",
+   "pos": "tính từ",
+   "note": "历史悠久 (lịch sử lâu đời).",
+   "ex": [
+    {
+     "cn": "越南有悠久的历史。",
+     "py": "Yuènán yǒu yōujiǔ de lìshǐ.",
+     "vi": "Việt Nam có lịch sử lâu đời."
+    }
+   ]
+  },
+  {
+   "w": "有利",
+   "py": "yǒulì",
+   "hv": "hữu lợi",
+   "vi": "có lợi",
+   "pos": "tính từ",
+   "note": "对……有利 (có lợi cho...).",
+   "ex": [
+    {
+     "cn": "现在的形势对我们有利。",
+     "py": "Xiànzài de xíngshì duì wǒmen yǒulì.",
+     "vi": "Tình hình hiện tại có lợi cho chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "有益",
+   "py": "yǒuyì",
+   "hv": "hữu ích",
+   "vi": "có ích",
+   "pos": "tính từ",
+   "note": "对身体有益 (tốt cho cơ thể).",
+   "ex": [
+    {
+     "cn": "运动对身体有益。",
+     "py": "Yùndòng duì shēntǐ yǒuyì.",
+     "vi": "Vận động có ích cho cơ thể."
+    }
+   ]
+  },
+  {
+   "w": "有害",
+   "py": "yǒuhài",
+   "hv": "hữu hại",
+   "vi": "có hại",
+   "pos": "tính từ",
+   "note": "对健康有害 (hại sức khoẻ).",
+   "ex": [
+    {
+     "cn": "吸烟对健康有害。",
+     "py": "Xīyān duì jiànkāng yǒuhài.",
+     "vi": "Hút thuốc có hại cho sức khoẻ."
+    }
+   ]
+  },
+  {
+   "w": "有力",
+   "py": "yǒulì",
+   "hv": "hữu lực",
+   "vi": "mạnh mẽ, có sức",
+   "pos": "tính từ",
+   "note": "有力的证据 (bằng chứng xác đáng).",
+   "ex": [
+    {
+     "cn": "他的发言很有力。",
+     "py": "Tā de fāyán hěn yǒulì.",
+     "vi": "Bài phát biểu của anh ấy rất mạnh mẽ."
+    }
+   ]
+  },
+  {
+   "w": "有限",
+   "py": "yǒuxiàn",
+   "hv": "hữu hạn",
+   "vi": "có hạn",
+   "pos": "tính từ",
+   "note": "时间有限 (thời gian có hạn).",
+   "ex": [
+    {
+     "cn": "时间有限，我们说重点。",
+     "py": "Shíjiān yǒuxiàn, wǒmen shuō zhòngdiǎn.",
+     "vi": "Thời gian có hạn, mình nói trọng tâm."
+    }
+   ]
+  },
+  {
+   "w": "有助于",
+   "py": "yǒuzhùyú",
+   "hv": "hữu trợ vu",
+   "vi": "giúp ích cho",
+   "pos": "động từ",
+   "note": "有助于学习 (giúp ích việc học).",
+   "ex": [
+    {
+     "cn": "多听多说有助于提高口语。",
+     "py": "Duō tīng duō shuō yǒuzhùyú tígāo kǒuyǔ.",
+     "vi": "Nghe nhiều nói nhiều giúp nâng khả năng nói."
+    }
+   ]
+  },
+  {
+   "w": "珍贵",
+   "py": "zhēnguì",
+   "hv": "trân quý",
+   "vi": "quý giá",
+   "pos": "tính từ",
+   "note": "Chính là \"trân quý\".",
+   "ex": [
+    {
+     "cn": "这些照片对我来说很珍贵。",
+     "py": "Zhèxiē zhàopiàn duì wǒ lái shuō hěn zhēnguì.",
+     "vi": "Những bức ảnh này rất quý giá với tôi."
+    }
+   ]
+  },
+  {
+   "w": "珍惜",
+   "py": "zhēnxī",
+   "hv": "trân tích",
+   "vi": "trân trọng",
+   "pos": "động từ",
+   "note": "珍惜时间 (quý trọng thời gian).",
+   "ex": [
+    {
+     "cn": "要珍惜每一次比赛的机会。",
+     "py": "Yào zhēnxī měi yí cì bǐsài de jīhuì.",
+     "vi": "Phải trân trọng mỗi cơ hội thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "完美",
+   "py": "wánměi",
+   "hv": "hoàn mỹ",
+   "vi": "hoàn hảo",
+   "pos": "tính từ",
+   "note": "Chính là \"hoàn mỹ\".",
+   "ex": [
+    {
+     "cn": "这次配合简直完美。",
+     "py": "Zhè cì pèihé jiǎnzhí wánměi.",
+     "vi": "Pha phối hợp này quả thực hoàn hảo."
+    }
+   ]
+  },
+  {
+   "w": "完善",
+   "py": "wánshàn",
+   "hv": "hoàn thiện",
+   "vi": "hoàn thiện",
+   "pos": "động từ, tính từ",
+   "note": "Chính là \"hoàn thiện\".",
+   "ex": [
+    {
+     "cn": "我们还要完善训练计划。",
+     "py": "Wǒmen hái yào wánshàn xùnliàn jìhuà.",
+     "vi": "Chúng ta còn phải hoàn thiện kế hoạch tập."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "对 + ai/cái gì + 有利/有益/有害",
+   "b": "对身体有益",
+   "d": "Có lợi, có ích, có hại cho ai.",
+   "ex": [
+    {
+     "cn": "熬夜对皮肤有害。",
+     "py": "Áoyè duì pífū yǒuhài.",
+     "vi": "Thức khuya có hại cho da."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "要发挥自己的优势，避开自己的弱点。",
+   "py": "Yào fāhuī zìjǐ de yōushì, bìkāi zìjǐ de ruòdiǎn.",
+   "vi": "Phải phát huy ưu thế, tránh điểm yếu của mình."
+  },
+  {
+   "cn": "年轻的时候要珍惜时间。",
+   "py": "Niánqīng de shíhou yào zhēnxī shíjiān.",
+   "vi": "Lúc trẻ phải quý trọng thời gian."
+  },
+  {
+   "cn": "没有完美的人，只有不断进步的人。",
+   "py": "Méiyǒu wánměi de rén, zhǐyǒu búduàn jìnbù de rén.",
+   "vi": "Không có người hoàn hảo, chỉ có người không ngừng tiến bộ."
+  }
+ ]
+}

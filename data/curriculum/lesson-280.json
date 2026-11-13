@@ -1,0 +1,264 @@
+{
+ "id": 280,
+ "cn": "追求梦想",
+ "title": "Ước mơ và lý tưởng",
+ "goal": "Nói về theo đuổi, nguyện vọng, mong muốn, dũng khí, do dự, tiếc nuối, tranh thủ, nắm vững, ý thức, ý nghĩa, đồng nghĩa với, nghĩa vụ, nguyên tắc, trí tuệ và tương lai.",
+ "words": [
+  {
+   "w": "追求",
+   "py": "zhuīqiú",
+   "hv": "truy cầu",
+   "vi": "theo đuổi",
+   "pos": "động từ",
+   "note": "追求梦想 (theo đuổi ước mơ).",
+   "ex": [
+    {
+     "cn": "每个人都有权利追求幸福。",
+     "py": "Měi ge rén dōu yǒu quánlì zhuīqiú xìngfú.",
+     "vi": "Ai cũng có quyền theo đuổi hạnh phúc."
+    }
+   ]
+  },
+  {
+   "w": "愿望",
+   "py": "yuànwàng",
+   "hv": "nguyện vọng",
+   "vi": "mong ước",
+   "pos": "danh từ",
+   "note": "Chính là \"nguyện vọng\".",
+   "ex": [
+    {
+     "cn": "我的愿望是当一名职业选手。",
+     "py": "Wǒ de yuànwàng shì dāng yì míng zhíyè xuǎnshǒu.",
+     "vi": "Ước mơ của tôi là làm tuyển thủ chuyên nghiệp."
+    }
+   ]
+  },
+  {
+   "w": "愿",
+   "py": "yuàn",
+   "hv": "nguyện",
+   "vi": "mong, nguyện",
+   "pos": "động từ",
+   "note": "但愿 (mong rằng).",
+   "ex": [
+    {
+     "cn": "愿你一切顺利。",
+     "py": "Yuàn nǐ yíqiè shùnlì.",
+     "vi": "Chúc bạn mọi việc suôn sẻ."
+    }
+   ]
+  },
+  {
+   "w": "勇气",
+   "py": "yǒngqì",
+   "hv": "dũng khí",
+   "vi": "dũng khí",
+   "pos": "danh từ",
+   "note": "Chính là \"dũng khí\".",
+   "ex": [
+    {
+     "cn": "承认错误需要勇气。",
+     "py": "Chéngrèn cuòwù xūyào yǒngqì.",
+     "vi": "Thừa nhận sai lầm cần dũng khí."
+    }
+   ]
+  },
+  {
+   "w": "犹豫",
+   "py": "yóuyù",
+   "hv": "do dự",
+   "vi": "do dự",
+   "pos": "động từ, tính từ",
+   "note": "Chính là \"do dự\".",
+   "ex": [
+    {
+     "cn": "别犹豫了，快决定吧。",
+     "py": "Bié yóuyù le, kuài juédìng ba.",
+     "vi": "Đừng do dự nữa, quyết nhanh đi."
+    }
+   ]
+  },
+  {
+   "w": "遗憾",
+   "py": "yíhàn",
+   "hv": "di hám",
+   "vi": "tiếc nuối",
+   "pos": "tính từ, danh từ",
+   "note": "很遗憾 (thật đáng tiếc).",
+   "ex": [
+    {
+     "cn": "很遗憾，我们没能进决赛。",
+     "py": "Hěn yíhàn, wǒmen méi néng jìn juésài.",
+     "vi": "Rất tiếc, chúng tôi không vào được chung kết."
+    }
+   ]
+  },
+  {
+   "w": "争取",
+   "py": "zhēngqǔ",
+   "hv": "tranh thủ",
+   "vi": "cố gắng giành",
+   "pos": "động từ",
+   "note": "争取胜利 (cố giành chiến thắng).",
+   "ex": [
+    {
+     "cn": "我们争取下次拿冠军。",
+     "py": "Wǒmen zhēngqǔ xià cì ná guànjūn.",
+     "vi": "Chúng tôi cố giành chức vô địch lần sau."
+    }
+   ]
+  },
+  {
+   "w": "掌握",
+   "py": "zhǎngwò",
+   "hv": "chưởng ác",
+   "vi": "nắm vững",
+   "pos": "động từ",
+   "note": "掌握技术 (nắm vững kỹ thuật).",
+   "ex": [
+    {
+     "cn": "他很快掌握了新英雄的玩法。",
+     "py": "Tā hěn kuài zhǎngwò le xīn yīngxióng de wánfǎ.",
+     "vi": "Anh ấy nhanh chóng nắm được cách chơi tướng mới."
+    }
+   ]
+  },
+  {
+   "w": "意识",
+   "py": "yìshi",
+   "hv": "ý thức",
+   "vi": "ý thức; nhận ra",
+   "pos": "danh từ, động từ",
+   "note": "意识到 (nhận ra).",
+   "ex": [
+    {
+     "cn": "我意识到自己错了。",
+     "py": "Wǒ yìshi dào zìjǐ cuò le.",
+     "vi": "Tôi nhận ra mình đã sai."
+    }
+   ]
+  },
+  {
+   "w": "意义",
+   "py": "yìyì",
+   "hv": "ý nghĩa",
+   "vi": "ý nghĩa",
+   "pos": "danh từ",
+   "note": "Chính là \"ý nghĩa\".",
+   "ex": [
+    {
+     "cn": "这次胜利对我们很有意义。",
+     "py": "Zhè cì shènglì duì wǒmen hěn yǒu yìyì.",
+     "vi": "Chiến thắng này rất ý nghĩa với chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "意味着",
+   "py": "yìwèizhe",
+   "hv": "ý vị trước",
+   "vi": "đồng nghĩa với",
+   "pos": "động từ",
+   "note": "Văn viết.",
+   "ex": [
+    {
+     "cn": "输了这场就意味着被淘汰。",
+     "py": "Shū le zhè chǎng jiù yìwèizhe bèi táotài.",
+     "vi": "Thua trận này đồng nghĩa với bị loại."
+    }
+   ]
+  },
+  {
+   "w": "义务",
+   "py": "yìwù",
+   "hv": "nghĩa vụ",
+   "vi": "nghĩa vụ",
+   "pos": "danh từ",
+   "note": "Chính là \"nghĩa vụ\".",
+   "ex": [
+    {
+     "cn": "保护环境是每个人的义务。",
+     "py": "Bǎohù huánjìng shì měi ge rén de yìwù.",
+     "vi": "Bảo vệ môi trường là nghĩa vụ của mọi người."
+    }
+   ]
+  },
+  {
+   "w": "原则",
+   "py": "yuánzé",
+   "hv": "nguyên tắc",
+   "vi": "nguyên tắc",
+   "pos": "danh từ",
+   "note": "Chính là \"nguyên tắc\".",
+   "ex": [
+    {
+     "cn": "他是一个有原则的人。",
+     "py": "Tā shì yí ge yǒu yuánzé de rén.",
+     "vi": "Anh ấy là người có nguyên tắc."
+    }
+   ]
+  },
+  {
+   "w": "智慧",
+   "py": "zhìhuì",
+   "hv": "trí tuệ",
+   "vi": "trí tuệ",
+   "pos": "danh từ",
+   "note": "Chính là \"trí tuệ\".",
+   "ex": [
+    {
+     "cn": "这个计划体现了大家的智慧。",
+     "py": "Zhège jìhuà tǐxiàn le dàjiā de zhìhuì.",
+     "vi": "Kế hoạch này thể hiện trí tuệ của mọi người."
+    }
+   ]
+  },
+  {
+   "w": "未来",
+   "py": "wèilái",
+   "hv": "vị lai",
+   "vi": "tương lai",
+   "pos": "danh từ",
+   "note": "Chính là \"vị lai\".",
+   "ex": [
+    {
+     "cn": "未来是属于年轻人的。",
+     "py": "Wèilái shì shǔyú niánqīngrén de.",
+     "vi": "Tương lai thuộc về người trẻ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "意识到 + việc",
+   "b": "我意识到自己错了",
+   "d": "Nhận ra điều gì.",
+   "ex": [
+    {
+     "cn": "他终于意识到问题的严重性。",
+     "py": "Tā zhōngyú yìshi dào wèntí de yánzhòngxìng.",
+     "vi": "Cuối cùng anh ấy nhận ra mức nghiêm trọng của vấn đề."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "追求梦想需要勇气和坚持。",
+   "py": "Zhuīqiú mèngxiǎng xūyào yǒngqì hé jiānchí.",
+   "vi": "Theo đuổi ước mơ cần dũng khí và kiên trì."
+  },
+  {
+   "cn": "不要犹豫，机会不会一直等你。",
+   "py": "Bú yào yóuyù, jīhuì bú huì yìzhí děng nǐ.",
+   "vi": "Đừng do dự, cơ hội sẽ không chờ bạn mãi."
+  },
+  {
+   "cn": "这次虽然有遗憾，但是我们学到了很多。",
+   "py": "Zhè cì suīrán yǒu yíhàn, dànshì wǒmen xué dào le hěn duō.",
+   "vi": "Lần này tuy còn tiếc nuối nhưng chúng tôi học được nhiều."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 281,
+ "cn": "组织比赛",
+ "title": "Tổ chức và quản lý",
+ "goal": "Nói về chính phủ, chính trị, chế độ, đặt ra, chấp hành, tổ chức, cấu thành, tổ hợp, tài nguyên, nguồn vốn, tư cách, trụ sở, nhân viên và công nhân viên.",
+ "words": [
+  {
+   "w": "政府",
+   "py": "zhèngfǔ",
+   "hv": "chính phủ",
+   "vi": "chính phủ",
+   "pos": "danh từ",
+   "note": "Chính là \"chính phủ\".",
+   "ex": [
+    {
+     "cn": "政府很支持电竞产业。",
+     "py": "Zhèngfǔ hěn zhīchí diànjìng chǎnyè.",
+     "vi": "Chính phủ rất ủng hộ ngành thể thao điện tử."
+    }
+   ]
+  },
+  {
+   "w": "政治",
+   "py": "zhèngzhì",
+   "hv": "chính trị",
+   "vi": "chính trị",
+   "pos": "danh từ",
+   "note": "Chính là \"chính trị\".",
+   "ex": [
+    {
+     "cn": "他对政治不感兴趣。",
+     "py": "Tā duì zhèngzhì bù gǎn xìngqù.",
+     "vi": "Anh ấy không quan tâm chính trị."
+    }
+   ]
+  },
+  {
+   "w": "制度",
+   "py": "zhìdù",
+   "hv": "chế độ",
+   "vi": "chế độ, quy chế",
+   "pos": "danh từ",
+   "note": "管理制度 (quy chế quản lý).",
+   "ex": [
+    {
+     "cn": "俱乐部有严格的管理制度。",
+     "py": "Jùlèbù yǒu yángé de guǎnlǐ zhìdù.",
+     "vi": "Câu lạc bộ có quy chế quản lý nghiêm."
+    }
+   ]
+  },
+  {
+   "w": "制定",
+   "py": "zhìdìng",
+   "hv": "chế định",
+   "vi": "đặt ra, xây dựng (quy định)",
+   "pos": "động từ",
+   "note": "制定规则 (đặt luật).",
+   "ex": [
+    {
+     "cn": "主办方制定了新的比赛规则。",
+     "py": "Zhǔbànfāng zhìdìng le xīn de bǐsài guīzé.",
+     "vi": "Ban tổ chức đặt ra luật thi đấu mới."
+    }
+   ]
+  },
+  {
+   "w": "制订",
+   "py": "zhìdìng",
+   "hv": "chế đính",
+   "vi": "lập (kế hoạch)",
+   "pos": "động từ",
+   "note": "制订计划 (lập kế hoạch).",
+   "ex": [
+    {
+     "cn": "我们制订了一个训练计划。",
+     "py": "Wǒmen zhìdìng le yí ge xùnliàn jìhuà.",
+     "vi": "Chúng tôi lập một kế hoạch tập luyện."
+    }
+   ]
+  },
+  {
+   "w": "执行",
+   "py": "zhíxíng",
+   "hv": "chấp hành",
+   "vi": "thực hiện, chấp hành",
+   "pos": "động từ",
+   "note": "执行战术 (thực hiện chiến thuật).",
+   "ex": [
+    {
+     "cn": "队员们很好地执行了战术。",
+     "py": "Duìyuánmen hěn hǎo de zhíxíng le zhànshù.",
+     "vi": "Các thành viên thực hiện chiến thuật rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "组织",
+   "py": "zǔzhī",
+   "hv": "tổ chức",
+   "vi": "tổ chức",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"tổ chức\".",
+   "ex": [
+    {
+     "cn": "学校组织了一次比赛。",
+     "py": "Xuéxiào zǔzhī le yí cì bǐsài.",
+     "vi": "Nhà trường tổ chức một cuộc thi."
+    }
+   ]
+  },
+  {
+   "w": "组成",
+   "py": "zǔchéng",
+   "hv": "tổ thành",
+   "vi": "hợp thành, gồm",
+   "pos": "động từ",
+   "note": "由……组成 (gồm có...).",
+   "ex": [
+    {
+     "cn": "我们队由六名队员组成。",
+     "py": "Wǒmen duì yóu liù míng duìyuán zǔchéng.",
+     "vi": "Đội chúng tôi gồm sáu thành viên."
+    }
+   ]
+  },
+  {
+   "w": "组合",
+   "py": "zǔhé",
+   "hv": "tổ hợp",
+   "vi": "tổ hợp, kết hợp",
+   "pos": "danh từ, động từ",
+   "note": "英雄组合 (tổ hợp tướng).",
+   "ex": [
+    {
+     "cn": "这个英雄组合很强。",
+     "py": "Zhège yīngxióng zǔhé hěn qiáng.",
+     "vi": "Tổ hợp tướng này rất mạnh."
+    }
+   ]
+  },
+  {
+   "w": "资源",
+   "py": "zīyuán",
+   "hv": "tư nguyên",
+   "vi": "tài nguyên, nguồn lực",
+   "pos": "danh từ",
+   "note": "Chính là \"tài nguyên\".",
+   "ex": [
+    {
+     "cn": "我们要合理分配资源。",
+     "py": "Wǒmen yào hélǐ fēnpèi zīyuán.",
+     "vi": "Chúng ta phải phân phối tài nguyên hợp lý."
+    }
+   ]
+  },
+  {
+   "w": "资金",
+   "py": "zījīn",
+   "hv": "tư kim",
+   "vi": "nguồn vốn",
+   "pos": "danh từ",
+   "note": "缺少资金 (thiếu vốn).",
+   "ex": [
+    {
+     "cn": "开公司需要很多资金。",
+     "py": "Kāi gōngsī xūyào hěn duō zījīn.",
+     "vi": "Mở công ty cần nhiều vốn."
+    }
+   ]
+  },
+  {
+   "w": "资格",
+   "py": "zīgé",
+   "hv": "tư cách",
+   "vi": "tư cách, đủ điều kiện",
+   "pos": "danh từ",
+   "note": "参赛资格 (suất dự thi).",
+   "ex": [
+    {
+     "cn": "我们拿到了参加世界赛的资格。",
+     "py": "Wǒmen ná dào le cānjiā shìjièsài de zīgé.",
+     "vi": "Chúng tôi giành suất dự giải thế giới."
+    }
+   ]
+  },
+  {
+   "w": "总部",
+   "py": "zǒngbù",
+   "hv": "tổng bộ",
+   "vi": "trụ sở chính",
+   "pos": "danh từ",
+   "note": "Chính là \"tổng bộ\".",
+   "ex": [
+    {
+     "cn": "公司总部在河内。",
+     "py": "Gōngsī zǒngbù zài Hénèi.",
+     "vi": "Trụ sở chính công ty ở Hà Nội."
+    }
+   ]
+  },
+  {
+   "w": "员工",
+   "py": "yuángōng",
+   "hv": "viên công",
+   "vi": "nhân viên",
+   "pos": "danh từ",
+   "note": "公司员工 (nhân viên công ty).",
+   "ex": [
+    {
+     "cn": "这家公司有五百名员工。",
+     "py": "Zhè jiā gōngsī yǒu wǔbǎi míng yuángōng.",
+     "vi": "Công ty này có năm trăm nhân viên."
+    }
+   ]
+  },
+  {
+   "w": "职工",
+   "py": "zhígōng",
+   "hv": "chức công",
+   "vi": "công nhân viên",
+   "pos": "danh từ",
+   "note": "Người làm công ăn lương.",
+   "ex": [
+    {
+     "cn": "工厂给每个职工发了奖金。",
+     "py": "Gōngchǎng gěi měi ge zhígōng fā le jiǎngjīn.",
+     "vi": "Nhà máy phát thưởng cho từng công nhân viên."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "制定 và 制订",
+   "b": "制定: quy định, luật (có tính bắt buộc) · 制订: kế hoạch, phương án",
+   "d": "Cùng đọc zhìdìng.",
+   "ex": [
+    {
+     "cn": "教练为每个人制订了训练计划。",
+     "py": "Jiàoliàn wèi měi ge rén zhìdìng le xùnliàn jìhuà.",
+     "vi": "Huấn luyện viên lập kế hoạch tập cho từng người."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "好的战术也需要好的执行。",
+   "py": "Hǎo de zhànshù yě xūyào hǎo de zhíxíng.",
+   "vi": "Chiến thuật hay cũng cần thực hiện tốt."
+  },
+  {
+   "cn": "我们终于拿到了参赛资格。",
+   "py": "Wǒmen zhōngyú ná dào le cānsài zīgé.",
+   "vi": "Cuối cùng chúng tôi giành được suất dự thi."
+  },
+  {
+   "cn": "这次比赛是由学生自己组织的。",
+   "py": "Zhè cì bǐsài shì yóu xuésheng zìjǐ zǔzhī de.",
+   "vi": "Giải lần này do sinh viên tự tổ chức."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 282,
+ "cn": "状态稳定",
+ "title": "Trạng thái và biến đổi",
+ "goal": "Nói về trạng thái, tình trạng, chuyển biến, từng bước, dần dần, ổn định, duy trì, nhanh chóng, kéo dài, rút ngắn, thu nhỏ, biến mất, tăng cường, tăng tiến và di chuyển.",
+ "words": [
+  {
+   "w": "状态",
+   "py": "zhuàngtài",
+   "hv": "trạng thái",
+   "vi": "trạng thái, phong độ",
+   "pos": "danh từ",
+   "note": "状态很好 (phong độ tốt).",
+   "ex": [
+    {
+     "cn": "他最近状态很好。",
+     "py": "Tā zuìjìn zhuàngtài hěn hǎo.",
+     "vi": "Dạo này anh ấy phong độ rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "状况",
+   "py": "zhuàngkuàng",
+   "hv": "trạng huống",
+   "vi": "tình trạng",
+   "pos": "danh từ",
+   "note": "身体状况 (tình trạng sức khoẻ).",
+   "ex": [
+    {
+     "cn": "他的身体状况不太好。",
+     "py": "Tā de shēntǐ zhuàngkuàng bú tài hǎo.",
+     "vi": "Tình trạng sức khoẻ anh ấy không tốt lắm."
+    }
+   ]
+  },
+  {
+   "w": "转变",
+   "py": "zhuǎnbiàn",
+   "hv": "chuyển biến",
+   "vi": "chuyển biến, thay đổi",
+   "pos": "động từ",
+   "note": "转变观念 (thay đổi quan niệm).",
+   "ex": [
+    {
+     "cn": "他的态度发生了很大的转变。",
+     "py": "Tā de tàidu fāshēng le hěn dà de zhuǎnbiàn.",
+     "vi": "Thái độ anh ấy thay đổi rất lớn."
+    }
+   ]
+  },
+  {
+   "w": "逐步",
+   "py": "zhúbù",
+   "hv": "trục bộ",
+   "vi": "từng bước",
+   "pos": "phó từ",
+   "note": "逐步提高 (từng bước nâng cao).",
+   "ex": [
+    {
+     "cn": "我们要逐步提高训练强度。",
+     "py": "Wǒmen yào zhúbù tígāo xùnliàn qiángdù.",
+     "vi": "Chúng ta phải tăng dần cường độ tập."
+    }
+   ]
+  },
+  {
+   "w": "逐渐",
+   "py": "zhújiàn",
+   "hv": "trục tiệm",
+   "vi": "dần dần",
+   "pos": "phó từ",
+   "note": "Giống 渐渐.",
+   "ex": [
+    {
+     "cn": "天气逐渐变冷了。",
+     "py": "Tiānqì zhújiàn biàn lěng le.",
+     "vi": "Thời tiết dần lạnh đi."
+    }
+   ]
+  },
+  {
+   "w": "稳定",
+   "py": "wěndìng",
+   "hv": "ổn định",
+   "vi": "ổn định",
+   "pos": "tính từ, động từ",
+   "note": "Chính là \"ổn định\".",
+   "ex": [
+    {
+     "cn": "他的发挥一直很稳定。",
+     "py": "Tā de fāhuī yìzhí hěn wěndìng.",
+     "vi": "Phong độ của anh ấy luôn ổn định."
+    }
+   ]
+  },
+  {
+   "w": "维持",
+   "py": "wéichí",
+   "hv": "duy trì",
+   "vi": "duy trì",
+   "pos": "động từ",
+   "note": "维持秩序 (giữ trật tự).",
+   "ex": [
+    {
+     "cn": "我们要维持现在的状态。",
+     "py": "Wǒmen yào wéichí xiànzài de zhuàngtài.",
+     "vi": "Chúng ta phải duy trì phong độ hiện tại."
+    }
+   ]
+  },
+  {
+   "w": "迅速",
+   "py": "xùnsù",
+   "hv": "tấn tốc",
+   "vi": "nhanh chóng",
+   "pos": "tính từ",
+   "note": "Chính là \"tấn tốc\".",
+   "ex": [
+    {
+     "cn": "他迅速做出了反应。",
+     "py": "Tā xùnsù zuòchū le fǎnyìng.",
+     "vi": "Anh ấy phản ứng nhanh chóng."
+    }
+   ]
+  },
+  {
+   "w": "延长",
+   "py": "yáncháng",
+   "hv": "diên trường",
+   "vi": "kéo dài",
+   "pos": "động từ",
+   "note": "延长时间 (kéo dài thời gian).",
+   "ex": [
+    {
+     "cn": "比赛时间延长了十分钟。",
+     "py": "Bǐsài shíjiān yáncháng le shí fēnzhōng.",
+     "vi": "Thời gian thi đấu kéo dài thêm mười phút."
+    }
+   ]
+  },
+  {
+   "w": "缩短",
+   "py": "suōduǎn",
+   "hv": "súc đoản",
+   "vi": "rút ngắn",
+   "pos": "động từ",
+   "note": "Trái nghĩa 延长.",
+   "ex": [
+    {
+     "cn": "新地铁缩短了上班时间。",
+     "py": "Xīn dìtiě suōduǎn le shàngbān shíjiān.",
+     "vi": "Tàu điện mới rút ngắn thời gian đi làm."
+    }
+   ]
+  },
+  {
+   "w": "缩小",
+   "py": "suōxiǎo",
+   "hv": "súc tiểu",
+   "vi": "thu hẹp, thu nhỏ",
+   "pos": "động từ",
+   "note": "缩小差距 (thu hẹp khoảng cách).",
+   "ex": [
+    {
+     "cn": "我们和对手的差距在缩小。",
+     "py": "Wǒmen hé duìshǒu de chājù zài suōxiǎo.",
+     "vi": "Khoảng cách giữa ta và đối thủ đang thu hẹp."
+    }
+   ]
+  },
+  {
+   "w": "消失",
+   "py": "xiāoshī",
+   "hv": "tiêu thất",
+   "vi": "biến mất",
+   "pos": "động từ",
+   "note": "Chính là \"tiêu thất\".",
+   "ex": [
+    {
+     "cn": "他突然从地图上消失了。",
+     "py": "Tā tūrán cóng dìtú shang xiāoshī le.",
+     "vi": "Anh ta đột nhiên biến mất khỏi bản đồ."
+    }
+   ]
+  },
+  {
+   "w": "增强",
+   "py": "zēngqiáng",
+   "hv": "tăng cường",
+   "vi": "tăng cường",
+   "pos": "động từ",
+   "note": "增强信心 (tăng sự tự tin).",
+   "ex": [
+    {
+     "cn": "这场胜利增强了我们的信心。",
+     "py": "Zhè chǎng shènglì zēngqiáng le wǒmen de xìnxīn.",
+     "vi": "Chiến thắng này tăng thêm tự tin cho chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "增进",
+   "py": "zēngjìn",
+   "hv": "tăng tiến",
+   "vi": "tăng cường (tình cảm, hiểu biết)",
+   "pos": "động từ",
+   "note": "增进友谊 (thắt chặt tình bạn).",
+   "ex": [
+    {
+     "cn": "一起旅行可以增进感情。",
+     "py": "Yìqǐ lǚxíng kěyǐ zēngjìn gǎnqíng.",
+     "vi": "Cùng đi du lịch giúp tăng tình cảm."
+    }
+   ]
+  },
+  {
+   "w": "移动",
+   "py": "yídòng",
+   "hv": "di động",
+   "vi": "di chuyển",
+   "pos": "động từ",
+   "note": "移动支付 (thanh toán di động).",
+   "ex": [
+    {
+     "cn": "打团的时候要注意移动位置。",
+     "py": "Dǎ tuán de shíhou yào zhùyì yídòng wèizhi.",
+     "vi": "Khi giao tranh phải chú ý di chuyển vị trí."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "逐步 / 逐渐",
+   "b": "逐步: chủ động từng bước · 逐渐: tự nhiên dần dần",
+   "d": "逐步提高 · 逐渐变冷.",
+   "ex": [
+    {
+     "cn": "他的中文水平逐渐提高了。",
+     "py": "Tā de Zhōngwén shuǐpíng zhújiàn tígāo le.",
+     "vi": "Trình độ tiếng Trung của anh ấy dần dần tăng lên."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "比赛前要调整好状态。",
+   "py": "Bǐsài qián yào tiáozhěng hǎo zhuàngtài.",
+   "vi": "Trước trận phải điều chỉnh tốt phong độ."
+  },
+  {
+   "cn": "稳定的发挥比偶尔的精彩更重要。",
+   "py": "Wěndìng de fāhuī bǐ ǒu'ěr de jīngcǎi gèng zhòngyào.",
+   "vi": "Phong độ ổn định quan trọng hơn thỉnh thoảng toả sáng."
+  },
+  {
+   "cn": "每天训练，我们和强队的差距逐渐缩小了。",
+   "py": "Měi tiān xùnliàn, wǒmen hé qiángduì de chājù zhújiàn suōxiǎo le.",
+   "vi": "Tập mỗi ngày, khoảng cách giữa chúng tôi với đội mạnh dần thu hẹp."
+  }
+ ]
+}
