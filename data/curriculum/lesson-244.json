@@ -1,0 +1,264 @@
+{
+ "id": 244,
+ "cn": "经营一家店",
+ "title": "Kinh doanh và lao động",
+ "goal": "Nói về kinh doanh, lợi nhuận, lợi ích, tận dụng, giao dịch, nhập khẩu, lỗ, tiết kiệm, gánh nặng, cống hiến, việc làm và phân chia.",
+ "words": [
+  {
+   "w": "经营",
+   "py": "jīngyíng",
+   "hv": "kinh doanh",
+   "vi": "kinh doanh, điều hành",
+   "pos": "động từ",
+   "note": "营 là \"doanh\".",
+   "ex": [
+    {
+     "cn": "他经营一家小饭馆。",
+     "py": "Tā jīngyíng yì jiā xiǎo fànguǎn.",
+     "vi": "Anh ấy kinh doanh một quán ăn nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "利润",
+   "py": "lìrùn",
+   "hv": "lợi nhuận",
+   "vi": "lợi nhuận",
+   "pos": "danh từ",
+   "note": "Chính là \"lợi nhuận\".",
+   "ex": [
+    {
+     "cn": "今年的利润比去年高。",
+     "py": "Jīnnián de lìrùn bǐ qùnián gāo.",
+     "vi": "Lợi nhuận năm nay cao hơn năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "利益",
+   "py": "lìyì",
+   "hv": "lợi ích",
+   "vi": "lợi ích",
+   "pos": "danh từ",
+   "note": "Chính là \"lợi ích\".",
+   "ex": [
+    {
+     "cn": "我们要考虑大家的利益。",
+     "py": "Wǒmen yào kǎolǜ dàjiā de lìyì.",
+     "vi": "Chúng ta phải tính đến lợi ích của mọi người."
+    }
+   ]
+  },
+  {
+   "w": "利用",
+   "py": "lìyòng",
+   "hv": "lợi dụng",
+   "vi": "tận dụng",
+   "pos": "động từ",
+   "note": "Nghĩa trung tính: tận dụng.",
+   "ex": [
+    {
+     "cn": "要好好利用时间。",
+     "py": "Yào hǎohǎo lìyòng shíjiān.",
+     "vi": "Phải tận dụng tốt thời gian."
+    }
+   ]
+  },
+  {
+   "w": "交易",
+   "py": "jiāoyì",
+   "hv": "giao dịch",
+   "vi": "giao dịch",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"giao dịch\".",
+   "ex": [
+    {
+     "cn": "这笔交易很成功。",
+     "py": "Zhè bǐ jiāoyì hěn chénggōng.",
+     "vi": "Thương vụ này rất thành công."
+    }
+   ]
+  },
+  {
+   "w": "进口",
+   "py": "jìnkǒu",
+   "hv": "tiến khẩu",
+   "vi": "nhập khẩu",
+   "pos": "động từ",
+   "note": "Trái nghĩa 出口.",
+   "ex": [
+    {
+     "cn": "这些水果是从泰国进口的。",
+     "py": "Zhèxiē shuǐguǒ shì cóng Tàiguó jìnkǒu de.",
+     "vi": "Hoa quả này nhập khẩu từ Thái Lan."
+    }
+   ]
+  },
+  {
+   "w": "亏",
+   "py": "kuī",
+   "hv": "khuy",
+   "vi": "lỗ; thiệt",
+   "pos": "động từ",
+   "note": "亏钱 (lỗ tiền).",
+   "ex": [
+    {
+     "cn": "第一年开店亏了不少钱。",
+     "py": "Dì yī nián kāi diàn kuī le bù shǎo qián.",
+     "vi": "Năm đầu mở quán lỗ khá nhiều."
+    }
+   ]
+  },
+  {
+   "w": "节省",
+   "py": "jiéshěng",
+   "hv": "tiết tỉnh",
+   "vi": "tiết kiệm",
+   "pos": "động từ",
+   "note": "节省时间 (tiết kiệm thời gian).",
+   "ex": [
+    {
+     "cn": "坐地铁可以节省时间。",
+     "py": "Zuò dìtiě kěyǐ jiéshěng shíjiān.",
+     "vi": "Đi tàu điện tiết kiệm thời gian."
+    }
+   ]
+  },
+  {
+   "w": "负担",
+   "py": "fùdān",
+   "hv": "phụ đảm",
+   "vi": "gánh nặng",
+   "pos": "danh từ, động từ",
+   "note": "减轻负担 (giảm gánh nặng).",
+   "ex": [
+    {
+     "cn": "我不想成为家人的负担。",
+     "py": "Wǒ bù xiǎng chéngwéi jiārén de fùdān.",
+     "vi": "Tôi không muốn thành gánh nặng cho gia đình."
+    }
+   ]
+  },
+  {
+   "w": "贡献",
+   "py": "gòngxiàn",
+   "hv": "cống hiến",
+   "vi": "đóng góp",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"cống hiến\".",
+   "ex": [
+    {
+     "cn": "他为球队做出了很大贡献。",
+     "py": "Tā wèi qiúduì zuòchū le hěn dà gòngxiàn.",
+     "vi": "Anh ấy có đóng góp lớn cho đội."
+    }
+   ]
+  },
+  {
+   "w": "就业",
+   "py": "jiùyè",
+   "hv": "tựu nghiệp",
+   "vi": "có việc làm",
+   "pos": "động từ",
+   "note": "就业机会 (cơ hội việc làm).",
+   "ex": [
+    {
+     "cn": "大学生就业越来越难。",
+     "py": "Dàxuéshēng jiùyè yuè lái yuè nán.",
+     "vi": "Sinh viên tìm việc ngày càng khó."
+    }
+   ]
+  },
+  {
+   "w": "离职",
+   "py": "lízhí",
+   "hv": "ly chức",
+   "vi": "nghỉ việc",
+   "pos": "động từ",
+   "note": "离 (rời) + 职 (chức).",
+   "ex": [
+    {
+     "cn": "她上个月离职了。",
+     "py": "Tā shàng ge yuè lízhí le.",
+     "vi": "Cô ấy nghỉ việc tháng trước."
+    }
+   ]
+  },
+  {
+   "w": "劳动",
+   "py": "láodòng",
+   "hv": "lao động",
+   "vi": "lao động",
+   "pos": "danh từ, động từ",
+   "note": "劳动节 (ngày Quốc tế Lao động).",
+   "ex": [
+    {
+     "cn": "五月一日是劳动节。",
+     "py": "Wǔ yuè yī rì shì Láodòng Jié.",
+     "vi": "Ngày 1/5 là Ngày Quốc tế Lao động."
+    }
+   ]
+  },
+  {
+   "w": "领取",
+   "py": "lǐngqǔ",
+   "hv": "lĩnh thủ",
+   "vi": "nhận, lĩnh",
+   "pos": "động từ",
+   "note": "领取奖金 (lĩnh tiền thưởng).",
+   "ex": [
+    {
+     "cn": "请到前台领取钥匙。",
+     "py": "Qǐng dào qiántái lǐngqǔ yàoshi.",
+     "vi": "Xin đến quầy lễ tân nhận chìa khoá."
+    }
+   ]
+  },
+  {
+   "w": "分配",
+   "py": "fēnpèi",
+   "hv": "phân phối",
+   "vi": "phân chia, phân công",
+   "pos": "động từ",
+   "note": "分配任务 (phân công nhiệm vụ).",
+   "ex": [
+    {
+     "cn": "教练给每个人分配了任务。",
+     "py": "Jiàoliàn gěi měi ge rén fēnpèi le rènwu.",
+     "vi": "Huấn luyện viên phân công nhiệm vụ cho từng người."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "为 + ai + 做出贡献",
+   "b": "为球队做出贡献",
+   "d": "Đóng góp cho ai/cái gì.",
+   "ex": [
+    {
+     "cn": "每个人都为这次胜利做出了贡献。",
+     "py": "Měi ge rén dōu wèi zhè cì shènglì zuòchū le gòngxiàn.",
+     "vi": "Ai cũng góp phần vào chiến thắng này."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "经营一家店比想象的难多了。",
+   "py": "Jīngyíng yì jiā diàn bǐ xiǎngxiàng de nán duō le.",
+   "vi": "Kinh doanh một cửa hàng khó hơn tưởng tượng nhiều."
+  },
+  {
+   "cn": "要学会利用自己的优势。",
+   "py": "Yào xuéhuì lìyòng zìjǐ de yōushì.",
+   "vi": "Phải biết tận dụng ưu thế của mình."
+  },
+  {
+   "cn": "合理分配资源可以节省很多成本。",
+   "py": "Hélǐ fēnpèi zīyuán kěyǐ jiéshěng hěn duō chéngběn.",
+   "vi": "Phân bổ nguồn lực hợp lý giúp tiết kiệm nhiều chi phí."
+  }
+ ]
+}

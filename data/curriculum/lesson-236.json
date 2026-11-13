@@ -1,0 +1,264 @@
+{
+ "id": 236,
+ "cn": "看望姥姥",
+ "title": "Gia đình và các mối quan hệ",
+ "goal": "Gọi chồng, vợ, ông bà ngoại; nói về yêu đương, chia tay, giao thiệp, thăm hỏi, người dân, sếp và khách hàng.",
+ "words": [
+  {
+   "w": "老公",
+   "py": "lǎogōng",
+   "hv": "lão công",
+   "vi": "chồng (khẩu ngữ)",
+   "pos": "danh từ",
+   "note": "Cách gọi thân mật.",
+   "ex": [
+    {
+     "cn": "我老公做饭做得很好吃。",
+     "py": "Wǒ lǎogōng zuò fàn zuò de hěn hǎochī.",
+     "vi": "Chồng tôi nấu ăn rất ngon."
+    }
+   ]
+  },
+  {
+   "w": "老婆",
+   "py": "lǎopo",
+   "hv": "lão bà",
+   "vi": "vợ (khẩu ngữ)",
+   "pos": "danh từ",
+   "note": "Khác \"bà già\"; là cách gọi vợ thân mật.",
+   "ex": [
+    {
+     "cn": "他每天给老婆打电话。",
+     "py": "Tā měi tiān gěi lǎopo dǎ diànhuà.",
+     "vi": "Ngày nào anh ấy cũng gọi cho vợ."
+    }
+   ]
+  },
+  {
+   "w": "姥姥",
+   "py": "lǎolao",
+   "hv": "lão lão",
+   "vi": "bà ngoại",
+   "pos": "danh từ",
+   "note": "Miền Bắc Trung Quốc; còn gọi 外婆.",
+   "ex": [
+    {
+     "cn": "小时候我常住在姥姥家。",
+     "py": "Xiǎoshíhou wǒ cháng zhù zài lǎolao jiā.",
+     "vi": "Hồi nhỏ tôi hay ở nhà bà ngoại."
+    }
+   ]
+  },
+  {
+   "w": "姥爷",
+   "py": "lǎoye",
+   "hv": "lão gia",
+   "vi": "ông ngoại",
+   "pos": "danh từ",
+   "note": "Còn gọi 外公.",
+   "ex": [
+    {
+     "cn": "姥爷每天早上去公园散步。",
+     "py": "Lǎoye měi tiān zǎoshang qù gōngyuán sànbù.",
+     "vi": "Ông ngoại sáng nào cũng đi dạo công viên."
+    }
+   ]
+  },
+  {
+   "w": "恋爱",
+   "py": "liàn'ài",
+   "hv": "luyến ái",
+   "vi": "yêu đương",
+   "pos": "động từ, danh từ",
+   "note": "谈恋爱 (hẹn hò).",
+   "ex": [
+    {
+     "cn": "他们谈了三年恋爱才结婚。",
+     "py": "Tāmen tán le sān nián liàn'ài cái jiéhūn.",
+     "vi": "Họ yêu nhau ba năm mới cưới."
+    }
+   ]
+  },
+  {
+   "w": "离婚",
+   "py": "líhūn",
+   "hv": "ly hôn",
+   "vi": "ly hôn",
+   "pos": "động từ",
+   "note": "Chính là \"ly hôn\".",
+   "ex": [
+    {
+     "cn": "他的父母很早就离婚了。",
+     "py": "Tā de fùmǔ hěn zǎo jiù líhūn le.",
+     "vi": "Bố mẹ anh ấy ly hôn từ sớm."
+    }
+   ]
+  },
+  {
+   "w": "分手",
+   "py": "fēnshǒu",
+   "hv": "phân thủ",
+   "vi": "chia tay",
+   "pos": "động từ",
+   "note": "Thường nói về người yêu.",
+   "ex": [
+    {
+     "cn": "他们上个月分手了。",
+     "py": "Tāmen shàng ge yuè fēnshǒu le.",
+     "vi": "Họ chia tay tháng trước."
+    }
+   ]
+  },
+  {
+   "w": "交往",
+   "py": "jiāowǎng",
+   "hv": "giao vãng",
+   "vi": "giao thiệp; qua lại",
+   "pos": "động từ",
+   "note": "和人交往 (giao tiếp với người khác).",
+   "ex": [
+    {
+     "cn": "他不太喜欢和陌生人交往。",
+     "py": "Tā bú tài xǐhuan hé mòshēngrén jiāowǎng.",
+     "vi": "Anh ấy không thích giao thiệp với người lạ lắm."
+    }
+   ]
+  },
+  {
+   "w": "看望",
+   "py": "kànwàng",
+   "hv": "khán vọng",
+   "vi": "thăm (người)",
+   "pos": "động từ",
+   "note": "看望病人 (thăm người ốm).",
+   "ex": [
+    {
+     "cn": "周末我们去医院看望他。",
+     "py": "Zhōumò wǒmen qù yīyuàn kànwàng tā.",
+     "vi": "Cuối tuần chúng tôi vào viện thăm anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "居民",
+   "py": "jūmín",
+   "hv": "cư dân",
+   "vi": "cư dân",
+   "pos": "danh từ",
+   "note": "Chính là \"cư dân\".",
+   "ex": [
+    {
+     "cn": "这里的居民都很友好。",
+     "py": "Zhèlǐ de jūmín dōu hěn yǒuhǎo.",
+     "vi": "Cư dân ở đây đều rất thân thiện."
+    }
+   ]
+  },
+  {
+   "w": "老百姓",
+   "py": "lǎobǎixìng",
+   "hv": "lão bách tính",
+   "vi": "người dân thường",
+   "pos": "danh từ",
+   "note": "Trăm họ, dân thường.",
+   "ex": [
+    {
+     "cn": "物价上涨，老百姓的生活更难了。",
+     "py": "Wùjià shàngzhǎng, lǎobǎixìng de shēnghuó gèng nán le.",
+     "vi": "Giá cả tăng, đời sống người dân khó hơn."
+    }
+   ]
+  },
+  {
+   "w": "老板",
+   "py": "lǎobǎn",
+   "hv": "lão bản",
+   "vi": "ông chủ, sếp",
+   "pos": "danh từ",
+   "note": "Chủ cửa hàng, công ty.",
+   "ex": [
+    {
+     "cn": "老板今天心情不错。",
+     "py": "Lǎobǎn jīntiān xīnqíng búcuò.",
+     "vi": "Hôm nay sếp vui."
+    }
+   ]
+  },
+  {
+   "w": "客户",
+   "py": "kèhù",
+   "hv": "khách hộ",
+   "vi": "khách hàng",
+   "pos": "danh từ",
+   "note": "Khách hàng của công ty.",
+   "ex": [
+    {
+     "cn": "我下午要见一个重要客户。",
+     "py": "Wǒ xiàwǔ yào jiàn yí ge zhòngyào kèhù.",
+     "vi": "Chiều nay tôi gặp một khách hàng quan trọng."
+    }
+   ]
+  },
+  {
+   "w": "客服",
+   "py": "kèfú",
+   "hv": "khách phục",
+   "vi": "chăm sóc khách hàng",
+   "pos": "danh từ",
+   "note": "客户服务 viết tắt.",
+   "ex": [
+    {
+     "cn": "有问题可以联系客服。",
+     "py": "Yǒu wèntí kěyǐ liánxì kèfú.",
+     "vi": "Có vấn đề có thể liên hệ chăm sóc khách hàng."
+    }
+   ]
+  },
+  {
+   "w": "领导",
+   "py": "lǐngdǎo",
+   "hv": "lãnh đạo",
+   "vi": "lãnh đạo; sếp",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"lãnh đạo\".",
+   "ex": [
+    {
+     "cn": "他领导这支队伍拿了冠军。",
+     "py": "Tā lǐngdǎo zhè zhī duìwu ná le guànjūn.",
+     "vi": "Anh ấy dẫn dắt đội này giành chức vô địch."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "谈 + 恋爱 / 生意",
+   "b": "谈恋爱 · 谈生意",
+   "d": "谈 đi với chuyện yêu đương, làm ăn.",
+   "ex": [
+    {
+     "cn": "他们在大学的时候开始谈恋爱。",
+     "py": "Tāmen zài dàxué de shíhou kāishǐ tán liàn'ài.",
+     "vi": "Họ bắt đầu hẹn hò từ hồi đại học."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "放假的时候，我一定回老家看望姥姥姥爷。",
+   "py": "Fàngjià de shíhou, wǒ yídìng huí lǎojiā kànwàng lǎolao lǎoye.",
+   "vi": "Nghỉ lễ tôi nhất định về quê thăm ông bà ngoại."
+  },
+  {
+   "cn": "好的老板会关心每一个员工。",
+   "py": "Hǎo de lǎobǎn huì guānxīn měi yí ge yuángōng.",
+   "vi": "Ông chủ tốt sẽ quan tâm từng nhân viên."
+  },
+  {
+   "cn": "客户的满意是我们最大的目标。",
+   "py": "Kèhù de mǎnyì shì wǒmen zuì dà de mùbiāo.",
+   "vi": "Sự hài lòng của khách hàng là mục tiêu lớn nhất của chúng tôi."
+  }
+ ]
+}

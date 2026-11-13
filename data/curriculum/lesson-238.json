@@ -1,0 +1,264 @@
+{
+ "id": 238,
+ "cn": "大象和猴子",
+ "title": "Thiên nhiên và động vật",
+ "goal": "Gọi tên voi, khỉ, bướm, côn trùng, sông, hồ, hang, quả, lê, quýt, rồng và nói về lượng mưa, tưới cây.",
+ "words": [
+  {
+   "w": "大象",
+   "py": "dàxiàng",
+   "hv": "đại tượng",
+   "vi": "con voi",
+   "pos": "danh từ",
+   "note": "象 là \"tượng\".",
+   "ex": [
+    {
+     "cn": "大象是陆地上最大的动物。",
+     "py": "Dàxiàng shì lùdì shang zuì dà de dòngwù.",
+     "vi": "Voi là động vật lớn nhất trên cạn."
+    }
+   ]
+  },
+  {
+   "w": "猴子",
+   "py": "hóuzi",
+   "hv": "hầu tử",
+   "vi": "con khỉ",
+   "pos": "danh từ",
+   "note": "猴 là \"hầu\".",
+   "ex": [
+    {
+     "cn": "猴子很聪明。",
+     "py": "Hóuzi hěn cōngming.",
+     "vi": "Khỉ rất thông minh."
+    }
+   ]
+  },
+  {
+   "w": "蝴蝶",
+   "py": "húdié",
+   "hv": "hồ điệp",
+   "vi": "con bướm",
+   "pos": "danh từ",
+   "note": "Chính là \"hồ điệp\".",
+   "ex": [
+    {
+     "cn": "花园里飞着很多蝴蝶。",
+     "py": "Huāyuán li fēi zhe hěn duō húdié.",
+     "vi": "Trong vườn có nhiều bướm bay."
+    }
+   ]
+  },
+  {
+   "w": "昆虫",
+   "py": "kūnchóng",
+   "hv": "côn trùng",
+   "vi": "côn trùng",
+   "pos": "danh từ",
+   "note": "Chính là \"côn trùng\".",
+   "ex": [
+    {
+     "cn": "孩子对昆虫很好奇。",
+     "py": "Háizi duì kūnchóng hěn hàoqí.",
+     "vi": "Trẻ con rất tò mò về côn trùng."
+    }
+   ]
+  },
+  {
+   "w": "河流",
+   "py": "héliú",
+   "hv": "hà lưu",
+   "vi": "sông ngòi",
+   "pos": "danh từ",
+   "note": "河 + 流.",
+   "ex": [
+    {
+     "cn": "这条河流很长。",
+     "py": "Zhè tiáo héliú hěn cháng.",
+     "vi": "Con sông này rất dài."
+    }
+   ]
+  },
+  {
+   "w": "湖",
+   "py": "hú",
+   "hv": "hồ",
+   "vi": "hồ",
+   "pos": "danh từ",
+   "note": "西湖 (Hồ Tây).",
+   "ex": [
+    {
+     "cn": "河内有很多湖。",
+     "py": "Hénèi yǒu hěn duō hú.",
+     "vi": "Hà Nội có rất nhiều hồ."
+    }
+   ]
+  },
+  {
+   "w": "洞",
+   "py": "dòng",
+   "hv": "động",
+   "vi": "hang, lỗ",
+   "pos": "danh từ",
+   "note": "山洞 (hang núi).",
+   "ex": [
+    {
+     "cn": "广宁有很多美丽的山洞。",
+     "py": "Guǎngníng yǒu hěn duō měilì de shāndòng.",
+     "vi": "Quảng Ninh có nhiều hang động đẹp."
+    }
+   ]
+  },
+  {
+   "w": "果实",
+   "py": "guǒshí",
+   "hv": "quả thực",
+   "vi": "quả; thành quả",
+   "pos": "danh từ",
+   "note": "劳动的果实 (thành quả lao động).",
+   "ex": [
+    {
+     "cn": "这是我们努力的果实。",
+     "py": "Zhè shì wǒmen nǔlì de guǒshí.",
+     "vi": "Đây là thành quả nỗ lực của chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "梨",
+   "py": "lí",
+   "hv": "lê",
+   "vi": "quả lê",
+   "pos": "danh từ",
+   "note": "Chính là \"lê\".",
+   "ex": [
+    {
+     "cn": "这个梨又大又甜。",
+     "py": "Zhège lí yòu dà yòu tián.",
+     "vi": "Quả lê này vừa to vừa ngọt."
+    }
+   ]
+  },
+  {
+   "w": "橘子",
+   "py": "júzi",
+   "hv": "quất tử",
+   "vi": "quả quýt",
+   "pos": "danh từ",
+   "note": "橘 là \"quất\".",
+   "ex": [
+    {
+     "cn": "过年的时候，家里会买很多橘子。",
+     "py": "Guònián de shíhou, jiā li huì mǎi hěn duō júzi.",
+     "vi": "Tết đến nhà sẽ mua nhiều quýt."
+    }
+   ]
+  },
+  {
+   "w": "灰",
+   "py": "huī",
+   "hv": "hôi",
+   "vi": "tro, bụi; màu xám",
+   "pos": "danh từ, tính từ",
+   "note": "灰尘 (bụi).",
+   "ex": [
+    {
+     "cn": "桌子上有很多灰。",
+     "py": "Zhuōzi shang yǒu hěn duō huī.",
+     "vi": "Trên bàn có nhiều bụi."
+    }
+   ]
+  },
+  {
+   "w": "灰色",
+   "py": "huīsè",
+   "hv": "hôi sắc",
+   "vi": "màu xám",
+   "pos": "danh từ",
+   "note": "灰 + 色.",
+   "ex": [
+    {
+     "cn": "他穿了一件灰色的外套。",
+     "py": "Tā chuān le yí jiàn huīsè de wàitào.",
+     "vi": "Anh ấy mặc áo khoác màu xám."
+    }
+   ]
+  },
+  {
+   "w": "龙",
+   "py": "lóng",
+   "hv": "long",
+   "vi": "con rồng",
+   "pos": "danh từ",
+   "note": "龙年 (năm Thìn).",
+   "ex": [
+    {
+     "cn": "越南人说自己是龙的子孙。",
+     "py": "Yuènánrén shuō zìjǐ shì lóng de zǐsūn.",
+     "vi": "Người Việt nói mình là con Rồng cháu Tiên."
+    }
+   ]
+  },
+  {
+   "w": "降水",
+   "py": "jiàngshuǐ",
+   "hv": "giáng thuỷ",
+   "vi": "lượng mưa",
+   "pos": "danh từ",
+   "note": "Mưa, tuyết rơi xuống.",
+   "ex": [
+    {
+     "cn": "今年的降水比去年少。",
+     "py": "Jīnnián de jiàngshuǐ bǐ qùnián shǎo.",
+     "vi": "Lượng mưa năm nay ít hơn năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "浇",
+   "py": "jiāo",
+   "hv": "kiêu",
+   "vi": "tưới",
+   "pos": "động từ",
+   "note": "浇花 (tưới hoa).",
+   "ex": [
+    {
+     "cn": "每天早上我给花浇水。",
+     "py": "Měi tiān zǎoshang wǒ gěi huā jiāo shuǐ.",
+     "vi": "Sáng nào tôi cũng tưới hoa."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "又 A 又 B",
+   "b": "又大又甜",
+   "d": "Vừa A vừa B (hai tính chất cùng có).",
+   "ex": [
+    {
+     "cn": "这家饭店的菜又便宜又好吃。",
+     "py": "Zhè jiā fàndiàn de cài yòu piányi yòu hǎochī.",
+     "vi": "Món ở quán này vừa rẻ vừa ngon."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "动物园里的大象和猴子最受欢迎。",
+   "py": "Dòngwùyuán li de dàxiàng hé hóuzi zuì shòu huānyíng.",
+   "vi": "Voi và khỉ trong sở thú được yêu thích nhất."
+  },
+  {
+   "cn": "秋天到了，树上结满了果实。",
+   "py": "Qiūtiān dào le, shù shang jiē mǎn le guǒshí.",
+   "vi": "Mùa thu đến, cây trĩu quả."
+  },
+  {
+   "cn": "春天的时候，到处都能看到蝴蝶。",
+   "py": "Chūntiān de shíhou, dàochù dōu néng kàndào húdié.",
+   "vi": "Mùa xuân, đâu đâu cũng thấy bướm."
+  }
+ ]
+}
