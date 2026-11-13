@@ -1,0 +1,112 @@
+# Từ mới B2–C1 cho chặng 3 (đợt 1). Mỗi dòng: từ | phiên âm (giọng Mỹ) | từ loại | nghĩa | câu ví dụ | nghĩa câu ví dụ
+@lv 5
+abolish | /əˈbɑːlɪʃ/ | v | bãi bỏ | The school abolished its strict dress code. | Trường đã bãi bỏ quy định trang phục khắt khe.
+abundant | /əˈbʌndənt/ | adj | dồi dào, phong phú | Fresh fruit is abundant in summer. | Mùa hè trái cây tươi rất dồi dào.
+accelerate | /əkˈseləreɪt/ | v | tăng tốc, đẩy nhanh | AI has accelerated the pace of change. | AI đã đẩy nhanh tốc độ thay đổi.
+accessible | /əkˈsesəbl/ | adj | dễ tiếp cận | The app makes learning accessible to everyone. | Ứng dụng giúp ai cũng tiếp cận được việc học.
+accommodate | /əˈkɑːmədeɪt/ | v | đáp ứng; cung cấp chỗ ở | The hall can accommodate five hundred people. | Hội trường chứa được năm trăm người.
+accumulate | /əˈkjuːmjəleɪt/ | v | tích luỹ | Small savings accumulate over time. | Khoản tiết kiệm nhỏ tích luỹ dần theo thời gian.
+adhere | /ədˈhɪr/ | v | tuân thủ (adhere to) | All players must adhere to the rules. | Mọi tuyển thủ phải tuân thủ luật.
+adjacent | /əˈdʒeɪsnt/ | adj | liền kề | The office is adjacent to the station. | Văn phòng nằm sát nhà ga.
+aesthetic | /esˈθetɪk/ | adj, n | thẩm mỹ | The design has a clean aesthetic. | Thiết kế có nét thẩm mỹ gọn gàng.
+affluent | /ˈæfluənt/ | adj | giàu có, sung túc | They grew up in an affluent area. | Họ lớn lên ở một khu giàu có.
+aggravate | /ˈæɡrəveɪt/ | v | làm trầm trọng thêm | Stress can aggravate the pain. | Căng thẳng có thể làm cơn đau nặng thêm.
+agile | /ˈædʒl/ | adj | nhanh nhẹn, linh hoạt | Small teams are often more agile. | Đội nhỏ thường linh hoạt hơn.
+allegation | /ˌæləˈɡeɪʃn/ | n | lời cáo buộc | He denied all the allegations. | Anh ta phủ nhận mọi cáo buộc.
+alleviate | /əˈliːvieɪt/ | v | làm giảm bớt | The new road will alleviate traffic. | Con đường mới sẽ giảm bớt kẹt xe.
+ample | /ˈæmpl/ | adj | dư dả, nhiều | We have ample time to prepare. | Chúng ta có dư thời gian chuẩn bị.
+analogy | /əˈnælədʒi/ | n | phép so sánh, sự tương đồng | He used a football analogy to explain it. | Anh ấy dùng phép so sánh với bóng đá để giải thích.
+anonymous | /əˈnɑːnɪməs/ | adj | ẩn danh | The survey is completely anonymous. | Khảo sát hoàn toàn ẩn danh.
+apparatus | /ˌæpəˈrætəs/ | n | bộ máy; thiết bị | The breathing apparatus saved his life. | Thiết bị thở đã cứu mạng anh ấy.
+appease | /əˈpiːz/ | v | xoa dịu, nhân nhượng | They tried to appease the angry fans. | Họ cố xoa dịu những người hâm mộ đang giận.
+applicable | /əˈplɪkəbl/ | adj | áp dụng được | The rule is not applicable in this case. | Quy định không áp dụng trong trường hợp này.
+appraisal | /əˈpreɪzl/ | n | sự đánh giá | Staff have an appraisal every six months. | Nhân viên được đánh giá sáu tháng một lần.
+apprehensive | /ˌæprɪˈhensɪv/ | adj | e sợ, lo lắng | She felt apprehensive before the interview. | Cô ấy thấy lo lắng trước buổi phỏng vấn.
+arbitrary | /ˈɑːrbɪtreri/ | adj | tuỳ tiện | The decision seemed arbitrary. | Quyết định có vẻ tuỳ tiện.
+articulate | /ɑːrˈtɪkjuleɪt/ | v, adj | diễn đạt rõ; ăn nói lưu loát | She can articulate complex ideas simply. | Cô ấy diễn đạt ý phức tạp một cách đơn giản.
+ascend | /əˈsend/ | v | đi lên, leo lên | The team ascended to first place. | Đội leo lên vị trí số một.
+aspire | /əˈspaɪər/ | v | khao khát (aspire to) | He aspires to become a coach. | Anh ấy khao khát trở thành huấn luyện viên.
+assert | /əˈsɜːrt/ | v | khẳng định | She asserted that the data was wrong. | Cô ấy khẳng định số liệu sai.
+assimilate | /əˈsɪməleɪt/ | v | tiếp thu; hoà nhập | New players need time to assimilate. | Tuyển thủ mới cần thời gian để hoà nhập.
+attain | /əˈteɪn/ | v | đạt được | Few people attain that level. | Ít người đạt được trình độ đó.
+attribute | /əˈtrɪbjuːt/ | v | cho là do | He attributes his success to hard work. | Anh ấy cho rằng thành công là nhờ chăm chỉ.
+audit | /ˈɔːdɪt/ | n, v | kiểm toán, kiểm tra | The company passed its annual audit. | Công ty vượt qua đợt kiểm toán hằng năm.
+authentic | /ɔːˈθentɪk/ | adj | đích thực, chính gốc | This is authentic Vietnamese food. | Đây là món ăn Việt chính gốc.
+autonomy | /ɔːˈtɑːnəmi/ | n | quyền tự chủ | Good managers give staff autonomy. | Quản lý giỏi trao quyền tự chủ cho nhân viên.
+avert | /əˈvɜːrt/ | v | ngăn chặn, tránh | Quick action averted a disaster. | Hành động nhanh đã ngăn được thảm hoạ.
+backlash | /ˈbæklæʃ/ | n | phản ứng dữ dội | The new price caused a backlash. | Giá mới gây ra phản ứng dữ dội.
+benchmark | /ˈbentʃmɑːrk/ | n | chuẩn mực để so sánh | Their results set a new benchmark. | Kết quả của họ tạo ra chuẩn mới.
+bilateral | /ˌbaɪˈlætərəl/ | adj | song phương | The two countries signed a bilateral deal. | Hai nước ký một thoả thuận song phương.
+blatant | /ˈbleɪtnt/ | adj | trắng trợn | It was a blatant lie. | Đó là lời nói dối trắng trợn.
+bolster | /ˈboʊlstər/ | v | củng cố | The win bolstered the team's confidence. | Chiến thắng củng cố sự tự tin của đội.
+breach | /briːtʃ/ | n, v | sự vi phạm; xâm phạm | It was a breach of contract. | Đó là hành vi vi phạm hợp đồng.
+brevity | /ˈbrevəti/ | n | sự ngắn gọn | Brevity is important in emails. | Ngắn gọn rất quan trọng trong email.
+candid | /ˈkændɪd/ | adj | thẳng thắn | Thank you for your candid feedback. | Cảm ơn góp ý thẳng thắn của bạn.
+capability | /ˌkeɪpəˈbɪləti/ | n | năng lực | The new phone has amazing capabilities. | Chiếc điện thoại mới có những khả năng tuyệt vời.
+catalyst | /ˈkætəlɪst/ | n | chất xúc tác; nhân tố thúc đẩy | The crisis was a catalyst for change. | Cuộc khủng hoảng là chất xúc tác cho thay đổi.
+cater | /ˈkeɪtər/ | v | phục vụ, đáp ứng (cater to/for) | The course caters to beginners. | Khoá học dành cho người mới.
+chronic | /ˈkrɑːnɪk/ | adj | mãn tính, kéo dài | He suffers from chronic back pain. | Ông ấy bị đau lưng mãn tính.
+circumvent | /ˌsɜːrkəmˈvent/ | v | lách, né tránh | They found a way to circumvent the rules. | Họ tìm ra cách lách luật.
+coincide | /ˌkoʊɪnˈsaɪd/ | v | trùng khớp | The final coincides with my birthday. | Trận chung kết trùng ngày sinh nhật tôi.
+collateral | /kəˈlætərəl/ | n, adj | tài sản thế chấp; phụ, kèm theo | He used his house as collateral. | Anh ấy dùng nhà làm tài sản thế chấp.
+commence | /kəˈmens/ | v | bắt đầu (trang trọng) | The ceremony will commence at nine. | Buổi lễ sẽ bắt đầu lúc chín giờ.
+compatible | /kəmˈpætəbl/ | adj | tương thích, hợp nhau | This app is compatible with iPad. | Ứng dụng này tương thích với iPad.
+compel | /kəmˈpel/ | v | buộc, ép | The law compels companies to report losses. | Luật buộc công ty phải báo cáo lỗ.
+compile | /kəmˈpaɪl/ | v | biên soạn, tổng hợp | She compiled a list of common mistakes. | Cô ấy tổng hợp danh sách lỗi thường gặp.
+complacent | /kəmˈpleɪsnt/ | adj | tự mãn | Winning made the team complacent. | Chiến thắng khiến đội tự mãn.
+complement | /ˈkɑːmplɪment/ | v | bổ sung cho nhau | The two players complement each other. | Hai tuyển thủ bổ sung cho nhau.
+comply | /kəmˈplaɪ/ | v | tuân theo (comply with) | All products comply with safety rules. | Mọi sản phẩm đều tuân thủ quy định an toàn.
+comprise | /kəmˈpraɪz/ | v | gồm có | The team comprises six players. | Đội gồm sáu tuyển thủ.
+concede | /kənˈsiːd/ | v | thừa nhận; chịu thua | He conceded that he was wrong. | Anh ấy thừa nhận mình sai.
+conceive | /kənˈsiːv/ | v | hình dung, nghĩ ra | It is hard to conceive of life without phones. | Khó mà hình dung cuộc sống thiếu điện thoại.
+conclusive | /kənˈkluːsɪv/ | adj | có tính quyết định, thuyết phục | There is no conclusive evidence. | Không có bằng chứng thuyết phục.
+concur | /kənˈkɜːr/ | v | đồng tình | I concur with your analysis. | Tôi đồng tình với phân tích của bạn.
+confer | /kənˈfɜːr/ | v | trao; hội ý | The coaches conferred before the final game. | Các huấn luyện viên hội ý trước ván cuối.
+confide | /kənˈfaɪd/ | v | tâm sự (confide in) | She confided in her best friend. | Cô ấy tâm sự với bạn thân.
+confine | /kənˈfaɪn/ | v | giới hạn, giam | Please confine your answer to one page. | Vui lòng giới hạn câu trả lời trong một trang.
+conform | /kənˈfɔːrm/ | v | tuân theo, làm theo số đông | Teenagers often feel pressure to conform. | Thanh thiếu niên thường bị áp lực phải giống số đông.
+consensus | /kənˈsensəs/ | n | sự đồng thuận | The team reached a consensus. | Cả đội đạt được đồng thuận.
+consequent | /ˈkɑːnsɪkwənt/ | adj | do đó mà ra | The storm and the consequent flooding hurt farmers. | Cơn bão và lũ lụt kéo theo làm khổ nông dân.
+conserve | /kənˈsɜːrv/ | v | tiết kiệm, bảo tồn | Turn off lights to conserve energy. | Tắt đèn để tiết kiệm năng lượng.
+conspicuous | /kənˈspɪkjuəs/ | adj | dễ thấy, nổi bật | His absence was conspicuous. | Sự vắng mặt của anh ấy rất dễ nhận ra.
+constitute | /ˈkɑːnstɪtuːt/ | v | cấu thành, tạo thành | Women constitute half of the staff. | Phụ nữ chiếm một nửa nhân viên.
+constrain | /kənˈstreɪn/ | v | hạn chế, kìm hãm | We are constrained by a small budget. | Chúng tôi bị hạn chế bởi ngân sách nhỏ.
+contemplate | /ˈkɑːntəmpleɪt/ | v | suy ngẫm, cân nhắc | He is contemplating a career change. | Anh ấy đang cân nhắc đổi nghề.
+contend | /kənˈtend/ | v | cho rằng; cạnh tranh | Critics contend that the plan will fail. | Giới phê bình cho rằng kế hoạch sẽ thất bại.
+contingent | /kənˈtɪndʒənt/ | adj | phụ thuộc vào (contingent on) | The deal is contingent on approval. | Thoả thuận phụ thuộc vào việc được phê duyệt.
+contradict | /ˌkɑːntrəˈdɪkt/ | v | mâu thuẫn, phản bác | The two reports contradict each other. | Hai báo cáo mâu thuẫn nhau.
+controversy | /ˈkɑːntrəvɜːrsi/ | n | cuộc tranh cãi | The decision caused controversy. | Quyết định gây ra tranh cãi.
+convene | /kənˈviːn/ | v | triệu tập, họp | The board will convene next week. | Hội đồng sẽ họp vào tuần sau.
+converge | /kənˈvɜːrdʒ/ | v | hội tụ | Our ideas began to converge. | Ý tưởng của chúng tôi bắt đầu gặp nhau.
+convey | /kənˈveɪ/ | v | truyền đạt | Tone conveys more than words. | Giọng điệu truyền đạt nhiều hơn lời nói.
+conviction | /kənˈvɪkʃn/ | n | niềm tin chắc; sự kết án | She spoke with real conviction. | Cô ấy nói với niềm tin thực sự.
+coordinate | /koʊˈɔːrdɪneɪt/ | v | phối hợp | The support coordinates the team in fights. | Trợ thủ phối hợp cả đội khi giao tranh.
+correlate | /ˈkɔːrəleɪt/ | v | có tương quan | Sleep correlates with performance. | Giấc ngủ có tương quan với phong độ.
+credible | /ˈkredəbl/ | adj | đáng tin | We need a credible source. | Chúng ta cần một nguồn đáng tin.
+criteria | /kraɪˈtɪriə/ | n | các tiêu chí | What are the criteria for selection? | Tiêu chí tuyển chọn là gì?
+culminate | /ˈkʌlmɪneɪt/ | v | lên tới đỉnh điểm (culminate in) | The season culminated in a title. | Mùa giải khép lại bằng một chức vô địch.
+curb | /kɜːrb/ | v, n | kiềm chế; lề đường | We must curb unnecessary spending. | Chúng ta phải kiềm chế chi tiêu không cần thiết.
+cynical | /ˈsɪnɪkl/ | adj | hoài nghi, yếm thế | He is cynical about politicians. | Ông ấy hoài nghi về giới chính trị.
+daunting | /ˈdɔːntɪŋ/ | adj | làm nản lòng | Learning Chinese can seem daunting. | Học tiếng Trung có thể trông thật nản.
+deadlock | /ˈdedlɑːk/ | n | thế bế tắc | The talks ended in deadlock. | Cuộc đàm phán rơi vào bế tắc.
+debris | /dəˈbriː/ | n | mảnh vỡ, đống đổ nát | Debris covered the road after the storm. | Mảnh vỡ phủ kín đường sau bão.
+decisive | /dɪˈsaɪsɪv/ | adj | quyết đoán; mang tính quyết định | It was the decisive moment of the match. | Đó là khoảnh khắc quyết định của trận đấu.
+deduce | /dɪˈduːs/ | v | suy ra | From the data, we can deduce a pattern. | Từ số liệu, ta có thể suy ra một quy luật.
+defer | /dɪˈfɜːr/ | v | hoãn lại | We deferred the decision until Monday. | Chúng tôi hoãn quyết định tới thứ Hai.
+demise | /dɪˈmaɪz/ | n | sự sụp đổ, cái chết | The app led to the demise of paper maps. | Ứng dụng khiến bản đồ giấy biến mất.
+denote | /dɪˈnoʊt/ | v | biểu thị | Red denotes danger. | Màu đỏ biểu thị nguy hiểm.
+depict | /dɪˈpɪkt/ | v | miêu tả, khắc hoạ | The film depicts life in the 1980s. | Bộ phim khắc hoạ cuộc sống những năm 1980.
+deplete | /dɪˈpliːt/ | v | làm cạn kiệt | Overfishing has depleted the sea. | Đánh bắt quá mức đã làm cạn kiệt biển.
+deploy | /dɪˈplɔɪ/ | v | triển khai | The company deployed the new system. | Công ty đã triển khai hệ thống mới.
+deprive | /dɪˈpraɪv/ | v | tước đoạt (deprive of) | Noise deprived him of sleep. | Tiếng ồn khiến anh ấy mất ngủ.
+deteriorate | /dɪˈtɪriəreɪt/ | v | xấu đi | His health deteriorated quickly. | Sức khoẻ ông ấy xấu đi nhanh chóng.
+deter | /dɪˈtɜːr/ | v | ngăn cản, làm nản | Cameras deter thieves. | Camera làm kẻ trộm chùn tay.
+deviate | /ˈdiːvieɪt/ | v | đi chệch | Do not deviate from the plan. | Đừng đi chệch kế hoạch.
+devise | /dɪˈvaɪz/ | v | nghĩ ra, phát minh | They devised a clever strategy. | Họ nghĩ ra một chiến thuật thông minh.
+dilute | /daɪˈluːt/ | v | pha loãng; làm yếu đi | Too many goals dilute your focus. | Quá nhiều mục tiêu làm bạn mất tập trung.
+diminish | /dɪˈmɪnɪʃ/ | v | giảm bớt | His influence has diminished. | Ảnh hưởng của ông ấy đã giảm.
+discern | /dɪˈsɜːrn/ | v | nhận ra, phân biệt | It is hard to discern the truth online. | Khó phân biệt sự thật trên mạng.
+discrepancy | /dɪˈskrepənsi/ | n | sự chênh lệch, không khớp | There is a discrepancy in the figures. | Các con số có chỗ không khớp.
+discretion | /dɪˈskreʃn/ | n | sự kín đáo; quyền tự quyết | Use your discretion. | Bạn tự cân nhắc quyết định.
+disparity | /dɪˈspærəti/ | n | sự chênh lệch | There is a large disparity in income. | Thu nhập chênh lệch rất lớn.
+disperse | /dɪˈspɜːrs/ | v | giải tán, phân tán | The crowd dispersed after the match. | Đám đông giải tán sau trận đấu.

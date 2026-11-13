@@ -80,5 +80,8 @@ export function gradeButton(getPayload, onResult) {
       }
     },
   }, '✦ Chấm bằng AI');
-  return h('div.stack', btn, out);
+  const wrap = h('div.stack', btn, out);
+  // Chưa bật chấm bằng AI thì không hiện nút
+  aiConfig().then((cfg) => { if (!cfg) wrap.remove(); }).catch(() => {});
+  return wrap;
 }

@@ -12,8 +12,8 @@
       "note": "Nội dung chính: 1.134 từ mới B1–B2 (10 từ mỗi buổi, đủ 120 buổi), 24 bài ngữ pháp B2, cụm từ cố định và 6 bài đọc B2 ở kệ \"Bài đọc B2\"."
     },
     "3": {
-      "ready": false,
-      "note": "Chặng này đang được soạn. Hiện các buổi lặp lại ngữ pháp và bài viết của chặng 2, chưa đủ để cam kết đạt B2 vững."
+      "ready": true,
+      "note": "Nội dung chính: 483 từ B2–C1 (6 từ mỗi buổi), 135 cụm từ tranh luận, 30 đề tranh luận nói 4 phút, 30 đề viết luận và báo cáo, 12 bài ngữ pháp nâng cao."
     },
     "4": {
       "ready": false,
@@ -56,6 +56,43 @@
         "Nói lại bằng lời mình",
         8,
         "retell"
+      ]
+    ],
+    "3": [
+      [
+        "Đọc bài của bạn",
+        15,
+        "mytext"
+      ],
+      [
+        "Từ mới B2–C1",
+        8,
+        "vocab3"
+      ],
+      [
+        "Ngôn ngữ tranh luận",
+        8,
+        "coll3"
+      ],
+      [
+        "Ôn từ cũ",
+        8,
+        "review"
+      ],
+      [
+        "Ngữ pháp nâng cao",
+        8,
+        "gram3"
+      ],
+      [
+        "Tranh luận",
+        12,
+        "debate"
+      ],
+      [
+        "Viết luận",
+        12,
+        "write3b"
       ]
     ]
   }

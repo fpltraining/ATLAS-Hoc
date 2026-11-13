@@ -10,7 +10,7 @@ import { curSession, enBlocks, enTitle, weekOf, quotaToday, dayType } from '../p
 import { InkPad } from '../pen/inkpad.js';
 import { sayEn, sayBtn, pair, wordy, scribble, diff, micCheck, hasMic } from '../kit.js';
 import { h, toast, section, progressBar, pill } from '../ui.js';
-import { gradeButton } from '../ai.js';
+import { gradeButton, aiConfig } from '../ai.js';
 import { cardSummary } from '../progress.js';
 
 export async function render(route) {
@@ -192,6 +192,22 @@ async function activity(key) {
     case 'write3': {
       const t = course.writeTasks[i % course.writeTasks.length];
       return writeBlock(key, { title: t.t, hint: (t.struct || []).join(' · '), min: t.w, tag: t.g, level });
+    }
+    case 'vocab3': {
+      // Chặng 3: mỗi buổi 6 từ B2–C1
+      const list = course.vocabC1 || [];
+      const from = Math.min(i * 6, Math.max(0, list.length - 6));
+      return wordsBlock(key, list.slice(from, from + 6), st, n);
+    }
+    case 'coll3': {
+      const th = course.colloc3[i % course.colloc3.length];
+      const k = Math.floor(i / course.colloc3.length) % 3;
+      return collBlock(key, th.t, th.v.slice(k * 5, k * 5 + 5));
+    }
+    case 'debate': return debateBlock(key, course.debate3[i % course.debate3.length], level);
+    case 'write3b': {
+      const t = course.writeTasks3[i % course.writeTasks3.length];
+      return writeBlock(key, { title: t.t, hint: [...(t.struct || []), '', 'Tự soát: ' + (t.check || []).join(' · ')].join('\n'), min: t.w, tag: t.g, level });
     }
     case 'coll': {
       const th = course.colloc[i % course.colloc.length];
@@ -458,6 +474,27 @@ function collBlock(key, title, rows) {
   return { title: 'Cụm từ cố định', el: h('div.stack', h('h2', title), list, doneBtn(key)) };
 }
 
+/* ---- tranh luận: đọc hai phía, chọn phe, nói 4 phút ---- */
+function debateBlock(key, d, level) {
+  const side = (title, pts) => h('div.card', { style: { padding: '12px' } },
+    h('b', title),
+    h('ul', { style: { margin: '6px 0 0', paddingLeft: '20px' } },
+      ...pts.map(([en, vi]) => h('li', { style: { margin: '6px 0' } }, wordy(en), h('div.small.faint', vi)))));
+  const view = retellBlock(key, {
+    t: d.t,
+    hint: `${d.vi}\nChọn một phía. Nói khoảng 4 phút: quan điểm, hai lý do có ví dụ, phản biện phía kia, kết luận.`,
+    sec: 240,
+  }, level);
+  view.title = 'Tranh luận';
+  view.el.prepend(
+    h('div.debate-sides', side('Ủng hộ', d.for), side('Phản đối', d.against)),
+    h('div.card', { style: { padding: '12px' } },
+      h('b', 'Cụm nên dùng hôm nay: '),
+      ...d.use.map((u) => h('span.pill.jade', { style: { margin: '2px 4px' } }, u))),
+  );
+  return view;
+}
+
 /* ---- nói lại bằng lời của mình ---- */
 function retellBlock(key, t, level) {
   const clock = h('div.score-big', `${t.sec}s`);
@@ -474,14 +511,16 @@ function retellBlock(key, t, level) {
     },
   }, 'Bắt đầu nói');
   const said = scribble('Lời bạn nói sẽ hiện ở đây, sửa được.', { long: true });
+  let aiCard = null;
+  aiConfig().then((cfg) => { if (!cfg) aiCard?.remove(); }).catch(() => {});
   const rec = dictation(said);
   return {
     title: 'Nói lại',
     el: h('div.stack',
-      h('div.card', h('h3', t.t), t.hint ? h('p.small.muted', { style: { marginTop: '6px' } }, t.hint) : null,
+      h('div.card', h('h3', t.t), t.hint ? h('p.small.muted', { style: { marginTop: '6px', whiteSpace: 'pre-wrap' } }, t.hint) : null,
         h('div.center', { style: { margin: '14px 0' } }, clock), startBtn),
-      h('div.card.stack',
-        h('h4', 'Chấm bài nói bằng AI (không bắt buộc)'),
+      aiCard = h('div.card.stack',
+        h('h4', 'Chấm bài nói bằng AI'),
         h('p.small.faint', hasMic
           ? 'Bấm Ghi âm rồi nói, máy chuyển lời bạn thành chữ. Sửa chỗ máy nghe nhầm rồi bấm chấm. AI chấm từ vựng, ngữ pháp và ý, không chấm phát âm.'
           : 'Trình duyệt này không chuyển giọng nói thành chữ được. Gõ lại điều bạn vừa nói rồi bấm chấm. AI không chấm phát âm.'),
