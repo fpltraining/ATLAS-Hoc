@@ -1,0 +1,264 @@
+{
+ "id": 259,
+ "cn": "商业和税",
+ "title": "Thương mại và sản xuất",
+ "goal": "Nói về nhà bán hàng, thương nhân, công vụ thương mại, thương mại, giá bán, tăng giá, đi lên, thuế, tổn thất, chất lượng, giống loài, đặc sản, sản xuất và phổ biến.",
+ "words": [
+  {
+   "w": "商家",
+   "py": "shāngjiā",
+   "hv": "thương gia",
+   "vi": "nhà bán hàng",
+   "pos": "danh từ",
+   "note": "Người bán, cửa hàng.",
+   "ex": [
+    {
+     "cn": "很多商家在节日打折。",
+     "py": "Hěn duō shāngjiā zài jiérì dǎzhé.",
+     "vi": "Nhiều nhà bán hàng giảm giá dịp lễ."
+    }
+   ]
+  },
+  {
+   "w": "商人",
+   "py": "shāngrén",
+   "hv": "thương nhân",
+   "vi": "thương nhân",
+   "pos": "danh từ",
+   "note": "Chính là \"thương nhân\".",
+   "ex": [
+    {
+     "cn": "他爸爸是一个成功的商人。",
+     "py": "Tā bàba shì yí ge chénggōng de shāngrén.",
+     "vi": "Bố anh ấy là một thương nhân thành đạt."
+    }
+   ]
+  },
+  {
+   "w": "商务",
+   "py": "shāngwù",
+   "hv": "thương vụ",
+   "vi": "thương mại, công việc kinh doanh",
+   "pos": "danh từ",
+   "note": "商务旅行 (đi công tác).",
+   "ex": [
+    {
+     "cn": "他经常去上海出差，做商务工作。",
+     "py": "Tā jīngcháng qù Shànghǎi chūchāi, zuò shāngwù gōngzuò.",
+     "vi": "Anh ấy hay đi Thượng Hải công tác, làm mảng thương mại."
+    }
+   ]
+  },
+  {
+   "w": "商业",
+   "py": "shāngyè",
+   "hv": "thương nghiệp",
+   "vi": "thương mại",
+   "pos": "danh từ",
+   "note": "商业中心 (trung tâm thương mại).",
+   "ex": [
+    {
+     "cn": "这里是城市的商业中心。",
+     "py": "Zhèlǐ shì chéngshì de shāngyè zhōngxīn.",
+     "vi": "Đây là trung tâm thương mại của thành phố."
+    }
+   ]
+  },
+  {
+   "w": "售价",
+   "py": "shòujià",
+   "hv": "thụ giá",
+   "vi": "giá bán",
+   "pos": "danh từ",
+   "note": "售 là bán.",
+   "ex": [
+    {
+     "cn": "这款手机的售价是五千块。",
+     "py": "Zhè kuǎn shǒujī de shòujià shì wǔqiān kuài.",
+     "vi": "Giá bán chiếc điện thoại này là năm nghìn tệ."
+    }
+   ]
+  },
+  {
+   "w": "上涨",
+   "py": "shàngzhǎng",
+   "hv": "thượng trướng",
+   "vi": "tăng (giá, nước)",
+   "pos": "động từ",
+   "note": "价格上涨 (giá tăng).",
+   "ex": [
+    {
+     "cn": "房价一直在上涨。",
+     "py": "Fángjià yìzhí zài shàngzhǎng.",
+     "vi": "Giá nhà liên tục tăng."
+    }
+   ]
+  },
+  {
+   "w": "上升",
+   "py": "shàngshēng",
+   "hv": "thượng thăng",
+   "vi": "đi lên, tăng",
+   "pos": "động từ",
+   "note": "排名上升 (thứ hạng tăng).",
+   "ex": [
+    {
+     "cn": "我们的排名上升了三位。",
+     "py": "Wǒmen de páimíng shàngshēng le sān wèi.",
+     "vi": "Thứ hạng của chúng tôi tăng ba bậc."
+    }
+   ]
+  },
+  {
+   "w": "税",
+   "py": "shuì",
+   "hv": "thuế",
+   "vi": "thuế",
+   "pos": "danh từ",
+   "note": "交税 (nộp thuế).",
+   "ex": [
+    {
+     "cn": "每个公民都要交税。",
+     "py": "Měi ge gōngmín dōu yào jiāo shuì.",
+     "vi": "Mọi công dân đều phải nộp thuế."
+    }
+   ]
+  },
+  {
+   "w": "损失",
+   "py": "sǔnshī",
+   "hv": "tổn thất",
+   "vi": "tổn thất",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"tổn thất\".",
+   "ex": [
+    {
+     "cn": "这次大火造成了很大损失。",
+     "py": "Zhè cì dàhuǒ zàochéng le hěn dà sǔnshī.",
+     "vi": "Trận cháy gây tổn thất lớn."
+    }
+   ]
+  },
+  {
+   "w": "损害",
+   "py": "sǔnhài",
+   "hv": "tổn hại",
+   "vi": "làm tổn hại",
+   "pos": "động từ",
+   "note": "损害健康 (hại sức khoẻ).",
+   "ex": [
+    {
+     "cn": "熬夜会损害身体。",
+     "py": "Áoyè huì sǔnhài shēntǐ.",
+     "vi": "Thức khuya hại sức khoẻ."
+    }
+   ]
+  },
+  {
+   "w": "品质",
+   "py": "pǐnzhì",
+   "hv": "phẩm chất",
+   "vi": "chất lượng; phẩm chất",
+   "pos": "danh từ",
+   "note": "Chính là \"phẩm chất\".",
+   "ex": [
+    {
+     "cn": "这家店的产品品质很好。",
+     "py": "Zhè jiā diàn de chǎnpǐn pǐnzhì hěn hǎo.",
+     "vi": "Sản phẩm quán này chất lượng rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "品种",
+   "py": "pǐnzhǒng",
+   "hv": "phẩm chủng",
+   "vi": "giống, chủng loại",
+   "pos": "danh từ",
+   "note": "水果品种 (giống hoa quả).",
+   "ex": [
+    {
+     "cn": "这种水果有很多品种。",
+     "py": "Zhè zhǒng shuǐguǒ yǒu hěn duō pǐnzhǒng.",
+     "vi": "Loại quả này có nhiều giống."
+    }
+   ]
+  },
+  {
+   "w": "特产",
+   "py": "tèchǎn",
+   "hv": "đặc sản",
+   "vi": "đặc sản",
+   "pos": "danh từ",
+   "note": "Chính là \"đặc sản\".",
+   "ex": [
+    {
+     "cn": "我给你带了家乡的特产。",
+     "py": "Wǒ gěi nǐ dài le jiāxiāng de tèchǎn.",
+     "vi": "Tôi mang cho bạn đặc sản quê tôi."
+    }
+   ]
+  },
+  {
+   "w": "生产",
+   "py": "shēngchǎn",
+   "hv": "sinh sản",
+   "vi": "sản xuất",
+   "pos": "động từ",
+   "note": "Khác \"sinh sản\" tiếng Việt.",
+   "ex": [
+    {
+     "cn": "这家工厂生产手机。",
+     "py": "Zhè jiā gōngchǎng shēngchǎn shǒujī.",
+     "vi": "Nhà máy này sản xuất điện thoại."
+    }
+   ]
+  },
+  {
+   "w": "普及",
+   "py": "pǔjí",
+   "hv": "phổ cập",
+   "vi": "phổ cập, phổ biến",
+   "pos": "động từ",
+   "note": "Chính là \"phổ cập\".",
+   "ex": [
+    {
+     "cn": "智能手机已经非常普及了。",
+     "py": "Zhìnéng shǒujī yǐjīng fēicháng pǔjí le.",
+     "vi": "Điện thoại thông minh đã rất phổ biến."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "造成 + 损失/影响",
+   "b": "造成很大损失",
+   "d": "Gây ra hậu quả (thường xấu).",
+   "ex": [
+    {
+     "cn": "他的失误造成了比赛的失败。",
+     "py": "Tā de shīwù zàochéng le bǐsài de shībài.",
+     "vi": "Sai lầm của anh ấy dẫn đến thua trận."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "物价上涨，商家也提高了售价。",
+   "py": "Wùjià shàngzhǎng, shāngjiā yě tígāo le shòujià.",
+   "vi": "Vật giá tăng, nhà bán hàng cũng tăng giá bán."
+  },
+  {
+   "cn": "越南的咖啡是很有名的特产。",
+   "py": "Yuènán de kāfēi shì hěn yǒumíng de tèchǎn.",
+   "vi": "Cà phê Việt Nam là đặc sản nổi tiếng."
+  },
+  {
+   "cn": "产品的品质比价格更重要。",
+   "py": "Chǎnpǐn de pǐnzhì bǐ jiàgé gèng zhòngyào.",
+   "vi": "Chất lượng sản phẩm quan trọng hơn giá cả."
+  }
+ ]
+}

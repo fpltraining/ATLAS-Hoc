@@ -1,0 +1,264 @@
+{
+ "id": 260,
+ "cn": "深刻的印象",
+ "title": "Đặc điểm và chiều sâu",
+ "goal": "Mô tả đặc sắc, đặc biệt, riêng có, đặc trưng, thần bí, thần thoại, sinh động, sâu sắc, đi sâu, sâu rộng, sâu đậm, màu sắc, ngon và dễ chịu.",
+ "words": [
+  {
+   "w": "特色",
+   "py": "tèsè",
+   "hv": "đặc sắc",
+   "vi": "nét đặc sắc",
+   "pos": "danh từ",
+   "note": "地方特色 (bản sắc địa phương).",
+   "ex": [
+    {
+     "cn": "这家餐厅的菜很有特色。",
+     "py": "Zhè jiā cāntīng de cài hěn yǒu tèsè.",
+     "vi": "Món ăn nhà hàng này rất đặc sắc."
+    }
+   ]
+  },
+  {
+   "w": "特殊",
+   "py": "tèshū",
+   "hv": "đặc thù",
+   "vi": "đặc biệt, đặc thù",
+   "pos": "tính từ",
+   "note": "特殊情况 (trường hợp đặc biệt).",
+   "ex": [
+    {
+     "cn": "除非有特殊情况，不能请假。",
+     "py": "Chúfēi yǒu tèshū qíngkuàng, bù néng qǐngjià.",
+     "vi": "Trừ trường hợp đặc biệt, không được xin nghỉ."
+    }
+   ]
+  },
+  {
+   "w": "特有",
+   "py": "tèyǒu",
+   "hv": "đặc hữu",
+   "vi": "riêng có",
+   "pos": "tính từ",
+   "note": "越南特有的 (chỉ Việt Nam có).",
+   "ex": [
+    {
+     "cn": "这是越南特有的水果。",
+     "py": "Zhè shì Yuènán tèyǒu de shuǐguǒ.",
+     "vi": "Đây là loại quả chỉ Việt Nam có."
+    }
+   ]
+  },
+  {
+   "w": "特征",
+   "py": "tèzhēng",
+   "hv": "đặc trưng",
+   "vi": "đặc điểm, đặc trưng",
+   "pos": "danh từ",
+   "note": "Chính là \"đặc trưng\".",
+   "ex": [
+    {
+     "cn": "他的打法有明显的特征。",
+     "py": "Tā de dǎfǎ yǒu míngxiǎn de tèzhēng.",
+     "vi": "Lối đánh của anh ấy có đặc trưng rõ rệt."
+    }
+   ]
+  },
+  {
+   "w": "神秘",
+   "py": "shénmì",
+   "hv": "thần bí",
+   "vi": "thần bí, bí ẩn",
+   "pos": "tính từ",
+   "note": "Chính là \"thần bí\".",
+   "ex": [
+    {
+     "cn": "这个地方很神秘。",
+     "py": "Zhège dìfang hěn shénmì.",
+     "vi": "Nơi này rất bí ẩn."
+    }
+   ]
+  },
+  {
+   "w": "神话",
+   "py": "shénhuà",
+   "hv": "thần thoại",
+   "vi": "thần thoại",
+   "pos": "danh từ",
+   "note": "Chính là \"thần thoại\".",
+   "ex": [
+    {
+     "cn": "很多游戏英雄来自古代神话。",
+     "py": "Hěn duō yóuxì yīngxióng láizì gǔdài shénhuà.",
+     "vi": "Nhiều tướng trong game lấy từ thần thoại cổ."
+    }
+   ]
+  },
+  {
+   "w": "生动",
+   "py": "shēngdòng",
+   "hv": "sinh động",
+   "vi": "sinh động",
+   "pos": "tính từ",
+   "note": "Chính là \"sinh động\".",
+   "ex": [
+    {
+     "cn": "老师讲得很生动。",
+     "py": "Lǎoshī jiǎng de hěn shēngdòng.",
+     "vi": "Thầy giảng rất sinh động."
+    }
+   ]
+  },
+  {
+   "w": "深刻",
+   "py": "shēnkè",
+   "hv": "thâm khắc",
+   "vi": "sâu sắc",
+   "pos": "tính từ",
+   "note": "深刻的印象 (ấn tượng sâu sắc).",
+   "ex": [
+    {
+     "cn": "这次比赛给我留下了深刻的印象。",
+     "py": "Zhè cì bǐsài gěi wǒ liú xià le shēnkè de yìnxiàng.",
+     "vi": "Trận đấu này để lại ấn tượng sâu sắc cho tôi."
+    }
+   ]
+  },
+  {
+   "w": "深入",
+   "py": "shēnrù",
+   "hv": "thâm nhập",
+   "vi": "đi sâu",
+   "pos": "động từ, tính từ",
+   "note": "深入研究 (nghiên cứu sâu).",
+   "ex": [
+    {
+     "cn": "我们要深入研究对手。",
+     "py": "Wǒmen yào shēnrù yánjiū duìshǒu.",
+     "vi": "Chúng ta phải nghiên cứu sâu đối thủ."
+    }
+   ]
+  },
+  {
+   "w": "深远",
+   "py": "shēnyuǎn",
+   "hv": "thâm viễn",
+   "vi": "sâu xa, lâu dài",
+   "pos": "tính từ",
+   "note": "影响深远 (ảnh hưởng sâu rộng).",
+   "ex": [
+    {
+     "cn": "这个决定的影响很深远。",
+     "py": "Zhège juédìng de yǐngxiǎng hěn shēnyuǎn.",
+     "vi": "Ảnh hưởng của quyết định này rất lâu dài."
+    }
+   ]
+  },
+  {
+   "w": "深厚",
+   "py": "shēnhòu",
+   "hv": "thâm hậu",
+   "vi": "sâu đậm",
+   "pos": "tính từ",
+   "note": "深厚的友谊 (tình bạn sâu đậm).",
+   "ex": [
+    {
+     "cn": "我们之间有深厚的友谊。",
+     "py": "Wǒmen zhījiān yǒu shēnhòu de yǒuyì.",
+     "vi": "Giữa chúng tôi có tình bạn sâu đậm."
+    }
+   ]
+  },
+  {
+   "w": "深度",
+   "py": "shēndù",
+   "hv": "thâm độ",
+   "vi": "độ sâu; chiều sâu",
+   "pos": "danh từ",
+   "note": "有深度 (sâu sắc).",
+   "ex": [
+    {
+     "cn": "这篇文章很有深度。",
+     "py": "Zhè piān wénzhāng hěn yǒu shēndù.",
+     "vi": "Bài viết này rất có chiều sâu."
+    }
+   ]
+  },
+  {
+   "w": "色彩",
+   "py": "sècǎi",
+   "hv": "sắc thái",
+   "vi": "màu sắc",
+   "pos": "danh từ",
+   "note": "Khác \"sắc thái\" (nghĩa bóng) tiếng Việt, ở đây chủ yếu là màu.",
+   "ex": [
+    {
+     "cn": "这幅画的色彩很美。",
+     "py": "Zhè fú huà de sècǎi hěn měi.",
+     "vi": "Màu sắc bức tranh này rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "美味",
+   "py": "měiwèi",
+   "hv": "mỹ vị",
+   "vi": "ngon; món ngon",
+   "pos": "tính từ, danh từ",
+   "note": "美味的食物 (món ăn ngon).",
+   "ex": [
+    {
+     "cn": "越南有很多美味的小吃。",
+     "py": "Yuènán yǒu hěn duō měiwèi de xiǎochī.",
+     "vi": "Việt Nam có nhiều món ăn vặt ngon."
+    }
+   ]
+  },
+  {
+   "w": "舒适",
+   "py": "shūshì",
+   "hv": "thư thích",
+   "vi": "dễ chịu, thoải mái",
+   "pos": "tính từ",
+   "note": "Văn viết của 舒服.",
+   "ex": [
+    {
+     "cn": "酒店的房间很舒适。",
+     "py": "Jiǔdiàn de fángjiān hěn shūshì.",
+     "vi": "Phòng khách sạn rất thoải mái."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "给 + ai + 留下 + 印象",
+   "b": "给我留下了深刻的印象",
+   "d": "Để lại ấn tượng cho ai.",
+   "ex": [
+    {
+     "cn": "他的笑容给大家留下了很好的印象。",
+     "py": "Tā de xiàoróng gěi dàjiā liú xià le hěn hǎo de yìnxiàng.",
+     "vi": "Nụ cười của anh ấy để lại ấn tượng tốt cho mọi người."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "每个地方都有自己的特色。",
+   "py": "Měi ge dìfang dōu yǒu zìjǐ de tèsè.",
+   "vi": "Mỗi nơi đều có nét đặc sắc riêng."
+  },
+  {
+   "cn": "只有深入了解对手，才能找到机会。",
+   "py": "Zhǐyǒu shēnrù liǎojiě duìshǒu, cái néng zhǎodào jīhuì.",
+   "vi": "Chỉ có hiểu sâu đối thủ mới tìm được cơ hội."
+  },
+  {
+   "cn": "这个故事讲得很生动，孩子们都爱听。",
+   "py": "Zhège gùshi jiǎng de hěn shēngdòng, háizimen dōu ài tīng.",
+   "vi": "Câu chuyện kể rất sinh động, bọn trẻ đều thích nghe."
+  }
+ ]
+}

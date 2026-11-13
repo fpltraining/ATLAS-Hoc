@@ -1,0 +1,264 @@
+{
+ "id": 256,
+ "cn": "新时代",
+ "title": "Thời đại và thời điểm",
+ "goal": "Nói về thời đại, thời kỳ, khoảnh khắc, thường xuyên, chênh lệch múi giờ, trước sau như một, lần đầu, đầu năm, thập niên, trước đó, sau đó và tiền đồ.",
+ "words": [
+  {
+   "w": "时代",
+   "py": "shídài",
+   "hv": "thời đại",
+   "vi": "thời đại",
+   "pos": "danh từ",
+   "note": "Chính là \"thời đại\".",
+   "ex": [
+    {
+     "cn": "我们生活在一个信息时代。",
+     "py": "Wǒmen shēnghuó zài yí ge xìnxī shídài.",
+     "vi": "Chúng ta sống trong thời đại thông tin."
+    }
+   ]
+  },
+  {
+   "w": "时期",
+   "py": "shíqī",
+   "hv": "thời kỳ",
+   "vi": "thời kỳ",
+   "pos": "danh từ",
+   "note": "困难时期 (thời kỳ khó khăn).",
+   "ex": [
+    {
+     "cn": "那是我人生中最困难的时期。",
+     "py": "Nà shì wǒ rénshēng zhōng zuì kùnnan de shíqī.",
+     "vi": "Đó là thời kỳ khó khăn nhất đời tôi."
+    }
+   ]
+  },
+  {
+   "w": "时刻",
+   "py": "shíkè",
+   "hv": "thời khắc",
+   "vi": "khoảnh khắc; luôn luôn",
+   "pos": "danh từ, phó từ",
+   "note": "时刻准备 (luôn sẵn sàng).",
+   "ex": [
+    {
+     "cn": "这是最激动人心的时刻。",
+     "py": "Zhè shì zuì jīdòng rénxīn de shíkè.",
+     "vi": "Đây là khoảnh khắc xúc động nhất."
+    }
+   ]
+  },
+  {
+   "w": "时常",
+   "py": "shícháng",
+   "hv": "thời thường",
+   "vi": "thường xuyên",
+   "pos": "phó từ",
+   "note": "Giống 经常.",
+   "ex": [
+    {
+     "cn": "我时常想起小时候的事。",
+     "py": "Wǒ shícháng xiǎngqǐ xiǎoshíhou de shì.",
+     "vi": "Tôi thường nhớ lại chuyện hồi nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "时差",
+   "py": "shíchā",
+   "hv": "thời sai",
+   "vi": "chênh lệch múi giờ",
+   "pos": "danh từ",
+   "note": "倒时差 (điều chỉnh lệch múi giờ).",
+   "ex": [
+    {
+     "cn": "越南和中国有一个小时的时差。",
+     "py": "Yuènán hé Zhōngguó yǒu yí ge xiǎoshí de shíchā.",
+     "vi": "Việt Nam và Trung Quốc lệch nhau một tiếng."
+    }
+   ]
+  },
+  {
+   "w": "始终",
+   "py": "shǐzhōng",
+   "hv": "thuỷ chung",
+   "vi": "từ đầu đến cuối, luôn",
+   "pos": "phó từ",
+   "note": "Khác \"thuỷ chung\" (chung thuỷ) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "他始终没有放弃。",
+     "py": "Tā shǐzhōng méiyǒu fàngqì.",
+     "vi": "Anh ấy trước sau không bỏ cuộc."
+    }
+   ]
+  },
+  {
+   "w": "首次",
+   "py": "shǒucì",
+   "hv": "thủ thứ",
+   "vi": "lần đầu",
+   "pos": "danh từ",
+   "note": "Văn viết của 第一次.",
+   "ex": [
+    {
+     "cn": "这是我们首次进入决赛。",
+     "py": "Zhè shì wǒmen shǒucì jìnrù juésài.",
+     "vi": "Đây là lần đầu chúng tôi vào chung kết."
+    }
+   ]
+  },
+  {
+   "w": "年初",
+   "py": "niánchū",
+   "hv": "niên sơ",
+   "vi": "đầu năm",
+   "pos": "danh từ",
+   "note": "Trái với 年底 (cuối năm).",
+   "ex": [
+    {
+     "cn": "年初我定了一个学习计划。",
+     "py": "Niánchū wǒ dìng le yí ge xuéxí jìhuà.",
+     "vi": "Đầu năm tôi đặt một kế hoạch học tập."
+    }
+   ]
+  },
+  {
+   "w": "年代",
+   "py": "niándài",
+   "hv": "niên đại",
+   "vi": "thập niên; thời đại",
+   "pos": "danh từ",
+   "note": "九十年代 (thập niên 90).",
+   "ex": [
+    {
+     "cn": "这首歌是九十年代的。",
+     "py": "Zhè shǒu gē shì jiǔshí niándài de.",
+     "vi": "Bài hát này từ thập niên 90."
+    }
+   ]
+  },
+  {
+   "w": "事先",
+   "py": "shìxiān",
+   "hv": "sự tiên",
+   "vi": "trước đó, từ trước",
+   "pos": "phó từ",
+   "note": "事先准备 (chuẩn bị trước).",
+   "ex": [
+    {
+     "cn": "你应该事先告诉我。",
+     "py": "Nǐ yīnggāi shìxiān gàosu wǒ.",
+     "vi": "Lẽ ra bạn phải nói trước với tôi."
+    }
+   ]
+  },
+  {
+   "w": "随后",
+   "py": "suíhòu",
+   "hv": "tuỳ hậu",
+   "vi": "sau đó, ngay sau",
+   "pos": "phó từ",
+   "note": "Văn viết của 然后.",
+   "ex": [
+    {
+     "cn": "你先走，我随后就到。",
+     "py": "Nǐ xiān zǒu, wǒ suíhòu jiù dào.",
+     "vi": "Bạn đi trước, tôi đến ngay sau."
+    }
+   ]
+  },
+  {
+   "w": "随时",
+   "py": "suíshí",
+   "hv": "tuỳ thời",
+   "vi": "bất cứ lúc nào",
+   "pos": "phó từ",
+   "note": "随时联系 (liên hệ bất cứ lúc nào).",
+   "ex": [
+    {
+     "cn": "有问题随时问我。",
+     "py": "Yǒu wèntí suíshí wèn wǒ.",
+     "vi": "Có vấn đề cứ hỏi tôi bất cứ lúc nào."
+    }
+   ]
+  },
+  {
+   "w": "上下",
+   "py": "shàngxià",
+   "hv": "thượng hạ",
+   "vi": "trên dưới; khoảng",
+   "pos": "danh từ",
+   "note": "三十岁上下 (khoảng ba mươi tuổi).",
+   "ex": [
+    {
+     "cn": "他看起来三十岁上下。",
+     "py": "Tā kàn qǐlái sānshí suì shàngxià.",
+     "vi": "Anh ấy trông khoảng ba mươi tuổi."
+    }
+   ]
+  },
+  {
+   "w": "前来",
+   "py": "qiánlái",
+   "hv": "tiền lai",
+   "vi": "đến (trang trọng)",
+   "pos": "động từ",
+   "note": "前来参加 (đến tham dự).",
+   "ex": [
+    {
+     "cn": "欢迎大家前来参加。",
+     "py": "Huānyíng dàjiā qiánlái cānjiā.",
+     "vi": "Hoan nghênh mọi người đến tham dự."
+    }
+   ]
+  },
+  {
+   "w": "前途",
+   "py": "qiántú",
+   "hv": "tiền đồ",
+   "vi": "tương lai, tiền đồ",
+   "pos": "danh từ",
+   "note": "很有前途 (có tương lai).",
+   "ex": [
+    {
+     "cn": "这个年轻人很有前途。",
+     "py": "Zhège niánqīngrén hěn yǒu qiántú.",
+     "vi": "Người trẻ này rất có tương lai."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "始终 + (不/没) + V",
+   "b": "始终没放弃",
+   "d": "Nhấn mạnh trạng thái không đổi từ đầu tới cuối.",
+   "ex": [
+    {
+     "cn": "他始终相信自己会成功。",
+     "py": "Tā shǐzhōng xiāngxìn zìjǐ huì chénggōng.",
+     "vi": "Anh ấy trước sau vẫn tin mình sẽ thành công."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "时代在变，我们也要跟着改变。",
+   "py": "Shídài zài biàn, wǒmen yě yào gēn zhe gǎibiàn.",
+   "vi": "Thời đại thay đổi, chúng ta cũng phải đổi theo."
+  },
+  {
+   "cn": "首次参加国际比赛，大家都很紧张。",
+   "py": "Shǒucì cānjiā guójì bǐsài, dàjiā dōu hěn jǐnzhāng.",
+   "vi": "Lần đầu dự giải quốc tế, ai cũng hồi hộp."
+  },
+  {
+   "cn": "比赛时间改了，请大家事先做好准备。",
+   "py": "Bǐsài shíjiān gǎi le, qǐng dàjiā shìxiān zuò hǎo zhǔnbèi.",
+   "vi": "Giờ thi đấu đã đổi, mọi người hãy chuẩn bị trước."
+  }
+ ]
+}

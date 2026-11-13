@@ -1,0 +1,264 @@
+{
+ "id": 263,
+ "cn": "创造奇迹",
+ "title": "Chiến thắng và vận mệnh",
+ "goal": "Nói về thắng, thắng lợi, sân đấu, đường chạy, sai sót, hai bên, toàn lực, toàn thể, phối hợp, tiến lên, kỳ tích, vận mệnh, yếu, độ khó và nâng cao.",
+ "words": [
+  {
+   "w": "胜",
+   "py": "shèng",
+   "hv": "thắng",
+   "vi": "thắng",
+   "pos": "động từ",
+   "note": "以三比二胜 (thắng 3–2).",
+   "ex": [
+    {
+     "cn": "我们以三比二胜了对手。",
+     "py": "Wǒmen yǐ sān bǐ èr shèng le duìshǒu.",
+     "vi": "Chúng tôi thắng đối thủ 3–2."
+    }
+   ]
+  },
+  {
+   "w": "胜利",
+   "py": "shènglì",
+   "hv": "thắng lợi",
+   "vi": "chiến thắng",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"thắng lợi\".",
+   "ex": [
+    {
+     "cn": "胜利属于坚持到最后的人。",
+     "py": "Shènglì shǔyú jiānchí dào zuìhòu de rén.",
+     "vi": "Chiến thắng thuộc về người kiên trì tới cùng."
+    }
+   ]
+  },
+  {
+   "w": "赛场",
+   "py": "sàichǎng",
+   "hv": "tái trường",
+   "vi": "sân đấu",
+   "pos": "danh từ",
+   "note": "赛 (thi đấu) + 场.",
+   "ex": [
+    {
+     "cn": "选手们走进了赛场。",
+     "py": "Xuǎnshǒumen zǒu jìn le sàichǎng.",
+     "vi": "Các tuyển thủ bước vào sân đấu."
+    }
+   ]
+  },
+  {
+   "w": "跑道",
+   "py": "pǎodào",
+   "hv": "bào đạo",
+   "vi": "đường chạy",
+   "pos": "danh từ",
+   "note": "跑 + 道 (đường).",
+   "ex": [
+    {
+     "cn": "他每天在跑道上跑五公里。",
+     "py": "Tā měi tiān zài pǎodào shang pǎo wǔ gōnglǐ.",
+     "vi": "Mỗi ngày anh ấy chạy năm cây số trên đường chạy."
+    }
+   ]
+  },
+  {
+   "w": "失误",
+   "py": "shīwù",
+   "hv": "thất ngộ",
+   "vi": "sai sót",
+   "pos": "danh từ",
+   "note": "失误太多 (sai sót quá nhiều).",
+   "ex": [
+    {
+     "cn": "一个小失误让我们输了比赛。",
+     "py": "Yí ge xiǎo shīwù ràng wǒmen shū le bǐsài.",
+     "vi": "Một sai sót nhỏ khiến chúng tôi thua trận."
+    }
+   ]
+  },
+  {
+   "w": "双方",
+   "py": "shuāngfāng",
+   "hv": "song phương",
+   "vi": "hai bên",
+   "pos": "danh từ",
+   "note": "Chính là \"song phương\".",
+   "ex": [
+    {
+     "cn": "比赛双方实力差不多。",
+     "py": "Bǐsài shuāngfāng shílì chàbuduō.",
+     "vi": "Thực lực hai đội gần ngang nhau."
+    }
+   ]
+  },
+  {
+   "w": "全力",
+   "py": "quánlì",
+   "hv": "toàn lực",
+   "vi": "toàn lực",
+   "pos": "danh từ",
+   "note": "全力以赴 (dốc toàn lực).",
+   "ex": [
+    {
+     "cn": "我们会全力以赴。",
+     "py": "Wǒmen huì quánlì yǐ fù.",
+     "vi": "Chúng tôi sẽ dốc toàn lực."
+    }
+   ]
+  },
+  {
+   "w": "全体",
+   "py": "quántǐ",
+   "hv": "toàn thể",
+   "vi": "toàn thể",
+   "pos": "danh từ",
+   "note": "Chính là \"toàn thể\".",
+   "ex": [
+    {
+     "cn": "全体队员都到了。",
+     "py": "Quántǐ duìyuán dōu dào le.",
+     "vi": "Toàn thể thành viên đã có mặt."
+    }
+   ]
+  },
+  {
+   "w": "配合",
+   "py": "pèihé",
+   "hv": "phối hợp",
+   "vi": "phối hợp",
+   "pos": "động từ",
+   "note": "Chính là \"phối hợp\".",
+   "ex": [
+    {
+     "cn": "他们俩配合得很好。",
+     "py": "Tāmen liǎ pèihé de hěn hǎo.",
+     "vi": "Hai người họ phối hợp rất ăn ý."
+    }
+   ]
+  },
+  {
+   "w": "前进",
+   "py": "qiánjìn",
+   "hv": "tiền tiến",
+   "vi": "tiến lên",
+   "pos": "động từ",
+   "note": "Chính là \"tiến lên\".",
+   "ex": [
+    {
+     "cn": "我们一起向前进！",
+     "py": "Wǒmen yìqǐ xiàng qián jìn!",
+     "vi": "Chúng ta cùng tiến lên!"
+    }
+   ]
+  },
+  {
+   "w": "奇迹",
+   "py": "qíjì",
+   "hv": "kỳ tích",
+   "vi": "kỳ tích, phép màu",
+   "pos": "danh từ",
+   "note": "创造奇迹 (làm nên kỳ tích).",
+   "ex": [
+    {
+     "cn": "他们创造了奇迹。",
+     "py": "Tāmen chuàngzào le qíjì.",
+     "vi": "Họ đã làm nên kỳ tích."
+    }
+   ]
+  },
+  {
+   "w": "命运",
+   "py": "mìngyùn",
+   "hv": "mệnh vận",
+   "vi": "vận mệnh, số phận",
+   "pos": "danh từ",
+   "note": "Chính là \"vận mệnh\".",
+   "ex": [
+    {
+     "cn": "我们的命运在自己手里。",
+     "py": "Wǒmen de mìngyùn zài zìjǐ shǒu li.",
+     "vi": "Vận mệnh của chúng ta nằm trong tay mình."
+    }
+   ]
+  },
+  {
+   "w": "弱",
+   "py": "ruò",
+   "hv": "nhược",
+   "vi": "yếu",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 强.",
+   "ex": [
+    {
+     "cn": "他们的下路比较弱。",
+     "py": "Tāmen de xiàlù bǐjiào ruò.",
+     "vi": "Đường dưới của họ khá yếu."
+    }
+   ]
+  },
+  {
+   "w": "难度",
+   "py": "nándù",
+   "hv": "nan độ",
+   "vi": "độ khó",
+   "pos": "danh từ",
+   "note": "难度很大 (rất khó).",
+   "ex": [
+    {
+     "cn": "这个动作难度很大。",
+     "py": "Zhège dòngzuò nándù hěn dà.",
+     "vi": "Động tác này rất khó."
+    }
+   ]
+  },
+  {
+   "w": "提升",
+   "py": "tíshēng",
+   "hv": "đề thăng",
+   "vi": "nâng cao",
+   "pos": "động từ",
+   "note": "提升水平 (nâng trình độ).",
+   "ex": [
+    {
+     "cn": "我们要提升团队的配合。",
+     "py": "Wǒmen yào tíshēng tuánduì de pèihé.",
+     "vi": "Chúng ta phải nâng cao sự phối hợp của đội."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "以 + tỉ số + 胜/输",
+   "b": "以三比二胜",
+   "d": "Thắng/thua với tỉ số bao nhiêu.",
+   "ex": [
+    {
+     "cn": "他们以零比三输给了我们。",
+     "py": "Tāmen yǐ líng bǐ sān shū gěi le wǒmen.",
+     "vi": "Họ thua chúng tôi 0–3."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "在赛场上，失误越少越好。",
+   "py": "Zài sàichǎng shang, shīwù yuè shǎo yuè hǎo.",
+   "vi": "Trên sân đấu, càng ít sai sót càng tốt."
+  },
+  {
+   "cn": "只要全体队员配合好，就有可能创造奇迹。",
+   "py": "Zhǐyào quántǐ duìyuán pèihé hǎo, jiù yǒu kěnéng chuàngzào qíjì.",
+   "vi": "Chỉ cần cả đội phối hợp tốt là có thể làm nên kỳ tích."
+  },
+  {
+   "cn": "找到对手弱的地方，然后集中进攻。",
+   "py": "Zhǎodào duìshǒu ruò de dìfang, ránhòu jízhōng jìngōng.",
+   "vi": "Tìm điểm yếu của đối thủ rồi tập trung tấn công."
+  }
+ ]
+}

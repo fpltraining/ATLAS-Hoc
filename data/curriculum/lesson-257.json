@@ -1,0 +1,264 @@
+{
+ "id": 257,
+ "cn": "实践出真知",
+ "title": "Thực hành và thực hiện",
+ "goal": "Nói về thực tiễn, thi hành, thực hiện, thí nghiệm, phòng thí nghiệm, thực tập, thực dụng, thực lực, dùng thử, thích hợp, thành thạo và giỏi về.",
+ "words": [
+  {
+   "w": "实践",
+   "py": "shíjiàn",
+   "hv": "thực tiễn",
+   "vi": "thực hành, thực tiễn",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"thực tiễn\".",
+   "ex": [
+    {
+     "cn": "实践是最好的老师。",
+     "py": "Shíjiàn shì zuì hǎo de lǎoshī.",
+     "vi": "Thực hành là người thầy tốt nhất."
+    }
+   ]
+  },
+  {
+   "w": "实施",
+   "py": "shíshī",
+   "hv": "thực thi",
+   "vi": "thực thi",
+   "pos": "động từ",
+   "note": "实施计划 (thực thi kế hoạch).",
+   "ex": [
+    {
+     "cn": "新规定下个月开始实施。",
+     "py": "Xīn guīdìng xià ge yuè kāishǐ shíshī.",
+     "vi": "Quy định mới bắt đầu thực thi từ tháng sau."
+    }
+   ]
+  },
+  {
+   "w": "实行",
+   "py": "shíxíng",
+   "hv": "thực hành",
+   "vi": "thi hành, áp dụng",
+   "pos": "động từ",
+   "note": "Khác \"thực hành\" (练习) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "公司实行每周五天工作制。",
+     "py": "Gōngsī shíxíng měi zhōu wǔ tiān gōngzuòzhì.",
+     "vi": "Công ty áp dụng chế độ làm năm ngày mỗi tuần."
+    }
+   ]
+  },
+  {
+   "w": "实现",
+   "py": "shíxiàn",
+   "hv": "thực hiện",
+   "vi": "hiện thực hoá",
+   "pos": "động từ",
+   "note": "实现梦想 (thực hiện ước mơ).",
+   "ex": [
+    {
+     "cn": "他终于实现了自己的梦想。",
+     "py": "Tā zhōngyú shíxiàn le zìjǐ de mèngxiǎng.",
+     "vi": "Cuối cùng anh ấy đã thực hiện được ước mơ."
+    }
+   ]
+  },
+  {
+   "w": "实验",
+   "py": "shíyàn",
+   "hv": "thực nghiệm",
+   "vi": "thí nghiệm",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"thực nghiệm\".",
+   "ex": [
+    {
+     "cn": "我们做了一个化学实验。",
+     "py": "Wǒmen zuò le yí ge huàxué shíyàn.",
+     "vi": "Chúng tôi làm một thí nghiệm hoá học."
+    }
+   ]
+  },
+  {
+   "w": "实验室",
+   "py": "shíyànshì",
+   "hv": "thực nghiệm thất",
+   "vi": "phòng thí nghiệm",
+   "pos": "danh từ",
+   "note": "室 là phòng.",
+   "ex": [
+    {
+     "cn": "她每天在实验室工作。",
+     "py": "Tā měi tiān zài shíyànshì gōngzuò.",
+     "vi": "Ngày nào cô ấy cũng làm trong phòng thí nghiệm."
+    }
+   ]
+  },
+  {
+   "w": "实习",
+   "py": "shíxí",
+   "hv": "thực tập",
+   "vi": "thực tập",
+   "pos": "động từ",
+   "note": "Chính là \"thực tập\".",
+   "ex": [
+    {
+     "cn": "我在一家游戏公司实习。",
+     "py": "Wǒ zài yì jiā yóuxì gōngsī shíxí.",
+     "vi": "Tôi thực tập ở một công ty game."
+    }
+   ]
+  },
+  {
+   "w": "实用",
+   "py": "shíyòng",
+   "hv": "thực dụng",
+   "vi": "thiết thực, dùng được",
+   "pos": "tính từ",
+   "note": "Nghĩa tốt: hữu dụng.",
+   "ex": [
+    {
+     "cn": "这本书很实用。",
+     "py": "Zhè běn shū hěn shíyòng.",
+     "vi": "Cuốn sách này rất thiết thực."
+    }
+   ]
+  },
+  {
+   "w": "实力",
+   "py": "shílì",
+   "hv": "thực lực",
+   "vi": "thực lực",
+   "pos": "danh từ",
+   "note": "Chính là \"thực lực\".",
+   "ex": [
+    {
+     "cn": "我们的实力不比他们差。",
+     "py": "Wǒmen de shílì bù bǐ tāmen chà.",
+     "vi": "Thực lực của chúng ta không kém họ."
+    }
+   ]
+  },
+  {
+   "w": "试验",
+   "py": "shìyàn",
+   "hv": "thí nghiệm",
+   "vi": "thử nghiệm",
+   "pos": "động từ, danh từ",
+   "note": "Thử để kiểm chứng.",
+   "ex": [
+    {
+     "cn": "新打法要先在训练赛里试验。",
+     "py": "Xīn dǎfǎ yào xiān zài xùnliànsài li shìyàn.",
+     "vi": "Lối đánh mới phải thử trong trận tập trước."
+    }
+   ]
+  },
+  {
+   "w": "试用",
+   "py": "shìyòng",
+   "hv": "thí dụng",
+   "vi": "dùng thử",
+   "pos": "động từ",
+   "note": "试用期 (thời gian thử việc).",
+   "ex": [
+    {
+     "cn": "新员工有三个月的试用期。",
+     "py": "Xīn yuángōng yǒu sān ge yuè de shìyòngqī.",
+     "vi": "Nhân viên mới có ba tháng thử việc."
+    }
+   ]
+  },
+  {
+   "w": "适用",
+   "py": "shìyòng",
+   "hv": "thích dụng",
+   "vi": "áp dụng được, phù hợp",
+   "pos": "động từ",
+   "note": "适用于 (áp dụng cho).",
+   "ex": [
+    {
+     "cn": "这个方法适用于初学者。",
+     "py": "Zhège fāngfǎ shìyòng yú chūxuézhě.",
+     "vi": "Phương pháp này phù hợp với người mới học."
+    }
+   ]
+  },
+  {
+   "w": "适当",
+   "py": "shìdàng",
+   "hv": "thích đáng",
+   "vi": "thích hợp, vừa phải",
+   "pos": "tính từ",
+   "note": "适当休息 (nghỉ ngơi hợp lý).",
+   "ex": [
+    {
+     "cn": "训练以后要适当休息。",
+     "py": "Xùnliàn yǐhòu yào shìdàng xiūxi.",
+     "vi": "Tập xong phải nghỉ ngơi hợp lý."
+    }
+   ]
+  },
+  {
+   "w": "熟练",
+   "py": "shúliàn",
+   "hv": "thục luyện",
+   "vi": "thành thạo",
+   "pos": "tính từ",
+   "note": "熟练掌握 (nắm vững).",
+   "ex": [
+    {
+     "cn": "他已经能熟练地使用这个英雄了。",
+     "py": "Tā yǐjīng néng shúliàn de shǐyòng zhège yīngxióng le.",
+     "vi": "Anh ấy đã chơi thành thạo vị tướng này."
+    }
+   ]
+  },
+  {
+   "w": "擅长",
+   "py": "shàncháng",
+   "hv": "thiện trường",
+   "vi": "giỏi về, sở trường",
+   "pos": "động từ",
+   "note": "擅长唱歌 (giỏi hát).",
+   "ex": [
+    {
+     "cn": "他擅长打野。",
+     "py": "Tā shàncháng dǎ yě.",
+     "vi": "Anh ấy giỏi đi rừng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "试用 · 适用 · 实用",
+   "b": "试用: dùng thử; 适用: áp dụng được; 实用: thiết thực",
+   "d": "Ba từ gần âm, khác chữ.",
+   "ex": [
+    {
+     "cn": "这个软件可以免费试用七天。",
+     "py": "Zhège ruǎnjiàn kěyǐ miǎnfèi shìyòng qī tiān.",
+     "vi": "Phần mềm này được dùng thử miễn phí bảy ngày."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "只有通过实践，才能真正掌握技术。",
+   "py": "Zhǐyǒu tōngguò shíjiàn, cái néng zhēnzhèng zhǎngwò jìshù.",
+   "vi": "Chỉ qua thực hành mới thật sự nắm được kỹ thuật."
+  },
+  {
+   "cn": "每个人都有自己擅长的位置。",
+   "py": "Měi ge rén dōu yǒu zìjǐ shàncháng de wèizhì.",
+   "vi": "Mỗi người đều có vị trí sở trường của mình."
+  },
+  {
+   "cn": "为了实现梦想，他每天训练十个小时。",
+   "py": "Wèile shíxiàn mèngxiǎng, tā měi tiān xùnliàn shí ge xiǎoshí.",
+   "vi": "Để thực hiện ước mơ, anh ấy tập mười tiếng mỗi ngày."
+  }
+ ]
+}
