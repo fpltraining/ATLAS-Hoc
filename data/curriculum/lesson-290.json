@@ -1,0 +1,264 @@
+{
+ "id": 290,
+ "cn": "职场新人",
+ "title": "Nơi làm việc",
+ "goal": "Nói về chốn công sở, thất nghiệp, nghỉ hưu, làm nghề, chuyên gia, chủ nhiệm, chủ nhà, môi giới, kinh doanh, vận tải, hiệp định, thu hoạch, hiệu suất, giỏi giang và bận rộn.",
+ "words": [
+  {
+   "w": "职场",
+   "py": "zhíchǎng",
+   "hv": "chức trường",
+   "vi": "chốn công sở",
+   "pos": "danh từ",
+   "note": "职场新人 (người mới đi làm).",
+   "ex": [
+    {
+     "cn": "刚进职场的人要多学习。",
+     "py": "Gāng jìn zhíchǎng de rén yào duō xuéxí.",
+     "vi": "Người mới đi làm phải học hỏi nhiều."
+    }
+   ]
+  },
+  {
+   "w": "失业",
+   "py": "shīyè",
+   "hv": "thất nghiệp",
+   "vi": "thất nghiệp",
+   "pos": "động từ",
+   "note": "Chính là \"thất nghiệp\".",
+   "ex": [
+    {
+     "cn": "他失业半年了。",
+     "py": "Tā shīyè bàn nián le.",
+     "vi": "Anh ấy thất nghiệp nửa năm rồi."
+    }
+   ]
+  },
+  {
+   "w": "退休",
+   "py": "tuìxiū",
+   "hv": "thoái hưu",
+   "vi": "nghỉ hưu",
+   "pos": "động từ",
+   "note": "Chính là \"nghỉ hưu\".",
+   "ex": [
+    {
+     "cn": "我爸爸去年退休了。",
+     "py": "Wǒ bàba qùnián tuìxiū le.",
+     "vi": "Bố tôi nghỉ hưu năm ngoái."
+    }
+   ]
+  },
+  {
+   "w": "从事",
+   "py": "cóngshì",
+   "hv": "tòng sự",
+   "vi": "làm (nghề)",
+   "pos": "động từ",
+   "note": "从事教育工作 (làm nghề giáo).",
+   "ex": [
+    {
+     "cn": "他从事电竞工作十年了。",
+     "py": "Tā cóngshì diànjìng gōngzuò shí nián le.",
+     "vi": "Anh ấy làm trong ngành eSports mười năm rồi."
+    }
+   ]
+  },
+  {
+   "w": "专家",
+   "py": "zhuānjiā",
+   "hv": "chuyên gia",
+   "vi": "chuyên gia",
+   "pos": "danh từ",
+   "note": "Chính là \"chuyên gia\".",
+   "ex": [
+    {
+     "cn": "我们请了一位心理专家。",
+     "py": "Wǒmen qǐng le yí wèi xīnlǐ zhuānjiā.",
+     "vi": "Chúng tôi mời một chuyên gia tâm lý."
+    }
+   ]
+  },
+  {
+   "w": "主任",
+   "py": "zhǔrèn",
+   "hv": "chủ nhiệm",
+   "vi": "chủ nhiệm, trưởng phòng",
+   "pos": "danh từ",
+   "note": "班主任 (giáo viên chủ nhiệm).",
+   "ex": [
+    {
+     "cn": "她是我们的班主任。",
+     "py": "Tā shì wǒmen de bānzhǔrèn.",
+     "vi": "Cô ấy là giáo viên chủ nhiệm lớp tôi."
+    }
+   ]
+  },
+  {
+   "w": "主人",
+   "py": "zhǔrén",
+   "hv": "chủ nhân",
+   "vi": "chủ (nhà, vật)",
+   "pos": "danh từ",
+   "note": "Chính là \"chủ nhân\".",
+   "ex": [
+    {
+     "cn": "这只狗的主人是谁？",
+     "py": "Zhè zhī gǒu de zhǔrén shì shéi?",
+     "vi": "Chủ của con chó này là ai?"
+    }
+   ]
+  },
+  {
+   "w": "中介",
+   "py": "zhōngjiè",
+   "hv": "trung giới",
+   "vi": "môi giới",
+   "pos": "danh từ",
+   "note": "房屋中介 (môi giới nhà đất).",
+   "ex": [
+    {
+     "cn": "我们通过中介找到了房子。",
+     "py": "Wǒmen tōngguò zhōngjiè zhǎodào le fángzi.",
+     "vi": "Chúng tôi tìm được nhà qua môi giới."
+    }
+   ]
+  },
+  {
+   "w": "营业",
+   "py": "yíngyè",
+   "hv": "doanh nghiệp",
+   "vi": "kinh doanh, mở cửa bán",
+   "pos": "động từ",
+   "note": "营业时间 (giờ mở cửa).",
+   "ex": [
+    {
+     "cn": "这家店营业到晚上十点。",
+     "py": "Zhè jiā diàn yíngyè dào wǎnshang shí diǎn.",
+     "vi": "Cửa hàng này mở cửa đến mười giờ tối."
+    }
+   ]
+  },
+  {
+   "w": "运输",
+   "py": "yùnshū",
+   "hv": "vận thâu",
+   "vi": "vận chuyển",
+   "pos": "động từ",
+   "note": "交通运输 (giao thông vận tải).",
+   "ex": [
+    {
+     "cn": "这些货物用船运输。",
+     "py": "Zhèxiē huòwù yòng chuán yùnshū.",
+     "vi": "Hàng này vận chuyển bằng tàu."
+    }
+   ]
+  },
+  {
+   "w": "协议",
+   "py": "xiéyì",
+   "hv": "hiệp nghị",
+   "vi": "thoả thuận, hiệp định",
+   "pos": "danh từ",
+   "note": "签协议 (ký thoả thuận).",
+   "ex": [
+    {
+     "cn": "双方签了合作协议。",
+     "py": "Shuāngfāng qiān le hézuò xiéyì.",
+     "vi": "Hai bên ký thoả thuận hợp tác."
+    }
+   ]
+  },
+  {
+   "w": "收获",
+   "py": "shōuhuò",
+   "hv": "thu hoạch",
+   "vi": "thu hoạch; thành quả",
+   "pos": "danh từ, động từ",
+   "note": "有收获 (có thu hoạch).",
+   "ex": [
+    {
+     "cn": "这次比赛我们收获很多。",
+     "py": "Zhè cì bǐsài wǒmen shōuhuò hěn duō.",
+     "vi": "Giải lần này chúng tôi thu được nhiều điều."
+    }
+   ]
+  },
+  {
+   "w": "效率",
+   "py": "xiàolǜ",
+   "hv": "hiệu suất",
+   "vi": "hiệu suất",
+   "pos": "danh từ",
+   "note": "提高效率 (nâng hiệu suất).",
+   "ex": [
+    {
+     "cn": "我们要提高训练效率。",
+     "py": "Wǒmen yào tígāo xùnliàn xiàolǜ.",
+     "vi": "Chúng ta phải nâng hiệu quả tập luyện."
+    }
+   ]
+  },
+  {
+   "w": "能干",
+   "py": "nénggàn",
+   "hv": "năng cán",
+   "vi": "giỏi giang, đảm đang",
+   "pos": "tính từ",
+   "note": "很能干 (rất giỏi giang).",
+   "ex": [
+    {
+     "cn": "她是一个很能干的经理。",
+     "py": "Tā shì yí ge hěn nénggàn de jīnglǐ.",
+     "vi": "Cô ấy là một quản lý rất giỏi giang."
+    }
+   ]
+  },
+  {
+   "w": "忙碌",
+   "py": "mánglù",
+   "hv": "mang lục",
+   "vi": "bận rộn",
+   "pos": "tính từ",
+   "note": "Văn viết của 忙.",
+   "ex": [
+    {
+     "cn": "忙碌了一天，终于可以休息了。",
+     "py": "Mánglù le yì tiān, zhōngyú kěyǐ xiūxi le.",
+     "vi": "Bận rộn cả ngày, cuối cùng được nghỉ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "从事 + ngành/công việc",
+   "b": "从事教育 · 从事电竞",
+   "d": "Làm nghề gì (văn viết).",
+   "ex": [
+    {
+     "cn": "她大学毕业后一直从事翻译工作。",
+     "py": "Tā dàxué bìyè hòu yìzhí cóngshì fānyì gōngzuò.",
+     "vi": "Tốt nghiệp đại học xong cô ấy làm phiên dịch suốt."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "职场和学校很不一样。",
+   "py": "Zhíchǎng hé xuéxiào hěn bù yíyàng.",
+   "vi": "Môi trường công sở rất khác trường học."
+  },
+  {
+   "cn": "提高效率比延长时间更重要。",
+   "py": "Tígāo xiàolǜ bǐ yáncháng shíjiān gèng zhòngyào.",
+   "vi": "Nâng hiệu suất quan trọng hơn kéo dài thời gian."
+  },
+  {
+   "cn": "每一次失败都有收获。",
+   "py": "Měi yí cì shībài dōu yǒu shōuhuò.",
+   "vi": "Mỗi lần thất bại đều có thu hoạch."
+  }
+ ]
+}

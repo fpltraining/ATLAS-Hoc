@@ -1,0 +1,264 @@
+{
+ "id": 291,
+ "cn": "主动和自觉",
+ "title": "Thái độ và cách đối xử",
+ "goal": "Nói về chủ động, chủ quan, khách quan, tự giác, bản thân, chuyên tâm, chú trọng, để tâm, tôn kính, tuân thủ, đối xử, xem nhẹ, ôm, sở hữu và dựa vào.",
+ "words": [
+  {
+   "w": "主动",
+   "py": "zhǔdòng",
+   "hv": "chủ động",
+   "vi": "chủ động",
+   "pos": "tính từ",
+   "note": "Chính là \"chủ động\".",
+   "ex": [
+    {
+     "cn": "他总是主动帮助别人。",
+     "py": "Tā zǒngshì zhǔdòng bāngzhù biérén.",
+     "vi": "Anh ấy luôn chủ động giúp người khác."
+    }
+   ]
+  },
+  {
+   "w": "主观",
+   "py": "zhǔguān",
+   "hv": "chủ quan",
+   "vi": "chủ quan",
+   "pos": "tính từ",
+   "note": "Chính là \"chủ quan\".",
+   "ex": [
+    {
+     "cn": "这只是我主观的看法。",
+     "py": "Zhè zhǐ shì wǒ zhǔguān de kànfǎ.",
+     "vi": "Đây chỉ là ý kiến chủ quan của tôi."
+    }
+   ]
+  },
+  {
+   "w": "客观",
+   "py": "kèguān",
+   "hv": "khách quan",
+   "vi": "khách quan",
+   "pos": "tính từ",
+   "note": "Chính là \"khách quan\".",
+   "ex": [
+    {
+     "cn": "我们要客观地分析比赛。",
+     "py": "Wǒmen yào kèguān de fēnxī bǐsài.",
+     "vi": "Chúng ta phải phân tích trận đấu một cách khách quan."
+    }
+   ]
+  },
+  {
+   "w": "自觉",
+   "py": "zìjué",
+   "hv": "tự giác",
+   "vi": "tự giác",
+   "pos": "tính từ",
+   "note": "Chính là \"tự giác\".",
+   "ex": [
+    {
+     "cn": "他每天自觉地训练。",
+     "py": "Tā měi tiān zìjué de xùnliàn.",
+     "vi": "Ngày nào anh ấy cũng tự giác tập luyện."
+    }
+   ]
+  },
+  {
+   "w": "自身",
+   "py": "zìshēn",
+   "hv": "tự thân",
+   "vi": "bản thân",
+   "pos": "đại từ",
+   "note": "自身的问题 (vấn đề của bản thân).",
+   "ex": [
+    {
+     "cn": "先找自身的原因。",
+     "py": "Xiān zhǎo zìshēn de yuányīn.",
+     "vi": "Trước hết hãy tìm nguyên nhân ở bản thân."
+    }
+   ]
+  },
+  {
+   "w": "专心",
+   "py": "zhuānxīn",
+   "hv": "chuyên tâm",
+   "vi": "chuyên tâm",
+   "pos": "tính từ",
+   "note": "专心学习 (chuyên tâm học).",
+   "ex": [
+    {
+     "cn": "上课的时候要专心。",
+     "py": "Shàngkè de shíhou yào zhuānxīn.",
+     "vi": "Trong giờ học phải tập trung."
+    }
+   ]
+  },
+  {
+   "w": "注重",
+   "py": "zhùzhòng",
+   "hv": "chú trọng",
+   "vi": "chú trọng",
+   "pos": "động từ",
+   "note": "Chính là \"chú trọng\".",
+   "ex": [
+    {
+     "cn": "我们队很注重团队配合。",
+     "py": "Wǒmen duì hěn zhùzhòng tuánduì pèihé.",
+     "vi": "Đội chúng tôi rất chú trọng phối hợp."
+    }
+   ]
+  },
+  {
+   "w": "在乎",
+   "py": "zàihu",
+   "hv": "tại hồ",
+   "vi": "để tâm, quan tâm",
+   "pos": "động từ",
+   "note": "不在乎 (không quan tâm).",
+   "ex": [
+    {
+     "cn": "我不在乎别人怎么说。",
+     "py": "Wǒ bú zàihu biérén zěnme shuō.",
+     "vi": "Tôi không để tâm người khác nói gì."
+    }
+   ]
+  },
+  {
+   "w": "尊敬",
+   "py": "zūnjìng",
+   "hv": "tôn kính",
+   "vi": "kính trọng",
+   "pos": "động từ",
+   "note": "尊敬老人 (kính trọng người già).",
+   "ex": [
+    {
+     "cn": "我们要尊敬老师。",
+     "py": "Wǒmen yào zūnjìng lǎoshī.",
+     "vi": "Chúng ta phải kính trọng thầy cô."
+    }
+   ]
+  },
+  {
+   "w": "遵守",
+   "py": "zūnshǒu",
+   "hv": "tuân thủ",
+   "vi": "tuân thủ",
+   "pos": "động từ",
+   "note": "遵守规则 (tuân thủ luật).",
+   "ex": [
+    {
+     "cn": "每个人都要遵守交通规则。",
+     "py": "Měi ge rén dōu yào zūnshǒu jiāotōng guīzé.",
+     "vi": "Mọi người đều phải tuân thủ luật giao thông."
+    }
+   ]
+  },
+  {
+   "w": "对待",
+   "py": "duìdài",
+   "hv": "đối đãi",
+   "vi": "đối xử",
+   "pos": "động từ",
+   "note": "认真对待 (nghiêm túc đối mặt).",
+   "ex": [
+    {
+     "cn": "我们要认真对待每一场比赛。",
+     "py": "Wǒmen yào rènzhēn duìdài měi yì chǎng bǐsài.",
+     "vi": "Chúng ta phải nghiêm túc với mọi trận đấu."
+    }
+   ]
+  },
+  {
+   "w": "忽视",
+   "py": "hūshì",
+   "hv": "hốt thị",
+   "vi": "xem nhẹ, bỏ qua",
+   "pos": "động từ",
+   "note": "不能忽视 (không thể xem nhẹ).",
+   "ex": [
+    {
+     "cn": "不能忽视任何一个对手。",
+     "py": "Bù néng hūshì rènhé yí ge duìshǒu.",
+     "vi": "Không được xem nhẹ bất kỳ đối thủ nào."
+    }
+   ]
+  },
+  {
+   "w": "拥抱",
+   "py": "yōngbào",
+   "hv": "ủng bão",
+   "vi": "ôm",
+   "pos": "động từ",
+   "note": "拥抱一下 (ôm một cái).",
+   "ex": [
+    {
+     "cn": "赢了以后，大家拥抱在一起。",
+     "py": "Yíng le yǐhòu, dàjiā yōngbào zài yìqǐ.",
+     "vi": "Thắng xong, mọi người ôm chầm lấy nhau."
+    }
+   ]
+  },
+  {
+   "w": "拥有",
+   "py": "yōngyǒu",
+   "hv": "ủng hữu",
+   "vi": "sở hữu, có",
+   "pos": "động từ",
+   "note": "Văn viết của 有.",
+   "ex": [
+    {
+     "cn": "他拥有很多粉丝。",
+     "py": "Tā yōngyǒu hěn duō fěnsī.",
+     "vi": "Anh ấy có rất nhiều fan."
+    }
+   ]
+  },
+  {
+   "w": "依靠",
+   "py": "yīkào",
+   "hv": "y kháo",
+   "vi": "dựa vào",
+   "pos": "động từ",
+   "note": "依靠自己 (dựa vào bản thân).",
+   "ex": [
+    {
+     "cn": "成功要依靠自己的努力。",
+     "py": "Chénggōng yào yīkào zìjǐ de nǔlì.",
+     "vi": "Thành công phải dựa vào nỗ lực của bản thân."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "认真 + 对待",
+   "b": "认真对待每一场比赛",
+   "d": "Nghiêm túc với việc gì.",
+   "ex": [
+    {
+     "cn": "他认真对待每一个问题。",
+     "py": "Tā rènzhēn duìdài měi yí ge wèntí.",
+     "vi": "Anh ấy nghiêm túc với từng vấn đề."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "输了以后，先找自身的问题。",
+   "py": "Shū le yǐhòu, xiān zhǎo zìshēn de wèntí.",
+   "vi": "Thua rồi, trước hết tìm vấn đề ở bản thân."
+  },
+  {
+   "cn": "要主动沟通，不要等别人来问。",
+   "py": "Yào zhǔdòng gōutōng, bú yào děng biérén lái wèn.",
+   "vi": "Phải chủ động trao đổi, đừng đợi người khác hỏi."
+  },
+  {
+   "cn": "分析比赛的时候要客观。",
+   "py": "Fēnxī bǐsài de shíhou yào kèguān.",
+   "vi": "Khi phân tích trận đấu phải khách quan."
+  }
+ ]
+}

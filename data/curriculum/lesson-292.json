@@ -1,0 +1,264 @@
+{
+ "id": 292,
+ "cn": "面临挑战",
+ "title": "Quy định và thách thức",
+ "goal": "Nói về vi phạm pháp luật, vi phạm, gây hại, đe doạ, ngăn cản, hạn chế, giữ gìn, đề xướng, nên, ứng phó, nhắm vào, đối mặt, hướng tới, xu thế và thúc đẩy.",
+ "words": [
+  {
+   "w": "违法",
+   "py": "wéifǎ",
+   "hv": "vi pháp",
+   "vi": "phạm pháp",
+   "pos": "động từ",
+   "note": "Chính là \"vi phạm pháp luật\".",
+   "ex": [
+    {
+     "cn": "这样做是违法的。",
+     "py": "Zhèyàng zuò shì wéifǎ de.",
+     "vi": "Làm vậy là phạm pháp."
+    }
+   ]
+  },
+  {
+   "w": "违反",
+   "py": "wéifǎn",
+   "hv": "vi phản",
+   "vi": "vi phạm",
+   "pos": "động từ",
+   "note": "违反规则 (vi phạm luật).",
+   "ex": [
+    {
+     "cn": "他违反了比赛规则。",
+     "py": "Tā wéifǎn le bǐsài guīzé.",
+     "vi": "Anh ấy vi phạm luật thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "危害",
+   "py": "wēihài",
+   "hv": "nguy hại",
+   "vi": "gây hại",
+   "pos": "động từ, danh từ",
+   "note": "危害健康 (hại sức khoẻ).",
+   "ex": [
+    {
+     "cn": "吸烟危害健康。",
+     "py": "Xīyān wēihài jiànkāng.",
+     "vi": "Hút thuốc hại sức khoẻ."
+    }
+   ]
+  },
+  {
+   "w": "威胁",
+   "py": "wēixié",
+   "hv": "uy hiếp",
+   "vi": "đe doạ",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"uy hiếp\".",
+   "ex": [
+    {
+     "cn": "他们的打野对我们威胁很大。",
+     "py": "Tāmen de dǎyě duì wǒmen wēixié hěn dà.",
+     "vi": "Người đi rừng của họ là mối đe doạ lớn với chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "阻止",
+   "py": "zǔzhǐ",
+   "hv": "trở chỉ",
+   "vi": "ngăn cản",
+   "pos": "động từ",
+   "note": "阻止对方 (ngăn đối phương).",
+   "ex": [
+    {
+     "cn": "我们必须阻止他们拿龙。",
+     "py": "Wǒmen bìxū zǔzhǐ tāmen ná lóng.",
+     "vi": "Chúng ta phải ngăn họ lấy rồng."
+    }
+   ]
+  },
+  {
+   "w": "限制",
+   "py": "xiànzhì",
+   "hv": "hạn chế",
+   "vi": "hạn chế",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"hạn chế\".",
+   "ex": [
+    {
+     "cn": "每天玩游戏的时间要限制。",
+     "py": "Měi tiān wán yóuxì de shíjiān yào xiànzhì.",
+     "vi": "Thời gian chơi game mỗi ngày phải hạn chế."
+    }
+   ]
+  },
+  {
+   "w": "守",
+   "py": "shǒu",
+   "hv": "thủ",
+   "vi": "giữ, canh",
+   "pos": "động từ",
+   "note": "守塔 (giữ trụ).",
+   "ex": [
+    {
+     "cn": "你们守住下路，我去中路。",
+     "py": "Nǐmen shǒu zhù xiàlù, wǒ qù zhōnglù.",
+     "vi": "Các bạn giữ đường dưới, tôi đi đường giữa."
+    }
+   ]
+  },
+  {
+   "w": "提倡",
+   "py": "tíchàng",
+   "hv": "đề xướng",
+   "vi": "khuyến khích, đề xướng",
+   "pos": "động từ",
+   "note": "提倡节约 (khuyến khích tiết kiệm).",
+   "ex": [
+    {
+     "cn": "学校提倡多读书。",
+     "py": "Xuéxiào tíchàng duō dú shū.",
+     "vi": "Nhà trường khuyến khích đọc nhiều sách."
+    }
+   ]
+  },
+  {
+   "w": "应当",
+   "py": "yīngdāng",
+   "hv": "ưng đương",
+   "vi": "nên, cần phải",
+   "pos": "động từ",
+   "note": "Văn viết của 应该.",
+   "ex": [
+    {
+     "cn": "我们应当互相帮助。",
+     "py": "Wǒmen yīngdāng hùxiāng bāngzhù.",
+     "vi": "Chúng ta nên giúp đỡ lẫn nhau."
+    }
+   ]
+  },
+  {
+   "w": "应对",
+   "py": "yìngduì",
+   "hv": "ứng đối",
+   "vi": "ứng phó",
+   "pos": "động từ",
+   "note": "应对变化 (ứng phó thay đổi).",
+   "ex": [
+    {
+     "cn": "我们要准备好应对各种情况。",
+     "py": "Wǒmen yào zhǔnbèi hǎo yìngduì gè zhǒng qíngkuàng.",
+     "vi": "Chúng ta phải chuẩn bị để ứng phó mọi tình huống."
+    }
+   ]
+  },
+  {
+   "w": "针对",
+   "py": "zhēnduì",
+   "hv": "châm đối",
+   "vi": "nhắm vào",
+   "pos": "động từ, giới từ",
+   "note": "针对问题 (nhắm vào vấn đề).",
+   "ex": [
+    {
+     "cn": "针对他们的打法，我们准备了新战术。",
+     "py": "Zhēnduì tāmen de dǎfǎ, wǒmen zhǔnbèi le xīn zhànshù.",
+     "vi": "Nhắm vào lối đánh của họ, chúng tôi chuẩn bị chiến thuật mới."
+    }
+   ]
+  },
+  {
+   "w": "面临",
+   "py": "miànlín",
+   "hv": "diện lâm",
+   "vi": "đứng trước, đối mặt",
+   "pos": "động từ",
+   "note": "面临挑战 (đối mặt thử thách).",
+   "ex": [
+    {
+     "cn": "我们面临着很大的挑战。",
+     "py": "Wǒmen miànlín zhe hěn dà de tiǎozhàn.",
+     "vi": "Chúng ta đang đứng trước thử thách lớn."
+    }
+   ]
+  },
+  {
+   "w": "面向",
+   "py": "miànxiàng",
+   "hv": "diện hướng",
+   "vi": "hướng tới, dành cho",
+   "pos": "động từ",
+   "note": "面向学生 (dành cho học sinh).",
+   "ex": [
+    {
+     "cn": "这个比赛面向所有大学生。",
+     "py": "Zhège bǐsài miànxiàng suǒyǒu dàxuéshēng.",
+     "vi": "Giải này dành cho tất cả sinh viên."
+    }
+   ]
+  },
+  {
+   "w": "趋势",
+   "py": "qūshì",
+   "hv": "xu thế",
+   "vi": "xu hướng",
+   "pos": "danh từ",
+   "note": "发展趋势 (xu hướng phát triển).",
+   "ex": [
+    {
+     "cn": "移动游戏是未来的趋势。",
+     "py": "Yídòng yóuxì shì wèilái de qūshì.",
+     "vi": "Game di động là xu hướng tương lai."
+    }
+   ]
+  },
+  {
+   "w": "推动",
+   "py": "tuīdòng",
+   "hv": "thôi động",
+   "vi": "thúc đẩy",
+   "pos": "động từ",
+   "note": "推动发展 (thúc đẩy phát triển).",
+   "ex": [
+    {
+     "cn": "年轻人推动了电竞的发展。",
+     "py": "Niánqīngrén tuīdòng le diànjìng de fāzhǎn.",
+     "vi": "Người trẻ thúc đẩy sự phát triển của eSports."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "针对 + đối tượng，+ hành động",
+   "b": "针对他们的打法，我们……",
+   "d": "Nhằm vào cái gì mà làm gì.",
+   "ex": [
+    {
+     "cn": "针对这个问题，我们开了一个会。",
+     "py": "Zhēnduì zhège wèntí, wǒmen kāi le yí ge huì.",
+     "vi": "Nhằm giải quyết vấn đề này, chúng tôi họp một buổi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "违反规则的选手会被罚。",
+   "py": "Wéifǎn guīzé de xuǎnshǒu huì bèi fá.",
+   "vi": "Tuyển thủ vi phạm luật sẽ bị phạt."
+  },
+  {
+   "cn": "面临困难的时候，不要放弃。",
+   "py": "Miànlín kùnnan de shíhou, bú yào fàngqì.",
+   "vi": "Khi đứng trước khó khăn, đừng bỏ cuộc."
+  },
+  {
+   "cn": "我们要阻止对方的进攻，守住高地。",
+   "py": "Wǒmen yào zǔzhǐ duìfāng de jìngōng, shǒu zhù gāodì.",
+   "vi": "Chúng ta phải chặn đợt tấn công của đối phương, giữ vững nhà chính."
+  }
+ ]
+}
