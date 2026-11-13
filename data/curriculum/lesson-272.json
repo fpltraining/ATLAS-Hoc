@@ -1,0 +1,264 @@
+{
+ "id": 272,
+ "cn": "好的心态",
+ "title": "Tâm lý và thái độ",
+ "goal": "Nói về tâm lý, tâm thế, tiêu cực, bất lực, đau khổ, tận hưởng, thưởng thức, tưởng tượng, tin tưởng, khiêm tốn, nghiêm túc, may mắn, vẫn như cũ, vô số và vô hạn.",
+ "words": [
+  {
+   "w": "心理",
+   "py": "xīnlǐ",
+   "hv": "tâm lý",
+   "vi": "tâm lý",
+   "pos": "danh từ",
+   "note": "心理压力 (áp lực tâm lý).",
+   "ex": [
+    {
+     "cn": "比赛前心理压力很大。",
+     "py": "Bǐsài qián xīnlǐ yālì hěn dà.",
+     "vi": "Trước trận áp lực tâm lý rất lớn."
+    }
+   ]
+  },
+  {
+   "w": "心态",
+   "py": "xīntài",
+   "hv": "tâm thái",
+   "vi": "tâm thế, thái độ",
+   "pos": "danh từ",
+   "note": "好心态 (tâm thế tốt).",
+   "ex": [
+    {
+     "cn": "保持好心态很重要。",
+     "py": "Bǎochí hǎo xīntài hěn zhòngyào.",
+     "vi": "Giữ tâm thế tốt rất quan trọng."
+    }
+   ]
+  },
+  {
+   "w": "消极",
+   "py": "xiāojí",
+   "hv": "tiêu cực",
+   "vi": "tiêu cực",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 积极.",
+   "ex": [
+    {
+     "cn": "不要有消极的想法。",
+     "py": "Bú yào yǒu xiāojí de xiǎngfǎ.",
+     "vi": "Đừng có suy nghĩ tiêu cực."
+    }
+   ]
+  },
+  {
+   "w": "无奈",
+   "py": "wúnài",
+   "hv": "vô nại",
+   "vi": "bất lực, đành chịu",
+   "pos": "tính từ",
+   "note": "很无奈 (rất bất lực).",
+   "ex": [
+    {
+     "cn": "他无奈地摇了摇头。",
+     "py": "Tā wúnài de yáo le yáo tóu.",
+     "vi": "Anh ấy bất lực lắc đầu."
+    }
+   ]
+  },
+  {
+   "w": "痛苦",
+   "py": "tòngkǔ",
+   "hv": "thống khổ",
+   "vi": "đau khổ",
+   "pos": "tính từ, danh từ",
+   "note": "Chính là \"thống khổ\".",
+   "ex": [
+    {
+     "cn": "失败的时候很痛苦。",
+     "py": "Shībài de shíhou hěn tòngkǔ.",
+     "vi": "Lúc thất bại rất đau khổ."
+    }
+   ]
+  },
+  {
+   "w": "享受",
+   "py": "xiǎngshòu",
+   "hv": "hưởng thụ",
+   "vi": "tận hưởng",
+   "pos": "động từ",
+   "note": "享受比赛 (tận hưởng trận đấu).",
+   "ex": [
+    {
+     "cn": "放轻松，享受比赛吧！",
+     "py": "Fàng qīngsōng, xiǎngshòu bǐsài ba!",
+     "vi": "Thả lỏng, tận hưởng trận đấu đi!"
+    }
+   ]
+  },
+  {
+   "w": "欣赏",
+   "py": "xīnshǎng",
+   "hv": "hân thưởng",
+   "vi": "thưởng thức; đánh giá cao",
+   "pos": "động từ",
+   "note": "欣赏音乐 (thưởng thức nhạc).",
+   "ex": [
+    {
+     "cn": "我很欣赏他的打法。",
+     "py": "Wǒ hěn xīnshǎng tā de dǎfǎ.",
+     "vi": "Tôi rất đánh giá cao lối đánh của anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "想象",
+   "py": "xiǎngxiàng",
+   "hv": "tưởng tượng",
+   "vi": "tưởng tượng",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"tưởng tượng\".",
+   "ex": [
+    {
+     "cn": "结果比我想象的好。",
+     "py": "Jiéguǒ bǐ wǒ xiǎngxiàng de hǎo.",
+     "vi": "Kết quả tốt hơn tôi tưởng tượng."
+    }
+   ]
+  },
+  {
+   "w": "信任",
+   "py": "xìnrèn",
+   "hv": "tín nhiệm",
+   "vi": "tin tưởng",
+   "pos": "động từ",
+   "note": "Chính là \"tín nhiệm\".",
+   "ex": [
+    {
+     "cn": "教练很信任他。",
+     "py": "Jiàoliàn hěn xìnrèn tā.",
+     "vi": "Huấn luyện viên rất tin tưởng anh ấy."
+    }
+   ]
+  },
+  {
+   "w": "虚心",
+   "py": "xūxīn",
+   "hv": "hư tâm",
+   "vi": "khiêm tốn, cầu thị",
+   "pos": "tính từ",
+   "note": "虚心学习 (khiêm tốn học hỏi).",
+   "ex": [
+    {
+     "cn": "他很虚心地接受了批评。",
+     "py": "Tā hěn xūxīn de jiēshòu le pīpíng.",
+     "vi": "Anh ấy khiêm tốn tiếp nhận lời phê bình."
+    }
+   ]
+  },
+  {
+   "w": "严肃",
+   "py": "yánsù",
+   "hv": "nghiêm túc",
+   "vi": "nghiêm túc, nghiêm nghị",
+   "pos": "tính từ",
+   "note": "Chính là \"nghiêm túc\".",
+   "ex": [
+    {
+     "cn": "他的表情很严肃。",
+     "py": "Tā de biǎoqíng hěn yánsù.",
+     "vi": "Vẻ mặt anh ấy rất nghiêm."
+    }
+   ]
+  },
+  {
+   "w": "幸运",
+   "py": "xìngyùn",
+   "hv": "hạnh vận",
+   "vi": "may mắn",
+   "pos": "tính từ",
+   "note": "Chính là \"hạnh vận\".",
+   "ex": [
+    {
+     "cn": "能认识你，我很幸运。",
+     "py": "Néng rènshi nǐ, wǒ hěn xìngyùn.",
+     "vi": "Quen được bạn, tôi thật may mắn."
+    }
+   ]
+  },
+  {
+   "w": "依然",
+   "py": "yīrán",
+   "hv": "y nhiên",
+   "vi": "vẫn, vẫn như cũ",
+   "pos": "phó từ",
+   "note": "Văn viết của 仍然.",
+   "ex": [
+    {
+     "cn": "虽然输了，粉丝依然支持我们。",
+     "py": "Suīrán shū le, fěnsī yīrán zhīchí wǒmen.",
+     "vi": "Dù thua, fan vẫn ủng hộ chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "无数",
+   "py": "wúshù",
+   "hv": "vô số",
+   "vi": "vô số",
+   "pos": "tính từ",
+   "note": "Chính là \"vô số\".",
+   "ex": [
+    {
+     "cn": "他练习了无数次。",
+     "py": "Tā liànxí le wúshù cì.",
+     "vi": "Anh ấy đã luyện vô số lần."
+    }
+   ]
+  },
+  {
+   "w": "无限",
+   "py": "wúxiàn",
+   "hv": "vô hạn",
+   "vi": "vô hạn",
+   "pos": "tính từ",
+   "note": "Chính là \"vô hạn\".",
+   "ex": [
+    {
+     "cn": "年轻人有无限的可能。",
+     "py": "Niánqīngrén yǒu wúxiàn de kěnéng.",
+     "vi": "Người trẻ có khả năng vô hạn."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "比 + ai + 想象的 + tính từ",
+   "b": "比我想象的好",
+   "d": "So với điều mình tưởng.",
+   "ex": [
+    {
+     "cn": "中文比我想象的难。",
+     "py": "Zhōngwén bǐ wǒ xiǎngxiàng de nán.",
+     "vi": "Tiếng Trung khó hơn tôi tưởng."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "好的心态是赢得比赛的一半。",
+   "py": "Hǎo de xīntài shì yíngdé bǐsài de yíbàn.",
+   "vi": "Tâm thế tốt là một nửa chiến thắng."
+  },
+  {
+   "cn": "要虚心听取别人的意见。",
+   "py": "Yào xūxīn tīngqǔ biérén de yìjiàn.",
+   "vi": "Phải khiêm tốn lắng nghe ý kiến người khác."
+  },
+  {
+   "cn": "队员之间要互相信任。",
+   "py": "Duìyuán zhījiān yào hùxiāng xìnrèn.",
+   "vi": "Các thành viên phải tin tưởng lẫn nhau."
+  }
+ ]
+}

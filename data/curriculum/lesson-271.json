@@ -1,0 +1,264 @@
+{
+ "id": 271,
+ "cn": "面对现实",
+ "title": "Hiện thực và hiện tượng",
+ "goal": "Nói về hiện thực, hiện tượng, hiện trạng, hiện đại, rõ ràng, tỏ ra, tương đối, liên quan, giống nhau, tượng trưng, hình thành, tình hình, tính chất và thể hiện.",
+ "words": [
+  {
+   "w": "现实",
+   "py": "xiànshí",
+   "hv": "hiện thực",
+   "vi": "hiện thực",
+   "pos": "danh từ, tính từ",
+   "note": "面对现实 (đối mặt hiện thực).",
+   "ex": [
+    {
+     "cn": "我们要面对现实。",
+     "py": "Wǒmen yào miànduì xiànshí.",
+     "vi": "Chúng ta phải đối mặt với hiện thực."
+    }
+   ]
+  },
+  {
+   "w": "现象",
+   "py": "xiànxiàng",
+   "hv": "hiện tượng",
+   "vi": "hiện tượng",
+   "pos": "danh từ",
+   "note": "Chính là \"hiện tượng\".",
+   "ex": [
+    {
+     "cn": "这是一个很常见的现象。",
+     "py": "Zhè shì yí ge hěn chángjiàn de xiànxiàng.",
+     "vi": "Đây là một hiện tượng rất phổ biến."
+    }
+   ]
+  },
+  {
+   "w": "现状",
+   "py": "xiànzhuàng",
+   "hv": "hiện trạng",
+   "vi": "hiện trạng",
+   "pos": "danh từ",
+   "note": "改变现状 (thay đổi hiện trạng).",
+   "ex": [
+    {
+     "cn": "我们不能满足于现状。",
+     "py": "Wǒmen bù néng mǎnzú yú xiànzhuàng.",
+     "vi": "Chúng ta không thể hài lòng với hiện trạng."
+    }
+   ]
+  },
+  {
+   "w": "现代",
+   "py": "xiàndài",
+   "hv": "hiện đại",
+   "vi": "hiện đại",
+   "pos": "danh từ, tính từ",
+   "note": "现代社会 (xã hội hiện đại).",
+   "ex": [
+    {
+     "cn": "现代人的生活节奏很快。",
+     "py": "Xiàndàirén de shēnghuó jiézòu hěn kuài.",
+     "vi": "Nhịp sống người hiện đại rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "显然",
+   "py": "xiǎnrán",
+   "hv": "hiển nhiên",
+   "vi": "rõ ràng",
+   "pos": "phó từ, tính từ",
+   "note": "Chính là \"hiển nhiên\".",
+   "ex": [
+    {
+     "cn": "他显然不同意。",
+     "py": "Tā xiǎnrán bù tóngyì.",
+     "vi": "Rõ ràng anh ấy không đồng ý."
+    }
+   ]
+  },
+  {
+   "w": "显得",
+   "py": "xiǎnde",
+   "hv": "hiển đắc",
+   "vi": "tỏ ra, trông",
+   "pos": "động từ",
+   "note": "显得很年轻 (trông rất trẻ).",
+   "ex": [
+    {
+     "cn": "穿上这件衣服，你显得很精神。",
+     "py": "Chuān shàng zhè jiàn yīfu, nǐ xiǎnde hěn jīngshen.",
+     "vi": "Mặc áo này bạn trông rất tươi tỉnh."
+    }
+   ]
+  },
+  {
+   "w": "相当",
+   "py": "xiāngdāng",
+   "hv": "tương đương",
+   "vi": "khá, tương đối; tương đương",
+   "pos": "phó từ, động từ",
+   "note": "相当好 (khá tốt).",
+   "ex": [
+    {
+     "cn": "他的中文相当不错。",
+     "py": "Tā de Zhōngwén xiāngdāng búcuò.",
+     "vi": "Tiếng Trung của anh ấy khá giỏi."
+    }
+   ]
+  },
+  {
+   "w": "相对",
+   "py": "xiāngduì",
+   "hv": "tương đối",
+   "vi": "tương đối",
+   "pos": "tính từ, phó từ",
+   "note": "相对来说 (nói một cách tương đối).",
+   "ex": [
+    {
+     "cn": "相对来说，这里比较安全。",
+     "py": "Xiāngduì lái shuō, zhèlǐ bǐjiào ānquán.",
+     "vi": "Nói tương đối, ở đây khá an toàn."
+    }
+   ]
+  },
+  {
+   "w": "相关",
+   "py": "xiāngguān",
+   "hv": "tương quan",
+   "vi": "liên quan",
+   "pos": "động từ",
+   "note": "相关部门 (cơ quan liên quan).",
+   "ex": [
+    {
+     "cn": "请提供相关材料。",
+     "py": "Qǐng tígōng xiāngguān cáiliào.",
+     "vi": "Xin cung cấp tài liệu liên quan."
+    }
+   ]
+  },
+  {
+   "w": "相似",
+   "py": "xiāngsì",
+   "hv": "tương tự",
+   "vi": "giống nhau",
+   "pos": "tính từ",
+   "note": "Chính là \"tương tự\".",
+   "ex": [
+    {
+     "cn": "这两种打法很相似。",
+     "py": "Zhè liǎng zhǒng dǎfǎ hěn xiāngsì.",
+     "vi": "Hai lối đánh này rất giống nhau."
+    }
+   ]
+  },
+  {
+   "w": "象征",
+   "py": "xiàngzhēng",
+   "hv": "tượng trưng",
+   "vi": "tượng trưng",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"tượng trưng\".",
+   "ex": [
+    {
+     "cn": "红色在中国象征好运。",
+     "py": "Hóngsè zài Zhōngguó xiàngzhēng hǎoyùn.",
+     "vi": "Màu đỏ ở Trung Quốc tượng trưng may mắn."
+    }
+   ]
+  },
+  {
+   "w": "形成",
+   "py": "xíngchéng",
+   "hv": "hình thành",
+   "vi": "hình thành",
+   "pos": "động từ",
+   "note": "形成习惯 (hình thành thói quen).",
+   "ex": [
+    {
+     "cn": "好习惯需要时间才能形成。",
+     "py": "Hǎo xíguàn xūyào shíjiān cái néng xíngchéng.",
+     "vi": "Thói quen tốt cần thời gian mới hình thành."
+    }
+   ]
+  },
+  {
+   "w": "形势",
+   "py": "xíngshì",
+   "hv": "hình thế",
+   "vi": "tình hình, cục diện",
+   "pos": "danh từ",
+   "note": "比赛形势 (cục diện trận đấu).",
+   "ex": [
+    {
+     "cn": "比赛形势对我们很不利。",
+     "py": "Bǐsài xíngshì duì wǒmen hěn bú lì.",
+     "vi": "Cục diện trận đấu rất bất lợi cho chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "性质",
+   "py": "xìngzhì",
+   "hv": "tính chất",
+   "vi": "tính chất",
+   "pos": "danh từ",
+   "note": "Chính là \"tính chất\".",
+   "ex": [
+    {
+     "cn": "这两件事的性质不一样。",
+     "py": "Zhè liǎng jiàn shì de xìngzhì bù yíyàng.",
+     "vi": "Tính chất hai việc này khác nhau."
+    }
+   ]
+  },
+  {
+   "w": "体现",
+   "py": "tǐxiàn",
+   "hv": "thể hiện",
+   "vi": "thể hiện",
+   "pos": "động từ",
+   "note": "Chính là \"thể hiện\".",
+   "ex": [
+    {
+     "cn": "这场胜利体现了团队精神。",
+     "py": "Zhè chǎng shènglì tǐxiàn le tuánduì jīngshén.",
+     "vi": "Chiến thắng này thể hiện tinh thần đồng đội."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "显得 + tính từ",
+   "b": "显得很年轻 · 显得紧张",
+   "d": "Tỏ ra, trông có vẻ.",
+   "ex": [
+    {
+     "cn": "第一次上台，他显得有点儿紧张。",
+     "py": "Dì yī cì shàng tái, tā xiǎnde yǒudiǎnr jǐnzhāng.",
+     "vi": "Lần đầu lên sân khấu, anh ấy trông hơi run."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "理想很美好，现实很困难。",
+   "py": "Lǐxiǎng hěn měihǎo, xiànshí hěn kùnnan.",
+   "vi": "Lý tưởng thì đẹp, hiện thực thì khó."
+  },
+  {
+   "cn": "形势不好的时候，更要冷静。",
+   "py": "Xíngshì bù hǎo de shíhou, gèng yào lěngjìng.",
+   "vi": "Khi tình hình xấu càng phải bình tĩnh."
+  },
+  {
+   "cn": "他的努力在比赛中体现出来了。",
+   "py": "Tā de nǔlì zài bǐsài zhōng tǐxiàn chūlái le.",
+   "vi": "Sự nỗ lực của anh ấy đã thể hiện trong trận đấu."
+  }
+ ]
+}

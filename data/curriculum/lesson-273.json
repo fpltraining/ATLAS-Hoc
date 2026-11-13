@@ -1,0 +1,264 @@
+{
+ "id": 273,
+ "cn": "学术演讲",
+ "title": "Học thuật và nghiên cứu",
+ "goal": "Nói về tín chỉ, môn học, học vấn, năm học, học thuật, học giả, văn học, vật lý, viết văn, thư pháp, diễn thuyết, đề bài, đặt câu hỏi, hỏi han và nghiên cứu phát triển.",
+ "words": [
+  {
+   "w": "学分",
+   "py": "xuéfēn",
+   "hv": "học phân",
+   "vi": "tín chỉ",
+   "pos": "danh từ",
+   "note": "修学分 (tích tín chỉ).",
+   "ex": [
+    {
+     "cn": "这门课有三个学分。",
+     "py": "Zhè mén kè yǒu sān ge xuéfēn.",
+     "vi": "Môn này có ba tín chỉ."
+    }
+   ]
+  },
+  {
+   "w": "学科",
+   "py": "xuékē",
+   "hv": "học khoa",
+   "vi": "môn học, ngành học",
+   "pos": "danh từ",
+   "note": "Chính là \"học khoa\".",
+   "ex": [
+    {
+     "cn": "数学是一门重要的学科。",
+     "py": "Shùxué shì yì mén zhòngyào de xuékē.",
+     "vi": "Toán là một môn học quan trọng."
+    }
+   ]
+  },
+  {
+   "w": "学历",
+   "py": "xuélì",
+   "hv": "học lịch",
+   "vi": "trình độ học vấn",
+   "pos": "danh từ",
+   "note": "本科学历 (bằng đại học).",
+   "ex": [
+    {
+     "cn": "这份工作要求本科学历。",
+     "py": "Zhè fèn gōngzuò yāoqiú běnkē xuélì.",
+     "vi": "Công việc này yêu cầu bằng đại học."
+    }
+   ]
+  },
+  {
+   "w": "学年",
+   "py": "xuénián",
+   "hv": "học niên",
+   "vi": "năm học",
+   "pos": "danh từ",
+   "note": "新学年 (năm học mới).",
+   "ex": [
+    {
+     "cn": "新学年九月开始。",
+     "py": "Xīn xuénián jiǔ yuè kāishǐ.",
+     "vi": "Năm học mới bắt đầu tháng Chín."
+    }
+   ]
+  },
+  {
+   "w": "学术",
+   "py": "xuéshù",
+   "hv": "học thuật",
+   "vi": "học thuật",
+   "pos": "danh từ",
+   "note": "学术会议 (hội thảo khoa học).",
+   "ex": [
+    {
+     "cn": "他参加了一个学术会议。",
+     "py": "Tā cānjiā le yí ge xuéshù huìyì.",
+     "vi": "Ông ấy dự một hội thảo khoa học."
+    }
+   ]
+  },
+  {
+   "w": "学者",
+   "py": "xuézhě",
+   "hv": "học giả",
+   "vi": "học giả",
+   "pos": "danh từ",
+   "note": "Chính là \"học giả\".",
+   "ex": [
+    {
+     "cn": "他是一位有名的学者。",
+     "py": "Tā shì yí wèi yǒumíng de xuézhě.",
+     "vi": "Ông ấy là một học giả nổi tiếng."
+    }
+   ]
+  },
+  {
+   "w": "文学",
+   "py": "wénxué",
+   "hv": "văn học",
+   "vi": "văn học",
+   "pos": "danh từ",
+   "note": "Chính là \"văn học\".",
+   "ex": [
+    {
+     "cn": "她大学学的是中国文学。",
+     "py": "Tā dàxué xué de shì Zhōngguó wénxué.",
+     "vi": "Đại học cô ấy học văn học Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "物理",
+   "py": "wùlǐ",
+   "hv": "vật lý",
+   "vi": "vật lý",
+   "pos": "danh từ",
+   "note": "Chính là \"vật lý\".",
+   "ex": [
+    {
+     "cn": "我中学的时候物理最好。",
+     "py": "Wǒ zhōngxué de shíhou wùlǐ zuì hǎo.",
+     "vi": "Hồi cấp ba tôi giỏi lý nhất."
+    }
+   ]
+  },
+  {
+   "w": "写作",
+   "py": "xiězuò",
+   "hv": "tả tác",
+   "vi": "viết văn, sáng tác",
+   "pos": "động từ, danh từ",
+   "note": "写作能力 (khả năng viết).",
+   "ex": [
+    {
+     "cn": "多读书可以提高写作水平。",
+     "py": "Duō dú shū kěyǐ tígāo xiězuò shuǐpíng.",
+     "vi": "Đọc nhiều sách giúp nâng trình độ viết."
+    }
+   ]
+  },
+  {
+   "w": "书法",
+   "py": "shūfǎ",
+   "hv": "thư pháp",
+   "vi": "thư pháp",
+   "pos": "danh từ",
+   "note": "Chính là \"thư pháp\".",
+   "ex": [
+    {
+     "cn": "爷爷每天练书法。",
+     "py": "Yéye měi tiān liàn shūfǎ.",
+     "vi": "Ông nội luyện thư pháp mỗi ngày."
+    }
+   ]
+  },
+  {
+   "w": "演讲",
+   "py": "yǎnjiǎng",
+   "hv": "diễn giảng",
+   "vi": "diễn thuyết",
+   "pos": "động từ, danh từ",
+   "note": "演讲比赛 (thi hùng biện).",
+   "ex": [
+    {
+     "cn": "她的演讲非常精彩。",
+     "py": "Tā de yǎnjiǎng fēicháng jīngcǎi.",
+     "vi": "Bài diễn thuyết của cô ấy rất xuất sắc."
+    }
+   ]
+  },
+  {
+   "w": "题目",
+   "py": "tímù",
+   "hv": "đề mục",
+   "vi": "đề bài; tiêu đề",
+   "pos": "danh từ",
+   "note": "考试题目 (đề thi).",
+   "ex": [
+    {
+     "cn": "这道题目太难了。",
+     "py": "Zhè dào tímù tài nán le.",
+     "vi": "Đề này khó quá."
+    }
+   ]
+  },
+  {
+   "w": "提问",
+   "py": "tíwèn",
+   "hv": "đề vấn",
+   "vi": "đặt câu hỏi",
+   "pos": "động từ",
+   "note": "课上提问 (hỏi trong giờ).",
+   "ex": [
+    {
+     "cn": "有问题可以随时提问。",
+     "py": "Yǒu wèntí kěyǐ suíshí tíwèn.",
+     "vi": "Có thắc mắc có thể hỏi bất cứ lúc nào."
+    }
+   ]
+  },
+  {
+   "w": "询问",
+   "py": "xúnwèn",
+   "hv": "tuân vấn",
+   "vi": "hỏi han, hỏi thăm",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 问.",
+   "ex": [
+    {
+     "cn": "我向工作人员询问了比赛时间。",
+     "py": "Wǒ xiàng gōngzuò rényuán xúnwèn le bǐsài shíjiān.",
+     "vi": "Tôi hỏi nhân viên về giờ thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "研发",
+   "py": "yánfā",
+   "hv": "nghiên phát",
+   "vi": "nghiên cứu phát triển",
+   "pos": "động từ",
+   "note": "研究开发 viết tắt.",
+   "ex": [
+    {
+     "cn": "这家公司研发了新技术。",
+     "py": "Zhè jiā gōngsī yánfā le xīn jìshù.",
+     "vi": "Công ty này nghiên cứu ra công nghệ mới."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "门 (lượng từ cho môn học)",
+   "b": "一门课 · 两门语言",
+   "d": "Môn học, ngôn ngữ dùng 门.",
+   "ex": [
+    {
+     "cn": "我会说三门语言。",
+     "py": "Wǒ huì shuō sān mén yǔyán.",
+     "vi": "Tôi nói được ba thứ tiếng."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "写作需要大量阅读。",
+   "py": "Xiězuò xūyào dàliàng yuèdú.",
+   "vi": "Viết văn cần đọc rất nhiều."
+  },
+  {
+   "cn": "演讲以后，很多人举手提问。",
+   "py": "Yǎnjiǎng yǐhòu, hěn duō rén jǔ shǒu tíwèn.",
+   "vi": "Sau bài diễn thuyết, nhiều người giơ tay đặt câu hỏi."
+  },
+  {
+   "cn": "书法是中国传统文化的一部分。",
+   "py": "Shūfǎ shì Zhōngguó chuántǒng wénhuà de yí bùfen.",
+   "vi": "Thư pháp là một phần văn hoá truyền thống Trung Quốc."
+  }
+ ]
+}
