@@ -322,3 +322,7 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 .login-input { width: 100%; font-size: 17px; }
 .login-msg { min-height: 20px; color: var(--ink-soft); }
 .login-msg.bad { color: var(--seal); }
+
+/* ---- tranh luận chặng 3 ---- */
+.debate-sides { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 620px) { .debate-sides { grid-template-columns: 1fr; } }

@@ -88,7 +88,12 @@ export function applyEnBank() {
    en-new-*.txt: từ | phiên âm | từ loại | nghĩa | câu ví dụ | nghĩa câu ví dụ
    Dòng "@lv 3" hoặc "@lv 4" đặt cấp cho các dòng phía dưới (3 = B1, 4 = B2). */
 export function applyEnNew() {
-  const files = fs.readdirSync(PATCH).filter((x) => /^en-new-.*\.txt$/.test(x)).sort();
+  applyWordList(/^en-new-.*\.txt$/, 'b1b2', 'vocabB2', 4, 'Từ mới B1–B2');
+  applyWordList(/^en-c1-.*\.txt$/, 'b2c1', 'vocabC1', 5, 'Từ mới B2–C1');
+}
+
+function applyWordList(pattern, tag, courseKey, defLv, label) {
+  const files = fs.readdirSync(PATCH).filter((x) => pattern.test(x)).sort();
   if (!files.length) return;
   const bankF = path.join(OUT, 'en', 'bank.json');
   const dictF = path.join(OUT, 'en', 'dict.json');
@@ -100,7 +105,7 @@ export function applyEnNew() {
   const list = [];
   let added = 0;
   for (const name of files) {
-    let lv = 4;
+    let lv = defLv;
     fs.readFileSync(path.join(PATCH, name), 'utf8').split(/\r?\n/).forEach((line, i) => {
       const t = line.trim();
       if (!t || t.startsWith('#')) return;
@@ -109,18 +114,18 @@ export function applyEnNew() {
       if (p.length !== 6) throw new Error(`${name}:${i + 1} cần đủ 6 cột: ${t}`);
       const [w, ipa, pos, vi, ex, exVi] = p;
       const k = key(w);
-      const row = [w, ipa, pos, vi, ex, exVi, 'b1b2', lv];
-      if (have.has(k)) { const r = have.get(k); if (r[6] === 'b1b2') row.forEach((v, j) => { r[j] = v; }); }
+      const row = [w, ipa, pos, vi, ex, exVi, tag, lv];
+      if (have.has(k)) { const r = have.get(k); if (r[6] === tag) row.forEach((v, j) => { r[j] = v; }); }
       else { bank.push(row); have.set(k, row); added++; }
       dict[k] = [vi, ipa];
       list.push([w, vi]);
     });
   }
-  course.vocabB2 = list;
+  course[courseKey] = list;
   fs.writeFileSync(bankF, JSON.stringify(bank));
   fs.writeFileSync(dictF, JSON.stringify(dict));
   fs.writeFileSync(courseF, JSON.stringify(course));
-  log.push(`Từ mới B1–B2: ${list.length} từ (thêm mới ${added})`);
+  log.push(`${label}: ${list.length} từ (thêm mới ${added})`);
 }
 
 /* 3. Phiên âm trong chủ đề: thay theo bảng từ -> IPA */
@@ -149,6 +154,16 @@ export function applyCourse() {
   course.stages.forEach((st, i) => { if (fix[i]) Object.assign(st, fix[i]); });
   const blocks = readJson(f).blocks || {};
   for (const [k, v] of Object.entries(blocks)) course.blocks[k] = v;
+  // Nội dung chặng 3: ngôn ngữ tranh luận, đề tranh luận, đề viết luận
+  const S3 = { colloc3: 'stage3-colloc.json', debate3: 'stage3-debate.json', writeTasks3: 'stage3-write.json' };
+  const CHECK = ['Mỗi đoạn có một câu chủ đề rõ ràng không', 'Có dùng ít nhất ba cụm từ tranh luận đã học không',
+    'Câu nào dài quá 25 từ thì cắt đôi', 'Động từ có chia đúng với chủ ngữ số ít, số nhiều không'];
+  for (const [k, file] of Object.entries(S3)) {
+    const p = path.join(PATCH, file);
+    if (!fs.existsSync(p)) continue;
+    course[k] = readJson(p);
+    if (k === 'writeTasks3') course[k] = course[k].map((t, i) => ({ id: `w3-${i + 1}`, check: CHECK, ...t }));
+  }
   fs.writeFileSync(cf, JSON.stringify(course));
   log.push(`Chặng tiếng Anh: ${Object.keys(fix).length} ghi chú`);
 }

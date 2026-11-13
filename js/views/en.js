@@ -193,6 +193,16 @@ async function activity(key) {
       const t = course.writeTasks[i % course.writeTasks.length];
       return writeBlock(key, { title: t.t, hint: (t.struct || []).join(' · '), min: t.w, tag: t.g, level });
     }
+    case 'coll3': {
+      const th = course.colloc3[i % course.colloc3.length];
+      const k = Math.floor(i / course.colloc3.length) % 3;
+      return collBlock(key, th.t, th.v.slice(k * 5, k * 5 + 5));
+    }
+    case 'debate': return debateBlock(key, course.debate3[i % course.debate3.length], level);
+    case 'write3b': {
+      const t = course.writeTasks3[i % course.writeTasks3.length];
+      return writeBlock(key, { title: t.t, hint: [...(t.struct || []), '', 'Tự soát: ' + (t.check || []).join(' · ')].join('\n'), min: t.w, tag: t.g, level });
+    }
     case 'coll': {
       const th = course.colloc[i % course.colloc.length];
       const k = Math.floor(i / course.colloc.length) % 3;
@@ -458,6 +468,27 @@ function collBlock(key, title, rows) {
   return { title: 'Cụm từ cố định', el: h('div.stack', h('h2', title), list, doneBtn(key)) };
 }
 
+/* ---- tranh luận: đọc hai phía, chọn phe, nói 4 phút ---- */
+function debateBlock(key, d, level) {
+  const side = (title, pts) => h('div.card', { style: { padding: '12px' } },
+    h('b', title),
+    h('ul', { style: { margin: '6px 0 0', paddingLeft: '20px' } },
+      ...pts.map(([en, vi]) => h('li', { style: { margin: '6px 0' } }, wordy(en), h('div.small.faint', vi)))));
+  const view = retellBlock(key, {
+    t: d.t,
+    hint: `${d.vi}\nChọn một phía. Nói khoảng 4 phút: quan điểm, hai lý do có ví dụ, phản biện phía kia, kết luận.`,
+    sec: 240,
+  }, level);
+  view.title = 'Tranh luận';
+  view.el.prepend(
+    h('div.debate-sides', side('Ủng hộ', d.for), side('Phản đối', d.against)),
+    h('div.card', { style: { padding: '12px' } },
+      h('b', 'Cụm nên dùng hôm nay: '),
+      ...d.use.map((u) => h('span.pill.jade', { style: { margin: '2px 4px' } }, u))),
+  );
+  return view;
+}
+
 /* ---- nói lại bằng lời của mình ---- */
 function retellBlock(key, t, level) {
   const clock = h('div.score-big', `${t.sec}s`);
@@ -478,7 +509,7 @@ function retellBlock(key, t, level) {
   return {
     title: 'Nói lại',
     el: h('div.stack',
-      h('div.card', h('h3', t.t), t.hint ? h('p.small.muted', { style: { marginTop: '6px' } }, t.hint) : null,
+      h('div.card', h('h3', t.t), t.hint ? h('p.small.muted', { style: { marginTop: '6px', whiteSpace: 'pre-wrap' } }, t.hint) : null,
         h('div.center', { style: { margin: '14px 0' } }, clock), startBtn),
       h('div.card.stack',
         h('h4', 'Chấm bài nói bằng AI (không bắt buộc)'),
