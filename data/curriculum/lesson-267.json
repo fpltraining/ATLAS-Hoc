@@ -1,0 +1,264 @@
+{
+ "id": 267,
+ "cn": "新郎和新娘",
+ "title": "Gia đình và đám cưới",
+ "goal": "Nói về ông bà ngoại, chú rể, cô dâu, đôi tân hôn, tiền lì xì, chung sống, album ảnh, mỉm cười, ấm áp, bắt tay, nghịch ngợm, đồ chơi, dép lê và phòng ngủ.",
+ "words": [
+  {
+   "w": "外公",
+   "py": "wàigōng",
+   "hv": "ngoại công",
+   "vi": "ông ngoại",
+   "pos": "danh từ",
+   "note": "Miền Nam Trung Quốc hay dùng; giống 姥爷.",
+   "ex": [
+    {
+     "cn": "外公以前是一名老师。",
+     "py": "Wàigōng yǐqián shì yì míng lǎoshī.",
+     "vi": "Ông ngoại trước đây là giáo viên."
+    }
+   ]
+  },
+  {
+   "w": "外婆",
+   "py": "wàipó",
+   "hv": "ngoại bà",
+   "vi": "bà ngoại",
+   "pos": "danh từ",
+   "note": "Giống 姥姥.",
+   "ex": [
+    {
+     "cn": "外婆做的菜最好吃。",
+     "py": "Wàipó zuò de cài zuì hǎochī.",
+     "vi": "Món bà ngoại nấu ngon nhất."
+    }
+   ]
+  },
+  {
+   "w": "新郎",
+   "py": "xīnláng",
+   "hv": "tân lang",
+   "vi": "chú rể",
+   "pos": "danh từ",
+   "note": "Chính là \"tân lang\".",
+   "ex": [
+    {
+     "cn": "新郎今天特别帅。",
+     "py": "Xīnláng jīntiān tèbié shuài.",
+     "vi": "Chú rể hôm nay đẹp trai lắm."
+    }
+   ]
+  },
+  {
+   "w": "新娘",
+   "py": "xīnniáng",
+   "hv": "tân nương",
+   "vi": "cô dâu",
+   "pos": "danh từ",
+   "note": "Chính là \"tân nương\".",
+   "ex": [
+    {
+     "cn": "新娘穿着白色的婚纱。",
+     "py": "Xīnniáng chuān zhe báisè de hūnshā.",
+     "vi": "Cô dâu mặc váy cưới màu trắng."
+    }
+   ]
+  },
+  {
+   "w": "新人",
+   "py": "xīnrén",
+   "hv": "tân nhân",
+   "vi": "người mới; đôi tân hôn",
+   "pos": "danh từ",
+   "note": "队里的新人 (lính mới trong đội).",
+   "ex": [
+    {
+     "cn": "他是队里的新人。",
+     "py": "Tā shì duì li de xīnrén.",
+     "vi": "Cậu ấy là người mới trong đội."
+    }
+   ]
+  },
+  {
+   "w": "压岁钱",
+   "py": "yāsuìqián",
+   "hv": "áp tuế tiền",
+   "vi": "tiền lì xì",
+   "pos": "danh từ",
+   "note": "Tiền mừng tuổi ngày Tết.",
+   "ex": [
+    {
+     "cn": "孩子们最喜欢过年收压岁钱。",
+     "py": "Háizimen zuì xǐhuan guònián shōu yāsuìqián.",
+     "vi": "Trẻ con thích nhất là Tết được nhận lì xì."
+    }
+   ]
+  },
+  {
+   "w": "相处",
+   "py": "xiāngchǔ",
+   "hv": "tương xử",
+   "vi": "chung sống, cư xử với nhau",
+   "pos": "động từ",
+   "note": "相处得很好 (hoà hợp).",
+   "ex": [
+    {
+     "cn": "队员之间相处得很好。",
+     "py": "Duìyuán zhījiān xiāngchǔ de hěn hǎo.",
+     "vi": "Các thành viên hoà hợp với nhau rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "相册",
+   "py": "xiàngcè",
+   "hv": "tướng sách",
+   "vi": "album ảnh",
+   "pos": "danh từ",
+   "note": "相 ở đây đọc xiàng (ảnh).",
+   "ex": [
+    {
+     "cn": "手机相册里有很多比赛照片。",
+     "py": "Shǒujī xiàngcè li yǒu hěn duō bǐsài zhàopiàn.",
+     "vi": "Album điện thoại có nhiều ảnh thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "微笑",
+   "py": "wēixiào",
+   "hv": "vi tiếu",
+   "vi": "mỉm cười",
+   "pos": "động từ, danh từ",
+   "note": "微 (nhỏ) + 笑.",
+   "ex": [
+    {
+     "cn": "她总是面带微笑。",
+     "py": "Tā zǒngshì miàn dài wēixiào.",
+     "vi": "Cô ấy lúc nào cũng mỉm cười."
+    }
+   ]
+  },
+  {
+   "w": "温暖",
+   "py": "wēnnuǎn",
+   "hv": "ôn noãn",
+   "vi": "ấm áp",
+   "pos": "tính từ",
+   "note": "Chính là \"ôn noãn\".",
+   "ex": [
+    {
+     "cn": "家是最温暖的地方。",
+     "py": "Jiā shì zuì wēnnuǎn de dìfang.",
+     "vi": "Nhà là nơi ấm áp nhất."
+    }
+   ]
+  },
+  {
+   "w": "握手",
+   "py": "wòshǒu",
+   "hv": "ác thủ",
+   "vi": "bắt tay",
+   "pos": "động từ",
+   "note": "握 là nắm.",
+   "ex": [
+    {
+     "cn": "比赛结束后，双方选手握手。",
+     "py": "Bǐsài jiéshù hòu, shuāngfāng xuǎnshǒu wòshǒu.",
+     "vi": "Hết trận, tuyển thủ hai đội bắt tay nhau."
+    }
+   ]
+  },
+  {
+   "w": "调皮",
+   "py": "tiáopí",
+   "hv": "điều bì",
+   "vi": "nghịch ngợm",
+   "pos": "tính từ",
+   "note": "Thường nói về trẻ con.",
+   "ex": [
+    {
+     "cn": "我弟弟小时候很调皮。",
+     "py": "Wǒ dìdi xiǎoshíhou hěn tiáopí.",
+     "vi": "Hồi nhỏ em trai tôi rất nghịch."
+    }
+   ]
+  },
+  {
+   "w": "玩具",
+   "py": "wánjù",
+   "hv": "ngoạn cụ",
+   "vi": "đồ chơi",
+   "pos": "danh từ",
+   "note": "玩 (chơi) + 具 (đồ).",
+   "ex": [
+    {
+     "cn": "地上都是孩子的玩具。",
+     "py": "Dìshang dōu shì háizi de wánjù.",
+     "vi": "Dưới sàn toàn đồ chơi của trẻ con."
+    }
+   ]
+  },
+  {
+   "w": "拖鞋",
+   "py": "tuōxié",
+   "hv": "tha hài",
+   "vi": "dép lê",
+   "pos": "danh từ",
+   "note": "拖 là kéo lê.",
+   "ex": [
+    {
+     "cn": "进门请换拖鞋。",
+     "py": "Jìn mén qǐng huàn tuōxié.",
+     "vi": "Vào nhà xin đổi dép."
+    }
+   ]
+  },
+  {
+   "w": "卧室",
+   "py": "wòshì",
+   "hv": "ngoạ thất",
+   "vi": "phòng ngủ",
+   "pos": "danh từ",
+   "note": "卧 là nằm.",
+   "ex": [
+    {
+     "cn": "我的卧室很小，但是很舒服。",
+     "py": "Wǒ de wòshì hěn xiǎo, dànshì hěn shūfu.",
+     "vi": "Phòng ngủ của tôi nhỏ nhưng thoải mái."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "面带 + 微笑",
+   "b": "面带微笑",
+   "d": "Văn viết: trên mặt mang (nụ cười).",
+   "ex": [
+    {
+     "cn": "他面带微笑地走上了舞台。",
+     "py": "Tā miàn dài wēixiào de zǒu shàng le wǔtái.",
+     "vi": "Anh ấy mỉm cười bước lên sân khấu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "祝新郎新娘幸福美满！",
+   "py": "Zhù xīnláng xīnniáng xìngfú měimǎn!",
+   "vi": "Chúc cô dâu chú rể hạnh phúc trọn vẹn!"
+  },
+  {
+   "cn": "和家人相处的时间最温暖。",
+   "py": "Hé jiārén xiāngchǔ de shíjiān zuì wēnnuǎn.",
+   "vi": "Khoảng thời gian bên gia đình là ấm áp nhất."
+  },
+  {
+   "cn": "过年的时候，外婆给了我很多压岁钱。",
+   "py": "Guònián de shíhou, wàipó gěi le wǒ hěn duō yāsuìqián.",
+   "vi": "Tết, bà ngoại cho tôi nhiều tiền lì xì."
+  }
+ ]
+}

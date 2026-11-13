@@ -1,0 +1,264 @@
+{
+ "id": 274,
+ "cn": "沿着铁路走",
+ "title": "Đường đi và vị trí",
+ "goal": "Nói về đường sắt, thông hành, chạy xe, người đi bộ, đi lại, lịch trình, khứ hồi, dừng lại, dọc theo, nằm ở, vị trí, khắp nơi, xung quanh, huyện và nông thôn.",
+ "words": [
+  {
+   "w": "铁路",
+   "py": "tiělù",
+   "hv": "thiết lộ",
+   "vi": "đường sắt",
+   "pos": "danh từ",
+   "note": "铁 (sắt) + 路.",
+   "ex": [
+    {
+     "cn": "这条铁路连接河内和胡志明市。",
+     "py": "Zhè tiáo tiělù liánjiē Hénèi hé Húzhìmíng Shì.",
+     "vi": "Tuyến đường sắt này nối Hà Nội với TP Hồ Chí Minh."
+    }
+   ]
+  },
+  {
+   "w": "通行",
+   "py": "tōngxíng",
+   "hv": "thông hành",
+   "vi": "đi qua, lưu thông",
+   "pos": "động từ",
+   "note": "禁止通行 (cấm đi qua).",
+   "ex": [
+    {
+     "cn": "前面修路，禁止通行。",
+     "py": "Qiánmiàn xiū lù, jìnzhǐ tōngxíng.",
+     "vi": "Phía trước sửa đường, cấm lưu thông."
+    }
+   ]
+  },
+  {
+   "w": "行驶",
+   "py": "xíngshǐ",
+   "hv": "hành sử",
+   "vi": "chạy (xe)",
+   "pos": "động từ",
+   "note": "安全行驶 (lái an toàn).",
+   "ex": [
+    {
+     "cn": "汽车在高速公路上行驶。",
+     "py": "Qìchē zài gāosù gōnglù shang xíngshǐ.",
+     "vi": "Ô tô chạy trên đường cao tốc."
+    }
+   ]
+  },
+  {
+   "w": "行人",
+   "py": "xíngrén",
+   "hv": "hành nhân",
+   "vi": "người đi bộ",
+   "pos": "danh từ",
+   "note": "Chính là \"hành nhân\".",
+   "ex": [
+    {
+     "cn": "开车要注意行人。",
+     "py": "Kāichē yào zhùyì xíngrén.",
+     "vi": "Lái xe phải chú ý người đi bộ."
+    }
+   ]
+  },
+  {
+   "w": "行走",
+   "py": "xíngzǒu",
+   "hv": "hành tẩu",
+   "vi": "đi bộ, đi lại",
+   "pos": "động từ",
+   "note": "Văn viết của 走.",
+   "ex": [
+    {
+     "cn": "这里只能步行行走。",
+     "py": "Zhèlǐ zhǐ néng bùxíng xíngzǒu.",
+     "vi": "Ở đây chỉ được đi bộ."
+    }
+   ]
+  },
+  {
+   "w": "行程",
+   "py": "xíngchéng",
+   "hv": "hành trình",
+   "vi": "lịch trình",
+   "pos": "danh từ",
+   "note": "行程安排 (sắp xếp lịch trình).",
+   "ex": [
+    {
+     "cn": "这次比赛的行程很紧。",
+     "py": "Zhè cì bǐsài de xíngchéng hěn jǐn.",
+     "vi": "Lịch trình giải đấu lần này rất dày."
+    }
+   ]
+  },
+  {
+   "w": "往返",
+   "py": "wǎngfǎn",
+   "hv": "vãng phản",
+   "vi": "khứ hồi",
+   "pos": "động từ",
+   "note": "往返机票 (vé khứ hồi).",
+   "ex": [
+    {
+     "cn": "我买了往返机票。",
+     "py": "Wǒ mǎi le wǎngfǎn jīpiào.",
+     "vi": "Tôi mua vé máy bay khứ hồi."
+    }
+   ]
+  },
+  {
+   "w": "停留",
+   "py": "tíngliú",
+   "hv": "đình lưu",
+   "vi": "dừng lại, lưu lại",
+   "pos": "động từ",
+   "note": "停留三天 (ở lại ba ngày).",
+   "ex": [
+    {
+     "cn": "我们在上海停留了三天。",
+     "py": "Wǒmen zài Shànghǎi tíngliú le sān tiān.",
+     "vi": "Chúng tôi lưu lại Thượng Hải ba ngày."
+    }
+   ]
+  },
+  {
+   "w": "沿",
+   "py": "yán",
+   "hv": "duyên",
+   "vi": "dọc theo",
+   "pos": "giới từ",
+   "note": "沿着河走 (đi dọc sông).",
+   "ex": [
+    {
+     "cn": "我们沿着河边散步。",
+     "py": "Wǒmen yán zhe hé biān sànbù.",
+     "vi": "Chúng tôi đi dạo dọc bờ sông."
+    }
+   ]
+  },
+  {
+   "w": "位于",
+   "py": "wèiyú",
+   "hv": "vị vu",
+   "vi": "nằm ở",
+   "pos": "động từ",
+   "note": "Văn viết.",
+   "ex": [
+    {
+     "cn": "河内位于越南北部。",
+     "py": "Hénèi wèiyú Yuènán běibù.",
+     "vi": "Hà Nội nằm ở miền Bắc Việt Nam."
+    }
+   ]
+  },
+  {
+   "w": "位置",
+   "py": "wèizhi",
+   "hv": "vị trí",
+   "vi": "vị trí",
+   "pos": "danh từ",
+   "note": "Chính là \"vị trí\".",
+   "ex": [
+    {
+     "cn": "你在队里打什么位置？",
+     "py": "Nǐ zài duì li dǎ shénme wèizhi?",
+     "vi": "Bạn chơi vị trí gì trong đội?"
+    }
+   ]
+  },
+  {
+   "w": "四处",
+   "py": "sìchù",
+   "hv": "tứ xứ",
+   "vi": "khắp nơi",
+   "pos": "danh từ",
+   "note": "四处寻找 (tìm khắp nơi).",
+   "ex": [
+    {
+     "cn": "他四处寻找丢失的钱包。",
+     "py": "Tā sìchù xúnzhǎo diūshī de qiánbāo.",
+     "vi": "Anh ấy tìm khắp nơi chiếc ví bị mất."
+    }
+   ]
+  },
+  {
+   "w": "四周",
+   "py": "sìzhōu",
+   "hv": "tứ chu",
+   "vi": "xung quanh",
+   "pos": "danh từ",
+   "note": "四周都是山 (xung quanh toàn núi).",
+   "ex": [
+    {
+     "cn": "房子四周都是树。",
+     "py": "Fángzi sìzhōu dōu shì shù.",
+     "vi": "Xung quanh nhà toàn cây."
+    }
+   ]
+  },
+  {
+   "w": "县",
+   "py": "xiàn",
+   "hv": "huyện",
+   "vi": "huyện",
+   "pos": "danh từ",
+   "note": "Chính là \"huyện\".",
+   "ex": [
+    {
+     "cn": "他来自一个小县城。",
+     "py": "Tā láizì yí ge xiǎo xiànchéng.",
+     "vi": "Anh ấy đến từ một thị trấn huyện nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "乡村",
+   "py": "xiāngcūn",
+   "hv": "hương thôn",
+   "vi": "nông thôn",
+   "pos": "danh từ",
+   "note": "Trái với 城市.",
+   "ex": [
+    {
+     "cn": "乡村的空气很新鲜。",
+     "py": "Xiāngcūn de kōngqì hěn xīnxiān.",
+     "vi": "Không khí nông thôn rất trong lành."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "沿着 + nơi + V",
+   "b": "沿着河边散步",
+   "d": "Làm gì dọc theo đâu.",
+   "ex": [
+    {
+     "cn": "沿着这条路一直走就到了。",
+     "py": "Yán zhe zhè tiáo lù yìzhí zǒu jiù dào le.",
+     "vi": "Cứ đi thẳng theo con đường này là tới."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "这次行程我们先去北京，再去上海。",
+   "py": "Zhè cì xíngchéng wǒmen xiān qù Běijīng, zài qù Shànghǎi.",
+   "vi": "Lịch trình lần này chúng tôi đi Bắc Kinh trước, rồi Thượng Hải."
+  },
+  {
+   "cn": "比赛场馆位于市中心。",
+   "py": "Bǐsài chǎngguǎn wèiyú shì zhōngxīn.",
+   "vi": "Nhà thi đấu nằm ở trung tâm thành phố."
+  },
+  {
+   "cn": "每个位置都有自己的责任。",
+   "py": "Měi ge wèizhi dōu yǒu zìjǐ de zérèn.",
+   "vi": "Mỗi vị trí đều có trách nhiệm riêng."
+  }
+ ]
+}

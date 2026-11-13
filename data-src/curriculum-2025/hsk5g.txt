@@ -1,0 +1,411 @@
+# Bài cấp 5 theo chuẩn HSK 2025 (phần 7), học sau bài 265.
+
+@id 266
+@after 265
+@cn 团队和选手
+@title Đội tuyển và tuyển thủ
+@goal Nói về đội, tuyển thủ, tập luyện, thử thách, tuyển chọn, điều chỉnh, dồn sức, thống kê, thống nhất, đề cử, rút lui, hành động, sân khấu và hiện trường.
+W 团队 | tuánduì | đoàn đội | đội, nhóm | danh từ | 团队精神 (tinh thần đồng đội).
+E 团队精神比个人能力更重要。 | Tuánduì jīngshén bǐ gèrén nénglì gèng zhòngyào. | Tinh thần đồng đội quan trọng hơn năng lực cá nhân.
+W 团 | tuán | đoàn | đoàn, nhóm; viên tròn | danh từ, lượng từ | 旅游团 (đoàn du lịch).
+E 我们跟旅游团去北京。 | Wǒmen gēn lǚyóutuán qù Běijīng. | Chúng tôi theo đoàn du lịch đi Bắc Kinh.
+W 选手 | xuǎnshǒu | tuyển thủ | tuyển thủ | danh từ | Chính là "tuyển thủ".
+E 他是我们队最年轻的选手。 | Tā shì wǒmen duì zuì niánqīng de xuǎnshǒu. | Cậu ấy là tuyển thủ trẻ nhất đội.
+W 训练 | xùnliàn | huấn luyện | tập luyện, huấn luyện | động từ, danh từ | Chính là "huấn luyện".
+E 我们每天训练八个小时。 | Wǒmen měi tiān xùnliàn bā ge xiǎoshí. | Chúng tôi tập tám tiếng mỗi ngày.
+W 挑战 | tiǎozhàn | khiêu chiến | thử thách | danh từ, động từ | 接受挑战 (nhận thử thách).
+E 这次比赛对我们是一个大挑战。 | Zhè cì bǐsài duì wǒmen shì yí ge dà tiǎozhàn. | Giải này là thử thách lớn với chúng tôi.
+W 挑选 | tiāoxuǎn | thiêu tuyển | chọn lựa | động từ | 挑 ở đây đọc tiāo.
+E 教练从十个人里挑选了五个人。 | Jiàoliàn cóng shí ge rén li tiāoxuǎn le wǔ ge rén. | Huấn luyện viên chọn năm người trong mười người.
+W 调整 | tiáozhěng | điều chỉnh | điều chỉnh | động từ | 调 ở đây đọc tiáo.
+E 输了第一局以后，我们调整了战术。 | Shū le dì yī jú yǐhòu, wǒmen tiáozhěng le zhànshù. | Thua ván đầu, chúng tôi điều chỉnh chiến thuật.
+W 投入 | tóurù | đầu nhập | dồn sức; đầu tư | động từ, tính từ | 全身心投入 (dồn hết tâm sức).
+E 他打比赛的时候非常投入。 | Tā dǎ bǐsài de shíhou fēicháng tóurù. | Khi thi đấu anh ấy cực kỳ nhập tâm.
+W 统计 | tǒngjì | thống kê | thống kê | động từ, danh từ | Chính là "thống kê".
+E 根据统计，我们的胜率是百分之七十。 | Gēnjù tǒngjì, wǒmen de shènglǜ shì bǎi fēnzhī qīshí. | Theo thống kê, tỉ lệ thắng của chúng tôi là 70%.
+W 统一 | tǒngyī | thống nhất | thống nhất, đồng bộ | động từ, tính từ | Chính là "thống nhất".
+E 大家的意见终于统一了。 | Dàjiā de yìjiàn zhōngyú tǒngyī le. | Ý kiến mọi người cuối cùng đã thống nhất.
+W 推荐 | tuījiàn | thôi tiến | giới thiệu, đề cử | động từ | 推荐一本书 (giới thiệu một cuốn sách).
+E 你能给我推荐一家好饭馆吗？ | Nǐ néng gěi wǒ tuījiàn yì jiā hǎo fànguǎn ma? | Bạn giới thiệu cho tôi một quán ngon được không?
+W 退出 | tuìchū | thoái xuất | rút lui, thoát ra | động từ | 退出比赛 (rút khỏi giải).
+E 他因为受伤退出了比赛。 | Tā yīnwèi shòushāng tuìchū le bǐsài. | Anh ấy rút khỏi giải vì chấn thương.
+W 行动 | xíngdòng | hành động | hành động | danh từ, động từ | Chính là "hành động".
+E 说得再好，不如马上行动。 | Shuō de zài hǎo, bùrú mǎshàng xíngdòng. | Nói hay mấy cũng không bằng hành động ngay.
+W 舞台 | wǔtái | vũ đài | sân khấu | danh từ | Chính là "vũ đài".
+E 这是他第一次站上国际舞台。 | Zhè shì tā dì yī cì zhàn shàng guójì wǔtái. | Đây là lần đầu anh ấy đứng trên sân khấu quốc tế.
+W 现场 | xiànchǎng | hiện trường | tại chỗ, trực tiếp | danh từ | 现场观众 (khán giả tại chỗ).
+E 现场有一万名观众。 | Xiànchǎng yǒu yí wàn míng guānzhòng. | Tại chỗ có mười nghìn khán giả.
+G 挑 có hai cách đọc | tiāo: chọn (挑选) · tiǎo: khiêu (挑战) | Nhớ theo từ ghép.
+E 你挑一个你喜欢的吧。 | Nǐ tiāo yí ge nǐ xǐhuan de ba. | Bạn chọn một cái bạn thích đi.
+S 好的团队需要每个选手都投入。 | Hǎo de tuánduì xūyào měi ge xuǎnshǒu dōu tóurù. | Một đội tốt cần mọi tuyển thủ đều dốc sức.
+S 比赛中要根据情况及时调整。 | Bǐsài zhōng yào gēnjù qíngkuàng jíshí tiáozhěng. | Trong trận phải điều chỉnh kịp thời theo tình hình.
+S 现场的气氛非常热烈。 | Xiànchǎng de qìfēn fēicháng rèliè. | Không khí tại chỗ cực kỳ sôi động.
+
+@id 267
+@after 266
+@cn 新郎和新娘
+@title Gia đình và đám cưới
+@goal Nói về ông bà ngoại, chú rể, cô dâu, đôi tân hôn, tiền lì xì, chung sống, album ảnh, mỉm cười, ấm áp, bắt tay, nghịch ngợm, đồ chơi, dép lê và phòng ngủ.
+W 外公 | wàigōng | ngoại công | ông ngoại | danh từ | Miền Nam Trung Quốc hay dùng; giống 姥爷.
+E 外公以前是一名老师。 | Wàigōng yǐqián shì yì míng lǎoshī. | Ông ngoại trước đây là giáo viên.
+W 外婆 | wàipó | ngoại bà | bà ngoại | danh từ | Giống 姥姥.
+E 外婆做的菜最好吃。 | Wàipó zuò de cài zuì hǎochī. | Món bà ngoại nấu ngon nhất.
+W 新郎 | xīnláng | tân lang | chú rể | danh từ | Chính là "tân lang".
+E 新郎今天特别帅。 | Xīnláng jīntiān tèbié shuài. | Chú rể hôm nay đẹp trai lắm.
+W 新娘 | xīnniáng | tân nương | cô dâu | danh từ | Chính là "tân nương".
+E 新娘穿着白色的婚纱。 | Xīnniáng chuān zhe báisè de hūnshā. | Cô dâu mặc váy cưới màu trắng.
+W 新人 | xīnrén | tân nhân | người mới; đôi tân hôn | danh từ | 队里的新人 (lính mới trong đội).
+E 他是队里的新人。 | Tā shì duì li de xīnrén. | Cậu ấy là người mới trong đội.
+W 压岁钱 | yāsuìqián | áp tuế tiền | tiền lì xì | danh từ | Tiền mừng tuổi ngày Tết.
+E 孩子们最喜欢过年收压岁钱。 | Háizimen zuì xǐhuan guònián shōu yāsuìqián. | Trẻ con thích nhất là Tết được nhận lì xì.
+W 相处 | xiāngchǔ | tương xử | chung sống, cư xử với nhau | động từ | 相处得很好 (hoà hợp).
+E 队员之间相处得很好。 | Duìyuán zhījiān xiāngchǔ de hěn hǎo. | Các thành viên hoà hợp với nhau rất tốt.
+W 相册 | xiàngcè | tướng sách | album ảnh | danh từ | 相 ở đây đọc xiàng (ảnh).
+E 手机相册里有很多比赛照片。 | Shǒujī xiàngcè li yǒu hěn duō bǐsài zhàopiàn. | Album điện thoại có nhiều ảnh thi đấu.
+W 微笑 | wēixiào | vi tiếu | mỉm cười | động từ, danh từ | 微 (nhỏ) + 笑.
+E 她总是面带微笑。 | Tā zǒngshì miàn dài wēixiào. | Cô ấy lúc nào cũng mỉm cười.
+W 温暖 | wēnnuǎn | ôn noãn | ấm áp | tính từ | Chính là "ôn noãn".
+E 家是最温暖的地方。 | Jiā shì zuì wēnnuǎn de dìfang. | Nhà là nơi ấm áp nhất.
+W 握手 | wòshǒu | ác thủ | bắt tay | động từ | 握 là nắm.
+E 比赛结束后，双方选手握手。 | Bǐsài jiéshù hòu, shuāngfāng xuǎnshǒu wòshǒu. | Hết trận, tuyển thủ hai đội bắt tay nhau.
+W 调皮 | tiáopí | điều bì | nghịch ngợm | tính từ | Thường nói về trẻ con.
+E 我弟弟小时候很调皮。 | Wǒ dìdi xiǎoshíhou hěn tiáopí. | Hồi nhỏ em trai tôi rất nghịch.
+W 玩具 | wánjù | ngoạn cụ | đồ chơi | danh từ | 玩 (chơi) + 具 (đồ).
+E 地上都是孩子的玩具。 | Dìshang dōu shì háizi de wánjù. | Dưới sàn toàn đồ chơi của trẻ con.
+W 拖鞋 | tuōxié | tha hài | dép lê | danh từ | 拖 là kéo lê.
+E 进门请换拖鞋。 | Jìn mén qǐng huàn tuōxié. | Vào nhà xin đổi dép.
+W 卧室 | wòshì | ngoạ thất | phòng ngủ | danh từ | 卧 là nằm.
+E 我的卧室很小，但是很舒服。 | Wǒ de wòshì hěn xiǎo, dànshì hěn shūfu. | Phòng ngủ của tôi nhỏ nhưng thoải mái.
+G 面带 + 微笑 | 面带微笑 | Văn viết: trên mặt mang (nụ cười).
+E 他面带微笑地走上了舞台。 | Tā miàn dài wēixiào de zǒu shàng le wǔtái. | Anh ấy mỉm cười bước lên sân khấu.
+S 祝新郎新娘幸福美满！ | Zhù xīnláng xīnniáng xìngfú měimǎn! | Chúc cô dâu chú rể hạnh phúc trọn vẹn!
+S 和家人相处的时间最温暖。 | Hé jiārén xiāngchǔ de shíjiān zuì wēnnuǎn. | Khoảng thời gian bên gia đình là ấm áp nhất.
+S 过年的时候，外婆给了我很多压岁钱。 | Guònián de shíhou, wàipó gěi le wǒ hěn duō yāsuìqián. | Tết, bà ngoại cho tôi nhiều tiền lì xì.
+
+@id 268
+@after 267
+@cn 网络和系统
+@title Mạng và dịch vụ
+@goal Nói về mạng, hệ thống, tải xuống, hiển thị, sửa chữa, sửa đổi, điền, phiếu khảo sát, vô hiệu, tuyến, tín dụng, tiền đặt cọc, hoàn trả, thủ tục và nghiệp vụ.
+W 网络 | wǎngluò | võng lạc | mạng, internet | danh từ | 网络游戏 (game online).
+E 今天网络很慢。 | Jīntiān wǎngluò hěn màn. | Hôm nay mạng rất chậm.
+W 系统 | xìtǒng | hệ thống | hệ thống | danh từ | Chính là "hệ thống".
+E 系统出了问题，请稍等。 | Xìtǒng chū le wèntí, qǐng shāo děng. | Hệ thống có sự cố, xin chờ chút.
+W 下载 | xiàzài | hạ tải | tải xuống | động từ | Trái nghĩa 上传.
+E 先下载这个软件。 | Xiān xiàzài zhège ruǎnjiàn. | Trước tiên tải phần mềm này về.
+W 显示 | xiǎnshì | hiển thị | hiển thị; cho thấy | động từ | 屏幕显示 (màn hình hiện).
+E 屏幕上显示比赛时间。 | Píngmù shang xiǎnshì bǐsài shíjiān. | Màn hình hiển thị giờ thi đấu.
+W 维修 | wéixiū | duy tu | sửa chữa, bảo dưỡng | động từ | 维修电脑 (sửa máy tính).
+E 电梯正在维修。 | Diàntī zhèngzài wéixiū. | Thang máy đang sửa.
+W 修改 | xiūgǎi | tu cải | sửa đổi | động từ | 修改文章 (sửa bài).
+E 请帮我修改一下这篇作文。 | Qǐng bāng wǒ xiūgǎi yíxià zhè piān zuòwén. | Hãy sửa giúp tôi bài văn này.
+W 填 | tián | điền | điền; lấp | động từ | 填表 (điền bảng).
+E 请先填这张表。 | Qǐng xiān tián zhè zhāng biǎo. | Xin điền tờ đơn này trước.
+W 问卷 | wènjuàn | vấn quyển | phiếu khảo sát | danh từ | 问卷调查 (khảo sát bằng phiếu).
+E 请花五分钟填一下问卷。 | Qǐng huā wǔ fēnzhōng tián yíxià wènjuàn. | Xin dành năm phút điền phiếu khảo sát.
+W 无效 | wúxiào | vô hiệu | vô hiệu | tính từ | Chính là "vô hiệu".
+E 这张票已经无效了。 | Zhè zhāng piào yǐjīng wúxiào le. | Vé này hết hiệu lực rồi.
+W 线路 | xiànlù | tuyến lộ | tuyến (xe, điện) | danh từ | 公交线路 (tuyến xe buýt).
+E 这条公交线路经过学校。 | Zhè tiáo gōngjiāo xiànlù jīngguò xuéxiào. | Tuyến xe buýt này đi qua trường.
+W 信用 | xìnyòng | tín dụng | uy tín; tín dụng | danh từ | 信用卡 (thẻ tín dụng).
+E 他是一个讲信用的人。 | Tā shì yí ge jiǎng xìnyòng de rén. | Anh ấy là người giữ chữ tín.
+W 押金 | yājīn | áp kim | tiền đặt cọc | danh từ | 交押金 (đóng cọc).
+E 租房要先交一个月的押金。 | Zū fáng yào xiān jiāo yí ge yuè de yājīn. | Thuê nhà phải đóng cọc một tháng trước.
+W 退还 | tuìhuán | thoái hoàn | hoàn trả | động từ | 退还押金 (trả lại tiền cọc).
+E 退房的时候会退还押金。 | Tuì fáng de shíhou huì tuìhuán yājīn. | Khi trả phòng sẽ hoàn tiền cọc.
+W 手续 | shǒuxù | thủ tục | thủ tục | danh từ | 办手续 (làm thủ tục).
+E 出国要办很多手续。 | Chūguó yào bàn hěn duō shǒuxù. | Ra nước ngoài phải làm nhiều thủ tục.
+W 业务 | yèwù | nghiệp vụ | nghiệp vụ, mảng công việc | danh từ | 业务能力 (năng lực chuyên môn).
+E 这家银行的业务很多。 | Zhè jiā yínháng de yèwù hěn duō. | Ngân hàng này có nhiều dịch vụ.
+G 办 + 手续/业务/签证 | 办手续 | 办 đi với các việc thủ tục.
+E 我明天去银行办业务。 | Wǒ míngtiān qù yínháng bàn yèwù. | Mai tôi ra ngân hàng làm giao dịch.
+S 网络不稳定，比赛暂停了。 | Wǎngluò bù wěndìng, bǐsài zàntíng le. | Mạng không ổn định, trận đấu tạm dừng.
+S 修改密码以后，请重新登录。 | Xiūgǎi mìmǎ yǐhòu, qǐng chóngxīn dēnglù. | Đổi mật khẩu xong, hãy đăng nhập lại.
+S 手续办好了，押金也退还了。 | Shǒuxù bàn hǎo le, yājīn yě tuìhuán le. | Thủ tục làm xong rồi, tiền cọc cũng được trả lại.
+
+@id 269
+@after 268
+@cn 五颜六色
+@title Hình dáng và màu sắc
+@goal Mô tả bề ngoài, hình dạng, hình tượng, hình thức, kiểu dáng, cong, nghiêng, đuôi, eo, mắt, răng, sặc sỡ, tranh vẽ và khăn quàng.
+W 外观 | wàiguān | ngoại quan | bề ngoài | danh từ | 外观设计 (thiết kế bề ngoài).
+E 这款手机的外观很漂亮。 | Zhè kuǎn shǒujī de wàiguān hěn piàoliang. | Ngoại hình điện thoại này rất đẹp.
+W 外形 | wàixíng | ngoại hình | hình dáng bên ngoài | danh từ | Hình dáng của vật.
+E 这座大楼的外形像一朵花。 | Zhè zuò dàlóu de wàixíng xiàng yì duǒ huā. | Toà nhà này có hình dáng giống một bông hoa.
+W 形状 | xíngzhuàng | hình trạng | hình dạng | danh từ | 圆形 (hình tròn).
+E 这块石头的形状很特别。 | Zhè kuài shítou de xíngzhuàng hěn tèbié. | Hòn đá này có hình dạng rất đặc biệt.
+W 形象 | xíngxiàng | hình tượng | hình ảnh, hình tượng | danh từ, tính từ | 公众形象 (hình ảnh trước công chúng).
+E 选手要注意自己的形象。 | Xuǎnshǒu yào zhùyì zìjǐ de xíngxiàng. | Tuyển thủ phải chú ý hình ảnh của mình.
+W 形式 | xíngshì | hình thức | hình thức | danh từ | Chính là "hình thức".
+E 比赛采用五局三胜的形式。 | Bǐsài cǎiyòng wǔ jú sān shèng de xíngshì. | Giải áp dụng thể thức thắng ba trong năm ván.
+W 样式 | yàngshì | dạng thức | kiểu dáng | danh từ | 衣服的样式 (kiểu quần áo).
+E 这件衣服的样式很新。 | Zhè jiàn yīfu de yàngshì hěn xīn. | Kiểu áo này rất mới.
+W 弯 | wān | loan | cong; chỗ rẽ | tính từ, danh từ | 拐弯 (rẽ).
+E 前面路口往左拐弯。 | Qiánmiàn lùkǒu wǎng zuǒ guǎi wān. | Đến ngã tư phía trước rẽ trái.
+W 斜 | xié | tà | nghiêng | tính từ | 斜坡 (dốc nghiêng).
+E 墙上的画挂斜了。 | Qiáng shang de huà guà xié le. | Bức tranh trên tường treo bị lệch.
+W 尾巴 | wěiba | vĩ ba | cái đuôi | danh từ | 尾 là "vĩ".
+E 小狗高兴得摇尾巴。 | Xiǎogǒu gāoxìng de yáo wěiba. | Chú chó con vui mừng vẫy đuôi.
+W 腰 | yāo | yêu | eo, lưng | danh từ | 腰疼 (đau lưng).
+E 坐久了腰会疼。 | Zuò jiǔ le yāo huì téng. | Ngồi lâu sẽ đau lưng.
+W 眼 | yǎn | nhãn | mắt; cái nhìn | danh từ, lượng từ | 看一眼 (liếc một cái).
+E 他看了我一眼，没说话。 | Tā kàn le wǒ yì yǎn, méi shuōhuà. | Anh ấy liếc tôi một cái, không nói gì.
+W 牙齿 | yáchǐ | nha xỉ | răng | danh từ | 牙 + 齿.
+E 每天要刷两次牙齿。 | Měi tiān yào shuā liǎng cì yáchǐ. | Mỗi ngày phải đánh răng hai lần.
+W 五颜六色 | wǔyán liùsè | ngũ nhan lục sắc | sặc sỡ nhiều màu | thành ngữ | Năm màu sáu sắc.
+E 花园里开满了五颜六色的花。 | Huāyuán li kāi mǎn le wǔyán liùsè de huā. | Vườn nở đầy hoa đủ màu sắc.
+W 图画 | túhuà | đồ hoạ | bức tranh | danh từ | Tranh vẽ.
+E 孩子画了一幅图画。 | Háizi huà le yì fú túhuà. | Đứa trẻ vẽ một bức tranh.
+W 围巾 | wéijīn | vi cân | khăn quàng cổ | danh từ | 围 (quấn) + 巾 (khăn).
+E 天冷了，戴上围巾吧。 | Tiān lěng le, dài shàng wéijīn ba. | Trời lạnh rồi, quàng khăn vào đi.
+G V + 了 + ai + 一眼 | 看了我一眼 | Lượng từ động tác: nhìn một cái.
+E 她回头看了一眼，然后走了。 | Tā huí tóu kàn le yì yǎn, ránhòu zǒu le. | Cô ấy quay đầu nhìn một cái rồi đi.
+S 这个英雄的外形很酷。 | Zhège yīngxióng de wàixíng hěn kù. | Ngoại hình vị tướng này rất ngầu.
+S 选手的形象也代表了整个俱乐部。 | Xuǎnshǒu de xíngxiàng yě dàibiǎo le zhěnggè jùlèbù. | Hình ảnh tuyển thủ cũng đại diện cho cả câu lạc bộ.
+S 长时间坐着打游戏，腰和眼睛都会累。 | Cháng shíjiān zuò zhe dǎ yóuxì, yāo hé yǎnjing dōu huì lèi. | Ngồi chơi game lâu, lưng và mắt đều mỏi.
+
+@id 270
+@after 269
+@cn 消费和销售
+@title Tiêu dùng và bán hàng
+@goal Nói về tiêu dùng, người tiêu dùng, doanh số, bán hàng, vật giá, đồ vật, quản lý toà nhà, vật chất, nhu cầu, tuyên truyền, quảng bá, cỡ nhỏ, kiểu mới, tiên tiến và hiện đại hoá.
+W 消费 | xiāofèi | tiêu phí | tiêu dùng, chi tiêu | động từ, danh từ | Khác "tiêu phí" (lãng phí) tiếng Việt.
+E 年轻人的消费习惯变了。 | Niánqīngrén de xiāofèi xíguàn biàn le. | Thói quen chi tiêu của người trẻ đã đổi.
+W 消费者 | xiāofèizhě | tiêu phí giả | người tiêu dùng | danh từ | 者 là người.
+E 消费者越来越重视质量。 | Xiāofèizhě yuè lái yuè zhòngshì zhìliàng. | Người tiêu dùng ngày càng chú trọng chất lượng.
+W 销量 | xiāoliàng | tiêu lượng | doanh số, lượng bán | danh từ | 销 là bán.
+E 这款游戏的销量很好。 | Zhè kuǎn yóuxì de xiāoliàng hěn hǎo. | Doanh số trò chơi này rất tốt.
+W 销售 | xiāoshòu | tiêu thụ | bán hàng | động từ | 销售员 (nhân viên bán hàng).
+E 她在一家公司做销售。 | Tā zài yì jiā gōngsī zuò xiāoshòu. | Cô ấy làm bán hàng ở một công ty.
+W 物价 | wùjià | vật giá | vật giá | danh từ | Chính là "vật giá".
+E 这里的物价比较低。 | Zhèlǐ de wùjià bǐjiào dī. | Vật giá ở đây khá thấp.
+W 物品 | wùpǐn | vật phẩm | đồ vật | danh từ | 个人物品 (đồ dùng cá nhân).
+E 请保管好自己的物品。 | Qǐng bǎoguǎn hǎo zìjǐ de wùpǐn. | Xin giữ gìn đồ đạc của mình.
+W 物业 | wùyè | vật nghiệp | ban quản lý toà nhà | danh từ | 物业费 (phí quản lý).
+E 房子漏水了，快找物业。 | Fángzi lòu shuǐ le, kuài zhǎo wùyè. | Nhà dột rồi, gọi ban quản lý ngay.
+W 物质 | wùzhì | vật chất | vật chất | danh từ | Chính là "vật chất".
+E 幸福不只是物质上的。 | Xìngfú bù zhǐ shì wùzhì shang de. | Hạnh phúc không chỉ là vật chất.
+W 需求 | xūqiú | nhu cầu | nhu cầu | danh từ | Chính là "nhu cầu".
+E 我们要满足客户的需求。 | Wǒmen yào mǎnzú kèhù de xūqiú. | Chúng ta phải đáp ứng nhu cầu khách hàng.
+W 宣传 | xuānchuán | tuyên truyền | quảng bá, tuyên truyền | động từ | 宣传活动 (hoạt động quảng bá).
+E 俱乐部在网上宣传这次比赛。 | Jùlèbù zài wǎngshang xuānchuán zhè cì bǐsài. | Câu lạc bộ quảng bá trận đấu trên mạng.
+W 推广 | tuīguǎng | thôi quảng | phổ biến rộng, quảng bá | động từ | 推广产品 (quảng bá sản phẩm).
+E 公司正在推广新产品。 | Gōngsī zhèngzài tuīguǎng xīn chǎnpǐn. | Công ty đang quảng bá sản phẩm mới.
+W 小型 | xiǎoxíng | tiểu hình | cỡ nhỏ | tính từ | Trái nghĩa 大型.
+E 我们先办一个小型比赛。 | Wǒmen xiān bàn yí ge xiǎoxíng bǐsài. | Chúng ta tổ chức một giải nhỏ trước.
+W 新型 | xīnxíng | tân hình | kiểu mới | tính từ | 新型材料 (vật liệu mới).
+E 这是一种新型电池。 | Zhè shì yì zhǒng xīnxíng diànchí. | Đây là một loại pin kiểu mới.
+W 先进 | xiānjìn | tiên tiến | tiên tiến | tính từ | Chính là "tiên tiến".
+E 这家医院的设备很先进。 | Zhè jiā yīyuàn de shèbèi hěn xiānjìn. | Thiết bị bệnh viện này rất tiên tiến.
+W 现代化 | xiàndàihuà | hiện đại hoá | hiện đại hoá | danh từ, động từ | Chính là "hiện đại hoá".
+E 这座城市越来越现代化了。 | Zhè zuò chéngshì yuè lái yuè xiàndàihuà le. | Thành phố này ngày càng hiện đại.
+G 满足 + 需求/要求 | 满足客户的需求 | Đáp ứng nhu cầu, yêu cầu.
+E 这个方案不能满足我们的要求。 | Zhège fāng'àn bù néng mǎnzú wǒmen de yāoqiú. | Phương án này không đáp ứng yêu cầu của chúng ta.
+S 物价上涨，消费者的压力也变大了。 | Wùjià shàngzhǎng, xiāofèizhě de yālì yě biàn dà le. | Vật giá tăng, áp lực của người tiêu dùng cũng lớn hơn.
+S 好的宣传可以提高销量。 | Hǎo de xuānchuán kěyǐ tígāo xiāoliàng. | Quảng bá tốt giúp tăng doanh số.
+S 了解客户的需求是销售的第一步。 | Liǎojiě kèhù de xūqiú shì xiāoshòu de dì yī bù. | Hiểu nhu cầu khách hàng là bước đầu của bán hàng.
+
+@id 271
+@after 270
+@cn 面对现实
+@title Hiện thực và hiện tượng
+@goal Nói về hiện thực, hiện tượng, hiện trạng, hiện đại, rõ ràng, tỏ ra, tương đối, liên quan, giống nhau, tượng trưng, hình thành, tình hình, tính chất và thể hiện.
+W 现实 | xiànshí | hiện thực | hiện thực | danh từ, tính từ | 面对现实 (đối mặt hiện thực).
+E 我们要面对现实。 | Wǒmen yào miànduì xiànshí. | Chúng ta phải đối mặt với hiện thực.
+W 现象 | xiànxiàng | hiện tượng | hiện tượng | danh từ | Chính là "hiện tượng".
+E 这是一个很常见的现象。 | Zhè shì yí ge hěn chángjiàn de xiànxiàng. | Đây là một hiện tượng rất phổ biến.
+W 现状 | xiànzhuàng | hiện trạng | hiện trạng | danh từ | 改变现状 (thay đổi hiện trạng).
+E 我们不能满足于现状。 | Wǒmen bù néng mǎnzú yú xiànzhuàng. | Chúng ta không thể hài lòng với hiện trạng.
+W 现代 | xiàndài | hiện đại | hiện đại | danh từ, tính từ | 现代社会 (xã hội hiện đại).
+E 现代人的生活节奏很快。 | Xiàndàirén de shēnghuó jiézòu hěn kuài. | Nhịp sống người hiện đại rất nhanh.
+W 显然 | xiǎnrán | hiển nhiên | rõ ràng | phó từ, tính từ | Chính là "hiển nhiên".
+E 他显然不同意。 | Tā xiǎnrán bù tóngyì. | Rõ ràng anh ấy không đồng ý.
+W 显得 | xiǎnde | hiển đắc | tỏ ra, trông | động từ | 显得很年轻 (trông rất trẻ).
+E 穿上这件衣服，你显得很精神。 | Chuān shàng zhè jiàn yīfu, nǐ xiǎnde hěn jīngshen. | Mặc áo này bạn trông rất tươi tỉnh.
+W 相当 | xiāngdāng | tương đương | khá, tương đối; tương đương | phó từ, động từ | 相当好 (khá tốt).
+E 他的中文相当不错。 | Tā de Zhōngwén xiāngdāng búcuò. | Tiếng Trung của anh ấy khá giỏi.
+W 相对 | xiāngduì | tương đối | tương đối | tính từ, phó từ | 相对来说 (nói một cách tương đối).
+E 相对来说，这里比较安全。 | Xiāngduì lái shuō, zhèlǐ bǐjiào ānquán. | Nói tương đối, ở đây khá an toàn.
+W 相关 | xiāngguān | tương quan | liên quan | động từ | 相关部门 (cơ quan liên quan).
+E 请提供相关材料。 | Qǐng tígōng xiāngguān cáiliào. | Xin cung cấp tài liệu liên quan.
+W 相似 | xiāngsì | tương tự | giống nhau | tính từ | Chính là "tương tự".
+E 这两种打法很相似。 | Zhè liǎng zhǒng dǎfǎ hěn xiāngsì. | Hai lối đánh này rất giống nhau.
+W 象征 | xiàngzhēng | tượng trưng | tượng trưng | động từ, danh từ | Chính là "tượng trưng".
+E 红色在中国象征好运。 | Hóngsè zài Zhōngguó xiàngzhēng hǎoyùn. | Màu đỏ ở Trung Quốc tượng trưng may mắn.
+W 形成 | xíngchéng | hình thành | hình thành | động từ | 形成习惯 (hình thành thói quen).
+E 好习惯需要时间才能形成。 | Hǎo xíguàn xūyào shíjiān cái néng xíngchéng. | Thói quen tốt cần thời gian mới hình thành.
+W 形势 | xíngshì | hình thế | tình hình, cục diện | danh từ | 比赛形势 (cục diện trận đấu).
+E 比赛形势对我们很不利。 | Bǐsài xíngshì duì wǒmen hěn bú lì. | Cục diện trận đấu rất bất lợi cho chúng ta.
+W 性质 | xìngzhì | tính chất | tính chất | danh từ | Chính là "tính chất".
+E 这两件事的性质不一样。 | Zhè liǎng jiàn shì de xìngzhì bù yíyàng. | Tính chất hai việc này khác nhau.
+W 体现 | tǐxiàn | thể hiện | thể hiện | động từ | Chính là "thể hiện".
+E 这场胜利体现了团队精神。 | Zhè chǎng shènglì tǐxiàn le tuánduì jīngshén. | Chiến thắng này thể hiện tinh thần đồng đội.
+G 显得 + tính từ | 显得很年轻 · 显得紧张 | Tỏ ra, trông có vẻ.
+E 第一次上台，他显得有点儿紧张。 | Dì yī cì shàng tái, tā xiǎnde yǒudiǎnr jǐnzhāng. | Lần đầu lên sân khấu, anh ấy trông hơi run.
+S 理想很美好，现实很困难。 | Lǐxiǎng hěn měihǎo, xiànshí hěn kùnnan. | Lý tưởng thì đẹp, hiện thực thì khó.
+S 形势不好的时候，更要冷静。 | Xíngshì bù hǎo de shíhou, gèng yào lěngjìng. | Khi tình hình xấu càng phải bình tĩnh.
+S 他的努力在比赛中体现出来了。 | Tā de nǔlì zài bǐsài zhōng tǐxiàn chūlái le. | Sự nỗ lực của anh ấy đã thể hiện trong trận đấu.
+
+@id 272
+@after 271
+@cn 好的心态
+@title Tâm lý và thái độ
+@goal Nói về tâm lý, tâm thế, tiêu cực, bất lực, đau khổ, tận hưởng, thưởng thức, tưởng tượng, tin tưởng, khiêm tốn, nghiêm túc, may mắn, vẫn như cũ, vô số và vô hạn.
+W 心理 | xīnlǐ | tâm lý | tâm lý | danh từ | 心理压力 (áp lực tâm lý).
+E 比赛前心理压力很大。 | Bǐsài qián xīnlǐ yālì hěn dà. | Trước trận áp lực tâm lý rất lớn.
+W 心态 | xīntài | tâm thái | tâm thế, thái độ | danh từ | 好心态 (tâm thế tốt).
+E 保持好心态很重要。 | Bǎochí hǎo xīntài hěn zhòngyào. | Giữ tâm thế tốt rất quan trọng.
+W 消极 | xiāojí | tiêu cực | tiêu cực | tính từ | Trái nghĩa 积极.
+E 不要有消极的想法。 | Bú yào yǒu xiāojí de xiǎngfǎ. | Đừng có suy nghĩ tiêu cực.
+W 无奈 | wúnài | vô nại | bất lực, đành chịu | tính từ | 很无奈 (rất bất lực).
+E 他无奈地摇了摇头。 | Tā wúnài de yáo le yáo tóu. | Anh ấy bất lực lắc đầu.
+W 痛苦 | tòngkǔ | thống khổ | đau khổ | tính từ, danh từ | Chính là "thống khổ".
+E 失败的时候很痛苦。 | Shībài de shíhou hěn tòngkǔ. | Lúc thất bại rất đau khổ.
+W 享受 | xiǎngshòu | hưởng thụ | tận hưởng | động từ | 享受比赛 (tận hưởng trận đấu).
+E 放轻松，享受比赛吧！ | Fàng qīngsōng, xiǎngshòu bǐsài ba! | Thả lỏng, tận hưởng trận đấu đi!
+W 欣赏 | xīnshǎng | hân thưởng | thưởng thức; đánh giá cao | động từ | 欣赏音乐 (thưởng thức nhạc).
+E 我很欣赏他的打法。 | Wǒ hěn xīnshǎng tā de dǎfǎ. | Tôi rất đánh giá cao lối đánh của anh ấy.
+W 想象 | xiǎngxiàng | tưởng tượng | tưởng tượng | động từ, danh từ | Chính là "tưởng tượng".
+E 结果比我想象的好。 | Jiéguǒ bǐ wǒ xiǎngxiàng de hǎo. | Kết quả tốt hơn tôi tưởng tượng.
+W 信任 | xìnrèn | tín nhiệm | tin tưởng | động từ | Chính là "tín nhiệm".
+E 教练很信任他。 | Jiàoliàn hěn xìnrèn tā. | Huấn luyện viên rất tin tưởng anh ấy.
+W 虚心 | xūxīn | hư tâm | khiêm tốn, cầu thị | tính từ | 虚心学习 (khiêm tốn học hỏi).
+E 他很虚心地接受了批评。 | Tā hěn xūxīn de jiēshòu le pīpíng. | Anh ấy khiêm tốn tiếp nhận lời phê bình.
+W 严肃 | yánsù | nghiêm túc | nghiêm túc, nghiêm nghị | tính từ | Chính là "nghiêm túc".
+E 他的表情很严肃。 | Tā de biǎoqíng hěn yánsù. | Vẻ mặt anh ấy rất nghiêm.
+W 幸运 | xìngyùn | hạnh vận | may mắn | tính từ | Chính là "hạnh vận".
+E 能认识你，我很幸运。 | Néng rènshi nǐ, wǒ hěn xìngyùn. | Quen được bạn, tôi thật may mắn.
+W 依然 | yīrán | y nhiên | vẫn, vẫn như cũ | phó từ | Văn viết của 仍然.
+E 虽然输了，粉丝依然支持我们。 | Suīrán shū le, fěnsī yīrán zhīchí wǒmen. | Dù thua, fan vẫn ủng hộ chúng tôi.
+W 无数 | wúshù | vô số | vô số | tính từ | Chính là "vô số".
+E 他练习了无数次。 | Tā liànxí le wúshù cì. | Anh ấy đã luyện vô số lần.
+W 无限 | wúxiàn | vô hạn | vô hạn | tính từ | Chính là "vô hạn".
+E 年轻人有无限的可能。 | Niánqīngrén yǒu wúxiàn de kěnéng. | Người trẻ có khả năng vô hạn.
+G 比 + ai + 想象的 + tính từ | 比我想象的好 | So với điều mình tưởng.
+E 中文比我想象的难。 | Zhōngwén bǐ wǒ xiǎngxiàng de nán. | Tiếng Trung khó hơn tôi tưởng.
+S 好的心态是赢得比赛的一半。 | Hǎo de xīntài shì yíngdé bǐsài de yíbàn. | Tâm thế tốt là một nửa chiến thắng.
+S 要虚心听取别人的意见。 | Yào xūxīn tīngqǔ biérén de yìjiàn. | Phải khiêm tốn lắng nghe ý kiến người khác.
+S 队员之间要互相信任。 | Duìyuán zhījiān yào hùxiāng xìnrèn. | Các thành viên phải tin tưởng lẫn nhau.
+
+@id 273
+@after 272
+@cn 学术演讲
+@title Học thuật và nghiên cứu
+@goal Nói về tín chỉ, môn học, học vấn, năm học, học thuật, học giả, văn học, vật lý, viết văn, thư pháp, diễn thuyết, đề bài, đặt câu hỏi, hỏi han và nghiên cứu phát triển.
+W 学分 | xuéfēn | học phân | tín chỉ | danh từ | 修学分 (tích tín chỉ).
+E 这门课有三个学分。 | Zhè mén kè yǒu sān ge xuéfēn. | Môn này có ba tín chỉ.
+W 学科 | xuékē | học khoa | môn học, ngành học | danh từ | Chính là "học khoa".
+E 数学是一门重要的学科。 | Shùxué shì yì mén zhòngyào de xuékē. | Toán là một môn học quan trọng.
+W 学历 | xuélì | học lịch | trình độ học vấn | danh từ | 本科学历 (bằng đại học).
+E 这份工作要求本科学历。 | Zhè fèn gōngzuò yāoqiú běnkē xuélì. | Công việc này yêu cầu bằng đại học.
+W 学年 | xuénián | học niên | năm học | danh từ | 新学年 (năm học mới).
+E 新学年九月开始。 | Xīn xuénián jiǔ yuè kāishǐ. | Năm học mới bắt đầu tháng Chín.
+W 学术 | xuéshù | học thuật | học thuật | danh từ | 学术会议 (hội thảo khoa học).
+E 他参加了一个学术会议。 | Tā cānjiā le yí ge xuéshù huìyì. | Ông ấy dự một hội thảo khoa học.
+W 学者 | xuézhě | học giả | học giả | danh từ | Chính là "học giả".
+E 他是一位有名的学者。 | Tā shì yí wèi yǒumíng de xuézhě. | Ông ấy là một học giả nổi tiếng.
+W 文学 | wénxué | văn học | văn học | danh từ | Chính là "văn học".
+E 她大学学的是中国文学。 | Tā dàxué xué de shì Zhōngguó wénxué. | Đại học cô ấy học văn học Trung Quốc.
+W 物理 | wùlǐ | vật lý | vật lý | danh từ | Chính là "vật lý".
+E 我中学的时候物理最好。 | Wǒ zhōngxué de shíhou wùlǐ zuì hǎo. | Hồi cấp ba tôi giỏi lý nhất.
+W 写作 | xiězuò | tả tác | viết văn, sáng tác | động từ, danh từ | 写作能力 (khả năng viết).
+E 多读书可以提高写作水平。 | Duō dú shū kěyǐ tígāo xiězuò shuǐpíng. | Đọc nhiều sách giúp nâng trình độ viết.
+W 书法 | shūfǎ | thư pháp | thư pháp | danh từ | Chính là "thư pháp".
+E 爷爷每天练书法。 | Yéye měi tiān liàn shūfǎ. | Ông nội luyện thư pháp mỗi ngày.
+W 演讲 | yǎnjiǎng | diễn giảng | diễn thuyết | động từ, danh từ | 演讲比赛 (thi hùng biện).
+E 她的演讲非常精彩。 | Tā de yǎnjiǎng fēicháng jīngcǎi. | Bài diễn thuyết của cô ấy rất xuất sắc.
+W 题目 | tímù | đề mục | đề bài; tiêu đề | danh từ | 考试题目 (đề thi).
+E 这道题目太难了。 | Zhè dào tímù tài nán le. | Đề này khó quá.
+W 提问 | tíwèn | đề vấn | đặt câu hỏi | động từ | 课上提问 (hỏi trong giờ).
+E 有问题可以随时提问。 | Yǒu wèntí kěyǐ suíshí tíwèn. | Có thắc mắc có thể hỏi bất cứ lúc nào.
+W 询问 | xúnwèn | tuân vấn | hỏi han, hỏi thăm | động từ | Trang trọng hơn 问.
+E 我向工作人员询问了比赛时间。 | Wǒ xiàng gōngzuò rényuán xúnwèn le bǐsài shíjiān. | Tôi hỏi nhân viên về giờ thi đấu.
+W 研发 | yánfā | nghiên phát | nghiên cứu phát triển | động từ | 研究开发 viết tắt.
+E 这家公司研发了新技术。 | Zhè jiā gōngsī yánfā le xīn jìshù. | Công ty này nghiên cứu ra công nghệ mới.
+G 门 (lượng từ cho môn học) | 一门课 · 两门语言 | Môn học, ngôn ngữ dùng 门.
+E 我会说三门语言。 | Wǒ huì shuō sān mén yǔyán. | Tôi nói được ba thứ tiếng.
+S 写作需要大量阅读。 | Xiězuò xūyào dàliàng yuèdú. | Viết văn cần đọc rất nhiều.
+S 演讲以后，很多人举手提问。 | Yǎnjiǎng yǐhòu, hěn duō rén jǔ shǒu tíwèn. | Sau bài diễn thuyết, nhiều người giơ tay đặt câu hỏi.
+S 书法是中国传统文化的一部分。 | Shūfǎ shì Zhōngguó chuántǒng wénhuà de yí bùfen. | Thư pháp là một phần văn hoá truyền thống Trung Quốc.
+
+@id 274
+@after 273
+@cn 沿着铁路走
+@title Đường đi và vị trí
+@goal Nói về đường sắt, thông hành, chạy xe, người đi bộ, đi lại, lịch trình, khứ hồi, dừng lại, dọc theo, nằm ở, vị trí, khắp nơi, xung quanh, huyện và nông thôn.
+W 铁路 | tiělù | thiết lộ | đường sắt | danh từ | 铁 (sắt) + 路.
+E 这条铁路连接河内和胡志明市。 | Zhè tiáo tiělù liánjiē Hénèi hé Húzhìmíng Shì. | Tuyến đường sắt này nối Hà Nội với TP Hồ Chí Minh.
+W 通行 | tōngxíng | thông hành | đi qua, lưu thông | động từ | 禁止通行 (cấm đi qua).
+E 前面修路，禁止通行。 | Qiánmiàn xiū lù, jìnzhǐ tōngxíng. | Phía trước sửa đường, cấm lưu thông.
+W 行驶 | xíngshǐ | hành sử | chạy (xe) | động từ | 安全行驶 (lái an toàn).
+E 汽车在高速公路上行驶。 | Qìchē zài gāosù gōnglù shang xíngshǐ. | Ô tô chạy trên đường cao tốc.
+W 行人 | xíngrén | hành nhân | người đi bộ | danh từ | Chính là "hành nhân".
+E 开车要注意行人。 | Kāichē yào zhùyì xíngrén. | Lái xe phải chú ý người đi bộ.
+W 行走 | xíngzǒu | hành tẩu | đi bộ, đi lại | động từ | Văn viết của 走.
+E 这里只能步行行走。 | Zhèlǐ zhǐ néng bùxíng xíngzǒu. | Ở đây chỉ được đi bộ.
+W 行程 | xíngchéng | hành trình | lịch trình | danh từ | 行程安排 (sắp xếp lịch trình).
+E 这次比赛的行程很紧。 | Zhè cì bǐsài de xíngchéng hěn jǐn. | Lịch trình giải đấu lần này rất dày.
+W 往返 | wǎngfǎn | vãng phản | khứ hồi | động từ | 往返机票 (vé khứ hồi).
+E 我买了往返机票。 | Wǒ mǎi le wǎngfǎn jīpiào. | Tôi mua vé máy bay khứ hồi.
+W 停留 | tíngliú | đình lưu | dừng lại, lưu lại | động từ | 停留三天 (ở lại ba ngày).
+E 我们在上海停留了三天。 | Wǒmen zài Shànghǎi tíngliú le sān tiān. | Chúng tôi lưu lại Thượng Hải ba ngày.
+W 沿 | yán | duyên | dọc theo | giới từ | 沿着河走 (đi dọc sông).
+E 我们沿着河边散步。 | Wǒmen yán zhe hé biān sànbù. | Chúng tôi đi dạo dọc bờ sông.
+W 位于 | wèiyú | vị vu | nằm ở | động từ | Văn viết.
+E 河内位于越南北部。 | Hénèi wèiyú Yuènán běibù. | Hà Nội nằm ở miền Bắc Việt Nam.
+W 位置 | wèizhi | vị trí | vị trí | danh từ | Chính là "vị trí".
+E 你在队里打什么位置？ | Nǐ zài duì li dǎ shénme wèizhi? | Bạn chơi vị trí gì trong đội?
+W 四处 | sìchù | tứ xứ | khắp nơi | danh từ | 四处寻找 (tìm khắp nơi).
+E 他四处寻找丢失的钱包。 | Tā sìchù xúnzhǎo diūshī de qiánbāo. | Anh ấy tìm khắp nơi chiếc ví bị mất.
+W 四周 | sìzhōu | tứ chu | xung quanh | danh từ | 四周都是山 (xung quanh toàn núi).
+E 房子四周都是树。 | Fángzi sìzhōu dōu shì shù. | Xung quanh nhà toàn cây.
+W 县 | xiàn | huyện | huyện | danh từ | Chính là "huyện".
+E 他来自一个小县城。 | Tā láizì yí ge xiǎo xiànchéng. | Anh ấy đến từ một thị trấn huyện nhỏ.
+W 乡村 | xiāngcūn | hương thôn | nông thôn | danh từ | Trái với 城市.
+E 乡村的空气很新鲜。 | Xiāngcūn de kōngqì hěn xīnxiān. | Không khí nông thôn rất trong lành.
+G 沿着 + nơi + V | 沿着河边散步 | Làm gì dọc theo đâu.
+E 沿着这条路一直走就到了。 | Yán zhe zhè tiáo lù yìzhí zǒu jiù dào le. | Cứ đi thẳng theo con đường này là tới.
+S 这次行程我们先去北京，再去上海。 | Zhè cì xíngchéng wǒmen xiān qù Běijīng, zài qù Shànghǎi. | Lịch trình lần này chúng tôi đi Bắc Kinh trước, rồi Thượng Hải.
+S 比赛场馆位于市中心。 | Bǐsài chǎngguǎn wèiyú shì zhōngxīn. | Nhà thi đấu nằm ở trung tâm thành phố.
+S 每个位置都有自己的责任。 | Měi ge wèizhi dōu yǒu zìjǐ de zérèn. | Mỗi vị trí đều có trách nhiệm riêng.
+
+@id 275
+@after 274
+@cn 逛夜市
+@title Ăn chơi và giải trí
+@goal Nói về đồ tráng miệng, món Tây, ống hút, kem que, khoai tây, vịt, thỏ, chợ đêm, thư giãn, nghiệp dư, múa, võ thuật, kịch, nhảy cao và nhảy xa.
+W 甜品 | tiánpǐn | điềm phẩm | đồ tráng miệng | danh từ | Món ngọt.
+E 吃完饭我们来点儿甜品吧。 | Chī wán fàn wǒmen lái diǎnr tiánpǐn ba. | Ăn xong mình gọi chút đồ ngọt nhé.
+W 西餐 | xīcān | tây xan | món Tây | danh từ | Trái với 中餐.
+E 你喜欢吃中餐还是西餐？ | Nǐ xǐhuan chī zhōngcān háishi xīcān? | Bạn thích món Trung hay món Tây?
+W 吸管 | xīguǎn | hấp quản | ống hút | danh từ | 吸 (hút) + 管 (ống).
+E 请给我一根吸管。 | Qǐng gěi wǒ yì gēn xīguǎn. | Cho tôi một cái ống hút.
+W 雪糕 | xuěgāo | tuyết cao | kem que | danh từ | 糕 là bánh.
+E 夏天吃雪糕最舒服。 | Xiàtiān chī xuěgāo zuì shūfu. | Mùa hè ăn kem que là sướng nhất.
+W 土豆 | tǔdòu | thổ đậu | khoai tây | danh từ | Đậu dưới đất.
+E 我最喜欢吃炸土豆。 | Wǒ zuì xǐhuan chī zhá tǔdòu. | Tôi thích nhất khoai tây chiên.
+W 鸭子 | yāzi | áp tử | con vịt | danh từ | 北京烤鸭 (vịt quay Bắc Kinh).
+E 湖上有几只鸭子在游泳。 | Hú shang yǒu jǐ zhī yāzi zài yóuyǒng. | Trên hồ có mấy con vịt đang bơi.
+W 兔子 | tùzi | thố tử | con thỏ | danh từ | 兔年 (năm Mão, Trung Quốc).
+E 兔子跑得很快。 | Tùzi pǎo de hěn kuài. | Thỏ chạy rất nhanh.
+W 夜市 | yèshì | dạ thị | chợ đêm | danh từ | Chính là "dạ thị".
+E 晚上我们去逛夜市吧。 | Wǎnshang wǒmen qù guàng yèshì ba. | Tối mình đi dạo chợ đêm nhé.
+W 休闲 | xiūxián | hưu nhàn | thư giãn, giải trí | tính từ, động từ | 休闲时间 (thời gian rảnh).
+E 周末是休闲的时间。 | Zhōumò shì xiūxián de shíjiān. | Cuối tuần là thời gian thư giãn.
+W 业余 | yèyú | nghiệp dư | nghiệp dư; ngoài giờ | tính từ | 业余时间 (thời gian rảnh).
+E 他业余时间喜欢打篮球。 | Tā yèyú shíjiān xǐhuan dǎ lánqiú. | Lúc rảnh anh ấy thích chơi bóng rổ.
+W 舞蹈 | wǔdǎo | vũ đạo | múa, vũ đạo | danh từ | Chính là "vũ đạo".
+E 她从小学习舞蹈。 | Tā cóngxiǎo xuéxí wǔdǎo. | Cô ấy học múa từ nhỏ.
+W 武术 | wǔshù | võ thuật | võ thuật | danh từ | Chính là "võ thuật".
+E 中国武术在世界上很有名。 | Zhōngguó wǔshù zài shìjiè shang hěn yǒumíng. | Võ thuật Trung Quốc nổi tiếng thế giới.
+W 戏剧 | xìjù | hí kịch | kịch, sân khấu | danh từ | Chính là "hí kịch".
+E 他对戏剧很感兴趣。 | Tā duì xìjù hěn gǎn xìngqù. | Anh ấy rất hứng thú với kịch.
+W 跳高 | tiàogāo | khiêu cao | nhảy cao | danh từ | 跳 + 高.
+E 他是学校的跳高冠军。 | Tā shì xuéxiào de tiàogāo guànjūn. | Cậu ấy là vô địch nhảy cao của trường.
+W 跳远 | tiàoyuǎn | khiêu viễn | nhảy xa | danh từ | 跳 + 远.
+E 她跳远跳了五米。 | Tā tiàoyuǎn tiào le wǔ mǐ. | Cô ấy nhảy xa được năm mét.
+G 来 + lượng + món (gọi món) | 来点儿甜品 · 来一杯咖啡 | Khẩu ngữ khi gọi đồ ăn.
+E 服务员，来两杯奶茶。 | Fúwùyuán, lái liǎng bēi nǎichá. | Phục vụ ơi, cho hai cốc trà sữa.
+S 夜市里有各种各样的小吃。 | Yèshì li yǒu gè zhǒng gè yàng de xiǎochī. | Chợ đêm có đủ loại đồ ăn vặt.
+S 业余时间我喜欢看戏剧。 | Yèyú shíjiān wǒ xǐhuan kàn xìjù. | Lúc rảnh tôi thích xem kịch.
+S 打完比赛，大家一起去吃甜品放松一下。 | Dǎ wán bǐsài, dàjiā yìqǐ qù chī tiánpǐn fàngsōng yíxià. | Đánh xong trận, mọi người cùng đi ăn đồ ngọt thư giãn.

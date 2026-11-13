@@ -1,0 +1,264 @@
+{
+ "id": 275,
+ "cn": "逛夜市",
+ "title": "Ăn chơi và giải trí",
+ "goal": "Nói về đồ tráng miệng, món Tây, ống hút, kem que, khoai tây, vịt, thỏ, chợ đêm, thư giãn, nghiệp dư, múa, võ thuật, kịch, nhảy cao và nhảy xa.",
+ "words": [
+  {
+   "w": "甜品",
+   "py": "tiánpǐn",
+   "hv": "điềm phẩm",
+   "vi": "đồ tráng miệng",
+   "pos": "danh từ",
+   "note": "Món ngọt.",
+   "ex": [
+    {
+     "cn": "吃完饭我们来点儿甜品吧。",
+     "py": "Chī wán fàn wǒmen lái diǎnr tiánpǐn ba.",
+     "vi": "Ăn xong mình gọi chút đồ ngọt nhé."
+    }
+   ]
+  },
+  {
+   "w": "西餐",
+   "py": "xīcān",
+   "hv": "tây xan",
+   "vi": "món Tây",
+   "pos": "danh từ",
+   "note": "Trái với 中餐.",
+   "ex": [
+    {
+     "cn": "你喜欢吃中餐还是西餐？",
+     "py": "Nǐ xǐhuan chī zhōngcān háishi xīcān?",
+     "vi": "Bạn thích món Trung hay món Tây?"
+    }
+   ]
+  },
+  {
+   "w": "吸管",
+   "py": "xīguǎn",
+   "hv": "hấp quản",
+   "vi": "ống hút",
+   "pos": "danh từ",
+   "note": "吸 (hút) + 管 (ống).",
+   "ex": [
+    {
+     "cn": "请给我一根吸管。",
+     "py": "Qǐng gěi wǒ yì gēn xīguǎn.",
+     "vi": "Cho tôi một cái ống hút."
+    }
+   ]
+  },
+  {
+   "w": "雪糕",
+   "py": "xuěgāo",
+   "hv": "tuyết cao",
+   "vi": "kem que",
+   "pos": "danh từ",
+   "note": "糕 là bánh.",
+   "ex": [
+    {
+     "cn": "夏天吃雪糕最舒服。",
+     "py": "Xiàtiān chī xuěgāo zuì shūfu.",
+     "vi": "Mùa hè ăn kem que là sướng nhất."
+    }
+   ]
+  },
+  {
+   "w": "土豆",
+   "py": "tǔdòu",
+   "hv": "thổ đậu",
+   "vi": "khoai tây",
+   "pos": "danh từ",
+   "note": "Đậu dưới đất.",
+   "ex": [
+    {
+     "cn": "我最喜欢吃炸土豆。",
+     "py": "Wǒ zuì xǐhuan chī zhá tǔdòu.",
+     "vi": "Tôi thích nhất khoai tây chiên."
+    }
+   ]
+  },
+  {
+   "w": "鸭子",
+   "py": "yāzi",
+   "hv": "áp tử",
+   "vi": "con vịt",
+   "pos": "danh từ",
+   "note": "北京烤鸭 (vịt quay Bắc Kinh).",
+   "ex": [
+    {
+     "cn": "湖上有几只鸭子在游泳。",
+     "py": "Hú shang yǒu jǐ zhī yāzi zài yóuyǒng.",
+     "vi": "Trên hồ có mấy con vịt đang bơi."
+    }
+   ]
+  },
+  {
+   "w": "兔子",
+   "py": "tùzi",
+   "hv": "thố tử",
+   "vi": "con thỏ",
+   "pos": "danh từ",
+   "note": "兔年 (năm Mão, Trung Quốc).",
+   "ex": [
+    {
+     "cn": "兔子跑得很快。",
+     "py": "Tùzi pǎo de hěn kuài.",
+     "vi": "Thỏ chạy rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "夜市",
+   "py": "yèshì",
+   "hv": "dạ thị",
+   "vi": "chợ đêm",
+   "pos": "danh từ",
+   "note": "Chính là \"dạ thị\".",
+   "ex": [
+    {
+     "cn": "晚上我们去逛夜市吧。",
+     "py": "Wǎnshang wǒmen qù guàng yèshì ba.",
+     "vi": "Tối mình đi dạo chợ đêm nhé."
+    }
+   ]
+  },
+  {
+   "w": "休闲",
+   "py": "xiūxián",
+   "hv": "hưu nhàn",
+   "vi": "thư giãn, giải trí",
+   "pos": "tính từ, động từ",
+   "note": "休闲时间 (thời gian rảnh).",
+   "ex": [
+    {
+     "cn": "周末是休闲的时间。",
+     "py": "Zhōumò shì xiūxián de shíjiān.",
+     "vi": "Cuối tuần là thời gian thư giãn."
+    }
+   ]
+  },
+  {
+   "w": "业余",
+   "py": "yèyú",
+   "hv": "nghiệp dư",
+   "vi": "nghiệp dư; ngoài giờ",
+   "pos": "tính từ",
+   "note": "业余时间 (thời gian rảnh).",
+   "ex": [
+    {
+     "cn": "他业余时间喜欢打篮球。",
+     "py": "Tā yèyú shíjiān xǐhuan dǎ lánqiú.",
+     "vi": "Lúc rảnh anh ấy thích chơi bóng rổ."
+    }
+   ]
+  },
+  {
+   "w": "舞蹈",
+   "py": "wǔdǎo",
+   "hv": "vũ đạo",
+   "vi": "múa, vũ đạo",
+   "pos": "danh từ",
+   "note": "Chính là \"vũ đạo\".",
+   "ex": [
+    {
+     "cn": "她从小学习舞蹈。",
+     "py": "Tā cóngxiǎo xuéxí wǔdǎo.",
+     "vi": "Cô ấy học múa từ nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "武术",
+   "py": "wǔshù",
+   "hv": "võ thuật",
+   "vi": "võ thuật",
+   "pos": "danh từ",
+   "note": "Chính là \"võ thuật\".",
+   "ex": [
+    {
+     "cn": "中国武术在世界上很有名。",
+     "py": "Zhōngguó wǔshù zài shìjiè shang hěn yǒumíng.",
+     "vi": "Võ thuật Trung Quốc nổi tiếng thế giới."
+    }
+   ]
+  },
+  {
+   "w": "戏剧",
+   "py": "xìjù",
+   "hv": "hí kịch",
+   "vi": "kịch, sân khấu",
+   "pos": "danh từ",
+   "note": "Chính là \"hí kịch\".",
+   "ex": [
+    {
+     "cn": "他对戏剧很感兴趣。",
+     "py": "Tā duì xìjù hěn gǎn xìngqù.",
+     "vi": "Anh ấy rất hứng thú với kịch."
+    }
+   ]
+  },
+  {
+   "w": "跳高",
+   "py": "tiàogāo",
+   "hv": "khiêu cao",
+   "vi": "nhảy cao",
+   "pos": "danh từ",
+   "note": "跳 + 高.",
+   "ex": [
+    {
+     "cn": "他是学校的跳高冠军。",
+     "py": "Tā shì xuéxiào de tiàogāo guànjūn.",
+     "vi": "Cậu ấy là vô địch nhảy cao của trường."
+    }
+   ]
+  },
+  {
+   "w": "跳远",
+   "py": "tiàoyuǎn",
+   "hv": "khiêu viễn",
+   "vi": "nhảy xa",
+   "pos": "danh từ",
+   "note": "跳 + 远.",
+   "ex": [
+    {
+     "cn": "她跳远跳了五米。",
+     "py": "Tā tiàoyuǎn tiào le wǔ mǐ.",
+     "vi": "Cô ấy nhảy xa được năm mét."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "来 + lượng + món (gọi món)",
+   "b": "来点儿甜品 · 来一杯咖啡",
+   "d": "Khẩu ngữ khi gọi đồ ăn.",
+   "ex": [
+    {
+     "cn": "服务员，来两杯奶茶。",
+     "py": "Fúwùyuán, lái liǎng bēi nǎichá.",
+     "vi": "Phục vụ ơi, cho hai cốc trà sữa."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "夜市里有各种各样的小吃。",
+   "py": "Yèshì li yǒu gè zhǒng gè yàng de xiǎochī.",
+   "vi": "Chợ đêm có đủ loại đồ ăn vặt."
+  },
+  {
+   "cn": "业余时间我喜欢看戏剧。",
+   "py": "Yèyú shíjiān wǒ xǐhuan kàn xìjù.",
+   "vi": "Lúc rảnh tôi thích xem kịch."
+  },
+  {
+   "cn": "打完比赛，大家一起去吃甜品放松一下。",
+   "py": "Dǎ wán bǐsài, dàjiā yìqǐ qù chī tiánpǐn fàngsōng yíxià.",
+   "vi": "Đánh xong trận, mọi người cùng đi ăn đồ ngọt thư giãn."
+  }
+ ]
+}

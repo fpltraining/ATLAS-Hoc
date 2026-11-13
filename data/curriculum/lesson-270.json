@@ -1,0 +1,264 @@
+{
+ "id": 270,
+ "cn": "消费和销售",
+ "title": "Tiêu dùng và bán hàng",
+ "goal": "Nói về tiêu dùng, người tiêu dùng, doanh số, bán hàng, vật giá, đồ vật, quản lý toà nhà, vật chất, nhu cầu, tuyên truyền, quảng bá, cỡ nhỏ, kiểu mới, tiên tiến và hiện đại hoá.",
+ "words": [
+  {
+   "w": "消费",
+   "py": "xiāofèi",
+   "hv": "tiêu phí",
+   "vi": "tiêu dùng, chi tiêu",
+   "pos": "động từ, danh từ",
+   "note": "Khác \"tiêu phí\" (lãng phí) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "年轻人的消费习惯变了。",
+     "py": "Niánqīngrén de xiāofèi xíguàn biàn le.",
+     "vi": "Thói quen chi tiêu của người trẻ đã đổi."
+    }
+   ]
+  },
+  {
+   "w": "消费者",
+   "py": "xiāofèizhě",
+   "hv": "tiêu phí giả",
+   "vi": "người tiêu dùng",
+   "pos": "danh từ",
+   "note": "者 là người.",
+   "ex": [
+    {
+     "cn": "消费者越来越重视质量。",
+     "py": "Xiāofèizhě yuè lái yuè zhòngshì zhìliàng.",
+     "vi": "Người tiêu dùng ngày càng chú trọng chất lượng."
+    }
+   ]
+  },
+  {
+   "w": "销量",
+   "py": "xiāoliàng",
+   "hv": "tiêu lượng",
+   "vi": "doanh số, lượng bán",
+   "pos": "danh từ",
+   "note": "销 là bán.",
+   "ex": [
+    {
+     "cn": "这款游戏的销量很好。",
+     "py": "Zhè kuǎn yóuxì de xiāoliàng hěn hǎo.",
+     "vi": "Doanh số trò chơi này rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "销售",
+   "py": "xiāoshòu",
+   "hv": "tiêu thụ",
+   "vi": "bán hàng",
+   "pos": "động từ",
+   "note": "销售员 (nhân viên bán hàng).",
+   "ex": [
+    {
+     "cn": "她在一家公司做销售。",
+     "py": "Tā zài yì jiā gōngsī zuò xiāoshòu.",
+     "vi": "Cô ấy làm bán hàng ở một công ty."
+    }
+   ]
+  },
+  {
+   "w": "物价",
+   "py": "wùjià",
+   "hv": "vật giá",
+   "vi": "vật giá",
+   "pos": "danh từ",
+   "note": "Chính là \"vật giá\".",
+   "ex": [
+    {
+     "cn": "这里的物价比较低。",
+     "py": "Zhèlǐ de wùjià bǐjiào dī.",
+     "vi": "Vật giá ở đây khá thấp."
+    }
+   ]
+  },
+  {
+   "w": "物品",
+   "py": "wùpǐn",
+   "hv": "vật phẩm",
+   "vi": "đồ vật",
+   "pos": "danh từ",
+   "note": "个人物品 (đồ dùng cá nhân).",
+   "ex": [
+    {
+     "cn": "请保管好自己的物品。",
+     "py": "Qǐng bǎoguǎn hǎo zìjǐ de wùpǐn.",
+     "vi": "Xin giữ gìn đồ đạc của mình."
+    }
+   ]
+  },
+  {
+   "w": "物业",
+   "py": "wùyè",
+   "hv": "vật nghiệp",
+   "vi": "ban quản lý toà nhà",
+   "pos": "danh từ",
+   "note": "物业费 (phí quản lý).",
+   "ex": [
+    {
+     "cn": "房子漏水了，快找物业。",
+     "py": "Fángzi lòu shuǐ le, kuài zhǎo wùyè.",
+     "vi": "Nhà dột rồi, gọi ban quản lý ngay."
+    }
+   ]
+  },
+  {
+   "w": "物质",
+   "py": "wùzhì",
+   "hv": "vật chất",
+   "vi": "vật chất",
+   "pos": "danh từ",
+   "note": "Chính là \"vật chất\".",
+   "ex": [
+    {
+     "cn": "幸福不只是物质上的。",
+     "py": "Xìngfú bù zhǐ shì wùzhì shang de.",
+     "vi": "Hạnh phúc không chỉ là vật chất."
+    }
+   ]
+  },
+  {
+   "w": "需求",
+   "py": "xūqiú",
+   "hv": "nhu cầu",
+   "vi": "nhu cầu",
+   "pos": "danh từ",
+   "note": "Chính là \"nhu cầu\".",
+   "ex": [
+    {
+     "cn": "我们要满足客户的需求。",
+     "py": "Wǒmen yào mǎnzú kèhù de xūqiú.",
+     "vi": "Chúng ta phải đáp ứng nhu cầu khách hàng."
+    }
+   ]
+  },
+  {
+   "w": "宣传",
+   "py": "xuānchuán",
+   "hv": "tuyên truyền",
+   "vi": "quảng bá, tuyên truyền",
+   "pos": "động từ",
+   "note": "宣传活动 (hoạt động quảng bá).",
+   "ex": [
+    {
+     "cn": "俱乐部在网上宣传这次比赛。",
+     "py": "Jùlèbù zài wǎngshang xuānchuán zhè cì bǐsài.",
+     "vi": "Câu lạc bộ quảng bá trận đấu trên mạng."
+    }
+   ]
+  },
+  {
+   "w": "推广",
+   "py": "tuīguǎng",
+   "hv": "thôi quảng",
+   "vi": "phổ biến rộng, quảng bá",
+   "pos": "động từ",
+   "note": "推广产品 (quảng bá sản phẩm).",
+   "ex": [
+    {
+     "cn": "公司正在推广新产品。",
+     "py": "Gōngsī zhèngzài tuīguǎng xīn chǎnpǐn.",
+     "vi": "Công ty đang quảng bá sản phẩm mới."
+    }
+   ]
+  },
+  {
+   "w": "小型",
+   "py": "xiǎoxíng",
+   "hv": "tiểu hình",
+   "vi": "cỡ nhỏ",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 大型.",
+   "ex": [
+    {
+     "cn": "我们先办一个小型比赛。",
+     "py": "Wǒmen xiān bàn yí ge xiǎoxíng bǐsài.",
+     "vi": "Chúng ta tổ chức một giải nhỏ trước."
+    }
+   ]
+  },
+  {
+   "w": "新型",
+   "py": "xīnxíng",
+   "hv": "tân hình",
+   "vi": "kiểu mới",
+   "pos": "tính từ",
+   "note": "新型材料 (vật liệu mới).",
+   "ex": [
+    {
+     "cn": "这是一种新型电池。",
+     "py": "Zhè shì yì zhǒng xīnxíng diànchí.",
+     "vi": "Đây là một loại pin kiểu mới."
+    }
+   ]
+  },
+  {
+   "w": "先进",
+   "py": "xiānjìn",
+   "hv": "tiên tiến",
+   "vi": "tiên tiến",
+   "pos": "tính từ",
+   "note": "Chính là \"tiên tiến\".",
+   "ex": [
+    {
+     "cn": "这家医院的设备很先进。",
+     "py": "Zhè jiā yīyuàn de shèbèi hěn xiānjìn.",
+     "vi": "Thiết bị bệnh viện này rất tiên tiến."
+    }
+   ]
+  },
+  {
+   "w": "现代化",
+   "py": "xiàndàihuà",
+   "hv": "hiện đại hoá",
+   "vi": "hiện đại hoá",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"hiện đại hoá\".",
+   "ex": [
+    {
+     "cn": "这座城市越来越现代化了。",
+     "py": "Zhè zuò chéngshì yuè lái yuè xiàndàihuà le.",
+     "vi": "Thành phố này ngày càng hiện đại."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "满足 + 需求/要求",
+   "b": "满足客户的需求",
+   "d": "Đáp ứng nhu cầu, yêu cầu.",
+   "ex": [
+    {
+     "cn": "这个方案不能满足我们的要求。",
+     "py": "Zhège fāng'àn bù néng mǎnzú wǒmen de yāoqiú.",
+     "vi": "Phương án này không đáp ứng yêu cầu của chúng ta."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "物价上涨，消费者的压力也变大了。",
+   "py": "Wùjià shàngzhǎng, xiāofèizhě de yālì yě biàn dà le.",
+   "vi": "Vật giá tăng, áp lực của người tiêu dùng cũng lớn hơn."
+  },
+  {
+   "cn": "好的宣传可以提高销量。",
+   "py": "Hǎo de xuānchuán kěyǐ tígāo xiāoliàng.",
+   "vi": "Quảng bá tốt giúp tăng doanh số."
+  },
+  {
+   "cn": "了解客户的需求是销售的第一步。",
+   "py": "Liǎojiě kèhù de xūqiú shì xiāoshòu de dì yī bù.",
+   "vi": "Hiểu nhu cầu khách hàng là bước đầu của bán hàng."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 268,
+ "cn": "网络和系统",
+ "title": "Mạng và dịch vụ",
+ "goal": "Nói về mạng, hệ thống, tải xuống, hiển thị, sửa chữa, sửa đổi, điền, phiếu khảo sát, vô hiệu, tuyến, tín dụng, tiền đặt cọc, hoàn trả, thủ tục và nghiệp vụ.",
+ "words": [
+  {
+   "w": "网络",
+   "py": "wǎngluò",
+   "hv": "võng lạc",
+   "vi": "mạng, internet",
+   "pos": "danh từ",
+   "note": "网络游戏 (game online).",
+   "ex": [
+    {
+     "cn": "今天网络很慢。",
+     "py": "Jīntiān wǎngluò hěn màn.",
+     "vi": "Hôm nay mạng rất chậm."
+    }
+   ]
+  },
+  {
+   "w": "系统",
+   "py": "xìtǒng",
+   "hv": "hệ thống",
+   "vi": "hệ thống",
+   "pos": "danh từ",
+   "note": "Chính là \"hệ thống\".",
+   "ex": [
+    {
+     "cn": "系统出了问题，请稍等。",
+     "py": "Xìtǒng chū le wèntí, qǐng shāo děng.",
+     "vi": "Hệ thống có sự cố, xin chờ chút."
+    }
+   ]
+  },
+  {
+   "w": "下载",
+   "py": "xiàzài",
+   "hv": "hạ tải",
+   "vi": "tải xuống",
+   "pos": "động từ",
+   "note": "Trái nghĩa 上传.",
+   "ex": [
+    {
+     "cn": "先下载这个软件。",
+     "py": "Xiān xiàzài zhège ruǎnjiàn.",
+     "vi": "Trước tiên tải phần mềm này về."
+    }
+   ]
+  },
+  {
+   "w": "显示",
+   "py": "xiǎnshì",
+   "hv": "hiển thị",
+   "vi": "hiển thị; cho thấy",
+   "pos": "động từ",
+   "note": "屏幕显示 (màn hình hiện).",
+   "ex": [
+    {
+     "cn": "屏幕上显示比赛时间。",
+     "py": "Píngmù shang xiǎnshì bǐsài shíjiān.",
+     "vi": "Màn hình hiển thị giờ thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "维修",
+   "py": "wéixiū",
+   "hv": "duy tu",
+   "vi": "sửa chữa, bảo dưỡng",
+   "pos": "động từ",
+   "note": "维修电脑 (sửa máy tính).",
+   "ex": [
+    {
+     "cn": "电梯正在维修。",
+     "py": "Diàntī zhèngzài wéixiū.",
+     "vi": "Thang máy đang sửa."
+    }
+   ]
+  },
+  {
+   "w": "修改",
+   "py": "xiūgǎi",
+   "hv": "tu cải",
+   "vi": "sửa đổi",
+   "pos": "động từ",
+   "note": "修改文章 (sửa bài).",
+   "ex": [
+    {
+     "cn": "请帮我修改一下这篇作文。",
+     "py": "Qǐng bāng wǒ xiūgǎi yíxià zhè piān zuòwén.",
+     "vi": "Hãy sửa giúp tôi bài văn này."
+    }
+   ]
+  },
+  {
+   "w": "填",
+   "py": "tián",
+   "hv": "điền",
+   "vi": "điền; lấp",
+   "pos": "động từ",
+   "note": "填表 (điền bảng).",
+   "ex": [
+    {
+     "cn": "请先填这张表。",
+     "py": "Qǐng xiān tián zhè zhāng biǎo.",
+     "vi": "Xin điền tờ đơn này trước."
+    }
+   ]
+  },
+  {
+   "w": "问卷",
+   "py": "wènjuàn",
+   "hv": "vấn quyển",
+   "vi": "phiếu khảo sát",
+   "pos": "danh từ",
+   "note": "问卷调查 (khảo sát bằng phiếu).",
+   "ex": [
+    {
+     "cn": "请花五分钟填一下问卷。",
+     "py": "Qǐng huā wǔ fēnzhōng tián yíxià wènjuàn.",
+     "vi": "Xin dành năm phút điền phiếu khảo sát."
+    }
+   ]
+  },
+  {
+   "w": "无效",
+   "py": "wúxiào",
+   "hv": "vô hiệu",
+   "vi": "vô hiệu",
+   "pos": "tính từ",
+   "note": "Chính là \"vô hiệu\".",
+   "ex": [
+    {
+     "cn": "这张票已经无效了。",
+     "py": "Zhè zhāng piào yǐjīng wúxiào le.",
+     "vi": "Vé này hết hiệu lực rồi."
+    }
+   ]
+  },
+  {
+   "w": "线路",
+   "py": "xiànlù",
+   "hv": "tuyến lộ",
+   "vi": "tuyến (xe, điện)",
+   "pos": "danh từ",
+   "note": "公交线路 (tuyến xe buýt).",
+   "ex": [
+    {
+     "cn": "这条公交线路经过学校。",
+     "py": "Zhè tiáo gōngjiāo xiànlù jīngguò xuéxiào.",
+     "vi": "Tuyến xe buýt này đi qua trường."
+    }
+   ]
+  },
+  {
+   "w": "信用",
+   "py": "xìnyòng",
+   "hv": "tín dụng",
+   "vi": "uy tín; tín dụng",
+   "pos": "danh từ",
+   "note": "信用卡 (thẻ tín dụng).",
+   "ex": [
+    {
+     "cn": "他是一个讲信用的人。",
+     "py": "Tā shì yí ge jiǎng xìnyòng de rén.",
+     "vi": "Anh ấy là người giữ chữ tín."
+    }
+   ]
+  },
+  {
+   "w": "押金",
+   "py": "yājīn",
+   "hv": "áp kim",
+   "vi": "tiền đặt cọc",
+   "pos": "danh từ",
+   "note": "交押金 (đóng cọc).",
+   "ex": [
+    {
+     "cn": "租房要先交一个月的押金。",
+     "py": "Zū fáng yào xiān jiāo yí ge yuè de yājīn.",
+     "vi": "Thuê nhà phải đóng cọc một tháng trước."
+    }
+   ]
+  },
+  {
+   "w": "退还",
+   "py": "tuìhuán",
+   "hv": "thoái hoàn",
+   "vi": "hoàn trả",
+   "pos": "động từ",
+   "note": "退还押金 (trả lại tiền cọc).",
+   "ex": [
+    {
+     "cn": "退房的时候会退还押金。",
+     "py": "Tuì fáng de shíhou huì tuìhuán yājīn.",
+     "vi": "Khi trả phòng sẽ hoàn tiền cọc."
+    }
+   ]
+  },
+  {
+   "w": "手续",
+   "py": "shǒuxù",
+   "hv": "thủ tục",
+   "vi": "thủ tục",
+   "pos": "danh từ",
+   "note": "办手续 (làm thủ tục).",
+   "ex": [
+    {
+     "cn": "出国要办很多手续。",
+     "py": "Chūguó yào bàn hěn duō shǒuxù.",
+     "vi": "Ra nước ngoài phải làm nhiều thủ tục."
+    }
+   ]
+  },
+  {
+   "w": "业务",
+   "py": "yèwù",
+   "hv": "nghiệp vụ",
+   "vi": "nghiệp vụ, mảng công việc",
+   "pos": "danh từ",
+   "note": "业务能力 (năng lực chuyên môn).",
+   "ex": [
+    {
+     "cn": "这家银行的业务很多。",
+     "py": "Zhè jiā yínháng de yèwù hěn duō.",
+     "vi": "Ngân hàng này có nhiều dịch vụ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "办 + 手续/业务/签证",
+   "b": "办手续",
+   "d": "办 đi với các việc thủ tục.",
+   "ex": [
+    {
+     "cn": "我明天去银行办业务。",
+     "py": "Wǒ míngtiān qù yínháng bàn yèwù.",
+     "vi": "Mai tôi ra ngân hàng làm giao dịch."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "网络不稳定，比赛暂停了。",
+   "py": "Wǎngluò bù wěndìng, bǐsài zàntíng le.",
+   "vi": "Mạng không ổn định, trận đấu tạm dừng."
+  },
+  {
+   "cn": "修改密码以后，请重新登录。",
+   "py": "Xiūgǎi mìmǎ yǐhòu, qǐng chóngxīn dēnglù.",
+   "vi": "Đổi mật khẩu xong, hãy đăng nhập lại."
+  },
+  {
+   "cn": "手续办好了，押金也退还了。",
+   "py": "Shǒuxù bàn hǎo le, yājīn yě tuìhuán le.",
+   "vi": "Thủ tục làm xong rồi, tiền cọc cũng được trả lại."
+  }
+ ]
+}

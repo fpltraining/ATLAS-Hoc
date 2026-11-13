@@ -1,0 +1,264 @@
+{
+ "id": 266,
+ "cn": "团队和选手",
+ "title": "Đội tuyển và tuyển thủ",
+ "goal": "Nói về đội, tuyển thủ, tập luyện, thử thách, tuyển chọn, điều chỉnh, dồn sức, thống kê, thống nhất, đề cử, rút lui, hành động, sân khấu và hiện trường.",
+ "words": [
+  {
+   "w": "团队",
+   "py": "tuánduì",
+   "hv": "đoàn đội",
+   "vi": "đội, nhóm",
+   "pos": "danh từ",
+   "note": "团队精神 (tinh thần đồng đội).",
+   "ex": [
+    {
+     "cn": "团队精神比个人能力更重要。",
+     "py": "Tuánduì jīngshén bǐ gèrén nénglì gèng zhòngyào.",
+     "vi": "Tinh thần đồng đội quan trọng hơn năng lực cá nhân."
+    }
+   ]
+  },
+  {
+   "w": "团",
+   "py": "tuán",
+   "hv": "đoàn",
+   "vi": "đoàn, nhóm; viên tròn",
+   "pos": "danh từ, lượng từ",
+   "note": "旅游团 (đoàn du lịch).",
+   "ex": [
+    {
+     "cn": "我们跟旅游团去北京。",
+     "py": "Wǒmen gēn lǚyóutuán qù Běijīng.",
+     "vi": "Chúng tôi theo đoàn du lịch đi Bắc Kinh."
+    }
+   ]
+  },
+  {
+   "w": "选手",
+   "py": "xuǎnshǒu",
+   "hv": "tuyển thủ",
+   "vi": "tuyển thủ",
+   "pos": "danh từ",
+   "note": "Chính là \"tuyển thủ\".",
+   "ex": [
+    {
+     "cn": "他是我们队最年轻的选手。",
+     "py": "Tā shì wǒmen duì zuì niánqīng de xuǎnshǒu.",
+     "vi": "Cậu ấy là tuyển thủ trẻ nhất đội."
+    }
+   ]
+  },
+  {
+   "w": "训练",
+   "py": "xùnliàn",
+   "hv": "huấn luyện",
+   "vi": "tập luyện, huấn luyện",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"huấn luyện\".",
+   "ex": [
+    {
+     "cn": "我们每天训练八个小时。",
+     "py": "Wǒmen měi tiān xùnliàn bā ge xiǎoshí.",
+     "vi": "Chúng tôi tập tám tiếng mỗi ngày."
+    }
+   ]
+  },
+  {
+   "w": "挑战",
+   "py": "tiǎozhàn",
+   "hv": "khiêu chiến",
+   "vi": "thử thách",
+   "pos": "danh từ, động từ",
+   "note": "接受挑战 (nhận thử thách).",
+   "ex": [
+    {
+     "cn": "这次比赛对我们是一个大挑战。",
+     "py": "Zhè cì bǐsài duì wǒmen shì yí ge dà tiǎozhàn.",
+     "vi": "Giải này là thử thách lớn với chúng tôi."
+    }
+   ]
+  },
+  {
+   "w": "挑选",
+   "py": "tiāoxuǎn",
+   "hv": "thiêu tuyển",
+   "vi": "chọn lựa",
+   "pos": "động từ",
+   "note": "挑 ở đây đọc tiāo.",
+   "ex": [
+    {
+     "cn": "教练从十个人里挑选了五个人。",
+     "py": "Jiàoliàn cóng shí ge rén li tiāoxuǎn le wǔ ge rén.",
+     "vi": "Huấn luyện viên chọn năm người trong mười người."
+    }
+   ]
+  },
+  {
+   "w": "调整",
+   "py": "tiáozhěng",
+   "hv": "điều chỉnh",
+   "vi": "điều chỉnh",
+   "pos": "động từ",
+   "note": "调 ở đây đọc tiáo.",
+   "ex": [
+    {
+     "cn": "输了第一局以后，我们调整了战术。",
+     "py": "Shū le dì yī jú yǐhòu, wǒmen tiáozhěng le zhànshù.",
+     "vi": "Thua ván đầu, chúng tôi điều chỉnh chiến thuật."
+    }
+   ]
+  },
+  {
+   "w": "投入",
+   "py": "tóurù",
+   "hv": "đầu nhập",
+   "vi": "dồn sức; đầu tư",
+   "pos": "động từ, tính từ",
+   "note": "全身心投入 (dồn hết tâm sức).",
+   "ex": [
+    {
+     "cn": "他打比赛的时候非常投入。",
+     "py": "Tā dǎ bǐsài de shíhou fēicháng tóurù.",
+     "vi": "Khi thi đấu anh ấy cực kỳ nhập tâm."
+    }
+   ]
+  },
+  {
+   "w": "统计",
+   "py": "tǒngjì",
+   "hv": "thống kê",
+   "vi": "thống kê",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"thống kê\".",
+   "ex": [
+    {
+     "cn": "根据统计，我们的胜率是百分之七十。",
+     "py": "Gēnjù tǒngjì, wǒmen de shènglǜ shì bǎi fēnzhī qīshí.",
+     "vi": "Theo thống kê, tỉ lệ thắng của chúng tôi là 70%."
+    }
+   ]
+  },
+  {
+   "w": "统一",
+   "py": "tǒngyī",
+   "hv": "thống nhất",
+   "vi": "thống nhất, đồng bộ",
+   "pos": "động từ, tính từ",
+   "note": "Chính là \"thống nhất\".",
+   "ex": [
+    {
+     "cn": "大家的意见终于统一了。",
+     "py": "Dàjiā de yìjiàn zhōngyú tǒngyī le.",
+     "vi": "Ý kiến mọi người cuối cùng đã thống nhất."
+    }
+   ]
+  },
+  {
+   "w": "推荐",
+   "py": "tuījiàn",
+   "hv": "thôi tiến",
+   "vi": "giới thiệu, đề cử",
+   "pos": "động từ",
+   "note": "推荐一本书 (giới thiệu một cuốn sách).",
+   "ex": [
+    {
+     "cn": "你能给我推荐一家好饭馆吗？",
+     "py": "Nǐ néng gěi wǒ tuījiàn yì jiā hǎo fànguǎn ma?",
+     "vi": "Bạn giới thiệu cho tôi một quán ngon được không?"
+    }
+   ]
+  },
+  {
+   "w": "退出",
+   "py": "tuìchū",
+   "hv": "thoái xuất",
+   "vi": "rút lui, thoát ra",
+   "pos": "động từ",
+   "note": "退出比赛 (rút khỏi giải).",
+   "ex": [
+    {
+     "cn": "他因为受伤退出了比赛。",
+     "py": "Tā yīnwèi shòushāng tuìchū le bǐsài.",
+     "vi": "Anh ấy rút khỏi giải vì chấn thương."
+    }
+   ]
+  },
+  {
+   "w": "行动",
+   "py": "xíngdòng",
+   "hv": "hành động",
+   "vi": "hành động",
+   "pos": "danh từ, động từ",
+   "note": "Chính là \"hành động\".",
+   "ex": [
+    {
+     "cn": "说得再好，不如马上行动。",
+     "py": "Shuō de zài hǎo, bùrú mǎshàng xíngdòng.",
+     "vi": "Nói hay mấy cũng không bằng hành động ngay."
+    }
+   ]
+  },
+  {
+   "w": "舞台",
+   "py": "wǔtái",
+   "hv": "vũ đài",
+   "vi": "sân khấu",
+   "pos": "danh từ",
+   "note": "Chính là \"vũ đài\".",
+   "ex": [
+    {
+     "cn": "这是他第一次站上国际舞台。",
+     "py": "Zhè shì tā dì yī cì zhàn shàng guójì wǔtái.",
+     "vi": "Đây là lần đầu anh ấy đứng trên sân khấu quốc tế."
+    }
+   ]
+  },
+  {
+   "w": "现场",
+   "py": "xiànchǎng",
+   "hv": "hiện trường",
+   "vi": "tại chỗ, trực tiếp",
+   "pos": "danh từ",
+   "note": "现场观众 (khán giả tại chỗ).",
+   "ex": [
+    {
+     "cn": "现场有一万名观众。",
+     "py": "Xiànchǎng yǒu yí wàn míng guānzhòng.",
+     "vi": "Tại chỗ có mười nghìn khán giả."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "挑 có hai cách đọc",
+   "b": "tiāo: chọn (挑选) · tiǎo: khiêu (挑战)",
+   "d": "Nhớ theo từ ghép.",
+   "ex": [
+    {
+     "cn": "你挑一个你喜欢的吧。",
+     "py": "Nǐ tiāo yí ge nǐ xǐhuan de ba.",
+     "vi": "Bạn chọn một cái bạn thích đi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "好的团队需要每个选手都投入。",
+   "py": "Hǎo de tuánduì xūyào měi ge xuǎnshǒu dōu tóurù.",
+   "vi": "Một đội tốt cần mọi tuyển thủ đều dốc sức."
+  },
+  {
+   "cn": "比赛中要根据情况及时调整。",
+   "py": "Bǐsài zhōng yào gēnjù qíngkuàng jíshí tiáozhěng.",
+   "vi": "Trong trận phải điều chỉnh kịp thời theo tình hình."
+  },
+  {
+   "cn": "现场的气氛非常热烈。",
+   "py": "Xiànchǎng de qìfēn fēicháng rèliè.",
+   "vi": "Không khí tại chỗ cực kỳ sôi động."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 269,
+ "cn": "五颜六色",
+ "title": "Hình dáng và màu sắc",
+ "goal": "Mô tả bề ngoài, hình dạng, hình tượng, hình thức, kiểu dáng, cong, nghiêng, đuôi, eo, mắt, răng, sặc sỡ, tranh vẽ và khăn quàng.",
+ "words": [
+  {
+   "w": "外观",
+   "py": "wàiguān",
+   "hv": "ngoại quan",
+   "vi": "bề ngoài",
+   "pos": "danh từ",
+   "note": "外观设计 (thiết kế bề ngoài).",
+   "ex": [
+    {
+     "cn": "这款手机的外观很漂亮。",
+     "py": "Zhè kuǎn shǒujī de wàiguān hěn piàoliang.",
+     "vi": "Ngoại hình điện thoại này rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "外形",
+   "py": "wàixíng",
+   "hv": "ngoại hình",
+   "vi": "hình dáng bên ngoài",
+   "pos": "danh từ",
+   "note": "Hình dáng của vật.",
+   "ex": [
+    {
+     "cn": "这座大楼的外形像一朵花。",
+     "py": "Zhè zuò dàlóu de wàixíng xiàng yì duǒ huā.",
+     "vi": "Toà nhà này có hình dáng giống một bông hoa."
+    }
+   ]
+  },
+  {
+   "w": "形状",
+   "py": "xíngzhuàng",
+   "hv": "hình trạng",
+   "vi": "hình dạng",
+   "pos": "danh từ",
+   "note": "圆形 (hình tròn).",
+   "ex": [
+    {
+     "cn": "这块石头的形状很特别。",
+     "py": "Zhè kuài shítou de xíngzhuàng hěn tèbié.",
+     "vi": "Hòn đá này có hình dạng rất đặc biệt."
+    }
+   ]
+  },
+  {
+   "w": "形象",
+   "py": "xíngxiàng",
+   "hv": "hình tượng",
+   "vi": "hình ảnh, hình tượng",
+   "pos": "danh từ, tính từ",
+   "note": "公众形象 (hình ảnh trước công chúng).",
+   "ex": [
+    {
+     "cn": "选手要注意自己的形象。",
+     "py": "Xuǎnshǒu yào zhùyì zìjǐ de xíngxiàng.",
+     "vi": "Tuyển thủ phải chú ý hình ảnh của mình."
+    }
+   ]
+  },
+  {
+   "w": "形式",
+   "py": "xíngshì",
+   "hv": "hình thức",
+   "vi": "hình thức",
+   "pos": "danh từ",
+   "note": "Chính là \"hình thức\".",
+   "ex": [
+    {
+     "cn": "比赛采用五局三胜的形式。",
+     "py": "Bǐsài cǎiyòng wǔ jú sān shèng de xíngshì.",
+     "vi": "Giải áp dụng thể thức thắng ba trong năm ván."
+    }
+   ]
+  },
+  {
+   "w": "样式",
+   "py": "yàngshì",
+   "hv": "dạng thức",
+   "vi": "kiểu dáng",
+   "pos": "danh từ",
+   "note": "衣服的样式 (kiểu quần áo).",
+   "ex": [
+    {
+     "cn": "这件衣服的样式很新。",
+     "py": "Zhè jiàn yīfu de yàngshì hěn xīn.",
+     "vi": "Kiểu áo này rất mới."
+    }
+   ]
+  },
+  {
+   "w": "弯",
+   "py": "wān",
+   "hv": "loan",
+   "vi": "cong; chỗ rẽ",
+   "pos": "tính từ, danh từ",
+   "note": "拐弯 (rẽ).",
+   "ex": [
+    {
+     "cn": "前面路口往左拐弯。",
+     "py": "Qiánmiàn lùkǒu wǎng zuǒ guǎi wān.",
+     "vi": "Đến ngã tư phía trước rẽ trái."
+    }
+   ]
+  },
+  {
+   "w": "斜",
+   "py": "xié",
+   "hv": "tà",
+   "vi": "nghiêng",
+   "pos": "tính từ",
+   "note": "斜坡 (dốc nghiêng).",
+   "ex": [
+    {
+     "cn": "墙上的画挂斜了。",
+     "py": "Qiáng shang de huà guà xié le.",
+     "vi": "Bức tranh trên tường treo bị lệch."
+    }
+   ]
+  },
+  {
+   "w": "尾巴",
+   "py": "wěiba",
+   "hv": "vĩ ba",
+   "vi": "cái đuôi",
+   "pos": "danh từ",
+   "note": "尾 là \"vĩ\".",
+   "ex": [
+    {
+     "cn": "小狗高兴得摇尾巴。",
+     "py": "Xiǎogǒu gāoxìng de yáo wěiba.",
+     "vi": "Chú chó con vui mừng vẫy đuôi."
+    }
+   ]
+  },
+  {
+   "w": "腰",
+   "py": "yāo",
+   "hv": "yêu",
+   "vi": "eo, lưng",
+   "pos": "danh từ",
+   "note": "腰疼 (đau lưng).",
+   "ex": [
+    {
+     "cn": "坐久了腰会疼。",
+     "py": "Zuò jiǔ le yāo huì téng.",
+     "vi": "Ngồi lâu sẽ đau lưng."
+    }
+   ]
+  },
+  {
+   "w": "眼",
+   "py": "yǎn",
+   "hv": "nhãn",
+   "vi": "mắt; cái nhìn",
+   "pos": "danh từ, lượng từ",
+   "note": "看一眼 (liếc một cái).",
+   "ex": [
+    {
+     "cn": "他看了我一眼，没说话。",
+     "py": "Tā kàn le wǒ yì yǎn, méi shuōhuà.",
+     "vi": "Anh ấy liếc tôi một cái, không nói gì."
+    }
+   ]
+  },
+  {
+   "w": "牙齿",
+   "py": "yáchǐ",
+   "hv": "nha xỉ",
+   "vi": "răng",
+   "pos": "danh từ",
+   "note": "牙 + 齿.",
+   "ex": [
+    {
+     "cn": "每天要刷两次牙齿。",
+     "py": "Měi tiān yào shuā liǎng cì yáchǐ.",
+     "vi": "Mỗi ngày phải đánh răng hai lần."
+    }
+   ]
+  },
+  {
+   "w": "五颜六色",
+   "py": "wǔyán liùsè",
+   "hv": "ngũ nhan lục sắc",
+   "vi": "sặc sỡ nhiều màu",
+   "pos": "thành ngữ",
+   "note": "Năm màu sáu sắc.",
+   "ex": [
+    {
+     "cn": "花园里开满了五颜六色的花。",
+     "py": "Huāyuán li kāi mǎn le wǔyán liùsè de huā.",
+     "vi": "Vườn nở đầy hoa đủ màu sắc."
+    }
+   ]
+  },
+  {
+   "w": "图画",
+   "py": "túhuà",
+   "hv": "đồ hoạ",
+   "vi": "bức tranh",
+   "pos": "danh từ",
+   "note": "Tranh vẽ.",
+   "ex": [
+    {
+     "cn": "孩子画了一幅图画。",
+     "py": "Háizi huà le yì fú túhuà.",
+     "vi": "Đứa trẻ vẽ một bức tranh."
+    }
+   ]
+  },
+  {
+   "w": "围巾",
+   "py": "wéijīn",
+   "hv": "vi cân",
+   "vi": "khăn quàng cổ",
+   "pos": "danh từ",
+   "note": "围 (quấn) + 巾 (khăn).",
+   "ex": [
+    {
+     "cn": "天冷了，戴上围巾吧。",
+     "py": "Tiān lěng le, dài shàng wéijīn ba.",
+     "vi": "Trời lạnh rồi, quàng khăn vào đi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 了 + ai + 一眼",
+   "b": "看了我一眼",
+   "d": "Lượng từ động tác: nhìn một cái.",
+   "ex": [
+    {
+     "cn": "她回头看了一眼，然后走了。",
+     "py": "Tā huí tóu kàn le yì yǎn, ránhòu zǒu le.",
+     "vi": "Cô ấy quay đầu nhìn một cái rồi đi."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "这个英雄的外形很酷。",
+   "py": "Zhège yīngxióng de wàixíng hěn kù.",
+   "vi": "Ngoại hình vị tướng này rất ngầu."
+  },
+  {
+   "cn": "选手的形象也代表了整个俱乐部。",
+   "py": "Xuǎnshǒu de xíngxiàng yě dàibiǎo le zhěnggè jùlèbù.",
+   "vi": "Hình ảnh tuyển thủ cũng đại diện cho cả câu lạc bộ."
+  },
+  {
+   "cn": "长时间坐着打游戏，腰和眼睛都会累。",
+   "py": "Cháng shíjiān zuò zhe dǎ yóuxì, yāo hé yǎnjing dōu huì lèi.",
+   "vi": "Ngồi chơi game lâu, lưng và mắt đều mỏi."
+  }
+ ]
+}
