@@ -1,0 +1,264 @@
+{
+ "id": 222,
+ "cn": "反正都一样",
+ "title": "Từ nối và ngữ khí",
+ "goal": "Dùng các từ nối: bắt buộc, cần thiết, nếu không, ngược lại, dù sao, từ đó, quả thật, dường như, lần lượt.",
+ "words": [
+  {
+   "w": "必",
+   "py": "bì",
+   "hv": "tất",
+   "vi": "ắt, phải",
+   "pos": "phó từ",
+   "note": "Văn viết: 必须 → 必.",
+   "ex": [
+    {
+     "cn": "这是必经之路。",
+     "py": "Zhè shì bì jīng zhī lù.",
+     "vi": "Đây là con đường bắt buộc phải đi qua."
+    }
+   ]
+  },
+  {
+   "w": "必需",
+   "py": "bìxū",
+   "hv": "tất nhu",
+   "vi": "thiết yếu",
+   "pos": "tính từ",
+   "note": "生活必需品 (đồ thiết yếu).",
+   "ex": [
+    {
+     "cn": "水是生活必需品。",
+     "py": "Shuǐ shì shēnghuó bìxūpǐn.",
+     "vi": "Nước là nhu yếu phẩm."
+    }
+   ]
+  },
+  {
+   "w": "必要",
+   "py": "bìyào",
+   "hv": "tất yếu",
+   "vi": "cần thiết",
+   "pos": "tính từ",
+   "note": "没有必要 (không cần thiết).",
+   "ex": [
+    {
+     "cn": "没有必要这么担心。",
+     "py": "Méiyǒu bìyào zhème dānxīn.",
+     "vi": "Không cần lo lắng như vậy."
+    }
+   ]
+  },
+  {
+   "w": "便",
+   "py": "biàn",
+   "hv": "tiện",
+   "vi": "liền, bèn",
+   "pos": "phó từ",
+   "note": "Văn viết của 就.",
+   "ex": [
+    {
+     "cn": "他一到家便睡觉了。",
+     "py": "Tā yí dào jiā biàn shuìjiào le.",
+     "vi": "Vừa về đến nhà anh ấy liền đi ngủ."
+    }
+   ]
+  },
+  {
+   "w": "不然",
+   "py": "bùrán",
+   "hv": "bất nhiên",
+   "vi": "nếu không thì",
+   "pos": "liên từ",
+   "note": "快点儿，不然就迟到了.",
+   "ex": [
+    {
+     "cn": "快走吧，不然要迟到了。",
+     "py": "Kuài zǒu ba, bùrán yào chídào le.",
+     "vi": "Đi nhanh lên, không thì muộn mất."
+    }
+   ]
+  },
+  {
+   "w": "反而",
+   "py": "fǎn'ér",
+   "hv": "phản nhi",
+   "vi": "ngược lại, trái lại",
+   "pos": "phó từ",
+   "note": "Kết quả trái với mong đợi.",
+   "ex": [
+    {
+     "cn": "吃了药，病反而更重了。",
+     "py": "Chī le yào, bìng fǎn'ér gèng zhòng le.",
+     "vi": "Uống thuốc rồi, bệnh ngược lại còn nặng hơn."
+    }
+   ]
+  },
+  {
+   "w": "反正",
+   "py": "fǎnzheng",
+   "hv": "phản chính",
+   "vi": "dù sao thì",
+   "pos": "phó từ",
+   "note": "Khẩu ngữ, nhấn mạnh kết quả không đổi.",
+   "ex": [
+    {
+     "cn": "反正还有时间，别着急。",
+     "py": "Fǎnzheng hái yǒu shíjiān, bié zháojí.",
+     "vi": "Dù sao vẫn còn thời gian, đừng vội."
+    }
+   ]
+  },
+  {
+   "w": "从而",
+   "py": "cóng'ér",
+   "hv": "tòng nhi",
+   "vi": "từ đó, nhờ vậy",
+   "pos": "liên từ",
+   "note": "Văn viết, nối nguyên nhân và kết quả.",
+   "ex": [
+    {
+     "cn": "他改变了方法，从而提高了成绩。",
+     "py": "Tā gǎibiàn le fāngfǎ, cóng'ér tígāo le chéngjì.",
+     "vi": "Anh ấy đổi cách làm, nhờ đó nâng được thành tích."
+    }
+   ]
+  },
+  {
+   "w": "从不",
+   "py": "cóng bù",
+   "hv": "tòng bất",
+   "vi": "không bao giờ",
+   "pos": "phó từ",
+   "note": "从不迟到 (chưa bao giờ đi muộn).",
+   "ex": [
+    {
+     "cn": "他从不说别人的坏话。",
+     "py": "Tā cóng bù shuō biérén de huàihuà.",
+     "vi": "Anh ấy không bao giờ nói xấu người khác."
+    }
+   ]
+  },
+  {
+   "w": "的确",
+   "py": "díquè",
+   "hv": "đích xác",
+   "vi": "quả thật",
+   "pos": "phó từ",
+   "note": "Chính là \"đích xác\".",
+   "ex": [
+    {
+     "cn": "这部电影的确很好看。",
+     "py": "Zhè bù diànyǐng díquè hěn hǎokàn.",
+     "vi": "Bộ phim này quả thật rất hay."
+    }
+   ]
+  },
+  {
+   "w": "仿佛",
+   "py": "fǎngfú",
+   "hv": "phảng phất",
+   "vi": "dường như",
+   "pos": "phó từ",
+   "note": "Chính là \"phảng phất\".",
+   "ex": [
+    {
+     "cn": "他仿佛回到了小时候。",
+     "py": "Tā fǎngfú huídào le xiǎoshíhou.",
+     "vi": "Anh ấy như quay về thời thơ ấu."
+    }
+   ]
+  },
+  {
+   "w": "纷纷",
+   "py": "fēnfēn",
+   "hv": "phân phân",
+   "vi": "lần lượt, nhao nhao",
+   "pos": "phó từ",
+   "note": "Nhiều người cùng làm.",
+   "ex": [
+    {
+     "cn": "观众纷纷站起来鼓掌。",
+     "py": "Guānzhòng fēnfēn zhàn qǐlái gǔzhǎng.",
+     "vi": "Khán giả lần lượt đứng dậy vỗ tay."
+    }
+   ]
+  },
+  {
+   "w": "分别",
+   "py": "fēnbié",
+   "hv": "phân biệt",
+   "vi": "lần lượt, riêng từng; chia tay",
+   "pos": "phó từ, động từ",
+   "note": "分别是 (lần lượt là).",
+   "ex": [
+    {
+     "cn": "冠军和亚军分别是A队和B队。",
+     "py": "Guànjūn hé yàjūn fēnbié shì A duì hé B duì.",
+     "vi": "Vô địch và á quân lần lượt là đội A và đội B."
+    }
+   ]
+  },
+  {
+   "w": "等于",
+   "py": "děngyú",
+   "hv": "đẳng vu",
+   "vi": "bằng",
+   "pos": "động từ",
+   "note": "一加一等于二.",
+   "ex": [
+    {
+     "cn": "三加五等于八。",
+     "py": "Sān jiā wǔ děngyú bā.",
+     "vi": "Ba cộng năm bằng tám."
+    }
+   ]
+  },
+  {
+   "w": "大于",
+   "py": "dàyú",
+   "hv": "đại vu",
+   "vi": "lớn hơn",
+   "pos": "động từ",
+   "note": "Trái nghĩa 小于.",
+   "ex": [
+    {
+     "cn": "收入大于支出。",
+     "py": "Shōurù dàyú zhīchū.",
+     "vi": "Thu nhập lớn hơn chi tiêu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "反而",
+   "b": "Mong đợi A nhưng kết quả trái lại",
+   "d": "Dùng ở vế sau, trước động từ hoặc tính từ.",
+   "ex": [
+    {
+     "cn": "休息了一天，我反而更累了。",
+     "py": "Xiūxi le yì tiān, wǒ fǎn'ér gèng lèi le.",
+     "vi": "Nghỉ một ngày, tôi lại còn mệt hơn."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "反正已经输了，我们就当学习经验吧。",
+   "py": "Fǎnzheng yǐjīng shū le, wǒmen jiù dāng xuéxí jīngyàn ba.",
+   "vi": "Dù sao cũng thua rồi, coi như học kinh nghiệm đi."
+  },
+  {
+   "cn": "他从不放弃，从而赢得了大家的尊重。",
+   "py": "Tā cóng bù fàngqì, cóng'ér yíngdé le dàjiā de zūnzhòng.",
+   "vi": "Anh ấy không bao giờ bỏ cuộc, nhờ đó được mọi người tôn trọng."
+  },
+  {
+   "cn": "比赛结束了，粉丝们纷纷来到后台。",
+   "py": "Bǐsài jiéshù le, fěnsīmen fēnfēn láidào hòutái.",
+   "vi": "Trận đấu kết thúc, người hâm mộ lần lượt kéo đến hậu trường."
+  }
+ ]
+}

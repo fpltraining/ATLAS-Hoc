@@ -1,0 +1,264 @@
+{
+ "id": 217,
+ "cn": "遵守规则",
+ "title": "Quy tắc và xử lý",
+ "goal": "Nói về bệnh tình, xử lý, biện pháp, phòng tránh, phạt, toà án, trọng tài và đối thủ.",
+ "words": [
+  {
+   "w": "病房",
+   "py": "bìngfáng",
+   "hv": "bệnh phòng",
+   "vi": "phòng bệnh",
+   "pos": "danh từ",
+   "note": "Phòng nằm của bệnh nhân.",
+   "ex": [
+    {
+     "cn": "他住在三号病房。",
+     "py": "Tā zhù zài sān hào bìngfáng.",
+     "vi": "Ông ấy nằm phòng bệnh số ba."
+    }
+   ]
+  },
+  {
+   "w": "病情",
+   "py": "bìngqíng",
+   "hv": "bệnh tình",
+   "vi": "bệnh tình",
+   "pos": "danh từ",
+   "note": "Chính là \"bệnh tình\".",
+   "ex": [
+    {
+     "cn": "医生说他的病情好多了。",
+     "py": "Yīshēng shuō tā de bìngqíng hǎo duō le.",
+     "vi": "Bác sĩ nói bệnh tình của ông ấy đỡ nhiều rồi."
+    }
+   ]
+  },
+  {
+   "w": "处理",
+   "py": "chǔlǐ",
+   "hv": "xử lý",
+   "vi": "xử lý",
+   "pos": "động từ",
+   "note": "Chính là \"xử lý\".",
+   "ex": [
+    {
+     "cn": "这件事我来处理。",
+     "py": "Zhè jiàn shì wǒ lái chǔlǐ.",
+     "vi": "Việc này để tôi xử lý."
+    }
+   ]
+  },
+  {
+   "w": "措施",
+   "py": "cuòshī",
+   "hv": "thố thi",
+   "vi": "biện pháp",
+   "pos": "danh từ",
+   "note": "采取措施 (áp dụng biện pháp).",
+   "ex": [
+    {
+     "cn": "学校采取了很多安全措施。",
+     "py": "Xuéxiào cǎiqǔ le hěn duō ānquán cuòshī.",
+     "vi": "Nhà trường áp dụng nhiều biện pháp an toàn."
+    }
+   ]
+  },
+  {
+   "w": "冲",
+   "py": "chōng",
+   "hv": "xung",
+   "vi": "lao tới; xả nước",
+   "pos": "động từ",
+   "note": "冲上去 (lao lên).",
+   "ex": [
+    {
+     "cn": "他第一个冲了上去。",
+     "py": "Tā dì yī ge chōng le shàngqù.",
+     "vi": "Anh ấy là người đầu tiên lao lên."
+    }
+   ]
+  },
+  {
+   "w": "打断",
+   "py": "dǎduàn",
+   "hv": "đả đoạn",
+   "vi": "ngắt lời; làm gián đoạn",
+   "pos": "động từ",
+   "note": "打断别人说话 (ngắt lời người khác).",
+   "ex": [
+    {
+     "cn": "对不起，打断一下。",
+     "py": "Duìbuqǐ, dǎduàn yíxià.",
+     "vi": "Xin lỗi, cho tôi ngắt lời một chút."
+    }
+   ]
+  },
+  {
+   "w": "防",
+   "py": "fáng",
+   "hv": "phòng",
+   "vi": "phòng, đề phòng",
+   "pos": "động từ",
+   "note": "防晒 (chống nắng), 防水 (chống nước).",
+   "ex": [
+    {
+     "cn": "这块手表可以防水。",
+     "py": "Zhè kuài shǒubiǎo kěyǐ fángshuǐ.",
+     "vi": "Chiếc đồng hồ này chống nước được."
+    }
+   ]
+  },
+  {
+   "w": "防止",
+   "py": "fángzhǐ",
+   "hv": "phòng chỉ",
+   "vi": "ngăn chặn, phòng ngừa",
+   "pos": "động từ",
+   "note": "Chính là \"phòng chỉ\".",
+   "ex": [
+    {
+     "cn": "多洗手可以防止生病。",
+     "py": "Duō xǐ shǒu kěyǐ fángzhǐ shēngbìng.",
+     "vi": "Rửa tay nhiều giúp phòng bệnh."
+    }
+   ]
+  },
+  {
+   "w": "罚",
+   "py": "fá",
+   "hv": "phạt",
+   "vi": "phạt",
+   "pos": "động từ",
+   "note": "Chính là \"phạt\".",
+   "ex": [
+    {
+     "cn": "他迟到了，被教练罚跑五圈。",
+     "py": "Tā chídào le, bèi jiàoliàn fá pǎo wǔ quān.",
+     "vi": "Cậu ấy đi muộn, bị huấn luyện viên phạt chạy năm vòng."
+    }
+   ]
+  },
+  {
+   "w": "罚款",
+   "py": "fákuǎn",
+   "hv": "phạt khoản",
+   "vi": "tiền phạt; phạt tiền",
+   "pos": "danh từ, động từ",
+   "note": "款 là khoản tiền.",
+   "ex": [
+    {
+     "cn": "闯红灯要罚款。",
+     "py": "Chuǎng hóngdēng yào fákuǎn.",
+     "vi": "Vượt đèn đỏ sẽ bị phạt tiền."
+    }
+   ]
+  },
+  {
+   "w": "法院",
+   "py": "fǎyuàn",
+   "hv": "pháp viện",
+   "vi": "toà án",
+   "pos": "danh từ",
+   "note": "Chính là \"pháp viện\".",
+   "ex": [
+    {
+     "cn": "这件事最后到了法院。",
+     "py": "Zhè jiàn shì zuìhòu dào le fǎyuàn.",
+     "vi": "Việc này cuối cùng đưa ra toà."
+    }
+   ]
+  },
+  {
+   "w": "裁判",
+   "py": "cáipàn",
+   "hv": "tài phán",
+   "vi": "trọng tài",
+   "pos": "danh từ",
+   "note": "Trọng tài thể thao.",
+   "ex": [
+    {
+     "cn": "裁判的决定很公平。",
+     "py": "Cáipàn de juédìng hěn gōngpíng.",
+     "vi": "Quyết định của trọng tài rất công bằng."
+    }
+   ]
+  },
+  {
+   "w": "敌人",
+   "py": "dírén",
+   "hv": "địch nhân",
+   "vi": "kẻ thù",
+   "pos": "danh từ",
+   "note": "敌 là \"địch\".",
+   "ex": [
+    {
+     "cn": "在游戏里，我们要打败敌人。",
+     "py": "Zài yóuxì li, wǒmen yào dǎbài dírén.",
+     "vi": "Trong game, chúng ta phải đánh bại kẻ địch."
+    }
+   ]
+  },
+  {
+   "w": "对手",
+   "py": "duìshǒu",
+   "hv": "đối thủ",
+   "vi": "đối thủ",
+   "pos": "danh từ",
+   "note": "Chính là \"đối thủ\".",
+   "ex": [
+    {
+     "cn": "我们要尊重每一个对手。",
+     "py": "Wǒmen yào zūnzhòng měi yí ge duìshǒu.",
+     "vi": "Chúng ta phải tôn trọng mọi đối thủ."
+    }
+   ]
+  },
+  {
+   "w": "地震",
+   "py": "dìzhèn",
+   "hv": "địa chấn",
+   "vi": "động đất",
+   "pos": "danh từ",
+   "note": "Chính là \"địa chấn\".",
+   "ex": [
+    {
+     "cn": "地震的时候不要坐电梯。",
+     "py": "Dìzhèn de shíhou bú yào zuò diàntī.",
+     "vi": "Khi động đất đừng đi thang máy."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "被 + người + phạt/批评 + việc",
+   "b": "被教练罚跑五圈",
+   "d": "Bị ai phạt làm gì.",
+   "ex": [
+    {
+     "cn": "他被老师罚写作业。",
+     "py": "Tā bèi lǎoshī fá xiě zuòyè.",
+     "vi": "Cậu ấy bị cô giáo phạt làm bài tập."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "遇到问题要冷静处理。",
+   "py": "Yùdào wèntí yào lěngjìng chǔlǐ.",
+   "vi": "Gặp vấn đề phải xử lý bình tĩnh."
+  },
+  {
+   "cn": "对手越强，我们越要认真准备。",
+   "py": "Duìshǒu yuè qiáng, wǒmen yuè yào rènzhēn zhǔnbèi.",
+   "vi": "Đối thủ càng mạnh, chúng ta càng phải chuẩn bị kỹ."
+  },
+  {
+   "cn": "为了防止受伤，比赛前要热身。",
+   "py": "Wèile fángzhǐ shòushāng, bǐsài qián yào rèshēn.",
+   "vi": "Để tránh chấn thương, trước trận phải khởi động."
+  }
+ ]
+}
