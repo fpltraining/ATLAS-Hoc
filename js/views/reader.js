@@ -43,6 +43,12 @@ export async function render(route) {
     p.append(ln);
   };
 
+  // tranh minh hoạ chương (nếu có), vẽ theo lối truyện tranh
+  const scenes = await fetch('data/scenes.json').then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
+  if (scenes[story.id]?.includes(ch.n)) {
+    body.append(h('figure.scene', h('img', { src: `img/scenes/${story.id}-${ch.n}.svg`, alt: ch.vi || ch.title, loading: 'lazy' })));
+  }
+
   for (const para of ch.paras) {
     const p = h('div.reader-para');
     for (const line of para) addLine(p, line);

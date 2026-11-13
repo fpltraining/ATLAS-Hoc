@@ -1,0 +1,805 @@
+# Mô tả tranh từng chương truyện tiếng Anh. Mỗi cảnh: dòng "@id-truyện số-chương",
+# rồi mỗi dòng một lớp vẽ (vẽ lần lượt, lớp sau đè lớp trước). Toạ độ x, y tính theo % khung.
+# Vẽ bằng: node tools/build-scenes.mjs
+
+# ===== The Man Who Kept the Numbers =====
+@man-numbers 1
+sky t=night
+stars n=80
+moon x=82 y=18 r=26
+sea y=78
+hills y=72 c=night
+dish x=26 y=74 s=0.9
+station x=62 y=74 s=1.1
+person x=78 y=76 s=0.7 pose=walk coat=deep scarf
+
+@man-numbers 2
+wall c=deep floor=80 planks
+window x=6 y=12 w=170 h=120 t=night moon=1
+desk x=58 y=84 w=320
+screen x=66 y=69 w=150 h=95 show=flat glow
+cup x=46 y=69 steam
+book x=80 y=69 open
+person x=36 y=86 s=1.15 pose=sitthink coat=mid scarf
+chair x=33 y=88
+vignette
+
+@man-numbers 3
+wall c=night floor=84
+spot x=55 y=40 r=260 a=0.1
+screen x=55 y=78 w=420 h=230 show=pulse glow
+label x=55 y=16 text="· · ·  —" fs=34 red
+person x=14 y=96 s=1.3 pose=worried coat=mid scarf face=shock
+
+@man-numbers 4
+wall c=deep floor=78
+rack x=18 y=84
+rack x=31 y=84
+lamp x=64 y=46
+screen x=82 y=74 w=120 h=80 show=pulse
+person x=50 y=84 s=1.15 pose=kneel coat=mid scarf face=worried item=torch
+label x=50 y=16 text="CABLES OK · FAN OK" fs=20 c=pale
+
+@man-numbers 5
+wall c=deep floor=76
+desk x=50 y=92 w=520
+lamp x=40 y=40
+book x=50 y=76 s=2.2 open red
+paper x=72 y=77 w=110 h=60 text="3 short, 1 long" fs=11 rot=6
+label x=50 y=20 text="REPEATING · SOURCE UNCLEAR" fs=20 c=pale
+vignette
+
+@man-numbers 6
+wall c=mid floor=78
+desk x=42 y=86 w=300
+paper x=42 y=72 w=110 h=120 rot=-3
+calendar x=78 y=62 r=1 c=0 cross
+clock x=78 y=30
+person x=22 y=88 s=1.1 pose=sitthink coat=deep scarf face=sad
+chair x=19 y=90
+
+@man-numbers 7
+sky t=day
+clouds n=3
+hills y=74 c=soft
+station x=24 y=78 s=0.9
+car x=62 y=88 s=1.1 c=ink
+person x=80 y=90 s=0.95 pose=stand coat=ink item=book redItem
+person x=88 y=90 s=0.95 pose=point coat=ink flip
+person x=10 y=90 s=0.95 pose=worried coat=mid scarf face=shock
+
+@man-numbers 8
+wall c=mid floor=80
+paper x=50 y=82 w=230 h=290 rot=-2
+label x=50 y=22 text="NORMAL" fs=24 c=ink
+label x=50 y=36 text="rain · birds · bad cables" fs=17 c=ink
+label x=50 y=52 text="three short, one long" fs=17 red
+person x=86 y=94 s=1.1 pose=stand coat=deep face=sad scarf
+
+@man-numbers 9
+wall c=night floor=80
+lamp x=48 y=36 red
+desk x=48 y=92 w=360
+book x=48 y=79 s=2 open
+label x=48 y=44 text="5 1 1" fs=40 red
+person x=22 y=96 s=1.25 pose=type coat=mid scarf hood
+vignette
+
+@man-numbers 10
+wall c=deep floor=80
+shelf x=26 y=78 w=260 rows=4
+window x=60 y=14 w=150 h=110 t=day
+person x=72 y=88 s=1.1 pose=sit coat=mid hair=grey scarf item=pen
+desk x=78 y=88 w=170
+calendar x=46 y=40 s=0.6 r=0 c=0
+
+@man-numbers 11
+sky t=dusk
+sea y=78
+hills y=74 c=deep
+station x=40 y=76 s=1 lit=no
+dish x=16 y=76 s=0.8
+person x=72 y=80 s=1 pose=walk coat=deep hair=grey scarf item=book flip
+sun x=88 y=56 r=34 red
+
+@man-numbers 12
+wall c=night floor=80
+shelf x=22 y=80 w=220 rows=4
+desk x=64 y=90 w=300
+screen x=70 y=75 w=150 h=90 show=pulse glow
+person x=50 y=92 s=1.1 pose=sitthink hair=long coat=mid scarf
+chair x=47 y=94
+label x=70 y=14 text="· · ·  —" fs=30 red
+
+# ===== The Robot Who Asked Why =====
+@robot-why 1
+wall c=mid floor=80 planks
+garage x=50 y=81 s=0.95 text="MINH GARAGE"
+toolboard x=14 y=52 s=0.8
+car x=58 y=86 c=red s=0.9
+person x=82 y=88 s=1 pose=hold coat=deep face=calm
+robot x=26 y=88 s=0.9 pose=stand q
+
+@robot-why 2
+wall c=mid floor=80
+car x=54 y=88 s=1.3 c=ink hot
+person x=88 y=90 s=1 pose=stand hair=long coat=deep
+person x=94 y=92 s=0.6 pose=stand coat=soft
+person x=81 y=92 s=0.55 pose=stand coat=soft hair=long
+robot x=32 y=90 s=0.9 pose=reach q
+bubble x=30 y=24 text="Why is this/wheel so hot?"
+
+@robot-why 3
+wall c=night floor=78
+window x=70 y=10 w=140 h=100 t=night moon=1
+car x=46 y=84 s=1.3 c=ink leak
+robot x=22 y=86 s=0.8 look=down light flip
+vignette
+
+@robot-why 4
+sky t=day
+ground y=82 c=pale
+garage x=38 y=82 s=0.75
+car x=58 y=90 s=1.1 c=ink
+robot x=80 y=92 s=1 pose=stop q
+person x=92 y=92 s=1 pose=point coat=deep face=worried flip
+bubble x=72 y=20 text="Please do not go!" red
+
+@robot-why 5
+wall c=deep floor=78
+car x=46 y=74 s=1.2 c=ink
+person x=36 y=92 s=1 pose=kneel coat=deep face=shock
+label x=56 y=92 text="BRAKE LINE CRACK" fs=18 red
+person x=80 y=90 s=1 pose=hold hair=long coat=mid face=worried flip
+robot x=92 y=92 s=0.7
+
+@robot-why 6
+wall c=mid floor=80 planks
+sign x=50 y=34 w=330 text="EVERY QUESTION IS WELCOME" fs=17
+person x=36 y=88 s=1.05 pose=sit coat=deep face=happy
+robot x=56 y=88 s=0.9 q
+bubble x=70 y=60 text="Why is the/sign blue?"
+
+# ===== The Coach in the Phone =====
+@coach-phone 1
+wall c=deep floor=80
+screen x=30 y=72 w=170 h=100 show=map
+label x=30 y=12 text="LOSS x11" fs=22 red
+desk x=40 y=86 w=380
+person x=22 y=88 s=1 pose=type coat=mid
+chair x=19 y=90
+person x=78 y=88 s=1.1 pose=stand coat=ink item=book face=sad flip
+person x=58 y=88 s=0.95 pose=sitphone coat=mid item=phone redItem
+chair x=55 y=90
+
+@coach-phone 2
+wall c=mid floor=80
+label x=50 y=14 text="7 WINS IN A ROW" fs=30 red
+person x=20 y=88 s=1 pose=cheer coat=deep face=happy
+person x=40 y=88 s=1 pose=phone coat=mid item=phone face=happy
+person x=60 y=88 s=1 pose=cheer coat=deep hair=long face=happy
+person x=80 y=88 s=1 pose=phone coat=mid item=phone face=happy flip
+phone x=50 y=58 s=2 red glow
+
+@coach-phone 3
+wall c=night floor=80
+person x=16 y=88 s=0.95 pose=sitphone coat=mid item=phone face=calm
+person x=34 y=88 s=0.95 pose=sitphone coat=deep item=phone face=calm
+person x=52 y=88 s=0.95 pose=sitphone coat=mid item=phone hair=long face=calm
+person x=82 y=88 s=1.1 pose=point coat=ink item=book face=worried flip
+bubble x=66 y=20 text="What do you want/to do first?"
+vignette
+
+@coach-phone 4
+sky t=dark
+stage y=60 show=map
+crowd y=100
+chair x=33 y=82
+chair x=47 y=82
+chair x=61 y=82
+person x=36 y=80 s=1 pose=type coat=mid face=worried
+person x=50 y=80 s=1 pose=type coat=deep
+person x=64 y=80 s=1 pose=type coat=mid
+sign x=80 y=60 w=150 text="NO PHONES" red
+dragon x=50 y=34 s=0.8
+
+@coach-phone 5
+wall c=night floor=80
+spot x=50 y=60 r=200 a=0.14
+person x=30 y=90 s=1.2 pose=sit coat=mid face=worried
+chair x=27 y=92
+person x=66 y=90 s=1.2 pose=sit coat=ink item=book redItem face=calm flip
+chair x=69 y=92
+bubble x=50 y=18 text="You are scared./I wrote it down/a year ago."
+
+@coach-phone 6
+wall c=night floor=80
+window x=66 y=10 w=150 h=110 t=night moon=1 city=1
+desk x=36 y=88 w=260
+phone x=40 y=72 s=1.6 glow
+notebook x=26 y=72 red
+person x=14 y=90 s=1.1 pose=sitthink coat=mid
+chair x=11 y=92
+label x=40 y=24 text="WHY DID WE LOSE?" fs=20 c=pale
+
+# ===== The Model That Would Not Lie =====
+@model-no-lie 1
+wall c=mid floor=80
+window x=6 y=10 w=200 h=120 t=day city=1
+desk x=60 y=86 w=320
+screen x=60 y=71 w=150 h=95 show=chart glow text="VEGA"
+pill x=84 y=60
+person x=40 y=88 s=1.05 pose=type hair=bun coat=deep
+chair x=37 y=90
+label x=60 y=12 text="9,999 / 10,000" fs=22 c=ink
+
+@model-no-lie 2
+wall c=night floor=80
+desk x=55 y=88 w=360
+screen x=60 y=73 w=220 h=130 show=text glow
+label x=60 y=12 text="I CANNOT STATE" fs=22 red
+label x=60 y=20 text="THAT ALL CASES PASSED." fs=22 red
+person x=26 y=90 s=1.1 pose=type hair=bun coat=mid
+chair x=23 y=92
+vignette
+
+@model-no-lie 3
+wall c=night floor=82
+eye x=50 y=36 s=1.1
+label x=28 y=74 text="TEST 0.991" fs=22 c=pale
+label x=72 y=74 text="REAL 0.987" fs=22 red
+person x=50 y=98 s=1 pose=sitthink hair=bun coat=mid
+vignette
+
+@model-no-lie 4
+wall c=mid floor=80
+screen x=50 y=56 w=260 h=140 show=text
+table x=50 y=98 w=280
+person x=16 y=92 s=1.1 pose=point hair=bun coat=deep
+person x=80 y=92 s=1.05 pose=stand coat=ink face=happy flip
+person x=90 y=92 s=1 pose=stand coat=ink flip
+bubble x=78 y=16 text="And you trust it?" tail=right
+
+@model-no-lie 5
+wall c=deep floor=80
+window x=70 y=10 w=140 h=100 t=night moon=1
+desk x=44 y=88 w=340
+cup x=26 y=72 steam
+laptop x=42 y=72 show=text
+notebook x=62 y=72 red
+paper x=78 y=73 w=60 h=80 stamp
+person x=10 y=90 s=1 pose=sitthink hair=bun coat=mid face=sad
+
+@model-no-lie 6
+wall c=mid floor=80
+shelf x=82 y=70 w=160 rows=3
+desk x=40 y=88 w=300
+screen x=42 y=73 w=140 h=90 show=text text="> Are you being honest?" fs=10
+person x=18 y=90 s=1.05 pose=type hair=bun coat=deep
+chair x=15 y=92
+newspaper x=76 y=96 s=0.6 text="LAUNCH DELAYED"
+
+@long-night-final 1
+wall c=night floor=82
+desk x=50 y=90 w=420
+screen x=34 y=74 w=160 h=100 show=text text="ECHO" glow
+screen x=66 y=74 w=160 h=100 show=face glow
+cup x=50 y=74
+notebook x=82 y=74 red
+person x=50 y=104 s=1.3 pose=sitthink coat=ink hair=short
+clock x=88 y=30 h3
+vignette
+
+# ===== Can Machines Think? (Turing) =====
+@true-turing 1
+wall c=deep floor=80 planks
+desk x=44 y=88 w=340
+box x=40 y=74 s=0.7
+paper x=62 y=74 w=80 h=60 text="QWERTZ" fs=13
+person x=78 y=90 s=1.05 pose=think coat=mid face=calm
+label x=44 y=14 text="ENIGMA" fs=28 red
+
+@true-turing 2
+wall c=mid floor=80
+terminal x=24 y=86 s=1 l1="> ARE YOU HUMAN?" l2="> YES." red
+terminal x=76 y=86 s=1 l1="> ARE YOU HUMAN?" l2="> YES."
+person x=50 y=90 s=1.1 pose=sitthink coat=deep
+question x=50 y=40 fs=90 red
+label x=24 y=12 text="A" fs=30
+label x=76 y=12 text="B" fs=30
+
+@true-turing 3
+sky t=dusk
+hills y=72 c=deep
+person x=30 y=80 s=1 pose=run coat=mid
+paper x=74 y=80 w=150 h=120 text="Can machines/think?" fs=16
+question x=74 y=34 fs=70 red
+
+# ===== The Secretary and the Machine (ELIZA) =====
+@true-eliza 1
+wall c=deep floor=80
+desk x=50 y=90 w=300
+terminal x=50 y=76 s=1.4 l1="> I FEEL SAD" l2="> WHY DO YOU" l3="  FEEL SAD?" red
+person x=16 y=90 s=1 pose=think coat=ink glasses
+label x=50 y=12 text="MIT · 1966" fs=22 c=pale
+
+@true-eliza 2
+wall c=mid floor=80
+desk x=40 y=90 w=280
+terminal x=40 y=76 s=1.2 l1="> TELL ME MORE" red
+person x=20 y=92 s=1 pose=type hair=bun coat=deep
+door x=86 y=86 s=0.9 open
+person x=76 y=90 s=1 pose=walk coat=ink glasses flip
+bubble x=34 y=18 text="Please leave/the room."
+
+@true-eliza 3
+wall c=night floor=80
+person x=30 y=90 s=1.1 pose=sitthink coat=mid face=sad
+chair x=27 y=92
+screen x=64 y=74 w=170 h=110 show=text glow
+heart x=64 y=42 s=0.9
+label x=50 y=12 text="THE ELIZA EFFECT" fs=24 c=pale
+
+# ===== The Day Kasparov Lost =====
+@true-kasparov 1
+wall c=deep floor=82
+spot x=50 y=60 r=220 a=0.14
+chess x=50 y=88 s=1.2 red
+person x=18 y=92 s=1.15 pose=sitthink coat=ink
+rack x=84 y=86 s=0.9
+label x=50 y=14 text="1996 · CHAMPION 4 – 2 MACHINE" fs=20 c=pale
+
+@true-kasparov 2
+wall c=night floor=82
+chess x=50 y=88 s=1.2
+person x=20 y=92 s=1.15 pose=worried coat=ink face=shock
+rack x=82 y=86 s=0.9
+label x=50 y=14 text="1997 · MACHINE WINS" fs=24 red
+vignette
+
+@true-kasparov 3
+wall c=mid floor=82
+chess x=50 y=90 s=1
+person x=24 y=92 s=1.05 pose=sitthink coat=deep
+laptop x=34 y=76
+person x=76 y=92 s=1.05 pose=sitthink coat=mid hair=long flip
+laptop x=66 y=76
+label x=50 y=14 text="HUMAN + MACHINE" fs=24 c=ink
+
+# ===== Move 37 =====
+@true-move37 1
+wall c=deep floor=82
+go x=50 y=90 s=1.1
+person x=20 y=94 s=1.15 pose=sit coat=ink face=happy
+screen x=82 y=78 w=130 h=80 show=code
+label x=50 y=14 text="SEOUL · 2016" fs=22 c=pale
+
+@true-move37 2
+wall c=night floor=82
+go x=50 y=90 s=1.3 red
+label x=67 y=40 text="37" fs=48 red
+person x=18 y=94 s=1.15 pose=sitthink coat=ink face=shock
+vignette
+
+@true-move37 3
+wall c=deep floor=82
+go x=50 y=90 s=1.3
+label x=40 y=40 text="78" fs=48 red
+person x=18 y=94 s=1.15 pose=sit coat=ink face=happy item=pen
+crowd y=104
+
+@true-move37 4
+wall c=mid floor=82
+go x=34 y=90 s=0.9
+person x=66 y=92 s=1.05 pose=stand coat=ink
+person x=80 y=92 s=0.9 pose=sitthink coat=mid
+laptop x=86 y=78
+label x=50 y=14 text="NEW MOVES, NEW IDEAS" fs=22 c=ink
+
+# ===== The Fifty-Year Problem (AlphaFold) =====
+@true-alphafold 1
+deep
+protein x=50 y=56 s=1.4 red
+molecule x=20 y=70 s=0.5
+molecule x=82 y=40 s=0.4
+label x=50 y=90 text="PROTEINS: TINY MACHINES" fs=22 c=pale
+
+@true-alphafold 2
+wall c=deep floor=80
+desk x=50 y=88 w=420
+flask x=30 y=72 s=0.6
+flask x=40 y=72 s=0.5 c=red
+screen x=66 y=73 w=140 h=90 show=text
+person x=86 y=90 s=1 pose=think coat=pale glasses face=sad
+calendar x=14 y=40 s=0.6 cross
+
+@true-alphafold 3
+sky t=night
+stars n=90
+globe x=50 y=60
+protein x=50 y=60 s=1 red
+label x=50 y=90 text="200 MILLION STRUCTURES · FREE" fs=20 c=pale
+
+# ===== News =====
+@news-ms-agents 1
+wall c=deep floor=82
+house x=50 y=86 s=1.3 red
+robot x=30 y=88 s=0.8 pose=reach
+robot x=70 y=88 s=0.8 pose=reach flip
+key x=50 y=30 red
+
+@news-ms-agents 2
+wall c=mid floor=82
+door x=40 y=86 s=1
+key x=62 y=60 s=1.2 red
+robot x=80 y=88 s=0.9 pose=reach flip
+label x=50 y=12 text="WHO HOLDS THE KEYS?" fs=24 c=ink
+
+@news-eu-delay 1
+wall c=mid floor=82
+stars12 x=24 y=70 s=0.9
+calendar x=58 y=72 s=1 r=1 c=1
+arrow x=64 y=52 len=50 red
+calendar x=86 y=72 s=1 r=3 c=3
+
+@news-eu-delay 2
+wall c=deep floor=82
+clock x=24 y=50 s=1.2 red
+paper x=52 y=82 w=110 h=140 stamp
+person x=80 y=90 s=1 pose=shrug coat=ink face=worried
+label x=50 y=12 text="DEADLINE MOVED" fs=24 c=pale
+
+@news-vn-law 1
+wall c=mid floor=82
+levels x=50 y=80 s=1.3
+label x=50 y=14 text="VIETNAM AI LAW" fs=26 c=ink
+
+@news-vn-law 2
+wall c=pale floor=82 fc=soft
+phone x=30 y=70 s=3
+label x=30 y=36 text="AI" fs=26 red
+person x=60 y=90 s=1.1 pose=phone item=phone coat=mid
+shield x=84 y=72 s=0.8
+
+@news-robots-power 1
+sky t=dusk
+city y=80 c=night h=120
+arm x=24 y=88 s=0.9
+arm x=44 y=88 s=0.8 red
+tower x=78 y=80 s=0.9
+bolt x=62 y=60 s=0.8
+
+@news-robots-power 2
+wall c=deep floor=82
+paper x=40 y=84 w=160 h=200 text="$ $ $" fs=40 rot=-3
+bolt x=72 y=70 s=1.1
+robot x=86 y=88 s=0.8
+
+@news-datacenter 1
+wall c=night floor=86
+racks y=88 n=7 s=0.95
+pylon x=10 y=86 s=0.8
+curve x=56 y=40 w=200 h=110 s=0.6
+
+@news-datacenter 2
+wall c=deep floor=82
+person x=24 y=90 s=1.1 pose=phone item=phone coat=mid
+bubble x=26 y=20 text="Just one/question?"
+arrow x=36 y=52 len=110
+bolt x=60 y=66 s=0.9
+racks y=88 n=3 s=0.7
+label x=78 y=20 text="ELECTRICITY" fs=20 c=pale
+
+@news-ai-drug 1
+wall c=mid floor=82
+laptop x=20 y=76 show=code
+desk x=20 y=88 w=180
+molecule x=40 y=56 s=0.6 red
+arrow x=46 y=56 len=90
+pill x=66 y=52
+person x=86 y=90 s=1.05 pose=stand coat=pale face=calm flip
+
+@news-ai-drug 2
+wall c=pale floor=82 fc=soft
+newspaper x=46 y=82 s=1.5 text="MIRACLE CURE?" red
+magnifier x=78 y=46 s=1.1 red
+
+# ===== Mysteries =====
+@myst-dark 1
+sky t=dark
+stars n=120
+galaxy x=40 y=46 s=1.4
+scales x=76 y=92 s=1.3 tilt
+question x=88 y=30 fs=80 red
+
+@myst-dark 2
+sky t=night
+stars n=60
+dish x=74 y=88 s=0.9
+person x=34 y=92 s=1.1 pose=point coat=mid hair=long
+galaxy x=30 y=30 s=0.8
+label x=60 y=12 text="VERA RUBIN" fs=22 c=pale
+
+@myst-dark 3
+sky t=dark
+stars n=100
+paper x=30 y=76 w=150 h=80 text="DARK MATTER" fs=16
+paper x=68 y=80 w=150 h=80 text="DARK ENERGY" fs=16 rot=5
+question x=50 y=36 fs=110 red
+
+@myst-ocean 1
+deep
+seafloor y=82
+fish x=30 y=40 s=1.2 light
+fish x=70 y=60 s=0.8 red
+planet x=86 y=16 r=26 red
+label x=50 y=14 text="MARS IS EASIER TO MAP" fs=20 c=pale
+
+@myst-ocean 2
+deep
+seafloor y=86
+sub x=30 y=50 s=1
+waves x=62 y=56 s=1.2 red
+fish x=82 y=74 s=0.8
+
+@myst-ocean 3
+deep
+seafloor y=80
+vent x=36 y=84 s=0.9
+fish x=62 y=48 s=1.4
+fish x=78 y=62 s=0.9 red
+label x=50 y=12 text="WHY THE BOTTOM MATTERS" fs=20 c=pale
+
+@myst-conscious 1
+wall c=deep floor=86
+brain x=50 y=78 s=1.4
+gear x=24 y=60 s=0.6
+gear x=78 y=56 s=0.5
+label x=50 y=14 text="SEE · MOVE · REMEMBER" fs=22 c=pale
+
+@myst-conscious 2
+wall c=night floor=86
+person x=28 y=92 s=1.2 pose=think coat=mid
+bulb x=60 y=74 s=1
+heart x=78 y=66 s=1
+question x=50 y=36 fs=100 red
+
+@myst-conscious 3
+wall c=night floor=86
+robot x=36 y=88 s=1.4 redHeart
+brain x=70 y=70 s=0.9 glow
+question x=86 y=34 fs=80 red
+
+@myst-life 1
+sky t=dusk
+volcano x=30 y=86 s=1.1
+volcano x=74 y=86 s=0.7
+sea y=86 c=deep
+bolt x=58 y=50 s=0.8
+planet x=86 y=14 r=20 c=pale
+
+@myst-life 2
+wall c=deep floor=82
+desk x=50 y=90 w=380
+flask x=40 y=74 s=1 spark
+flask x=62 y=74 s=0.7
+bolt x=78 y=60 s=0.6
+label x=50 y=14 text="CHICAGO · 1952" fs=22 c=pale
+
+@myst-life 3
+sky t=dusk
+sun x=18 y=22 r=26
+hills y=64 c=deep
+sea y=76 c=mid
+label x=24 y=94 text="WARM POOLS" fs=18 c=pale
+deep from=50
+seafloor y=86 from=50
+vent x=76 y=90 s=0.9
+label x=76 y=14 text="DEEP VENTS" fs=18 c=pale
+question x=50 y=60 fs=90 red
+
+@myst-wow 1
+sky t=night
+stars n=110
+ground y=82 c=deep
+dish x=50 y=84 s=1.2
+waves x=50 y=36 s=1.4 red
+
+@myst-wow 2
+wall c=deep floor=82
+paper x=50 y=92 w=240 h=280 text="6EQUJ5" fs=40 circle rot=-2
+label x=74 y=30 text="Wow!" fs=40 red
+
+@myst-wow 3
+sky t=night
+stars n=140
+dish x=28 y=90 s=0.9
+person x=60 y=92 s=1 pose=stand coat=mid face=sad
+signal x=60 y=30 s=0.8
+question x=86 y=40 fs=80 red
+
+@myst-fermi 1
+wall c=mid floor=82
+table x=50 y=98 w=280
+person x=22 y=92 s=1.05 pose=point coat=deep
+person x=50 y=92 s=1 pose=sit coat=mid
+person x=78 y=92 s=1.05 pose=think coat=ink flip
+bubble x=30 y=18 text="Where is/everybody?"
+
+@myst-fermi 2
+sky t=dark
+stars n=160
+planet x=20 y=40 r=34 c=mid ring
+planet x=70 y=26 r=20 c=soft
+planet x=84 y=64 r=28 red
+galaxy x=48 y=60 s=0.6
+
+@myst-fermi 3
+sky t=dark
+stars n=120
+planet x=50 y=78 r=60 c=mid
+label x=50 y=22 text="THE GREAT FILTER" fs=26 red
+arrow x=20 y=46 len=140
+
+@myst-voynich 1
+wall c=deep floor=82 planks
+crate x=40 y=86 s=1.2 red
+manuscript x=72 y=70 s=1
+person x=14 y=90 s=1 pose=hold coat=ink glasses
+label x=50 y=12 text="ITALY · 1912" fs=22 c=pale
+
+@myst-voynich 2
+wall c=night floor=82
+desk x=50 y=90 w=420
+manuscript x=50 y=76 s=1.6
+magnifier x=72 y=50 s=0.9 red
+person x=18 y=92 s=1.05 pose=sitthink coat=ink glasses
+
+@myst-voynich 3
+wall c=mid floor=82
+manuscript x=50 y=70 s=1.4
+paper x=18 y=80 w=90 h=110 text="SOLVED!" fs=14 rot=-8
+paper x=82 y=80 w=90 h=110 text="SOLVED!" fs=14 rot=7
+question x=50 y=30 fs=80 red
+
+@myst-sleep 1
+sky t=night
+stars n=60
+pines y=84 c=night h=130 n=10
+bed x=34 y=92 s=0.9 zzz
+label x=74 y=66 text="●  ●" fs=16 red
+label x=86 y=58 text="●  ●" fs=16 red
+
+@myst-sleep 2
+wall c=deep floor=82
+calendar x=24 y=60 s=1 r=2 c=0
+label x=24 y=26 text="11 DAYS" fs=26 red
+person x=60 y=90 s=1.15 pose=worried coat=mid face=worried
+clock x=86 y=36
+
+@myst-sleep 3
+wall c=night floor=82
+window x=70 y=10 w=140 h=100 t=night moon=1
+bed x=40 y=88 s=1.1 zzz
+brain x=40 y=40 s=0.6 c=soft glow
+
+@myst-anesthesia 1
+wall c=deep floor=82 planks
+bed x=46 y=88 s=1.1
+person x=80 y=90 s=1 pose=hold coat=ink face=worried flip
+bubble x=30 y=26 text="AAAH!" red
+clock x=86 y=30 red
+label x=50 y=10 text="BEFORE 1846" fs=22 c=pale
+
+@myst-anesthesia 2
+wall c=mid floor=82
+oplamp x=50 y=10
+bed x=50 y=86 s=1.1
+person x=78 y=90 s=1 pose=hold coat=ink item=cup
+crowd y=104
+label x=20 y=12 text="ETHER DAY" fs=24 c=ink
+
+@myst-anesthesia 3
+wall c=night floor=82
+brain x=50 y=72 s=1.3
+bulb x=20 y=76 s=0.7 off
+bulb x=80 y=76 s=0.7
+label x=50 y=14 text="OFF ... AND ON AGAIN" fs=22 c=pale
+
+@myst-blackbox 1
+wall c=deep floor=82
+paper x=24 y=82 w=110 h=140 text="CODE" fs=16
+arrow x=40 y=58 len=60
+flask x=72 y=82 s=1
+protein x=72 y=56 s=0.4 red
+label x=50 y=12 text="WRITTEN OR GROWN?" fs=22 c=pale
+
+@myst-blackbox 2
+wall c=night floor=82
+blackbox x=46 y=78 s=2 text="MODEL"
+magnifier x=70 y=44 s=1.2 red
+person x=86 y=90 s=1 pose=think coat=mid glasses
+
+@myst-blackbox 3
+wall c=mid floor=82
+robot x=50 y=88 s=1.5 redHeart
+person x=20 y=90 s=1 pose=shrug coat=ink face=worried
+person x=82 y=90 s=1 pose=think coat=deep hair=long flip
+
+# ===== B2 =====
+@b2-habits 1
+wall c=deep floor=86
+loop x=50 y=50 r=110 labels="CUE,ROUTINE,REWARD" dot=40
+phone x=50 y=58 s=1.2 red
+
+@b2-habits 2
+wall c=mid floor=86
+loop x=50 y=48 r=110 labels="CUE,NEW ROUTINE,REWARD" dot=42 redIndex=1
+person x=50 y=74 s=0.7 pose=run coat=deep
+
+@b2-sleep 1
+sky t=night
+city y=86 c=night h=140
+moon x=82 y=18 r=24
+person x=36 y=90 s=1 pose=walk coat=mid item=cup
+clock x=14 y=40 red
+
+@b2-sleep 2
+wall c=night floor=82
+window x=72 y=10 w=140 h=100 t=night moon=1
+bed x=40 y=88 s=1.1 zzz
+phone x=82 y=86 s=1
+label x=82 y=70 text="NO" fs=22 red
+
+@b2-adult-learner 1
+wall c=mid floor=82
+door x=50 y=86 s=1.3 red
+person x=24 y=90 s=1.1 pose=think hair=grey coat=deep
+label x=50 y=12 text="TOO LATE?" fs=28 c=ink
+
+@b2-adult-learner 2
+wall c=deep floor=82
+door x=80 y=86 s=1 open
+person x=48 y=90 s=1.1 pose=walk hair=grey coat=mid item=book redItem
+books x=20 y=86 n=5 redIndex=4
+
+@b2-compound 1
+wall c=mid floor=82
+coins x=20 y=86 n=2
+coins x=34 y=86 n=4
+coins x=48 y=86 n=7 red
+curve x=58 y=86 w=260 h=220 s=0.9 line
+
+@b2-compound 2
+wall c=deep floor=82
+book x=20 y=84 s=1
+books x=36 y=86 n=3
+books x=52 y=86 n=6
+books x=68 y=86 n=10 redIndex=9
+curve x=74 y=86 w=140 h=200 s=0.9
+
+@b2-check-news 1
+wall c=deep floor=82
+phone x=30 y=72 s=2.2 red
+label x=30 y=34 text="FAKE!" fs=22 red
+person x=56 y=90 s=0.9 pose=phone item=phone coat=mid
+person x=72 y=90 s=0.9 pose=phone item=phone coat=deep
+person x=88 y=90 s=0.9 pose=phone item=phone coat=mid hair=long
+
+@b2-check-news 2
+wall c=pale floor=82 fc=soft
+newspaper x=36 y=84 s=1.4 text="SHOCKING!"
+magnifier x=70 y=50 s=1.2 red
+label x=78 y=86 text="1 2 3 4" fs=26 c=ink
+
+@b2-feedback 1
+wall c=deep floor=82
+person x=28 y=90 s=1.1 pose=point coat=ink face=sad
+person x=72 y=90 s=1.1 pose=worried coat=mid face=worried flip
+bubble x=30 y=20 text="This is bad." red
+
+@b2-feedback 2
+wall c=mid floor=82
+person x=28 y=90 s=1.1 pose=point coat=deep face=happy
+person x=72 y=90 s=1.1 pose=think coat=mid face=calm flip
+bubble x=40 y=18 text="What I saw ·/Why it matters ·/One next step"
