@@ -1,0 +1,264 @@
+{
+ "id": 241,
+ "cn": "克服困难",
+ "title": "Ý chí và tinh thần",
+ "goal": "Nói về kiên cường, gian khổ, vượt qua, quyết tâm, dám, lạc quan, niềm vui, tò mò, sức lực, cố gắng, thận trọng và nước mắt.",
+ "words": [
+  {
+   "w": "坚强",
+   "py": "jiānqiáng",
+   "hv": "kiên cường",
+   "vi": "kiên cường",
+   "pos": "tính từ",
+   "note": "Chính là \"kiên cường\".",
+   "ex": [
+    {
+     "cn": "她是一个很坚强的人。",
+     "py": "Tā shì yí ge hěn jiānqiáng de rén.",
+     "vi": "Cô ấy là người rất kiên cường."
+    }
+   ]
+  },
+  {
+   "w": "艰苦",
+   "py": "jiānkǔ",
+   "hv": "gian khổ",
+   "vi": "gian khổ",
+   "pos": "tính từ",
+   "note": "Chính là \"gian khổ\".",
+   "ex": [
+    {
+     "cn": "训练很艰苦，但是很有用。",
+     "py": "Xùnliàn hěn jiānkǔ, dànshì hěn yǒuyòng.",
+     "vi": "Tập luyện gian khổ nhưng rất có ích."
+    }
+   ]
+  },
+  {
+   "w": "克服",
+   "py": "kèfú",
+   "hv": "khắc phục",
+   "vi": "vượt qua, khắc phục",
+   "pos": "động từ",
+   "note": "克服困难 (vượt khó).",
+   "ex": [
+    {
+     "cn": "我们一起克服困难。",
+     "py": "Wǒmen yìqǐ kèfú kùnnan.",
+     "vi": "Chúng ta cùng vượt qua khó khăn."
+    }
+   ]
+  },
+  {
+   "w": "决心",
+   "py": "juéxīn",
+   "hv": "quyết tâm",
+   "vi": "quyết tâm",
+   "pos": "danh từ, động từ",
+   "note": "下决心 (hạ quyết tâm).",
+   "ex": [
+    {
+     "cn": "他下决心每天学中文。",
+     "py": "Tā xià juéxīn měi tiān xué Zhōngwén.",
+     "vi": "Anh ấy quyết tâm ngày nào cũng học tiếng Trung."
+    }
+   ]
+  },
+  {
+   "w": "敢于",
+   "py": "gǎnyú",
+   "hv": "cảm vu",
+   "vi": "dám",
+   "pos": "động từ",
+   "note": "敢于挑战 (dám thử thách).",
+   "ex": [
+    {
+     "cn": "年轻人要敢于挑战自己。",
+     "py": "Niánqīngrén yào gǎnyú tiǎozhàn zìjǐ.",
+     "vi": "Người trẻ phải dám thử thách bản thân."
+    }
+   ]
+  },
+  {
+   "w": "乐观",
+   "py": "lèguān",
+   "hv": "lạc quan",
+   "vi": "lạc quan",
+   "pos": "tính từ",
+   "note": "Chính là \"lạc quan\".",
+   "ex": [
+    {
+     "cn": "他总是很乐观。",
+     "py": "Tā zǒngshì hěn lèguān.",
+     "vi": "Anh ấy luôn lạc quan."
+    }
+   ]
+  },
+  {
+   "w": "乐趣",
+   "py": "lèqù",
+   "hv": "lạc thú",
+   "vi": "niềm vui, thú vị",
+   "pos": "danh từ",
+   "note": "Chính là \"lạc thú\".",
+   "ex": [
+    {
+     "cn": "学习语言有很多乐趣。",
+     "py": "Xuéxí yǔyán yǒu hěn duō lèqù.",
+     "vi": "Học ngôn ngữ có nhiều niềm vui."
+    }
+   ]
+  },
+  {
+   "w": "好奇",
+   "py": "hàoqí",
+   "hv": "hiếu kỳ",
+   "vi": "tò mò",
+   "pos": "tính từ",
+   "note": "好 đọc hào: thích.",
+   "ex": [
+    {
+     "cn": "孩子对什么都好奇。",
+     "py": "Háizi duì shénme dōu hàoqí.",
+     "vi": "Trẻ con tò mò với mọi thứ."
+    }
+   ]
+  },
+  {
+   "w": "精力",
+   "py": "jīnglì",
+   "hv": "tinh lực",
+   "vi": "sức lực, năng lượng",
+   "pos": "danh từ",
+   "note": "精力充沛 (tràn đầy năng lượng).",
+   "ex": [
+    {
+     "cn": "年轻人精力很充足。",
+     "py": "Niánqīngrén jīnglì hěn chōngzú.",
+     "vi": "Người trẻ tràn đầy năng lượng."
+    }
+   ]
+  },
+  {
+   "w": "尽力",
+   "py": "jìnlì",
+   "hv": "tận lực",
+   "vi": "cố hết sức",
+   "pos": "động từ",
+   "note": "尽力而为 (làm hết sức).",
+   "ex": [
+    {
+     "cn": "我已经尽力了。",
+     "py": "Wǒ yǐjīng jìnlì le.",
+     "vi": "Tôi đã cố hết sức rồi."
+    }
+   ]
+  },
+  {
+   "w": "尽量",
+   "py": "jǐnliàng",
+   "hv": "tận lượng",
+   "vi": "cố gắng hết mức có thể",
+   "pos": "phó từ",
+   "note": "尽 ở đây đọc jǐn.",
+   "ex": [
+    {
+     "cn": "我会尽量早点儿到。",
+     "py": "Wǒ huì jǐnliàng zǎo diǎnr dào.",
+     "vi": "Tôi sẽ cố đến sớm nhất có thể."
+    }
+   ]
+  },
+  {
+   "w": "谨慎",
+   "py": "jǐnshèn",
+   "hv": "cẩn thận",
+   "vi": "thận trọng",
+   "pos": "tính từ",
+   "note": "Trang trọng hơn 小心.",
+   "ex": [
+    {
+     "cn": "做决定的时候要谨慎。",
+     "py": "Zuò juédìng de shíhou yào jǐnshèn.",
+     "vi": "Khi đưa ra quyết định cần thận trọng."
+    }
+   ]
+  },
+  {
+   "w": "了不起",
+   "py": "liǎobuqǐ",
+   "hv": "liễu bất khởi",
+   "vi": "giỏi lắm, phi thường",
+   "pos": "tính từ",
+   "note": "真了不起 (thật tuyệt vời).",
+   "ex": [
+    {
+     "cn": "你一个人完成了，真了不起！",
+     "py": "Nǐ yí ge rén wánchéng le, zhēn liǎobuqǐ!",
+     "vi": "Bạn tự mình làm xong, thật phi thường!"
+    }
+   ]
+  },
+  {
+   "w": "可怕",
+   "py": "kěpà",
+   "hv": "khả phạ",
+   "vi": "đáng sợ",
+   "pos": "tính từ",
+   "note": "可 + 怕 (sợ).",
+   "ex": [
+    {
+     "cn": "失败不可怕，可怕的是放弃。",
+     "py": "Shībài bù kěpà, kěpà de shì fàngqì.",
+     "vi": "Thất bại không đáng sợ, đáng sợ là bỏ cuộc."
+    }
+   ]
+  },
+  {
+   "w": "泪水",
+   "py": "lèishuǐ",
+   "hv": "lệ thuỷ",
+   "vi": "nước mắt",
+   "pos": "danh từ",
+   "note": "泪 là \"lệ\".",
+   "ex": [
+    {
+     "cn": "赢了以后，他流下了泪水。",
+     "py": "Yíng le yǐhòu, tā liú xià le lèishuǐ.",
+     "vi": "Thắng xong, anh ấy rơi nước mắt."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "尽力 và 尽量",
+   "b": "尽力 (jìnlì): đã cố hết sức; 尽量 (jǐnliàng): cố gắng trong phạm vi có thể",
+   "d": "我尽力了 · 尽量早点来.",
+   "ex": [
+    {
+     "cn": "我们尽量不犯同样的错误。",
+     "py": "Wǒmen jǐnliàng bú fàn tóngyàng de cuòwù.",
+     "vi": "Chúng ta cố gắng không mắc lỗi giống nhau."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "只要有决心，就能克服困难。",
+   "py": "Zhǐyào yǒu juéxīn, jiù néng kèfú kùnnan.",
+   "vi": "Chỉ cần có quyết tâm là vượt được khó khăn."
+  },
+  {
+   "cn": "不管输赢，我们都尽力了。",
+   "py": "Bùguǎn shū yíng, wǒmen dōu jìnlì le.",
+   "vi": "Dù thắng hay thua, chúng ta đều đã cố hết sức."
+  },
+  {
+   "cn": "保持乐观，明天会更好。",
+   "py": "Bǎochí lèguān, míngtiān huì gèng hǎo.",
+   "vi": "Giữ lạc quan, ngày mai sẽ tốt hơn."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 240,
+ "cn": "开幕式",
+ "title": "Sự kiện và tổ chức",
+ "goal": "Nói về khai mạc, bế mạc, đại hội, có mặt, triển khai, khai trương, mở cửa, buổi toạ đàm, phát biểu, tiếp đón và thăm viếng.",
+ "words": [
+  {
+   "w": "开幕",
+   "py": "kāimù",
+   "hv": "khai mạc",
+   "vi": "khai mạc",
+   "pos": "động từ",
+   "note": "幕 là màn.",
+   "ex": [
+    {
+     "cn": "比赛明天正式开幕。",
+     "py": "Bǐsài míngtiān zhèngshì kāimù.",
+     "vi": "Giải đấu chính thức khai mạc ngày mai."
+    }
+   ]
+  },
+  {
+   "w": "开幕式",
+   "py": "kāimùshì",
+   "hv": "khai mạc thức",
+   "vi": "lễ khai mạc",
+   "pos": "danh từ",
+   "note": "式 là nghi thức.",
+   "ex": [
+    {
+     "cn": "开幕式上有很多精彩的表演。",
+     "py": "Kāimùshì shang yǒu hěn duō jīngcǎi de biǎoyǎn.",
+     "vi": "Lễ khai mạc có nhiều tiết mục đặc sắc."
+    }
+   ]
+  },
+  {
+   "w": "闭幕式",
+   "py": "bìmùshì",
+   "hv": "bế mạc thức",
+   "vi": "lễ bế mạc",
+   "pos": "danh từ",
+   "note": "闭 là \"bế\" (đóng).",
+   "ex": [
+    {
+     "cn": "闭幕式在晚上八点举行。",
+     "py": "Bìmùshì zài wǎnshang bā diǎn jǔxíng.",
+     "vi": "Lễ bế mạc tổ chức lúc tám giờ tối."
+    }
+   ]
+  },
+  {
+   "w": "大会",
+   "py": "dàhuì",
+   "hv": "đại hội",
+   "vi": "đại hội, hội nghị lớn",
+   "pos": "danh từ",
+   "note": "Chính là \"đại hội\".",
+   "ex": [
+    {
+     "cn": "全体队员都参加了大会。",
+     "py": "Quántǐ duìyuán dōu cānjiā le dàhuì.",
+     "vi": "Toàn thể thành viên đều dự đại hội."
+    }
+   ]
+  },
+  {
+   "w": "出席",
+   "py": "chūxí",
+   "hv": "xuất tịch",
+   "vi": "có mặt, dự (họp)",
+   "pos": "động từ",
+   "note": "Trang trọng hơn 参加.",
+   "ex": [
+    {
+     "cn": "很多明星出席了这次活动。",
+     "py": "Hěn duō míngxīng chūxí le zhè cì huódòng.",
+     "vi": "Nhiều ngôi sao dự sự kiện lần này."
+    }
+   ]
+  },
+  {
+   "w": "开展",
+   "py": "kāizhǎn",
+   "hv": "khai triển",
+   "vi": "triển khai, phát động",
+   "pos": "động từ",
+   "note": "开展活动 (tổ chức hoạt động).",
+   "ex": [
+    {
+     "cn": "学校开展了读书活动。",
+     "py": "Xuéxiào kāizhǎn le dúshū huódòng.",
+     "vi": "Nhà trường phát động phong trào đọc sách."
+    }
+   ]
+  },
+  {
+   "w": "开业",
+   "py": "kāiyè",
+   "hv": "khai nghiệp",
+   "vi": "khai trương",
+   "pos": "động từ",
+   "note": "开业典礼 (lễ khai trương).",
+   "ex": [
+    {
+     "cn": "这家咖啡店上周开业。",
+     "py": "Zhè jiā kāfēidiàn shàng zhōu kāiyè.",
+     "vi": "Quán cà phê này khai trương tuần trước."
+    }
+   ]
+  },
+  {
+   "w": "开放",
+   "py": "kāifàng",
+   "hv": "khai phóng",
+   "vi": "mở cửa; cởi mở",
+   "pos": "động từ, tính từ",
+   "note": "对外开放 (mở cửa ra ngoài).",
+   "ex": [
+    {
+     "cn": "博物馆周一不开放。",
+     "py": "Bówùguǎn zhōuyī bù kāifàng.",
+     "vi": "Bảo tàng không mở cửa thứ Hai."
+    }
+   ]
+  },
+  {
+   "w": "讲座",
+   "py": "jiǎngzuò",
+   "hv": "giảng toạ",
+   "vi": "buổi toạ đàm, bài giảng",
+   "pos": "danh từ",
+   "note": "听讲座 (nghe toạ đàm).",
+   "ex": [
+    {
+     "cn": "下午有一个关于心理健康的讲座。",
+     "py": "Xiàwǔ yǒu yí ge guānyú xīnlǐ jiànkāng de jiǎngzuò.",
+     "vi": "Chiều nay có buổi toạ đàm về sức khoẻ tinh thần."
+    }
+   ]
+  },
+  {
+   "w": "讲话",
+   "py": "jiǎnghuà",
+   "hv": "giảng thoại",
+   "vi": "phát biểu; nói chuyện",
+   "pos": "động từ, danh từ",
+   "note": "发表讲话 (có bài phát biểu).",
+   "ex": [
+    {
+     "cn": "队长在会上讲了话。",
+     "py": "Duìzhǎng zài huì shang jiǎng le huà.",
+     "vi": "Đội trưởng phát biểu trong buổi họp."
+    }
+   ]
+  },
+  {
+   "w": "接待",
+   "py": "jiēdài",
+   "hv": "tiếp đãi",
+   "vi": "tiếp đón",
+   "pos": "động từ",
+   "note": "接待客人 (tiếp khách).",
+   "ex": [
+    {
+     "cn": "他负责接待外国客人。",
+     "py": "Tā fùzé jiēdài wàiguó kèrén.",
+     "vi": "Anh ấy phụ trách tiếp khách nước ngoài."
+    }
+   ]
+  },
+  {
+   "w": "剧场",
+   "py": "jùchǎng",
+   "hv": "kịch trường",
+   "vi": "nhà hát",
+   "pos": "danh từ",
+   "note": "Chính là \"kịch trường\".",
+   "ex": [
+    {
+     "cn": "剧场里坐满了观众。",
+     "py": "Jùchǎng li zuò mǎn le guānzhòng.",
+     "vi": "Nhà hát kín chỗ khán giả."
+    }
+   ]
+  },
+  {
+   "w": "联合",
+   "py": "liánhé",
+   "hv": "liên hợp",
+   "vi": "liên kết, phối hợp",
+   "pos": "động từ",
+   "note": "联合举办 (đồng tổ chức).",
+   "ex": [
+    {
+     "cn": "这次活动由两家公司联合举办。",
+     "py": "Zhè cì huódòng yóu liǎng jiā gōngsī liánhé jǔbàn.",
+     "vi": "Sự kiện này do hai công ty đồng tổ chức."
+    }
+   ]
+  },
+  {
+   "w": "访问",
+   "py": "fǎngwèn",
+   "hv": "phỏng vấn",
+   "vi": "viếng thăm; truy cập",
+   "pos": "động từ",
+   "note": "Khác \"phỏng vấn\" tiếng Việt (采访).",
+   "ex": [
+    {
+     "cn": "总统下周访问越南。",
+     "py": "Zǒngtǒng xià zhōu fǎngwèn Yuènán.",
+     "vi": "Tổng thống thăm Việt Nam tuần sau."
+    }
+   ]
+  },
+  {
+   "w": "临时",
+   "py": "línshí",
+   "hv": "lâm thời",
+   "vi": "tạm thời; phút chót",
+   "pos": "tính từ, phó từ",
+   "note": "临时决定 (quyết định phút chót).",
+   "ex": [
+    {
+     "cn": "计划临时改变了。",
+     "py": "Jìhuà línshí gǎibiàn le.",
+     "vi": "Kế hoạch thay đổi phút chót."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "由 + ai + 动词",
+   "b": "由两家公司联合举办",
+   "d": "Do ai làm (văn viết).",
+   "ex": [
+    {
+     "cn": "这次比赛由我负责。",
+     "py": "Zhè cì bǐsài yóu wǒ fùzé.",
+     "vi": "Giải đấu lần này do tôi phụ trách."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "开幕式结束后，比赛就正式开始了。",
+   "py": "Kāimùshì jiéshù hòu, bǐsài jiù zhèngshì kāishǐ le.",
+   "vi": "Lễ khai mạc kết thúc, giải đấu chính thức bắt đầu."
+  },
+  {
+   "cn": "我们要好好接待来访的客人。",
+   "py": "Wǒmen yào hǎohǎo jiēdài láifǎng de kèrén.",
+   "vi": "Chúng ta phải tiếp đón chu đáo khách đến thăm."
+  },
+  {
+   "cn": "因为下雨，活动临时取消了。",
+   "py": "Yīnwèi xià yǔ, huódòng línshí qǔxiāo le.",
+   "vi": "Vì mưa, sự kiện bị huỷ phút chót."
+  }
+ ]
+}

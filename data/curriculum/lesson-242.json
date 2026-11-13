@@ -1,0 +1,264 @@
+{
+ "id": 242,
+ "cn": "有理由吗",
+ "title": "Lý lẽ và phân loại",
+ "goal": "Nói về lý do, kết luận, cấu trúc, kết hợp, hợp thành, loại, tương tự, cụ thể, có đủ, nguồn gốc và nghe nói.",
+ "words": [
+  {
+   "w": "理由",
+   "py": "lǐyóu",
+   "hv": "lý do",
+   "vi": "lý do",
+   "pos": "danh từ",
+   "note": "Chính là \"lý do\".",
+   "ex": [
+    {
+     "cn": "你有什么理由迟到？",
+     "py": "Nǐ yǒu shénme lǐyóu chídào?",
+     "vi": "Bạn có lý do gì mà đến muộn?"
+    }
+   ]
+  },
+  {
+   "w": "结论",
+   "py": "jiélùn",
+   "hv": "kết luận",
+   "vi": "kết luận",
+   "pos": "danh từ",
+   "note": "Chính là \"kết luận\".",
+   "ex": [
+    {
+     "cn": "先别急着下结论。",
+     "py": "Xiān bié jí zhe xià jiélùn.",
+     "vi": "Đừng vội kết luận."
+    }
+   ]
+  },
+  {
+   "w": "结构",
+   "py": "jiégòu",
+   "hv": "kết cấu",
+   "vi": "cấu trúc",
+   "pos": "danh từ",
+   "note": "Chính là \"kết cấu\".",
+   "ex": [
+    {
+     "cn": "这篇文章结构很清楚。",
+     "py": "Zhè piān wénzhāng jiégòu hěn qīngchu.",
+     "vi": "Bài viết này có cấu trúc rõ ràng."
+    }
+   ]
+  },
+  {
+   "w": "结合",
+   "py": "jiéhé",
+   "hv": "kết hợp",
+   "vi": "kết hợp",
+   "pos": "động từ",
+   "note": "Chính là \"kết hợp\".",
+   "ex": [
+    {
+     "cn": "我们要把训练和比赛结合起来。",
+     "py": "Wǒmen yào bǎ xùnliàn hé bǐsài jiéhé qǐlái.",
+     "vi": "Chúng ta phải kết hợp tập luyện với thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "构成",
+   "py": "gòuchéng",
+   "hv": "cấu thành",
+   "vi": "cấu thành, tạo nên",
+   "pos": "động từ",
+   "note": "Chính là \"cấu thành\".",
+   "ex": [
+    {
+     "cn": "一支队伍由五名主力构成。",
+     "py": "Yì zhī duìwu yóu wǔ míng zhǔlì gòuchéng.",
+     "vi": "Một đội gồm năm tuyển thủ chính."
+    }
+   ]
+  },
+  {
+   "w": "类",
+   "py": "lèi",
+   "hv": "loại",
+   "vi": "loại",
+   "pos": "danh từ, lượng từ",
+   "note": "这类问题 (loại vấn đề này).",
+   "ex": [
+    {
+     "cn": "这类问题很常见。",
+     "py": "Zhè lèi wèntí hěn chángjiàn.",
+     "vi": "Loại vấn đề này rất phổ biến."
+    }
+   ]
+  },
+  {
+   "w": "类似",
+   "py": "lèisì",
+   "hv": "loại tự",
+   "vi": "tương tự",
+   "pos": "tính từ",
+   "note": "类似的情况 (tình huống tương tự).",
+   "ex": [
+    {
+     "cn": "以前我们也遇到过类似的问题。",
+     "py": "Yǐqián wǒmen yě yùdào guo lèisì de wèntí.",
+     "vi": "Trước đây chúng tôi cũng gặp vấn đề tương tự."
+    }
+   ]
+  },
+  {
+   "w": "类型",
+   "py": "lèixíng",
+   "hv": "loại hình",
+   "vi": "kiểu, loại",
+   "pos": "danh từ",
+   "note": "Chính là \"loại hình\".",
+   "ex": [
+    {
+     "cn": "你喜欢什么类型的电影？",
+     "py": "Nǐ xǐhuan shénme lèixíng de diànyǐng?",
+     "vi": "Bạn thích thể loại phim nào?"
+    }
+   ]
+  },
+  {
+   "w": "具体",
+   "py": "jùtǐ",
+   "hv": "cụ thể",
+   "vi": "cụ thể",
+   "pos": "tính từ",
+   "note": "Chính là \"cụ thể\".",
+   "ex": [
+    {
+     "cn": "请说得具体一点儿。",
+     "py": "Qǐng shuō de jùtǐ yìdiǎnr.",
+     "vi": "Hãy nói cụ thể hơn chút."
+    }
+   ]
+  },
+  {
+   "w": "具备",
+   "py": "jùbèi",
+   "hv": "cụ bị",
+   "vi": "có đủ (điều kiện)",
+   "pos": "động từ",
+   "note": "具备条件 (đủ điều kiện).",
+   "ex": [
+    {
+     "cn": "他具备当队长的能力。",
+     "py": "Tā jùbèi dāng duìzhǎng de nénglì.",
+     "vi": "Anh ấy có đủ năng lực làm đội trưởng."
+    }
+   ]
+  },
+  {
+   "w": "具有",
+   "py": "jùyǒu",
+   "hv": "cụ hữu",
+   "vi": "có (ý nghĩa, đặc điểm)",
+   "pos": "động từ",
+   "note": "Văn viết của 有.",
+   "ex": [
+    {
+     "cn": "这场比赛具有重要的意义。",
+     "py": "Zhè chǎng bǐsài jùyǒu zhòngyào de yìyì.",
+     "vi": "Trận đấu này có ý nghĩa quan trọng."
+    }
+   ]
+  },
+  {
+   "w": "来源",
+   "py": "láiyuán",
+   "hv": "lai nguyên",
+   "vi": "nguồn gốc",
+   "pos": "danh từ",
+   "note": "收入来源 (nguồn thu nhập).",
+   "ex": [
+    {
+     "cn": "这条消息的来源可靠吗？",
+     "py": "Zhè tiáo xiāoxi de láiyuán kěkào ma?",
+     "vi": "Nguồn của tin này có đáng tin không?"
+    }
+   ]
+  },
+  {
+   "w": "据说",
+   "py": "jùshuō",
+   "hv": "cứ thuyết",
+   "vi": "nghe nói",
+   "pos": "động từ",
+   "note": "据 (căn cứ) + 说.",
+   "ex": [
+    {
+     "cn": "据说明天会下大雨。",
+     "py": "Jùshuō míngtiān huì xià dàyǔ.",
+     "vi": "Nghe nói mai sẽ mưa to."
+    }
+   ]
+  },
+  {
+   "w": "据",
+   "py": "jù",
+   "hv": "cứ",
+   "vi": "theo, căn cứ",
+   "pos": "giới từ",
+   "note": "据统计 (theo thống kê).",
+   "ex": [
+    {
+     "cn": "据调查，大部分人喜欢运动。",
+     "py": "Jù diàochá, dà bùfen rén xǐhuan yùndòng.",
+     "vi": "Theo khảo sát, đa số mọi người thích vận động."
+    }
+   ]
+  },
+  {
+   "w": "可见",
+   "py": "kějiàn",
+   "hv": "khả kiến",
+   "vi": "có thể thấy",
+   "pos": "liên từ",
+   "note": "Dùng để rút ra kết luận.",
+   "ex": [
+    {
+     "cn": "他每天都来练习，可见他很认真。",
+     "py": "Tā měi tiān dōu lái liànxí, kějiàn tā hěn rènzhēn.",
+     "vi": "Ngày nào anh ấy cũng đến tập, có thể thấy anh ấy rất nghiêm túc."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "由 + 部分 + 构成 / 组成",
+   "b": "由五名主力构成",
+   "d": "Gồm những phần nào.",
+   "ex": [
+    {
+     "cn": "这个句子由三个部分构成。",
+     "py": "Zhège jùzi yóu sān ge bùfen gòuchéng.",
+     "vi": "Câu này gồm ba phần."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "先找到具体的理由，再下结论。",
+   "py": "Xiān zhǎodào jùtǐ de lǐyóu, zài xià jiélùn.",
+   "vi": "Trước tìm lý do cụ thể, rồi mới kết luận."
+  },
+  {
+   "cn": "据说这家店的火锅特别好吃。",
+   "py": "Jùshuō zhè jiā diàn de huǒguō tèbié hǎochī.",
+   "vi": "Nghe nói lẩu quán này ngon lắm."
+  },
+  {
+   "cn": "他连续三次犯同样的错误，可见问题很严重。",
+   "py": "Tā liánxù sān cì fàn tóngyàng de cuòwù, kějiàn wèntí hěn yánzhòng.",
+   "vi": "Anh ấy ba lần liền mắc cùng lỗi, có thể thấy vấn đề nghiêm trọng."
+  }
+ ]
+}

@@ -1,0 +1,264 @@
+{
+ "id": 237,
+ "cn": "机器人时代",
+ "title": "Công nghệ và máy tính",
+ "goal": "Nói về công nghệ cao, robot, tính toán, máy tính, bàn phím, hoá học, nghiên cứu, lý thuyết, phát triển, kích hoạt và chia sẻ.",
+ "words": [
+  {
+   "w": "高科技",
+   "py": "gāokējì",
+   "hv": "cao khoa kỹ",
+   "vi": "công nghệ cao",
+   "pos": "danh từ",
+   "note": "高 + 科技.",
+   "ex": [
+    {
+     "cn": "这家公司做高科技产品。",
+     "py": "Zhè jiā gōngsī zuò gāokējì chǎnpǐn.",
+     "vi": "Công ty này làm sản phẩm công nghệ cao."
+    }
+   ]
+  },
+  {
+   "w": "机器人",
+   "py": "jīqìrén",
+   "hv": "cơ khí nhân",
+   "vi": "robot",
+   "pos": "danh từ",
+   "note": "Người máy.",
+   "ex": [
+    {
+     "cn": "机器人可以帮我们做很多事。",
+     "py": "Jīqìrén kěyǐ bāng wǒmen zuò hěn duō shì.",
+     "vi": "Robot có thể giúp chúng ta làm nhiều việc."
+    }
+   ]
+  },
+  {
+   "w": "计算",
+   "py": "jìsuàn",
+   "hv": "kế toán",
+   "vi": "tính toán",
+   "pos": "động từ",
+   "note": "Khác \"kế toán\" tiếng Việt (会计).",
+   "ex": [
+    {
+     "cn": "请计算一下总共多少钱。",
+     "py": "Qǐng jìsuàn yíxià zǒnggòng duōshao qián.",
+     "vi": "Hãy tính xem tổng cộng bao nhiêu tiền."
+    }
+   ]
+  },
+  {
+   "w": "计算机",
+   "py": "jìsuànjī",
+   "hv": "kế toán cơ",
+   "vi": "máy tính",
+   "pos": "danh từ",
+   "note": "Giống 电脑.",
+   "ex": [
+    {
+     "cn": "他大学学的是计算机。",
+     "py": "Tā dàxué xué de shì jìsuànjī.",
+     "vi": "Đại học anh ấy học ngành máy tính."
+    }
+   ]
+  },
+  {
+   "w": "键",
+   "py": "jiàn",
+   "hv": "kiện",
+   "vi": "phím",
+   "pos": "danh từ",
+   "note": "按键 (nút bấm).",
+   "ex": [
+    {
+     "cn": "按这个键就可以开始。",
+     "py": "Àn zhège jiàn jiù kěyǐ kāishǐ.",
+     "vi": "Bấm phím này là bắt đầu được."
+    }
+   ]
+  },
+  {
+   "w": "键盘",
+   "py": "jiànpán",
+   "hv": "kiện bàn",
+   "vi": "bàn phím",
+   "pos": "danh từ",
+   "note": "盘 là cái đĩa, bàn.",
+   "ex": [
+    {
+     "cn": "这个键盘打字很舒服。",
+     "py": "Zhège jiànpán dǎzì hěn shūfu.",
+     "vi": "Bàn phím này gõ rất êm."
+    }
+   ]
+  },
+  {
+   "w": "化学",
+   "py": "huàxué",
+   "hv": "hoá học",
+   "vi": "hoá học",
+   "pos": "danh từ",
+   "note": "Chính là \"hoá học\".",
+   "ex": [
+    {
+     "cn": "我中学的时候化学不太好。",
+     "py": "Wǒ zhōngxué de shíhou huàxué bú tài hǎo.",
+     "vi": "Hồi cấp ba tôi học hoá không giỏi lắm."
+    }
+   ]
+  },
+  {
+   "w": "科研",
+   "py": "kēyán",
+   "hv": "khoa nghiên",
+   "vi": "nghiên cứu khoa học",
+   "pos": "danh từ",
+   "note": "科学研究 viết tắt.",
+   "ex": [
+    {
+     "cn": "她在大学做科研工作。",
+     "py": "Tā zài dàxué zuò kēyán gōngzuò.",
+     "vi": "Cô ấy làm nghiên cứu ở trường đại học."
+    }
+   ]
+  },
+  {
+   "w": "理论",
+   "py": "lǐlùn",
+   "hv": "lý luận",
+   "vi": "lý thuyết",
+   "pos": "danh từ",
+   "note": "Trái với 实践 (thực hành).",
+   "ex": [
+    {
+     "cn": "理论和实践要结合起来。",
+     "py": "Lǐlùn hé shíjiàn yào jiéhé qǐlái.",
+     "vi": "Lý thuyết và thực hành phải kết hợp."
+    }
+   ]
+  },
+  {
+   "w": "开发",
+   "py": "kāifā",
+   "hv": "khai phát",
+   "vi": "phát triển, khai thác",
+   "pos": "động từ",
+   "note": "开发游戏 (phát triển game).",
+   "ex": [
+    {
+     "cn": "他们开发了一款新游戏。",
+     "py": "Tāmen kāifā le yì kuǎn xīn yóuxì.",
+     "vi": "Họ phát triển một trò chơi mới."
+    }
+   ]
+  },
+  {
+   "w": "开通",
+   "py": "kāitōng",
+   "hv": "khai thông",
+   "vi": "mở, kích hoạt (dịch vụ)",
+   "pos": "động từ",
+   "note": "开通账户 (mở tài khoản).",
+   "ex": [
+    {
+     "cn": "我刚开通了网上银行。",
+     "py": "Wǒ gāng kāitōng le wǎngshàng yínháng.",
+     "vi": "Tôi vừa mở ngân hàng trực tuyến."
+    }
+   ]
+  },
+  {
+   "w": "浏览",
+   "py": "liúlǎn",
+   "hv": "lưu lãm",
+   "vi": "xem lướt, duyệt",
+   "pos": "động từ",
+   "note": "浏览器 (trình duyệt).",
+   "ex": [
+    {
+     "cn": "我每天早上浏览新闻。",
+     "py": "Wǒ měi tiān zǎoshang liúlǎn xīnwén.",
+     "vi": "Sáng nào tôi cũng lướt tin tức."
+    }
+   ]
+  },
+  {
+   "w": "留言",
+   "py": "liúyán",
+   "hv": "lưu ngôn",
+   "vi": "để lại lời nhắn; bình luận",
+   "pos": "động từ, danh từ",
+   "note": "给我留言 (nhắn lại cho tôi).",
+   "ex": [
+    {
+     "cn": "很多粉丝在下面留言。",
+     "py": "Hěn duō fěnsī zài xiàmiàn liúyán.",
+     "vi": "Nhiều fan để lại bình luận bên dưới."
+    }
+   ]
+  },
+  {
+   "w": "共享",
+   "py": "gòngxiǎng",
+   "hv": "cộng hưởng",
+   "vi": "dùng chung",
+   "pos": "động từ",
+   "note": "共享单车 (xe đạp công cộng).",
+   "ex": [
+    {
+     "cn": "我们共享这个文件。",
+     "py": "Wǒmen gòngxiǎng zhège wénjiàn.",
+     "vi": "Chúng ta dùng chung tài liệu này."
+    }
+   ]
+  },
+  {
+   "w": "接收",
+   "py": "jiēshōu",
+   "hv": "tiếp thu",
+   "vi": "nhận (tín hiệu, tin)",
+   "pos": "động từ",
+   "note": "Khác \"tiếp thu\" kiến thức (接受).",
+   "ex": [
+    {
+     "cn": "手机接收不到信号。",
+     "py": "Shǒujī jiēshōu bu dào xìnhào.",
+     "vi": "Điện thoại không nhận được tín hiệu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 不到",
+   "b": "接收不到 · 找不到 · 买不到",
+   "d": "Không đạt được kết quả.",
+   "ex": [
+    {
+     "cn": "这么晚了，打不到车了。",
+     "py": "Zhème wǎn le, dǎ bu dào chē le.",
+     "vi": "Muộn thế này, không bắt được xe nữa."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "机器人越来越聪明了。",
+   "py": "Jīqìrén yuè lái yuè cōngming le.",
+   "vi": "Robot càng ngày càng thông minh."
+  },
+  {
+   "cn": "这个游戏是越南团队开发的。",
+   "py": "Zhège yóuxì shì Yuènán tuánduì kāifā de.",
+   "vi": "Trò chơi này do một nhóm Việt Nam phát triển."
+  },
+  {
+   "cn": "只学理论不够，还要多练习。",
+   "py": "Zhǐ xué lǐlùn bú gòu, hái yào duō liànxí.",
+   "vi": "Chỉ học lý thuyết không đủ, còn phải luyện nhiều."
+  }
+ ]
+}

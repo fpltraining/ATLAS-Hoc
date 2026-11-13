@@ -1,0 +1,264 @@
+{
+ "id": 243,
+ "cn": "立刻出发",
+ "title": "Thời gian và tốc độ",
+ "goal": "Nói về hôm nay, gần đây, những năm gần đây, cận đại, năm ấy, hiện tại, lâu đời, ngay lập tức, vội vàng, khẩn cấp và không ngờ.",
+ "words": [
+  {
+   "w": "今日",
+   "py": "jīnrì",
+   "hv": "kim nhật",
+   "vi": "hôm nay",
+   "pos": "danh từ",
+   "note": "Văn viết của 今天.",
+   "ex": [
+    {
+     "cn": "今日新闻：比赛结果公布。",
+     "py": "Jīnrì xīnwén: bǐsài jiéguǒ gōngbù.",
+     "vi": "Tin hôm nay: công bố kết quả thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "近日",
+   "py": "jìnrì",
+   "hv": "cận nhật",
+   "vi": "mấy hôm nay",
+   "pos": "danh từ",
+   "note": "Văn viết, thời gian gần.",
+   "ex": [
+    {
+     "cn": "近日天气变化很大。",
+     "py": "Jìnrì tiānqì biànhuà hěn dà.",
+     "vi": "Mấy hôm nay thời tiết thay đổi nhiều."
+    }
+   ]
+  },
+  {
+   "w": "近期",
+   "py": "jìnqī",
+   "hv": "cận kỳ",
+   "vi": "thời gian tới; gần đây",
+   "pos": "danh từ",
+   "note": "近期计划 (kế hoạch sắp tới).",
+   "ex": [
+    {
+     "cn": "我们近期没有比赛。",
+     "py": "Wǒmen jìnqī méiyǒu bǐsài.",
+     "vi": "Thời gian tới chúng tôi không có trận nào."
+    }
+   ]
+  },
+  {
+   "w": "近年来",
+   "py": "jìnnián lái",
+   "hv": "cận niên lai",
+   "vi": "những năm gần đây",
+   "pos": "cụm từ",
+   "note": "近年 + 来.",
+   "ex": [
+    {
+     "cn": "近年来，电竞越来越受欢迎。",
+     "py": "Jìnnián lái, diànjìng yuè lái yuè shòu huānyíng.",
+     "vi": "Những năm gần đây, thể thao điện tử ngày càng được ưa chuộng."
+    }
+   ]
+  },
+  {
+   "w": "近代",
+   "py": "jìndài",
+   "hv": "cận đại",
+   "vi": "cận đại",
+   "pos": "danh từ",
+   "note": "Chính là \"cận đại\".",
+   "ex": [
+    {
+     "cn": "他研究中国近代历史。",
+     "py": "Tā yánjiū Zhōngguó jìndài lìshǐ.",
+     "vi": "Anh ấy nghiên cứu lịch sử cận đại Trung Quốc."
+    }
+   ]
+  },
+  {
+   "w": "当年",
+   "py": "dāngnián",
+   "hv": "đương niên",
+   "vi": "năm ấy, hồi đó",
+   "pos": "danh từ",
+   "note": "想当年 (nhớ hồi đó).",
+   "ex": [
+    {
+     "cn": "当年我也是一名选手。",
+     "py": "Dāngnián wǒ yě shì yì míng xuǎnshǒu.",
+     "vi": "Hồi đó tôi cũng là tuyển thủ."
+    }
+   ]
+  },
+  {
+   "w": "当前",
+   "py": "dāngqián",
+   "hv": "đương tiền",
+   "vi": "hiện tại, trước mắt",
+   "pos": "danh từ",
+   "note": "当前的任务 (nhiệm vụ trước mắt).",
+   "ex": [
+    {
+     "cn": "当前最重要的是准备决赛。",
+     "py": "Dāngqián zuì zhòngyào de shì zhǔnbèi juésài.",
+     "vi": "Trước mắt quan trọng nhất là chuẩn bị chung kết."
+    }
+   ]
+  },
+  {
+   "w": "当中",
+   "py": "dāngzhōng",
+   "hv": "đương trung",
+   "vi": "trong số, ở giữa",
+   "pos": "danh từ",
+   "note": "我们当中 (trong chúng ta).",
+   "ex": [
+    {
+     "cn": "我们当中谁最会做饭？",
+     "py": "Wǒmen dāngzhōng shéi zuì huì zuò fàn?",
+     "vi": "Trong chúng ta ai nấu ăn giỏi nhất?"
+    }
+   ]
+  },
+  {
+   "w": "久远",
+   "py": "jiǔyuǎn",
+   "hv": "cửu viễn",
+   "vi": "lâu đời, xa xưa",
+   "pos": "tính từ",
+   "note": "历史久远 (lịch sử lâu đời).",
+   "ex": [
+    {
+     "cn": "这座寺庙的历史很久远。",
+     "py": "Zhè zuò sìmiào de lìshǐ hěn jiǔyuǎn.",
+     "vi": "Ngôi chùa này có lịch sử lâu đời."
+    }
+   ]
+  },
+  {
+   "w": "立即",
+   "py": "lìjí",
+   "hv": "lập tức",
+   "vi": "ngay lập tức",
+   "pos": "phó từ",
+   "note": "Văn viết của 马上.",
+   "ex": [
+    {
+     "cn": "收到通知后请立即回复。",
+     "py": "Shōudào tōngzhī hòu qǐng lìjí huífù.",
+     "vi": "Nhận được thông báo xin trả lời ngay."
+    }
+   ]
+  },
+  {
+   "w": "立刻",
+   "py": "lìkè",
+   "hv": "lập khắc",
+   "vi": "lập tức",
+   "pos": "phó từ",
+   "note": "Khẩu ngữ hơn 立即.",
+   "ex": [
+    {
+     "cn": "他听到声音立刻跑了出去。",
+     "py": "Tā tīngdào shēngyīn lìkè pǎo le chūqù.",
+     "vi": "Nghe thấy tiếng, anh ấy lập tức chạy ra."
+    }
+   ]
+  },
+  {
+   "w": "连忙",
+   "py": "liánmáng",
+   "hv": "liên mang",
+   "vi": "vội vàng",
+   "pos": "phó từ",
+   "note": "Chỉ dùng cho việc đã xảy ra.",
+   "ex": [
+    {
+     "cn": "看到老师进来，学生们连忙坐好。",
+     "py": "Kàndào lǎoshī jìnlái, xuéshengmen liánmáng zuò hǎo.",
+     "vi": "Thấy thầy vào, học sinh vội ngồi ngay ngắn."
+    }
+   ]
+  },
+  {
+   "w": "紧急",
+   "py": "jǐnjí",
+   "hv": "khẩn cấp",
+   "vi": "khẩn cấp",
+   "pos": "tính từ",
+   "note": "Chính là \"khẩn cấp\".",
+   "ex": [
+    {
+     "cn": "遇到紧急情况请打这个电话。",
+     "py": "Yùdào jǐnjí qíngkuàng qǐng dǎ zhège diànhuà.",
+     "vi": "Gặp tình huống khẩn cấp hãy gọi số này."
+    }
+   ]
+  },
+  {
+   "w": "尽快",
+   "py": "jǐnkuài",
+   "hv": "tận khoái",
+   "vi": "càng nhanh càng tốt",
+   "pos": "phó từ",
+   "note": "尽 đọc jǐn.",
+   "ex": [
+    {
+     "cn": "请尽快完成报告。",
+     "py": "Qǐng jǐnkuài wánchéng bàogào.",
+     "vi": "Hãy hoàn thành báo cáo sớm nhất có thể."
+    }
+   ]
+  },
+  {
+   "w": "居然",
+   "py": "jūrán",
+   "hv": "cư nhiên",
+   "vi": "không ngờ, vậy mà",
+   "pos": "phó từ",
+   "note": "Ngoài dự đoán.",
+   "ex": [
+    {
+     "cn": "他居然一个人打败了三个对手。",
+     "py": "Tā jūrán yí ge rén dǎbài le sān ge duìshǒu.",
+     "vi": "Không ngờ anh ấy một mình hạ ba đối thủ."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "立刻 / 马上 / 立即",
+   "b": "Cả ba đều là \"ngay\"; 立即 trang trọng nhất",
+   "d": "马上 dùng được cho tương lai: 我马上来.",
+   "ex": [
+    {
+     "cn": "比赛结束后，我们立刻开始复盘。",
+     "py": "Bǐsài jiéshù hòu, wǒmen lìkè kāishǐ fùpán.",
+     "vi": "Hết trận, chúng tôi lập tức bắt đầu xem lại trận đấu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "近年来，越南的经济发展得很快。",
+   "py": "Jìnnián lái, Yuènán de jīngjì fāzhǎn de hěn kuài.",
+   "vi": "Những năm gần đây kinh tế Việt Nam phát triển nhanh."
+  },
+  {
+   "cn": "我真没想到，他居然忘了自己的生日。",
+   "py": "Wǒ zhēn méi xiǎngdào, tā jūrán wàng le zìjǐ de shēngrì.",
+   "vi": "Thật không ngờ anh ấy lại quên sinh nhật của mình."
+  },
+  {
+   "cn": "情况紧急，我们必须立即出发。",
+   "py": "Qíngkuàng jǐnjí, wǒmen bìxū lìjí chūfā.",
+   "vi": "Tình hình khẩn cấp, chúng ta phải xuất phát ngay."
+  }
+ ]
+}

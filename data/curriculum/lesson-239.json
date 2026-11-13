@@ -1,0 +1,264 @@
+{
+ "id": 239,
+ "cn": "激烈的决赛",
+ "title": "Thi đấu và chiến thuật",
+ "goal": "Nói về chung kết, kịch liệt, dẫn trước, liên tiếp, mùa giải, giai đoạn, vai trò, kỹ năng, kiểm soát, linh hoạt và góc nhìn.",
+ "words": [
+  {
+   "w": "决赛",
+   "py": "juésài",
+   "hv": "quyết tái",
+   "vi": "trận chung kết",
+   "pos": "danh từ",
+   "note": "半决赛 (bán kết).",
+   "ex": [
+    {
+     "cn": "我们终于进入了决赛。",
+     "py": "Wǒmen zhōngyú jìnrù le juésài.",
+     "vi": "Cuối cùng chúng tôi đã vào chung kết."
+    }
+   ]
+  },
+  {
+   "w": "激烈",
+   "py": "jīliè",
+   "hv": "kích liệt",
+   "vi": "kịch liệt, gay cấn",
+   "pos": "tính từ",
+   "note": "比赛很激烈 (trận đấu gay cấn).",
+   "ex": [
+    {
+     "cn": "这场比赛非常激烈。",
+     "py": "Zhè chǎng bǐsài fēicháng jīliè.",
+     "vi": "Trận đấu này cực kỳ gay cấn."
+    }
+   ]
+  },
+  {
+   "w": "领先",
+   "py": "lǐngxiān",
+   "hv": "lĩnh tiên",
+   "vi": "dẫn trước",
+   "pos": "động từ",
+   "note": "领先对手 (dẫn trước đối thủ).",
+   "ex": [
+    {
+     "cn": "我们一直领先到最后。",
+     "py": "Wǒmen yìzhí lǐngxiān dào zuìhòu.",
+     "vi": "Chúng tôi dẫn trước tới phút cuối."
+    }
+   ]
+  },
+  {
+   "w": "连续",
+   "py": "liánxù",
+   "hv": "liên tục",
+   "vi": "liên tiếp",
+   "pos": "động từ, phó từ",
+   "note": "连续三场 (ba trận liên tiếp).",
+   "ex": [
+    {
+     "cn": "他们连续赢了五场。",
+     "py": "Tāmen liánxù yíng le wǔ chǎng.",
+     "vi": "Họ thắng liền năm trận."
+    }
+   ]
+  },
+  {
+   "w": "届",
+   "py": "jiè",
+   "hv": "giới",
+   "vi": "mùa, khoá, lần (lượng từ)",
+   "pos": "lượng từ",
+   "note": "第十届比赛 (giải lần thứ mười).",
+   "ex": [
+    {
+     "cn": "这是第三届APL比赛。",
+     "py": "Zhè shì dì sān jiè APL bǐsài.",
+     "vi": "Đây là giải APL lần thứ ba."
+    }
+   ]
+  },
+  {
+   "w": "阶段",
+   "py": "jiēduàn",
+   "hv": "giai đoạn",
+   "vi": "giai đoạn",
+   "pos": "danh từ",
+   "note": "Chính là \"giai đoạn\".",
+   "ex": [
+    {
+     "cn": "比赛进入了最后阶段。",
+     "py": "Bǐsài jìnrù le zuìhòu jiēduàn.",
+     "vi": "Trận đấu bước vào giai đoạn cuối."
+    }
+   ]
+  },
+  {
+   "w": "环节",
+   "py": "huánjié",
+   "hv": "hoàn tiết",
+   "vi": "khâu, mắt xích",
+   "pos": "danh từ",
+   "note": "关键环节 (khâu then chốt).",
+   "ex": [
+    {
+     "cn": "选人是比赛中很重要的环节。",
+     "py": "Xuǎn rén shì bǐsài zhōng hěn zhòngyào de huánjié.",
+     "vi": "Cấm chọn là khâu rất quan trọng trong trận đấu."
+    }
+   ]
+  },
+  {
+   "w": "角色",
+   "py": "juésè",
+   "hv": "giác sắc",
+   "vi": "vai, vai trò",
+   "pos": "danh từ",
+   "note": "角 ở đây đọc jué.",
+   "ex": [
+    {
+     "cn": "每个人在队里都有自己的角色。",
+     "py": "Měi ge rén zài duì li dōu yǒu zìjǐ de juésè.",
+     "vi": "Mỗi người trong đội đều có vai trò riêng."
+    }
+   ]
+  },
+  {
+   "w": "技能",
+   "py": "jìnéng",
+   "hv": "kỹ năng",
+   "vi": "kỹ năng; chiêu (game)",
+   "pos": "danh từ",
+   "note": "Chính là \"kỹ năng\".",
+   "ex": [
+    {
+     "cn": "这个英雄的技能很强。",
+     "py": "Zhège yīngxióng de jìnéng hěn qiáng.",
+     "vi": "Kỹ năng của tướng này rất mạnh."
+    }
+   ]
+  },
+  {
+   "w": "集体",
+   "py": "jítǐ",
+   "hv": "tập thể",
+   "vi": "tập thể",
+   "pos": "danh từ",
+   "note": "Chính là \"tập thể\".",
+   "ex": [
+    {
+     "cn": "胜利属于整个集体。",
+     "py": "Shènglì shǔyú zhěnggè jítǐ.",
+     "vi": "Chiến thắng thuộc về cả tập thể."
+    }
+   ]
+  },
+  {
+   "w": "控制",
+   "py": "kòngzhì",
+   "hv": "khống chế",
+   "vi": "kiểm soát, khống chế",
+   "pos": "động từ",
+   "note": "控制节奏 (kiểm soát nhịp độ).",
+   "ex": [
+    {
+     "cn": "我们要控制比赛的节奏。",
+     "py": "Wǒmen yào kòngzhì bǐsài de jiézòu.",
+     "vi": "Chúng ta phải kiểm soát nhịp trận đấu."
+    }
+   ]
+  },
+  {
+   "w": "灵活",
+   "py": "línghuó",
+   "hv": "linh hoạt",
+   "vi": "linh hoạt",
+   "pos": "tính từ",
+   "note": "Chính là \"linh hoạt\".",
+   "ex": [
+    {
+     "cn": "他的打法很灵活。",
+     "py": "Tā de dǎfǎ hěn línghuó.",
+     "vi": "Lối đánh của anh ấy rất linh hoạt."
+    }
+   ]
+  },
+  {
+   "w": "力量",
+   "py": "lìliang",
+   "hv": "lực lượng",
+   "vi": "sức mạnh",
+   "pos": "danh từ",
+   "note": "Khác \"lực lượng\" (quân) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "团结就是力量。",
+     "py": "Tuánjié jiù shì lìliang.",
+     "vi": "Đoàn kết là sức mạnh."
+    }
+   ]
+  },
+  {
+   "w": "奖励",
+   "py": "jiǎnglì",
+   "hv": "tưởng lệ",
+   "vi": "khen thưởng; phần thưởng",
+   "pos": "động từ, danh từ",
+   "note": "Chính là \"khen thưởng\".",
+   "ex": [
+    {
+     "cn": "赢了比赛，教练奖励我们一顿大餐。",
+     "py": "Yíng le bǐsài, jiàoliàn jiǎnglì wǒmen yí dùn dàcān.",
+     "vi": "Thắng trận, huấn luyện viên thưởng cả đội một bữa lớn."
+    }
+   ]
+  },
+  {
+   "w": "角度",
+   "py": "jiǎodù",
+   "hv": "giác độ",
+   "vi": "góc độ",
+   "pos": "danh từ",
+   "note": "换个角度 (đổi góc nhìn).",
+   "ex": [
+    {
+     "cn": "换个角度想，这也是好事。",
+     "py": "Huàn ge jiǎodù xiǎng, zhè yě shì hǎoshì.",
+     "vi": "Nghĩ theo góc khác thì đây cũng là chuyện tốt."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "角 có hai cách đọc",
+   "b": "jiǎo (góc): 角度 · jué (vai): 角色",
+   "d": "Nhớ theo từ ghép.",
+   "ex": [
+    {
+     "cn": "这个角色在游戏里很重要。",
+     "py": "Zhège juésè zài yóuxì li hěn zhòngyào.",
+     "vi": "Vai trò này rất quan trọng trong game."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "决赛打得非常激烈，最后我们赢了。",
+   "py": "Juésài dǎ de fēicháng jīliè, zuìhòu wǒmen yíng le.",
+   "vi": "Trận chung kết rất gay cấn, cuối cùng chúng tôi thắng."
+  },
+  {
+   "cn": "领先的时候也不能放松。",
+   "py": "Lǐngxiān de shíhou yě bù néng fàngsōng.",
+   "vi": "Dù dẫn trước cũng không được lơi lỏng."
+  },
+  {
+   "cn": "每个环节都不能出错。",
+   "py": "Měi ge huánjié dōu bù néng chū cuò.",
+   "vi": "Không khâu nào được phép sai."
+  }
+ ]
+}

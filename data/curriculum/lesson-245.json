@@ -1,0 +1,264 @@
+{
+ "id": 245,
+ "cn": "靠近终点",
+ "title": "Di chuyển và khoảng cách",
+ "goal": "Nói về lái xe, bằng lái, tàu, xe cứu thương, bay, tăng tốc, chậm, bước chân, tiến gần, khoảng cách, bề rộng và centimet.",
+ "words": [
+  {
+   "w": "驾驶",
+   "py": "jiàshǐ",
+   "hv": "giá sử",
+   "vi": "lái (xe, máy bay)",
+   "pos": "động từ",
+   "note": "驾驶员 (người lái).",
+   "ex": [
+    {
+     "cn": "酒后不能驾驶。",
+     "py": "Jiǔ hòu bù néng jiàshǐ.",
+     "vi": "Uống rượu không được lái xe."
+    }
+   ]
+  },
+  {
+   "w": "驾照",
+   "py": "jiàzhào",
+   "hv": "giá chiếu",
+   "vi": "bằng lái",
+   "pos": "danh từ",
+   "note": "驾驶执照 viết tắt.",
+   "ex": [
+    {
+     "cn": "我去年考了驾照。",
+     "py": "Wǒ qùnián kǎo le jiàzhào.",
+     "vi": "Năm ngoái tôi thi bằng lái."
+    }
+   ]
+  },
+  {
+   "w": "列车",
+   "py": "lièchē",
+   "hv": "liệt xa",
+   "vi": "đoàn tàu",
+   "pos": "danh từ",
+   "note": "列 là hàng, dãy.",
+   "ex": [
+    {
+     "cn": "列车马上就要进站了。",
+     "py": "Lièchē mǎshàng jiù yào jìn zhàn le.",
+     "vi": "Tàu sắp vào ga."
+    }
+   ]
+  },
+  {
+   "w": "救护车",
+   "py": "jiùhùchē",
+   "hv": "cứu hộ xa",
+   "vi": "xe cứu thương",
+   "pos": "danh từ",
+   "note": "救护 (cứu hộ) + 车.",
+   "ex": [
+    {
+     "cn": "快叫救护车！",
+     "py": "Kuài jiào jiùhùchē!",
+     "vi": "Gọi xe cứu thương nhanh lên!"
+    }
+   ]
+  },
+  {
+   "w": "飞行",
+   "py": "fēixíng",
+   "hv": "phi hành",
+   "vi": "bay",
+   "pos": "động từ",
+   "note": "飞行时间 (thời gian bay).",
+   "ex": [
+    {
+     "cn": "从河内到北京飞行三个小时。",
+     "py": "Cóng Hénèi dào Běijīng fēixíng sān ge xiǎoshí.",
+     "vi": "Từ Hà Nội đến Bắc Kinh bay ba tiếng."
+    }
+   ]
+  },
+  {
+   "w": "加速",
+   "py": "jiāsù",
+   "hv": "gia tốc",
+   "vi": "tăng tốc",
+   "pos": "động từ",
+   "note": "Chính là \"gia tốc\".",
+   "ex": [
+    {
+     "cn": "车子突然加速了。",
+     "py": "Chēzi tūrán jiāsù le.",
+     "vi": "Xe đột nhiên tăng tốc."
+    }
+   ]
+  },
+  {
+   "w": "缓慢",
+   "py": "huǎnmàn",
+   "hv": "hoãn mạn",
+   "vi": "chậm chạp",
+   "pos": "tính từ",
+   "note": "Văn viết của 慢.",
+   "ex": [
+    {
+     "cn": "交通堵塞，车辆缓慢前进。",
+     "py": "Jiāotōng dǔsè, chēliàng huǎnmàn qiánjìn.",
+     "vi": "Giao thông ùn tắc, xe cộ nhích chậm."
+    }
+   ]
+  },
+  {
+   "w": "脚步",
+   "py": "jiǎobù",
+   "hv": "cước bộ",
+   "vi": "bước chân",
+   "pos": "danh từ",
+   "note": "加快脚步 (rảo bước).",
+   "ex": [
+    {
+     "cn": "我们要加快脚步。",
+     "py": "Wǒmen yào jiākuài jiǎobù.",
+     "vi": "Chúng ta phải rảo bước nhanh hơn."
+    }
+   ]
+  },
+  {
+   "w": "靠近",
+   "py": "kàojìn",
+   "hv": "kháo cận",
+   "vi": "đến gần, sát",
+   "pos": "động từ",
+   "note": "靠近窗户 (gần cửa sổ).",
+   "ex": [
+    {
+     "cn": "我想要一个靠近窗户的座位。",
+     "py": "Wǒ xiǎng yào yí ge kàojìn chuānghu de zuòwèi.",
+     "vi": "Tôi muốn chỗ ngồi gần cửa sổ."
+    }
+   ]
+  },
+  {
+   "w": "接近",
+   "py": "jiējìn",
+   "hv": "tiếp cận",
+   "vi": "gần, tiến gần",
+   "pos": "động từ",
+   "note": "接近目标 (gần đến mục tiêu).",
+   "ex": [
+    {
+     "cn": "我们越来越接近目标了。",
+     "py": "Wǒmen yuè lái yuè jiējìn mùbiāo le.",
+     "vi": "Chúng ta ngày càng gần mục tiêu."
+    }
+   ]
+  },
+  {
+   "w": "距",
+   "py": "jù",
+   "hv": "cự",
+   "vi": "cách",
+   "pos": "giới từ",
+   "note": "距今 (cách nay).",
+   "ex": [
+    {
+     "cn": "酒店距机场二十公里。",
+     "py": "Jiǔdiàn jù jīchǎng èrshí gōnglǐ.",
+     "vi": "Khách sạn cách sân bay hai mươi cây số."
+    }
+   ]
+  },
+  {
+   "w": "空中",
+   "py": "kōngzhōng",
+   "hv": "không trung",
+   "vi": "trên không",
+   "pos": "danh từ",
+   "note": "Chính là \"không trung\".",
+   "ex": [
+    {
+     "cn": "空中飞着几只鸟。",
+     "py": "Kōngzhōng fēi zhe jǐ zhī niǎo.",
+     "vi": "Trên không có mấy con chim bay."
+    }
+   ]
+  },
+  {
+   "w": "宽",
+   "py": "kuān",
+   "hv": "khoan",
+   "vi": "rộng",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 窄 (hẹp).",
+   "ex": [
+    {
+     "cn": "这条路很宽。",
+     "py": "Zhè tiáo lù hěn kuān.",
+     "vi": "Con đường này rất rộng."
+    }
+   ]
+  },
+  {
+   "w": "宽度",
+   "py": "kuāndù",
+   "hv": "khoan độ",
+   "vi": "chiều rộng",
+   "pos": "danh từ",
+   "note": "宽 + 度.",
+   "ex": [
+    {
+     "cn": "这张桌子的宽度是八十厘米。",
+     "py": "Zhè zhāng zhuōzi de kuāndù shì bāshí límǐ.",
+     "vi": "Chiều rộng cái bàn này là tám mươi phân."
+    }
+   ]
+  },
+  {
+   "w": "厘米",
+   "py": "límǐ",
+   "hv": "li mễ",
+   "vi": "centimet",
+   "pos": "lượng từ",
+   "note": "厘 (li) + 米 (mét).",
+   "ex": [
+    {
+     "cn": "他身高一米八十厘米。",
+     "py": "Tā shēngāo yì mǐ bāshí límǐ.",
+     "vi": "Anh ấy cao một mét tám mươi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "距 / 离 + nơi + khoảng cách",
+   "b": "酒店距机场二十公里",
+   "d": "距 là văn viết của 离.",
+   "ex": [
+    {
+     "cn": "我家离学校不远。",
+     "py": "Wǒ jiā lí xuéxiào bù yuǎn.",
+     "vi": "Nhà tôi cách trường không xa."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "离终点越来越近了，加油！",
+   "py": "Lí zhōngdiǎn yuè lái yuè jìn le, jiāyóu!",
+   "vi": "Càng lúc càng gần đích rồi, cố lên!"
+  },
+  {
+   "cn": "救护车很快就到了。",
+   "py": "Jiùhùchē hěn kuài jiù dào le.",
+   "vi": "Xe cứu thương đến rất nhanh."
+  },
+  {
+   "cn": "开车的时候，不要突然加速。",
+   "py": "Kāichē de shíhou, bú yào tūrán jiāsù.",
+   "vi": "Khi lái xe đừng đột ngột tăng tốc."
+  }
+ ]
+}
