@@ -1,0 +1,264 @@
+{
+ "id": 261,
+ "cn": "舍不得离开",
+ "title": "Suy nghĩ và tâm tính",
+ "goal": "Nói về suy nghĩ, tư duy, tư tưởng, thấm thía, thuyết phục, dường như, biết đâu, bí mật, tiếc không nỡ, nỡ, ngốc, lương thiện và yêu tha thiết.",
+ "words": [
+  {
+   "w": "思考",
+   "py": "sīkǎo",
+   "hv": "tư khảo",
+   "vi": "suy nghĩ",
+   "pos": "động từ",
+   "note": "独立思考 (suy nghĩ độc lập).",
+   "ex": [
+    {
+     "cn": "遇到问题要学会思考。",
+     "py": "Yùdào wèntí yào xuéhuì sīkǎo.",
+     "vi": "Gặp vấn đề phải biết suy nghĩ."
+    }
+   ]
+  },
+  {
+   "w": "思维",
+   "py": "sīwéi",
+   "hv": "tư duy",
+   "vi": "tư duy",
+   "pos": "danh từ",
+   "note": "Chính là \"tư duy\".",
+   "ex": [
+    {
+     "cn": "学语言可以锻炼思维。",
+     "py": "Xué yǔyán kěyǐ duànliàn sīwéi.",
+     "vi": "Học ngôn ngữ giúp rèn tư duy."
+    }
+   ]
+  },
+  {
+   "w": "思想",
+   "py": "sīxiǎng",
+   "hv": "tư tưởng",
+   "vi": "tư tưởng, suy nghĩ",
+   "pos": "danh từ",
+   "note": "Chính là \"tư tưởng\".",
+   "ex": [
+    {
+     "cn": "他的思想很开放。",
+     "py": "Tā de sīxiǎng hěn kāifàng.",
+     "vi": "Tư tưởng của anh ấy rất cởi mở."
+    }
+   ]
+  },
+  {
+   "w": "体会",
+   "py": "tǐhuì",
+   "hv": "thể hội",
+   "vi": "thấm thía, trải nghiệm",
+   "pos": "động từ, danh từ",
+   "note": "深有体会 (rất thấm thía).",
+   "ex": [
+    {
+     "cn": "当了教练，我才体会到压力有多大。",
+     "py": "Dāng le jiàoliàn, wǒ cái tǐhuì dào yālì yǒu duō dà.",
+     "vi": "Làm huấn luyện viên rồi tôi mới thấm áp lực lớn thế nào."
+    }
+   ]
+  },
+  {
+   "w": "说服",
+   "py": "shuōfú",
+   "hv": "thuyết phục",
+   "vi": "thuyết phục",
+   "pos": "động từ",
+   "note": "Chính là \"thuyết phục\".",
+   "ex": [
+    {
+     "cn": "我终于说服了父母。",
+     "py": "Wǒ zhōngyú shuōfú le fùmǔ.",
+     "vi": "Cuối cùng tôi đã thuyết phục được bố mẹ."
+    }
+   ]
+  },
+  {
+   "w": "似乎",
+   "py": "sìhū",
+   "hv": "tự hồ",
+   "vi": "dường như",
+   "pos": "phó từ",
+   "note": "Văn viết của 好像.",
+   "ex": [
+    {
+     "cn": "他似乎不太高兴。",
+     "py": "Tā sìhū bú tài gāoxìng.",
+     "vi": "Anh ấy dường như không vui lắm."
+    }
+   ]
+  },
+  {
+   "w": "似的",
+   "py": "shìde",
+   "hv": "tự đích",
+   "vi": "như là",
+   "pos": "trợ từ",
+   "note": "像……似的 (giống như...).",
+   "ex": [
+    {
+     "cn": "他高兴得像个孩子似的。",
+     "py": "Tā gāoxìng de xiàng ge háizi shìde.",
+     "vi": "Anh ấy vui như đứa trẻ."
+    }
+   ]
+  },
+  {
+   "w": "说不定",
+   "py": "shuōbudìng",
+   "hv": "thuyết bất định",
+   "vi": "biết đâu, không chừng",
+   "pos": "phó từ",
+   "note": "Khẩu ngữ.",
+   "ex": [
+    {
+     "cn": "说不定他已经到了。",
+     "py": "Shuōbudìng tā yǐjīng dào le.",
+     "vi": "Biết đâu anh ấy đến rồi."
+    }
+   ]
+  },
+  {
+   "w": "秘密",
+   "py": "mìmì",
+   "hv": "bí mật",
+   "vi": "bí mật",
+   "pos": "danh từ, tính từ",
+   "note": "Chính là \"bí mật\".",
+   "ex": [
+    {
+     "cn": "这是我们之间的秘密。",
+     "py": "Zhè shì wǒmen zhījiān de mìmì.",
+     "vi": "Đây là bí mật giữa chúng ta."
+    }
+   ]
+  },
+  {
+   "w": "舍不得",
+   "py": "shěbude",
+   "hv": "xả bất đắc",
+   "vi": "không nỡ, tiếc",
+   "pos": "động từ",
+   "note": "舍不得离开 (không nỡ rời đi).",
+   "ex": [
+    {
+     "cn": "我舍不得离开这个城市。",
+     "py": "Wǒ shěbude líkāi zhège chéngshì.",
+     "vi": "Tôi không nỡ rời thành phố này."
+    }
+   ]
+  },
+  {
+   "w": "舍得",
+   "py": "shěde",
+   "hv": "xả đắc",
+   "vi": "nỡ, chịu bỏ ra",
+   "pos": "động từ",
+   "note": "舍得花钱 (chịu chi).",
+   "ex": [
+    {
+     "cn": "他很舍得在学习上花钱。",
+     "py": "Tā hěn shěde zài xuéxí shang huā qián.",
+     "vi": "Anh ấy rất chịu chi cho việc học."
+    }
+   ]
+  },
+  {
+   "w": "傻",
+   "py": "shǎ",
+   "hv": "soạ",
+   "vi": "ngốc",
+   "pos": "tính từ",
+   "note": "别傻了 (đừng ngốc thế).",
+   "ex": [
+    {
+     "cn": "你真傻，这么简单都不会。",
+     "py": "Nǐ zhēn shǎ, zhème jiǎndān dōu bú huì.",
+     "vi": "Bạn ngốc thật, dễ thế mà không biết."
+    }
+   ]
+  },
+  {
+   "w": "善良",
+   "py": "shànliáng",
+   "hv": "thiện lương",
+   "vi": "lương thiện, tốt bụng",
+   "pos": "tính từ",
+   "note": "Chính là \"thiện lương\".",
+   "ex": [
+    {
+     "cn": "她是一个善良的女孩。",
+     "py": "Tā shì yí ge shànliáng de nǚhái.",
+     "vi": "Cô ấy là cô gái tốt bụng."
+    }
+   ]
+  },
+  {
+   "w": "善于",
+   "py": "shànyú",
+   "hv": "thiện vu",
+   "vi": "giỏi về",
+   "pos": "động từ",
+   "note": "善于沟通 (giỏi giao tiếp).",
+   "ex": [
+    {
+     "cn": "好的队长善于沟通。",
+     "py": "Hǎo de duìzhǎng shànyú gōutōng.",
+     "vi": "Đội trưởng giỏi thì giỏi giao tiếp."
+    }
+   ]
+  },
+  {
+   "w": "热爱",
+   "py": "rè'ài",
+   "hv": "nhiệt ái",
+   "vi": "yêu tha thiết",
+   "pos": "động từ",
+   "note": "热爱生活 (yêu cuộc sống).",
+   "ex": [
+    {
+     "cn": "他非常热爱这份工作。",
+     "py": "Tā fēicháng rè'ài zhè fèn gōngzuò.",
+     "vi": "Anh ấy cực kỳ yêu công việc này."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "像……似的",
+   "b": "像个孩子似的",
+   "d": "So sánh \"giống như\".",
+   "ex": [
+    {
+     "cn": "他跑得像风似的。",
+     "py": "Tā pǎo de xiàng fēng shìde.",
+     "vi": "Anh ấy chạy như gió."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "遇到困难的时候，要冷静思考。",
+   "py": "Yùdào kùnnan de shíhou, yào lěngjìng sīkǎo.",
+   "vi": "Gặp khó khăn phải bình tĩnh suy nghĩ."
+  },
+  {
+   "cn": "说不定下次我们就能赢。",
+   "py": "Shuōbudìng xià cì wǒmen jiù néng yíng.",
+   "vi": "Biết đâu lần sau chúng ta thắng."
+  },
+  {
+   "cn": "要离开队伍了，我真舍不得大家。",
+   "py": "Yào líkāi duìwu le, wǒ zhēn shěbude dàjiā.",
+   "vi": "Sắp rời đội rồi, tôi thật không nỡ xa mọi người."
+  }
+ ]
+}

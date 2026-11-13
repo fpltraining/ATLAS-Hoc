@@ -1,0 +1,264 @@
+{
+ "id": 264,
+ "cn": "失眠了",
+ "title": "Giấc ngủ và thể chất",
+ "goal": "Nói về mất ngủ, giấc ngủ, đau nhức, vết thương, tổn thương, phẫu thuật, ngón tay, vóc dáng, thể lực, calo, ngã, vỡ, duỗi, sờ và thiếu.",
+ "words": [
+  {
+   "w": "失眠",
+   "py": "shīmián",
+   "hv": "thất miên",
+   "vi": "mất ngủ",
+   "pos": "động từ",
+   "note": "眠 là \"miên\" (ngủ).",
+   "ex": [
+    {
+     "cn": "比赛前一晚我失眠了。",
+     "py": "Bǐsài qián yì wǎn wǒ shīmián le.",
+     "vi": "Đêm trước trận tôi mất ngủ."
+    }
+   ]
+  },
+  {
+   "w": "睡眠",
+   "py": "shuìmián",
+   "hv": "thuỵ miên",
+   "vi": "giấc ngủ",
+   "pos": "danh từ",
+   "note": "睡眠质量 (chất lượng giấc ngủ).",
+   "ex": [
+    {
+     "cn": "选手需要充足的睡眠。",
+     "py": "Xuǎnshǒu xūyào chōngzú de shuìmián.",
+     "vi": "Tuyển thủ cần ngủ đủ giấc."
+    }
+   ]
+  },
+  {
+   "w": "疼痛",
+   "py": "téngtòng",
+   "hv": "đông thống",
+   "vi": "đau đớn",
+   "pos": "danh từ, tính từ",
+   "note": "Văn viết của 疼.",
+   "ex": [
+    {
+     "cn": "他的手腕感到疼痛。",
+     "py": "Tā de shǒuwàn gǎndào téngtòng.",
+     "vi": "Cổ tay anh ấy thấy đau."
+    }
+   ]
+  },
+  {
+   "w": "伤",
+   "py": "shāng",
+   "hv": "thương",
+   "vi": "vết thương; làm bị thương",
+   "pos": "danh từ, động từ",
+   "note": "受伤 (bị thương).",
+   "ex": [
+    {
+     "cn": "他的手受了伤。",
+     "py": "Tā de shǒu shòu le shāng.",
+     "vi": "Tay anh ấy bị thương."
+    }
+   ]
+  },
+  {
+   "w": "伤害",
+   "py": "shānghài",
+   "hv": "thương hại",
+   "vi": "làm tổn thương",
+   "pos": "động từ",
+   "note": "Khác \"thương hại\" (thương xót) tiếng Việt.",
+   "ex": [
+    {
+     "cn": "他的话伤害了我。",
+     "py": "Tā de huà shānghài le wǒ.",
+     "vi": "Lời anh ta làm tôi tổn thương."
+    }
+   ]
+  },
+  {
+   "w": "手术",
+   "py": "shǒushù",
+   "hv": "thủ thuật",
+   "vi": "phẫu thuật",
+   "pos": "danh từ",
+   "note": "做手术 (mổ).",
+   "ex": [
+    {
+     "cn": "他的手做了一个小手术。",
+     "py": "Tā de shǒu zuò le yí ge xiǎo shǒushù.",
+     "vi": "Tay anh ấy được mổ một ca nhỏ."
+    }
+   ]
+  },
+  {
+   "w": "手指",
+   "py": "shǒuzhǐ",
+   "hv": "thủ chỉ",
+   "vi": "ngón tay",
+   "pos": "danh từ",
+   "note": "指 là ngón.",
+   "ex": [
+    {
+     "cn": "打游戏打久了，手指很累。",
+     "py": "Dǎ yóuxì dǎ jiǔ le, shǒuzhǐ hěn lèi.",
+     "vi": "Chơi game lâu, ngón tay rất mỏi."
+    }
+   ]
+  },
+  {
+   "w": "身材",
+   "py": "shēncái",
+   "hv": "thân tài",
+   "vi": "vóc dáng",
+   "pos": "danh từ",
+   "note": "身材很好 (dáng đẹp).",
+   "ex": [
+    {
+     "cn": "她每天跑步，身材很好。",
+     "py": "Tā měi tiān pǎobù, shēncái hěn hǎo.",
+     "vi": "Cô ấy chạy bộ mỗi ngày, dáng rất đẹp."
+    }
+   ]
+  },
+  {
+   "w": "体力",
+   "py": "tǐlì",
+   "hv": "thể lực",
+   "vi": "thể lực",
+   "pos": "danh từ",
+   "note": "Chính là \"thể lực\".",
+   "ex": [
+    {
+     "cn": "打五局比赛需要很好的体力。",
+     "py": "Dǎ wǔ jú bǐsài xūyào hěn hǎo de tǐlì.",
+     "vi": "Đánh năm ván cần thể lực rất tốt."
+    }
+   ]
+  },
+  {
+   "w": "热量",
+   "py": "rèliàng",
+   "hv": "nhiệt lượng",
+   "vi": "calo",
+   "pos": "danh từ",
+   "note": "Năng lượng trong thức ăn.",
+   "ex": [
+    {
+     "cn": "这种饮料热量很高。",
+     "py": "Zhè zhǒng yǐnliào rèliàng hěn gāo.",
+     "vi": "Đồ uống này rất nhiều calo."
+    }
+   ]
+  },
+  {
+   "w": "摔",
+   "py": "shuāi",
+   "hv": "suất",
+   "vi": "ngã; làm rơi",
+   "pos": "động từ",
+   "note": "摔倒 (ngã), 摔坏 (rơi hỏng).",
+   "ex": [
+    {
+     "cn": "他走路的时候摔倒了。",
+     "py": "Tā zǒulù de shíhou shuāi dǎo le.",
+     "vi": "Anh ấy ngã khi đang đi."
+    }
+   ]
+  },
+  {
+   "w": "碎",
+   "py": "suì",
+   "hv": "toái",
+   "vi": "vỡ vụn",
+   "pos": "động từ, tính từ",
+   "note": "打碎 (làm vỡ).",
+   "ex": [
+    {
+     "cn": "杯子掉在地上碎了。",
+     "py": "Bēizi diào zài dìshang suì le.",
+     "vi": "Cái cốc rơi xuống đất vỡ rồi."
+    }
+   ]
+  },
+  {
+   "w": "伸",
+   "py": "shēn",
+   "hv": "thân",
+   "vi": "duỗi, giơ",
+   "pos": "động từ",
+   "note": "伸手 (giơ tay).",
+   "ex": [
+    {
+     "cn": "他伸出手和我握手。",
+     "py": "Tā shēn chū shǒu hé wǒ wòshǒu.",
+     "vi": "Anh ấy đưa tay ra bắt tay tôi."
+    }
+   ]
+  },
+  {
+   "w": "摸",
+   "py": "mō",
+   "hv": "mô",
+   "vi": "sờ",
+   "pos": "động từ",
+   "note": "摸一摸 (sờ thử).",
+   "ex": [
+    {
+     "cn": "妈妈摸了摸我的头。",
+     "py": "Māma mō le mō wǒ de tóu.",
+     "vi": "Mẹ xoa đầu tôi."
+    }
+   ]
+  },
+  {
+   "w": "缺乏",
+   "py": "quēfá",
+   "hv": "khuyết phạp",
+   "vi": "thiếu",
+   "pos": "động từ",
+   "note": "缺乏经验 (thiếu kinh nghiệm).",
+   "ex": [
+    {
+     "cn": "年轻选手缺乏比赛经验。",
+     "py": "Niánqīng xuǎnshǒu quēfá bǐsài jīngyàn.",
+     "vi": "Tuyển thủ trẻ thiếu kinh nghiệm thi đấu."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 了 + V (làm thử, nhẹ nhàng)",
+   "b": "摸了摸 · 看了看",
+   "d": "Lặp động từ ở thì quá khứ.",
+   "ex": [
+    {
+     "cn": "他想了想，然后点了点头。",
+     "py": "Tā xiǎng le xiǎng, ránhòu diǎn le diǎn tóu.",
+     "vi": "Anh ấy nghĩ một lát rồi gật đầu."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "睡眠不好会影响比赛状态。",
+   "py": "Shuìmián bù hǎo huì yǐngxiǎng bǐsài zhuàngtài.",
+   "vi": "Ngủ không ngon sẽ ảnh hưởng phong độ thi đấu."
+  },
+  {
+   "cn": "他缺乏的不是能力，而是信心。",
+   "py": "Tā quēfá de bú shì nénglì, ér shì xìnxīn.",
+   "vi": "Cái anh ấy thiếu không phải năng lực mà là sự tự tin."
+  },
+  {
+   "cn": "训练太久，手指和手腕都会疼痛。",
+   "py": "Xùnliàn tài jiǔ, shǒuzhǐ hé shǒuwàn dōu huì téngtòng.",
+   "vi": "Tập quá lâu, ngón tay và cổ tay đều sẽ đau."
+  }
+ ]
+}

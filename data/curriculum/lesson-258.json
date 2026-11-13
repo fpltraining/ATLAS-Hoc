@@ -1,0 +1,264 @@
+{
+ "id": 258,
+ "cn": "上传文件",
+ "title": "Phần mềm và dữ liệu",
+ "goal": "Nói về phần mềm, xoá, tải lên, tìm kiếm, nhập liệu, chuột máy tính, dữ liệu, cài đặt, thiết bị, nâng cấp, nộp, chế độ và kết nối.",
+ "words": [
+  {
+   "w": "软件",
+   "py": "ruǎnjiàn",
+   "hv": "nhuyễn kiện",
+   "vi": "phần mềm",
+   "pos": "danh từ",
+   "note": "软 (mềm) + 件.",
+   "ex": [
+    {
+     "cn": "这个软件很好用。",
+     "py": "Zhège ruǎnjiàn hěn hǎoyòng.",
+     "vi": "Phần mềm này rất dễ dùng."
+    }
+   ]
+  },
+  {
+   "w": "删",
+   "py": "shān",
+   "hv": "san",
+   "vi": "xoá (khẩu ngữ)",
+   "pos": "động từ",
+   "note": "删掉 (xoá đi).",
+   "ex": [
+    {
+     "cn": "我把那张照片删了。",
+     "py": "Wǒ bǎ nà zhāng zhàopiàn shān le.",
+     "vi": "Tôi xoá tấm ảnh đó rồi."
+    }
+   ]
+  },
+  {
+   "w": "删除",
+   "py": "shānchú",
+   "hv": "san trừ",
+   "vi": "xoá bỏ",
+   "pos": "động từ",
+   "note": "删除文件 (xoá tệp).",
+   "ex": [
+    {
+     "cn": "不小心删除了重要文件。",
+     "py": "Bù xiǎoxīn shānchú le zhòngyào wénjiàn.",
+     "vi": "Lỡ tay xoá mất tệp quan trọng."
+    }
+   ]
+  },
+  {
+   "w": "上传",
+   "py": "shàngchuán",
+   "hv": "thượng truyền",
+   "vi": "tải lên",
+   "pos": "động từ",
+   "note": "Trái nghĩa 下载 (tải xuống).",
+   "ex": [
+    {
+     "cn": "他把视频上传到了网上。",
+     "py": "Tā bǎ shìpín shàngchuán dào le wǎngshang.",
+     "vi": "Anh ấy tải video lên mạng."
+    }
+   ]
+  },
+  {
+   "w": "搜",
+   "py": "sōu",
+   "hv": "sưu",
+   "vi": "tìm (khẩu ngữ)",
+   "pos": "động từ",
+   "note": "搜一下 (tìm thử).",
+   "ex": [
+    {
+     "cn": "你上网搜一下就知道了。",
+     "py": "Nǐ shàngwǎng sōu yíxià jiù zhīdào le.",
+     "vi": "Bạn lên mạng tìm thử là biết."
+    }
+   ]
+  },
+  {
+   "w": "搜索",
+   "py": "sōusuǒ",
+   "hv": "sưu tác",
+   "vi": "tìm kiếm",
+   "pos": "động từ",
+   "note": "搜索引擎 (công cụ tìm kiếm).",
+   "ex": [
+    {
+     "cn": "在这里输入你想搜索的内容。",
+     "py": "Zài zhèlǐ shūrù nǐ xiǎng sōusuǒ de nèiróng.",
+     "vi": "Nhập nội dung bạn muốn tìm vào đây."
+    }
+   ]
+  },
+  {
+   "w": "输入",
+   "py": "shūrù",
+   "hv": "thâu nhập",
+   "vi": "nhập (dữ liệu)",
+   "pos": "động từ",
+   "note": "输入密码 (nhập mật khẩu).",
+   "ex": [
+    {
+     "cn": "请输入密码。",
+     "py": "Qǐng shūrù mìmǎ.",
+     "vi": "Xin nhập mật khẩu."
+    }
+   ]
+  },
+  {
+   "w": "鼠标",
+   "py": "shǔbiāo",
+   "hv": "thử tiêu",
+   "vi": "chuột máy tính",
+   "pos": "danh từ",
+   "note": "鼠 là con chuột.",
+   "ex": [
+    {
+     "cn": "我的鼠标坏了。",
+     "py": "Wǒ de shǔbiāo huài le.",
+     "vi": "Chuột máy tính của tôi hỏng rồi."
+    }
+   ]
+  },
+  {
+   "w": "数据",
+   "py": "shùjù",
+   "hv": "số cứ",
+   "vi": "dữ liệu, số liệu",
+   "pos": "danh từ",
+   "note": "大数据 (dữ liệu lớn).",
+   "ex": [
+    {
+     "cn": "教练每天分析比赛数据。",
+     "py": "Jiàoliàn měi tiān fēnxī bǐsài shùjù.",
+     "vi": "Huấn luyện viên phân tích số liệu trận đấu mỗi ngày."
+    }
+   ]
+  },
+  {
+   "w": "设置",
+   "py": "shèzhì",
+   "hv": "thiết trí",
+   "vi": "cài đặt",
+   "pos": "động từ, danh từ",
+   "note": "手机设置 (cài đặt điện thoại).",
+   "ex": [
+    {
+     "cn": "你可以在设置里改语言。",
+     "py": "Nǐ kěyǐ zài shèzhì li gǎi yǔyán.",
+     "vi": "Bạn có thể đổi ngôn ngữ trong phần cài đặt."
+    }
+   ]
+  },
+  {
+   "w": "设备",
+   "py": "shèbèi",
+   "hv": "thiết bị",
+   "vi": "thiết bị",
+   "pos": "danh từ",
+   "note": "Chính là \"thiết bị\".",
+   "ex": [
+    {
+     "cn": "比赛的设备都准备好了。",
+     "py": "Bǐsài de shèbèi dōu zhǔnbèi hǎo le.",
+     "vi": "Thiết bị thi đấu đã chuẩn bị xong."
+    }
+   ]
+  },
+  {
+   "w": "升级",
+   "py": "shēngjí",
+   "hv": "thăng cấp",
+   "vi": "nâng cấp; lên cấp",
+   "pos": "động từ",
+   "note": "系统升级 (nâng cấp hệ thống).",
+   "ex": [
+    {
+     "cn": "手机系统需要升级。",
+     "py": "Shǒujī xìtǒng xūyào shēngjí.",
+     "vi": "Hệ điều hành điện thoại cần nâng cấp."
+    }
+   ]
+  },
+  {
+   "w": "提交",
+   "py": "tíjiāo",
+   "hv": "đề giao",
+   "vi": "nộp",
+   "pos": "động từ",
+   "note": "提交报告 (nộp báo cáo).",
+   "ex": [
+    {
+     "cn": "请在周五前提交作业。",
+     "py": "Qǐng zài zhōuwǔ qián tíjiāo zuòyè.",
+     "vi": "Hãy nộp bài trước thứ Sáu."
+    }
+   ]
+  },
+  {
+   "w": "模式",
+   "py": "móshì",
+   "hv": "mô thức",
+   "vi": "chế độ, mô hình",
+   "pos": "danh từ",
+   "note": "游戏模式 (chế độ chơi).",
+   "ex": [
+    {
+     "cn": "这个游戏有很多种模式。",
+     "py": "Zhège yóuxì yǒu hěn duō zhǒng móshì.",
+     "vi": "Trò chơi này có nhiều chế độ."
+    }
+   ]
+  },
+  {
+   "w": "连接",
+   "py": "liánjiē",
+   "hv": "liên tiếp",
+   "vi": "kết nối",
+   "pos": "động từ",
+   "note": "连接网络 (kết nối mạng).",
+   "ex": [
+    {
+     "cn": "手机连接不上网络。",
+     "py": "Shǒujī liánjiē bu shàng wǎngluò.",
+     "vi": "Điện thoại không kết nối được mạng."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "V + 不上 / 得上",
+   "b": "连接不上 · 赶不上",
+   "d": "Không đạt tới được.",
+   "ex": [
+    {
+     "cn": "我们得快点儿，不然赶不上飞机了。",
+     "py": "Wǒmen děi kuài diǎnr, bùrán gǎn bu shàng fēijī le.",
+     "vi": "Phải nhanh lên, không thì lỡ máy bay."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "删除以前，请先确认一下。",
+   "py": "Shānchú yǐqián, qǐng xiān quèrèn yíxià.",
+   "vi": "Trước khi xoá, hãy xác nhận trước."
+  },
+  {
+   "cn": "数据可以帮我们发现问题。",
+   "py": "Shùjù kěyǐ bāng wǒmen fāxiàn wèntí.",
+   "vi": "Số liệu giúp chúng ta phát hiện vấn đề."
+  },
+  {
+   "cn": "游戏升级以后，速度更快了。",
+   "py": "Yóuxì shēngjí yǐhòu, sùdù gèng kuài le.",
+   "vi": "Game nâng cấp xong chạy nhanh hơn."
+  }
+ ]
+}

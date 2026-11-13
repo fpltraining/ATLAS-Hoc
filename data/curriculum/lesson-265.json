@@ -1,0 +1,264 @@
+{
+ "id": 265,
+ "cn": "我们的社区",
+ "title": "Nơi ở và hàng xóm",
+ "goal": "Nói về ký túc xá, phòng đọc sách, giá sách, đèn bàn, bậc thềm, quạt tay, khoá, găng tay, đồ thủ công, khu dân cư, tiện ích, cư trú, thị dân, người quen và vợ.",
+ "words": [
+  {
+   "w": "宿舍",
+   "py": "sùshè",
+   "hv": "túc xá",
+   "vi": "ký túc xá",
+   "pos": "danh từ",
+   "note": "Chính là \"túc xá\".",
+   "ex": [
+    {
+     "cn": "我们队住在同一个宿舍。",
+     "py": "Wǒmen duì zhù zài tóng yí ge sùshè.",
+     "vi": "Đội chúng tôi ở cùng một ký túc xá."
+    }
+   ]
+  },
+  {
+   "w": "书房",
+   "py": "shūfáng",
+   "hv": "thư phòng",
+   "vi": "phòng đọc sách",
+   "pos": "danh từ",
+   "note": "Chính là \"thư phòng\".",
+   "ex": [
+    {
+     "cn": "爸爸在书房里看书。",
+     "py": "Bàba zài shūfáng li kàn shū.",
+     "vi": "Bố đang đọc sách trong phòng sách."
+    }
+   ]
+  },
+  {
+   "w": "书架",
+   "py": "shūjià",
+   "hv": "thư giá",
+   "vi": "giá sách",
+   "pos": "danh từ",
+   "note": "架 là giá đỡ.",
+   "ex": [
+    {
+     "cn": "书架上放满了书。",
+     "py": "Shūjià shang fàng mǎn le shū.",
+     "vi": "Giá sách xếp đầy sách."
+    }
+   ]
+  },
+  {
+   "w": "台灯",
+   "py": "táidēng",
+   "hv": "đài đăng",
+   "vi": "đèn bàn",
+   "pos": "danh từ",
+   "note": "台 là cái bàn, bệ.",
+   "ex": [
+    {
+     "cn": "晚上我开台灯学习。",
+     "py": "Wǎnshang wǒ kāi táidēng xuéxí.",
+     "vi": "Buổi tối tôi bật đèn bàn để học."
+    }
+   ]
+  },
+  {
+   "w": "台阶",
+   "py": "táijiē",
+   "hv": "đài giai",
+   "vi": "bậc thềm",
+   "pos": "danh từ",
+   "note": "Bậc thang ngoài trời.",
+   "ex": [
+    {
+     "cn": "下台阶的时候要小心。",
+     "py": "Xià táijiē de shíhou yào xiǎoxīn.",
+     "vi": "Xuống bậc thềm phải cẩn thận."
+    }
+   ]
+  },
+  {
+   "w": "扇子",
+   "py": "shànzi",
+   "hv": "phiến tử",
+   "vi": "cái quạt tay",
+   "pos": "danh từ",
+   "note": "扇 là \"phiến\".",
+   "ex": [
+    {
+     "cn": "天太热了，她拿着扇子扇风。",
+     "py": "Tiān tài rè le, tā ná zhe shànzi shān fēng.",
+     "vi": "Trời nóng quá, cô ấy cầm quạt quạt mát."
+    }
+   ]
+  },
+  {
+   "w": "锁",
+   "py": "suǒ",
+   "hv": "toả",
+   "vi": "cái khoá; khoá lại",
+   "pos": "danh từ, động từ",
+   "note": "锁门 (khoá cửa).",
+   "ex": [
+    {
+     "cn": "出门的时候别忘了锁门。",
+     "py": "Chūmén de shíhou bié wàng le suǒ mén.",
+     "vi": "Ra ngoài đừng quên khoá cửa."
+    }
+   ]
+  },
+  {
+   "w": "手套",
+   "py": "shǒutào",
+   "hv": "thủ sáo",
+   "vi": "găng tay",
+   "pos": "danh từ",
+   "note": "套 là cái bao.",
+   "ex": [
+    {
+     "cn": "冬天骑车要戴手套。",
+     "py": "Dōngtiān qí chē yào dài shǒutào.",
+     "vi": "Mùa đông đi xe phải đeo găng tay."
+    }
+   ]
+  },
+  {
+   "w": "手工",
+   "py": "shǒugōng",
+   "hv": "thủ công",
+   "vi": "thủ công",
+   "pos": "danh từ",
+   "note": "手工做的 (làm bằng tay).",
+   "ex": [
+    {
+     "cn": "这个包是手工做的。",
+     "py": "Zhège bāo shì shǒugōng zuò de.",
+     "vi": "Chiếc túi này làm thủ công."
+    }
+   ]
+  },
+  {
+   "w": "社区",
+   "py": "shèqū",
+   "hv": "xã khu",
+   "vi": "khu dân cư, cộng đồng",
+   "pos": "danh từ",
+   "note": "社区活动 (hoạt động cộng đồng).",
+   "ex": [
+    {
+     "cn": "我们社区经常举办活动。",
+     "py": "Wǒmen shèqū jīngcháng jǔbàn huódòng.",
+     "vi": "Khu dân cư chúng tôi hay tổ chức hoạt động."
+    }
+   ]
+  },
+  {
+   "w": "设施",
+   "py": "shèshī",
+   "hv": "thiết thi",
+   "vi": "cơ sở vật chất, tiện ích",
+   "pos": "danh từ",
+   "note": "体育设施 (tiện ích thể thao).",
+   "ex": [
+    {
+     "cn": "这里的生活设施很完善。",
+     "py": "Zhèlǐ de shēnghuó shèshī hěn wánshàn.",
+     "vi": "Tiện ích sinh hoạt ở đây rất đầy đủ."
+    }
+   ]
+  },
+  {
+   "w": "居住",
+   "py": "jūzhù",
+   "hv": "cư trú",
+   "vi": "cư trú, sinh sống",
+   "pos": "động từ",
+   "note": "Chính là \"cư trú\".",
+   "ex": [
+    {
+     "cn": "他在胡志明市居住了十年。",
+     "py": "Tā zài Húzhìmíng Shì jūzhù le shí nián.",
+     "vi": "Anh ấy sống ở TP Hồ Chí Minh mười năm."
+    }
+   ]
+  },
+  {
+   "w": "市民",
+   "py": "shìmín",
+   "hv": "thị dân",
+   "vi": "người dân thành phố",
+   "pos": "danh từ",
+   "note": "市 + 民.",
+   "ex": [
+    {
+     "cn": "很多市民来看比赛。",
+     "py": "Hěn duō shìmín lái kàn bǐsài.",
+     "vi": "Nhiều người dân thành phố đến xem thi đấu."
+    }
+   ]
+  },
+  {
+   "w": "熟人",
+   "py": "shúrén",
+   "hv": "thục nhân",
+   "vi": "người quen",
+   "pos": "danh từ",
+   "note": "熟 là quen.",
+   "ex": [
+    {
+     "cn": "在这里我一个熟人也没有。",
+     "py": "Zài zhèlǐ wǒ yí ge shúrén yě méiyǒu.",
+     "vi": "Ở đây tôi chẳng có người quen nào."
+    }
+   ]
+  },
+  {
+   "w": "太太",
+   "py": "tàitai",
+   "hv": "thái thái",
+   "vi": "bà, vợ",
+   "pos": "danh từ",
+   "note": "王太太 (bà Vương).",
+   "ex": [
+    {
+     "cn": "这是我太太。",
+     "py": "Zhè shì wǒ tàitai.",
+     "vi": "Đây là vợ tôi."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "一 + lượng từ + danh từ + 也/都 + 没",
+   "b": "一个熟人也没有",
+   "d": "Nhấn mạnh \"không một... nào\".",
+   "ex": [
+    {
+     "cn": "他一句话也没说。",
+     "py": "Tā yí jù huà yě méi shuō.",
+     "vi": "Anh ấy không nói một lời nào."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "宿舍虽然小，但是很干净。",
+   "py": "Sùshè suīrán xiǎo, dànshì hěn gānjìng.",
+   "vi": "Ký túc xá tuy nhỏ nhưng rất sạch."
+  },
+  {
+   "cn": "我们社区的设施很方便。",
+   "py": "Wǒmen shèqū de shèshī hěn fāngbiàn.",
+   "vi": "Tiện ích khu dân cư chúng tôi rất tiện."
+  },
+  {
+   "cn": "在外地遇到熟人，真高兴。",
+   "py": "Zài wàidì yùdào shúrén, zhēn gāoxìng.",
+   "vi": "Gặp người quen nơi đất khách thật vui."
+  }
+ ]
+}

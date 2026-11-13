@@ -1,0 +1,264 @@
+{
+ "id": 262,
+ "cn": "沙漠和山区",
+ "title": "Đất đai và sinh vật",
+ "goal": "Gọi tên sa mạc, cát, rắn, đào, rau, cây cối, đá; nói về sinh vật, sinh trưởng, sinh tồn, lục địa, miền núi, ẩm ướt, phơi nắng và nước.",
+ "words": [
+  {
+   "w": "沙漠",
+   "py": "shāmò",
+   "hv": "sa mạc",
+   "vi": "sa mạc",
+   "pos": "danh từ",
+   "note": "Chính là \"sa mạc\".",
+   "ex": [
+    {
+     "cn": "沙漠里很少下雨。",
+     "py": "Shāmò li hěn shǎo xià yǔ.",
+     "vi": "Sa mạc rất ít mưa."
+    }
+   ]
+  },
+  {
+   "w": "沙子",
+   "py": "shāzi",
+   "hv": "sa tử",
+   "vi": "cát",
+   "pos": "danh từ",
+   "note": "沙滩 (bãi cát).",
+   "ex": [
+    {
+     "cn": "鞋子里进了沙子。",
+     "py": "Xiézi li jìn le shāzi.",
+     "vi": "Cát vào giày rồi."
+    }
+   ]
+  },
+  {
+   "w": "蛇",
+   "py": "shé",
+   "hv": "xà",
+   "vi": "con rắn",
+   "pos": "danh từ",
+   "note": "蛇年 (năm Tỵ).",
+   "ex": [
+    {
+     "cn": "我最怕蛇。",
+     "py": "Wǒ zuì pà shé.",
+     "vi": "Tôi sợ rắn nhất."
+    }
+   ]
+  },
+  {
+   "w": "桃",
+   "py": "táo",
+   "hv": "đào",
+   "vi": "quả đào; hoa đào",
+   "pos": "danh từ",
+   "note": "桃花 (hoa đào).",
+   "ex": [
+    {
+     "cn": "过年的时候，北方人喜欢买桃花。",
+     "py": "Guònián de shíhou, běifāngrén xǐhuan mǎi táohuā.",
+     "vi": "Tết đến, người miền Bắc thích mua hoa đào."
+    }
+   ]
+  },
+  {
+   "w": "蔬菜",
+   "py": "shūcài",
+   "hv": "sơ thái",
+   "vi": "rau",
+   "pos": "danh từ",
+   "note": "蔬 là rau.",
+   "ex": [
+    {
+     "cn": "多吃蔬菜对身体好。",
+     "py": "Duō chī shūcài duì shēntǐ hǎo.",
+     "vi": "Ăn nhiều rau tốt cho sức khoẻ."
+    }
+   ]
+  },
+  {
+   "w": "树木",
+   "py": "shùmù",
+   "hv": "thụ mộc",
+   "vi": "cây cối",
+   "pos": "danh từ",
+   "note": "Chính là \"thụ mộc\".",
+   "ex": [
+    {
+     "cn": "公园里有很多树木。",
+     "py": "Gōngyuán li yǒu hěn duō shùmù.",
+     "vi": "Công viên có nhiều cây cối."
+    }
+   ]
+  },
+  {
+   "w": "石头",
+   "py": "shítou",
+   "hv": "thạch đầu",
+   "vi": "hòn đá",
+   "pos": "danh từ",
+   "note": "石 là \"thạch\".",
+   "ex": [
+    {
+     "cn": "路上有一块大石头。",
+     "py": "Lùshang yǒu yí kuài dà shítou.",
+     "vi": "Trên đường có một hòn đá lớn."
+    }
+   ]
+  },
+  {
+   "w": "生物",
+   "py": "shēngwù",
+   "hv": "sinh vật",
+   "vi": "sinh vật; sinh học",
+   "pos": "danh từ",
+   "note": "Chính là \"sinh vật\".",
+   "ex": [
+    {
+     "cn": "海里有很多奇怪的生物。",
+     "py": "Hǎi li yǒu hěn duō qíguài de shēngwù.",
+     "vi": "Dưới biển có nhiều sinh vật kỳ lạ."
+    }
+   ]
+  },
+  {
+   "w": "生长",
+   "py": "shēngzhǎng",
+   "hv": "sinh trưởng",
+   "vi": "sinh trưởng, mọc",
+   "pos": "động từ",
+   "note": "Chính là \"sinh trưởng\".",
+   "ex": [
+    {
+     "cn": "这种植物生长得很快。",
+     "py": "Zhè zhǒng zhíwù shēngzhǎng de hěn kuài.",
+     "vi": "Loài cây này mọc rất nhanh."
+    }
+   ]
+  },
+  {
+   "w": "生存",
+   "py": "shēngcún",
+   "hv": "sinh tồn",
+   "vi": "sinh tồn",
+   "pos": "động từ",
+   "note": "Chính là \"sinh tồn\".",
+   "ex": [
+    {
+     "cn": "没有水，人无法生存。",
+     "py": "Méiyǒu shuǐ, rén wúfǎ shēngcún.",
+     "vi": "Không có nước, con người không thể sống."
+    }
+   ]
+  },
+  {
+   "w": "陆地",
+   "py": "lùdì",
+   "hv": "lục địa",
+   "vi": "đất liền",
+   "pos": "danh từ",
+   "note": "Trái với 海洋.",
+   "ex": [
+    {
+     "cn": "地球上大部分是海，陆地比较少。",
+     "py": "Dìqiú shang dà bùfen shì hǎi, lùdì bǐjiào shǎo.",
+     "vi": "Trái đất phần lớn là biển, đất liền ít hơn."
+    }
+   ]
+  },
+  {
+   "w": "山区",
+   "py": "shānqū",
+   "hv": "sơn khu",
+   "vi": "vùng núi",
+   "pos": "danh từ",
+   "note": "山 + 区.",
+   "ex": [
+    {
+     "cn": "他在山区当老师。",
+     "py": "Tā zài shānqū dāng lǎoshī.",
+     "vi": "Anh ấy làm giáo viên vùng núi."
+    }
+   ]
+  },
+  {
+   "w": "湿",
+   "py": "shī",
+   "hv": "thấp",
+   "vi": "ướt, ẩm",
+   "pos": "tính từ",
+   "note": "Trái nghĩa 干 (khô).",
+   "ex": [
+    {
+     "cn": "下雨了，衣服都湿了。",
+     "py": "Xià yǔ le, yīfu dōu shī le.",
+     "vi": "Mưa rồi, quần áo ướt hết."
+    }
+   ]
+  },
+  {
+   "w": "晒",
+   "py": "shài",
+   "hv": "sái",
+   "vi": "phơi; nắng gắt",
+   "pos": "động từ",
+   "note": "晒太阳 (tắm nắng).",
+   "ex": [
+    {
+     "cn": "把衣服拿出去晒一晒。",
+     "py": "Bǎ yīfu ná chūqù shài yi shài.",
+     "vi": "Mang quần áo ra phơi đi."
+    }
+   ]
+  },
+  {
+   "w": "水分",
+   "py": "shuǐfèn",
+   "hv": "thuỷ phần",
+   "vi": "độ ẩm, lượng nước",
+   "pos": "danh từ",
+   "note": "补充水分 (bổ sung nước).",
+   "ex": [
+    {
+     "cn": "运动以后要补充水分。",
+     "py": "Yùndòng yǐhòu yào bǔchōng shuǐfèn.",
+     "vi": "Vận động xong phải bổ sung nước."
+    }
+   ]
+  }
+ ],
+ "grammar": [
+  {
+   "t": "无法 + V",
+   "b": "无法生存 · 无法理解",
+   "d": "Không có cách nào (văn viết của 没法儿).",
+   "ex": [
+    {
+     "cn": "我无法理解他的决定。",
+     "py": "Wǒ wúfǎ lǐjiě tā de juédìng.",
+     "vi": "Tôi không thể hiểu quyết định của anh ấy."
+    }
+   ]
+  }
+ ],
+ "sentences": [
+  {
+   "cn": "沙漠里白天很热，晚上很冷。",
+   "py": "Shāmò li báitiān hěn rè, wǎnshang hěn lěng.",
+   "vi": "Trong sa mạc ngày rất nóng, đêm rất lạnh."
+  },
+  {
+   "cn": "山区的孩子上学很不容易。",
+   "py": "Shānqū de háizi shàngxué hěn bù róngyì.",
+   "vi": "Trẻ em vùng núi đi học rất vất vả."
+  },
+  {
+   "cn": "天气好的时候，奶奶喜欢晒太阳。",
+   "py": "Tiānqì hǎo de shíhou, nǎinai xǐhuan shài tàiyáng.",
+   "vi": "Trời đẹp, bà nội thích tắm nắng."
+  }
+ ]
+}
