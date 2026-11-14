@@ -98,12 +98,35 @@ export async function checkedToday() {
   return { done: !!c.days[vnDay()], streak: c.streak || 0, count: Object.keys(c.days).length };
 }
 
-/** Huy hiệu rank: khiên màu theo rank, chữ bậc ở giữa */
+/* Khiên rank: ảnh img/rank/r1..r9.webp (256px, nền trong suốt), số bậc IV–I in đè vào giữa vòng tròn.
+   PLATE: tâm và bán kính vòng tròn trống của từng khiên, tính trên ảnh 256px. Ảnh lỗi thì vẽ khiên SVG. */
+const PLATE = [[126, 121, 62], [129, 120, 57], [127, 122, 56], [127, 127, 61], [124, 123, 59], [127, 128, 47], [128, 128, 52], [128, 140, 41], [128, 138, 44]];
 export function emblem(r, size = 46) {
   const el = document.createElement('span');
   el.className = 'rank-emblem';
-  el.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 48 48"><path d="M24 3 L42 10 Q42 32 24 45 Q6 32 6 10 Z" fill="${r.color}" stroke="#1a1f3a" stroke-width="2.5"/><path d="M24 9 L36 14 Q36 30 24 39 Z" fill="#fff" opacity=".22"/>${r.i >= 6 ? '<path d="M14 6 l4 6 l6-8 l6 8 l4-6 l-1 9 h-18 Z" fill="#f4d35e" stroke="#1a1f3a" stroke-width="1.5"/>' : ''}<text x="24" y="30" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="13" fill="#fff">${r.tier || '★'}</text></svg>`;
+  el.style.width = `${size}px`;
+  el.style.height = `${size}px`;
+  const img = document.createElement('img');
+  img.src = `img/rank/r${r.i + 1}.webp`;
+  img.alt = r.name;
+  img.decoding = 'async';
+  img.onerror = () => { el.innerHTML = svgEmblem(r, size); };
+  el.append(img);
+  if (r.tier) {
+    const [cx, cy, pr] = PLATE[r.i] || [128, 128, 56];
+    const t = document.createElement('b');
+    t.className = 'rank-tier';
+    t.textContent = r.tier;
+    t.style.left = `${(cx / 256) * 100}%`;
+    t.style.top = `${(cy / 256) * 100}%`;
+    t.style.fontSize = `${Math.max(8, Math.round((size * pr) / 256 * 0.78))}px`;
+    el.append(t);
+  }
   return el;
+}
+
+function svgEmblem(r, size) {
+  return `<svg width="${size}" height="${size}" viewBox="0 0 48 48"><path d="M24 3 L42 10 Q42 32 24 45 Q6 32 6 10 Z" fill="${r.color}" stroke="#1a1f3a" stroke-width="2.5"/><path d="M24 9 L36 14 Q36 30 24 39 Z" fill="#fff" opacity=".22"/>${r.i >= 6 ? '<path d="M14 6 l4 6 l6-8 l6 8 l4-6 l-1 9 h-18 Z" fill="#f4d35e" stroke="#1a1f3a" stroke-width="1.5"/>' : ''}<text x="24" y="30" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="13" fill="#fff">${r.tier || '★'}</text></svg>`;
 }
 
 /** Thẻ rank gọn dùng ở trang chủ và trang Tiến độ */
@@ -119,7 +142,7 @@ export async function rankCard({ compact = false } = {}) {
   }, ci.done ? '✓ Đã điểm danh' : 'Điểm danh +5');
   const bar = h('div.rank-bar', h('i', { style: { width: `${r.span ? Math.min(100, (r.into / r.span) * 100) : 100}%`, background: r.color } }));
   return h('div.rank-card' + (compact ? '.compact' : ''),
-    emblem(r, compact ? 40 : 52),
+    emblem(r, compact ? 48 : 68),
     h('div.grow',
       h('b', r.label), h('span.small.faint', ` · ${x.total} điểm`),
       bar,

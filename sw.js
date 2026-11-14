@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v37';
+const VERSION = 'atlas-v38';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
@@ -23,10 +23,11 @@ const CORE_FILES = [
   'data/stories/index.json', 'data/en/course.json', 'data/en/dict.json', 'data/zh-dict.json',
   'data/work.json', 'data/know.json',
   'icons/icon-180.png', 'icons/icon-192.png',
+  ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map((k) => `img/rank/r${k}.webp`),
 ];
 
 /* Tải sau, chạy ngầm: nhiều và nặng hơn nhưng không cần ngay lúc mở app */
-const EXTRA_FILES = ['data/audio.json', 'data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json', 'data/pics/en.json', 'data/pics/zh.json', 'data/pron/zh.json', 'data/pron/en.json', 'data/pron/combos.json', 'data/pinyin-grid.json', 'img/mascot/han-chao.webp', 'img/mascot/han-giai-thich.webp', 'img/mascot/han-nghe.webp', 'img/mascot/han-khen.webp', 'img/mascot/han-dong-vien.webp', 'img/mascot/han-nghi.webp', 'img/mascot/han-avatar.webp', 'img/mascot/kai-chao.webp', 'img/mascot/kai-giai-thich.webp', 'img/mascot/kai-nghe.webp', 'img/mascot/kai-khen.webp', 'img/mascot/kai-dong-vien.webp', 'img/mascot/kai-nghi.webp', 'img/mascot/kai-avatar.webp'];
+const EXTRA_FILES = ['data/audio.json', 'data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json', 'data/pics/en.json', 'data/pics/zh.json', 'data/pron/zh.json', 'data/pron/en.json', 'data/pron/combos.json', 'data/pinyin-grid.json', 'img/mascot/han-chao.webp', 'img/mascot/han-giai-thich.webp', 'img/mascot/han-nghe.webp', 'img/mascot/han-khen.webp', 'img/mascot/han-dong-vien.webp', 'img/mascot/han-nghi.webp', 'img/mascot/han-avatar.webp', 'img/mascot/kai-chao.webp', 'img/mascot/kai-giai-thich.webp', 'img/mascot/kai-nghe.webp', 'img/mascot/kai-khen.webp', 'img/mascot/kai-dong-vien.webp', 'img/mascot/kai-nghi.webp', 'img/mascot/kai-avatar.webp', 'img/pron/mouth-lips.webp', 'img/pron/mouth-lips-asp.webp', 'img/pron/mouth-interdental.webp', 'img/pron/mouth-interdental-asp.webp', 'img/pron/mouth-dental.webp', 'img/pron/mouth-dental-asp.webp', 'img/pron/mouth-retroflex.webp', 'img/pron/mouth-retroflex-asp.webp', 'img/pron/mouth-palatal.webp', 'img/pron/mouth-palatal-asp.webp', 'img/pron/mouth-velar.webp', 'img/pron/mouth-velar-asp.webp', 'img/pron/lips-open.webp', 'img/pron/lips-mid.webp', 'img/pron/lips-spread.webp', 'img/pron/lips-round.webp', 'img/pron/lips-small.webp', 'img/pron/lips-roundi.webp'];
 
 /* Bỏ qua bộ nhớ đệm HTTP của trình duyệt (GitHub Pages giữ 10 phút): nếu không, bản mới của app
    có thể lưu lẫn file CSS cũ với file JS mới, vỡ giao diện tới tận lần cập nhật sau. */

@@ -127,14 +127,22 @@ export function stress(parts, strong) {
 }
 
 /** Vẽ theo mã trong dữ liệu bài: "mouth:velar+asp", "lips:round", "tones", "tones:3", "syllable", "combo:3-4", "stress:pho-to-graph:0" */
+/* Ảnh khẩu hình (vẽ bằng ChatGPT, đã soát giải phẫu và vẽ lại mũi tên luồng hơi đi ra):
+   mặt cắt img/pron/mouth-<vị trí>[-asp].webp, môi nhìn thẳng img/pron/lips-<dáng>.webp.
+   Vị trí chưa có ảnh đúng (môi–răng f v, lợi d t n l, hơi qua mũi -n -ng, môi f v, th) vẫn vẽ bằng code. */
+const MOUTH_IMG = new Set(['lips', 'interdental', 'dental', 'retroflex', 'palatal', 'velar']);
+const LIPS_IMG = new Set(['open', 'mid', 'spread', 'round', 'small', 'roundi']);
+const photo = (src) => `<img class="pron-photo" src="${src}" alt="" loading="lazy" decoding="async">`;
+
 export function art(code) {
   if (!code) return '';
   const [kind, arg = '', extra = ''] = code.split(':');
   if (kind === 'mouth') {
     const [place, ...flags] = arg.split('+');
+    if (MOUTH_IMG.has(place) && !flags.includes('nasal') && !flags.includes('round')) return photo(`img/pron/mouth-${place}${flags.includes('asp') ? '-asp' : ''}.webp`);
     return mouth(place, { asp: flags.includes('asp'), nasal: flags.includes('nasal'), round: flags.includes('round') });
   }
-  if (kind === 'lips') return lips(arg);
+  if (kind === 'lips') return LIPS_IMG.has(arg) ? photo(`img/pron/lips-${arg}.webp`) : lips(arg);
   if (kind === 'tones') return toneChart(arg ? arg.split(',').map(Number) : [1, 2, 3, 4]);
   if (kind === 'combo') { const [a, b] = arg.split('-').map(Number); return comboChart(a, b); }
   if (kind === 'syllable') { const [i, f, m] = (arg || 'm,a,mǎ').split(','); return syllable(i, f, m); }
