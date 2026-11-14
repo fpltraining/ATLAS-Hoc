@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#1b2140">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Thế giới Ngôn Ngữ</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="../icons/icon-180.png">
+<link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+  <!-- Ngôi nhà chung -->
+  <main id="lobby"></main>
+
+  <!-- Bản đồ -->
+  <section id="play" style="display:none">
+    <canvas id="world"></canvas>
+    <div class="hud">
+      <button id="hud-home" class="hud-btn" aria-label="Về Ngôi nhà chung">🏠</button>
+      <b id="hud-title"></b>
+      <span id="hud-xp" class="hud-xp"></span>
+    </div>
+    <div id="joy" class="joy" aria-label="Cần điều khiển"><div id="joy-knob" class="joy-knob"></div></div>
+    <button id="act" class="act"></button>
+    <div id="kai" class="kai"><div class="kai-face">🤖</div><div id="kai-text" class="kai-text"></div></div>
+  </section>
+
+  <!-- Bảng học trong phòng -->
+  <div id="panel" class="panel">
+    <div class="panel-card">
+      <div class="panel-top"><b id="panel-title"></b><button id="panel-close" class="hud-btn" aria-label="Đóng">✕</button></div>
+      <div id="panel-body" class="panel-body"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="js/util.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/assets.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="data/en_a1.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/lesson.js"></script>
+  <script src="js/lobby.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
