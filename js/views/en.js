@@ -15,7 +15,7 @@ import { answer } from '../fx.js';
 import { gradeButton, aiConfig } from '../ai.js';
 import { cardSummary } from '../progress.js';
 import { award } from '../xp.js';
-import { enPath, pathStrip } from '../path.js';
+import { enPath, pathStrip, currentArt } from '../path.js';
 import { langDayCard } from '../daycard.js';
 
 export async function render(route) {
@@ -43,7 +43,10 @@ async function hub() {
   const nx = content.nextReading(enStories, read);
 
   const el = h('div.stack');
-  el.append(h('div.card.today-hero',
+  const enP = await enPath();
+  const heroArt = currentArt(enP);
+  el.append(h(`div.card.today-hero${heroArt ? '.has-art' : ''}`,
+    heroArt ? h('img.hero-art', { src: heroArt, alt: '' }) : null,
     h('div.small.hero-sub', `${stage.name} · ${stage.cefr} · buổi ${n}/${stage.total}`),
     h('h1.today-title', enTitle(st, n, course)),
     h('div', { style: { marginTop: '12px' } }, progressBar(doneHere / stage.total)),
@@ -53,7 +56,7 @@ async function hub() {
   ));
   const today = langDayCard(await buildToday(), 'en', { onToggle: () => window.dispatchEvent(new HashChangeEvent('hashchange')) });
   if (today) el.append(today);
-  el.append(h('div.card', h('div.row.spread', h('h3', 'Lộ trình tiếng Anh'), h('span.small.faint', '✓ xong · ● đang học')), pathStrip(await enPath())));
+  el.append(h('div.card', h('div.row.spread', h('h3', 'Lộ trình tiếng Anh'), h('span.small.faint', '✓ xong · ● đang học')), pathStrip(enP)));
 
   el.append(h('h3.hub-head', 'Luyện thêm khi rảnh'));
   el.append(h('div.hub-grid',

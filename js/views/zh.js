@@ -6,7 +6,7 @@ import * as store from '../store.js';
 import * as content from '../content.js';
 import { h, section, progressBar, plural } from '../ui.js';
 import { cardSummary, mastery } from '../progress.js';
-import { zhPath, pathStrip } from '../path.js';
+import { zhPath, pathStrip, currentArt } from '../path.js';
 import { buildToday } from '../plan.js';
 import { langDayCard } from '../daycard.js';
 
@@ -29,7 +29,9 @@ export async function render() {
   const zp = await zhPath();
   const nx0 = zp.next;
   const pron = nx0.kind === 'pron';
-  el.append(h('div.card.today-hero',
+  const heroArt = currentArt(zp);
+  el.append(h(`div.card.today-hero${heroArt ? '.has-art' : ''}`,
+    heroArt ? h('img.hero-art', { src: heroArt, alt: '' }) : null,
     h('div.small.hero-sub', nx0.where),
     h('h1.today-title', pron ? nx0.title : next.title),
     pron ? h('div.hero-desc', nx0.sub) : h('div.cn.hero-cn', next.cn),
