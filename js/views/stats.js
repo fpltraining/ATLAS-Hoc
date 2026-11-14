@@ -5,7 +5,7 @@ import * as store from '../store.js';
 import * as content from '../content.js';
 import { summarize, TYPE_LABEL } from '../srs.js';
 import { h, section, progressBar, todayKey, plural, toast } from '../ui.js';
-import { rankCard, xpState, RANKS } from '../xp.js';
+import { rankCard, xpState, RANKS, emblem } from '../xp.js';
 
 const TRACK_NAME = { review: 'Ôn thẻ', en: 'Tiếng Anh', read: 'Đọc', zh: 'Tiếng Trung', work: 'Anh nghề', know: 'Kiến thức' };
 
@@ -25,7 +25,7 @@ export async function render() {
   el.append(h('div.card',
     h('h3', 'Rank của bạn'),
     await rankCard(),
-    h('div.rank-ladder', ...RANKS.map((r) => h('span.rank-step' + (xp.total >= r.min ? '.on' : ''), { style: { borderColor: r.color, color: xp.total >= r.min ? '#fff' : r.color, background: xp.total >= r.min ? r.color : 'transparent' } }, r.name))),
+    h('div.rank-ladder', ...RANKS.map((r, i) => h('span.rank-step' + (xp.total >= r.min ? '.on' : ''), { style: { borderColor: r.color, color: xp.total >= r.min ? '#fff' : r.color, background: xp.total >= r.min ? r.color : 'transparent' } }, emblem({ ...r, i, tier: '' }, 22), r.name))),
     h('div.small.faint', { style: { marginTop: '8px' } }, 'Điểm đến từ: điểm danh, xong mục học, đọc chương truyện, ôn thẻ, qua bài phát âm. Gần đây:'),
     h('div.small', ...(xp.log || []).slice(0, 6).map((l) => h('div', `+${l.p} · ${l.r}`))),
   ));

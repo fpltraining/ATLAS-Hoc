@@ -369,6 +369,7 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 .guide-name { font-size: 11px; font-weight: 800; letter-spacing: .08em; color: var(--seal); text-transform: uppercase; }
 .pron-fig { max-width: 340px; margin: 4px auto 8px; }
 .pron-fig svg, .pron-figs svg { width: 100%; height: auto; display: block; }
+.pron-fig img.pron-photo, .pron-figs img.pron-photo { width: 100%; height: auto; display: block; border-radius: 10px; }
 .pron-figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 6px 0 10px; }
 .pron-figs figure { margin: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 6px; }
 .pron-figs figcaption { font-size: 12px; color: var(--ink-soft); text-align: center; margin-top: 4px; }
@@ -417,11 +418,14 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 /* ---------- rank ---------- */
 .rank-card { display: flex; gap: 12px; align-items: center; background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; }
 .rank-card.compact { padding: 10px 12px; }
-.rank-emblem { flex: none; display: inline-block; line-height: 0; }
+.rank-emblem { flex: none; display: inline-block; line-height: 0; position: relative; }
+.rank-emblem img { display: block; width: 100%; height: 100%; filter: drop-shadow(0 2px 3px rgba(20, 24, 50, .25)); }
+.rank-tier { position: absolute; transform: translate(-50%, -50%); font-family: Georgia, 'Times New Roman', serif; font-weight: 800; line-height: 1; color: #fff; letter-spacing: .02em;
+  -webkit-text-stroke: .6px rgba(20, 16, 10, .55); text-shadow: 0 1px 0 rgba(0, 0, 0, .55), 0 0 4px rgba(0, 0, 0, .45); pointer-events: none; }
 .rank-bar { height: 7px; border-radius: 9px; background: var(--paper-2); overflow: hidden; margin: 6px 0 3px; }
 .rank-bar i { display: block; height: 100%; border-radius: 9px; }
 .rank-ladder { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-.rank-step { font-size: 12px; font-weight: 700; padding: 3px 9px; border: 1.5px solid; border-radius: 99px; }
+.rank-step { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; padding: 2px 10px 2px 4px; border: 1.5px solid; border-radius: 99px; }
 
 /* nhân vật dẫn bài (ảnh) */
 .guide-ava { width: 78px; height: 78px; }
