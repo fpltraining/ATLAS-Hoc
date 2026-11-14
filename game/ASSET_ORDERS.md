@@ -177,6 +177,65 @@ Tải về mp4 rồi gửi em: em nén lại, bỏ tiếng, kiểm tra chạy đ
 
 **Mẹo:** nền hồng tím đặc (#ff00ff) như đợt này là dễ tách nhất, anh cứ giữ cách đó. Người mới nên có thêm tư thế "đang nói" đặt tên `npc_<tên>_talk.png`.
 
+---
+
+## G. Nhân vật tự tạo · ghép lớp (đặt ngay)
+
+Màn tạo nhân vật ghép 3 lớp hình: **thân + trang phục**, **khuôn mặt**, **tóc**. Game chỉ tô lại màu tóc, không vẽ thêm gì.
+- Làm cả nhóm trong **một đoạn chat**, đính kèm hình Han (tóc nâu, hoodie đỏ) anh đã làm để giữ đúng nét vẽ.
+- Nền **hồng tím đặc #FF00FF** như đợt trước.
+- Mỗi hình là một **tờ** gồm nhiều ô. Anh **gửi tờ cho em**, không bỏ thẳng vào assets/: em cắt, căn cho các lớp khớp nhau rồi đặt tên file.
+
+Câu mở đầu chung (dán ở đầu mỗi câu lệnh):
+*"Same chibi art style as the attached character: thick dark-brown outlines, flat soft colors, big head, small body. Solid flat magenta #FF00FF background. No text."*
+
+### G1. Thân + trang phục (6 tờ, mỗi tờ 1 bộ đồ, 3 hướng)
+
+| Tờ | Tên file em sẽ cắt ra | Câu lệnh (sau câu mở đầu chung) |
+|---|---|---|
+| 1 | `body_hoodie_down/up/left.png` | A character turnaround of ONE chibi kid mannequin with a smooth BALD head and a BLANK face (no eyes, no mouth, no eyebrows, no hair), light skin, wearing a red hoodie, navy shorts and white sneakers. Three full-body views in one row, same size, evenly spaced, standing straight with arms down: front view, back view, side view facing left. |
+| 2 | `body_jacket_*.png` | (giống tờ 1) wearing a light-blue denim jacket over a white t-shirt, dark jeans, red sneakers. |
+| 3 | `body_uniform_*.png` | (giống tờ 1) wearing a navy school blazer with a small blank badge, white shirt, jade-green tie, grey trousers, black shoes. |
+| 4 | `body_sport_*.png` | (giống tờ 1) wearing a jade-green tracksuit with white stripes and white running shoes. |
+| 5 | `body_sweater_*.png` | (giống tờ 1) wearing a cream knitted sweater, a coral pleated skirt, white socks and brown shoes. |
+| 6 | `body_tech_*.png` | (giống tờ 1) wearing a futuristic year-2080 light jacket with glowing sky-blue trim lines, black cargo pants and white high-tech sneakers. |
+
+**Quan trọng:** cả 6 tờ phải cùng một dáng người, cùng cỡ đầu. Tờ sau bị khác dáng thì anh dán thêm: *"Keep exactly the same body shape, head size and pose as the previous sheet, only change the clothes."*
+
+### G2. Tóc (3 tờ) · tóc **màu xám nhạt** để game tô màu
+
+| Tờ | Tên file | Câu lệnh |
+|---|---|---|
+| 7 | `hair_messy/spiky/bowl_*.png` | Hairstyle pieces only, like wigs floating in the air: NO head, NO face, NO body. Every hairstyle is colored LIGHT GREY (#D8D8D8) with soft grey shading and dark-brown outlines. Draw 3 hairstyles, one per row: row 1 short messy hair, row 2 spiky hair, row 3 bowl cut with straight bangs. Each row shows the same hairstyle in 3 views: front, back, side facing left. Sized to fit the bald head of the previous character. |
+| 8 | `hair_curly/sidepart/bun_*.png` | (giống tờ 7) row 1 curly hair, row 2 neat side-part hair, row 3 hair tied in a top bun. |
+| 9 | `hair_ponytail/long_*.png` | (giống tờ 7, chỉ 2 hàng) row 1 high ponytail, row 2 long straight hair down to the shoulders. |
+
+### G3. Khuôn mặt (2 tờ) · chỉ mắt, lông mày, miệng
+
+| Tờ | Tên file | Câu lệnh |
+|---|---|---|
+| 10 | `face_*_down.png` | Chibi FACE FEATURES ONLY floating on the background: eyes, eyebrows, small mouth and light pink blush. NO head outline, NO skin, NO hair. 6 faces in a 3x2 grid, front view, same size: gentle smile, big sparkly eyes, cheerful closed-eye smile, cool confident look, calm sleepy eyes, cheeky wink. |
+| 11 | `face_*_left.png` | (giống tờ 10) the same 6 faces in SIDE VIEW facing left: one eye, eyebrow, small mouth and blush, as they would look on a head seen from the side. Same order. |
+
+---
+
+## H. Đường tới trường: nhà, bến xe, ga tàu (đặt ngay)
+
+| Tên file | Cỡ / nền | Câu lệnh |
+|---|---|---|
+| `map_home_en.png` | 1536×1024 | Cozy 2D life-sim game art, top-down view tilted slightly (3/4 perspective). No text. The ground map of Maple Street, a quiet residential neighborhood of a near-future American town (year 2080), seen from above with NO buildings: a curved street, sidewalks, three empty grass lots (left middle, right top, right bottom) where buildings will be placed, solar street lamps, small gardens, oak trees, a parked hover-car. Wide 3:2. |
+| `building_en_home.png` | 1024 vuông · nền hồng | Same style. One building only, centered, front door at the bottom center: a cozy small family house of the year 2080 with rounded white walls, wood panels, a solar roof, a little garden and a mailbox. |
+| `building_en_busstop.png` | 1024 vuông · nền hồng | Same style. One structure only, centered, at the bottom center: a futuristic bus stop shelter with a curved glass roof, a bench, a blank digital timetable screen and a pole with a round blank sign. |
+| `building_en_metro.png` | 1024 vuông · nền hồng | Same style. One structure only, centered, entrance at the bottom center: a metro station entrance with stairs going down, a curved glass canopy and a big round blank sign. |
+| `npc_driver.png` | 1024 vuông · nền hồng | Same style as the character images. One chibi character, full body: Mr. Joe, a friendly bus driver with a grey moustache, navy cap and uniform, waving. |
+| `vehicle_bus.png` | 1536×768 · nền hồng | Same style. SIDE VIEW of a cute futuristic electric city bus facing RIGHT, coral red with cream stripes, big windows, the route number 7 on the front sign. Only the bus. |
+| `vehicle_metro.png` | 1536×768 · nền hồng | Same style. SIDE VIEW of a short futuristic metro train (2 cars) facing RIGHT, white with a jade-green stripe, doors closed. Only the train. |
+| `vehicle_metro_open.png` | 1536×768 · nền hồng | The same train as the previous image, exactly the same position and size, but with the doors open and warm light inside. |
+| `ride_bg_bus.png` | 3072×1024 · không nền hồng | Same style. A long SIDE-VIEW street panorama of a near-future American town for a scrolling game background: towers with rounded glass, rooftop gardens, trees, street lamps; an empty road along the bottom 12% of the image. No vehicles on the road. The left and right edges must match so the image can repeat seamlessly. |
+| `ride_bg_metro.png` | 3072×1024 · không nền hồng | Same style. A long SIDE-VIEW panorama seen from an elevated metro line: the town skyline, river, parks; an empty elevated rail track along the bottom 12%. Left and right edges must match so it repeats seamlessly. |
+
+---
+
 ## Tổng kết theo giai đoạn
 
 | Giai đoạn | Cần đặt | Số file |
