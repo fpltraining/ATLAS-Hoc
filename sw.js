@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v49';
+const VERSION = 'atlas-v50';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
@@ -84,6 +84,9 @@ async function fillContentCache() {
     // tranh minh hoạ chương truyện
     const scenes = await fetch('data/scenes.json').then((r) => r.json()).catch(() => ({}));
     urls.add('data/scenes.json');
+    const covers = await fetch('data/covers.json').then((r) => r.json()).catch(() => []);
+    urls.add('data/covers.json');
+    for (const id of covers) urls.add(`img/covers/${id}.webp`);
     for (const [sid, ns] of Object.entries(scenes)) for (const k of ns) urls.add(`img/scenes/${sid}-${k}.svg`);
 
     const todo = [];

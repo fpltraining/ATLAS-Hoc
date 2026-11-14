@@ -4,7 +4,13 @@ import * as store from '../store.js';
 import * as content from '../content.js';
 import { h, section, progressBar } from '../ui.js';
 
+/* Bìa truyện (ChatGPT đợt 9–15): data/covers.json liệt kê truyện đã có img/covers/<id>.webp */
+let coverSet = null;
+const loadCovers = () => coverSet || (coverSet = fetch('data/covers.json').then((r) => (r.ok ? r.json() : [])).catch(() => []).then((a) => new Set(a)));
+const cover = (id, covers, cls = 'story-cover') => (covers.has(id) ? h(`img.${cls}`, { src: `img/covers/${id}.webp`, alt: '', loading: 'lazy' }) : null);
+
 export async function render(route) {
+  const covers = await loadCovers();
   const lang = route.args[0] === 'zh' ? 'zh' : 'en';
   const [index, read, cards] = await Promise.all([content.storyIndex(), store.readState(), store.allCards()]);
   const list = index.filter((s) => s.lang === lang);
@@ -19,7 +25,9 @@ export async function render(route) {
   ));
 
   if (nx) {
-    el.append(h('a.card.today-hero', { href: `#/reader/${nx.story.id}/${nx.chapter.n}` },
+    const art = cover(nx.story.id, covers, 'hero-art');
+    el.append(h(`a.card.today-hero${art ? '.has-art' : ''}`, { href: `#/reader/${nx.story.id}/${nx.chapter.n}` },
+      art,
       h('div.small.hero-sub', `Đọc tiếp · ${nx.story.level}`),
       h(`h1.today-title${lang === 'zh' ? '.cn' : ''}`, nx.story.title),
       h('div.hero-sub', nx.story.vi),
@@ -40,7 +48,7 @@ export async function render(route) {
       if (!items.length) continue;
       shelves.append(section(shelf.name,
         h('p.small.faint', { style: { marginTop: '-6px' } }, shelf.hint),
-        h('div.story-grid', ...items.map((s) => storyCard(s, read, known, cards.length))),
+        h('div.story-grid', ...items.map((s) => storyCard(s, read, known, covers))),
       ));
     }
   }
@@ -66,7 +74,7 @@ function knownSet(cards, lang) {
   return out;
 }
 
-function storyCard(s, read, known) {
+function storyCard(s, read, known, covers = new Set()) {
   const done = Object.keys(read.stories?.[s.id]?.ch || {}).length;
   const total = s.chapters.length;
   const unit = s.lang === 'zh' ? 'chữ' : 'từ';
@@ -76,6 +84,7 @@ function storyCard(s, read, known) {
     : null;
   const nextCh = s.chapters.find((c) => !read.stories?.[s.id]?.ch?.[c.n]) || s.chapters[0];
   return h('a.story-card', { href: `#/reader/${s.id}/${nextCh.n}` },
+    cover(s.id, covers),
     h('div.row.spread', h('span.level', s.level), s.date ? h('span.small.faint', fmtDate(s.date)) : null),
     h(`b.story-title${s.lang === 'zh' ? '.cn' : ''}`, s.title),
     h('div.small.muted', s.vi),
