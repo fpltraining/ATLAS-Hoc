@@ -11,6 +11,7 @@
 import * as store from '../store.js';
 import * as audio from '../audio.js';
 import { h, toast, pill, progressBar } from '../ui.js';
+import { answer } from '../fx.js';
 import { sayEn, scribble, shuffle } from '../kit.js';
 import { listen, score as speechScore, verdictSpeak, canListen } from '../speech.js';
 import { art, mascot, comboChart, TONE_COLORS, MASCOT_NAME } from '../pron-art.js';
@@ -207,6 +208,7 @@ function runQuestions(host, qs, { mode = 'practice', onDone, seconds = 60 }) {
     const finish = (ok, pickedLabel) => {
       if (done) return; done = true;
       noteResult(q.tag, ok);
+      answer(ok);
       if (mode !== 'practice' || !firstTry.has(q)) { if (ok) right++; answered++; }
       if (!ok) wrongTags[q.tag] = (wrongTags[q.tag] || 0) + 1;
       if (mode === 'practice') {

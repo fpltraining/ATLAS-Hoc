@@ -7,6 +7,7 @@ import * as content from '../content.js';
 import { newCard, ZH_TYPES } from '../srs.js';
 import { micCheck, shuffle } from '../kit.js';
 import { h, toast, pill } from '../ui.js';
+import { answer } from '../fx.js';
 
 const MODES = [
   ['flash', 'Thẻ lật', 'Nhìn từ, nhớ nghĩa, tự đánh giá'],
@@ -119,6 +120,7 @@ export async function render(route) {
         onclick: (e) => {
           if (done) return;
           done = true;
+          answer(o === x, e.currentTarget);
           if (o === x) { right++; e.currentTarget.classList.add('ok'); } else {
             e.currentTarget.classList.add('no');
             [...list.children][opts.indexOf(x)].classList.add('ok');

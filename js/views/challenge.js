@@ -6,6 +6,7 @@ import * as store from '../store.js';
 import * as audio from '../audio.js';
 import { sayEn, shuffle } from '../kit.js';
 import { h, pill, progressBar } from '../ui.js';
+import { answer } from '../fx.js';
 import { learnedWords } from '../pool.js';
 
 const N = 10;
@@ -56,6 +57,7 @@ export async function render() {
           if (answered) return;
           answered = true;
           list.children[q.a].classList.add('ok');
+          answer(k === q.a, e.currentTarget);
           if (k === q.a) S.right++;
           else { e.currentTarget.classList.add('no'); S.wrong.push(it); }
           if (!q.reverse) say(it);

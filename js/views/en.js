@@ -11,6 +11,7 @@ import { InkPad } from '../pen/inkpad.js';
 import { sayEn, sayBtn, pair, wordy, scribble, diff, micCheck, hasMic } from '../kit.js';
 import { wordPic, sentencePics } from '../pics.js';
 import { h, toast, section, progressBar, pill } from '../ui.js';
+import { answer } from '../fx.js';
 import { gradeButton, aiConfig } from '../ai.js';
 import { cardSummary } from '../progress.js';
 import { award } from '../xp.js';
@@ -418,6 +419,7 @@ function dictBlock(key, sentences) {
     function check() {
       const d = diff(s, input.value);
       if (d.ok) right++;
+      answer(d.ok);
       result.replaceChildren(h('div.note', { style: { marginTop: '10px' } },
         h('b', d.ok ? 'Đúng hoàn toàn. ' : `Khớp ${d.score}%. `), d.el),
         h('button.btn.primary.block', { style: { marginTop: '10px' }, onclick: () => { i++; draw(); } }, 'Câu tiếp ›'));

@@ -210,7 +210,12 @@ export function patchToday(fn) {
   });
 }
 
-export const markStep = (key, on = true) => patchToday((d) => { d.steps[key] = on; });
+export async function markStep(key, on = true) {
+  let was = false;
+  await patchToday((d) => { was = !!d.steps[key]; d.steps[key] = on; });
+  // app.js nghe sự kiện này để ăn mừng và chỉ sang việc kế tiếp
+  if (on && !was && typeof window !== 'undefined') window.dispatchEvent(new CustomEvent('atlas:step', { detail: { key } }));
+}
 export const addSeconds = (track, s) => patchToday((d) => { d.secs[track] = (d.secs[track] || 0) + s; });
 
 /* ---------- tiến độ các nhánh -------------------------------------------- */

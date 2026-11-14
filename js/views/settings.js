@@ -72,6 +72,7 @@ export async function renderSettings() {
       seg('langs', [['both', 'Cả hai'], ['en', 'Tiếng Anh'], ['zh', 'Tiếng Trung']], s.langs || 'both')),
     row('Tiếng Anh nghề mỗi ngày', 'Câu về bán hàng, huấn luyện, TikTok.', toggle('workOn', s.workOn !== false)),
     row('Nhịp tuần', 'Thứ Bảy không thêm từ mới, Chủ nhật chỉ ôn và đọc nhẹ.', toggle('weekRhythm', s.weekRhythm)),
+    row('Âm thanh hiệu ứng', 'Tiếng "ting" khi trả lời đúng, khi xong việc, khi mở huy hiệu.', toggle('sfx', s.sfx !== false)),
     row('Giao diện', null, seg('theme', [['auto', 'Theo máy'], ['light', 'Sáng'], ['dark', 'Tối']], s.theme || 'auto')),
 
     h('h4', 'Viết bằng Apple Pencil'),
