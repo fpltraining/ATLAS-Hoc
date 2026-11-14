@@ -168,6 +168,15 @@ Tải về mp4 rồi gửi em: em nén lại, bỏ tiếng, kiểm tra chạy đ
 
 ---
 
+## Đã nhận (14/11/2026)
+
+Đã tách nền và bỏ vào `assets/`:
+- Han (tóc nâu, áo hoodie đỏ) và Minh (tóc đen, áo khoác xanh navy): mặt trước, sau lưng, bên trái + 3 biểu cảm `player_*_happy/wow/think.png` (màn kết quả dùng).
+- `npc_emma`, `npc_wang`, `npc_principal_li` + tư thế đang nói `npc_*_talk.png` (dùng trong khung thoại).
+- `door_open.png`. `kai_follow.png` tạm lấy hình Kai của app ATLAS.
+
+**Mẹo:** nền hồng tím đặc (#ff00ff) như đợt này là dễ tách nhất, anh cứ giữ cách đó. Người mới nên có thêm tư thế "đang nói" đặt tên `npc_<tên>_talk.png`.
+
 ## Tổng kết theo giai đoạn
 
 | Giai đoạn | Cần đặt | Số file |
