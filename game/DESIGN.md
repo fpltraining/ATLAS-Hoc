@@ -41,8 +41,8 @@ Game tách hẳn khỏi app ATLAS: dữ liệu và tiến độ riêng, code ES5
 Mở game là vào **Ngôi nhà chung**, một màn hình giống trang web chứ không phải bản đồ:
 - **Đầu trang:** câu khẩu hiệu "Học thêm một ngôn ngữ, sống thêm một cuộc đời". Han và Kai vẫy chào. Có nút **Vào thành phố đang học**.
 - **Lưới thẻ thành phố.** Mỗi thẻ có ảnh, tên, ngôn ngữ và nhãn trạng thái:
-  - **Thành phố Brightford** · Tiếng Anh · *Đang mở*
-  - **Trường Lạc trấn 长乐镇** · Tiếng Trung · *Đang mở*
+  - **Thị trấn Brightford** (nước Mỹ tương lai, khoảng năm 2080) · Tiếng Anh · *Đang mở*
+  - **Trường Lạc trấn 长乐镇** (thị trấn sông nước Trung Quốc) · Tiếng Trung · *Đang mở*
   - 3 thẻ mờ *Sắp ra mắt*: Tiếng Nhật, Tiếng Hàn, Tiếng Pháp (chỉ để trang trí, sau này thêm thành phố được).
 - **Hồ sơ của bạn:** nhân vật, cấp mỗi thành phố, XP, chuỗi ngày, bằng tốt nghiệp, đồ kỷ niệm, sổ từ khó.
 - **Cuối trang:** Cài đặt, Xuất và nhập file sao lưu, Hướng dẫn chơi.
