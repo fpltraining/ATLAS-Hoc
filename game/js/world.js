@@ -3,7 +3,11 @@
 var G = window.G || (window.G = {});
 
 G.NPCS = {
-  emma: { name: 'Ms. Emma', img: 'npc_emma.png', role: 'Giáo viên phòng A1-1' }
+  emma: { name: 'Ms. Emma', img: 'npc_emma.png', role: 'Giáo viên phòng A1-1' },
+  tom: { name: 'Mr. Tom', img: 'npc_tom.png', role: 'Giáo viên phòng A1-2' },
+  lily: { name: 'Mrs. Lily', img: 'npc_lily.png', role: 'Giáo viên phòng A1-3' },
+  sam: { name: 'Chef Sam', img: 'npc_sam.png', role: 'Giáo viên phòng A1-4' },
+  kai: { name: 'Hiệu trưởng Kai', img: 'kai_follow.png', role: 'Hiệu trưởng, phòng thi cuối cấp A1' }
 };
 
 /* Các phòng trong hành lang Trường Anh ngữ (5 cửa dọc tường trên) */
@@ -15,7 +19,7 @@ G.EN_HALL_DOORS = [
   { room: 'en-a1-test', label: 'Thi A1', x: 1364 }
 ];
 G.HALL_DOOR_Y = 345;   // chỗ đứng trước cửa (chân tường dưới các cửa trong ảnh hành lang)
-G.ROOM_TEACHER = { 'en-a1-1': 'emma' };
+G.ROOM_TEACHER = { 'en-a1-1': 'emma', 'en-a1-2': 'tom', 'en-a1-3': 'lily', 'en-a1-4': 'sam', 'en-a1-test': 'kai' };
 
 G.SCENES = {
   home_en: {
@@ -59,10 +63,13 @@ G.SCENES = {
   }
 };
 
-/* Phòng đã mở chưa: phòng đầu luôn mở, phòng sau cần phòng trước đạt từ 80% */
+/* Đã qua phòng chưa: đạt từ 80% số câu (phòng thường 8/10, phòng thi 16/20) */
+G.roomPassed = function (id) {
+  var p = G.S.phong[id], r = G.ROOMS[id];
+  return !!(p && p.diem >= ((r && r.passN) || 8));
+};
+/* Phòng đã mở chưa: phòng đầu luôn mở, phòng sau cần qua phòng trước */
 G.roomOpen = function (idx) {
   if (idx === 0) return true;
-  var prev = G.EN_HALL_DOORS[idx - 1].room;
-  var p = G.S.phong[prev];
-  return !!(p && p.diem >= 8);
+  return G.roomPassed(G.EN_HALL_DOORS[idx - 1].room);
 };

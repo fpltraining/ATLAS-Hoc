@@ -13,7 +13,7 @@ var G = window.G || (window.G = {});
 
   function enRooms() {
     var done = 0, stars = 0;
-    for (var i = 0; i < G.EN_HALL_DOORS.length; i++) { var p = G.S.phong[G.EN_HALL_DOORS[i].room]; if (p && p.diem >= 8) { done++; stars += p.sao; } }
+    for (var i = 0; i < G.EN_HALL_DOORS.length; i++) { var id = G.EN_HALL_DOORS[i].room, p = G.S.phong[id]; if (G.roomPassed(id)) { done++; stars += p.sao; } }
     return { done: done, stars: stars };
   }
 
@@ -35,7 +35,7 @@ var G = window.G || (window.G = {});
     root.appendChild(G.el('h2.sec', 'Các thành phố'));
     root.appendChild(G.el('div.cities', CITIES.map(function (c) {
       var open = c.state === 'open';
-      var prog = c.id === 'en' ? r.done + '/5 phòng A1 · ' + r.stars + '★' : '';
+      var prog = c.id === 'en' ? (G.S.totNghiep.en && G.S.totNghiep.en.A1 ? '🎓 Đã tốt nghiệp A1 · ' : r.done + '/5 phòng A1 · ') + r.stars + '★' : '';
       return G.el('button.city' + (open ? '' : '.soon'), { onclick: function () { if (open) G.goCity(c.id); else G.toast(c.name + ': ' + (c.note || 'sắp ra mắt')); } },
         G.imgEl(c.card, 'city-img'),
         G.el('b', c.name),
@@ -55,7 +55,10 @@ var G = window.G || (window.G = {});
         stat(G.S.chuoi.hienTai + ' ngày', 'Chuỗi học'),
         stat(r.done + '/5', 'Phòng A1 đã qua'),
         stat(G.S.tuKho.length, 'Từ cần ôn')
-      )
+      ),
+      G.diplomas().length ? G.el('div.dips', G.diplomas().map(function (d) {
+        return G.el('span.dip-chip', '🎓 ' + (d.lang === 'en' ? 'Tiếng Anh ' : 'Tiếng Trung ') + d.level + ' · ' + d.info.diem + '/' + d.info.tong);
+      })) : null
     ));
 
     root.appendChild(G.el('h2.sec', 'Sao lưu và cài đặt'));

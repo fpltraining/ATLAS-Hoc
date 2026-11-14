@@ -1,8 +1,25 @@
 # Danh sách đặt hình: Thế giới Ngôn Ngữ
 
-## ĐƠN ĐANG CHỜ
+## ĐƠN ĐANG CHỜ (GĐ2 · copy nguyên khối, đính kèm hình Ms. Emma để giữ nét vẽ)
 
-Hiện không còn hình nào cần đặt cho GĐ1. Đơn mới sẽ ghi ở đây khi làm GĐ2.
+Làm xong anh cứ dán hình vào chat với em, em tự cắt, đặt tên và lưu vào game.
+
+```
+Please create the following images for my 2D mobile game, ONE image per message, in this order.
+Attached: a teacher character from my game. Match its art style exactly.
+
+GLOBAL RULES
+- Cozy chibi 2D game art like the attached character: thick dark-brown outlines, flat soft colors, gentle shading.
+- Palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0.
+- NO text, letters or numbers anywhere.
+- Solid flat magenta #FF00FF background, nothing else.
+
+1. Two poses of the same chibi teacher side by side, full body, same size: left = standing and smiling, right = talking with one hand raised. Mr. Tom, a cheerful middle-aged English teacher with a brown moustache, a checkered vest, rolled sleeves, holding a big pocket watch.
+2. Same two poses: Mrs. Lily, a warm teacher in her forties with curly brown hair, a floral dress and a cardigan, holding a small family photo frame.
+3. Same two poses: Chef Sam, a tall friendly cooking teacher with a white chef hat, white jacket, coral apron, holding a wooden spoon.
+4. A heavy chain crossed in an X with a big golden padlock in the middle, front view, to put on top of a locked door. Only the chain and padlock.
+5. A framed diploma, front view, landscape 4:3: cream paper with a large EMPTY area in the middle (no writing), a sky-blue ribbon seal at the bottom, a gold frame.
+```
 
 Đã nhận và lưu: bản đồ hai hòn đảo (đầu trang Ngôi nhà chung); xe buýt, tàu điện (đóng/mở cửa), 2 dải phố, bản đồ trung tâm, 5 toà nhà, hành lang, lớp học, 3 thẻ thành phố; 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
 
