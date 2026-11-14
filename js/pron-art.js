@@ -3,7 +3,7 @@
    - khẩu hình môi nhìn thẳng
    - biểu đồ độ cao 4 thanh, tổ hợp thanh của từ hai âm tiết
    - sơ đồ cấu tạo âm tiết
-   - hai nhân vật dẫn bài: Linh (tiếng Trung) và Bo (tiếng Anh) */
+   - hai nhân vật dẫn bài: Han (tiếng Trung) và Kai (tiếng Anh) */
 
 const INK = '#1a1f3a', SKIN = '#f3e3d8', TONGUE = '#e9a090', HOT = '#e0442a', AIR = '#2f7a63', SOFT = '#8b91a8';
 export const TONE_COLORS = { 1: '#2f6fd0', 2: '#2f9a6a', 3: '#c8892b', 4: '#d2452e', 0: '#8b91a8' };
@@ -144,9 +144,9 @@ export function art(code) {
 
 /* ---------- nhân vật dẫn bài ---------- */
 export function mascot(who) {
-  if (who === 'bo') {
+  if (who === 'kai') {
     return svg('0 0 64 64', `<circle cx="32" cy="32" r="31" fill="#dceaf0"/><rect x="14" y="18" width="36" height="28" rx="8" fill="#d6eae7" stroke="${INK}" stroke-width="2.4"/><circle cx="25" cy="31" r="6" fill="#fff" stroke="${INK}" stroke-width="2"/><circle cx="39" cy="31" r="6" fill="#fff" stroke="${INK}" stroke-width="2"/><circle cx="26" cy="31" r="2.6" fill="${INK}"/><circle cx="40" cy="31" r="2.6" fill="${INK}"/><line x1="32" y1="18" x2="32" y2="9" stroke="${INK}" stroke-width="2.4"/><circle cx="32" cy="7" r="4" fill="${HOT}" stroke="${INK}" stroke-width="2"/><path d="M26 40 q6 4 12 0" fill="none" stroke="${INK}" stroke-width="2"/><rect x="20" y="46" width="24" height="14" rx="4" fill="#8bbac0" stroke="${INK}" stroke-width="2.4"/>`, 'mascot');
   }
   return svg('0 0 64 64', `<circle cx="32" cy="32" r="31" fill="#f6e1ef"/><path d="M14 40 Q10 14 32 12 Q54 12 50 40 Q48 50 44 54 L20 54 Q16 50 14 40 Z" fill="${INK}"/><circle cx="32" cy="32" r="14" fill="#f3e3d8" stroke="${INK}" stroke-width="2.2"/><path d="M18 30 Q22 16 32 17 Q44 17 46 30 Q38 22 32 25 Q26 22 18 30 Z" fill="${INK}"/><circle cx="27" cy="33" r="2" fill="${INK}"/><circle cx="37" cy="33" r="2" fill="${INK}"/><path d="M28 39 q4 3 8 0" fill="none" stroke="${INK}" stroke-width="1.8"/><path d="M20 50 Q32 58 44 50 L46 60 Q32 66 18 60 Z" fill="${HOT}" stroke="${INK}" stroke-width="2"/>`, 'mascot');
 }
-export const MASCOT_NAME = { zh: 'Linh', en: 'Bo' };
+export const MASCOT_NAME = { zh: 'Han', en: 'Kai' };
