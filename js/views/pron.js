@@ -435,13 +435,15 @@ async function renderLesson(course, id, el) {
           const first = !(await progress()).passed[id];
           await saveProgress((p) => { p.passed[id] = Math.max(p.passed[id] || 0, right); return p; });
           if (first) await award(30, `Qua bài phát âm ${id}`);
+          if (LANG === 'zh') await store.markStep('zh'); // xong việc "Tiếng Trung" của hôm nay
         }
         const nextL = course.lessons.find((x) => x.id === id + 1);
         box.replaceChildren(h('div.card',
           h('div.row', { style: { gap: '12px', alignItems: 'center' } }, mascotImg(pass ? 'khen' : 'dong-vien', 'result-img'), h('h2', `${right}/${total} câu đúng`)),
           h(`div.note.${pass ? 'jade' : 'seal'}`, pass ? 'Qua bài! Bài sau đã mở.' : 'Chưa đạt 8/10. Xem lại các mục rồi kiểm tra lại nhé.'),
           h('div.btn-row', { style: { marginTop: '12px' } },
-            pass && nextL ? h('a.btn.primary', { href: `#/pron/${LANG}/${nextL.id}` }, `Sang Bài ${nextL.id} ›`) : null,
+            pass ? h('a.btn.primary', { href: '#/home' }, 'Về trang Hôm nay ›') : null,
+            pass && nextL ? h('a.btn', { href: `#/pron/${LANG}/${nextL.id}` }, `Học tiếp Bài ${nextL.id}`) : null,
             h('button.btn.ghost', { onclick: () => draw() }, 'Kiểm tra lại'),
             h('a.btn.ghost', { href: `#/pron/${LANG}` }, 'Về trang khoá'))));
       } });

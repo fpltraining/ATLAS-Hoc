@@ -1,12 +1,11 @@
 /* Hôm nay: mở app là biết ngay phải làm gì, làm tới đâu là đủ. */
 
 import * as store from '../store.js';
-import * as data from '../data.js';
-import * as content from '../content.js';
-import { buildToday, DAY_NAME, curSession } from '../plan.js';
+import { buildToday, DAY_NAME } from '../plan.js';
 import { h, progressBar } from '../ui.js';
 import { streak } from '../progress.js';
 import { rankCard } from '../xp.js';
+import { zhPath, enPath, pathCard } from '../path.js';
 
 const WEEKDAY = ['Chủ nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
 
@@ -22,7 +21,21 @@ export async function render() {
   const next = plan.steps.find((s) => !s.done);
   const now = new Date();
 
-  /* ---- đầu trang: một nút duy nhất để bắt đầu ---- */
+  const nextIdx = next ? plan.steps.indexOf(next) + 1 : 0;
+
+  /* ---- lần đầu: mời trả lời 4 câu để có lộ trình riêng ---- */
+  if (!plan.settings.onboarded) {
+    el.append(h('div.card.start-invite',
+      h('img.start-ava', { src: 'img/mascot/han-chao.webp', alt: 'Han' }),
+      h('div.grow',
+        h('b', 'Chưa biết học từ đâu?'),
+        h('div.small.muted', 'Trả lời 4 câu (1 phút): học gì, mỗi ngày bao lâu, đang ở trình độ nào. App xếp lộ trình riêng và chỉ đúng bài cần học trước.'),
+      ),
+      h('a.btn.seal', { href: '#/start' }, 'Xếp lộ trình ›'),
+    ));
+  }
+
+  /* ---- đầu trang: đúng một việc cần làm ngay ---- */
   el.append(h('div.card.today-hero',
     h('div.row.spread',
       h('div',
@@ -30,24 +43,30 @@ export async function render() {
         h('div.streak', { title: `Chuỗi dài nhất: ${st.best} ngày` },
           '🔥 ', st.cur ? h('b', String(st.cur)) : null, st.cur ? ' ngày học liên tiếp' : 'Học hôm nay để bắt đầu chuỗi ngày',
           st.cur && !st.todayOn ? h('span.small', ' · học hôm nay để giữ chuỗi') : null),
-        h('h1.today-title', doneCount === plan.steps.length ? 'Xong hết việc hôm nay' : `Hôm nay, ${planned} phút`),
       ),
       h('div.today-time', h('b', String(minsToday)), h('span', `/${planned} phút`)),
     ),
+    next
+      ? h('div.hero-next',
+        h('div.small.hero-sub', `Việc ${nextIdx}/${plan.steps.length} hôm nay · khoảng ${next.mins} phút`),
+        h('h1.today-title', next.title),
+        h('div.hero-desc', next.desc),
+      )
+      : h('h1.today-title', 'Xong hết việc hôm nay 🎉'),
     h('div', { style: { marginTop: '12px' } }, progressBar(plan.steps.length ? doneCount / plan.steps.length : 0)),
     next
-      ? h('a.btn.seal.block', { href: next.href, style: { marginTop: '14px' } }, `Tiếp tục: ${next.title} ›`)
+      ? h('a.btn.seal.block', { href: next.href, style: { marginTop: '14px' } }, 'Học ngay ›')
       : h('a.btn.ghost.block.on-hero', { href: '#/read', style: { marginTop: '14px' } }, 'Còn sức thì đọc thêm một bài'),
   ));
-  el.append(await rankCard({ compact: true }));
 
   if (plan.quota.reason) el.append(h('div.note', plan.quota.reason));
 
-  /* ---- các việc theo thứ tự ---- */
+  /* ---- các việc theo thứ tự, đánh số ---- */
   const list = h('div.plan-list');
-  for (const s of plan.steps) {
+  plan.steps.forEach((s, i) => {
     const isNext = next && s.key === next.key;
     list.append(h(`div.today-step${s.done ? '.done' : ''}${isNext ? '.next' : ''}`,
+      h('span.step-no', String(i + 1)),
       h('button.tick', {
         'aria-label': s.done ? 'Bỏ đánh dấu' : 'Đánh dấu xong',
         onclick: async () => {
@@ -57,12 +76,24 @@ export async function render() {
         },
       }, s.done ? '✓' : ''),
       h('a.grow', { href: s.href },
-        h('div.row.spread', h('b', s.title), h('span.plan-time', `${s.mins}′`)),
+        h('div.row.spread', h('b', s.title, isNext ? h('span.pill.seal.step-now', 'Làm tiếp') : null), h('span.plan-time', `${s.mins}′`)),
         h('div.small.faint', s.desc),
       ),
     ));
-  }
-  el.append(h('div.card', { style: { padding: '6px 14px' } }, list));
+  });
+  el.append(h('div.card', { style: { padding: '6px 14px' } },
+    h('div.row.spread', { style: { padding: '8px 0 2px' } }, h('h3', 'Việc hôm nay'), h('span.small.faint', 'làm lần lượt từ trên xuống')),
+    list));
+
+  /* ---- lộ trình: đang ở chặng nào, sắp tới là gì ---- */
+  const langs = plan.settings.langs || 'both';
+  const paths = await Promise.all([langs !== 'zh' ? enPath() : null, langs !== 'en' ? zhPath() : null]);
+  el.append(h('div.card',
+    h('div.row.spread', h('h3', 'Lộ trình của bạn'), h('a.small.faint', { href: '#/start' }, 'Đổi lộ trình ›')),
+    h('div.stack', { style: { marginTop: '8px' } }, ...paths.filter(Boolean).map((p) => pathCard(p))),
+  ));
+
+  el.append(await rankCard({ compact: true }));
 
   /* ---- thử thách 10 câu ---- */
   el.append(h('a.card.challenge-card', { href: '#/challenge' },
@@ -72,41 +103,10 @@ export async function render() {
     h('span.pill.jade', ch ? `${ch.right}/${ch.n}` : '10 câu ›'),
   ));
 
-  /* ---- đang ở đâu ---- */
-  el.append(await whereAmI());
-
   /* ---- nhật ký ---- */
   el.append(journalCard(plan.day));
 
   return { title: 'Hôm nay', el };
-}
-
-async function whereAmI() {
-  const [en, read, wk, kn, lessons, course, idx, stories, knowData] = await Promise.all([
-    store.enState(), store.readState(), store.workState(), store.knowState(), store.lessonProgress(),
-    content.course(), data.curriculum(), content.storyIndex(), content.know(),
-  ]);
-  const stage = en.stage || 0;
-  const sessDone = Object.values(en.sess?.[stage] || {}).filter((x) => x.done).length;
-  const zhDone = idx.lessons.filter((l) => lessons[l.id]?.done).length;
-  const totalCh = stories.reduce((a, s) => a + s.chapters.length, 0);
-  const readCh = Object.values(read.stories || {}).reduce((a, s) => a + Object.keys(s.ch || {}).length, 0);
-  const n = curSession(en, course);
-
-  const row = (label, sub, ratio, href) => h('a.where', { href },
-    h('div.row.spread', h('b', label), h('span.small.faint', sub)),
-    progressBar(ratio),
-  );
-  return h('div.card',
-    h('h3', { style: { marginBottom: '8px' } }, 'Đang ở đâu'),
-    h('div.where-grid',
-      row('Tiếng Anh', `${course.stages[stage].name} · buổi ${n}/${course.stages[stage].total}`, sessDone / course.stages[stage].total, '#/en'),
-      row('Tiếng Trung', `${zhDone}/${idx.lessons.length} bài HSK`, zhDone / idx.lessons.length, '#/zh'),
-      row('Đọc song ngữ', `${readCh}/${totalCh} chương · ${read.words || 0} từ`, readCh / totalCh, '#/read'),
-      row('Anh nghề', `${Object.keys(wk.done).length}/30 ngày`, Object.keys(wk.done).length / 30, '#/work'),
-      row('Kiến thức', `${Object.keys(kn.done).length}/${knowData.lessons.length} bài`, Object.keys(kn.done).length / knowData.lessons.length, '#/know'),
-    ),
-  );
 }
 
 function journalCard(day) {

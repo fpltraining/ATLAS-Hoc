@@ -6,6 +6,7 @@ import * as store from '../store.js';
 import * as content from '../content.js';
 import { h, section, progressBar, plural } from '../ui.js';
 import { cardSummary, mastery } from '../progress.js';
+import { zhPath, pathStrip } from '../path.js';
 
 export async function render() {
   const [idx, cards, progress, read, stories] = await Promise.all([
@@ -22,16 +23,24 @@ export async function render() {
 
   const el = h('div.stack');
 
-  /* ---- bài đang học ---- */
+  /* ---- bước kế tiếp theo lộ trình: phát âm trước, rồi HSK ---- */
+  const zp = await zhPath();
+  const nx0 = zp.next;
+  const pron = nx0.kind === 'pron';
   el.append(h('div.card.today-hero',
-    h('div.small.hero-sub', `HSK ${next.level} · bài ${next.no ?? next.id}/${idx.lessons.length}`),
-    h('h1.today-title', next.title),
-    h('div.cn.hero-cn', next.cn),
-    h('div', { style: { marginTop: '12px' } }, progressBar(doneCount / idx.lessons.length)),
-    h('a.btn.seal.block', { href: `#/lesson/${next.id}`, style: { marginTop: '14px' } }, doneCount ? 'Học tiếp ›' : 'Bắt đầu ›'),
+    h('div.small.hero-sub', nx0.where),
+    h('h1.today-title', pron ? nx0.title : next.title),
+    pron ? h('div.hero-desc', nx0.sub) : h('div.cn.hero-cn', next.cn),
+    h('div', { style: { marginTop: '12px' } }, progressBar(pron ? zp.passed / zp.stages[0].total : doneCount / idx.lessons.length)),
+    h('a.btn.seal.block', { href: nx0.href, style: { marginTop: '14px' } }, 'Học ngay ›'),
+    pron ? h('button.hero-link', {
+      onclick: async () => { await store.setSetting('zhSkipPron', true); location.hash = '#/zh'; window.dispatchEvent(new HashChangeEvent('hashchange')); },
+    }, 'Đã đọc được pinyin và 4 thanh? Vào thẳng HSK 1') : null,
   ));
+  el.append(h('div.card', h('div.row.spread', h('h3', 'Lộ trình tiếng Trung'), h('span.small.faint', '✓ xong · ● đang học')), pathStrip(zp)));
 
-  /* ---- bốn việc chính, xếp giống hệt mục Tiếng Anh ---- */
+  /* ---- luyện thêm ---- */
+  el.append(h('h3.hub-head', 'Luyện thêm khi rảnh'));
   el.append(h('div.hub-grid',
     tile('#/read/zh', '读', 'Đọc truyện', nx ? nx.story.title : `${zhStories.length} truyện`),
     tile(`#/charmap/${next.id}`, '写', 'Viết bằng bút', `Chấm từng nét · ${plural(Object.keys(scores).length, 'chữ')} đã viết`),

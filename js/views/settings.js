@@ -63,6 +63,9 @@ export async function renderSettings() {
   return h('div',
     h('h2', 'Cài đặt'),
 
+    row('Lộ trình học', 'Trả lời lại 4 câu: học gì, bao lâu, trình độ. App xếp lại việc mỗi ngày.',
+      h('a.btn.sm', { href: '#/start', onclick: () => setTimeout(closeSheet, 30) }, 'Xếp lại lộ trình')),
+
     row('Mỗi ngày học bao lâu', 'Chia việc trên trang Hôm nay và đặt hạn mức từ mới.',
       seg('dailyMinutes', [[30, '30′'], [60, '1 giờ'], [90, '90′'], [120, '2 giờ']], s.dailyMinutes)),
     row('Bạn muốn học', 'Trang Hôm nay chỉ xếp việc của ngôn ngữ đã chọn.',

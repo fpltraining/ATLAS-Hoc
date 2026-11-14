@@ -42,6 +42,7 @@ const routes = {
   speak:    () => import('./views/speak.js'),
   hsk:      () => import('./views/word.js'),
   pron:     () => import('./views/pron.js'),
+  start:    () => import('./views/start.js'),
 };
 
 /* Màn hình nào thuộc khối học nào, để đếm thời gian và sáng đúng mục trên thanh điều hướng */
@@ -51,7 +52,7 @@ const TRACK = {
 };
 const TAB = {
   home: 'home', review: 'home', en: 'en', penen: 'en', work: 'en', book: 'en',
-  zh: 'zh', lesson: 'zh', write: 'zh', char: 'zh', radicals: 'zh', pinyin: 'zh', exam: 'zh', charmap: 'zh', challenge: 'home', games: 'zh', search: 'lib', word: 'zh', hsk: 'zh', speak: 'home',
+  start: 'home', zh: 'zh', lesson: 'zh', write: 'zh', char: 'zh', radicals: 'zh', pinyin: 'zh', exam: 'zh', charmap: 'zh', challenge: 'home', games: 'zh', search: 'lib', word: 'zh', hsk: 'zh', speak: 'home',
   lib: 'lib', drill: 'lib', numbers: 'lib', notes: 'lib', know: 'lib', stats: 'stats',
 };
 
