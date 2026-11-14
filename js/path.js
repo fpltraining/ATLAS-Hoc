@@ -12,6 +12,10 @@ import * as content from './content.js';
 import { curSession, enTitle } from './plan.js';
 import { h } from './ui.js';
 
+/* Ảnh chặng (ChatGPT đợt 4–5): img/stages/<lang>-<số chặng>.webp. Ngôn ngữ chưa có ảnh thì để false. */
+export const STAGE_ART = { zh: true, en: false };
+const art = (lang, i) => (STAGE_ART[lang] ? `img/stages/${lang}-${i}.webp` : null);
+
 let pronCache = null;
 const pronCourse = () => pronCache || (pronCache = fetch('data/pron/zh.json').then((r) => r.json()).catch(() => ({ lessons: [] })));
 
@@ -28,7 +32,7 @@ export async function zhPath() {
 
   const stages = [{
     key: 'pron', name: 'Phát âm', sub: `${total} bài: thanh điệu, pinyin, khẩu hình`,
-    done: Math.min(passed, total), total, href: '#/pron/zh',
+    done: Math.min(passed, total), total, href: '#/pron/zh', img: art('zh', 0),
     state: passed >= total ? 'done' : pronNeeded ? 'now' : settings.zhSkipPron ? 'skip' : 'side',
   }];
   const levels = [...new Set(idx.lessons.map((l) => l.level || 1))].sort((a, b) => a - b);
@@ -39,7 +43,7 @@ export async function zhPath() {
     const complete = d >= inLv.length;
     const state = complete ? 'done' : !found ? 'now' : 'todo';
     if (state === 'now') found = true;
-    stages.push({ key: `hsk${lv}`, name: `HSK ${lv}`, sub: `${inLv.length} bài`, done: d, total: inLv.length, href: '#/zh', state });
+    stages.push({ key: `hsk${lv}`, name: `HSK ${lv}`, sub: `${inLv.length} bài`, done: d, total: inLv.length, href: '#/zh', state, img: art('zh', stages.length) });
   }
 
   let next;
@@ -68,7 +72,7 @@ export async function enPath() {
   const n = curSession(en, course);
   const stages = course.stages.map((s, i) => {
     const d = Object.values(en.sess?.[i] || {}).filter((x) => x.done).length;
-    return { key: `en${i}`, name: s.cefr, sub: s.sub, done: Math.min(d, s.total), total: s.total, href: '#/en', state: i < st ? 'done' : i === st ? 'now' : 'todo' };
+    return { key: `en${i}`, name: s.cefr, sub: s.sub, done: Math.min(d, s.total), total: s.total, href: '#/en', state: i < st ? 'done' : i === st ? 'now' : 'todo', img: art('en', i) };
   });
   const s = course.stages[st];
   const sessDone = Object.values(en.sess?.[st] || {}).filter((x) => x.done).length;
@@ -85,9 +89,12 @@ export async function enPath() {
 const MARK = { done: '✓', now: '●', todo: '', skip: '–', side: '' };
 
 /** Dải chặng nằm ngang: ✓ đã xong · ● đang ở đây · ○ sắp tới. */
+/** Ảnh của chặng đang học (để làm ảnh đầu trang mục) */
+export const currentArt = (path) => (path.stages.find((s) => s.state === 'now') || path.stages.find((s) => s.state !== 'done') || path.stages[0])?.img || null;
+
 export function pathStrip(path) {
   return h('div.path-strip', ...path.stages.map((s) => h(`a.path-node.${s.state}`, { href: s.href, title: `${s.name}: ${s.done}/${s.total}` },
-    h('span.path-dot', MARK[s.state] || ''),
+    s.img ? h('span.path-dot.pic', { style: { backgroundImage: `url(${s.img})` } }, MARK[s.state] ? h('b.path-mark', MARK[s.state]) : null) : h('span.path-dot', MARK[s.state] || ''),
     h('span.path-name', s.name),
     h('span.path-sub', s.state === 'skip' ? 'đã bỏ qua' : s.state === 'side' ? `học xen · ${s.done}/${s.total}` : `${s.done}/${s.total}`),
   )));
