@@ -28,7 +28,7 @@ var G = window.G || (window.G = {});
   function teacherLine(text, en) {
     var n = teacher();
     var pic = G.el('div.tpic');
-    pic.appendChild(G.imgEl(n.img, 'tpic-img'));
+    pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));
     return G.el('div.tline', pic, G.el('div.tbubble', G.el('b', n.name), G.el('div', text), en ? speakBtn(en) : null));
   }
 
@@ -207,6 +207,7 @@ var G = window.G || (window.G = {});
     body.appendChild(head(2, 'Kết quả'));
     body.appendChild(G.el('div.result' + (pass ? '.pass' : ''),
       G.el('div.rscore', right + '/10'),
+      G.imgEl('player_' + (G.S.nhanVat || 'han') + '_' + (pass ? 'happy' : 'think') + '.png', 'rface'),
       G.el('div.rstars', pass ? stars(sao) : '☆☆☆'),
       G.el('div', pass ? (firstPass ? 'Qua phòng! Cửa phòng tiếp theo đã mở.' : 'Qua phòng! Kết quả tốt nhất đã được lưu.') : 'Chưa đạt 8/10. Xem lại thẻ và luyện thêm rồi thử lại nhé.')
     ));

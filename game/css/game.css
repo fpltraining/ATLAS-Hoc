@@ -130,3 +130,5 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 .confetti { position: fixed; inset: 0; pointer-events: none; z-index: 70; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+.rface { width: 112px; height: 112px; margin: 0 auto 4px; background: transparent !important; }
+.rface.ok { background: transparent; }

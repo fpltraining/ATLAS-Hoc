@@ -11,6 +11,8 @@ G.ASSET_LIST = [
   'interior_en_hall.png', 'classroom_en.png', 'interior_en_cafe.png', 'interior_en_market.png', 'interior_en_hospital.png', 'interior_en_airport.png',
   'interior_zh_hall.png', 'classroom_zh.png', 'interior_zh_teahouse.png', 'interior_zh_market.png', 'interior_zh_hospital.png', 'interior_zh_airport.png',
   'npc_emma.png', 'npc_tom.png', 'npc_lily.png', 'npc_sam.png', 'npc_principal_li.png', 'npc_wang.png', 'npc_li.png', 'npc_zhang.png', 'npc_chen.png',
+  'npc_emma_talk.png', 'npc_wang_talk.png', 'npc_principal_li_talk.png',
+  'player_han_happy.png', 'player_han_wow.png', 'player_han_think.png', 'player_minh_happy.png', 'player_minh_wow.png', 'player_minh_think.png',
   'npc_leo.png', 'npc_xiaolin.png', 'npc_rosa.png', 'npc_wangdama.png', 'npc_grace.png', 'npc_zhou.png', 'npc_anna.png', 'npc_sun.png',
   'door_locked.png', 'door_open.png', 'plane.png', 'diploma_en.png', 'diploma_zh.png',
   'souvenir_tea.png', 'souvenir_coffee.png', 'souvenir_apples.png', 'souvenir_ticket.png', 'souvenir_medkit.png',
@@ -74,12 +76,15 @@ G.ASSET_LIST = [
   };
 
   /* Ảnh trong giao diện HTML (thẻ thành phố, ảnh đầu trang): thiếu thì hiện ô màu có tên file */
-  G.imgEl = function (name, cls) {
+  /* fallback: tên file dùng thay khi file chính chưa có */
+  G.imgEl = function (name, cls, fallback) {
     var wrap = G.el('div.asset ' + (cls || ''));
     var img = new Image();
     img.alt = '';
-    img.onload = function () { wrap.innerHTML = ''; wrap.appendChild(img); wrap.className = 'asset ok ' + (cls || ''); };
-    img.onerror = function () { wrap.innerHTML = ''; wrap.appendChild(G.el('span.asset-name', name)); wrap.style.background = colorOf(name); };
+    img.onload = function () { wrap.innerHTML = ''; wrap.style.background = ''; wrap.appendChild(img); wrap.className = 'asset ok ' + (cls || ''); };
+    img.onerror = function () {
+      if (fallback) { var f = fallback; fallback = null; name = f; img.src = 'assets/' + f; return; }
+      wrap.innerHTML = ''; wrap.appendChild(G.el('span.asset-name', name)); wrap.style.background = colorOf(name); };
     img.src = 'assets/' + name;
     wrap.appendChild(G.el('span.asset-name', name));
     wrap.style.background = colorOf(name);
