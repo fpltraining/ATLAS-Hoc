@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v34';
+const VERSION = 'atlas-v35';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
@@ -26,7 +26,7 @@ const CORE_FILES = [
 ];
 
 /* Tải sau, chạy ngầm: nhiều và nặng hơn nhưng không cần ngay lúc mở app */
-const EXTRA_FILES = ['data/audio.json', 'data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json', 'data/pics/en.json', 'data/pron/zh.json', 'data/pron/en.json', 'data/pron/combos.json', 'data/pinyin-grid.json', 'img/mascot/linh-chao.webp', 'img/mascot/linh-giai-thich.webp', 'img/mascot/linh-nghe.webp', 'img/mascot/linh-khen.webp', 'img/mascot/linh-dong-vien.webp', 'img/mascot/linh-nghi.webp', 'img/mascot/linh-avatar.webp', 'img/mascot/bo-chao.webp', 'img/mascot/bo-giai-thich.webp', 'img/mascot/bo-nghe.webp', 'img/mascot/bo-khen.webp', 'img/mascot/bo-dong-vien.webp', 'img/mascot/bo-nghi.webp', 'img/mascot/bo-avatar.webp'];
+const EXTRA_FILES = ['data/audio.json', 'data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json', 'data/pics/en.json', 'data/pron/zh.json', 'data/pron/en.json', 'data/pron/combos.json', 'data/pinyin-grid.json', 'img/mascot/han-chao.webp', 'img/mascot/han-giai-thich.webp', 'img/mascot/han-nghe.webp', 'img/mascot/han-khen.webp', 'img/mascot/han-dong-vien.webp', 'img/mascot/han-nghi.webp', 'img/mascot/han-avatar.webp', 'img/mascot/kai-chao.webp', 'img/mascot/kai-giai-thich.webp', 'img/mascot/kai-nghe.webp', 'img/mascot/kai-khen.webp', 'img/mascot/kai-dong-vien.webp', 'img/mascot/kai-nghi.webp', 'img/mascot/kai-avatar.webp'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {

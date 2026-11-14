@@ -84,7 +84,7 @@ function artEl(code, cls = 'pron-fig') {
 }
 /* Nhân vật dẫn bài: ảnh theo tư thế (chao, giai-thich, nghe, khen, dong-vien, nghi, avatar);
    ảnh lỗi thì quay về hình vẽ SVG. */
-const who = () => (LANG === 'en' ? 'bo' : 'linh');
+const who = () => (LANG === 'en' ? 'kai' : 'han');
 function mascotImg(pose = 'chao', cls = 'mascot-img') {
   const img = h(`img.${cls}`, { src: `img/mascot/${who()}-${pose}.webp`, alt: MASCOT_NAME[LANG], loading: 'lazy', decoding: 'async' });
   img.onerror = () => { const d = h('span.mascot-svg'); d.innerHTML = mascot(who()); img.replaceWith(d); };
