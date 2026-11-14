@@ -234,3 +234,9 @@ game/
 - **Đi học bằng tàu điện:** mua vé ở máy (chọn ga, số vé), đọc sơ đồ tuyến để chọn sân ga (toward …), nghe "This is …" và xuống khi cửa mở.
 - Xuống đúng +10 XP; nhầm trạm hoặc đi quá thì đi lại chuyến khác. Đi đủ 3 lần thì có nút "Đi nhanh".
 - Ở trung tâm có bến xe buýt và ga tàu để về nhà theo chiều ngược lại.
+
+## Bổ sung: khu đời sống tiếng Anh (GĐ4) · tiếng Trung tạm dừng
+- Quán cà phê (Leo): mở sau A1-4. Chợ (Mrs. Rosa): mở sau A1-2. Bệnh viện (Dr. Anna): mở sau khi tốt nghiệp A1.
+- Mỗi nơi 3 tình huống × 5 lượt; chọn câu đáp, sai thì Kai gợi ý theo nghĩa câu vừa nghe.
+- Xong tình huống lần đầu +20 XP (làm lại +5). Xong cả 3 → đồ kỷ niệm, bày ở mục "Đồ kỷ niệm" của Ngôi nhà chung.
+- Phần tiếng Trung (Trường Lạc trấn, khu đời sống tiếng Trung, hình tiếng Trung) tạm dừng theo yêu cầu.

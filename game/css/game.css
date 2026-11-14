@@ -249,3 +249,20 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .py-btn { margin-left: auto; margin-right: 8px; }
 .panel-top { display: flex; align-items: center; }
 .py-btn { white-space: nowrap; font-size: 13px; padding: 6px 10px; min-height: 34px; }
+
+/* ---------- Khu đời sống ---------- */
+.chatlog { display: flex; flex-direction: column; gap: 8px; margin: 8px 0; }
+.tline.me { justify-content: flex-end; }
+.tbubble.mine { background: var(--jade-soft); text-align: right; }
+.chatopts .opts { margin-top: 6px; }
+.big.done { background: var(--jade-soft); border-color: var(--jade); }
+.souv-row { display: flex; gap: 12px; align-items: center; margin-top: 14px; background: var(--paper); border: 1px dashed var(--line); border-radius: 14px; padding: 10px; }
+.souv-img { width: 64px; height: 64px; flex: none; }
+.souv-img.ok, .souv-big.ok { background: transparent !important; }
+.souv-img.ok img, .souv-big.ok img { object-fit: contain; }
+.souv-gift { text-align: center; margin: 12px 0; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.souv-big { width: 120px; height: 120px; }
+.souvs { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+.souv { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 10px; font-size: 13px; }
+.souv.lock { opacity: .45; }
+.souv .souv-img { width: 72px; height: 72px; }
