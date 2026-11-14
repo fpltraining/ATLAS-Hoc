@@ -419,3 +419,16 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 .rank-bar i { display: block; height: 100%; border-radius: 9px; }
 .rank-ladder { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
 .rank-step { font-size: 12px; font-weight: 700; padding: 3px 9px; border: 1.5px solid; border-radius: 99px; }
+
+/* nhân vật dẫn bài (ảnh) */
+.guide-ava { width: 78px; height: 78px; }
+.mascot-img { width: 78px; height: 78px; object-fit: contain; display: block; filter: drop-shadow(0 3px 4px rgba(11, 22, 48, .18)); }
+.mascot-svg svg { width: 52px; height: 52px; }
+.guide-bubble { margin-top: 10px; }
+.note.react { display: flex; gap: 10px; align-items: center; }
+.react-img { width: 54px; height: 54px; object-fit: contain; flex: none; }
+.result-img { width: 90px; height: 90px; object-fit: contain; }
+.pron-hero { position: relative; overflow: hidden; }
+.hero-mascot { position: absolute; right: 6px; bottom: -6px; width: 128px; height: 128px; object-fit: contain; pointer-events: none; }
+.pron-hero > :not(.hero-mascot) { position: relative; max-width: calc(100% - 110px); }
+@media (max-width: 480px) { .hero-mascot { width: 96px; height: 96px; opacity: .9; } .pron-hero > :not(.hero-mascot) { max-width: calc(100% - 70px); } }

@@ -82,10 +82,16 @@ function artEl(code, cls = 'pron-fig') {
   d.innerHTML = art(code);
   return d;
 }
-function guide(text, extra) {
-  const m = h('div.guide-ava');
-  m.innerHTML = mascot(LANG === 'en' ? 'bo' : 'linh');
-  return h('div.guide', m, h('div.guide-bubble', h('div.guide-name', MASCOT_NAME[LANG]), h('div', text), extra || null));
+/* Nhân vật dẫn bài: ảnh theo tư thế (chao, giai-thich, nghe, khen, dong-vien, nghi, avatar);
+   ảnh lỗi thì quay về hình vẽ SVG. */
+const who = () => (LANG === 'en' ? 'bo' : 'linh');
+function mascotImg(pose = 'chao', cls = 'mascot-img') {
+  const img = h(`img.${cls}`, { src: `img/mascot/${who()}-${pose}.webp`, alt: MASCOT_NAME[LANG], loading: 'lazy', decoding: 'async' });
+  img.onerror = () => { const d = h('span.mascot-svg'); d.innerHTML = mascot(who()); img.replaceWith(d); };
+  return img;
+}
+function guide(text, extra, pose = 'giai-thich') {
+  return h('div.guide', h('div.guide-ava', mascotImg(pose)), h('div.guide-bubble', h('div.guide-name', MASCOT_NAME[LANG]), h('div', text), extra || null));
 }
 
 /* ---------- lỗi theo nhãn ---------- */
@@ -207,7 +213,8 @@ function runQuestions(host, qs, { mode = 'practice', onDone, seconds = 60 }) {
         if (!ok) { firstTry.add(q); queue.push(q); }
       }
       reveal.hidden = false;
-      fb.replaceChildren(h(`div.note.${ok ? 'jade' : 'seal'}`, ok ? 'Đúng rồi!' : `Chưa đúng${q.type ? `: đáp án ${q.it.py || q.it.w}` : ''}. ${mode === 'practice' ? 'Câu này sẽ quay lại ở cuối.' : ''}`));
+      fb.replaceChildren(h(`div.note.react.${ok ? 'jade' : 'seal'}`, mascotImg(ok ? 'khen' : 'dong-vien', 'react-img'),
+        h('span', ok ? 'Đúng rồi!' : `Chưa đúng${q.type ? `: đáp án ${q.it.py || q.it.w}` : ''}. ${mode === 'practice' ? 'Câu này sẽ quay lại ở cuối, cố lên!' : 'Không sao, xem đáp án bên dưới.'}`)));
       if (mode === 'race') { setTimeout(next, ok ? 350 : 900); return; }
       body.append(h('button.btn.primary.block', { style: { marginTop: '12px' }, onclick: next }, queue.length || mode !== 'practice' ? 'Tiếp ›' : 'Xong'));
     };
@@ -314,7 +321,7 @@ async function renderLesson(course, id, el) {
     const s = steps[cur];
     if (s.k === 'review') {
       const pool = shuffle(lessonPool(prevL)).slice(0, 5);
-      host.replaceChildren(guide(`Ôn lại 5 câu nghe của bài ${prevL.id} trước khi học tiếp.`), h('div'));
+      host.replaceChildren(guide(`Ôn lại 5 câu nghe của bài ${prevL.id} trước khi học tiếp.`, null, 'nghe'), h('div'));
       stop = runQuestions(host.lastChild, pool, { mode: 'review', onDone: ({ right, total }) => {
         host.lastChild.replaceChildren(h('div.card', h('h2', `Ôn bài cũ: ${right}/${total}`), h('p.muted', right >= 4 ? 'Nhớ tốt. Vào bài mới thôi.' : 'Chưa chắc lắm, nhưng cứ học tiếp, phần ôn lỗi sẽ nhắc lại.'), nextBtn()));
       } });
@@ -338,7 +345,7 @@ async function renderLesson(course, id, el) {
         },
       }, o)));
       host.replaceChildren(
-        guide(W.lead),
+        guide(W.lead, null, 'nghe'),
         h('div.card', tiles,
           h('button.btn.jade', { style: { marginTop: '10px' }, onclick: async () => { for (const it of items) await sayWait(it); } }, '▶ Nghe lần lượt'),
           h('h3', { style: { marginTop: '16px' } }, W.q || 'Bạn đoán thế nào?'),
@@ -359,7 +366,7 @@ async function renderLesson(course, id, el) {
         } });
       };
       host.replaceChildren(
-        guide(S.lead || S.title),
+        guide(S.lead || S.title, null, 'giai-thich'),
         h('div.card.pron-learn',
           h('h2', S.title),
           S.art ? (Array.isArray(S.art) ? h('div.pron-figs', ...S.art.map((a) => h('figure', artEl(a), a.cap ? h('figcaption', a.cap) : null))) : artEl(S.art)) : null,
@@ -377,7 +384,7 @@ async function renderLesson(course, id, el) {
       return;
     }
     if (s.k === 'break') {
-      host.replaceChildren(guide('Nghỉ một chút nhé. Não cần vài phút để cất những âm vừa học.'),
+      host.replaceChildren(guide('Nghỉ một chút nhé. Não cần vài phút để cất những âm vừa học.', null, 'nghi'),
         h('div.card', h('h2', 'Nghỉ giữa bài'), h('ul.muted',
           h('li', 'Đứng dậy, vươn vai, uống ngụm nước.'),
           h('li', 'Nói thầm lại 3 âm vừa học, không cần nhìn màn hình.'),
@@ -406,14 +413,14 @@ async function renderLesson(course, id, el) {
           h('div.grow', h(`div.pair-en${LANG === 'zh' ? '.cn' : ''}`, it.w), h('div.pair-vi', LANG === 'zh' ? tonedSpan(it.py) : it.py), it.vi ? h('div.small.faint', it.vi) : null, res),
           h('div.pair-act', playBtn(it), mic)));
       }
-      host.replaceChildren(guide(canListen ? 'Nghe mẫu rồi bấm 🎤 nói theo. Máy chấm mức "người nghe hiểu được", không khắt khe.' : 'Máy này chưa nghe được giọng nói. Hãy nghe mẫu rồi nói to theo từng dòng.'),
+      host.replaceChildren(guide(canListen ? 'Nghe mẫu rồi bấm 🎤 nói theo. Máy chấm mức "người nghe hiểu được", không khắt khe.' : 'Máy này chưa nghe được giọng nói. Hãy nghe mẫu rồi nói to theo từng dòng.', null, 'chao'),
         h('div.card', h('h2', 'Nói'), list, nextBtn()));
       return;
     }
     if (s.k === 'game') {
       const G = L.game || { t: 'race' };
       const box = h('div');
-      host.replaceChildren(guide(G.t === 'sort' ? `Xếp rổ: nghe từng âm rồi bỏ vào đúng rổ.` : 'Đua 60 giây: trả lời càng nhiều câu đúng càng tốt.'), box);
+      host.replaceChildren(guide(G.t === 'sort' ? `Xếp rổ: nghe từng âm rồi bỏ vào đúng rổ.` : 'Đua 60 giây: trả lời càng nhiều câu đúng càng tốt.', null, 'khen'), box);
       if (G.t === 'sort') sortGame(box, G, () => box.append(nextBtn()));
       else { raceGame(box, lessonPool(L), () => box.append(nextBtn())); stop = () => { raceStop?.(); raceStop = null; }; }
       return;
@@ -431,7 +438,7 @@ async function renderLesson(course, id, el) {
         }
         const nextL = course.lessons.find((x) => x.id === id + 1);
         box.replaceChildren(h('div.card',
-          h('h2', `${right}/${total} câu đúng`),
+          h('div.row', { style: { gap: '12px', alignItems: 'center' } }, mascotImg(pass ? 'khen' : 'dong-vien', 'result-img'), h('h2', `${right}/${total} câu đúng`)),
           h(`div.note.${pass ? 'jade' : 'seal'}`, pass ? 'Qua bài! Bài sau đã mở.' : 'Chưa đạt 8/10. Xem lại các mục rồi kiểm tra lại nhé.'),
           h('div.btn-row', { style: { marginTop: '12px' } },
             pass && nextL ? h('a.btn.primary', { href: `#/pron/${LANG}/${nextL.id}` }, `Sang Bài ${nextL.id} ›`) : null,
@@ -507,6 +514,7 @@ async function renderHub(course, el) {
 
   el.append(...kids(
     h('div.pron-hero',
+      mascotImg('chao', 'hero-mascot'),
       h('div.small', course.kicker),
       h('h1', course.title),
       h('p', course.desc),
