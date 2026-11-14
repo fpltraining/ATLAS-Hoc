@@ -197,6 +197,10 @@ var G = window.G || (window.G = {});
     }
     // Kai đi theo sau, cách một khoảng
     var kx = P.x - 60 - K.x, ky = P.y + 20 - K.y, kd = Math.sqrt(kx * kx + ky * ky);
+    // hướng của Kai: theo hướng đang bay, đứng yên thì quay về phía người chơi
+    var kvx = kd > 30 ? kx : P.x - K.x, kvy = kd > 30 ? ky : P.y - K.y;
+    K.moving = kd > 30;
+    if (Math.abs(kvx) > 4 || Math.abs(kvy) > 4) K.dir = Math.abs(kvx) > Math.abs(kvy) * 0.8 ? (kvx < 0 ? 'left' : 'right') : (kvy < 0 ? 'up' : 'down');
     if (kd > 30) { K.x += (kx / kd) * Math.min(kd, SPEED * 0.95 * dt * (kd > 160 ? 1.6 : 1)); K.y += (ky / kd) * Math.min(kd, SPEED * 0.95 * dt * (kd > 160 ? 1.6 : 1)); }
 
     // chỗ tương tác gần nhất → nút hành động
@@ -536,9 +540,16 @@ var G = window.G || (window.G = {});
     G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 9, P.moving, 0.72);
   }
   function drawKai() {
-    var bob = Math.sin(Date.now() / 260) * 4;
+    var bob = Math.sin(Date.now() / 260) * 4, dir = K.dir || 'down';
     shadow(K.x, K.y, 16);
-    G.drawAsset(ctx, 'kai_follow.png', K.x - 38, K.y - 82 + bob, 76, 76);
+    // có hình riêng từng hướng (kai_up / kai_left) thì dùng; chưa có thì lật hình mặt trước theo hướng đi
+    var side = dir === 'left' || dir === 'right';
+    var name = dir === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : side && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
+    var flip = name === 'kai_left.png' ? dir === 'right' : dir === 'left';
+    var tilt = K.moving ? (dir === 'left' ? -0.12 : dir === 'right' ? 0.12 : 0) : 0;
+    ctx.save(); ctx.translate(K.x, K.y - 44 + bob); ctx.rotate(tilt); ctx.translate(-K.x, -(K.y - 44 + bob));
+    G.drawAsset(ctx, name, K.x - 38, K.y - 82 + bob, 76, 76, flip);
+    ctx.restore();
   }
   function drawTeacher(id) {
     var n = G.NPCS[id];
