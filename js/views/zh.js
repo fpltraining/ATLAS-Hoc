@@ -7,6 +7,8 @@ import * as content from '../content.js';
 import { h, section, progressBar, plural } from '../ui.js';
 import { cardSummary, mastery } from '../progress.js';
 import { zhPath, pathStrip } from '../path.js';
+import { buildToday } from '../plan.js';
+import { langDayCard } from '../daycard.js';
 
 export async function render() {
   const [idx, cards, progress, read, stories] = await Promise.all([
@@ -37,6 +39,8 @@ export async function render() {
       onclick: async () => { await store.setSetting('zhSkipPron', true); location.hash = '#/zh'; window.dispatchEvent(new HashChangeEvent('hashchange')); },
     }, 'Đã đọc được pinyin và 4 thanh? Vào thẳng HSK 1') : null,
   ));
+  const today = langDayCard(await buildToday(), 'zh', { onToggle: () => window.dispatchEvent(new HashChangeEvent('hashchange')) });
+  if (today) el.append(today);
   el.append(h('div.card', h('div.row.spread', h('h3', 'Lộ trình tiếng Trung'), h('span.small.faint', '✓ xong · ● đang học')), pathStrip(zp)));
 
   /* ---- luyện thêm ---- */
