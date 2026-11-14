@@ -97,6 +97,16 @@ export function confetti({ count = 110, duration = 1700, y = 0.32 } = {}) {
   requestAnimationFrame(frame);
 }
 
+/* ---------- dáng nhân vật ----------
+   Han và Kai đủ 12 dáng (ảnh ChatGPT đợt 1–2); nhân vật nào thiếu dáng thì dùng dáng cũ gần nghĩa nhất. */
+const ALL_POSES = ['mung', 'khen', 'nghi', 'boi-roi', 'dong-vien', 'giai-thich', 'doc', 'viet', 'nghe', 'ngu', 'chao', 'thang'];
+const NEW_POSES = { han: new Set(ALL_POSES), kai: new Set(ALL_POSES) };
+const OLD = { mung: 'khen', thang: 'khen', 'boi-roi': 'nghi', doc: 'giai-thich', viet: 'giai-thich', ngu: 'nghi' };
+export function poseSrc(who, pose) {
+  const p = NEW_POSES[who]?.has(pose) || !OLD[pose] ? pose : OLD[pose];
+  return `img/mascot/${who}-${p}.webp`;
+}
+
 /* ---------- thẻ ăn mừng (không chặn màn hình) ---------- */
 let current = null;
 let shownAt = 0;
@@ -111,7 +121,7 @@ export function celebrate(opts = {}) {
   closeCard();
   const pose = opts.pose || 'khen';
   let pic;
-  if (opts.who) pic = h('img.fx-ava', { src: `img/mascot/${opts.who}-${pose}.webp`, alt: '' });
+  if (opts.who) pic = h('img.fx-ava', { src: poseSrc(opts.who, pose), alt: '' });
   else { pic = h('span.fx-art'); pic.innerHTML = artSvg(opts.art || 'party-popper', 64); }
   const card = h(`div.fx-card${opts.big ? '.big' : ''}`, { role: 'status' },
     pic,
