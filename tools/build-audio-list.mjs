@@ -113,6 +113,10 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
     add('en', `To ${n}, please.`); add('en', n);
   }
   for (const g of ['Morning!', 'Hey there!', 'Evening!']) add('en', `${g} Where you headed?`);
+  // câu người đi đường nói (engine.js, LINES)
+  const eng = fs.readFileSync(path.join(ROOT, 'game/js/engine.js'), 'utf8');
+  const lb = eng.slice(eng.indexOf('var LINES = ['), eng.indexOf('];', eng.indexOf('var LINES = [')));
+  [...lb.matchAll(/\['((?:[^'\\]|\\.)*)', '/g)].forEach((m, i) => add('en', m[1].replace(/\\'/g, "'"), alt(i)));
 }
 
 const list = [...items.values()];

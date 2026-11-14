@@ -160,7 +160,33 @@ async function router() {
   if (route.name === 'pinyin') store.markLesson('pinyinSeen', { seen: true }).catch(() => {});
   for (const t of document.querySelectorAll('.tab')) t.classList.toggle('on', t.dataset.tab === tab);
   refreshDueBadge();
+  refreshDayRing();
 }
+
+/* Vòng tiến độ hôm nay ở góc phải thanh trên: phút đã học / quỹ thời gian, số việc đã xong */
+let ringLast = -1;
+async function refreshDayRing() {
+  try {
+    const { buildToday, minsByLang } = await import('./plan.js');
+    const plan = await buildToday();
+    const m = minsByLang(plan.day.secs);
+    const mins = m.en + m.zh + m.all, budget = plan.budget || 120;
+    const done = plan.steps.filter((s) => s.done).length, all = plan.steps.length;
+    // tiến độ = trung bình của phút đã học và việc đã xong (học đủ giờ mà bỏ việc thì chưa tròn vòng)
+    const pct = Math.min(100, Math.round(((Math.min(1, mins / budget) + (all ? done / all : 0)) / 2) * 100));
+    const el = document.getElementById('day-ring');
+    el.hidden = false;
+    el.style.setProperty('--p', pct);
+    el.classList.toggle('full', pct >= 100);
+    document.getElementById('dr-pct').textContent = pct >= 100 ? '✓' : pct + '%';
+    document.getElementById('dr-min').textContent = `${mins}/${budget}′`;
+    document.getElementById('dr-sub').textContent = `${done}/${all} việc`;
+    el.title = `Hôm nay: ${mins}/${budget} phút, ${done}/${all} việc`;
+    if (ringLast >= 0 && pct > ringLast) { el.classList.remove('bump'); void el.offsetWidth; el.classList.add('bump'); }
+    ringLast = pct;
+  } catch { /* chưa có dữ liệu: ẩn */ }
+}
+setInterval(refreshDayRing, 60000);
 
 function showError(msg, err) {
   console.error(err);
