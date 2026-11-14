@@ -9,16 +9,18 @@ var G = window.G || (window.G = {});
   };
 
   G.goCity = function (id) {
-    if (id !== 'en') return;
     document.getElementById('lobby').style.display = 'none';
     document.getElementById('play').style.display = 'block';
     G.updateHud();
-    var v = G.S.viTri;
-    if (v && G.SCENES[v.canh] && v.canh !== 'classroom_en') G.enterScene(v.canh, { x: v.x, y: v.y, dir: 'down' });
+    // vị trí đã lưu thuộc thành phố này thì đi tiếp từ đó, không thì vào cổng chính của thành phố
+    var v = G.S.viTri, sv = v && G.SCENES[v.canh];
+    if (sv && sv.city === id && sv.kind !== 'classroom') G.enterScene(v.canh, { x: v.x, y: v.y, dir: 'down' });
+    else if (id === 'zh') G.enterScene('city_zh');
     else G.enterScene('home_en');
     var sc = G.S.viTri.canh;
     G.kaiSay(sc === 'home_en' ? 'Chào ' + G.playerName() + '! Đi học thôi: bến xe buýt ở góc trên bên phải, ga tàu điện ở góc dưới bên phải.'
-      : sc === 'city_en' ? 'Trường Anh ngữ ở góc dưới bên trái, có biển màu đỏ. Bến xe buýt và ga tàu điện để về nhà ở hai góc dưới.' : 'Tiếp tục học nào!');
+      : sc === 'city_en' ? 'Trường Anh ngữ ở góc dưới bên trái, có biển màu đỏ. Bến xe buýt và ga tàu điện để về nhà ở hai góc dưới.'
+      : sc === 'city_zh' ? '欢迎！Chào mừng tới Trường Lạc trấn. Học viện Hán ngữ ở góc dưới bên trái, sân bay ở phía trên.' : 'Tiếp tục học nào!');
   };
 
   G.goLobby = function () {
