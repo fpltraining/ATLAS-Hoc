@@ -165,7 +165,7 @@ async function router() {
 function showError(msg, err) {
   console.error(err);
   viewEl.replaceChildren(h('div.empty',
-    h('img.empty-art', { src: 'img/moments/offline.webp', alt: '' }),
+    h('img.empty-art', { src: navigator.onLine ? 'img/moments/error.webp' : 'img/moments/offline.webp', alt: '' }),
     h('p', navigator.onLine ? msg : 'Đang mất mạng. Những bài đã mở trước đó vẫn học được.'),
     h('p.small.faint', String(err?.message || err || '')),
     h('p.small.faint', 'Thường do app vừa cập nhật bản mới. Bấm Tải lại app là xong.'),
@@ -319,8 +319,9 @@ function listenCelebrations() {
     try {
       const [{ emblem }, fx] = await Promise.all([import('./xp.js'), import('./fx.js')]);
       const r = e.detail.to;
-      const node = emblem(r, 140);
-      node.classList.add('fx-shine');
+      const shield = emblem(r, 96);
+      shield.classList.add('fx-shine');
+      const node = h('div.rankup-art', h('img', { src: 'img/moments/rankup.webp', alt: '' }), shield);
       fx.spotlight(node, { title: `Thăng hạng: ${r.label}`, sub: r.next ? `Tiếp theo: ${r.next}` : 'Rank cao nhất rồi!' });
     } catch (err) { console.warn(err); }
   });
