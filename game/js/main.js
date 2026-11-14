@@ -18,7 +18,7 @@ var G = window.G || (window.G = {});
     else G.enterScene('home_en');
     var sc = G.S.viTri.canh;
     G.kaiSay(sc === 'home_en' ? 'Chào ' + G.playerName() + '! Đi học thôi: bến xe buýt ở góc trên bên phải, ga tàu điện ở góc dưới bên phải.'
-      : sc === 'city_en' ? 'Trường Anh ngữ ở phía dưới, có biển màu đỏ. Bến xe buýt và ga tàu điện để về nhà ở hai góc dưới.' : 'Tiếp tục học nào!');
+      : sc === 'city_en' ? 'Trường Anh ngữ ở góc dưới bên trái, có biển màu đỏ. Bến xe buýt và ga tàu điện để về nhà ở hai góc dưới.' : 'Tiếp tục học nào!');
   };
 
   G.goLobby = function () {

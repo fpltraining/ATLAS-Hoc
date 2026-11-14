@@ -298,7 +298,7 @@ var G = window.G || (window.G = {});
   }
 
   /* Vẽ cảnh đi xe: toàn bộ là hình đặt từ ChatGPT, thiếu hình thì hiện ô màu ghi tên file.
-     ride_bg_*.png là dải phố dài lặp lại được, cuộn ngang khi xe chạy; mặt đường / đường ray ở 12% dưới cùng. */
+     ride_bg_*.png là dải phố dài lặp lại được, cuộn ngang khi xe chạy; bánh xe đặt lên mặt đường / đường ray. */
   function draw() {
     if (!W || cv.clientWidth !== W || cv.clientHeight !== H) resize();
     if (!W || !H) return;
@@ -312,7 +312,7 @@ var G = window.G || (window.G = {});
       for (var x = -off; x < W; x += bw) g.drawImage(bg.img, x, 0, bw + 1, H);
     } else G.drawPlaceholder(g, bgName, 6, 6, W - 12, H - 12);
 
-    var ground = H * 0.88;
+    var ground = H * (R.type === 'bus' ? 0.95 : 0.76);   // mặt đường / mặt ray trong ảnh nền
     var vx = W * 0.42;
     if (R.phase === 'arrive') { var a = Math.min(1, R.t / ARRIVE); vx = -W * 0.7 + (W * 1.12) * (1 - Math.pow(1 - a, 3)); }
     if (R.signName) {
