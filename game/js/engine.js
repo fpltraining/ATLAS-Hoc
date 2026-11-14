@@ -207,7 +207,9 @@ var G = window.G || (window.G = {});
     zoom = Math.max(baseZoom, W / scene.w, H / scene.h);
     var vw = W / zoom, vh = H / zoom;
     var cx = clamp(P.x - vw / 2, 0, Math.max(0, scene.w - vw)) - (vw > scene.w ? (vw - scene.w) / 2 : 0);
-    var cy = clamp(P.y - vh / 2, 0, Math.max(0, scene.h - vh)) - (vh > scene.h ? (vh - scene.h) / 2 : 0);
+    // chừa chỗ cho thanh trên + thanh nhiệm vụ: mép trên bản đồ hiện ngay dưới hai thanh này
+    var topUI = 128 / zoom;
+    var cy = clamp(P.y - vh / 2, -topUI, Math.max(-topUI, scene.h - vh)) - (vh > scene.h + topUI ? (vh - scene.h - topUI) / 2 : 0);
     // camera đi theo mượt (trễ nhẹ), vào cảnh mới thì đặt ngay
     if (camSnap) { cam.x = cx; cam.y = cy; camSnap = false; }
     else { var kf = Math.min(1, dt * 7); cam.x += (cx - cam.x) * kf; cam.y += (cy - cam.y) * kf; }
@@ -542,15 +544,15 @@ var G = window.G || (window.G = {});
       var door = DR[d], open = G.roomOpen(d, DR), p = G.S.phong[door.room];
       var stars = p ? (p.sao === 3 ? '★★★' : p.sao === 2 ? '★★☆' : p.sao === 1 ? '★☆☆' : '') : '';
       // khoá xích trên cửa chưa mở (có hình door_lock.png thì vẽ, chưa có thì chỉ hiện biển 🔒)
-      if (!open && G.asset('door_lock.png').ok) G.drawAsset(ctx, 'door_lock.png', door.x - 75, 110, 150, 150);
+      if (!open && G.asset('door_lock.png').ok) G.drawAsset(ctx, 'door_lock.png', door.x - 70, 120, 140, 140);
       ctx.fillStyle = open ? 'rgba(47,122,99,.95)' : 'rgba(27,33,64,.85)';
-      G.roundRect(ctx, door.x - 64, 150, 128, 50, 12); ctx.fill();
+      G.roundRect(ctx, door.x - 64, 250, 128, 50, 12); ctx.fill();
       ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.font = '800 19px -apple-system, system-ui, sans-serif';
-      ctx.fillText((open ? '' : '🔒 ') + door.label, door.x, 166);
+      ctx.fillText((open ? '' : '🔒 ') + door.label, door.x, 266);
       ctx.font = '600 15px -apple-system, system-ui, sans-serif';
       ctx.fillStyle = '#ffd56b';
-      ctx.fillText(stars || (open ? 'Đang mở' : 'Khoá'), door.x, 187);
+      ctx.fillText(stars || (open ? 'Đang mở' : 'Khoá'), door.x, 287);
     }
   }
 
