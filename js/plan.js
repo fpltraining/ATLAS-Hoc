@@ -72,6 +72,32 @@ export function quotaToday(budget, type, dueCount) {
   return { en: q.en, zh: q.zh, scale: 1, reason: '' };
 }
 
+const isZhCard = (c) => !c.lang || c.lang === 'zh';
+
+/* ---------- thời gian theo ngôn ngữ ------------------------------------------
+   Mỗi giây học được ghi vào một khối (track). Khối nào thuộc ngôn ngữ nào: */
+export const TRACK_LANG = { en: 'en', read: 'en', work: 'en', reviewEn: 'en', zh: 'zh', readZh: 'zh', reviewZh: 'zh', review: 'all', know: 'all' };
+export const LANG_NAME = { en: 'Tiếng Anh', zh: 'Tiếng Trung', all: 'Việc chung' };
+
+/** Số phút đã học hôm nay của từng ngôn ngữ */
+export function minsByLang(secs = {}) {
+  const m = { en: 0, zh: 0, all: 0 };
+  for (const [k, v] of Object.entries(secs)) m[TRACK_LANG[k] || 'all'] += v;
+  return { en: Math.round(m.en / 60), zh: Math.round(m.zh / 60), all: Math.round(m.all / 60) };
+}
+
+/** Tóm tắt một ngôn ngữ trong kế hoạch hôm nay: việc, đã xong, phút dự kiến, phút đã học */
+export function langDay(plan, lang) {
+  const steps = plan.steps.filter((s) => s.lang === lang);
+  return {
+    lang, steps,
+    done: steps.filter((s) => s.done).length,
+    planned: steps.reduce((a, s) => a + s.mins, 0),
+    mins: minsByLang(plan.day.secs)[lang],
+    next: steps.find((s) => !s.done) || null,
+  };
+}
+
 /* ---------- vị trí trong khoá tiếng Anh ------------------------------------- */
 
 export function curSession(en, course) {
@@ -137,19 +163,30 @@ export async function buildToday() {
     blocks.readZh = 0;
   }
 
-  /* ---- ôn ---- */
+  /* ---- ôn: tách riêng thẻ tiếng Anh và thẻ tiếng Trung ----
+     Quỹ ôn chia theo số thẻ tới hạn của mỗi bên. Ngôn ngữ chưa có thẻ nào thì không có việc ôn,
+     phần thời gian đó trả về bài học của chính ngôn ngữ ấy. */
   if (blocks.review) {
-    const capCards = Math.round((blocks.review * 60) / SECS_PER_CARD);
-    const n = Math.min(due, capCards);
-    const dueEn = dueCards.filter((c) => c.lang === 'en').length;
-    const dueZh = dueCards.filter((c) => !c.lang || c.lang === 'zh').length;
-    steps.push({
-      key: 'review', mins: blocks.review, href: '#/review', title: 'Ôn thẻ',
-      desc: due
-        ? `${n} thẻ: ${dueEn} tiếng Anh, ${dueZh} tiếng Trung${due > capCards ? `. Còn ${due - capCards} thẻ để mai` : ''}`
-        : 'Chưa có thẻ nào tới hạn. Xong phần này rồi.',
-      auto: due === 0,
-    });
+    const langsOn = settings.langs || 'both';
+    const parts = [];
+    if (langsOn !== 'zh') parts.push({ lg: 'en', all: cards.filter((c) => c.lang === 'en').length, due: dueCards.filter((c) => c.lang === 'en').length });
+    if (langsOn !== 'en') parts.push({ lg: 'zh', all: cards.filter(isZhCard).length, due: dueCards.filter(isZhCard).length });
+    const live = parts.filter((p) => p.all > 0);
+    const dueSum = live.reduce((a, p) => a + p.due, 0);
+    for (const p of parts) {
+      let mins = 0;
+      if (p.all > 0) mins = live.length === 1 ? blocks.review : Math.round(blocks.review * (dueSum ? p.due / dueSum : 0.5));
+      else blocks[p.lg] += Math.round(blocks.review / parts.length); // chưa có thẻ: dồn cho bài học
+      if (!p.all) continue;
+      if (p.due && mins < 5) mins = 5;
+      const cap = Math.round((mins * 60) / SECS_PER_CARD);
+      steps.push({
+        key: p.lg === 'en' ? 'reviewEn' : 'reviewZh', lang: p.lg, mins, href: `#/review?lang=${p.lg}`,
+        title: p.lg === 'en' ? 'Ôn thẻ tiếng Anh' : 'Ôn thẻ tiếng Trung',
+        desc: p.due ? `${Math.min(p.due, cap)} thẻ tới hạn${p.due > cap ? ` · còn ${p.due - cap} thẻ để mai` : ''}` : 'Chưa có thẻ nào tới hạn. Xong phần này rồi.',
+        auto: p.due === 0,
+      });
+    }
   }
 
   /* ---- tiếng Anh ---- */
@@ -158,7 +195,7 @@ export async function buildToday() {
   if (blocks.en) {
     const left = enBlocks(stage, n, course).filter((b) => !en.sess?.[stage]?.[n]?.blocks?.[b.key]);
     steps.push({
-      key: 'en', mins: blocks.en, href: '#/en/session', title: 'Tiếng Anh: học bài',
+      key: 'en', mins: blocks.en, lang: 'en', href: '#/en/session', title: 'Tiếng Anh: học bài',
       desc: `${course.stages[stage].name}, buổi ${n}: ${enTitle(stage, n, course)}. ${left.map((b) => b.label).join(', ')}${quota.en ? ` · tối đa ${quota.en} từ mới` : ''}`,
     });
   }
@@ -167,7 +204,7 @@ export async function buildToday() {
   if (blocks.read) {
     const nx = content.nextReading(storyIdx.filter((s) => s.lang === 'en'), read);
     steps.push({
-      key: 'read', mins: blocks.read, title: 'Tiếng Anh: đọc truyện',
+      key: 'read', mins: blocks.read, lang: 'en', title: 'Tiếng Anh: đọc truyện',
       href: nx ? `#/reader/${nx.story.id}/${nx.chapter.n}` : '#/read/en',
       desc: nx ? `${nx.story.title}${nx.story.chapters.length > 1 ? `, chương ${nx.chapter.n}` : ''} · ${nx.story.level}` : 'Chọn một bài trong thư viện đọc',
     });
@@ -178,7 +215,7 @@ export async function buildToday() {
     const zp = await zhPath();
     const nx = zp.next;
     steps.push({
-      key: 'zh', mins: blocks.zh, href: nx.href,
+      key: 'zh', mins: blocks.zh, lang: 'zh', href: nx.href,
       title: nx.kind === 'pron' ? `Tiếng Trung: phát âm bài ${nx.title.match(/bài (\d+)/)[1]}` : 'Tiếng Trung: học bài',
       desc: nx.kind === 'pron'
         ? `${nx.title.replace(/^Phát âm bài \d+: /, '')} · chặng đầu tiên, học xong 10 bài mới vào HSK 1`
@@ -190,7 +227,7 @@ export async function buildToday() {
   if (blocks.readZh) {
     const nx = content.nextReading(storyIdx.filter((s) => s.lang === 'zh'), read);
     steps.push({
-      key: 'readZh', mins: blocks.readZh, title: 'Tiếng Trung: đọc truyện',
+      key: 'readZh', mins: blocks.readZh, lang: 'zh', title: 'Tiếng Trung: đọc truyện',
       href: nx ? `#/reader/${nx.story.id}/${nx.chapter.n}` : '#/read/zh',
       desc: nx ? `${nx.story.title}${nx.story.chapters.length > 1 ? `, chương ${nx.chapter.n}` : ''} · ${nx.story.level}` : 'Chọn một truyện',
     });
@@ -200,7 +237,7 @@ export async function buildToday() {
   if (blocks.work) {
     const d = workData.days.findIndex((_, i) => !wk.done[i + 1]) + 1 || 1;
     steps.push({
-      key: 'work', mins: blocks.work, title: 'Tiếng Anh nghề', href: `#/work/day/${d}`,
+      key: 'work', mins: blocks.work, lang: 'en', title: 'Tiếng Anh nghề', href: `#/work/day/${d}`,
       desc: `Ngày ${d}/30: ${workData.days[d - 1].title}`,
     });
   }
@@ -210,12 +247,15 @@ export async function buildToday() {
     const id = knowData.order.find((x) => !kn.done[x]);
     const L = knowData.lessons.find((l) => l.id === id);
     steps.push({
-      key: 'know', mins: blocks.know, title: 'Kiến thức và nhật ký',
+      key: 'know', mins: blocks.know, lang: 'all', title: 'Kiến thức và nhật ký',
       href: L ? `#/know/${L.id}` : '#/know',
       desc: L ? `${L.title}, rồi ghi một dòng nhật ký` : 'Ghi một dòng nhật ký',
     });
   }
 
-  for (const s of steps) s.done = !!day.steps[s.key] || !!s.auto;
+  // Xếp theo nhóm: tiếng Anh, rồi tiếng Trung, rồi việc chung; trong nhóm giữ thứ tự ôn → học → đọc
+  const ORDER = { en: 0, zh: 1, all: 2 };
+  steps.sort((a, b) => ORDER[a.lang] - ORDER[b.lang]);
+  for (const s of steps) s.done = !!day.steps[s.key] || !!s.auto || (s.key.startsWith('review') && !!day.steps.review);
   return { steps, budget, type, due, quota: isNew ? { ...quota, reason: '' } : quota, day, settings, isNew };
 }

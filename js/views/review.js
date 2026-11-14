@@ -340,7 +340,9 @@ export async function render(route) {
 
   async function finish() {
     cleanupPad();
-    await store.markStep('review');
+    // đánh dấu xong đúng việc ôn của ngôn ngữ đang ôn; ôn chung thì xong cả hai
+    if (lang !== 'zh') await store.markStep('reviewEn');
+    if (lang !== 'en') await store.markStep('reviewZh');
     const pct = queue.length ? Math.round((S.correct / queue.length) * 100) : 0;
     bodyEl.replaceChildren(h('div.card', { style: { maxWidth: '430px', margin: '24px auto' } },
       h('div.center',

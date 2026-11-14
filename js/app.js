@@ -56,6 +56,18 @@ const TAB = {
   lib: 'lib', drill: 'lib', numbers: 'lib', notes: 'lib', know: 'lib', stats: 'stats',
 };
 
+/* Giây học ghi vào khối của đúng ngôn ngữ: đọc truyện tiếng Trung không tính vào tiếng Anh,
+   ôn thẻ tách theo ngôn ngữ đang ôn (ôn chung cả hai thì ghi vào khối chung). */
+function trackOf(route) {
+  const n = route.name;
+  if (n === 'speak') return route.args[0] === 'zh' ? 'zh' : 'en';
+  if (n === 'pron') return route.args[0] === 'en' ? 'en' : 'zh';
+  if (n === 'reader') return String(route.args[0]).startsWith('zh-') ? 'readZh' : 'read';
+  if (n === 'read') return route.args[0] === 'zh' ? 'readZh' : 'read';
+  if (n === 'review') return route.query.lang === 'en' ? 'reviewEn' : route.query.lang === 'zh' ? 'reviewZh' : 'review';
+  return TRACK[n] || null;
+}
+
 /* Đọc truyện và ôn thẻ thuộc mục của đúng ngôn ngữ đang xem */
 function tabOf(route) {
   if (route.name === 'read') return route.args[0] === 'zh' ? 'zh' : 'en';
@@ -99,7 +111,7 @@ async function router() {
   try { currentCleanup?.(); } catch { /* bỏ qua */ }
   currentCleanup = null;
   audio.stop();
-  currentTrack = route.name === 'speak' ? (route.args[0] === 'zh' ? 'zh' : 'en') : route.name === 'pron' ? (route.args[0] === 'en' ? 'en' : 'zh') : TRACK[route.name] || null;
+  currentTrack = trackOf(route);
 
   viewEl.replaceChildren(h('div.empty', h('span.spin')));
   viewEl.className = 'view';

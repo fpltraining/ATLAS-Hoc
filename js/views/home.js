@@ -1,8 +1,9 @@
 /* Hôm nay: mở app là biết ngay phải làm gì, làm tới đâu là đủ. */
 
 import * as store from '../store.js';
-import { buildToday, DAY_NAME } from '../plan.js';
-import { h, progressBar } from '../ui.js';
+import { buildToday, DAY_NAME, langDay, LANG_NAME } from '../plan.js';
+import { langMeter, stepList, LANG_MARK } from '../daycard.js';
+import { h } from '../ui.js';
 import { streak } from '../progress.js';
 import { rankCard } from '../xp.js';
 import { zhPath, enPath, pathCard } from '../path.js';
@@ -14,14 +15,12 @@ export async function render() {
   const ch = challenges[store.dayKey()];
   const el = h('div.stack');
 
-  const totalSecs = Object.values(plan.day.secs || {}).reduce((a, b) => a + b, 0);
-  const minsToday = Math.round(totalSecs / 60);
-  const planned = plan.steps.reduce((a, s) => a + s.mins, 0);
-  const doneCount = plan.steps.filter((s) => s.done).length;
+  // Tiến độ tách theo ngôn ngữ: mỗi nhóm có số việc, số phút và thanh riêng
+  const groups = ['en', 'zh', 'all'].map((lg) => langDay(plan, lg)).filter((g) => g.steps.length);
+  const meters = groups.filter((g) => g.lang !== 'all');
   const next = plan.steps.find((s) => !s.done);
   const now = new Date();
-
-  const nextIdx = next ? plan.steps.indexOf(next) + 1 : 0;
+  const refresh = () => { location.hash = '#/home'; window.dispatchEvent(new HashChangeEvent('hashchange')); };
 
   /* ---- lần đầu: mời trả lời 4 câu để có lộ trình riêng ---- */
   if (!plan.settings.onboarded) {
@@ -35,25 +34,21 @@ export async function render() {
     ));
   }
 
-  /* ---- đầu trang: đúng một việc cần làm ngay ---- */
+  /* ---- đầu trang: đúng một việc cần làm ngay, tiến độ từng ngôn ngữ ---- */
+  const nextGroup = next ? groups.find((g) => g.lang === next.lang) : null;
   el.append(h('div.card.today-hero',
-    h('div.row.spread',
-      h('div',
-        h('div.small.hero-sub', `${WEEKDAY[now.getDay()]}, ${now.getDate()}/${now.getMonth() + 1} · ${DAY_NAME[plan.type]}`),
-        h('div.streak', { title: `Chuỗi dài nhất: ${st.best} ngày` },
-          '🔥 ', st.cur ? h('b', String(st.cur)) : null, st.cur ? ' ngày học liên tiếp' : 'Học hôm nay để bắt đầu chuỗi ngày',
-          st.cur && !st.todayOn ? h('span.small', ' · học hôm nay để giữ chuỗi') : null),
-      ),
-      h('div.today-time', h('b', String(minsToday)), h('span', `/${planned} phút`)),
-    ),
+    h('div.small.hero-sub', `${WEEKDAY[now.getDay()]}, ${now.getDate()}/${now.getMonth() + 1} · ${DAY_NAME[plan.type]}`),
+    h('div.streak', { title: `Chuỗi dài nhất: ${st.best} ngày` },
+      '🔥 ', st.cur ? h('b', String(st.cur)) : null, st.cur ? ' ngày học liên tiếp' : 'Học hôm nay để bắt đầu chuỗi ngày',
+      st.cur && !st.todayOn ? h('span.small', ' · học hôm nay để giữ chuỗi') : null),
+    h('div.hero-meters', ...meters.map((g) => langMeter(g))),
     next
       ? h('div.hero-next',
-        h('div.small.hero-sub', `Việc ${nextIdx}/${plan.steps.length} hôm nay · khoảng ${next.mins} phút`),
+        h('div.small.hero-sub', `${LANG_MARK[next.lang]} ${LANG_NAME[next.lang]} · việc ${nextGroup.steps.indexOf(next) + 1}/${nextGroup.steps.length} · khoảng ${next.mins} phút`),
         h('h1.today-title', next.title),
         h('div.hero-desc', next.desc),
       )
-      : h('h1.today-title', 'Xong hết việc hôm nay 🎉'),
-    h('div', { style: { marginTop: '12px' } }, progressBar(plan.steps.length ? doneCount / plan.steps.length : 0)),
+      : h('h1.today-title', { style: { marginTop: '12px' } }, 'Xong hết việc hôm nay 🎉'),
     next
       ? h('a.btn.seal.block', { href: next.href, style: { marginTop: '14px' } }, 'Học ngay ›')
       : h('a.btn.ghost.block.on-hero', { href: '#/read', style: { marginTop: '14px' } }, 'Còn sức thì đọc thêm một bài'),
@@ -61,29 +56,15 @@ export async function render() {
 
   if (plan.quota.reason) el.append(h('div.note', plan.quota.reason));
 
-  /* ---- các việc theo thứ tự, đánh số ---- */
-  const list = h('div.plan-list');
-  plan.steps.forEach((s, i) => {
-    const isNext = next && s.key === next.key;
-    list.append(h(`div.today-step${s.done ? '.done' : ''}${isNext ? '.next' : ''}`,
-      h('span.step-no', String(i + 1)),
-      h('button.tick', {
-        'aria-label': s.done ? 'Bỏ đánh dấu' : 'Đánh dấu xong',
-        onclick: async () => {
-          await store.markStep(s.key, !s.done);
-          location.hash = '#/home';
-          window.dispatchEvent(new HashChangeEvent('hashchange'));
-        },
-      }, s.done ? '✓' : ''),
-      h('a.grow', { href: s.href },
-        h('div.row.spread', h('b', s.title, isNext ? h('span.pill.seal.step-now', 'Làm tiếp') : null), h('span.plan-time', `${s.mins}′`)),
-        h('div.small.faint', s.desc),
-      ),
+  /* ---- việc hôm nay, chia nhóm theo ngôn ngữ; mỗi nhóm có thanh tiến độ riêng ---- */
+  for (const g of groups) {
+    el.append(h('div.card.lang-day', { style: { padding: '10px 14px 6px' } },
+      g.lang === 'all'
+        ? h('div.row.spread', { style: { padding: '2px 0' } }, h('h3', LANG_NAME.all), h('span.small.faint', `${g.done}/${g.steps.length} việc`))
+        : langMeter(g),
+      stepList(g.steps, { next, onToggle: refresh }),
     ));
-  });
-  el.append(h('div.card', { style: { padding: '6px 14px' } },
-    h('div.row.spread', { style: { padding: '8px 0 2px' } }, h('h3', 'Việc hôm nay'), h('span.small.faint', 'làm lần lượt từ trên xuống')),
-    list));
+  }
 
   /* ---- lộ trình: đang ở chặng nào, sắp tới là gì ---- */
   const langs = plan.settings.langs || 'both';

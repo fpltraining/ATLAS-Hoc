@@ -6,7 +6,7 @@
 
 import * as store from '../store.js';
 import * as content from '../content.js';
-import { curSession, enBlocks, enTitle, weekOf, quotaToday, dayType } from '../plan.js';
+import { curSession, enBlocks, enTitle, weekOf, quotaToday, dayType, buildToday } from '../plan.js';
 import { InkPad } from '../pen/inkpad.js';
 import { sayEn, sayBtn, pair, wordy, scribble, diff, micCheck, hasMic } from '../kit.js';
 import { wordPic, sentencePics } from '../pics.js';
@@ -15,6 +15,7 @@ import { gradeButton, aiConfig } from '../ai.js';
 import { cardSummary } from '../progress.js';
 import { award } from '../xp.js';
 import { enPath, pathStrip } from '../path.js';
+import { langDayCard } from '../daycard.js';
 
 export async function render(route) {
   const sub = route.args[0];
@@ -49,6 +50,8 @@ async function hub() {
     h('a.btn.seal.block', { href: '#/en/session', style: { marginTop: '14px' } }, 'Học ngay ›'),
     !en.placed && !doneHere ? h('a.hero-link', { href: '#/en/placement' }, 'Biết chút ít tiếng Anh? Làm bài xếp lớp 10 phút để vào đúng chặng') : null,
   ));
+  const today = langDayCard(await buildToday(), 'en', { onToggle: () => window.dispatchEvent(new HashChangeEvent('hashchange')) });
+  if (today) el.append(today);
   el.append(h('div.card', h('div.row.spread', h('h3', 'Lộ trình tiếng Anh'), h('span.small.faint', '✓ xong · ● đang học')), pathStrip(await enPath())));
 
   el.append(h('h3.hub-head', 'Luyện thêm khi rảnh'));

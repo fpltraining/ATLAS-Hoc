@@ -6,8 +6,9 @@ import * as content from '../content.js';
 import { summarize, TYPE_LABEL } from '../srs.js';
 import { h, section, progressBar, todayKey, plural, toast } from '../ui.js';
 import { rankCard, xpState, RANKS, emblem } from '../xp.js';
+import { TRACK_LANG, LANG_NAME, minsByLang } from '../plan.js';
 
-const TRACK_NAME = { review: 'Ôn thẻ', en: 'Tiếng Anh', read: 'Đọc', zh: 'Tiếng Trung', work: 'Anh nghề', know: 'Kiến thức' };
+const TRACK_NAME = { reviewEn: 'Ôn thẻ', en: 'Học bài', read: 'Đọc truyện', work: 'Anh nghề', reviewZh: 'Ôn thẻ', zh: 'Học bài', readZh: 'Đọc truyện', review: 'Ôn thẻ chung', know: 'Kiến thức' };
 
 export async function render() {
   const [cards, logs, idx, progress, scores, days, read, en, course] = await Promise.all([
@@ -62,24 +63,33 @@ export async function render() {
     const secs = days[k]?.secs || {};
     week.push({ k, label: `${x.getDate()}/${x.getMonth() + 1}`, secs, total: Object.values(secs).reduce((a, b) => a + b, 0) });
   }
-  const maxMin = Math.max(30, ...week.map((w) => Math.round(w.total / 60)));
-  const chart = h('div.week-chart', ...week.map((w) => {
-    const m = Math.round(w.total / 60);
-    return h('div.week-col', { title: `${w.label}: ${m} phút` },
-      h('div.week-num.small.faint', m ? String(m) : ''),
-      h('div.week-bar', h('i', { style: { height: m ? `${Math.max(6, Math.round((m / maxMin) * 100))}%` : '0' } })),
+  // Hai cột mỗi ngày: tiếng Anh và tiếng Trung tính riêng (việc chung như ôn thẻ trộn, kiến thức không vẽ cột)
+  for (const w of week) w.by = minsByLang(w.secs);
+  const maxMin = Math.max(30, ...week.flatMap((w) => [w.by.en, w.by.zh]));
+  const bar = (m, cls) => h(`i.${cls}`, { style: { height: m ? `${Math.max(6, Math.round((m / maxMin) * 100))}%` : '0' } });
+  const chart = h('div',
+    h('div.week-legend.small', h('span', h('i.en'), 'Tiếng Anh'), h('span', h('i.zh'), 'Tiếng Trung')),
+    h('div.week-chart', ...week.map((w) => h('div.week-col', { title: `${w.label}: tiếng Anh ${w.by.en} phút, tiếng Trung ${w.by.zh} phút` },
+      h('div.week-num.small.faint', w.by.en || w.by.zh ? `${w.by.en} · ${w.by.zh}` : ''),
+      h('div.week-bar.two', bar(w.by.en, 'en'), bar(w.by.zh, 'zh')),
       h('div.small.faint', w.label),
-    );
-  }));
+    ))));
   const weekSecs = {};
   for (const w of week) for (const [k, v] of Object.entries(w.secs)) weekSecs[k] = (weekSecs[k] || 0) + v;
   const totalWeek = Object.values(weekSecs).reduce((a, b) => a + b, 0);
   el.append(section('7 ngày gần nhất', h('div.card',
     chart,
-    totalWeek ? h('div', { style: { marginTop: '12px' } }, ...Object.entries(weekSecs).sort((a, b) => b[1] - a[1]).map(([k, v]) => h('div', { style: { padding: '5px 0' } },
-      h('div.row.spread', h('span.small', TRACK_NAME[k] || k), h('span.small.faint', `${Math.round(v / 60)} phút`)),
-      h('div', { style: { marginTop: '3px' } }, progressBar(v / totalWeek)),
-    ))) : h('p.small.faint', { style: { margin: '10px 0 0' } }, 'Thời gian chỉ tính khi app đang mở và bạn có thao tác trong 2 phút gần nhất.'),
+    totalWeek ? h('div.week-split', ...['en', 'zh', 'all'].map((lg) => {
+      const rows = Object.entries(weekSecs).filter(([k]) => (TRACK_LANG[k] || 'all') === lg).sort((a, b) => b[1] - a[1]);
+      if (!rows.length) return null;
+      const sum = rows.reduce((a, [, v]) => a + v, 0);
+      return h('div',
+        h('div.row.spread', { style: { marginTop: '12px' } }, h('b', LANG_NAME[lg]), h('span.small', `${Math.round(sum / 60)} phút trong 7 ngày`)),
+        ...rows.map(([k, v]) => h('div', { style: { padding: '4px 0' } },
+          h('div.row.spread', h('span.small', TRACK_NAME[k] || k), h('span.small.faint', `${Math.round(v / 60)} phút`)),
+          h('div', { style: { marginTop: '3px' } }, progressBar(v / sum)),
+        )));
+    })) : h('p.small.faint', { style: { margin: '10px 0 0' } }, 'Thời gian chỉ tính khi app đang mở và bạn có thao tác trong 2 phút gần nhất.'),
   )));
 
   /* ---- đọc ---- */
