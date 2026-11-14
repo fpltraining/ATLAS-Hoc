@@ -4,8 +4,20 @@ var G = window.G || (window.G = {});
 (function () {
   G.S = G.load();
 
+  /* vòng tiến độ góc phải: số phòng A1 đã qua (kể cả phòng thi), XP */
+  var hudLast = -1;
   G.updateHud = function () {
-    document.getElementById('hud-xp').textContent = G.S.xp + ' XP';
+    var d = G.EN_HALL_DOORS, n = 0;
+    for (var i = 0; i < d.length; i++) if (G.roomPassed(d[i].room)) n++;
+    var pct = Math.round(n / d.length * 100), el = document.getElementById('hud-xp');
+    var grad = G.S.totNghiep.en && G.S.totNghiep.en.A1;
+    el.innerHTML = '';
+    el.style.setProperty('--p', pct);
+    el.className = 'hud-xp ring' + (grad ? ' full' : '');
+    el.appendChild(G.el('span.hr-ring', G.el('b', grad ? '🎓' : n + '/' + d.length)));
+    el.appendChild(G.el('span.hr-txt', G.el('b', grad ? 'Đã xong A1' : 'Cấp A1 · ' + pct + '%'), G.el('small', G.S.xp + ' XP')));
+    if (hudLast >= 0 && n > hudLast) { el.classList.add('bump'); setTimeout(function () { el.classList.remove('bump'); }, 800); }
+    hudLast = n;
   };
 
   G.goCity = function (id) {

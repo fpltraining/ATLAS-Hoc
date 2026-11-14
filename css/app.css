@@ -496,3 +496,24 @@ p  { margin: 0 0 10px; }
 .divider { height: 1px; background: var(--line); margin: 16px 0; border: 0; }
 .spin { display: inline-block; width: 17px; height: 17px; border: 2px solid var(--line); border-top-color: var(--seal); border-radius: 99px; animation: spin .7s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Vòng tiến độ hôm nay (góc phải thanh trên) ---------- */
+.day-ring { display: flex; align-items: center; gap: 6px; padding: 3px 9px 3px 3px; margin-left: 2px; border-radius: 99px;
+  background: linear-gradient(135deg, #1b2140, #2c3566); color: #fff; text-decoration: none; box-shadow: 0 3px 10px rgba(27,33,64,.25); flex: none; }
+.dr-ring { --c: #ff8a5c; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  background: conic-gradient(var(--c) calc(var(--p, 0) * 1%), rgba(255,255,255,.18) 0); }
+.dr-ring b { width: 26px; height: 26px; border-radius: 50%; background: #1b2140; display: grid; place-items: center; font-size: 9.5px; font-weight: 800; }
+.dr-txt { display: flex; flex-direction: column; line-height: 1.05; }
+.dr-txt b { font-size: 12.5px; font-weight: 800; }
+.dr-txt small { font-size: 10px; opacity: .75; }
+.day-ring.full { background: linear-gradient(135deg, #2f7a63, #3fa37f); }
+.day-ring.full .dr-ring { --c: #ffd56b; }
+.day-ring.full .dr-ring b { background: #2f7a63; font-size: 14px; }
+.day-ring.bump { animation: drbump .7s ease; }
+@keyframes drbump { 30% { transform: scale(1.15); } 60% { transform: scale(.96); } }
+@media (max-width: 360px) { .dr-txt small { display: none; } }
+@media (max-width: 440px) {
+  .topbar .icon-btn { width: 34px; font-size: 20px; }
+  .dr-txt small { display: none; }
+  .day-ring { padding-right: 7px; gap: 4px; }
+}

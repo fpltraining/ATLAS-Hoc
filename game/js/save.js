@@ -47,7 +47,7 @@ var G = window.G || (window.G = {});
     G.save();
   };
 
-  G.addXp = function (n) { G.S.xp += n; G.save(); };
+  G.addXp = function (n) { G.S.xp += n; G.save(); if (G.updateHud) G.updateHud(); };
 
   G.addHard = function (lang, word) {
     var id = lang + ':' + word;
