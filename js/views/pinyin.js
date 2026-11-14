@@ -88,6 +88,10 @@ export async function render() {
       'Pinyin là cách ghi âm tiếng Trung bằng chữ Latin. Học chắc phần này trước, ',
       'vì sai thanh điệu là người nghe hiểu sang nghĩa khác hẳn.'),
     !audio.hasVoice() ? h('div.note.seal', { style: { marginTop: '10px' } }, audio.NO_VOICE_HELP) : null,
+    h('div.btn-row', { style: { marginTop: '10px' } },
+      h('a.btn.jade', { href: '#/pron/zh' }, 'Học khoá phát âm 10 bài ›'),
+      h('a.btn.ghost', { href: '#/pron/zh/bang' }, 'Bảng pinyin có tiếng'),
+      h('a.btn.ghost', { href: '#/pron/zh/thanh' }, '20 tổ hợp thanh')),
   ));
 
   /* ---- 5 thanh ---- */

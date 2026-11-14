@@ -41,6 +41,7 @@ const routes = {
   word:     () => import('./views/word.js'),
   speak:    () => import('./views/speak.js'),
   hsk:      () => import('./views/word.js'),
+  pron:     () => import('./views/pron.js'),
 };
 
 /* Màn hình nào thuộc khối học nào, để đếm thời gian và sáng đúng mục trên thanh điều hướng */
@@ -59,6 +60,7 @@ function tabOf(route) {
   if (route.name === 'read') return route.args[0] === 'zh' ? 'zh' : 'en';
   if (route.name === 'reader') return String(route.args[0]).startsWith('zh-') ? 'zh' : 'en';
   if (route.name === 'review') return route.query.lang || 'home';
+  if (route.name === 'pron') return route.args[0] === 'en' ? 'en' : 'zh';
   return TAB[route.name] || 'home';
 }
 
@@ -96,7 +98,7 @@ async function router() {
   try { currentCleanup?.(); } catch { /* bỏ qua */ }
   currentCleanup = null;
   audio.stop();
-  currentTrack = route.name === 'speak' ? (route.args[0] === 'zh' ? 'zh' : 'en') : TRACK[route.name] || null;
+  currentTrack = route.name === 'speak' ? (route.args[0] === 'zh' ? 'zh' : 'en') : route.name === 'pron' ? (route.args[0] === 'en' ? 'en' : 'zh') : TRACK[route.name] || null;
 
   viewEl.replaceChildren(h('div.empty', h('span.spin')));
   viewEl.className = 'view';
@@ -226,6 +228,10 @@ async function boot() {
 
     window.addEventListener('hashchange', router);
     backBtn.addEventListener('click', back);
+    document.getElementById('btn-report').addEventListener('click', async () => {
+      const { openReport } = await import('./report.js');
+      openReport();
+    });
     document.getElementById('btn-settings').addEventListener('click', async () => {
       const { renderSettings } = await import('./views/settings.js');
       sheet(await renderSettings());

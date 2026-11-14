@@ -9,6 +9,7 @@ import { sayEn } from '../kit.js';
 import { applyTheme } from '../app.js';
 import { h, toast, closeSheet } from '../ui.js';
 import { picsOn, setPicsOn } from '../pics.js';
+import { reportsBlock } from '../report.js';
 
 export async function renderSettings() {
   const s = await store.settings();
@@ -89,6 +90,7 @@ export async function renderSettings() {
     voiceRow('zh', 'Giọng tiếng Trung', s, () => audio.speak('你好，很高兴认识你。今天过得怎么样？', { rate: s.speechRate })),
     !audio.hasVoice() ? h('div.note.seal', { style: { marginTop: '10px' } }, audio.NO_VOICE_HELP) : null,
 
+    await reportsBlock(),
     accountBlock(),
     h('hr.divider'),
     aiBlock(s, set),

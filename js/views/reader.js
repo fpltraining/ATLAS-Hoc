@@ -12,6 +12,7 @@ import * as data from '../data.js';
 import { newCard, ZH_TYPES } from '../srs.js';
 import { wordSheet, mcq, sayBtn } from '../kit.js';
 import { h, toast, sheet, closeSheet, section } from '../ui.js';
+import { award } from '../xp.js';
 
 export async function render(route) {
   const id = route.args[0];
@@ -216,6 +217,8 @@ const countWords = (ch) => ch.paras.flat().reduce((a, [t]) => a + (t.match(/\S+/
 
 async function finish(story, ch) {
   const zh = story.lang === 'zh';
+  const readBefore = (await store.readState()).stories?.[story.id]?.ch?.[ch.n];
+  if (!readBefore) award(8, 'Đọc xong một chương');
   const words = zh
     ? ch.paras.flat().reduce((a, [t]) => a + [...t].filter(data.isHan).length, 0)
     : countWords(ch);

@@ -69,6 +69,12 @@ async function hub() {
         b[g.id] != null ? h('span.pill.jade', `Kỷ lục ${b[g.id]} ${g.unit}`) : null,
         h('span.faint', '›'),
       )),
+      h('h3', { style: { marginTop: '10px' } }, 'Trò phát âm'),
+      ...[['#/pron/zh/dua', '⏱', 'Đua 60 giây · tiếng Trung', 'Nghe chọn thanh, chọn pinyin, càng nhiều câu đúng càng tốt'],
+        ['#/pron/en/dua', '⏱', 'Đua 60 giây · tiếng Anh', 'Nghe chọn từ trong các cặp dễ nhầm'],
+        ['#/pron/zh/5', '🧺', 'Xếp rổ: bật hơi hay không', 'Trong bài 5 của khoá phát âm (chặng Củng cố)'],
+        ['#/pron/zh/thanh', '⌇', '20 tổ hợp thanh', 'Nghe từ hai âm tiết, chọn kiểu ghép thanh']].map(([href, mark, title, sub]) => h('a.hub-tile', { href },
+        h('span.hub-mark', mark), h('span.grow', h('b', title), h('span.small.faint.block', sub)), h('span.faint', '›'))),
     ),
   };
 }

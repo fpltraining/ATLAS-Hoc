@@ -5,6 +5,7 @@ import * as store from '../store.js';
 import * as content from '../content.js';
 import { summarize, TYPE_LABEL } from '../srs.js';
 import { h, section, progressBar, todayKey, plural, toast } from '../ui.js';
+import { rankCard, xpState, RANKS } from '../xp.js';
 
 const TRACK_NAME = { review: 'Ôn thẻ', en: 'Tiếng Anh', read: 'Đọc', zh: 'Tiếng Trung', work: 'Anh nghề', know: 'Kiến thức' };
 
@@ -18,6 +19,16 @@ export async function render() {
   const enCards = cards.filter((c) => c.lang === 'en');
   const zhCards = cards.filter((c) => !c.lang || c.lang === 'zh');
   const el = h('div.stack');
+
+  /* ---- rank và điểm thưởng ---- */
+  const xp = await xpState();
+  el.append(h('div.card',
+    h('h3', 'Rank của bạn'),
+    await rankCard(),
+    h('div.rank-ladder', ...RANKS.map((r) => h('span.rank-step' + (xp.total >= r.min ? '.on' : ''), { style: { borderColor: r.color, color: xp.total >= r.min ? '#fff' : r.color, background: xp.total >= r.min ? r.color : 'transparent' } }, r.name))),
+    h('div.small.faint', { style: { marginTop: '8px' } }, 'Điểm đến từ: điểm danh, xong mục học, đọc chương truyện, ôn thẻ, qua bài phát âm. Gần đây:'),
+    h('div.small', ...(xp.log || []).slice(0, 6).map((l) => h('div', `+${l.p} · ${l.r}`))),
+  ));
 
   /* ---- các con số chính, chia theo ngôn ngữ ---- */
   const st = en.stage || 0;

@@ -6,6 +6,7 @@ import * as content from '../content.js';
 import { buildToday, DAY_NAME, curSession } from '../plan.js';
 import { h, progressBar } from '../ui.js';
 import { streak } from '../progress.js';
+import { rankCard } from '../xp.js';
 
 const WEEKDAY = ['Chủ nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
 
@@ -38,6 +39,7 @@ export async function render() {
       ? h('a.btn.seal.block', { href: next.href, style: { marginTop: '14px' } }, `Tiếp tục: ${next.title} ›`)
       : h('a.btn.ghost.block.on-hero', { href: '#/read', style: { marginTop: '14px' } }, 'Còn sức thì đọc thêm một bài'),
   ));
+  el.append(await rankCard({ compact: true }));
 
   if (plan.quota.reason) el.append(h('div.note', plan.quota.reason));
 
