@@ -303,9 +303,9 @@ function listenCelebrations() {
           if (!next) {
             const langs = plan.settings.langs || 'both';
             const parts = [langs !== 'zh' ? `Tiếng Anh ${m.en} phút` : null, langs !== 'en' ? `Tiếng Trung ${m.zh} phút` : null].filter(Boolean);
-            fx.celebrate({ big: true, who, title: 'Xong hết việc hôm nay!', sub: `${parts.join(' · ')}. Mai gặp lại nhé.` });
+            fx.celebrate({ big: true, who, pose: 'mung', title: 'Xong hết việc hôm nay!', sub: `${parts.join(' · ')}. Mai gặp lại nhé.` });
           } else if (step.lang !== 'all' && g.done === g.steps.length) {
-            fx.celebrate({ who, title: `Xong ${LANG_NAME[step.lang].toLowerCase()} hôm nay!`, sub: `${g.steps.length}/${g.steps.length} việc · ${g.mins} phút`, next: { title: next.title, href: next.href } });
+            fx.celebrate({ who, pose: 'thang', title: `Xong ${LANG_NAME[step.lang].toLowerCase()} hôm nay!`, sub: `${g.steps.length}/${g.steps.length} việc · ${g.mins} phút`, next: { title: next.title, href: next.href } });
           } else {
             fx.celebrate({ who, title: `Xong: ${step.title}`, sub: `${LANG_NAME[step.lang]}: ${g.done}/${g.steps.length} việc hôm nay`, next: { title: next.title, href: next.href, label: 'Tiếp' } });
           }
