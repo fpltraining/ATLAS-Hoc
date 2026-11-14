@@ -1,4 +1,4 @@
-# Danh sách đặt hình: Thị trấn Ngôn Ngữ
+# Danh sách đặt hình: Thế giới Ngôn Ngữ
 
 **Cách làm:**
 1. Mở ChatGPT, dán câu lệnh của từng mục (bằng tiếng Anh).
@@ -37,44 +37,70 @@ Cùng một đoạn chat. Mỗi nhân vật có 3 hướng: mặt trước, sau 
 
 ---
 
-## B. Thị trấn (GĐ1)
+## B. Ngôi nhà chung: thẻ thành phố (GĐ1) · 1024×1024, không cần trong suốt
 
-Một đoạn chat cho cả nhóm. Ảnh nền đi trước, các toà nhà làm sau.
+Một đoạn chat. Thẻ vuông bo góc, mỗi thẻ là một "cửa sổ" nhìn vào thành phố. Game in tên thành phố bên dưới.
 
-| Tên file | Loại · cỡ | Mô tả | Câu lệnh |
-|---|---|---|---|
-| `map_town.png` | Ảnh nền · 1536×1024, không cần trong suốt | Mặt đất thị trấn: đường lát đá, quảng trường ở giữa, cỏ, cây, đèn đường. **Không có nhà** (nhà là ảnh riêng). | Cozy 2D life-sim game art, top-down view tilted slightly (3/4 perspective), soft flat colors with clean dark outlines, warm palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0. No text anywhere. A small cozy town ground map seen from above with NO buildings: a round stone plaza in the center with a fountain, cobblestone paths going north, east, west and south from the plaza, six empty flat grass lots beside the paths where buildings will be placed later, trees, flower beds, benches and street lamps along the paths. Wide landscape 3:2. |
-| `building_home.png` | Nhà · 1024×1024, trong suốt | Nhà của bạn | Same style as the previous image. Transparent background PNG. One building only, centered, seen from the same tilted top-down angle, front door clearly visible at the bottom center: a small cozy two-storey house with a navy roof, cream walls, a round window and flower pots. |
-| `building_en_school.png` | Nhà · 1024×1024, trong suốt | Trường Anh ngữ | Same style. Transparent background PNG. One building only, centered, front door clearly visible at the bottom center: a friendly modern school building with sky-blue walls, a clock tower, big windows, a small flag pole with a blank flag, and a robot-head shaped weather vane. |
-| `building_zh_school.png` | Nhà · 1024×1024, trong suốt | Học viện Hán ngữ | Same style. Transparent background PNG. One building only, centered, front door clearly visible at the bottom center: a traditional Chinese academy with curved coral-red roof tiles, wooden pillars, red paper lanterns (blank, no characters), and stone lion statues by the door. |
-| `building_cafe.png` | Nhà · 1024×1024, trong suốt | Quán cà phê | Same style. Transparent background PNG. One building only, centered, door at the bottom center: a small corner café with a striped jade-and-cream awning, outdoor tables, a big coffee cup sign shape (no letters), plants. |
-| `building_market.png` | Nhà · 1024×1024, trong suốt | Chợ | Same style. Transparent background PNG. One structure only, centered, entrance at the bottom center: a covered open-air market hall with coral roof, fruit and vegetable stalls visible inside, baskets and crates. |
-| `building_airport.png` | Nhà · 1024×1024, trong suốt | Sân bay | Same style. Transparent background PNG. One building only, centered, glass doors at the bottom center: a small modern airport terminal with a curved glass roof, a control tower, and a small airplane parked beside it. |
-| `building_hospital.png` | Nhà · 1024×1024, trong suốt | Bệnh viện | Same style. Transparent background PNG. One building only, centered, door at the bottom center: a clean small hospital with white and sky-blue walls, a green cross sign, and an ambulance parked in front. |
+| Tên file | Mô tả | Câu lệnh |
+|---|---|---|
+| `card_city_en.png` | Thẻ Brightford (tiếng Anh) | Cozy 2D life-sim game art, top-down view tilted slightly (3/4 perspective, camera about 30 degrees above the ground), soft flat colors with clean dark outlines and gentle shading, warm palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0. No text, letters or numbers anywhere. A square app card illustration: a charming small English-speaking city seen from slightly above, red-brick terraced houses, a clock tower, a red double-decker style bus, a river with a stone bridge, autumn trees, soft morning light. Centered composition with rounded corners feel. |
+| `card_city_zh.png` | Thẻ Trường Lạc trấn (tiếng Trung) | Same style as the previous image. No text or characters. A square app card illustration: a charming small Chinese water town seen from slightly above, white walls with dark curved roof tiles, red lanterns (blank), stone arch bridges over a canal, a small boat, willow trees, soft morning light. |
+| `card_city_soon.png` | Thẻ "Sắp ra mắt" dùng chung | Same style. No text. A square app card illustration: a city skyline hidden behind soft clouds, a small airplane flying toward it, muted pastel colors, dreamy and mysterious. |
+| `lobby_hero.png` | Ảnh đầu trang Ngôi nhà chung · 1536×1024 | Same style. No text. A cozy world map island scene seen from above: two small cities on two islands (left: red-brick English city with a clock tower; right: Chinese water town with curved roofs), connected by a dotted flight path with a tiny airplane, ocean around, clouds. Wide 3:2. |
 
 ---
 
-## C. Bên trong nhà (GĐ1 làm 2 ảnh đầu, còn lại theo giai đoạn) · 1536×1024, không cần trong suốt
+## C. Bản đồ và nhà cửa (Brightford ở GĐ1, Trường Lạc trấn ở GĐ3)
 
-Một đoạn chat. Góc nhìn giống bản đồ. Không có người trong ảnh (NPC do game đặt vào).
+Mỗi thành phố một đoạn chat. Ảnh nền làm trước, nhà làm sau, thêm câu *"Same style as the previous image."*
+Ảnh nền 1536×1024, không cần trong suốt. Nhà 1024×1024 **nền trong suốt**, cửa chính luôn nằm **giữa cạnh dưới**.
 
-| Tên file | GĐ | Mô tả | Câu lệnh |
-|---|---|---|---|
-| `interior_en_hall.png` | 1 | Hành lang Trường Anh ngữ: 5 cánh cửa phòng dọc tường trên | Cozy 2D life-sim game art, top-down view tilted slightly (3/4 perspective), soft flat colors with clean dark outlines, warm palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0. No text and no people anywhere. Interior of a bright school hallway seen from above: a long corridor with exactly five identical classroom doors evenly spaced along the top wall, a reception desk on the left, lockers, a notice board with blank papers, potted plants, and the entrance at the bottom center. Wide landscape 3:2. |
-| `classroom_en.png` | 1 | Lớp học tiếng Anh | Same style as the previous image. No text, no people. A cozy English classroom seen from above: a blank chalkboard on the top wall, teacher's desk in front of it, a few student desks, a world map (no labels), bookshelves, a window with sunlight, and the door at the bottom center. Wide 3:2. |
-| `interior_zh_hall.png` | 3 | Hành lang Học viện Hán ngữ | Same style. No text, no characters, no people. Hallway of a traditional Chinese academy seen from above: five wooden sliding doors evenly spaced along the top wall, red paper lanterns (blank), bamboo plants, a calligraphy brush stand, and the entrance at the bottom center. Wide 3:2. |
-| `classroom_zh.png` | 3 | Lớp học tiếng Trung | Same style. No text, no characters, no people. A cozy Chinese classroom seen from above: a blank blackboard, a low wooden teacher's table with ink stone and brush, student desks, paper lanterns, a round window with a plum blossom branch, door at the bottom center. Wide 3:2. |
-| `interior_home.png` | 2 | Nhà của bạn | Same style. No text, no people. A cozy small bedroom-living room seen from above: bed, desk with a lamp, an empty wall for diplomas, a shelf for souvenirs, a rug, a window, door at the bottom center. Wide 3:2. |
-| `interior_cafe.png` | 4 | Trong quán cà phê | Same style. No text, no people. Inside a cozy café seen from above: a counter with an espresso machine and cakes in a glass case on the top side, small round tables, plants, warm lights, door at the bottom center. Wide 3:2. |
-| `interior_market.png` | 4 | Trong chợ | Same style. No text, no people. Inside a covered market seen from above: two stalls on the top side (one with fruit, one with vegetables), baskets, hanging scales, crates, door at the bottom center. Wide 3:2. |
-| `interior_airport.png` | 4 | Trong sân bay | Same style. No text, no people. Inside an airport terminal seen from above: check-in counters on the top-left, a security gate on the top-right, rows of seats, a big window showing an airplane, entrance at the bottom center. Wide 3:2. |
-| `interior_hospital.png` | 4 | Trong bệnh viện | Same style. No text, no people. Inside a small clinic seen from above: a reception desk on the top-left, a doctor's desk with a computer on the top-right, an examination bed, waiting chairs, plants, entrance at the bottom center. Wide 3:2. |
+### Brightford (tiếng Anh)
+
+| Tên file | Mô tả | Câu lệnh |
+|---|---|---|
+| `map_en.png` | Mặt đất thành phố, **không có nhà** | Cozy 2D life-sim game art, top-down view tilted slightly (3/4 perspective, camera about 30 degrees above the ground), soft flat colors with clean dark outlines and gentle shading, warm palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0. No text, letters or numbers anywhere. A small cozy English town ground map seen from above with NO buildings: a round stone plaza with a fountain in the center, cobblestone paths going north, east, west and south, five empty flat grass lots beside the paths where buildings will be placed later, red phone box, benches, street lamps, trees and flower beds. Wide 3:2. |
+| `building_en_school.png` | Trường Anh ngữ | Same style as the previous image. Transparent background PNG. One building only, centered, front door at the bottom center: a friendly red-brick school with white window frames, a clock tower, ivy, a flag pole with a blank flag, and a robot-head shaped weather vane. |
+| `building_en_cafe.png` | Quán cà phê | Same style. Transparent background PNG. One building only, centered, door at the bottom center: a small corner café with a striped jade-and-cream awning, outdoor tables, a coffee cup shaped hanging sign (no letters), plants. |
+| `building_en_market.png` | Chợ | Same style. Transparent background PNG. One structure only, centered, entrance at the bottom center: a covered Victorian-style market hall with an iron-and-glass roof, fruit and flower stalls visible inside. |
+| `building_en_hospital.png` | Bệnh viện | Same style. Transparent background PNG. One building only, centered, door at the bottom center: a clean small hospital with white and sky-blue walls, a green cross sign, an ambulance parked in front. |
+| `building_en_airport.png` | Sân bay | Same style. Transparent background PNG. One building only, centered, glass doors at the bottom center: a small modern airport terminal with a curved glass roof, a control tower, a small airplane parked beside it. |
+
+### Trường Lạc trấn (tiếng Trung)
+
+| Tên file | Mô tả | Câu lệnh |
+|---|---|---|
+| `map_zh.png` | Mặt đất thị trấn sông nước, **không có nhà** | Cozy 2D life-sim game art, top-down view tilted slightly (3/4 perspective, camera about 30 degrees above the ground), soft flat colors with clean dark outlines and gentle shading, warm palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0. No text, letters or numbers anywhere. No Chinese characters. A small Chinese water town ground map seen from above with NO buildings: a stone plaza with an old well in the center, stone-slab paths going north, east, west and south, a narrow canal with two small arch bridges, five empty flat lots beside the paths, willow and plum trees, red lanterns on poles (blank). Wide 3:2. |
+| `building_zh_school.png` | Học viện Hán ngữ | Same style as the previous image. Transparent background PNG. No characters. One building only, centered, front door at the bottom center: a traditional Chinese academy with curved dark roof tiles, coral-red pillars, red lanterns (blank), stone lion statues by the door. |
+| `building_zh_teahouse.png` | Quán trà | Same style. Transparent background PNG. No characters. One building only, centered, door at the bottom center: a two-storey wooden teahouse with lattice windows, hanging lanterns, a teapot-shaped sign (blank), bamboo plants. |
+| `building_zh_market.png` | Chợ | Same style. Transparent background PNG. No characters. One structure only, centered, entrance at the bottom center: an open-air morning market under a tiled roof, vegetable and fruit stalls, bamboo baskets. |
+| `building_zh_hospital.png` | Bệnh viện | Same style. Transparent background PNG. No characters. One building only, centered, door at the bottom center: a small modern clinic with white walls, a green cross sign and a small traditional herb-medicine corner. |
+| `building_zh_airport.png` | Sân bay | Same style. Transparent background PNG. No characters. One building only, centered, glass doors at the bottom center: a small airport terminal with a roof shaped like a curved traditional Chinese roof, and a small airplane parked beside it. |
+
+### Bên trong nhà · 1536×1024, không cần trong suốt, không có người
+
+Mỗi thành phố một đoạn chat. Góc nhìn giống bản đồ.
+
+| Tên file | GĐ | Câu lệnh |
+|---|---|---|
+| `interior_en_hall.png` | 1 | Cozy 2D life-sim game art, top-down view tilted slightly (3/4 perspective, camera about 30 degrees above the ground), soft flat colors with clean dark outlines and gentle shading, warm palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0. No text, letters or numbers anywhere. No people. Interior of a bright school hallway seen from above: a long corridor with exactly five identical classroom doors evenly spaced along the top wall, a reception desk on the left, lockers, a notice board with blank papers, potted plants, entrance at the bottom center. Wide 3:2. |
+| `classroom_en.png` | 1 | Same style as the previous image. No text, no people. A cozy English classroom seen from above: a blank chalkboard on the top wall, teacher's desk, a few student desks, a world map without labels, bookshelves, a sunny window, door at the bottom center. Wide 3:2. |
+| `interior_en_cafe.png` | 4 | Same style. No text, no people. Inside a cozy café seen from above: counter with an espresso machine and cakes in a glass case on the top side, small round tables, plants, warm lights, door at the bottom center. Wide 3:2. |
+| `interior_en_market.png` | 4 | Same style. No text, no people. Inside a covered market seen from above: a fruit stall and a flower stall on the top side, baskets, hanging scales, crates, door at the bottom center. Wide 3:2. |
+| `interior_en_hospital.png` | 4 | Same style. No text, no people. Inside a small clinic seen from above: reception desk top-left, doctor's desk with a computer top-right, an examination bed, waiting chairs, entrance at the bottom center. Wide 3:2. |
+| `interior_en_airport.png` | 3 | Same style. No text, no people. Inside an airport terminal seen from above: check-in counters top-left, a boarding gate top-right, rows of seats, a big window showing an airplane, entrance at the bottom center. Wide 3:2. |
+| `interior_zh_hall.png` | 3 | Cozy 2D life-sim game art, top-down view tilted slightly (3/4 perspective, camera about 30 degrees above the ground), soft flat colors with clean dark outlines and gentle shading, warm palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0. No text, letters or numbers anywhere. No characters, no people. Hallway of a traditional Chinese academy seen from above: five wooden sliding doors evenly spaced along the top wall, red lanterns (blank), bamboo plants, a calligraphy brush stand, entrance at the bottom center. Wide 3:2. |
+| `classroom_zh.png` | 3 | Same style as the previous image. No characters, no people. A cozy Chinese classroom seen from above: a blank blackboard, a low wooden teacher's table with ink stone and brush, student desks, lanterns, a round window with a plum blossom branch, door at the bottom center. Wide 3:2. |
+| `interior_zh_teahouse.png` | 4 | Same style. No characters, no people. Inside a wooden teahouse seen from above: a tea counter with teapots and tea jars on the top side, low tables with tea sets, lattice windows, door at the bottom center. Wide 3:2. |
+| `interior_zh_market.png` | 4 | Same style. No characters, no people. Inside a morning market seen from above: a vegetable stall and a fruit stall on the top side, bamboo baskets, hanging scales, door at the bottom center. Wide 3:2. |
+| `interior_zh_hospital.png` | 4 | Same style. No characters, no people. Inside a small clinic seen from above: reception desk top-left, doctor's desk top-right, herb-medicine drawers on the wall, an examination bed, entrance at the bottom center. Wide 3:2. |
+| `interior_zh_airport.png` | 3 | Same style. No characters, no people. Inside an airport terminal seen from above: check-in counters top-left, a boarding gate top-right, seats, red lantern decorations (blank), a big window with an airplane, entrance at the bottom center. Wide 3:2. |
 
 ---
 
-## D. Giáo viên và người trong thị trấn · nền trong suốt · 1024×1024
+## D. Giáo viên và người dân · nền trong suốt · 1024×1024
 
-Cùng đoạn chat với nhóm A (nhân vật). Mỗi người một ảnh: toàn thân, đứng hơi xoay về phía camera.
+Cùng đoạn chat với nhóm A (nhân vật). Người Brightford đặt ở GĐ1–2, người Trường Lạc trấn ở GĐ3. Mỗi người một ảnh: toàn thân, đứng hơi xoay về phía camera.
 Game dùng một ảnh cho cả bản đồ (thu nhỏ) và hộp thoại (phóng to).
 
 Câu mở đầu chung cho mọi người trong nhóm này (đã ghép sẵn):
@@ -112,8 +138,10 @@ Một đoạn chat. Đồ vật nhỏ, rõ nét, nhìn hơi nghiêng như trong 
 |---|---|---|---|
 | `door_locked.png` | 2 | Cửa phòng đang khoá | Cozy 2D life-sim game art, top-down view tilted slightly, soft flat colors, clean dark outlines, warm palette navy, cream, coral, jade, sky blue. Transparent background PNG. No text. A single wooden classroom door, closed, with a big golden padlock and chain across it. |
 | `door_open.png` | 2 | Cửa đã mở | Same style. Transparent background PNG. No text. The same wooden classroom door, open, with warm light glowing from inside and small sparkles. |
+| `plane.png` | 3 | Máy bay bay giữa hai thành phố | Same style. Transparent background PNG. No text. A small cute passenger airplane seen from above at a slight angle, white and coral with a jade stripe, flying to the right. |
 | `diploma_en.png` | 2 | Bằng tốt nghiệp tiếng Anh treo tường | Same style. Transparent background PNG. No text or letters. A framed diploma on a wall: cream paper with a blank area, a sky-blue ribbon seal, gold frame. |
 | `diploma_zh.png` | 3 | Bằng tốt nghiệp tiếng Trung | Same style. Transparent background PNG. No text or characters. A framed scroll diploma with a red seal stamp (blank), dark wood frame, small tassels. |
+| `souvenir_tea.png` | 4 | Kỷ niệm quán trà | Same style. Transparent background PNG. No characters. A small clay teapot with a tiny tea cup. |
 | `souvenir_coffee.png` | 4 | Kỷ niệm quán cà phê | Same style. Transparent background PNG. A single takeaway coffee cup with a jade sleeve. |
 | `souvenir_apples.png` | 4 | Kỷ niệm chợ | Same style. Transparent background PNG. A small paper bag of red apples. |
 | `souvenir_ticket.png` | 4 | Kỷ niệm sân bay | Same style. Transparent background PNG. An airplane boarding pass without any text, with a small airplane icon. |
@@ -128,7 +156,8 @@ Tải về mp4 rồi gửi em: em nén lại, bỏ tiếng, kiểm tra chạy đ
 
 | Tên file | Mô tả | Câu lệnh |
 |---|---|---|
-| `video_intro.mp4` | Mở đầu game | Use the attached characters exactly as they look. Cozy 2D life-sim animation, top-down tilted view, warm palette. The camera glides over a small cozy town at sunrise, then stops at the town plaza where Han and the small robot Kai wave at the viewer. 6 seconds, vertical 9:16, no text, no sound needed. |
+| `video_intro.mp4` | Mở đầu game | Use the attached characters exactly as they look. Cozy 2D life-sim animation, top-down tilted view, warm palette. The camera flies over a small world of islands at sunrise, passing an English red-brick city and a Chinese water town, then stops on Han and the small robot Kai waving at the viewer. 6 seconds, vertical 9:16, no text, no sound needed. |
+| `video_flight.mp4` | Bay giữa hai thành phố | Use the attached characters. Same style. Han and the small robot Kai look out of an airplane window, clouds and a small island city pass by below, both smile and wave. 5 seconds, vertical 9:16, no text. |
 | `video_grad_en.mp4` | Tốt nghiệp tiếng Anh | Use the attached characters. Same style. Inside a bright school hall, Kai the robot principal hands a diploma to Han, confetti falls, Han jumps with joy. 6 seconds, vertical 9:16, no text. |
 | `video_grad_zh.mp4` | Tốt nghiệp tiếng Trung | Use the attached characters. Same style. In a traditional Chinese academy courtyard with red lanterns, an elderly principal hands a scroll diploma to Han, red paper confetti falls, Han bows and smiles. 6 seconds, vertical 9:16, no text. |
 
@@ -138,10 +167,10 @@ Tải về mp4 rồi gửi em: em nén lại, bỏ tiếng, kiểm tra chạy đ
 
 | Giai đoạn | Cần đặt | Số file |
 |---|---|---|
-| GĐ1 | Nhóm A (7), nhóm B (8), `interior_en_hall`, `classroom_en`, `npc_emma` | 18 |
-| GĐ2 | `npc_tom`, `npc_lily`, `npc_sam`, `interior_home`, `door_locked`, `door_open`, `diploma_en` | 7 |
-| GĐ3 | `interior_zh_hall`, `classroom_zh`, `npc_principal_li`, `npc_wang`, `npc_li`, `npc_zhang`, `npc_chen`, `diploma_zh` | 8 |
-| GĐ4 | 4 nội thất đời sống, 8 người phục vụ, 4 kỷ niệm | 16 |
-| GĐ5 | 3 video | 3 |
+| GĐ1 | Nhóm A (7 nhân vật), 4 ảnh Ngôi nhà chung, `map_en` + 5 nhà Brightford, `interior_en_hall`, `classroom_en`, `npc_emma` | 20 |
+| GĐ2 | `npc_tom`, `npc_lily`, `npc_sam`, `door_locked`, `door_open`, `diploma_en` | 6 |
+| GĐ3 | `map_zh` + 5 nhà Trường Lạc trấn, `interior_zh_hall`, `classroom_zh`, 2 nội thất sân bay, `plane`, 5 người HSK1, `diploma_zh` | 17 |
+| GĐ4 | 6 nội thất đời sống, 8 người phục vụ, 5 kỷ niệm | 19 |
+| GĐ5 | 4 video | 4 |
 
 Chưa có file nào thì game vẫn chạy bằng ô màu ghi tên file. Anh đặt tới đâu, game đẹp lên tới đó.

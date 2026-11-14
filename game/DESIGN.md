@@ -1,8 +1,13 @@
-# Thị trấn Ngôn Ngữ: bản thiết kế
+# Thế giới Ngôn Ngữ: bản thiết kế
 
-Game học tiếng Anh và tiếng Trung cho Han. Người chơi là một nhân vật sống trong thị trấn 2D,
-nhìn từ trên xuống nghiêng nhẹ. Muốn đi xa hơn thì phải học: qua bài kiểm tra thì cửa phòng kế mở ra,
-xong cả trường thì tốt nghiệp. Ngoài giờ học có quán cà phê, chợ, sân bay, bệnh viện để nói thật.
+Game học tiếng Anh và tiếng Trung cho Han. **Một thế giới, nhiều thành phố:** mỗi ngôn ngữ là một thành phố.
+Học ngôn ngữ nào thì vào thành phố ấy. Muốn đổi ngôn ngữ thì ra sân bay, bay sang thành phố kia.
+Người chơi là một nhân vật sống trong thành phố 2D, nhìn từ trên xuống nghiêng nhẹ.
+Muốn đi xa hơn thì phải học: qua bài kiểm tra thì cửa phòng kế mở ra, xong cả trường thì tốt nghiệp.
+Ngoài giờ học có quán, chợ, bệnh viện để nói chuyện thật.
+
+Khung lấy cảm hứng từ trang "The Language Lab" của The Mandarin Lab (một ngôi nhà chung, mỗi ngôn ngữ một thành phố,
+thẻ "Đang mở" và "Sắp ra mắt"). Tên, logo, chữ và hình đều là của mình, không chép của họ.
 
 ---
 
@@ -32,26 +37,39 @@ Game tách hẳn khỏi app ATLAS: dữ liệu và tiến độ riêng, code ES5
 
 ## 2. Thế giới
 
+### 2.1 Ngôi nhà chung (màn hình chính)
+Mở game là vào **Ngôi nhà chung**, một màn hình giống trang web chứ không phải bản đồ:
+- **Đầu trang:** câu khẩu hiệu "Học thêm một ngôn ngữ, sống thêm một cuộc đời". Han và Kai vẫy chào. Có nút **Vào thành phố đang học**.
+- **Lưới thẻ thành phố.** Mỗi thẻ có ảnh, tên, ngôn ngữ và nhãn trạng thái:
+  - **Thành phố Brightford** · Tiếng Anh · *Đang mở*
+  - **Trường Lạc trấn 长乐镇** · Tiếng Trung · *Đang mở*
+  - 3 thẻ mờ *Sắp ra mắt*: Tiếng Nhật, Tiếng Hàn, Tiếng Pháp (chỉ để trang trí, sau này thêm thành phố được).
+- **Hồ sơ của bạn:** nhân vật, cấp mỗi thành phố, XP, chuỗi ngày, bằng tốt nghiệp, đồ kỷ niệm, sổ từ khó.
+- **Cuối trang:** Cài đặt, Xuất và nhập file sao lưu, Hướng dẫn chơi.
+
+### 2.2 Thành phố
+Mỗi thành phố là một bản đồ riêng, nhà cửa và người dân nói đúng ngôn ngữ của thành phố đó.
+
 ```
-              [Sân bay ✈]
-                   |
- [Chợ 🛒] ---- Quảng trường ---- [Quán cà phê ☕]
-                   |
-   [Trường Anh ngữ]   [Học viện Hán ngữ]
-                   |
-            [Nhà của bạn 🏠]  ← điểm xuất phát
-                   |
-            [Bệnh viện ✚]
+Brightford (tiếng Anh)                 Trường Lạc trấn (tiếng Trung)
+
+      [Sân bay ✈]                             [Sân bay ✈]
+           |                                       |
+[Chợ] — Quảng trường — [Cà phê]       [Chợ] — Quảng trường — [Quán trà]
+           |                                       |
+   [Trường Anh ngữ]                        [Học viện Hán ngữ]
+           |                                       |
+     [Bệnh viện]                             [Bệnh viện]
 ```
 
-- **Bản đồ thị trấn:** một ảnh nền lớn. Nhà cửa là các ảnh riêng do code đặt lên nền, nên cửa luôn nằm đúng chỗ.
-  Camera đi theo nhân vật.
-- **Nhà của bạn:** nơi lưu game, xem bằng tốt nghiệp, sao lưu và đổi nhân vật.
-- **Kai** (robot hip-hop) đi theo người chơi khắp nơi. Kai nói hướng dẫn ngắn: "Phòng A1-2 vừa mở!".
-- **Ban ngày và ban đêm** theo giờ Việt Nam thật. Trời phủ màu tối dần sau 18:00. Riêng quán cà phê mở tới 22:00 (chỉ là chi tiết vui, không khoá học).
+- **Nhà cửa là ảnh riêng do code đặt lên ảnh nền**, nên cửa luôn nằm đúng chỗ. Camera đi theo nhân vật.
+- **Sân bay** là cổng nối hai thành phố. Vào sân bay chọn "Bay sang …" thì có cảnh máy bay bay (video hoặc hoạt hình), rồi tới sân bay thành phố kia.
+  Mỗi lần bay là một hội thoại ngắn ở quầy làm thủ tục bằng ngôn ngữ của nơi đi.
+- **Kai** (robot hip-hop) đi theo người chơi ở cả hai thành phố, nói hướng dẫn ngắn bằng tiếng Việt: "Phòng A1-2 vừa mở!".
+- **Ngày và đêm** theo giờ Việt Nam thật: trời phủ màu tối dần sau 18:00.
 
 ### Nhân vật người chơi
-Chọn một trong hai khi bắt đầu (đổi được ở Nhà):
+Chọn một trong hai khi bắt đầu (đổi được ở Ngôi nhà chung):
 - **Han**: cô gái mặc đồ hip-hop, mũ bucket xanh (đã có sẵn từ app ATLAS).
 - **Minh**: chàng trai cùng phong cách.
 
@@ -96,27 +114,28 @@ Có nút ẩn pinyin để tự luyện đọc.
 
 ## 4. Khu đời sống
 
-Mỗi nơi có hai người phục vụ: một nói tiếng Anh, một nói tiếng Trung. Người chơi chọn nói chuyện với ai.
+Mỗi thành phố có khu đời sống riêng, người ở đó chỉ nói ngôn ngữ của thành phố.
 
-| Nơi | Tiếng Anh | Tiếng Trung | Tình huống | Mở khi |
+| Nơi | Brightford (tiếng Anh) | Trường Lạc trấn (tiếng Trung) | Tình huống | Mở khi |
 |---|---|---|---|---|
-| Quán cà phê | **Leo** (pha chế, tạp dề nâu, tóc xoăn) | **小林 Tiểu Lâm** (cô gái tóc đuôi ngựa) | Gọi món, hỏi giá, trả tiền | Xong A1-4 / HSK1-4 |
+| Quán | Quán cà phê · **Leo** (pha chế, tạp dề nâu, tóc xoăn) | Quán trà · **小林 Tiểu Lâm** (cô gái tóc đuôi ngựa) | Gọi món, hỏi giá, trả tiền | Xong A1-4 / HSK1-4 |
 | Chợ | **Mrs. Rosa** (bà bán hoa quả, khăn trùm) | **王大妈 Bác Vương** (bà bán rau) | Mua hàng, mặc cả, đếm tiền | Xong A2-2 / HSK2 mua sắm |
-| Sân bay | **Officer Grace** (nhân viên quầy, đồng phục xanh) | **周小姐 Cô Chu** (tiếp viên) | Làm thủ tục, hỏi cửa ra máy bay, hải quan | Xong A2-3 / HSK2 hỏi đường |
 | Bệnh viện | **Dr. Anna** | **孙医生 Bác sĩ Tôn** | Kể triệu chứng, hiểu lời dặn | Xong A2-4 / HSK2 xem bệnh |
+| Sân bay | **Officer Grace** (nhân viên quầy, đồng phục xanh) | **周小姐 Cô Chu** (tiếp viên) | Làm thủ tục, hỏi cửa ra máy bay | Luôn mở để bay qua lại. Hội thoại khó hơn mở sau A2-3 / HSK2 hỏi đường |
 
 **Hội thoại:**
 - NPC nói một câu: có tiếng đọc và chữ; tiếng Trung có thêm pinyin.
-- Người chơi chọn 1 trong 3 câu trả lời. Câu đúng thì hội thoại đi tiếp, câu sai thì NPC phản ứng vui rồi cho chọn lại.
-- Đi hết thì nhận "món đồ" kỷ niệm (ly cà phê, túi táo, vé máy bay…) bày trong Nhà.
-- Mỗi nơi có 3 tình huống mỗi ngôn ngữ, mỗi tình huống 5–8 lượt.
+- Người chơi chọn 1 trong 3 câu đáp. Câu đúng thì đi tiếp, câu sai thì NPC phản ứng vui rồi cho chọn lại.
+- Đi hết thì nhận đồ kỷ niệm (ly cà phê, ấm trà, túi táo, vé máy bay…), bày ở Ngôi nhà chung.
+- Mỗi nơi có 3 tình huống, mỗi tình huống 5–8 lượt.
 
 ---
 
 ## 5. Luồng chơi
 
 ```
-Mở game → (video mở đầu, bỏ qua được) → chọn nhân vật → ra thị trấn, Kai chào
+Mở game → (video mở đầu, bỏ qua được) → chọn nhân vật → Ngôi nhà chung
+→ bấm thẻ "Brightford · Tiếng Anh" → hạ cánh ở sân bay Brightford, Kai chào
 → đi vào Trường Anh ngữ → sảnh → cửa phòng A1-1 (mở sẵn) → gặp Ms. Emma
 → Học: thẻ từ (nghe, xem nghĩa, ví dụ)
 → Luyện: 3 trò ngắn (nghe chọn nghĩa · nhìn nghĩa chọn từ · ghép câu)
@@ -149,13 +168,13 @@ Mở game → (video mở đầu, bỏ qua được) → chọn nhân vật → 
 
 ## 7. Lưu tiến độ
 
-`localStorage["thitran-save-v1"]` chứa:
+`localStorage["thegioi-save-v1"]` chứa:
 
 ```json
 {
   "v": 1,
   "nhanVat": "han",
-  "viTri": { "canh": "thitran", "x": 512, "y": 640 },
+  "viTri": { "canh": "brightford", "x": 512, "y": 640 },
   "xp": 340,
   "phong": { "en-a1-1": { "sao": 3, "diem": 10, "lan": 2, "luc": "2026-11-14 20:15" } },
   "totNghiep": { "en-a1": "2026-11-20 21:03" },
@@ -167,7 +186,7 @@ Mở game → (video mở đầu, bỏ qua được) → chọn nhân vật → 
 ```
 
 - Mọi chuỗi giờ ở dạng `YYYY-MM-DD HH:mm`, theo giờ Việt Nam.
-- **Xuất sao lưu:** tải về file `thitran-YYYYMMDD-HHmm.json`.
+- **Xuất sao lưu:** tải về file `thegioi-YYYYMMDD-HHmm.json`.
 - **Nhập sao lưu:** chọn file → kiểm tra hợp lệ → hỏi lại trước khi ghi đè.
 
 ---
@@ -184,7 +203,8 @@ game/
   js/save.js           lưu, xuất, nhập, giờ Việt Nam
   js/audio.js          phát tệp giọng có sẵn, không có thì dùng giọng máy
   js/assets.js         tải ảnh; thiếu thì vẽ ô màu ghi tên file
-  data/world.js        bản đồ, vị trí nhà, cửa, NPC
+  js/lobby.js          Ngôi nhà chung: thẻ thành phố, hồ sơ, sao lưu
+  data/world.js        hai thành phố: bản đồ, vị trí nhà, cửa, NPC
   data/en.js, zh.js    nội dung phòng (dựng từ kho ATLAS)
   data/life.js         hội thoại khu đời sống
   assets/              hình và video anh đặt từ ChatGPT
@@ -201,8 +221,8 @@ game/
 
 | GĐ | Làm gì | Test thế nào |
 |---|---|---|
-| **1** | Bản đồ thị trấn, nhân vật đi (chạm hoặc cần điều khiển), Kai đi theo, vào Trường Anh ngữ, phòng A1-1 với Ms. Emma: học, luyện, kiểm tra | Mở trên iPhone, đi vào trường, học xong A1-1, làm kiểm tra |
-| **2** | Cửa khoá và mở, đủ 4 phòng A1, kiểm tra cuối cấp, tốt nghiệp, sao, XP, lưu, xuất và nhập | Thử thua dưới 80% thấy cửa vẫn khoá; xuất file rồi nhập lại thấy đúng tiến độ |
-| **3** | Học viện Hán ngữ: phòng Phát âm + HSK1, pinyin, giọng zh-CN | Học HSK1-1, nghe giọng Trung, bật tắt pinyin |
-| **4** | Khu đời sống: quán cà phê, chợ, sân bay, bệnh viện với hội thoại chọn câu | Gọi một ly cà phê bằng tiếng Anh và bằng tiếng Trung |
-| **5** | Video mở đầu và tốt nghiệp, hiệu ứng, âm thanh, ngày và đêm | Tốt nghiệp A1 xem video; tắt mạng mở lại vẫn chơi được |
+| **1** | Ngôi nhà chung (lưới thẻ thành phố). Bản đồ Brightford, nhân vật đi (chạm hoặc cần điều khiển), Kai đi theo. Vào Trường Anh ngữ, phòng A1-1 với Ms. Emma: học, luyện, kiểm tra | Mở trên iPhone, bấm thẻ Brightford, đi vào trường, học xong A1-1, làm kiểm tra |
+| **2** | Cửa khoá và mở, đủ 4 phòng A1, kiểm tra cuối cấp, tốt nghiệp, sao, XP, hồ sơ, lưu, xuất và nhập | Thử thua dưới 80% thấy cửa vẫn khoá; xuất file rồi nhập lại thấy đúng tiến độ |
+| **3** | Trường Lạc trấn: bản đồ, Học viện Hán ngữ (Phát âm + HSK1), pinyin, giọng zh-CN; sân bay bay qua lại giữa hai thành phố | Bay từ Brightford sang Trường Lạc trấn, học HSK1-1, bật tắt pinyin |
+| **4** | Khu đời sống ở cả hai thành phố: quán, chợ, bệnh viện, quầy sân bay | Gọi cà phê ở Brightford, gọi trà ở Trường Lạc trấn |
+| **5** | Video mở đầu, bay và tốt nghiệp; hiệu ứng, âm thanh, ngày và đêm | Tốt nghiệp A1 xem video; tắt mạng mở lại vẫn chơi được |
