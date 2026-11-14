@@ -46,6 +46,14 @@ var G = window.G || (window.G = {});
     if (!running) { running = true; last = 0; requestAnimationFrame(loop); }
   };
   G.stopEngine = function () { running = false; };
+  /* quay lại cảnh đang đứng (sau khi thoát xe) */
+  G.resumeScene = function () { G.enterScene(sceneId, { x: P.x, y: P.y + 30, dir: 'down' }); };
+  /* xuống xe ở trạm của thành phố đích */
+  G.arriveBy = function (type, toward) {
+    var sc = toward === 'school' ? 'city_en' : 'home_en', bs = G.SCENES[sc].buildings;
+    for (var i = 0; i < bs.length; i++) if (bs[i].ride === type) { G.enterScene(sc, { x: bs[i].x, y: bs[i].y + 80, dir: 'down' }); break; }
+    G.kaiSay(toward === 'school' ? 'Tới trung tâm rồi! Trường Anh ngữ là toà có biển đỏ. Đi tới đó nhé.' : 'Về tới khu phố Maple rồi. Nghỉ ngơi thôi!');
+  };
 
   /* Danh sách thứ có thể tương tác trong cảnh hiện tại */
   function triggers() {
@@ -53,7 +61,8 @@ var G = window.G || (window.G = {});
     if (scene.buildings) {
       for (var i = 0; i < scene.buildings.length; i++) {
         var b = scene.buildings[i];
-        list.push({ x: b.x, y: b.y + 18, r: 70, label: 'Vào ' + b.name, act: (function (bb) { return function () { useBuilding(bb); }; })(b) });
+        var lb = b.ride === 'bus' ? 'Đợi xe buýt' + (b.toward === 'home' ? ' về nhà' : ' tới trường') : b.ride === 'metro' ? 'Vào ga tàu điện' : b.home ? 'Nhà của bạn' : 'Vào ' + b.name;
+        list.push({ x: b.x, y: b.y + 18, r: 70, label: lb, act: (function (bb) { return function () { useBuilding(bb); }; })(b) });
       }
     }
     if (scene.kind === 'hall') {
@@ -71,6 +80,8 @@ var G = window.G || (window.G = {});
   }
 
   function useBuilding(b) {
+    if (b.ride) { G.sfx('door'); G.openRide(b.ride, b.toward); return; }
+    if (b.home) { G.kaiSay(sceneId === 'home_en' ? 'Nhà của bạn đây. Hôm nay đi học nhé: ra bến xe buýt hoặc ga tàu điện!' : ''); return; }
     if (b.go) { G.sfx('door'); G.enterScene(b.go.scene, { x: b.go.x, y: b.go.y, dir: 'up' }); G.kaiSay('Đây là Trường Anh ngữ. Phòng A1-1 ở cửa đầu tiên bên trái!'); }
     else G.kaiSay(b.soon);
   }
@@ -220,12 +231,7 @@ var G = window.G || (window.G = {});
     if (a.ok) { ctx.drawImage(a.img, 0, 0, scene.w, scene.h); return; }
     // nền tạm vẽ bằng code, kèm tên file cần đặt
     if (scene.kind === 'city') {
-      ctx.fillStyle = '#a9cf9a'; ctx.fillRect(0, 0, scene.w, scene.h);
-      ctx.fillStyle = '#e6dcc6';
-      ctx.fillRect(728, 0, 80, scene.h); ctx.fillRect(0, 480, scene.w, 80);
-      ctx.beginPath(); ctx.arc(768, 520, 150, 0, 6.283); ctx.fill();
-      ctx.fillStyle = '#8bbac0'; ctx.beginPath(); ctx.arc(768, 520, 46, 0, 6.283); ctx.fill();
-      for (var i = 0; i < 40; i++) { var tx = (i * 397) % scene.w, ty = (i * 251) % scene.h; if (Math.abs(tx - 768) < 120 || Math.abs(ty - 520) < 110) continue; ctx.fillStyle = '#5f9a6a'; ctx.beginPath(); ctx.arc(tx, ty, 22, 0, 6.283); ctx.fill(); }
+      ctx.fillStyle = '#cfe3c8'; ctx.fillRect(0, 0, scene.w, scene.h);
     } else {
       ctx.fillStyle = '#efe4d2'; ctx.fillRect(0, 0, scene.w, scene.h);
       ctx.fillStyle = '#d9c7a8'; ctx.fillRect(0, 0, scene.w, 400);
@@ -255,6 +261,11 @@ var G = window.G || (window.G = {});
   function shadow(x, y, r) { ctx.fillStyle = 'rgba(0,0,0,.18)'; ctx.beginPath(); ctx.ellipse(x, y, r, r * 0.38, 0, 0, 6.283); ctx.fill(); }
 
   function drawPlayer() {
+    if (G.S.nhanVat === 'custom' && G.S.avatar) {
+      shadow(P.x, P.y, 24);
+      G.drawAvatar(ctx, G.S.avatar, P.x, P.y + 4, 112, P.dir, P.t * 11, P.moving);
+      return;
+    }
     var who = G.S.nhanVat || 'han';
     var dir = P.dir === 'right' ? 'left' : P.dir;
     var bob = P.moving ? Math.abs(Math.sin(P.t * 10)) * 7 : 0;
@@ -334,7 +345,7 @@ var G = window.G || (window.G = {});
     });
     var MAP = { ArrowLeft: 'l', ArrowRight: 'r', ArrowUp: 'u', ArrowDown: 'd', a: 'l', d: 'r', w: 'u', s: 'd' };
     window.addEventListener('keydown', function (e) {
-      if (document.getElementById('panel').className.indexOf('open') >= 0) return;
+      if (document.getElementById('panel').className.indexOf('open') >= 0 || !running) return;
       if (MAP[e.key]) { keys[MAP[e.key]] = true; e.preventDefault(); }
       if ((e.key === 'Enter' || e.key === ' ') && near) { e.preventDefault(); near.act(); }
     });

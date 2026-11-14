@@ -15,12 +15,15 @@ var G = window.G || (window.G = {});
     G.updateHud();
     var v = G.S.viTri;
     if (v && G.SCENES[v.canh] && v.canh !== 'classroom_en') G.enterScene(v.canh, { x: v.x, y: v.y, dir: 'down' });
-    else G.enterScene('city_en');
-    G.kaiSay('Chào mừng tới Brightford! Trường Anh ngữ ở phía dưới bên trái, có biển màu đỏ.');
+    else G.enterScene('home_en');
+    var sc = G.S.viTri.canh;
+    G.kaiSay(sc === 'home_en' ? 'Chào ' + G.playerName() + '! Đi học thôi: bến xe buýt ở bên phải, ga tàu điện ở góc dưới bên phải.'
+      : sc === 'city_en' ? 'Trường Anh ngữ ở phía dưới, có biển màu đỏ. Bến xe buýt và ga tàu điện để về nhà ở hai góc dưới.' : 'Tiếp tục học nào!');
   };
 
   G.goLobby = function () {
     G.stopEngine();
+    document.getElementById('create').style.display = 'none';
     G.closeLesson();
     document.getElementById('play').style.display = 'none';
     document.getElementById('lobby').style.display = 'block';
@@ -77,8 +80,10 @@ var G = window.G || (window.G = {});
     G.lessonInit();
     document.getElementById('hud-home').onclick = G.goLobby;
     document.getElementById('act').onclick = G.doNear;
-    G.renderLobby();
-    if (!G.S.nhanVat) G.chooseCharacter(G.renderLobby);
+    if (!G.S.nhanVat) {
+      // lần đầu: tạo nhân vật → lời mở đầu → ra khỏi nhà
+      G.openCreator(function () { G.introStory(function () { G.goCity('en'); }); });
+    } else G.renderLobby();
     if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(function () {});
   }
 

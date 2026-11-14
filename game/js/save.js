@@ -8,14 +8,17 @@ var G = window.G || (window.G = {});
     return {
       v: 1,
       nhanVat: null,
-      viTri: { canh: 'city_en', x: 768, y: 230 },
+      ten: '',
+      avatar: null,
+      viTri: { canh: 'home_en', x: 420, y: 640 },
+      diLai: { bus: 0, metro: 0 },
       xp: 0,
       phong: {},
       totNghiep: {},
       doiSong: {},
       tuKho: [],
       chuoi: { hienTai: 0, ngayCuoi: '' },
-      caiDat: { amThanh: true, hienPinyin: true },
+      caiDat: { amThanh: true, hienPinyin: true, chiNghe: false },
       taoLuc: G.vnNow()
     };
   }

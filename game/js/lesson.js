@@ -207,7 +207,7 @@ var G = window.G || (window.G = {});
     body.appendChild(head(2, 'Kết quả'));
     body.appendChild(G.el('div.result' + (pass ? '.pass' : ''),
       G.el('div.rscore', right + '/10'),
-      G.imgEl('player_' + (G.S.nhanVat || 'han') + '_' + (pass ? 'happy' : 'think') + '.png', 'rface'),
+      G.playerPic(112, 'rface', pass ? 'happy' : 'think'),
       G.el('div.rstars', pass ? stars(sao) : '☆☆☆'),
       G.el('div', pass ? (firstPass ? 'Qua phòng! Cửa phòng tiếp theo đã mở.' : 'Qua phòng! Kết quả tốt nhất đã được lưu.') : 'Chưa đạt 8/10. Xem lại thẻ và luyện thêm rồi thử lại nhé.')
     ));

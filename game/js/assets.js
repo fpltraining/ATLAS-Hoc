@@ -6,6 +6,8 @@ G.ASSET_LIST = [
   'player_han_down.png', 'player_han_up.png', 'player_han_left.png',
   'player_minh_down.png', 'player_minh_up.png', 'player_minh_left.png', 'kai_follow.png',
   'card_city_en.png', 'card_city_zh.png', 'card_city_soon.png', 'lobby_hero.png',
+  'map_home_en.png', 'building_en_home.png', 'building_en_busstop.png', 'building_en_metro.png',
+  'npc_driver.png', 'vehicle_bus.png', 'vehicle_metro.png', 'vehicle_metro_open.png', 'ride_bg_bus.png', 'ride_bg_metro.png',
   'map_en.png', 'building_en_school.png', 'building_en_cafe.png', 'building_en_market.png', 'building_en_hospital.png', 'building_en_airport.png',
   'map_zh.png', 'building_zh_school.png', 'building_zh_teahouse.png', 'building_zh_market.png', 'building_zh_hospital.png', 'building_zh_airport.png',
   'interior_en_hall.png', 'classroom_en.png', 'interior_en_cafe.png', 'interior_en_market.png', 'interior_en_hospital.png', 'interior_en_airport.png',

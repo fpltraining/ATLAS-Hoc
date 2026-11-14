@@ -226,3 +226,11 @@ game/
 | **3** | Trường Lạc trấn: bản đồ, Học viện Hán ngữ (Phát âm + HSK1), pinyin, giọng zh-CN; sân bay bay qua lại giữa hai thành phố | Bay từ Brightford sang Trường Lạc trấn, học HSK1-1, bật tắt pinyin |
 | **4** | Khu đời sống ở cả hai thành phố: quán, chợ, bệnh viện, quầy sân bay | Gọi cà phê ở Brightford, gọi trà ở Trường Lạc trấn |
 | **5** | Video mở đầu, bay và tốt nghiệp; hiệu ứng, âm thanh, ngày và đêm | Tốt nghiệp A1 xem video; tắt mạng mở lại vẫn chơi được |
+
+## Bổ sung (14/11/2026): tạo nhân vật và đường tới trường
+- **Lần đầu mở game:** màn tạo nhân vật (kiểu tóc, màu tóc, khuôn mặt, trang phục, tên). Nhân vật ghép từ các lớp hình đặt ở ASSET_ORDERS mục G; game chỉ tô màu tóc. Vẫn chọn được Han hoặc Minh có sẵn.
+- **Lời mở đầu của Kai** rồi xuất hiện trước nhà ở **Khu phố Maple** (`home_en`).
+- **Đi học bằng xe buýt:** nói chuyện với tài xế (Where are you going? / tap your card), nghe "Next stop: …", bấm chuông xuống đúng trạm Brightford High School.
+- **Đi học bằng tàu điện:** mua vé ở máy (chọn ga, số vé), đọc sơ đồ tuyến để chọn sân ga (toward …), nghe "This is …" và xuống khi cửa mở.
+- Xuống đúng +10 XP; nhầm trạm hoặc đi quá thì đi lại chuyến khác. Đi đủ 3 lần thì có nút "Đi nhanh".
+- Ở trung tâm có bến xe buýt và ga tàu để về nhà theo chiều ngược lại.

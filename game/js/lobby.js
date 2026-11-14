@@ -48,8 +48,8 @@ var G = window.G || (window.G = {});
     var who = G.S.nhanVat || 'han';
     root.appendChild(G.el('h2.sec', 'Hồ sơ của bạn'));
     root.appendChild(G.el('div.profile',
-      G.el('div.pchar', G.imgEl('player_' + who + '_down.png', 'pchar-img'), G.el('b', who === 'han' ? 'Han' : 'Minh'),
-        G.el('button.btn.sm', { onclick: function () { G.chooseCharacter(G.renderLobby); } }, 'Đổi nhân vật')),
+      G.el('div.pchar', G.playerPic(96, 'pchar-img'), G.el('b', G.playerName()),
+        G.el('button.btn.sm', { onclick: function () { G.openCreator(function () { G.goLobby(); }); } }, 'Sửa nhân vật')),
       G.el('div.pstats',
         stat(G.S.xp, 'XP'),
         stat(G.S.chuoi.hienTai + ' ngày', 'Chuỗi học'),
