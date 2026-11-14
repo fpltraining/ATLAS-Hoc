@@ -112,7 +112,7 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
     add('en', `This is ${n}. Please mind the gap.`, 'f'); add('en', `This is ${n}. This is the last stop.`, 'f');
     add('en', `To ${n}, please.`); add('en', n);
   }
-  for (const g of ['Good morning!', 'Good afternoon!', 'Good evening!']) add('en', `${g} Where are you going?`);
+  for (const g of ['Morning!', 'Hey there!', 'Evening!']) add('en', `${g} Where you headed?`);
 }
 
 const list = [...items.values()];

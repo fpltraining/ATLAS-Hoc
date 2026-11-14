@@ -10,24 +10,24 @@ G.ROOMS['en-a1-1'] = {
   title: 'A1-1 · Chào hỏi và giới thiệu',
   teacher: 'emma',
   intro: [
-    'Hello! I am Ms. Emma. Welcome to Brightford!',
-    'Hôm nay mình học cách chào hỏi và giới thiệu bản thân. Bấm 🔊 để nghe, rồi nói theo nhé.'
+    'Hey! I\'m Ms. Emma. Welcome to Brightford!',
+    'Hôm nay học cách chào hỏi như người Mỹ nói thật ngoài đời: ngắn, thoải mái, có rút gọn (I\'m, what\'s…). Bấm 🔊 rồi nói theo nhé.'
   ],
   items: [
-    { en: 'hello', vi: 'xin chào', ex: 'Hello, I am Han.', exVi: 'Xin chào, mình là Han.' },
-    { en: 'good morning', vi: 'chào buổi sáng', ex: 'Good morning, Ms. Emma!', exVi: 'Chào buổi sáng, cô Emma!' },
-    { en: 'good afternoon', vi: 'chào buổi chiều', ex: 'Good afternoon, everyone.', exVi: 'Chào buổi chiều mọi người.' },
-    { en: 'good evening', vi: 'chào buổi tối', ex: 'Good evening, Mr. Tom.', exVi: 'Chào buổi tối, thầy Tom.' },
-    { en: 'goodbye', vi: 'tạm biệt', ex: 'Goodbye, see you tomorrow!', exVi: 'Tạm biệt, mai gặp lại nhé!' },
-    { en: 'see you later', vi: 'hẹn gặp lại', ex: 'See you later, Kai!', exVi: 'Hẹn gặp lại nhé, Kai!' },
-    { en: 'What is your name?', vi: 'Bạn tên là gì?', ex: 'Hi! What is your name?', exVi: 'Chào bạn! Bạn tên là gì?' },
-    { en: 'My name is Han.', vi: 'Mình tên là Han.', ex: 'Hello, my name is Han.', exVi: 'Xin chào, mình tên là Han.' },
-    { en: 'nice to meet you', vi: 'rất vui được gặp bạn', ex: 'Nice to meet you, Emma.', exVi: 'Rất vui được gặp cô, Emma.' },
-    { en: 'How are you?', vi: 'Bạn có khoẻ không?', ex: 'Hi Tom, how are you?', exVi: 'Chào Tom, cậu khoẻ không?' },
-    { en: 'I am fine, thank you.', vi: 'Mình khoẻ, cảm ơn.', ex: 'I am fine, thank you. And you?', exVi: 'Mình khoẻ, cảm ơn. Còn bạn?' },
-    { en: 'I am from Vietnam.', vi: 'Mình đến từ Việt Nam.', ex: 'I am from Vietnam. I live in Hanoi.', exVi: 'Mình đến từ Việt Nam. Mình sống ở Hà Nội.' }
+    { en: 'Hey!', vi: 'Chào! (thân mật, dùng nhiều nhất)', ex: 'Hey! What\'s up?', exVi: 'Chào! Có gì mới không?' },
+    { en: 'Morning!', vi: 'Chào buổi sáng! (nói gọn)', ex: 'Morning, Ms. Emma!', exVi: 'Chào buổi sáng cô Emma!' },
+    { en: 'How\'s it going?', vi: 'Dạo này sao rồi?', ex: 'Hey Tom, how\'s it going?', exVi: 'Chào Tom, dạo này sao rồi?' },
+    { en: 'Not bad, you?', vi: 'Cũng ổn, còn bạn?', ex: 'Not bad, you? Busy day?', exVi: 'Cũng ổn, còn bạn? Hôm nay bận không?' },
+    { en: 'Pretty good, thanks.', vi: 'Khá ổn, cảm ơn.', ex: 'Pretty good, thanks for asking.', exVi: 'Khá ổn, cảm ơn đã hỏi.' },
+    { en: 'What\'s your name?', vi: 'Bạn tên gì?', ex: 'Sorry, what\'s your name again?', exVi: 'Xin lỗi, bạn tên gì nhỉ?' },
+    { en: 'I\'m Han.', vi: 'Mình là Han.', ex: 'Hi, I\'m Han. I\'m new here.', exVi: 'Chào, mình là Han. Mình mới tới.' },
+    { en: 'Nice to meet you.', vi: 'Rất vui được gặp bạn.', ex: 'Nice to meet you too!', exVi: 'Mình cũng rất vui được gặp bạn!' },
+    { en: 'Where are you from?', vi: 'Bạn từ đâu tới?', ex: 'So, where are you from?', exVi: 'Vậy bạn từ đâu tới?' },
+    { en: 'I\'m from Vietnam.', vi: 'Mình đến từ Việt Nam.', ex: 'I\'m from Vietnam. Hanoi, actually.', exVi: 'Mình từ Việt Nam. Hà Nội cơ.' },
+    { en: 'See you later!', vi: 'Gặp lại sau nhé!', ex: 'Gotta go. See you later!', exVi: 'Mình phải đi rồi. Gặp lại sau nhé!' },
+    { en: 'Take care!', vi: 'Giữ gìn sức khoẻ nhé! (lời chào khi chia tay)', ex: 'Bye, take care!', exVi: 'Tạm biệt, giữ gìn nhé!' }
   ],
-  outro: 'Great job! You can say hello in English now.'
+  outro: 'Awesome! You sound like a local already.'
 };
 
 G.ROOMS['en-a1-2'] = {
@@ -36,24 +36,24 @@ G.ROOMS['en-a1-2'] = {
   title: 'A1-2 · Số, giờ và ngày',
   teacher: 'tom',
   intro: [
-    'Good morning! I am Mr. Tom. Let us learn numbers and time.',
-    'Hôm nay học số, hỏi giờ và các ngày trong tuần. Nghe kỹ cách đọc giờ nhé.'
+    'Morning! I\'m Mr. Tom. Let\'s talk numbers and time.',
+    'Hôm nay học hỏi giờ, nói tuổi, ngày trong tuần đúng kiểu người bản xứ hay nói.'
   ],
   items: [
-    { en: 'one', vi: 'một', ex: 'I have one brother.', exVi: 'Mình có một anh trai.' },
-    { en: 'five', vi: 'năm', ex: 'I have five books.', exVi: 'Mình có năm quyển sách.' },
-    { en: 'ten', vi: 'mười', ex: 'There are ten students in the class.', exVi: 'Lớp có mười học sinh.' },
-    { en: 'twenty', vi: 'hai mươi', ex: 'I am twenty years old.', exVi: 'Mình hai mươi tuổi.' },
-    { en: 'How old are you?', vi: 'Bạn bao nhiêu tuổi?', ex: 'Hi Kai, how old are you?', exVi: 'Chào Kai, bạn bao nhiêu tuổi?' },
-    { en: 'What time is it?', vi: 'Mấy giờ rồi?', ex: 'Excuse me, what time is it?', exVi: 'Xin lỗi, mấy giờ rồi ạ?' },
-    { en: 'seven o\'clock', vi: 'bảy giờ đúng', ex: 'It is seven o\'clock in the morning.', exVi: 'Bây giờ là bảy giờ sáng.' },
-    { en: 'half past eight', vi: 'tám giờ rưỡi', ex: 'The class starts at half past eight.', exVi: 'Lớp học bắt đầu lúc tám giờ rưỡi.' },
-    { en: 'Monday', vi: 'thứ Hai', ex: 'I go to school on Monday.', exVi: 'Mình đi học vào thứ Hai.' },
-    { en: 'Sunday', vi: 'Chủ nhật', ex: 'We rest on Sunday.', exVi: 'Chúng mình nghỉ vào Chủ nhật.' },
-    { en: 'today', vi: 'hôm nay', ex: 'Today is Friday.', exVi: 'Hôm nay là thứ Sáu.' },
-    { en: 'tomorrow', vi: 'ngày mai', ex: 'See you tomorrow, Mr. Tom!', exVi: 'Hẹn gặp thầy Tom ngày mai!' }
+    { en: 'What time is it?', vi: 'Mấy giờ rồi?', ex: 'Hey, what time is it?', exVi: 'Ê, mấy giờ rồi?' },
+    { en: 'It\'s seven o\'clock.', vi: 'Bảy giờ đúng.', ex: 'It\'s seven o\'clock. Time to get up!', exVi: 'Bảy giờ rồi. Dậy thôi!' },
+    { en: 'It\'s eight thirty.', vi: 'Tám giờ rưỡi.', ex: 'Class starts at eight thirty.', exVi: 'Lớp bắt đầu lúc tám giờ rưỡi.' },
+    { en: 'quarter to nine', vi: 'chín giờ kém mười lăm', ex: 'It\'s quarter to nine. We\'re late!', exVi: 'Chín giờ kém mười lăm rồi. Muộn rồi!' },
+    { en: 'How old are you?', vi: 'Bạn bao nhiêu tuổi?', ex: 'If you don\'t mind me asking, how old are you?', exVi: 'Nếu bạn không phiền, bạn bao nhiêu tuổi?' },
+    { en: 'I\'m twenty.', vi: 'Mình hai mươi tuổi.', ex: 'I\'m twenty. I just had my birthday.', exVi: 'Mình hai mươi. Mình vừa sinh nhật xong.' },
+    { en: 'What day is it today?', vi: 'Hôm nay thứ mấy?', ex: 'Wait, what day is it today?', exVi: 'Khoan, hôm nay thứ mấy nhỉ?' },
+    { en: 'It\'s Monday.', vi: 'Thứ Hai.', ex: 'Ugh, it\'s Monday again.', exVi: 'Haizz, lại thứ Hai rồi.' },
+    { en: 'this weekend', vi: 'cuối tuần này', ex: 'Are you free this weekend?', exVi: 'Cuối tuần này bạn rảnh không?' },
+    { en: 'tomorrow', vi: 'ngày mai', ex: 'See you tomorrow, Mr. Tom!', exVi: 'Mai gặp thầy Tom nhé!' },
+    { en: 'in five minutes', vi: 'năm phút nữa', ex: 'I\'ll be there in five minutes.', exVi: 'Năm phút nữa mình tới.' },
+    { en: 'I\'m running late.', vi: 'Mình bị trễ rồi.', ex: 'Sorry, I\'m running late. Traffic is crazy.', exVi: 'Xin lỗi, mình trễ rồi. Kẹt xe kinh khủng.' }
   ],
-  outro: 'Excellent! Now you can tell the time in English.'
+  outro: 'Nice! Now you\'ll never be late again.'
 };
 
 G.ROOMS['en-a1-3'] = {
@@ -62,24 +62,24 @@ G.ROOMS['en-a1-3'] = {
   title: 'A1-3 · Gia đình và mọi người',
   teacher: 'lily',
   intro: [
-    'Hello, dear! I am Mrs. Lily. Tell me about your family.',
-    'Hôm nay học cách nói về gia đình và tả người. Bấm 🔊 rồi nói theo nhé.'
+    'Hi, sweetie! I\'m Mrs. Lily. Tell me about your family.',
+    'Hôm nay học nói về gia đình như người Mỹ hay nói: mom, dad, grandma… chứ ít ai nói mother, father khi trò chuyện.'
   ],
   items: [
-    { en: 'family', vi: 'gia đình', ex: 'I love my family.', exVi: 'Mình yêu gia đình mình.' },
-    { en: 'mother', vi: 'mẹ', ex: 'My mother is a teacher.', exVi: 'Mẹ mình là giáo viên.' },
-    { en: 'father', vi: 'bố', ex: 'My father likes coffee.', exVi: 'Bố mình thích cà phê.' },
-    { en: 'brother', vi: 'anh trai, em trai', ex: 'My brother is ten years old.', exVi: 'Em trai mình mười tuổi.' },
-    { en: 'sister', vi: 'chị gái, em gái', ex: 'My sister likes music.', exVi: 'Chị gái mình thích âm nhạc.' },
-    { en: 'grandmother', vi: 'bà', ex: 'My grandmother lives with us.', exVi: 'Bà sống cùng nhà mình.' },
-    { en: 'grandfather', vi: 'ông', ex: 'My grandfather tells funny stories.', exVi: 'Ông mình kể chuyện rất vui.' },
-    { en: 'friend', vi: 'bạn', ex: 'Kai is my best friend.', exVi: 'Kai là bạn thân nhất của mình.' },
-    { en: 'This is my mother.', vi: 'Đây là mẹ mình.', ex: 'Hello! This is my mother.', exVi: 'Xin chào! Đây là mẹ mình.' },
-    { en: 'He is tall.', vi: 'Anh ấy cao.', ex: 'My father is tall and strong.', exVi: 'Bố mình cao và khoẻ.' },
-    { en: 'She is kind.', vi: 'Cô ấy tốt bụng.', ex: 'She is kind and funny.', exVi: 'Cô ấy tốt bụng và vui tính.' },
-    { en: 'Do you have any brothers?', vi: 'Bạn có anh em trai không?', ex: 'Do you have any brothers or sisters?', exVi: 'Bạn có anh chị em không?' }
+    { en: 'my mom', vi: 'mẹ mình', ex: 'My mom is a teacher.', exVi: 'Mẹ mình là giáo viên.' },
+    { en: 'my dad', vi: 'bố mình', ex: 'My dad loves coffee.', exVi: 'Bố mình mê cà phê.' },
+    { en: 'my brother', vi: 'anh / em trai mình', ex: 'My little brother is ten.', exVi: 'Em trai mình mười tuổi.' },
+    { en: 'my sister', vi: 'chị / em gái mình', ex: 'My big sister lives in Saigon.', exVi: 'Chị gái mình sống ở Sài Gòn.' },
+    { en: 'my grandma', vi: 'bà mình', ex: 'My grandma lives with us.', exVi: 'Bà mình sống cùng nhà.' },
+    { en: 'my grandpa', vi: 'ông mình', ex: 'My grandpa tells the best stories.', exVi: 'Ông mình kể chuyện hay nhất.' },
+    { en: 'my best friend', vi: 'bạn thân nhất của mình', ex: 'Kai is my best friend.', exVi: 'Kai là bạn thân nhất của mình.' },
+    { en: 'This is my mom.', vi: 'Đây là mẹ mình.', ex: 'Hey, this is my mom.', exVi: 'Ê, đây là mẹ mình nè.' },
+    { en: 'Do you have any siblings?', vi: 'Bạn có anh chị em không?', ex: 'So, do you have any siblings?', exVi: 'Vậy bạn có anh chị em không?' },
+    { en: 'I\'m an only child.', vi: 'Mình là con một.', ex: 'No, I\'m an only child.', exVi: 'Không, mình là con một.' },
+    { en: 'He\'s really tall.', vi: 'Anh ấy cao lắm.', ex: 'My dad\'s really tall.', exVi: 'Bố mình cao lắm.' },
+    { en: 'She\'s super nice.', vi: 'Cô ấy cực kỳ dễ thương.', ex: 'Your sister\'s super nice!', exVi: 'Chị bạn dễ thương ghê!' }
   ],
-  outro: 'Wonderful! You can talk about your family now.'
+  outro: 'So sweet! Now you can talk about your family.'
 };
 
 G.ROOMS['en-a1-4'] = {
@@ -88,24 +88,24 @@ G.ROOMS['en-a1-4'] = {
   title: 'A1-4 · Đồ ăn và đồ uống',
   teacher: 'sam',
   intro: [
-    'Hi there! I am Chef Sam. Are you hungry?',
-    'Hôm nay học tên đồ ăn, đồ uống và cách gọi món. Học xong là đủ sức ra quán cà phê đấy!'
+    'Hey there! I\'m Chef Sam. Hungry yet?',
+    'Hôm nay học gọi món như ngoài quán thật: Can I get…, for here or to go… Học xong là đủ sức ra quán cà phê đấy!'
   ],
   items: [
-    { en: 'water', vi: 'nước', ex: 'Can I have some water, please?', exVi: 'Cho mình xin ít nước được không?' },
-    { en: 'coffee', vi: 'cà phê', ex: 'I drink coffee every morning.', exVi: 'Sáng nào mình cũng uống cà phê.' },
-    { en: 'tea', vi: 'trà', ex: 'Would you like some tea?', exVi: 'Bạn có muốn uống chút trà không?' },
-    { en: 'bread', vi: 'bánh mì', ex: 'I eat bread for breakfast.', exVi: 'Bữa sáng mình ăn bánh mì.' },
-    { en: 'rice', vi: 'cơm, gạo', ex: 'We eat rice for dinner.', exVi: 'Bữa tối chúng mình ăn cơm.' },
-    { en: 'apple', vi: 'quả táo', ex: 'This apple is very sweet.', exVi: 'Quả táo này ngọt lắm.' },
-    { en: 'chicken', vi: 'thịt gà', ex: 'I like chicken soup.', exVi: 'Mình thích súp gà.' },
-    { en: 'breakfast', vi: 'bữa sáng', ex: 'I have breakfast at seven.', exVi: 'Mình ăn sáng lúc bảy giờ.' },
-    { en: 'delicious', vi: 'ngon', ex: 'This soup is delicious!', exVi: 'Món súp này ngon quá!' },
-    { en: 'I am hungry.', vi: 'Mình đói.', ex: 'I am hungry. Let us eat!', exVi: 'Mình đói rồi. Đi ăn thôi!' },
-    { en: 'I am thirsty.', vi: 'Mình khát.', ex: 'I am thirsty. I want some water.', exVi: 'Mình khát. Mình muốn uống nước.' },
-    { en: 'I would like a sandwich.', vi: 'Mình muốn một cái bánh mì kẹp.', ex: 'I would like a sandwich, please.', exVi: 'Cho mình một cái bánh mì kẹp nhé.' }
+    { en: 'I\'m starving.', vi: 'Mình đói muốn xỉu.', ex: 'I\'m starving. Let\'s grab lunch.', exVi: 'Đói quá. Đi ăn trưa đi.' },
+    { en: 'I\'m so thirsty.', vi: 'Mình khát quá.', ex: 'I\'m so thirsty. Is there any water?', exVi: 'Khát quá. Có nước không?' },
+    { en: 'Can I get a coffee?', vi: 'Cho mình một ly cà phê.', ex: 'Hi, can I get a coffee, please?', exVi: 'Chào, cho mình một ly cà phê nhé.' },
+    { en: 'an iced latte', vi: 'một ly latte đá', ex: 'Can I get an iced latte?', exVi: 'Cho mình một latte đá.' },
+    { en: 'I\'ll have the chicken.', vi: 'Mình gọi món gà.', ex: 'I\'ll have the chicken, please.', exVi: 'Cho mình món gà nhé.' },
+    { en: 'For here or to go?', vi: 'Ăn ở đây hay mang đi?', ex: 'Is that for here or to go?', exVi: 'Ăn ở đây hay mang đi ạ?' },
+    { en: 'To go, please.', vi: 'Mang đi nhé.', ex: 'To go, please. I\'m in a hurry.', exVi: 'Mang đi nhé. Mình đang vội.' },
+    { en: 'Anything else?', vi: 'Còn gì nữa không?', ex: 'Great. Anything else?', exVi: 'Được rồi. Còn gì nữa không?' },
+    { en: 'That\'s it, thanks.', vi: 'Vậy thôi, cảm ơn.', ex: 'No, that\'s it, thanks.', exVi: 'Không, vậy thôi, cảm ơn.' },
+    { en: 'This is so good!', vi: 'Ngon quá!', ex: 'Wow, this is so good!', exVi: 'Trời, ngon quá!' },
+    { en: 'breakfast', vi: 'bữa sáng', ex: 'What did you have for breakfast?', exVi: 'Sáng nay bạn ăn gì?' },
+    { en: 'Can I get the check?', vi: 'Cho mình tính tiền.', ex: 'Excuse me, can I get the check?', exVi: 'Xin lỗi, cho mình tính tiền.' }
   ],
-  outro: 'Yummy! You can order food in English now.'
+  outro: 'Yum! You\'re ready to order anywhere.'
 };
 
 /* Phòng thi cuối cấp A1: trộn câu của cả 4 phòng, 20 câu, đạt từ 16 câu là tốt nghiệp */
@@ -118,9 +118,9 @@ G.ROOMS['en-a1-test'] = {
   testN: 20,
   passN: 16,
   intro: [
-    'Welcome to the A1 final test! I am Kai, the principal.',
+    'Welcome to the A1 final! I\'m Kai, the principal. You got this!',
     'Đây là bài thi cuối cấp A1: 20 câu lấy từ cả 4 phòng. Đúng từ 16 câu là tốt nghiệp và nhận bằng A1.'
   ],
   items: [].concat(G.ROOMS['en-a1-1'].items, G.ROOMS['en-a1-2'].items, G.ROOMS['en-a1-3'].items, G.ROOMS['en-a1-4'].items),
-  outro: 'Congratulations! You passed A1!'
+  outro: 'You did it! You passed A1!'
 };
