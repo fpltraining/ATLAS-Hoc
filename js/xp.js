@@ -76,7 +76,7 @@ export async function award(points, reason = '') {
     return x;
   });
   const a = rankOf(before), b = rankOf(after);
-  if (a.label !== b.label) toast(`🏆 Thăng hạng: ${b.label}!`, 3500);
+  if (a.label !== b.label) window.dispatchEvent(new CustomEvent('atlas:rankup', { detail: { from: a, to: b } }));
   return b;
 }
 

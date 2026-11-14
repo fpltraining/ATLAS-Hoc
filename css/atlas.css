@@ -505,3 +505,78 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 .hero-mascot { position: absolute; right: 6px; bottom: -6px; width: 128px; height: 128px; object-fit: contain; pointer-events: none; }
 .pron-hero > :not(.hero-mascot) { position: relative; max-width: calc(100% - 110px); }
 @media (max-width: 480px) { .hero-mascot { width: 96px; height: 96px; opacity: .9; } .pron-hero > :not(.hero-mascot) { max-width: calc(100% - 70px); } }
+
+/* ---------- hiệu ứng (js/fx.js) ---------- */
+.fx-confetti { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9998; }
+.fx-card {
+  position: fixed; z-index: 9997; left: 50%; bottom: calc(86px + env(safe-area-inset-bottom, 0px));
+  transform: translateX(-50%); width: min(560px, calc(100% - 24px));
+  display: flex; align-items: center; gap: 14px; padding: 12px 14px;
+  background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(20, 24, 50, .22); animation: fx-up .32s cubic-bezier(.2, .9, .3, 1.25) both;
+}
+.fx-card.big { border: 2px solid var(--jade); }
+.fx-card.out { animation: fx-down .22s ease-in both; }
+.fx-ava { width: 84px; height: 84px; object-fit: contain; flex: none; margin: -24px 0 -6px; animation: fx-hop .9s ease-in-out .15s 2; }
+.fx-art { flex: none; display: grid; place-items: center; }
+.fx-title { display: block; font-size: 17px; line-height: 1.3; }
+.fx-sub { font-size: 13px; color: var(--ink-soft); margin-top: 2px; }
+.fx-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+@media (min-width: 900px) { .fx-card { bottom: 24px; } }
+.fx-spot { position: fixed; inset: 0; z-index: 9996; display: grid; place-items: center; padding: 20px; background: rgba(14, 17, 34, .55); animation: fx-fade .2s ease-out both; }
+.fx-spot.out { animation: fx-fade .2s ease-in reverse both; }
+.fx-spot-card { width: min(360px, 100%); background: var(--card); color: var(--ink); border-radius: 22px; padding: 22px 20px 18px; text-align: center; box-shadow: 0 30px 80px rgba(0, 0, 0, .35); animation: fx-pop-in .42s cubic-bezier(.2, .9, .3, 1.3) both; }
+.fx-spot-art { display: grid; place-items: center; margin: -6px 0 10px; }
+.fx-spot-title { font-size: 21px; font-weight: 800; line-height: 1.25; }
+.fx-spot-sub { color: var(--ink-soft); margin: 6px 0 14px; font-size: 14px; }
+.fx-shine { position: relative; overflow: hidden; border-radius: 50%; }
+.fx-shine::after { content: ''; position: absolute; inset: -20%; background: linear-gradient(115deg, transparent 35%, rgba(255, 255, 255, .75) 50%, transparent 65%); transform: translateX(-120%); animation: fx-sweep 1.6s ease-in-out .35s 2; pointer-events: none; }
+.fx-pop { animation: fx-pop .32s ease-out; }
+.fx-shake { animation: fx-shake .36s ease-in-out; }
+@keyframes fx-up { from { opacity: 0; transform: translate(-50%, 30px) scale(.96); } }
+@keyframes fx-down { to { opacity: 0; transform: translate(-50%, 24px); } }
+@keyframes fx-hop { 50% { transform: translateY(-10px) rotate(-3deg); } }
+@keyframes fx-fade { from { opacity: 0; } }
+@keyframes fx-pop-in { from { opacity: 0; transform: scale(.7); } }
+@keyframes fx-sweep { to { transform: translateX(120%); } }
+@keyframes fx-pop { 40% { transform: scale(1.06); } }
+@keyframes fx-shake { 20% { transform: translateX(-6px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(3px); } }
+
+/* huy chương */
+.medal { position: relative; display: inline-grid; place-items: center; flex: none; border-radius: 50%; }
+.medal:not(.has-img) { background: conic-gradient(from 210deg, var(--m1), var(--m2), var(--m1), var(--m2), var(--m1)); box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .45), 0 4px 12px rgba(20, 24, 50, .18); }
+.medal.bronze { --m1: #a8693c; --m2: #e8b98d; }
+.medal.silver { --m1: #8e9aab; --m2: #eef2f7; }
+.medal.gold { --m1: #c99520; --m2: #fbe39a; }
+.medal-disc { width: 76%; height: 76%; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #fffdf6, #f1e6d0); box-shadow: inset 0 2px 6px rgba(0, 0, 0, .15); }
+.medal-img { width: 100%; height: 100%; object-fit: contain; }
+.medal.locked { filter: grayscale(1) opacity(.42); }
+.badge-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 14px 10px; margin-top: 12px; }
+.badge-cell { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
+.badge-cell b { font-size: 13px; line-height: 1.25; }
+.badge-cell.locked b { color: var(--ink-faint); }
+
+/* chuỗi ngày trong tuần */
+.streak-row { display: flex; align-items: center; justify-content: space-between; gap: 10px 16px; flex-wrap: wrap; margin-top: 6px; }
+.streak { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.streak-flame { display: inline-grid; line-height: 0; animation: fx-flicker 2.4s ease-in-out infinite; transform-origin: 50% 90%; }
+.streak-n { font-size: 24px; line-height: 1; }
+.streak-warn { width: 100%; opacity: .8; }
+.week-dots { display: flex; gap: 6px; }
+.wd { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.wd i { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; border: 2px solid rgba(255, 255, 255, .22); line-height: 0; }
+.wd.on i { background: rgba(242, 191, 60, .2); border-color: #f2bf3c; }
+.wd.today i { border-color: #fff; }
+.wd.future i { opacity: .45; }
+.wd small { font-size: 10.5px; opacity: .75; }
+@keyframes fx-flicker { 0%, 100% { transform: scale(1) rotate(0); } 30% { transform: scale(1.06, .96) rotate(-2deg); } 60% { transform: scale(.97, 1.04) rotate(2deg); } }
+
+/* chuyển màn mượt, nút có phản hồi khi chạm */
+.view > * { animation: view-in .22s ease-out both; }
+@keyframes view-in { from { opacity: 0; transform: translateY(6px); } }
+.btn, a.card, .hub-tile, .choice, .path-node, .lang-meter, .mcq-opt, .game-tile { transition: transform .12s ease, box-shadow .12s ease; }
+.btn:active, a.card:active, .hub-tile:active, .choice:active, .mcq-opt:active, .game-tile:active { transform: scale(.97); }
+
+@media (prefers-reduced-motion: reduce) {
+  .view > *, .fx-card, .fx-spot, .fx-spot-card, .fx-ava, .streak-flame, .fx-shine::after, .fx-pop, .fx-shake { animation: none !important; }
+}

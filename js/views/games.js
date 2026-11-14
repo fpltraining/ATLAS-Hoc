@@ -15,6 +15,7 @@ import * as audio from '../audio.js';
 import { shuffle } from '../kit.js';
 import { learnedWords, shortVi } from '../pool.js';
 import { h, pill } from '../ui.js';
+import { answer } from '../fx.js';
 
 const GAMES = [
   { id: 'listen',  mark: '🎧', title: 'Nghe → chọn chữ', sub: 'Nghe phát âm, chọn đúng chữ Hán', unit: 'đúng' },
@@ -121,6 +122,7 @@ async function listen(ctx, g) {
         done = true;
         const ok = o === it;
         if (ok) S.right++; else { S.wrong.push(it); e.currentTarget.classList.add('no'); }
+        answer(ok, e.currentTarget);
         [...grid.children][opts.indexOf(it)].classList.add('ok');
         note.replaceChildren(h('div', h('span.py', it.py), ' · ', it.vi),
           h('button.btn.primary.block', { style: { marginTop: '10px' }, onclick: next }, S.i < qs.length - 1 ? 'Câu tiếp ›' : 'Xem kết quả'));
@@ -165,6 +167,7 @@ async function reflex(ctx, g) {
       const ok = picked === it;
       if (ok) { S.right++; S.score += 10 + Math.round(left / 600); } // trả lời nhanh được thêm điểm
       else { S.wrong.push(it); el?.classList.add('no'); }
+      answer(ok, el);
       [...list.children][opts.indexOf(it)].classList.add('ok');
       S.timer = setTimeout(next, ok ? 500 : 1300);
     };
@@ -289,6 +292,7 @@ async function compose(ctx, g) {
           done = true;
           const ok = chosen.every((c, k) => c === q.parts[k]);
           if (ok) S.right++; else S.wrong.push({ w: q.ch, py: q.py, vi: q.d.vi || '' });
+          answer(ok);
           note.replaceChildren(
             h(`div.note.${ok ? 'jade' : 'seal'}`, ok ? 'Đúng rồi! ' : 'Chưa đúng. ',
               h('span.cn', { style: { fontSize: '22px' } }, q.ch), ' = ', q.parts.join(' + '),
@@ -354,6 +358,7 @@ async function vanish(ctx, g) {
         if (done) return;
         done = true;
         if (o === gone) S.right++; else { S.wrong.push(gone); e.currentTarget.classList.add('no'); }
+        answer(o === gone, e.currentTarget);
         [...list.children][opts.indexOf(gone)].classList.add('ok');
         note.replaceChildren(h('div', h('b.cn', gone.w), ' ', h('span.py', gone.py), ' · ', gone.vi),
           h('button.btn.primary.block', { style: { marginTop: '10px' }, onclick: next }, S.i < ROUNDS - 1 ? 'Lượt tiếp ›' : 'Xem kết quả'));

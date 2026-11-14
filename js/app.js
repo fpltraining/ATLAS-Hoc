@@ -266,6 +266,9 @@ async function boot() {
     await router();
     registerServiceWorker();
     data.warmLookups();
+    listenCelebrations();
+    // huy hiệu đã đạt từ trước (lần đầu có tính năng này) thì mở khoá và chúc mừng luôn
+    setTimeout(() => import('./badges.js').then((m) => m.checkBadges()).catch(() => {}), 2500);
   } catch (e) {
     console.error(e);
     bootEl.classList.add('error');
@@ -273,6 +276,53 @@ async function boot() {
       'Không tải được dữ liệu. Nếu bạn đang mở file trực tiếp từ ổ đĩa, ' +
       'hãy chạy app qua một máy chủ web (xem README).';
   }
+}
+
+/* ---------- ăn mừng khi xong việc, lên rank ----------
+   store.markStep phát 'atlas:step' khi một việc trong ngày vừa xong; gom các sự kiện liền nhau
+   (ôn chung cả hai ngôn ngữ xong hai việc một lúc) rồi hiện một thẻ ăn mừng có nút sang việc kế tiếp. */
+function listenCelebrations() {
+  const keys = new Set();
+  let timer = 0;
+  window.addEventListener('atlas:step', (e) => {
+    keys.add(e.detail.key);
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      const done = [...keys];
+      keys.clear();
+      try {
+        const [{ buildToday, langDay, LANG_NAME, minsByLang }, fx, badges] = await Promise.all([import('./plan.js'), import('./fx.js'), import('./badges.js')]);
+        const plan = await buildToday();
+        const step = plan.steps.find((s) => done.includes(s.key));
+        if (/^#\/(home|en|zh)?$/.test(location.hash || '#/home')) window.dispatchEvent(new HashChangeEvent('hashchange'));
+        if (step) {
+          const g = langDay(plan, step.lang);
+          const next = plan.steps.find((s) => !s.done);
+          const who = step.lang === 'zh' ? 'han' : 'kai';
+          const m = minsByLang(plan.day.secs);
+          if (!next) {
+            const langs = plan.settings.langs || 'both';
+            const parts = [langs !== 'zh' ? `Tiếng Anh ${m.en} phút` : null, langs !== 'en' ? `Tiếng Trung ${m.zh} phút` : null].filter(Boolean);
+            fx.celebrate({ big: true, who, title: 'Xong hết việc hôm nay!', sub: `${parts.join(' · ')}. Mai gặp lại nhé.` });
+          } else if (step.lang !== 'all' && g.done === g.steps.length) {
+            fx.celebrate({ who, title: `Xong ${LANG_NAME[step.lang].toLowerCase()} hôm nay!`, sub: `${g.steps.length}/${g.steps.length} việc · ${g.mins} phút`, next: { title: next.title, href: next.href } });
+          } else {
+            fx.celebrate({ who, title: `Xong: ${step.title}`, sub: `${LANG_NAME[step.lang]}: ${g.done}/${g.steps.length} việc hôm nay`, next: { title: next.title, href: next.href, label: 'Tiếp' } });
+          }
+        }
+        setTimeout(() => badges.checkBadges().catch(() => {}), 1400);
+      } catch (err) { console.warn(err); }
+    }, 350);
+  });
+  window.addEventListener('atlas:rankup', async (e) => {
+    try {
+      const [{ emblem }, fx] = await Promise.all([import('./xp.js'), import('./fx.js')]);
+      const r = e.detail.to;
+      const node = emblem(r, 140);
+      node.classList.add('fx-shine');
+      fx.spotlight(node, { title: `Thăng hạng: ${r.label}`, sub: r.next ? `Tiếp theo: ${r.next}` : 'Rank cao nhất rồi!' });
+    } catch (err) { console.warn(err); }
+  });
 }
 
 /* Có bản mới (service worker mới vừa nắm quyền): lần chuyển màn hình kế tiếp thì tải lại cả app,

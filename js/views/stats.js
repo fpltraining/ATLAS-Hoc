@@ -6,6 +6,7 @@ import * as content from '../content.js';
 import { summarize, TYPE_LABEL } from '../srs.js';
 import { h, section, progressBar, todayKey, plural, toast } from '../ui.js';
 import { rankCard, xpState, RANKS, emblem } from '../xp.js';
+import { badgeShelf } from '../badges.js';
 import { TRACK_LANG, LANG_NAME, minsByLang } from '../plan.js';
 
 const TRACK_NAME = { reviewEn: 'Ôn thẻ', en: 'Học bài', read: 'Đọc truyện', work: 'Anh nghề', reviewZh: 'Ôn thẻ', zh: 'Học bài', readZh: 'Đọc truyện', review: 'Ôn thẻ chung', know: 'Kiến thức' };
@@ -30,6 +31,7 @@ export async function render() {
     h('div.small.faint', { style: { marginTop: '8px' } }, 'Điểm đến từ: điểm danh, xong mục học, đọc chương truyện, ôn thẻ, qua bài phát âm. Gần đây:'),
     h('div.small', ...(xp.log || []).slice(0, 6).map((l) => h('div', `+${l.p} · ${l.r}`))),
   ));
+  el.append(await badgeShelf());
 
   /* ---- các con số chính, chia theo ngôn ngữ ---- */
   const st = en.stage || 0;

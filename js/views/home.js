@@ -7,11 +7,12 @@ import { h } from '../ui.js';
 import { streak } from '../progress.js';
 import { rankCard } from '../xp.js';
 import { zhPath, enPath, pathCard } from '../path.js';
+import { artSvg } from '../fx-art.js';
 
 const WEEKDAY = ['Chủ nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
 
 export async function render() {
-  const [plan, st, challenges] = await Promise.all([buildToday(), streak(), store.kvGet('challenge', {})]);
+  const [plan, st, challenges, days] = await Promise.all([buildToday(), streak(), store.kvGet('challenge', {}), store.allDays()]);
   const ch = challenges[store.dayKey()];
   const el = h('div.stack');
 
@@ -38,9 +39,14 @@ export async function render() {
   const nextGroup = next ? groups.find((g) => g.lang === next.lang) : null;
   el.append(h('div.card.today-hero',
     h('div.small.hero-sub', `${WEEKDAY[now.getDay()]}, ${now.getDate()}/${now.getMonth() + 1} · ${DAY_NAME[plan.type]}`),
-    h('div.streak', { title: `Chuỗi dài nhất: ${st.best} ngày` },
-      '🔥 ', st.cur ? h('b', String(st.cur)) : null, st.cur ? ' ngày học liên tiếp' : 'Học hôm nay để bắt đầu chuỗi ngày',
-      st.cur && !st.todayOn ? h('span.small', ' · học hôm nay để giữ chuỗi') : null),
+    h('div.streak-row',
+      h('div.streak', { title: `Chuỗi dài nhất: ${st.best} ngày` },
+        h('span.streak-flame', { html: artSvg('fire', 26) }),
+        st.cur ? h('b.streak-n', String(st.cur)) : null,
+        h('span', st.cur ? ' ngày liên tiếp' : 'Học hôm nay để bắt đầu chuỗi ngày'),
+        st.cur && !st.todayOn ? h('span.small.streak-warn', 'Học hôm nay để giữ chuỗi') : null),
+      weekDots(days, now),
+    ),
     h('div.hero-meters', ...meters.map((g) => langMeter(g))),
     next
       ? h('div.hero-next',
@@ -88,6 +94,22 @@ export async function render() {
   el.append(journalCard(plan.day));
 
   return { title: 'Hôm nay', el };
+}
+
+/* 7 ô Thứ Hai → Chủ nhật của tuần này: ngày có học hiện ngọn lửa, hôm nay có viền */
+const isActive = (d) => !!d && (Object.values(d.secs || {}).reduce((a, b) => a + b, 0) >= 60 || Object.values(d.steps || {}).some(Boolean));
+function weekDots(days, now) {
+  const monday = new Date(now);
+  monday.setDate(now.getDate() - ((now.getDay() + 6) % 7));
+  const todayK = store.dayKey(now);
+  return h('div.week-dots', ...['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].map((l, i) => {
+    const d = new Date(monday);
+    d.setDate(monday.getDate() + i);
+    const k = store.dayKey(d);
+    const on = isActive(days[k]);
+    const cls = `${on ? '.on' : ''}${k === todayK ? '.today' : ''}${d > now && k !== todayK ? '.future' : ''}`;
+    return h(`span.wd${cls}`, h('i', on ? { html: artSvg('fire', 18) } : null), h('small', l));
+  }));
 }
 
 function journalCard(day) {

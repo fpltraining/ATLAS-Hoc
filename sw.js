@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v42';
+const VERSION = 'atlas-v43';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
@@ -14,7 +14,7 @@ const CORE_FILES = [
   './', 'index.html', 'manifest.webmanifest',
   'css/app.css', 'css/atlas.css',
   'js/app.js', 'js/ui.js', 'js/data.js', 'js/store.js', 'js/srs.js', 'js/plan.js',
-  'js/audio.js', 'js/content.js', 'js/kit.js', 'js/ai.js', 'js/progress.js', 'js/pool.js', 'js/speech.js', 'js/audiokey.js', 'js/pics.js', 'js/xp.js', 'js/report.js', 'js/pron-art.js', 'js/path.js', 'js/daycard.js', 'js/auth.js', 'js/sync.js', 'js/config.js', 'js/vendor/supabase-2.119.0.js',
+  'js/audio.js', 'js/content.js', 'js/kit.js', 'js/ai.js', 'js/progress.js', 'js/pool.js', 'js/speech.js', 'js/audiokey.js', 'js/pics.js', 'js/xp.js', 'js/report.js', 'js/pron-art.js', 'js/path.js', 'js/daycard.js', 'js/fx.js', 'js/fx-art.js', 'js/badges.js', 'js/auth.js', 'js/sync.js', 'js/config.js', 'js/vendor/supabase-2.119.0.js',
   'js/pen/canvas.js', 'js/pen/brush.js', 'js/pen/grid.js', 'js/pen/grade.js', 'js/pen/sound.js', 'js/pen/inkpad.js',
   ...['home', 'en', 'zh', 'read', 'reader', 'lesson', 'write', 'review', 'radicals', 'pinyin', 'char', 'penen',
     'work', 'know', 'lib', 'drill', 'numbers', 'notes', 'book', 'stats', 'settings', 'exam', 'charmap', 'challenge', 'games', 'search', 'word', 'speak', 'pron', 'start'].map((v) => `js/views/${v}.js`),
