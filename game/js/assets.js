@@ -4,7 +4,7 @@ var G = window.G || (window.G = {});
 
 G.ASSET_LIST = [
   'player_han_down.png', 'player_han_up.png', 'player_han_left.png',
-  'player_minh_down.png', 'player_minh_up.png', 'player_minh_left.png', 'kai_follow.png',
+  'player_minh_down.png', 'player_minh_up.png', 'player_minh_left.png', 'kai_follow.png', 'kai_up.png', 'kai_left.png',
   'card_city_en.png', 'card_city_zh.png', 'card_city_soon.png', 'lobby_hero.png',
   'map_home_en.png', 'building_en_home.png', 'building_en_busstop.png', 'building_en_metro.png',
   'npc_driver.png', 'vehicle_bus.png', 'vehicle_metro.png', 'vehicle_metro_open.png', 'ride_bg_bus.png', 'ride_bg_metro.png',
