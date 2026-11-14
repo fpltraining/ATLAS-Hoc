@@ -605,3 +605,7 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 .hub-mark.pic img { width: 46px; height: 46px; object-fit: contain; display: block; filter: drop-shadow(0 3px 5px rgba(20, 24, 50, .18)); }
 .with-icon { display: flex; align-items: center; gap: 8px; }
 .with-icon img { width: 30px; height: 30px; object-fit: contain; }
+
+/* bìa truyện */
+.story-card { overflow: hidden; }
+.story-cover { display: block; width: calc(100% + 28px); max-width: none; aspect-ratio: 3 / 2; object-fit: cover; margin: -13px -14px 10px; }
