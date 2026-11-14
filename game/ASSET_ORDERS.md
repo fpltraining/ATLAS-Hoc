@@ -1,26 +1,10 @@
 # Danh sách đặt hình: Thế giới Ngôn Ngữ
 
-## ĐƠN ĐANG CHỜ (copy nguyên khối dưới đây gửi AI vẽ hình, đính kèm hình Han)
+## ĐƠN ĐANG CHỜ
 
-Làm xong anh cứ dán hình vào đoạn chat với em, không cần đổi tên hay lưu thư mục: em tự cắt, đặt tên và lưu vào game.
-Những hình đã gửi em rồi thì không có trong đơn này.
+Hiện không còn hình nào cần đặt cho GĐ1. Đơn mới sẽ ghi ở đây khi làm GĐ2.
 
-```
-Please create the following images for my 2D mobile game, ONE image per message, in this order (I will say "next" after each).
-Attached: my main character. Match its art style exactly.
-
-GLOBAL RULES FOR EVERY IMAGE
-- Cozy chibi 2D game art like the attached character: thick dark-brown outlines, flat soft colors, gentle shading.
-- Palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0.
-- NO text, letters or numbers anywhere (only exception: the number 7 on the bus).
-- [MAGENTA] = isolated subject on a solid flat magenta #FF00FF background, nothing else.
-- [MAP] = top-down view tilted slightly (3/4 view, camera ~30° above ground), fills the whole image, wide 3:2.
-- English town setting: Brightford, a cozy small town in the near-future USA (year 2080): rounded white-and-glass buildings with warm wood, solar roofs, rooftop gardens, small hover-cars, delivery drones, oak and palm trees.
-
-1. Wide 3:2 world-map scene: two small islands, left = Brightford (near-future American town), right = the Chinese water town, connected by a dotted flight path with a tiny airplane, ocean and clouds around.
-```
-
-Đã nhận và lưu: xe buýt, tàu điện (đóng/mở cửa), 2 dải phố, bản đồ trung tâm, 5 toà nhà, hành lang, lớp học, 3 thẻ thành phố; 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
+Đã nhận và lưu: bản đồ hai hòn đảo (đầu trang Ngôi nhà chung); xe buýt, tàu điện (đóng/mở cửa), 2 dải phố, bản đồ trung tâm, 5 toà nhà, hành lang, lớp học, 3 thẻ thành phố; 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
 
 ---
 
