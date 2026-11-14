@@ -27,7 +27,8 @@ var G = window.G || (window.G = {});
     root.appendChild(G.el('header.lhero',
       G.imgEl('lobby_hero.png', 'hero-img'),
       G.el('div.hero-text',
-        G.el('div.kicker', 'ConnectLife · Kết nối cuộc sống'),
+        G.el('img.lobby-logo', { src: 'assets/logo_banner.png', alt: 'ConnectLife' }),
+        G.el('div.kicker', 'Kết nối cuộc sống'),
         G.el('h1', 'Học thêm một ngôn ngữ, sống thêm một cuộc đời.'),
         G.el('p', 'Mỗi ngôn ngữ là một thành phố. Học ở trường, nói chuyện ở quán, bay sang thành phố khác để kết bạn.'),
         G.el('button.btn.seal.big1', { onclick: function () { G.goCity(lastCity()); } }, 'Vào ' + (lastCity() === 'zh' ? 'Trường Lạc trấn' : 'Brightford') + ' ›')
