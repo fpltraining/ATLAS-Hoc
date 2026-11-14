@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v54';
+const VERSION = 'atlas-v55';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
@@ -118,6 +118,9 @@ self.addEventListener('fetch', (e) => {
 
   const url = new URL(req.url);
   if (url.origin !== location.origin) return;
+  // Game "Thế giới Ngôn Ngữ" ở thư mục game/ có bộ nhớ đệm riêng (game/sw.js): app này không đụng tới,
+  // nếu không trang game sẽ bị trả về trang chủ ATLAS.
+  if (url.pathname.includes('/game/')) return;
 
   // Mở app: lấy NGAY bản đã lưu rồi mới âm thầm hỏi mạng bản mới, để không treo màn hình trắng khi mạng chậm.
   if (req.mode === 'navigate') {

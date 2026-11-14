@@ -62,6 +62,14 @@ export async function render() {
 
   if (plan.quota.reason) el.append(h('div.note', plan.quota.reason));
 
+  /* ---- game Thế giới Ngôn Ngữ (trang riêng trong thư mục game/) ---- */
+  el.append(h('a.card.challenge-card.game-card', { href: 'game/' },
+    h('img.game-thumb', { src: 'game/assets/card_city_en.png', alt: '' }),
+    h('div.grow', h('b', '🎮 Thế giới Ngôn Ngữ'),
+      h('div.small.faint', 'Game: sống ở Brightford, đi xe buýt tới trường, học từng phòng A1, ra quán cà phê nói chuyện.')),
+    h('span.pill.jade', 'Chơi ›'),
+  ));
+
   /* ---- việc hôm nay, chia nhóm theo ngôn ngữ; mỗi nhóm có thanh tiến độ riêng ---- */
   for (const g of groups) {
     el.append(h('div.card.lang-day', { style: { padding: '10px 14px 6px' } },
