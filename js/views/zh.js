@@ -48,16 +48,16 @@ export async function render() {
   /* ---- luyện thêm ---- */
   el.append(h('h3.hub-head', 'Luyện thêm khi rảnh'));
   el.append(h('div.hub-grid',
-    tile('#/read/zh', '读', 'Đọc truyện', nx ? nx.story.title : `${zhStories.length} truyện`),
-    tile(`#/charmap/${next.id}`, '写', 'Viết bằng bút', `Chấm từng nét · ${plural(Object.keys(scores).length, 'chữ')} đã viết`),
-    tile('#/review?lang=zh', '↻', 'Ôn thẻ', due ? `${due} thẻ tới hạn` : 'Chưa có thẻ tới hạn'),
-    tile('#/hsk/1', '词', 'Từ vựng HSK 3.0', 'Đủ cấp 1 đến 7–9, nghĩa chi tiết'),
-    tile('#/games', '戏', 'Trò ôn nhanh', 'Nghe chọn chữ, phản xạ, nối cặp, ghép chữ'),
-    tile('#/exam', '考', 'Thi thử HSK', 'Đề luyện cấp 1–4, chấm điểm'),
-    tile('#/pron/zh', '音', 'Phát âm cho người Việt', '10 bài · sơ đồ lưỡi · bảng pinyin có tiếng'),
-    tile('#/pinyin', 'ā', 'Pinyin tóm tắt', 'Thanh điệu, vần, biến điệu'),
-    tile('#/radicals', '部', 'Bộ thủ', 'Mảnh ghép của chữ Hán'),
-    tile('#/speak', '声', 'Luyện phát âm', 'Nói vào micro, máy chấm điểm'),
+    tile('#/read/zh', 'icon:zh-1', 'Đọc truyện', nx ? nx.story.title : `${zhStories.length} truyện`),
+    tile(`#/charmap/${next.id}`, 'icon:zh-2', 'Viết bằng bút', `Chấm từng nét · ${plural(Object.keys(scores).length, 'chữ')} đã viết`),
+    tile('#/review?lang=zh', 'icon:zh-3', 'Ôn thẻ', due ? `${due} thẻ tới hạn` : 'Chưa có thẻ tới hạn'),
+    tile('#/hsk/1', 'icon:zh-4', 'Từ vựng HSK 3.0', 'Đủ cấp 1 đến 7–9, nghĩa chi tiết'),
+    tile('#/games', 'icon:zh-5', 'Trò ôn nhanh', 'Nghe chọn chữ, phản xạ, nối cặp, ghép chữ'),
+    tile('#/exam', 'icon:zh-6', 'Thi thử HSK', 'Đề luyện cấp 1–4, chấm điểm'),
+    tile('#/pron/zh', 'icon:zh-7', 'Phát âm cho người Việt', '10 bài · sơ đồ lưỡi · bảng pinyin có tiếng'),
+    tile('#/pinyin', 'icon:zh-8', 'Pinyin tóm tắt', 'Thanh điệu, vần, biến điệu'),
+    tile('#/radicals', 'icon:zh-9', 'Bộ thủ', 'Mảnh ghép của chữ Hán'),
+    tile('#/speak', 'icon:zh-10', 'Luyện phát âm', 'Nói vào micro, máy chấm điểm'),
   ));
 
   /* ---- tóm tắt thẻ ôn ---- */
@@ -98,8 +98,10 @@ export async function render() {
 }
 
 function tile(href, mark, title, sub) {
+  // mark 'icon:zh-3' → icon 3D trong img/icons (ChatGPT đợt 8)
+  const icon = String(mark).startsWith('icon:') ? h('img', { src: `img/icons/${mark.slice(5)}.webp`, alt: '' }) : null;
   return h('a.hub-tile', { href },
-    h('span.hub-mark.cn', mark),
+    h(`span.hub-mark.cn${icon ? '.pic' : ''}`, icon || mark),
     h('span.grow', h('b', title), h('span.small.faint.block', sub)),
     h('span.faint', '›'),
   );
