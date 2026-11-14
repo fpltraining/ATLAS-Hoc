@@ -17,29 +17,10 @@ GLOBAL RULES FOR EVERY IMAGE
 - [MAP] = top-down view tilted slightly (3/4 view, camera ~30° above ground), fills the whole image, wide 3:2.
 - English town setting: Brightford, a cozy small town in the near-future USA (year 2080): rounded white-and-glass buildings with warm wood, solar roofs, rooftop gardens, small hover-cars, delivery drones, oak and palm trees.
 
-PART B · THE WAY TO SCHOOL
-17. [MAGENTA] SIDE VIEW of a cute futuristic electric city bus facing RIGHT, coral red with cream stripes, big windows, number 7 on the front sign. Wide 2:1.
-18. [MAGENTA] SIDE VIEW of a short futuristic metro train (2 cars) facing RIGHT, white with a jade-green stripe, doors closed. Wide 2:1.
-19. The same train as image 18, same position and size, doors OPEN with warm light inside. [MAGENTA]
-20. A very wide SIDE-VIEW street panorama of Brightford for a scrolling background (3:1): rounded glass towers, rooftop gardens, trees, street lamps; an empty road along the bottom 12%. No vehicles. Left and right edges must match so it repeats seamlessly.
-21. Same as 20 but seen from an elevated metro line: skyline, river, parks; an empty elevated rail track along the bottom 12%. Seamless left/right edges.
-
-PART C · TOWN CENTER AND SCHOOL
-22. [MAP] Brightford town center with NO buildings: a round plaza with a glowing fountain in the middle, wide walkways going north, south, east and west, seven empty flat grass lots (top-center, left-middle, right-middle, bottom-left, bottom-right, far bottom-left corner, far bottom-right corner), solar lamps, charging stations, benches, trees.
-23. [MAGENTA] One building, door at bottom center: a friendly near-future high school, rounded white walls, big glass windows, wood panels, solar roof with a small garden, a digital clock tower with a blank face, a flag pole with a blank flag.
-24. [MAGENTA] A small corner café: glass front, jade-and-cream awning, glowing coffee-cup sign, outdoor tables, a small serving robot.
-25. [MAGENTA] A farmers market hall with a curved glass roof and solar panels, hydroponic vegetable towers, fruit and flower stalls.
-26. [MAGENTA] A small hospital: white and sky-blue rounded walls, glowing green cross, a hover-ambulance in front.
-27. [MAGENTA] A small airport terminal: sweeping curved glass roof, slim control tower, a small electric airplane beside it.
-28. [MAP] Inside the school hallway, no people: a long corridor with EXACTLY five identical sliding glass classroom doors evenly spaced along the top wall, a reception desk with a small helper robot on the left, white lockers, plants, entrance at bottom center.
-29. [MAP] Inside a classroom, no people: a large blank glowing smartboard on the top wall, teacher's desk, a few student desks, bookshelves, sunny window, door at bottom center.
-30. Square app card illustration: Brightford seen from slightly above, soft morning light.
-31. Square app card illustration: a charming small Chinese water town seen from slightly above: white walls, dark curved roof tiles, blank red lanterns, stone arch bridges over a canal, a small boat, willow trees.
-32. Square app card illustration: a city skyline hidden behind soft clouds, a small airplane flying toward it, dreamy pastel colors.
-33. Wide 3:2 world-map scene: two small islands, left = Brightford (near-future American town), right = the Chinese water town, connected by a dotted flight path with a tiny airplane, ocean and clouds around.
+1. Wide 3:2 world-map scene: two small islands, left = Brightford (near-future American town), right = the Chinese water town, connected by a dotted flight path with a tiny airplane, ocean and clouds around.
 ```
 
-Đã nhận và lưu: 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
+Đã nhận và lưu: xe buýt, tàu điện (đóng/mở cửa), 2 dải phố, bản đồ trung tâm, 5 toà nhà, hành lang, lớp học, 3 thẻ thành phố; 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
 
 ---
 

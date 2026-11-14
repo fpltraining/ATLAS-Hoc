@@ -37,7 +37,8 @@ var G = window.G || (window.G = {});
     scene = G.SCENES[id]; sceneId = id;
     resize(); // màn bản đồ vừa hiện ra: đo lại kích thước canvas
     var sp = at || scene.spawn || { x: scene.w / 2, y: scene.walk.y1 - 40 };
-    P.x = sp.x; P.y = sp.y; P.dir = sp.dir || 'up';
+    var wk = scene.walk;   // luôn đặt nhân vật trong vùng đi được
+    P.x = clamp(sp.x, wk.x0 + 5, wk.x1 - 5); P.y = clamp(sp.y, wk.y0 + 5, wk.y1 - 5); P.dir = sp.dir || 'up';
     K.x = P.x - 50; K.y = P.y + 30;
     target = null; pending = null; fade = 1;
     G.S.viTri = { canh: id, x: Math.round(P.x), y: Math.round(P.y) };
@@ -68,12 +69,12 @@ var G = window.G || (window.G = {});
     if (scene.kind === 'hall') {
       for (var d = 0; d < G.EN_HALL_DOORS.length; d++) {
         var door = G.EN_HALL_DOORS[d];
-        list.push({ x: door.x, y: 440, r: 80, label: 'Vào phòng ' + door.label, act: (function (idx) { return function () { useDoor(idx); }; })(d) });
+        list.push({ x: door.x, y: G.HALL_DOOR_Y, r: 80, label: 'Vào phòng ' + door.label, act: (function (idx) { return function () { useDoor(idx); }; })(d) });
       }
     }
     if (scene.kind === 'classroom' && G.currentRoom) {
       var tid = G.ROOM_TEACHER[G.currentRoom];
-      if (tid) list.push({ x: 768, y: 560, r: 110, npc: tid, label: 'Nói chuyện với ' + G.NPCS[tid].name, act: function () { G.openLesson(G.currentRoom); } });
+      if (tid) list.push({ x: TX(), y: TY() + 40, r: 110, npc: tid, label: 'Nói chuyện với ' + G.NPCS[tid].name, act: function () { G.openLesson(G.currentRoom); } });
     }
     if (scene.exit) list.push({ x: scene.exit.x, y: scene.exit.y, r: 70, label: scene.exit.label, act: useExit });
     return list;
@@ -106,7 +107,7 @@ var G = window.G || (window.G = {});
       var bs = G.SCENES[to.scene].buildings;
       for (var i = 0; i < bs.length; i++) if (bs[i].id === to.building) { G.enterScene(to.scene, { x: bs[i].x, y: bs[i].y + 70, dir: 'down' }); return; }
     }
-    if (to.door) { G.enterScene(to.scene, { x: G.EN_HALL_DOORS[lastDoor].x, y: 500, dir: 'down' }); return; }
+    if (to.door) { G.enterScene(to.scene, { x: G.EN_HALL_DOORS[lastDoor].x, y: G.HALL_DOOR_Y + 60, dir: 'down' }); return; }
     G.enterScene(to.scene);
   }
 
@@ -120,7 +121,7 @@ var G = window.G || (window.G = {});
         if (x > b.x - 125 && x < b.x + 125 && y > b.y - 190 && y < b.y - 4) return true;
       }
     }
-    if (scene.kind === 'classroom' && Math.abs(x - 768) < 60 && Math.abs(y - 500) < 36) return true; // giáo viên
+    if (scene.kind === 'classroom' && Math.abs(x - TX()) < 60 && Math.abs(y - TY() + 20) < 36) return true; // giáo viên
     return false;
   }
 
@@ -195,6 +196,10 @@ var G = window.G || (window.G = {});
     return false;
   }
 
+  /* vị trí giáo viên trong lớp (theo ảnh lớp học) */
+  function TX() { return (scene.teacher || {}).x || 768; }
+  function TY() { return (scene.teacher || {}).y || 520; }
+
   function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
 
   /* ---------- vẽ ---------- */
@@ -209,7 +214,7 @@ var G = window.G || (window.G = {});
     // các thứ có chiều sâu: vẽ theo y tăng dần
     var items = [];
     if (scene.buildings) for (var i = 0; i < scene.buildings.length; i++) items.push({ y: scene.buildings[i].y, draw: drawBuilding, o: scene.buildings[i] });
-    if (scene.kind === 'classroom' && G.currentRoom) items.push({ y: 520, draw: drawTeacher, o: G.ROOM_TEACHER[G.currentRoom] });
+    if (scene.kind === 'classroom' && G.currentRoom) items.push({ y: TY(), draw: drawTeacher, o: G.ROOM_TEACHER[G.currentRoom] });
     items.push({ y: K.y, draw: drawKai });
     items.push({ y: P.y, draw: drawPlayer });
     items.sort(function (a, b) { return a.y - b.y; });
@@ -280,12 +285,13 @@ var G = window.G || (window.G = {});
   }
   function drawTeacher(id) {
     var n = G.NPCS[id];
-    shadow(768, 520, 34);
-    G.drawAsset(ctx, n.img, 768 - 85, 520 - 170, 170, 170);
+    var tx = TX(), ty = TY();
+    shadow(tx, ty, 34);
+    G.drawAsset(ctx, n.img, tx - 85, ty - 170, 170, 170);
     ctx.fillStyle = 'rgba(27,33,64,.85)';
-    G.roundRect(ctx, 768 - 70, 528, 140, 30, 15); ctx.fill();
+    G.roundRect(ctx, tx - 70, ty + 8, 140, 30, 15); ctx.fill();
     ctx.fillStyle = '#fff'; ctx.font = '700 17px -apple-system, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText(n.name, 768, 543);
+    ctx.fillText(n.name, tx, ty + 23);
   }
   function drawDoorPlates() {
     for (var d = 0; d < G.EN_HALL_DOORS.length; d++) {
@@ -312,7 +318,7 @@ var G = window.G || (window.G = {});
       var t = ts[i];
       // chạm vào nhà / cửa / NPC: đi tới rồi làm luôn
       var dx = w.x - t.x, dy = w.y - t.y;
-      var hitR = t.npc ? 120 : scene.kind === 'hall' && t.y === 440 ? 110 : 90;
+      var hitR = t.npc ? 120 : scene.kind === 'hall' && t.y === G.HALL_DOOR_Y ? 110 : 90;
       if (Math.abs(dx) < hitR && dy > -260 && dy < 60) { hit = t; break; }
     }
     if (hit) { target = { x: hit.x, y: hit.y + (scene.kind === 'city' ? 10 : 0) }; pending = hit.act; pendingLabel = hit.label; }
