@@ -80,10 +80,17 @@ var G = window.G || (window.G = {});
     return list;
   }
 
+  /* lời Kai khi vào hành lang: chỉ phòng nên học tiếp */
+  function hallHint() {
+    var d = G.EN_HALL_DOORS;
+    for (var i = 0; i < d.length; i++) if (!G.roomPassed(d[i].room)) return i === 0 ? 'Đây là Trường Anh ngữ. Phòng A1-1 ở cửa đầu tiên bên trái!' : 'Phòng nên học tiếp: ' + d[i].label + ' (cửa thứ ' + (i + 1) + ' từ trái sang).';
+    return 'Bạn đã tốt nghiệp A1! Cấp A2 sẽ mở ở bản cập nhật sau.';
+  }
+
   function useBuilding(b) {
     if (b.ride) { G.sfx('door'); G.openRide(b.ride, b.toward); return; }
     if (b.home) { G.kaiSay(sceneId === 'home_en' ? 'Nhà của bạn đây. Hôm nay đi học nhé: ra bến xe buýt hoặc ga tàu điện!' : ''); return; }
-    if (b.go) { G.sfx('door'); G.enterScene(b.go.scene, { x: b.go.x, y: b.go.y, dir: 'up' }); G.kaiSay('Đây là Trường Anh ngữ. Phòng A1-1 ở cửa đầu tiên bên trái!'); }
+    if (b.go) { G.sfx('door'); G.enterScene(b.go.scene, { x: b.go.x, y: b.go.y, dir: 'up' }); G.kaiSay(hallHint()); }
     else G.kaiSay(b.soon);
   }
 
@@ -91,7 +98,7 @@ var G = window.G || (window.G = {});
   function useDoor(idx) {
     var door = G.EN_HALL_DOORS[idx];
     if (!G.roomOpen(idx)) { G.sfx('wrong'); G.kaiSay('Cửa ' + door.label + ' còn khoá. Qua bài kiểm tra phòng trước (từ 8/10) để mở nhé.'); return; }
-    if (!G.ROOMS[door.room]) { G.kaiSay('Phòng ' + door.label + ' sẽ có trong bản cập nhật sau (giai đoạn 2).'); return; }
+    if (!G.ROOMS[door.room]) { G.kaiSay('Phòng ' + door.label + ' sẽ có trong bản cập nhật sau.'); return; }
     lastDoor = idx;
     G.currentRoom = door.room;
     G.sfx('door');
@@ -297,6 +304,8 @@ var G = window.G || (window.G = {});
     for (var d = 0; d < G.EN_HALL_DOORS.length; d++) {
       var door = G.EN_HALL_DOORS[d], open = G.roomOpen(d), p = G.S.phong[door.room];
       var stars = p ? (p.sao === 3 ? '★★★' : p.sao === 2 ? '★★☆' : p.sao === 1 ? '★☆☆' : '') : '';
+      // khoá xích trên cửa chưa mở (có hình door_lock.png thì vẽ, chưa có thì chỉ hiện biển 🔒)
+      if (!open && G.asset('door_lock.png').ok) G.drawAsset(ctx, 'door_lock.png', door.x - 75, 110, 150, 150);
       ctx.fillStyle = open ? 'rgba(47,122,99,.95)' : 'rgba(27,33,64,.85)';
       G.roundRect(ctx, door.x - 64, 150, 128, 50, 12); ctx.fill();
       ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';

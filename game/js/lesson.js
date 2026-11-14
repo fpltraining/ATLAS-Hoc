@@ -50,11 +50,13 @@ var G = window.G || (window.G = {});
     body.appendChild(G.el('div.tline.small', G.el('div.tbubble.en', G.el('div', R.intro[0]), speakBtn(R.intro[0]))));
     say(R.intro[0]);
     body.appendChild(G.el('div.menu3',
-      G.el('button.big', { onclick: function () { learn(0); } }, G.el('b', '1 · Học'), G.el('span', R.items.length + ' từ và câu, nghe và xem nghĩa')),
+      G.el('button.big', { onclick: function () { learn(0); } }, G.el('b', R.final ? '1 · Ôn tập' : '1 · Học'), G.el('span', R.items.length + ' từ và câu' + (R.final ? ' của cả cấp A1' : ', nghe và xem nghĩa'))),
       G.el('button.big', { onclick: practice }, G.el('b', '2 · Luyện'), G.el('span', '3 trò ngắn, sai thì làm lại')),
-      G.el('button.big.seal', { onclick: test }, G.el('b', '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/10 ' + stars(p.sao) : '10 câu, đạt từ 8 câu là qua phòng'))
+      G.el('button.big.seal', { onclick: test }, G.el('b', '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/' + TN() + ' ' + stars(p.sao) : TN() + ' câu, đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp' : 'qua phòng')))
     ));
   }
+  function TN() { return R.testN || 10; }   // số câu kiểm tra
+  function PN() { return R.passN || 8; }    // số câu cần đúng để qua
   function stars(n) { return n === 3 ? '★★★' : n === 2 ? '★★☆' : n === 1 ? '★☆☆' : ''; }
 
   /* ---------- 1. Học: thẻ từ ---------- */
@@ -172,20 +174,20 @@ var G = window.G || (window.G = {});
   function practiceDone() {
     body.innerHTML = '';
     body.appendChild(head(1, 'Xong phần Luyện'));
-    body.appendChild(teacherLine('Luyện tốt lắm! Giờ làm bài kiểm tra 10 câu nhé. Đạt từ 8 câu là cửa phòng tiếp theo sẽ mở.', 'Well done!'));
+    body.appendChild(teacherLine('Luyện tốt lắm! Giờ làm bài kiểm tra ' + TN() + ' câu nhé. Đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp cấp A1.' : 'cửa phòng tiếp theo sẽ mở.'), 'Well done!'));
     body.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { learn(0); } }, 'Xem lại thẻ'), G.el('button.btn.seal', { onclick: test }, 'Làm kiểm tra ›')));
     G.sfx('done');
   }
 
   /* ---------- 3. Kiểm tra ---------- */
   function test() {
-    var pool = G.shuffle(R.items).slice(0, 10);
+    var pool = G.shuffle(R.items).slice(0, TN());
     var makers = [qListen, qMeaning, qWord];
     var right = 0, k = 0, wrong = [];
     (function next() {
       if (k >= pool.length) { finish(right, wrong); return; }
       body.innerHTML = '';
-      var hd = head(2, 'Câu ' + (k + 1) + '/10 · đúng ' + right);
+      var hd = head(2, 'Câu ' + (k + 1) + '/' + pool.length + ' · đúng ' + right);
       var q = makers[k % 3](pool[k], hd, true);
       mcq(q, function (ok) {
         if (ok) { right++; G.addXp(5); } else { wrong.push(q.item); G.addHard(lang, q.item.en); }
@@ -195,10 +197,10 @@ var G = window.G || (window.G = {});
   }
 
   function finish(right, wrong) {
-    var pass = right >= 8;
-    var sao = right >= 10 ? 3 : right >= 9 ? 2 : right >= 8 ? 1 : 0;
+    var N = TN(), pass = right >= PN();
+    var sao = right >= N ? 3 : right >= Math.ceil(N * 0.9) ? 2 : pass ? 1 : 0;
     var p = G.S.phong[R.id] || { sao: 0, diem: 0, lan: 0 };
-    var firstPass = pass && !(p.diem >= 8);
+    var firstPass = pass && !(p.diem >= PN());
     p.lan += 1;
     if (right >= p.diem) { p.diem = right; p.sao = Math.max(p.sao, sao); p.luc = G.vnNow(); }
     G.S.phong[R.id] = p;
@@ -206,10 +208,10 @@ var G = window.G || (window.G = {});
     body.innerHTML = '';
     body.appendChild(head(2, 'Kết quả'));
     body.appendChild(G.el('div.result' + (pass ? '.pass' : ''),
-      G.el('div.rscore', right + '/10'),
+      G.el('div.rscore', right + '/' + N),
       G.playerPic(112, 'rface', pass ? 'happy' : 'think'),
       G.el('div.rstars', pass ? stars(sao) : '☆☆☆'),
-      G.el('div', pass ? (firstPass ? 'Qua phòng! Cửa phòng tiếp theo đã mở.' : 'Qua phòng! Kết quả tốt nhất đã được lưu.') : 'Chưa đạt 8/10. Xem lại thẻ và luyện thêm rồi thử lại nhé.')
+      G.el('div', pass ? (R.final ? 'Đạt! Bạn đã tốt nghiệp cấp A1.' : firstPass ? 'Qua phòng! Cửa phòng tiếp theo đã mở.' : 'Qua phòng! Kết quả tốt nhất đã được lưu.') : 'Chưa đạt ' + PN() + '/' + N + '. Xem lại thẻ và luyện thêm rồi thử lại nhé.')
     ));
     if (wrong.length) {
       body.appendChild(G.el('div.wrongs', G.el('b', 'Câu cần ôn lại:'), wrong.map(function (it) { return G.el('div', G.el('span', it.en), ' · ', G.el('span.faint', it.vi), speakBtn(it.en)); })));
@@ -217,10 +219,24 @@ var G = window.G || (window.G = {});
     body.appendChild(teacherLine(pass ? R.outro : 'Don’t worry. Practice makes perfect!', pass ? R.outro : 'Don’t worry. Practice makes perfect!'));
     body.appendChild(G.el('div.row',
       G.el('button.btn', { onclick: test }, 'Làm lại'),
-      G.el('button.btn.seal', { onclick: function () { closePanel(); if (pass) G.kaiSay(firstPass ? 'Tuyệt! Phòng ' + R.title.split(' ·')[0] + ' đạt ' + stars(sao) + '. Phòng tiếp theo sẽ có ở giai đoạn 2.' : 'Giỏi lắm!'); } }, pass ? 'Xong ›' : 'Đóng')
+      G.el('button.btn.seal', { onclick: function () { closePanel(); if (pass) afterPass(firstPass, sao, right); } }, pass ? (R.final ? 'Nhận bằng ›' : 'Xong ›') : 'Đóng')
     ));
     G.sfx(pass ? 'done' : 'wrong');
     if (pass) G.confetti();
     G.updateHud();
+  }
+
+  /* sau khi qua phòng: báo cửa mới mở, hoặc lễ tốt nghiệp nếu là phòng thi cuối cấp */
+  function afterPass(firstPass, sao, right) {
+    if (R.final) {
+      var done = G.S.totNghiep[R.final.lang] && G.S.totNghiep[R.final.lang][R.final.level];
+      if (!done) { G.graduate(R.final.lang, R.final.level, right, TN()); return; }
+      G.kaiSay('Bạn đã có bằng ' + R.final.level + ' rồi. Giỏi lắm!');
+      return;
+    }
+    var doors = G.EN_HALL_DOORS, next = null;
+    for (var i = 0; i < doors.length - 1; i++) if (doors[i].room === R.id) next = doors[i + 1];
+    if (firstPass && next) { G.sfx('door'); G.kaiSay('Tuyệt! ' + R.title.split(' ·')[0] + ' đạt ' + stars(sao) + '. Cửa ' + next.label + ' vừa mở, ra hành lang để vào nhé!'); G.toast('🔓 Đã mở ' + next.label); }
+    else G.kaiSay('Giỏi lắm! Kết quả tốt nhất đã được lưu.');
   }
 })();
