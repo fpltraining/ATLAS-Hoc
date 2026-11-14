@@ -49,7 +49,7 @@ PART E · LOGO (ConnectLife = "connect your life")
 21. The same red clay "C" logo as a wide 3:1 banner: the clay C on the left, followed by the word "onnectLife" in the same red clay letters so it reads "ConnectLife", the letter "L" slightly bigger. Solid flat magenta #FF00FF background.
 ```
 
-Đã nhận và lưu: Leo, Mrs. Rosa, Dr. Anna, Officer Grace, 4 phòng bên trong, máy bay, dải trời, ly cà phê; Mr. Tom, Mrs. Lily, Chef Sam (2 tư thế), khoá xích, bằng tốt nghiệp; bản đồ hai hòn đảo (đầu trang Ngôi nhà chung); xe buýt, tàu điện (đóng/mở cửa), 2 dải phố, bản đồ trung tâm, 5 toà nhà, hành lang, lớp học, 3 thẻ thành phố; 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
+Đã nhận và lưu: logo chữ C đất sét + banner ConnectLife, túi táo, 8 đồ vật thị trấn; Leo, Mrs. Rosa, Dr. Anna, Officer Grace, 4 phòng bên trong, máy bay, dải trời, ly cà phê; Mr. Tom, Mrs. Lily, Chef Sam (2 tư thế), khoá xích, bằng tốt nghiệp; bản đồ hai hòn đảo (đầu trang Ngôi nhà chung); xe buýt, tàu điện (đóng/mở cửa), 2 dải phố, bản đồ trung tâm, 5 toà nhà, hành lang, lớp học, 3 thẻ thành phố; 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
 
 ---
 

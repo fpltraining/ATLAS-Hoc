@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v59';
+const VERSION = 'atlas-v60';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
@@ -22,7 +22,7 @@ const CORE_FILES = [
   'data/hanviet.json', 'data/decomp.json',
   'data/stories/index.json', 'data/en/course.json', 'data/en/dict.json', 'data/zh-dict.json',
   'data/work.json', 'data/know.json',
-  'icons/icon-180.png', 'icons/icon-192.png',
+  'icons/icon-180.png', 'icons/icon-192.png', 'img/logo-banner.png',
   ...[1, 2, 3, 4, 5, 6, 7, 8, 9].map((k) => `img/rank/r${k}.webp`),
 ];
 

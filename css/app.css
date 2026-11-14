@@ -517,3 +517,5 @@ p  { margin: 0 0 10px; }
   .dr-txt small { display: none; }
   .day-ring { padding-right: 7px; gap: 4px; }
 }
+
+.boot-logo { width: min(78vw, 360px); height: auto; margin-bottom: 8px; }
