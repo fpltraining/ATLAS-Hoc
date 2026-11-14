@@ -90,17 +90,17 @@ G.SCENES = {
 /* Khu đời sống Brightford: vào trong là gặp người bán / bác sĩ */
 G.SCENES.cafe_en = {
   city: 'en', title: 'Quán cà phê của Leo', bg: 'interior_en_cafe.png', w: 1536, h: 1024, kind: 'shop', life: 'en-cafe', npc: 'leo',
-  walk: { x0: 90, y0: 330, x1: 1446, y1: 990 }, teacher: { x: 768, y: 400 },
+  walk: { x0: 90, y0: 450, x1: 1446, y1: 990 }, teacher: { x: 620, y: 470 },
   exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'cafe' } }
 };
 G.SCENES.market_en = {
   city: 'en', title: 'Chợ nông sản', bg: 'interior_en_market.png', w: 1536, h: 1024, kind: 'shop', life: 'en-market', npc: 'rosa',
-  walk: { x0: 90, y0: 330, x1: 1446, y1: 990 }, teacher: { x: 768, y: 400 },
+  walk: { x0: 90, y0: 560, x1: 1446, y1: 990 }, teacher: { x: 380, y: 580 },
   exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'market' } }
 };
 G.SCENES.hospital_en = {
   city: 'en', title: 'Bệnh viện Brightford', bg: 'interior_en_hospital.png', w: 1536, h: 1024, kind: 'shop', life: 'en-hospital', npc: 'anna',
-  walk: { x0: 90, y0: 330, x1: 1446, y1: 990 }, teacher: { x: 1100, y: 400 },
+  walk: { x0: 300, y0: 470, x1: 1440, y1: 990 }, teacher: { x: 1080, y: 560 },
   exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'hospital' } }
 };
 
