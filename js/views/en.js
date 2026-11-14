@@ -13,6 +13,7 @@ import { wordPic, sentencePics } from '../pics.js';
 import { h, toast, section, progressBar, pill } from '../ui.js';
 import { gradeButton, aiConfig } from '../ai.js';
 import { cardSummary } from '../progress.js';
+import { award } from '../xp.js';
 
 export async function render(route) {
   const sub = route.args[0];
@@ -52,6 +53,7 @@ async function hub() {
     tile('#/read/en', '❡', 'Đọc truyện', nx ? nx.story.title : `${enStories.length} bài`),
     tile('#/penen', '✎', 'Viết bằng bút', 'Đồ, chép, viết trí nhớ'),
     tile('#/review?lang=en', '↻', 'Ôn thẻ', due ? `${due} thẻ tới hạn` : 'Chưa có thẻ tới hạn'),
+    tile('#/pron/en', 'ə', 'Phát âm cho người Việt', '8 bài · bảng 44 âm IPA'),
     tile('#/speak', '🗣', 'Luyện phát âm', 'Nói vào micro, máy chấm điểm'),
     tile('#/work', '★', 'Tiếng Anh nghề', 'Bán hàng, huấn luyện, TikTok'),
     tile('#/book', '¶', 'Sổ tay ngữ pháp', 'B1 đến B2, có bài tập'),
@@ -138,6 +140,7 @@ async function session() {
 }
 
 async function finishBlock(key) {
+  award(10, 'Xong một mục tiếng Anh');
   const course = await content.course();
   const out = await store.updateEn((e) => {
     const st = e.stage || 0;
@@ -252,6 +255,8 @@ function soundBlock(s) {
   return {
     title: 'Luyện âm',
     el: h('div.stack',
+      h('a.note.amber', { href: '#/pron/en', style: { display: 'block', textDecoration: 'none', color: 'inherit' } },
+        h('b', 'Học sâu hơn: '), 'khoá "Phát âm tiếng Anh cho người Việt" có sơ đồ miệng, luyện nghe cặp từ và kiểm tra 8/10 ›'),
       h('div.card', h('h2', s.title),
         h('p', h('b', 'Vì sao quan trọng: '), s.why),
         h('p', { style: { marginBottom: 0 } }, h('b', 'Cách làm: '), s.how)),

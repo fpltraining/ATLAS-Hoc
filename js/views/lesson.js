@@ -7,6 +7,7 @@ import { newCard, ZH_TYPES } from '../srs.js';
 import { quotaToday, dayType } from '../plan.js';
 import { h, section, readingLine, toast, clickableHanzi, pill } from '../ui.js';
 import { refreshDueBadge } from '../app.js';
+import { award } from '../xp.js';
 
 export async function render(route) {
   const id = Number(route.args[0]) || 1;
@@ -148,8 +149,10 @@ export async function render(route) {
     prev ? h('a.btn.ghost', { href: `#/lesson/${prev.id}` }, '‹ Bài ', String(prev.id)) : null,
     h('button.btn.jade', {
       onclick: async () => {
+        const was = (await store.lessonProgress())[id]?.done;
         await store.markLesson(id, { started: true, done: true });
         await store.markStep('zh');
+        if (!was) award(15, `Xong bài tiếng Trung ${id}`);
         toast('Đã đánh dấu hoàn thành bài ' + id);
         location.hash = '#/zh';
       },

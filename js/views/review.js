@@ -17,6 +17,7 @@ import { sayEn, scribble, diff, wordy, mcq } from '../kit.js';
 import { wordPic, sentencePics } from '../pics.js';
 import { h, readingLine, pill, empty } from '../ui.js';
 import { refreshDueBadge } from '../app.js';
+import { award } from '../xp.js';
 
 const GRADES = [
   { g: 0, label: 'Quên', cls: 'g0' },
@@ -323,6 +324,7 @@ export async function render(route) {
     const updated = review(c, grade);
     await store.putCard(updated);
     await store.logReview({ kind: 'srs', word: c.word, type: c.type, grade });
+    if (grade >= 2) award(1, 'Ôn thẻ');
     if (grade >= 2) S.correct++;
 
     // Thẻ quên được đưa lại cuối hàng đợi trong cùng phiên

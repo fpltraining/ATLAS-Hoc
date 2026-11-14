@@ -68,6 +68,13 @@ for (const cv of work.convos) for (const l of cv.lines) add('en', l.en, /^han$/i
 for (const k of ['car', 'tiktok', 'patterns']) work[k].forEach((p, i) => add('en', p.en, alt(i)));
 for (const g of work.aov) for (const it of g.items) add('en', it.en);
 
+// Khoá phát âm, bảng pinyin, 20 tổ hợp thanh, bảng IPA (tools/build-pron.mjs ghi ra)
+if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
+  const pa = J('data-src/pron-audio.json');
+  pa.zh.forEach((t) => add('zh', t));
+  pa.en.forEach((t) => add('en', t));
+}
+
 const list = [...items.values()];
 fs.writeFileSync(path.join(ROOT, 'data-src', 'audio-list.json'), JSON.stringify(list));
 const by = (l) => list.filter((x) => x.lang === l);
