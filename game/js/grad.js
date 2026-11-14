@@ -13,7 +13,7 @@ var G = window.G || (window.G = {});
     G.confetti();
     setTimeout(G.confetti, 900);
     var name = G.playerName();
-    var speech = 'Congratulations, ' + name + '! You have finished level ' + level + '.';
+    var speech = 'Congrats, ' + name + '! You\'ve finished ' + level + '. So proud of you!';
     G.say(speech, 'en');
     var wrap = G.el('div.modal.grad',
       G.el('div.grad-card',

@@ -97,7 +97,7 @@ var G = window.G || (window.G = {});
     drawRoute();
   }
 
-  function greet() { var h = G.vnParts().h; return h < 12 ? 'Good morning!' : h < 18 ? 'Good afternoon!' : 'Good evening!'; }
+  function greet() { var h = G.vnParts().h; return h < 12 ? 'Morning!' : h < 18 ? 'Hey there!' : 'Evening!'; }
 
   function talk(who, pic, en, vi) {
     G.say(en, 'en');
@@ -120,17 +120,17 @@ var G = window.G || (window.G = {});
   function boardDialog(step) {
     ui.box.innerHTML = '';
     if (step === 0) {
-      ui.box.appendChild(talk('Mr. Joe · tài xế', 'npc_driver.png', greet() + ' Where are you going?', 'Tài xế hỏi: Bạn đi đâu?'));
-      ui.box.appendChild(choices(['To ' + R.goal + ', please.', 'I\'m fine, thank you.', 'Yes, I am a student.'], 'To ' + R.goal + ', please.',
+      ui.box.appendChild(talk('Mr. Joe · tài xế', 'npc_driver.png', greet() + ' Where you headed?', 'Tài xế hỏi: Bạn đi đâu? (nói tắt của Where are you headed?)'));
+      ui.box.appendChild(choices(['To ' + R.goal + ', please.', 'Pretty good, thanks.', 'Yeah, I\'m a student.'], 'To ' + R.goal + ', please.',
         function () { boardDialog(1); }, function () { kai('Tài xế hỏi bạn đi đâu. Hãy nói "To … , please." kèm tên trạm.'); }));
       if ((G.S.diLai.bus || 0) >= 3) ui.box.appendChild(G.el('button.btn.sm.rd-skip', { onclick: function () { finish(true, true); } }, '⏩ Đi nhanh tới nơi'));
     } else if (step === 1) {
-      ui.box.appendChild(talk('Mr. Joe · tài xế', 'npc_driver.png', 'That\'s two dollars. Please tap your card here.', 'Hai đô la. Quẹt thẻ ở đây nhé.'));
-      ui.box.appendChild(choices(['Okay. Here you go.', 'I\'m going to school.', 'Good night!'], 'Okay. Here you go.',
-        function () { boardDialog(2); }, function () { kai('Tài xế bảo bạn quẹt thẻ. Trả lời "Okay. Here you go." (Vâng, đây ạ).'); }));
+      ui.box.appendChild(talk('Mr. Joe · tài xế', 'npc_driver.png', 'Two bucks. Just tap your card right there.', 'Hai đô. Quẹt thẻ ngay chỗ đó nhé. (bucks = đô la, cách nói thường)'));
+      ui.box.appendChild(choices(['Got it, thanks.', 'I\'m going to school.', 'Good night!'], 'Got it, thanks.',
+        function () { boardDialog(2); }, function () { kai('Tài xế bảo bạn quẹt thẻ. Trả lời "Got it, thanks." (Hiểu rồi, cảm ơn).'); }));
     } else {
       G.sfx('door');
-      ui.box.appendChild(talk('Mr. Joe · tài xế', 'npc_driver.png', 'Thank you. Have a nice day!', 'Cảm ơn. Chúc một ngày tốt lành!'));
+      ui.box.appendChild(talk('Mr. Joe · tài xế', 'npc_driver.png', 'Thanks. Have a good one!', 'Cảm ơn. Chúc một ngày vui! (cách chào rất hay dùng)'));
       kai('Ngồi xuống nào. Nghe "Next stop: ' + R.goal + '" thì bấm chuông để xuống.');
       setTimeout(function () { if (R && R.phase === 'board') setPhase('ride'); }, 1800);
     }
@@ -154,7 +154,7 @@ var G = window.G || (window.G = {});
       ui.box.appendChild(talk('Máy bán vé', null, 'How many tickets?', 'Bao nhiêu vé?'));
       ui.box.appendChild(choices(['One', 'Two', 'Three'], 'One', function () { ticketMachine(2); }, function () { kai('Chỉ cần 1 vé: "One".'); }));
     } else {
-      ui.box.appendChild(talk('Máy bán vé', null, 'That\'s two dollars fifty. Please tap your card.', 'Hai đô năm mươi xu. Quẹt thẻ nhé.'));
+      ui.box.appendChild(talk('Máy bán vé', null, 'That\'s two fifty. Tap your card to pay.', 'Hai đô năm mươi. Quẹt thẻ để trả tiền.'));
       ui.box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { G.sfx('done'); setPhase('platform'); } }, '💳 Quẹt thẻ'));
     }
   }
@@ -241,7 +241,7 @@ var G = window.G || (window.G = {});
     }
   }
   function vocab() {
-    if (R.type === 'bus') return [['Where are you going?', 'Bạn đi đâu?'], ['Next stop', 'Trạm kế tiếp'], ['tap your card', 'quẹt thẻ'], ['Here you go.', 'Đây ạ (khi đưa gì đó)']];
+    if (R.type === 'bus') return [['Where you headed?', 'Bạn đi đâu?'], ['Next stop', 'Trạm kế tiếp'], ['bucks', 'đô la (nói thường)'], ['Have a good one!', 'Chúc một ngày vui!']];
     return [['station', 'ga'], ['platform', 'sân ga'], ['toward', 'về phía'], ['Please mind the gap.', 'Chú ý khoảng trống (giữa tàu và sân ga).']];
   }
   function retry() {

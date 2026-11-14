@@ -9,25 +9,25 @@ G.LIFE = {
     souvenir: { img: 'souvenir_coffee.png', name: 'Ly cà phê của Leo' },
     talks: [
       { title: 'Gọi đồ uống', turns: [
-        { npc: 'Hi! Welcome to Leo\'s Café. What can I get for you?', vi: 'Chào! Chào mừng tới quán của Leo. Bạn dùng gì?', ok: 'A coffee, please.' },
-        { npc: 'Sure! Hot or iced?', vi: 'Được! Nóng hay đá?', ok: 'Iced, please.' },
-        { npc: 'What size? Small, medium or large?', vi: 'Cỡ nào? Nhỏ, vừa hay lớn?', ok: 'Medium, please.' },
-        { npc: 'Anything else?', vi: 'Bạn cần gì nữa không?', ok: 'No, thank you.' },
-        { npc: 'That is four dollars, please.', vi: 'Của bạn bốn đô la.', ok: 'Here you go.' }
+        { npc: 'Hey! What can I get you?', vi: 'Chào! Bạn dùng gì?', ok: 'Can I get an iced latte?' },
+        { npc: 'Sure. What size?', vi: 'Được. Cỡ nào?', ok: 'Medium, please.' },
+        { npc: 'Oat milk or regular?', vi: 'Sữa yến mạch hay sữa thường?', ok: 'Regular\'s fine.' },
+        { npc: 'Anything else for you?', vi: 'Bạn cần thêm gì không?', ok: 'No, that\'s it, thanks.' },
+        { npc: 'That\'ll be four fifty.', vi: 'Của bạn bốn đô năm mươi.', ok: 'Here you go.' }
       ] },
       { title: 'Gọi đồ ăn', turns: [
-        { npc: 'Good afternoon! Are you hungry?', vi: 'Chào buổi chiều! Bạn đói không?', ok: 'Yes, I am very hungry.' },
-        { npc: 'We have sandwiches, cakes and soup.', vi: 'Quán có bánh mì kẹp, bánh ngọt và súp.', ok: 'I would like a sandwich, please.' },
-        { npc: 'Chicken or egg sandwich?', vi: 'Bánh kẹp gà hay trứng?', ok: 'Chicken, please.' },
-        { npc: 'Would you like a drink with that?', vi: 'Bạn có muốn uống gì kèm không?', ok: 'Some water, please.' },
-        { npc: 'Is it for here or to go?', vi: 'Ăn ở đây hay mang đi?', ok: 'For here, please.' }
+        { npc: 'Hi there! You hungry?', vi: 'Chào! Đói không?', ok: 'Yeah, I\'m starving.' },
+        { npc: 'We\'ve got sandwiches, soup and muffins today.', vi: 'Hôm nay có bánh kẹp, súp và bánh muffin.', ok: 'I\'ll have a sandwich, please.' },
+        { npc: 'Chicken or turkey?', vi: 'Gà hay gà tây?', ok: 'Chicken, please.' },
+        { npc: 'Want a drink with that?', vi: 'Lấy thêm đồ uống không?', ok: 'Just water, thanks.' },
+        { npc: 'For here or to go?', vi: 'Ăn ở đây hay mang đi?', ok: 'For here.' }
       ] },
       { title: 'Trò chuyện với Leo', turns: [
-        { npc: 'Hey, I have not seen you before. What is your name?', vi: 'Ơ, trước giờ chưa gặp bạn. Bạn tên gì?', ok: 'My name is {name}.' },
-        { npc: 'Nice to meet you! Where are you from?', vi: 'Rất vui được gặp! Bạn từ đâu tới?', ok: 'I am from Vietnam.' },
-        { npc: 'Cool! Do you study here?', vi: 'Hay quá! Bạn học ở đây à?', ok: 'Yes, I study at Brightford High School.' },
-        { npc: 'What time do your classes start?', vi: 'Lớp của bạn bắt đầu lúc mấy giờ?', ok: 'At half past eight.' },
-        { npc: 'Come back tomorrow. I will make you a special coffee!', vi: 'Mai ghé nhé. Mình sẽ pha cho bạn một ly đặc biệt!', ok: 'Thank you! See you tomorrow!' }
+        { npc: 'Hey, haven\'t seen you before. I\'m Leo.', vi: 'Ơ, chưa gặp bạn bao giờ. Mình là Leo.', ok: 'Hi Leo, I\'m {name}.' },
+        { npc: 'Nice to meet you! Where are you from?', vi: 'Vui được gặp bạn! Bạn từ đâu tới?', ok: 'I\'m from Vietnam.' },
+        { npc: 'No way! Are you a student here?', vi: 'Thật á! Bạn học ở đây hả?', ok: 'Yeah, I go to Brightford High.' },
+        { npc: 'Cool. What time\'s your class?', vi: 'Hay đó. Mấy giờ bạn vào lớp?', ok: 'At eight thirty.' },
+        { npc: 'Come by tomorrow. Next coffee\'s on me!', vi: 'Mai ghé nhé. Ly sau mình bao!', ok: 'Thanks! See you tomorrow!' }
       ] }
     ]
   },
@@ -36,25 +36,25 @@ G.LIFE = {
     souvenir: { img: 'souvenir_apples.png', name: 'Túi táo của Mrs. Rosa' },
     talks: [
       { title: 'Mua táo', turns: [
-        { npc: 'Good morning, dear! Fresh fruit today!', vi: 'Chào cháu! Hôm nay hoa quả tươi lắm!', ok: 'Good morning! I would like some apples.' },
-        { npc: 'How many apples?', vi: 'Lấy mấy quả táo?', ok: 'Five apples, please.' },
-        { npc: 'Red or green?', vi: 'Táo đỏ hay táo xanh?', ok: 'Red, please.' },
-        { npc: 'Here you are. Anything else?', vi: 'Của cháu đây. Còn gì nữa không?', ok: 'No, thank you. How much is it?' },
-        { npc: 'That is three dollars.', vi: 'Ba đô la.', ok: 'Here you are.' }
+        { npc: 'Morning, sweetie! Everything\'s fresh today.', vi: 'Chào cháu! Hôm nay đồ tươi hết đó.', ok: 'Morning! I\'d like some apples.' },
+        { npc: 'How many do you need?', vi: 'Cháu lấy mấy quả?', ok: 'Five, please.' },
+        { npc: 'Red or green?', vi: 'Đỏ hay xanh?', ok: 'Red ones, please.' },
+        { npc: 'Here you go. Anything else?', vi: 'Đây nè. Còn gì nữa không?', ok: 'No, that\'s all. How much is it?' },
+        { npc: 'That\'s three bucks.', vi: 'Ba đô.', ok: 'Here\'s three dollars.' }
       ] },
       { title: 'Hỏi giá', turns: [
-        { npc: 'These oranges are very sweet!', vi: 'Cam này ngọt lắm đấy!', ok: 'How much are the oranges?' },
-        { npc: 'One dollar each.', vi: 'Một đô một quả.', ok: 'Two oranges, please.' },
-        { npc: 'Do you need a bag?', vi: 'Cháu cần túi không?', ok: 'Yes, please.' },
-        { npc: 'That is two dollars.', vi: 'Hai đô la.', ok: 'Here is two dollars.' },
-        { npc: 'Thank you, dear! Have a nice day!', vi: 'Cảm ơn cháu! Chúc một ngày vui!', ok: 'You too! Goodbye!' }
+        { npc: 'These oranges are super sweet!', vi: 'Cam này ngọt lắm đó!', ok: 'How much are the oranges?' },
+        { npc: 'A dollar each, or three for two.', vi: 'Một đô một quả, hoặc ba quả hai đô.', ok: 'I\'ll take three, then.' },
+        { npc: 'Do you need a bag?', vi: 'Cháu cần túi không?', ok: 'No, I\'m good. I\'ve got one.' },
+        { npc: 'Alright, that\'s two dollars.', vi: 'Được rồi, hai đô nhé.', ok: 'Can I pay by card?' },
+        { npc: 'Sure, just tap here. Have a good one!', vi: 'Được chứ, quẹt ở đây. Chúc một ngày vui!', ok: 'Thanks, you too!' }
       ] },
       { title: 'Mua hoa tặng mẹ', turns: [
-        { npc: 'Flowers for someone special?', vi: 'Mua hoa tặng ai đặc biệt à?', ok: 'Yes, for my mother.' },
-        { npc: 'Lovely! Roses or sunflowers?', vi: 'Dễ thương quá! Hoa hồng hay hướng dương?', ok: 'Sunflowers, please. She likes yellow.' },
-        { npc: 'How many?', vi: 'Mấy bông?', ok: 'Ten, please.' },
-        { npc: 'Shall I wrap them for you?', vi: 'Bà gói lại cho cháu nhé?', ok: 'Yes, please. Thank you.' },
-        { npc: 'Your mother is a lucky woman!', vi: 'Mẹ cháu thật may mắn!', ok: 'Thank you, Mrs. Rosa!' }
+        { npc: 'Flowers for someone special?', vi: 'Mua hoa tặng ai đặc biệt hả?', ok: 'Yeah, they\'re for my mom.' },
+        { npc: 'Aw, that\'s sweet! Roses or sunflowers?', vi: 'Dễ thương ghê! Hoa hồng hay hướng dương?', ok: 'Sunflowers. She loves yellow.' },
+        { npc: 'How many would you like?', vi: 'Cháu lấy mấy bông?', ok: 'Ten, please.' },
+        { npc: 'Want me to wrap them up?', vi: 'Bà gói lại cho cháu nhé?', ok: 'Yes, please. That\'d be great.' },
+        { npc: 'Your mom\'s gonna love them!', vi: 'Mẹ cháu sẽ thích lắm đó!', ok: 'I hope so! Thanks, Mrs. Rosa!' }
       ] }
     ]
   },
@@ -63,25 +63,25 @@ G.LIFE = {
     souvenir: { img: 'souvenir_medkit.png', name: 'Hộp cứu thương' },
     talks: [
       { title: 'Đau đầu', turns: [
-        { npc: 'Hello, come in. What is the matter?', vi: 'Chào bạn, vào đi. Bạn bị sao?', ok: 'I have a headache.' },
-        { npc: 'When did it start?', vi: 'Bắt đầu từ khi nào?', ok: 'Yesterday evening.' },
-        { npc: 'Do you have a fever?', vi: 'Bạn có sốt không?', ok: 'No, I do not.' },
-        { npc: 'Drink more water and rest well.', vi: 'Uống nhiều nước và nghỉ ngơi nhé.', ok: 'Okay, I will.' },
-        { npc: 'Take this medicine after meals.', vi: 'Uống thuốc này sau bữa ăn.', ok: 'Thank you, doctor.' }
+        { npc: 'Hi, come on in. What brings you in today?', vi: 'Chào, vào đi. Hôm nay bạn bị sao?', ok: 'I\'ve got a really bad headache.' },
+        { npc: 'How long have you had it?', vi: 'Bị bao lâu rồi?', ok: 'Since last night.' },
+        { npc: 'Any fever?', vi: 'Có sốt không?', ok: 'No, I don\'t think so.' },
+        { npc: 'Okay. Drink lots of water and get some rest.', vi: 'Được. Uống nhiều nước và nghỉ ngơi nhé.', ok: 'Got it.' },
+        { npc: 'Take one of these after meals.', vi: 'Uống một viên sau bữa ăn.', ok: 'Thanks, doctor.' }
       ] },
       { title: 'Đau bụng', turns: [
-        { npc: 'Good morning. How can I help you?', vi: 'Chào buổi sáng. Tôi giúp gì được bạn?', ok: 'I have a stomachache.' },
-        { npc: 'What did you eat yesterday?', vi: 'Hôm qua bạn ăn gì?', ok: 'I ate chicken soup.' },
-        { npc: 'Does it hurt here?', vi: 'Đau ở đây không?', ok: 'Yes, it hurts a lot.' },
-        { npc: 'Do not eat spicy food for two days.', vi: 'Hai ngày đừng ăn đồ cay nhé.', ok: 'Okay. Can I drink tea?' },
-        { npc: 'Yes, warm tea is fine. Get well soon!', vi: 'Được, trà ấm thì được. Mau khỏi nhé!', ok: 'Thank you very much!' }
+        { npc: 'Morning. What\'s going on?', vi: 'Chào buổi sáng. Bạn sao vậy?', ok: 'My stomach really hurts.' },
+        { npc: 'What did you eat yesterday?', vi: 'Hôm qua bạn ăn gì?', ok: 'Some street food, I think.' },
+        { npc: 'Does it hurt here?', vi: 'Đau chỗ này không?', ok: 'Ow, yeah, right there.' },
+        { npc: 'No spicy food for a couple of days, okay?', vi: 'Vài ngày đừng ăn cay nhé?', ok: 'Okay. Is tea okay?' },
+        { npc: 'Warm tea is fine. Feel better soon!', vi: 'Trà ấm thì được. Mau khoẻ nhé!', ok: 'Thanks so much!' }
       ] },
       { title: 'Bị cảm', turns: [
-        { npc: 'You look tired. Are you okay?', vi: 'Trông bạn mệt quá. Bạn ổn không?', ok: 'I have a cold.' },
-        { npc: 'Do you have a sore throat?', vi: 'Bạn có đau họng không?', ok: 'Yes, I do.' },
-        { npc: 'Your temperature is a little high.', vi: 'Nhiệt độ của bạn hơi cao.', ok: 'Should I stay home?' },
-        { npc: 'Yes, stay home tomorrow and sleep a lot.', vi: 'Ừ, mai ở nhà và ngủ nhiều vào.', ok: 'Okay, I will rest.' },
-        { npc: 'Come back if you feel worse.', vi: 'Thấy tệ hơn thì quay lại nhé.', ok: 'Thank you, Dr. Anna. Goodbye!' }
+        { npc: 'You look pretty tired. You okay?', vi: 'Trông bạn mệt quá. Ổn không?', ok: 'I think I\'m coming down with a cold.' },
+        { npc: 'Is your throat sore?', vi: 'Có đau họng không?', ok: 'Yeah, it\'s really sore.' },
+        { npc: 'Your temperature\'s a little high.', vi: 'Nhiệt độ của bạn hơi cao.', ok: 'Should I stay home tomorrow?' },
+        { npc: 'Yes, take a day off and sleep a lot.', vi: 'Ừ, nghỉ một ngày và ngủ nhiều vào.', ok: 'Okay, I will.' },
+        { npc: 'Come back if it gets worse.', vi: 'Tệ hơn thì quay lại nhé.', ok: 'Will do. Thanks, Dr. Anna!' }
       ] }
     ]
   }

@@ -6,11 +6,11 @@ var G = window.G || (window.G = {});
   var CITY = { en: 'Brightford', zh: 'Trường Lạc trấn' };
   var DESK = {
     en: { who: 'Officer Grace · quầy thủ tục', img: 'npc_grace.png', lang: 'en', steps: [
-      { q: 'Good morning! Where are you flying to?', vi: 'Chào buổi sáng! Bạn bay đi đâu?', ok: 'To Changle Town, please.', bad: ['I like apples.', 'It is Monday.'], hint: 'Nhân viên hỏi bạn bay đi đâu. Trả lời "To … , please."' },
-      { q: 'May I see your passport, please?', vi: 'Cho tôi xem hộ chiếu nhé?', ok: 'Here you are.', bad: ['No, thank you.', 'I am fine.'], hint: 'Đưa hộ chiếu thì nói "Here you are." (Của bạn đây.)' },
-      { q: 'Here is your boarding pass. Your gate is number three.', vi: 'Đây là thẻ lên máy bay. Cửa số ba.', ok: 'Thank you very much!', bad: ['Good night!', 'I am hungry.'], hint: 'Cảm ơn nhân viên nhé!' }
-    ], air: ['Ladies and gentlemen, welcome aboard. Please fasten your seat belt.', 'We will land soon. Thank you for flying with us.'],
-      airVi: ['Kính chào quý khách, chào mừng lên máy bay. Vui lòng thắt dây an toàn.', 'Máy bay sắp hạ cánh. Cảm ơn quý khách.'] },
+      { q: 'Hi! Where are you flying today?', vi: 'Chào! Hôm nay bạn bay đi đâu?', ok: 'Changle Town.', bad: ['I like apples.', 'It\'s Monday.'], hint: 'Nhân viên hỏi bạn bay đi đâu. Chỉ cần nói tên nơi đến.' },
+      { q: 'Can I see your passport?', vi: 'Cho tôi xem hộ chiếu nhé?', ok: 'Sure, here you go.', bad: ['No, thanks.', 'Pretty good.'], hint: 'Đưa hộ chiếu thì nói "Sure, here you go." (Vâng, đây ạ.)' },
+      { q: 'Here\'s your boarding pass. You\'re at gate three.', vi: 'Thẻ lên máy bay của bạn đây. Cửa số ba.', ok: 'Great, thanks!', bad: ['Good night!', 'I\'m starving.'], hint: 'Cảm ơn nhân viên nhé!' }
+    ], air: ['Hi folks, welcome aboard! Please make sure your seat belt is fastened.', 'We\'re starting our descent. Thanks for flying with us!'],
+      airVi: ['Chào mọi người, chào mừng lên máy bay! Hãy chắc là bạn đã thắt dây an toàn.', 'Máy bay bắt đầu hạ độ cao. Cảm ơn đã bay cùng chúng tôi!'] },
     zh: { who: '周小姐 Cô Chu · quầy thủ tục', img: 'npc_zhou.png', lang: 'zh', steps: [
       { q: '你好！你去哪儿？', py: 'Nǐ hǎo! Nǐ qù nǎr?', vi: 'Chào bạn! Bạn đi đâu?', ok: ['我去Brightford。', 'Wǒ qù Brightford.'], bad: [['我饿了。', 'Wǒ è le.'], ['今天星期一。', 'Jīntiān xīngqīyī.']], hint: 'Cô Chu hỏi bạn đi đâu. Trả lời "我去… (Wǒ qù …)".' },
       { q: '请给我你的护照。', py: 'Qǐng gěi wǒ nǐ de hùzhào.', vi: 'Cho tôi xem hộ chiếu của bạn.', ok: ['给你。', 'Gěi nǐ.'], bad: [['没关系。', 'Méi guānxi.'], ['再见。', 'Zàijiàn.']], hint: 'Đưa đồ cho ai thì nói "给你 (Gěi nǐ)": của bạn đây.' },
