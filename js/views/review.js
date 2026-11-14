@@ -41,7 +41,7 @@ export async function render(route) {
   if (!all.length) {
     return {
       title: 'Ôn tập',
-      el: empty('空', 'Chưa có thẻ nào. Học từ mới trong một buổi học là thẻ tự vào đây.',
+      el: empty('img:empty', 'Chưa có thẻ nào. Học từ mới trong một buổi học là thẻ tự vào đây.',
         h('a.btn.primary', { href: homeHref }, 'Về học bài')),
     };
   }
@@ -57,7 +57,7 @@ export async function render(route) {
     const mins = Math.max(1, Math.round((soon.due - Date.now()) / 60000));
     return {
       title: 'Ôn tập',
-      el: empty('好', `Hết thẻ tới hạn rồi. Thẻ tiếp theo sau khoảng ${fmtWait(mins)}.`,
+      el: empty('img:done', `Hết thẻ tới hạn rồi. Thẻ tiếp theo sau khoảng ${fmtWait(mins)}.`,
         h('div.btn-row', { style: { maxWidth: '320px', margin: '0 auto' } },
           h('a.btn', { href: homeHref }, 'Quay lại'),
           h('a.btn.ghost', { href: `#/review?ahead=1${lang ? `&lang=${lang}` : ''}` }, 'Ôn trước hạn'),

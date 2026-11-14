@@ -26,7 +26,7 @@ export async function render() {
   /* ---- lần đầu: mời trả lời 4 câu để có lộ trình riêng ---- */
   if (!plan.settings.onboarded) {
     el.append(h('div.card.start-invite',
-      h('img.start-ava', { src: 'img/mascot/han-chao.webp', alt: 'Han' }),
+      h('img.start-ava.wide', { src: 'img/moments/welcome.webp', alt: 'Han và Kai' }),
       h('div.grow',
         h('b', 'Chưa biết học từ đâu?'),
         h('div.small.muted', 'Trả lời 4 câu (1 phút): học gì, mỗi ngày bao lâu, đang ở trình độ nào. App xếp lộ trình riêng và chỉ đúng bài cần học trước.'),
@@ -54,7 +54,7 @@ export async function render() {
         h('h1.today-title', next.title),
         h('div.hero-desc', next.desc),
       )
-      : h('h1.today-title', { style: { marginTop: '12px' } }, 'Xong hết việc hôm nay 🎉'),
+      : h('div.hero-done', h('img', { src: 'img/moments/done.webp', alt: '' }), h('h1.today-title', 'Xong hết việc hôm nay 🎉')),
     next
       ? h('a.btn.seal.block', { href: next.href, style: { marginTop: '14px' } }, 'Học ngay ›')
       : h('a.btn.ghost.block.on-hero', { href: '#/read', style: { marginTop: '14px' } }, 'Còn sức thì đọc thêm một bài'),
