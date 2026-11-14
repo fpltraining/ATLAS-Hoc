@@ -142,6 +142,7 @@ var G = window.G || (window.G = {});
         if (x > b.x - 125 && x < b.x + 125 && y > b.y - 190 && y < b.y - 4) return true;
       }
     }
+    if (scene.props) for (var pj = 0; pj < scene.props.length; pj++) { var pr = scene.props[pj], ddx = x - pr.x, ddy = (y - pr.y) * 2; if (ddx * ddx + ddy * ddy < pr.r * pr.r) return true; }
     if ((scene.kind === 'classroom' || scene.kind === 'shop') && Math.abs(x - TX()) < 60 && Math.abs(y - TY() + 20) < 36) return true; // giáo viên
     return false;
   }
@@ -356,6 +357,14 @@ var G = window.G || (window.G = {});
       p.dir = Math.abs(mx) > Math.abs(my) ? (mx < 0 ? 'left' : 'right') : (my < 0 ? 'up' : 'down');
     }
   }
+  function drawProp(o) {
+    shadow(o.x, o.y, o.r * 0.9 + 6);
+    // cây đung đưa nhẹ trong gió
+    var sway = /oak|palm/.test(o.img) ? Math.sin(Date.now() / 900 + o.x) * 0.025 : 0;
+    ctx.save(); ctx.translate(o.x, o.y); ctx.rotate(sway); ctx.translate(-o.x, -o.y);
+    G.drawAsset(ctx, o.img, o.x - o.s / 2, o.y - o.s * 0.96, o.s, o.s);
+    ctx.restore();
+  }
   function drawTownie(p) {
     shadow(p.x, p.y, 20);
     G.drawAvatar(ctx, p.av, p.x, p.y + 4, 100, p.dir, p.t * 9, p.moving);
@@ -414,6 +423,8 @@ var G = window.G || (window.G = {});
       ctx.fillStyle = g; ctx.beginPath(); ctx.ellipse(cx, cy, 300, 170, 0, 0, 6.283); ctx.fill();
     }
     drawFx('leaf'); drawFx('bird');
+    var dt2 = (t * 70) % (scene.w + 600) - 300, dy2 = 260 + Math.sin(t * 1.3) * 18 + (sceneId === 'home_en' ? 200 : 0);
+    if (G.asset('prop_drone.png').ok) G.drawAsset(ctx, 'prop_drone.png', dt2 - 45, dy2 - 45, 90, 90);
     ctx.restore();
   }
   /* chỗ đang đứng gần (cửa, người): vòng sáng vàng nhấp nháy */
@@ -443,6 +454,7 @@ var G = window.G || (window.G = {});
     drawFx('dust');
     var items = [];
     if (scene.buildings) for (var i = 0; i < scene.buildings.length; i++) items.push({ y: scene.buildings[i].y, draw: drawBuilding, o: scene.buildings[i] });
+    if (scene.props) for (var pi = 0; pi < scene.props.length; pi++) items.push({ y: scene.props[pi].y, draw: drawProp, o: scene.props[pi] });
     if (scene.kind === 'classroom' && G.currentRoom) items.push({ y: TY(), draw: drawTeacher, o: G.ROOM_TEACHER[G.currentRoom] });
     if (scene.kind === 'shop') items.push({ y: TY(), draw: drawTeacher, o: scene.npc });
     for (var ti = 0; ti < town.length; ti++) items.push({ y: town[ti].y, draw: drawTownie, o: town[ti] });
