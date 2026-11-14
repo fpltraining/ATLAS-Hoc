@@ -60,16 +60,16 @@ async function hub() {
 
   el.append(h('h3.hub-head', 'Luyện thêm khi rảnh'));
   el.append(h('div.hub-grid',
-    tile('#/read/en', '❡', 'Đọc truyện', nx ? nx.story.title : `${enStories.length} bài`),
-    tile('#/penen', '✎', 'Viết bằng bút', 'Đồ, chép, viết trí nhớ'),
-    tile('#/review?lang=en', '↻', 'Ôn thẻ', due ? `${due} thẻ tới hạn` : 'Chưa có thẻ tới hạn'),
-    tile('#/pron/en', 'ə', 'Phát âm cho người Việt', '8 bài · bảng 44 âm IPA'),
-    tile('#/speak', '🗣', 'Luyện phát âm', 'Nói vào micro, máy chấm điểm'),
-    tile('#/work', '★', 'Tiếng Anh nghề', 'Bán hàng, huấn luyện, TikTok'),
-    tile('#/book', '¶', 'Sổ tay ngữ pháp', 'B1 đến B2, có bài tập'),
-    tile('#/lib/irreg', 'V', 'Động từ bất quy tắc', 'Theo nhóm dễ nhớ'),
-    tile('#/lib/sentences', '“', 'Câu mẫu', 'Luyện nghe và viết'),
-    tile('#/en/placement', '?', 'Kiểm tra xếp lớp', en.placed ? `Lần trước: ${en.placed.level}` : '36 câu, gợi ý chặng phù hợp'),
+    tile('#/read/en', 'icon:en-1', 'Đọc truyện', nx ? nx.story.title : `${enStories.length} bài`),
+    tile('#/penen', 'icon:en-2', 'Viết bằng bút', 'Đồ, chép, viết trí nhớ'),
+    tile('#/review?lang=en', 'icon:en-3', 'Ôn thẻ', due ? `${due} thẻ tới hạn` : 'Chưa có thẻ tới hạn'),
+    tile('#/pron/en', 'icon:en-4', 'Phát âm cho người Việt', '8 bài · bảng 44 âm IPA'),
+    tile('#/speak', 'icon:en-5', 'Luyện phát âm', 'Nói vào micro, máy chấm điểm'),
+    tile('#/work', 'icon:en-6', 'Tiếng Anh nghề', 'Bán hàng, huấn luyện, TikTok'),
+    tile('#/book', 'icon:en-7', 'Sổ tay ngữ pháp', 'B1 đến B2, có bài tập'),
+    tile('#/lib/irreg', 'icon:en-8', 'Động từ bất quy tắc', 'Theo nhóm dễ nhớ'),
+    tile('#/lib/sentences', 'icon:en-9', 'Câu mẫu', 'Luyện nghe và viết'),
+    tile('#/en/placement', 'icon:en-10', 'Kiểm tra xếp lớp', en.placed ? `Lần trước: ${en.placed.level}` : '36 câu, gợi ý chặng phù hợp'),
   ));
 
   if (enCards.length) el.append(cardSummary(enCards, '#/review?lang=en', 'Thẻ ôn tiếng Anh'));
@@ -101,8 +101,10 @@ async function hub() {
 }
 
 function tile(href, mark, title, sub) {
+  // mark 'icon:en-3' → icon 3D trong img/icons (ChatGPT đợt 7)
+  const icon = String(mark).startsWith('icon:') ? h('img', { src: `img/icons/${mark.slice(5)}.webp`, alt: '' }) : null;
   return h('a.hub-tile', { href },
-    h('span.hub-mark', mark),
+    h(`span.hub-mark${icon ? '.pic' : ''}`, icon || mark),
     h('span.grow', h('b', title), h('span.small.faint.block', sub)),
     h('span.faint', '›'),
   );

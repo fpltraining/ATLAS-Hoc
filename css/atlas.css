@@ -599,3 +599,9 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 .start-ava.wide { width: 84px; height: 84px; object-fit: cover; border-radius: 14px; }
 .hero-done { display: flex; align-items: center; gap: 16px; margin-top: 12px; }
 .hero-done img { width: 120px; height: 120px; object-fit: cover; border-radius: 16px; flex: none; }
+
+/* icon 3D (img/icons) */
+.hub-mark.pic { background: none; box-shadow: none; padding: 0; }
+.hub-mark.pic img { width: 46px; height: 46px; object-fit: contain; display: block; filter: drop-shadow(0 3px 5px rgba(20, 24, 50, .18)); }
+.with-icon { display: flex; align-items: center; gap: 8px; }
+.with-icon img { width: 30px; height: 30px; object-fit: contain; }

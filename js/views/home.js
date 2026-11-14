@@ -84,7 +84,7 @@ export async function render() {
 
   /* ---- thử thách 10 câu ---- */
   el.append(h('a.card.challenge-card', { href: '#/challenge' },
-    h('span.hub-mark', '🎯'),
+    h('span.hub-mark.pic', h('img', { src: 'img/icons/en-11.webp', alt: '' })),
     h('div.grow', h('b', 'Thử thách hôm nay'),
       h('div.small.faint', ch ? `Đã làm: đúng ${ch.right}/${ch.n} câu. Làm lại để ôn thêm.` : '10 câu trắc nghiệm nhanh từ những từ đã học, 2–3 phút')),
     h('span.pill.jade', ch ? `${ch.right}/${ch.n}` : '10 câu ›'),
@@ -124,7 +124,7 @@ function journalCard(day) {
   });
   note.value = day.note || '';
   return h('div.card',
-    h('div.row.spread', h('h3', 'Nhật ký hôm nay'), h('a.small.faint', { href: '#/stats' }, 'Xem cả nhật ký ›')),
+    h('div.row.spread', h('h3.with-icon', h('img', { src: 'img/icons/en-12.webp', alt: '' }), 'Nhật ký hôm nay'), h('a.small.faint', { href: '#/stats' }, 'Xem cả nhật ký ›')),
     h('div.row', { style: { margin: '8px 0' } },
       h('span.small', 'Hôm nay bạn hiểu được bao nhiêu?'),
       h('input.range.grow', {
