@@ -5,17 +5,19 @@ var G = window.G || (window.G = {});
 (function () {
   var CITIES = [
     { id: 'en', name: 'Brightford', lang: 'Tiếng Anh · Mỹ tương lai', card: 'card_city_en.png', state: 'open', scene: 'city_en' },
-    { id: 'zh', name: 'Trường Lạc trấn 长乐镇', lang: 'Tiếng Trung · Thị trấn Trung Quốc', card: 'card_city_zh.png', state: 'soon', note: 'Mở ở giai đoạn 3' },
+    { id: 'zh', name: 'Trường Lạc trấn 长乐镇', lang: 'Tiếng Trung · Thị trấn Trung Quốc', card: 'card_city_zh.png', state: 'open', scene: 'city_zh' },
     { id: 'ja', name: 'Thành phố Nhật', lang: 'Tiếng Nhật', card: 'card_city_soon.png', state: 'soon' },
     { id: 'ko', name: 'Thành phố Hàn', lang: 'Tiếng Hàn', card: 'card_city_soon.png', state: 'soon' },
     { id: 'fr', name: 'Thành phố Pháp', lang: 'Tiếng Pháp', card: 'card_city_soon.png', state: 'soon' }
   ];
 
-  function enRooms() {
+  function rooms(doors) {
     var done = 0, stars = 0;
-    for (var i = 0; i < G.EN_HALL_DOORS.length; i++) { var id = G.EN_HALL_DOORS[i].room, p = G.S.phong[id]; if (G.roomPassed(id)) { done++; stars += p.sao; } }
-    return { done: done, stars: stars };
+    for (var i = 0; i < doors.length; i++) { var id = doors[i].room, p = G.S.phong[id]; if (G.roomPassed(id)) { done++; stars += p.sao; } }
+    return { done: done, stars: stars, all: doors.length };
   }
+  function lastCity() { var sv = G.S.viTri && G.SCENES[G.S.viTri.canh]; return (sv && sv.city) || 'en'; }
+  function enRooms() { return rooms(G.EN_HALL_DOORS); }
 
   G.renderLobby = function () {
     var root = document.getElementById('lobby');
@@ -28,14 +30,16 @@ var G = window.G || (window.G = {});
         G.el('div.kicker', 'Thế giới Ngôn Ngữ'),
         G.el('h1', 'Học thêm một ngôn ngữ, sống thêm một cuộc đời.'),
         G.el('p', 'Mỗi ngôn ngữ là một thành phố. Học ở trường, nói chuyện ở quán, bay sang thành phố khác để kết bạn.'),
-        G.el('button.btn.seal.big1', { onclick: function () { G.goCity('en'); } }, 'Vào Brightford ›')
+        G.el('button.btn.seal.big1', { onclick: function () { G.goCity(lastCity()); } }, 'Vào ' + (lastCity() === 'zh' ? 'Trường Lạc trấn' : 'Brightford') + ' ›')
       )
     ));
 
     root.appendChild(G.el('h2.sec', 'Các thành phố'));
     root.appendChild(G.el('div.cities', CITIES.map(function (c) {
       var open = c.state === 'open';
-      var prog = c.id === 'en' ? (G.S.totNghiep.en && G.S.totNghiep.en.A1 ? '🎓 Đã tốt nghiệp A1 · ' : r.done + '/5 phòng A1 · ') + r.stars + '★' : '';
+      var z = rooms(G.ZH_HALL_DOORS);
+      var prog = c.id === 'en' ? (G.S.totNghiep.en && G.S.totNghiep.en.A1 ? '🎓 Đã tốt nghiệp A1 · ' : r.done + '/5 phòng A1 · ') + r.stars + '★'
+        : c.id === 'zh' ? (G.S.totNghiep.zh && G.S.totNghiep.zh.HSK1 ? '🎓 Đã tốt nghiệp HSK1 · ' : z.done + '/6 phòng HSK1 · ') + z.stars + '★' : '';
       return G.el('button.city' + (open ? '' : '.soon'), { onclick: function () { if (open) G.goCity(c.id); else G.toast(c.name + ': ' + (c.note || 'sắp ra mắt')); } },
         G.imgEl(c.card, 'city-img'),
         G.el('b', c.name),
@@ -54,6 +58,7 @@ var G = window.G || (window.G = {});
         stat(G.S.xp, 'XP'),
         stat(G.S.chuoi.hienTai + ' ngày', 'Chuỗi học'),
         stat(r.done + '/5', 'Phòng A1 đã qua'),
+        stat(rooms(G.ZH_HALL_DOORS).done + '/6', 'Phòng HSK1 đã qua'),
         stat(G.S.tuKho.length, 'Từ cần ôn')
       ),
       G.diplomas().length ? G.el('div.dips', G.diplomas().map(function (d) {

@@ -1,24 +1,50 @@
 # Danh sách đặt hình: Thế giới Ngôn Ngữ
 
-## ĐƠN ĐANG CHỜ (GĐ2 · copy nguyên khối, đính kèm hình Ms. Emma để giữ nét vẽ)
+## ĐƠN ĐANG CHỜ (GĐ2 + GĐ3 · copy nguyên khối, đính kèm hình Ms. Emma để giữ nét vẽ)
 
 Làm xong anh cứ dán hình vào chat với em, em tự cắt, đặt tên và lưu vào game.
 
 ```
 Please create the following images for my 2D mobile game, ONE image per message, in this order.
-Attached: a teacher character from my game. Match its art style exactly.
+Attached: a character from my game. Match its art style exactly.
 
 GLOBAL RULES
 - Cozy chibi 2D game art like the attached character: thick dark-brown outlines, flat soft colors, gentle shading.
 - Palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0.
-- NO text, letters or numbers anywhere.
-- Solid flat magenta #FF00FF background, nothing else.
+- NO text, letters, numbers or Chinese characters anywhere.
+- [MAGENTA] = isolated subject on a solid flat magenta #FF00FF background, nothing else.
+- [MAP] = top-down view tilted slightly (3/4 view, camera ~30 degrees above ground), fills the whole image, wide 3:2.
+- [TWO POSES] = the same chibi character twice side by side, full body, same size: left = standing and smiling, right = talking with one hand raised. [MAGENTA].
+- Chinese town setting: Changle Town, a charming Chinese water town: white walls, dark curved roof tiles, blank red lanterns, stone bridges, canals, willow trees.
 
-1. Two poses of the same chibi teacher side by side, full body, same size: left = standing and smiling, right = talking with one hand raised. Mr. Tom, a cheerful middle-aged English teacher with a brown moustache, a checkered vest, rolled sleeves, holding a big pocket watch.
-2. Same two poses: Mrs. Lily, a warm teacher in her forties with curly brown hair, a floral dress and a cardigan, holding a small family photo frame.
-3. Same two poses: Chef Sam, a tall friendly cooking teacher with a white chef hat, white jacket, coral apron, holding a wooden spoon.
-4. A heavy chain crossed in an X with a big golden padlock in the middle, front view, to put on top of a locked door. Only the chain and padlock.
-5. A framed diploma, front view, landscape 4:3: cream paper with a large EMPTY area in the middle (no writing), a sky-blue ribbon seal at the bottom, a gold frame.
+PART A · TEACHERS AND OBJECTS
+1. [TWO POSES] Mr. Tom, a cheerful middle-aged English teacher with a brown moustache, a checkered vest, rolled sleeves, holding a big pocket watch.
+2. [TWO POSES] Mrs. Lily, a warm teacher in her forties with curly brown hair, a floral dress and a cardigan, holding a small family photo frame.
+3. [TWO POSES] Chef Sam, a tall friendly cooking teacher with a white chef hat, white jacket, coral apron, holding a wooden spoon.
+4. [TWO POSES] Teacher Li, a young Chinese teacher with glasses, a white shirt with rolled sleeves, holding a small abacus.
+5. [TWO POSES] Auntie Zhang, a cheerful middle-aged Chinese auntie with permed hair, a flowered blouse and an apron.
+6. [TWO POSES] Master Chen, a friendly Chinese cook with a towel over his shoulder, white tank top, holding a wok.
+7. [TWO POSES] Officer Grace, an airport check-in officer in a neat navy uniform with a scarf, holding a passport.
+8. [TWO POSES] Miss Zhou, a Chinese airline check-in officer in a coral uniform with a small hat, smiling politely.
+9. [MAGENTA] A heavy chain crossed in an X with a big golden padlock in the middle, front view. Only the chain and padlock.
+10. [MAGENTA] A framed diploma, front view, landscape 4:3: cream paper with a large EMPTY area in the middle, a sky-blue ribbon seal at the bottom, a gold frame.
+11. [MAGENTA] A Chinese scroll diploma, front view, landscape 4:3: cream paper with a large EMPTY area, a red round seal stamp (blank), dark wood rods at the sides.
+12. [MAGENTA] SIDE VIEW of a cute small passenger airplane flying to the RIGHT, white and coral with a jade stripe, round windows. Wide 2:1.
+
+PART B · CHANGLE TOWN
+13. [MAP] The ground map of Changle Town with NO buildings: a stone plaza with an old well in the middle, stone-slab paths going north, south, east and west, a canal with two small arch bridges, five empty flat lots (top-center, left-middle, right-middle, bottom-left, bottom-right), willow and plum trees, blank red lanterns on poles.
+14. [MAGENTA] One building, front door at the bottom center: a traditional Chinese academy with curved dark roof tiles, coral-red pillars, blank red lanterns, two stone lion statues by the door.
+15. [MAGENTA] A two-storey wooden teahouse with lattice windows, hanging lanterns, a teapot-shaped sign (blank), bamboo plants. Door at the bottom center.
+16. [MAGENTA] An open-air morning market under a tiled roof, vegetable and fruit stalls, bamboo baskets. Entrance at the bottom center.
+17. [MAGENTA] A small modern clinic with white walls, a green cross sign and a small herb-medicine corner. Door at the bottom center.
+18. [MAGENTA] A small airport terminal with a roof shaped like a curved traditional Chinese roof, a small airplane parked beside it. Glass doors at the bottom center.
+19. [MAP] Inside the academy hallway, no people: EXACTLY SIX identical wooden sliding doors evenly spaced along the top wall, the floor starting one third from the top, blank red lanterns, bamboo plants, a calligraphy brush stand, entrance at the bottom center.
+20. [MAP] Inside a Chinese classroom, no people: a large blank blackboard on the top wall, a low wooden teacher's table with ink stone and brush on the left, student desks, lanterns, a round window with a plum blossom branch on the right, door at the bottom center.
+
+PART C · AIRPORTS AND FLIGHT
+21. [MAP] Inside a near-future American airport terminal, no people: check-in counters in the middle, a big window showing an airplane, rows of seats.
+22. [MAP] Inside the Changle Town airport, no people: check-in counters in the middle, blank red lantern decorations, a big window with an airplane, seats.
+23. A very wide SIDE-VIEW sky panorama for a scrolling flight background (3:1): soft blue sky, fluffy cream clouds, a sea far below with tiny islands. Left and right edges must match so it repeats seamlessly.
 ```
 
 Đã nhận và lưu: bản đồ hai hòn đảo (đầu trang Ngôi nhà chung); xe buýt, tàu điện (đóng/mở cửa), 2 dải phố, bản đồ trung tâm, 5 toà nhà, hành lang, lớp học, 3 thẻ thành phố; 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.

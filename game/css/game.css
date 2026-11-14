@@ -238,3 +238,14 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .grad-xp { font-size: 22px; font-weight: 800; color: var(--jade); margin: 8px 0 12px; }
 .dips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
 .dip-chip { background: var(--navy); color: #fff; border-radius: 99px; padding: 4px 12px; font-size: 13px; font-weight: 700; }
+
+/* ---------- Tiếng Trung: pinyin ---------- */
+.py { color: var(--jade); font-size: .82em; font-weight: 600; letter-spacing: .02em; }
+.py.inl { display: inline; }
+.wbig + .py { font-size: 20px; margin-top: -4px; }
+.nopy .py { display: none; }
+.zhopt { display: inline-flex; flex-direction: column; line-height: 1.2; }
+.zhopt .py { font-size: 13px; }
+.py-btn { margin-left: auto; margin-right: 8px; }
+.panel-top { display: flex; align-items: center; }
+.py-btn { white-space: nowrap; font-size: 13px; padding: 6px 10px; min-height: 34px; }
