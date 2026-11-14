@@ -25,7 +25,7 @@ export const BADGES = [
 ];
 
 /* Số thứ tự các huy hiệu đã có ảnh vẽ (img/badges/b<n>.webp). Thêm vào khi nhận ảnh từ ChatGPT. */
-const HAS_IMG = new Set([]);
+const HAS_IMG = new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 
 /** Huy chương: ảnh vẽ sẵn nếu có, không thì vòng kim loại theo hạng + hình Fluent. */
 export function medal(b, { size = 72, locked = false } = {}) {
