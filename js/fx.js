@@ -102,6 +102,16 @@ export function confetti({ count = 110, duration = 1700, y = 0.32 } = {}) {
 const ALL_POSES = ['mung', 'khen', 'nghi', 'boi-roi', 'dong-vien', 'giai-thich', 'doc', 'viet', 'nghe', 'ngu', 'chao', 'thang'];
 const NEW_POSES = { han: new Set(ALL_POSES), kai: new Set(ALL_POSES) };
 const OLD = { mung: 'khen', thang: 'khen', 'boi-roi': 'nghi', doc: 'giai-thich', viet: 'giai-thich', ngu: 'nghi' };
+/** Video vòng lặp nhân vật (ChatGPT/Sora): img/video/<tên>.mp4, ảnh chờ <tên>.jpg. Giảm chuyển động thì chỉ hiện ảnh. */
+export function loopVideo(name, cls = 'fx-ava') {
+  const poster = `img/video/${name}.jpg`;
+  if (reduced()) return h(`img.${cls}`, { src: poster, alt: '' });
+  const v = h(`video.${cls}`, { src: `img/video/${name}.mp4`, poster, autoplay: true, muted: true, loop: true, playsinline: true, 'aria-hidden': 'true' });
+  v.muted = true;
+  v.play?.().catch(() => {});
+  return v;
+}
+
 export function poseSrc(who, pose) {
   const p = NEW_POSES[who]?.has(pose) || !OLD[pose] ? pose : OLD[pose];
   return `img/mascot/${who}-${p}.webp`;
@@ -121,7 +131,8 @@ export function celebrate(opts = {}) {
   closeCard();
   const pose = opts.pose || 'khen';
   let pic;
-  if (opts.who) pic = h('img.fx-ava', { src: poseSrc(opts.who, pose), alt: '' });
+  if (opts.video) pic = loopVideo(opts.video, 'fx-ava.vid');
+  else if (opts.who) pic = h('img.fx-ava', { src: poseSrc(opts.who, pose), alt: '' });
   else { pic = h('span.fx-art'); pic.innerHTML = artSvg(opts.art || 'party-popper', 64); }
   const card = h(`div.fx-card${opts.big ? '.big' : ''}`, { role: 'status' },
     pic,

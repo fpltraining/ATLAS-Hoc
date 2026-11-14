@@ -609,3 +609,7 @@ ol.senses li { margin: 4px 0; line-height: 1.45; }
 /* bìa truyện */
 .story-card { overflow: hidden; }
 .story-cover { display: block; width: calc(100% + 28px); max-width: none; aspect-ratio: 3 / 2; object-fit: cover; margin: -13px -14px 10px; }
+
+/* video nhân vật */
+video.fx-ava.vid { width: 96px; height: 120px; object-fit: cover; border-radius: 14px; margin: -30px 0 -6px; background: #f3efe8; animation: none; }
+.start-vid { width: 96px; height: 120px; object-fit: cover; border-radius: 16px; flex: none; background: #f3efe8; }
