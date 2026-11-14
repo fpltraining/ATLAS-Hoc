@@ -45,6 +45,7 @@ var G = window.G || (window.G = {});
       )
     ));
     renderOpts();
+    setTimeout(renderOpts, 700); setTimeout(renderOpts, 2000); // vẽ lại khi các lớp hình đã tải
     window.scrollTo(0, 0);
     cancelAnimationFrame(raf);
     var t0 = Date.now();

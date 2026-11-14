@@ -20,12 +20,12 @@ G.SCENES = {
   home_en: {
     title: 'Khu phố Maple',
     bg: 'map_home_en.png', w: 1536, h: 1024, kind: 'city',
-    spawn: { x: 420, y: 640 },
+    spawn: { x: 330, y: 790 },
     walk: { x0: 30, y0: 60, x1: 1506, y1: 1000 },
     buildings: [
-      { id: 'home', img: 'building_en_home.png', x: 420, y: 560, name: 'Nhà của bạn', home: true },
-      { id: 'busstop', img: 'building_en_busstop.png', x: 1120, y: 470, name: 'Bến xe buýt', ride: 'bus', toward: 'school' },
-      { id: 'metro', img: 'building_en_metro.png', x: 1150, y: 900, name: 'Ga tàu điện', ride: 'metro', toward: 'school' }
+      { id: 'home', img: 'building_en_home.png', x: 330, y: 700, name: 'Nhà của bạn', home: true },
+      { id: 'busstop', img: 'building_en_busstop.png', x: 1240, y: 400, name: 'Bến xe buýt', ride: 'bus', toward: 'school' },
+      { id: 'metro', img: 'building_en_metro.png', x: 1190, y: 960, name: 'Ga tàu điện', ride: 'metro', toward: 'school' }
     ]
   },
   city_en: {

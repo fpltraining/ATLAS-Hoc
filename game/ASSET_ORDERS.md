@@ -17,25 +17,7 @@ GLOBAL RULES FOR EVERY IMAGE
 - [MAP] = top-down view tilted slightly (3/4 view, camera ~30° above ground), fills the whole image, wide 3:2.
 - English town setting: Brightford, a cozy small town in the near-future USA (year 2080): rounded white-and-glass buildings with warm wood, solar roofs, rooftop gardens, small hover-cars, delivery drones, oak and palm trees.
 
-PART A · CHARACTER CREATOR PARTS (all [MAGENTA], all with the SAME body shape, head size and pose)
-1. Turnaround of ONE chibi kid mannequin with a smooth BALD head and a BLANK face (no eyes, no mouth, no eyebrows, no hair), light skin, wearing a red hoodie, navy shorts, white sneakers. Three full-body views in one row, same size, evenly spaced, standing straight, arms down: front, back, side facing left.
-2. Same mannequin, same 3 views, wearing a light-blue denim jacket over a white t-shirt, dark jeans, red sneakers.
-3. Same, wearing a navy school blazer with a blank badge, white shirt, jade-green tie, grey trousers, black shoes.
-4. Same, wearing a jade-green tracksuit with white stripes, white running shoes.
-5. Same, wearing a cream knitted sweater, coral pleated skirt, white socks, brown shoes.
-6. Same, wearing a futuristic 2080 light jacket with glowing sky-blue trim, black cargo pants, white high-tech sneakers.
-7. Hairstyle pieces ONLY, like wigs floating (no head, no face, no body), colored LIGHT GREY #D8D8D8 with soft grey shading and dark-brown outlines, sized for the bald head above. 3 rows, each row = one hairstyle in 3 views (front, back, side facing left): row 1 short messy, row 2 spiky, row 3 bowl cut with straight bangs.
-8. Same as 7: row 1 curly, row 2 neat side part, row 3 top bun.
-9. Same as 7, 2 rows: row 1 high ponytail, row 2 long straight hair to the shoulders.
-10. Chibi FACE FEATURES ONLY (eyes, eyebrows, small mouth, light pink blush), no head outline, no skin, no hair. 6 faces in a 3x2 grid, front view: gentle smile, big sparkly eyes, cheerful closed-eye smile, cool confident, calm sleepy, cheeky wink.
-11. The same 6 faces in SIDE VIEW facing left (one eye, eyebrow, mouth, blush), same order.
-
 PART B · THE WAY TO SCHOOL
-12. [MAP] Maple Street, a quiet residential street of Brightford, with NO buildings: curved street, sidewalks, three empty grass lots (left-middle, right-top, right-bottom), solar street lamps, gardens, trees, a parked hover-car.
-13. [MAGENTA] One building, front door at bottom center: a cozy small family house of 2080, rounded white walls, wood panels, solar roof, little garden, mailbox.
-14. [MAGENTA] A futuristic bus stop shelter: curved glass roof, bench, blank digital timetable screen, pole with a round blank sign.
-15. [MAGENTA] A metro station entrance: stairs going down, curved glass canopy, big round blank sign. Entrance at bottom center.
-16. [MAGENTA] Chibi character, full body: Mr. Joe, a friendly bus driver with a grey moustache, navy cap and uniform, waving.
 17. [MAGENTA] SIDE VIEW of a cute futuristic electric city bus facing RIGHT, coral red with cream stripes, big windows, number 7 on the front sign. Wide 2:1.
 18. [MAGENTA] SIDE VIEW of a short futuristic metro train (2 cars) facing RIGHT, white with a jade-green stripe, doors closed. Wide 2:1.
 19. The same train as image 18, same position and size, doors OPEN with warm light inside. [MAGENTA]
@@ -57,7 +39,7 @@ PART C · TOWN CENTER AND SCHOOL
 33. Wide 3:2 world-map scene: two small islands, left = Brightford (near-future American town), right = the Chinese water town, connected by a dotted flight path with a tiny airplane, ocean and clouds around.
 ```
 
-Đã nhận và lưu: Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
+Đã nhận và lưu: 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
 
 ---
 

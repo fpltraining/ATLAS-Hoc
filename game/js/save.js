@@ -10,7 +10,7 @@ var G = window.G || (window.G = {});
       nhanVat: null,
       ten: '',
       avatar: null,
-      viTri: { canh: 'home_en', x: 420, y: 640 },
+      viTri: { canh: 'home_en', x: 330, y: 790 },
       diLai: { bus: 0, metro: 0 },
       xp: 0,
       phong: {},

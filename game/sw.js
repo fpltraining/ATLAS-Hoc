@@ -1,10 +1,10 @@
 /* Chạy offline: giữ toàn bộ code game, dữ liệu và mọi file trong assets/ đã có.
    Hình mới bỏ vào assets/ được tải ở lần mở kế tiếp có mạng. Tệp giọng đọc được giữ lại khi đã nghe một lần. */
-var VERSION = 'thegioi-v5';
+var VERSION = 'thegioi-v6';
 var CORE = [
   './', 'index.html', 'manifest.webmanifest', 'css/game.css',
   'js/util.js', 'js/save.js', 'js/assets.js', 'js/audio.js', 'js/world.js', 'js/engine.js', 'js/lesson.js', 'js/lobby.js', 'js/main.js', 'js/avatar.js', 'js/create.js', 'js/ride.js',
-  'data/en_a1.js', '../data/audio.json', '../icons/icon-180.png'
+  'data/en_a1.js', 'data/avatar_heads.js', '../data/audio.json', '../icons/icon-180.png'
 ];
 
 self.addEventListener('install', function (e) {

@@ -35,7 +35,7 @@ var G = window.G || (window.G = {});
 
   G.ASSET_LIST = G.ASSET_LIST.concat(G.avatarFiles());
 
-  G.defaultAvatar = function () { return { ao: 'hoodie', mat: 'gentle', toc: 'messy', mauToc: '#5b3a29' }; };
+  G.defaultAvatar = function () { return { ao: 'hoodie', mat: 'smile', toc: 'messy', mauToc: '#5b3a29' }; };
   G.randomAvatar = function () {
     var A = G.AV;
     function r(a) { return a[Math.floor(Math.random() * a.length)]; }
@@ -59,9 +59,11 @@ var G = window.G || (window.G = {});
     return cv;
   }
 
-  function layer(ctx, img, x, y, s, flip) {
-    if (flip) { ctx.save(); ctx.translate(x + s, y); ctx.scale(-1, 1); ctx.drawImage(img, 0, 0, s, s); ctx.restore(); }
-    else ctx.drawImage(img, x, y, s, s);
+  /* Tóc và mặt vẽ trong khung 640 với đầu chuẩn: tâm x 320, đỉnh đầu 150, bề ngang sọ 200.
+     Thân vẽ trong khung 512; vị trí đầu thật của từng hình thân nằm ở G.AV_HEAD (công cụ cắt hình tạo ra). */
+  function headLayer(ctx, img, hd, X, Y, k) {
+    var r = hd.cw / 200, sz = 640 * r * k;
+    ctx.drawImage(img, X + (hd.cx - 320 * r) * k, Y + (hd.top - 150 * r) * k, sz, sz);
   }
 
   /* Vẽ nhân vật. x, footY: chân; h: chiều cao khung; dir: down / up / left / right; phase, moving: nhịp bước */
@@ -71,15 +73,20 @@ var G = window.G || (window.G = {});
     var X = x - h / 2, Y = footY - h - bob;
     var body = G.asset('body_' + av.ao + '_' + d + '.png');
     if (!body.ok) { G.drawPlaceholder(ctx, 'body_' + av.ao + '_' + d + '.png', X, Y, h, h); return; }
-    if (moving) { ctx.save(); ctx.translate(x, footY); ctx.rotate(Math.sin(phase) * 0.04); ctx.translate(-x, -footY); }
-    layer(ctx, body.img, X, Y, h, flip);
-    if (d !== 'up') {
-      var face = G.asset('face_' + av.mat + '_' + d + '.png');
-      if (face.ok) layer(ctx, face.img, X, Y, h, flip);
+    var k = h / 512, hd = (G.AV_HEAD || {})[av.ao + '_' + d];
+    ctx.save();
+    if (flip) { ctx.translate(x, 0); ctx.scale(-1, 1); ctx.translate(-x, 0); }
+    if (moving) { ctx.translate(x, footY); ctx.rotate(Math.sin(phase) * 0.04); ctx.translate(-x, -footY); }
+    ctx.drawImage(body.img, X, Y, h, h);
+    if (hd) {
+      if (d !== 'up') {
+        var face = G.asset('face_' + av.mat + '_' + d + '.png');
+        if (face.ok) headLayer(ctx, face.img, hd, X, Y, k);
+      }
+      var hair = hairTinted('hair_' + av.toc + '_' + d + '.png', av.mauToc);
+      if (hair) headLayer(ctx, hair, hd, X, Y, k);
     }
-    var hair = hairTinted('hair_' + av.toc + '_' + d + '.png', av.mauToc);
-    if (hair) layer(ctx, hair, X, Y, h, flip);
-    if (moving) ctx.restore();
+    ctx.restore();
   };
 
   /* Ảnh nhỏ của nhân vật (canvas) để đặt trong trang; tự vẽ lại khi các lớp hình tải xong */
