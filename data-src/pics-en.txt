@@ -73,3 +73,6 @@ big=🐘 small=🐭 large=🐘 tiny=🐜 huge=🐘 long=📏 short=📏 high=⬆
 
 # --- văn chương, tư duy (một số từ trừu tượng có hình rõ) ---
 plot=🗺️ setting=🏞️ character=🎭 symbol=- metaphor=💬 climax=⛰️ turning_point=↪️ flashback=⏪ theme=🎨 perspective=👁️ tone=🎵 conclusion=🏁 proof=🔍 evidence=🔍 source=🔗 reason=💭 cause=➡️ effect=💥 consequence=💥 result=🎯 impact=💥 benefit=🎁 advantage=👍 disadvantage=👎 drawback=👎 obstacle=🧱 barrier=🚧 milestone=🚩 breakthrough=💥 achievement=🏆 improvement=📈 effort=💪 commitment=🤝 dedication=❤️ patience=⏳ discipline=📏 persistence=🧗 consistency=🔁 insight=💡 awareness=👁️ belief=🙏 purpose=🎯 intention=🎯 motive=🎯 method=🛠️ factor=🧩 aspect=🔍 structure=🏗️ process=⚙️ procedure=📋 system=⚙️ example=💡 fact=📌 information=ℹ️ truth=✔️ lie=🤥 secret=🤫 mystery=❓ clue=🔍 puzzle=🧩 answer_(n)=💡 thing=📦 something=❓ story=📖 event=🎪 incident=💥 occasion=🎉 condition=📋 outcome=🎯 era=⏳ period=⏳ instant=⚡
+
+# --- sửa sau khi soát lưới tranh (14/11) ---
+fat=- thin=- dirty=- pull=- fact=- old=👴 driver=🚕

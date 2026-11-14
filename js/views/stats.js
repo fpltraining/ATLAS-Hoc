@@ -62,12 +62,12 @@ export async function render() {
     const secs = days[k]?.secs || {};
     week.push({ k, label: `${x.getDate()}/${x.getMonth() + 1}`, secs, total: Object.values(secs).reduce((a, b) => a + b, 0) });
   }
-  const maxMin = Math.max(120, ...week.map((w) => Math.round(w.total / 60)));
+  const maxMin = Math.max(30, ...week.map((w) => Math.round(w.total / 60)));
   const chart = h('div.week-chart', ...week.map((w) => {
     const m = Math.round(w.total / 60);
     return h('div.week-col', { title: `${w.label}: ${m} phút` },
       h('div.week-num.small.faint', m ? String(m) : ''),
-      h('div.week-bar', h('i', { style: { height: `${Math.round((m / maxMin) * 100)}%` } })),
+      h('div.week-bar', h('i', { style: { height: m ? `${Math.max(6, Math.round((m / maxMin) * 100))}%` : '0' } })),
       h('div.small.faint', w.label),
     );
   }));
