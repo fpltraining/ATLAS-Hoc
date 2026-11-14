@@ -87,6 +87,18 @@ G.SCENES = {
   }
 };
 
+/* Đồ vật rời trên bản đồ (vẽ theo chiều sâu, nhân vật đi ra sau được): img, chân x/y, cỡ s, bán kính chặn r */
+G.SCENES.city_en.props = [
+  { img: 'prop_oak.png', x: 90, y: 410, s: 190, r: 26 },
+  { img: 'prop_flowers.png', x: 300, y: 640, s: 110, r: 34 },
+  { img: 'prop_palm.png', x: 1300, y: 650, s: 200, r: 22 },
+  { img: 'prop_car.png', x: 990, y: 1010, s: 150, r: 46 },
+  { img: 'prop_mailbox.png', x: 1000, y: 150, s: 90, r: 16 }
+];
+G.SCENES.home_en.props = [
+  { img: 'prop_flowers.png', x: 150, y: 790, s: 100, r: 30 }
+];
+
 /* Khu đời sống Brightford: vào trong là gặp người bán / bác sĩ */
 G.SCENES.cafe_en = {
   city: 'en', title: 'Quán cà phê của Leo', bg: 'interior_en_cafe.png', w: 1536, h: 1024, kind: 'shop', life: 'en-cafe', npc: 'leo',
