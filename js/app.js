@@ -145,8 +145,8 @@ async function router() {
     }
     viewEl.replaceChildren(result.el);
     if (result.className) viewEl.className = 'view ' + result.className;
-    titleEl.textContent = result.title || 'ATLAS';
-    document.title = result.title ? `${result.title} · ATLAS` : 'ATLAS';
+    titleEl.textContent = result.title || 'ConnectLife';
+    document.title = result.title ? `${result.title} · ConnectLife` : 'ConnectLife';
     currentCleanup = result.cleanup || null;
     window.scrollTo(0, 0);
   } catch (e) {

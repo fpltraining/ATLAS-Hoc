@@ -1,6 +1,6 @@
 {
-  "name": "ATLAS: Tiếng Anh và Tiếng Trung",
-  "short_name": "ATLAS",
+  "name": "ConnectLife: Kết nối cuộc sống bằng ngôn ngữ",
+  "short_name": "ConnectLife",
   "description": "Học tiếng Anh, tiếng Trung, đọc truyện song ngữ và viết bằng Apple Pencil.",
   "lang": "vi",
   "start_url": "./index.html",

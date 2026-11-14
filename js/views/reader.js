@@ -169,7 +169,7 @@ export async function render(route) {
   if (story.date) {
     after.append(h('div.source',
       story.date ? h('div', `Cập nhật: ${fmtDate(story.date)}`) : null,
-      h('div.faint', 'Bài do ATLAS viết lại bằng ngôn ngữ dễ.'),
+      h('div.faint', 'Bài do ConnectLife viết lại bằng ngôn ngữ dễ.'),
     ));
   }
 
