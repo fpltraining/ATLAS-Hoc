@@ -67,26 +67,59 @@ var G = window.G || (window.G = {});
   }
 
   /* Vẽ nhân vật. x, footY: chân; h: chiều cao khung; dir: down / up / left / right; phase, moving: nhịp bước */
+  /* Bước đi: tách hình thành thân trên và phần chân (dưới hông).
+     Nhìn trước / sau: hai nửa chân nhấc so le. Nhìn ngang: chân vung trước – sau.
+     Thân nhún theo nhịp bước và hơi nghiêng về hướng đi. Đứng yên: thở nhẹ.
+     paint(c, X, Y, S) vẽ trọn hình trong khung vuông S; hip: tỉ lệ chiều cao tới hông. */
+  G.walkDraw = function (c, paint, x, footY, S, dir, phase, moving, hip) {
+    var X = x - S / 2, Y = footY - S;
+    if (!moving) {
+      var br = 1 + Math.sin(Date.now() / 600) * 0.012;
+      c.save(); c.translate(x, footY); c.scale(1, br); c.translate(-x, -footY); paint(c, X, Y, S); c.restore();
+      return;
+    }
+    var s = Math.sin(phase), hipY = Y + S * hip, over = S * 0.07;
+    var bob = Math.abs(s) * S * 0.03;
+    // phần chân (vẽ trước, thân trên đè lên chỗ nối)
+    if (dir === 'left' || dir === 'right') {
+      c.save(); c.beginPath(); c.rect(X - S, hipY - over, S * 3, S); c.clip();
+      var k = s * 0.42;
+      c.translate(x, hipY); c.transform(1, 0, k, 1, 0, 0); c.translate(-x, -hipY);
+      paint(c, X, Y, S); c.restore();
+    } else {
+      for (var side = -1; side <= 1; side += 2) {
+        var lift = Math.max(0, side * s) * S * 0.075;
+        c.save(); c.beginPath(); c.rect(side < 0 ? X - S : x, hipY - over, S * 2, S); c.clip();
+        c.translate(x, footY); c.scale(1, 1 - lift * 0.8 / S); c.translate(-x, -footY - lift * 0.55);
+        paint(c, X, Y, S); c.restore();
+      }
+    }
+    // thân trên
+    var lean = dir === 'left' ? -0.06 : dir === 'right' ? 0.06 : 0;
+    c.save(); c.beginPath(); c.rect(X - S, Y - S, S * 3, hipY - (Y - S)); c.clip();
+    c.translate(x, hipY); c.rotate(lean + s * 0.025); c.translate(-x, -hipY - bob);
+    paint(c, X, Y, S); c.restore();
+  };
+
+  /* Vẽ nhân vật. x, footY: chân; h: chiều cao khung; dir: down / up / left / right; phase, moving: nhịp bước */
   G.drawAvatar = function (ctx, av, x, footY, h, dir, phase, moving) {
     var flip = dir === 'right', d = flip ? 'left' : dir;
-    var bob = moving ? Math.abs(Math.sin(phase)) * h * 0.04 : 0;
-    var X = x - h / 2, Y = footY - h - bob;
     var body = G.asset('body_' + av.ao + '_' + d + '.png');
-    if (!body.ok) { G.drawPlaceholder(ctx, 'body_' + av.ao + '_' + d + '.png', X, Y, h, h); return; }
+    if (!body.ok) { G.drawPlaceholder(ctx, 'body_' + av.ao + '_' + d + '.png', x - h / 2, footY - h, h, h); return; }
     var k = h / 512, hd = (G.AV_HEAD || {})[av.ao + '_' + d];
-    ctx.save();
-    if (flip) { ctx.translate(x, 0); ctx.scale(-1, 1); ctx.translate(-x, 0); }
-    if (moving) { ctx.translate(x, footY); ctx.rotate(Math.sin(phase) * 0.04); ctx.translate(-x, -footY); }
-    ctx.drawImage(body.img, X, Y, h, h);
-    if (hd) {
-      if (d !== 'up') {
-        var face = G.asset('face_' + av.mat + '_' + d + '.png');
-        if (face.ok) headLayer(ctx, face.img, hd, X, Y, k);
+    var face = d !== 'up' ? G.asset('face_' + av.mat + '_' + d + '.png') : null;
+    var hair = hd ? hairTinted('hair_' + av.toc + '_' + d + '.png', av.mauToc) : null;
+    function paint(c, X, Y) {
+      c.save();
+      if (flip) { c.translate(x, 0); c.scale(-1, 1); c.translate(-x, 0); }
+      c.drawImage(body.img, X, Y, h, h);
+      if (hd) {
+        if (face && face.ok) headLayer(c, face.img, hd, X, Y, k);
+        if (hair) headLayer(c, hair, hd, X, Y, k);
       }
-      var hair = hairTinted('hair_' + av.toc + '_' + d + '.png', av.mauToc);
-      if (hair) headLayer(ctx, hair, hd, X, Y, k);
+      c.restore();
     }
-    ctx.restore();
+    G.walkDraw(ctx, paint, x, footY, h, dir, phase, moving, 0.745);
   };
 
   /* Ảnh nhỏ của nhân vật (canvas) để đặt trong trang; tự vẽ lại khi các lớp hình tải xong */

@@ -75,6 +75,46 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
   pa.en.forEach((t) => add('en', t));
 }
 
+// Game "Thế giới Ngôn Ngữ" (game/): câu trong phòng học tiếng Anh, khu đời sống, xe buýt, tàu điện, sân bay.
+// Giọng theo người nói: cô giáo, bà Rosa, bác sĩ Anna, nhân viên sân bay là giọng nữ; còn lại giọng nam.
+{
+  const vm = await import('node:vm');
+  const ctx = { console }; ctx.window = ctx; ctx.G = {}; vm.createContext(ctx);
+  for (const f of ['game/data/en_a1.js', 'game/data/life.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
+  const FEM = { emma: 1, lily: 1, rosa: 1, anna: 1 };
+  for (const R of Object.values(ctx.G.ROOMS)) {
+    if (R.lang !== 'en') continue;
+    const sx = FEM[R.teacher] ? 'f' : 'm';
+    add('en', R.intro[0], sx); add('en', R.outro, sx);
+    R.items.forEach((it, i) => { add('en', it.en, alt(i)); add('en', it.ex, alt(i + 1)); });
+  }
+  for (const L of Object.values(ctx.G.LIFE)) {
+    if (L.lang !== 'en') continue;
+    for (const t of L.talks) for (const u of t.turns) {
+      add('en', u.npc.replace(/\{name\}/g, 'Han'), FEM[L.npc] ? 'f' : 'm');
+      add('en', u.ok.replace(/\{name\}/g, 'Han'), 'm');
+    }
+  }
+  // câu cố định trong js/ride.js, js/flight.js, js/grad.js (câu tiếng Anh viết hoa đầu, kết thúc bằng . ? !)
+  for (const f of ['game/js/ride.js', 'game/js/flight.js']) {
+    const src = fs.readFileSync(path.join(ROOT, f), 'utf8');
+    for (const m of src.matchAll(/'((?:[^'\\]|\\.)*)'/g)) {
+      const t = m[1].replace(/\\'/g, "'");
+      if (/^[A-Z][a-z]/.test(t) && /[.?!]$/.test(t) && !/[À-ỹđĐ]/.test(t) && !/[一-鿿]/.test(t)) add('en', t, /flight/.test(f) ? 'f' : 'm');
+    }
+  }
+  // câu ghép theo tên trạm (ride.js) và lời chào theo giờ của tài xế
+  const rideSrc = fs.readFileSync(path.join(ROOT, 'game/js/ride.js'), 'utf8');
+  const stops = new Set();
+  for (const m of rideSrc.matchAll(/(?:school|home|line): \[([^\]]*)\]/g)) for (const q of m[1].matchAll(/'([^']+)'/g)) stops.add(q[1]);
+  for (const n of stops) {
+    add('en', `Next stop: ${n}.`); add('en', `The next station is ${n}.`, 'f');
+    add('en', `This is ${n}. Please mind the gap.`, 'f'); add('en', `This is ${n}. This is the last stop.`, 'f');
+    add('en', `To ${n}, please.`); add('en', n);
+  }
+  for (const g of ['Good morning!', 'Good afternoon!', 'Good evening!']) add('en', `${g} Where are you going?`);
+}
+
 const list = [...items.values()];
 fs.writeFileSync(path.join(ROOT, 'data-src', 'audio-list.json'), JSON.stringify(list));
 const by = (l) => list.filter((x) => x.lang === l);

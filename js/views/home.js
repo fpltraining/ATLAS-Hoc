@@ -63,11 +63,14 @@ export async function render() {
   if (plan.quota.reason) el.append(h('div.note', plan.quota.reason));
 
   /* ---- game Thế giới Ngôn Ngữ (trang riêng trong thư mục game/) ---- */
+  const g = gameProgress();
   el.append(h('a.card.challenge-card.game-card', { href: 'game/' },
     h('img.game-thumb', { src: 'game/assets/card_city_en.png', alt: '' }),
     h('div.grow', h('b', '🎮 Thế giới Ngôn Ngữ'),
-      h('div.small.faint', 'Game: sống ở Brightford, đi xe buýt tới trường, học từng phòng A1, ra quán cà phê nói chuyện.')),
-    h('span.pill.jade', 'Chơi ›'),
+      h('div.small.faint', g
+        ? `Phòng A1 đã qua ${g.rooms}/5${g.grad ? ' · 🎓 đã tốt nghiệp A1' : ''} · ${g.xp} XP · ${g.today ? 'hôm nay đã chơi ✓' : 'hôm nay chưa chơi'}`
+        : 'Game: sống ở Brightford, đi xe buýt tới trường, học từng phòng A1, ra quán cà phê nói chuyện.')),
+    h('span.pill.jade', g ? 'Chơi tiếp ›' : 'Chơi ›'),
   ));
 
   /* ---- việc hôm nay, chia nhóm theo ngôn ngữ; mỗi nhóm có thanh tiến độ riêng ---- */
@@ -102,6 +105,17 @@ export async function render() {
   el.append(journalCard(plan.day));
 
   return { title: 'Hôm nay', el };
+}
+
+/* Tiến độ game (game/ lưu trong localStorage cùng trang web): số phòng A1 đã qua, XP, hôm nay đã chơi chưa */
+function gameProgress() {
+  try {
+    const g = JSON.parse(localStorage.getItem('thegioi-save-v1') || 'null');
+    if (!g || !g.nhanVat) return null;
+    const pass = (id, n) => g.phong && g.phong[id] && g.phong[id].diem >= n;
+    const rooms = ['en-a1-1', 'en-a1-2', 'en-a1-3', 'en-a1-4'].filter((id) => pass(id, 8)).length + (pass('en-a1-test', 16) ? 1 : 0);
+    return { rooms, xp: g.xp || 0, grad: !!(g.totNghiep && g.totNghiep.en && g.totNghiep.en.A1), today: g.chuoi && g.chuoi.ngayCuoi === store.dayKey() };
+  } catch { return null; }
 }
 
 /* 7 ô Thứ Hai → Chủ nhật của tuần này: ngày có học hiện ngọn lửa, hôm nay có viền */
