@@ -1,5 +1,66 @@
 # Danh sách đặt hình: Thế giới Ngôn Ngữ
 
+## ĐƠN ĐANG CHỜ (copy nguyên khối dưới đây gửi AI vẽ hình, đính kèm hình Han)
+
+Làm xong anh cứ dán hình vào đoạn chat với em, không cần đổi tên hay lưu thư mục: em tự cắt, đặt tên và lưu vào game.
+Những hình đã gửi em rồi thì không có trong đơn này.
+
+```
+Please create the following images for my 2D mobile game, ONE image per message, in this order (I will say "next" after each).
+Attached: my main character. Match its art style exactly.
+
+GLOBAL RULES FOR EVERY IMAGE
+- Cozy chibi 2D game art like the attached character: thick dark-brown outlines, flat soft colors, gentle shading.
+- Palette: navy #1b2140, cream #f8f4ee, coral #c8553d, jade #2f7a63, sky blue #8bbac0.
+- NO text, letters or numbers anywhere (only exception: the number 7 on the bus).
+- [MAGENTA] = isolated subject on a solid flat magenta #FF00FF background, nothing else.
+- [MAP] = top-down view tilted slightly (3/4 view, camera ~30° above ground), fills the whole image, wide 3:2.
+- English town setting: Brightford, a cozy small town in the near-future USA (year 2080): rounded white-and-glass buildings with warm wood, solar roofs, rooftop gardens, small hover-cars, delivery drones, oak and palm trees.
+
+PART A · CHARACTER CREATOR PARTS (all [MAGENTA], all with the SAME body shape, head size and pose)
+1. Turnaround of ONE chibi kid mannequin with a smooth BALD head and a BLANK face (no eyes, no mouth, no eyebrows, no hair), light skin, wearing a red hoodie, navy shorts, white sneakers. Three full-body views in one row, same size, evenly spaced, standing straight, arms down: front, back, side facing left.
+2. Same mannequin, same 3 views, wearing a light-blue denim jacket over a white t-shirt, dark jeans, red sneakers.
+3. Same, wearing a navy school blazer with a blank badge, white shirt, jade-green tie, grey trousers, black shoes.
+4. Same, wearing a jade-green tracksuit with white stripes, white running shoes.
+5. Same, wearing a cream knitted sweater, coral pleated skirt, white socks, brown shoes.
+6. Same, wearing a futuristic 2080 light jacket with glowing sky-blue trim, black cargo pants, white high-tech sneakers.
+7. Hairstyle pieces ONLY, like wigs floating (no head, no face, no body), colored LIGHT GREY #D8D8D8 with soft grey shading and dark-brown outlines, sized for the bald head above. 3 rows, each row = one hairstyle in 3 views (front, back, side facing left): row 1 short messy, row 2 spiky, row 3 bowl cut with straight bangs.
+8. Same as 7: row 1 curly, row 2 neat side part, row 3 top bun.
+9. Same as 7, 2 rows: row 1 high ponytail, row 2 long straight hair to the shoulders.
+10. Chibi FACE FEATURES ONLY (eyes, eyebrows, small mouth, light pink blush), no head outline, no skin, no hair. 6 faces in a 3x2 grid, front view: gentle smile, big sparkly eyes, cheerful closed-eye smile, cool confident, calm sleepy, cheeky wink.
+11. The same 6 faces in SIDE VIEW facing left (one eye, eyebrow, mouth, blush), same order.
+
+PART B · THE WAY TO SCHOOL
+12. [MAP] Maple Street, a quiet residential street of Brightford, with NO buildings: curved street, sidewalks, three empty grass lots (left-middle, right-top, right-bottom), solar street lamps, gardens, trees, a parked hover-car.
+13. [MAGENTA] One building, front door at bottom center: a cozy small family house of 2080, rounded white walls, wood panels, solar roof, little garden, mailbox.
+14. [MAGENTA] A futuristic bus stop shelter: curved glass roof, bench, blank digital timetable screen, pole with a round blank sign.
+15. [MAGENTA] A metro station entrance: stairs going down, curved glass canopy, big round blank sign. Entrance at bottom center.
+16. [MAGENTA] Chibi character, full body: Mr. Joe, a friendly bus driver with a grey moustache, navy cap and uniform, waving.
+17. [MAGENTA] SIDE VIEW of a cute futuristic electric city bus facing RIGHT, coral red with cream stripes, big windows, number 7 on the front sign. Wide 2:1.
+18. [MAGENTA] SIDE VIEW of a short futuristic metro train (2 cars) facing RIGHT, white with a jade-green stripe, doors closed. Wide 2:1.
+19. The same train as image 18, same position and size, doors OPEN with warm light inside. [MAGENTA]
+20. A very wide SIDE-VIEW street panorama of Brightford for a scrolling background (3:1): rounded glass towers, rooftop gardens, trees, street lamps; an empty road along the bottom 12%. No vehicles. Left and right edges must match so it repeats seamlessly.
+21. Same as 20 but seen from an elevated metro line: skyline, river, parks; an empty elevated rail track along the bottom 12%. Seamless left/right edges.
+
+PART C · TOWN CENTER AND SCHOOL
+22. [MAP] Brightford town center with NO buildings: a round plaza with a glowing fountain in the middle, wide walkways going north, south, east and west, seven empty flat grass lots (top-center, left-middle, right-middle, bottom-left, bottom-right, far bottom-left corner, far bottom-right corner), solar lamps, charging stations, benches, trees.
+23. [MAGENTA] One building, door at bottom center: a friendly near-future high school, rounded white walls, big glass windows, wood panels, solar roof with a small garden, a digital clock tower with a blank face, a flag pole with a blank flag.
+24. [MAGENTA] A small corner café: glass front, jade-and-cream awning, glowing coffee-cup sign, outdoor tables, a small serving robot.
+25. [MAGENTA] A farmers market hall with a curved glass roof and solar panels, hydroponic vegetable towers, fruit and flower stalls.
+26. [MAGENTA] A small hospital: white and sky-blue rounded walls, glowing green cross, a hover-ambulance in front.
+27. [MAGENTA] A small airport terminal: sweeping curved glass roof, slim control tower, a small electric airplane beside it.
+28. [MAP] Inside the school hallway, no people: a long corridor with EXACTLY five identical sliding glass classroom doors evenly spaced along the top wall, a reception desk with a small helper robot on the left, white lockers, plants, entrance at bottom center.
+29. [MAP] Inside a classroom, no people: a large blank glowing smartboard on the top wall, teacher's desk, a few student desks, bookshelves, sunny window, door at bottom center.
+30. Square app card illustration: Brightford seen from slightly above, soft morning light.
+31. Square app card illustration: a charming small Chinese water town seen from slightly above: white walls, dark curved roof tiles, blank red lanterns, stone arch bridges over a canal, a small boat, willow trees.
+32. Square app card illustration: a city skyline hidden behind soft clouds, a small airplane flying toward it, dreamy pastel colors.
+33. Wide 3:2 world-map scene: two small islands, left = Brightford (near-future American town), right = the Chinese water town, connected by a dotted flight path with a tiny airplane, ocean and clouds around.
+```
+
+Đã nhận và lưu: Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
+
+---
+
 **Cách làm:**
 1. Mở ChatGPT, dán câu lệnh của từng mục (bằng tiếng Anh).
 2. Tải ảnh gốc PNG về, đổi tên đúng như cột "Tên file".
