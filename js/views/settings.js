@@ -79,7 +79,7 @@ export async function renderSettings() {
     row('Kiểu ngòi bút chữ Hán', 'Bút lông đổi độ dày theo lực nhấn.', seg('brush', [['but-chi', 'Bút chì'], ['but-long', 'Bút lông']], s.brush)),
     row('Ô kẻ tập viết chữ Hán', '田 chia tư · 米 thêm đường chéo.', seg('grid', [['tian', '田'], ['mi', '米'], ['none', 'Trơn']], s.grid)),
 
-    row('Tranh minh hoạ từ và câu', 'Hình nhỏ kiểu thẻ học cạnh từ mới và dưới câu tiếng Anh.',
+    row('Tranh minh hoạ từ và câu', 'Hình nhỏ kiểu thẻ học cạnh từ mới và dưới câu tiếng Anh, tiếng Trung.',
       h('label.switch', h('input', { type: 'checkbox', checked: picsOn(), onchange: (e) => setPicsOn(e.target.checked) }), h('i'))),
 
     h('h4', 'Giọng đọc'),

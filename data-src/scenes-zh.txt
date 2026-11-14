@@ -1,0 +1,666 @@
+# Mô tả tranh từng chương truyện tiếng Trung. Cùng cú pháp với scenes-en.txt:
+# dòng "@id-truyện số-chương", rồi mỗi dòng một lớp vẽ. Toạ độ x, y tính theo % khung.
+# Vẽ bằng: node tools/build-scenes.mjs
+
+# ===== 爱问问题的机器人 =====
+@zh-robot 1
+wall c=mid floor=80 planks
+garage x=50 y=81 s=0.95 text="明老板修车店"
+toolboard x=14 y=52 s=0.8
+car x=58 y=86 c=red s=0.9
+person x=84 y=88 s=1 pose=hold coat=deep face=happy
+robot x=26 y=88 s=0.9 pose=stand q
+bubble x=28 y=18 text="这辆车/为什么是红色的？"
+
+@zh-robot 2
+wall c=mid floor=80
+car x=54 y=88 s=1.3 c=ink hot
+person x=88 y=90 s=1 pose=stand hair=long coat=deep
+robot x=32 y=90 s=0.9 pose=reach q
+bubble x=30 y=22 text="车轮为什么/这么热？"
+
+@zh-robot 3
+wall c=night floor=78
+window x=70 y=10 w=140 h=100 t=night moon=1
+car x=46 y=84 s=1.3 c=ink leak
+robot x=22 y=86 s=0.8 look=down light flip
+label x=76 y=64 text="一滴，两滴，三滴" fs=20 red
+vignette
+
+@zh-robot 4
+sky t=day
+ground y=82 c=pale
+garage x=38 y=82 s=0.75 text="修车店"
+car x=58 y=90 s=1.1 c=ink
+robot x=78 y=92 s=1 pose=stop q
+person x=92 y=92 s=1 pose=point coat=deep face=worried flip
+person x=6 y=94 s=1 pose=hold hair=long coat=mid
+person x=13 y=95 s=0.6 coat=soft
+person x=18 y=95 s=0.55 coat=soft hair=long
+bubble x=70 y=18 text="请不要走！" red
+
+@zh-robot 5
+wall c=mid floor=80 planks
+sign x=50 y=32 w=330 text="欢迎问问题" fs=28
+person x=30 y=88 s=1.05 pose=sit coat=deep face=happy
+robot x=52 y=88 s=0.9 q
+person x=80 y=90 s=1 pose=stand hair=long coat=mid face=happy flip
+person x=88 y=92 s=0.6 coat=soft face=happy
+person x=94 y=92 s=0.55 coat=soft hair=long face=happy
+bubble x=66 y=60 text="牌子为什么/是蓝色的？"
+
+# ===== 我的AI老师 =====
+@zh-teacher 1
+wall c=deep floor=82
+window x=8 y=10 w=170 h=120 t=day
+label x=19 y=27 text="河内" fs=26 c=ink
+desk x=58 y=86 w=320
+screen x=70 y=70 w=130 h=90 show=face glow
+person x=40 y=88 s=1.1 pose=type hair=long coat=mid face=happy
+chair x=38 y=90
+bubble x=78 y=16 text="没关系，/我们再说一次。"
+
+@zh-teacher 2
+wall c=night floor=84
+window x=4 y=8 w=230 h=140 t=day
+label x=18 y=26 text="上海" fs=26 c=ink
+person x=50 y=90 s=1 pose=cheer coat=mid face=happy
+person x=63 y=90 s=1 pose=stand coat=deep face=happy hair=bun
+person x=76 y=90 s=1 pose=point coat=soft face=happy glasses
+person x=24 y=92 s=1.05 pose=shrug hair=long coat=red face=worried flip
+question x=30 y=52 fs=60 red
+bubble x=63 y=18 text="哈哈哈！"
+
+@zh-teacher 3
+wall c=mid floor=82 planks
+table x=50 y=90 w=230
+bowl x=40 y=76 s=0.6 steam
+bowl x=58 y=76 s=0.6 red
+plate x=50 y=78 s=0.8
+person x=22 y=92 s=1 pose=sit hair=long coat=red face=happy
+person x=80 y=92 s=1 pose=sit coat=deep face=happy flip
+person x=66 y=92 s=0.95 pose=cheer coat=soft face=happy hair=bun
+bubble x=26 y=20 text="你们昨天/笑什么？"
+
+# ===== 守株待兔 =====
+@zh-rabbit 1
+sky t=day
+sun x=86 y=18
+hills y=66 c=soft
+field y=72 sprouts
+tree x=74 y=76 s=0.95
+stump x=56 y=88 s=1
+rabbit x=46 y=92 s=0.9 down
+person x=18 y=92 s=1 pose=cheer coat=deep face=happy hat=straw
+
+@zh-rabbit 2
+sky t=dusk
+sun x=14 y=24 r=24 red
+hills y=66 c=deep
+ground y=76 c=mid
+grass y=96 h=120 n=26 from=0 to=55
+tree x=72 y=80 s=0.95
+stump x=58 y=92 s=0.9
+person x=74 y=92 s=0.95 pose=sitthink coat=deep face=calm hat=straw flip
+person x=92 y=92 s=0.95 pose=point hair=bun coat=mid face=worried flip
+label x=28 y=16 text="一天，两天，一个月……" fs=22 c=pale
+
+@zh-rabbit 3
+wall c=night floor=84
+lamp x=76 y=44
+manuscript x=54 y=86 s=1
+person x=28 y=90 s=1.1 pose=sitthink coat=deep hat=official item=brush
+label x=52 y=16 text="韩非" fs=34 red
+stump x=84 y=92 s=0.6
+rabbit x=84 y=82 s=0.45
+vignette
+
+# ===== 画蛇添足 =====
+@zh-snake 1
+sky t=day
+ground y=78 c=pale
+house x=82 y=78 s=0.9
+jug x=50 y=72 s=1.1 red text="酒"
+person x=24 y=92 s=1 pose=point coat=mid face=happy
+person x=36 y=92 s=0.95 pose=think coat=deep face=calm hair=bun
+person x=66 y=92 s=1 pose=cheer coat=soft face=happy
+bubble x=28 y=14 text="比一比，/谁先画好蛇！"
+
+@zh-snake 2
+sky t=day
+ground y=66 c=pale
+snake x=44 y=84 s=1.2 legs=4
+person x=82 y=92 s=1.1 pose=kneel coat=mid face=happy item=jug flip
+snake x=16 y=66 s=0.45 c=deep
+person x=10 y=70 s=0.6 pose=kneel coat=deep
+person x=94 y=70 s=0.6 pose=kneel coat=soft flip
+label x=40 y=16 text="一只，两只，三只……" fs=22 red
+
+@zh-snake 3
+sky t=dusk
+hills y=72 c=night
+ground y=82 c=deep
+flag x=86 y=60 s=1
+person x=72 y=92 s=1.15 pose=stand coat=ink cloak face=calm
+person x=36 y=92 s=1 pose=point coat=mid face=calm hat=official
+bubble x=34 y=20 text="见好就收。"
+label x=86 y=22 text="楚国" fs=26 c=pale
+
+# ===== 亡羊补牢 =====
+@zh-sheep 1
+sky t=night
+stars n=60
+moon x=84 y=16
+ground y=74 c=deep
+fence x=44 y=80 s=1 w=440 hole=5
+sheep x=26 y=74 s=0.9
+sheep x=36 y=72 s=0.85
+sheep x=58 y=73 s=0.9 flip
+wolf x=56 y=96 s=1.1
+label x=50 y=12 text="羊圈破了一个洞" fs=22 c=pale
+
+@zh-sheep 2
+sky t=dawn
+sun x=84 y=22 r=26
+ground y=74 c=mid
+fence x=44 y=80 s=1 w=440 hole=5 patch
+sheep x=24 y=74 s=0.9
+sheep x=34 y=72 s=0.85
+sheep x=72 y=74 s=0.9 flip
+person x=46 y=96 s=1 pose=kneel coat=deep face=calm
+label x=50 y=12 text="亡羊补牢，犹未为晚" fs=24 red
+
+@zh-sheep 3
+wall c=deep floor=82 planks
+flag x=12 y=60 s=1
+flag x=88 y=60 s=1
+person x=36 y=90 s=1.15 pose=worried coat=red cloak crown face=worried
+person x=66 y=90 s=1.05 pose=bow coat=mid hat=official flip
+bubble x=70 y=18 text="现在补，/还不晚。"
+
+# ===== 宇宙的秘密 =====
+@zh-universe 1
+sky t=dark
+stars n=120
+galaxy x=40 y=46 s=1.4
+scales x=76 y=92 s=1.3 tilt
+label x=76 y=58 text="5%    95%" fs=22 c=pale
+question x=88 y=30 fs=80 red
+
+@zh-universe 2
+sky t=night
+stars n=60
+dish x=74 y=88 s=0.9
+person x=34 y=92 s=1.1 pose=point coat=mid hair=long
+galaxy x=30 y=30 s=0.8
+label x=62 y=12 text="薇拉·鲁宾" fs=24 c=pale
+
+@zh-universe 3
+sky t=dark
+stars n=100
+paper x=30 y=76 w=150 h=80 text="暗物质" fs=22
+paper x=68 y=80 w=150 h=80 text="暗能量" fs=22 rot=5
+question x=50 y=36 fs=110 red
+
+# ===== 睡觉的秘密 =====
+@zh-sleep 1
+sky t=night
+stars n=60
+pines y=84 c=night h=130 n=10
+bed x=34 y=92 s=0.9 zzz
+fish x=76 y=64 s=1 red
+label x=76 y=36 text="一半大脑在睡觉" fs=18 c=pale
+
+@zh-sleep 2
+wall c=deep floor=82
+calendar x=24 y=60 s=1 r=2 c=0
+label x=24 y=26 text="十一天" fs=28 red
+person x=60 y=90 s=1.05 pose=worried coat=mid face=worried
+clock x=86 y=36
+
+@zh-sleep 3
+wall c=night floor=82
+window x=70 y=10 w=140 h=100 t=night moon=1
+bed x=40 y=88 s=1.1 zzz
+brain x=40 y=40 s=0.6 c=soft glow
+
+# ===== 海底的秘密 =====
+@zh-ocean 1
+deep
+seafloor y=82
+fish x=30 y=40 s=1.2 light
+fish x=70 y=60 s=0.8 red
+moon x=86 y=16 r=26
+label x=50 y=14 text="只有6%的海底有地图" fs=22 c=pale
+
+@zh-ocean 2
+deep
+seafloor y=86
+sub x=30 y=50 s=1
+waves x=62 y=56 s=1.2 red
+fish x=82 y=74 s=0.8
+label x=50 y=12 text="用声音画地图" fs=22 c=pale
+
+@zh-ocean 3
+deep
+seafloor y=80
+vent x=36 y=84 s=0.9
+fish x=62 y=48 s=1.4
+fish x=78 y=62 s=0.9 red
+label x=50 y=12 text="海底电缆、天气、新动物" fs=20 c=pale
+
+# ===== 新闻：越南人工智能法 =====
+@zh-news-law 1
+wall c=mid floor=82
+levels x=50 y=80 s=1.3 text="低风险/中风险/高风险" fs=12
+label x=50 y=14 text="越南人工智能法" fs=28 c=ink
+
+@zh-news-law 2
+wall c=pale floor=82 fc=soft
+phone x=30 y=70 s=3
+label x=30 y=36 text="AI" fs=26 red
+person x=60 y=90 s=1.1 pose=phone item=phone coat=mid
+shield x=84 y=72 s=0.8
+bubble x=58 y=16 text="这是AI做的吗？"
+
+# ===== 新闻：人形机器人 =====
+@zh-news-robot 1
+sky t=dusk
+city y=80 c=night h=120
+robot x=24 y=88 s=0.9
+robot x=40 y=88 s=0.8
+tower x=78 y=80 s=0.9
+bolt x=62 y=60 s=0.8
+label x=32 y=18 text="价格 -93%" fs=30 red
+
+@zh-news-robot 2
+wall c=deep floor=82
+bolt x=20 y=60 s=1
+robot x=56 y=88 s=0.9 look=down
+person x=76 y=92 s=1 pose=kneel coat=mid face=calm
+gear x=40 y=40 s=0.8
+label x=50 y=14 text="修机器人、教机器人" fs=22 c=pale
+
+# ===== 小明的一天 =====
+@zh-g1-day 1
+sky t=dawn
+sun x=84 y=26 r=30
+hills y=74 c=soft
+ground y=82 c=pale
+house x=22 y=82 s=0.85
+person x=34 y=84 s=0.9 pose=point coat=mid hair=bun face=happy
+person x=62 y=90 s=0.75 pose=walk coat=red face=happy
+label x=82 y=60 text="7:00" fs=28 c=ink
+bubble x=34 y=16 text="小明，早上好！"
+
+@zh-g1-day 2
+wall c=deep floor=82 planks
+window x=72 y=10 w=150 h=100 t=night moon=1
+table x=46 y=90 w=200
+bowl x=38 y=76 s=0.55 steam
+bowl x=54 y=76 s=0.55
+person x=20 y=92 s=1 pose=sit coat=deep face=happy
+person x=72 y=92 s=0.95 pose=sit coat=mid hair=bun face=happy flip
+person x=46 y=94 s=0.7 pose=cheer coat=red face=happy
+bubble x=22 y=18 text="今天学了/什么？"
+
+# ===== 生日 =====
+@zh-g1-birthday 1
+wall c=mid floor=82
+board x=50 y=50 w=300 h=120 text="你好！" fs=36
+person x=20 y=92 s=0.95 pose=stand hair=long coat=red face=sad
+person x=60 y=92 s=0.9 pose=point coat=deep face=happy
+person x=76 y=92 s=0.9 pose=stand coat=soft face=happy hair=bun
+bubble x=24 y=18 text="今天是我的/生日……"
+
+@zh-g1-birthday 2
+wall c=night floor=84
+lantern x=20 y=6 l=10 glow
+lantern x=80 y=6 l=10 glow
+table x=50 y=92 w=220
+cake x=50 y=78 s=1
+person x=22 y=92 s=1 pose=cheer hair=long coat=red face=happy
+person x=76 y=92 s=0.95 pose=cheer coat=deep face=happy
+person x=88 y=92 s=0.95 pose=cheer coat=soft face=happy hair=bun
+bubble x=50 y=16 text="生日快乐！" red
+
+# ===== 买水果 =====
+@zh-g1-fruit 1
+sky t=day
+ground y=82 c=pale
+stall x=50 y=84 s=1.1 text="10元一个"
+apples x=34 y=69 s=0.8 n=6
+apples x=66 y=69 s=0.8 n=6
+person x=84 y=92 s=0.8 pose=worried coat=red face=shock flip
+bubble x=82 y=18 text="太贵了！"
+
+@zh-g1-fruit 2
+wall c=mid floor=82 planks
+person x=30 y=90 s=1 pose=cheer coat=deep hair=bun face=happy
+person x=58 y=92 s=0.8 pose=hold coat=red face=happy
+apples x=62 y=86 s=0.9 n=8 basket
+coins x=80 y=86 s=0.8 n=2
+label x=62 y=18 text="八个苹果 + 十块钱" fs=22 c=pale
+bubble x=28 y=16 text="你真棒！"
+
+# ===== 下雨了 =====
+@zh-g1-rain 1
+sky t=dusk
+clouds n=4
+ground y=82 c=deep
+house x=30 y=82 s=1.1
+person x=30 y=90 s=0.85 pose=worried hair=long coat=red face=sad
+rain heavy n=180
+label x=74 y=48 text="没有伞" fs=28 c=snow
+
+@zh-g1-rain 2
+sky t=dusk
+clouds n=4
+ground y=82 c=deep
+rain n=150
+person x=44 y=92 s=0.9 pose=hold hair=long coat=red face=happy item=umbrella redItem
+person x=56 y=92 s=0.9 pose=walk hair=bun coat=mid face=happy flip
+bubble x=72 y=18 text="我们一起走吧！"
+
+# ===== 新同学 =====
+@zh-g1-newfriend 1
+wall c=mid floor=82
+board x=34 y=54 w=280 h=120 text="你好，我叫阮兰" fs=24
+person x=74 y=92 s=1 pose=point coat=deep hair=bun glasses face=happy
+person x=50 y=92 s=0.85 pose=stand hair=long coat=red face=happy
+label x=50 y=12 text="越南 → 中国" fs=22 c=pale
+
+@zh-g1-newfriend 2
+wall c=deep floor=82 planks
+table x=40 y=92 w=170
+bowl x=36 y=78 s=0.55
+person x=22 y=92 s=0.9 pose=sit hair=long coat=red face=sad
+person x=74 y=92 s=0.9 pose=walk coat=mid face=happy flip
+bowl x=66 y=64 s=0.45
+bubble x=72 y=16 text="我可以/坐这儿吗？"
+
+# ===== 第一次坐火车 =====
+@zh-g2-train 1
+wall c=deep floor=84
+window x=8 y=10 w=150 h=110 t=day
+clock x=86 y=42 h3
+phone x=56 y=72 s=2.4
+label x=56 y=34 text="9:00 北京" fs=20 red
+person x=30 y=90 s=1 pose=phone item=phone hair=long coat=red face=happy
+
+@zh-g2-train 2
+wall c=night floor=86
+train x=46 y=74 s=0.9 cars=2
+clock x=10 y=30 h3 red
+person x=78 y=94 s=0.85 pose=run hair=long coat=red face=worried
+person x=94 y=94 s=0.9 pose=point coat=deep face=calm flip
+bubble x=70 y=14 text="往右走，快跑！"
+
+# ===== 小猫不见了 =====
+@zh-g2-cat 1
+wall c=deep floor=80 planks
+bed x=30 y=88 s=0.8
+table x=74 y=88 w=90
+person x=50 y=94 s=0.85 pose=kneel coat=red face=worried
+question x=50 y=30 fs=80 red
+label x=82 y=26 text="雪？" fs=30 c=pale
+
+@zh-g2-cat 2
+wall c=night floor=82 planks
+wardrobe x=40 y=90 s=1 open
+cat x=40 y=70 s=0.6 sleep
+person x=72 y=92 s=0.85 pose=cheer coat=red face=happy flip
+
+# ===== 足球比赛 =====
+@zh-g2-football 1
+sky t=day
+ground y=66 c=mid
+goal x=84 y=72 s=0.9
+person x=30 y=92 s=0.95 pose=run coat=red face=calm
+person x=50 y=92 s=1.05 pose=run coat=deep face=calm flip
+person x=64 y=90 s=1.05 pose=stand coat=deep face=calm
+ball x=38 y=93 s=1
+score x=30 y=22 s=1 text="1 : 1"
+
+@zh-g2-football 2
+sky t=day
+ground y=66 c=mid
+goal x=80 y=74 s=1
+ball x=78 y=60 s=1
+person x=22 y=92 s=0.9 pose=point coat=red face=happy
+person x=56 y=92 s=0.9 pose=cheer coat=red face=happy
+person x=92 y=92 s=0.9 pose=worried coat=deep face=shock flip
+arrow x=28 y=74 len=150
+score x=30 y=22 s=1 text="2 : 1" red
+
+# ===== 妈妈的生日 =====
+@zh-g2-mother 1
+wall c=mid floor=84
+jacket x=16 y=62 s=0.75 c=deep
+jacket x=36 y=62 s=0.75 c=red
+label x=26 y=72 text="¥800" fs=22 c=snow
+clock x=54 y=52
+label x=54 y=62 text="¥500" fs=20 c=snow
+person x=74 y=92 s=0.85 pose=worried coat=deep face=worried
+person x=86 y=94 s=0.7 pose=stand hair=long coat=red face=sad flip
+coins x=80 y=40 s=0.7 n=2
+label x=80 y=22 text="只有80块" fs=24 red
+
+@zh-g2-mother 2
+wall c=deep floor=82 planks
+table x=50 y=92 w=220
+plate x=40 y=76 s=0.9 food=fish burnt
+plate x=60 y=76 s=0.9 food=egg burnt
+person x=20 y=92 s=0.85 pose=cheer coat=deep face=happy
+person x=30 y=94 s=0.7 pose=cheer hair=long coat=red face=happy
+person x=82 y=92 s=1 pose=cheer hair=bun coat=mid face=happy flip
+bubble x=80 y=16 text="这是最好的/礼物！"
+
+# ===== 学做饭 =====
+@zh-g2-cook 1
+wall c=night floor=82
+window x=70 y=10 w=140 h=100 t=night moon=1
+desk x=40 y=86 w=260
+bowl x=34 y=72 s=0.8 steam
+chair x=64 y=94
+person x=66 y=92 s=1 pose=sitphone item=phone hair=long coat=red face=sad
+label x=32 y=24 text="方便面，又是方便面" fs=20 c=pale
+bubble x=56 y=16 text="妈妈，我想/你做的菜。"
+
+@zh-g2-cook 2
+wall c=mid floor=82 planks
+desk x=40 y=86 w=260
+pot x=28 y=72 s=1 steam
+screen x=52 y=72 w=80 h=60 show=face glow
+plate x=72 y=74 s=0.8 food=egg
+person x=82 y=92 s=1 pose=cheer hair=long coat=red face=happy
+label x=40 y=16 text="一个月以后：会做五个菜" fs=20 c=ink
+
+# ===== 邻居 =====
+@zh-g3-neighbor 1
+wall c=night floor=82
+window x=74 y=10 w=130 h=100 t=night moon=1
+bed x=38 y=88 s=1
+person x=36 y=74 s=0.8 pose=worried hair=long coat=red face=worried
+label x=12 y=40 text="♪ ♫ ♪" fs=40 red
+clock x=86 y=72 red
+label x=86 y=30 text="23:00" fs=22 c=pale
+
+@zh-g3-neighbor 2
+wall c=deep floor=82
+door x=62 y=92 s=1 open
+person x=66 y=92 s=1 pose=stand coat=mid face=worried
+guitar x=74 y=84 s=0.7 rot=-20
+person x=30 y=92 s=1 pose=point hair=long coat=red face=calm
+bubble x=30 y=18 text="打扰你了，/我睡不着。"
+
+# ===== 手机 =====
+@zh-g3-phone 1
+wall c=night floor=82
+table x=50 y=92 w=220
+bowl x=40 y=78 s=0.5
+person x=24 y=92 s=1 pose=sit coat=deep face=worried
+person x=78 y=92 s=0.95 pose=sit hair=bun coat=mid face=worried flip
+person x=52 y=94 s=0.85 pose=sitphone item=phone coat=red redItem
+clock x=86 y=30 red
+label x=50 y=14 text="凌晨一点" fs=22 c=pale
+
+@zh-g3-phone 2
+wall c=mid floor=82 planks
+lamp x=82 y=40
+table x=46 y=92 w=200
+chess x=46 y=78 s=0.7
+person x=20 y=92 s=1 pose=sitthink coat=deep face=happy
+person x=72 y=92 s=0.85 pose=sit coat=red face=happy flip
+person x=90 y=92 s=0.95 pose=sit hair=bun coat=mid item=book face=happy flip
+label x=40 y=16 text="晚上八点以后：不用手机" fs=20 c=ink
+
+# ===== 考试 =====
+@zh-g3-exam 1
+wall c=night floor=84
+lamp x=20 y=40
+desk x=50 y=86 w=320
+books x=30 y=72 s=1
+stack x=70 y=72 s=1 n=8
+person x=50 y=90 s=1 pose=sitthink hair=long coat=red face=sad tears
+label x=80 y=20 text="HSK" fs=36 red
+
+@zh-g3-exam 2
+wall c=mid floor=84
+desk x=50 y=86 w=320
+paper x=46 y=60 w=170 h=110 text="人 口 大 学 生/中 国 爱 家 水/好 吃 喝 天 气" fs=18
+person x=22 y=90 s=1 pose=sit hair=long coat=red face=happy item=pen
+person x=80 y=90 s=1 pose=point hair=bun glasses coat=deep face=happy flip
+bubble x=78 y=14 text="你已经会/这么多了！"
+
+# ===== 外卖 =====
+@zh-g3-delivery 1
+wall c=night floor=82
+window x=12 y=10 w=160 h=110 t=night
+label x=22 y=26 text="下大雨" fs=22 c=pale
+phone x=60 y=72 s=2.4
+label x=60 y=34 text="30分钟" fs=20 red
+clock x=84 y=40 red
+person x=34 y=92 s=1 pose=worried coat=mid face=worried
+label x=84 y=70 text="50分钟" fs=20 c=pale
+
+@zh-g3-delivery 2
+wall c=deep floor=82
+door x=42 y=92 s=1 open
+person x=46 y=92 s=1 pose=hold coat=night face=calm hair=grey wet item=box
+person x=78 y=92 s=1 pose=hold coat=mid face=happy item=cup flip
+label x=78 y=18 text="毛巾和热水" fs=20 c=pale
+bubble x=30 y=14 text="对不起，/车坏了。"
+
+# ===== 奶奶学视频 =====
+@zh-g3-grandma 1
+wall c=mid floor=84 planks
+chair x=34 y=90
+person x=36 y=88 s=1 pose=sitphone item=phone hair=grey coat=deep face=worried
+person x=66 y=92 s=0.95 pose=point hair=long coat=red face=calm flip
+question x=34 y=32 fs=70 red
+label x=70 y=16 text="七十岁" fs=24 c=pale
+
+@zh-g3-grandma 2
+wall c=deep floor=84 planks
+notebook x=28 y=80 s=1.4
+label x=28 y=46 text="第一步 → 第二步" fs=18 c=pale
+person x=60 y=90 s=1 pose=sitphone item=phone hair=grey coat=deep face=happy
+screen x=84 y=60 w=110 h=80 show=face glow
+bubble x=82 y=14 text="妈，我看见你了！"
+
+# ===== 面试 =====
+@zh-g4-interview 1
+wall c=night floor=84
+desk x=50 y=86 w=320
+laptop x=40 y=72 s=1.2
+stack x=70 y=72 s=1 n=10 red
+person x=24 y=90 s=1 pose=type hair=long coat=red face=worried
+label x=70 y=24 text="20份简历 → 1个面试" fs=20 c=pale
+
+@zh-g4-interview 2
+wall c=mid floor=84
+desk x=66 y=88 w=230
+person x=78 y=90 s=1.05 pose=sit coat=ink glasses face=calm flip
+person x=30 y=90 s=1 pose=sit hair=long coat=red face=calm
+chair x=28 y=92
+bubble x=74 y=16 text="说说你的/一次失败。"
+bubble x=30 y=22 text="我HSK考试/没通过……" tail=right
+
+# ===== 打工 =====
+@zh-g4-parttime 1
+wall c=deep floor=84 planks
+shelf x=16 y=70 s=0.8
+table x=74 y=92 w=110
+cup x=52 y=58 s=1 red
+cup x=58 y=50 s=1
+person x=48 y=92 s=0.95 pose=run coat=mid face=shock
+shards x=62 y=94 s=1
+person x=86 y=92 s=0.95 pose=worried hair=long coat=red face=shock flip
+
+@zh-g4-parttime 2
+wall c=mid floor=84 planks
+shelf x=82 y=70 s=0.8
+person x=34 y=92 s=1.05 pose=point coat=deep face=calm
+person x=62 y=92 s=0.95 pose=stand coat=mid face=happy flip
+bubble x=34 y=16 text="走慢一点，/没关系。"
+
+# ===== 网购 =====
+@zh-g4-online 1
+wall c=night floor=84
+phone x=26 y=80 s=3.2
+jacket x=26 y=62 s=0.55 c=red
+label x=26 y=26 text="¥199" fs=22 red
+crate x=62 y=92 s=0.8
+jacket x=62 y=70 s=0.7 c=mid bad
+person x=86 y=92 s=1 pose=worried hair=long coat=red face=shock flip
+
+@zh-g4-online 2
+wall c=mid floor=84
+jacket x=36 y=74 s=0.9 c=mid bad
+tape x=36 y=90 s=1
+phone x=66 y=72 s=2
+person x=82 y=92 s=1 pose=phone item=phone hair=long coat=red face=happy flip
+label x=60 y=18 text="退款成功 ✓" fs=26 red
+
+# ===== 比赛输了 =====
+@zh-g4-match 1
+sky t=dusk
+crowd y=60 n=40
+ground y=66 c=mid
+score x=50 y=28 s=1.2 text="0 : 3" red
+person x=24 y=92 s=0.95 pose=kneel coat=red face=sad
+person x=44 y=92 s=0.95 pose=worried coat=red face=sad
+person x=64 y=92 s=0.95 pose=stand coat=red face=sad
+person x=84 y=92 s=1.05 pose=think coat=ink face=worried flip
+
+@zh-g4-match 2
+wall c=deep floor=84
+board x=72 y=56 w=220 h=110 text="写三件事" fs=28
+person x=84 y=92 s=1.05 pose=point coat=ink face=calm flip
+person x=20 y=92 s=0.9 pose=sit coat=red face=calm item=book
+person x=36 y=92 s=0.9 pose=sit coat=red face=happy item=pen
+person x=52 y=92 s=0.9 pose=sit coat=red face=calm item=paper
+bubble x=30 y=16 text="是我给你们的/压力太大了。" tail=right
+
+# ===== 回家过年 =====
+@zh-g4-home 1
+sky t=dusk
+city y=72 c=night h=140
+ground y=84 c=deep
+label x=24 y=20 text="上海 · 三年" fs=22 c=pale
+person x=60 y=94 s=1 pose=phone item=phone coat=mid face=worried
+crate x=74 y=94 s=0.35
+bubble x=34 y=40 text="你爸身体不太好，/回来吧。"
+
+@zh-g4-home 2
+sky t=night
+stars n=50
+ground y=82 c=night
+house x=40 y=86 s=1.9
+lantern x=16 y=30 l=10 glow
+lantern x=64 y=30 l=10 glow
+person x=40 y=88 s=0.85 pose=stand coat=deep hair=grey face=happy
+person x=82 y=92 s=1 pose=walk coat=mid face=happy flip
+crate x=90 y=92 s=0.3
+label x=80 y=16 text="过年好" fs=30 red

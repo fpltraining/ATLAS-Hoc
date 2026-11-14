@@ -1,6 +1,6 @@
 // Vẽ tranh minh hoạ cho từng chương truyện, theo lối truyện tranh bảng màu hạn chế:
 // xanh navy – xanh ngọc đơn sắc, một màu nhấn đỏ, nét mực, hạt nhiễu như bản in.
-// Mỗi cảnh mô tả bằng vài dòng trong data-src/scenes-en.txt, xuất ra img/scenes/<truyện>-<chương>.svg.
+// Mỗi cảnh mô tả bằng vài dòng trong data-src/scenes-*.txt (en, zh), xuất ra img/scenes/<truyện>-<chương>.svg.
 // Cách chạy: node tools/build-scenes.mjs [id-truyện ...]
 import fs from 'node:fs';
 import path from 'node:path';
@@ -323,7 +323,8 @@ R.magnifier = (o) => g(o, `<line x1="30" y1="30" x2="70" y2="70" stroke="${C.ink
 R.bubble = (o) => {
   const text = String(o.text || '');
   const lines = text.split('/');
-  const w = Number(o.w || Math.max(70, Math.max(...lines.map((l) => l.length)) * 10 + 30)), h = 24 + lines.length * 20;
+  const wl = (l) => [...l].reduce((a, c) => a + (/[\u3000-\u9fff\uff00-\uffef]/.test(c) ? 18 : 10), 0); // chữ Hán rộng gần gấp đôi
+  const w = Number(o.w || Math.max(70, Math.max(...lines.map(wl)) + 30)), h = 24 + lines.length * 20;
   const tx = o.tail === 'right' ? w * 0.3 : -w * 0.3;
   let s = `<path d="M${-w / 2} ${-h / 2} Q${-w / 2} ${-h / 2 - 2} ${-w / 2 + 14} ${-h / 2} L${w / 2 - 14} ${-h / 2} Q${w / 2} ${-h / 2} ${w / 2} ${-h / 2 + 14} L${w / 2} ${h / 2 - 14} Q${w / 2} ${h / 2} ${w / 2 - 14} ${h / 2} L${tx + 10} ${h / 2} L${tx * 1.15} ${h / 2 + 22} L${tx - 6} ${h / 2} L${-w / 2 + 14} ${h / 2} Q${-w / 2} ${h / 2} ${-w / 2} ${h / 2 - 14} Z" fill="${C.snow}" ${STROKE}/>`;
   lines.forEach((l, i) => { s += `<text x="0" y="${-h / 2 + 27 + i * 20}" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="17" fill="${o.red ? C.red : C.ink}">${esc(l)}</text>`; });
@@ -396,13 +397,203 @@ R.arrow = (o) => { const L = Number(o.len || 120); return g(o, `<path d="M0 0 L$
 R.flag = (o) => g(o, `<line x1="0" y1="0" x2="0" y2="-120" stroke="${C.ink}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M0 -120 L70 -104 L0 -88 Z" fill="${o.red ? C.red : C.pale}" ${STROKE}/>`);
 R.stars12 = (o) => { let s = ''; for (let i = 0; i < 12; i++) { const a = (i / 12) * Math.PI * 2; s += `<circle cx="${f(Math.cos(a) * 50)}" cy="${f(Math.sin(a) * 50 - 60)}" r="5" fill="${C.glow}"/>`; } return g(o, `<rect x="-80" y="-120" width="160" height="120" fill="${C.deep}" ${STROKE}/>` + s); };
 R.shield = (o) => g(o, `<path d="M0 -120 L60 -100 Q60 -30 0 0 Q-60 -30 -60 -100 Z" fill="${o.red ? C.red : C.mid}" ${STROKE}/><path d="M0 -100 L40 -88 Q40 -40 0 -20 Z" fill="${C.pale}" opacity=".35"/>`);
-R.levels = (o) => g(o, ['LOW', 'HIGH', 'BANNED'].map((t, i) => `<rect x="${-120 + i * 84}" y="${-40 - i * 40}" width="72" height="${40 + i * 40}" fill="${i === 2 ? C.red : [C.soft, C.mid][i]}" ${STROKE}/><text x="${-84 + i * 84}" y="-12" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="11" fill="${i ? C.snow : C.ink}">${t}</text>`).join(''));
+R.levels = (o) => g(o, (o.text ? String(o.text).split('/') : ['LOW', 'HIGH', 'BANNED']).map((t, i) => `<rect x="${-120 + i * 84}" y="${-40 - i * 40}" width="72" height="${40 + i * 40}" fill="${i === 2 ? C.red : [C.soft, C.mid][i]}" ${STROKE}/><text x="${-84 + i * 84}" y="-12" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="${o.fs || 11}" fill="${i ? C.snow : C.ink}">${esc(t)}</text>`).join(''));
 R.signal = (o) => g(o, `<path d="M-160 0 L-120 0 L-110 -10 L-100 0 L-60 0 L-50 -90 L-40 0 L0 0 L10 -14 L20 0 L160 0" fill="none" stroke="${C.red}" stroke-width="4"/>`);
 R.table = (o) => g(o, `<ellipse cx="0" cy="-60" rx="${o.w || 200}" ry="34" fill="${C.night}" ${STROKE}/><rect x="-10" y="-60" width="20" height="60" fill="${C.ink}"/>`);
 R.notebook = (o) => g(o, `<rect x="-34" y="-46" width="68" height="46" fill="${o.red ? C.red : C.soft}" ${STROKE}/><rect x="-28" y="-40" width="56" height="34" fill="${C.snow}"/><line x1="-22" y1="-32" x2="18" y2="-32" stroke="${C.mid}" stroke-width="2"/><line x1="-22" y1="-24" x2="10" y2="-24" stroke="${C.mid}" stroke-width="2"/><line x1="-22" y1="-16" x2="20" y2="-16" stroke="${C.mid}" stroke-width="2"/>`);
 R.dragon = (o) => g(o, `<path d="M-80 -20 Q-40 -90 0 -50 Q40 -10 80 -70 L96 -60 Q60 10 0 -20 Q-40 -50 -60 0 Z" fill="${C.red}" ${STROKE}/><circle cx="84" cy="-74" r="4" fill="${C.snow}"/>`);
 R.gear = (o) => { let s = ''; for (let i = 0; i < 8; i++) s += `<rect x="-8" y="-58" width="16" height="20" fill="${o.red ? C.red : C.soft}" ${STROKE} transform="rotate(${i * 45})"/>`; return g(o, `<g transform="translate(0 -50)">${s}<circle r="42" fill="${o.red ? C.red : C.soft}" ${STROKE}/><circle r="14" fill="${C.ink}"/></g>`); };
 R.box = (o) => g(o, `<rect x="-70" y="-100" width="140" height="100" fill="${C.ink}" ${STROKE}/><path d="M-70 -100 L-40 -130 L100 -130 L70 -100 Z M70 -100 L100 -130 L100 -30 L70 0 Z" fill="${C.night}" ${STROKE}/>` + (o.glow ? `<circle cx="0" cy="-50" r="20" fill="${C.red}" opacity=".9"/><circle cx="0" cy="-50" r="44" fill="${C.red}" opacity=".18"/>` : `<text x="0" y="-40" text-anchor="middle" font-family="Georgia, serif" font-size="50" font-weight="700" fill="${C.soft}">?</text>`));
+
+/* ---------- thêm cho truyện tiếng Trung: đồng quê, thành ngữ, đời thường ---------- */
+const blob = (pts, fill) => pts.map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" ${STROKE}/>`).join('') +
+  pts.map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r - 3.5}" fill="${fill}"/>`).join('');
+R.tree = (o) => {
+  let s = `<path d="M-16 0 Q-10 -60 -12 -118 L12 -118 Q10 -60 16 0 Z" fill="${C.night}" ${STROKE}/>`;
+  if (!o.bare) s += blob([[-58, -150, 50], [52, -152, 52], [0, -196, 62], [-36, -210, 40], [40, -214, 42], [0, -140, 46]], col(o.c, C.deep));
+  if (o.fruit) for (const [x, y] of [[-50, -160], [30, -140], [10, -210], [55, -190], [-20, -180]]) s += `<circle cx="${x}" cy="${y}" r="7" fill="${C.red}" ${STROKE}/>`;
+  return g(o, s);
+};
+R.stump = (o) => g(o, `<path d="M-34 0 L-28 -46 L28 -46 L34 0 Z" fill="${C.night}" ${STROKE}/><ellipse cx="0" cy="-46" rx="28" ry="9" fill="${C.soft}" ${STROKE}/><ellipse cx="0" cy="-46" rx="14" ry="4" fill="none" stroke="${C.mid}" stroke-width="2"/>`);
+R.field = (o) => {
+  const y0 = Y(o.y ?? 70);
+  let s = `<rect x="0" y="${f(y0)}" width="${W}" height="${f(H - y0)}" fill="${col(o.c, C.mid)}"/>`;
+  const n = Number(o.n || 14);
+  for (let i = 0; i <= n; i++) {
+    const x = (i / n) * W;
+    s += `<line x1="${f(x)}" y1="${f(y0)}" x2="${f(W / 2 + (x - W / 2) * 1.8)}" y2="${H}" stroke="${C.deep}" stroke-width="3" opacity=".7"/>`;
+  }
+  if (o.sprouts) for (let i = 0; i < 40; i++) { const x = rnd() * W, y = y0 + 10 + rnd() * (H - y0 - 10); s += `<path d="M${f(x)} ${f(y)} q-6 -10 -2 -16 M${f(x)} ${f(y)} q6 -10 2 -16" stroke="${C.pale}" stroke-width="2.5" fill="none"/>`; }
+  return s;
+};
+R.grass = (o) => {
+  const y = Y(o.y ?? 82), hgt = Number(o.h || 30), n = Number(o.n || 26);
+  const x0 = X(o.from ?? 0), x1 = X(o.to ?? 100);
+  let s = '';
+  for (let i = 0; i < n; i++) {
+    const x = x0 + (i + rnd() * 0.6) * ((x1 - x0) / n), hh = hgt * (0.7 + rnd() * 0.6);
+    s += `<path d="M${f(x - 10)} ${f(y)} Q${f(x - 8)} ${f(y - hh * 0.6)} ${f(x - 16)} ${f(y - hh)} Q${f(x - 2)} ${f(y - hh * 0.5)} ${f(x)} ${f(y - hh * 1.1)} Q${f(x + 4)} ${f(y - hh * 0.5)} ${f(x + 16)} ${f(y - hh * 0.9)} Q${f(x + 8)} ${f(y - hh * 0.5)} ${f(x + 10)} ${f(y)} Z" fill="${col(o.c, C.deep)}" stroke="${C.ink}" stroke-width="1.6" stroke-linejoin="round"/>`;
+  }
+  return s;
+};
+R.rabbit = (o) => {
+  const fill = col(o.c, C.snow);
+  if (o.down) {
+    return g(o, `<ellipse cx="0" cy="-18" rx="32" ry="17" fill="${fill}" ${STROKE}/><circle cx="34" cy="-16" r="13" fill="${fill}" ${STROKE}/>` +
+      `<ellipse cx="54" cy="-26" rx="18" ry="5" fill="${fill}" ${STROKE}/><ellipse cx="52" cy="-12" rx="18" ry="5" fill="${fill}" ${STROKE}/>` +
+      `<path d="M33 -22 l6 6 M39 -22 l-6 6" stroke="${C.ink}" stroke-width="2.2"/><circle cx="-32" cy="-22" r="6" fill="${fill}" ${STROKE}/>` +
+      `<path d="M30 -46 l3 -9 l3 9 l9 0 l-7 5 l3 9 l-8 -5 l-8 5 l3 -9 l-7 -5 Z" fill="${C.glow}" stroke="${C.ink}" stroke-width="1.5"/>`);
+  }
+  const run = o.run;
+  let s = run ? `<path d="M-30 -20 L-56 -8 M20 -14 L50 -4" stroke="${C.ink}" stroke-width="7" stroke-linecap="round"/><path d="M-30 -20 L-56 -8 M20 -14 L50 -4" stroke="${fill}" stroke-width="3.5" stroke-linecap="round"/>` : '';
+  s += `<ellipse cx="0" cy="-24" rx="${run ? 36 : 28}" ry="${run ? 16 : 21}" fill="${fill}" ${STROKE}/><circle cx="-30" cy="-30" r="7" fill="${fill}" ${STROKE}/>`;
+  s += `<ellipse cx="22" cy="-66" rx="5.5" ry="19" transform="rotate(${run ? 40 : -12} 22 -48)" fill="${fill}" ${STROKE}/><ellipse cx="32" cy="-64" rx="5.5" ry="19" transform="rotate(${run ? 52 : 8} 32 -46)" fill="${fill}" ${STROKE}/>`;
+  s += `<circle cx="28" cy="-40" r="14" fill="${fill}" ${STROKE}/><circle cx="33" cy="-42" r="2.4" fill="${C.ink}"/><circle cx="41" cy="-37" r="2" fill="${C.red}"/>`;
+  if (run) s += `<path d="M-60 -34 h-26 M-58 -22 h-34 M-62 -10 h-22" stroke="${C.pale}" stroke-width="3" stroke-linecap="round" opacity=".8"/>`;
+  return g(o, s);
+};
+R.snake = (o) => {
+  const d = 'M-130 0 C-100 -40 -70 40 -40 0 S20 -40 50 0 S100 30 120 -6';
+  let s = `<path d="${d}" fill="none" stroke="${C.ink}" stroke-width="17" stroke-linecap="round"/><path d="${d}" fill="none" stroke="${col(o.c, C.mid)}" stroke-width="11" stroke-linecap="round"/>`;
+  s += `<path d="${d}" fill="none" stroke="${C.pale}" stroke-width="2" stroke-dasharray="3 9" opacity=".7"/>`;
+  s += `<ellipse cx="128" cy="-10" rx="16" ry="11" fill="${col(o.c, C.mid)}" ${STROKE}/><circle cx="133" cy="-14" r="2.5" fill="${C.ink}"/><path d="M143 -8 l14 2 l4 -5 M157 -6 l4 4" stroke="${C.red}" stroke-width="2.5" fill="none" stroke-linecap="round"/>`;
+  const legs = Number(o.legs || 0);
+  const at = [[-100, -12], [-70, 14], [-20, -18], [10, 10], [70, -6], [95, 10]];
+  for (let i = 0; i < legs && i < at.length; i++) { const [x, y] = at[i]; s += `<path d="M${x} ${y} l-6 26 l-10 4 M${x + 12} ${y} l4 26 l10 4" fill="none" stroke="${C.red}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>`; }
+  return g(o, s);
+};
+R.jug = (o) => g(o, `<path d="M-30 0 Q-52 -40 -24 -66 L-14 -70 L-14 -88 L14 -88 L14 -70 L24 -66 Q52 -40 30 0 Z" fill="${o.red ? C.red : C.soft}" ${STROKE}/><rect x="-18" y="-96" width="36" height="10" rx="3" fill="${C.night}" ${STROKE}/><path d="M28 -54 q22 -4 18 22" fill="none" ${STROKE}/>` +
+  (o.text ? `<text x="0" y="-26" text-anchor="middle" font-family="serif" font-weight="700" font-size="24" fill="${o.red ? C.snow : C.ink}">${esc(o.text)}</text>` : ''));
+R.sheep = (o) => {
+  let s = [[-20, 0], [-6, 0], [14, 0], [26, 0]].map(([x]) => `<rect x="${x - 3}" y="-24" width="7" height="24" fill="${C.ink}"/>`).join('');
+  s += blob([[-26, -38, 16], [-8, -44, 18], [12, -42, 17], [24, -34, 14], [-14, -26, 14], [8, -26, 15]], col(o.c, C.snow));
+  s += `<ellipse cx="40" cy="-46" rx="11" ry="14" fill="${C.ink}" transform="rotate(-20 40 -46)"/><ellipse cx="32" cy="-54" rx="8" ry="3.5" fill="${C.ink}" transform="rotate(-30 32 -54)"/><circle cx="44" cy="-50" r="2.2" fill="${C.pale}"/>`;
+  return g(o, s);
+};
+R.wolf = (o) => g(o, `<path d="M-60 -34 Q-80 -50 -90 -30 Q-74 -36 -62 -26 L-48 -30 L-50 0 L-40 0 L-36 -26 L20 -28 L26 0 L36 0 L34 -32 Q50 -40 54 -52 L50 -74 L42 -58 L34 -66 L30 -52 Q0 -60 -30 -54 Q-50 -50 -60 -34 Z" fill="${C.ink}" stroke="${C.night}" stroke-width="2.5" stroke-linejoin="round"/><path d="M54 -52 L76 -46 L56 -40" fill="${C.ink}"/><circle cx="46" cy="-54" r="3" fill="${C.red}"/>`);
+R.fence = (o) => {
+  const w = Number(o.w || 360), n = Math.round(w / 34), hgt = Number(o.h || 70);
+  const hole = o.hole !== undefined ? Number(o.hole) : -1;
+  let s = '';
+  for (let i = 0; i <= n; i++) {
+    const x = -w / 2 + (i * w) / n;
+    if (i === hole || i === hole + 1) continue;
+    s += `<rect x="${f(x - 5)}" y="${-hgt}" width="10" height="${hgt}" fill="${col(o.c, C.soft)}" ${STROKE}/>`;
+  }
+  for (const yy of [-hgt * 0.75, -hgt * 0.35]) {
+    if (hole < 0) s += `<rect x="${-w / 2}" y="${f(yy - 5)}" width="${w}" height="10" fill="${col(o.c, C.soft)}" ${STROKE}/>`;
+    else {
+      const a = -w / 2 + (hole * w) / n - 6, b = -w / 2 + ((hole + 2) * w) / n + 6;
+      s += `<rect x="${-w / 2}" y="${f(yy - 5)}" width="${f(a + w / 2)}" height="10" fill="${col(o.c, C.soft)}" ${STROKE}/><rect x="${f(b)}" y="${f(yy - 5)}" width="${f(w / 2 - b)}" height="10" fill="${col(o.c, C.soft)}" ${STROKE}/>`;
+    }
+  }
+  if (hole >= 0 && o.patch) {
+    const a = -w / 2 + (hole * w) / n - 10, b = -w / 2 + ((hole + 2) * w) / n + 10;
+    s += `<rect x="${f(a)}" y="${-hgt + 4}" width="${f(b - a)}" height="${hgt - 4}" fill="${C.red}" opacity=".9" ${STROKE}/>` +
+      [0.25, 0.5, 0.75].map((t) => `<line x1="${f(a + (b - a) * t)}" y1="${-hgt + 4}" x2="${f(a + (b - a) * t)}" y2="0" stroke="${C.redDark}" stroke-width="3"/>`).join('');
+  }
+  return g(o, s);
+};
+const umbrella = (x, y, red) => `<path d="M${x - 62} ${y} Q${x} ${y - 76} ${x + 62} ${y} Q${x + 46} ${y - 10} ${x + 31} ${y} Q${x + 15} ${y - 10} ${x} ${y} Q${x - 15} ${y - 10} ${x - 31} ${y} Q${x - 46} ${y - 10} ${x - 62} ${y} Z" fill="${red ? C.red : C.soft}" ${STROKE}/><line x1="${x}" y1="${y - 36}" x2="${x}" y2="${y + 52}" stroke="${C.ink}" stroke-width="4"/>`;
+R.umbrella = (o) => g(o, umbrella(0, -60, o.red));
+R.rain = (o) => {
+  let s = '';
+  const n = Number(o.n || 140);
+  for (let i = 0; i < n; i++) { const x = rnd() * (W + 60) - 30, y = rnd() * H, l = 14 + rnd() * 18; s += `<line x1="${f(x)}" y1="${f(y)}" x2="${f(x - l * 0.35)}" y2="${f(y + l)}" stroke="${C.pale}" stroke-width="${o.heavy ? 2.4 : 1.6}" opacity=".55"/>`; }
+  return s;
+};
+R.cat = (o) => {
+  const fill = col(o.c, C.snow);
+  if (o.sleep) return g(o, `<ellipse cx="0" cy="-20" rx="44" ry="21" fill="${fill}" ${STROKE}/><circle cx="30" cy="-28" r="17" fill="${fill}" ${STROKE}/><path d="M18 -40 l4 -16 l10 10 M34 -42 l10 -12 l2 16" fill="${fill}" ${STROKE}/><path d="M24 -28 q4 3 8 0 M36 -28 q4 3 8 0" fill="none" stroke="${C.ink}" stroke-width="2"/><path d="M-44 -18 q-10 18 20 18" fill="none" ${STROKE}/>` +
+    `<text x="52" y="-56" font-family="Georgia, serif" font-weight="700" font-size="20" fill="${C.soft}">z z</text>`);
+  return g(o, `<path d="M-20 0 Q-30 -40 -12 -62 L14 -62 Q32 -40 22 0 Z" fill="${fill}" ${STROKE}/><path d="M22 -6 q34 -6 26 -40" fill="none" stroke="${C.ink}" stroke-width="9" stroke-linecap="round"/><path d="M22 -6 q34 -6 26 -40" fill="none" stroke="${fill}" stroke-width="5" stroke-linecap="round"/>` +
+    `<circle cx="0" cy="-76" r="20" fill="${fill}" ${STROKE}/><path d="M-16 -88 l-2 -20 l14 10 M16 -88 l2 -20 l-14 10" fill="${fill}" ${STROKE}/><circle cx="-7" cy="-78" r="2.6" fill="${C.ink}"/><circle cx="7" cy="-78" r="2.6" fill="${C.ink}"/><path d="M-3 -70 l3 2 l3 -2" fill="none" stroke="${C.red}" stroke-width="2"/>`);
+};
+R.ball = (o) => g(o, `<circle cx="0" cy="-15" r="15" fill="${C.snow}" ${STROKE}/><path d="M0 -21 l6 4 l-2 7 h-8 l-2 -7 Z" fill="${C.ink}"/>`);
+R.goal = (o) => {
+  let s = '';
+  for (let x = -96; x <= 96; x += 16) s += `<line x1="${x}" y1="-110" x2="${x * 0.9}" y2="0" stroke="${C.soft}" stroke-width="1.5" opacity=".8"/>`;
+  for (let y = -100; y < 0; y += 16) s += `<line x1="-100" y1="${y}" x2="100" y2="${y}" stroke="${C.soft}" stroke-width="1.5" opacity=".8"/>`;
+  s += `<path d="M-104 0 L-104 -114 L104 -114 L104 0" fill="none" stroke="${C.ink}" stroke-width="12"/><path d="M-104 0 L-104 -114 L104 -114 L104 0" fill="none" stroke="${C.snow}" stroke-width="7"/>`;
+  return g(o, s);
+};
+R.train = (o) => {
+  const cars = Number(o.cars || 2);
+  let s = `<path d="M0 -20 L0 -110 L170 -110 Q236 -104 250 -40 L250 -20 Z" fill="${col(o.c, C.mid)}" ${STROKE}/><path d="M178 -100 Q222 -94 236 -60 L178 -60 Z" fill="${C.pale}" ${STROKE}/>`;
+  s += `<rect x="0" y="-52" width="250" height="10" fill="${C.red}"/>`;
+  for (let k = 0; k < 4; k++) s += `<rect x="${16 + k * 40}" y="-96" width="28" height="30" rx="4" fill="${C.glow}" ${STROKE}/>`;
+  for (let c = 1; c <= cars; c++) {
+    const x = -c * 240;
+    s += `<rect x="${x + 6}" y="-110" width="228" height="90" rx="10" fill="${col(o.c, C.mid)}" ${STROKE}/><rect x="${x + 6}" y="-52" width="228" height="10" fill="${C.red}"/>`;
+    for (let k = 0; k < 5; k++) s += `<rect x="${x + 20 + k * 42}" y="-96" width="28" height="30" rx="4" fill="${C.glow}" ${STROKE}/>`;
+  }
+  for (let c = 0; c <= cars; c++) for (const dx of [40, 190]) s += `<circle cx="${-c * 240 + dx}" cy="-16" r="14" fill="${C.ink}" stroke="${C.soft}" stroke-width="2"/>`;
+  s += `<rect x="${-cars * 240 - 40}" y="-4" width="${cars * 240 + 330}" height="6" fill="${C.ink}"/>`;
+  return g(o, s);
+};
+R.guitar = (o) => g(o, `<g transform="rotate(${o.rot ?? -30})"><rect x="-5" y="-120" width="10" height="70" fill="${C.night}" ${STROKE}/><rect x="-9" y="-136" width="18" height="18" rx="3" fill="${C.ink}"/><circle cx="0" cy="-42" r="22" fill="${C.red}" ${STROKE}/><circle cx="0" cy="-12" r="28" fill="${C.red}" ${STROKE}/><circle cx="0" cy="-22" r="8" fill="${C.ink}"/></g>`);
+R.apples = (o) => {
+  const n = Number(o.n || 6);
+  let s = '', k = 0;
+  for (let row = 0; k < n; row++) for (let i = 0; i < 4 - row && k < n; i++, k++) {
+    const x = (i - (3 - row) / 2) * 26, y = -14 - row * 22;
+    s += `<circle cx="${x}" cy="${y}" r="13" fill="${o.c ? col(o.c) : C.red}" ${STROKE}/><path d="M${x} ${y - 12} q4 -8 10 -6" fill="none" stroke="${C.ink}" stroke-width="2"/>`;
+  }
+  if (o.basket) s = `<path d="M-64 -30 L-52 0 L52 0 L64 -30 Z" fill="${C.soft}" ${STROKE}/>` + s.replace(/cy="(-?\d+\.?\d*)"/g, (m, v) => `cy="${Number(v) - 22}"`).replace(/M(-?\d+\.?\d*) (-?\d+\.?\d*) q4/g, (m, a, b) => `M${a} ${Number(b) - 22} q4`);
+  return g(o, s);
+};
+R.gift = (o) => g(o, `<rect x="-34" y="-56" width="68" height="56" fill="${C.pale}" ${STROKE}/><rect x="-40" y="-70" width="80" height="16" fill="${C.soft}" ${STROKE}/><rect x="-6" y="-70" width="12" height="70" fill="${C.red}"/><path d="M0 -70 q-26 -26 -30 -6 q4 8 30 6 q26 -26 30 -6 q-4 8 -30 6" fill="${C.red}" ${STROKE}/>`);
+R.cake = (o) => {
+  let s = `<rect x="-60" y="-40" width="120" height="40" rx="6" fill="${C.pale}" ${STROKE}/><rect x="-42" y="-74" width="84" height="34" rx="6" fill="${C.snow}" ${STROKE}/><path d="M-60 -26 q15 10 30 0 t30 0 t30 0 t30 0" fill="none" stroke="${C.red}" stroke-width="4"/>`;
+  for (const x of [-24, 0, 24]) s += `<rect x="${x - 3}" y="-96" width="6" height="22" fill="${C.red}" ${STROKE}/><path d="M${x} -112 q6 8 0 14 q-6 -6 0 -14" fill="${C.glow}"/>`;
+  return g(o, s);
+};
+R.stall = (o) => {
+  const w = Number(o.w || 220);
+  let s = `<rect x="${-w / 2 + 6}" y="-150" width="8" height="150" fill="${C.ink}"/><rect x="${w / 2 - 14}" y="-150" width="8" height="150" fill="${C.ink}"/>`;
+  s += `<rect x="${-w / 2}" y="-64" width="${w}" height="64" fill="${col(o.c, C.deep)}" ${STROKE}/>`;
+  const k = 6;
+  for (let i = 0; i < k; i++) s += `<path d="M${-w / 2 - 10 + (i * (w + 20)) / k} -150 h${(w + 20) / k} v26 q${-(w + 20) / k / 2} 14 ${-(w + 20) / k} 0 Z" fill="${i % 2 ? C.snow : C.red}" ${STROKE}/>`;
+  if (o.text) s += `<rect x="-46" y="-104" width="92" height="30" rx="4" fill="${C.snow}" ${STROKE}/><text x="0" y="-82" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="18" fill="${C.red}">${esc(o.text)}</text>`;
+  return g(o, s);
+};
+R.wardrobe = (o) => {
+  let s = `<rect x="-74" y="-230" width="148" height="230" fill="${C.night}" ${STROKE}/>`;
+  if (o.open) s += `<rect x="-66" y="-222" width="132" height="214" fill="${C.ink}"/><line x1="-60" y1="-200" x2="60" y2="-200" stroke="${C.soft}" stroke-width="4"/><path d="M-40 -200 l0 50 l20 0 l0 -50 M10 -200 l0 70 l26 0 l0 -70" fill="${C.deep}" stroke="${C.ink}" stroke-width="2"/><path d="M-74 -230 L-118 -214 L-118 10 L-74 0 Z" fill="${C.deep}" ${STROKE}/>`;
+  else s += `<line x1="0" y1="-230" x2="0" y2="0" ${STROKE}/><circle cx="-10" cy="-116" r="4" fill="${C.soft}"/><circle cx="10" cy="-116" r="4" fill="${C.soft}"/>`;
+  return g(o, s);
+};
+R.bowl = (o) => g(o, `<path d="M-46 -40 Q-44 0 0 0 Q44 0 46 -40 Z" fill="${o.red ? C.red : C.pale}" ${STROKE}/><path d="M-36 -42 q10 -12 20 0 t20 0 t20 0" fill="none" stroke="${C.glow}" stroke-width="4"/><line x1="10" y1="-46" x2="60" y2="-96" stroke="${C.ink}" stroke-width="4"/><line x1="20" y1="-44" x2="70" y2="-90" stroke="${C.ink}" stroke-width="4"/>` +
+  (o.steam ? `<path d="M-14 -54 q-8 -10 0 -20 t0 -20 M4 -54 q-8 -10 0 -20" fill="none" stroke="${C.pale}" stroke-width="2.5" opacity=".7"/>` : ''));
+R.plate = (o) => {
+  let s = `<ellipse cx="0" cy="-8" rx="46" ry="12" fill="${C.snow}" ${STROKE}/>`;
+  if (o.food === 'fish') s += `<path d="M-30 -18 Q-6 -40 20 -18 Q-6 2 -30 -18 Z M20 -18 l14 -10 l0 20 Z" fill="${o.burnt ? C.night : C.soft}" ${STROKE}/><circle cx="-18" cy="-20" r="2.5" fill="${C.ink}"/>`;
+  else if (o.food === 'egg') s += `<path d="M-24 -14 q-6 -18 14 -20 q20 -6 24 10 q6 14 -16 14 q-18 4 -22 -4 Z" fill="${C.snow}" ${STROKE}/><circle cx="0" cy="-18" r="9" fill="${o.burnt ? C.night : C.glow}" ${STROKE}/>`;
+  else s += `<path d="M-30 -14 Q-20 -40 0 -36 Q22 -42 30 -14 Z" fill="${o.red ? C.red : C.mid}" ${STROKE}/>`;
+  return g(o, s);
+};
+R.board = (o) => {
+  const w = Number(o.w || 260), hh = Number(o.h || 130);
+  let s = `<rect x="${-w / 2}" y="${-hh}" width="${w}" height="${hh}" rx="4" fill="${C.night}" stroke="${C.ink}" stroke-width="8"/>`;
+  if (o.text) s += `<text x="0" y="${-hh / 2 + 12}" text-anchor="middle" font-family="serif" font-weight="700" font-size="${o.fs || 34}" fill="${C.pale}">${esc(o.text)}</text>`;
+  return g(o, s);
+};
+R.trophy = (o) => g(o, `<rect x="-30" y="-14" width="60" height="14" fill="${C.night}" ${STROKE}/><rect x="-8" y="-40" width="16" height="26" fill="${C.glow}" ${STROKE}/><path d="M-34 -96 L34 -96 Q34 -40 0 -40 Q-34 -40 -34 -96 Z" fill="${C.glow}" ${STROKE}/><path d="M-34 -88 q-22 2 -14 24 q6 10 20 8 M34 -88 q22 2 14 24 q-6 10 -20 8" fill="none" ${STROKE}/>`);
+R.lantern = (o) => {
+  let s = `<line x1="0" y1="${-(o.l || 40)}" x2="0" y2="0" stroke="${C.ink}" stroke-width="2.5"/><rect x="-12" y="0" width="24" height="7" fill="${C.ink}"/><ellipse cx="0" cy="34" rx="30" ry="28" fill="${C.red}" ${STROKE}/>`;
+  s += `<path d="M-14 9 Q-24 34 -14 60 M14 9 Q24 34 14 60 M0 7 L0 62" fill="none" stroke="${C.redDark}" stroke-width="2.5"/><rect x="-12" y="60" width="24" height="7" fill="${C.ink}"/><path d="M-4 67 l-2 22 M0 67 l0 24 M4 67 l2 22" stroke="${C.red}" stroke-width="2.5"/>`;
+  if (o.glow) s = `<ellipse cx="0" cy="34" rx="60" ry="56" fill="${C.red}" opacity=".15"/>` + s;
+  return g(o, s);
+};
+R.jacket = (o) => g(o, `<path d="M-30 -100 L-60 -88 L-74 -20 L-56 -18 L-46 -62 L-44 0 L44 0 L46 -62 L56 -18 L74 -20 L60 -88 L30 -100 Q0 -84 -30 -100 Z" fill="${col(o.c, C.mid)}" ${STROKE}/><line x1="0" y1="-92" x2="0" y2="0" stroke="${C.ink}" stroke-width="2"/>` +
+  (o.bad ? `<path d="M-30 -60 l16 6 M20 -40 l12 -10 M-20 -20 l8 -14" stroke="${C.red}" stroke-width="3"/><path d="M46 -62 L56 -18 L74 -20" fill="none" stroke="${C.red}" stroke-width="3" stroke-dasharray="5 5"/>` : ''));
+R.shards = (o) => g(o, `<ellipse cx="0" cy="-4" rx="70" ry="10" fill="${C.night}" opacity=".85"/><path d="M-40 -6 l10 -14 l8 12 Z M-6 -4 l6 -18 l12 8 Z M24 -8 l14 -10 l4 14 Z M48 -4 l6 -8 l6 8 Z" fill="${C.pale}" ${STROKE}/>`);
+R.foodbox = (o) => g(o, `<path d="M-30 0 L-38 -50 L38 -50 L30 0 Z" fill="${C.snow}" ${STROKE}/><path d="M-38 -50 L-30 -62 L30 -62 L38 -50" fill="${C.pale}" ${STROKE}/><path d="M-14 -62 q14 -22 28 0" fill="none" ${STROKE}/><rect x="-12" y="-36" width="24" height="16" fill="${C.red}"/>`);
+R.stack = (o) => { let s = ''; const n = Number(o.n || 6); for (let i = 0; i < n; i++) s += `<rect x="${-40 + (i % 3) * 3}" y="${-12 - i * 7}" width="80" height="10" fill="${i === n - 1 && o.red ? C.red : C.snow}" ${STROKE}/>`; return g(o, s); };
+R.pot = (o) => g(o, `<path d="M-46 -50 L-40 0 L40 0 L46 -50 Z" fill="${C.night}" ${STROKE}/><rect x="-52" y="-58" width="104" height="10" rx="4" fill="${C.ink}"/><path d="M-52 -50 h-14 M52 -50 h14" ${STROKE}/>` + (o.steam ? `<path d="M-12 -66 q-8 -10 0 -20 t0 -20 M10 -66 q-8 -10 0 -20" fill="none" stroke="${C.pale}" stroke-width="2.5" opacity=".7"/>` : ''));
+R.tape = (o) => g(o, `<rect x="-90" y="-14" width="180" height="14" fill="${C.glow}" ${STROKE}/>` + Array.from({ length: 17 }, (_, i) => `<line x1="${-84 + i * 10.5}" y1="-14" x2="${-84 + i * 10.5}" y2="${i % 2 ? -8 : -4}" stroke="${C.ink}" stroke-width="1.5"/>`).join(''));
+R.drops = (o) => g(o, [[-20, -10], [0, -26], [22, -6], [10, 10]].map(([x, y]) => `<path d="M${x} ${y - 10} q7 10 0 14 q-7 -4 0 -14" fill="${C.soft}" stroke="${C.ink}" stroke-width="1.5"/>`).join(''));
+R.score = (o) => g(o, `<rect x="-80" y="-54" width="160" height="54" rx="6" fill="${C.ink}" stroke="${C.soft}" stroke-width="3"/><text x="0" y="-14" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="36" fill="${o.red ? C.red : C.glow}">${esc(o.text || '0 : 0')}</text>`);
 
 /* ---------- người ---------- */
 const POSES = {
@@ -462,6 +653,11 @@ R.person = (o) => {
   else if (mood === 'shock') s += `<ellipse cx="${hx + 10}" cy="${hy + 10}" rx="3" ry="4" fill="${C.ink}"/>`;
   else s += `<line x1="${hx + 6}" y1="${hy + 9}" x2="${hx + 13}" y2="${hy + 9}" stroke="${C.ink}" stroke-width="2"/>`;
   if (o.glasses) s += `<circle cx="${hx + 6}" cy="${hy + 1}" r="5" fill="none" stroke="${C.ink}" stroke-width="1.6"/><circle cx="${hx + 14}" cy="${hy + 1}" r="5" fill="none" stroke="${C.ink}" stroke-width="1.6"/>`;
+  if (o.tears) s += `<path d="M${hx + 6} ${hy + 4} q-3 8 0 12 q3 -4 0 -12 M${hx + 14} ${hy + 4} q-3 8 0 12 q3 -4 0 -12" fill="${C.soft}" stroke="${C.ink}" stroke-width="1.2"/>`;
+  if (o.crown) s += `<path d="M${hx - 15} ${hy - 14} L${hx - 15} ${hy - 34} L${hx - 7} ${hy - 24} L${hx} ${hy - 38} L${hx + 7} ${hy - 24} L${hx + 15} ${hy - 34} L${hx + 15} ${hy - 14} Z" fill="${C.glow}" ${STROKE}/><circle cx="${hx}" cy="${hy - 22}" r="3" fill="${C.red}"/>`;
+  if (o.hat === 'straw') s += `<path d="M${hx - 34} ${hy - 6} L${hx} ${hy - 40} L${hx + 34} ${hy - 6} Q${hx} ${hy - 12} ${hx - 34} ${hy - 6} Z" fill="${C.glow}" ${STROKE}/>`;
+  if (o.hat === 'official') s += `<rect x="${hx - 14}" y="${hy - 34}" width="28" height="18" rx="4" fill="${C.ink}" ${STROKE}/><path d="M${hx - 14} ${hy - 22} h-22 M${hx + 14} ${hy - 22} h22" stroke="${C.ink}" stroke-width="5" stroke-linecap="round"/>`;
+  if (o.wet) s += [[-26, -30], [24, -40], [30, -10], [-30, 4]].map(([x, y]) => `<path d="M${hx + x} ${hy + y - 8} q6 8 0 12 q-6 -4 0 -12" fill="${C.soft}" stroke="${C.ink}" stroke-width="1.2"/>`).join('');
   s += arms[1].svg;
   const [px, py] = arms[1].hand;
   const item = o.item;
@@ -472,6 +668,11 @@ R.person = (o) => {
   if (item === 'pen') s += `<line x1="${f(px)}" y1="${f(py)}" x2="${f(px + 8)}" y2="${f(py + 14)}" stroke="${C.ink}" stroke-width="4"/>`;
   if (item === 'torch') s += `<path d="M${f(px)} ${f(py)} l90 -30 l0 70 Z" fill="${C.glow}" opacity=".22"/>`;
   if (item === 'flag') s += `<line x1="${f(px)}" y1="${f(py + 10)}" x2="${f(px)}" y2="${f(py - 60)}" stroke="${C.ink}" stroke-width="4"/><path d="M${f(px)} ${f(py - 60)} l40 10 l-40 10 Z" fill="${C.red}" ${STROKE}/>`;
+  if (item === 'umbrella') s += umbrella(px, py - 52, o.redItem);
+  if (item === 'apple') s += `<circle cx="${f(px)}" cy="${f(py - 6)}" r="10" fill="${C.red}" ${STROKE}/>`;
+  if (item === 'jug') s += `<g transform="translate(${f(px)} ${f(py + 30)}) scale(.55)"><path d="M-30 0 Q-52 -40 -24 -66 L-14 -70 L-14 -88 L14 -88 L14 -70 L24 -66 Q52 -40 30 0 Z" fill="${C.red}" ${STROKE}/></g>`;
+  if (item === 'box') s += `<g transform="translate(${f(px)} ${f(py + 14)}) scale(.7)"><path d="M-30 0 L-38 -50 L38 -50 L30 0 Z" fill="${C.snow}" ${STROKE}/><rect x="-12" y="-36" width="24" height="16" fill="${C.red}"/></g>`;
+  if (item === 'brush') s += `<line x1="${f(px)}" y1="${f(py)}" x2="${f(px + 10)}" y2="${f(py + 26)}" stroke="${C.ink}" stroke-width="4"/><path d="M${f(px + 8)} ${f(py + 22)} l6 12 l-8 -2 Z" fill="${C.ink}"/>`;
   if (item === 'sign') s += `<rect x="${f(px - 30)}" y="${f(py - 60)}" width="60" height="40" fill="${C.snow}" ${STROKE}/><line x1="${f(px)}" y1="${f(py - 20)}" x2="${f(px)}" y2="${f(py + 10)}" stroke="${C.ink}" stroke-width="4"/>`;
   return g(o, s);
 };
@@ -522,7 +723,8 @@ function parse(text) {
 }
 
 const only = new Set(process.argv.slice(2));
-const scenes = parse(fs.readFileSync(path.join(ROOT, 'data-src/scenes-en.txt'), 'utf8'));
+const scenes = fs.readdirSync(path.join(ROOT, 'data-src')).filter((x) => /^scenes-.*\.txt$/.test(x)).sort()
+  .flatMap((x) => parse(fs.readFileSync(path.join(ROOT, 'data-src', x), 'utf8')));
 const outDir = path.join(ROOT, 'img/scenes');
 fs.mkdirSync(outDir, { recursive: true });
 const manifest = {};

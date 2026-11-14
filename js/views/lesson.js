@@ -8,6 +8,7 @@ import { quotaToday, dayType } from '../plan.js';
 import { h, section, readingLine, toast, clickableHanzi, pill } from '../ui.js';
 import { refreshDueBadge } from '../app.js';
 import { award } from '../xp.js';
+import { wordPic, sentencePics } from '../pics.js';
 
 export async function render(route) {
   const id = Number(route.args[0]) || 1;
@@ -91,7 +92,7 @@ export async function render(route) {
   const words = h('div.card');
   for (const w of L.words) {
     words.append(h('div.word',
-      h('div.word-cn', clickableHanzi(w.w, openChar)),
+      h('div.word-cn', clickableHanzi(w.w, openChar), wordPic(w.w, { size: 40, lang: 'zh' })),
       h('div.word-body',
         readingLine(w.py, w.hv),
         h('div', w.vi),
@@ -118,6 +119,7 @@ export async function render(route) {
             h('div.sent-cn', clickableHanzi(e.cn, openChar)),
             h('div.py.small', e.py),
             h('div.small.muted', e.vi),
+            sentencePics(e.cn, { lang: 'zh' }),
           ),
           h('button.speak-btn', { onclick: () => say(e.cn), 'aria-label': 'Đọc' }, '🔊'),
         ),
@@ -135,6 +137,7 @@ export async function render(route) {
           h('div.sent-cn', clickableHanzi(s.cn, openChar)),
           h('div.py.small', s.py),
           h('div.small.muted', s.vi),
+          sentencePics(s.cn, { lang: 'zh' }),
         ),
         h('button.speak-btn', { onclick: () => say(s.cn), 'aria-label': 'Đọc' }, '🔊'),
       ),
