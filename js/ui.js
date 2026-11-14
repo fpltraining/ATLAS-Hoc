@@ -102,7 +102,9 @@ export function section(title, ...content) {
 }
 
 export function empty(mark, text, action) {
-  return h('div.empty', h('div.big.cn', mark), h('p', text), action);
+  // mark là chữ (空, 好…) hoặc tên ảnh khoảnh khắc trong img/moments (vd 'img:empty')
+  const art = typeof mark === 'string' && mark.startsWith('img:') ? h('img.empty-art', { src: `img/moments/${mark.slice(4)}.webp`, alt: '' }) : null;
+  return h('div.empty', art || h('div.big.cn', mark), h('p', text), action);
 }
 
 export function spinner(text = 'Đang tải…') {

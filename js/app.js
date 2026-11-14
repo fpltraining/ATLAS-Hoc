@@ -165,7 +165,8 @@ async function router() {
 function showError(msg, err) {
   console.error(err);
   viewEl.replaceChildren(h('div.empty',
-    h('p', msg),
+    h('img.empty-art', { src: 'img/moments/offline.webp', alt: '' }),
+    h('p', navigator.onLine ? msg : 'Đang mất mạng. Những bài đã mở trước đó vẫn học được.'),
     h('p.small.faint', String(err?.message || err || '')),
     h('p.small.faint', 'Thường do app vừa cập nhật bản mới. Bấm Tải lại app là xong.'),
     h('button.btn.sm', { onclick: () => location.reload() }, 'Tải lại app'),
