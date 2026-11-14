@@ -4,8 +4,8 @@ var G = window.G || (window.G = {});
 
 (function () {
   var CITIES = [
-    { id: 'en', name: 'Brightford', lang: 'Tiếng Anh', card: 'card_city_en.png', state: 'open', scene: 'city_en' },
-    { id: 'zh', name: 'Trường Lạc trấn 长乐镇', lang: 'Tiếng Trung', card: 'card_city_zh.png', state: 'soon', note: 'Mở ở giai đoạn 3' },
+    { id: 'en', name: 'Brightford', lang: 'Tiếng Anh · Mỹ tương lai', card: 'card_city_en.png', state: 'open', scene: 'city_en' },
+    { id: 'zh', name: 'Trường Lạc trấn 长乐镇', lang: 'Tiếng Trung · Thị trấn Trung Quốc', card: 'card_city_zh.png', state: 'soon', note: 'Mở ở giai đoạn 3' },
     { id: 'ja', name: 'Thành phố Nhật', lang: 'Tiếng Nhật', card: 'card_city_soon.png', state: 'soon' },
     { id: 'ko', name: 'Thành phố Hàn', lang: 'Tiếng Hàn', card: 'card_city_soon.png', state: 'soon' },
     { id: 'fr', name: 'Thành phố Pháp', lang: 'Tiếng Pháp', card: 'card_city_soon.png', state: 'soon' }
