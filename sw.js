@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v41';
+const VERSION = 'atlas-v42';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
@@ -121,7 +121,7 @@ self.addEventListener('fetch', (e) => {
     e.respondWith((async () => {
       const cache = await caches.open(CORE);
       const cached = (await cache.match('index.html')) || (await cache.match('./'));
-      const fresh = fetch(req).then((res) => {
+      const fresh = fetch(req, { cache: 'no-cache' }).then((res) => {
         if (res && res.ok) cache.put('index.html', res.clone());
         return res;
       }).catch(() => null);
@@ -143,10 +143,25 @@ self.addEventListener('fetch', (e) => {
     return;
   }
 
-  // Mọi thứ còn lại: lấy từ bộ nhớ đệm trước cho nhanh, đồng thời làm mới ngầm
+  // Mã chạy app (.js, .css): chỉ lấy từ bộ của ĐÚNG phiên bản này, không làm mới lẻ từng tệp.
+  // Làm mới lẻ từng tệp từng khiến app ghép home.js mới với plan.js cũ ("binding not found").
+  // Bản mới về trọn bộ khi đổi VERSION: cài đặt tải lại cả bộ CORE_FILES cùng lúc.
+  if (/\.(js|css)$/.test(url.pathname)) {
+    e.respondWith((async () => {
+      const core = await caches.open(CORE);
+      const hit = await core.match(req, { ignoreSearch: true });
+      if (hit) return hit;
+      const res = await fetch(req, { cache: 'no-cache' }).catch(() => null);
+      if (res && res.ok) core.put(req, res.clone());
+      return res || new Response('Offline', { status: 503 });
+    })());
+    return;
+  }
+
+  // Dữ liệu, ảnh: lấy từ bộ nhớ đệm trước cho nhanh, đồng thời hỏi máy chủ bản mới (bỏ qua bộ nhớ đệm HTTP)
   e.respondWith((async () => {
     const cached = await caches.match(req);
-    const network = fetch(req).then(async (res) => {
+    const network = fetch(req, { cache: 'no-cache' }).then(async (res) => {
       if (res && res.ok) {
         const cache = await caches.open(url.pathname.includes('/data/') ? RUNTIME : CORE);
         cache.put(req, res.clone());

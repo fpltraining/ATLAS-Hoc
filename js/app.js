@@ -103,6 +103,7 @@ function parseHash() {
 }
 
 async function router() {
+  if (swUpdated) { location.reload(); return; }
   const route = parseHash();
   const loader = routes[route.name] || routes.home;
   const seq = ++navSeq;
@@ -121,6 +122,16 @@ async function router() {
     mod = await loader();
   } catch (e) {
     if (stale()) return;
+    // Lỗi ghép tệp khác phiên bản (vừa cập nhật): tự tải lại một lần là hết
+    if (/binding|import|module|export/i.test(String(e?.message || e))) {
+      let last = 0;
+      try { last = Number(sessionStorage.getItem('atlas-auto-reload') || 0); } catch { /* bỏ qua */ }
+      if (Date.now() - last > 60000) {
+        try { sessionStorage.setItem('atlas-auto-reload', String(Date.now())); } catch { /* bỏ qua */ }
+        location.reload();
+        return;
+      }
+    }
     showError('Không tải được màn hình này.', e);
     return;
   }
@@ -156,6 +167,7 @@ function showError(msg, err) {
   viewEl.replaceChildren(h('div.empty',
     h('p', msg),
     h('p.small.faint', String(err?.message || err || '')),
+    h('p.small.faint', 'Thường do app vừa cập nhật bản mới. Bấm Tải lại app là xong.'),
     h('button.btn.sm', { onclick: () => location.reload() }, 'Tải lại app'),
   ));
 }
@@ -263,9 +275,14 @@ async function boot() {
   }
 }
 
+/* Có bản mới (service worker mới vừa nắm quyền): lần chuyển màn hình kế tiếp thì tải lại cả app,
+   để mọi tệp mã cùng một phiên bản. Không tải lại giữa chừng bài đang làm. */
+let swUpdated = false;
 function registerServiceWorker() {
   if (!('serviceWorker' in navigator)) return;
   if (location.protocol === 'file:') return;
+  const hadController = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener('controllerchange', () => { if (hadController) swUpdated = true; });
   navigator.serviceWorker.register('sw.js')
     .then(() => navigator.serviceWorker.ready)
     .then((reg) => reg.active?.postMessage('fill-offline'))
