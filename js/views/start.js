@@ -6,6 +6,7 @@ import * as content from '../content.js';
 import { h } from '../ui.js';
 import { zhPath, enPath, pathCard } from '../path.js';
 import { buildToday } from '../plan.js';
+import { loopVideo } from '../fx.js';
 
 const LANGS = [
   ['both', '汉 + Aa', 'Cả hai', 'Tiếng Anh và tiếng Trung song song mỗi ngày'],
@@ -61,7 +62,7 @@ export async function render() {
     if (key === 'langs') {
       el.replaceChildren(
         h('div.start-hello',
-          h('img.start-welcome', { src: 'img/moments/welcome.webp', alt: 'Han và Kai' }),
+          loopVideo('han-chao', 'start-vid'),
           h('div', h('b', 'Chào bạn! Mình là Han và Kai.'), h('div.small.muted', 'Trả lời 4 câu (1 phút), app xếp lộ trình riêng và chỉ đúng bài cần học trước.')),
         ),
         h('div.card', head('Bạn muốn học gì?'), choice(LANGS, 'langs')),
