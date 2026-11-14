@@ -1,20 +1,26 @@
-/* Tranh minh hoạ cho từ và câu tiếng Anh, theo kiểu thẻ học (flashcard).
-   Icon: Fluent Emoji Flat (MIT, Microsoft), dựng sẵn ở data/pics/en.json bằng tools/build-pics.mjs.
-   Tải lười: chỉ nạp file tranh lần đầu cần dùng. */
+/* Tranh minh hoạ cho từ và câu tiếng Anh, tiếng Trung, theo kiểu thẻ học (flashcard).
+   Icon: Fluent Emoji Flat (MIT, Microsoft), dựng sẵn ở data/pics/en.json (tools/build-pics.mjs)
+   và data/pics/zh.json (tools/build-pics-zh.mjs). Tải lười: chỉ nạp file tranh lần đầu cần dùng. */
 import { h } from './ui.js';
 
-let data = null;
-let loading = null;
+const packs = { en: null, zh: null };
+const loading = { en: null, zh: null };
+let data = null; // gói tiếng Anh (giữ tên cũ cho các hàm bên dưới)
 
-export function loadPics() {
-  if (data) return Promise.resolve(data);
-  if (!loading) {
-    loading = fetch('data/pics/en.json')
+export function loadPics(lang = 'en') {
+  if (packs[lang]) return Promise.resolve(packs[lang]);
+  if (!loading[lang]) {
+    loading[lang] = fetch(`data/pics/${lang}.json`)
       .then((r) => (r.ok ? r.json() : null))
-      .then((j) => { data = j; return j; })
-      .catch(() => { loading = null; return null; });
+      .then((j) => {
+        if (j && lang === 'zh') { j.soloSet = new Set(j.solo || []); j.segSet = new Set(j.seg || []); }
+        packs[lang] = j;
+        if (lang === 'en') data = j;
+        return j;
+      })
+      .catch(() => { loading[lang] = null; return null; });
   }
-  return loading;
+  return loading[lang];
 }
 
 /* Bật/tắt trong Cài đặt, mặc định bật. Đọc đồng bộ từ localStorage cho nhanh. */
@@ -63,7 +69,13 @@ function candidates(w) {
 }
 
 /** Tên icon cho một từ (đã nạp dữ liệu). */
-export function picName(word) {
+export function picName(word, lang = 'en') {
+  if (lang === 'zh') {
+    const z = packs.zh;
+    if (!z) return null;
+    const w = String(word).trim();
+    return z.words[w] || z.words[w.replace(/儿$/, '')] || null;
+  }
   if (!data) return null;
   const w = String(word).toLowerCase().trim();
   if (data.words[w]) return data.words[w];
@@ -72,13 +84,13 @@ export function picName(word) {
   return null;
 }
 
-function svg(name, size) {
+function svg(name, size, pack = data) {
   const el = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  el.setAttribute('viewBox', `0 0 ${data.size} ${data.size}`);
+  el.setAttribute('viewBox', `0 0 ${pack.size} ${pack.size}`);
   el.setAttribute('width', size);
   el.setAttribute('height', size);
   el.setAttribute('aria-hidden', 'true');
-  el.innerHTML = data.icons[name];
+  el.innerHTML = pack.icons[name];
   return el;
 }
 
@@ -87,20 +99,65 @@ const TINTS = ['#fde2d8', '#dff0e9', '#fbf0d8', '#e3e8fb', '#f6e1ef', '#e2f3f7',
 const tint = (w) => { let x = 0; for (const c of w) x = (x * 31 + c.charCodeAt(0)) >>> 0; return TINTS[x % TINTS.length]; };
 
 /** Ô tranh lớn cho một từ. Không có tranh thì ô tự bỏ đi. */
-export function wordPic(word, { size = 88 } = {}) {
-  const box = h('div.pic-tile', { style: { background: tint(String(word).toLowerCase()) } });
+export function wordPic(word, { size = 88, lang = 'en' } = {}) {
   if (!picsOn()) return null;
-  loadPics().then(() => {
-    const n = picName(word);
+  const box = h('div.pic-tile', { style: { background: tint(String(word).toLowerCase()) } });
+  loadPics(lang).then((pack) => {
+    const n = pack ? picName(word, lang) : null;
     if (!n) { box.remove(); return; }
-    box.append(svg(n, size));
+    box.append(svg(n, size, pack));
   });
   return box;
 }
 
+/* Lượng từ hay trùng chữ với danh từ: 一门课, 这笔钱 → không vẽ cửa, bút. */
+const MW = new Set(['门', '笔']);
+const NUMISH = '一二两三四五六七八九十百几每这那哪多好整';
+
+/** Tách câu tiếng Trung theo từ dài nhất có trong bộ tranh, trả về các từ có tranh theo thứ tự. */
+export function zhPicWords(text, z = packs.zh) {
+  const out = [];
+  if (!z) return out;
+  const s = String(text);
+  for (let i = 0; i < s.length;) {
+    let hit = null;
+    for (let L = Math.min(6, s.length - i); L >= 1; L--) {
+      const t = s.substr(i, L);
+      if (L === 1 ? z.soloSet.has(t) : (z.words[t] || z.segSet.has(t))) { hit = t; break; }
+    }
+    if (!hit) { i++; continue; }
+    if (z.words[hit] && !(MW.has(hit) && i > 0 && NUMISH.includes(s[i - 1]))) out.push(hit);
+    i += hit.length;
+  }
+  return out;
+}
+
+function zhSentencePics(text, { max, minChars, skip }) {
+  const han = (String(text).match(/[\u4e00-\u9fff]/g) || []).length;
+  if (han < minChars) return null;
+  const strip = h('div.pic-strip');
+  loadPics('zh').then((z) => {
+    if (!z) { strip.remove(); return; }
+    const seen = new Set();
+    const skipName = skip ? picName(skip, 'zh') : null;
+    let n = 0;
+    for (const w of zhPicWords(text, z)) {
+      if (n >= max) break;
+      const name = z.words[w];
+      if (seen.has(name) || name === skipName) continue;
+      seen.add(name);
+      strip.append(h('div.pic-mini', { style: { background: tint(w) } }, svg(name, 34, z), h('span.cn', w)));
+      n++;
+    }
+    if (!n) strip.remove();
+  });
+  return strip;
+}
+
 /** Dải tranh nhỏ cho câu: mỗi tranh kèm từ tiếng Anh ở dưới, tối đa `max` tranh. */
-export function sentencePics(text, { max = 3, minWords = 4, skip = '' } = {}) {
+export function sentencePics(text, { max = 3, minWords = 4, minChars = 5, skip = '', lang = 'en' } = {}) {
   if (!picsOn()) return null;
+  if (lang === 'zh') return zhSentencePics(text, { max, minChars, skip });
   const words = String(text).toLowerCase().match(/[a-z]+(?:'[a-z]+)?/g) || [];
   if (words.length < minWords) return null;
   const strip = h('div.pic-strip');

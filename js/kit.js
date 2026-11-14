@@ -33,7 +33,7 @@ export function pair(en, vi, { actions = [], lang = 'en', pics = true } = {}) {
     h('div.grow',
       h(lang === 'en' ? 'div.pair-en' : 'div.pair-en.cn', lang === 'en' ? wordy(en) : en),
       vi && h('div.pair-vi', vi),
-      lang === 'en' && pics ? sentencePics(en) : null,
+      pics ? sentencePics(en, { lang: lang === 'en' ? 'en' : 'zh' }) : null,
     ),
     h('div.pair-act', sayBtn(en, lang), ...actions),
   );

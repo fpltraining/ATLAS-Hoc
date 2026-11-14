@@ -10,6 +10,7 @@ import * as content from '../content.js';
 import { newCard, ZH_TYPES } from '../srs.js';
 import { h, toast, pill } from '../ui.js';
 import { refreshDueBadge } from '../app.js';
+import { wordPic } from '../pics.js';
 
 export const LEVELS = ['1', '2', '3', '4', '5', '6', '7-9'];
 const PAGE = 100;
@@ -54,12 +55,14 @@ export async function render(route) {
   const el = h('div.stack',
     h('div.card',
       h('div.row.spread',
-        h('div',
-          h('div.cn', { style: { fontSize: '48px', lineHeight: 1.1 } }, w),
-          h('div.row.wrap', { style: { gap: '8px', marginTop: '6px' } },
-            h('span.py', { style: { fontSize: '20px' } }, py), hv ? h('span.hv', hv) : null,
-            lv[w] ? pill(`HSK ${lv[w]}`, 'jade') : null),
-        ),
+        h('div.row', { style: { gap: '16px', alignItems: 'center' } },
+          wordPic(w, { size: 72, lang: 'zh' }),
+          h('div',
+            h('div.cn', { style: { fontSize: '48px', lineHeight: 1.1 } }, w),
+            h('div.row.wrap', { style: { gap: '8px', marginTop: '6px' } },
+              h('span.py', { style: { fontSize: '20px' } }, py), hv ? h('span.hv', hv) : null,
+              lv[w] ? pill(`HSK ${lv[w]}`, 'jade') : null),
+          )),
         h('button.speak-btn', { onclick: say, 'aria-label': 'Đọc' }, '🔊'),
       ),
       mine?.[2] ? h('div', { style: { marginTop: '10px', fontSize: '18px', fontWeight: 600 } }, mine[2]) : null,
