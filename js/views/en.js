@@ -14,6 +14,7 @@ import { h, toast, section, progressBar, pill } from '../ui.js';
 import { gradeButton, aiConfig } from '../ai.js';
 import { cardSummary } from '../progress.js';
 import { award } from '../xp.js';
+import { enPath, pathStrip } from '../path.js';
 
 export async function render(route) {
   const sub = route.args[0];
@@ -45,10 +46,12 @@ async function hub() {
     h('h1.today-title', enTitle(st, n, course)),
     h('div', { style: { marginTop: '12px' } }, progressBar(doneHere / stage.total)),
     stage.ready === false ? h('div.note.seal', { style: { marginTop: '10px' } }, stage.note) : null,
-    h('a.btn.seal.block', { href: '#/en/session', style: { marginTop: '14px' } }, doneHere || enCards.length ? 'Học tiếp ›' : 'Bắt đầu ›'),
-    !en.placed && !doneHere ? h('a.small', { href: '#/en/placement', style: { display: 'block', textAlign: 'center', marginTop: '10px', color: '#fff', opacity: 0.85, textDecoration: 'underline' } }, 'Chưa biết bắt đầu từ đâu? Làm bài xếp lớp (10 phút)') : null,
+    h('a.btn.seal.block', { href: '#/en/session', style: { marginTop: '14px' } }, 'Học ngay ›'),
+    !en.placed && !doneHere ? h('a.hero-link', { href: '#/en/placement' }, 'Biết chút ít tiếng Anh? Làm bài xếp lớp 10 phút để vào đúng chặng') : null,
   ));
+  el.append(h('div.card', h('div.row.spread', h('h3', 'Lộ trình tiếng Anh'), h('span.small.faint', '✓ xong · ● đang học')), pathStrip(await enPath())));
 
+  el.append(h('h3.hub-head', 'Luyện thêm khi rảnh'));
   el.append(h('div.hub-grid',
     tile('#/read/en', '❡', 'Đọc truyện', nx ? nx.story.title : `${enStories.length} bài`),
     tile('#/penen', '✎', 'Viết bằng bút', 'Đồ, chép, viết trí nhớ'),

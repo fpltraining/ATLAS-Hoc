@@ -10,6 +10,7 @@
 import * as store from './store.js';
 import * as data from './data.js';
 import * as content from './content.js';
+import { zhPath } from './path.js';
 
 /* Số phút cho từng khối, theo quỹ thời gian mỗi ngày. */
 export const BUDGETS = {
@@ -111,7 +112,9 @@ export async function buildToday() {
   ]);
 
   const budget = settings.dailyMinutes || 120;
-  const type = dayType(settings);
+  // Người mới (chưa tới 30 thẻ) chưa có gì để củng cố: ngày nào cũng học bài đầy đủ, chưa theo nhịp tuần
+  const isNew = cards.length < 30;
+  const type = isNew ? 'full' : dayType(settings);
   const blocks = blocksFor(budget, type, settings);
   const now = Date.now();
   const dueCards = cards.filter((c) => c.due <= now);
@@ -120,7 +123,13 @@ export async function buildToday() {
   const steps = [];
 
   const zhDone = idx.lessons.filter((l) => lessons[l.id]?.done).length;
-  const zhStarted = cards.some((c) => !c.lang || c.lang === 'zh') || zhDone > 0;
+  const enSessDone = Object.values(en.sess?.[en.stage || 0] || {}).filter((x) => x.done).length;
+
+  // Mới học tiếng Anh (5 buổi đầu chặng 0) thì chưa đọc truyện: thời gian đó dồn cho bài học
+  if (blocks.read && !(en.stage || 0) && enSessDone < 5 && blocks.en) {
+    blocks.en += blocks.read;
+    blocks.read = 0;
+  }
 
   // Mới học tiếng Trung thì chưa đọc được truyện: 10 phút đó dành hết cho bài học
   if (blocks.readZh && zhDone < 3 && blocks.zh) {
@@ -164,16 +173,16 @@ export async function buildToday() {
     });
   }
 
-  /* ---- tiếng Trung ---- */
+  /* ---- tiếng Trung: theo lộ trình (phát âm trước, rồi HSK) ---- */
   if (blocks.zh) {
-    const meta = idx.lessons.find((l) => !lessons[l.id]?.done) || idx.lessons[0];
-    const beginner = !zhStarted && !lessons.pinyinSeen;
+    const zp = await zhPath();
+    const nx = zp.next;
     steps.push({
-      key: 'zh', mins: blocks.zh, title: 'Tiếng Trung: học bài',
-      href: beginner ? '#/pinyin' : `#/lesson/${meta.id}`,
-      desc: beginner
-        ? 'Bắt đầu từ Pinyin và thanh điệu, rồi tới bài 1'
-        : `HSK ${meta.level}, bài ${meta.no ?? meta.id}: ${meta.title}${quota.zh ? ` · tối đa ${quota.zh} từ mới, viết từng nét bằng bút` : ' · luyện viết chữ cũ'}`,
+      key: 'zh', mins: blocks.zh, href: nx.href,
+      title: nx.kind === 'pron' ? `Tiếng Trung: phát âm bài ${nx.title.match(/bài (\d+)/)[1]}` : 'Tiếng Trung: học bài',
+      desc: nx.kind === 'pron'
+        ? `${nx.title.replace(/^Phát âm bài \d+: /, '')} · chặng đầu tiên, học xong 10 bài mới vào HSK 1`
+        : `${nx.title}${quota.zh ? ` · tối đa ${quota.zh} từ mới, viết từng nét bằng bút` : ' · luyện viết chữ cũ'}`,
     });
   }
 
@@ -208,5 +217,5 @@ export async function buildToday() {
   }
 
   for (const s of steps) s.done = !!day.steps[s.key] || !!s.auto;
-  return { steps, budget, type, due, quota, day, settings };
+  return { steps, budget, type, due, quota: isNew ? { ...quota, reason: '' } : quota, day, settings, isNew };
 }
