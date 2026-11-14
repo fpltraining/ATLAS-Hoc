@@ -82,6 +82,7 @@ var G = window.G || (window.G = {});
     G.lessonInit();
     document.getElementById('hud-home').onclick = G.goLobby;
     document.getElementById('act').onclick = G.doNear;
+    document.getElementById('quest').onclick = function () { G.goQuest(); };
     if (!G.S.nhanVat) {
       // lần đầu: tạo nhân vật → lời mở đầu → ra khỏi nhà
       G.openCreator(function () { G.introStory(function () { G.goCity('en'); }); });

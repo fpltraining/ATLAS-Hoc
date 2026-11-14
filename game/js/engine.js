@@ -220,6 +220,89 @@ var G = window.G || (window.G = {});
   function TX() { return (scene.teacher || {}).x || 768; }
   function TY() { return (scene.teacher || {}).y || 520; }
 
+
+  /* ---------- Việc tiếp theo: tính theo tiến độ, chỉ đường trong cảnh hiện tại ---------- */
+  function bld(id) { var bs = scene.buildings || []; for (var i = 0; i < bs.length; i++) if (bs[i].id === id) return bs[i]; return null; }
+  function nextRoom() {
+    var d = G.EN_HALL_DOORS;
+    for (var i = 0; i < d.length; i++) if (G.ROOMS[d[i].room] && !G.roomPassed(d[i].room)) return { door: d[i], idx: i };
+    return null;
+  }
+  function nextLife() {   // nơi đời sống đã mở mà chưa xong cả 3 tình huống
+    for (var k in G.LIFE) {
+      if (!G.LIFE.hasOwnProperty(k) || G.LIFE[k].lang !== 'en' || !G.roomPassed(G.LIFE[k].unlock)) continue;
+      var st = G.S.doiSong[k], n = 0; if (st) for (var t in st.xong) if (st.xong.hasOwnProperty(t)) n++;
+      if (n < G.LIFE[k].talks.length) return k;
+    }
+    return null;
+  }
+  /* trả về { text, x, y, h (độ cao dấu), label (nút hành động khớp) } hoặc null */
+  function goal() {
+    var nr = nextRoom(), lf = nr ? null : nextLife();
+    var tName = nr ? G.NPCS[G.ROOM_TEACHER[nr.door.room]].name : '';
+    var what = nr ? 'Học phòng ' + nr.door.label + ' với ' + tName : lf ? 'Nói chuyện ở ' + G.LIFE[lf].title : 'Ôn lại một phòng bất kỳ để lấy thêm sao';
+    var id = sceneId;
+    if (id === 'home_en') { var bs = bld('busstop'); return { text: 'Ra bến xe buýt đi tới trường · ' + what, x: bs.x, y: bs.y + 18, h: 230, label: 'Đợi xe buýt tới trường' }; }
+    if (scene.city === 'zh') { var ap = bld('airport'); return ap ? { text: 'Bay về Brightford để học tiếng Anh', x: ap.x, y: ap.y + 18, h: 260, label: 'Vào Sân bay' } : (scene.exit ? { text: 'Ra ngoài, bay về Brightford', x: scene.exit.x, y: scene.exit.y, h: 120, label: scene.exit.label } : null); }
+    if (id === 'city_en') {
+      if (!nr && lf) { var lb = null, bs2 = scene.buildings; for (var i = 0; i < bs2.length; i++) if (bs2[i].life === lf) lb = bs2[i]; if (lb) return { text: what + ' (+20 XP mỗi tình huống)', x: lb.x, y: lb.y + 18, h: 260, label: 'Vào ' + lb.name }; }
+      var sc = bld('school'); return { text: 'Vào Trường Anh ngữ · ' + what, x: sc.x, y: sc.y + 18, h: 260, label: 'Vào ' + sc.name };
+    }
+    if (scene.kind === 'hall') {
+      if (!nr) return { text: lf ? 'Ra phố · ' + what : what, x: lf ? scene.exit.x : G.EN_HALL_DOORS[0].x, y: lf ? scene.exit.y : G.HALL_DOOR_Y, h: lf ? 120 : 220, label: lf ? scene.exit.label : 'Vào phòng ' + G.EN_HALL_DOORS[0].label };
+      return { text: 'Vào cửa ' + nr.door.label + ' (cửa thứ ' + (nr.idx + 1) + ' từ trái) · ' + tName, x: nr.door.x, y: G.HALL_DOOR_Y, h: 230, label: 'Vào phòng ' + nr.door.label };
+    }
+    if (scene.kind === 'classroom') {
+      var here = G.currentRoom, hn = G.NPCS[G.ROOM_TEACHER[here]];
+      if (nr && here !== nr.door.room) return { text: 'Phòng này đã qua. Ra hành lang, sang phòng ' + nr.door.label, x: scene.exit.x, y: scene.exit.y, h: 120, label: scene.exit.label };
+      var p = G.S.phong[here];
+      return { text: 'Gặp ' + hn.name + ' · ' + (p ? 'Kiểm tra lại để đạt từ 8/10' : 'Học → Luyện → Kiểm tra'), x: TX(), y: TY() + 40, h: 220, label: 'Nói chuyện với ' + hn.name };
+    }
+    if (scene.kind === 'shop') return { text: 'Gặp ' + G.NPCS[scene.npc].name + ' và chọn một tình huống', x: TX(), y: TY() + 40, h: 220, label: 'Nói chuyện với ' + G.NPCS[scene.npc].name };
+    return null;
+  }
+  var curGoal = null, lastGoalText = '';
+  function updateQuest() {
+    curGoal = goal();
+    var q = document.getElementById('quest');
+    if (!q) return;
+    q.style.display = curGoal ? '' : 'none';
+    if (curGoal && curGoal.text !== lastGoalText) { lastGoalText = curGoal.text; document.getElementById('quest-text').textContent = curGoal.text; }
+  }
+  /* bấm thanh nhiệm vụ: tự đi tới chỗ cần đến rồi làm luôn */
+  G.goQuest = function () {
+    if (!curGoal) return;
+    var ts = triggers();
+    for (var i = 0; i < ts.length; i++) if (ts[i].label === curGoal.label) {
+      if (near === ts[i]) { ts[i].act(); return; }
+      target = { x: ts[i].x, y: ts[i].y + (scene.kind === 'city' ? 10 : 0) }; pending = ts[i].act; pendingLabel = ts[i].label; return;
+    }
+    target = { x: curGoal.x, y: curGoal.y }; pending = null;
+  };
+  /* dấu 📍 trên đích; nếu đích ngoài màn hình thì mũi tên ở mép chỉ hướng */
+  function drawGoalMark() {
+    if (!curGoal) return;
+    var t = Date.now() / 300, gx = curGoal.x, gy = curGoal.y - curGoal.h + Math.sin(t) * 8;
+    var sx = (gx - cam.x) * zoom, sy = (gy - cam.y) * zoom, m = 36, top = 130, bot = 150;
+    ctx.save();
+    if (sx > m && sx < W - m && sy > top && sy < H - bot) {
+      ctx.setTransform(dpr * zoom, 0, 0, dpr * zoom, -cam.x * dpr * zoom, -cam.y * dpr * zoom);
+      ctx.font = '44px -apple-system, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'bottom';
+      ctx.fillText('📍', gx, gy);
+      ctx.strokeStyle = 'rgba(200,85,61,.7)'; ctx.lineWidth = 4;
+      var r = 22 + (Math.sin(t) + 1) * 6; ctx.beginPath(); ctx.ellipse(curGoal.x, curGoal.y, r, r * 0.4, 0, 0, 6.283); ctx.stroke();
+    } else {
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      var cx = W / 2, cy = (top + H - bot) / 2, dx = sx - cx, dy = sy - cy;
+      var k = Math.min(Math.abs((W / 2 - m) / (dx || 1e-6)), Math.abs(((H - top - bot) / 2) / (dy || 1e-6)));
+      var ax = cx + dx * k, ay = cy + dy * k, ang = Math.atan2(dy, dx);
+      ctx.translate(ax, ay); ctx.rotate(ang);
+      ctx.fillStyle = 'rgba(200,85,61,.95)'; ctx.strokeStyle = '#fff'; ctx.lineWidth = 3;
+      ctx.beginPath(); ctx.moveTo(18, 0); ctx.lineTo(-12, -14); ctx.lineTo(-6, 0); ctx.lineTo(-12, 14); ctx.closePath(); ctx.fill(); ctx.stroke();
+    }
+    ctx.restore();
+  }
+
   function doorsHere() { return G[scene.doors] || []; }
 
   function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
@@ -244,6 +327,7 @@ var G = window.G || (window.G = {});
     for (var j = 0; j < items.length; j++) items[j].draw(items[j].o);
 
     if (scene.kind === 'hall') drawDoorPlates();
+    updateQuest();
     if (target) { ctx.strokeStyle = 'rgba(255,255,255,.8)'; ctx.lineWidth = 3; ctx.beginPath(); ctx.ellipse(target.x, target.y, 16, 8, 0, 0, 6.283); ctx.stroke(); }
 
     // ngày và đêm theo giờ Việt Nam
@@ -251,6 +335,7 @@ var G = window.G || (window.G = {});
     var hr = G.vnParts().h;
     var night = scene.kind === 'city' ? (hr >= 19 || hr < 5 ? 0.38 : hr >= 18 ? 0.2 : hr < 6 ? 0.2 : 0) : 0;
     if (night) { ctx.fillStyle = 'rgba(20,24,60,' + night + ')'; ctx.fillRect(0, 0, W, H); }
+    drawGoalMark();
     if (fade > 0) { ctx.fillStyle = 'rgba(27,33,64,' + fade + ')'; ctx.fillRect(0, 0, W, H); }
   }
 
@@ -289,17 +374,18 @@ var G = window.G || (window.G = {});
   function shadow(x, y, r) { ctx.fillStyle = 'rgba(0,0,0,.18)'; ctx.beginPath(); ctx.ellipse(x, y, r, r * 0.38, 0, 0, 6.283); ctx.fill(); }
 
   function drawPlayer() {
+    // bóng dưới chân co giãn theo nhịp bước
+    var sh = P.moving ? 1 - Math.abs(Math.sin(P.t * 9)) * 0.12 : 1;
     if (G.S.nhanVat === 'custom' && G.S.avatar) {
-      shadow(P.x, P.y, 24);
-      G.drawAvatar(ctx, G.S.avatar, P.x, P.y + 4, 112, P.dir, P.t * 11, P.moving);
+      shadow(P.x, P.y, 24 * sh);
+      G.drawAvatar(ctx, G.S.avatar, P.x, P.y + 4, 112, P.dir, P.t * 9, P.moving);
       return;
     }
     var who = G.S.nhanVat || 'han';
-    var dir = P.dir === 'right' ? 'left' : P.dir;
-    var bob = P.moving ? Math.abs(Math.sin(P.t * 10)) * 7 : 0;
-    var sz = 120;
-    shadow(P.x, P.y, 26);
-    G.drawAsset(ctx, 'player_' + who + '_' + dir + '.png', P.x - sz / 2, P.y - sz - bob + 8, sz, sz, P.dir === 'right');
+    var dir = P.dir === 'right' ? 'left' : P.dir, flip = P.dir === 'right';
+    var name = 'player_' + who + '_' + dir + '.png';
+    shadow(P.x, P.y, 26 * sh);
+    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 9, P.moving, 0.72);
   }
   function drawKai() {
     var bob = Math.sin(Date.now() / 260) * 4;
@@ -310,7 +396,7 @@ var G = window.G || (window.G = {});
     var n = G.NPCS[id];
     var tx = TX(), ty = TY();
     shadow(tx, ty, 34);
-    G.drawAsset(ctx, n.img, tx - 85, ty - 170, 170, 170);
+    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, n.img, X, Y, S, S); }, tx, ty, 170, 'down', 0, false, 0.72);
     ctx.fillStyle = 'rgba(27,33,64,.85)';
     G.roundRect(ctx, tx - 70, ty + 8, 140, 30, 15); ctx.fill();
     ctx.fillStyle = '#fff'; ctx.font = '700 17px -apple-system, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';

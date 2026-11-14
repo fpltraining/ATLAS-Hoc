@@ -266,3 +266,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .souv { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 10px; font-size: 13px; }
 .souv.lock { opacity: .45; }
 .souv .souv-img { width: 72px; height: 72px; }
+
+/* ---------- Thanh nhiệm vụ: việc tiếp theo ---------- */
+.quest { position: absolute; left: 50%; transform: translateX(-50%); top: calc(max(10px, env(safe-area-inset-top)) + 54px); z-index: 6;
+  display: flex; align-items: center; gap: 10px; width: min(92vw, 460px); text-align: left; border: 0; border-radius: 16px; padding: 8px 12px;
+  background: rgba(255,253,249,.96); color: var(--navy); box-shadow: 0 6px 18px rgba(27,33,64,.25); }
+.quest small { display: block; font-size: 11px; font-weight: 700; color: var(--coral); text-transform: uppercase; letter-spacing: .05em; }
+.quest b { display: block; font-size: 14px; line-height: 1.3; }
+.quest > span:nth-child(2) { flex: 1; }
+.q-pin { font-size: 22px; animation: qb 1.2s ease-in-out infinite; }
+.q-go { background: var(--coral); color: #fff; font-weight: 800; border-radius: 10px; padding: 6px 10px; font-size: 13px; white-space: nowrap; }
+@keyframes qb { 50% { transform: translateY(-3px); } }
+.kai { top: calc(max(10px, env(safe-area-inset-top)) + 124px) !important; }
