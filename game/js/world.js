@@ -8,6 +8,9 @@ G.NPCS = {
   lily: { name: 'Mrs. Lily', img: 'npc_lily.png', role: 'Giáo viên phòng A1-3' },
   sam: { name: 'Chef Sam', img: 'npc_sam.png', role: 'Giáo viên phòng A1-4' },
   kai: { name: 'Hiệu trưởng Kai', img: 'kai_follow.png', role: 'Hiệu trưởng, phòng thi cuối cấp A1' },
+  leo: { name: 'Leo', img: 'npc_leo.png', role: 'Pha chế ở quán cà phê' },
+  rosa: { name: 'Mrs. Rosa', img: 'npc_rosa.png', role: 'Bán hoa quả ở chợ' },
+  anna: { name: 'Dr. Anna', img: 'npc_anna.png', role: 'Bác sĩ ở bệnh viện' },
   wang: { name: '王老师 Cô Vương', img: 'npc_wang.png', role: 'Phòng Phát âm và HSK1-1' },
   li: { name: '李老师 Thầy Lý', img: 'npc_li.png', role: 'Phòng HSK1-2' },
   zhang: { name: '张阿姨 Dì Trương', img: 'npc_zhang.png', role: 'Phòng HSK1-3' },
@@ -59,10 +62,10 @@ G.SCENES = {
     walk: { x0: 30, y0: 60, x1: 1506, y1: 1000 },
     buildings: [
       { id: 'airport', img: 'building_en_airport.png', x: 768, y: 205, name: 'Sân bay', fly: 'zh' },
-      { id: 'market', img: 'building_en_market.png', x: 330, y: 440, name: 'Chợ', soon: 'Chợ mở ở giai đoạn 4.' },
-      { id: 'cafe', img: 'building_en_cafe.png', x: 1206, y: 440, name: 'Quán cà phê', soon: 'Quán cà phê mở ở giai đoạn 4.' },
+      { id: 'market', img: 'building_en_market.png', x: 330, y: 440, name: 'Chợ', life: 'en-market' },
+      { id: 'cafe', img: 'building_en_cafe.png', x: 1206, y: 440, name: 'Quán cà phê', life: 'en-cafe' },
       { id: 'school', img: 'building_en_school.png', x: 420, y: 880, name: 'Trường Anh ngữ', go: { scene: 'en_hall', x: 768, y: 930 } },
-      { id: 'hospital', img: 'building_en_hospital.png', x: 1110, y: 880, name: 'Bệnh viện', soon: 'Bệnh viện mở ở giai đoạn 4.' },
+      { id: 'hospital', img: 'building_en_hospital.png', x: 1110, y: 880, name: 'Bệnh viện', life: 'en-hospital' },
       { id: 'busstop', img: 'building_en_busstop.png', x: 125, y: 945, name: 'Bến xe buýt', ride: 'bus', toward: 'home' },
       { id: 'metro', img: 'building_en_metro.png', x: 1395, y: 945, name: 'Ga tàu điện', ride: 'metro', toward: 'home' }
     ]
@@ -82,6 +85,23 @@ G.SCENES = {
     teacher: { x: 900, y: 380 },
     exit: { x: 768, y: 985, label: 'Ra hành lang', to: { scene: 'en_hall', door: true } }
   }
+};
+
+/* Khu đời sống Brightford: vào trong là gặp người bán / bác sĩ */
+G.SCENES.cafe_en = {
+  city: 'en', title: 'Quán cà phê của Leo', bg: 'interior_en_cafe.png', w: 1536, h: 1024, kind: 'shop', life: 'en-cafe', npc: 'leo',
+  walk: { x0: 90, y0: 330, x1: 1446, y1: 990 }, teacher: { x: 768, y: 400 },
+  exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'cafe' } }
+};
+G.SCENES.market_en = {
+  city: 'en', title: 'Chợ nông sản', bg: 'interior_en_market.png', w: 1536, h: 1024, kind: 'shop', life: 'en-market', npc: 'rosa',
+  walk: { x0: 90, y0: 330, x1: 1446, y1: 990 }, teacher: { x: 768, y: 400 },
+  exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'market' } }
+};
+G.SCENES.hospital_en = {
+  city: 'en', title: 'Bệnh viện Brightford', bg: 'interior_en_hospital.png', w: 1536, h: 1024, kind: 'shop', life: 'en-hospital', npc: 'anna',
+  walk: { x0: 90, y0: 330, x1: 1446, y1: 990 }, teacher: { x: 1100, y: 400 },
+  exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'hospital' } }
 };
 
 /* Trường Lạc trấn: bản đồ cùng bố cục 5 bãi đất như trung tâm Brightford */

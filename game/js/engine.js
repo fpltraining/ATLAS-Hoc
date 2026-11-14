@@ -73,6 +73,10 @@ var G = window.G || (window.G = {});
         list.push({ x: door.x, y: G.HALL_DOOR_Y, r: 80, label: 'Vào phòng ' + door.label, act: (function (idx) { return function () { useDoor(idx); }; })(d) });
       }
     }
+    if (scene.kind === 'shop') {
+      var nid = scene.npc;
+      list.push({ x: TX(), y: TY() + 40, r: 110, npc: nid, label: 'Nói chuyện với ' + G.NPCS[nid].name, act: function () { G.openLife(scene.life); } });
+    }
     if (scene.kind === 'classroom' && G.currentRoom) {
       var tid = G.ROOM_TEACHER[G.currentRoom];
       if (tid) list.push({ x: TX(), y: TY() + 40, r: 110, npc: tid, label: 'Nói chuyện với ' + G.NPCS[tid].name, act: function () { G.openLesson(G.currentRoom); } });
@@ -91,6 +95,13 @@ var G = window.G || (window.G = {});
   function useBuilding(b) {
     if (b.ride) { G.sfx('door'); G.openRide(b.ride, b.toward); return; }
     if (b.fly) { G.sfx('door'); G.openFlight(scene.city, b.fly); return; }
+    if (b.life) {
+      var L = G.LIFE[b.life];
+      if (!G.roomPassed(L.unlock)) { G.sfx('wrong'); G.kaiSay(b.name + ' chưa mở. ' + L.unlockText); return; }
+      G.sfx('door'); G.enterScene(L.scene, { x: 768, y: 930, dir: 'up' });
+      G.kaiSay('Đi tới gặp ' + G.NPCS[L.npc].name + ' rồi bấm "Nói chuyện". Ở đây chỉ nói tiếng Anh nhé!');
+      return;
+    }
     if (b.home) { G.kaiSay(sceneId === 'home_en' ? 'Nhà của bạn đây. Hôm nay đi học nhé: ra bến xe buýt hoặc ga tàu điện!' : ''); return; }
     if (b.go) { G.sfx('door'); G.enterScene(b.go.scene, { x: b.go.x, y: b.go.y, dir: 'up' }); G.kaiSay(hallHint()); }
     else G.kaiSay(b.soon);
@@ -130,7 +141,7 @@ var G = window.G || (window.G = {});
         if (x > b.x - 125 && x < b.x + 125 && y > b.y - 190 && y < b.y - 4) return true;
       }
     }
-    if (scene.kind === 'classroom' && Math.abs(x - TX()) < 60 && Math.abs(y - TY() + 20) < 36) return true; // giáo viên
+    if ((scene.kind === 'classroom' || scene.kind === 'shop') && Math.abs(x - TX()) < 60 && Math.abs(y - TY() + 20) < 36) return true; // giáo viên
     return false;
   }
 
@@ -226,6 +237,7 @@ var G = window.G || (window.G = {});
     var items = [];
     if (scene.buildings) for (var i = 0; i < scene.buildings.length; i++) items.push({ y: scene.buildings[i].y, draw: drawBuilding, o: scene.buildings[i] });
     if (scene.kind === 'classroom' && G.currentRoom) items.push({ y: TY(), draw: drawTeacher, o: G.ROOM_TEACHER[G.currentRoom] });
+    if (scene.kind === 'shop') items.push({ y: TY(), draw: drawTeacher, o: scene.npc });
     items.push({ y: K.y, draw: drawKai });
     items.push({ y: P.y, draw: drawPlayer });
     items.sort(function (a, b) { return a.y - b.y; });

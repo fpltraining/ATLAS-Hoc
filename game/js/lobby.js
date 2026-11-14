@@ -66,6 +66,11 @@ var G = window.G || (window.G = {});
       })) : null
     ));
 
+    root.appendChild(G.el('h2.sec', 'Đồ kỷ niệm'));
+    root.appendChild(G.el('div.souvs', G.souvenirs().map(function (v) {
+      return G.el('div.souv' + (v.got ? '' : '.lock'), G.imgEl(v.item.img, 'souv-img'), G.el('b', v.got ? v.item.name : '???'), G.el('span.faint', v.place));
+    })));
+
     root.appendChild(G.el('h2.sec', 'Sao lưu và cài đặt'));
     var file = G.el('input', { type: 'file', accept: 'application/json,.json', style: { display: 'none' }, onchange: function (e) { if (e.target.files[0]) G.importSave(e.target.files[0], G.renderLobby); e.target.value = ''; } });
     root.appendChild(G.el('div.tools',
