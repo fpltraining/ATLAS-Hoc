@@ -26,7 +26,7 @@ async function listExams() {
   el.append(h('div.card',
     h('h2', 'Thi thử HSK'),
     h('p.muted', 'Đề luyện theo dạng đề HSK chuẩn 2025, chỉ dùng từ trong giáo trình của từng cấp. Đạt từ 60 điểm là đủ sức đi thi cấp đó.'),
-    h('p.small.faint', 'Đề do ATLAS soạn để luyện tập, không phải đề thi chính thức.'),
+    h('p.small.faint', 'Đề do ConnectLife soạn để luyện tập, không phải đề thi chính thức.'),
   ));
   for (const level of [...new Set(idx.map((e) => e.level))]) {
     const list = h('div');

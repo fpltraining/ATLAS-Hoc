@@ -66,7 +66,7 @@ export async function render() {
   const g = gameProgress();
   el.append(h('a.card.challenge-card.game-card', { href: 'game/' },
     h('img.game-thumb', { src: 'game/assets/card_city_en.png', alt: '' }),
-    h('div.grow', h('b', '🎮 Thế giới Ngôn Ngữ'),
+    h('div.grow', h('b', '🎮 ConnectLife Town'),
       h('div.small.faint', g
         ? `Phòng A1 đã qua ${g.rooms}/5${g.grad ? ' · 🎓 đã tốt nghiệp A1' : ''} · ${g.xp} XP · ${g.today ? 'hôm nay đã chơi ✓' : 'hôm nay chưa chơi'}`
         : 'Game: sống ở Brightford, đi xe buýt tới trường, học từng phòng A1, ra quán cà phê nói chuyện.')),

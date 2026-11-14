@@ -1,6 +1,6 @@
 {
-  "name": "Thế giới Ngôn Ngữ",
-  "short_name": "Thế giới NN",
+  "name": "ConnectLife Town",
+  "short_name": "ConnectLife",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

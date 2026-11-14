@@ -104,7 +104,7 @@ export async function renderSettings() {
 
     versionLine(),
     h('div.small.faint',
-      h('p', h('b', 'ATLAS'), ': học tiếng Anh và tiếng Trung, đọc truyện song ngữ, viết bằng Apple Pencil. Chạy hoàn toàn trên máy bạn.'),
+      h('p', h('b', 'ConnectLife'), ' (kết nối cuộc sống): học tiếng Anh và tiếng Trung, đọc truyện song ngữ, viết bằng Apple Pencil. Chạy hoàn toàn trên máy bạn.'),
       h('p', 'Dữ liệu nét viết: hanzi-writer-data. Cấu tạo chữ: Make Me a Hanzi. Cả hai theo Arphic Public License. Âm Hán Việt: Unihan Database của Unicode. Nghĩa chi tiết từ HSK: CVDICT của Phong Phan (CC BY-SA 4.0).'),
       h('p', 'Không quảng cáo, không tài khoản. Dữ liệu học nằm trên máy bạn; chỉ khi bạn bật Chấm bài bằng AI và tự bấm chấm thì bài đó mới được gửi tới máy chủ bạn đã điền.'),
     ),
