@@ -224,6 +224,7 @@ textarea.scribble.long { min-height: 104px; font-size: 16.5px; }
 .journal-row { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .journal-row:last-child { border-bottom: 0; }
 .lang-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.lang-stats > .card { margin-top: 0; }
 .week-chart { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; align-items: end; }
 .week-col { text-align: center; }
 .week-bar { height: 96px; display: flex; align-items: flex-end; justify-content: center; }

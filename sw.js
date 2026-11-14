@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v36';
+const VERSION = 'atlas-v37';
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */
@@ -28,11 +28,15 @@ const CORE_FILES = [
 /* Tải sau, chạy ngầm: nhiều và nặng hơn nhưng không cần ngay lúc mở app */
 const EXTRA_FILES = ['data/audio.json', 'data/zh-full.json', 'data/en/placement.json', 'data/exams/index.json', 'data/en/bank.json', 'data/en/book.json', 'data/en/sentences.json', 'data/topics.json', 'data/pics/en.json', 'data/pics/zh.json', 'data/pron/zh.json', 'data/pron/en.json', 'data/pron/combos.json', 'data/pinyin-grid.json', 'img/mascot/han-chao.webp', 'img/mascot/han-giai-thich.webp', 'img/mascot/han-nghe.webp', 'img/mascot/han-khen.webp', 'img/mascot/han-dong-vien.webp', 'img/mascot/han-nghi.webp', 'img/mascot/han-avatar.webp', 'img/mascot/kai-chao.webp', 'img/mascot/kai-giai-thich.webp', 'img/mascot/kai-nghe.webp', 'img/mascot/kai-khen.webp', 'img/mascot/kai-dong-vien.webp', 'img/mascot/kai-nghi.webp', 'img/mascot/kai-avatar.webp'];
 
+/* Bỏ qua bộ nhớ đệm HTTP của trình duyệt (GitHub Pages giữ 10 phút): nếu không, bản mới của app
+   có thể lưu lẫn file CSS cũ với file JS mới, vỡ giao diện tới tận lần cập nhật sau. */
+const noHttpCache = (f) => new Request(f, { cache: 'reload' });
+
 self.addEventListener('install', (e) => {
   e.waitUntil((async () => {
     const cache = await caches.open(CORE);
     // addAll thất bại toàn bộ nếu một file lỗi, nên thêm từng file để bền hơn
-    await Promise.all(CORE_FILES.map((f) => cache.add(f).catch(() => {})));
+    await Promise.all(CORE_FILES.map((f) => cache.add(noHttpCache(f)).catch(() => {})));
     self.skipWaiting();
   })());
 });
@@ -58,7 +62,7 @@ async function fillContentCache() {
     // nên mỗi lần mở app đều kiểm tra và tải lại phần khung nếu bị thiếu.
     const core = await caches.open(CORE);
     await Promise.all(CORE_FILES.map(async (f) => {
-      if (!(await core.match(f))) await core.add(f).catch(() => {});
+      if (!(await core.match(f))) await core.add(noHttpCache(f)).catch(() => {});
     }));
 
     const cache = await caches.open(RUNTIME);
@@ -89,7 +93,7 @@ async function fillContentCache() {
       while (i < todo.length) {
         const u = todo[i++];
         try {
-          const res = await fetch(u);
+          const res = await fetch(noHttpCache(u));
           if (res && res.ok) await cache.put(u, res.clone());
         } catch { /* mạng chập chờn, lần chạy sau tải tiếp */ }
       }
