@@ -45,8 +45,8 @@ PART D · TOWN PROPS (so characters can walk behind them)
 19. [MAGENTA] A sprite sheet of 8 separate town props in a 4x2 grid, same scale, each seen from the same slightly tilted top-down view, with a small soft shadow: a round oak tree, a palm tree, a solar street lamp, a park bench, a parked hover-car, a mailbox, a flower bed, a delivery drone.
 
 PART E · LOGO (ConnectLife = "connect your life")
-20. App icon logo for a cozy language-learning life-sim game called "ConnectLife". Rounded square app icon, same chibi style. A tiny futuristic town with rounded white buildings and a clock tower sitting on top of an open book, a small friendly robot waving in front, two speech bubbles linked together like a chain above the town (the idea of connecting people). No text inside the icon. Square 1:1.
-21. The same logo as image 20, as a wide 3:1 banner with the title "ConnectLife" in a bold, rounded, playful font below the icon. Navy text with a coral letter "L". Solid flat magenta #FF00FF background.
+20. App icon for "ConnectLife": a single big capital letter "C" sculpted from glossy red modeling clay (claymation / plasticine style), soft rounded edges, visible fingerprint texture and tiny tool marks, warm studio lighting with a soft shadow. Inside the open curve of the C, a small clay speech bubble in cream, linked to the C like a chain link (the idea of connecting people). Clean cream #f8f4ee background, rounded square app icon, centered, 1:1. No other text.
+21. The same red clay "C" logo as a wide 3:1 banner: the clay C on the left, followed by the word "onnectLife" in the same red clay letters so it reads "ConnectLife", the letter "L" slightly bigger. Solid flat magenta #FF00FF background.
 ```
 
 Đã nhận và lưu: bản đồ hai hòn đảo (đầu trang Ngôi nhà chung); xe buýt, tàu điện (đóng/mở cửa), 2 dải phố, bản đồ trung tâm, 5 toà nhà, hành lang, lớp học, 3 thẻ thành phố; 6 bộ trang phục, 8 kiểu tóc, 6 khuôn mặt, bản đồ khu phố Maple, nhà, bến xe buýt, cửa ga tàu, tài xế Mr. Joe; Han, Minh (3 hướng + 3 biểu cảm), Ms. Emma, cô Vương, hiệu trưởng Lý (+ tư thế nói), cửa mở. Kai dùng hình của app ATLAS.
