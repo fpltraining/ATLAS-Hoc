@@ -129,9 +129,9 @@ export function stress(parts, strong) {
 /** Vẽ theo mã trong dữ liệu bài: "mouth:velar+asp", "lips:round", "tones", "tones:3", "syllable", "combo:3-4", "stress:pho-to-graph:0" */
 /* Ảnh khẩu hình (vẽ bằng ChatGPT, đã soát giải phẫu và vẽ lại mũi tên luồng hơi đi ra):
    mặt cắt img/pron/mouth-<vị trí>[-asp].webp, môi nhìn thẳng img/pron/lips-<dáng>.webp.
-   Vị trí chưa có ảnh đúng (môi–răng f v, lợi d t n l, hơi qua mũi -n -ng, môi f v, th) vẫn vẽ bằng code. */
-const MOUTH_IMG = new Set(['lips', 'interdental', 'dental', 'retroflex', 'palatal', 'velar']);
-const LIPS_IMG = new Set(['open', 'mid', 'spread', 'round', 'small', 'roundi']);
+   Vị trí chưa có ảnh vẽ đúng (mặt cắt môi–răng f v, -ng hơi qua mũi) vẫn vẽ bằng code. */
+const MOUTH_IMG = new Set(['lips', 'interdental', 'dental', 'retroflex', 'palatal', 'velar'].flatMap((p) => [p, `${p}-asp`]).concat(['alveolar', 'alveolar-nasal']));
+const LIPS_IMG = new Set(['open', 'mid', 'spread', 'round', 'small', 'roundi', 'bite', 'tongue']);
 const photo = (src) => `<img class="pron-photo" src="${src}" alt="" loading="lazy" decoding="async">`;
 
 export function art(code) {
@@ -139,7 +139,8 @@ export function art(code) {
   const [kind, arg = '', extra = ''] = code.split(':');
   if (kind === 'mouth') {
     const [place, ...flags] = arg.split('+');
-    if (MOUTH_IMG.has(place) && !flags.includes('nasal') && !flags.includes('round')) return photo(`img/pron/mouth-${place}${flags.includes('asp') ? '-asp' : ''}.webp`);
+    const key = `${place}${flags.includes('nasal') ? '-nasal' : ''}${flags.includes('asp') ? '-asp' : ''}`;
+    if (MOUTH_IMG.has(key) && !flags.includes('round')) return photo(`img/pron/mouth-${key}.webp`);
     return mouth(place, { asp: flags.includes('asp'), nasal: flags.includes('nasal'), round: flags.includes('round') });
   }
   if (kind === 'lips') return LIPS_IMG.has(arg) ? photo(`img/pron/lips-${arg}.webp`) : lips(arg);
