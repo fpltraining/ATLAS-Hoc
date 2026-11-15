@@ -1,0 +1,62 @@
+#id news-ai-drug
+#level B1
+#title A Drug Designed with AI Is Being Tested
+#vi Thuốc được thiết kế bằng AI đang được thử nghiệm
+#blurb Rentosertib của Insilico Medicine là một trong những thuốc đầu tiên mà AI giúp tìm cả mục tiêu lẫn phân tử. Bài đọc về hy vọng, các giai đoạn thử thuốc và cách đọc tin y học cho tỉnh táo.
+
+## From Computer to Patient | Từ máy tính đến người bệnh
+Making a new medicine usually takes more than ten years and costs a huge amount of money. | Làm ra một loại thuốc mới thường mất hơn mười năm và tốn một khoản tiền khổng lồ.
+Most ideas fail along the way. | Phần lớn ý tưởng thất bại giữa đường.
+So scientists are hoping AI can make the process faster and cheaper. | Vì thế các nhà khoa học hy vọng AI có thể làm quá trình này nhanh hơn và rẻ hơn.
+
+A company called Insilico Medicine has a drug named rentosertib. | Một công ty tên Insilico Medicine có một loại thuốc tên là rentosertib.
+It's being tested for a lung disease called idiopathic pulmonary fibrosis, or IPF. | Thuốc đang được thử cho một bệnh phổi tên là xơ phổi vô căn, viết tắt IPF.
+In IPF, the lungs slowly become stiff and scarred, and breathing gets harder. | Trong bệnh IPF, phổi dần cứng lại và có sẹo, và việc thở ngày càng khó.
+There is no cure. | Bệnh chưa có cách chữa khỏi.
+
+What makes this drug special is how it was found. | Điều đặc biệt ở loại thuốc này là cách nó được tìm ra.
+AI helped choose the target: the part of the body the drug should act on. | AI giúp chọn mục tiêu: bộ phận trong cơ thể mà thuốc cần tác động.
+Then AI also helped design the molecule itself. | Sau đó AI còn giúp thiết kế chính phân tử thuốc.
+
+In 2025, a small study with 71 patients was published in the journal Nature Medicine. | Năm 2025, một nghiên cứu nhỏ với 71 bệnh nhân được công bố trên tạp chí Nature Medicine.
+The results were encouraging. | Kết quả rất đáng khích lệ.
+In 2026, a larger trial with about 320 patients began in China. | Năm 2026, một thử nghiệm lớn hơn với khoảng 320 bệnh nhân bắt đầu ở Trung Quốc.
+? Vì sao làm ra một loại thuốc mới lại mất nhiều năm như vậy?
+? AI giúp ở hai bước nào trong câu chuyện này?
+? Nếu AI giúp làm thuốc nhanh hơn, ai sẽ được lợi nhiều nhất? Người nghèo có được lợi không?
+* medicine | thuốc, y học
+* lung | phổi
+* cure | cách chữa khỏi
+* target | mục tiêu
+* molecule | phân tử
+* trial | thử nghiệm (lâm sàng)
+
+## Hope and Caution | Hy vọng và thận trọng
+In September 2026, some headlines said the drug might also "slow aging". | Tháng 9 năm 2026, một số tiêu đề báo nói thuốc còn có thể "làm chậm lão hoá".
+That sounds exciting, but read carefully. | Nghe thật hấp dẫn, nhưng hãy đọc kỹ.
+That idea came from an extra analysis of existing data, not from a trial designed to test aging. | Ý đó đến từ một phân tích bổ sung trên dữ liệu có sẵn, không phải từ thử nghiệm được thiết kế để kiểm tra lão hoá.
+An extra analysis can give scientists a new question. It can't give a final answer. | Một phân tích bổ sung có thể cho nhà khoa học một câu hỏi mới. Nó không thể cho câu trả lời cuối cùng.
+
+New drugs are usually tested in steps called phases. | Thuốc mới thường được thử theo các bước gọi là giai đoạn.
+Phase 1 checks if the drug is safe in a small group of people. | Giai đoạn 1 kiểm tra thuốc có an toàn ở một nhóm nhỏ người không.
+Phase 2 checks if it works and what dose is right. | Giai đoạn 2 kiểm tra thuốc có hiệu quả không và liều nào là phù hợp.
+Phase 3 tests it in many more patients and compares it with other treatments. | Giai đoạn 3 thử trên nhiều bệnh nhân hơn và so sánh với cách điều trị khác.
+Many drugs that look good in Phase 2 still fail in Phase 3. | Nhiều thuốc trông tốt ở giai đoạn 2 vẫn thất bại ở giai đoạn 3.
+
+So the honest summary is this: rentosertib is promising, but it's not yet proven. | Vậy tóm tắt trung thực là: rentosertib đầy hứa hẹn, nhưng chưa được chứng minh.
+And AI didn't replace the scientists. | Và AI không thay thế các nhà khoa học.
+People still had to test the drug in the lab, run the trials and care for the patients. | Con người vẫn phải thử thuốc trong phòng thí nghiệm, tiến hành thử nghiệm và chăm sóc bệnh nhân.
+
+In the future, we'll see more news like this. | Trong tương lai, ta sẽ thấy nhiều tin như thế này hơn.
+Some headlines will be too excited, and some will be too afraid. | Có tiêu đề sẽ quá hào hứng, có tiêu đề lại quá sợ hãi.
+A good reader asks simple questions. | Người đọc giỏi hỏi những câu đơn giản.
+How many patients? Which phase? Was the trial designed to test this exact claim? | Bao nhiêu bệnh nhân? Giai đoạn nào? Thử nghiệm có được thiết kế để kiểm tra đúng tuyên bố này không?
+? Lần tới thấy tiêu đề "thuốc thần kỳ", em sẽ hỏi ba câu nào trước khi tin?
+? Vì sao "phân tích bổ sung" không thể cho câu trả lời cuối cùng?
+? Hãy kể cho người thân nghe về ba giai đoạn thử thuốc bằng lời của em.
+* headline | tiêu đề báo
+* aging | sự lão hoá
+* analysis | phân tích
+* dose | liều lượng
+* promising | đầy hứa hẹn
+* proven | đã được chứng minh

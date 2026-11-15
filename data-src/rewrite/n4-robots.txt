@@ -1,0 +1,60 @@
+#id news-robots-power
+#level B1
+#title Robots Will Need a Country's Worth of Power
+#vi Robot sẽ cần lượng điện bằng cả một quốc gia
+#blurb Theo Wood Mackenzie, đến năm 2035 robot có thể dùng 363 TWh điện mỗi năm, gần bằng toàn bộ điện hạt nhân của Pháp. Bài đọc về cái giá năng lượng của một thế giới đầy máy móc.
+
+## The Numbers | Những con số
+When we imagine a future full of robots, we usually think about jobs. | Khi tưởng tượng một tương lai đầy robot, ta thường nghĩ về việc làm.
+We rarely think about electricity. | Ta hiếm khi nghĩ về điện.
+But every robot needs power to move, to see and to think. | Nhưng robot nào cũng cần điện để di chuyển, quan sát và suy nghĩ.
+
+An energy research company called Wood Mackenzie has made an estimate. | Một công ty nghiên cứu năng lượng tên là Wood Mackenzie đã đưa ra một ước tính.
+By 2035, robots around the world could use about 363 terawatt-hours of electricity a year. | Đến năm 2035, robot trên khắp thế giới có thể dùng khoảng 363 terawatt giờ điện mỗi năm.
+That's a hard number to picture, so here's a comparison. | Con số đó khó hình dung, nên đây là một phép so sánh.
+In 2025, all of France's nuclear power plants together produced about 373 terawatt-hours. | Năm 2025, toàn bộ nhà máy điện hạt nhân của Pháp cộng lại sản xuất khoảng 373 terawatt giờ.
+France is famous for nuclear power, and it has dozens of reactors. | Pháp nổi tiếng về điện hạt nhân và có hàng chục lò phản ứng.
+So in ten years, robots may need almost as much power as all of them. | Vậy trong mười năm nữa, robot có thể cần lượng điện gần bằng tất cả chúng.
+
+Where would that demand come from? | Nhu cầu đó đến từ đâu?
+Most of it isn't from humanoid robots that walk like people. | Phần lớn không đến từ robot hình người biết đi như người.
+It's from robots in factories: about 5 million of them, using around 78 terawatt-hours. | Mà từ robot trong nhà máy: khoảng 5 triệu con, dùng khoảng 78 terawatt giờ.
+The rest comes from delivery robots, cleaning robots, farm machines and many other kinds. | Phần còn lại đến từ robot giao hàng, robot dọn dẹp, máy nông nghiệp và nhiều loại khác.
+? Em có nghĩ đến chuyện robot "ăn điện" bao giờ chưa? Vì sao người ta hay quên mặt này?
+? Phép so sánh với điện hạt nhân của Pháp giúp em hình dung con số tốt hơn ra sao?
+? Ngoài nhà máy, em đoán robot sẽ xuất hiện nhiều nhất ở đâu trong cuộc sống Việt Nam?
+* electricity | điện
+* estimate | ước tính
+* comparison | phép so sánh
+* reactor | lò phản ứng
+* demand | nhu cầu
+
+## Cheaper Robots, Bigger Questions | Robot rẻ hơn, câu hỏi lớn hơn
+Robots are also getting much cheaper. | Robot cũng đang rẻ đi rất nhiều.
+According to the same report, the price of humanoid robots fell by about 93 percent between 2020 and 2025. | Theo cùng báo cáo, giá robot hình người giảm khoảng 93 phần trăm từ năm 2020 đến 2025.
+An average one now costs around 58,000 US dollars. | Một con trung bình giờ có giá khoảng 58.000 đô la Mỹ.
+That's still expensive for a family, but not for a big company. | Vẫn đắt với một gia đình, nhưng không đắt với một công ty lớn.
+China deployed about 90 percent of the humanoid robots that went into use in 2025. | Trung Quốc triển khai khoảng 90 phần trăm số robot hình người được đưa vào sử dụng năm 2025.
+
+When something gets cheap, people use much more of it. | Khi một thứ trở nên rẻ, người ta dùng nó nhiều hơn hẳn.
+That's good for factories, but it creates new questions. | Điều đó tốt cho nhà máy, nhưng đặt ra những câu hỏi mới.
+Where will all that electricity come from? | Lượng điện đó sẽ lấy từ đâu?
+If it comes from coal, more robots could mean dirtier air and a hotter planet. | Nếu từ than, nhiều robot hơn có thể đồng nghĩa không khí bẩn hơn và Trái Đất nóng hơn.
+If it comes from solar, wind and nuclear power, countries must build them much faster. | Nếu từ điện mặt trời, điện gió và điện hạt nhân, các nước phải xây chúng nhanh hơn nhiều.
+
+There's a question of fairness too. | Còn có câu hỏi về sự công bằng.
+Countries with cheap, clean power will attract robot factories. | Những nước có điện rẻ và sạch sẽ thu hút nhà máy robot.
+Countries without it may fall behind. | Những nước không có thể bị tụt lại.
+And workers in every country will need new skills as machines take over simple tasks. | Và người lao động ở mọi nước sẽ cần kỹ năng mới khi máy móc đảm nhận việc đơn giản.
+
+Remember that these numbers are estimates, not facts about the future. | Hãy nhớ những con số này là ước tính, không phải sự thật về tương lai.
+Real growth could be faster or slower. | Mức tăng thực tế có thể nhanh hơn hoặc chậm hơn.
+But the message is clear: the future of robots is also the future of energy. | Nhưng thông điệp đã rõ: tương lai của robot cũng là tương lai của năng lượng.
+? Nếu Việt Nam muốn thu hút nhà máy robot, đất nước cần chuẩn bị nguồn điện thế nào?
+? Khi robot rẻ đi, công việc nào ở quanh em có thể bị thay đổi đầu tiên? Người làm việc đó nên học gì?
+? Vì sao ta nên đọc các con số dự báo với một chút thận trọng?
+* deploy | triển khai
+* attract | thu hút
+* fairness | sự công bằng
+* fall behind | tụt lại phía sau
+* growth | sự tăng trưởng
