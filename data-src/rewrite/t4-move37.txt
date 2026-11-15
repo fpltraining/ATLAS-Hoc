@@ -1,0 +1,108 @@
+#id true-move37
+#level A2
+#title Move 37
+#vi Nước đi 37
+#blurb Năm 2016, ở Seoul, AI tên AlphaGo đi một nước cờ vây mà không ai hiểu. Kỳ thủ Lee Sedol thua, rồi tìm ra cách thắng lại một ván. Câu chuyện có thật về sự sáng tạo của máy và giá trị của con người.
+
+## The Man Who Expected to Win | Người tin mình sẽ thắng
+Go is an ancient board game from China, more than two thousand years old. | Cờ vây là trò chơi cổ xưa từ Trung Quốc, hơn hai nghìn năm tuổi.
+Two players place black and white stones on a large board. | Hai người lần lượt đặt quân đen và trắng lên một bàn cờ lớn.
+The rules are simple, but the game is incredibly deep. | Luật chơi đơn giản, nhưng ván cờ sâu vô cùng.
+There are more possible positions in Go than atoms in the universe. | Số thế cờ vây có thể có còn nhiều hơn số nguyên tử trong vũ trụ.
+For years, experts said computers would not beat top Go players for decades. | Nhiều năm liền, giới chuyên môn nói máy tính còn hàng chục năm nữa mới thắng được kỳ thủ hàng đầu.
+
+In March 2016, in Seoul, a computer program called AlphaGo challenged Lee Sedol. | Tháng Ba năm 2016, ở Seoul, một chương trình tên AlphaGo thách đấu Lee Sedol.
+Lee was one of the best players in the world, with eighteen international titles. | Lee là một trong những kỳ thủ giỏi nhất thế giới, với mười tám danh hiệu quốc tế.
+AlphaGo was made by DeepMind, a company owned by Google. | AlphaGo do DeepMind, một công ty thuộc Google, làm ra.
+Unlike Deep Blue in chess, AlphaGo wasn't programmed with rules from human experts. | Khác Deep Blue trong cờ vua, AlphaGo không được lập trình bằng luật của chuyên gia.
+It learned by studying human games and then playing against itself millions of times. | Nó học bằng cách nghiên cứu ván cờ của người rồi tự đấu với chính nó hàng triệu lần.
+
+Before the match, Lee was confident. | Trước trận đấu, Lee rất tự tin.
+"I think I will win five to zero, or maybe four to one," he told reporters. | "Tôi nghĩ tôi sẽ thắng năm – không, hoặc có lẽ bốn – một," ông nói với phóng viên.
+Most experts agreed with him. | Phần lớn chuyên gia đồng ý với ông.
+Then he lost the first game. | Rồi ông thua ván đầu tiên.
+? Vì sao chuyên gia đã đoán sai rằng máy còn lâu mới thắng được cờ vây? Dự đoán về công nghệ thường sai ở đâu?
+? AlphaGo học bằng cách tự chơi với mình hàng triệu lần. Con người có thể học từ cách đó điều gì?
+? Sự tự tin quá mức có thể khiến ta chủ quan như thế nào?
+* ancient | cổ xưa
+* stone | quân cờ
+* atom | nguyên tử
+* challenge | thách đấu
+* confident | tự tin
+
+## The Strange Move | Nước đi kỳ lạ
+In the second game, something happened that people still talk about. | Ở ván thứ hai, có một chuyện mà người ta vẫn bàn tán đến giờ.
+On its thirty-seventh move, AlphaGo placed a stone in a very unusual position. | Ở nước thứ ba mươi bảy, AlphaGo đặt một quân vào một vị trí rất bất thường.
+The commentators were confused. One thought it was a mistake. | Các bình luận viên bối rối. Một người nghĩ đó là nước đi sai.
+Lee Sedol stood up and left the room for about fifteen minutes. | Lee Sedol đứng dậy rời phòng khoảng mười lăm phút.
+
+AlphaGo itself had estimated that a human would play that move only about one time in ten thousand. | Chính AlphaGo ước tính một kỳ thủ người chỉ đi nước đó khoảng một lần trên mười nghìn.
+In other words, it wasn't copying humans. It was doing something new. | Nói cách khác, nó không bắt chước con người. Nó đang làm một điều mới.
+As the game continued, the strange stone became more and more important. | Khi ván cờ tiếp diễn, quân cờ lạ kia ngày càng trở nên quan trọng.
+AlphaGo won. | AlphaGo thắng.
+
+Fan Hui, a European champion who had lost to AlphaGo before, said the move was "beautiful". | Phàn Huy, nhà vô địch châu Âu từng thua AlphaGo, nói nước đi đó "đẹp".
+For the first time, many people felt that a machine had been creative. | Lần đầu tiên, nhiều người cảm thấy một cỗ máy đã sáng tạo.
+That idea was exciting. It was also frightening. | Ý nghĩ đó thật phấn khích. Cũng thật đáng sợ.
+If machines can surprise the best humans in the most human of games, what else will they surprise us with? | Nếu máy có thể khiến người giỏi nhất bất ngờ trong trò chơi mang tính người nhất, nó còn khiến ta bất ngờ ở đâu nữa?
+? Một nước đi "mà con người chỉ đi một lần trên mười nghìn" có phải là sáng tạo không? Sáng tạo là gì?
+? Nếu AI nghĩ ra cách làm mới mà con người không hiểu, ta có nên tin và làm theo không?
+? Trong ngành của em, một "nước đi 37" do AI nghĩ ra có thể trông như thế nào?
+* commentator | bình luận viên
+* confused | bối rối
+* estimate | ước tính
+* creative | sáng tạo
+* frightening | đáng sợ
+
+## Game Four | Ván thứ tư
+After three games, AlphaGo led three to zero. The match was over. | Sau ba ván, AlphaGo dẫn ba – không. Trận đấu đã ngã ngũ.
+Lee Sedol apologized to the public. "I'm sorry I couldn't meet your expectations," he said. | Lee Sedol xin lỗi công chúng. "Tôi xin lỗi vì không đáp ứng được kỳ vọng của mọi người," ông nói.
+"This is Lee Sedol's defeat, not humanity's defeat." | "Đây là thất bại của Lee Sedol, không phải của loài người."
+
+He still had to play two more games. | Ông vẫn phải đánh thêm hai ván.
+In game four, Lee played his seventy-eighth move. | Ở ván bốn, Lee đi nước thứ bảy mươi tám.
+It was a brilliant, unexpected placement in the middle of the board. | Đó là một nước đặt quân xuất sắc, bất ngờ ở giữa bàn cờ.
+Later, people called it the "divine move". | Về sau, người ta gọi nó là "nước đi thần thánh".
+AlphaGo didn't expect it. It started to make strange mistakes. | AlphaGo không lường trước. Nó bắt đầu mắc những lỗi kỳ lạ.
+Lee won the game. | Lee thắng ván đó.
+
+The room exploded with applause. Lee smiled like a child. | Cả phòng vỡ oà tiếng vỗ tay. Lee cười như một đứa trẻ.
+"I have never been congratulated so much for winning one game," he said. | "Tôi chưa bao giờ được chúc mừng nhiều đến thế chỉ vì thắng một ván," ông nói.
+AlphaGo won the last game, so the final result was four to one. | AlphaGo thắng ván cuối, nên kết quả chung cuộc là bốn – một.
+But for many people, game four mattered more than the score. | Nhưng với nhiều người, ván thứ tư quan trọng hơn tỉ số.
+It showed that a human, under huge pressure, could still find something new. | Nó cho thấy một con người, dưới áp lực khổng lồ, vẫn tìm ra được điều mới.
+? Lee nói "Đây là thất bại của tôi, không phải của loài người." Em nghĩ gì về câu nói đó?
+? Vì sao chiến thắng một ván lại được chúc mừng nhiều hơn cả trận thua?
+? Dưới áp lực, điều gì giúp con người vẫn sáng tạo được?
+* expectation | kỳ vọng
+* defeat | thất bại
+* divine | thần thánh
+* applause | tiếng vỗ tay
+* congratulate | chúc mừng
+
+## What Came After | Điều xảy ra sau đó
+After the match, Go changed. | Sau trận đấu, cờ vây thay đổi.
+Professional players began studying AI games to find new ideas. | Kỳ thủ chuyên nghiệp bắt đầu nghiên cứu ván cờ của AI để tìm ý tưởng mới.
+Moves that teachers had called "bad" for centuries turned out to be good. | Những nước thầy dạy là "tồi" suốt nhiều thế kỷ hoá ra lại tốt.
+Some research later suggested that human players made more creative and higher-quality moves after AI appeared. | Một số nghiên cứu sau này cho thấy kỳ thủ con người đi những nước sáng tạo và chất lượng hơn sau khi AI xuất hiện.
+The machines didn't kill the game. They made people see it differently. | Máy không giết chết trò chơi. Chúng khiến con người nhìn nó theo cách khác.
+
+But not everyone felt happy. | Nhưng không phải ai cũng vui.
+In 2019, Lee Sedol retired from professional Go. | Năm 2019, Lee Sedol giải nghệ khỏi cờ vây chuyên nghiệp.
+He explained that even if he became number one again, there was "an entity that cannot be defeated". | Ông giải thích rằng dù có trở lại vị trí số một, vẫn có "một thực thể không thể bị đánh bại".
+For him, the meaning of competing had changed. | Với ông, ý nghĩa của việc thi đấu đã thay đổi.
+
+This story asks us a question about the future. | Câu chuyện này đặt cho ta một câu hỏi về tương lai.
+When machines become better than us at the things we love, what do we do? | Khi máy giỏi hơn ta ở những điều ta yêu thích, ta sẽ làm gì?
+Some people, like Lee, will feel that something was lost. | Một số người, như Lee, sẽ thấy điều gì đó đã mất đi.
+Others will use the machines to learn faster and go further. | Những người khác sẽ dùng máy để học nhanh hơn và đi xa hơn.
+Maybe both feelings are true at the same time. | Có lẽ cả hai cảm xúc đều đúng cùng một lúc.
+And maybe the reason to play, learn, or create was never only to be the best. | Và có lẽ lý do để chơi, học hay sáng tạo chưa bao giờ chỉ là để trở thành giỏi nhất.
+? Lee Sedol giải nghệ vì có "thực thể không thể bị đánh bại". Em hiểu cảm giác của ông không?
+? Nếu AI luôn giỏi hơn em ở một việc, em vẫn sẽ tiếp tục làm việc đó chứ? Vì sao?
+? Lý do em học tiếng Anh là gì, nếu sau này máy dịch hoàn hảo?
+* professional | chuyên nghiệp
+* century | thế kỷ
+* retire | giải nghệ, nghỉ hưu
+* entity | thực thể
+* compete | thi đấu

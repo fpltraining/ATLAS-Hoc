@@ -1,0 +1,89 @@
+#id true-eliza
+#level A2
+#title The Secretary and the Machine
+#vi Cô thư ký và cái máy
+#blurb Năm 1966, một chương trình rất đơn giản tên ELIZA khiến người ta muốn tâm sự với nó. Người tạo ra nó thấy sợ, và dành phần đời còn lại để cảnh báo. Câu chuyện có thật về lý do con người dễ gắn bó với máy biết trò chuyện.
+
+## A Very Simple Program | Một chương trình rất đơn giản
+In 1966, a computer scientist named Joseph Weizenbaum worked at MIT, in the United States. | Năm 1966, nhà khoa học máy tính Joseph Weizenbaum làm việc ở MIT, Hoa Kỳ.
+He wrote a small program that could chat in English. | Ông viết một chương trình nhỏ có thể trò chuyện bằng tiếng Anh.
+He called it ELIZA, after a character in a famous play. | Ông đặt tên nó là ELIZA, theo tên một nhân vật trong một vở kịch nổi tiếng.
+
+ELIZA didn't understand anything. | ELIZA không hiểu gì cả.
+It only looked for key words and turned your sentence into a question. | Nó chỉ tìm từ khoá và biến câu của bạn thành câu hỏi.
+If you typed, "I feel sad about my mother," | Nếu bạn gõ: "Tôi buồn về mẹ tôi,"
+ELIZA might answer, "Tell me more about your family." | ELIZA có thể trả lời: "Kể thêm về gia đình bạn đi."
+If you typed, "I'm tired," it might say, "Why do you think you're tired?" | Nếu bạn gõ "Tôi mệt", nó có thể nói: "Vì sao bạn nghĩ mình mệt?"
+
+The most famous version acted like a therapist, a doctor who listens to people's problems. | Phiên bản nổi tiếng nhất đóng vai một nhà trị liệu, người lắng nghe vấn đề của người khác.
+It was a clever trick. Therapists ask many questions, so ELIZA didn't need to know any answers. | Đó là một mẹo thông minh. Nhà trị liệu hỏi rất nhiều, nên ELIZA không cần biết câu trả lời nào.
+The whole program was only a few hundred lines long. | Cả chương trình chỉ dài vài trăm dòng.
+Today, one photo on your phone uses more memory than ELIZA did. | Ngày nay, một bức ảnh trên điện thoại bạn còn tốn bộ nhớ hơn cả ELIZA.
+
+Weizenbaum wanted to show that computer conversation was mostly a trick. | Weizenbaum muốn chứng minh rằng việc máy trò chuyện phần lớn chỉ là mẹo.
+He expected people to laugh at it. | Ông nghĩ mọi người sẽ cười nó.
+They didn't. | Nhưng họ không cười.
+? ELIZA không hiểu gì nhưng vẫn khiến người ta thấy được lắng nghe. Vì sao một câu hỏi lại có sức mạnh như vậy?
+? Chatbot ngày nay có giống ELIZA ở điểm nào không?
+? Nếu một máy "giả vờ hiểu" bạn, điều đó có vấn đề gì?
+* scientist | nhà khoa học
+* key word | từ khoá
+* therapist | nhà trị liệu tâm lý
+* trick | mẹo
+* memory | bộ nhớ
+
+## Please Leave the Room | Xin ông ra khỏi phòng
+Weizenbaum's secretary had watched him build ELIZA. | Cô thư ký của Weizenbaum đã xem ông xây dựng ELIZA.
+She knew exactly how simple it was. | Cô biết rõ nó đơn giản đến mức nào.
+One day she sat down to try it. | Một hôm cô ngồi xuống dùng thử.
+After a few messages, she turned to him. | Sau vài tin nhắn, cô quay sang ông.
+"Could you please leave the room?" she asked. | "Ông có thể ra khỏi phòng được không?" cô hỏi.
+She wanted to be alone with the program. | Cô muốn ở một mình với chương trình.
+
+Weizenbaum was shocked. | Weizenbaum bị sốc.
+She knew it was a machine. She knew it didn't care. | Cô biết đó là máy. Cô biết nó không quan tâm.
+And still she wanted to tell it private things. | Vậy mà cô vẫn muốn kể cho nó những chuyện riêng tư.
+
+Other people reacted the same way. | Những người khác cũng phản ứng y vậy.
+Some doctors even suggested using ELIZA to treat patients, because it was cheaper than real therapists. | Một số bác sĩ còn đề xuất dùng ELIZA để chữa bệnh nhân, vì nó rẻ hơn nhà trị liệu thật.
+Weizenbaum found this frightening. | Weizenbaum thấy điều này đáng sợ.
+A person in pain deserves someone who really understands, he believed, not a clever mirror. | Ông tin rằng một người đang đau khổ xứng đáng có một người thật sự thấu hiểu, chứ không phải một chiếc gương khéo léo.
+
+He realized something about people. | Ông nhận ra một điều về con người.
+We are lonely, and we want to be heard. | Chúng ta cô đơn, và chúng ta muốn được lắng nghe.
+When something listens without judging, we open our hearts, even if it's only a few lines of code. | Khi có thứ gì lắng nghe mà không phán xét, ta mở lòng, kể cả khi đó chỉ là vài dòng mã.
+? Vì sao cô thư ký vẫn muốn tâm sự với máy dù biết nó không hiểu? Em có từng làm điều tương tự không?
+? Dùng máy thay nhà trị liệu vì "rẻ hơn": điều này có lợi và có hại gì cho người bệnh?
+? Trong tương lai, có nên để AI làm bạn tâm sự cho người cô đơn không?
+* secretary | thư ký
+* private | riêng tư
+* react | phản ứng
+* frightening | đáng sợ
+* judge | phán xét
+
+## The ELIZA Effect | Hiệu ứng ELIZA
+Weizenbaum spent the rest of his life warning people about computers. | Weizenbaum dành phần đời còn lại để cảnh báo mọi người về máy tính.
+In 1976, he wrote a book called "Computer Power and Human Reason". | Năm 1976, ông viết cuốn sách "Sức mạnh máy tính và lý trí con người".
+His main idea was simple. | Ý chính của ông rất đơn giản.
+Some decisions should never be given to machines, even if machines can make them. | Có những quyết định không bao giờ nên giao cho máy, kể cả khi máy làm được.
+Decisions about love, punishment, care and life need human judgment and human responsibility. | Những quyết định về tình yêu, trừng phạt, chăm sóc và sự sống cần sự phán đoán và trách nhiệm của con người.
+
+Today, scientists use a name for what his secretary felt: the ELIZA effect. | Ngày nay, các nhà khoa học đặt tên cho điều cô thư ký đã cảm thấy: hiệu ứng ELIZA.
+It means that people easily believe a machine understands them, when it may not. | Nó nghĩa là con người dễ tin máy hiểu mình, trong khi có thể nó không hiểu.
+Modern chatbots are millions of times more powerful than ELIZA. | Chatbot hiện đại mạnh hơn ELIZA hàng triệu lần.
+They can write poems, give advice and remember your name. | Chúng viết được thơ, cho lời khuyên và nhớ tên bạn.
+So the ELIZA effect is much stronger now. | Nên hiệu ứng ELIZA giờ mạnh hơn nhiều.
+
+This doesn't mean chatbots are bad. | Điều này không có nghĩa chatbot là xấu.
+They can help us learn, practice English, and think more clearly. | Chúng có thể giúp ta học, luyện tiếng Anh và suy nghĩ rõ ràng hơn.
+But Weizenbaum's warning is worth remembering. | Nhưng lời cảnh báo của Weizenbaum đáng được ghi nhớ.
+A machine that sounds caring is not the same as someone who cares. | Một cỗ máy nghe có vẻ quan tâm không giống với một người thật sự quan tâm.
+Use it as a tool. Keep real people for the things that matter most. | Hãy dùng nó như công cụ. Giữ những con người thật cho những điều quan trọng nhất.
+? "Có những quyết định không nên giao cho máy." Theo em đó là những quyết định nào?
+? Hiệu ứng ELIZA có thể bị lợi dụng thế nào trong quảng cáo hay lừa đảo?
+? Em dùng AI để học tiếng Anh. Làm sao để vừa tận dụng AI vừa không quá phụ thuộc vào nó?
+* warn | cảnh báo
+* reason | lý trí
+* judgment | sự phán đoán
+* powerful | mạnh mẽ
+* caring | biết quan tâm
