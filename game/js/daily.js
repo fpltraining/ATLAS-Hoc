@@ -103,7 +103,8 @@ var G = window.G || (window.G = {});
     if (IDX) { cb(IDX); return; }
     fetch('../data/stories/index.json').then(function (r) { return r.json(); }).then(function (j) {
       var order = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5 };
-      IDX = j.filter(function (s) { return s.lang === 'en'; });
+      // chỉ giữ truyện dài, có ý nghĩa: loạt Brightford 2080 và truyện dài nhiều chương; truyện ngắn cũ ẩn khỏi góc đọc
+      IDX = j.filter(function (s) { return s.lang === 'en' && (s.shelf === 'future' || s.id === 'slow-message'); });
       // loạt "Brightford 2080" (chương dài, vấn đề xã hội) lên đầu, sau đó truyện ngắn theo cấp
       IDX.sort(function (a, b) { return ((a.shelf === 'future' ? 0 : 10) + (order[a.level] || 9)) - ((b.shelf === 'future' ? 0 : 10) + (order[b.level] || 9)); });
       cb(IDX);
@@ -124,7 +125,7 @@ var G = window.G || (window.G = {});
       var lv = '';
       list.forEach(function (s) {
         var grp = s.shelf === 'future' ? 'future' : s.level;
-        if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', grp === 'future' ? '🌆 Brightford 2080 · truyện dài về vấn đề xã hội tương lai' : 'Truyện ngắn · cấp ' + grp)); }
+        if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', grp === 'future' ? '🌆 Brightford 2080 · truyện dài về vấn đề xã hội tương lai' : '📚 Truyện dài khác · cấp ' + grp)); }
         var r = readN(s.id);
         body.appendChild(G.el('button.rd-story' + (s.shelf === 'future' ? '.future' : ''), { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
           G.el('b', s.title), G.el('span.small.faint', s.vi + ' · ' + s.level + ' · ' + s.chapters.length + ' chương'),

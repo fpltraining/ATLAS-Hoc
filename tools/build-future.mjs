@@ -9,7 +9,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dir = path.join(ROOT, 'data-src/future');
 const idxPath = path.join(ROOT, 'data/stories/index.json');
 let idx = JSON.parse(fs.readFileSync(idxPath, 'utf8'));
-const made = [];
+const made = [], entries = [];
 for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.txt')).sort()) {
   const meta = {}, chapters = [];
   let ch = null, para = [];
@@ -32,8 +32,9 @@ for (const f of fs.readdirSync(dir).filter((x) => x.endsWith('.txt')).sort()) {
   const entry = { id: meta.id, lang: 'en', shelf: 'future', level: meta.level, title: meta.title, vi: meta.vi, blurb: meta.blurb, date: '', sources: [],
     chapters: chapters.map((c) => ({ n: c.n, title: c.title, vi: c.vi, words: words(c), lines: c.paras.flat().length })) };
   idx = idx.filter((s) => s.id !== meta.id);
-  idx.unshift(entry);
+  entries.push(entry);
   made.push(`${meta.id}: ${chapters.length} chương, ${entry.chapters.map((c) => c.words).join('/')} từ`);
 }
+idx = entries.concat(idx);   // giữ đúng thứ tự tệp (s1, s2…) ở đầu kho
 fs.writeFileSync(idxPath, JSON.stringify(idx));
 console.log(made.join('\n'));
