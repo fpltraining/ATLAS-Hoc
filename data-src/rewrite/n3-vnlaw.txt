@@ -1,0 +1,63 @@
+#id news-vn-law
+#level B1
+#title Vietnam's First AI Law Is Now in Force
+#vi Luật AI đầu tiên của Việt Nam đã có hiệu lực
+#blurb Từ 1/3/2026, Việt Nam có luật riêng về trí tuệ nhân tạo. Luật phân loại AI theo rủi ro và yêu cầu dán nhãn nội dung giả người thật. Bài đọc về điều đó có ý nghĩa gì với người xem và người làm nội dung.
+
+## Three Levels of Risk | Ba mức độ rủi ro
+Vietnam now has its own law on artificial intelligence. | Việt Nam giờ đã có luật riêng về trí tuệ nhân tạo.
+It was passed on 10 December 2025 and took effect on 1 March 2026. | Luật được thông qua ngày 10 tháng 12 năm 2025 và có hiệu lực từ ngày 1 tháng 3 năm 2026.
+Like Europe's AI Act, it puts AI systems into groups based on risk. | Giống Đạo luật AI của châu Âu, luật xếp các hệ thống AI vào nhóm theo mức rủi ro.
+
+High-risk systems are those that could seriously harm life, health, rights, or national security. | Hệ thống rủi ro cao là những hệ thống có thể gây hại nghiêm trọng đến tính mạng, sức khoẻ, quyền lợi hoặc an ninh quốc gia.
+Medium-risk systems are those that could confuse or mislead people. | Hệ thống rủi ro trung bình là những hệ thống có thể khiến người ta nhầm lẫn hoặc hiểu sai.
+A common example is when users don't know they are talking to an AI. | Ví dụ phổ biến là khi người dùng không biết mình đang nói chuyện với AI.
+Everything else is considered low risk. | Mọi thứ còn lại được coi là rủi ro thấp.
+The higher the risk, the more rules a system must follow. | Rủi ro càng cao, hệ thống càng phải tuân theo nhiều quy định.
+
+For people who make content, one part matters a lot. | Với người làm nội dung, có một phần rất quan trọng.
+Content that copies a real person, a real voice, or a real event needs a clear label. | Nội dung mô phỏng người thật, giọng nói thật hoặc sự kiện thật cần được dán nhãn rõ ràng.
+The government will publish the details about how those labels should look. | Chính phủ sẽ ban hành chi tiết về cách trình bày nhãn đó.
+
+Older systems get some extra time to follow the rules. | Các hệ thống cũ được thêm thời gian để tuân thủ.
+In health, education and finance, they have until September 2027. | Trong y tế, giáo dục và tài chính, hạn là tháng 9 năm 2027.
+In other areas, they have until March 2027. | Ở các lĩnh vực khác, hạn là tháng 3 năm 2027.
+The law also plans a national fund to support AI research in Vietnam. | Luật cũng dự kiến lập một quỹ quốc gia hỗ trợ nghiên cứu AI tại Việt Nam.
+? Theo em, một app chấm điểm học sinh bằng AI nên được xếp vào mức rủi ro nào? Vì sao?
+? Vì sao việc người dùng "không biết mình đang nói chuyện với AI" lại bị coi là rủi ro?
+? Việt Nam có luật AI riêng mang lại lợi ích gì cho người dân?
+* pass (a law) | thông qua (luật)
+* take effect | có hiệu lực
+* national security | an ninh quốc gia
+* mislead | gây hiểu lầm
+* label | nhãn
+
+## What It Means for You | Điều đó có ý nghĩa gì với bạn
+Think about the videos you watch every day. | Hãy nghĩ về những video bạn xem mỗi ngày.
+Some faces and voices in them are now made by AI. | Một số gương mặt và giọng nói trong đó giờ do AI tạo ra.
+Some are made for fun, like a cartoon or a joke. | Có cái làm cho vui, như hoạt hình hay trò đùa.
+Some are made to trick people. | Có cái làm ra để lừa người.
+Scammers have used fake voices of family members to ask for money in an emergency. | Kẻ lừa đảo đã dùng giọng nói giả của người thân để xin tiền trong tình huống khẩn cấp.
+Older people, who grew up trusting what they see and hear, are often the main victims. | Người lớn tuổi, vốn quen tin vào những gì mắt thấy tai nghe, thường là nạn nhân chính.
+
+A clear label helps you as a viewer. | Một nhãn rõ ràng giúp bạn với tư cách người xem.
+You know what is real and what isn't, before you believe it or share it. | Bạn biết điều gì là thật, điều gì không, trước khi tin hoặc chia sẻ.
+If you make content, the label protects you too. | Nếu bạn làm nội dung, nhãn cũng bảo vệ bạn.
+Your viewers trust you more when you are honest about your tools. | Người xem tin bạn hơn khi bạn thành thật về công cụ mình dùng.
+
+Of course, a law can't stop every scammer. | Tất nhiên, luật không thể ngăn mọi kẻ lừa đảo.
+People who want to cheat will not add a label. | Người muốn lừa sẽ không dán nhãn.
+So families also need their own simple rules. | Vì vậy các gia đình cũng cần quy tắc đơn giản của riêng mình.
+For example, agree on a secret word to use if someone calls asking for urgent money. | Ví dụ, thống nhất một mật khẩu để dùng nếu có ai gọi điện xin tiền gấp.
+If the voice can't say the word, hang up and call back on the real number. | Nếu giọng nói đó không nói được mật khẩu, hãy cúp máy và gọi lại số thật.
+
+The details of the rules are still coming. | Chi tiết các quy định vẫn đang được ban hành.
+But the idea is already clear: if AI made it look real, say so. | Nhưng ý tưởng đã rõ: nếu AI làm cho nó trông như thật, hãy nói rõ điều đó.
+? Hôm nay hãy nói với bố mẹ hoặc ông bà về cách lừa đảo bằng giọng nói giả. Gia đình em có thể dùng "mật khẩu" nào?
+? Vì sao người lớn tuổi dễ bị lừa bằng video và giọng nói giả hơn?
+? Nếu em làm video bằng AI, em sẽ ghi nhãn thế nào để vừa trung thực vừa không làm mất hứng người xem?
+* scammer | kẻ lừa đảo
+* emergency | tình huống khẩn cấp
+* victim | nạn nhân
+* urgent | gấp
+* hang up | cúp máy

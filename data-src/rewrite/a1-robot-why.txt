@@ -1,0 +1,134 @@
+#id robot-why
+#level A1
+#title The Robot Who Asked Why
+#vi Con robot hay hỏi tại sao
+#blurb Bo là robot nhỏ trong một xưởng sửa xe ở Sài Gòn. Cậu hỏi "tại sao" nhiều đến phát bực, cho tới một buổi sáng câu hỏi của cậu cứu một mạng người. Truyện về giá trị của việc dám đặt câu hỏi.
+
+## The Garage | Xưởng xe
+Bo is a small robot. | Bo là một con robot nhỏ.
+He lives in a garage in Saigon. | Cậu sống trong một xưởng sửa xe ở Sài Gòn.
+The garage is old and hot and noisy. | Xưởng cũ, nóng và ồn.
+Mr. Tâm owns the garage. He is fifty years old. | Ông Tâm là chủ xưởng. Ông năm mươi tuổi.
+He fixes cars all day, and Bo helps him. | Ông sửa xe cả ngày, và Bo giúp ông.
+
+Bo can carry tools. Bo can clean the floor. | Bo xách được dụng cụ. Bo lau được sàn.
+Bo can read every part of a car in two seconds. | Bo đọc được mọi bộ phận của một chiếc xe trong hai giây.
+But Bo has one problem. He asks too many questions. | Nhưng Bo có một tật. Cậu hỏi quá nhiều.
+
+"Why is this car red?" | "Tại sao xe này màu đỏ?"
+"Why does the customer want it today?" | "Tại sao khách muốn lấy xe hôm nay?"
+"Why do people drive so fast in the rain?" | "Tại sao người ta lái nhanh thế khi trời mưa?"
+"Why, why, why!" Mr. Tâm says. "Just do your job, Bo." | "Tại sao, tại sao, tại sao!" ông Tâm nói. "Làm việc của mày đi, Bo."
+
+The other workers laugh at Bo. | Mấy người thợ khác cười Bo.
+"A robot should do what it's told," says Hùng, the young mechanic. | "Robot thì phải làm theo lệnh," Hùng, anh thợ trẻ, nói.
+"Questions are for people." | "Đặt câu hỏi là việc của con người."
+Bo doesn't understand. | Bo không hiểu.
+If a question can make something better, why should only people ask it? | Nếu một câu hỏi có thể làm mọi thứ tốt hơn, tại sao chỉ con người được hỏi?
+So he keeps asking, quietly, inside his head. | Nên cậu vẫn hỏi, lặng lẽ, trong đầu mình.
+? Ở trường hay chỗ làm, em có bị bảo "làm đi, đừng hỏi nhiều" bao giờ chưa? Em cảm thấy thế nào?
+? Trong tương lai có nhiều robot, ta muốn robot chỉ làm theo lệnh hay biết đặt câu hỏi?
+? Một câu hỏi "phiền phức" có thể có ích như thế nào?
+* garage | xưởng sửa xe
+* tool | dụng cụ
+* customer | khách hàng
+* mechanic | thợ máy
+* do what you're told | làm theo lệnh
+
+## The Black Car | Chiếc xe màu đen
+One evening, a black car comes into the garage. | Một buổi tối, một chiếc xe màu đen chạy vào xưởng.
+The driver is a tired woman with a baby in the back seat. | Tài xế là một người phụ nữ mệt mỏi, có em bé ở ghế sau.
+"Please check the oil," she says. "I'm driving to Đà Lạt tomorrow morning." | "Kiểm tra dầu giúp tôi," chị nói. "Sáng mai tôi lái lên Đà Lạt."
+"It's a long road with many hills." | "Đường dài và nhiều dốc lắm."
+
+Hùng checks the oil. "It's fine," he says. "Come back at seven." | Hùng kiểm tra dầu. "Ổn rồi," anh nói. "Bảy giờ quay lại lấy nhé."
+The woman leaves. Hùng goes home too. It is late. | Người phụ nữ đi. Hùng cũng về. Đã khuya rồi.
+
+Bo looks at the black car. | Bo nhìn chiếc xe đen.
+The oil is fine. Hùng is right. | Dầu thì ổn. Hùng nói đúng.
+But Bo sees something small near the front wheel. | Nhưng Bo thấy một thứ nhỏ gần bánh trước.
+A tiny drop of liquid on the floor. | Một giọt chất lỏng nhỏ xíu trên sàn.
+It isn't oil. It isn't water. | Không phải dầu. Không phải nước.
+"Why is there a drop there?" Bo asks himself. | "Tại sao lại có giọt đó ở đây?" Bo tự hỏi.
+
+Nobody asked him to check. | Không ai bảo cậu kiểm tra.
+The job ticket only says "oil". | Phiếu công việc chỉ ghi "dầu".
+Checking more means more work, and nobody will pay for it. | Kiểm tra thêm là thêm việc, mà chẳng ai trả tiền.
+Bo thinks about the long road and the many hills. | Bo nghĩ đến con đường dài và những con dốc.
+He thinks about the baby in the back seat. | Cậu nghĩ đến em bé ở ghế sau.
+Then he picks up a light and goes under the car. | Rồi cậu cầm đèn và chui xuống gầm xe.
+? Bo làm thêm việc mà không ai trả tiền. Vì sao cậu vẫn làm?
+? "Phiếu công việc chỉ ghi dầu." Trong công việc, khi nào ta nên làm nhiều hơn những gì được giao?
+? Nếu máy móc chỉ làm đúng những gì được lập trình, điều gì có thể xảy ra?
+* liquid | chất lỏng
+* wheel | bánh xe
+* drop | giọt
+* job ticket | phiếu công việc
+* hill | đồi, dốc
+
+## The Brakes | Phanh xe
+Under the car, Bo finds the answer. | Dưới gầm xe, Bo tìm ra câu trả lời.
+The brake line has a small crack. | Đường ống phanh có một vết nứt nhỏ.
+Every time the driver brakes, a little brake fluid escapes. | Mỗi lần tài xế đạp phanh, một ít dầu phanh rỉ ra.
+On a flat city road, she won't notice. | Trên đường bằng trong thành phố, chị ấy sẽ không nhận ra.
+But on a long road down a mountain, the brakes could fail. | Nhưng trên đường dài đổ đèo, phanh có thể mất.
+
+Bo can't fix it alone. He doesn't have the part. | Bo không tự sửa được. Cậu không có phụ tùng.
+So he does something he has never done. | Nên cậu làm một việc chưa từng làm.
+He calls Mr. Tâm at eleven at night. | Cậu gọi ông Tâm lúc mười một giờ đêm.
+"Why are you calling me so late?" Mr. Tâm says, angry and sleepy. | "Sao mày gọi khuya thế?" ông Tâm nói, vừa giận vừa buồn ngủ.
+"Because," says Bo, "I asked why." | "Vì," Bo nói, "con đã hỏi tại sao."
+
+Mr. Tâm comes back to the garage in his pajamas. | Ông Tâm quay lại xưởng trong bộ đồ ngủ.
+He looks at the crack for a long time. | Ông nhìn vết nứt rất lâu.
+His face goes pale. | Mặt ông tái đi.
+"She would have driven down the mountain with this," he says quietly. | "Cô ấy sẽ lái xuống đèo với cái này," ông nói khẽ.
+They work together until three in the morning. | Hai bên làm cùng nhau đến ba giờ sáng.
+
+At seven, the woman comes back. | Bảy giờ, người phụ nữ quay lại.
+Mr. Tâm shows her the old brake line. | Ông Tâm cho chị xem ống phanh cũ.
+She holds her baby very tightly. | Chị ôm chặt em bé.
+"Who found this?" she asks. | "Ai phát hiện ra vậy?" chị hỏi.
+Mr. Tâm points at the small robot in the corner. | Ông Tâm chỉ vào con robot nhỏ trong góc.
+? Câu hỏi "tại sao" của Bo đã cứu ai? Một câu hỏi nhỏ có thể tạo ra khác biệt lớn thế nào?
+? Ông Tâm giận vì bị gọi khuya. Khi nào ta nên làm phiền người khác vì sự an toàn?
+? Trong tương lai, robot và con người nên chia trách nhiệm về an toàn ra sao?
+* brake | phanh
+* crack | vết nứt
+* fail | hỏng, không hoạt động
+* part | phụ tùng
+* pale | tái mét
+
+## A New Sign | Tấm biển mới
+The next week, a new sign appears on the garage wall. | Tuần sau, một tấm biển mới xuất hiện trên tường xưởng.
+It says: "Here, everyone can ask why." | Trên đó ghi: "Ở đây, ai cũng được hỏi tại sao."
+Mr. Tâm wrote it himself, with big uneven letters. | Ông Tâm tự tay viết, chữ to và xiêu vẹo.
+
+Things change in the garage. | Mọi thứ trong xưởng thay đổi.
+Now, every morning, they have a five-minute meeting. | Giờ mỗi sáng, họ có một buổi họp năm phút.
+Anyone can ask one question: about a car, a tool, or a customer. | Ai cũng được đặt một câu hỏi: về một chiếc xe, một dụng cụ, hay một khách hàng.
+At first, Hùng is quiet. | Lúc đầu, Hùng im lặng.
+Then one day he asks, "Why do we always rush the cheap cars?" | Rồi một hôm anh hỏi: "Tại sao mình luôn làm vội mấy chiếc xe rẻ tiền?"
+Nobody has a good answer. So they stop doing it. | Không ai có câu trả lời hay. Nên họ thôi làm vậy.
+
+Bo still asks many questions. | Bo vẫn hỏi rất nhiều.
+Some are useful. Some are silly. | Có câu có ích. Có câu ngớ ngẩn.
+"Why do humans like spicy food when it hurts?" | "Tại sao con người thích ăn cay dù cay thì đau?"
+Mr. Tâm still sighs sometimes. | Ông Tâm thỉnh thoảng vẫn thở dài.
+But now he answers. | Nhưng giờ ông trả lời.
+
+One evening, Mr. Tâm sits next to Bo. | Một buổi tối, ông Tâm ngồi cạnh Bo.
+"In thirty years of fixing cars," he says, "nobody asked me why." | "Ba mươi năm sửa xe," ông nói, "chưa ai hỏi tôi tại sao."
+"I stopped asking too. I just did the job." | "Tôi cũng thôi hỏi. Tôi chỉ làm việc."
+"A small robot reminded an old man how to think." | "Một con robot nhỏ nhắc một ông già cách suy nghĩ."
+Bo doesn't say anything. | Bo không nói gì.
+But inside his head, he asks one more question: | Nhưng trong đầu, cậu hỏi thêm một câu:
+"Why did it take so long?" | "Tại sao lại mất lâu đến thế?"
+? Vì sao một nơi làm việc "ai cũng được hỏi tại sao" lại an toàn và tốt hơn?
+? Hùng hỏi "Tại sao mình luôn làm vội xe rẻ tiền?" Câu hỏi đó nói lên vấn đề gì về sự công bằng?
+? Em có thể bắt đầu thói quen đặt một câu hỏi "tại sao" mỗi ngày ở đâu?
+* sign | tấm biển
+* rush | làm vội
+* silly | ngớ ngẩn
+* spicy | cay
+* remind | nhắc nhở

@@ -1,0 +1,87 @@
+#id b2-sleep
+#level B2
+#title Sleep: The Skill Nobody Teaches
+#vi Giấc ngủ: kỹ năng không ai dạy
+#blurb Nhiều học sinh coi giấc ngủ là thời gian lãng phí. Khoa học thì nói ngược lại. Bài đọc về ca làm đêm của bộ não, ba quy tắc bảo vệ giấc ngủ, và một xã hội đang "nợ ngủ".
+
+## The Night Shift | Ca làm đêm
+Many students treat sleep as wasted time. | Nhiều học sinh coi giấc ngủ là thời gian lãng phí.
+Before an exam, they stay up late, hoping to squeeze in a few more pages. | Trước kỳ thi, họ thức khuya, mong nhồi thêm được vài trang.
+Scientists now believe this is a poor trade. | Các nhà khoa học giờ cho rằng đây là một cuộc đổi chác tồi.
+
+While you sleep, your brain is far from idle. | Khi bạn ngủ, bộ não không hề nhàn rỗi.
+It replays parts of the day and strengthens some new connections. | Nó phát lại một phần ngày hôm đó và củng cố một số kết nối mới.
+Many studies suggest that people remember new words and skills better after a night of sleep than after the same hours awake. | Nhiều nghiên cứu cho thấy người ta nhớ từ mới và kỹ năng mới tốt hơn sau một đêm ngủ so với cùng số giờ thức.
+In a sense, part of learning happens after you close the book. | Theo một nghĩa nào đó, một phần việc học diễn ra sau khi bạn gập sách lại.
+
+Sleep also seems to help the brain clean itself. | Giấc ngủ dường như cũng giúp bộ não tự làm sạch.
+During deep sleep, fluid flows around brain cells and may carry away waste. | Trong giấc ngủ sâu, chất lỏng chảy quanh tế bào não và có thể mang chất thải đi.
+This is still an active area of research, and the details are debated. | Đây vẫn là lĩnh vực đang được nghiên cứu sôi nổi, và các chi tiết vẫn còn tranh cãi.
+But the direction is clear: sleep isn't a pause in your life. | Nhưng hướng đi đã rõ: giấc ngủ không phải là quãng tạm dừng trong cuộc đời bạn.
+It's the night shift, when the brain does maintenance work it can't do while you're busy. | Đó là ca làm đêm, khi bộ não làm công việc bảo trì mà nó không thể làm khi bạn đang bận rộn.
+
+Cutting sleep to study more is like skipping the save button to type faster. | Cắt giảm giấc ngủ để học nhiều hơn giống như bỏ qua nút lưu để gõ nhanh hơn.
+You produce more, but you keep less. | Bạn làm ra nhiều hơn, nhưng giữ lại được ít hơn.
+? "Một phần việc học diễn ra sau khi gập sách." Điều này thay đổi cách em ôn thi thế nào?
+? Em đồng ý với phép so sánh "bỏ qua nút lưu" không? Hãy nghĩ một phép so sánh khác.
+* squeeze in | nhồi nhét vào
+* trade | sự đánh đổi
+* idle | nhàn rỗi
+* strengthen | củng cố
+* debate | tranh luận
+* maintenance | sự bảo trì
+
+## Protecting Your Sleep | Bảo vệ giấc ngủ
+Knowing that sleep matters is easy. Getting enough of it is harder. | Biết giấc ngủ quan trọng thì dễ. Ngủ đủ mới khó.
+The first rule is consistency. | Quy tắc đầu tiên là đều đặn.
+Going to bed and waking up at similar times helps your body clock stay stable, even on weekends. | Đi ngủ và thức dậy vào giờ tương tự nhau giúp đồng hồ sinh học ổn định, kể cả cuối tuần.
+A late Saturday night can feel like jet lag on Monday morning. | Một tối thứ Bảy thức khuya có thể khiến sáng thứ Hai giống như bị lệch múi giờ.
+
+The second rule is about light. | Quy tắc thứ hai là về ánh sáng.
+Bright screens late at night can delay the feeling of sleepiness. | Màn hình sáng vào đêm khuya có thể làm chậm cảm giác buồn ngủ.
+Morning sunlight does the opposite: it tells your body that the day has begun. | Ánh nắng buổi sáng thì ngược lại: nó báo cho cơ thể biết ngày mới đã bắt đầu.
+A ten-minute walk outside after waking up is one of the cheapest sleep aids there is. | Mười phút đi bộ ngoài trời sau khi thức dậy là một trong những cách hỗ trợ giấc ngủ rẻ nhất.
+
+The third rule is caffeine. | Quy tắc thứ ba là cà-phê-in.
+Its effects can last for many hours, so an afternoon coffee may still be active when you're trying to fall asleep. | Tác dụng của nó có thể kéo dài nhiều giờ, nên ly cà phê buổi chiều có thể vẫn còn tác dụng khi bạn cố ngủ.
+Many people in Vietnam love a strong iced coffee at three in the afternoon. | Nhiều người Việt Nam thích một ly cà phê đá đậm lúc ba giờ chiều.
+It might be worth moving it a few hours earlier. | Có lẽ nên dời nó sớm lên vài tiếng.
+
+None of this requires money or equipment. | Không điều nào trong đây cần tiền hay thiết bị.
+It only requires treating sleep as part of your study plan, not as the thing you cut when you're busy. | Nó chỉ cần bạn coi giấc ngủ là một phần kế hoạch học tập, chứ không phải thứ bị cắt đi khi bận.
+? Trong ba quy tắc (đều đặn, ánh sáng, cà-phê-in), quy tắc nào em khó giữ nhất? Em sẽ bắt đầu từ đâu?
+? Hãy lập "giờ ngủ" cho tuần tới và viết nó bằng tiếng Anh.
+* consistency | sự đều đặn
+* body clock | đồng hồ sinh học
+* jet lag | mệt mỏi do lệch múi giờ
+* delay | trì hoãn, làm chậm
+* sleep aid | thứ hỗ trợ giấc ngủ
+* equipment | thiết bị
+
+## A Society in Sleep Debt | Một xã hội đang nợ ngủ
+Sleep isn't only a personal choice. It's shaped by the society around us. | Giấc ngủ không chỉ là lựa chọn cá nhân. Nó được định hình bởi xã hội quanh ta.
+Many students have early classes, long extra lessons and homework late into the night. | Nhiều học sinh có lớp học sớm, học thêm dài và bài tập tới khuya.
+Many workers answer messages from their boss at eleven at night. | Nhiều người lao động trả lời tin nhắn của sếp lúc mười một giờ đêm.
+Delivery drivers and factory workers often work night shifts that change every week. | Tài xế giao hàng và công nhân nhà máy thường làm ca đêm thay đổi mỗi tuần.
+
+When a whole society sleeps too little, the costs add up. | Khi cả xã hội ngủ quá ít, cái giá cộng dồn lại.
+There are more traffic accidents, more mistakes at work and more health problems. | Có nhiều tai nạn giao thông hơn, nhiều sai sót trong công việc hơn và nhiều vấn đề sức khoẻ hơn.
+Some schools in other countries have started classes later in the morning. | Một số trường ở các nước khác đã bắt đầu cho học muộn hơn vào buổi sáng.
+Some have reported that students arrived more alert and missed fewer classes. | Một số trường báo cáo học sinh đến lớp tỉnh táo hơn và nghỉ học ít hơn.
+Some countries have discussed a "right to disconnect", so workers don't have to answer messages after hours. | Một số nước đã thảo luận về "quyền ngắt kết nối", để người lao động không phải trả lời tin nhắn ngoài giờ.
+
+In the future, AI and automation may give us more free time, or they may fill every hour with more work. | Trong tương lai, AI và tự động hoá có thể cho ta thêm thời gian rảnh, hoặc lấp đầy mọi giờ bằng thêm việc.
+Which one happens is a choice that societies will make. | Điều nào xảy ra là lựa chọn mà các xã hội sẽ đưa ra.
+Until then, protect your own sleep. | Cho đến lúc đó, hãy bảo vệ giấc ngủ của chính bạn.
+And if you lead a team, protect theirs. | Và nếu bạn dẫn dắt một đội, hãy bảo vệ giấc ngủ của họ.
+A rested team plays smarter than a tired one. | Một đội được nghỉ ngơi đủ chơi thông minh hơn một đội mệt mỏi.
+? Ở Việt Nam, điều gì trong cách học và làm việc đang khiến mọi người thiếu ngủ?
+? Em có ủng hộ "quyền ngắt kết nối" sau giờ làm không? Nó có thể áp dụng cho một đội tuyển không?
+? Nếu là huấn luyện viên, em sẽ đặt quy tắc ngủ nào cho đội?
+* debt | nợ
+* shape | định hình
+* add up | cộng dồn
+* alert | tỉnh táo
+* disconnect | ngắt kết nối
+* automation | tự động hoá
+* rested | được nghỉ ngơi đầy đủ

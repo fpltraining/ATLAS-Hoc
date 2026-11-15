@@ -1,0 +1,90 @@
+#id true-kasparov
+#level A2
+#title The Day Kasparov Lost
+#vi Ngày Kasparov thua
+#blurb Năm 1997, người chơi cờ giỏi nhất thế giới thua một cỗ máy. Ông giận dữ nhiều năm, rồi tìm ra một điều bất ngờ: người và máy cùng chơi còn mạnh hơn. Câu chuyện có thật về cách sống cùng máy thay vì chống lại nó.
+
+## The Champion and the Machine | Nhà vô địch và cỗ máy
+Garry Kasparov became world chess champion in 1985, when he was only twenty-two. | Garry Kasparov trở thành vô địch cờ vua thế giới năm 1985, khi mới hai mươi hai tuổi.
+For many years, he was the best player on the planet. | Suốt nhiều năm, ông là kỳ thủ giỏi nhất hành tinh.
+He was fast, aggressive and very proud. | Ông nhanh, chơi tấn công và rất kiêu hãnh.
+
+At the same time, the computer company IBM was building a chess machine called Deep Blue. | Cùng lúc đó, hãng máy tính IBM đang chế tạo một cỗ máy chơi cờ tên Deep Blue.
+Deep Blue couldn't "think" like a person. | Deep Blue không thể "suy nghĩ" như con người.
+But it could look at about two hundred million positions every second. | Nhưng nó xem xét được khoảng hai trăm triệu thế cờ mỗi giây.
+A human master looks at maybe two or three positions per second. | Một kiện tướng con người có lẽ chỉ xem được hai ba thế cờ mỗi giây.
+
+In 1996, they played their first match in Philadelphia. | Năm 1996, hai bên đấu trận đầu tiên ở Philadelphia.
+Deep Blue won the first game, which shocked everyone. | Deep Blue thắng ván đầu, khiến ai cũng sốc.
+But Kasparov learned quickly. He found the machine's weaknesses. | Nhưng Kasparov học rất nhanh. Ông tìm ra điểm yếu của cỗ máy.
+He won the match four to two. | Ông thắng chung cuộc bốn – hai.
+"Humans are still better," the newspapers said. | "Con người vẫn giỏi hơn," báo chí viết.
+Kasparov agreed to play again the next year. | Kasparov đồng ý đấu lại vào năm sau.
+He didn't know that IBM was making Deep Blue much stronger. | Ông không biết IBM đang làm Deep Blue mạnh hơn rất nhiều.
+? Máy xem hai trăm triệu thế cờ mỗi giây, người chỉ vài thế. Vậy con người có lợi thế gì?
+? Khi máy thắng người ở một việc, người ta thường cảm thấy thế nào? Vì sao?
+? Hiện nay AI đã vượt con người ở những việc gì?
+* champion | nhà vô địch
+* aggressive | quyết liệt, tấn công
+* proud | kiêu hãnh
+* position | thế cờ
+* weakness | điểm yếu
+
+## The Rematch | Trận tái đấu
+In May 1997, the rematch began in New York. | Tháng Năm năm 1997, trận tái đấu bắt đầu ở New York.
+Millions of people followed it on television and the new internet. | Hàng triệu người theo dõi qua truyền hình và Internet còn mới mẻ.
+Many saw it as a battle for the pride of humanity. | Nhiều người coi đó là cuộc chiến vì niềm tự hào của loài người.
+
+Kasparov won the first game. | Kasparov thắng ván đầu.
+In the second game, Deep Blue played a quiet, careful move that looked very human. | Ở ván hai, Deep Blue đi một nước lặng lẽ, thận trọng, trông rất giống con người.
+Kasparov was disturbed. He thought, "A machine doesn't play like that." | Kasparov bị xáo trộn. Ông nghĩ: "Máy đâu có chơi như vậy."
+He began to suspect that a human was secretly helping the computer. | Ông bắt đầu nghi rằng có người bí mật giúp máy tính.
+He lost the game, and something inside him broke. | Ông thua ván đó, và có gì đó trong ông vỡ vụn.
+
+The next three games were draws. | Ba ván tiếp theo hoà.
+In the sixth and final game, Kasparov made an early mistake. | Ở ván thứ sáu, ván cuối cùng, Kasparov mắc lỗi sớm.
+He was tired, angry and distracted. | Ông mệt, giận dữ và mất tập trung.
+After only nineteen moves, he stood up and left the table. | Chỉ sau mười chín nước, ông đứng dậy rời bàn.
+Deep Blue won the match three and a half to two and a half. | Deep Blue thắng chung cuộc ba rưỡi – hai rưỡi.
+
+Kasparov demanded another match. IBM said no. | Kasparov đòi đấu thêm. IBM từ chối.
+They took Deep Blue apart and never let it play again. | Họ tháo rời Deep Blue và không bao giờ cho nó thi đấu nữa.
+For years, Kasparov believed he had been cheated. | Nhiều năm liền, Kasparov tin rằng mình bị chơi gian.
+Later, he admitted that the real problem was in his own head: fear, not the machine. | Về sau, ông thừa nhận vấn đề thật nằm trong đầu ông: nỗi sợ, chứ không phải cỗ máy.
+? Kasparov thua một phần vì nỗi sợ và sự nghi ngờ. Cảm xúc ảnh hưởng đến kết quả thi đấu, học tập như thế nào?
+? IBM không cho đấu lại và tháo máy. Em nghĩ họ làm vậy đúng hay sai?
+? Khi đối đầu với một thứ mạnh hơn mình, làm sao để không bị nỗi sợ chi phối?
+* rematch | trận tái đấu
+* disturbed | bị xáo trộn, bất an
+* suspect | nghi ngờ
+* draw | ván hoà
+* cheat | gian lận
+
+## Better Together | Cùng nhau mạnh hơn
+For a while, Kasparov was bitter about computers. | Một thời gian, Kasparov cay đắng với máy tính.
+Then he did something surprising. He became curious. | Rồi ông làm một điều bất ngờ. Ông trở nên tò mò.
+In 1998, he invented a new kind of chess called "Advanced Chess". | Năm 1998, ông sáng tạo một kiểu cờ mới gọi là "Cờ nâng cao".
+In this game, each human player can use a computer during the match. | Trong kiểu cờ này, mỗi kỳ thủ được dùng máy tính trong lúc đấu.
+The human chooses the plan. The computer checks the details. | Con người chọn chiến lược. Máy kiểm tra chi tiết.
+
+Later, there were open tournaments for human-computer teams, often called "centaur" chess. | Về sau có những giải đấu mở cho các đội người – máy, thường gọi là cờ "nhân mã".
+The results were surprising. | Kết quả thật bất ngờ.
+In one famous event in 2005, the winners were not grandmasters with supercomputers. | Ở một giải nổi tiếng năm 2005, đội thắng không phải các đại kiện tướng với siêu máy tính.
+They were two amateur players with three ordinary computers. | Mà là hai kỳ thủ nghiệp dư với ba chiếc máy tính bình thường.
+They won because they were very good at working with their machines. | Họ thắng vì họ rất giỏi làm việc cùng máy của mình.
+
+Kasparov wrote that a weak human plus a machine plus a better process can beat a strong human or a strong machine alone. | Kasparov viết rằng một người yếu cộng máy cộng một quy trình tốt hơn có thể đánh bại người mạnh hoặc máy mạnh đứng một mình.
+In other words, the most important skill is learning how to work together. | Nói cách khác, kỹ năng quan trọng nhất là học cách làm việc cùng nhau.
+
+Today, the same lesson matters far beyond chess. | Ngày nay, bài học ấy quan trọng vượt xa bàn cờ.
+Doctors, teachers, drivers and coaches all face the same question Kasparov faced in 1997. | Bác sĩ, giáo viên, tài xế và huấn luyện viên đều đối mặt với câu hỏi mà Kasparov gặp năm 1997.
+We can fight the machines, or fear them. | Ta có thể chống lại máy móc, hoặc sợ chúng.
+Or, like Kasparov in the end, we can learn to play on the same side. | Hoặc, như Kasparov cuối cùng, ta có thể học cách chơi cùng một phe.
+? "Người yếu + máy + quy trình tốt" thắng "người mạnh" hoặc "máy mạnh". Điều này gợi ý gì cho cách em học tiếng Anh với AI?
+? Kỹ năng "làm việc cùng máy" sẽ quan trọng thế nào cho việc làm trong tương lai?
+? Kasparov chuyển từ cay đắng sang tò mò. Em đã bao giờ biến một thất bại thành cơ hội học hỏi chưa?
+* bitter | cay đắng
+* invent | sáng tạo, phát minh
+* amateur | nghiệp dư
+* ordinary | bình thường
+* process | quy trình

@@ -103,13 +103,15 @@ var G = window.G || (window.G = {});
     if (IDX) { cb(IDX); return; }
     fetch('../data/stories/index.json').then(function (r) { return r.json(); }).then(function (j) {
       var order = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5 };
-      // chỉ giữ truyện dài, có ý nghĩa: loạt Brightford 2080 và truyện dài nhiều chương; truyện ngắn cũ ẩn khỏi góc đọc
-      IDX = j.filter(function (s) { return s.lang === 'en' && (s.shelf === 'future' || s.id === 'slow-message'); });
-      // loạt "Brightford 2080" (chương dài, vấn đề xã hội) lên đầu, sau đó truyện ngắn theo cấp
-      IDX.sort(function (a, b) { return ((a.shelf === 'future' ? 0 : 10) + (order[a.level] || 9)) - ((b.shelf === 'future' ? 0 : 10) + (order[b.level] || 9)); });
+      // hiện tất cả truyện tiếng Anh, xếp theo kệ (Brightford 2080 đầu tiên), trong kệ theo cấp
+      IDX = j.filter(function (s) { return s.lang === 'en'; });
+      IDX.sort(function (a, b) { return (shelfRank(a) * 10 + (order[a.level] || 9)) - (shelfRank(b) * 10 + (order[b.level] || 9)); });
       cb(IDX);
     }).catch(function () { G.toast('Chưa tải được kho truyện. Mở khi có mạng một lần nhé.'); });
   }
+  var SHELF = ['future', 'ai', 'true', 'mystery', 'news', 'essay', 'long'];
+  var SHELF_NAME = { future: '🌆 Brightford 2080 · vấn đề xã hội tương lai', ai: '🤖 Chuyện về AI', true: '📜 Chuyện có thật', mystery: '🔭 Bí ẩn chưa có lời giải', news: '📰 Tin tức 2025–2026', essay: '🧠 Bài luận B2 · kỹ năng sống', long: '📚 Truyện dài' };
+  function shelfRank(s) { var i = SHELF.indexOf(s.shelf); return i < 0 ? SHELF.length : i; }
   function readN(id) { return (G.S.truyen && G.S.truyen[id]) || 0; }
   G.openReader = function () {
     var body = panelOpen('📖 Đọc truyện');
@@ -124,12 +126,12 @@ var G = window.G || (window.G = {});
         G.el('b', '▶ Đọc tiếp: ' + next.title), G.el('span', next.vi + ' · chương ' + (readN(next.id) + 1) + '/' + next.chapters.length + ' · ' + next.level)));
       var lv = '';
       list.forEach(function (s) {
-        var grp = s.shelf === 'future' ? 'future' : s.level;
-        if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', grp === 'future' ? '🌆 Brightford 2080 · truyện dài về vấn đề xã hội tương lai' : '📚 Truyện dài khác · cấp ' + grp)); }
+        var grp = s.shelf || 'long';
+        if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', SHELF_NAME[grp] || '📚 Truyện khác')); }
         var r = readN(s.id);
         body.appendChild(G.el('button.rd-story' + (s.shelf === 'future' ? '.future' : ''), { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
           G.el('b', s.title), G.el('span.small.faint', s.vi + ' · ' + s.level + ' · ' + s.chapters.length + ' chương'),
-          s.shelf === 'future' ? G.el('span.small.rd-blurb', s.blurb) : null,
+          s.blurb ? G.el('span.small.rd-blurb', s.blurb) : null,
           G.el('span.rd-prog', r >= s.chapters.length ? '✓ Đã đọc' : r ? r + '/' + s.chapters.length : '')));
       });
     });

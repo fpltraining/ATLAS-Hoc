@@ -1,0 +1,93 @@
+#id b2-feedback
+#level B2
+#title Giving Feedback That People Can Use
+#vi Góp ý sao cho người khác dùng được
+#blurb Ai cũng nói muốn được góp ý, nhưng phần lớn góp ý chẳng thay đổi được gì. Bài đọc về vì sao góp ý thất bại, cấu trúc Tình huống – Hành vi – Tác động, và cách nhận góp ý trong thời đại AI chấm điểm mọi thứ.
+
+## Why Feedback Fails | Vì sao góp ý thất bại
+Almost everyone says they want feedback. | Gần như ai cũng nói mình muốn được góp ý.
+Yet most feedback changes nothing. | Thế nhưng phần lớn góp ý chẳng thay đổi được gì.
+
+Often the problem is that it's too general. | Vấn đề thường là nó quá chung chung.
+"Play better" or "be more confident" tells a person that something's wrong, but not what to do next. | "Chơi tốt hơn đi" hay "tự tin lên" cho người ta biết có gì đó sai, nhưng không nói phải làm gì tiếp.
+It's like a map that says "you're lost" without showing the road. | Giống như tấm bản đồ chỉ nói "bạn lạc rồi" mà không chỉ đường.
+
+Another problem is timing. | Một vấn đề khác là thời điểm.
+Feedback given weeks later is hard to connect to the moment it describes. | Góp ý đưa ra sau nhiều tuần rất khó gắn với khoảnh khắc mà nó nói đến.
+The details have faded, and the person may have already repeated the mistake many times. | Chi tiết đã phai nhạt, và người kia có thể đã lặp lại lỗi đó nhiều lần.
+But feedback given too soon can also fail. | Nhưng góp ý quá sớm cũng có thể thất bại.
+Right after a painful loss, people often aren't ready to listen. | Ngay sau một trận thua đau, người ta thường chưa sẵn sàng lắng nghe.
+
+A third problem is emotion. | Vấn đề thứ ba là cảm xúc.
+When people feel attacked, they defend themselves instead of listening. | Khi cảm thấy bị tấn công, người ta tự vệ thay vì lắng nghe.
+Even good advice is wasted if it arrives as an insult. | Ngay cả lời khuyên tốt cũng thành vô ích nếu nó đến dưới dạng lời xúc phạm.
+And feedback given in front of others can feel like public punishment. | Và góp ý trước mặt người khác có thể giống như bị trừng phạt công khai.
+? Hãy nhớ lại một lời góp ý chung chung em từng nhận. Lẽ ra người đó nên nói thế nào cho cụ thể?
+? Sau một trận thua, nên góp ý ngay hay đợi? Đợi bao lâu là hợp lý?
+* feedback | góp ý, phản hồi
+* general | chung chung
+* timing | thời điểm
+* fade | phai nhạt
+* defend | tự vệ, bảo vệ
+* insult | lời xúc phạm
+
+## A Simple Structure | Một cấu trúc đơn giản
+Many coaches use a simple structure: situation, behavior, impact. | Nhiều huấn luyện viên dùng một cấu trúc đơn giản: tình huống, hành vi, tác động.
+
+Situation: describe when and where. | Tình huống: mô tả khi nào và ở đâu.
+"In the third game yesterday, at minute twelve…" | "Trong ván thứ ba hôm qua, ở phút mười hai…"
+
+Behavior: describe what the person did, not what kind of person they are. | Hành vi: mô tả người đó đã làm gì, chứ không phải họ là kiểu người nào.
+"…you moved to the river alone…" is better than "you're careless". | "…em di chuyển ra sông một mình…" tốt hơn "em bất cẩn quá".
+A behavior can change by tomorrow. A label can stick for years. | Một hành vi có thể thay đổi ngay ngày mai. Một cái nhãn có thể dính suốt nhiều năm.
+
+Impact: explain the result. | Tác động: giải thích hậu quả.
+"…so we lost the fight four against five." | "…nên đội mình thua giao tranh bốn đánh năm."
+
+Then add one clear request for next time. | Sau đó thêm một đề nghị rõ ràng cho lần sau.
+"Next time, ping the team and wait for the jungler." | "Lần sau, báo đội và đợi đi rừng nhé."
+And then listen to their side. | Rồi lắng nghe phía họ.
+They may have seen something you missed. | Họ có thể đã thấy điều bạn bỏ lỡ.
+Maybe the jungler had called them there. | Có thể chính người đi rừng đã gọi họ ra đó.
+
+Good feedback isn't soft or harsh. | Góp ý tốt không mềm mỏng cũng không gay gắt.
+It's specific, timely and respectful. | Nó cụ thể, đúng lúc và tôn trọng.
+Above all, it's about the work, not about the person. | Trên hết, nó nói về công việc, không nói về con người.
+? Hãy viết một lời góp ý theo cấu trúc Tình huống – Hành vi – Tác động – Đề nghị cho một tình huống thật trong đội.
+? Vì sao "một cái nhãn có thể dính suốt nhiều năm"? Em đã từng bị gắn nhãn chưa?
+* situation | tình huống
+* behavior | hành vi
+* impact | tác động
+* careless | bất cẩn
+* request | đề nghị
+* harsh | gay gắt
+* respectful | tôn trọng
+
+## Receiving Feedback in the Age of Scores | Nhận góp ý trong thời đại điểm số
+Giving feedback is only half the skill. Receiving it is the other half. | Góp ý mới chỉ là một nửa kỹ năng. Nhận góp ý là nửa còn lại.
+When someone criticizes your work, the first feeling is often defensive. | Khi ai đó phê bình công việc của bạn, cảm giác đầu tiên thường là muốn phòng thủ.
+Try a simple habit: say "thank you", then ask one question. | Hãy thử một thói quen đơn giản: nói "cảm ơn", rồi hỏi một câu.
+"Can you show me the moment?" or "What would you do differently?" | "Anh chỉ cho em khoảnh khắc đó được không?" hay "Nếu là anh thì anh sẽ làm khác thế nào?"
+You don't have to agree with everything. | Bạn không cần đồng ý với mọi điều.
+But you should understand it before you decide. | Nhưng bạn nên hiểu nó trước khi quyết định.
+
+In the future, more and more feedback will come from machines. | Trong tương lai, ngày càng nhiều góp ý sẽ đến từ máy móc.
+Apps already score our pronunciation, our writing and even our gameplay. | Ứng dụng đã chấm điểm phát âm, bài viết và cả lối chơi của chúng ta.
+Some companies use AI to rate their workers every day. | Một số công ty dùng AI để chấm điểm nhân viên mỗi ngày.
+This can be useful, because machines are fast and never tired. | Điều này có thể hữu ích, vì máy móc nhanh và không bao giờ mệt.
+But a number isn't a conversation. | Nhưng một con số không phải là một cuộc trò chuyện.
+A score can tell you that you're weak, but not why you made that choice, or what you were trying to do. | Điểm số có thể cho bạn biết bạn yếu, nhưng không biết vì sao bạn chọn như vậy, hay bạn đang cố làm gì.
+And people who are measured all the time may start playing for the score, not for the goal. | Và người bị đo lường liên tục có thể bắt đầu chơi vì điểm số, chứ không vì mục tiêu.
+
+So the human part of feedback will matter even more. | Vì vậy phần con người trong góp ý sẽ càng quan trọng.
+A good coach, teacher or friend does what a score can't. | Một huấn luyện viên, thầy cô hay người bạn tốt làm được điều mà điểm số không làm được.
+They see the person behind the numbers, and they help that person grow. | Họ nhìn thấy con người phía sau những con số, và giúp người đó trưởng thành.
+? Lần tới bị góp ý, em sẽ thử nói "cảm ơn" và hỏi câu gì?
+? AI chấm điểm phát âm của em mỗi ngày. Điểm số đó giúp được gì, và thiếu điều gì so với một người thầy?
+? "Chơi vì điểm số, không vì mục tiêu." Em đã thấy điều này xảy ra trong học tập hay thi đấu chưa?
+* criticize | phê bình
+* defensive | phòng thủ
+* differently | khác đi
+* rate | chấm điểm, đánh giá
+* measure | đo lường
+* grow | trưởng thành

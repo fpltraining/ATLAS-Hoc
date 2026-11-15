@@ -1,0 +1,84 @@
+#id myst-anesthesia
+#level B1
+#title We Use It Every Day and Don't Know Why
+#vi Ngày nào cũng dùng mà không biết vì sao
+#blurb Thuốc gây mê đã cứu hàng trăm triệu ca phẫu thuật, nhưng bác sĩ vẫn chưa giải thích được trọn vẹn vì sao nó "tắt" ý thức. Truyện về Ngày Ether, lòng tham, và việc dùng an toàn một thứ ta chưa hiểu hết.
+
+## Surgery Before 1846 | Phẫu thuật trước năm 1846
+Imagine surgery without any medicine for pain. | Hãy tưởng tượng phẫu thuật mà không có thuốc giảm đau nào.
+For thousands of years, that was normal. | Suốt hàng nghìn năm, điều đó là bình thường.
+Patients were awake. Strong men held them down. | Bệnh nhân tỉnh táo. Những người đàn ông khoẻ mạnh giữ chặt họ.
+Some patients drank alcohol first, but it didn't help much. | Một số bệnh nhân uống rượu trước, nhưng chẳng đỡ được bao nhiêu.
+
+The best surgeons were the fastest ones. | Bác sĩ phẫu thuật giỏi nhất là người nhanh nhất.
+Some could remove a leg in a few minutes. | Có người cắt bỏ một chân chỉ trong vài phút.
+Speed was kinder than skill, because every second was pain. | Tốc độ nhân từ hơn tay nghề, vì mỗi giây là một cơn đau.
+Many people chose to stay sick rather than face the knife. | Nhiều người chọn chịu bệnh còn hơn đối mặt với con dao mổ.
+
+Some people knew that certain gases made you feel strange and sleepy. | Một số người biết có vài loại khí khiến bạn thấy lâng lâng và buồn ngủ.
+Young people even used them at parties for fun. | Giới trẻ thậm chí dùng chúng ở các bữa tiệc cho vui.
+People who breathed them fell, got hurt, and didn't seem to notice. | Người hít phải vấp ngã, bị thương mà dường như không nhận ra.
+Nobody had yet shown that these gases could stop pain during a real operation. | Nhưng chưa ai chứng minh những loại khí này có thể chặn cơn đau trong một ca mổ thật.
+The answer was in front of everyone, but nobody had tested it properly. | Câu trả lời nằm ngay trước mắt mọi người, nhưng chưa ai kiểm chứng nó đúng cách.
+? Vì sao một điều "nằm ngay trước mắt" lại có thể bị bỏ qua lâu đến vậy?
+? Thời xưa "nhanh" quan trọng hơn "giỏi". Ngày nay, trong nghề của em, điều gì quan trọng hơn?
+* surgery | phẫu thuật
+* patient | bệnh nhân
+* surgeon | bác sĩ phẫu thuật
+* remove | cắt bỏ, loại bỏ
+* operation | ca mổ
+* properly | đúng cách
+
+## Ether Day | Ngày Ether
+On 16 October 1846, in a hospital in Boston, a room full of doctors watched carefully. | Ngày 16 tháng 10 năm 1846, tại một bệnh viện ở Boston, cả căn phòng đầy bác sĩ chăm chú theo dõi.
+A dentist named William Morton gave a patient a gas called ether. | Một nha sĩ tên William Morton cho bệnh nhân hít một loại khí tên là ether.
+The patient fell into a deep sleep. | Bệnh nhân chìm vào giấc ngủ sâu.
+Then the surgeon, John Warren, removed a growth from the man's neck. | Rồi bác sĩ phẫu thuật John Warren cắt bỏ một khối u trên cổ người đàn ông.
+The man didn't scream. | Người đàn ông không hề la hét.
+When he woke up, he said he had felt only a little scratching. | Khi tỉnh dậy, anh nói mình chỉ thấy hơi sột soạt.
+Warren turned to the doctors and said, "Gentlemen, this is no trick." | Warren quay sang các bác sĩ và nói: "Thưa các ngài, đây không phải trò bịp."
+The room where it happened is still called the Ether Dome. | Căn phòng nơi chuyện đó xảy ra đến nay vẫn được gọi là Mái vòm Ether.
+
+But Morton had a secret plan. | Nhưng Morton có một kế hoạch bí mật.
+He added a smell to the ether and gave it a new name, so nobody would know what it really was. | Ông thêm mùi vào ether và đặt tên mới, để không ai biết nó thật ra là gì.
+He wanted to own it and get rich. | Ông muốn độc quyền nó và làm giàu.
+But doctors soon found out, and the news spread around the world within months. | Nhưng các bác sĩ sớm phát hiện ra, và tin tức lan khắp thế giới chỉ trong vài tháng.
+Morton spent the rest of his life fighting for money and credit. | Morton dành phần đời còn lại để tranh giành tiền bạc và công trạng.
+He died poor and angry. | Ông chết trong nghèo khó và cay đắng.
+The gift, however, belonged to everyone. | Dù vậy, món quà ấy đã thuộc về tất cả mọi người.
+? Morton muốn giữ bí mật để làm giàu. Ngày nay, các công ty giữ bí mật về thuốc hay công nghệ AI có giống vậy không?
+? Một phát hiện cứu người nên thuộc về ai: người tìm ra hay tất cả mọi người?
+* dentist | nha sĩ
+* growth | khối u
+* scream | la hét
+* trick | trò bịp
+* spread | lan truyền
+* credit | công trạng
+
+## Off and On Again | Tắt rồi bật lại
+Today, hundreds of millions of operations happen every year. | Ngày nay, mỗi năm có hàng trăm triệu ca phẫu thuật.
+Anesthesia is one of the great gifts of medicine. | Gây mê là một trong những món quà lớn của y học.
+Doctors know very well how to use it safely. | Bác sĩ biết rất rõ cách dùng nó an toàn.
+They watch your heart, your breathing and your brain the whole time. | Họ theo dõi tim, nhịp thở và bộ não của bạn suốt thời gian đó.
+
+But here's the surprising part. | Nhưng đây là phần đáng ngạc nhiên.
+They still can't fully explain how it works. | Họ vẫn chưa giải thích được trọn vẹn nó hoạt động thế nào.
+We know these drugs act on brain cells. | Ta biết những loại thuốc này tác động lên tế bào não.
+We know that different parts of the brain stop talking to each other well. | Ta biết các vùng khác nhau của não ngừng "trò chuyện" tốt với nhau.
+But why does that turn "you" off, and then turn you on again? | Nhưng vì sao điều đó lại "tắt" bạn đi, rồi lại "bật" bạn lên?
+Part of the problem is that nobody can say exactly what consciousness is. | Một phần vấn đề là không ai nói chính xác được ý thức là gì.
+It's hard to explain how you lose something when you can't explain what it is. | Thật khó giải thích bạn đánh mất một thứ thế nào khi không giải thích được nó là gì.
+
+This is a lesson for the age of AI. | Đây là một bài học cho thời đại AI.
+We're using powerful AI systems every day that their makers don't fully understand. | Ta đang dùng mỗi ngày những hệ thống AI mạnh mẽ mà chính người làm ra chúng cũng chưa hiểu hết.
+Anesthesia shows that this can be done safely. | Gây mê cho thấy điều đó có thể được làm an toàn.
+But only with careful testing, constant watching and people who take responsibility. | Nhưng chỉ khi có thử nghiệm cẩn thận, theo dõi liên tục và những con người chịu trách nhiệm.
+Not understanding something is not a reason to stop using it. | Không hiểu một điều không phải lý do để ngừng dùng nó.
+But it's a very good reason to be careful. | Nhưng đó là lý do rất tốt để cẩn trọng.
+? Gây mê được dùng an toàn dù chưa hiểu hết. AI có thể học được gì từ cách ngành y làm việc này?
+? Em có đang dùng thứ gì mỗi ngày mà không hiểu nó hoạt động ra sao không?
+* anesthesia | gây mê
+* safely | an toàn
+* drug | thuốc
+* constant | liên tục
+* responsibility | trách nhiệm
