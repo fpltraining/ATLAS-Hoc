@@ -304,3 +304,25 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .dip-school { font-size: 11px; } .dip-title { font-size: 13.5px; line-height: 1.2; } .dip-name { font-size: 22px; line-height: 1.1; } .dip-meta { font-size: 10.5px; }
 
 .lobby-logo { width: min(100%, 300px); height: auto; display: block; margin-bottom: 4px; filter: drop-shadow(0 2px 4px rgba(0,0,0,.25)); }
+
+/* ---------- Hôm nay, góc học ---------- */
+.hud-xp { cursor: pointer; }
+.td-head { display: flex; gap: 14px; align-items: center; margin-bottom: 12px; }
+.td-ring { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--coral) calc(var(--p, 0) * 1%), var(--line) 0); flex: none; }
+.td-ring b { width: 50px; height: 50px; border-radius: 50%; background: var(--paper); display: grid; place-items: center; font-size: 15px; }
+.td-list { display: flex; flex-direction: column; gap: 8px; }
+.td-item { display: flex; gap: 10px; align-items: center; background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; }
+.td-item.ok { background: var(--jade-soft); border-color: var(--jade); }
+.td-ic { font-size: 22px; } .td-txt { flex: 1; }
+.rd-next { width: 100%; margin-bottom: 8px; text-align: left; }
+.rd-lv { margin: 14px 2px 6px; font-size: 15px; color: var(--soft); }
+.rd-story { display: flex; flex-direction: column; align-items: flex-start; width: 100%; text-align: left; gap: 2px; padding: 10px 12px; margin-bottom: 6px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--paper); position: relative; }
+.rd-prog { position: absolute; right: 12px; top: 10px; font-size: 12px; font-weight: 700; color: var(--jade); }
+.rd-para { margin: 10px 0; }
+.rd-line { padding: 4px 2px; font-size: 18px; line-height: 1.5; cursor: pointer; border-radius: 6px; }
+.rd-line:active { background: var(--jade-soft); }
+.rd-vi { display: none; font-size: 14px; color: var(--soft); }
+.rd-vi.show { display: block; }
+.rv-back { display: none; } .rv-back.show { display: block; }
+.rv-show { width: 100%; margin-top: 10px; }
+.old-link { display: block; text-align: center; margin: 18px 0 4px; }

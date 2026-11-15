@@ -17,6 +17,8 @@ var G = window.G || (window.G = {});
       totNghiep: {},
       doiSong: {},
       tuKho: [],
+      ngay: {},
+      truyen: {},
       chuoi: { hienTai: 0, ngayCuoi: '' },
       caiDat: { amThanh: true, hienPinyin: true, chiNghe: false },
       taoLuc: G.vnNow()

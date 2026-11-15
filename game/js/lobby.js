@@ -5,7 +5,7 @@ var G = window.G || (window.G = {});
 (function () {
   var CITIES = [
     { id: 'en', name: 'Brightford', lang: 'Tiếng Anh · Mỹ tương lai', card: 'card_city_en.png', state: 'open', scene: 'city_en' },
-    { id: 'zh', name: 'Trường Lạc trấn 长乐镇', lang: 'Tiếng Trung · Thị trấn Trung Quốc', card: 'card_city_zh.png', state: 'open', scene: 'city_zh' },
+    { id: 'zh', name: 'Trường Lạc trấn 长乐镇', lang: 'Tiếng Trung · Thị trấn Trung Quốc', card: 'card_city_zh.png', state: 'soon', note: 'Tạm dừng' },
     { id: 'ja', name: 'Thành phố Nhật', lang: 'Tiếng Nhật', card: 'card_city_soon.png', state: 'soon' },
     { id: 'ko', name: 'Thành phố Hàn', lang: 'Tiếng Hàn', card: 'card_city_soon.png', state: 'soon' },
     { id: 'fr', name: 'Thành phố Pháp', lang: 'Tiếng Pháp', card: 'card_city_soon.png', state: 'soon' }
@@ -80,6 +80,7 @@ var G = window.G || (window.G = {});
       G.el('button.btn', { onclick: function () { G.S.caiDat.amThanh = !G.S.caiDat.amThanh; G.save(); G.renderLobby(); } }, G.S.caiDat.amThanh ? '🔔 Âm thanh: bật' : '🔕 Âm thanh: tắt'),
       file
     ));
+    root.appendChild(G.el('a.small.faint.old-link', { href: '../#/home' }, 'Kho bài nâng cao (giao diện cũ) ›'));
     root.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam). Nhớ xuất file sao lưu thỉnh thoảng nhé.'));
   };
 

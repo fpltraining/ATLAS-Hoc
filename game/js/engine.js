@@ -63,7 +63,7 @@ var G = window.G || (window.G = {});
     if (scene.buildings) {
       for (var i = 0; i < scene.buildings.length; i++) {
         var b = scene.buildings[i];
-        var lb = b.ride === 'bus' ? 'Đợi xe buýt' + (b.toward === 'home' ? ' về nhà' : ' tới trường') : b.ride === 'metro' ? 'Vào ga tàu điện' : b.home ? 'Nhà của bạn' : 'Vào ' + b.name;
+        var lb = b.ride === 'bus' ? 'Đợi xe buýt' + (b.toward === 'home' ? ' về nhà' : ' tới trường') : b.ride === 'metro' ? 'Vào ga tàu điện' : b.home ? 'Vào nhà · đọc truyện, ôn từ' : 'Vào ' + b.name;
         list.push({ x: b.x, y: b.y + 18, r: 70, label: lb, act: (function (bb) { return function () { useBuilding(bb); }; })(b) });
       }
     }
@@ -103,7 +103,7 @@ var G = window.G || (window.G = {});
       G.kaiSay('Đi tới gặp ' + G.NPCS[L.npc].name + ' rồi bấm "Nói chuyện". Ở đây chỉ nói tiếng Anh nhé!');
       return;
     }
-    if (b.home) { G.kaiSay(sceneId === 'home_en' ? 'Nhà của bạn đây. Hôm nay đi học nhé: ra bến xe buýt hoặc ga tàu điện!' : ''); return; }
+    if (b.home) { G.sfx('door'); G.openHome(); return; }
     if (b.go) { G.sfx('door'); G.enterScene(b.go.scene, { x: b.go.x, y: b.go.y, dir: 'up' }); G.kaiSay(hallHint()); }
     else G.kaiSay(b.soon);
   }
@@ -255,6 +255,8 @@ var G = window.G || (window.G = {});
     var tName = nr ? G.NPCS[G.ROOM_TEACHER[nr.door.room]].name : '';
     var what = nr ? 'Học phòng ' + nr.door.label + ' với ' + tName : lf ? 'Nói chuyện ở ' + G.LIFE[lf].title : 'Ôn lại một phòng bất kỳ để lấy thêm sao';
     var id = sceneId;
+    var td = G.today().viec;
+    if (id === 'home_en' && td.bai && (!td.doc || !td.on)) { var hm = bld('home'); return { text: 'Vào nhà ' + (!td.doc ? 'đọc 1 chương truyện' : 'ôn từ khó') + ' (việc hôm nay)', x: hm.x, y: hm.y + 18, h: 260, label: 'Vào nhà · đọc truyện, ôn từ' }; }
     if (id === 'home_en') { var bs = bld('busstop'); return { text: 'Ra bến xe buýt đi tới trường · ' + what, x: bs.x, y: bs.y + 18, h: 230, label: 'Đợi xe buýt tới trường' }; }
     if (scene.city === 'zh') { var ap = bld('airport'); return ap ? { text: 'Bay về Brightford để học tiếng Anh', x: ap.x, y: ap.y + 18, h: 260, label: 'Vào Sân bay' } : (scene.exit ? { text: 'Ra ngoài, bay về Brightford', x: scene.exit.x, y: scene.exit.y, h: 120, label: scene.exit.label } : null); }
     if (id === 'city_en') {
