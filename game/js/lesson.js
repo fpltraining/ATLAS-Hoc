@@ -31,7 +31,7 @@ var G = window.G || (window.G = {});
     return v;
   }
   function say(t) { G.say(t, lang); }
-  function speakBtn(t) { return G.el('button.speak', { 'aria-label': 'Nghe', onclick: function (e) { e.stopPropagation(); say(t); } }, '🔊'); }
+  function speakBtn(t) { return G.sayBtns(t, lang); }
 
   function head(step, sub) {
     var steps = ['Học', 'Luyện', 'Kiểm tra'];

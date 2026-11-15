@@ -103,7 +103,7 @@ var G = window.G || (window.G = {});
     G.say(en, 'en');
     return G.el('div.rd-talk', pic ? G.imgEl(pic, 'rd-pic') : G.el('div.rd-pic.machine', '🎫'),
       G.el('div.rd-bub', G.el('b', who), G.el('div.en', en), vi ? G.el('div.small.faint', vi) : null,
-        G.el('button.spk', { onclick: function () { G.say(en, 'en'); }, 'aria-label': 'Nghe lại' }, '🔊')));
+        G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(en, 'en'); }, 'aria-label': 'Nghe lại' }, '🔊'), G.el('button.spk.slow', { onclick: function () { G.say(en, 'en', true); }, 'aria-label': 'Nghe chậm' }, '🐢'))));
   }
 
   function choices(opts, right, onRight, onWrong) {
@@ -200,7 +200,7 @@ var G = window.G || (window.G = {});
     if (R.hideText) { t.className = 'en hide'; v.style.display = 'none'; }
     return G.el('div.rd-ann',
       G.el('div.rd-ann-top', G.el('span.small', '📢 Thông báo'),
-        G.el('button.spk', { onclick: function () { G.say(en, 'en'); }, 'aria-label': 'Nghe lại' }, '🔊'),
+        G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(en, 'en'); }, 'aria-label': 'Nghe lại' }, '🔊'), G.el('button.spk.slow', { onclick: function () { G.say(en, 'en', true); }, 'aria-label': 'Nghe chậm' }, '🐢')),
         G.el('button.btn.sm', { onclick: function () { R.hideText = !R.hideText; G.S.caiDat.chiNghe = R.hideText; G.save(); t.className = 'en' + (R.hideText ? ' hide' : ''); v.style.display = R.hideText ? 'none' : ''; } }, R.hideText ? 'Hiện chữ' : 'Chỉ nghe')),
       t, v);
   }

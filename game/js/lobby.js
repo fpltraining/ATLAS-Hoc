@@ -54,7 +54,7 @@ var G = window.G || (window.G = {});
     root.appendChild(G.el('h2.sec', 'Hồ sơ của bạn'));
     root.appendChild(G.el('div.profile',
       G.el('div.pchar', G.playerPic(96, 'pchar-img'), G.el('b', G.playerName()),
-        G.el('button.btn.sm', { onclick: function () { G.openCreator(function () { G.goLobby(); }); } }, 'Sửa nhân vật')),
+        G.el('button.btn.sm', { onclick: function () { G.openCreator(function () { G.goLobby(); }); } }, 'Đổi nhân vật')),
       G.el('div.pstats',
         stat(G.S.xp, 'XP'),
         stat(G.S.chuoi.hienTai + ' ngày', 'Chuỗi học'),
@@ -86,17 +86,4 @@ var G = window.G || (window.G = {});
 
   function stat(v, l) { return G.el('div.stat', G.el('b', String(v)), G.el('span', l)); }
 
-  /* Chọn nhân vật (lần đầu và khi đổi) */
-  G.chooseCharacter = function (done) {
-    var box = G.el('div.choose',
-      G.el('h2', 'Chọn nhân vật của bạn'),
-      G.el('div.chars', ['han', 'minh'].map(function (w) {
-        return G.el('button.char', { onclick: function () { G.S.nhanVat = w; G.save(); document.body.removeChild(wrap); if (done) done(); } },
-          G.imgEl('player_' + w + '_down.png', 'char-img'), G.el('b', w === 'han' ? 'Han' : 'Minh'));
-      })),
-      G.el('p.small.faint', 'Kai, bạn robot, sẽ đi cùng bạn ở mọi thành phố.')
-    );
-    var wrap = G.el('div.modal', box);
-    document.body.appendChild(wrap);
-  };
 })();

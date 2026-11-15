@@ -48,7 +48,7 @@ var G = window.G || (window.G = {});
     G.say(text, lang);
     return G.el('div.rd-talk', G.imgEl(img, 'rd-pic'),
       G.el('div.rd-bub', G.el('b', who), G.el('div.en', text), py ? G.el('div.py', py) : null, G.el('div.small.faint', vi),
-        G.el('button.spk', { onclick: function () { G.say(text, lang); }, 'aria-label': 'Nghe lại' }, '🔊')));
+        G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(text, lang); }, 'aria-label': 'Nghe lại' }, '🔊'), G.el('button.spk.slow', { onclick: function () { G.say(text, lang, true); }, 'aria-label': 'Nghe chậm' }, '🐢'))));
   }
 
   function desk(i) {
@@ -76,7 +76,7 @@ var G = window.G || (window.G = {});
     ui.box.innerHTML = '';
     G.say(d.air[k], d.lang);
     ui.box.appendChild(G.el('div.rd-ann',
-      G.el('div.rd-ann-top', G.el('span.small', '📢 Thông báo trên máy bay'), G.el('button.spk', { onclick: function () { G.say(d.air[k], d.lang); }, 'aria-label': 'Nghe lại' }, '🔊')),
+      G.el('div.rd-ann-top', G.el('span.small', '📢 Thông báo trên máy bay'), G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(d.air[k], d.lang); }, 'aria-label': 'Nghe lại' }, '🔊'), G.el('button.spk.slow', { onclick: function () { G.say(d.air[k], d.lang, true); }, 'aria-label': 'Nghe chậm' }, '🐢'))),
       G.el('div.en', d.air[k]), d.airPy ? G.el('div.py', d.airPy[k]) : null, G.el('div.small.faint', d.airVi[k])));
   }
   function land() {
