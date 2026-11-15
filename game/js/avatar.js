@@ -66,11 +66,29 @@ var G = window.G || (window.G = {});
     ctx.drawImage(img, X + (hd.cx - 320 * r) * k, Y + (hd.top - 150 * r) * k, sz, sz);
   }
 
-  /* Vẽ nhân vật. x, footY: chân; h: chiều cao khung; dir: down / up / left / right; phase, moving: nhịp bước */
-  /* Bước đi: tách hình thành thân trên và phần chân (dưới hông).
-     Nhìn trước / sau: hai nửa chân nhấc so le. Nhìn ngang: chân vung trước – sau.
-     Thân nhún theo nhịp bước và hơi nghiêng về hướng đi. Đứng yên: thở nhẹ.
+  /* Bước đi: tách hình thành thân trên và phần chân (dưới hông), chân trái – chân phải bước so le.
+     - Nhìn ngang: vẽ 2 chân (chân sau tối hơn), mỗi chân xoay quanh hông ngược pha nhau như cây kéo;
+       chân đang đưa ra trước thì nhấc nhẹ khỏi mặt đất, chân kia trụ.
+     - Nhìn trước / sau: nửa trái và nửa phải của phần chân thay nhau nhấc lên (co gối), chân kia trụ;
+       thân lắc nhẹ sang phía chân trụ.
+     - Thân nhún lên khi một chân đang nhấc, hạ xuống khi hai chân chạm đất. Đứng yên: thở nhẹ.
      paint(c, X, Y, S) vẽ trọn hình trong khung vuông S; hip: tỉ lệ chiều cao tới hông. */
+  var legCv = null, legDk = null;
+  function legLayers(paint, X, Y, S, hipFrac) {
+    // vẽ riêng phần chân ra canvas phụ (bản thường + bản tối cho chân phía sau)
+    var W = Math.ceil(S), H = Math.ceil(S);
+    if (!legCv) { legCv = document.createElement('canvas'); legDk = document.createElement('canvas'); }
+    if (legCv.width !== W || legCv.height !== H) { legCv.width = legDk.width = W; legCv.height = legDk.height = H; }
+    var a = legCv.getContext('2d'), d = legDk.getContext('2d');
+    a.setTransform(1, 0, 0, 1, 0, 0); a.clearRect(0, 0, W, H);
+    a.translate(-X, -Y); paint(a, X, Y, S); a.setTransform(1, 0, 0, 1, 0, 0);   // vẽ đúng toạ độ thật (để lật hình đúng)
+    a.clearRect(0, 0, W, Math.floor(S * (hipFrac - 0.07)));        // chỉ giữ phần dưới hông
+    d.setTransform(1, 0, 0, 1, 0, 0); d.clearRect(0, 0, W, H);
+    d.globalCompositeOperation = 'source-over'; d.drawImage(legCv, 0, 0);
+    d.globalCompositeOperation = 'source-atop'; d.fillStyle = 'rgba(20,24,50,.32)'; d.fillRect(0, 0, W, H);
+    d.globalCompositeOperation = 'source-over';
+    return { n: legCv, dk: legDk };
+  }
   G.walkDraw = function (c, paint, x, footY, S, dir, phase, moving, hip) {
     var X = x - S / 2, Y = footY - S;
     if (!moving) {
@@ -78,26 +96,40 @@ var G = window.G || (window.G = {});
       c.save(); c.translate(x, footY); c.scale(1, br); c.translate(-x, -footY); paint(c, X, Y, S); c.restore();
       return;
     }
-    var s = Math.sin(phase), hipY = Y + S * hip, over = S * 0.07;
-    var bob = Math.abs(s) * S * 0.03;
-    // phần chân (vẽ trước, thân trên đè lên chỗ nối)
-    if (dir === 'left' || dir === 'right') {
-      c.save(); c.beginPath(); c.rect(X - S, hipY - over, S * 3, S); c.clip();
-      var k = s * 0.42;
-      c.translate(x, hipY); c.transform(1, 0, k, 1, 0, 0); c.translate(-x, -hipY);
-      paint(c, X, Y, S); c.restore();
+    var s = Math.sin(phase), co = Math.cos(phase), hipY = Y + S * hip;
+    var bob = Math.abs(s) * S * 0.028;                 // nhún lên khi một chân đang nhấc
+    var side = dir === 'left' || dir === 'right';
+    var L = legLayers(paint, X, Y, S, hip);
+    if (side) {
+      var fwd = dir === 'right' ? -1 : 1;               // xoay dương = bàn chân đưa sang trái
+      var sw = s * 0.42;                                // biên độ vung chân (radian)
+      // chân sau (tối hơn) ngược pha, rồi chân trước
+      for (var k = 0; k < 2; k++) {
+        var ang = (k === 0 ? -sw : sw) * fwd;
+        var lift = Math.max(0, (k === 0 ? -co : co)) * S * 0.035;   // chân đang đưa ra trước thì nhấc lên
+        c.save();
+        c.translate(x + (k === 0 ? -fwd * S * 0.02 : 0), hipY - bob * 0.5 - lift);
+        c.rotate(ang);
+        c.translate(-x, -hipY);
+        c.drawImage(k === 0 ? L.dk : L.n, X, Y, S, S);
+        c.restore();
+      }
     } else {
-      for (var side = -1; side <= 1; side += 2) {
-        var lift = Math.max(0, side * s) * S * 0.075;
-        c.save(); c.beginPath(); c.rect(side < 0 ? X - S : x, hipY - over, S * 2, S); c.clip();
-        c.translate(x, footY); c.scale(1, 1 - lift * 0.8 / S); c.translate(-x, -footY - lift * 0.55);
-        paint(c, X, Y, S); c.restore();
+      for (var sd = -1; sd <= 1; sd += 2) {
+        var up = Math.max(0, sd * s);                   // nửa này đang nhấc (0..1)
+        up = up * up * (3 - 2 * up);                    // mềm ở hai đầu, chân trụ đứng yên lâu hơn
+        c.save(); c.beginPath(); c.rect(sd < 0 ? X - S : x, hipY - S * 0.07 - bob, sd < 0 ? x - (X - S) : S * 2, S * 1.2); c.clip();
+        // co gối: phần chân ngắn lại quanh hông và nâng bàn chân lên
+        c.translate(x, hipY - bob * 0.6); c.scale(1 + up * 0.03, 1 - up * 0.22); c.translate(-x, -hipY - up * S * 0.035);
+        c.drawImage(L.n, X, Y, S, S);
+        c.restore();
       }
     }
-    // thân trên
-    var lean = dir === 'left' ? -0.06 : dir === 'right' ? 0.06 : 0;
-    c.save(); c.beginPath(); c.rect(X - S, Y - S, S * 3, hipY - (Y - S)); c.clip();
-    c.translate(x, hipY); c.rotate(lean + s * 0.025); c.translate(-x, -hipY - bob);
+    // thân trên: nghiêng theo hướng đi, lắc nhẹ sang chân trụ khi nhìn trước/sau
+    var lean = dir === 'left' ? -0.05 : dir === 'right' ? 0.05 : 0;
+    var sway = side ? 0 : -s * S * 0.012;
+    c.save(); c.beginPath(); c.rect(X - S, Y - S, S * 3, hipY - (Y - S) + S * 0.02); c.clip();
+    c.translate(x + sway, hipY); c.rotate(lean + (side ? 0 : s * 0.02)); c.translate(-x, -hipY - bob);
     paint(c, X, Y, S); c.restore();
   };
 

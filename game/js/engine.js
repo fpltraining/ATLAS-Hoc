@@ -621,10 +621,10 @@ var G = window.G || (window.G = {});
 
   function drawPlayer() {
     // bóng dưới chân co giãn theo nhịp bước
-    var sh = P.moving ? 1 - Math.abs(Math.sin(P.t * 9)) * 0.12 : 1;
+    var sh = P.moving ? 1 - Math.abs(Math.sin(P.t * 14)) * 0.12 : 1;
     if (G.S.nhanVat === 'custom' && G.S.avatar) {
       shadow(P.x, P.y, 24 * sh);
-      G.drawAvatar(ctx, G.S.avatar, P.x, P.y + 4, 112, P.dir, P.t * 9, P.moving);
+      G.drawAvatar(ctx, G.S.avatar, P.x, P.y + 4, 112, P.dir, P.t * 14, P.moving);
       return;
     }
     var who = G.S.nhanVat || 'han';
@@ -632,7 +632,7 @@ var G = window.G || (window.G = {});
       var kd = P.dir, kside = kd === 'left' || kd === 'right';
       var kn = kd === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : kside && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
       var kf = kn === 'kai_left.png' ? kd === 'right' : kd === 'left';
-      var kb = P.moving ? Math.abs(Math.sin(P.t * 9)) * 6 : Math.sin(Date.now() / 300) * 2;
+      var kb = P.moving ? Math.abs(Math.sin(P.t * 14)) * 6 : Math.sin(Date.now() / 300) * 2;
       shadow(P.x, P.y, 22 * sh);
       G.drawAsset(ctx, kn, P.x - 52, P.y - 100 - kb, 104, 104, kf);
       return;
@@ -640,7 +640,7 @@ var G = window.G || (window.G = {});
     var dir = P.dir === 'right' ? 'left' : P.dir, flip = P.dir === 'right';
     var name = 'player_' + who + '_' + dir + '.png';
     shadow(P.x, P.y, 26 * sh);
-    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 9, P.moving, 0.72);
+    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, 0.72);
   }
   function drawKai() {
     var bob = Math.sin(Date.now() / 260) * 4, dir = K.dir || 'down';
