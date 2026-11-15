@@ -1,0 +1,153 @@
+#id man-numbers
+#level A1
+#title The Man Who Kept the Numbers
+#vi Người giữ những con số
+#blurb Câu ngắn, từ đơn giản. Một người trực đêm ở trạm thu tín hiệu nghe thấy một âm thanh không ai giải thích được. Người ta bảo anh im lặng. Anh vẫn âm thầm ghi lại suốt mười lăm năm. Truyện về sự thật, luật lệ và lòng kiên trì.
+
+## The Sound | Âm thanh
+Hải is twenty-eight years old. | Hải hai mươi tám tuổi.
+He works at a small station on a hill by the sea. | Anh làm việc ở một trạm nhỏ trên đồi cạnh biển.
+Outside, there is a big dish. The dish listens to the sky. | Bên ngoài có một chảo ăng-ten lớn. Chiếc chảo lắng nghe bầu trời.
+Hải works at night, from ten to six. | Hải làm ca đêm, từ mười giờ đến sáu giờ.
+The building is old and cold, but he likes the quiet. | Toà nhà cũ và lạnh, nhưng anh thích sự yên tĩnh.
+Every night he does the same things. | Đêm nào anh cũng làm những việc giống nhau.
+He makes tea. He looks at the screen. | Anh pha trà. Anh nhìn màn hình.
+The line on the screen is flat. It is always flat. | Đường kẻ trên màn hình phẳng. Lúc nào nó cũng phẳng.
+He opens his notebook and writes: "Nothing unusual." | Anh mở sổ và viết: "Không có gì bất thường."
+He has written these words for five years. | Anh đã viết những chữ này suốt năm năm.
+
+One night in March, at ten past one, the line moves. | Một đêm tháng Ba, lúc một giờ mười phút, đường kẻ chuyển động.
+Hải stops. He looks again. | Hải dừng lại. Anh nhìn lại.
+Three short. Then one long. Then nothing. | Ba ngắn. Rồi một dài. Rồi không có gì.
+Then again: three short, one long. | Rồi lại: ba ngắn, một dài.
+He turns on the sound. It is like a finger on a table. | Anh bật âm thanh lên. Nó giống như ngón tay gõ lên bàn.
+Tap, tap, tap. Then a long press. | Cốc, cốc, cốc. Rồi một tiếng ấn dài.
+
+He checks every cable. He checks the fan. He checks the heater. | Anh kiểm tra từng sợi cáp. Anh kiểm tra quạt. Anh kiểm tra lò sưởi.
+Everything is fine. The sound does not stop. | Mọi thứ đều ổn. Âm thanh không dừng.
+His tea is cold. He does not drink it. | Trà của anh nguội. Anh không uống.
+At four in the morning, he opens his notebook. | Lúc bốn giờ sáng, anh mở sổ.
+He does not write "nothing unusual". | Anh không viết "không có gì bất thường".
+He writes: "Three short, one long. Repeating. Source unclear." | Anh viết: "Ba ngắn, một dài. Lặp lại. Không rõ nguồn."
+The words look strange on the page. But they are true. | Những chữ đó trông lạ trên trang giấy. Nhưng chúng là sự thật.
+? Hải đã viết "không có gì bất thường" suốt năm năm. Vì sao viết điều khác đi lại khó đến vậy?
+? Khi thấy điều bất thường ở chỗ làm, em sẽ ghi lại hay bỏ qua?
+? Một con số hay một ghi chép nhỏ có thể quan trọng như thế nào sau này?
+* station | trạm
+* dish | chảo ăng-ten
+* unusual | bất thường
+* cable | dây cáp
+* repeat | lặp lại
+
+## The Clean Car | Chiếc xe sạch sẽ
+Hải writes a report. It is one page. | Hải viết một bản báo cáo. Dài một trang.
+He sends it on Monday. Then he waits. | Anh gửi nó vào thứ Hai. Rồi anh chờ.
+One week passes. Nobody answers. | Một tuần trôi qua. Không ai trả lời.
+Two weeks pass. The sound comes and goes. | Hai tuần trôi qua. Âm thanh lúc có lúc không.
+He writes it down every time. | Lần nào anh cũng ghi lại.
+His notebook is full of the same words: three short, one long. | Sổ của anh đầy những chữ giống nhau: ba ngắn, một dài.
+
+On a Tuesday, a car comes up the hill. | Một ngày thứ Ba, một chiếc xe chạy lên đồi.
+The car is very clean. Two men get out. | Chiếc xe rất sạch. Hai người đàn ông bước ra.
+They are polite. They smile. They ask many questions. | Họ lịch sự. Họ mỉm cười. Họ hỏi rất nhiều.
+They read every page of his notebook. | Họ đọc từng trang sổ của anh.
+Then they put the notebook in a bag. | Rồi họ cho cuốn sổ vào túi.
+"This is equipment noise," one man says. | "Đây là tiếng nhiễu của thiết bị," một người nói.
+"Do not report it again." | "Đừng báo cáo nữa."
+Then they drive away. | Rồi họ lái xe đi.
+
+The next week, there is a new list on the wall. | Tuần sau, trên tường có một danh sách mới.
+The list has normal things on it: rain, birds, bad cables. | Danh sách ghi những thứ bình thường: mưa, chim, cáp hỏng.
+Now the sound is on the list too. | Giờ âm thanh đó cũng nằm trong danh sách.
+Things on the list are not unusual. | Những thứ trong danh sách thì không bất thường.
+So nobody has to write them down. | Nên không ai phải ghi lại chúng.
+New workers come. They never listen to the sound. | Người mới đến làm. Họ không bao giờ nghe âm thanh đó.
+For them, it is just noise. | Với họ, nó chỉ là tiếng ồn.
+
+Hải understands the rule. It is a good rule. It stops people from worrying about rain and birds. | Hải hiểu quy định. Đó là một quy định tốt. Nó giúp người ta khỏi lo về mưa và chim.
+But it is also a wall. | Nhưng nó cũng là một bức tường.
+Behind the wall, a question is hiding. | Sau bức tường, một câu hỏi đang trốn.
+? Hai người đàn ông nói "Đừng báo cáo nữa." Vì sao một tổ chức lại muốn che một câu hỏi đi?
+? "Quy định tốt nhưng cũng là bức tường." Em có biết quy định nào như vậy không?
+? Trong tương lai, khi máy tự lọc "tiếng ồn", điều quan trọng nào có thể bị bỏ sót?
+* report | báo cáo
+* polite | lịch sự
+* equipment | thiết bị
+* noise | tiếng ồn, nhiễu
+* rule | quy định
+
+## Fifteen Years | Mười lăm năm
+Hải still hears the sound. He still wants to write it down. | Hải vẫn nghe thấy âm thanh. Anh vẫn muốn ghi lại.
+But he can't. It is against the rule. | Nhưng anh không được. Điều đó trái quy định.
+So he finds a quiet way. | Nên anh tìm một cách lặng lẽ.
+He writes the times backwards, like weather notes. | Anh viết ngược giờ, trông như ghi chú thời tiết.
+One fifteen becomes "five one one". | Một giờ mười lăm thành "năm một một".
+Nobody asks about it. Nobody reads it. | Không ai hỏi. Không ai đọc.
+
+He does this every time the sound comes. | Anh làm vậy mỗi lần âm thanh xuất hiện.
+Year after year. | Năm này qua năm khác.
+He is thirty-five. Then forty. His hair goes grey. | Anh ba mươi lăm. Rồi bốn mươi. Tóc anh bạc dần.
+New workers come and go. Nobody stays long. | Người mới đến rồi đi. Không ai ở lâu.
+The notebooks fill a whole shelf. | Những cuốn sổ đầy cả một kệ.
+He does not tell anybody. Not even his wife. | Anh không kể với ai. Kể cả vợ anh.
+
+Some nights he asks himself why. | Có những đêm anh tự hỏi tại sao.
+Nobody will read these numbers. | Sẽ không ai đọc những con số này.
+Maybe the men in the clean car were right. Maybe it is only noise. | Có lẽ hai người trong chiếc xe sạch nói đúng. Có lẽ nó chỉ là nhiễu.
+But a small voice inside him says: | Nhưng một giọng nói nhỏ trong anh bảo:
+"If nobody writes it down, nobody can ever check." | "Nếu không ai ghi lại, sẽ không ai kiểm chứng được."
+"A question without records is a question that dies." | "Một câu hỏi không có ghi chép là một câu hỏi sẽ chết."
+
+In 1994, Hải leaves the station. He is forty-three and tired. | Năm 1994, Hải rời trạm. Anh bốn mươi ba tuổi và mệt mỏi.
+On his last night, he writes the numbers one more time. | Đêm cuối, anh ghi những con số thêm một lần.
+Then he writes three short lines: | Rồi anh viết ba dòng ngắn:
+"Someone has to keep the numbers." | "Phải có người giữ những con số."
+"I will be too old." | "Tôi sẽ quá già."
+"That is all right." | "Không sao cả."
+He puts the notebook on the shelf and walks down the hill. | Anh đặt cuốn sổ lên kệ và đi xuống đồi.
+? Hải kiên trì 15 năm dù không ai đọc. Đó là sự kiên trì hay sự cố chấp? Vì sao?
+? "Một câu hỏi không có ghi chép là một câu hỏi sẽ chết." Em hiểu câu này thế nào?
+? Có điều gì em muốn ghi lại đều đặn mỗi ngày (như việc học), dù chưa ai thấy kết quả?
+* backwards | ngược lại
+* shelf | kệ
+* grey | bạc (tóc)
+* record | ghi chép
+* tired | mệt mỏi
+
+## Many Years Later | Nhiều năm sau
+The notebooks stay on the shelf. Dust covers them. | Những cuốn sổ nằm trên kệ. Bụi phủ kín.
+Twenty years pass. | Hai mươi năm trôi qua.
+The station gets new computers, but the old dish still listens to the sky. | Trạm có máy tính mới, nhưng chiếc chảo cũ vẫn lắng nghe bầu trời.
+
+One night, a young woman works alone. Her name is Mai. | Một đêm, một cô gái trẻ làm việc một mình. Cô tên là Mai.
+At ten past one, the line on her screen moves. | Lúc một giờ mười phút, đường kẻ trên màn hình cô chuyển động.
+Three short. One long. | Ba ngắn. Một dài.
+Mai checks the cables. She checks the fan. | Mai kiểm tra cáp. Cô kiểm tra quạt.
+She looks at the list on the wall. The sound is on the list. | Cô nhìn danh sách trên tường. Âm thanh có trong danh sách.
+"Equipment noise," the list says. | "Nhiễu thiết bị," danh sách ghi.
+
+But Mai is curious. | Nhưng Mai tò mò.
+Why is a noise so regular? Machines usually make messy noise. | Tại sao một tiếng nhiễu lại đều đặn như vậy? Máy móc thường gây nhiễu lộn xộn.
+She looks for old records and finds the dusty shelf. | Cô tìm hồ sơ cũ và thấy chiếc kệ đầy bụi.
+She opens the notebooks and sees the strange weather notes. | Cô mở những cuốn sổ và thấy các ghi chú thời tiết kỳ lạ.
+It takes her a week to understand. The numbers are times, written backwards. | Cô mất một tuần mới hiểu. Những con số là giờ, viết ngược.
+Fifteen years of times. Every single night. | Mười lăm năm giờ giấc. Từng đêm một.
+On the last page, she reads: "Someone has to keep the numbers." | Ở trang cuối, cô đọc: "Phải có người giữ những con số."
+
+Mai puts the old numbers into her computer. | Mai nhập những con số cũ vào máy tính.
+A pattern appears. The sound is not random. | Một quy luật hiện ra. Âm thanh không ngẫu nhiên.
+It comes back every eighty-one days, at the same time. | Nó quay lại sau mỗi tám mươi mốt ngày, vào cùng một giờ.
+Noise doesn't keep a calendar. | Tiếng nhiễu không có lịch.
+
+Mai doesn't know what the sound is. Maybe nobody will know for years. | Mai không biết âm thanh là gì. Có lẽ nhiều năm nữa cũng chưa ai biết.
+But now there are numbers to study, thanks to one quiet man. | Nhưng giờ đã có số liệu để nghiên cứu, nhờ một người đàn ông lặng lẽ.
+She opens a new notebook and writes the time. | Cô mở một cuốn sổ mới và ghi giờ.
+This time, she writes it the right way round. And she sends a report. | Lần này cô viết đúng chiều. Và cô gửi báo cáo.
+? Ghi chép của Hải giúp được Mai điều gì? Việc nhỏ hôm nay có thể giúp người sau thế nào?
+? Mai tò mò dù danh sách nói "chỉ là nhiễu". Vì sao tò mò quan trọng với khoa học và xã hội?
+? Trong thời đại dữ liệu, ai nên được quyết định điều gì là "tiếng ồn" và điều gì đáng ghi lại?
+* dust | bụi
+* curious | tò mò
+* regular | đều đặn
+* pattern | quy luật
+* random | ngẫu nhiên

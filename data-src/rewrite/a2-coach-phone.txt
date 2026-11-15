@@ -1,0 +1,125 @@
+#id coach-phone
+#level A2
+#title The Coach in the Phone
+#vi Huấn luyện viên trong điện thoại
+#blurb Một đội Liên Quân thua liên tục, cho tới khi có Echo, một AI đọc được mọi ván đấu. Đội thắng liền mạch, nhưng có một thứ AI không đọc được. Truyện về dữ liệu, con người và vai trò của người huấn luyện trong thời AI.
+
+## Eleven Losses | Mười một trận thua
+The Saigon Owls lost eleven games in a row. | Đội Saigon Owls thua mười một trận liên tiếp.
+They were young and talented, but they always made the same mistakes. | Họ trẻ và tài năng, nhưng lúc nào cũng mắc cùng một lỗi.
+They fought too early. They forgot the dragon. They blamed each other. | Họ giao tranh quá sớm. Họ quên rồng. Họ đổ lỗi cho nhau.
+Their coach, Minh, was tired. He hadn't slept well in weeks. | Huấn luyện viên của họ, anh Minh, mệt mỏi. Đã nhiều tuần anh không ngủ ngon.
+
+Then the team owner bought a new tool called Echo. | Rồi chủ đội mua một công cụ mới tên Echo.
+Echo was an AI that lived in everyone's phone. | Echo là một AI sống trong điện thoại của mọi người.
+It had watched two million professional games. | Nó đã xem hai triệu trận đấu chuyên nghiệp.
+It knew every hero, every item, every map. | Nó biết mọi tướng, mọi trang bị, mọi bản đồ.
+During practice, it spoke in the players' ears: | Trong lúc tập, nó nói vào tai các tuyển thủ:
+"Jungler, go top now. Sixty-two percent chance of a kill." | "Đi rừng, lên đường trên ngay. Sáu mươi hai phần trăm khả năng hạ mạng."
+"Support, buy a shield. The enemy has more magic damage." | "Hỗ trợ, mua khiên. Đối thủ nhiều sát thương phép hơn."
+
+Minh watched quietly from the back of the room. | Anh Minh lặng lẽ quan sát từ cuối phòng.
+He felt two things at the same time. | Anh cảm thấy hai điều cùng một lúc.
+He felt relief, because the players finally had good advice. | Anh thấy nhẹ nhõm, vì cuối cùng các tuyển thủ có lời khuyên tốt.
+And he felt fear, because the advice wasn't coming from him. | Và anh thấy sợ, vì lời khuyên không đến từ anh.
+If a phone could coach the team, what was he for? | Nếu một chiếc điện thoại huấn luyện được cả đội, thì anh để làm gì?
+? Nếu em là anh Minh, em cảm thấy thế nào khi AI làm tốt phần việc của mình?
+? AI đã xem hai triệu trận đấu. Nhưng có điều gì về con người mà dữ liệu không thể biết?
+? Trong ngành của em, công cụ AI nào đang làm thay một phần việc của con người?
+* in a row | liên tiếp
+* blame | đổ lỗi
+* relief | sự nhẹ nhõm
+* advice | lời khuyên
+* professional | chuyên nghiệp
+
+## Seven Wins | Bảy trận thắng
+With Echo, the Owls won seven games in a row. | Có Echo, Owls thắng bảy trận liên tiếp.
+The fans were excited. The owner was happy. | Người hâm mộ phấn khích. Chủ đội vui mừng.
+Online, people called Echo "the sixth player". | Trên mạng, người ta gọi Echo là "tuyển thủ thứ sáu".
+
+But Minh noticed things that Echo didn't. | Nhưng anh Minh để ý những điều Echo không thấy.
+The players stopped talking to each other. | Các tuyển thủ thôi nói chuyện với nhau.
+Why would they? Echo told them everything. | Mà sao phải nói? Echo đã bảo họ mọi thứ.
+Long, the young mid laner, stopped making his crazy, creative plays. | Long, tuyển thủ đường giữa trẻ tuổi, thôi tung ra những pha xử lý điên rồ, sáng tạo.
+"Echo says they don't work," he said. "The numbers are bad." | "Echo bảo chúng không hiệu quả," cậu nói. "Số liệu xấu."
+Before Echo, those plays won them their only trophy. | Trước khi có Echo, chính những pha đó giúp họ giành chiếc cúp duy nhất.
+
+And one player, Vy, the support, was getting quieter every day. | Và một tuyển thủ, Vy, người chơi hỗ trợ, ngày càng ít nói.
+Her numbers were perfect. Echo gave her an A every game. | Chỉ số của cô hoàn hảo. Ván nào Echo cũng chấm cô điểm A.
+But she ate lunch alone. She didn't laugh anymore. | Nhưng cô ăn trưa một mình. Cô không còn cười nữa.
+Echo couldn't see that. There was no number for it. | Echo không thấy điều đó. Không có con số nào cho nó.
+
+One evening, Minh found Vy crying in the stairwell. | Một buổi tối, anh Minh thấy Vy khóc ở cầu thang.
+"My mom is in the hospital," she said. "I didn't tell anyone." | "Mẹ em đang nằm viện," cô nói. "Em không kể với ai."
+"Echo says I'm playing well, so I thought it didn't matter." | "Echo nói em chơi tốt, nên em nghĩ chuyện đó không quan trọng."
+? Đội thắng nhiều hơn nhưng các tuyển thủ ít nói chuyện hơn. Thắng bằng mọi giá có đáng không?
+? Vì sao Long thôi chơi sáng tạo? Dữ liệu có thể giết chết sự sáng tạo như thế nào?
+? "Không có con số nào cho nỗi buồn." Ở chỗ làm hay ở trường, điều gì quan trọng mà không đo được?
+* fan | người hâm mộ
+* creative | sáng tạo
+* trophy | cúp
+* stairwell | cầu thang
+* matter | quan trọng
+
+## No Phones on Stage | Không điện thoại trên sân khấu
+Then the big news came. | Rồi tin lớn đến.
+The league made a new rule for the playoffs: no AI help during matches. | Ban tổ chức ra luật mới cho vòng loại trực tiếp: không được dùng AI hỗ trợ trong trận.
+Phones had to stay in a box outside the stage. | Điện thoại phải để trong một chiếc hộp bên ngoài sân khấu.
+The players panicked. | Các tuyển thủ hoảng loạn.
+"We can't play without Echo," Long said. "We don't remember how." | "Bọn em không chơi được nếu thiếu Echo," Long nói. "Bọn em quên cách chơi rồi."
+
+That was true, and it scared Minh more than any loss. | Điều đó là thật, và nó khiến anh Minh sợ hơn bất kỳ trận thua nào.
+In two months, the team had stopped thinking for themselves. | Chỉ trong hai tháng, cả đội đã thôi tự suy nghĩ.
+They knew what to do, but not why. | Họ biết phải làm gì, nhưng không biết tại sao.
+
+So for the last week before the playoffs, Minh changed practice. | Nên tuần cuối trước vòng loại, anh Minh đổi cách tập.
+He turned Echo off during games. | Anh tắt Echo trong lúc đấu.
+After each game, they watched the replay together, with Echo's advice on the screen. | Sau mỗi ván, cả đội xem lại băng cùng nhau, lời khuyên của Echo hiện trên màn hình.
+"Echo says go top here. Do you agree? Why?" Minh asked. | "Echo bảo lên đường trên ở đây. Các em có đồng ý không? Tại sao?" anh Minh hỏi.
+Sometimes the players agreed. Sometimes they argued. | Có lúc tuyển thủ đồng ý. Có lúc họ tranh cãi.
+Once, Long said, "Echo is wrong. The enemy jungler was tilted. I could feel it." | Có lần Long nói: "Echo sai. Đi rừng đối thủ đang cay cú. Em cảm nhận được."
+Echo didn't know what "tilted" felt like. | Echo không biết "cay cú" là cảm giác thế nào.
+
+Slowly, the team started talking again. | Dần dần, cả đội bắt đầu nói chuyện lại với nhau.
+The AI was still there, but now it was a teacher, not a boss. | AI vẫn ở đó, nhưng giờ nó là thầy giáo, không phải ông chủ.
+? Vì sao dựa vào AI quá nhiều có thể khiến ta "quên cách tự suy nghĩ"? Em có thấy điều này khi dùng điện thoại, bản đồ, máy tính không?
+? "AI là thầy giáo, không phải ông chủ." Em hiểu câu này thế nào?
+? Xem lại và hỏi "Tại sao?" giúp người học khác gì với chỉ làm theo lời khuyên?
+* league | giải đấu
+* panic | hoảng loạn
+* replay | băng xem lại
+* argue | tranh cãi
+* tilted | cay cú (khi chơi game)
+
+## Two Coaches | Hai người huấn luyện
+The final was against the best team in the country. | Trận chung kết gặp đội mạnh nhất cả nước.
+Everyone expected the Owls to lose. Without Echo, they were "just kids". | Ai cũng nghĩ Owls sẽ thua. Không có Echo, họ "chỉ là mấy đứa trẻ".
+In the first game, they lost badly. | Ván đầu, họ thua đậm.
+In the break, nobody spoke. | Giờ nghỉ, không ai nói gì.
+
+Then Vy stood up. | Rồi Vy đứng dậy.
+Her mother was out of the hospital, and she was smiling again. | Mẹ cô đã xuất viện, và cô đã cười trở lại.
+"They play exactly like Echo told us to play," she said. | "Họ chơi y hệt cách Echo từng bảo bọn mình chơi," cô nói.
+"Safe. Perfect. Predictable." | "An toàn. Hoàn hảo. Dễ đoán."
+"So let's do the thing the numbers hate." | "Vậy mình làm cái điều mà số liệu ghét đi."
+Long grinned. | Long cười toe.
+
+In the next three games, the Owls played like before Echo, but smarter. | Ba ván tiếp theo, Owls chơi như trước khi có Echo, nhưng thông minh hơn.
+They took risks the AI would never take, at moments they had studied together. | Họ chấp nhận những rủi ro AI không bao giờ dám, vào những thời điểm cả đội đã cùng nghiên cứu.
+They won three to one. | Họ thắng ba một.
+
+After the trophy, a journalist asked Minh: | Sau khi nhận cúp, một nhà báo hỏi anh Minh:
+"Who is the real coach of this team, you or the AI?" | "Ai mới là huấn luyện viên thật của đội, anh hay AI?"
+Minh thought about it. | Anh Minh suy nghĩ.
+"Echo knows the game," he said. "I know the players." | "Echo hiểu trò chơi," anh nói. "Tôi hiểu các tuyển thủ."
+"Echo can tell you what usually works." | "Echo nói được điều gì thường hiệu quả."
+"A coach helps people believe they can do what usually doesn't." | "Huấn luyện viên giúp con người tin rằng họ làm được điều thường không ai làm được."
+"In the future, every team will have an AI. Not every team will have a heart." | "Trong tương lai, đội nào cũng sẽ có AI. Không phải đội nào cũng có trái tim."
+? Vy nhận ra đối thủ "chơi y hệt AI". Khi ai cũng dùng cùng một AI, điều gì sẽ xảy ra với sự khác biệt?
+? "Echo hiểu trò chơi, tôi hiểu tuyển thủ." Trong tương lai, nghề nào cần cả hai loại hiểu biết này?
+? Nếu em là huấn luyện viên, em sẽ dùng AI thế nào để đội mạnh hơn mà không mất "trái tim"?
+* break | giờ nghỉ
+* predictable | dễ đoán
+* take a risk | chấp nhận rủi ro
+* journalist | nhà báo
+* believe | tin
