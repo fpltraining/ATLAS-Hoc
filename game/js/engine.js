@@ -39,8 +39,9 @@ var G = window.G || (window.G = {});
     var sp = at || scene.spawn || { x: scene.w / 2, y: scene.walk.y1 - 40 };
     var wk = scene.walk;   // luôn đặt nhân vật trong vùng đi được
     P.x = clamp(sp.x, wk.x0 + 5, wk.x1 - 5); P.y = clamp(sp.y, wk.y0 + 5, wk.y1 - 5); P.dir = sp.dir || 'up';
+    unstick();
     K.x = P.x - 50; K.y = P.y + 30;
-    target = null; pending = null; fade = 1;
+    target = null; pending = null; path = []; fade = 1;
     G.S.viTri = { canh: id, x: Math.round(P.x), y: Math.round(P.y) };
     G.save();
     camSnap = true; spawnTown(); fx = [];
@@ -160,13 +161,15 @@ var G = window.G || (window.G = {});
 
   function update(dt) {
     var vx = 0, vy = 0;
-    if (joy.on && (Math.abs(joy.dx) > 0.15 || Math.abs(joy.dy) > 0.15)) { vx = joy.dx; vy = joy.dy; target = null; pending = null; }
-    else if (keys.l || keys.r || keys.u || keys.d) { vx = (keys.r ? 1 : 0) - (keys.l ? 1 : 0); vy = (keys.d ? 1 : 0) - (keys.u ? 1 : 0); target = null; pending = null; }
+    if (joy.on && (Math.abs(joy.dx) > 0.15 || Math.abs(joy.dy) > 0.15)) { vx = joy.dx; vy = joy.dy; target = null; pending = null; path = []; }
+    else if (keys.l || keys.r || keys.u || keys.d) { vx = (keys.r ? 1 : 0) - (keys.l ? 1 : 0); vy = (keys.d ? 1 : 0) - (keys.u ? 1 : 0); target = null; pending = null; path = []; }
     else if (target) {
       var tx = target.x - P.x, ty = target.y - P.y, dist = Math.sqrt(tx * tx + ty * ty);
-      if (dist < 8 || (pending && near && near.label === pendingLabel)) {
-        target = null;
-        if (pending) { var p = pending; pending = null; p(); }
+      if (pending && near && near.label === pendingLabel) {
+        target = null; path = []; var p0 = pending; pending = null; p0();
+      } else if (dist < 8) {
+        if (path.length) { target = path.shift(); tx = target.x - P.x; ty = target.y - P.y; dist = Math.sqrt(tx * tx + ty * ty) || 1; vx = tx / dist; vy = ty / dist; }
+        else { target = null; if (pending) { var p = pending; pending = null; p(); } }
       } else { vx = tx / dist; vy = ty / dist; }
     }
     var len = Math.sqrt(vx * vx + vy * vy);
@@ -175,23 +178,21 @@ var G = window.G || (window.G = {});
       dustT -= dt; if (dustT <= 0) { dustT = 0.22; fx.push({ k: 'dust', x: P.x + (Math.random() - 0.5) * 14, y: P.y + 2, t: 0, life: 0.5 }); }
       vx /= Math.max(1, len); vy /= Math.max(1, len);
       var step = SPEED * dt;
-      var moved = tryMove(vx, vy, step);
-      if (!moved && target) {
-        // lách vòng vật cản: thử xoay hướng đi dần sang trái hoặc phải, nhớ phía đã chọn cho mượt
-        var base = [0.6, 1.2, 1.5708, 2.1];
-        var angs = [];
-        for (var bi = 0; bi < base.length; bi++) { if (detour) angs.push(detour * base[bi]); else { angs.push(base[bi]); angs.push(-base[bi]); } }
-        if (detour) for (var bj = 0; bj < base.length; bj++) angs.push(-detour * base[bj]);
-        for (var ai = 0; ai < angs.length && !moved; ai++) {
-          var c = Math.cos(angs[ai]), sn = Math.sin(angs[ai]);
-          var rx = vx * c - vy * sn, ry = vx * sn + vy * c;
-          if (tryMove(rx, ry, step)) { moved = true; detour = angs[ai] > 0 ? 1 : -1; vx = rx; vy = ry; }
+      if (target && step > dist) step = dist;   // không vượt quá điểm đích
+      var ox = P.x, oy = P.y;
+      var moved = slideMove(vx, vy, step);
+      var prog = Math.abs(P.x - ox) + Math.abs(P.y - oy);
+      if (target) {
+        // đi chậm hẳn hoặc đứng im quá lâu: tìm đường lại, vẫn kẹt thì dừng
+        if (prog < step * 0.25) stuckT += dt; else stuckT = Math.max(0, stuckT - dt);
+        if (stuckT > 0.35) {
+          stuckT = 0;
+          var fin = finalT || target, pa = pending, pl = pendingLabel;
+          if (replans < 2) { replans++; var rp = replans; goTo(fin.x, fin.y, pa, pl); replans = rp; }
+          else { target = null; path = []; if (pending && near) { var q = pending; pending = null; q(); } else pending = null; }
         }
-        if (!moved) {
-          if (pending && near) { var q = pending; pending = null; target = null; q(); }
-          else target = null;
-        }
-      } else if (moved && target) { stuckFree += dt; if (stuckFree > 0.6) { detour = 0; stuckFree = 0; } }
+      }
+      if (!moved) P.moving = false;
       if (Math.abs(vx) > Math.abs(vy)) P.dir = vx < 0 ? 'left' : 'right'; else P.dir = vy < 0 ? 'up' : 'down';
       P.t += dt;
     }
@@ -222,12 +223,100 @@ var G = window.G || (window.G = {});
     if (fade > 0) fade = Math.max(0, fade - dt * 3);
   }
 
-  var detour = 0, stuckFree = 0;
+  var detour = 0, stuckFree = 0, stuckT = 0, path = [], replans = 0;
   function tryMove(dx, dy, step) {
     var nx = P.x + dx * step, ny = P.y + dy * step;
     if (!blocked(nx, ny)) { P.x = nx; P.y = ny; return true; }
     return false;
   }
+  /* đi theo hướng (dx,dy); chạm tường thì trượt dọc tường thay vì đứng khựng */
+  function slideMove(dx, dy, step) {
+    if (tryMove(dx, dy, step)) return true;
+    if (Math.abs(dx) > 0.2 && tryMove(dx > 0 ? 1 : -1, 0, step * Math.abs(dx))) return true;
+    if (Math.abs(dy) > 0.2 && tryMove(0, dy > 0 ? 1 : -1, step * Math.abs(dy))) return true;
+    var a = [0.5, -0.5, 0.9, -0.9];
+    for (var i = 0; i < a.length; i++) {
+      var c = Math.cos(a[i]), sn = Math.sin(a[i]);
+      if (tryMove(dx * c - dy * sn, dx * sn + dy * c, step * 0.8)) return true;
+    }
+    return false;
+  }
+
+  /* ---------- tìm đường A* trên lưới ô 20 đơn vị ---------- */
+  var CELL = 20;
+  function freeAt(x, y) { return !blocked(x, y); }
+  function nearestFree(x, y) {
+    if (freeAt(x, y)) return { x: x, y: y };
+    for (var r = CELL / 2; r < 400; r += CELL / 2) {
+      for (var k = 0; k < 16; k++) {
+        var a = k * Math.PI / 8, qx = x + Math.cos(a) * r, qy = y + Math.sin(a) * r;
+        if (freeAt(qx, qy)) return { x: qx, y: qy };
+      }
+    }
+    return null;
+  }
+  function lineFree(x0, y0, x1, y1) {
+    var dx = x1 - x0, dy = y1 - y0, d = Math.sqrt(dx * dx + dy * dy), n = Math.ceil(d / 8);
+    for (var i = 1; i <= n; i++) if (blocked(x0 + dx * i / n, y0 + dy * i / n)) return false;
+    return true;
+  }
+  function findPath(sx, sy, gx, gy) {
+    if (lineFree(sx, sy, gx, gy)) return [{ x: gx, y: gy }];
+    var cols = Math.ceil(scene.w / CELL), rows = Math.ceil(scene.h / CELL), N = cols * rows;
+    var free = {}, g = {}, came = {}, closed = {};
+    function ok(i) { if (free[i] === undefined) free[i] = freeAt((i % cols) * CELL + CELL / 2, Math.floor(i / cols) * CELL + CELL / 2); return free[i]; }
+    function cx(i) { return (i % cols) * CELL + CELL / 2; }
+    function cy(i) { return Math.floor(i / cols) * CELL + CELL / 2; }
+    function idx(x, y) { return clamp(Math.floor(y / CELL), 0, rows - 1) * cols + clamp(Math.floor(x / CELL), 0, cols - 1); }
+    var st = idx(sx, sy), go = idx(gx, gy);
+    if (!ok(go)) { var nf = nearestFree(gx, gy); if (!nf) return null; gx = nf.x; gy = nf.y; go = idx(gx, gy); if (!ok(go)) return null; }
+    function h(i) { var ax = Math.abs(cx(i) - gx), ay = Math.abs(cy(i) - gy); return Math.max(ax, ay) + 0.414 * Math.min(ax, ay); }
+    // hàng đợi ưu tiên (đống nhị phân)
+    var heap = [], fv = {};
+    function push(i) { heap.push(i); var c = heap.length - 1; while (c > 0) { var pa = (c - 1) >> 1; if (fv[heap[pa]] <= fv[heap[c]]) break; var t = heap[pa]; heap[pa] = heap[c]; heap[c] = t; c = pa; } }
+    function pop() { var top = heap[0], end = heap.pop(); if (heap.length) { heap[0] = end; var c = 0; for (;;) { var l = 2 * c + 1, r = l + 1, m = c; if (l < heap.length && fv[heap[l]] < fv[heap[m]]) m = l; if (r < heap.length && fv[heap[r]] < fv[heap[m]]) m = r; if (m === c) break; var t = heap[m]; heap[m] = heap[c]; heap[c] = t; c = m; } } return top; }
+    g[st] = 0; fv[st] = h(st); push(st);
+    var D = [[1, 0, 1], [-1, 0, 1], [0, 1, 1], [0, -1, 1], [1, 1, 1.414], [1, -1, 1.414], [-1, 1, 1.414], [-1, -1, 1.414]];
+    var found = false, steps = 0;
+    while (heap.length && steps < N) {
+      var cur = pop(); steps++;
+      if (closed[cur]) continue; closed[cur] = 1;
+      if (cur === go) { found = true; break; }
+      var c0 = cur % cols, r0 = Math.floor(cur / cols);
+      for (var k = 0; k < 8; k++) {
+        var c1 = c0 + D[k][0], r1 = r0 + D[k][1];
+        if (c1 < 0 || r1 < 0 || c1 >= cols || r1 >= rows) continue;
+        var ni = r1 * cols + c1;
+        if (closed[ni] || !ok(ni)) continue;
+        if (D[k][2] > 1 && (!ok(r0 * cols + c1) || !ok(r1 * cols + c0))) continue; // không cắt góc
+        var ng = g[cur] + D[k][2] * CELL;
+        if (g[ni] === undefined || ng < g[ni]) { g[ni] = ng; came[ni] = cur; fv[ni] = ng + h(ni); push(ni); }
+      }
+    }
+    if (!found) return null;
+    var pts = [{ x: gx, y: gy }];
+    for (var q = came[go]; q !== undefined && q !== st; q = came[q]) pts.unshift({ x: cx(q), y: cy(q) });
+    // làm mượt: bỏ các điểm trung gian nếu đi thẳng được
+    var out = [], fx0 = sx, fy0 = sy, iA = 0;
+    while (iA < pts.length) {
+      var j = pts.length - 1;
+      while (j > iA && !lineFree(fx0, fy0, pts[j].x, pts[j].y)) j--;
+      out.push(pts[j]); fx0 = pts[j].x; fy0 = pts[j].y; iA = j + 1;
+    }
+    return out;
+  }
+  /* đặt đích đi tới: tìm đường vòng qua nhà, cây, xe… */
+  function goTo(x, y, act, label) {
+    pending = act || null; pendingLabel = label || '';
+    var w = scene.walk;
+    x = clamp(x, w.x0 + 4, w.x1 - 4); y = clamp(y, w.y0 + 4, w.y1 - 4);
+    var pth = findPath(P.x, P.y, x, y);
+    if (!pth || !pth.length) { target = null; path = []; if (pending && near) { var q = pending; pending = null; q(); } return; }
+    path = pth; target = path.shift(); stuckT = 0; replans = 0; finalT = pth.length ? pth[pth.length - 1] : target;
+  }
+  var finalT = null;
+  /* vị trí lưu cũ nằm trong vật cản (bản đồ đổi) thì đẩy ra chỗ trống gần nhất */
+  function unstick() { if (blocked(P.x, P.y)) { var f = nearestFree(P.x, P.y); if (f) { P.x = f.x; P.y = f.y; } } }
 
   /* vị trí giáo viên trong lớp (theo ảnh lớp học) */
   function TX() { return (scene.teacher || {}).x || 768; }
@@ -290,9 +379,9 @@ var G = window.G || (window.G = {});
     var ts = triggers();
     for (var i = 0; i < ts.length; i++) if (ts[i].label === curGoal.label) {
       if (near === ts[i]) { ts[i].act(); return; }
-      target = { x: ts[i].x, y: ts[i].y + (scene.kind === 'city' ? 10 : 0) }; pending = ts[i].act; pendingLabel = ts[i].label; return;
+      goTo(ts[i].x, ts[i].y + (scene.kind === 'city' ? 10 : 0), ts[i].act, ts[i].label); return;
     }
-    target = { x: curGoal.x, y: curGoal.y }; pending = null;
+    goTo(curGoal.x, curGoal.y);
   };
   /* dấu 📍 trên đích; nếu đích ngoài màn hình thì mũi tên ở mép chỉ hướng */
   function drawGoalMark() {
@@ -595,8 +684,8 @@ var G = window.G || (window.G = {});
       var hitR = t.npc ? 120 : scene.kind === 'hall' && t.y === G.HALL_DOOR_Y ? 110 : 90;
       if (Math.abs(dx) < hitR && dy > -260 && dy < 60) { hit = t; break; }
     }
-    if (hit) { target = { x: hit.x, y: hit.y + (scene.kind === 'city' ? 10 : 0) }; pending = hit.act; pendingLabel = hit.label; }
-    else { target = w; pending = null; }
+    if (hit) goTo(hit.x, hit.y + (scene.kind === 'city' ? 10 : 0), hit.act, hit.label);
+    else goTo(w.x, w.y);
   }
 
   function bindInput() {
@@ -634,5 +723,6 @@ var G = window.G || (window.G = {});
 
   G.doNear = function () { if (near) near.act(); };
   /* để thử tự động: vị trí nhân vật, camera, cảnh, chỗ tương tác gần nhất */
-  G.debugState = function () { return { x: P.x, y: P.y, cx: cam.x, cy: cam.y, zoom: zoom, scene: sceneId, near: near ? near.label : null }; };
+  G.debugGo = function (x, y) { goTo(x, y); return { path: path.length + (target ? 1 : 0) }; };
+  G.debugState = function () { return { target: !!target, moving: P.moving, x: P.x, y: P.y, cx: cam.x, cy: cam.y, zoom: zoom, scene: sceneId, near: near ? near.label : null }; };
 })();
