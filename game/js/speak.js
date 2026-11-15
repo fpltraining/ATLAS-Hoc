@@ -19,21 +19,28 @@ var G = window.G || (window.G = {});
   G.setMic = function (on) { G.S.micro = on ? 'on' : 'off'; G.save(); };
 
   /* nghe một lần: cb(err, [các cách nghe]) */
-  var cur = null;
+  var cur = null, dog = 0;
+  G.listening = function () { return !!cur; };
   G.listen = function (lang, cb, onInterim) {
     if (!SR) { cb('Máy này chưa nghe được giọng nói. Trên iPhone/iPad hãy mở bằng Safari và bật Siri.'); return; }
-    if (cur) { try { cur.abort(); } catch (e) { /* bỏ qua */ } }
-    var r = new SR(), done = false, finals = [];
+    if (cur) { var old = cur; cur = null; try { old.abort(); } catch (e0) { /* bỏ qua */ } }
+    if (G.hush) G.hush();
+    var r, done = false, finals = [], interim = '';
+    try { r = new SR(); } catch (e1) { cb('Không mở được micro. Thử lại sau giây lát.'); return; }
     cur = r;
+    function end(err, alts) {
+      if (done) return; done = true; clearTimeout(dog);
+      if (cur === r) cur = null;
+      cb(err, alts);
+    }
     r.lang = lang === 'zh' ? 'zh-CN' : 'en-US';
     r.interimResults = true; r.maxAlternatives = 5; r.continuous = false;
     r.onresult = function (e) {
       var res = e.results[e.results.length - 1];
-      if (res.isFinal) { finals = []; for (var i = 0; i < res.length; i++) finals.push(res[i].transcript); }
-      else if (onInterim) onInterim(res[0].transcript);
+      if (res.isFinal) { finals = []; for (var i = 0; i < res.length; i++) if (res[i].transcript) finals.push(res[i].transcript); }
+      else { interim = res[0].transcript; if (onInterim) onInterim(interim); }
     };
     r.onerror = function (e) {
-      if (done) return; done = true; cur = null;
       var M = {
         'not-allowed': 'Chưa cho phép dùng micro. Vào Cài đặt → Safari → Micro, chọn Cho phép.',
         'service-not-allowed': 'Nhận dạng giọng nói đang tắt. Bật Siri trong Cài đặt rồi thử lại.',
@@ -42,15 +49,24 @@ var G = window.G || (window.G = {});
         'audio-capture': 'Không tìm thấy micro trên máy này.',
         aborted: 'Đã dừng.'
       };
-      cb(M[e.error] || 'Máy chưa nghe được. Thử lại nhé.');
+      // đã nghe được một phần thì vẫn chấm
+      if (e.error !== 'not-allowed' && e.error !== 'service-not-allowed' && (finals.length || interim)) { end(null, finals.length ? finals : [interim]); return; }
+      end({ code: e.error, msg: M[e.error] || 'Máy chưa nghe được. Thử lại nhé.' });
     };
     r.onend = function () {
-      if (done) return; done = true; cur = null;
-      if (finals.length) cb(null, finals); else cb('Máy chưa nghe thấy gì. Nói to và gần micro hơn nhé.');
+      if (finals.length) end(null, finals);
+      else if (interim) end(null, [interim]);   // iPhone đôi khi không gửi kết quả cuối
+      else end({ code: 'no-speech', msg: 'Máy chưa nghe thấy gì. Nói to và gần micro hơn nhé.' });
     };
-    try { r.start(); } catch (e) { done = true; cur = null; cb('Không mở được micro. Thử lại sau giây lát.'); }
+    // chống treo: nghe tối đa 10 giây, sau đó dừng; 3 giây nữa vẫn im thì báo lỗi
+    dog = setTimeout(function () {
+      try { r.stop(); } catch (e2) { /* bỏ qua */ }
+      dog = setTimeout(function () { try { r.abort(); } catch (e3) { /* bỏ qua */ } if (finals.length || interim) end(null, finals.length ? finals : [interim]); else end({ code: 'timeout', msg: 'Máy nghe lâu quá mà chưa ra chữ. Thử lại nhé.' }); }, 3000);
+    }, 10000);
+    try { r.start(); } catch (e4) { end({ code: 'start', msg: 'Không mở được micro. Thử lại sau giây lát.' }); }
   };
   G.stopListen = function () { if (cur) { try { cur.stop(); } catch (e) { /* bỏ qua */ } } };
+  G.abortListen = function () { if (cur) { var c = cur; cur = null; try { c.abort(); } catch (e) { /* bỏ qua */ } } };
 
   /* ---------- chấm điểm ---------- */
   var ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
@@ -158,32 +174,49 @@ var G = window.G || (window.G = {});
         G.el('button.speak', { 'aria-label': 'Nghe mẫu', onclick: function () { G.say(opts.text, lang); } }, '🔊')));
       if (G.micOn()) micMode(); else selfMode();
     }
+    function icon(n, cls) { return G.el('img.' + (cls || 'mk-ic'), { src: 'assets/' + n, alt: '', draggable: 'false' }); }
+    var busy = false, lastTap = 0;
+    function tapOk() { var n = Date.now(); if (n - lastTap < 600) return false; lastTap = n; return true; }   // chống chạm đúp
     function micMode() {
       var res = G.el('div.mk-res');
-      var mic = G.el('button.mk-mic', { onclick: start }, '🎤', G.el('span', tries ? 'Nói lại' : 'Bấm rồi nói'));
+      var lbl = G.el('span', tries ? 'Nói lại' : 'Bấm rồi nói');
+      var mic = G.el('button.mk-mic', { 'aria-label': 'Bấm để nói', onclick: function () { if (!tapOk()) return; if (busy) G.stopListen(); else start(); } }, icon('ic_mic.png', 'mk-mic-img'), lbl);
       box.appendChild(G.el('div.mk-row', mic, res));
       box.appendChild(G.el('div.mk-foot',
-        G.el('button.link', { onclick: function () { G.setMic(false); render(); } }, '🔇 Không dùng micro'),
-        G.el('button.link', { onclick: function () { G.stopListen(); finish(best ? best.score : null); } }, best ? 'Tiếp tục ›' : 'Bỏ qua ›')));
+        G.el('button.mk-sw', { onclick: function () { G.abortListen(); busy = false; G.setMic(false); render(); } }, icon('ic_lips.png'), 'Không dùng micro'),
+        G.el('button.link', { onclick: function () { G.abortListen(); busy = false; finish(best ? best.score : null); } }, best ? 'Tiếp tục ›' : 'Bỏ qua ›')));
       if (best) showResult(res, best);
+      else res.appendChild(G.el('div.small.faint', 'Bấm micro, nói câu ở trên. Nói xong máy tự chấm (bấm lần nữa để dừng sớm).'));
       function start() {
-        mic.className = 'mk-mic on'; mic.lastChild.textContent = 'Đang nghe…';
-        res.innerHTML = ''; res.appendChild(G.el('div.small.faint', 'Nói to, rõ câu ở trên'));
+        busy = true;
+        mic.className = 'mk-mic on'; lbl.textContent = 'Đang nghe… bấm để dừng';
+        res.innerHTML = ''; res.appendChild(G.el('div.mk-live', '🎙 Nói to, rõ câu ở trên'));
         G.listen(lang, function (err, alts) {
+          busy = false; lastTap = Date.now();
+          if (fin || !box.parentNode) return;            // thẻ đã đóng
           mic.className = 'mk-mic';
-          if (err) { mic.lastChild.textContent = 'Thử lại'; res.innerHTML = ''; res.appendChild(G.el('div.mk-err', err)); return; }
+          if (err) {
+            if (err.code === 'aborted') { lbl.textContent = tries ? 'Nói lại' : 'Bấm rồi nói'; res.innerHTML = ''; return; }
+            lbl.textContent = 'Thử lại'; res.innerHTML = '';
+            res.appendChild(G.el('div.mk-err', err.msg));
+            if (err.code === 'not-allowed' || err.code === 'service-not-allowed' || err.code === 'audio-capture') {
+              res.appendChild(G.el('button.btn.sm', { onclick: function () { G.setMic(false); render(); } }, 'Học không dùng micro'));
+            }
+            return;
+          }
           tries++;
           var r = G.scoreSpeech(opts.text, alts);
+          var first = !best;
           if (!best || r.score >= best.score) best = r;
           G.sfx(r.score >= G.PASS_SCORE ? 'right' : 'wrong');
-          if (r.score >= G.PASS_SCORE) G.addXp(r.score >= 90 ? 3 : 2);
+          if (r.score >= G.PASS_SCORE && first) G.addXp(r.score >= 90 ? 3 : 2);
           render();
-        }, function (t) { res.innerHTML = ''; res.appendChild(G.el('div.small.faint', '“' + t + '”')); });
+        }, function (t) { res.innerHTML = ''; res.appendChild(G.el('div.mk-live', '“' + t + '”')); });
       }
     }
     function showResult(res, r) {
       var lb = G.scoreLabel(r.score);
-      res.appendChild(G.el('div.mk-score.' + lb[1], G.el('b', r.score), G.el('span', '/100')));
+      res.appendChild(G.el('div.mk-score.' + lb[1], r.score >= G.PASS_SCORE ? icon('ic_mic_ok.png', 'mk-ok') : null, G.el('b', r.score), G.el('span', '/100')));
       res.appendChild(G.el('div.mk-lb', lb[0]));
       res.appendChild(G.el('div.mk-words', r.words.map(function (w, i) {
         var m = r.marks[i] || 0; return G.el('span.' + (m >= 0.85 ? 'w-ok' : m > 0 ? 'w-near' : 'w-miss'), w);
@@ -191,13 +224,14 @@ var G = window.G || (window.G = {});
       res.appendChild(G.el('div.small.faint', 'Máy nghe: “' + r.heard + '”'));
     }
     function selfMode() {
-      box.appendChild(G.el('div.small', '🔁 Bấm 🔊 nghe mẫu, rồi nhắc lại thật to 2 lần. Nói xong thì bấm nút bên dưới.'));
+      box.appendChild(G.el('div.mk-row', icon('ic_speak.png', 'mk-self-img'),
+        G.el('div.small', 'Bấm 🔊 nghe mẫu, rồi nhắc lại thật to 2 lần. Nói xong thì bấm nút bên dưới.')));
       box.appendChild(G.el('div.mk-foot',
-        G.canListen ? G.el('button.link', { onclick: function () { G.setMic(true); render(); } }, '🎤 Dùng micro chấm điểm') : G.el('span.small.faint', 'Máy này chưa có micro chấm điểm'),
+        G.canListen ? G.el('button.mk-sw', { onclick: function () { G.setMic(true); render(); } }, icon('ic_mic.png'), 'Dùng micro chấm điểm') : G.el('span.small.faint', 'Máy này chưa có micro chấm điểm'),
         G.el('button.btn.seal.sm', { onclick: function () { G.sfx('right'); G.addXp(1); finish(null); } }, '✓ Mình đã nói xong')));
     }
     var fin = false;
-    function finish(s) { if (fin) return; fin = true; if (opts.onDone) opts.onDone(s); }
+    function finish(s) { if (fin) return; fin = true; G.abortListen(); if (opts.onDone) opts.onDone(s); }
     render();
     if (opts.autoplay !== false) G.say(opts.text, lang);
     return box;

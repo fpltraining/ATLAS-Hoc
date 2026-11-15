@@ -48,6 +48,12 @@ var G = window.G || (window.G = {});
     } catch (e) { /* máy không có giọng */ }
   }
 
+  /* tắt giọng mẫu đang phát (trước khi bật micro, để micro không thu lại tiếng loa) */
+  G.hush = function () {
+    try { player.pause(); } catch (e) { /* bỏ qua */ }
+    try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e2) { /* bỏ qua */ }
+  };
+
   G.say = function (text, lang) {
     var url = G.audioUrl(text, lang || 'en');
     if (url) {
