@@ -90,13 +90,13 @@ var G = window.G || (window.G = {});
     function drawMic() {
       micBox.innerHTML = '';
       var on = G.micOn();
-      micBox.appendChild(G.el('div.td-txt', G.el('b', '🎤 Luyện nói'),
+      micBox.appendChild(G.el('div.td-txt', G.el('b.td-mic-h', G.el('img.mk-ic', { src: 'assets/ic_mic_ok.png', alt: '' }), 'Luyện nói'),
         G.el('div.small.faint', sp !== null ? 'Hôm nay nói ' + d.noi.n + ' câu · điểm trung bình ' + sp + '/100 · ' + G.scoreLabel(sp)[0]
           : on ? 'Micro đang bật: nói câu trong bài học và ngoài phố, máy chấm 0–100 (chấm vừa phải).'
           : 'Đang học không micro: nghe mẫu rồi nhắc lại to, tự bấm "đã nói xong".')));
       micBox.appendChild(G.el('div.td-seg',
-        G.el('button' + (on ? '.on' : ''), { onclick: function () { if (!G.canListen) { G.toast('Máy này chưa nghe được giọng nói. Trên iPhone/iPad hãy mở bằng Safari và bật Siri.'); return; } G.setMic(true); drawMic(); } }, '🎤 Dùng micro'),
-        G.el('button' + (!on ? '.on' : ''), { onclick: function () { G.setMic(false); drawMic(); } }, '🔇 Không dùng micro')));
+        G.el('button' + (on ? '.on' : ''), { onclick: function () { if (!G.canListen) { G.toast('Máy này chưa nghe được giọng nói. Trên iPhone/iPad hãy mở bằng Safari và bật Siri.'); return; } G.setMic(true); drawMic(); } }, G.el('img.mk-ic', { src: 'assets/ic_mic.png', alt: '' }), 'Dùng micro'),
+        G.el('button' + (!on ? '.on' : ''), { onclick: function () { G.setMic(false); drawMic(); } }, G.el('img.mk-ic', { src: 'assets/ic_lips.png', alt: '' }), 'Không dùng micro')));
     }
     drawMic();
     body.appendChild(micBox);
