@@ -1,4 +1,4 @@
-/* Học trong một phòng: 1 Học (thẻ từ) → 2 Luyện (3 trò, không chấm) → 3 Kiểm tra (10 câu, đạt từ 8/10).
+/* Học trong một phòng: 1 Học (thẻ từ) → 2 Luyện (4 trò, có nói qua micro) → 3 Kiểm tra (10 câu, đạt từ 8/10).
    Điểm: luyện đúng +2 XP, kiểm tra đúng +5 XP. Sao: 8/10 = 1, 9/10 = 2, 10/10 = 3. */
 var G = window.G || (window.G = {});
 
@@ -69,7 +69,7 @@ var G = window.G || (window.G = {});
     say(R.intro[0]);
     body.appendChild(G.el('div.menu3',
       G.el('button.big', { onclick: function () { learn(0); } }, G.el('b', R.final ? '1 · Ôn tập' : '1 · Học'), G.el('span', R.items.length + ' từ và câu' + (R.final ? ' của cả cấp A1' : ', nghe và xem nghĩa'))),
-      G.el('button.big', { onclick: practice }, G.el('b', '2 · Luyện'), G.el('span', '3 trò ngắn, sai thì làm lại')),
+      G.el('button.big', { onclick: practice }, G.el('b', '2 · Luyện'), G.el('span', '4 trò ngắn: nghe, chọn câu, nói qua micro, xếp câu')),
       G.el('button.big.seal', { onclick: test }, G.el('b', '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/' + TN() + ' ' + stars(p.sao) : TN() + ' câu, đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp' : 'qua phòng')))
     ));
   }
@@ -137,7 +137,7 @@ var G = window.G || (window.G = {});
     return { headEl: headEl, exam: exam, prompt: T(it), sub: it.py, audio: T(it), autoplay: false, answer: it.vi, options: G.shuffle([it.vi].concat(G.pick(R.items, 3, it).map(function (x) { return x.vi; }))), item: it };
   }
 
-  /* ---------- 2. Luyện: 3 trò ---------- */
+  /* ---------- 2. Luyện: 4 trò ---------- */
   function practice() {
     var games = [
       { name: 'Nghe chọn nghĩa', make: qListen },
@@ -145,21 +145,35 @@ var G = window.G || (window.G = {});
     ];
     var gi = 0;
     function runGame() {
-      if (gi >= games.length) { order(0); return; }
+      if (gi >= games.length) { speakGame(); return; }
       var gm = games[gi];
       var list = G.shuffle(R.items).slice(0, 6);
       var k = 0;
       (function next() {
         if (k >= list.length) { gi++; runGame(); return; }
         body.innerHTML = '';
-        var hd = head(1, 'Trò ' + (gi + 1) + '/3 · ' + gm.name + ' · câu ' + (k + 1) + '/' + list.length);
+        var hd = head(1, 'Trò ' + (gi + 1) + '/4 · ' + gm.name + ' · câu ' + (k + 1) + '/' + list.length);
         mcq(gm.make(list[k], hd, false), function () { G.addXp(2); k++; next(); });
       })();
     }
     runGame();
   }
 
-  /* trò 3: sắp xếp câu ví dụ */
+  /* trò 3: nói theo câu ví dụ (micro chấm 0–100, không có micro thì nghe rồi nhắc lại) */
+  function speakGame() {
+    var list = G.shuffle(R.items).slice(0, 4), k = 0, sum = 0, n = 0;
+    (function next() {
+      if (k >= list.length) { order(0); return; }
+      body.innerHTML = '';
+      body.appendChild(head(1, 'Trò 3/4 · Nói theo · câu ' + (k + 1) + '/' + list.length + (n ? ' · điểm TB ' + Math.round(sum / n) : '')));
+      body.appendChild(G.speakCard({ text: list[k].ex, vi: list[k].exVi, lang: lang, onDone: function (sc) {
+        if (sc !== null) { sum += sc; n++; G.logSpeak(sc); }
+        k++; next();
+      } }));
+    })();
+  }
+
+  /* trò 4: sắp xếp câu ví dụ */
   function order(k) {
     function toks(x) { return (x.w || x.ex).split(' '); }   // tiếng Trung: tách theo từ đã đánh dấu
     var list = R.items.filter(function (x) { return toks(x).length >= 3; });
@@ -170,7 +184,7 @@ var G = window.G || (window.G = {});
       var words = toks(it);
       var picked = [];
       body.innerHTML = '';
-      body.appendChild(head(1, 'Trò 3/3 · Sắp xếp câu · câu ' + (n + 1) + '/' + list.length));
+      body.appendChild(head(1, 'Trò 4/4 · Sắp xếp câu · câu ' + (n + 1) + '/' + list.length));
       var line = G.el('div.oline');
       var pool = G.el('div.opool');
       body.appendChild(G.el('div.qbox', G.el('div.qtext', '“' + it.exVi + '”', speakBtn(it.ex)), pyEl(it.exPy), line, pool));

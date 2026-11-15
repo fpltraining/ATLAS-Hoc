@@ -334,3 +334,36 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .rd-box ol { margin: 6px 0 6px 18px; padding: 0; } .rd-box li { margin: 4px 0; }
 .rd-vocab { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .rd-w { border: 1px solid var(--line); background: #fff; border-radius: 10px; padding: 5px 9px; font-size: 14px; }
+
+/* ---------- luyện nói qua micro ---------- */
+.mk { background: var(--paper); border: 2px solid var(--line); border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.mk-q { position: relative; padding-right: 48px; }
+.mk-q .speak { position: absolute; right: 0; top: 0; }
+.mk-t { font-size: 20px; font-weight: 700; line-height: 1.35; }
+.mk-row { display: flex; gap: 14px; align-items: flex-start; }
+.mk-mic { flex: 0 0 auto; width: 92px; height: 92px; border-radius: 50%; border: 0; background: var(--coral); color: #fff; font-size: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; box-shadow: 0 4px 0 rgba(0,0,0,.15); }
+.mk-mic span { font-size: 12px; font-weight: 700; }
+.mk-mic.on { background: var(--jade); animation: mkPulse 1s infinite; }
+@keyframes mkPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+.mk-res { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.mk-score { display: flex; align-items: baseline; gap: 2px; }
+.mk-score b { font-size: 38px; line-height: 1; }
+.mk-score span { font-weight: 700; opacity: .6; }
+.mk-score.great b, .mk-score.good b { color: var(--jade); }
+.mk-score.ok b { color: #b7791f; }
+.mk-score.low b { color: var(--coral); }
+.mk-lb { font-weight: 700; }
+.mk-words { display: flex; flex-wrap: wrap; gap: 4px; }
+.mk-words span { padding: 1px 6px; border-radius: 6px; font-weight: 600; }
+.w-ok { background: var(--jade-soft); }
+.w-near { background: #fdf0d5; }
+.w-miss { background: var(--coral-soft); text-decoration: underline wavy var(--coral); }
+.mk-err { color: var(--coral); font-weight: 600; }
+.mk-foot { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.mk .link, .td-mic .link { background: none; border: 0; color: var(--ink, #1b2140); text-decoration: underline; font-weight: 600; padding: 6px 0; }
+.mk-chip { display: inline-block; margin-top: 4px; padding: 1px 8px; border-radius: 10px; font-size: 13px; font-weight: 700; background: var(--jade-soft); }
+.mk-chip.ok { background: #fdf0d5; } .mk-chip.low { background: var(--coral-soft); }
+.td-mic { margin-top: 12px; padding: 12px; border: 2px solid var(--line); border-radius: 16px; display: flex; flex-direction: column; gap: 10px; }
+.td-seg { display: flex; gap: 6px; }
+.td-seg button { flex: 1; min-height: 44px; border-radius: 12px; border: 2px solid var(--line); background: var(--paper); font-weight: 700; }
+.td-seg button.on { border-color: var(--jade); background: var(--jade-soft); }

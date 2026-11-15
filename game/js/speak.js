@@ -1,0 +1,214 @@
+/* Nói qua micro và chấm điểm 0–100 (chấm vừa phải, không gắt).
+
+   Dùng nhận dạng giọng nói có sẵn của trình duyệt (iPhone/iPad: Safari, cần mạng, bật Siri).
+   Máy so chữ nó nghe được với câu mẫu: đây là điểm "nói ra người nghe có hiểu không",
+   không phải phân tích từng âm. Cách chấm cố ý nhẹ tay:
+     - từ gần đúng (sai 1–2 chữ cái) vẫn được nửa hoặc trọn điểm;
+     - bỏ qua dấu câu, viết tắt (I'm = I am), số (3 = three);
+     - lấy cách nghe tốt nhất trong các cách máy đưa ra;
+     - điểm thô được nâng nhẹ: nói đúng 80% từ ≈ 88 điểm.
+   Không có micro, hoặc người học chọn "Không dùng micro": chuyển sang nghe rồi nhắc lại to, tự đánh dấu. */
+var G = window.G || (window.G = {});
+
+(function () {
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  G.canListen = !!SR;
+
+  /* chế độ micro: 'on' | 'off' (lưu trong G.S.micro); mặc định bật nếu máy nghe được */
+  G.micOn = function () { return G.canListen && G.S && G.S.micro !== 'off'; };
+  G.setMic = function (on) { G.S.micro = on ? 'on' : 'off'; G.save(); };
+
+  /* nghe một lần: cb(err, [các cách nghe]) */
+  var cur = null;
+  G.listen = function (lang, cb, onInterim) {
+    if (!SR) { cb('Máy này chưa nghe được giọng nói. Trên iPhone/iPad hãy mở bằng Safari và bật Siri.'); return; }
+    if (cur) { try { cur.abort(); } catch (e) { /* bỏ qua */ } }
+    var r = new SR(), done = false, finals = [];
+    cur = r;
+    r.lang = lang === 'zh' ? 'zh-CN' : 'en-US';
+    r.interimResults = true; r.maxAlternatives = 5; r.continuous = false;
+    r.onresult = function (e) {
+      var res = e.results[e.results.length - 1];
+      if (res.isFinal) { finals = []; for (var i = 0; i < res.length; i++) finals.push(res[i].transcript); }
+      else if (onInterim) onInterim(res[0].transcript);
+    };
+    r.onerror = function (e) {
+      if (done) return; done = true; cur = null;
+      var M = {
+        'not-allowed': 'Chưa cho phép dùng micro. Vào Cài đặt → Safari → Micro, chọn Cho phép.',
+        'service-not-allowed': 'Nhận dạng giọng nói đang tắt. Bật Siri trong Cài đặt rồi thử lại.',
+        network: 'Cần có mạng để máy nghe được giọng nói.',
+        'no-speech': 'Máy chưa nghe thấy gì. Nói to và gần micro hơn nhé.',
+        'audio-capture': 'Không tìm thấy micro trên máy này.',
+        aborted: 'Đã dừng.'
+      };
+      cb(M[e.error] || 'Máy chưa nghe được. Thử lại nhé.');
+    };
+    r.onend = function () {
+      if (done) return; done = true; cur = null;
+      if (finals.length) cb(null, finals); else cb('Máy chưa nghe thấy gì. Nói to và gần micro hơn nhé.');
+    };
+    try { r.start(); } catch (e) { done = true; cur = null; cb('Không mở được micro. Thử lại sau giây lát.'); }
+  };
+  G.stopListen = function () { if (cur) { try { cur.stop(); } catch (e) { /* bỏ qua */ } } };
+
+  /* ---------- chấm điểm ---------- */
+  var ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
+    'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
+  var TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+  function num(n) {
+    if (n < 20) return ONES[n];
+    if (n < 100) return TENS[Math.floor(n / 10)] + (n % 10 ? ' ' + ONES[n % 10] : '');
+    if (n < 1000) return ONES[Math.floor(n / 100)] + ' hundred' + (n % 100 ? ' ' + num(n % 100) : '');
+    if (n < 10000) return num(Math.floor(n / 1000)) + ' thousand' + (n % 1000 ? ' ' + num(n % 1000) : '');
+    return String(n);
+  }
+  var CON = { "i'm": 'i am', "you're": 'you are', "he's": 'he is', "she's": 'she is', "it's": 'it is', "we're": 'we are',
+    "they're": 'they are', "don't": 'do not', "doesn't": 'does not', "didn't": 'did not', "can't": 'can not', cannot: 'can not',
+    "won't": 'will not', "isn't": 'is not', "aren't": 'are not', "i'll": 'i will', "i've": 'i have', "i'd": 'i would',
+    "that's": 'that is', "what's": 'what is', "let's": 'let us', "there's": 'there is', "wasn't": 'was not',
+    "weren't": 'were not', "you'll": 'you will', "we'll": 'we will', "it'll": 'it will', "you've": 'you have',
+    "we've": 'we have', "they've": 'they have', "couldn't": 'could not', "wouldn't": 'would not', "shouldn't": 'should not',
+    "here's": 'here is', "where's": 'where is', "how's": 'how is', "who's": 'who is', ok: 'okay', gonna: 'going to', wanna: 'want to' };
+  G.words = function (s) {
+    var t = String(s).toLowerCase().replace(/[’‘]/g, "'").replace(/\d+/g, function (d) { return ' ' + num(+d) + ' '; })
+      .replace(/[^a-z' ]+/g, ' ').split(/\s+/);
+    var out = [];
+    for (var i = 0; i < t.length; i++) {
+      if (!t[i]) continue;
+      var w = CON[t[i]] || t[i].replace(/'s$/, '').replace(/'/g, '');
+      var ps = w.split(' ');
+      for (var j = 0; j < ps.length; j++) if (ps[j]) out.push(ps[j]);
+    }
+    return out;
+  };
+  function edit(a, b) {
+    if (Math.abs(a.length - b.length) > 2) return 3;
+    var prev = [], cur2, i, j;
+    for (j = 0; j <= b.length; j++) prev.push(j);
+    for (i = 1; i <= a.length; i++) {
+      cur2 = [i];
+      for (j = 1; j <= b.length; j++) cur2[j] = Math.min(prev[j] + 1, cur2[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      prev = cur2;
+    }
+    return prev[b.length];
+  }
+  /* điểm khớp của một từ: 1 đúng, 0.5–1 gần đúng, 0 sai */
+  function sim(a, b) {
+    if (a === b) return 1;
+    var d = edit(a, b), L = Math.max(a.length, b.length);
+    if (L >= 4 && d === 1) return 0.85;
+    if (L >= 7 && d === 2) return 0.6;
+    if (L <= 3 && d === 1 && a[0] === b[0]) return 0.5;
+    return 0;
+  }
+  /* ghép kiểu dãy con chung có trọng số; trả về điểm từng từ của câu mẫu */
+  function align(T, H) {
+    var n = T.length, m = H.length, i, j, D = [];
+    for (i = 0; i <= n; i++) { D.push([]); for (j = 0; j <= m; j++) D[i].push(0); }
+    for (i = n - 1; i >= 0; i--) for (j = m - 1; j >= 0; j--) {
+      var s = sim(T[i], H[j]);
+      D[i][j] = Math.max(D[i + 1][j], D[i][j + 1], s > 0 ? D[i + 1][j + 1] + s : 0);
+    }
+    var marks = [];
+    for (i = 0; i < n; i++) marks.push(0);
+    i = 0; j = 0;
+    while (i < n && j < m) {
+      var s2 = sim(T[i], H[j]);
+      if (s2 > 0 && D[i][j] === D[i + 1][j + 1] + s2) { marks[i] = s2; i++; j++; }
+      else if (D[i + 1][j] >= D[i][j + 1]) i++; else j++;
+    }
+    return { total: D[0][0], marks: marks };
+  }
+  /* chấm: trả {score 0–100, marks[] theo từ câu mẫu, words[], heard} */
+  G.scoreSpeech = function (target, alts) {
+    var T = G.words(target), best = null;
+    for (var k = 0; k < alts.length; k++) {
+      var H = G.words(alts[k]);
+      if (!T.length) break;
+      var a = align(T, H);
+      var raw = a.total / T.length;
+      // nói thừa nhiều từ thì trừ nhẹ
+      var extra = Math.max(0, H.length - T.length * 1.5) / T.length;
+      raw = Math.max(0, raw - extra * 0.2);
+      var sc = Math.round(100 * Math.min(1, Math.pow(raw, 0.6)));   // nâng nhẹ: 0.8 → 88, 0.6 → 74, 0.4 → 58
+      if (H.length && sc < 15) sc = 15;                                // có nói thì không 0 điểm
+      if (!best || sc > best.score) best = { score: sc, marks: a.marks, words: T, heard: alts[k] };
+    }
+    return best || { score: 0, marks: [], words: T, heard: '' };
+  };
+  G.scoreLabel = function (s) {
+    if (s >= 90) return ['Tuyệt vời!', 'great'];
+    if (s >= 75) return ['Rất tốt!', 'good'];
+    if (s >= 60) return ['Tốt, người nghe hiểu được', 'good'];
+    if (s >= 40) return ['Khá rồi, thử lại cho rõ hơn nhé', 'ok'];
+    return ['Nói lại chậm và rõ từng từ nhé', 'low'];
+  };
+  G.PASS_SCORE = 60;
+
+  /* ---------- thẻ "Nói câu này" dùng chung ----------
+     opts: { text, vi, lang, onDone(score|null) }  — score null khi không dùng micro / bỏ qua */
+  G.speakCard = function (opts) {
+    var lang = opts.lang || 'en', best = null, tries = 0;
+    var box = G.el('div.mk');
+    function render() {
+      box.innerHTML = '';
+      box.appendChild(G.el('div.mk-q', G.el('div.mk-t', opts.text),
+        opts.vi ? G.el('div.small.faint', opts.vi) : null,
+        G.el('button.speak', { 'aria-label': 'Nghe mẫu', onclick: function () { G.say(opts.text, lang); } }, '🔊')));
+      if (G.micOn()) micMode(); else selfMode();
+    }
+    function micMode() {
+      var res = G.el('div.mk-res');
+      var mic = G.el('button.mk-mic', { onclick: start }, '🎤', G.el('span', tries ? 'Nói lại' : 'Bấm rồi nói'));
+      box.appendChild(G.el('div.mk-row', mic, res));
+      box.appendChild(G.el('div.mk-foot',
+        G.el('button.link', { onclick: function () { G.setMic(false); render(); } }, '🔇 Không dùng micro'),
+        G.el('button.link', { onclick: function () { G.stopListen(); finish(best ? best.score : null); } }, best ? 'Tiếp tục ›' : 'Bỏ qua ›')));
+      if (best) showResult(res, best);
+      function start() {
+        mic.className = 'mk-mic on'; mic.lastChild.textContent = 'Đang nghe…';
+        res.innerHTML = ''; res.appendChild(G.el('div.small.faint', 'Nói to, rõ câu ở trên'));
+        G.listen(lang, function (err, alts) {
+          mic.className = 'mk-mic';
+          if (err) { mic.lastChild.textContent = 'Thử lại'; res.innerHTML = ''; res.appendChild(G.el('div.mk-err', err)); return; }
+          tries++;
+          var r = G.scoreSpeech(opts.text, alts);
+          if (!best || r.score >= best.score) best = r;
+          G.sfx(r.score >= G.PASS_SCORE ? 'right' : 'wrong');
+          if (r.score >= G.PASS_SCORE) G.addXp(r.score >= 90 ? 3 : 2);
+          render();
+        }, function (t) { res.innerHTML = ''; res.appendChild(G.el('div.small.faint', '“' + t + '”')); });
+      }
+    }
+    function showResult(res, r) {
+      var lb = G.scoreLabel(r.score);
+      res.appendChild(G.el('div.mk-score.' + lb[1], G.el('b', r.score), G.el('span', '/100')));
+      res.appendChild(G.el('div.mk-lb', lb[0]));
+      res.appendChild(G.el('div.mk-words', r.words.map(function (w, i) {
+        var m = r.marks[i] || 0; return G.el('span.' + (m >= 0.85 ? 'w-ok' : m > 0 ? 'w-near' : 'w-miss'), w);
+      })));
+      res.appendChild(G.el('div.small.faint', 'Máy nghe: “' + r.heard + '”'));
+    }
+    function selfMode() {
+      box.appendChild(G.el('div.small', '🔁 Bấm 🔊 nghe mẫu, rồi nhắc lại thật to 2 lần. Nói xong thì bấm nút bên dưới.'));
+      box.appendChild(G.el('div.mk-foot',
+        G.canListen ? G.el('button.link', { onclick: function () { G.setMic(true); render(); } }, '🎤 Dùng micro chấm điểm') : G.el('span.small.faint', 'Máy này chưa có micro chấm điểm'),
+        G.el('button.btn.seal.sm', { onclick: function () { G.sfx('right'); G.addXp(1); finish(null); } }, '✓ Mình đã nói xong')));
+    }
+    var fin = false;
+    function finish(s) { if (fin) return; fin = true; if (opts.onDone) opts.onDone(s); }
+    render();
+    if (opts.autoplay !== false) G.say(opts.text, lang);
+    return box;
+  };
+
+  /* ghi điểm nói của ngày (trung bình) để hiện ở bảng Hôm nay */
+  G.logSpeak = function (score) {
+    if (score === null || score === undefined) return;
+    var d = G.today ? G.today() : null; if (!d) return;
+    d.noi = d.noi || { n: 0, tong: 0 };
+    d.noi.n++; d.noi.tong += score;
+    G.save();
+  };
+})();
