@@ -557,6 +557,7 @@ var G = window.G || (window.G = {});
     items.push({ y: P.y, draw: drawPlayer });
     items.sort(function (a, b) { return a.y - b.y; });
     for (var j = 0; j < items.length; j++) items[j].draw(items[j].o);
+    if (scene.buildings) for (var bl = 0; bl < scene.buildings.length; bl++) drawBuildingLabel(scene.buildings[bl]);
 
     if (scene.kind === 'hall') drawDoorPlates();
     updateQuest();
@@ -606,7 +607,9 @@ var G = window.G || (window.G = {});
 
   function drawBuilding(b) {
     G.drawAsset(ctx, b.img, b.x - 150, b.y - 290, 300, 300);
-    // biển tên
+  }
+  /* biển tên nhà vẽ sau cùng để nhân vật không che chữ */
+  function drawBuildingLabel(b) {
     var label = b.name, w = Math.max(110, label.length * 13 + 30);
     ctx.fillStyle = b.go ? 'rgba(200,85,61,.95)' : 'rgba(27,33,64,.82)';
     G.roundRect(ctx, b.x - w / 2, b.y + 8, w, 34, 17); ctx.fill();
