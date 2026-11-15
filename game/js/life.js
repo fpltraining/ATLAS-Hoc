@@ -17,8 +17,9 @@ var G = window.G || (window.G = {});
     pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));
     return G.el('div.tline', pic, G.el('div.tbubble', G.el('b', n.name), G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null, speak(text)));
   }
-  function meLine(text) {
-    return G.el('div.tline.me', G.el('div.tbubble.mine', G.el('b', name()), G.el('div.en', text)), G.el('div.tpic', G.playerPic(56, 'tpic-img')));
+  function meLine(text, sc) {
+    return G.el('div.tline.me', G.el('div.tbubble.mine', G.el('b', name()), G.el('div.en', text),
+      sc !== null && sc !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(sc)[1], '🎤 ' + sc + '/100') : null), G.el('div.tpic', G.playerPic(56, 'tpic-img')));
   }
 
   /* câu sai: lấy câu đáp của các nơi khác cùng ngôn ngữ */
@@ -59,12 +60,12 @@ var G = window.G || (window.G = {});
   }
 
   function talk(ti) {
-    var t = L.talks[ti], k = 0, log = G.el('div.chatlog'), box = G.el('div.chatopts');
+    var t = L.talks[ti], k = 0, log = G.el('div.chatlog'), box = G.el('div.chatopts'), scores = [];
     body.innerHTML = '';
-    body.appendChild(G.el('div.lhead', G.el('div.lsub', t.title + ' · nghe rồi chọn câu đáp đúng')));
+    body.appendChild(G.el('div.lhead', G.el('div.lsub', t.title + ' · nghe, chọn câu đáp đúng rồi nói thành tiếng')));
     body.appendChild(log); body.appendChild(box);
     function turn() {
-      if (k >= t.turns.length) { finish(ti); return; }
+      if (k >= t.turns.length) { finish(ti, scores); return; }
       var tu = t.turns[k], said = fill(tu.npc), right = fill(tu.ok);
       log.appendChild(npcLine(said, tu.vi));
       G.say(said, L.lang);
@@ -73,8 +74,14 @@ var G = window.G || (window.G = {});
         return G.el('button.opt', { onclick: function (e) {
           if (o === right) {
             G.sfx('right'); box.innerHTML = '';
-            log.appendChild(meLine(o)); G.say(o, L.lang);
-            k++; setTimeout(function () { turn(); scrollEnd(); }, 1100);
+            // chọn đúng rồi thì nói câu đó thành tiếng (có micro thì chấm điểm 0–100)
+            box.appendChild(G.el('div.small.faint', '🗣 Giờ hãy nói câu này với ' + npc().name + ':'));
+            box.appendChild(G.speakCard({ text: o, lang: L.lang, onDone: function (sc) {
+              if (sc !== null) { scores.push(sc); G.logSpeak(sc); }
+              box.innerHTML = '';
+              log.appendChild(meLine(o, sc));
+              k++; setTimeout(function () { turn(); scrollEnd(); }, 700);
+            } }));
           } else {
             e.currentTarget.className = 'opt no'; G.sfx('wrong');
             G.kaiSay('Chưa hợp. ' + npc().name + ' vừa nói: "' + tu.vi + '". Chọn câu trả lời đúng ý đó nhé.');
@@ -88,7 +95,7 @@ var G = window.G || (window.G = {});
   }
   function scrollEnd() { body.scrollTop = body.scrollHeight; }
 
-  function finish(ti) {
+  function finish(ti, scores) {
     var st = state(), first = !st.xong[ti];
     st.xong[ti] = G.vnNow();
     G.markTask('noi');
@@ -97,7 +104,10 @@ var G = window.G || (window.G = {});
     var gift = all && !st.kyNiem;
     if (gift) st.kyNiem = G.vnNow();
     G.save();
-    body.appendChild(G.el('div.result.pass', G.el('b', 'Xong: ' + L.talks[ti].title), G.el('div', '+' + (first ? 20 : 5) + ' XP')));
+    var avg = null;
+    if (scores && scores.length) { var sum = 0; for (var si = 0; si < scores.length; si++) sum += scores[si]; avg = Math.round(sum / scores.length); }
+    body.appendChild(G.el('div.result.pass', G.el('b', 'Xong: ' + L.talks[ti].title), G.el('div', '+' + (first ? 20 : 5) + ' XP'),
+      avg !== null ? G.el('div', '🎤 Điểm nói trung bình: ' + avg + '/100 · ' + G.scoreLabel(avg)[0]) : null));
     if (gift) {
       G.confetti();
       body.appendChild(G.el('div.souv-gift', G.imgEl(L.souvenir.img, 'souv-big'),

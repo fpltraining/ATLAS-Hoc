@@ -84,6 +84,22 @@ var G = window.G || (window.G = {});
         G.el('div.td-txt', G.el('b', t.name), G.el('div.small.faint', ok ? 'Xong lúc ' + d.viec[t.id] : t.hint + ' · khoảng ' + t.min + ' phút')),
         !ok && (t.id === 'doc' || t.id === 'on') ? G.el('button.btn.sm', { onclick: function () { t.id === 'doc' ? G.openReader() : G.openReview(); } }, 'Làm ngay') : null);
     })));
+    // luyện nói: điểm hôm nay + bật/tắt micro
+    var sp = d.noi && d.noi.n ? Math.round(d.noi.tong / d.noi.n) : null;
+    var micBox = G.el('div.td-mic');
+    function drawMic() {
+      micBox.innerHTML = '';
+      var on = G.micOn();
+      micBox.appendChild(G.el('div.td-txt', G.el('b', '🎤 Luyện nói'),
+        G.el('div.small.faint', sp !== null ? 'Hôm nay nói ' + d.noi.n + ' câu · điểm trung bình ' + sp + '/100 · ' + G.scoreLabel(sp)[0]
+          : on ? 'Micro đang bật: nói câu trong bài học và ngoài phố, máy chấm 0–100 (chấm vừa phải).'
+          : 'Đang học không micro: nghe mẫu rồi nhắc lại to, tự bấm "đã nói xong".')));
+      micBox.appendChild(G.el('div.td-seg',
+        G.el('button' + (on ? '.on' : ''), { onclick: function () { if (!G.canListen) { G.toast('Máy này chưa nghe được giọng nói. Trên iPhone/iPad hãy mở bằng Safari và bật Siri.'); return; } G.setMic(true); drawMic(); } }, '🎤 Dùng micro'),
+        G.el('button' + (!on ? '.on' : ''), { onclick: function () { G.setMic(false); drawMic(); } }, '🔇 Không dùng micro')));
+    }
+    drawMic();
+    body.appendChild(micBox);
     body.appendChild(G.el('p.small.faint', 'Làm đủ 4 việc và học đủ 2 giờ là tròn vòng hôm nay. Thanh 📍 Việc tiếp theo luôn chỉ chỗ cần đến.'));
   };
 
