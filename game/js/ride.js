@@ -219,6 +219,7 @@ var G = window.G || (window.G = {});
     var here = R.stops[R.cur];
     if (ok) {
       G.S.diLai[R.type] = (G.S.diLai[R.type] || 0) + 1;
+      if (!skipped) G.markTask('noi');
       var xp = skipped ? 0 : 10;
       if (xp) G.addXp(xp); else G.save();
       G.updateHud();

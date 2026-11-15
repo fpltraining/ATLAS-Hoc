@@ -7,15 +7,12 @@ var G = window.G || (window.G = {});
   /* vòng tiến độ góc phải: số phòng A1 đã qua (kể cả phòng thi), XP */
   var hudLast = -1;
   G.updateHud = function () {
-    var d = G.EN_HALL_DOORS, n = 0;
-    for (var i = 0; i < d.length; i++) if (G.roomPassed(d[i].room)) n++;
-    var pct = Math.round(n / d.length * 100), el = document.getElementById('hud-xp');
-    var grad = G.S.totNghiep.en && G.S.totNghiep.en.A1;
+    var p = G.dayProgress(), n = p.pct, el = document.getElementById('hud-xp');
     el.innerHTML = '';
-    el.style.setProperty('--p', pct);
-    el.className = 'hud-xp ring' + (grad ? ' full' : '');
-    el.appendChild(G.el('span.hr-ring', G.el('b', grad ? '🎓' : n + '/' + d.length)));
-    el.appendChild(G.el('span.hr-txt', G.el('b', grad ? 'Đã xong A1' : 'Cấp A1 · ' + pct + '%'), G.el('small', G.S.xp + ' XP')));
+    el.style.setProperty('--p', p.pct);
+    el.className = 'hud-xp ring' + (p.pct >= 100 ? ' full' : '');
+    el.appendChild(G.el('span.hr-ring', G.el('b', p.pct >= 100 ? '✓' : p.pct + '%')));
+    el.appendChild(G.el('span.hr-txt', G.el('b', 'Hôm nay ' + p.done + '/' + p.all), G.el('small', p.mins + '/' + p.goal + '′ · ' + G.S.xp + ' XP')));
     if (hudLast >= 0 && n > hudLast) { el.classList.add('bump'); setTimeout(function () { el.classList.remove('bump'); }, 800); }
     hudLast = n;
   };
@@ -94,6 +91,7 @@ var G = window.G || (window.G = {});
     G.lessonInit();
     document.getElementById('hud-home').onclick = G.goLobby;
     document.getElementById('act').onclick = G.doNear;
+    document.getElementById('hud-xp').onclick = G.openToday;
     document.getElementById('quest').onclick = function () { G.goQuest(); };
     if (!G.S.nhanVat) {
       // lần đầu: tạo nhân vật → lời mở đầu → ra khỏi nhà

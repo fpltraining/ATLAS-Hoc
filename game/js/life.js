@@ -91,6 +91,7 @@ var G = window.G || (window.G = {});
   function finish(ti) {
     var st = state(), first = !st.xong[ti];
     st.xong[ti] = G.vnNow();
+    G.markTask('noi');
     G.addXp(first ? 20 : 5); G.updateHud(); G.sfx('done');
     var all = true; for (var i = 0; i < L.talks.length; i++) if (!st.xong[i]) all = false;
     var gift = all && !st.kyNiem;

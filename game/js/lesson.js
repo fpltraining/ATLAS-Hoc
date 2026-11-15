@@ -194,6 +194,7 @@ var G = window.G || (window.G = {});
   function practiceDone() {
     body.innerHTML = '';
     body.appendChild(head(1, 'Xong phần Luyện'));
+    if (lang === 'en') G.markTask('bai');
     body.appendChild(teacherLine('Luyện tốt lắm! Giờ làm bài kiểm tra ' + TN() + ' câu nhé. Đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp cấp A1.' : 'cửa phòng tiếp theo sẽ mở.'), 'Well done!'));
     body.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { learn(0); } }, 'Xem lại thẻ'), G.el('button.btn.seal', { onclick: test }, 'Làm kiểm tra ›')));
     G.sfx('done');
@@ -218,6 +219,7 @@ var G = window.G || (window.G = {});
 
   function finish(right, wrong) {
     var N = TN(), pass = right >= PN();
+    if (lang === 'en') G.markTask('bai');
     var sao = right >= N ? 3 : right >= Math.ceil(N * 0.9) ? 2 : pass ? 1 : 0;
     var p = G.S.phong[R.id] || { sao: 0, diem: 0, lan: 0 };
     var firstPass = pass && !(p.diem >= PN());
