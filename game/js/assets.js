@@ -18,6 +18,8 @@ G.ASSET_LIST = [
   'npc_leo.png', 'npc_xiaolin.png', 'npc_rosa.png', 'npc_wangdama.png', 'npc_grace.png', 'npc_zhou.png', 'npc_anna.png', 'npc_sun.png',
   'door_locked.png', 'door_open.png', 'door_lock.png', 'npc_tom_talk.png', 'npc_lily_talk.png', 'npc_sam_talk.png', 'plane.png', 'prop_oak.png', 'prop_palm.png', 'prop_lamp.png', 'prop_bench.png', 'prop_car.png', 'prop_mailbox.png', 'prop_flowers.png', 'prop_drone.png', 'logo_banner.png', 'logo_icon.png', 'flight_bg.png', 'npc_zhou_talk.png', 'npc_grace_talk.png', 'npc_li_talk.png', 'npc_zhang_talk.png', 'npc_chen_talk.png', 'diploma_en.png', 'diploma_zh.png',
   'souvenir_tea.png', 'souvenir_coffee.png', 'souvenir_apples.png', 'souvenir_ticket.png', 'souvenir_medkit.png',
+  'rank_1.webp', 'rank_2.webp', 'rank_3.webp', 'rank_4.webp', 'rank_5.webp', 'rank_6.webp', 'rank_7.webp', 'rank_8.webp', 'rank_9.webp',
+  'badge_1.webp', 'badge_2.webp', 'badge_3.webp', 'badge_4.webp', 'badge_5.webp', 'badge_6.webp', 'badge_7.webp', 'badge_8.webp', 'badge_9.webp', 'badge_10.webp', 'badge_11.webp', 'badge_12.webp',
   'ic_mic.png', 'ic_mic_ok.png', 'ic_speak.png', 'ic_lips.png',
   'video_intro.mp4', 'video_flight.mp4', 'video_grad_en.mp4', 'video_grad_zh.mp4'
 ];

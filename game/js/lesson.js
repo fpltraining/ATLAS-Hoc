@@ -62,17 +62,24 @@ var G = window.G || (window.G = {});
 
   /* màn đầu: lời giáo viên + 3 bước */
   function showHome() {
-    var p = G.S.phong[R.id];
+    var p = G.S.phong[R.id], d = st();
     body.innerHTML = '';
     body.appendChild(teacherLine(R.intro[1], null));
     body.appendChild(G.el('div.tline.small', G.el('div.tbubble.en', G.el('div', R.intro[0]), pyEl(R.introPy), speakBtn(R.intro[0]))));
     say(R.intro[0]);
     body.appendChild(G.el('div.menu3',
-      G.el('button.big', { onclick: function () { learn(0); } }, G.el('b', R.final ? '1 · Ôn tập' : '1 · Học'), G.el('span', R.items.length + ' từ và câu' + (R.final ? ' của cả cấp A1' : ', nghe và xem nghĩa'))),
-      G.el('button.big', { onclick: practice }, G.el('b', '2 · Luyện'), G.el('span', '4 trò ngắn: nghe, chọn câu, nói qua micro, xếp câu')),
+      G.el('button.big' + (d.hocXong ? '.done' : ''), { onclick: function () { learn(d.hocXong ? 0 : Math.min(d.the, R.items.length - 1)); } },
+        G.el('b', (d.hocXong ? '✓ ' : '') + (R.final ? '1 · Ôn tập' : '1 · Học')),
+        G.el('span', d.hocXong ? 'Đã học xong ' + R.items.length + ' thẻ · xem lại' : d.the > 0 ? 'Học tiếp từ thẻ ' + (d.the + 1) + '/' + R.items.length : R.items.length + ' từ và câu' + (R.final ? ' của cả cấp A1' : ', nghe và xem nghĩa'))),
+      G.el('button.big' + (d.luyenXong ? '.done' : ''), { onclick: practice },
+        G.el('b', (d.luyenXong ? '✓ ' : '') + '2 · Luyện'),
+        G.el('span', d.luyenXong ? 'Đã luyện xong · luyện lại' : d.tro > 0 ? 'Làm tiếp trò ' + (d.tro + 1) + '/4' : '4 trò ngắn: nghe, chọn câu, nói qua micro, xếp câu')),
       G.el('button.big.seal', { onclick: test }, G.el('b', '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/' + TN() + ' ' + stars(p.sao) : TN() + ' câu, đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp' : 'qua phòng')))
     ));
   }
+  /* tiến độ đang học dở của phòng (lưu ngay, mở lại học tiếp, cập nhật app không mất) */
+  function st() { G.S.dangHoc = G.S.dangHoc || {}; return G.S.dangHoc[R.id] || (G.S.dangHoc[R.id] = { the: 0, hocXong: '', tro: 0, luyenXong: '' }); }
+  function keep(k, v) { var d = st(); d[k] = v; d.luc = G.vnNow(); G.save(); }
   function TN() { return R.testN || 10; }   // số câu kiểm tra
   function PN() { return R.passN || 8; }    // số câu cần đúng để qua
   function stars(n) { return n === 3 ? '★★★' : n === 2 ? '★★☆' : n === 1 ? '★☆☆' : ''; }
@@ -80,6 +87,8 @@ var G = window.G || (window.G = {});
   /* ---------- 1. Học: thẻ từ ---------- */
   function learn(i) {
     var it = R.items[i];
+    if (i > st().the) keep('the', i);
+    if (i === R.items.length - 1 && !st().hocXong) keep('hocXong', G.vnNow());
     body.innerHTML = '';
     body.appendChild(head(0, 'Thẻ ' + (i + 1) + '/' + R.items.length + ' · bấm 🔊 để nghe, nói to theo'));
     var card = G.el('div.wcard',
@@ -143,10 +152,13 @@ var G = window.G || (window.G = {});
       { name: 'Nghe chọn nghĩa', make: qListen },
       { name: 'Nhìn nghĩa chọn câu', make: qMeaning }
     ];
-    var gi = 0;
+    var gi = st().luyenXong ? 0 : st().tro || 0;
+    if (gi === 2) { speakGame(); return; }
+    if (gi >= 3) { order(0); return; }
     function runGame() {
       if (gi >= games.length) { speakGame(); return; }
       var gm = games[gi];
+      keep('tro', gi);
       var list = G.shuffle(R.items).slice(0, 6);
       var k = 0;
       (function next() {
@@ -161,6 +173,7 @@ var G = window.G || (window.G = {});
 
   /* trò 3: nói theo câu ví dụ (micro chấm 0–100, không có micro thì nghe rồi nhắc lại) */
   function speakGame() {
+    keep('tro', 2);
     var list = G.shuffle(R.items).slice(0, 4), k = 0, sum = 0, n = 0;
     (function next() {
       if (k >= list.length) { order(0); return; }
@@ -175,6 +188,7 @@ var G = window.G || (window.G = {});
 
   /* trò 4: sắp xếp câu ví dụ */
   function order(k) {
+    keep('tro', 3);
     function toks(x) { return (x.w || x.ex).split(' '); }   // tiếng Trung: tách theo từ đã đánh dấu
     var list = R.items.filter(function (x) { return toks(x).length >= 3; });
     list = G.shuffle(list).slice(0, 4);
@@ -206,6 +220,7 @@ var G = window.G || (window.G = {});
   }
 
   function practiceDone() {
+    var dd = st(); dd.luyenXong = G.vnNow(); dd.tro = 0; G.save();
     body.innerHTML = '';
     body.appendChild(head(1, 'Xong phần Luyện'));
     if (lang === 'en') G.markTask('bai');
@@ -240,7 +255,9 @@ var G = window.G || (window.G = {});
     p.lan += 1;
     if (right >= p.diem) { p.diem = right; p.sao = Math.max(p.sao, sao); p.luc = G.vnNow(); }
     G.S.phong[R.id] = p;
+    if (right >= N) G.S.tuyetDoi = G.S.tuyetDoi || G.vnNow();
     G.save();
+    if (G.achSoon) G.achSoon();
     body.innerHTML = '';
     body.appendChild(head(2, 'Kết quả'));
     body.appendChild(G.el('div.result' + (pass ? '.pass' : ''),

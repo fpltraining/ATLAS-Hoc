@@ -93,6 +93,9 @@ var G = window.G || (window.G = {});
     document.getElementById('act').onclick = G.doNear;
     document.getElementById('hud-xp').onclick = G.openToday;
     document.getElementById('quest').onclick = function () { G.goQuest(); };
+    G.initRank(); G.importOldProgress(); setTimeout(G.checkAchievements, 1500);
+    // bản sao IndexedDB mới hơn (localStorage bị mất) thì khôi phục rồi vẽ lại sảnh
+    G.restoreCheck(function (restored) { if (restored && G.S.nhanVat) { G.initRank(); var cr = document.getElementById('create'); if (cr) cr.style.display = 'none'; G.renderLobby(); } });
     if (!G.S.nhanVat) {
       // lần đầu: tạo nhân vật → lời mở đầu → ra khỏi nhà
       G.openCreator(function () { G.introStory(function () { G.goCity('en'); }); });

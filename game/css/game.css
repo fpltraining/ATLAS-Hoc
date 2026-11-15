@@ -397,3 +397,28 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .rd-ann .spk2 { position: static; }
 .rd-ann .spk.slow { background: #fff; }
 .rd-bub { padding-right: 96px !important; }
+
+/* rank và huy hiệu */
+.rk-card { display: flex; gap: 14px; align-items: center; background: var(--navy); color: #fff; border-radius: 18px; padding: 12px 16px; margin: 8px 0 12px; }
+.rk-emb { flex: none; width: 76px; height: 76px; filter: drop-shadow(0 0 10px rgba(255,230,160,.55)); animation: rkGlow 2.4s ease-in-out infinite; }
+.rk-img { width: 76px; height: 76px; background: transparent !important; }
+.rk-img img, .bd-img img, .ach-img img { width: 100%; height: 100%; object-fit: contain; }
+@keyframes rkGlow { 0%,100% { filter: drop-shadow(0 0 6px rgba(255,230,160,.4)); } 50% { filter: drop-shadow(0 0 16px rgba(255,230,160,.9)); } }
+.rk-txt { flex: 1; min-width: 0; }
+.rk-txt .kicker { color: rgba(255,255,255,.6); }
+.rk-name { display: block; font-size: 22px; margin: 2px 0 6px; }
+.rk-txt .faint { color: rgba(255,255,255,.7); }
+.rk-bar { height: 10px; border-radius: 99px; background: rgba(255,255,255,.15); overflow: hidden; margin-bottom: 4px; }
+.rk-bar i { display: block; height: 100%; border-radius: 99px; }
+.bd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; margin-top: 8px; }
+.bd { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2px; padding: 10px 6px; border-radius: 16px; background: var(--paper); border: 1px solid var(--line); }
+.bd-img { width: 64px; height: 64px; background: transparent !important; }
+.bd b { font-size: 14px; }
+.bd .small { font-size: 11px; line-height: 1.25; }
+.bd.lock .bd-img { filter: grayscale(1) opacity(.35); }
+.bd.lock b { opacity: .55; }
+.ach-card { background: var(--paper); border-radius: 24px; padding: 22px; max-width: 340px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.ach-glow { width: 150px; height: 150px; border-radius: 50%; background: radial-gradient(circle, rgba(255,226,140,.9) 0, rgba(255,226,140,0) 70%); display: flex; align-items: center; justify-content: center; animation: achPop .6s cubic-bezier(.2,1.6,.4,1); }
+.ach-img { width: 120px; height: 120px; background: transparent !important; }
+.ach-card b { font-size: 20px; }
+@keyframes achPop { from { transform: scale(.3) rotate(-20deg); opacity: 0; } to { transform: none; opacity: 1; } }

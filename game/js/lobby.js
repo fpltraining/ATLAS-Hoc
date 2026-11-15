@@ -67,6 +67,10 @@ var G = window.G || (window.G = {});
       })) : null
     ));
 
+    root.appendChild(G.el('h2.sec', 'Rank và huy hiệu'));
+    root.appendChild(G.rankCard());
+    root.appendChild(G.badgeGrid());
+
     root.appendChild(G.el('h2.sec', 'Đồ kỷ niệm'));
     root.appendChild(G.el('div.souvs', G.souvenirs().map(function (v) {
       return G.el('div.souv' + (v.got ? '' : '.lock'), G.imgEl(v.item.img, 'souv-img'), G.el('b', v.got ? v.item.name : '???'), G.el('span.faint', v.place));
@@ -80,7 +84,6 @@ var G = window.G || (window.G = {});
       G.el('button.btn', { onclick: function () { G.S.caiDat.amThanh = !G.S.caiDat.amThanh; G.save(); G.renderLobby(); } }, G.S.caiDat.amThanh ? '🔔 Âm thanh: bật' : '🔕 Âm thanh: tắt'),
       file
     ));
-    root.appendChild(G.el('a.small.faint.old-link', { href: '../#/home' }, 'Kho bài nâng cao (giao diện cũ) ›'));
     root.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam). Nhớ xuất file sao lưu thỉnh thoảng nhé.'));
   };
 

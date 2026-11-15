@@ -32,6 +32,7 @@ var G = window.G || (window.G = {});
     G.save();
     var t = null; for (var i = 0; i < TASKS.length; i++) if (TASKS[i].id === id) t = TASKS[i];
     if (t) G.toast('✅ Xong việc hôm nay: ' + t.name);
+    if (G.achSoon) G.achSoon();
     if (G.updateHud) G.updateHud();
   };
 
@@ -77,6 +78,7 @@ var G = window.G || (window.G = {});
     ring.style.setProperty('--p', p.pct);
     body.appendChild(G.el('div.td-head', ring,
       G.el('div', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc · chuỗi ' + G.S.chuoi.hienTai + ' ngày'))));
+    if (G.rankCard) body.appendChild(G.rankCard());
     body.appendChild(G.el('div.td-list', TASKS.map(function (t) {
       var ok = !!d.viec[t.id];
       return G.el('div.td-item' + (ok ? '.ok' : ''),

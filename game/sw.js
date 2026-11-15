@@ -1,9 +1,9 @@
 /* Chạy offline: giữ toàn bộ code game, dữ liệu và mọi file trong assets/ đã có.
    Hình mới bỏ vào assets/ được tải ở lần mở kế tiếp có mạng. Tệp giọng đọc được giữ lại khi đã nghe một lần. */
-var VERSION = 'thegioi-v35';
+var VERSION = 'thegioi-v36';
 var CORE = [
   './', 'index.html', 'manifest.webmanifest', 'css/game.css',
-  'js/util.js', 'js/save.js', 'js/assets.js', 'js/audio.js', 'js/speak.js', 'js/world.js', 'js/engine.js', 'js/lesson.js', 'js/lobby.js', 'js/main.js', 'js/avatar.js', 'js/create.js', 'js/ride.js', 'js/grad.js', 'js/flight.js', 'data/zh_hsk1.js', 'js/life.js', 'js/daily.js', 'data/life.js',
+  'js/util.js', 'js/save.js', 'js/assets.js', 'js/audio.js', 'js/speak.js', 'js/world.js', 'js/engine.js', 'js/lesson.js', 'js/lobby.js', 'js/main.js', 'js/avatar.js', 'js/create.js', 'js/ride.js', 'js/grad.js', 'js/flight.js', 'data/zh_hsk1.js', 'js/life.js', 'js/daily.js', 'js/rank.js', 'data/life.js',
   'data/en_a1.js', 'data/avatar_heads.js', '../data/audio.json', '../icons/icon-180.png'
 ];
 
@@ -13,7 +13,7 @@ self.addEventListener('install', function (e) {
   }).then(function () {
     // hình đã có trong assets/ (thiếu file nào thì bỏ qua)
     return fetch('js/assets.js').then(function (r) { return r.text(); }).then(function (t) {
-      var m = t.match(/'[a-z0-9_]+\.(png|mp4)'/g) || [];
+      var m = t.match(/'[a-z0-9_]+\.(png|mp4|webp)'/g) || [];
       return caches.open(VERSION).then(function (c) {
         return Promise.all(m.map(function (q) { return c.add(new Request('assets/' + q.slice(1, -1), { cache: 'reload' })).catch(function () {}); }));
       });
