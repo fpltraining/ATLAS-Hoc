@@ -215,6 +215,7 @@ var G = window.G || (window.G = {});
           var r = G.scoreSpeech(opts.text, alts);
           var first = !best;
           if (!best || r.score >= best.score) best = r;
+          if (r.score >= 90) { G.S.noiTot = (G.S.noiTot || 0) + 1; G.save(); if (G.achSoon) G.achSoon(); }
           G.sfx(r.score >= G.PASS_SCORE ? 'right' : 'wrong');
           if (r.score >= G.PASS_SCORE && first) G.addXp(r.score >= 90 ? 3 : 2);
           render();

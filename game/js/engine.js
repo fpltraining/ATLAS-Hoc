@@ -558,6 +558,8 @@ var G = window.G || (window.G = {});
     items.sort(function (a, b) { return a.y - b.y; });
     for (var j = 0; j < items.length; j++) items[j].draw(items[j].o);
     if (scene.buildings) for (var bl = 0; bl < scene.buildings.length; bl++) drawBuildingLabel(scene.buildings[bl]);
+    // huy hiệu rank lơ lửng trên đầu nhân vật
+    if (G.drawRankBadge) G.drawRankBadge(ctx, P.x, P.y - 104, P.moving, Date.now() / 1000);
 
     if (scene.kind === 'hall') drawDoorPlates();
     updateQuest();
@@ -640,7 +642,7 @@ var G = window.G || (window.G = {});
     var dir = P.dir === 'right' ? 'left' : P.dir, flip = P.dir === 'right';
     var name = 'player_' + who + '_' + dir + '.png';
     shadow(P.x, P.y, 26 * sh);
-    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, 0.72);
+    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, 0.72, G.ARMS[name]);
   }
   function drawKai() {
     var bob = Math.sin(Date.now() / 260) * 4, dir = K.dir || 'down';
