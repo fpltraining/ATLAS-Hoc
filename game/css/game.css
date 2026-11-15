@@ -326,3 +326,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .rv-back { display: none; } .rv-back.show { display: block; }
 .rv-show { width: 100%; margin-top: 10px; }
 .old-link { display: block; text-align: center; margin: 18px 0 4px; }
+
+.rd-story.future { border-color: var(--coral); background: #fff6f2; }
+.rd-blurb { color: var(--soft); margin-top: 2px; line-height: 1.35; }
+.rd-box { margin: 14px 0; padding: 12px 14px; border-radius: 14px; background: var(--jade-soft); }
+.rd-box.think { background: #fff3d9; }
+.rd-box ol { margin: 6px 0 6px 18px; padding: 0; } .rd-box li { margin: 4px 0; }
+.rd-vocab { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.rd-w { border: 1px solid var(--line); background: #fff; border-radius: 10px; padding: 5px 9px; font-size: 14px; }

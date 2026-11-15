@@ -104,7 +104,8 @@ var G = window.G || (window.G = {});
     fetch('../data/stories/index.json').then(function (r) { return r.json(); }).then(function (j) {
       var order = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5 };
       IDX = j.filter(function (s) { return s.lang === 'en'; });
-      IDX.sort(function (a, b) { return (order[a.level] || 9) - (order[b.level] || 9); });
+      // loạt "Brightford 2080" (chương dài, vấn đề xã hội) lên đầu, sau đó truyện ngắn theo cấp
+      IDX.sort(function (a, b) { return ((a.shelf === 'future' ? 0 : 10) + (order[a.level] || 9)) - ((b.shelf === 'future' ? 0 : 10) + (order[b.level] || 9)); });
       cb(IDX);
     }).catch(function () { G.toast('Chưa tải được kho truyện. Mở khi có mạng một lần nhé.'); });
   }
@@ -122,10 +123,12 @@ var G = window.G || (window.G = {});
         G.el('b', '▶ Đọc tiếp: ' + next.title), G.el('span', next.vi + ' · chương ' + (readN(next.id) + 1) + '/' + next.chapters.length + ' · ' + next.level)));
       var lv = '';
       list.forEach(function (s) {
-        if (s.level !== lv) { lv = s.level; body.appendChild(G.el('h3.rd-lv', 'Cấp ' + lv)); }
+        var grp = s.shelf === 'future' ? 'future' : s.level;
+        if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', grp === 'future' ? '🌆 Brightford 2080 · truyện dài về vấn đề xã hội tương lai' : 'Truyện ngắn · cấp ' + grp)); }
         var r = readN(s.id);
-        body.appendChild(G.el('button.rd-story', { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
-          G.el('b', s.title), G.el('span.small.faint', s.vi + ' · ' + s.chapters.length + ' chương'),
+        body.appendChild(G.el('button.rd-story' + (s.shelf === 'future' ? '.future' : ''), { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
+          G.el('b', s.title), G.el('span.small.faint', s.vi + ' · ' + s.level + ' · ' + s.chapters.length + ' chương'),
+          s.shelf === 'future' ? G.el('span.small.rd-blurb', s.blurb) : null,
           G.el('span.rd-prog', r >= s.chapters.length ? '✓ Đã đọc' : r ? r + '/' + s.chapters.length : '')));
       });
     });
@@ -143,6 +146,13 @@ var G = window.G || (window.G = {});
           return G.el('div.rd-line', { onclick: function () { vi.className = vi.className.indexOf('show') >= 0 ? 'rd-vi' : 'rd-vi show'; G.say(ln[0], 'en'); } }, G.el('span', ln[0]), vi);
         })));
       });
+      if (ch.vocab && ch.vocab.length) body.appendChild(G.el('div.rd-box',
+        G.el('b', '📝 Từ đáng nhớ'),
+        G.el('div.rd-vocab', ch.vocab.map(function (v) { return G.el('button.rd-w', { onclick: function () { G.say(v[0], 'en'); } }, G.el('b', v[0]), ' · ' + v[1]); }))));
+      if (ch.think && ch.think.length) body.appendChild(G.el('div.rd-box.think',
+        G.el('b', '💭 Suy ngẫm'),
+        G.el('ol', ch.think.map(function (q) { return G.el('li', q); })),
+        G.el('div.small.faint', 'Nghĩ hoặc nói to câu trả lời bằng tiếng Việt, rồi thử nói một câu bằng tiếng Anh.')));
       body.appendChild(G.el('div.row',
         G.el('button.btn', { onclick: G.openReader }, '‹ Kho truyện'),
         G.el('button.btn.seal', { onclick: function () {

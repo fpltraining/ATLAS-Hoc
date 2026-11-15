@@ -1,0 +1,168 @@
+#id future-job
+#level A2
+#title The Robot in Dad's Chair
+#vi Con robot ngồi ghế của bố
+#blurb Bố của Mia mất việc vào tay một con robot. Cả nhà phải học cách sống khi máy làm giỏi hơn người. Câu hỏi lớn: con người còn giá trị gì khi không còn việc làm?
+
+## The Last Day | Ngày cuối cùng
+Mia's dad drove the number 7 bus in Brightford for twenty years. | Bố của Mia lái xe buýt số 7 ở Brightford suốt hai mươi năm.
+He knew every stop, every road, and almost every passenger. | Ông thuộc từng trạm, từng con đường, và gần như từng hành khách.
+He knew that Mrs. Rosa always sat at the front. | Ông biết bà Rosa luôn ngồi ở hàng đầu.
+He knew that the twins from Maple Street always forgot their cards. | Ông biết cặp song sinh ở phố Maple lúc nào cũng quên thẻ.
+And he always let them ride anyway. | Và ông vẫn luôn cho chúng đi.
+
+One Monday morning, he came home at ten o'clock. | Một sáng thứ Hai, ông về nhà lúc mười giờ.
+That never happened. | Chuyện đó chưa bao giờ xảy ra.
+He sat down in his chair and didn't take off his jacket. | Ông ngồi xuống ghế mà không cởi áo khoác.
+"They're giving my bus to a robot," he said quietly. | "Họ giao xe buýt của bố cho một con robot," ông nói khẽ.
+"Not just mine. All the buses in town." | "Không chỉ xe của bố. Tất cả xe buýt trong thị trấn."
+
+Mia didn't know what to say. | Mia không biết nói gì.
+She was fourteen, and she loved robots. | Cô bé mười bốn tuổi, và cô thích robot.
+Her best friend was a robot called Kai. | Bạn thân nhất của cô là một con robot tên Kai.
+But today, robots didn't feel like friends. | Nhưng hôm nay, robot không giống bạn bè chút nào.
+
+"Is the robot a better driver than you?" she asked. | "Robot lái giỏi hơn bố à?" cô hỏi.
+Dad thought about it for a long time. | Bố nghĩ rất lâu.
+"Yes," he said finally. "It never gets tired. It never gets angry. It never has an accident." | "Ừ," cuối cùng ông nói. "Nó không bao giờ mệt. Không bao giờ nổi nóng. Không bao giờ gây tai nạn."
+"It's cheaper too. It doesn't need a salary or a holiday." | "Nó còn rẻ hơn. Nó không cần lương hay ngày nghỉ."
+Then he smiled a little. | Rồi ông cười nhẹ.
+"But it doesn't know that the twins always forget their cards." | "Nhưng nó không biết cặp song sinh lúc nào cũng quên thẻ."
+
+That night, Mia couldn't sleep. | Đêm đó, Mia không ngủ được.
+She kept thinking about one question. | Cô cứ nghĩ mãi về một câu hỏi.
+If a machine can do your job better than you, what are you for? | Nếu máy làm việc của bạn giỏi hơn bạn, thì bạn tồn tại để làm gì?
+? Nếu công việc của bố mẹ em bị máy thay thế, gia đình em sẽ thay đổi thế nào?
+? Robot lái "giỏi hơn" bố Mia. Nhưng có điều gì bố Mia làm được mà robot không làm được?
+? Công ty chọn robot vì rẻ và an toàn. Theo em, quyết định đó đúng hay sai? Vì sao?
+* passenger | hành khách
+* salary | lương
+* accident | tai nạn
+* replace | thay thế
+* quietly | khẽ, lặng lẽ
+* anyway | dù sao vẫn
+
+## Free Time | Thời gian rảnh
+The first week, Dad was almost happy. | Tuần đầu, bố gần như vui vẻ.
+He slept late. He cooked big breakfasts. He fixed the kitchen door. | Ông ngủ muộn. Ông nấu bữa sáng thật to. Ông sửa cửa bếp.
+"I'm on holiday," he told everyone. | "Tôi đang đi nghỉ," ông nói với mọi người.
+The town sent him money every month. | Thị trấn gửi tiền cho ông hằng tháng.
+In 2080, everyone in Brightford gets a basic income, a small amount of money from the government. | Năm 2080, ai ở Brightford cũng nhận thu nhập cơ bản, một khoản tiền nhỏ từ chính quyền.
+It isn't much, but it's enough for food and rent. | Không nhiều, nhưng đủ tiền ăn và tiền nhà.
+
+The second week, Dad stopped cooking. | Tuần thứ hai, bố thôi nấu ăn.
+He watched videos all day. | Ông xem video cả ngày.
+He didn't shave. He didn't answer his phone. | Ông không cạo râu. Ông không nghe điện thoại.
+Mom tried to talk to him, but he only said, "I'm fine." | Mẹ cố nói chuyện với ông, nhưng ông chỉ bảo: "Bố ổn."
+
+Mia knew he wasn't fine. | Mia biết bố không ổn.
+One evening she sat next to him. | Một tối, cô ngồi cạnh ông.
+"Dad, you have money. You have time. Why are you sad?" | "Bố, bố có tiền. Bố có thời gian. Sao bố buồn?"
+He turned off the screen. | Ông tắt màn hình.
+"Money isn't the problem, Mia," he said. | "Tiền không phải vấn đề, Mia," ông nói.
+"When I drove the bus, people needed me. I was useful." | "Hồi bố lái xe buýt, mọi người cần bố. Bố có ích."
+"Now nobody needs me. I wake up and nobody is waiting for me." | "Giờ chẳng ai cần bố. Bố thức dậy và chẳng ai đang đợi bố cả."
+
+Mia remembered something from school. | Mia nhớ ra một điều ở trường.
+Her teacher, Mr. Tom, once said that people need three things: | Thầy Tom từng nói con người cần ba thứ:
+something to do, someone to love, and something to hope for. | một việc để làm, một người để yêu, và một điều để hy vọng.
+The basic income gave Dad food. | Thu nhập cơ bản cho bố cái ăn.
+But it didn't give him something to do. | Nhưng nó không cho bố một việc để làm.
+
+"Then let's find something," Mia said. | "Vậy mình đi tìm một việc đi," Mia nói.
+"Not a job. Something that matters." | "Không phải việc làm kiếm tiền. Một việc có ý nghĩa."
+Dad looked at her for a moment. | Bố nhìn cô một lúc.
+Then, for the first time in two weeks, he laughed. | Rồi, lần đầu tiên sau hai tuần, ông bật cười.
+"When did you get so wise?" | "Con khôn ra từ bao giờ thế?"
+? Bố Mia có tiền nhưng vẫn buồn. Theo em, ngoài tiền, công việc còn cho con người những gì?
+? "Thu nhập cơ bản" (mọi người được nhận tiền dù không làm việc) có lợi và có hại gì?
+? Em có đồng ý con người cần "một việc để làm, một người để yêu, một điều để hy vọng" không?
+* basic income | thu nhập cơ bản
+* government | chính quyền
+* rent | tiền thuê nhà
+* useful | có ích
+* matter | có ý nghĩa, quan trọng
+* wise | khôn ngoan
+
+## The Things Robots Can't Do | Những việc robot không làm được
+The next morning, Dad and Mia took the robot bus into town. | Sáng hôm sau, bố và Mia đi xe buýt robot vào thị trấn.
+It was clean and quiet and exactly on time. | Xe sạch sẽ, yên tĩnh, đúng giờ tuyệt đối.
+But Mrs. Rosa wasn't sitting at the front. | Nhưng bà Rosa không ngồi ở hàng đầu.
+"She stopped taking the bus," another passenger said. | "Bà ấy thôi đi xe buýt rồi," một hành khách nói.
+"She can't read the new screens, and the robot doesn't help her." | "Bà không đọc được màn hình mới, và con robot không giúp bà."
+
+At the market, they found Mrs. Rosa at her fruit stall. | Ở chợ, hai bố con tìm thấy bà Rosa ở sạp trái cây.
+"Joe!" she cried when she saw Dad. "I miss your bus!" | "Joe!" bà reo lên khi thấy bố. "Tôi nhớ xe buýt của anh quá!"
+She told them that many older people now stayed at home. | Bà kể rằng giờ nhiều người già chỉ ở nhà.
+The machines were fast, but nobody explained anything. | Máy móc thì nhanh, nhưng chẳng ai giải thích gì.
+Nobody said good morning. Nobody waited for slow people. | Không ai chào buổi sáng. Không ai chờ người chậm chạp.
+
+Dad listened carefully. | Bố chăm chú lắng nghe.
+Mia could see an idea growing in his eyes. | Mia thấy một ý tưởng đang lớn dần trong mắt bố.
+That week, Dad started something new. | Tuần đó, bố bắt đầu một việc mới.
+Every morning, he rode the robot buses, not as a driver, but as a helper. | Mỗi sáng, ông đi các chuyến xe buýt robot, không phải làm tài xế mà làm người giúp đỡ.
+He helped old people with the screens. | Ông giúp người già dùng màn hình.
+He carried bags. He talked to lonely passengers. | Ông xách đồ. Ông trò chuyện với những hành khách cô đơn.
+He showed tourists the best café in town. | Ông chỉ cho khách du lịch quán cà phê ngon nhất thị trấn.
+
+At first, nobody paid him. | Lúc đầu, chẳng ai trả tiền cho ông.
+But soon, more and more people took the bus again. | Nhưng chẳng bao lâu, ngày càng nhiều người đi xe buýt trở lại.
+Mrs. Rosa came back. The twins came back. | Bà Rosa quay lại. Cặp song sinh quay lại.
+The bus company noticed. | Công ty xe buýt để ý thấy.
+They had robots that could drive perfectly, | Họ có những con robot lái xe hoàn hảo,
+but they didn't have anyone who could make people feel welcome. | nhưng họ không có ai khiến mọi người cảm thấy được chào đón.
+
+"Machines are good at doing things," Dad told Mia that night. | "Máy giỏi làm việc," tối đó bố nói với Mia.
+"But people are good at caring about things." | "Còn con người giỏi quan tâm đến mọi thứ."
+? Khi máy làm mọi việc nhanh và chính xác, những ai trong xã hội dễ bị bỏ lại phía sau?
+? Bố Mia tự tạo ra một công việc mới. Em nghĩ trong tương lai, những công việc nào máy khó thay thế được?
+? "Máy giỏi làm việc, người giỏi quan tâm." Em đồng ý hay không? Cho một ví dụ.
+* tourist | khách du lịch
+* lonely | cô đơn
+* notice | để ý thấy
+* welcome | được chào đón
+* care about | quan tâm đến
+* explain | giải thích
+
+## A New Kind of Work | Một kiểu công việc mới
+Three months later, the bus company called Dad. | Ba tháng sau, công ty xe buýt gọi cho bố.
+They wanted to hire him again, with a new title: Community Guide. | Họ muốn thuê ông lại, với chức danh mới: Người hướng dẫn cộng đồng.
+His job was to train other people to do what he did. | Việc của ông là đào tạo người khác làm những gì ông đã làm.
+Many of them were drivers who lost their jobs too. | Nhiều người trong số đó cũng là tài xế bị mất việc.
+
+On his first day, Dad stood in front of twenty people. | Ngày đầu tiên, bố đứng trước hai mươi người.
+Some looked angry. Some looked tired. Some looked scared. | Có người trông giận dữ. Có người mệt mỏi. Có người sợ hãi.
+"I know how you feel," Dad began. | "Tôi hiểu các bạn cảm thấy thế nào," bố bắt đầu.
+"I felt useless too. But I learned something." | "Tôi cũng từng thấy mình vô dụng. Nhưng tôi đã học được một điều."
+"The robots took our driving. They didn't take our hearts." | "Robot lấy mất việc lái xe của chúng ta. Chúng không lấy được trái tim chúng ta."
+
+Not everyone agreed. | Không phải ai cũng đồng ý.
+A young man stood up. | Một chàng trai trẻ đứng dậy.
+"That's easy for you to say," he said. "You found a new job. Most of us won't." | "Chú nói thì dễ," anh nói. "Chú tìm được việc mới. Phần lớn bọn cháu thì không."
+The room was silent. | Căn phòng im lặng.
+Dad nodded slowly. | Bố chậm rãi gật đầu.
+"You're right. It isn't fair," he said. | "Cậu nói đúng. Chuyện này không công bằng," ông nói.
+"The company saves a lot of money with robots." | "Công ty tiết kiệm được rất nhiều tiền nhờ robot."
+"Maybe some of that money should help the people who lost their jobs." | "Có lẽ một phần số tiền đó nên dùng để giúp những người mất việc."
+Everyone started talking at once. | Mọi người bắt đầu nói cùng một lúc.
+
+That evening, Mia asked about the meeting. | Tối đó, Mia hỏi về buổi họp.
+"Did you find the answer?" she asked. | "Bố tìm ra câu trả lời chưa?" cô hỏi.
+"No," Dad said. "But we started asking the right questions." | "Chưa," bố nói. "Nhưng bọn bố đã bắt đầu hỏi đúng câu hỏi."
+"Who gets the money when machines do the work?" | "Khi máy làm việc thì ai được hưởng tiền?"
+"How do we make sure nobody is left behind?" | "Làm sao để không ai bị bỏ lại phía sau?"
+
+Mia looked out of the window. | Mia nhìn ra cửa sổ.
+The robot bus passed by, perfect and silent. | Chiếc xe buýt robot chạy ngang qua, hoàn hảo và im lặng.
+Inside, she could see an old woman laughing with a guide. | Bên trong, cô thấy một bà cụ đang cười với một người hướng dẫn.
+Maybe the future wasn't about people against machines, she thought. | Có lẽ tương lai không phải là con người chống lại máy móc, cô nghĩ.
+Maybe it was about people deciding what kind of world they want to build. | Có lẽ nó là chuyện con người quyết định họ muốn xây một thế giới như thế nào.
+? Khi công ty tiết kiệm tiền nhờ robot, theo em số tiền đó nên được dùng thế nào cho công bằng?
+? Chàng trai trẻ nói "Chú nói thì dễ". Em hiểu cảm giác của anh ấy không?
+? Nếu em là thị trưởng Brightford, em sẽ làm gì để "không ai bị bỏ lại phía sau"?
+* hire | thuê, tuyển
+* train | đào tạo
+* useless | vô dụng
+* fair | công bằng
+* save money | tiết kiệm tiền
+* left behind | bị bỏ lại phía sau

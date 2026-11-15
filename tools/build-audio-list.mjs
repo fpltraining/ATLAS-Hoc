@@ -43,6 +43,7 @@ for (const s of J('data/stories/index.json')) {
   const st = J(`data/stories/${s.id}.json`);
   const lang = s.lang === 'zh' ? 'zh' : 'en';
   for (const ch of st.chapters) for (const p of ch.paras) for (const ln of p) add(lang, ln[0]);
+  for (const ch of st.chapters) for (const v of ch.vocab || []) add(lang, v[0]);
 }
 
 // Tiếng Anh: kho từ (từ giọng nam, câu ví dụ xen kẽ), khoá học, tiếng Anh nghề
