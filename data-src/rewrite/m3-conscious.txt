@@ -1,0 +1,88 @@
+#id myst-conscious
+#level B1
+#title Why Is There Anyone Inside?
+#vi Vì sao bên trong lại có "ai đó"?
+#blurb Khoa học giải thích được nhiều điều về bộ não, nhưng chưa giải thích được vì sao ta "cảm thấy". Khi AI bắt đầu nói về cảm xúc, câu hỏi triết học này trở thành câu hỏi xã hội.
+
+## The Easy Problems | Những bài toán "dễ"
+Your brain has about 86 billion nerve cells. | Bộ não bạn có khoảng 86 tỉ tế bào thần kinh.
+They send tiny electric signals to each other, all day and all night. | Chúng gửi những tín hiệu điện nhỏ xíu cho nhau, suốt ngày đêm.
+Science can explain a lot about this. | Khoa học có thể giải thích rất nhiều về điều này.
+It can explain how your eyes send color to the brain. | Nó giải thích được cách mắt bạn gửi màu sắc lên não.
+It can explain how you remember a phone number, and how you decide to move your hand. | Nó giải thích được cách bạn nhớ một số điện thoại, và cách bạn quyết định cử động tay.
+
+These questions are difficult, but scientists know how to study them. | Những câu hỏi này khó, nhưng các nhà khoa học biết cách nghiên cứu chúng.
+You can measure signals, run experiments and build models. | Bạn có thể đo tín hiệu, làm thí nghiệm và xây dựng mô hình.
+One philosopher called them "the easy problems". | Một nhà triết học gọi chúng là "những bài toán dễ".
+Of course, they aren't really easy. They might take a hundred years. | Tất nhiên chúng không thật sự dễ. Có thể mất cả trăm năm.
+But at least we know what a solution would look like. | Nhưng ít ra ta biết lời giải sẽ trông như thế nào.
+
+Here's the strange part. | Đây là phần kỳ lạ.
+When you look at a red apple, you don't only process information. | Khi bạn nhìn một quả táo đỏ, bạn không chỉ xử lý thông tin.
+You experience red. | Bạn trải nghiệm màu đỏ.
+It feels like something to see it, to taste it, to be hungry for it. | Có một cảm giác khi nhìn nó, khi nếm nó, khi thèm nó.
+A camera can record red, but nobody thinks the camera feels anything. | Một chiếc máy ảnh có thể ghi lại màu đỏ, nhưng không ai nghĩ máy ảnh cảm thấy gì.
+So what's the difference between you and the camera? | Vậy bạn và máy ảnh khác nhau ở đâu?
+? Hãy thử mô tả "màu đỏ" cho một người mù từ khi sinh ra. Vì sao lại khó đến vậy?
+? Em nghĩ khác biệt giữa em và một chiếc máy ảnh là gì?
+* nerve cell | tế bào thần kinh
+* signal | tín hiệu
+* philosopher | nhà triết học
+* process | xử lý
+* experience | trải nghiệm
+
+## The Hard Problem | Bài toán khó
+In 1994, at a conference in Arizona, a young Australian philosopher named David Chalmers gave a famous talk. | Năm 1994, tại một hội nghị ở Arizona, một nhà triết học trẻ người Úc tên David Chalmers có một bài nói nổi tiếng.
+He said: imagine we explain every signal in the brain. | Ông nói: hãy tưởng tượng ta giải thích được mọi tín hiệu trong não.
+One question would still be left. | Vẫn sẽ còn lại một câu hỏi.
+Why is there a "you" inside at all? | Vì sao lại có một "bạn" ở bên trong?
+Why doesn't it all happen in the dark, with no feeling? | Vì sao mọi thứ không diễn ra trong bóng tối, không có cảm giác nào?
+He called it "the hard problem of consciousness". | Ông gọi đó là "bài toán khó của ý thức".
+
+In 1998, the brain scientist Christof Koch made a bet with Chalmers. | Năm 1998, nhà khoa học thần kinh Christof Koch đánh cược với Chalmers.
+Koch bet a case of wine that within 25 years, science would find how the brain creates consciousness. | Koch cược một thùng rượu rằng trong vòng 25 năm, khoa học sẽ tìm ra cách bộ não tạo ra ý thức.
+In June 2023, the 25 years were over. | Tháng 6 năm 2023, 25 năm đã trôi qua.
+Scientists had tested two big theories against each other. | Các nhà khoa học đã cho hai lý thuyết lớn đối đầu nhau trong thí nghiệm.
+Neither one clearly won. | Không lý thuyết nào thắng rõ ràng.
+Koch admitted he had lost, and he gave Chalmers the wine. | Koch thừa nhận mình thua, và trao rượu cho Chalmers.
+Then he made a new bet for another 25 years. | Rồi ông đặt một vụ cược mới cho 25 năm nữa.
+
+I like this story because both men were honest. | Tôi thích câu chuyện này vì cả hai người đều trung thực.
+One admitted that he was wrong. The other didn't pretend to have the answer. | Một người thừa nhận mình sai. Người kia không giả vờ có câu trả lời.
+? Koch thua cược nhưng vẫn đặt cược tiếp. Em học được gì từ thái độ đó?
+? Em đã bao giờ phải thừa nhận mình sai trước người khác chưa? Điều đó khó hay dễ?
+* conference | hội nghị
+* consciousness | ý thức
+* bet | cược
+* theory | lý thuyết
+* admit | thừa nhận
+* pretend | giả vờ
+
+## And the Machines? | Còn máy móc thì sao?
+This is no longer only a question for philosophers. | Đây không còn chỉ là câu hỏi cho các nhà triết học.
+AI can now talk about its feelings. | Giờ đây AI có thể nói về cảm xúc của nó.
+It can say "I'm happy" or "I'm worried", and it can sound very real. | Nó có thể nói "tôi vui" hay "tôi lo", và nghe rất thật.
+But does it feel anything? | Nhưng nó có cảm thấy gì không?
+Some scientists say clearly no. It only predicts the next word. | Một số nhà khoa học nói rõ là không. Nó chỉ đoán từ tiếp theo.
+Others say we can't be sure. | Số khác nói ta không thể chắc chắn.
+
+The problem is simple and deep. | Vấn đề vừa đơn giản vừa sâu sắc.
+We can't measure feelings from the outside, not even in other people. | Ta không thể đo cảm xúc từ bên ngoài, ngay cả ở người khác.
+You only know your own experience directly. | Bạn chỉ biết trực tiếp trải nghiệm của chính mình.
+You believe your friends feel things because they're like you. | Bạn tin bạn bè mình có cảm xúc vì họ giống bạn.
+But an AI is very different from you, even when it talks like you. | Nhưng AI rất khác bạn, ngay cả khi nó nói chuyện giống bạn.
+
+This creates real social questions. | Điều này tạo ra những câu hỏi xã hội thật sự.
+People are already forming strong friendships with AI companions. | Mọi người đã bắt đầu gắn bó sâu sắc với những người bạn AI.
+If a company deletes an AI that someone loves, is that just closing an app? | Nếu một công ty xoá một AI mà ai đó yêu quý, đó chỉ là đóng một ứng dụng thôi sao?
+Some AI companies have started to study whether their models might matter morally. | Một số công ty AI đã bắt đầu nghiên cứu xem mô hình của họ có thể có ý nghĩa về mặt đạo đức không.
+They don't say the answer is yes. | Họ không nói câu trả lời là có.
+They say the question deserves care, and that it's better to think about it early than too late. | Họ nói câu hỏi này đáng được cân nhắc cẩn thận, và nên nghĩ về nó sớm còn hơn quá muộn.
+? Nếu một AI nói "tôi buồn", em sẽ phản ứng thế nào? Em có tin nó không?
+? Gắn bó với một người bạn AI có hại gì không? Có lợi gì không?
+? Vì sao nên suy nghĩ về câu hỏi này "sớm còn hơn quá muộn"?
+* predict | dự đoán
+* directly | trực tiếp
+* companion | người bạn đồng hành
+* morally | về mặt đạo đức
+* deserve | xứng đáng

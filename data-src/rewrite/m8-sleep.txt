@@ -1,0 +1,90 @@
+#id myst-sleep
+#level A2
+#title Why Do We Sleep?
+#vi Vì sao chúng ta ngủ?
+#blurb Ta dành một phần ba cuộc đời để ngủ, nhưng khoa học vẫn chưa biết hết vì sao. Truyện về cậu học sinh thức 11 ngày, bộ não tự dọn dẹp, và một xã hội ngày càng thiếu ngủ.
+
+## A Dangerous Habit | Một thói quen nguy hiểm
+You'll spend about one third of your life asleep. | Bạn sẽ dành khoảng một phần ba cuộc đời để ngủ.
+You lie still. You don't eat or work. | Bạn nằm yên. Bạn không ăn cũng không làm việc.
+You can't see danger coming. | Bạn không thể thấy nguy hiểm đang tới.
+For an animal in the wild, that looks like a terrible idea. | Với một con vật ngoài tự nhiên, điều đó có vẻ là ý tưởng tồi tệ.
+
+And yet, nearly every animal that scientists have studied sleeps in some way. | Thế nhưng, gần như mọi loài vật các nhà khoa học từng nghiên cứu đều ngủ theo cách nào đó.
+Even tiny flies sleep. | Ngay cả ruồi nhỏ cũng ngủ.
+Even some jellyfish, with no brain at all, have a kind of sleep. | Ngay cả một số loài sứa, hoàn toàn không có não, cũng có một kiểu ngủ.
+
+Some animals have found clever ways. | Một số loài đã tìm ra những cách khéo léo.
+Dolphins sleep with half of their brain at a time, so they can keep swimming and breathing. | Cá heo ngủ mỗi lần một nửa bộ não, để vẫn bơi và thở được.
+Some sea birds sleep for a few seconds at a time while flying over the ocean. | Một số loài chim biển ngủ từng vài giây một trong khi bay trên đại dương.
+
+Nature had millions of years to get rid of sleep. | Thiên nhiên đã có hàng triệu năm để loại bỏ giấc ngủ.
+It didn't. | Nó đã không làm vậy.
+Instead, it found ways to keep sleep, even when sleep was dangerous. | Thay vào đó, nó tìm cách giữ lại giấc ngủ, ngay cả khi ngủ là nguy hiểm.
+So sleep must do something very important. | Vậy giấc ngủ hẳn phải làm điều gì đó rất quan trọng.
+But what? | Nhưng là điều gì?
+? Vì sao việc cá heo "ngủ một nửa não" chứng tỏ giấc ngủ rất quan trọng?
+? Em ngủ trung bình mấy tiếng mỗi đêm? Em có nghĩ mình ngủ đủ không?
+* asleep | đang ngủ
+* danger | nguy hiểm
+* jellyfish | con sứa
+* dolphin | cá heo
+* get rid of | loại bỏ
+
+## Eleven Days Awake | Mười một ngày không ngủ
+In 1964, a 17-year-old student named Randy Gardner wanted to win a school science fair. | Năm 1964, một học sinh 17 tuổi tên Randy Gardner muốn thắng hội chợ khoa học ở trường.
+His plan was simple: stay awake as long as possible. | Kế hoạch của cậu đơn giản: thức càng lâu càng tốt.
+He stayed awake for eleven days. | Cậu đã thức suốt mười một ngày.
+Friends kept him busy with games and basketball. | Bạn bè giữ cậu bận rộn bằng trò chơi và bóng rổ.
+
+But his mind began to change. | Nhưng tâm trí cậu bắt đầu thay đổi.
+He forgot words. He couldn't do simple math. | Cậu quên từ. Cậu không làm được phép tính đơn giản.
+He became moody, and he saw things that weren't there. | Cậu trở nên cáu bẳn, và nhìn thấy những thứ không có thật.
+After the test, he slept for fourteen hours. | Sau thử nghiệm, cậu ngủ một mạch mười bốn tiếng.
+Years later, he said he had trouble sleeping for much of his life. | Nhiều năm sau, ông kể mình bị khó ngủ trong phần lớn cuộc đời.
+Today, scientists say nobody should repeat this. | Ngày nay, các nhà khoa học nói không ai nên lặp lại điều này.
+
+Even one bad night has a cost. | Ngay cả một đêm ngủ tệ cũng có cái giá.
+After a short night, our attention is weaker and our mood is worse. | Sau một đêm ngủ ít, sự tập trung của ta yếu hơn và tâm trạng tệ hơn.
+And the opposite is also true. | Và điều ngược lại cũng đúng.
+In one study, college basketball players tried to sleep about ten hours a night for several weeks. | Trong một nghiên cứu, các cầu thủ bóng rổ đại học cố ngủ khoảng mười tiếng mỗi đêm trong vài tuần.
+They ran faster, and their shooting got about 9 percent more accurate. | Họ chạy nhanh hơn, và ném bóng chính xác hơn khoảng 9 phần trăm.
+No new training. No new shoes. Just more sleep. | Không tập thêm. Không giày mới. Chỉ là ngủ nhiều hơn.
+? Nếu ngủ đủ giúp cầu thủ ném chuẩn hơn 9%, nó có thể giúp tuyển thủ thể thao điện tử thế nào?
+? Em đã bao giờ thức khuya rồi học hay chơi kém đi hôm sau chưa? Kể lại bằng tiếng Anh.
+* awake | thức
+* science fair | hội chợ khoa học
+* moody | cáu bẳn, thất thường
+* attention | sự tập trung
+* accurate | chính xác
+
+## Cleaning the Brain | Dọn dẹp bộ não
+We know some of the answers now. | Giờ ta đã biết một phần câu trả lời.
+While you sleep, your brain replays the day. | Khi bạn ngủ, bộ não phát lại một ngày của bạn.
+Scientists have watched this in rats. | Các nhà khoa học đã quan sát điều này ở chuột.
+After running a maze, the rats' brain cells repeated the same path in their sleep. | Sau khi chạy qua mê cung, tế bào não của chuột lặp lại đúng lộ trình đó trong giấc ngủ.
+This helps turn new memories into long ones. | Điều này giúp biến ký ức mới thành ký ức lâu dài.
+That's why sleeping after study is part of studying. | Đó là lý do ngủ sau khi học cũng là một phần của việc học.
+
+In 2013, scientists found something else. | Năm 2013, các nhà khoa học phát hiện thêm một điều.
+During sleep, fluid flows through the brain more easily and washes away waste. | Trong khi ngủ, chất lỏng chảy qua não dễ hơn và rửa trôi chất thải.
+Sleep may be the brain's cleaning time. | Giấc ngủ có thể là giờ dọn dẹp của bộ não.
+
+But our modern world is fighting against sleep. | Nhưng thế giới hiện đại đang chống lại giấc ngủ.
+Bright phones stay with us in bed. | Những chiếc điện thoại sáng rực ở cạnh ta trên giường.
+Apps are designed to keep us scrolling, one more video, one more match. | Ứng dụng được thiết kế để ta lướt mãi, thêm một video, thêm một trận nữa.
+Many people are proud of sleeping less, as if it shows how hard they work. | Nhiều người tự hào vì ngủ ít, như thể điều đó chứng tỏ họ làm việc chăm chỉ.
+
+Nobody has one clear answer for why sleep had to exist at all. | Chưa ai có một câu trả lời rõ ràng vì sao giấc ngủ phải tồn tại.
+And we still don't really know why we dream. | Và ta vẫn chưa thật sự biết vì sao ta mơ.
+But we know enough to make one choice. | Nhưng ta biết đủ để đưa ra một lựa chọn.
+Sleep isn't wasted time. It's when your brain does its quiet work. | Ngủ không phải thời gian lãng phí. Đó là lúc bộ não làm công việc thầm lặng của nó.
+? Vì sao "ngủ sau khi học cũng là một phần của việc học"? Em sẽ thay đổi giờ ngủ thế nào?
+? Ứng dụng được thiết kế để ta "lướt mãi". Em có thể đặt quy tắc gì cho điện thoại trước giờ ngủ?
+? Vì sao xã hội lại khen người ngủ ít? Điều đó đúng hay sai?
+* replay | phát lại
+* maze | mê cung
+* memory | ký ức, trí nhớ
+* fluid | chất lỏng
+* waste | chất thải
+* scroll | lướt (màn hình)

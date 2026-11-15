@@ -1,0 +1,85 @@
+#id myst-dark
+#level A2
+#title Most of the Universe Is Missing
+#vi Phần lớn vũ trụ đang mất tích
+#blurb Mọi thứ ta thấy chỉ chiếm khoảng 5% vũ trụ. Phần còn lại là "vật chất tối" và "năng lượng tối" – hai cái tên cho điều ta chưa biết. Truyện về sự kiên trì, và về can đảm nói "tôi không biết".
+
+## The Missing Weight | Khối lượng bị thiếu
+Look at everything you know. | Hãy nhìn mọi thứ bạn biết.
+Your phone, the sea, the Sun, every star in the night sky. | Điện thoại của bạn, biển cả, Mặt Trời, mọi ngôi sao trên trời đêm.
+All of it is made of normal matter. | Tất cả đều làm từ vật chất thông thường.
+But scientists now think normal matter is only about 5 percent of the universe. | Nhưng giờ các nhà khoa học cho rằng vật chất thông thường chỉ chiếm khoảng 5 phần trăm vũ trụ.
+The rest is something we can't see. | Phần còn lại là thứ ta không nhìn thấy.
+
+The first clue came in 1933. | Manh mối đầu tiên xuất hiện năm 1933.
+A Swiss scientist named Fritz Zwicky was studying a big group of galaxies. | Một nhà khoa học Thuỵ Sĩ tên Fritz Zwicky đang nghiên cứu một cụm thiên hà lớn.
+He noticed that they were moving too fast. | Ông nhận thấy chúng chuyển động quá nhanh.
+With only the stars we can see, the group should fly apart, like children on a spinning ride who let go. | Chỉ với những ngôi sao ta thấy được, cụm thiên hà lẽ ra phải văng ra, như trẻ con buông tay trên chiếc đu quay.
+Something invisible was holding it together. | Có thứ gì vô hình đang giữ chúng lại với nhau.
+He called it "dark matter". | Ông gọi nó là "vật chất tối".
+
+Zwicky was clever, but he was also difficult. | Zwicky thông minh, nhưng cũng khó gần.
+He argued with many people, and many people didn't like him. | Ông tranh cãi với nhiều người, và nhiều người không ưa ông.
+So most scientists didn't pay much attention to his idea. | Vì thế phần lớn các nhà khoa học không mấy để tâm đến ý tưởng của ông.
+For almost forty years, the missing weight was a strange note in an old paper. | Suốt gần bốn mươi năm, khối lượng bị thiếu chỉ là một ghi chú lạ trong một bài báo cũ.
+Sometimes an idea is ignored not because it's wrong, but because of who said it. | Đôi khi một ý tưởng bị bỏ qua không phải vì nó sai, mà vì người nói ra nó.
+? Vì sao ý tưởng của Zwicky bị bỏ qua gần 40 năm? Ngày nay chuyện đó còn xảy ra không?
+? Em có bao giờ không tin một ý kiến đúng chỉ vì không thích người nói không?
+* matter | vật chất
+* universe | vũ trụ
+* clue | manh mối
+* galaxy | thiên hà
+* invisible | vô hình
+* ignore | phớt lờ
+
+## The Woman Who Measured Galaxies | Người phụ nữ đo thiên hà
+In the 1960s and 1970s, an American astronomer named Vera Rubin studied how galaxies spin. | Vào những năm 1960 và 1970, một nhà thiên văn người Mỹ tên Vera Rubin nghiên cứu cách các thiên hà quay.
+At that time, it was hard for women to work in astronomy. | Thời đó, phụ nữ làm thiên văn học rất khó.
+One famous observatory didn't even let women use its telescopes at first. | Một đài thiên văn nổi tiếng ban đầu thậm chí không cho phụ nữ dùng kính thiên văn.
+She kept working anyway. | Bà vẫn tiếp tục làm việc.
+
+She measured the speed of stars at the edge of galaxies. | Bà đo tốc độ của các ngôi sao ở rìa thiên hà.
+They should move slowly, like the outer planets around our Sun. | Chúng lẽ ra phải chuyển động chậm, như những hành tinh ở xa quanh Mặt Trời.
+But they moved just as fast as the stars near the center. | Nhưng chúng di chuyển nhanh y như những ngôi sao gần tâm.
+Galaxy after galaxy, the result was the same. | Hết thiên hà này đến thiên hà khác, kết quả vẫn như vậy.
+Now scientists had to take dark matter seriously. | Giờ thì các nhà khoa học phải coi trọng vật chất tối.
+Today we think it's about 27 percent of the universe. | Ngày nay ta cho rằng nó chiếm khoảng 27 phần trăm vũ trụ.
+
+Then, in 1998, two teams found something even stranger. | Rồi năm 1998, hai nhóm nghiên cứu phát hiện điều còn kỳ lạ hơn.
+The universe isn't only growing. It's growing faster and faster. | Vũ trụ không chỉ đang giãn nở. Nó giãn nở ngày càng nhanh.
+Something is pushing it apart. | Có thứ gì đó đang đẩy nó ra.
+Scientists called it "dark energy", and it seems to be about 68 percent of everything. | Các nhà khoa học gọi nó là "năng lượng tối", và nó có vẻ chiếm khoảng 68 phần trăm mọi thứ.
+Vera Rubin never won a Nobel Prize, but in 2020 a great new telescope was named after her. | Vera Rubin chưa bao giờ đoạt giải Nobel, nhưng năm 2020 một kính thiên văn mới rất lớn được đặt theo tên bà.
+? Vera Rubin bị cấm dùng kính thiên văn nhưng vẫn làm tiếp. Điều gì giúp một người kiên trì như vậy?
+? Hôm nay ở Việt Nam, phụ nữ còn gặp rào cản nào trong khoa học và công nghệ?
+* astronomer | nhà thiên văn học
+* spin | quay
+* measure | đo
+* edge | rìa, mép
+* seriously | nghiêm túc
+
+## Labels for Our Confusion | Cái nhãn cho sự bối rối
+Here's the honest part. | Đây là phần thành thật.
+Nobody has ever caught a single piece of dark matter. | Chưa ai từng bắt được dù chỉ một mẩu vật chất tối.
+Scientists have built huge detectors deep under the ground, away from noise. | Các nhà khoa học đã xây những máy dò khổng lồ sâu dưới lòng đất, tránh xa nhiễu.
+For years, they've waited. So far, they've found nothing. | Họ đã chờ nhiều năm. Đến nay họ chưa tìm thấy gì.
+And nobody really knows what dark energy is. | Và không ai thật sự biết năng lượng tối là gì.
+
+"Dark" doesn't really mean black. It means: we don't know. | "Tối" không thật sự có nghĩa là màu đen. Nó có nghĩa là: chúng ta không biết.
+These names are labels for our confusion. | Những cái tên này là nhãn dán cho sự bối rối của chúng ta.
+Some scientists even think our ideas about gravity might be wrong. | Một số nhà khoa học thậm chí nghĩ hiểu biết của ta về lực hấp dẫn có thể sai.
+That's possible too. | Điều đó cũng có thể.
+
+This story has a lesson for our future. | Câu chuyện này có một bài học cho tương lai.
+In a world full of AI answers, it's easy to believe that everything is already known. | Trong một thế giới đầy câu trả lời của AI, rất dễ tin rằng mọi thứ đều đã được biết.
+It isn't. Most of the universe is still a question. | Không phải vậy. Phần lớn vũ trụ vẫn là một câu hỏi.
+Good scientists aren't afraid to say, "We don't know yet." | Nhà khoa học giỏi không ngại nói: "Chúng tôi chưa biết."
+Those three words aren't weakness. They're where discovery begins. | Mấy chữ đó không phải sự yếu đuối. Đó là nơi khám phá bắt đầu.
+? Lần cuối em dám nói "tôi không biết" là khi nào? Em cảm thấy thế nào?
+? Vì sao trong thời đại AI, câu "chúng ta chưa biết" lại càng quan trọng?
+? Em sẽ giải thích "vật chất tối" cho một bạn nhỏ bằng ví dụ nào?
+* detector | máy dò
+* confusion | sự bối rối
+* gravity | lực hấp dẫn
+* weakness | sự yếu đuối
+* discovery | khám phá

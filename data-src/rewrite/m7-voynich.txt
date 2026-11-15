@@ -1,0 +1,86 @@
+#id myst-voynich
+#level A2
+#title The Book Nobody Can Read
+#vi Cuốn sách không ai đọc được
+#blurb Một cuốn sách viết tay hơn 200 trang, chữ không ai biết, tranh vẽ cây không ai gọi được tên. Hơn một trăm năm, các nhà giải mã giỏi nhất và cả máy tính đều bó tay. Truyện về sự khiêm tốn trước điều chưa biết.
+
+## A Box of Old Books | Một thùng sách cũ
+In 1912, a book dealer named Wilfrid Voynich visited an old building near Rome. | Năm 1912, một người buôn sách tên Wilfrid Voynich đến thăm một toà nhà cổ gần Rome.
+The owners needed money, so they were selling some old books. | Chủ nhân cần tiền, nên họ bán bớt một số sách cũ.
+Voynich bought several. | Voynich mua vài cuốn.
+One of them was very strange. | Một trong số đó rất kỳ lạ.
+
+It had more than 200 pages, written by hand on animal skin. | Nó có hơn 200 trang, viết tay trên da động vật.
+The writing was beautiful and neat. | Chữ viết đẹp và ngay ngắn.
+The writer never seemed to stop or correct a mistake. | Người viết dường như không bao giờ dừng lại hay sửa lỗi.
+But nobody had ever seen these letters before. | Nhưng chưa ai từng thấy những chữ cái này.
+They weren't Latin, Greek or any known language. | Chúng không phải tiếng La-tinh, Hy Lạp hay bất kỳ ngôn ngữ nào đã biết.
+
+The pictures were even stranger. | Tranh vẽ còn kỳ lạ hơn.
+There were plants that no one could name. | Có những loài cây không ai gọi được tên.
+There were maps of stars and circles full of tiny figures. | Có bản đồ sao và những vòng tròn đầy hình người nhỏ.
+There were small women bathing in green water, connected by strange tubes. | Có những người phụ nữ nhỏ tắm trong nước xanh, nối với nhau bằng những ống kỳ lạ.
+Today we call it the Voynich manuscript. | Ngày nay ta gọi nó là bản thảo Voynich.
+? Nếu em tìm thấy một cuốn sách viết bằng chữ không ai biết, em sẽ bắt đầu tìm hiểu từ đâu?
+? Vì sao một cuốn sách "không đọc được" lại hấp dẫn con người đến vậy?
+* dealer | người buôn bán
+* skin | da
+* neat | ngay ngắn, gọn gàng
+* correct | sửa
+* figure | hình người
+* manuscript | bản thảo viết tay
+
+## The Code Breakers Try | Những nhà giải mã ra tay
+Voynich hoped to sell the book for a lot of money. | Voynich hy vọng bán cuốn sách được nhiều tiền.
+First, he wanted someone to read it. | Trước hết, ông muốn có ai đó đọc được nó.
+Many experts tried. All of them failed. | Nhiều chuyên gia đã thử. Tất cả đều thất bại.
+
+During and after the Second World War, William Friedman studied it. | Trong và sau Thế chiến thứ hai, William Friedman nghiên cứu nó.
+He was one of the greatest code breakers in history. | Ông là một trong những nhà giải mã vĩ đại nhất lịch sử.
+He had broken secret codes used by armies. | Ông đã phá những mật mã bí mật mà quân đội sử dụng.
+He and his team worked on the book for decades. | Ông và nhóm của mình làm việc với cuốn sách suốt nhiều thập kỷ.
+They couldn't read a single word. | Họ không đọc được một chữ nào.
+
+Later, computers studied the letters. | Sau này, máy tính phân tích các chữ cái.
+They found patterns, like the patterns of a real language. | Chúng tìm thấy những quy luật, giống quy luật của một ngôn ngữ thật.
+Some words repeat often. Some appear only once. | Một số từ lặp lại thường xuyên. Một số chỉ xuất hiện một lần.
+But patterns aren't meaning. | Nhưng quy luật không phải là ý nghĩa.
+
+In 2009, scientists tested the animal skin. | Năm 2009, các nhà khoa học kiểm tra lớp da động vật.
+It came from the early 1400s, about 600 years ago. | Nó có từ đầu những năm 1400, khoảng 600 năm trước.
+So we know when the skin was made, but still not what the words say. | Vậy ta biết lớp da được làm khi nào, nhưng vẫn không biết những chữ kia nói gì.
+? Máy tính tìm ra "quy luật" nhưng không tìm ra "ý nghĩa". Em nghĩ khác biệt đó là gì?
+? Khi học tiếng Anh, em có lúc nào thấy quy luật mà chưa hiểu nghĩa không?
+* code breaker | nhà giải mã
+* army | quân đội
+* decade | thập kỷ
+* pattern | quy luật, khuôn mẫu
+* meaning | ý nghĩa
+
+## Solved Again and Again | Được "giải" hết lần này đến lần khác
+Today the book lives in a library at Yale University in America. | Ngày nay cuốn sách nằm trong một thư viện của Đại học Yale ở Mỹ.
+The library has put every page online for free. | Thư viện đã đưa mọi trang lên mạng miễn phí.
+Anyone in the world can try to read it. | Bất kỳ ai trên thế giới cũng có thể thử đọc nó.
+And many people do. | Và rất nhiều người đã thử.
+
+Every few years, someone says, "I've solved it!" | Cứ vài năm lại có người nói: "Tôi đã giải được rồi!"
+Newspapers write excited stories. | Báo chí viết những bài hào hứng.
+Then experts look closely and show that the solution doesn't work. | Rồi các chuyên gia xem kỹ và chỉ ra lời giải không đúng.
+Recently, some people have asked AI to translate it. | Gần đây, một số người nhờ AI dịch nó.
+The AI happily gives an answer, but it's a guess dressed up as a translation. | AI vui vẻ đưa ra câu trả lời, nhưng đó là một phỏng đoán khoác áo bản dịch.
+
+That's a useful warning for our time. | Đó là lời cảnh báo hữu ích cho thời đại chúng ta.
+A machine that always answers isn't the same as a machine that knows. | Một cỗ máy luôn trả lời không giống một cỗ máy thật sự biết.
+The book stays silent. | Cuốn sách vẫn im lặng.
+Maybe it's a lost language. | Có lẽ đó là một ngôn ngữ đã mất.
+Maybe it's a clever code. | Có lẽ đó là một mật mã tinh vi.
+Maybe it's a beautiful fake, made to sell to a rich king. | Có lẽ đó là một món đồ giả tuyệt đẹp, làm ra để bán cho một ông vua giàu có.
+We don't know, and it's okay to say so. | Chúng ta không biết, và nói ra điều đó cũng không sao.
+? Vì sao "một cỗ máy luôn trả lời" lại khác "một cỗ máy thật sự biết"? Em đã gặp trường hợp AI trả lời sai một cách tự tin chưa?
+? Khi ai đó nói "tôi đã giải được rồi", em nên kiểm tra điều gì?
+* library | thư viện
+* solve | giải
+* closely | kỹ lưỡng
+* translate | dịch
+* warning | lời cảnh báo
+* fake | đồ giả

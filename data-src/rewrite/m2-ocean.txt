@@ -1,0 +1,88 @@
+#id myst-ocean
+#level A2
+#title We Have Better Maps of Mars
+#vi Bản đồ sao Hỏa còn rõ hơn đáy biển
+#blurb Năm 2017, mới có khoảng 6% đáy biển được vẽ bản đồ chi tiết. Một dự án toàn cầu đang cùng nhau thay đổi điều đó. Truyện về sự hợp tác, và về vùng đất lạ ngay dưới chân mình.
+
+## The Dark Floor | Đáy biển tối
+The ocean covers about 70 percent of our planet. | Đại dương bao phủ khoảng 70 phần trăm hành tinh của chúng ta.
+On average, it's almost four kilometers deep. | Trung bình, nó sâu gần bốn ki-lô-mét.
+Sunlight can't reach the bottom. | Ánh sáng mặt trời không thể chạm tới đáy.
+Down there, it's cold, dark and very quiet. | Dưới đó lạnh, tối và rất yên tĩnh.
+The water presses down with enormous weight, enough to crush a normal submarine. | Nước ép xuống với sức nặng khổng lồ, đủ để bóp nát một chiếc tàu ngầm bình thường.
+
+We've sent machines to Mars. | Chúng ta đã gửi máy móc lên sao Hoả.
+We have very good maps of its surface, and of the Moon too. | Ta có bản đồ rất tốt về bề mặt của nó, và của cả Mặt Trăng.
+But in 2017, only about 6 percent of our own ocean floor had a modern, detailed map. | Nhưng năm 2017, chỉ khoảng 6 phần trăm đáy biển của chính ta có bản đồ chi tiết, hiện đại.
+
+Why is it so hard? | Vì sao lại khó như vậy?
+Satellites can photograph Mars from space, because there's nothing in the way. | Vệ tinh có thể chụp sao Hoả từ không gian, vì không có gì cản trở.
+But light and radio waves can't pass through deep water. | Nhưng ánh sáng và sóng vô tuyến không thể xuyên qua nước sâu.
+To see the sea floor clearly, a ship must sail over it, slowly, one line at a time. | Để nhìn rõ đáy biển, một con tàu phải chạy qua nó, chậm rãi, từng đường một.
+It's like mowing a field the size of the world. | Giống như cắt cỏ một cánh đồng rộng bằng cả thế giới.
+So for most of history, the deep sea floor was a blank space on our maps. | Vì thế suốt phần lớn lịch sử, đáy biển sâu là một khoảng trống trên bản đồ của ta.
+? Vì sao con người hiểu sao Hoả rõ hơn đáy biển của chính hành tinh mình?
+? Có "khoảng trống trên bản đồ" nào ngay trong cuộc sống của em mà em chưa từng khám phá?
+* ocean | đại dương
+* on average | trung bình
+* crush | bóp nát
+* surface | bề mặt
+* satellite | vệ tinh
+* blank | trống
+
+## Listening to the Deep | Lắng nghe đáy sâu
+Ships map the sea with sound. | Tàu vẽ bản đồ biển bằng âm thanh.
+They send a sound down to the bottom, and it comes back like an echo. | Chúng phát âm thanh xuống đáy, và âm thanh dội lại như tiếng vang.
+The time it takes tells us the depth. | Thời gian nó mất cho ta biết độ sâu.
+Modern ships send many beams at once, so they can map a wide strip of the floor. | Tàu hiện đại phát nhiều chùm tia cùng lúc, nên có thể vẽ một dải đáy biển rộng.
+
+In 2017, an international project began. | Năm 2017, một dự án quốc tế bắt đầu.
+It's called Seabed 2030. | Nó tên là Seabed 2030 (Đáy biển 2030).
+Its goal is simple and huge: a full map of the ocean floor by 2030. | Mục tiêu đơn giản mà khổng lồ: bản đồ đầy đủ của đáy đại dương vào năm 2030.
+
+The project doesn't own many ships. | Dự án không sở hữu nhiều tàu.
+Instead, it asks for help. | Thay vào đó, nó kêu gọi giúp đỡ.
+Governments, scientists and companies share their data. | Các chính phủ, nhà khoa học và công ty chia sẻ dữ liệu của họ.
+Even fishing boats and private sailors can add small pieces. | Ngay cả thuyền đánh cá và người đi thuyền tư nhân cũng có thể góp những mảnh nhỏ.
+Every piece is added to one big map that anyone can use for free. | Mỗi mảnh được thêm vào một tấm bản đồ lớn mà ai cũng dùng miễn phí.
+
+In 2026, the project said 28.7 percent of the floor had been mapped. | Năm 2026, dự án cho biết 28,7 phần trăm đáy biển đã được vẽ bản đồ.
+That's a big jump from 6 percent, but the deadline is close. | Đó là bước nhảy lớn từ 6 phần trăm, nhưng hạn chót đã gần.
+Now people are building robot boats with no crew. | Giờ người ta đang chế tạo thuyền robot không người lái.
+They can sail for weeks and map day and night. | Chúng có thể đi biển hàng tuần và vẽ bản đồ ngày đêm.
+? Dự án không có nhiều tàu nhưng vẫn tiến bộ nhờ đâu? Bài học gì cho một đội nhóm?
+? Em có thể "góp một mảnh nhỏ" vào dự án chung nào ở trường, ở đội hay ở nơi em sống?
+* echo | tiếng vang
+* depth | độ sâu
+* international | quốc tế
+* share | chia sẻ
+* deadline | hạn chót
+* crew | thuỷ thủ đoàn
+
+## Why the Bottom Matters | Vì sao đáy biển quan trọng
+Why does a map of the sea floor matter? | Vì sao bản đồ đáy biển lại quan trọng?
+The shape of the floor guides ocean currents. | Hình dạng đáy biển dẫn đường cho dòng hải lưu.
+Currents carry heat around the world and change our weather. | Hải lưu mang hơi nóng đi khắp thế giới và thay đổi thời tiết.
+As the planet gets warmer, we need to understand them better. | Khi Trái Đất nóng lên, ta cần hiểu chúng rõ hơn.
+
+The floor also changes how tsunamis travel. | Đáy biển cũng làm thay đổi đường đi của sóng thần.
+A good map helps us warn people on the coast sooner. | Một bản đồ tốt giúp ta cảnh báo người dân ven biển sớm hơn.
+Internet cables lie on the sea floor too. | Cáp Internet cũng nằm dưới đáy biển.
+When you send a message to another country, it often travels along the bottom of the ocean. | Khi bạn gửi tin nhắn ra nước ngoài, nó thường đi dọc theo đáy đại dương.
+
+But a map is also a kind of power. | Nhưng bản đồ cũng là một dạng quyền lực.
+Some companies want to dig the deep sea floor for metals used in batteries. | Một số công ty muốn khai thác đáy biển sâu để lấy kim loại làm pin.
+Scientists worry that this could destroy places we haven't even seen yet. | Các nhà khoa học lo rằng điều đó có thể phá huỷ những nơi ta còn chưa từng thấy.
+So the same map can help us protect the ocean, or help us use it up. | Vậy cùng một tấm bản đồ có thể giúp ta bảo vệ đại dương, hoặc giúp ta vắt kiệt nó.
+
+In the deep dark, scientists keep finding animals that no human has ever seen. | Trong bóng tối sâu thẳm, các nhà khoa học liên tục tìm thấy những loài vật chưa ai từng thấy.
+Even now, more than 70 percent of the floor is still unknown. | Đến giờ, hơn 70 phần trăm đáy biển vẫn chưa được biết đến.
+The greatest unexplored land on Earth is right under the waves. | Vùng đất chưa khám phá lớn nhất Trái Đất nằm ngay dưới những con sóng.
+? Việt Nam có bờ biển dài. Bản đồ đáy biển có thể giúp người dân ven biển thế nào?
+? Nên khai thác kim loại dưới đáy biển để làm pin xe điện, hay bảo vệ nơi đó? Em chọn bên nào, vì sao?
+* current | dòng hải lưu
+* tsunami | sóng thần
+* coast | bờ biển
+* cable | dây cáp
+* destroy | phá huỷ
+* unexplored | chưa được khám phá
