@@ -553,10 +553,11 @@ var G = window.G || (window.G = {});
     if (scene.kind === 'classroom' && G.currentRoom) items.push({ y: TY(), draw: drawTeacher, o: G.ROOM_TEACHER[G.currentRoom] });
     if (scene.kind === 'shop') items.push({ y: TY(), draw: drawTeacher, o: scene.npc });
     for (var ti = 0; ti < town.length; ti++) items.push({ y: town[ti].y, draw: drawTownie, o: town[ti] });
-    items.push({ y: K.y, draw: drawKai });
+    if (G.S.nhanVat !== 'kai') items.push({ y: K.y, draw: drawKai });   // chơi bằng Kai thì không có robot đi theo
     items.push({ y: P.y, draw: drawPlayer });
     items.sort(function (a, b) { return a.y - b.y; });
     for (var j = 0; j < items.length; j++) items[j].draw(items[j].o);
+    if (scene.buildings) for (var bl = 0; bl < scene.buildings.length; bl++) drawBuildingLabel(scene.buildings[bl]);
 
     if (scene.kind === 'hall') drawDoorPlates();
     updateQuest();
@@ -606,7 +607,9 @@ var G = window.G || (window.G = {});
 
   function drawBuilding(b) {
     G.drawAsset(ctx, b.img, b.x - 150, b.y - 290, 300, 300);
-    // biển tên
+  }
+  /* biển tên nhà vẽ sau cùng để nhân vật không che chữ */
+  function drawBuildingLabel(b) {
     var label = b.name, w = Math.max(110, label.length * 13 + 30);
     ctx.fillStyle = b.go ? 'rgba(200,85,61,.95)' : 'rgba(27,33,64,.82)';
     G.roundRect(ctx, b.x - w / 2, b.y + 8, w, 34, 17); ctx.fill();
@@ -625,6 +628,15 @@ var G = window.G || (window.G = {});
       return;
     }
     var who = G.S.nhanVat || 'han';
+    if (who === 'kai') {   // chơi bằng robot Kai: dùng hình Kai 3 hướng, to hơn khi đi theo
+      var kd = P.dir, kside = kd === 'left' || kd === 'right';
+      var kn = kd === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : kside && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
+      var kf = kn === 'kai_left.png' ? kd === 'right' : kd === 'left';
+      var kb = P.moving ? Math.abs(Math.sin(P.t * 9)) * 6 : Math.sin(Date.now() / 300) * 2;
+      shadow(P.x, P.y, 22 * sh);
+      G.drawAsset(ctx, kn, P.x - 52, P.y - 100 - kb, 104, 104, kf);
+      return;
+    }
     var dir = P.dir === 'right' ? 'left' : P.dir, flip = P.dir === 'right';
     var name = 'player_' + who + '_' + dir + '.png';
     shadow(P.x, P.y, 26 * sh);

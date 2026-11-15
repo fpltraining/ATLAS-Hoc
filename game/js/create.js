@@ -1,112 +1,49 @@
-/* Màn tạo nhân vật: chọn da, khuôn mặt, kiểu tóc, màu tóc, áo, quần, giày, đặt tên.
-   Xem trước nhân vật bước đi và xoay 4 hướng. Có thể chọn nhân vật có sẵn (Han, Minh). */
+/* Màn chọn nhân vật: chọn 1 trong 3 nhân vật có sẵn (Han, Minh, Kai), đặt tên nếu muốn.
+   Gọn và nhanh để vào học ngay. (Nhân vật tự tạo từ bản cũ vẫn hiển thị bình thường.) */
 var G = window.G || (window.G = {});
 
 (function () {
-  var av, tab = 'toc', dirIdx = 0, raf = 0, cv, done = null, nameIn;
-  var DIRS = ['down', 'left', 'up', 'right'];
-  var TABS = [
-    { id: 'toc', name: 'Kiểu tóc' }, { id: 'mauToc', name: 'Màu tóc' }, { id: 'mat', name: 'Khuôn mặt' }, { id: 'ao', name: 'Trang phục' }
+  var done = null, nameIn, pick = 'han';
+  var CHARS = [
+    { id: 'han', name: 'Han', img: 'player_han_down.png', note: 'Chăm chỉ, thích thể thao điện tử' },
+    { id: 'minh', name: 'Minh', img: 'player_minh_down.png', note: 'Tò mò, thích khám phá thành phố' },
+    { id: 'kai', name: 'Kai', img: 'kai_follow.png', note: 'Robot nhỏ, học tiếng Anh cùng bạn' }
   ];
+  G.CHARS = CHARS;
 
   G.openCreator = function (cb) {
     done = cb;
-    av = G.S.avatar ? JSON.parse(JSON.stringify(G.S.avatar)) : G.defaultAvatar();
+    pick = G.S.nhanVat && G.S.nhanVat !== 'custom' ? G.S.nhanVat : 'han';
     var root = document.getElementById('create');
     document.getElementById('lobby').style.display = 'none';
     document.getElementById('play').style.display = 'none';
     root.style.display = 'block';
     root.innerHTML = '';
-    cv = document.createElement('canvas');
-    cv.className = 'cr-canvas';
-    nameIn = G.el('input.cr-name', { type: 'text', maxLength: 14, placeholder: 'Tên của bạn', value: G.S.ten || '' });
-
+    nameIn = G.el('input.cr-name', { type: 'text', maxLength: 14, placeholder: 'Để trống thì dùng tên nhân vật', value: G.S.ten || '' });
+    var grid = G.el('div.cr-chars');
+    function draw() {
+      grid.innerHTML = '';
+      CHARS.forEach(function (c) {
+        grid.appendChild(G.el('button.cr-pre' + (pick === c.id ? '.on' : ''), { onclick: function () { pick = c.id; draw(); } },
+          G.imgEl(c.img, 'cr-pre-img'), G.el('b', c.name), G.el('span.small.faint', c.note)));
+      });
+    }
+    draw();
     root.appendChild(G.el('div.cr-wrap',
-      G.el('div.cr-top', G.el('div.kicker', 'Bước 1 · Tạo nhân vật'), G.el('h1', 'Bạn trông thế nào?'),
-        G.el('p.small.faint', 'Nhân vật này sẽ sống ở Brightford, đi xe buýt, tàu điện tới trường và học cùng Kai.')),
-      G.el('div.cr-stage',
-        cv,
-        G.el('div.cr-stage-btns',
-          G.el('button.btn.sm', { onclick: function () { dirIdx = (dirIdx + 3) % 4; }, 'aria-label': 'Xoay trái' }, '⟲'),
-          G.el('button.btn.sm', { onclick: function () { av = G.randomAvatar(); renderOpts(); } }, '🎲 Ngẫu nhiên'),
-          G.el('button.btn.sm', { onclick: function () { dirIdx = (dirIdx + 1) % 4; }, 'aria-label': 'Xoay phải' }, '⟳'))
-      ),
-      G.el('div.cr-tabs', TABS.map(function (t) {
-        return G.el('button.cr-tab' + (t.id === tab ? '.on' : ''), { 'data-t': t.id, onclick: function () { tab = t.id; renderOpts(); } }, t.name);
-      })),
-      G.el('div.cr-opts', { id: 'cr-opts' }),
-      G.el('label.cr-label', 'Tên nhân vật', nameIn),
-      G.el('button.btn.seal.big1.cr-go', { onclick: finish }, 'Bắt đầu cuộc sống mới ›'),
-      G.el('div.cr-preset',
-        G.el('p.small.faint', 'Hoặc chọn nhân vật có sẵn:'),
-        G.el('div.cr-presets', ['han', 'minh'].map(function (w) {
-          return G.el('button.cr-pre', { onclick: function () { pickPreset(w); } }, G.imgEl('player_' + w + '_down.png', 'cr-pre-img'), G.el('b', w === 'han' ? 'Han' : 'Minh'));
-        }))
-      )
+      G.el('div.cr-top', G.el('div.kicker', 'Bắt đầu'), G.el('h1', 'Chọn nhân vật của bạn'),
+        G.el('p.small.faint', 'Nhân vật sẽ sống ở Brightford, đi xe buýt, tàu điện tới trường và học tiếng Anh mỗi ngày.')),
+      grid,
+      G.el('label.cr-label', 'Tên của bạn (không bắt buộc)', nameIn),
+      G.el('button.btn.seal.big1.cr-go', { onclick: finish }, 'Vào học ngay ›')
     ));
-    renderOpts();
-    setTimeout(renderOpts, 700); setTimeout(renderOpts, 2000); // vẽ lại khi các lớp hình đã tải
     window.scrollTo(0, 0);
-    cancelAnimationFrame(raf);
-    var t0 = Date.now();
-    (function anim() {
-      if (root.style.display === 'none') return;
-      drawPreview((Date.now() - t0) / 1000);
-      raf = requestAnimationFrame(anim);
-    })();
   };
 
-  function drawPreview(t) {
-    var px = Math.min(240, Math.round(window.innerWidth * 0.55)), d = Math.min(2, window.devicePixelRatio || 1);
-    if (cv.width !== px * d) { cv.width = px * d; cv.height = px * d; cv.style.width = px + 'px'; cv.style.height = px + 'px'; }
-    var g = cv.getContext('2d');
-    g.setTransform(d, 0, 0, d, 0, 0);
-    g.clearRect(0, 0, px, px);
-    var walking = Math.floor(t / 2.4) % 2 === 1;
-    G.drawAvatar(g, av, px / 2, px, px, DIRS[dirIdx], t * 9, walking);
-  }
-
-  /* các lựa chọn của thẻ đang mở */
-  function renderOpts() {
-    var tabs = document.querySelectorAll('.cr-tab');
-    for (var i = 0; i < tabs.length; i++) tabs[i].className = 'cr-tab' + (tabs[i].getAttribute('data-t') === tab ? ' on' : '');
-    var box = document.getElementById('cr-opts');
-    box.innerHTML = '';
-    var A = G.AV;
-    if (tab === 'mauToc') { box.appendChild(swatches(A.mauToc, 'mauToc')); return; }
-    box.appendChild(styles(A[tab], tab, 'down'));
-  }
-
-  function swatches(list, key) {
-    return G.el('div.cr-sw', list.map(function (col) {
-      return G.el('button.sw' + (av[key] === col ? '.on' : ''), { style: { background: col }, 'aria-label': col, onclick: function () { av[key] = col; renderOpts(); } });
-    }));
-  }
-  function styles(list, key, dir) {
-    return G.el('div.cr-st', list.map(function (o) {
-      var test = JSON.parse(JSON.stringify(av)); test[key] = o.id;
-      // có đủ hình thì xem trước cả nhân vật, chưa đủ thì hiện riêng lớp hình đó (hoặc ô ghi tên file)
-      var part = (key === 'ao' ? 'body_' : key === 'toc' ? 'hair_' : 'face_') + o.id + '_down.png';
-      var full = G.asset('body_' + test.ao + '_down.png').ok && G.asset(part).ok;
-      return G.el('button.st' + (av[key] === o.id ? '.on' : ''), { onclick: function () { av[key] = o.id; renderOpts(); } },
-        full ? G.avatarCanvas(test, 74, dir) : G.imgEl(part, 'st-part'), G.el('span', o.name));
-    }));
-  }
-
-  function close() {
-    cancelAnimationFrame(raf);
-    document.getElementById('create').style.display = 'none';
-  }
+  function close() { document.getElementById('create').style.display = 'none'; }
   function finish() {
-    var name = (nameIn.value || '').replace(/^\s+|\s+$/g, '');
-    if (!name) { G.toast('Đặt tên cho nhân vật nhé'); nameIn.focus(); return; }
-    G.S.avatar = av; G.S.nhanVat = 'custom'; G.S.ten = name;
-    G.save();
-    close();
-    if (done) done();
-  }
-  function pickPreset(w) {
-    G.S.nhanVat = w; G.S.ten = (nameIn.value || '').replace(/^\s+|\s+$/g, '') || (w === 'han' ? 'Han' : 'Minh');
+    var c = null; for (var i = 0; i < CHARS.length; i++) if (CHARS[i].id === pick) c = CHARS[i];
+    G.S.nhanVat = pick;
+    G.S.ten = (nameIn.value || '').replace(/^\s+|\s+$/g, '') || c.name;
     G.save();
     close();
     if (done) done();
@@ -115,7 +52,8 @@ var G = window.G || (window.G = {});
   /* Lời mở đầu sau khi tạo nhân vật */
   G.introStory = function (cb) {
     var lines = [
-      'Chào ' + G.playerName() + '! Mình là Kai, bạn robot sẽ đi cùng bạn.',
+      G.S.nhanVat === 'kai' ? 'Chào ' + G.playerName() + '! Bạn là một robot nhỏ vừa được gửi tới Brightford để học tiếng Anh.'
+        : 'Chào ' + G.playerName() + '! Mình là Kai, bạn robot sẽ đi cùng bạn.',
       'Bạn vừa chuyển tới Brightford, một thị trấn nhỏ ở nước Mỹ tương lai. Ở đây ai cũng nói tiếng Anh.',
       'Hôm nay là ngày đầu đi học ở Trường Anh ngữ. Nhà bạn ở khu phố Maple, trường ở trung tâm.',
       'Ra bến xe buýt hoặc ga tàu điện, nghe thông báo trạm bằng tiếng Anh và xuống đúng trạm nhé!'

@@ -35,13 +35,13 @@ var G = window.G || (window.G = {});
     return index[lang][k] ? '../audio/' + lang + '/' + k + '.mp3' : null;
   };
 
-  function speakTts(text, lang) {
+  function speakTts(text, lang, slow) {
     if (!window.speechSynthesis) return;
     try {
       speechSynthesis.cancel();
       var u = new SpeechSynthesisUtterance(text);
       u.lang = lang === 'zh' ? 'zh-CN' : 'en-US';
-      u.rate = 0.85;
+      u.rate = slow ? 0.55 : 0.85;
       var vs = speechSynthesis.getVoices();
       for (var i = 0; i < vs.length; i++) if (vs[i].lang && vs[i].lang.replace('_', '-').indexOf(u.lang) === 0) { u.voice = vs[i]; break; }
       speechSynthesis.speak(u);
@@ -54,13 +54,27 @@ var G = window.G || (window.G = {});
     try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e2) { /* bỏ qua */ }
   };
 
-  G.say = function (text, lang) {
-    var url = G.audioUrl(text, lang || 'en');
+  /* đọc câu; slow = true thì đọc chậm (70% tốc độ, giữ nguyên cao độ giọng) */
+  G.say = function (text, lang, slow) {
+    lang = lang || 'en';
+    var url = G.audioUrl(text, lang);
     if (url) {
+      var rate = slow ? 0.7 : 1;
       player.src = url;
+      try {
+        player.preservesPitch = true; player.webkitPreservesPitch = true; player.mozPreservesPitch = true;
+        player.defaultPlaybackRate = rate; player.playbackRate = rate;
+      } catch (e) { /* máy cũ không đổi được tốc độ */ }
       var p = player.play();
-      if (p && p.catch) p.catch(function () { speakTts(text, lang); });
-    } else speakTts(text, lang || 'en');
+      if (p && p.catch) p.catch(function () { speakTts(text, lang, slow); });
+    } else speakTts(text, lang, slow);
+  };
+  G.saySlow = function (text, lang) { G.say(text, lang, true); };
+  /* cặp nút nghe thường 🔊 và nghe chậm 🐢 */
+  G.sayBtns = function (text, lang) {
+    return G.el('span.say2',
+      G.el('button.speak', { 'aria-label': 'Nghe', onclick: function (e) { e.stopPropagation(); G.say(text, lang); } }, '🔊'),
+      G.el('button.speak.slow', { 'aria-label': 'Nghe chậm', onclick: function (e) { e.stopPropagation(); G.say(text, lang, true); } }, '🐢'));
   };
 
   /* Tải sẵn tệp giọng của một phòng để học được khi mất mạng (service worker giữ lại) */

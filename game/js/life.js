@@ -11,7 +11,7 @@ var G = window.G || (window.G = {});
   function npc() { return G.NPCS[L.npc]; }
   function state() { var d = G.S.doiSong[id] || (G.S.doiSong[id] = { xong: {}, kyNiem: '' }); return d; }
 
-  function speak(t) { return G.el('button.speak', { 'aria-label': 'Nghe', onclick: function (e) { e.stopPropagation(); G.say(t, L.lang); } }, '🔊'); }
+  function speak(t) { return G.sayBtns(t, L.lang); }
   function npcLine(text, vi) {
     var n = npc(), pic = G.el('div.tpic');
     pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));

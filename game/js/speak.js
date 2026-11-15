@@ -13,6 +13,9 @@ var G = window.G || (window.G = {});
 (function () {
   var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   G.canListen = !!SR;
+  // mở từ biểu tượng ngoài màn hình chính (iPad/iPhone): một số bản iOS không cho nhận giọng nói ở chế độ này
+  G.standalone = !!(window.navigator.standalone || (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches));
+  var micFails = 0;
 
   /* chế độ micro: 'on' | 'off' (lưu trong G.S.micro); mặc định bật nếu máy nghe được */
   G.micOn = function () { return G.canListen && G.S && G.S.micro !== 'off'; };
@@ -171,7 +174,7 @@ var G = window.G || (window.G = {});
       box.innerHTML = '';
       box.appendChild(G.el('div.mk-q', G.el('div.mk-t', opts.text),
         opts.vi ? G.el('div.small.faint', opts.vi) : null,
-        G.el('button.speak', { 'aria-label': 'Nghe mẫu', onclick: function () { G.say(opts.text, lang); } }, '🔊')));
+        G.sayBtns(opts.text, lang)));
       if (G.micOn()) micMode(); else selfMode();
     }
     function icon(n, cls) { return G.el('img.' + (cls || 'mk-ic'), { src: 'assets/' + n, alt: '', draggable: 'false' }); }
@@ -198,8 +201,12 @@ var G = window.G || (window.G = {});
           if (err) {
             if (err.code === 'aborted') { lbl.textContent = tries ? 'Nói lại' : 'Bấm rồi nói'; res.innerHTML = ''; return; }
             lbl.textContent = 'Thử lại'; res.innerHTML = '';
-            res.appendChild(G.el('div.mk-err', err.msg));
-            if (err.code === 'not-allowed' || err.code === 'service-not-allowed' || err.code === 'audio-capture') {
+            var hard = err.code === 'not-allowed' || err.code === 'service-not-allowed' || err.code === 'audio-capture' || err.code === 'start' || err.code === 'timeout';
+            if (hard) micFails++;
+            res.appendChild(G.el('div.mk-err', G.standalone && hard
+              ? 'Micro chưa chạy khi mở app từ màn hình chính. Bật Siri và cho phép micro trong Cài đặt → ConnectLife/Safari. Nếu vẫn không được, học tiếp bằng chế độ không micro nhé.'
+              : err.msg));
+            if (hard || micFails >= 2) {
               res.appendChild(G.el('button.btn.sm', { onclick: function () { G.setMic(false); render(); } }, 'Học không dùng micro'));
             }
             return;
@@ -225,7 +232,7 @@ var G = window.G || (window.G = {});
     }
     function selfMode() {
       box.appendChild(G.el('div.mk-row', icon('ic_speak.png', 'mk-self-img'),
-        G.el('div.small', 'Bấm 🔊 nghe mẫu, rồi nhắc lại thật to 2 lần. Nói xong thì bấm nút bên dưới.')));
+        G.el('div.small', 'Bấm 🔊 nghe mẫu (🐢 để nghe chậm), rồi nhắc lại thật to 2 lần. Nói xong thì bấm nút bên dưới.')));
       box.appendChild(G.el('div.mk-foot',
         G.canListen ? G.el('button.mk-sw', { onclick: function () { G.setMic(true); render(); } }, icon('ic_mic.png'), 'Dùng micro chấm điểm') : G.el('span.small.faint', 'Máy này chưa có micro chấm điểm'),
         G.el('button.btn.seal.sm', { onclick: function () { G.sfx('right'); G.addXp(1); finish(null); } }, '✓ Mình đã nói xong')));

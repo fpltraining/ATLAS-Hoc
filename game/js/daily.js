@@ -158,16 +158,25 @@ var G = window.G || (window.G = {});
     fetch('../data/stories/' + s.id + '.json').then(function (r) { return r.json(); }).then(function (full) {
       var ch = full.chapters[k];
       body.innerHTML = '';
-      body.appendChild(G.el('div.lhead', G.el('div.lsub', 'Chương ' + ch.n + '/' + full.chapters.length + ' · ' + ch.title + ' · ' + (ch.vi || '') + ' · bấm câu để xem nghĩa')));
+      body.appendChild(G.el('div.lhead', G.el('div.lsub', 'Chương ' + ch.n + '/' + full.chapters.length + ' · ' + ch.title + ' · ' + (ch.vi || '') + ' · bấm câu để nghe và xem nghĩa')));
+      // tốc độ đọc: thường / chậm (nhớ cho lần sau)
+      var cd = G.S.caiDat || (G.S.caiDat = {});
+      var spd = G.el('div.td-seg.rd-speed');
+      function drawSpd() {
+        spd.innerHTML = '';
+        spd.appendChild(G.el('button' + (!cd.docCham ? '.on' : ''), { onclick: function () { cd.docCham = false; G.save(); drawSpd(); } }, '🔊 Tốc độ thường'));
+        spd.appendChild(G.el('button' + (cd.docCham ? '.on' : ''), { onclick: function () { cd.docCham = true; G.save(); drawSpd(); } }, '🐢 Đọc chậm'));
+      }
+      drawSpd(); body.appendChild(spd);
       (ch.paras || []).forEach(function (para) {
         body.appendChild(G.el('div.rd-para', para.map(function (ln) {
           var vi = G.el('div.rd-vi', ln[1]);
-          return G.el('div.rd-line', { onclick: function () { vi.className = vi.className.indexOf('show') >= 0 ? 'rd-vi' : 'rd-vi show'; G.say(ln[0], 'en'); } }, G.el('span', ln[0]), vi);
+          return G.el('div.rd-line', { onclick: function () { vi.className = vi.className.indexOf('show') >= 0 ? 'rd-vi' : 'rd-vi show'; G.say(ln[0], 'en', !!(G.S.caiDat && G.S.caiDat.docCham)); } }, G.el('span', ln[0]), vi);
         })));
       });
       if (ch.vocab && ch.vocab.length) body.appendChild(G.el('div.rd-box',
         G.el('b', '📝 Từ đáng nhớ'),
-        G.el('div.rd-vocab', ch.vocab.map(function (v) { return G.el('button.rd-w', { onclick: function () { G.say(v[0], 'en'); } }, G.el('b', v[0]), ' · ' + v[1]); }))));
+        G.el('div.rd-vocab', ch.vocab.map(function (v) { return G.el('button.rd-w', { onclick: function () { G.say(v[0], 'en', !!(G.S.caiDat && G.S.caiDat.docCham)); } }, G.el('b', v[0]), ' · ' + v[1]); }))));
       if (ch.think && ch.think.length) body.appendChild(G.el('div.rd-box.think',
         G.el('b', '💭 Suy ngẫm'),
         G.el('ol', ch.think.map(function (q) { return G.el('li', q); })),

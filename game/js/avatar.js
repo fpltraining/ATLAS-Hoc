@@ -143,10 +143,11 @@ var G = window.G || (window.G = {});
   G.playerPic = function (px, cls, pose) {
     if (G.S.nhanVat === 'custom' && G.S.avatar) return G.avatarCanvas(G.S.avatar, px, 'down', cls);
     var who = G.S.nhanVat || 'han';
+    if (who === 'kai') return G.imgEl('kai_follow.png', cls);
     return G.imgEl('player_' + who + '_' + (pose || 'down') + '.png', cls, pose ? 'player_' + who + '_down.png' : null);
   };
   G.playerName = function () {
     if (G.S.ten) return G.S.ten;
-    return G.S.nhanVat === 'minh' ? 'Minh' : G.S.nhanVat === 'han' ? 'Han' : 'Bạn';
+    return G.S.nhanVat === 'minh' ? 'Minh' : G.S.nhanVat === 'han' ? 'Han' : G.S.nhanVat === 'kai' ? 'Kai' : 'Bạn';
   };
 })();

@@ -134,7 +134,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .rface.ok { background: transparent; }
 
 /* ---------- Tạo nhân vật ---------- */
-#create { min-height: 100%; background: linear-gradient(180deg, #1b2140 0, #1b2140 330px, var(--cream) 330px); }
+#create { min-height: 100%; background: #1b2140; }
 .cr-wrap { max-width: 560px; margin: 0 auto; padding: max(16px, env(safe-area-inset-top)) 16px 40px; }
 .cr-top { color: #fff; text-align: center; }
 .cr-top h1 { margin: 4px 0 6px; font-size: 26px; }
@@ -337,8 +337,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 /* ---------- luyện nói qua micro ---------- */
 .mk { background: var(--paper); border: 2px solid var(--line); border-radius: 18px; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
-.mk-q { position: relative; padding-right: 48px; }
-.mk-q .speak { position: absolute; right: 0; top: 0; }
+.mk-q { position: relative; }
 .mk-t { font-size: 20px; font-weight: 700; line-height: 1.35; }
 .mk-row { display: flex; gap: 14px; align-items: flex-start; }
 .mk-mic { flex: 0 0 auto; width: 104px; min-height: 120px; border-radius: 22px; border: 3px solid var(--coral); background: #fff; color: var(--ink, #1b2140); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 8px 4px; box-shadow: 0 4px 0 rgba(0,0,0,.12); -webkit-user-select: none; user-select: none; touch-action: manipulation; }
@@ -376,3 +375,25 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .mk-live { font-weight: 600; color: var(--jade); }
 .td-mic-h { display: flex; align-items: center; }
 .td-seg button { display: inline-flex; align-items: center; justify-content: center; }
+
+/* chọn nhân vật */
+.cr-chars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 18px; }
+.cr-chars .cr-pre { padding: 12px 6px; border: 3px solid var(--line); border-radius: 18px; background: var(--paper); gap: 4px; text-align: center; }
+.cr-chars .cr-pre.on { border-color: var(--coral); background: #fff; box-shadow: 0 6px 16px rgba(200,85,61,.25); }
+.cr-chars .cr-pre-img { width: 100%; max-width: 130px; height: auto; aspect-ratio: 1; }
+.cr-chars .cr-pre b { font-size: 20px; }
+.cr-chars .cr-pre .small { font-size: 12px; line-height: 1.3; }
+.cr-wrap .cr-label { color: #fff; }
+
+/* nghe chậm */
+.say2 { display: inline-flex; gap: 6px; vertical-align: middle; }
+.say2 .speak { margin-left: 0; }
+.speak.slow { background: #eef6f1; }
+.mk-q .say2 { position: absolute; right: 0; top: 0; }
+.mk-q { padding-right: 96px; }
+.rd-speed { margin: 8px 0 4px; }
+.spk2 { position: absolute; top: 8px; right: 8px; display: flex; gap: 6px; }
+.spk2 .spk { position: static; }
+.rd-ann .spk2 { position: static; }
+.rd-ann .spk.slow { background: #fff; }
+.rd-bub { padding-right: 96px !important; }

@@ -91,10 +91,15 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
   }
   for (const L of Object.values(ctx.G.LIFE)) {
     if (L.lang !== 'en') continue;
-    for (const t of L.talks) for (const u of t.turns) {
-      add('en', u.npc.replace(/\{name\}/g, 'Han'), FEM[L.npc] ? 'f' : 'm');
-      add('en', u.ok.replace(/\{name\}/g, 'Han'), 'm');
+    // câu có tên người chơi: tạo cho cả 3 nhân vật có sẵn (Han, Minh, Kai)
+    for (const t of L.talks) for (const u of t.turns) for (const nm of ['Han', 'Minh', 'Kai']) {
+      add('en', u.npc.replace(/\{name\}/g, nm), FEM[L.npc] ? 'f' : 'm');
+      add('en', u.ok.replace(/\{name\}/g, nm), 'm');
     }
+  }
+  // lời chúc tốt nghiệp (grad.js)
+  for (const R of Object.values(ctx.G.ROOMS)) if (R.final && R.final.lang === 'en') for (const nm of ['Han', 'Minh', 'Kai']) add('en', `Congrats, ${nm}! You've finished ${R.final.level}. So proud of you!`, 'f');
+  {
   }
   // câu cố định trong js/ride.js, js/flight.js, js/grad.js (câu tiếng Anh viết hoa đầu, kết thúc bằng . ? !)
   for (const f of ['game/js/ride.js', 'game/js/flight.js']) {
