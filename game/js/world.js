@@ -164,5 +164,6 @@ G.roomPassed = function (id) {
 G.roomOpen = function (idx, doors) {
   doors = doors || G.EN_HALL_DOORS;
   if (idx === 0) return true;
+  if (G.S && G.S.dauVao && G.S.dauVao.lv >= 3 && doors === G.EN_HALL_DOORS) return true;   // đầu vào từ A2: thi vượt các phòng A1
   return G.roomPassed(doors[idx - 1].room);
 };

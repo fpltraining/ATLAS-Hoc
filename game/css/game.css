@@ -477,3 +477,54 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .rd-hidevi .rd-vi { display: none !important; }
 .rd-vibtn { margin: 0 0 8px; }
 .rd-line { padding: 4px 0; }
+
+/* lựa chọn có nghĩa tiếng Việt (người mới) */
+.opt.opt-vi span { display: block; }
+.opt.opt-vi small { display: block; font-size: 13px; font-weight: 500; color: var(--faint); margin-top: 2px; }
+
+/* bài kiểm tra đầu vào */
+#placement { position: fixed; inset: 0; z-index: 55; background: var(--cream); overflow-y: auto; -webkit-overflow-scrolling: touch; display: none; }
+.pl-wrap { max-width: 640px; margin: 0 auto; padding: calc(max(16px, env(safe-area-inset-top)) + 8px) 16px calc(28px + env(safe-area-inset-bottom)); display: flex; flex-direction: column; gap: 14px; }
+.pl-head h1 { margin: 2px 0 4px; font-size: 26px; line-height: 1.2; }
+.pl-head .kicker { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--coral); }
+.pl-head p { margin: 0; }
+.pl-parts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.pl-part { background: var(--paper); border: 1.5px solid var(--line); border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
+.pl-note { background: #fff6e6; border: 1.5px solid #f1dfb8; border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.pl-go { width: 100%; }
+.pl-zero, .pl-later { width: 100%; }
+.pl-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.pl-prog { display: flex; gap: 6px; }
+.pl-prog i { width: 26px; height: 6px; border-radius: 3px; background: var(--line); }
+.pl-prog i.done { background: var(--jade); }
+.pl-prog i.on { background: var(--coral); }
+.pl-card { background: var(--paper); border: 1.5px solid var(--line); border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.pl-listen { display: flex; gap: 10px; justify-content: center; padding: 10px 0; }
+.pl-play { min-height: 64px; padding: 10px 22px; border-radius: 16px; border: 2px solid var(--navy); background: var(--navy); color: #fff; font-size: 18px; font-weight: 800; }
+.pl-play.slow { background: var(--jade-soft); border-color: var(--jade); color: var(--jade); }
+.pl-sign { align-self: center; padding: 14px 28px; border-radius: 10px; background: #2f7a63; color: #fff; font-size: 30px; font-weight: 900; letter-spacing: .06em; border: 4px solid #1f5c4a; white-space: pre; }
+.pl-msg { padding: 14px 16px; border-radius: 16px; background: #eef4fb; border: 1.5px solid #cfdcec; font-size: 18px; line-height: 1.45; }
+.pl-say { display: flex; gap: 10px; align-items: flex-start; }
+.pl-who { font-size: 34px; line-height: 1; }
+.pl-bub { flex: 1; background: #f3efe7; border-radius: 16px; padding: 12px 14px; font-size: 19px; font-weight: 650; display: flex; gap: 10px; align-items: center; justify-content: space-between; }
+.pl-mini { min-width: 44px; min-height: 44px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; }
+.pl-q { font-size: 18px; font-weight: 700; }
+.pl-opts { display: flex; flex-direction: column; gap: 10px; }
+.pl-opts .opt { width: 100%; }
+.opt.pl-picked { border-color: var(--navy); background: #e8ebf5; }
+.pl-idk { align-self: center; }
+.pl-microw { display: flex; gap: 12px; align-items: center; }
+.pl-heard { flex: 1; }
+.pl-lv { align-self: center; display: flex; flex-direction: column; align-items: center; background: var(--navy); color: #fff; border-radius: 20px; padding: 14px 34px; }
+.pl-lv b { font-size: 40px; line-height: 1.1; }
+.pl-skills { display: flex; flex-direction: column; gap: 8px; background: var(--paper); border: 1.5px solid var(--line); border-radius: 16px; padding: 12px 14px; }
+.pl-skill { display: grid; grid-template-columns: 9.5em 1fr 4.5em; gap: 10px; align-items: center; }
+.pl-bar { display: flex; gap: 4px; }
+.pl-bar i { flex: 1; height: 10px; border-radius: 5px; background: var(--line); }
+.pl-bar i.on { background: var(--jade); }
+.pl-sk-lv { text-align: right; }
+.pl-can, .pl-plan { background: var(--paper); border: 1.5px solid var(--line); border-radius: 16px; padding: 12px 14px; }
+.pl-plan ul { margin: 6px 0 0; padding-left: 20px; }
+.pl-plan li { margin: 3px 0; }
+@media (max-width: 420px) { .pl-part { padding: 8px 10px; } .pl-part .small { font-size: 12px; line-height: 1.35; } .pl-head h1 { font-size: 23px; } .pl-skill { grid-template-columns: 8em 1fr 4em; } .pl-sign { font-size: 24px; } }
+.pl-lobby { width: 100%; margin-top: 10px; }
