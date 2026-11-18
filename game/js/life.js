@@ -4,7 +4,7 @@
 var G = window.G || (window.G = {});
 
 (function () {
-  var panel, body, L = null, id = '';
+  var panel, body, L = null, id = '', lastHidden = null;
 
   function name() { return G.playerName(); }
   function fill(t) { return t.replace(/\{name\}/g, name()); }
@@ -16,7 +16,10 @@ var G = window.G || (window.G = {});
     var n = npc(), pic = G.el('div.tpic');
     if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));   // nhân vật ghép từ lớp hình
     else pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));
-    return G.el('div.tline', pic, G.el('div.tbubble', G.el('b', n.name), G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null, speak(text)));
+    var hide = G.S.caiDat && G.S.caiDat.chiNgheNoi && vi;   // chế độ chỉ nghe: ẩn chữ, đáp xong mới hiện
+    var bub = G.el('div.tbubble' + (hide ? '.hidetext' : ''), G.el('b', n.name), hide ? G.el('div.small.listen-tag', '👂 Nghe rồi chọn câu đáp') : null, G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null, speak(text));
+    if (hide) lastHidden = bub;
+    return G.el('div.tline', pic, bub);
   }
   function meLine(text, sc) {
     return G.el('div.tline.me', G.el('div.tbubble.mine', G.el('b', name()), G.el('div.en', text),
@@ -56,6 +59,14 @@ var G = window.G || (window.G = {});
       return G.el('button.big' + (done ? '.done' : ''), { onclick: function () { talk(i); } },
         G.el('b', (done ? '✓ ' : (i + 1) + ' · ') + t.title), G.el('span', t.turns.length + ' lượt nói' + (done ? ' · đã xong, làm lại +5 XP' : ' · +20 XP')));
     })));
+    // nói tự do ở nơi này + chế độ chỉ nghe
+    var fr = G.freeFor ? G.freeFor(id) : [];
+    if (fr.length) body.appendChild(G.el('button.big.fr-btn', { onclick: function () { G.openFree(fr, '💡 Nói tự do · ' + L.title, function () { G.openLife(id); }); } },
+      G.el('b', '💡 Tự nói (không có câu gợi ý)'), G.el('span', fr.length + ' tình huống · tự trả lời bằng câu của bạn')));
+    var cd = G.S.caiDat || (G.S.caiDat = {});
+    body.appendChild(G.el('div.td-seg.lf-mode',
+      G.el('button' + (!cd.chiNgheNoi ? '.on' : ''), { onclick: function () { cd.chiNgheNoi = false; G.save(); home(); } }, '👀 Hiện chữ'),
+      G.el('button' + (cd.chiNgheNoi ? '.on' : ''), { onclick: function () { cd.chiNgheNoi = true; G.save(); home(); } }, '👂 Chỉ nghe (ẩn chữ)')));
     if (L.souvenir) body.appendChild(G.el('div.souv-row', G.imgEl(L.souvenir.img, 'souv-img'),
       G.el('div', G.el('b', 'Đồ kỷ niệm: ' + L.souvenir.name), G.el('div.small.faint', st.kyNiem ? 'Đã nhận, bày ở Ngôi nhà chung.' : 'Xong cả 3 tình huống để nhận (' + n + '/3).'))));
   }
@@ -75,6 +86,7 @@ var G = window.G || (window.G = {});
         return G.el('button.opt', { onclick: function (e) {
           if (o === right) {
             G.sfx('right'); box.innerHTML = '';
+            if (lastHidden) { lastHidden.className = 'tbubble'; lastHidden = null; }
             // chọn đúng rồi thì nói câu đó thành tiếng (có micro thì chấm điểm 0–100)
             box.appendChild(G.el('div.small.faint', '🗣 Giờ hãy nói câu này với ' + npc().name + ':'));
             box.appendChild(G.speakCard({ text: o, lang: L.lang, onDone: function (sc) {
@@ -107,6 +119,8 @@ var G = window.G || (window.G = {});
     if (L.morning) { td.sang = td.sang || {}; td.sang[id] = G.vnNow().slice(11, 16); }
     // ghi vào tiến độ hôm nay: nơi, tình huống, giờ, điểm nói trung bình
     var avg0 = null; if (scores && scores.length) { var s0 = 0; for (var q = 0; q < scores.length; q++) s0 += scores[q]; avg0 = Math.round(s0 / scores.length); }
+    if (G.srsAddTalk && L.lang === 'en') G.srsAddTalk(id, ti);
+    st.diem = st.diem || {}; if (avg0 !== null && (st.diem[ti] === undefined || avg0 > st.diem[ti])) st.diem[ti] = avg0;
     td.hoiThoai = td.hoiThoai || [];
     td.hoiThoai.push({ noi: id, ten: L.title, tinhHuong: L.talks[ti].title, luc: G.vnNow().slice(11, 16), diem: avg0 });
     if (gift) st.kyNiem = G.vnNow();

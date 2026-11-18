@@ -67,6 +67,13 @@ var G = window.G || (window.G = {});
       })) : null
     ));
 
+    if (G.weeklyChart) {
+      root.appendChild(G.el('h2.sec', 'Đầu ra của bạn'));
+      root.appendChild(G.el('div.out-row',
+        G.el('button.big', { onclick: G.openWeekly }, G.el('b', '📝 Kiểm tra tuần'), G.el('span', G.weekLine())),
+        G.el('button.big', { onclick: G.openCanDo }, G.el('b', '📒 Mình nói được'), G.el('span', G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được'))));
+      root.appendChild(G.weeklyChart());
+    }
     root.appendChild(G.el('h2.sec', 'Rank và huy hiệu'));
     root.appendChild(G.rankCard());
     root.appendChild(G.badgeGrid());
