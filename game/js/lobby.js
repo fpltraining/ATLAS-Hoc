@@ -72,6 +72,14 @@ var G = window.G || (window.G = {});
       root.appendChild(G.el('div.out-row',
         G.el('button.big', { onclick: G.openWeekly }, G.el('b', '📝 Kiểm tra tuần'), G.el('span', G.weekLine())),
         G.el('button.big', { onclick: G.openCanDo }, G.el('b', '📒 Mình nói được'), G.el('span', G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được'))));
+      // trình độ đầu vào (kiểm tra 4 kỹ năng), làm lại để đo đầu ra
+      if (G.openPlacement) {
+        var dv = G.S.dauVao;
+        root.appendChild(G.el('button.big.pl-lobby', { onclick: function () { G.openPlacement(function () { G.goLobby(); }, { canSkip: true }); } },
+          G.el('b', '📏 Trình độ đầu vào' + (dv ? ': ' + G.levelName(dv.lv) : '')),
+          G.el('span', dv ? 'Làm ngày ' + dv.luc.slice(8, 10) + '/' + dv.luc.slice(5, 7) + ' · Nghe ' + G.PLACE_EN.levels[dv.nghe] + ' · Đọc ' + G.PLACE_EN.levels[dv.doc] + ' · Giao tiếp ' + G.PLACE_EN.levels[dv.gt] + ' · Nói ' + (dv.noi === null ? 'chưa đo' : G.PLACE_EN.levels[dv.noi]) + ' · bấm để làm lại'
+            : 'Chưa làm · 4 kỹ năng theo CEFR, 3–12 phút')));
+      }
       root.appendChild(G.weeklyChart());
     }
     root.appendChild(G.el('h2.sec', 'Rank và huy hiệu'));

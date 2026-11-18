@@ -81,7 +81,7 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
 {
   const vm = await import('node:vm');
   const ctx = { console }; ctx.window = ctx; ctx.G = {}; vm.createContext(ctx);
-  for (const f of ['game/data/en_a1.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
+  for (const f of ['game/data/en_a1.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js', 'game/data/placement_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
   const FEM = { emma: 1, lily: 1, rosa: 1, anna: 1, mom: 1, mia: 1, nora: 1, pat: 1, kim: 1, zoe: 1, lee: 1, ivy: 1 };
   for (const R of Object.values(ctx.G.ROOMS)) {
     if (R.lang !== 'en') continue;
@@ -101,6 +101,9 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
   for (const sh of Object.values(ctx.G.SHOPS || {})) for (const b of sh.boards || []) b.lines.forEach(([t]) => add('en', t, 'f'));
   // nói tự do: câu hỏi của nhân vật và câu mẫu (data/practice_en.js)
   for (const f of ctx.G.FREE_TALK || []) { add('en', f.q, FEM[f.npc] ? 'f' : 'm'); f.sample.forEach((t) => add('en', t, 'm')); }
+  // bài kiểm tra đầu vào (data/placement_en.js): câu nghe, câu người ta nói ở phần giao tiếp, câu đọc to và câu hỏi phần nói
+  const PL = ctx.G.PLACE_EN;
+  if (PL) { PL.nghe.forEach((it, i) => add('en', it.a, alt(i))); PL.gt.forEach((it, i) => add('en', it.p, alt(i + 1))); PL.noi.forEach((it) => add('en', it.read || it.ask, 'f')); }
   // lời chúc tốt nghiệp (grad.js)
   for (const R of Object.values(ctx.G.ROOMS)) if (R.final && R.final.lang === 'en') for (const nm of ['Han', 'Minh', 'Kai']) add('en', `Congrats, ${nm}! You've finished ${R.final.level}. So proud of you!`, 'f');
   {

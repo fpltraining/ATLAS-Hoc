@@ -30,6 +30,17 @@ var G = window.G || (window.G = {});
     G.kaiSay(sc === 'home_en' ? 'Chào ' + G.playerName() + '! Đi học thôi: bến xe buýt ở góc trên bên phải, ga tàu điện ở góc dưới bên phải.'
       : sc === 'city_en' ? 'Trường Anh ngữ ở góc dưới bên trái, có biển màu đỏ. Bến xe buýt và ga tàu điện để về nhà ở hai góc dưới.'
       : sc === 'city_zh' ? '欢迎！Chào mừng tới Trường Lạc trấn. Học viện Hán ngữ ở góc dưới bên trái, sân bay ở phía trên.' : 'Tiếp tục học nào!');
+    // người đang học từ bản cũ chưa có kết quả đầu vào: mời làm một lần (không ép)
+    if (id === 'en' && G.openPlacement && !G.S.dauVao && !G.S.hoiDauVao) {
+      G.S.hoiDauVao = G.vnNow(); G.save();
+      var wrap = G.el('div.modal', G.el('div.choose.story',
+        G.el('h2', '📏 Kiểm tra trình độ đầu vào'),
+        G.el('p', 'Bài mới: 4 phần Nghe, Đọc, Phản xạ giao tiếp, Nói theo khung CEFR. Làm 3–12 phút để app chỉnh độ khó cho đúng với bạn. Tiến độ đang học vẫn giữ nguyên.'),
+        G.el('div.row',
+          G.el('button.btn', { onclick: function () { document.body.removeChild(wrap); } }, 'Để sau'),
+          G.el('button.btn.seal', { onclick: function () { document.body.removeChild(wrap); G.openPlacement(function () {}, { canSkip: true }); } }, 'Làm ngay ›'))));
+      setTimeout(function () { if (!G._placementOpen) document.body.appendChild(wrap); }, 1200);
+    }
   };
 
   G.goLobby = function () {
@@ -98,7 +109,8 @@ var G = window.G || (window.G = {});
     G.restoreCheck(function (restored) { if (restored && G.S.nhanVat) { G.initRank(); var cr = document.getElementById('create'); if (cr) cr.style.display = 'none'; G.renderLobby(); } });
     if (!G.S.nhanVat) {
       // lần đầu: tạo nhân vật → lời mở đầu → ra khỏi nhà
-      G.openCreator(function () { G.introStory(function () { G.goCity('en'); }); });
+      // lần đầu: chọn nhân vật → kiểm tra trình độ đầu vào → lời mở đầu → ra khỏi nhà
+      G.openCreator(function () { G.openPlacement(function () { G.introStory(function () { G.goCity('en'); }); }); });
     } else G.renderLobby();
     if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(function () {});
   }

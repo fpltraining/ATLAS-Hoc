@@ -58,6 +58,8 @@ var G = window.G || (window.G = {});
       'Hôm nay là ngày đầu đi học ở Trường Anh ngữ. Nhà bạn ở khu phố Maple, trường ở trung tâm.',
       'Ra bến xe buýt hoặc ga tàu điện, nghe thông báo trạm bằng tiếng Anh và xuống đúng trạm nhé!'
     ];
+    if (G.S.dauVao && G.S.dauVao.lv <= 1) lines.push('Bạn mới bắt đầu nên mình sẽ dẫn bạn tới trường học phòng A1-1 trước. Câu nào cũng có nghĩa tiếng Việt, bấm 🐢 để nghe chậm.');
+    else if (G.S.dauVao && G.S.dauVao.lv >= 3) lines.push('Trình độ của bạn từ A2 trở lên: cả 4 phòng A1 đã mở, vào kiểm tra thẳng để lấy sao rồi ra Phố mua sắm luyện nói.');
     var i = 0, txt = G.el('p.st-text'), pic = G.el('div.st-kai');
     pic.appendChild(G.imgEl('kai_follow.png', 'st-kai-img'));
     var btn = G.el('button.btn.seal.big1', { onclick: next }, 'Tiếp ›');

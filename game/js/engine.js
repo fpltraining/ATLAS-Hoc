@@ -380,7 +380,9 @@ var G = window.G || (window.G = {});
     var what = nr ? 'Học phòng ' + nr.door.label + ' với ' + tName : lf ? 'Nói chuyện ở ' + G.LIFE[lf].title : 'Ôn lại một phòng bất kỳ để lấy thêm sao';
     var id = sceneId;
     var td = G.today().viec;
-    var mn = id === 'home_en' ? morningNext() : null;
+    // người mới (đầu vào dưới A1) chưa qua phòng đầu: chỉ thẳng tới trường học trước, nói chuyện ngoài phố để sau
+    var newbie = !!(G.S.dauVao && G.S.dauVao.lv <= 1 && !G.roomPassed(G.EN_HALL_DOORS[0].room));
+    var mn = id === 'home_en' && !newbie ? morningNext() : null;
     if (mn === 'en-home') { var hm0 = bld('home'); return { text: 'Buổi sáng: vào nhà ăn sáng và nói chuyện với mẹ', x: hm0.x, y: hm0.y + 18, h: 260, label: 'Vào nhà · đọc truyện, ôn từ' }; }
     if (mn) { var pm = personOf(mn), nm = G.NPCS[G.LIFE[mn].npc].name; if (pm) return { text: 'Buổi sáng: ' + G.LIFE[mn].title + ' · nói chuyện với ' + nm, x: pm.x, y: pm.y + 40, h: 150, label: 'Nói chuyện với ' + nm }; }
     // sau giờ học: mỗi ngày gợi ý một nơi (siêu thị, hiệu thuốc, ngân hàng, bưu điện, cắt tóc, gym), xoay vòng theo ngày
@@ -393,7 +395,7 @@ var G = window.G || (window.G = {});
       if (gS) return { text: 'Sau giờ học: sang Phố mua sắm, ghé ' + G.LIFE[pickA].title, x: gS.x, y: gS.y, h: 170, label: gS.label };
     }
     if (id === 'street_en') { var gB = gateTo('city_en'); return { text: 'Về trung tâm · ' + what, x: gB.x, y: gB.y, h: 170, label: gB.label }; }
-    if (id === 'city_en' && G.LIFE['en-gate'] && !talkedToday('en-gate') && personOf('en-gate')) { var pg = personOf('en-gate'); return { text: 'Chào Ms. Nora ở cổng trường trước khi vào lớp', x: pg.x, y: pg.y + 40, h: 150, label: 'Nói chuyện với Ms. Nora' }; }
+    if (id === 'city_en' && !newbie && G.LIFE['en-gate'] && !talkedToday('en-gate') && personOf('en-gate')) { var pg = personOf('en-gate'); return { text: 'Chào Ms. Nora ở cổng trường trước khi vào lớp', x: pg.x, y: pg.y + 40, h: 150, label: 'Nói chuyện với Ms. Nora' }; }
     if (id === 'home_en' && td.bai && (!td.doc || !td.on)) { var hm = bld('home'); return { text: 'Vào nhà ' + (!td.doc ? 'đọc 1 chương truyện' : 'ôn từ khó') + ' (việc hôm nay)', x: hm.x, y: hm.y + 18, h: 260, label: 'Vào nhà · đọc truyện, ôn từ' }; }
     if (id === 'home_en') { var bs = bld('busstop'); return { text: 'Ra bến xe buýt đi tới trường · ' + what, x: bs.x, y: bs.y + 18, h: 230, label: 'Đợi xe buýt tới trường' }; }
     if (scene.city === 'zh') { var ap = bld('airport'); return ap ? { text: 'Bay về Brightford để học tiếng Anh', x: ap.x, y: ap.y + 18, h: 260, label: 'Vào Sân bay' } : (scene.exit ? { text: 'Ra ngoài, bay về Brightford', x: scene.exit.x, y: scene.exit.y, h: 120, label: scene.exit.label } : null); }
