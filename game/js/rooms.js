@@ -184,6 +184,38 @@ var G = window.G || (window.G = {});
     (R.onCounter || []).forEach(function (e, i, a) { emoji(c, e, tx - w / 2 + (i + 1) * w / (a.length + 1), ty - 30, 44); });
   };
 
+  /* Phố mua sắm vẽ bằng code (dùng tới khi có ảnh map_street_en.png): cỏ, vỉa hè, đường nhựa có vạch, vạch qua đường, quảng trường */
+  G.drawStreet = function (c, sc) {
+    var W = sc.w, H = sc.h, i, x;
+    c.fillStyle = '#7cbf8c'; c.fillRect(0, 0, W, H);
+    c.fillStyle = 'rgba(40,96,62,.22)';   // cỏ lấm tấm
+    for (i = 0; i < 220; i++) { var gx = (i * 977) % W, gy = (i * 613 + (i % 7) * 41) % H; c.fillRect(gx, gy, 7, 3); c.fillRect(gx + 3, gy - 4, 2, 7); }
+    function walkway(y, h) {
+      c.fillStyle = '#f8f2eb'; c.fillRect(0, y, W, h);
+      c.strokeStyle = 'rgba(58,36,24,.13)'; c.lineWidth = 2; c.beginPath();
+      for (x = 0; x < W; x += 64) { c.moveTo(x, y); c.lineTo(x, y + h); }
+      c.moveTo(0, y + h / 2); c.lineTo(W, y + h / 2); c.stroke();
+      c.strokeStyle = '#3a2418'; c.lineWidth = 5; c.beginPath(); c.moveTo(0, y); c.lineTo(W, y); c.moveTo(0, y + h); c.lineTo(W, y + h); c.stroke();
+    }
+    walkway(380, 80);                                   // vỉa hè trước dãy tiệm
+    c.fillStyle = '#2b3156'; c.fillRect(0, 460, W, 140); // đường nhựa
+    c.fillStyle = '#f3d9a4'; for (x = 20; x < W; x += 110) c.fillRect(x, 527, 60, 6);
+    c.fillStyle = '#f8f2eb'; for (x = 704; x < 836; x += 30) c.fillRect(x, 470, 16, 120);   // vạch qua đường
+    walkway(600, 80);                                   // vỉa hè phía quảng trường
+    // lối đi xuống quảng trường
+    c.fillStyle = '#f8f2eb'; c.fillRect(708, 680, 120, 60);
+    c.strokeStyle = '#3a2418'; c.lineWidth = 5; c.beginPath(); c.moveTo(708, 680); c.lineTo(708, 742); c.moveTo(828, 680); c.lineTo(828, 742); c.stroke();
+    // quảng trường lát gạch
+    c.save(); c.beginPath(); c.ellipse(768, 860, 560, 150, 0, 0, 6.283); c.fillStyle = '#efe4d2'; c.fill();
+    c.clip(); c.strokeStyle = 'rgba(58,36,24,.12)'; c.lineWidth = 2; c.beginPath();
+    for (x = 200; x < 1340; x += 56) { c.moveTo(x, 700); c.lineTo(x, 1020); }
+    for (var yy = 720; yy < 1020; yy += 40) { c.moveTo(200, yy); c.lineTo(1340, yy); }
+    c.stroke(); c.restore();
+    c.strokeStyle = '#3a2418'; c.lineWidth = 5; c.beginPath(); c.ellipse(768, 860, 560, 150, 0, 0, 6.283); c.stroke();
+    // hàng rào cây thấp ở mép dưới
+    c.fillStyle = '#4f8f62'; for (x = -20; x < W; x += 70) { c.beginPath(); c.arc(x, H + 6, 40, Math.PI, 0); c.fill(); }
+  };
+
   /* bảng đứng trên sàn (tiệm có ảnh nội thất): bấm để đọc */
   G.drawStandee = function (c, b) {
     var x = b.x, y = b.y;

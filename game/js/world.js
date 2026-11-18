@@ -71,7 +71,9 @@ G.SCENES = {
       { id: 'hospital', img: 'building_en_hospital.png', x: 1110, y: 880, name: 'Bệnh viện', life: 'en-hospital' },
       { id: 'busstop', img: 'building_en_busstop.png', x: 125, y: 945, name: 'Bến xe buýt', ride: 'bus', toward: 'home' },
       { id: 'metro', img: 'building_en_metro.png', x: 1395, y: 945, name: 'Ga tàu điện', ride: 'metro', toward: 'home' }
-    ]
+    ],
+    // cuối đường bên phải: sang Phố mua sắm (bưu điện, ngân hàng, hiệu thuốc, tiệm tóc, siêu thị)
+    gates: [{ x: 1490, y: 512, side: 'right', label: 'Sang Phố mua sắm', sign: '🛍️ Phố mua sắm ›', to: { scene: 'street_en', x: 150, y: 420, dir: 'right' } }]
   },
   en_hall: {
     city: 'en', doors: 'EN_HALL_DOORS', classroom: 'classroom_en',
