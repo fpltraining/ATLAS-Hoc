@@ -37,6 +37,12 @@ def pipe(lang):
     return pipes[lang]
 
 def mp3(path, audio):
+    # chuẩn hoá âm lượng: trung bình khoảng -20 dB, đỉnh không quá -1.5 dB (cùng mức với các tệp đã có)
+    rms = float(np.sqrt(np.mean(np.square(audio)))) if len(audio) else 0
+    if rms > 1e-5:
+        audio = audio * (0.1 / rms)
+        peak = float(np.max(np.abs(audio)))
+        if peak > 0.84: audio = audio * (0.84 / peak)
     pcm = (np.clip(audio, -1, 1) * 32767).astype('<i2').tobytes()
     subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-f', 's16le', '-ar', str(SR), '-ac', '1', '-i', '-',
                     '-b:a', '32k', '-ar', '24000', path], input=pcm, check=True)

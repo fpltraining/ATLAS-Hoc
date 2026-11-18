@@ -93,6 +93,23 @@ var G = window.G || (window.G = {});
     }
   };
 
+  /* tiếng mưa rơi nhỏ (nhiễu trắng lọc trầm), chỉ khi bật âm thanh */
+  var rainNode = null;
+  G.rainSound = function (on) {
+    var a = ac();
+    if (!on || !a || (G.S && G.S.caiDat && G.S.caiDat.amThanh === false)) { if (rainNode) { try { rainNode.g.gain.setTargetAtTime(0, a.currentTime, 0.4); var rn = rainNode; setTimeout(function () { try { rn.s.stop(); } catch (e) { /* bỏ qua */ } }, 1500); } catch (e2) { /* bỏ qua */ } rainNode = null; } return; }
+    if (rainNode) return;
+    try {
+      var len = a.sampleRate * 2, buf = a.createBuffer(1, len, a.sampleRate), d = buf.getChannelData(0), last = 0;
+      for (var i = 0; i < len; i++) { last = (last + 0.02 * (Math.random() * 2 - 1)) / 1.02; d[i] = last * 3.5; }
+      var s = a.createBufferSource(); s.buffer = buf; s.loop = true;
+      var f = a.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 1400;
+      var g = a.createGain(); g.gain.value = 0; s.connect(f); f.connect(g); g.connect(a.destination); s.start();
+      g.gain.setTargetAtTime(0.06, a.currentTime, 1);
+      rainNode = { s: s, g: g };
+    } catch (e3) { rainNode = null; }
+  };
+
   /* ---------- âm thanh hiệu ứng ---------- */
   var ctx = null;
   function ac() {

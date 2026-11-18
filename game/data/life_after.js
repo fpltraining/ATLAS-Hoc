@@ -170,6 +170,134 @@ var G = window.G || (window.G = {});
     ]
   };
 
+
+  /* ---------- thêm tình huống sát thực tế cho mỗi tiệm ---------- */
+  function more(id, talks) { L[id].talks = L[id].talks.concat(talks); }
+  more('en-barber', [
+    { title: 'Hôm nay để kiểu nào?', turns: [
+      { npc: 'So, what style are you thinking about today?', vi: 'Vậy hôm nay bạn định để kiểu gì?', ok: 'I\'m not sure. What do you recommend?' },
+      { npc: 'You\'ve got a round face, so a fade with some volume on top would suit you.', vi: 'Mặt bạn tròn, nên kiểu fade, phía trên để phồng sẽ hợp.', ok: 'A fade? What\'s that exactly?' },
+      { npc: 'Short on the sides, getting longer toward the top. It\'s really popular right now.', vi: 'Hai bên ngắn, dài dần lên phía trên. Giờ đang rất thịnh.', ok: 'Sounds good. Not too short, though.' },
+      { npc: 'Got it. What about the front? Do you want bangs?', vi: 'Hiểu rồi. Còn phía trước? Bạn muốn để mái không?', ok: 'No bangs. Can you push it back?' },
+      { npc: 'Sure. Want a little wax to finish?', vi: 'Được. Thêm chút sáp vuốt cho xong nhé?', ok: 'Just a little, thanks.' }
+    ] },
+    { title: 'Kiểu nào hợp với mình?', turns: [
+      { npc: 'You\'ve got really thick hair. Lucky you!', vi: 'Tóc bạn dày ghê. Sướng nhé!', ok: 'Really? It\'s hard to style in the morning.' },
+      { npc: 'Try a side part. It only takes two minutes with a comb.', vi: 'Thử rẽ ngôi lệch xem. Chải hai phút là xong.', ok: 'Which side is better for me?' },
+      { npc: 'Your hair grows to the left, so part it on the left.', vi: 'Tóc bạn mọc xuôi sang trái, nên rẽ ngôi bên trái.', ok: 'Okay. Can you show me how?' },
+      { npc: 'Sure. Comb it like this, then add a little gel.', vi: 'Được. Chải thế này, rồi thêm chút gel.', ok: 'Wow, that looks much neater.' },
+      { npc: 'See? Come back in about four weeks for a trim.', vi: 'Thấy chưa? Khoảng bốn tuần nữa quay lại tỉa nhé.', ok: 'Will do. Thanks for the tips!' }
+    ] }
+  ]);
+  more('en-post', [
+    { title: 'Gửi thư bảo đảm', turns: [
+      { npc: 'Is this letter important?', vi: 'Lá thư này quan trọng hả?', ok: 'Yes, it\'s a job application.' },
+      { npc: 'Then I\'d send it by registered mail. You can track it online.', vi: 'Vậy nên gửi bảo đảm. Bạn theo dõi được trên mạng.', ok: 'How much more does that cost?' },
+      { npc: 'Four dollars extra. Someone has to sign for it.', vi: 'Thêm bốn đô. Người nhận phải ký nhận.', ok: 'Okay, let\'s do that.' },
+      { npc: 'Here\'s your receipt with the tracking number.', vi: 'Hoá đơn của bạn có mã theo dõi đây.', ok: 'Where do I enter the number?' },
+      { npc: 'On our website. Just type it in the box.', vi: 'Trên trang web của bưu điện. Gõ vào ô là được.', ok: 'Got it. Thanks a lot.' }
+    ] },
+    { title: 'Hàng bị thất lạc', turns: [
+      { npc: 'Hi, what seems to be the problem?', vi: 'Chào, có chuyện gì vậy?', ok: 'My package hasn\'t arrived. It\'s been two weeks.' },
+      { npc: 'Do you have the tracking number?', vi: 'Bạn có mã theo dõi không?', ok: 'Yes, here it is on my phone.' },
+      { npc: 'It says it\'s stuck at the sorting center.', vi: 'Hệ thống báo đang kẹt ở trung tâm phân loại.', ok: 'What can I do?' },
+      { npc: 'I\'ll file a report. They\'ll call you within three days.', vi: 'Tôi sẽ lập báo cáo. Họ sẽ gọi bạn trong ba ngày.', ok: 'Okay. Here\'s my phone number.' },
+      { npc: 'Thanks. Sorry for the trouble.', vi: 'Cảm ơn. Xin lỗi vì sự phiền toái.', ok: 'It\'s not your fault. Thanks for helping.' }
+    ] }
+  ]);
+  more('en-bank', [
+    { title: 'Chuyển tiền về nhà', turns: [
+      { npc: 'How can I help you today?', vi: 'Hôm nay tôi giúp gì được bạn?', ok: 'I want to send money to my family in Vietnam.' },
+      { npc: 'Sure. Do you have their bank details?', vi: 'Được. Bạn có thông tin ngân hàng của họ không?', ok: 'Yes, I have the account number here.' },
+      { npc: 'How much would you like to send?', vi: 'Bạn muốn gửi bao nhiêu?', ok: 'Three hundred dollars.' },
+      { npc: 'It usually takes two to three business days.', vi: 'Thường mất hai đến ba ngày làm việc.', ok: 'Is there a fee for that?' },
+      { npc: 'Yes, fifteen dollars for international transfers.', vi: 'Có, mười lăm đô cho chuyển tiền quốc tế.', ok: 'Okay, that\'s fine.' }
+    ] },
+    { title: 'Mở sổ tiết kiệm', turns: [
+      { npc: 'Are you interested in a savings account?', vi: 'Bạn có muốn mở tài khoản tiết kiệm không?', ok: 'Maybe. What\'s the interest rate?' },
+      { npc: 'It\'s three percent a year right now.', vi: 'Hiện là ba phần trăm một năm.', ok: 'Can I take money out anytime?' },
+      { npc: 'Yes, but only twice a month for free.', vi: 'Được, nhưng mỗi tháng chỉ rút miễn phí hai lần.', ok: 'Is there a minimum amount?' },
+      { npc: 'You need to keep at least fifty dollars in it.', vi: 'Phải giữ ít nhất năm mươi đô trong tài khoản.', ok: 'Okay. Can I open one today?' },
+      { npc: 'Sure. It\'ll only take ten minutes.', vi: 'Được. Chỉ mất mười phút thôi.', ok: 'Great, let\'s do it.' }
+    ] }
+  ]);
+  more('en-super', [
+    { title: 'Hàng khuyến mãi', turns: [
+      { npc: 'Just so you know, the yogurt is buy one, get one free.', vi: 'Cho bạn biết, sữa chua đang mua một tặng một.', ok: 'Oh, nice! Which ones?' },
+      { npc: 'Any flavor in the green box.', vi: 'Vị nào trong hộp xanh cũng được.', ok: 'Great. When does the sale end?' },
+      { npc: 'This Sunday.', vi: 'Chủ nhật này.', ok: 'Can you check the date on this one?' },
+      { npc: 'It\'s good until the twenty-fifth.', vi: 'Hạn dùng tới ngày hai mươi lăm.', ok: 'Perfect. I\'ll take two.' },
+      { npc: 'Remember, you get two more for free!', vi: 'Nhớ là bạn được tặng thêm hai hộp nhé!', ok: 'Even better. Thanks!' }
+    ] },
+    { title: 'Quầy cân rau quả', turns: [
+      { npc: 'Do you need help with the scale?', vi: 'Bạn cần giúp cân đồ không?', ok: 'Yes, please. How does it work?' },
+      { npc: 'Put the bag on, then press the number for the fruit.', vi: 'Đặt túi lên, rồi bấm số của loại quả.', ok: 'What\'s the number for bananas?' },
+      { npc: 'It\'s eleven. It\'s written on the sign.', vi: 'Số mười một. Có ghi trên bảng đó.', ok: 'Oh, I see it now.' },
+      { npc: 'Now stick the label on the bag.', vi: 'Giờ dán nhãn lên túi.', ok: 'Done. Is this enough for a week?' },
+      { npc: 'For one person, sure.', vi: 'Một người thì đủ.', ok: 'Great, thanks for your help.' }
+    ] }
+  ]);
+  more('en-pharmacy', [
+    { title: 'Hỏi cách dùng thuốc', turns: [
+      { npc: 'Do you have any questions about this medicine?', vi: 'Bạn có câu hỏi gì về thuốc này không?', ok: 'Yes. Are there any side effects?' },
+      { npc: 'It might make you a little sleepy.', vi: 'Có thể làm bạn hơi buồn ngủ.', ok: 'Can I drive after taking it?' },
+      { npc: 'Better not. Take it before bed.', vi: 'Tốt nhất là không. Uống trước khi ngủ.', ok: 'Can my little sister take it too?' },
+      { npc: 'No, it\'s only for adults. Kids need a different one.', vi: 'Không, chỉ cho người lớn. Trẻ em cần loại khác.', ok: 'Okay, I\'ll ask the doctor.' },
+      { npc: 'Good idea. Anything else?', vi: 'Ý hay đó. Còn gì nữa không?', ok: 'No, that\'s all. Thanks.' }
+    ] },
+    { title: 'Mua kem chống nắng, đồ sơ cứu', turns: [
+      { npc: 'Going somewhere sunny?', vi: 'Bạn sắp đi chỗ nắng hả?', ok: 'Yes, the beach this weekend. I need sunscreen.' },
+      { npc: 'I\'d get SPF fifty. It\'s waterproof too.', vi: 'Nên lấy loại SPF năm mươi. Lại chống nước nữa.', ok: 'Great. Do you have a small first aid kit?' },
+      { npc: 'Yes, it has bandages and cream for cuts.', vi: 'Có, gồm băng dán và kem bôi vết đứt.', ok: 'I\'ll take one of each.' },
+      { npc: 'Don\'t forget to drink lots of water.', vi: 'Đừng quên uống nhiều nước nhé.', ok: 'I won\'t. How much is everything?' },
+      { npc: 'Twenty-two fifty in total.', vi: 'Tổng cộng hai mươi hai đô năm mươi.', ok: 'Here you go.' }
+    ] }
+  ]);
+  more('en-gym', [
+    { title: 'Lớp tập nhóm', turns: [
+      { npc: 'Have you tried our group classes?', vi: 'Bạn đã thử lớp tập nhóm chưa?', ok: 'Not yet. What classes do you have?' },
+      { npc: 'Yoga, spinning and boxing.', vi: 'Yoga, đạp xe trong nhà và đấm bốc.', ok: 'Is yoga good for beginners?' },
+      { npc: 'Totally. There\'s a class tomorrow at seven.', vi: 'Hoàn toàn được. Mai bảy giờ có một lớp.', ok: 'In the morning or evening?' },
+      { npc: 'In the evening. Bring your own mat if you can.', vi: 'Buổi tối. Có thì mang thảm riêng theo nhé.', ok: 'Okay. Do I need to book?' },
+      { npc: 'Yes, sign up on the app. Spots fill up fast.', vi: 'Có, đăng ký trên ứng dụng. Chỗ hết nhanh lắm.', ok: 'I\'ll book it now.' }
+    ] },
+    { title: 'Hỏi chế độ ăn', turns: [
+      { npc: 'How\'s your training going?', vi: 'Tập luyện dạo này sao rồi?', ok: 'Good, but I\'m always hungry after.' },
+      { npc: 'That\'s normal. Do you eat enough protein?', vi: 'Bình thường thôi. Bạn ăn đủ đạm không?', ok: 'I\'m not sure. What should I eat?' },
+      { npc: 'Eggs, chicken, fish and beans are all great.', vi: 'Trứng, thịt gà, cá và đậu đều tốt.', ok: 'Should I eat before or after training?' },
+      { npc: 'A small snack before, and a real meal after.', vi: 'Ăn nhẹ trước khi tập, ăn bữa chính sau khi tập.', ok: 'What about sugary drinks?' },
+      { npc: 'Try to drink water instead.', vi: 'Cố gắng uống nước lọc thay vào đó.', ok: 'Got it. Thanks, Coach!' }
+    ] }
+  ]);
+
+  /* ---------- khu riêng (nội thất) cho từng tiệm ---------- */
+  var SHOPS = {
+    'en-barber': { scene: 'barber_en', title: 'Tiệm cắt tóc của Tony', kind: 'barber', wall: '#e9d7c3', trim: '#2c3550', floor: 'check', sign: '💈 TONY\'S BARBERSHOP', signCol: '#c8553d', window: [520, 110, 300, 230], counter: '#2c3550', onCounter: ['✂️', '🧴', '💈'],
+      boards: [{ x: 160, y: 230, title: 'PRICES', lines: [['Haircut – $20', 'Cắt tóc: 20 đô'], ['Students – $15', 'Học sinh: 15 đô'], ['Wash & style – $10', 'Gội và tạo kiểu: 10 đô'], ['Beard trim – $8', 'Tỉa râu: 8 đô'], ['Kids under 10 – $12', 'Trẻ dưới 10 tuổi: 12 đô']], q: ['Bạn là học sinh, cắt tóc và gội tạo kiểu hết bao nhiêu?', '$15 + $10 = $25'] }] },
+    'en-post': { scene: 'post_en', title: 'Bưu điện Brightford', kind: 'post', wall: '#d6e4ef', trim: '#c8553d', floor: 'tile', sign: '📮 POST OFFICE', signCol: '#1b2140', window: [480, 110, 300, 230], counter: '#c8553d', onCounter: ['⚖️', '✉️', '📦'],
+      boards: [{ x: 210, y: 230, title: 'SHIPPING', lines: [['Letter (local) – $0.70', 'Thư trong nước: 0,7 đô'], ['Letter (international) – $1.50', 'Thư quốc tế: 1,5 đô'], ['Standard parcel – 10–14 days', 'Bưu kiện thường: 10–14 ngày'], ['Express parcel – 3–5 days', 'Bưu kiện nhanh: 3–5 ngày'], ['Open Mon–Sat, 8 AM – 6 PM', 'Mở cửa thứ Hai – thứ Bảy, 8 giờ sáng – 6 giờ chiều']], q: ['Chủ nhật bưu điện có mở cửa không?', 'Không, chỉ mở thứ Hai đến thứ Bảy'] }] },
+    'en-bank': { scene: 'bank_en', title: 'Ngân hàng Brightford', kind: 'bank', wall: '#efe6d3', trim: '#2f7a63', floor: 'tile', sign: '🏦 BRIGHTFORD BANK', signCol: '#2f7a63', window: [560, 110, 300, 230], counter: '#5b6b7f', onCounter: ['💳', '🖊️', '💵'],
+      boards: [{ x: 960, y: 230, title: 'EXCHANGE RATES', lines: [['1 USD = 25,400 VND', '1 đô Mỹ = 25.400 đồng'], ['1 EUR = 27,300 VND', '1 euro = 27.300 đồng'], ['Fee: $3 per exchange', 'Phí: 3 đô mỗi lần đổi'], ['Savings: 3% a year', 'Tiết kiệm: 3% một năm'], ['ATM open 24/7', 'ATM mở 24/7']], q: ['Đổi 100 đô được khoảng bao nhiêu tiền đồng (chưa trừ phí)?', 'Khoảng 2.540.000 đồng'] }] },
+    'en-super': { scene: 'super_en', title: 'Siêu thị mini', kind: 'super', wall: '#f4ead7', trim: '#2f7a63', floor: 'tile', sign: '🛒 FRESH MART', signCol: '#2f7a63', window: [760, 110, 300, 230], counter: '#2f7a63', onCounter: ['🧾', '🛍️', '💳'],
+      boards: [{ x: 1300, y: 230, title: 'TODAY\'S DEALS', lines: [['Yogurt – buy 1, get 1 free', 'Sữa chua: mua 1 tặng 1'], ['Bananas – $0.59 / lb', 'Chuối: 0,59 đô một pao'], ['Bread – 20% off', 'Bánh mì: giảm 20%'], ['Eggs (12) – $3.99', 'Trứng (12 quả): 3,99 đô'], ['Bring your own bag!', 'Hãy mang túi riêng!']], q: ['Mua 2 hộp sữa chua thì trả tiền mấy hộp?', 'Chỉ 1 hộp (mua 1 tặng 1)'] }] },
+    'en-pharmacy': { scene: 'pharmacy_en', title: 'Hiệu thuốc', kind: 'pharmacy', wall: '#e3f1ea', trim: '#2f7a63', floor: 'tile', sign: '💊 PHARMACY', signCol: '#2f7a63', window: [500, 110, 280, 230], counter: '#f8f4ee', onCounter: ['💊', '🧴', '🩹'],
+      boards: [{ x: 1300, y: 230, title: 'OPEN HOURS', lines: [['Mon – Fri: 8 AM – 9 PM', 'Thứ Hai – thứ Sáu: 8 giờ sáng – 9 giờ tối'], ['Sat – Sun: 9 AM – 6 PM', 'Thứ Bảy – Chủ nhật: 9 giờ sáng – 6 giờ chiều'], ['Prescriptions ready in 15 min', 'Thuốc theo đơn có sau 15 phút'], ['Ask us about side effects', 'Hãy hỏi chúng tôi về tác dụng phụ'], ['Emergency? Call 911', 'Cấp cứu? Gọi 911']], q: ['Chủ nhật 8 giờ tối hiệu thuốc còn mở không?', 'Không, cuối tuần đóng cửa lúc 6 giờ chiều'] }] },
+    'en-gym': { scene: 'gym_en', title: 'Phòng gym', kind: 'gym', wall: '#dfe3ea', trim: '#c8553d', floor: 'wood', sign: '🏋️ POWER GYM', signCol: '#c8553d', window: [720, 110, 280, 230], counter: '#1b2140', onCounter: ['🧃', '🥤', '🔑'],
+      boards: [{ x: 1300, y: 230, title: 'CLASSES', lines: [['Yoga – Mon & Wed, 7 PM', 'Yoga: thứ Hai và thứ Tư, 7 giờ tối'], ['Spinning – Tue & Thu, 6 PM', 'Đạp xe: thứ Ba và thứ Năm, 6 giờ tối'], ['Boxing – Sat, 10 AM', 'Đấm bốc: thứ Bảy, 10 giờ sáng'], ['Book on the app', 'Đặt chỗ trên ứng dụng'], ['Towels are free', 'Khăn miễn phí']], q: ['Bạn chỉ rảnh thứ Bảy buổi sáng. Bạn tập lớp nào được?', 'Lớp đấm bốc (Boxing) 10 giờ sáng'] }] }
+  };
+  G.SHOPS = SHOPS;
+  // world.js tạo G.SCENES sau file này: ghi vào G.SCENE_MORE rồi world.js gộp vào
+  var SM = G.SCENE_MORE || (G.SCENE_MORE = {});
+  for (var lid in SHOPS) if (SHOPS.hasOwnProperty(lid)) {
+    var S = SHOPS[lid];
+    SM[S.scene] = {
+      city: 'en', title: S.title, bg: '', w: 1536, h: 820, kind: 'shop', life: lid, npc: L[lid].npc,
+      walk: { x0: 90, y0: 600, x1: 1446, y1: 790 }, teacher: { x: 768, y: 480 },
+      room: S, boards: S.boards,
+      exit: { x: 768, y: 785, label: 'Ra phố', to: { back: 1 } }
+    };
+  }
+
   /* quầy ở trung tâm (thêm vào danh sách người đứng trên bản đồ city_en) */
   G.PEOPLE = G.PEOPLE || {};
   G.PEOPLE.city_en = (G.PEOPLE.city_en || []).concat([
