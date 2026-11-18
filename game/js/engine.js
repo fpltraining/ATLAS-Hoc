@@ -354,6 +354,13 @@ var G = window.G || (window.G = {});
     var mn = id === 'home_en' ? morningNext() : null;
     if (mn === 'en-home') { var hm0 = bld('home'); return { text: 'Buổi sáng: vào nhà ăn sáng và nói chuyện với mẹ', x: hm0.x, y: hm0.y + 18, h: 260, label: 'Vào nhà · đọc truyện, ôn từ' }; }
     if (mn) { var pm = personOf(mn), nm = G.NPCS[G.LIFE[mn].npc].name; if (pm) return { text: 'Buổi sáng: ' + G.LIFE[mn].title + ' · nói chuyện với ' + nm, x: pm.x, y: pm.y + 40, h: 150, label: 'Nói chuyện với ' + nm }; }
+    // sau giờ học: mỗi ngày gợi ý một nơi (siêu thị, hiệu thuốc, ngân hàng, bưu điện, cắt tóc, gym), xoay vòng theo ngày
+    var AFTER = ['en-super', 'en-pharmacy', 'en-bank', 'en-post', 'en-barber'], doneAfter = talkedToday('en-gym');
+    for (var ai = 0; ai < AFTER.length; ai++) if (talkedToday(AFTER[ai])) doneAfter = true;
+    if (id === 'city_en' && td.bai && !doneAfter && G.LIFE[AFTER[0]]) {
+      var pickA = AFTER[(+G.vnDay().slice(8, 10)) % AFTER.length], pa = personOf(pickA);
+      if (pa) { var na = G.NPCS[G.LIFE[pickA].npc].name; return { text: 'Sau giờ học: ghé ' + G.LIFE[pickA].title + ' · nói chuyện với ' + na, x: pa.x, y: pa.y + 40, h: 150, label: 'Nói chuyện với ' + na }; }
+    }
     if (id === 'city_en' && G.LIFE['en-gate'] && !talkedToday('en-gate') && personOf('en-gate')) { var pg = personOf('en-gate'); return { text: 'Chào Ms. Nora ở cổng trường trước khi vào lớp', x: pg.x, y: pg.y + 40, h: 150, label: 'Nói chuyện với Ms. Nora' }; }
     if (id === 'home_en' && td.bai && (!td.doc || !td.on)) { var hm = bld('home'); return { text: 'Vào nhà ' + (!td.doc ? 'đọc 1 chương truyện' : 'ôn từ khó') + ' (việc hôm nay)', x: hm.x, y: hm.y + 18, h: 260, label: 'Vào nhà · đọc truyện, ôn từ' }; }
     if (id === 'home_en') { var bs = bld('busstop'); return { text: 'Ra bến xe buýt đi tới trường · ' + what, x: bs.x, y: bs.y + 18, h: 230, label: 'Đợi xe buýt tới trường' }; }
