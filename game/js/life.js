@@ -116,7 +116,7 @@ var G = window.G || (window.G = {});
     var all = true; for (var i = 0; i < L.talks.length; i++) if (!st.xong[i]) all = false;
     var gift = all && !st.kyNiem && !!L.souvenir;
     var td = G.today();
-    if (L.morning) { td.sang = td.sang || {}; td.sang[id] = G.vnNow().slice(11, 16); }
+    td.sang = td.sang || {}; td.sang[id] = G.vnNow().slice(11, 16);   // đã gặp hôm nay (tắt bong bóng 💬)
     // ghi vào tiến độ hôm nay: nơi, tình huống, giờ, điểm nói trung bình
     var avg0 = null; if (scores && scores.length) { var s0 = 0; for (var q = 0; q < scores.length; q++) s0 += scores[q]; avg0 = Math.round(s0 / scores.length); }
     if (G.srsAddTalk && L.lang === 'en') G.srsAddTalk(id, ti);

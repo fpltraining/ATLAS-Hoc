@@ -72,3 +72,6 @@ G.FREE_TALK = [
     need: [['two', '2'], ['pizza', 'pizzas'], ['deliver', 'delivery', 'to my house', 'address'], ['how long', 'what time', 'when']],
     sample: ['Can I order two pizzas for delivery? How long will it take?', 'I\'d like two pizzas delivered, please. How long is the wait?'] }
 ];
+
+/* câu nói tự do thêm từ các file dữ liệu khác (vd. data/life_school.js) */
+if (G.FREE_MORE) G.FREE_TALK = G.FREE_TALK.concat(G.FREE_MORE);

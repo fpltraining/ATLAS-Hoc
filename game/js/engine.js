@@ -362,6 +362,9 @@ var G = window.G || (window.G = {});
       if (!nr && lf) { var lb = null, bs2 = scene.buildings; for (var i = 0; i < bs2.length; i++) if (bs2[i].life === lf) lb = bs2[i]; if (lb) return { text: what + ' (+20 XP mỗi tình huống)', x: lb.x, y: lb.y + 18, h: 260, label: 'Vào ' + lb.name }; }
       var sc = bld('school'); return { text: 'Vào Trường Anh ngữ · ' + what, x: sc.x, y: sc.y + 18, h: 260, label: 'Vào ' + sc.name };
     }
+    if (scene.kind === 'hall' && td.bai && G.LIFE['en-canteen'] && !talkedToday('en-canteen') && personOf('en-canteen')) {
+      var pc = personOf('en-canteen'); return { text: 'Giờ ăn trưa: ra căng tin gặp Ms. Pat', x: pc.x, y: pc.y + 40, h: 150, label: 'Nói chuyện với Ms. Pat' };
+    }
     if (scene.kind === 'hall') {
       if (!nr) return { text: lf ? 'Ra phố · ' + what : what, x: lf ? scene.exit.x : G.EN_HALL_DOORS[0].x, y: lf ? scene.exit.y : G.HALL_DOOR_Y, h: lf ? 120 : 220, label: lf ? scene.exit.label : 'Vào phòng ' + G.EN_HALL_DOORS[0].label };
       return { text: 'Vào cửa ' + nr.door.label + ' (cửa thứ ' + (nr.idx + 1) + ' từ trái) · ' + tName, x: nr.door.x, y: G.HALL_DOOR_Y, h: 230, label: 'Vào phòng ' + nr.door.label };
@@ -657,7 +660,7 @@ var G = window.G || (window.G = {});
     G.roundRect(ctx, x - 80, y - 58, 160, 64, 12); ctx.fill(); ctx.stroke();
     ctx.fillStyle = '#2f7a63'; G.roundRect(ctx, x - 80, y - 10, 160, 16, 6); ctx.fill();
     ctx.font = '700 15px -apple-system, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillStyle = '#c8553d'; ctx.fillText('🥐 ' + o.stall, x, y - 32);
+    ctx.fillStyle = '#c8553d'; ctx.fillText((o.icon || '🥐') + ' ' + o.stall, x, y - 32);
     ctx.restore();
   }
   function drawPerson(o) {
