@@ -103,7 +103,12 @@ var G = window.G || (window.G = {});
     G.addXp(first ? 20 : 5); G.updateHud(); G.sfx('done');
     var all = true; for (var i = 0; i < L.talks.length; i++) if (!st.xong[i]) all = false;
     var gift = all && !st.kyNiem && !!L.souvenir;
-    if (L.morning) { var td = G.today(); td.sang = td.sang || {}; td.sang[id] = G.vnNow().slice(11, 16); }
+    var td = G.today();
+    if (L.morning) { td.sang = td.sang || {}; td.sang[id] = G.vnNow().slice(11, 16); }
+    // ghi vào tiến độ hôm nay: nơi, tình huống, giờ, điểm nói trung bình
+    var avg0 = null; if (scores && scores.length) { var s0 = 0; for (var q = 0; q < scores.length; q++) s0 += scores[q]; avg0 = Math.round(s0 / scores.length); }
+    td.hoiThoai = td.hoiThoai || [];
+    td.hoiThoai.push({ noi: id, ten: L.title, tinhHuong: L.talks[ti].title, luc: G.vnNow().slice(11, 16), diem: avg0 });
     if (gift) st.kyNiem = G.vnNow();
     G.save();
     var avg = null;

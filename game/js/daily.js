@@ -86,6 +86,13 @@ var G = window.G || (window.G = {});
         G.el('div.td-txt', G.el('b', t.name), G.el('div.small.faint', ok ? 'Xong lúc ' + d.viec[t.id] : t.hint + ' · khoảng ' + t.min + ' phút')),
         !ok && (t.id === 'doc' || t.id === 'on') ? G.el('button.btn.sm', { onclick: function () { t.id === 'doc' ? G.openReader() : G.openReview(); } }, 'Làm ngay') : null);
     })));
+    // các cuộc nói chuyện hôm nay
+    var ht = d.hoiThoai || [];
+    body.appendChild(G.el('div.td-talks',
+      G.el('b', '💬 Nói chuyện hôm nay · ' + ht.length + ' tình huống'),
+      ht.length ? G.el('div.td-talk-list', ht.slice().reverse().map(function (h) {
+        return G.el('div.td-talk', G.el('span.small.faint', h.luc), G.el('span', h.ten + ' · ' + h.tinhHuong), h.diem !== null && h.diem !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(h.diem)[1], '🎤 ' + h.diem) : G.el('span.small.faint', 'không micro'));
+      })) : G.el('div.small.faint', 'Chưa nói chuyện với ai hôm nay. Ra phố gặp mẹ, ông Ben, xe bánh Sunny… (người có 💬 trên đầu).')));
     // luyện nói: điểm hôm nay + bật/tắt micro
     var sp = d.noi && d.noi.n ? Math.round(d.noi.tong / d.noi.n) : null;
     var micBox = G.el('div.td-mic');
