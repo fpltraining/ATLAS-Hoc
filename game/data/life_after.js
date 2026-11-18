@@ -355,7 +355,7 @@ var G = window.G || (window.G = {});
     { npc: 'grant', life: 'en-bank', x: 610, y: 380, dir: 'down', stall: 'Ngân hàng', icon: '🏦', bimg: 'building_en_bank.png', bs: 300 },
     { npc: 'lee', life: 'en-pharmacy', x: 990, y: 380, dir: 'down', stall: 'Hiệu thuốc', icon: '💊', bimg: 'building_en_pharmacy.png', bs: 300 },
     { npc: 'tony', life: 'en-barber', x: 1370, y: 380, dir: 'down', stall: 'Tiệm tóc', icon: '💈', bimg: 'building_en_barber.png', bs: 300 },
-    { npc: 'ray', life: 'en-super', x: 768, y: 840, dir: 'down', stall: 'Siêu thị mini', icon: '🛒' }
+    { npc: 'ray', life: 'en-super', x: 768, y: 950, dir: 'down', stall: 'Siêu thị mini', icon: '🛒', bimg: 'building_en_super.png', bs: 300 }
   ];
   // phòng gym ở khu phố Maple, gần nhà
   G.PEOPLE.home_en = (G.PEOPLE.home_en || []).concat([
