@@ -68,7 +68,7 @@ var G = window.G || (window.G = {});
     document.getElementById('panel-title').textContent = title;
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     var body = document.getElementById('panel-body');
-    body.innerHTML = '';
+    body.innerHTML = ''; body.className = 'panel-body';
     return body;
   }
   G.openToday = function () {
@@ -182,7 +182,7 @@ var G = window.G || (window.G = {});
     fetch('../data/stories/' + s.id + '.json').then(function (r) { return r.json(); }).then(function (full) {
       var ch = full.chapters[k];
       body.innerHTML = '';
-      body.appendChild(G.el('div.lhead', G.el('div.lsub', 'Chương ' + ch.n + '/' + full.chapters.length + ' · ' + ch.title + ' · ' + (ch.vi || '') + ' · bấm câu để nghe và xem nghĩa')));
+      body.appendChild(G.el('div.lhead', G.el('div.lsub', 'Chương ' + ch.n + '/' + full.chapters.length + ' · ' + ch.title + ' · ' + (ch.vi || '') + ' · bấm câu để nghe')));
       // tốc độ đọc: thường / chậm (nhớ cho lần sau)
       var cd = G.S.caiDat || (G.S.caiDat = {});
       var spd = G.el('div.td-seg.rd-speed');
@@ -192,10 +192,15 @@ var G = window.G || (window.G = {});
         spd.appendChild(G.el('button' + (cd.docCham ? '.on' : ''), { onclick: function () { cd.docCham = true; G.save(); drawSpd(); } }, '🐢 Đọc chậm'));
       }
       drawSpd(); body.appendChild(spd);
+      // hiện / ẩn nghĩa tiếng Việt (mặc định hiện, nhớ cho lần sau)
+      var viBtn = G.el('button.btn.sm.rd-vibtn', { onclick: function () { cd.anNghia = !cd.anNghia; G.save(); applyVi(); } });
+      function applyVi() { body.className = 'panel-body' + (cd.anNghia ? ' rd-hidevi' : ''); viBtn.textContent = cd.anNghia ? '👀 Hiện nghĩa tiếng Việt' : '🙈 Ẩn nghĩa (tự đọc)'; }
+      body.appendChild(viBtn); applyVi();
       (ch.paras || []).forEach(function (para) {
         body.appendChild(G.el('div.rd-para', para.map(function (ln) {
-          var vi = G.el('div.rd-vi', ln[1]);
-          return G.el('div.rd-line', { onclick: function () { vi.className = vi.className.indexOf('show') >= 0 ? 'rd-vi' : 'rd-vi show'; G.say(ln[0], 'en', !!(G.S.caiDat && G.S.caiDat.docCham)); } }, G.el('span', ln[0]), vi);
+          // nghĩa tiếng Việt luôn hiện ngay dưới câu (ẩn được bằng nút "Ẩn nghĩa" để tự luyện đọc); bấm câu để nghe
+          var vi = G.el('div.rd-vi.show', ln[1]);
+          return G.el('div.rd-line', { onclick: function () { G.say(ln[0], 'en', !!(G.S.caiDat && G.S.caiDat.docCham)); } }, G.el('span', ln[0]), vi);
         })));
       });
       if (ch.vocab && ch.vocab.length) body.appendChild(G.el('div.rd-box',

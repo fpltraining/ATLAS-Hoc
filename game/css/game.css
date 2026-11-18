@@ -321,7 +321,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .rd-para { margin: 10px 0; }
 .rd-line { padding: 4px 2px; font-size: 18px; line-height: 1.5; cursor: pointer; border-radius: 6px; }
 .rd-line:active { background: var(--jade-soft); }
-.rd-vi { display: none; font-size: 14px; color: var(--soft); }
+.rd-vi { display: none; font-size: 15px; color: var(--soft); margin-top: 2px; }
 .rd-vi.show { display: block; }
 .rv-back { display: none; } .rv-back.show { display: block; }
 .rv-show { width: 100%; margin-top: 10px; }
@@ -473,3 +473,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 
 .bd-line { padding: 8px 4px; border-bottom: 1px dashed #c9a96e; cursor: pointer; }
 .bd-line b { font: 700 18px/1.4 ui-monospace, Menlo, monospace; color: #1b2140; }
+
+.rd-hidevi .rd-vi { display: none !important; }
+.rd-vibtn { margin: 0 0 8px; }
+.rd-line { padding: 4px 0; }
