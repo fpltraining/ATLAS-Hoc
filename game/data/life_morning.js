@@ -7,11 +7,11 @@ var G = window.G || (window.G = {});
 (function () {
   // world.js tạo G.NPCS sau file này, nên ghi vào G.NPC_MORE rồi world.js gộp vào
   var N = G.NPC_MORE || (G.NPC_MORE = {});
-  N.mom = { name: 'Mom', vi: 'Mẹ', av: { ao: 'sweater', mat: 'gentle', toc: 'bun', mauToc: '#5b3a29' }, role: 'Mẹ của bạn' };
-  N.ben = { name: 'Mr. Ben', av: { ao: 'jacket', mat: 'calm', toc: 'sidepart', mauToc: '#e9e6df' }, role: 'Hàng xóm' };
-  N.mia = { name: 'Mia', av: { ao: 'uniform', mat: 'smile', toc: 'ponytail', mauToc: '#c9893e' }, role: 'Chủ xe bánh Sunny' };
-  N.carlos = { name: 'Carlos', av: { ao: 'tech', mat: 'sparkle', toc: 'curly', mauToc: '#2a2220' }, role: 'Du khách' };
-  N.dan = { name: 'Officer Dan', av: { ao: 'sport', mat: 'cool', toc: 'spiky', mauToc: '#8a5a3b' }, role: 'Chú bảo vệ qua đường' };
+  N.mom = { img: 'npc_mom.png', name: 'Mom', vi: 'Mẹ', av: { ao: 'sweater', mat: 'gentle', toc: 'bun', mauToc: '#5b3a29' }, role: 'Mẹ của bạn' };
+  N.ben = { img: 'npc_ben.png', name: 'Mr. Ben', av: { ao: 'jacket', mat: 'calm', toc: 'sidepart', mauToc: '#e9e6df' }, role: 'Hàng xóm' };
+  N.mia = { img: 'npc_mia.png', name: 'Mia', av: { ao: 'uniform', mat: 'smile', toc: 'ponytail', mauToc: '#c9893e' }, role: 'Chủ xe bánh Sunny' };
+  N.carlos = { img: 'npc_carlos.png', name: 'Carlos', av: { ao: 'tech', mat: 'sparkle', toc: 'curly', mauToc: '#2a2220' }, role: 'Du khách' };
+  N.dan = { img: 'npc_dan.png', name: 'Officer Dan', av: { ao: 'sport', mat: 'cool', toc: 'spiky', mauToc: '#8a5a3b' }, role: 'Chú bảo vệ qua đường' };
   N.nora = { name: 'Ms. Nora', av: { ao: 'sweater', mat: 'calm', toc: 'long', mauToc: '#2a2220' }, role: 'Bàn tiếp đón ở cổng trường' };
 
   var L = G.LIFE || (G.LIFE = {});

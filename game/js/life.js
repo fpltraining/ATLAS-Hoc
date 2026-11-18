@@ -14,8 +14,8 @@ var G = window.G || (window.G = {});
   function speak(t) { return G.sayBtns(t, L.lang); }
   function npcLine(text, vi) {
     var n = npc(), pic = G.el('div.tpic');
-    if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));   // nhân vật ghép từ lớp hình
-    else pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));
+    if (n.img) pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));   // có ảnh riêng thì dùng ảnh
+    else if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));   // chưa có: ghép từ lớp hình
     var hide = G.S.caiDat && G.S.caiDat.chiNgheNoi && vi;   // chế độ chỉ nghe: ẩn chữ, đáp xong mới hiện
     var bub = G.el('div.tbubble' + (hide ? '.hidetext' : ''), G.el('b', n.name), hide ? G.el('div.small.listen-tag', '👂 Nghe rồi chọn câu đáp') : null, G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null, speak(text));
     if (hide) lastHidden = bub;
