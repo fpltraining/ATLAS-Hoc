@@ -33,6 +33,7 @@ var G = window.G || (window.G = {});
     cur = r;
     function end(err, alts) {
       if (done) return; done = true; clearTimeout(dog);
+      setTimeout(function () { if (G.audioReset) G.audioReset(); }, 300);
       if (cur === r) cur = null;
       cb(err, alts);
     }

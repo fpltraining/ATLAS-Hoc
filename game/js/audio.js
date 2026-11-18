@@ -32,7 +32,7 @@ var G = window.G || (window.G = {});
   G.audioUrl = function (text, lang) {
     if (!index || !index[lang]) return null;
     var k = G.audioKey(lang, text);
-    return index[lang][k] ? '../audio/' + lang + '/' + k + '.mp3' : null;
+    return index[lang][k] ? '../audio/' + lang + '/' + k + '.mp3?v=2' : null;   // v=2: giọng đã chuẩn hoá âm lượng
   };
 
   function speakTts(text, lang, slow) {
@@ -42,6 +42,7 @@ var G = window.G || (window.G = {});
       var u = new SpeechSynthesisUtterance(text);
       u.lang = lang === 'zh' ? 'zh-CN' : 'en-US';
       u.rate = slow ? 0.55 : 0.85;
+      u.volume = 0.6;   // giọng máy to hơn giọng AI: hạ xuống cho đều
       var vs = speechSynthesis.getVoices();
       for (var i = 0; i < vs.length; i++) if (vs[i].lang && vs[i].lang.replace('_', '-').indexOf(u.lang) === 0) { u.voice = vs[i]; break; }
       speechSynthesis.speak(u);
@@ -49,6 +50,8 @@ var G = window.G || (window.G = {});
   }
 
   /* tắt giọng mẫu đang phát (trước khi bật micro, để micro không thu lại tiếng loa) */
+  /* sau khi dùng micro, iPad chuyển âm thanh sang chế độ gọi (nhỏ hơn): tạo lại trình phát để về âm lượng thường */
+  G.audioReset = function () { try { player.pause(); } catch (e) { /* bỏ qua */ } player = new Audio(); player.preload = 'auto'; if (ctx && ctx.state === 'running' && ctx.suspend) { ctx.suspend().then(function () { ctx.resume(); }); } };
   G.hush = function () {
     try { player.pause(); } catch (e) { /* bỏ qua */ }
     try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e2) { /* bỏ qua */ }
@@ -57,6 +60,10 @@ var G = window.G || (window.G = {});
   /* đọc câu; slow = true thì đọc chậm (70% tốc độ, giữ nguyên cao độ giọng) */
   G.say = function (text, lang, slow) {
     lang = lang || 'en';
+    // danh sách giọng AI chưa tải xong: chờ một chút thay vì đọc bằng giọng máy (to nhỏ khác nhau)
+    if (!index && (G._sayWait = (G._sayWait || 0) + 1) < 15) { setTimeout(function () { G.say(text, lang, slow); }, 200); return; }
+    G._sayWait = 0;
+    player.volume = 1;
     var url = G.audioUrl(text, lang);
     if (url) {
       var rate = slow ? 0.7 : 1;
@@ -103,7 +110,7 @@ var G = window.G || (window.G = {});
     o.type = type || 'sine';
     o.frequency.setValueAtTime(f, t);
     g.gain.setValueAtTime(0.0001, t);
-    g.gain.exponentialRampToValueAtTime(vol || 0.15, t + 0.015);
+    g.gain.exponentialRampToValueAtTime((vol || 0.15) * 0.45, t + 0.015);   // hiệu ứng nhỏ hơn giọng đọc
     g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
     o.connect(g); g.connect(a.destination);
     o.start(t); o.stop(t + dur + 0.05);
