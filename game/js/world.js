@@ -90,6 +90,9 @@ G.SCENES = {
   }
 };
 
+/* cảnh thêm từ file dữ liệu khác (vd. nội thất tiệm ở data/life_after.js) */
+if (G.SCENE_MORE) for (var sk in G.SCENE_MORE) if (G.SCENE_MORE.hasOwnProperty(sk)) G.SCENES[sk] = G.SCENE_MORE[sk];
+
 /* Đồ vật rời trên bản đồ (vẽ theo chiều sâu, nhân vật đi ra sau được): img, chân x/y, cỡ s, bán kính chặn r */
 G.SCENES.city_en.props = [
   { img: 'prop_oak.png', x: 90, y: 410, s: 190, r: 26 },

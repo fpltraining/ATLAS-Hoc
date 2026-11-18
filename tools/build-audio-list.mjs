@@ -97,6 +97,8 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
       add('en', u.ok.replace(/\{name\}/g, nm), 'm');
     }
   }
+  // bảng thông tin trong tiệm (data/life_after.js)
+  for (const sh of Object.values(ctx.G.SHOPS || {})) for (const b of sh.boards || []) b.lines.forEach(([t]) => add('en', t, 'f'));
   // nói tự do: câu hỏi của nhân vật và câu mẫu (data/practice_en.js)
   for (const f of ctx.G.FREE_TALK || []) { add('en', f.q, FEM[f.npc] ? 'f' : 'm'); f.sample.forEach((t) => add('en', t, 'm')); }
   // lời chúc tốt nghiệp (grad.js)
