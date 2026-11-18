@@ -191,7 +191,7 @@ var G = window.G || (window.G = {});
   G.drawAvatar = function (ctx, av, x, footY, h, dir, phase, moving) {
     var flip = dir === 'right', d = flip ? 'left' : dir;
     var body = G.asset('body_' + av.ao + '_' + d + '.png');
-    if (!body.ok) { G.drawPlaceholder(ctx, 'body_' + av.ao + '_' + d + '.png', x - h / 2, footY - h, h, h); return; }
+    if (!body.ok) return;   // hình đang tải: chưa vẽ (không hiện ô xám), khung sau sẽ có
     var k = h / 512, hd = (G.AV_HEAD || {})[av.ao + '_' + d];
     var face = d !== 'up' ? G.asset('face_' + av.mat + '_' + d + '.png') : null;
     var hair = hd ? hairTinted('hair_' + av.toc + '_' + d + '.png', av.mauToc) : null;
