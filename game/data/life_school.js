@@ -9,7 +9,7 @@ var G = window.G || (window.G = {});
   N.owen = { img: 'npc_owen.png', name: 'Mr. Owen', av: { ao: 'jacket', mat: 'calm', toc: 'sidepart', mauToc: '#2a2220' }, role: 'Thủ thư' };
   N.kim = { img: 'npc_kim.png', name: 'Nurse Kim', av: { ao: 'uniform', mat: 'gentle', toc: 'ponytail', mauToc: '#2a2220' }, role: 'Cô y tế' };
   N.jake = { img: 'npc_jake.png', name: 'Jake', av: { ao: 'hoodie', mat: 'wink', toc: 'spiky', mauToc: '#c9893e' }, role: 'Bạn cùng lớp' };
-  N.zoe = { name: 'Zoe', av: { ao: 'sport', mat: 'sparkle', toc: 'ponytail', mauToc: '#c8553d' }, role: 'Trưởng CLB' };
+  N.zoe = { img: 'npc_zoe.png', name: 'Zoe', av: { ao: 'sport', mat: 'sparkle', toc: 'ponytail', mauToc: '#c8553d' }, role: 'Trưởng CLB' };
 
   var L = G.LIFE || (G.LIFE = {});
   L['en-canteen'] = {
