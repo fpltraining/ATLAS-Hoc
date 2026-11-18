@@ -169,7 +169,7 @@ var G = window.G || (window.G = {});
   /* một câu hỏi tự nói; onDone(score) */
   function freeCard(body, it, onDone) {
     var n = G.NPCS[it.npc] || {}, pic = G.el('div.tpic');
-    if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img')); else if (n.img) pic.appendChild(G.imgEl(n.img, 'tpic-img'));
+    if (n.img) pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img)); else if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));
     body.appendChild(G.el('div.fr-sit', G.el('b', '🎯 Tình huống'), G.el('div', it.sit)));
     body.appendChild(G.el('div.tline', pic, G.el('div.tbubble', G.el('b', n.name || ''), G.el('div.en', it.q), G.el('div.small.faint', it.vi), G.sayBtns(it.q, 'en'))));
     G.say(it.q, 'en');

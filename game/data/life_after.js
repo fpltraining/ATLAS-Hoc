@@ -286,10 +286,41 @@ var G = window.G || (window.G = {});
       boards: [{ x: 1300, y: 230, title: 'CLASSES', lines: [['Yoga – Mon & Wed, 7 PM', 'Yoga: thứ Hai và thứ Tư, 7 giờ tối'], ['Spinning – Tue & Thu, 6 PM', 'Đạp xe: thứ Ba và thứ Năm, 6 giờ tối'], ['Boxing – Sat, 10 AM', 'Đấm bốc: thứ Bảy, 10 giờ sáng'], ['Book on the app', 'Đặt chỗ trên ứng dụng'], ['Towels are free', 'Khăn miễn phí']], q: ['Bạn chỉ rảnh thứ Bảy buổi sáng. Bạn tập lớp nào được?', 'Lớp đấm bốc (Boxing) 10 giờ sáng'] }] }
   };
   G.SHOPS = SHOPS;
+  /* tiệm có ảnh nội thất: chỗ người bán đứng sau quầy (teacher), phần quầy vẽ đè lên người bán (front: x, y, rộng, cao),
+     chỗ đứng nói chuyện (talk), khung đi lại (walk), cửa ra (exit), bảng đứng trên sàn (board), đồ đạc chắn đường (blocks),
+     cửa sổ đổi màu theo buổi và mưa (wins: ['o', tâm x, tâm y, bán kính] hoặc ['r', x, y, rộng, cao]) */
+  var LAY = {
+    'en-barber': { bg: 'interior_en_barber.png', teacher: { x: 1000, y: 500 }, front: [880, 466, 240, 222], talk: { x: 1000, y: 730 },
+      walk: { x0: 40, y0: 705, x1: 1470, y1: 1000 }, exit: { x: 755, y: 975 }, board: { x: 250, y: 800 },
+      wins: [['o', 567, 140, 96], ['o', 867, 140, 96], ['o', 1171, 140, 96]] },
+    'en-post': { bg: 'interior_en_post.png', teacher: { x: 890, y: 440 }, front: [770, 405, 240, 212], talk: { x: 890, y: 670 },
+      walk: { x0: 190, y0: 640, x1: 1350, y1: 995 }, exit: { x: 765, y: 985 }, board: { x: 360, y: 790 }, blocks: [[955, 790, 1125, 1024]] },
+    'en-pharmacy': { bg: 'interior_en_pharmacy.png', teacher: { x: 700, y: 456 }, front: [580, 437, 240, 178], talk: { x: 700, y: 650 },
+      walk: { x0: 280, y0: 620, x1: 1470, y1: 845 }, exit: { x: 757, y: 835 }, board: { x: 1340, y: 690 }, wins: [['r', 1200, 100, 100, 113]] },
+    'en-gym': { bg: 'interior_en_gym.png', teacher: { x: 600, y: 470 }, front: [480, 437, 240, 165], talk: { x: 600, y: 640 },
+      walk: { x0: 170, y0: 610, x1: 1360, y1: 960 }, exit: { x: 766, y: 955 }, board: { x: 300, y: 770 },
+      blocks: [[1200, 460, 1440, 780], [515, 860, 625, 1000], [910, 860, 1015, 1000]], wins: [['r', 317, 40, 870, 267]] },
+    'en-super': { bg: 'interior_en_super.png', teacher: { x: 760, y: 470 }, front: [640, 440, 240, 175], talk: { x: 760, y: 650 },
+      walk: { x0: 160, y0: 630, x1: 1370, y1: 885 }, exit: { x: 760, y: 878 }, board: { x: 1250, y: 690 } }
+  };
   // world.js tạo G.SCENES sau file này: ghi vào G.SCENE_MORE rồi world.js gộp vào
   var SM = G.SCENE_MORE || (G.SCENE_MORE = {});
   for (var lid in SHOPS) if (SHOPS.hasOwnProperty(lid)) {
-    var S = SHOPS[lid];
+    var S = SHOPS[lid], Y = LAY[lid];
+    if (Y) {
+      var bds = [], blk = (Y.blocks || []).slice();
+      for (var bi = 0; bi < S.boards.length; bi++) {
+        var b0 = S.boards[bi], bx = Y.board.x + bi * 200;
+        bds.push({ x: bx, y: Y.board.y, title: b0.title, lines: b0.lines, q: b0.q, floor: 1 });
+        blk.push([bx - 72, Y.board.y + 40, bx + 72, Y.board.y + 82]);   // chân bảng
+      }
+      SM[S.scene] = {
+        city: 'en', title: S.title, bg: Y.bg, w: 1536, h: 1024, kind: 'shop', life: lid, npc: L[lid].npc,
+        walk: Y.walk, teacher: Y.teacher, talk: Y.talk, room: S, lay: Y, boards: bds, blocks: blk,
+        exit: { x: Y.exit.x, y: Y.exit.y, label: 'Ra phố', to: { back: 1 } }
+      };
+      continue;
+    }
     SM[S.scene] = {
       city: 'en', title: S.title, bg: '', w: 1536, h: 820, kind: 'shop', life: lid, npc: L[lid].npc,
       walk: { x0: 90, y0: 600, x1: 1446, y1: 790 }, teacher: { x: 768, y: 480 },
@@ -302,14 +333,14 @@ var G = window.G || (window.G = {});
   G.PEOPLE = G.PEOPLE || {};
   G.PEOPLE.city_en = (G.PEOPLE.city_en || []).concat([
     { npc: 'ray', life: 'en-super', x: 160, y: 660, dir: 'down', stall: 'Siêu thị mini', icon: '🛒' },
-    { npc: 'lee', life: 'en-pharmacy', x: 1390, y: 660, dir: 'down', stall: 'Hiệu thuốc', icon: '💊' },
-    { npc: 'grant', life: 'en-bank', x: 1445, y: 235, dir: 'down', stall: 'Ngân hàng', icon: '🏦' },
-    { npc: 'ivy', life: 'en-post', x: 575, y: 330, dir: 'down', stall: 'Bưu điện', icon: '📮' },
-    { npc: 'tony', life: 'en-barber', x: 960, y: 330, dir: 'down', stall: 'Cắt tóc', icon: '💈' }
+    { npc: 'lee', life: 'en-pharmacy', x: 1400, y: 640, dir: 'down', stall: 'Hiệu thuốc', icon: '💊', bimg: 'building_en_pharmacy.png' },
+    { npc: 'grant', life: 'en-bank', x: 1445, y: 235, dir: 'down', stall: 'Ngân hàng', icon: '🏦', bimg: 'building_en_bank.png' },
+    { npc: 'ivy', life: 'en-post', x: 575, y: 330, dir: 'down', stall: 'Bưu điện', icon: '📮', bimg: 'building_en_post.png' },
+    { npc: 'tony', life: 'en-barber', x: 960, y: 330, dir: 'down', stall: 'Cắt tóc', icon: '💈', bimg: 'building_en_barber.png' }
   ]);
   // phòng gym ở khu phố Maple, gần nhà
   G.PEOPLE.home_en = (G.PEOPLE.home_en || []).concat([
-    { npc: 'max', life: 'en-gym', x: 130, y: 420, dir: 'down', stall: 'Phòng gym', icon: '🏋️' }
+    { npc: 'max', life: 'en-gym', x: 130, y: 420, dir: 'down', stall: 'Phòng gym', icon: '🏋️', bimg: 'building_en_gym.png' }
   ]);
 
   /* nói tự do sau giờ học */

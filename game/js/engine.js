@@ -78,8 +78,8 @@ var G = window.G || (window.G = {});
     }
     if (scene.kind === 'shop') {
       var nid = scene.npc;
-      var ty0 = scene.room ? TY() + 120 : TY() + 40;
-      list.push({ x: TX(), y: ty0, r: 120, npc: nid, label: 'Nói chuyện với ' + G.NPCS[nid].name, act: function () { G.openLife(scene.life); } });
+      var tp = talkPt();
+      list.push({ x: tp.x, y: tp.y, r: 120, npc: nid, label: 'Nói chuyện với ' + G.NPCS[nid].name, act: function () { G.openLife(scene.life); } });
       (scene.boards || []).forEach(function (bd) { list.push({ x: bd.x, y: Math.max(scene.walk.y0 + 20, bd.y + 120), r: 110, board: bd, label: 'Đọc bảng ' + bd.title, act: function () { G.openBoard(bd); } }); });
     }
     if (scene.kind === 'classroom' && G.currentRoom) {
@@ -135,7 +135,8 @@ var G = window.G || (window.G = {});
   /* bước vào tiệm (khu riêng), nhớ chỗ đứng ngoài phố để ra lại đúng chỗ */
   function enterShop(sh, pp) {
     G._outside = { scene: sceneId, x: pp.x, y: pp.y + 70 };
-    G.sfx('door'); G.enterScene(sh.scene, { x: 768, y: 760, dir: 'up' });
+    var ex = G.SCENES[sh.scene] && G.SCENES[sh.scene].exit;
+    G.sfx('door'); G.enterScene(sh.scene, ex ? { x: ex.x, y: ex.y - 70, dir: 'up' } : { x: 768, y: 760, dir: 'up' });
     G.kaiSay('Vào ' + sh.title + ' rồi! Gặp ' + G.NPCS[G.LIFE[scene.life].npc].name + ' ở quầy để nói chuyện, hoặc đọc bảng thông tin trên tường.');
   }
   function useExit() {
@@ -161,8 +162,14 @@ var G = window.G || (window.G = {});
       }
     }
     if (scene.props) for (var pj = 0; pj < scene.props.length; pj++) { var pr = scene.props[pj], ddx = x - pr.x, ddy = (y - pr.y) * 2; if (ddx * ddx + ddy * ddy < pr.r * pr.r) return true; }
-    var PP = people(); for (var pq = 0; pq < PP.length; pq++) { var pd = x - PP[pq].x, pe = (y - PP[pq].y) * 2; if (pd * pd + pe * pe < 26 * 26) return true; }
-    if (scene.room && Math.abs(x - TX()) < (scene.room.counterW || 420) / 2 + 10 && y > TY() - 20 && y < TY() + 90) return true;   // quầy
+    var PP = people();
+    for (var pq = 0; pq < PP.length; pq++) {
+      var po = PP[pq];
+      if (po.bimg) { if (Math.abs(x - po.x) < 90 && y > po.y - 120 && y < po.y + 6) return true; continue; }   // tiệm có hình toà nhà
+      var pd = x - po.x, pe = (y - po.y) * 2; if (pd * pd + pe * pe < 26 * 26) return true;
+    }
+    if (scene.blocks) for (var bk = 0; bk < scene.blocks.length; bk++) { var B = scene.blocks[bk]; if (x > B[0] && x < B[2] && y > B[1] && y < B[3]) return true; }   // đồ đạc trong ảnh nội thất
+    if (scene.room && !scene.lay && Math.abs(x - TX()) < (scene.room.counterW || 420) / 2 + 10 && y > TY() - 20 && y < TY() + 90) return true;   // quầy
     if ((scene.kind === 'classroom' || scene.kind === 'shop') && Math.abs(x - TX()) < 60 && Math.abs(y - TY() + 20) < 36) return true; // giáo viên
     return false;
   }
@@ -339,6 +346,8 @@ var G = window.G || (window.G = {});
 
   /* vị trí giáo viên trong lớp (theo ảnh lớp học) */
   function TX() { return (scene.teacher || {}).x || 768; }
+  /* chỗ đứng nói chuyện với người bán (tiệm có ảnh: ngay trước quầy) */
+  function talkPt() { return scene.talk || { x: TX(), y: scene.room ? TY() + 120 : TY() + 40 }; }
   function TY() { return (scene.teacher || {}).y || 520; }
 
 
@@ -395,7 +404,7 @@ var G = window.G || (window.G = {});
       var p = G.S.phong[here];
       return { text: 'Gặp ' + hn.name + ' · ' + (p ? 'Kiểm tra lại để đạt từ 8/10' : 'Học → Luyện → Kiểm tra'), x: TX(), y: TY() + 40, h: 220, label: 'Nói chuyện với ' + hn.name };
     }
-    if (scene.kind === 'shop') return { text: 'Gặp ' + G.NPCS[scene.npc].name + ' và chọn một tình huống', x: TX(), y: TY() + 40, h: 220, label: 'Nói chuyện với ' + G.NPCS[scene.npc].name };
+    if (scene.kind === 'shop') return { text: 'Gặp ' + G.NPCS[scene.npc].name + ' và chọn một tình huống', x: talkPt().x, y: talkPt().y, h: scene.lay ? talkPt().y - scene.lay.front[1] - 40 : 220, label: 'Nói chuyện với ' + G.NPCS[scene.npc].name };
     return null;
   }
   var curGoal = null, lastGoalText = '';
@@ -719,6 +728,7 @@ var G = window.G || (window.G = {});
     if (scene.kind === 'classroom' && G.currentRoom) items.push({ y: TY(), draw: drawTeacher, o: G.ROOM_TEACHER[G.currentRoom] });
     if (scene.kind === 'shop') items.push({ y: TY(), draw: drawTeacher, o: scene.npc });
     if (scene.room && G.drawRoomFront) items.push({ y: TY() + 30, draw: function () { G.drawRoomFront(ctx, scene); } });
+    if (scene.lay && G.drawStandee) for (var sb = 0; sb < (scene.boards || []).length; sb++) items.push({ y: scene.boards[sb].y + 70, draw: function (b) { G.drawStandee(ctx, b); }, o: scene.boards[sb] });
     for (var ti = 0; ti < town.length; ti++) items.push({ y: town[ti].y, draw: drawTownie, o: town[ti] });
     if (G.S.nhanVat !== 'kai') items.push({ y: K.y, draw: drawKai });   // chơi bằng Kai thì không có robot đi theo
     var PP = people(); for (var pk = 0; pk < PP.length; pk++) items.push({ y: PP[pk].y, draw: drawPerson, o: PP[pk] });
@@ -823,28 +833,44 @@ var G = window.G || (window.G = {});
     ctx.fillStyle = '#c8553d'; ctx.fillText((o.icon || '🥐') + ' ' + o.stall, x, y - 32);
     ctx.restore();
   }
+  function talkBubble(x, y) {
+    var t = Date.now() / 1000, by = y + Math.sin(t * 3 + x) * 4;
+    ctx.save(); ctx.fillStyle = '#fff'; ctx.strokeStyle = '#1b2140'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.arc(x, by, 18, 0, 6.283); ctx.fill(); ctx.stroke();
+    ctx.font = '20px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('💬', x, by + 1);
+    ctx.restore();
+  }
+  function nameTag(text, x, y) {
+    ctx.save(); ctx.font = '700 15px -apple-system, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    var w = ctx.measureText(text).width + 18; ctx.fillStyle = 'rgba(27,33,64,.8)'; G.roundRect(ctx, x - w / 2, y - 12, w, 24, 12); ctx.fill();
+    ctx.fillStyle = '#fff'; ctx.fillText(text, x, y); ctx.restore();
+  }
+  /* tiệm nhỏ có hình toà nhà: vẽ toà nhà thay cho quầy, người bán ở bên trong */
+  function drawShopHouse(o) {
+    var S = 210;
+    G.drawAsset(ctx, o.bimg, o.x - S / 2, o.y + 14 - S, S, S);
+    if (!talkedToday(o.life)) talkBubble(o.x + 78, o.y - S + 24);
+    nameTag((o.icon || '') + ' ' + o.stall, o.x, o.y + 28);
+  }
+  /* NPC có ảnh riêng (ChatGPT) thì dùng ảnh, chưa có thì ghép từ lớp hình */
+  function npcImg(n) { return n.img && (G.asset(n.img).ok || !n.av) ? n.img : null; }
   function drawPerson(o) {
-    var n = G.NPCS[o.npc]; if (!n || !n.av) return;
+    var n = G.NPCS[o.npc]; if (!n) return;
+    if (o.bimg && G.asset(o.bimg).ok) { drawShopHouse(o); return; }
+    var im = npcImg(n); if (!im && !n.av) return;
     if (o.stall) drawStallBack(o);
     var dx = P.x - o.x, dy = P.y - o.y, close = dx * dx + dy * dy < 200 * 200;
     var dir = close ? (Math.abs(dx) > Math.abs(dy) ? (dx < 0 ? 'left' : 'right') : (dy < 0 ? 'up' : 'down')) : o.dir;
     var py = o.stall ? o.y - 40 : o.y;   // người bán đứng sau quầy
+    var top = im ? 138 : 118;
     shadow(o.x, py, 20);
-    G.drawAvatar(ctx, n.av, o.x, py + 4, 104, dir, 0, false);
-    if (raining() && !o.stall) umbrella(o.x + 10, py - 100, (o.x >> 3) % 6, 0);
+    if (im) G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, o.x, py + 4, 124, 'down', 0, false, 0.72);
+    else G.drawAvatar(ctx, n.av, o.x, py + 4, 104, dir, 0, false);
+    if (raining() && !o.stall) umbrella(o.x + 10, py - (im ? 122 : 100), (o.x >> 3) % 6, 0);
     if (o.stall) { drawStallFront(o); py = o.y + 6; }   // tên người bán nằm dưới quầy
     // bong bóng 💬 nhấp nhô khi hôm nay chưa nói chuyện
-    if (!talkedToday(o.life)) {
-      var t = Date.now() / 1000, by = (o.stall ? o.y - 210 : py - 118) + Math.sin(t * 3 + o.x) * 4;
-      ctx.save(); ctx.fillStyle = '#fff'; ctx.strokeStyle = '#1b2140'; ctx.lineWidth = 3;
-      ctx.beginPath(); ctx.arc(o.x, by, 18, 0, 6.283); ctx.fill(); ctx.stroke();
-      ctx.font = '20px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('💬', o.x, by + 1);
-      ctx.restore();
-    }
-    // tên
-    ctx.save(); ctx.font = '700 15px -apple-system, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    var w = ctx.measureText(n.name).width + 18; ctx.fillStyle = 'rgba(27,33,64,.8)'; G.roundRect(ctx, o.x - w / 2, py + 10, w, 24, 12); ctx.fill();
-    ctx.fillStyle = '#fff'; ctx.fillText(n.name, o.x, py + 22); ctx.restore();
+    if (!talkedToday(o.life)) talkBubble(o.x, o.stall ? o.y - 210 : py - top);
+    nameTag(n.name, o.x, py + 22);
   }
   /* lộ trình buổi sáng: ở nhà với mẹ → chào hàng xóm → mua bánh sáng (mỗi ngày gợi ý một lần) */
   var MORNING = ['en-home', 'en-neighbor', 'en-bakery'];
@@ -895,12 +921,14 @@ var G = window.G || (window.G = {});
     var n = G.NPCS[id];
     var tx = TX(), ty = TY();
     shadow(tx, ty, 34);
-    if (n.av) G.drawAvatar(ctx, n.av, tx, ty + 4, 150, 'down', 0, false);
-    else G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, n.img, X, Y, S, S); }, tx, ty, 170, 'down', 0, false, 0.72);
+    var im = npcImg(n);
+    if (im) G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, tx, ty, 170, 'down', 0, false, 0.72);
+    else if (n.av) G.drawAvatar(ctx, n.av, tx, ty + 4, 150, 'down', 0, false);
+    var ly = scene.lay ? ty - 186 : ty + 8;   // tiệm có ảnh: quầy che phía dưới nên tên đặt trên đầu
     ctx.fillStyle = 'rgba(27,33,64,.85)';
-    G.roundRect(ctx, tx - 70, ty + 8, 140, 30, 15); ctx.fill();
+    G.roundRect(ctx, tx - 70, ly, 140, 30, 15); ctx.fill();
     ctx.fillStyle = '#fff'; ctx.font = '700 17px -apple-system, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText(n.name, tx, ty + 23);
+    ctx.fillText(n.name, tx, ly + 15);
   }
   function drawDoorPlates() {
     var DR = doorsHere();
