@@ -7,10 +7,10 @@ var G = window.G || (window.G = {});
   var N = G.NPC_MORE || (G.NPC_MORE = {});
   N.ray = { name: 'Ray', av: { ao: 'uniform', mat: 'cool', toc: 'messy', mauToc: '#2a2220' }, role: 'Thu ngân siêu thị' };
   N.lee = { name: 'Ms. Lee', av: { ao: 'uniform', mat: 'calm', toc: 'long', mauToc: '#5b3a29' }, role: 'Dược sĩ' };
-  N.grant = { name: 'Mr. Grant', av: { ao: 'jacket', mat: 'calm', toc: 'sidepart', mauToc: '#8a5a3b' }, role: 'Nhân viên ngân hàng' };
-  N.ivy = { name: 'Ivy', av: { ao: 'sweater', mat: 'smile', toc: 'curly', mauToc: '#c8553d' }, role: 'Nhân viên bưu điện' };
+  N.grant = { img: 'npc_grant.png', name: 'Mr. Grant', av: { ao: 'jacket', mat: 'calm', toc: 'sidepart', mauToc: '#8a5a3b' }, role: 'Nhân viên ngân hàng' };
+  N.ivy = { img: 'npc_ivy.png', name: 'Ivy', av: { ao: 'sweater', mat: 'smile', toc: 'curly', mauToc: '#c8553d' }, role: 'Nhân viên bưu điện' };
   N.tony = { name: 'Tony', av: { ao: 'tech', mat: 'wink', toc: 'spiky', mauToc: '#2a2220' }, role: 'Thợ cắt tóc' };
-  N.max = { name: 'Coach Max', av: { ao: 'sport', mat: 'smile', toc: 'bowl', mauToc: '#c9893e' }, role: 'Huấn luyện viên phòng gym' };
+  N.max = { img: 'npc_max.png', name: 'Coach Max', av: { ao: 'sport', mat: 'smile', toc: 'bowl', mauToc: '#c9893e' }, role: 'Huấn luyện viên phòng gym' };
 
   var L = G.LIFE || (G.LIFE = {});
   L['en-super'] = {
@@ -300,6 +300,9 @@ var G = window.G || (window.G = {});
     'en-gym': { bg: 'interior_en_gym.png', teacher: { x: 600, y: 470 }, front: [480, 437, 240, 165], talk: { x: 600, y: 640 },
       walk: { x0: 170, y0: 610, x1: 1360, y1: 960 }, exit: { x: 766, y: 955 }, board: { x: 300, y: 770 },
       blocks: [[1200, 460, 1440, 780], [515, 860, 625, 1000], [910, 860, 1015, 1000]], wins: [['r', 317, 40, 870, 267]] },
+    'en-bank': { bg: 'interior_en_bank.png', teacher: { x: 773, y: 450 }, front: [600, 405, 346, 132], glass: [652, 285, 241, 122, 0.32], talk: { x: 773, y: 585 },
+      walk: { x0: 60, y0: 545, x1: 1470, y1: 900 }, exit: { x: 768, y: 890 }, board: { x: 1180, y: 690 },
+      blocks: [[100, 520, 190, 570], [0, 600, 150, 860], [1260, 520, 1460, 600], [1370, 600, 1480, 680]] },
     'en-super': { bg: 'interior_en_super.png', teacher: { x: 760, y: 470 }, front: [640, 440, 240, 175], talk: { x: 760, y: 650 },
       walk: { x0: 160, y0: 630, x1: 1370, y1: 885 }, exit: { x: 760, y: 878 }, board: { x: 1250, y: 690 } }
   };

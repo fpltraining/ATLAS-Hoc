@@ -168,8 +168,13 @@ var G = window.G || (window.G = {});
   /* quầy trước mặt người bán */
   G.drawRoomFront = function (c, sc) {
     if (sc.lay) {   // tiệm có ảnh: vẽ lại đúng mảng quầy trong ảnh đè lên người bán
-      var a = G.asset(sc.lay.bg), f = sc.lay.front;
-      if (a.ok) { var kx = a.img.naturalWidth / sc.w, ky = a.img.naturalHeight / sc.h; c.drawImage(a.img, f[0] * kx, f[1] * ky, f[2] * kx, f[3] * ky, f[0], f[1], f[2], f[3]); }
+      var a = G.asset(sc.lay.bg), f = sc.lay.front, gl = sc.lay.glass;
+      if (a.ok) {
+        var kx = a.img.naturalWidth / sc.w, ky = a.img.naturalHeight / sc.h;
+        // vách kính (ngân hàng): vẽ mờ để thấy người bên trong
+        if (gl) { c.save(); c.globalAlpha = gl[4]; c.drawImage(a.img, gl[0] * kx, gl[1] * ky, gl[2] * kx, gl[3] * ky, gl[0], gl[1], gl[2], gl[3]); c.restore(); }
+        c.drawImage(a.img, f[0] * kx, f[1] * ky, f[2] * kx, f[3] * ky, f[0], f[1], f[2], f[3]);
+      }
       return;
     }
     var R = sc.room, tx = sc.teacher.x, ty = sc.teacher.y, w = R.counterW || 420;

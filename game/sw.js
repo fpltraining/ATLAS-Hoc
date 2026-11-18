@@ -1,6 +1,6 @@
 /* Chạy offline: giữ toàn bộ code game, dữ liệu và mọi file trong assets/ đã có.
    Hình mới bỏ vào assets/ được tải ở lần mở kế tiếp có mạng. Tệp giọng đọc được giữ lại khi đã nghe một lần. */
-var VERSION = 'thegioi-v51';
+var VERSION = 'thegioi-v52';
 var CORE = [
   './', 'index.html', 'manifest.webmanifest', 'css/game.css',
   'js/util.js', 'js/save.js', 'js/assets.js', 'js/audio.js', 'js/speak.js', 'js/world.js', 'js/engine.js', 'js/rooms.js', 'js/lesson.js', 'js/lobby.js', 'js/main.js', 'js/avatar.js', 'js/create.js', 'js/ride.js', 'js/grad.js', 'js/flight.js', 'data/zh_hsk1.js', 'js/life.js', 'js/daily.js', 'js/rank.js', 'js/practice.js', 'data/practice_en.js', 'data/life.js', 'data/life_morning.js', 'data/life_school.js', 'data/life_after.js',
