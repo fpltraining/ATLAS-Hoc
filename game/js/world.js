@@ -18,6 +18,9 @@ G.NPCS = {
   principal_li: { name: '李校长 Hiệu trưởng Lý', img: 'npc_principal_li.png', role: 'Phòng thi cuối cấp HSK1' }
 };
 
+/* nhân vật thêm từ các file dữ liệu khác (vd. data/life_morning.js) */
+if (G.NPC_MORE) for (var nk in G.NPC_MORE) if (G.NPC_MORE.hasOwnProperty(nk)) G.NPCS[nk] = G.NPC_MORE[nk];
+
 /* Các phòng trong hành lang Trường Anh ngữ (5 cửa dọc tường trên) */
 G.EN_HALL_DOORS = [
   { room: 'en-a1-1', label: 'A1-1', x: 172 },

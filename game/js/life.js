@@ -14,7 +14,8 @@ var G = window.G || (window.G = {});
   function speak(t) { return G.sayBtns(t, L.lang); }
   function npcLine(text, vi) {
     var n = npc(), pic = G.el('div.tpic');
-    pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));
+    if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));   // nhân vật ghép từ lớp hình
+    else pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));
     return G.el('div.tline', pic, G.el('div.tbubble', G.el('b', n.name), G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null, speak(text)));
   }
   function meLine(text, sc) {
@@ -55,7 +56,7 @@ var G = window.G || (window.G = {});
       return G.el('button.big' + (done ? '.done' : ''), { onclick: function () { talk(i); } },
         G.el('b', (done ? '✓ ' : (i + 1) + ' · ') + t.title), G.el('span', t.turns.length + ' lượt nói' + (done ? ' · đã xong, làm lại +5 XP' : ' · +20 XP')));
     })));
-    body.appendChild(G.el('div.souv-row', G.imgEl(L.souvenir.img, 'souv-img'),
+    if (L.souvenir) body.appendChild(G.el('div.souv-row', G.imgEl(L.souvenir.img, 'souv-img'),
       G.el('div', G.el('b', 'Đồ kỷ niệm: ' + L.souvenir.name), G.el('div.small.faint', st.kyNiem ? 'Đã nhận, bày ở Ngôi nhà chung.' : 'Xong cả 3 tình huống để nhận (' + n + '/3).'))));
   }
 
@@ -101,7 +102,8 @@ var G = window.G || (window.G = {});
     G.markTask('noi');
     G.addXp(first ? 20 : 5); G.updateHud(); G.sfx('done');
     var all = true; for (var i = 0; i < L.talks.length; i++) if (!st.xong[i]) all = false;
-    var gift = all && !st.kyNiem;
+    var gift = all && !st.kyNiem && !!L.souvenir;
+    if (L.morning) { var td = G.today(); td.sang = td.sang || {}; td.sang[id] = G.vnNow().slice(11, 16); }
     if (gift) st.kyNiem = G.vnNow();
     G.save();
     var avg = null;
@@ -121,7 +123,7 @@ var G = window.G || (window.G = {});
   /* đồ kỷ niệm đã nhận, cho Ngôi nhà chung */
   G.souvenirs = function () {
     var out = [];
-    for (var k in G.LIFE) if (G.LIFE.hasOwnProperty(k)) out.push({ id: k, place: G.LIFE[k].title, item: G.LIFE[k].souvenir, got: !!(G.S.doiSong[k] && G.S.doiSong[k].kyNiem) });
+    for (var k in G.LIFE) if (G.LIFE.hasOwnProperty(k) && G.LIFE[k].souvenir) out.push({ id: k, place: G.LIFE[k].title, item: G.LIFE[k].souvenir, got: !!(G.S.doiSong[k] && G.S.doiSong[k].kyNiem) });
     return out;
   };
 })();

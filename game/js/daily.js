@@ -109,7 +109,10 @@ var G = window.G || (window.G = {});
   G.openHome = function () {
     var body = panelOpen('🏠 Nhà của bạn');
     var d = today(), n = G.S.tuKho.length;
+    var momDone = !!(d.sang && d.sang['en-home']);
     body.appendChild(G.el('div.menu3',
+      G.LIFE['en-home'] ? G.el('button.big' + (momDone ? '.done' : '.seal'), { onclick: function () { G.openLife('en-home'); } },
+        G.el('b', (momDone ? '✓ ' : '') + '👩 Nói chuyện với mẹ'), G.el('span', 'Buổi sáng ở nhà: thức dậy, ăn sáng, chuẩn bị đi học')) : null,
       G.el('button.big' + (d.viec.doc ? '.done' : ''), { onclick: G.openReader }, G.el('b', (d.viec.doc ? '✓ ' : '') + '📖 Đọc truyện'), G.el('span', 'Truyện song ngữ theo cấp, bấm câu để xem nghĩa, nghe giọng đọc')),
       G.el('button.big' + (d.viec.on ? '.done' : ''), { onclick: G.openReview }, G.el('b', (d.viec.on ? '✓ ' : '') + '🔁 Ôn từ khó'), G.el('span', n ? n + ' từ đang chờ ôn' : 'Chưa có từ sai nào. Ôn lại từ đã học')),
       G.el('button.big', { onclick: G.openToday }, G.el('b', '📋 Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/4 việc · ' + G.dayProgress().mins + ' phút'))));

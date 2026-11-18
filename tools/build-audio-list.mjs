@@ -81,8 +81,8 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
 {
   const vm = await import('node:vm');
   const ctx = { console }; ctx.window = ctx; ctx.G = {}; vm.createContext(ctx);
-  for (const f of ['game/data/en_a1.js', 'game/data/life.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
-  const FEM = { emma: 1, lily: 1, rosa: 1, anna: 1 };
+  for (const f of ['game/data/en_a1.js', 'game/data/life.js', 'game/data/life_morning.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
+  const FEM = { emma: 1, lily: 1, rosa: 1, anna: 1, mom: 1, mia: 1, nora: 1 };
   for (const R of Object.values(ctx.G.ROOMS)) {
     if (R.lang !== 'en') continue;
     const sx = FEM[R.teacher] ? 'f' : 'm';
