@@ -5,11 +5,11 @@ var G = window.G || (window.G = {});
 
 (function () {
   var N = G.NPC_MORE || (G.NPC_MORE = {});
-  N.ray = { name: 'Ray', av: { ao: 'uniform', mat: 'cool', toc: 'messy', mauToc: '#2a2220' }, role: 'Thu ngân siêu thị' };
-  N.lee = { name: 'Ms. Lee', av: { ao: 'uniform', mat: 'calm', toc: 'long', mauToc: '#5b3a29' }, role: 'Dược sĩ' };
+  N.ray = { img: 'npc_ray.png', name: 'Ray', av: { ao: 'uniform', mat: 'cool', toc: 'messy', mauToc: '#2a2220' }, role: 'Thu ngân siêu thị' };
+  N.lee = { img: 'npc_lee.png', name: 'Ms. Lee', av: { ao: 'uniform', mat: 'calm', toc: 'long', mauToc: '#5b3a29' }, role: 'Dược sĩ' };
   N.grant = { img: 'npc_grant.png', name: 'Mr. Grant', av: { ao: 'jacket', mat: 'calm', toc: 'sidepart', mauToc: '#8a5a3b' }, role: 'Nhân viên ngân hàng' };
   N.ivy = { img: 'npc_ivy.png', name: 'Ivy', av: { ao: 'sweater', mat: 'smile', toc: 'curly', mauToc: '#c8553d' }, role: 'Nhân viên bưu điện' };
-  N.tony = { name: 'Tony', av: { ao: 'tech', mat: 'wink', toc: 'spiky', mauToc: '#2a2220' }, role: 'Thợ cắt tóc' };
+  N.tony = { img: 'npc_tony.png', name: 'Tony', av: { ao: 'tech', mat: 'wink', toc: 'spiky', mauToc: '#2a2220' }, role: 'Thợ cắt tóc' };
   N.max = { img: 'npc_max.png', name: 'Coach Max', av: { ao: 'sport', mat: 'smile', toc: 'bowl', mauToc: '#c9893e' }, role: 'Huấn luyện viên phòng gym' };
 
   var L = G.LIFE || (G.LIFE = {});

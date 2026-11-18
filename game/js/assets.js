@@ -20,7 +20,8 @@ G.ASSET_LIST = [
   /* ảnh ChatGPT: người trong đời sống, toà nhà và nội thất các tiệm */
   'npc_mom.png', 'npc_mom_talk.png', 'npc_mia.png', 'npc_mia_talk.png', 'npc_ben.png', 'npc_ben_talk.png', 'npc_carlos.png', 'npc_carlos_talk.png', 'npc_dan.png', 'npc_dan_talk.png',
   'npc_owen.png', 'npc_owen_talk.png', 'npc_jake.png', 'npc_jake_talk.png', 'npc_ivy.png', 'npc_ivy_talk.png', 'npc_grant.png', 'npc_grant_talk.png',
-  'npc_kim.png', 'npc_kim_talk.png', 'npc_max.png', 'npc_max_talk.png', 'npc_pat.png', 'npc_pat_talk.png', 'npc_nora.png', 'npc_nora_talk.png', 'interior_en_bank.png',
+  'npc_kim.png', 'npc_kim_talk.png', 'npc_max.png', 'npc_max_talk.png', 'npc_pat.png', 'npc_pat_talk.png', 'npc_nora.png', 'npc_nora_talk.png',
+  'npc_zoe.png', 'npc_zoe_talk.png', 'npc_lee.png', 'npc_lee_talk.png', 'npc_ray.png', 'npc_ray_talk.png', 'npc_tony.png', 'npc_tony_talk.png', 'interior_en_bank.png',
   'building_en_bank.png', 'building_en_gym.png', 'building_en_pharmacy.png', 'building_en_barber.png', 'building_en_post.png',
   'interior_en_barber.png', 'interior_en_post.png', 'interior_en_pharmacy.png', 'interior_en_gym.png', 'interior_en_super.png',
   'souvenir_tea.png', 'souvenir_coffee.png', 'souvenir_apples.png', 'souvenir_ticket.png', 'souvenir_medkit.png',
