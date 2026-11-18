@@ -18,6 +18,16 @@ G.ASSET_LIST = [
   'npc_leo.png', 'npc_xiaolin.png', 'npc_rosa.png', 'npc_wangdama.png', 'npc_grace.png', 'npc_zhou.png', 'npc_anna.png', 'npc_sun.png',
   'door_locked.png', 'door_open.png', 'door_lock.png', 'npc_tom_talk.png', 'npc_lily_talk.png', 'npc_sam_talk.png', 'plane.png', 'prop_oak.png', 'prop_palm.png', 'prop_lamp.png', 'prop_bench.png', 'prop_car.png', 'prop_mailbox.png', 'prop_flowers.png', 'prop_drone.png', 'logo_banner.png', 'logo_icon.png', 'flight_bg.png', 'npc_zhou_talk.png', 'npc_grace_talk.png', 'npc_li_talk.png', 'npc_zhang_talk.png', 'npc_chen_talk.png', 'diploma_en.png', 'diploma_zh.png',
   'souvenir_tea.png', 'souvenir_coffee.png', 'souvenir_apples.png', 'souvenir_ticket.png', 'souvenir_medkit.png',
+  /* lớp hình nhân vật ghép (người đi đường, mẹ, hàng xóm…): lưu sẵn để không mất hình khi mạng chập chờn */
+  'body_hoodie_down.png', 'body_hoodie_left.png', 'body_hoodie_up.png', 'body_jacket_down.png', 'body_jacket_left.png', 'body_jacket_up.png',
+  'body_sport_down.png', 'body_sport_left.png', 'body_sport_up.png', 'body_sweater_down.png', 'body_sweater_left.png', 'body_sweater_up.png',
+  'body_tech_down.png', 'body_tech_left.png', 'body_tech_up.png', 'body_uniform_down.png', 'body_uniform_left.png', 'body_uniform_up.png',
+  'face_calm_down.png', 'face_calm_left.png', 'face_cool_down.png', 'face_cool_left.png', 'face_gentle_down.png', 'face_gentle_left.png',
+  'face_smile_down.png', 'face_smile_left.png', 'face_sparkle_down.png', 'face_sparkle_left.png', 'face_wink_down.png', 'face_wink_left.png',
+  'hair_bowl_down.png', 'hair_bowl_left.png', 'hair_bowl_up.png', 'hair_bun_down.png', 'hair_bun_left.png', 'hair_bun_up.png',
+  'hair_curly_down.png', 'hair_curly_left.png', 'hair_curly_up.png', 'hair_long_down.png', 'hair_long_left.png', 'hair_long_up.png',
+  'hair_messy_down.png', 'hair_messy_left.png', 'hair_messy_up.png', 'hair_ponytail_down.png', 'hair_ponytail_left.png', 'hair_ponytail_up.png',
+  'hair_sidepart_down.png', 'hair_sidepart_left.png', 'hair_sidepart_up.png', 'hair_spiky_down.png', 'hair_spiky_left.png', 'hair_spiky_up.png',
   'rank_1.webp', 'rank_2.webp', 'rank_3.webp', 'rank_4.webp', 'rank_5.webp', 'rank_6.webp', 'rank_7.webp', 'rank_8.webp', 'rank_9.webp',
   'badge_1.webp', 'badge_2.webp', 'badge_3.webp', 'badge_4.webp', 'badge_5.webp', 'badge_6.webp', 'badge_7.webp', 'badge_8.webp', 'badge_9.webp', 'badge_10.webp', 'badge_11.webp', 'badge_12.webp',
   'ic_mic.png', 'ic_mic_ok.png', 'ic_speak.png', 'ic_lips.png',
@@ -38,7 +48,11 @@ G.ASSET_LIST = [
     if (cache[name]) return cache[name];
     var a = { name: name, ok: false, img: new Image(), tried: false };
     a.img.onload = function () { a.ok = true; };
-    a.img.onerror = function () { a.ok = false; a.tried = true; };
+    // lỗi tải (mạng chập chờn): thử lại tối đa 4 lần, mỗi lần chờ lâu hơn
+    a.img.onerror = function () {
+      a.ok = false; a.tried = true; a.fail = (a.fail || 0) + 1;
+      if (a.fail <= 4) setTimeout(function () { a.img.src = 'assets/' + name + '?r=' + a.fail; }, 1500 * a.fail);
+    };
     a.img.src = 'assets/' + name;
     cache[name] = a;
     return a;
@@ -53,7 +67,8 @@ G.ASSET_LIST = [
       } else ctx.drawImage(a.img, x, y, w, h);
       return true;
     }
-    G.drawPlaceholder(ctx, name, x, y, w, h);
+    // ảnh nhân vật / đồ vật chưa tải xong: không vẽ ô xám có tên file
+    if (!/^(body|hair|face|npc|player|kai|prop|souvenir|rank|badge|ic)_/.test(name)) G.drawPlaceholder(ctx, name, x, y, w, h);
     return false;
   };
 
