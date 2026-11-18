@@ -70,6 +70,11 @@ var G = window.G || (window.G = {});
   var lastLabel = null, busy = false;
   G.checkAchievements = function () {
     if (!G.S || busy) return;
+    // đang học / nói chuyện / đi xe: chờ xong rồi mới ăn mừng, không chen ngang
+    var pn = document.getElementById('panel'), ride = document.getElementById('ride');
+    if ((pn && /open/.test(pn.className)) || (ride && ride.style.display !== 'none' && ride.parentNode && ride.innerHTML) || document.querySelector('.modal')) {
+      clearTimeout(G._achWait); G._achWait = setTimeout(G.checkAchievements, 2500); return;
+    }
     busy = true;
     try {
       G.S.huyHieu = G.S.huyHieu || {};
