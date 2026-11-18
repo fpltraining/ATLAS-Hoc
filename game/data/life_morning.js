@@ -12,7 +12,7 @@ var G = window.G || (window.G = {});
   N.mia = { img: 'npc_mia.png', name: 'Mia', av: { ao: 'uniform', mat: 'smile', toc: 'ponytail', mauToc: '#c9893e' }, role: 'Chủ xe bánh Sunny' };
   N.carlos = { img: 'npc_carlos.png', name: 'Carlos', av: { ao: 'tech', mat: 'sparkle', toc: 'curly', mauToc: '#2a2220' }, role: 'Du khách' };
   N.dan = { img: 'npc_dan.png', name: 'Officer Dan', av: { ao: 'sport', mat: 'cool', toc: 'spiky', mauToc: '#8a5a3b' }, role: 'Chú bảo vệ qua đường' };
-  N.nora = { name: 'Ms. Nora', av: { ao: 'sweater', mat: 'calm', toc: 'long', mauToc: '#2a2220' }, role: 'Bàn tiếp đón ở cổng trường' };
+  N.nora = { img: 'npc_nora.png', name: 'Ms. Nora', av: { ao: 'sweater', mat: 'calm', toc: 'long', mauToc: '#2a2220' }, role: 'Bàn tiếp đón ở cổng trường' };
 
   var L = G.LIFE || (G.LIFE = {});
   L['en-home'] = {
