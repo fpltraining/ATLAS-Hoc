@@ -87,6 +87,7 @@ var G = window.G || (window.G = {});
   /* ---------- 1. Học: thẻ từ ---------- */
   function learn(i) {
     var it = R.items[i];
+    if (G.srsAdd && lang === 'en') G.srsAdd({ t: 'item', en: it.en, vi: it.vi });
     if (i > st().the) keep('the', i);
     if (i === R.items.length - 1 && !st().hocXong) keep('hocXong', G.vnNow());
     body.innerHTML = '';
