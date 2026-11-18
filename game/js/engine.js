@@ -44,7 +44,7 @@ var G = window.G || (window.G = {});
     target = null; pending = null; path = []; fade = 1;
     G.S.viTri = { canh: id, x: Math.round(P.x), y: Math.round(P.y) };
     G.save();
-    camSnap = true; spawnTown(); fx = [];
+    camSnap = true; spawnTown(); fx = []; hudT = 0; weatherHint();
     document.getElementById('hud-title').textContent = scene.title;
     if (!running) { running = true; last = 0; requestAnimationFrame(loop); }
   };
@@ -430,6 +430,7 @@ var G = window.G || (window.G = {});
 
   /* ================= Thế giới sống: người đi đường, hiệu ứng ================= */
   var camSnap = true, town = [], fx = [], dustT = 0, birdT = 4, leafT = 0;
+  var RAIN_LINES = [['Ugh, it\'s pouring!', 'Trời ơi, mưa như trút!'], ['Did you bring an umbrella?', 'Bạn có mang ô không?'], ['I\'m soaked!', 'Mình ướt sũng rồi!'], ['It\'s raining again.', 'Lại mưa nữa rồi.']];
   var LINES = [
     ['Morning!', 'Chào buổi sáng!'], ['Nice day, huh?', 'Trời đẹp nhỉ?'], ['Hey, how\'s it going?', 'Chào, dạo này sao rồi?'],
     ['Love your outfit!', 'Đồ bạn mặc đẹp ghê!'], ['Oops, sorry!', 'Ối, xin lỗi nha!'], ['Have a good one!', 'Chúc một ngày vui!'],
@@ -462,11 +463,11 @@ var G = window.G || (window.G = {});
       p.talkCd -= dt;
       // đứng gần người chơi thì thỉnh thoảng chào (chỉ hiện chữ, bấm vào mới đọc to)
       var dx = P.x - p.x, dy = P.y - p.y;
-      if (p.talkCd <= 0 && dx * dx + dy * dy < 170 * 170) { p.say = LINES[Math.floor(Math.random() * LINES.length)]; p.sayT = 3; p.talkCd = 18 + Math.random() * 15; p.wait = 1.5; p.dir = Math.abs(dx) > Math.abs(dy) ? (dx < 0 ? 'left' : 'right') : (dy < 0 ? 'up' : 'down'); }
+      if (p.talkCd <= 0 && dx * dx + dy * dy < 170 * 170) { var LL = raining() && Math.random() < 0.6 ? RAIN_LINES : LINES; p.say = LL[Math.floor(Math.random() * LL.length)]; p.sayT = 3; p.talkCd = 18 + Math.random() * 15; p.wait = 1.5; p.dir = Math.abs(dx) > Math.abs(dy) ? (dx < 0 ? 'left' : 'right') : (dy < 0 ? 'up' : 'down'); }
       if (p.wait > 0) { p.wait -= dt; p.moving = false; continue; }
       var mx = p.tx - p.x, my = p.ty - p.y, d = Math.sqrt(mx * mx + my * my);
-      if (d < 6) { p.wait = 1 + Math.random() * 3; var tg = freeSpot(); p.tx = tg.x; p.ty = tg.y; p.moving = false; continue; }
-      var st = Math.min(d, p.sp * dt), nx = p.x + mx / d * st, ny = p.y + my / d * st;
+      if (d < 6) { p.wait = raining() ? 4 + Math.random() * 6 : 1 + Math.random() * 3; /* mưa: hay đứng lại che ô */ var tg = freeSpot(); p.tx = tg.x; p.ty = tg.y; p.moving = false; continue; }
+      var st = Math.min(d, p.sp * (raining() ? 0.7 : 1) * dt), nx = p.x + mx / d * st, ny = p.y + my / d * st;
       if (blocked(nx, ny)) { var t2 = freeSpot(); p.tx = t2.x; p.ty = t2.y; p.wait = 0.5; p.moving = false; continue; }
       p.x = nx; p.y = ny; p.moving = true; p.t += dt;
       p.dir = Math.abs(mx) > Math.abs(my) ? (mx < 0 ? 'left' : 'right') : (my < 0 ? 'up' : 'down');
@@ -483,6 +484,7 @@ var G = window.G || (window.G = {});
   function drawTownie(p) {
     shadow(p.x, p.y, 20);
     G.drawAvatar(ctx, p.av, p.x, p.y + 4, 100, p.dir, p.t * 9, p.moving);
+    if (raining()) { if (p.uc === undefined) p.uc = Math.floor(Math.random() * 6); umbrella(p.x + 10, p.y - 96, p.uc, p.moving ? Math.sin(p.t * 9) * 0.04 : 0); }
     if (p.sayT > 0 && p.say) bubble(p.x, p.y - 108, p.say[0], Math.min(1, p.sayT * 2));
   }
   function bubble(x, y, text, a) {
@@ -526,6 +528,90 @@ var G = window.G || (window.G = {});
     }
   }
   /* lá rơi, chim bay và bóng mây trôi (vẽ trên cùng, theo camera) */
+  /* ---------- thời tiết và buổi trong ngày (theo giờ Việt Nam) ----------
+     Mỗi khung 3 giờ có thời tiết riêng, cố định trong khung đó: nắng / nhiều mây / mưa (khoảng 1/5 số khung).
+     G.debugWeather('rain' | 'cloudy' | 'clear' | null) để xem thử. */
+  var WX_FORCE = null, HOUR_FORCE = null;
+  G.debugWeather = function (w, h) { WX_FORCE = w; HOUR_FORCE = h === undefined ? null : h; };
+  function hourNow() { return HOUR_FORCE !== null ? HOUR_FORCE : G.vnParts().h; }
+  G.weather = function () {
+    if (WX_FORCE) return WX_FORCE;
+    var p = G.vnParts(), seed = p.y * 1000 + p.m * 37 + p.d * 101 + Math.floor(p.h / 3) * 13;
+    var r = Math.abs(Math.sin(seed * 12.9898) * 43758.5453) % 1;
+    return r < 0.2 ? 'rain' : r < 0.45 ? 'cloudy' : 'clear';
+  };
+  G.dayPart = function () {
+    var h = hourNow();
+    return h >= 5 && h < 10 ? 'sang' : h >= 10 && h < 14 ? 'trua' : h >= 14 && h < 17 ? 'chieu' : h >= 17 && h < 19 ? 'hoanghon' : 'toi';
+  };
+  var PART_NAME = { sang: '🌅 Sáng', trua: '☀️ Trưa', chieu: '🌤 Chiều', hoanghon: '🌇 Hoàng hôn', toi: '🌙 Tối' };
+  function raining() { return scene && scene.kind === 'city' && G.weather() === 'rain'; }
+  /* chiếc ô vẽ bằng code: x giữa, y = đỉnh đầu người cầm */
+  var UCOL = ['#c8553d', '#2f7a63', '#4a68d8', '#e0a43a', '#b46fc0', '#1b2140'];
+  function umbrella(x, y, ci, sway) {
+    var col = UCOL[ci % UCOL.length], R = 46, cy = y - 22;
+    ctx.save(); ctx.translate(x, cy + 40); ctx.rotate(sway || 0); ctx.translate(-x, -(cy + 40));
+    ctx.strokeStyle = '#3a2418'; ctx.lineWidth = 3;
+    ctx.beginPath(); ctx.moveTo(x, cy); ctx.lineTo(x, cy + 52); ctx.stroke();                 // cán ô
+    ctx.beginPath(); ctx.arc(x + 5, cy + 52, 5, 0, Math.PI); ctx.stroke();                    // tay cầm cong
+    ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(x - R, cy);                              // tán ô có viền sóng
+    ctx.quadraticCurveTo(x, cy - R * 0.95, x + R, cy);
+    for (var i = 3; i >= 0; i--) { var a = x - R + (i + 0.5) * (2 * R / 4); ctx.quadraticCurveTo(a + R / 4, cy - 9, a - R / 4 + R / 4 - R / 4, cy); }
+    ctx.closePath(); ctx.fill(); ctx.lineWidth = 3; ctx.stroke();
+    ctx.strokeStyle = 'rgba(255,255,255,.45)'; ctx.lineWidth = 2;
+    ctx.beginPath(); ctx.moveTo(x, cy - R * 0.47); ctx.lineTo(x - R * 0.5, cy - 2); ctx.moveTo(x, cy - R * 0.47); ctx.lineTo(x + R * 0.5, cy - 2); ctx.stroke();
+    ctx.fillStyle = '#3a2418'; ctx.beginPath(); ctx.arc(x, cy - R * 0.48, 3, 0, 6.283); ctx.fill();
+    ctx.restore();
+  }
+  G._umbrella = function (x, y, ci, sway) { umbrella(x, y, ci, sway); };
+  /* mưa: hạt mưa rơi theo màn hình + vũng nước bắn tung toé trên mặt đất */
+  var drops = [], splash = [], rainLast = 0;
+  function drawRain() {
+    var now = Date.now(), dt = rainLast ? Math.min(0.05, (now - rainLast) / 1000) : 0; rainLast = now;
+    var want = Math.round(W * H / 5200);
+    while (drops.length < want) drops.push({ x: Math.random() * (W + 200) - 100, y: Math.random() * H, v: 700 + Math.random() * 400, l: 10 + Math.random() * 12 });
+    ctx.save();
+    ctx.fillStyle = 'rgba(40,52,84,.20)'; ctx.fillRect(0, 0, W, H);
+    ctx.strokeStyle = 'rgba(210,225,255,.55)'; ctx.lineWidth = 1.4; ctx.beginPath();
+    for (var i = 0; i < drops.length; i++) {
+      var d = drops[i]; d.y += d.v * dt; d.x -= d.v * dt * 0.18;
+      if (d.y > H) { if (Math.random() < 0.25) splash.push({ x: d.x, y: H * (0.25 + Math.random() * 0.75), t: 0 }); d.y = -20; d.x = Math.random() * (W + 200) - 100; }
+      ctx.moveTo(d.x, d.y); ctx.lineTo(d.x + d.l * 0.18, d.y - d.l);
+    }
+    ctx.stroke();
+    ctx.strokeStyle = 'rgba(220,235,255,.6)'; ctx.lineWidth = 1.2;
+    for (var j = splash.length - 1; j >= 0; j--) {
+      var s0 = splash[j]; s0.t += dt; if (s0.t > 0.35) { splash.splice(j, 1); continue; }
+      ctx.globalAlpha = 1 - s0.t / 0.35; ctx.beginPath(); ctx.ellipse(s0.x, s0.y, 3 + s0.t * 26, 1 + s0.t * 8, 0, 0, 6.283); ctx.stroke();
+    }
+    ctx.restore();
+  }
+  /* ánh sáng theo buổi: sáng hồng nhạt, trưa sáng gắt, chiều vàng, hoàng hôn cam tím */
+  function drawDayTint() {
+    var part = G.dayPart(), wx = G.weather(), c = null;
+    if (part === 'sang') c = ['rgba(255,196,160,.16)', 'rgba(255,230,200,0)'];
+    else if (part === 'trua') c = ['rgba(255,252,225,.10)', 'rgba(255,252,225,.04)'];
+    else if (part === 'chieu') c = ['rgba(255,190,100,.14)', 'rgba(255,170,80,.06)'];
+    else if (part === 'hoanghon') c = ['rgba(240,120,110,.26)', 'rgba(120,80,160,.18)'];
+    if (c) { var g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, c[0]); g.addColorStop(1, c[1]); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H); }
+    if (wx === 'cloudy') { ctx.fillStyle = 'rgba(90,100,120,.10)'; ctx.fillRect(0, 0, W, H); }
+  }
+  var wxSaid = '';
+  function weatherHint() {
+    if (scene.kind !== 'city') return;
+    var key = G.vnDay() + G.weather() + Math.floor(G.vnParts().h / 3);
+    if (wxSaid === key) return; wxSaid = key;
+    var w = G.weather();
+    if (w === 'rain') setTimeout(function () { G.kaiSay('🌧 Trời mưa rồi! Người ta hay nói: "It\'s raining." · "Don\'t forget your umbrella!" (Đừng quên mang ô!)'); }, 1800);
+  }
+  var hudT = 0;
+  function hudWeather() {
+    if (Date.now() - hudT < 4000) return; hudT = Date.now();
+    var el = document.getElementById('hud-title'); if (!el) return;
+    var w = G.weather(), ic = scene.kind === 'city' ? (w === 'rain' ? ' · 🌧 Mưa' : w === 'cloudy' ? ' · ☁️ Nhiều mây' : '') : '';
+    el.textContent = scene.title + (scene.kind === 'city' ? ' · ' + PART_NAME[G.dayPart()] + ic : '');
+  }
+
   function drawSky() {
     if (scene.kind !== 'city') return;
     ctx.save();
@@ -580,7 +666,7 @@ var G = window.G || (window.G = {});
     for (var j = 0; j < items.length; j++) items[j].draw(items[j].o);
     if (scene.buildings) for (var bl = 0; bl < scene.buildings.length; bl++) drawBuildingLabel(scene.buildings[bl]);
     // huy hiệu rank lơ lửng trên đầu nhân vật
-    if (G.drawRankBadge) G.drawRankBadge(ctx, P.x, P.y - 104, P.moving, Date.now() / 1000);
+    if (G.drawRankBadge) G.drawRankBadge(ctx, P.x, P.y - (raining() ? 170 : 104), P.moving, Date.now() / 1000);   // trời mưa: huy hiệu nằm trên chiếc ô
 
     if (scene.kind === 'hall') drawDoorPlates();
     updateQuest();
@@ -588,9 +674,11 @@ var G = window.G || (window.G = {});
 
     // ngày và đêm theo giờ Việt Nam
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    var hr = G.vnParts().h;
+    var hr = hourNow();
     var night = scene.kind === 'city' ? (hr >= 19 || hr < 5 ? 0.42 : hr >= 18 ? 0.22 : hr < 6 ? 0.22 : 0) : 0;
     drawSky();
+    if (scene.kind === 'city') { drawDayTint(); if (raining()) drawRain(); }
+    hudWeather();
     if (night) {
       // ban đêm: trời tối, quanh nhân vật có quầng sáng như đèn đường
       var px = (P.x - cam.x) * zoom, py = (P.y - 50 - cam.y) * zoom;
@@ -678,6 +766,7 @@ var G = window.G || (window.G = {});
     var py = o.stall ? o.y - 40 : o.y;   // người bán đứng sau quầy
     shadow(o.x, py, 20);
     G.drawAvatar(ctx, n.av, o.x, py + 4, 104, dir, 0, false);
+    if (raining() && !o.stall) umbrella(o.x + 10, py - 100, (o.x >> 3) % 6, 0);
     if (o.stall) { drawStallFront(o); py = o.y + 6; }   // tên người bán nằm dưới quầy
     // bong bóng 💬 nhấp nhô khi hôm nay chưa nói chuyện
     if (!talkedToday(o.life)) {
@@ -716,12 +805,14 @@ var G = window.G || (window.G = {});
       var kb = P.moving ? Math.abs(Math.sin(P.t * 14)) * 6 : Math.sin(Date.now() / 300) * 2;
       shadow(P.x, P.y, 22 * sh);
       G.drawAsset(ctx, kn, P.x - 52, P.y - 100 - kb, 104, 104, kf);
+      if (raining()) umbrella(P.x + 14, P.y - 104 - kb, 3, 0);
       return;
     }
     var dir = P.dir === 'right' ? 'left' : P.dir, flip = P.dir === 'right';
     var name = 'player_' + who + '_' + dir + '.png';
     shadow(P.x, P.y, 26 * sh);
     G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, 0.72, G.ARMS[name]);
+    if (raining()) umbrella(P.x + (P.dir === 'left' ? -12 : 12), P.y - 112, 0, P.moving ? Math.sin(P.t * 14) * 0.05 : 0);
   }
   function drawKai() {
     var bob = Math.sin(Date.now() / 260) * 4, dir = K.dir || 'down';

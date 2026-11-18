@@ -33,7 +33,10 @@ var G = window.G || (window.G = {});
     cur = r;
     function end(err, alts) {
       if (done) return; done = true; clearTimeout(dog);
-      setTimeout(function () { if (G.audioReset) G.audioReset(); }, 300);
+      // tắt hẳn micro (iPad giữ micro → loa chuyển sang chế độ gọi, giọng đọc nhỏ đi)
+      r.onresult = r.onerror = r.onend = null;
+      try { r.abort(); } catch (eA) { /* bỏ qua */ }
+      setTimeout(function () { if (G.audioReset) G.audioReset(); }, 400);
       if (cur === r) cur = null;
       cb(err, alts);
     }
@@ -41,7 +44,10 @@ var G = window.G || (window.G = {});
     r.interimResults = true; r.maxAlternatives = 5; r.continuous = false;
     r.onresult = function (e) {
       var res = e.results[e.results.length - 1];
-      if (res.isFinal) { finals = []; for (var i = 0; i < res.length; i++) if (res[i].transcript) finals.push(res[i].transcript); }
+      if (res.isFinal) {
+        finals = []; for (var i = 0; i < res.length; i++) if (res[i].transcript) finals.push(res[i].transcript);
+        if (finals.length) { end(null, finals); return; }   // có kết quả là dừng micro ngay
+      }
       else { interim = res[0].transcript; if (onInterim) onInterim(interim); }
     };
     r.onerror = function (e) {
