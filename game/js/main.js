@@ -37,7 +37,6 @@ var G = window.G || (window.G = {});
     if (G.S.dauVao || G._placementOpen) { if (after) after(); return; }
     G.openPlacement(after, { mandatory: true });
   }
-  G.mustTest = mustTest;
 
   G.goLobby = function () {
     G.stopEngine();

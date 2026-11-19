@@ -35,12 +35,6 @@ var G = window.G || (window.G = {});
 
   G.ASSET_LIST = G.ASSET_LIST.concat(G.avatarFiles());
 
-  G.randomAvatar = function () {
-    var A = G.AV;
-    function r(a) { return a[Math.floor(Math.random() * a.length)]; }
-    return { ao: r(A.ao).id, mat: r(A.mat).id, toc: r(A.toc).id, mauToc: r(A.mauToc) };
-  };
-
   /* tóc: tô màu đã chọn lên hình tóc xám (giữ nét viền tối), nhớ kết quả */
   var tinted = {};
   function hairTinted(name, col) {
