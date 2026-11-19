@@ -149,7 +149,7 @@ var G = window.G || (window.G = {});
         if (after) after(what);
       });
     }
-    wrap = G.el('div.modal', G.el('div.choose.story.cl-box',
+    wrap = G.el('div.modal.cl-wrap', G.el('div.choose.story.cl-box',
       G.el('h2', '☁️ Lưu tiến độ trên mây'),
       G.el('p.small', 'Đăng nhập một lần, app tự lưu sau mỗi bài. Đổi sang iPad, iPhone khác chỉ cần đăng nhập là học tiếp, không cần sao lưu.'),
       em, pw, msg,

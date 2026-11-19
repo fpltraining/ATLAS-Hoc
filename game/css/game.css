@@ -574,3 +574,4 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .big.cur { border-color: var(--jade); background: var(--jade-soft); }
 .wipa { color: var(--faint); font-size: 15px; }
 .back-ses { min-height: 36px; padding: 6px 12px; font-size: 14px; margin-bottom: 10px; }
+.cl-wrap { z-index: 58; }   /* khung đăng nhập mây nằm trên màn kiểm tra đầu vào (55), dưới thông báo (60) */
