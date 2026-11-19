@@ -11,7 +11,7 @@ G.ASSET_LIST = [
   'map_home_en_p.png', 'map_street_en.png',
   /* kiểu mô hình giấy: Khu phố Maple, Trung tâm, Phố mua sắm */
   'pc_airport.png', 'pc_school.png', 'pc_hospital.png', 'pc_market.png', 'pc_cafe.png', 'pc_fountain.png', 'pc_kiosk.png',
-  'pc_post.png', 'pc_bank.png', 'pc_pharmacy.png', 'pc_barber.png', 'pc_super.png',
+  'pc_canteen.png', 'pc_post.png', 'pc_bank.png', 'pc_pharmacy.png', 'pc_barber.png', 'pc_super.png',
   'pc_home.png', 'pc_busstop.png', 'pc_metro.png', 'pc_gym.png', 'pc_cart.png', 'pc_tree_orange.png', 'pc_tree_green.png', 'pc_tree_pine.png', 'pc_tree_birch.png', 'pc_tree_maple.png', 'pc_tree_small.png',
   'pc_bush_orange.png', 'pc_bush_white.png', 'pc_rock.png', 'pc_rock_moss.png', 'pc_fence.png', 'pc_signpost.png', 'pc_bench.png', 'pc_mailbox.png', 'pc_lamp.png', 'pc_mushroom.png', 'pc_flowerbox.png', 'pc_bin.png',
   'npc_driver.png', 'vehicle_bus.png', 'vehicle_metro.png', 'vehicle_metro_open.png', 'ride_bg_bus.png', 'ride_bg_metro.png',

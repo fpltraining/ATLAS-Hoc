@@ -146,11 +146,11 @@ var G = window.G || (window.G = {});
   /* Người đứng trong hành lang trường */
   G.PEOPLE = G.PEOPLE || {};
   G.PEOPLE.en_hall = [
-    { npc: 'pat', life: 'en-canteen', x: 1100, y: 470, dir: 'down', stall: 'Căng tin', icon: '🍱' },
+    { npc: 'pat', life: 'en-canteen', x: 1075, y: 540, dir: 'down', stall: 'Căng tin', icon: '🍱', simg: 'pc_canteen.png', ss: 280 },
     { npc: 'owen', life: 'en-library', x: 560, y: 470, dir: 'down' },
     { npc: 'kim', life: 'en-nurse', x: 1190, y: 790, dir: 'left' },
-    { npc: 'jake', life: 'en-classmate', x: 430, y: 600, dir: 'right' },
-    { npc: 'zoe', life: 'en-club', x: 900, y: 470, dir: 'down' }
+    { npc: 'jake', life: 'en-classmate', x: 610, y: 660, dir: 'right' },
+    { npc: 'zoe', life: 'en-club', x: 830, y: 470, dir: 'down' }
   ];
 
   /* nói tự do ở trường */

@@ -1,7 +1,7 @@
 /* Chạy offline: giữ toàn bộ code game, dữ liệu và mọi hình trong assets/.
    Hình tải qua assets/<tên>?v=<mã nội dung> (data/asset_rev.js): mỗi lần cập nhật app chỉ tải hình mới hoặc hình đã thay,
    hình không đổi chép lại từ bản trong máy. Tệp giọng đọc được giữ lại khi đã nghe một lần. */
-var VERSION = 'thegioi-v77';
+var VERSION = 'thegioi-v78';
 // giọng đọc: tên tệp đặt theo nội dung câu nên không bao giờ đổi, giữ riêng một kho để cập nhật app không phải tải lại
 var AUDIO = 'connectlife-audio-v2';
 var CORE = [
