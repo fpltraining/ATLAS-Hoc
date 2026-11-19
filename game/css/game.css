@@ -536,3 +536,18 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .cl-in { width: 100%; min-height: 46px; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line); font-size: 16px; background: #fff; }
 .cl-msg { min-height: 1.4em; color: var(--coral); }
 .cr-cloud { width: 100%; margin-top: 10px; }
+
+/* radar / la bàn + nhiệt độ ở góc phải trên */
+.radar { position: absolute; right: max(12px, env(safe-area-inset-right)); top: calc(max(10px, env(safe-area-inset-top)) + 54px); z-index: 6; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.radar canvas { width: 112px; height: 112px; border-radius: 50%; box-shadow: 0 6px 16px rgba(0,0,0,.35); cursor: pointer; touch-action: manipulation; }
+.temp { border: 0; background: rgba(27,33,64,.88); color: #fff; border-radius: 12px; padding: 4px 9px; text-align: center; line-height: 1.15; box-shadow: 0 4px 12px rgba(0,0,0,.25); min-width: 96px; }
+.temp b { display: block; font-size: 16px; }
+.temp .tp-en { display: block; font-size: 12.5px; font-weight: 800; color: #ffd56b; }
+.temp small { display: block; font-size: 10.5px; opacity: .8; }
+@media (max-width: 640px) {
+  .radar canvas { width: 84px; height: 84px; }
+  .temp { min-width: 84px; padding: 3px 6px; } .temp b { font-size: 14px; } .temp .tp-en { font-size: 11px; } .temp small { font-size: 9.5px; }
+  .quest { left: max(12px, env(safe-area-inset-left)); transform: none; width: calc(100% - 132px); }
+  .kai { left: max(12px, env(safe-area-inset-left)) !important; transform: translate(0, -10px) !important; width: calc(100% - 132px) !important; }
+  .kai.show { transform: translate(0, 0) !important; }
+}
