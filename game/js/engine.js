@@ -804,6 +804,7 @@ var G = window.G || (window.G = {});
     vg.addColorStop(0, 'rgba(10,12,30,0)'); vg.addColorStop(1, 'rgba(10,12,30,.28)');
     ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
     drawGoalMark();
+    if (G.drawRadar) G.drawRadar({ scene: scene, id: sceneId, P: P, goal: curGoal, people: people(), talked: talkedToday, dpr: dpr });
     if (fade > 0) { ctx.fillStyle = 'rgba(27,33,64,' + fade + ')'; ctx.fillRect(0, 0, W, H); }
   }
 

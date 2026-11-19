@@ -104,6 +104,11 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
   // bài kiểm tra đầu vào (data/placement_en.js): câu nghe, câu người ta nói ở phần giao tiếp, câu đọc to và câu hỏi phần nói
   const PL = ctx.G.PLACE_EN;
   if (PL) { PL.nghe.forEach((it, i) => add('en', it.a, alt(i))); PL.gt.forEach((it, i) => add('en', it.p, alt(i + 1))); PL.noi.forEach((it) => add('en', it.read || it.ask, 'f')); }
+  // nhiệt độ ngoài trời (js/radar.js): "It's 13 degrees and cool." từ -5 tới 38 độ
+  {
+    const W = [[4, 'freezing'], [11, 'cold'], [17, 'cool'], [23, 'mild'], [29, 'warm'], [34, 'hot'], [99, 'boiling hot']];
+    for (let t = -5; t <= 38; t++) add('en', `It's ${t < 0 ? 'minus ' + -t : t} degrees and ${W.find((w) => t <= w[0])[1]}.`, 'f');
+  }
   // lời chúc tốt nghiệp (grad.js)
   for (const R of Object.values(ctx.G.ROOMS)) if (R.final && R.final.lang === 'en') for (const nm of ['Han', 'Minh', 'Kai']) add('en', `Congrats, ${nm}! You've finished ${R.final.level}. So proud of you!`, 'f');
   {
