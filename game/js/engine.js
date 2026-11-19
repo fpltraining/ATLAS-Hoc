@@ -33,8 +33,20 @@ var G = window.G || (window.G = {});
   }
 
   /* ---------- cảnh ---------- */
+  /* lớp chặn theo ảnh nền (data/walkmask.js): giải mã một lần thành mảng 0/1 theo ô */
+  var MASKS = {};
+  function maskOf(sc) {
+    var src = G.WALKMASK && sc.bg && G.WALKMASK[sc.bg];
+    if (!src) return null;
+    if (MASKS[sc.bg]) return MASKS[sc.bg];
+    var rows = src.r, w = rows[0].length * 4, cells = [];
+    for (var y = 0; y < rows.length; y++) for (var x = 0; x < w; x++) cells.push((parseInt(rows[y].charAt(x >> 2), 16) >> (3 - (x & 3))) & 1);
+    return (MASKS[sc.bg] = { c: src.c, w: w, h: rows.length, a: cells });
+  }
+  var mask = null;
   G.enterScene = function (id, at) {
     scene = G.SCENES[id]; sceneId = id;
+    mask = maskOf(scene);
     resize(); // màn bản đồ vừa hiện ra: đo lại kích thước canvas
     var sp = at || scene.spawn || { x: scene.w / 2, y: scene.walk.y1 - 40 };
     var wk = scene.walk;   // luôn đặt nhân vật trong vùng đi được
@@ -175,6 +187,10 @@ var G = window.G || (window.G = {});
       if (po.bimg) { var bk0 = (po.bs || 210) / 210; if (Math.abs(x - po.x) < 90 * bk0 && y > po.y - 120 * bk0 && y < po.y + 6) return true; continue; }   // tiệm có hình toà nhà
       var pd = x - po.x, pe = (y - po.y) * 2; if (pd * pd + pe * pe < 26 * 26) return true;
     }
+    if (mask) {   // vật vẽ trong ảnh nền: cây, ghế, đài phun nước, cột đèn, bàn ghế, nước…
+      var mx = (x / mask.c) | 0, my = (y / mask.c) | 0;
+      if (mx >= 0 && my >= 0 && mx < mask.w && my < mask.h && mask.a[my * mask.w + mx]) return true;
+    }
     if (scene.blocks) for (var bk = 0; bk < scene.blocks.length; bk++) { var B = scene.blocks[bk]; if (x > B[0] && x < B[2] && y > B[1] && y < B[3]) return true; }   // đồ đạc trong ảnh nội thất
     if ((scene.kind === 'classroom' || scene.kind === 'shop') && Math.abs(x - TX()) < 60 && Math.abs(y - TY() + 20) < 36) return true; // giáo viên
     return false;
@@ -301,7 +317,7 @@ var G = window.G || (window.G = {});
     function cy(i) { return Math.floor(i / cols) * CELL + CELL / 2; }
     function idx(x, y) { return clamp(Math.floor(y / CELL), 0, rows - 1) * cols + clamp(Math.floor(x / CELL), 0, cols - 1); }
     var st = idx(sx, sy), go = idx(gx, gy);
-    if (!ok(go)) { var nf = nearestFree(gx, gy); if (!nf) return null; gx = nf.x; gy = nf.y; go = idx(gx, gy); if (!ok(go)) return null; }
+    if (!ok(go)) { var nf = nearestFree(gx, gy); if (nf) { gx = nf.x; gy = nf.y; go = idx(gx, gy); } }   // vẫn kẹt thì A* tự chọn chỗ gần nhất đi được
     function h(i) { var ax = Math.abs(cx(i) - gx), ay = Math.abs(cy(i) - gy); return Math.max(ax, ay) + 0.414 * Math.min(ax, ay); }
     // hàng đợi ưu tiên (đống nhị phân)
     var heap = [], fv = {};
@@ -309,11 +325,12 @@ var G = window.G || (window.G = {});
     function pop() { var top = heap[0], end = heap.pop(); if (heap.length) { heap[0] = end; var c = 0; for (;;) { var l = 2 * c + 1, r = l + 1, m = c; if (l < heap.length && fv[heap[l]] < fv[heap[m]]) m = l; if (r < heap.length && fv[heap[r]] < fv[heap[m]]) m = r; if (m === c) break; var t = heap[m]; heap[m] = heap[c]; heap[c] = t; c = m; } } return top; }
     g[st] = 0; fv[st] = h(st); push(st);
     var D = [[1, 0, 1], [-1, 0, 1], [0, 1, 1], [0, -1, 1], [1, 1, 1.414], [1, -1, 1.414], [-1, 1, 1.414], [-1, -1, 1.414]];
-    var found = false, steps = 0;
+    var found = false, steps = 0, best = st, bestH = h(st);
     while (heap.length && steps < N) {
       var cur = pop(); steps++;
       if (closed[cur]) continue; closed[cur] = 1;
       if (cur === go) { found = true; break; }
+      var hc = h(cur); if (hc < bestH) { bestH = hc; best = cur; }
       var c0 = cur % cols, r0 = Math.floor(cur / cols);
       for (var k = 0; k < 8; k++) {
         var c1 = c0 + D[k][0], r1 = r0 + D[k][1];
@@ -325,7 +342,10 @@ var G = window.G || (window.G = {});
         if (g[ni] === undefined || ng < g[ni]) { g[ni] = ng; came[ni] = cur; fv[ni] = ng + h(ni); push(ni); }
       }
     }
-    if (!found) return null;
+    if (!found) {   // đích nằm sau vật cản / giữa nước: đi tới chỗ đi được gần đích nhất
+      if (best === st) return null;
+      go = best; gx = cx(best); gy = cy(best);
+    }
     var pts = [{ x: gx, y: gy }];
     for (var q = came[go]; q !== undefined && q !== st; q = came[q]) pts.unshift({ x: cx(q), y: cy(q) });
     // làm mượt: bỏ các điểm trung gian nếu đi thẳng được
@@ -479,15 +499,20 @@ var G = window.G || (window.G = {});
     }
     return { x: (w.x0 + w.x1) / 2, y: (w.y0 + w.y1) / 2 };
   }
+  /* người đi đường: dùng bộ hình vẽ sẵn 3 hướng (person_<tên>_down/up/left.png, G.TOWNIE_SETS).
+     Nhân vật ghép từ lớp hình (tóc, áo rời) bị lệch nên không dùng cho người đi đường nữa; chưa có hình thì phố vắng người. */
   function spawnTown() {
     town = [];
-    if (scene.kind !== 'city' || !G.randomAvatar || !G.asset('body_hoodie_down.png').ok) return;
-    var n = sceneId === 'home_en' ? 3 : 6;
+    var sets = (G.TOWNIE_SETS || []).filter(function (s) { return G.asset('person_' + s + '_down.png').ok; });
+    if (scene.kind !== 'city' || !sets.length) return;
+    var n = Math.min(sets.length, sceneId === 'home_en' ? 3 : 6), pick = G.shuffle(sets.slice());
     for (var i = 0; i < n; i++) {
       var sp = freeSpot(), tg = freeSpot();
-      town.push({ av: G.randomAvatar(), x: sp.x, y: sp.y, tx: tg.x, ty: tg.y, dir: 'down', t: Math.random() * 6, sp: 60 + Math.random() * 40, wait: Math.random() * 2, say: null, sayT: 0, talkCd: 5 + Math.random() * 15 });
+      town.push({ set: pick[i], x: sp.x, y: sp.y, tx: tg.x, ty: tg.y, dir: 'down', t: Math.random() * 6, sp: 60 + Math.random() * 40, wait: Math.random() * 2, say: null, sayT: 0, talkCd: 5 + Math.random() * 15 });
     }
   }
+  G.TOWNIE_SETS = G.TOWNIE_SETS || [];
+  for (var tsI = 0; tsI < G.TOWNIE_SETS.length; tsI++) G.asset('person_' + G.TOWNIE_SETS[tsI] + '_down.png');   // tải sẵn
   function updateTown(dt) {
     for (var i = 0; i < town.length; i++) {
       var p = town[i];
@@ -515,7 +540,9 @@ var G = window.G || (window.G = {});
   }
   function drawTownie(p) {
     shadow(p.x, p.y, 20);
-    G.drawAvatar(ctx, p.av, p.x, p.y + 4, 100, p.dir, p.t * 9, p.moving);
+    var d = p.dir === 'right' ? 'left' : p.dir, nm = 'person_' + p.set + '_' + d + '.png';
+    if (!G.asset(nm).ok) nm = 'person_' + p.set + '_down.png';
+    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, nm, X, Y, S, S, p.dir === 'right'); }, p.x, p.y + 6, 112, p.dir, p.t * 9, p.moving, 0.72);
     if (raining()) { if (p.uc === undefined) p.uc = Math.floor(Math.random() * 6); umbrella(p.x + 10, p.y - 96, p.uc, p.moving ? Math.sin(p.t * 9) * 0.04 : 0); }
     if (p.sayT > 0 && p.say) bubble(p.x, p.y - 108, p.say[0], Math.min(1, p.sayT * 2));
   }
@@ -882,7 +909,7 @@ var G = window.G || (window.G = {});
     nameTag((o.icon || '') + ' ' + o.stall, o.x, o.y + 28);
   }
   /* NPC có ảnh riêng (ChatGPT) thì dùng ảnh, chưa có thì ghép từ lớp hình */
-  function npcImg(n) { return n.img && (G.asset(n.img).ok || !n.av) ? n.img : null; }
+  function npcImg(n) { return n.img || null; }   // có ảnh riêng thì luôn dùng ảnh (đang tải thì chưa vẽ, không hiện nhân vật ghép)
   function drawPerson(o) {
     var n = G.NPCS[o.npc]; if (!n) return;
     if (o.bimg && G.asset(o.bimg).ok) { drawShopHouse(o); return; }
@@ -1032,5 +1059,6 @@ var G = window.G || (window.G = {});
   G.doNear = function () { if (near) near.act(); };
   /* để thử tự động: vị trí nhân vật, camera, cảnh, chỗ tương tác gần nhất */
   G.debugGo = function (x, y) { goTo(x, y); return { path: path.length + (target ? 1 : 0) }; };
+  G.debugTown = function () { return town.map(function (t) { return { x: Math.round(t.x), y: Math.round(t.y), av: t.av }; }); };
   G.debugState = function () { return { target: !!target, moving: P.moving, x: P.x, y: P.y, cx: cam.x, cy: cam.y, zoom: zoom, scene: sceneId, near: near ? near.label : null }; };
 })();
