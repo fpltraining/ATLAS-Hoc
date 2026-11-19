@@ -121,7 +121,7 @@ G.SCENES = {
       { id: 'metro', img: 'building_en_metro.png', x: 1395, y: 945, name: 'Ga tàu điện', ride: 'metro', toward: 'home' }
     ],
     // cuối đường bên phải: sang Phố mua sắm (bưu điện, ngân hàng, hiệu thuốc, tiệm tóc, siêu thị)
-    gates: [{ x: 1490, y: 512, side: 'right', label: 'Sang Phố mua sắm', sign: '🛍️ Phố mua sắm ›', to: { scene: 'street_en', x: 150, y: 420, dir: 'right' } }]
+    gates: [{ x: 1490, y: 512, side: 'right', label: 'Sang Phố mua sắm', sign: '🛍️ Phố mua sắm ›', to: { scene: 'street_en', x: 150, y: 330, dir: 'right' } }]
   },
   en_hall: {
     city: 'en', doors: 'EN_HALL_DOORS', classroom: 'classroom_en', floor: 2,

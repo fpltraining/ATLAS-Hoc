@@ -41,10 +41,6 @@ var G = window.G || (window.G = {});
   var ICON = { home: '🏠', busstop: '🚌', metro: '🚇', school: '🏫', cafe: '☕', market: '🍎', hospital: '🏥', airport: '✈️', teahouse: '🍵' };
   function sceneImage(sc, id) {
     if (sc.bg) { var a = G.asset(sc.bg); return a.ok ? a.img : null; }
-    if (sc.draw && G.drawStreet) {
-      if (!RD.off[id]) { var c = document.createElement('canvas'); c.width = sc.w / 4; c.height = sc.h / 4; var g = c.getContext('2d'); g.scale(0.25, 0.25); G.drawStreet(g, sc); RD.off[id] = c; }
-      return RD.off[id];
-    }
     return null;
   }
   function emoji(g, e, x, y, s) { g.font = s + 'px "Apple Color Emoji","Segoe UI Emoji",sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(e, x, y); }

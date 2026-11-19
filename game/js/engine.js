@@ -733,7 +733,8 @@ var G = window.G || (window.G = {});
   /* đèn đường sáng lên lúc hoàng hôn và buổi tối */
   var LAMPS = {
     city_en: [[663, 287], [871, 287], [663, 693], [871, 693], [663, 953], [447, 60], [1093, 420], [400, 540]],
-    home_en: [[867, 107], [720, 413], [1107, 567], [307, 687], [500, 920]]
+    home_en: [[867, 107], [720, 413], [1107, 567], [307, 687], [500, 920]],
+    street_en: [[76, 530], [1492, 530], [344, 866], [1200, 866]]
   };
   function drawLamps() {
     var part = G.dayPart(); if (part !== 'toi' && part !== 'hoanghon') return;
@@ -896,7 +897,6 @@ var G = window.G || (window.G = {});
 
   function drawBackground() {
     if (scene.room && G.drawRoom) { G.drawRoom(ctx, scene); return; }   // tiệm vẽ bằng code
-    if (scene.draw && G.drawStreet && (!scene.bg || !G.asset(scene.bg).ok)) { G.drawStreet(ctx, scene); return; }   // khu phố vẽ bằng code (chưa có ảnh)
     var a = G.asset(scene.bg);
     if (a.ok) { ctx.drawImage(a.img, 0, 0, scene.w, scene.h); return; }
     // nền tạm vẽ bằng code, kèm tên file cần đặt
