@@ -324,23 +324,29 @@ var G = window.G || (window.G = {});
     };
   }
 
-  /* Phố mua sắm: khu riêng nối với trung tâm (mép phải bản đồ trung tâm). Ảnh nền map_street_en.png:
-     4 ô đất phía trên đường (bưu điện, ngân hàng, hiệu thuốc, tiệm tóc), siêu thị giữa quảng trường bầu dục phía dưới.
-     Cây, đèn, ghế, bồn hoa, hàng rào cây đã vẽ sẵn trong ảnh. */
+  /* Phố mua sắm: khu riêng nối với trung tâm (mép phải bản đồ trung tâm). Tờ giấy nền map_street_en.png (kiểu mô hình giấy):
+     4 ô cỏ phía trên đường (bưu điện, ngân hàng, hiệu thuốc, tiệm tóc), siêu thị giữa quảng trường bầu dục phía dưới;
+     cây, đèn, ghế, bụi hoa là hình giấy dựng rời. */
   SM.street_en = {
     city: 'en', title: 'Phố mua sắm', bg: 'map_street_en.png', w: 1536, h: 1024, kind: 'city',
-    spawn: { x: 150, y: 330 },
+    spawn: { x: 150, y: 380 },
     walk: { x0: 30, y0: 90, x1: 1506, y1: 1000 },
-    gates: [{ x: 45, y: 330, side: 'left', label: 'Về trung tâm Brightford', sign: '‹ Trung tâm', to: { scene: 'city_en', x: 1385, y: 512, dir: 'left' } }],
-    props: [{ img: 'prop_car.png', x: 1300, y: 522, s: 150, r: 46 }]
+    gates: [{ x: 45, y: 380, side: 'left', label: 'Về trung tâm Brightford', sign: '‹ Trung tâm', to: { scene: 'city_en', x: 1385, y: 508, dir: 'left' } }],
+    props: [
+      { img: 'pc_tree_small.png', x: 396, y: 240, s: 170, r: 18 }, { img: 'pc_tree_green.png', x: 765, y: 240, s: 180, r: 20 }, { img: 'pc_tree_small.png', x: 1128, y: 240, s: 170, r: 18 },
+      { img: 'pc_lamp.png', x: 400, y: 425, s: 150, r: 10 }, { img: 'pc_lamp.png', x: 1130, y: 425, s: 150, r: 10 },
+      { img: 'pc_lamp.png', x: 300, y: 720, s: 150, r: 10 }, { img: 'pc_lamp.png', x: 1230, y: 720, s: 150, r: 10 },
+      { img: 'pc_bench.png', x: 420, y: 870, s: 110, r: 28 }, { img: 'pc_bench.png', x: 1110, y: 870, s: 110, r: 28 },
+      { img: 'pc_bush_orange.png', x: 200, y: 900, s: 110, r: 32 }, { img: 'pc_bush_white.png', x: 1330, y: 900, s: 110, r: 32 }
+    ]
   };
   G.PEOPLE = G.PEOPLE || {};
   G.PEOPLE.street_en = [
-    { npc: 'ivy', life: 'en-post', x: 183, y: 232, dir: 'down', stall: 'Bưu điện', icon: '📮', bimg: 'building_en_post.png', bs: 240 },
-    { npc: 'grant', life: 'en-bank', x: 579, y: 232, dir: 'down', stall: 'Ngân hàng', icon: '🏦', bimg: 'building_en_bank.png', bs: 240 },
-    { npc: 'lee', life: 'en-pharmacy', x: 966, y: 232, dir: 'down', stall: 'Hiệu thuốc', icon: '💊', bimg: 'building_en_pharmacy.png', bs: 240 },
-    { npc: 'tony', life: 'en-barber', x: 1351, y: 232, dir: 'down', stall: 'Tiệm tóc', icon: '💈', bimg: 'building_en_barber.png', bs: 240 },
-    { npc: 'ray', life: 'en-super', x: 768, y: 874, dir: 'down', stall: 'Siêu thị mini', icon: '🛒', bimg: 'building_en_super.png', bs: 290 }
+    { npc: 'ivy', life: 'en-post', x: 216, y: 272, dir: 'down', stall: 'Bưu điện', icon: '📮', bimg: 'pc_post.png', bs: 250 },
+    { npc: 'grant', life: 'en-bank', x: 584, y: 272, dir: 'down', stall: 'Ngân hàng', icon: '🏦', bimg: 'pc_bank.png', bs: 250 },
+    { npc: 'lee', life: 'en-pharmacy', x: 952, y: 272, dir: 'down', stall: 'Hiệu thuốc', icon: '💊', bimg: 'pc_pharmacy.png', bs: 250 },
+    { npc: 'tony', life: 'en-barber', x: 1320, y: 272, dir: 'down', stall: 'Tiệm tóc', icon: '💈', bimg: 'pc_barber.png', bs: 250 },
+    { npc: 'ray', life: 'en-super', x: 764, y: 895, dir: 'down', stall: 'Siêu thị mini', icon: '🛒', bimg: 'pc_super.png', bs: 240 }
   ];
   // phòng gym ở khu phố Maple, gần nhà
   G.PEOPLE.home_en = (G.PEOPLE.home_en || []).concat([
