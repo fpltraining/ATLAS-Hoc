@@ -292,6 +292,7 @@ var G = window.G || (window.G = {});
     // hướng của Kai: theo hướng đang bay, đứng yên thì quay về phía người chơi
     var kvx = kd > 30 ? kx : P.x - K.x, kvy = kd > 30 ? ky : P.y - K.y;
     K.moving = kd > 30;
+    if (K.moving) K.t = (K.t || 0) + dt;
     if (Math.abs(kvx) > 4 || Math.abs(kvy) > 4) K.dir = Math.abs(kvx) > Math.abs(kvy) * 0.8 ? (kvx < 0 ? 'left' : 'right') : (kvy < 0 ? 'up' : 'down');
     if (kd > 30) { K.x += (kx / kd) * Math.min(kd, SPEED * 0.95 * dt * (kd > 160 ? 1.6 : 1)); K.y += (ky / kd) * Math.min(kd, SPEED * 0.95 * dt * (kd > 160 ? 1.6 : 1)); }
 
@@ -1042,22 +1043,24 @@ var G = window.G || (window.G = {});
       var kd = P.dir, kside = kd === 'left' || kd === 'right';
       var kn = kd === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : kside && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
       var kf = kn === 'kai_left.png' ? kd === 'right' : kd === 'left';
-      var kb = P.moving ? Math.abs(Math.sin(P.t * 14)) * 6 : Math.sin(Date.now() / 300) * 2;
+      var kb = G.hopLift(104, P.t * 14, P.moving);
       shadow(P.x, P.y, 22 * sh);
-      var ku = raining() ? holdAt(kn, P.x - 52, P.y - 100 - kb, 104, kf, 0, kn === 'kai_left.png') : null;
+      var ku = raining() ? holdAt(kn, P.x - 52, P.y + 4 - 104 - kb, 104, kf, 0, kn === 'kai_left.png') : null;
       if (ku) umbrella(ku, 3, 0, 'pole');
-      G.drawAsset(ctx, kn, P.x - 52, P.y - 100 - kb, 104, 104, kf);
+      G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, kn, X, Y, S, S, kf); }, P.x, P.y + 4, 104, P.t * 14, P.moving);
       if (ku) umbrella(ku, 3, 0, 'top', kd !== 'up');
       return;
     }
     var dir = P.dir === 'right' ? 'left' : P.dir, flip = P.dir === 'right';
     var name = 'player_' + who + '_' + dir + '.png';
     shadow(P.x, P.y, 26 * sh);
-    var u = raining() ? holdAt(name, P.x - 60, P.y + 8 - 120, 120, flip, P.moving ? -Math.abs(Math.sin(P.t * 14)) * 120 * 0.028 : 0, dir === 'left') : null;
-    var sw = P.moving ? Math.sin(P.t * 14) * 0.03 : 0;
+    var paper = G.PAPER_FIG[who];
+    var u = raining() ? holdAt(name, P.x - 60, P.y + 8 - 120, 120, flip, P.moving ? -(paper ? G.hopLift(120, P.t * 14, true) : Math.abs(Math.sin(P.t * 14)) * 120 * 0.028) : 0, dir === 'left') : null;
+    var sw = P.moving ? Math.sin(P.t * 14) * (paper ? 0.07 : 0.03) : 0;   // tượng giấy: ô lắc cùng nhịp với người
     if (u) umbrella(u, 0, sw, 'pole');
+    if (paper) G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.t * 14, P.moving);
     // tay cầm ô giữ yên (nhìn ngang: tay phía trước; nhìn trước / sau: tay bên phải màn hình)
-    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, 0.72, G.ARMS[name], u ? (dir === 'left' ? 0 : 1) : -1);
+    else G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, 0.72, G.ARMS[name], u ? (dir === 'left' ? 0 : 1) : -1);
     if (u) umbrella(u, 0, sw, 'top', dir !== 'up');
   }
   function drawKai() {
@@ -1067,6 +1070,7 @@ var G = window.G || (window.G = {});
     var side = dir === 'left' || dir === 'right';
     var name = dir === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : side && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
     var flip = name === 'kai_left.png' ? dir === 'right' : dir === 'left';
+    if (G.PAPER_FIG.kai) { G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, K.x, K.y - 6, 76, (K.t || 0) * 14, K.moving); return; }
     var tilt = K.moving ? (dir === 'left' ? -0.12 : dir === 'right' ? 0.12 : 0) : 0;
     ctx.save(); ctx.translate(K.x, K.y - 44 + bob); ctx.rotate(tilt); ctx.translate(-K.x, -(K.y - 44 + bob));
     G.drawAsset(ctx, name, K.x - 38, K.y - 82 + bob, 76, 76, flip);
