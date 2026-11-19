@@ -90,7 +90,9 @@ var G = window.G || (window.G = {});
   G.walkSprite = function (c, base, x, footY, S, dir, phase, moving, plain) {
     var d = dir === 'right' ? 'left' : dir, flip = dir === 'right', stand = base + '_' + d + '.png';
     if (!has(stand)) { stand = base + '_down.png'; d = 'down'; flip = false; }
-    if (!moving || plain || !G.hasWalk(base, d)) { G.hopDraw(c, function (cc, X, Y, SS) { G.drawAsset(cc, stand, X, Y, SS, SS, flip); }, x, footY, S, phase, moving); return; }
+    var hw = G.hasWalk(base, d);
+    if (hw && !moving) { G.asset(base + '_' + d + '_w1.png'); G.asset(base + '_' + d + '_w2.png'); }   // tải sẵn khung bước khi còn đứng
+    if (!moving || plain || !hw) { G.hopDraw(c, function (cc, X, Y, SS) { G.drawAsset(cc, stand, X, Y, SS, SS, flip); }, x, footY, S, phase, moving); return; }
     var ph = phase * 0.5;   // khung hình: khoảng 2 bước mỗi giây (nhún nhảy thì nhanh hơn)
     var q = Math.floor(((ph % 6.2832) + 6.2832) % 6.2832 / 1.5708);   // 0..3
     var nm = q === 1 ? base + '_' + d + '_w1.png' : q === 3 ? base + '_' + d + '_w2.png' : stand;

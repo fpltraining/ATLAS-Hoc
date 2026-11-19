@@ -51,9 +51,9 @@ G.HANDS = {
     'person_walter_down.png': [65.9, 75.1, '#fddcca', 4.7],
     'person_walter_left.png': [51.7, 76.2, '#fedcca', 4.7],
     'person_walter_up.png': [65.9, 75.1, '#fcdcc8', 4.7],
-    'player_han_down.png': [66.5, 65.5, '#f6dcc8', 4.7],
-    'player_han_left.png': [48.5, 72.5, '#f6dcc8', 4.7],
-    'player_han_up.png': [66, 65, '#f6dcc8', 4.9],
+    'player_han_down.png': [63.7, 69.7, '#f6dcc8', 4.7],
+    'player_han_left.png': [50.6, 71, '#f6dcc8', 4.7],
+    'player_han_up.png': [64.1, 70.3, '#f6dcc8', 4.7],
     'player_minh_down.png': [70.8, 74.5, '#feddc3', 4.7],
     'player_minh_left.png': [50.8, 77.2, '#feddc4', 4.7],
     'player_minh_up.png': [70.8, 74.9, '#fdddc3', 4.7]
