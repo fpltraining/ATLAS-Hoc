@@ -30,18 +30,14 @@ var G = window.G || (window.G = {});
     G.kaiSay(sc === 'home_en' ? 'Chào ' + G.playerName() + '! Đi học thôi: bến xe buýt ở góc trên bên phải, ga tàu điện ở góc dưới bên phải.'
       : sc === 'city_en' ? 'Trường Anh ngữ ở góc dưới bên trái, có biển màu đỏ. Bến xe buýt và ga tàu điện để về nhà ở hai góc dưới.'
       : sc === 'city_zh' ? '欢迎！Chào mừng tới Trường Lạc trấn. Học viện Hán ngữ ở góc dưới bên trái, sân bay ở phía trên.' : 'Tiếp tục học nào!');
-    // người đang học từ bản cũ chưa có kết quả đầu vào: mời làm một lần (không ép)
-    if (id === 'en' && G.openPlacement && !G.S.dauVao && !G.S.hoiDauVao) {
-      G.S.hoiDauVao = G.vnNow(); G.save();
-      var wrap = G.el('div.modal', G.el('div.choose.story',
-        G.el('h2', '📏 Kiểm tra trình độ đầu vào'),
-        G.el('p', 'Bài mới: 4 phần Nghe, Đọc, Phản xạ giao tiếp, Nói theo khung CEFR. Làm 3–12 phút để app chỉnh độ khó cho đúng với bạn. Tiến độ đang học vẫn giữ nguyên.'),
-        G.el('div.row',
-          G.el('button.btn', { onclick: function () { document.body.removeChild(wrap); } }, 'Để sau'),
-          G.el('button.btn.seal', { onclick: function () { document.body.removeChild(wrap); G.openPlacement(function () {}, { canSkip: true }); } }, 'Làm ngay ›'))));
-      setTimeout(function () { if (!G._placementOpen) document.body.appendChild(wrap); }, 1200);
-    }
   };
+
+  /* Bài kiểm tra trình độ là bước bắt buộc đầu tiên: chưa có kết quả thì chưa vào học được (kể cả người đang học dở) */
+  function mustTest(after) {
+    if (G.S.dauVao || G._placementOpen) { if (after) after(); return; }
+    G.openPlacement(after, { mandatory: true });
+  }
+  G.mustTest = mustTest;
 
   G.goLobby = function () {
     G.stopEngine();
@@ -106,15 +102,21 @@ var G = window.G || (window.G = {});
     document.getElementById('quest').onclick = function () { G.goQuest(); };
     G.initRank(); G.importOldProgress(); setTimeout(G.checkAchievements, 1500);
     // bản sao IndexedDB mới hơn (localStorage bị mất) thì khôi phục rồi vẽ lại sảnh
-    G.restoreCheck(function (restored) { if (restored && G.S.nhanVat) { G.initRank(); var cr = document.getElementById('create'); if (cr) cr.style.display = 'none'; G.renderLobby(); } });
+    G.restoreCheck(function (restored) { if (restored && G.S.nhanVat) { G.initRank(); var cr = document.getElementById('create'); if (cr) cr.style.display = 'none'; G.renderLobby(); mustTest(); } });
     // lưu trên mây: mở app thì đồng bộ; nhận bản mới hơn từ máy khác thì tải lại app với tiến độ đó
     G.onCloudPulled = function () { G.toast('☁️ Đã lấy tiến độ mới nhất trên mây.'); setTimeout(function () { location.reload(); }, 1300); };
     if (G.cloudReady && G.cloudReady() && G.cloudUser()) setTimeout(function () { G.cloudSync(); }, 600);
-    if (!G.S.nhanVat) {
-      // lần đầu: tạo nhân vật → lời mở đầu → ra khỏi nhà
-      // lần đầu: chọn nhân vật → kiểm tra trình độ đầu vào → lời mở đầu → ra khỏi nhà
-      G.openCreator(function () { G.openPlacement(function () { G.introStory(function () { G.goCity('en'); }); }); });
-    } else G.renderLobby();
+    if (!G.S.nhanVat && !G.S.dauVao) {
+      // lần đầu: kiểm tra trình độ (bắt buộc) → chọn nhân vật → lời mở đầu → ra khỏi nhà
+      G.openPlacement(function () { G.openCreator(function () { G.introStory(function () { G.goCity('en'); }); }); }, { first: true });
+    } else if (!G.S.nhanVat) {
+      // đã làm bài kiểm tra nhưng thoát trước khi chọn nhân vật
+      G.openCreator(function () { G.introStory(function () { G.goCity('en'); }); });
+    } else {
+      // người đang học: chưa có kết quả đầu vào thì phải làm trước khi vào sảnh
+      G.renderLobby();
+      mustTest(function () { G.renderLobby(); });
+    }
     if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(function () {});
   }
 
