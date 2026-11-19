@@ -2,6 +2,7 @@
    là game tự dùng, không phải sửa code. Danh sách tên file trùng với ASSET_ORDERS.md (sw.js cũng đọc danh sách này). */
 var G = window.G || (window.G = {});
 
+G.TOWNIE_SETS = ['linda', 'walter', 'sofia', 'marco', 'amy', 'david', 'helen', 'kenji'];
 G.ASSET_LIST = [
   'player_han_down.png', 'player_han_up.png', 'player_han_left.png',
   'player_minh_down.png', 'player_minh_up.png', 'player_minh_left.png', 'kai_follow.png', 'kai_up.png', 'kai_left.png',
@@ -25,6 +26,11 @@ G.ASSET_LIST = [
   'building_en_bank.png', 'building_en_super.png', 'building_en_gym.png', 'building_en_pharmacy.png', 'building_en_barber.png', 'building_en_post.png',
   'interior_en_barber.png', 'interior_en_post.png', 'interior_en_pharmacy.png', 'interior_en_gym.png', 'interior_en_super.png',
   'souvenir_tea.png', 'souvenir_coffee.png', 'souvenir_apples.png', 'souvenir_ticket.png', 'souvenir_medkit.png',
+  /* người đi đường: mỗi người 3 hướng (nhìn ngang phải = lật hình nhìn ngang trái) */
+  'person_linda_down.png', 'person_linda_up.png', 'person_linda_left.png', 'person_walter_down.png', 'person_walter_up.png', 'person_walter_left.png',
+  'person_sofia_down.png', 'person_sofia_up.png', 'person_sofia_left.png', 'person_marco_down.png', 'person_marco_up.png', 'person_marco_left.png',
+  'person_amy_down.png', 'person_amy_up.png', 'person_amy_left.png', 'person_david_down.png', 'person_david_up.png', 'person_david_left.png',
+  'person_helen_down.png', 'person_helen_up.png', 'person_helen_left.png', 'person_kenji_down.png', 'person_kenji_up.png', 'person_kenji_left.png',
   /* lớp hình nhân vật ghép (người đi đường, mẹ, hàng xóm…): lưu sẵn để không mất hình khi mạng chập chờn */
   'body_hoodie_down.png', 'body_hoodie_left.png', 'body_hoodie_up.png', 'body_jacket_down.png', 'body_jacket_left.png', 'body_jacket_up.png',
   'body_sport_down.png', 'body_sport_left.png', 'body_sport_up.png', 'body_sweater_down.png', 'body_sweater_left.png', 'body_sweater_up.png',

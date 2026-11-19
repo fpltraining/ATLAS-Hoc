@@ -120,7 +120,8 @@ var G = window.G || (window.G = {});
     if (arms && arms.length === 1) out.armDk = darken(out.arms[0], 'armDk');
     return out;
   }
-  G.walkDraw = function (c, paint, x, footY, S, dir, phase, moving, hip, arms) {
+  /* hold: số thứ tự tay đang cầm ô (trong arms) — tay đó giữ yên, không đánh theo bước chân */
+  G.walkDraw = function (c, paint, x, footY, S, dir, phase, moving, hip, arms, hold) {
     var X = x - S / 2, Y = footY - S;
     if (!moving) {
       var br = 1 + Math.sin(Date.now() / 600) * 0.012;
@@ -170,12 +171,13 @@ var G = window.G || (window.G = {});
     c.drawImage(L.body, X, Y, S, S); c.restore();
     // tay phía trước
     if (arms) {
-      if (side) armAt(L.arms[0], arms[0], -aSw * fwd, 1);
+      if (side) armAt(L.arms[0], arms[0], hold === 0 ? 0 : -aSw * fwd, 1);
       else for (var ai = 0; ai < arms.length; ai++) {
         // tay bên trái màn hình (ai = 0) đưa ra trước khi chân bên phải đang bước (s > 0) và ngược lại
         var fw = (ai === 0 ? 1 : -1) * s;               // > 0: tay đang đưa ra trước
         var out = (ai === 0 ? 1 : -1);                  // xoay ra ngoài
-        armAt(L.arms[ai], arms[ai], out * fw * 0.10, 1 - Math.max(0, fw) * 0.10);
+        if (ai === hold) armAt(L.arms[ai], arms[ai], 0, 1);
+        else armAt(L.arms[ai], arms[ai], out * fw * 0.10, 1 - Math.max(0, fw) * 0.10);
       }
     }
   };
