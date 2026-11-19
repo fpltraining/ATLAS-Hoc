@@ -87,8 +87,17 @@ var G = window.G || (window.G = {});
     try { localStorage.setItem(KEY, data); } catch (e) { ok = false; }
     try { localStorage.setItem(BAK, data); } catch (e2) { /* bỏ qua */ }
     mirror();
+    if (G.cloudQueue) G.cloudQueue();   // có đăng nhập lưu trên mây thì tự đẩy lên
     if (!ok) G.toast('Không lưu được tiến độ (bộ nhớ máy đầy?). Hãy xuất file sao lưu.');
     return ok;
+  };
+  /* nhận bản tiến độ từ mây: ghi vào máy (không đẩy ngược lên mây) */
+  G.applySave = function (obj) {
+    G.S = fill(obj);
+    var data = JSON.stringify(G.S);
+    try { localStorage.setItem(KEY, data); } catch (e) { /* bỏ qua */ }
+    try { localStorage.setItem(BAK, data); } catch (e2) { /* bỏ qua */ }
+    mirror();
   };
 
   /* Ghi một lần học trong ngày: cập nhật chuỗi ngày theo giờ Việt Nam */
