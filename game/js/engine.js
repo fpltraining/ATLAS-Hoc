@@ -542,8 +542,15 @@ var G = window.G || (window.G = {});
     shadow(p.x, p.y, 20);
     var d = p.dir === 'right' ? 'left' : p.dir, nm = 'person_' + p.set + '_' + d + '.png';
     if (!G.asset(nm).ok) nm = 'person_' + p.set + '_down.png';
-    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, nm, X, Y, S, S, p.dir === 'right'); }, p.x, p.y + 6, 112, p.dir, p.t * 9, p.moving, 0.72);
-    if (raining()) { if (p.uc === undefined) p.uc = Math.floor(Math.random() * 6); umbrella(p.x + 10, p.y - 96, p.uc, p.moving ? Math.sin(p.t * 9) * 0.04 : 0); }
+    var S = 112, u = null, sw = 0, up = /_up\.png$/.test(nm);
+    if (raining()) {
+      if (p.uc === undefined) p.uc = Math.floor(Math.random() * 6);
+      u = holdAt(nm, p.x - S / 2, p.y + 6 - S, S, p.dir === 'right', p.moving ? -Math.abs(Math.sin(p.t * 9)) * S * 0.028 : 0, /_left\.png$/.test(nm));
+      sw = p.moving ? Math.sin(p.t * 9) * 0.035 : 0;
+      umbrella(u, p.uc, sw, 'pole');
+    }
+    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, nm, X, Y, S, S, p.dir === 'right'); }, p.x, p.y + 6, S, p.dir, p.t * 9, p.moving, 0.72);
+    if (u) umbrella(u, p.uc, sw, 'top', !up);
     if (p.sayT > 0 && p.say) bubble(p.x, p.y - 108, p.say[0], Math.min(1, p.sayT * 2));
   }
   function bubble(x, y, text, a) {
@@ -605,21 +612,47 @@ var G = window.G || (window.G = {});
   };
   var PART_NAME = { sang: '🌅 Sáng', trua: '☀️ Trưa', chieu: '🌤 Chiều', hoanghon: '🌇 Hoàng hôn', toi: '🌙 Tối' };
   function raining() { return scene && scene.kind === 'city' && G.weather() === 'rain'; }
-  /* chiếc ô vẽ bằng code: x giữa, y = đỉnh đầu người cầm */
+  /* chiếc ô cầm trong tay (vẽ bằng code). Bàn tay lấy từ G.HANDS (vị trí bàn tay trên từng hình); cán đi từ bàn tay
+     lên giữa tán, tán che trên đầu và nghiêng theo cán. Cán vẽ trước người (part 'pole': nằm sau bàn tay, sau thân),
+     tán và nắm tay vẽ sau người (part 'top'), nên bàn tay nắm đúng cán ô. */
   var UCOL = ['#c8553d', '#2f7a63', '#4a68d8', '#e0a43a', '#b46fc0', '#1b2140'];
-  function umbrella(x, y, ci, sway) {
-    var col = UCOL[ci % UCOL.length], R = 46, cy = y - 22;
-    ctx.save(); ctx.translate(x, cy + 40); ctx.rotate(sway || 0); ctx.translate(-x, -(cy + 40));
-    ctx.strokeStyle = '#3a2418'; ctx.lineWidth = 3;
-    ctx.beginPath(); ctx.moveTo(x, cy); ctx.lineTo(x, cy + 52); ctx.stroke();                 // cán ô
-    ctx.beginPath(); ctx.arc(x + 5, cy + 52, 5, 0, Math.PI); ctx.stroke();                    // tay cầm cong
-    ctx.fillStyle = col; ctx.beginPath(); ctx.moveTo(x - R, cy);                              // tán ô có viền sóng
-    ctx.quadraticCurveTo(x, cy - R * 0.95, x + R, cy);
-    for (var i = 3; i >= 0; i--) { var a = x - R + (i + 0.5) * (2 * R / 4); ctx.quadraticCurveTo(a + R / 4, cy - 9, a - R / 4 + R / 4 - R / 4, cy); }
-    ctx.closePath(); ctx.fill(); ctx.lineWidth = 3; ctx.stroke();
-    ctx.strokeStyle = 'rgba(255,255,255,.45)'; ctx.lineWidth = 2;
-    ctx.beginPath(); ctx.moveTo(x, cy - R * 0.47); ctx.lineTo(x - R * 0.5, cy - 2); ctx.moveTo(x, cy - R * 0.47); ctx.lineTo(x + R * 0.5, cy - 2); ctx.stroke();
-    ctx.fillStyle = '#3a2418'; ctx.beginPath(); ctx.arc(x, cy - R * 0.48, 3, 0, 6.283); ctx.fill();
+  /* img: tên hình đang vẽ; X, Y, S: khung hình; flip: hình lật; dy: độ nhún khi bước; side: hình nhìn ngang */
+  function holdAt(img, X, Y, S, flip, dy, side) {
+    var h = (G.HANDS && G.HANDS[img]) || [68, 74, '#f6c9a8', 6];
+    var hx = X + (flip ? 100 - h[0] : h[0]) * S / 100, hy = Y + h[1] * S / 100 + (dy || 0), top = Y + h[3] * S / 100 + (dy || 0);
+    var cx = X + S / 2;
+    // nhìn trước / sau: cán dựng sát cạnh đầu, hơi ngả ra ngoài; nhìn ngang: ngả ra sau lưng như tựa lên vai
+    var ux = side ? cx + (flip ? -1 : 1) * S * 0.12 : hx + (hx >= cx ? 1 : -1) * S * 0.04;
+    return { hx: hx, hy: hy, ux: ux, uy: top - S * 0.025, S: S, col: h[2] };
+  }
+  /* ô của nhân vật ghép (thân body_<áo>_<hướng>.png): x, footY, h như G.drawAvatar; phase: nhịp bước (null = đứng) */
+  function avatarHold(av, x, footY, h, dir, phase) {
+    var d = dir === 'right' ? 'left' : dir;
+    return holdAt('body_' + av.ao + '_' + d + '.png', x - h / 2, footY - h, h, dir === 'right', phase == null ? 0 : -Math.abs(Math.sin(phase)) * h * 0.028, d === 'left');
+  }
+  function umbrella(u, ci, sway, part, fist) {
+    var S = u.S, R = S * 0.38, lw = Math.max(2, S * 0.024);
+    var vx = u.ux - u.hx, vy = u.uy - u.hy, L = Math.sqrt(vx * vx + vy * vy), ang = Math.atan2(vx, -vy) + (sway || 0);
+    ctx.save(); ctx.translate(u.hx, u.hy); ctx.rotate(ang);
+    ctx.strokeStyle = '#3a2418'; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    if (part === 'pole') {
+      var ext = S * 0.075, hr = S * 0.035;
+      ctx.lineWidth = lw; ctx.beginPath(); ctx.moveTo(0, ext); ctx.lineTo(0, -L); ctx.stroke();      // cán
+      ctx.beginPath(); ctx.arc(-hr, ext, hr, 0, Math.PI); ctx.stroke();                             // móc cong ở đuôi cán
+    } else {
+      var cy = -L, w = R / 2, i, a;
+      ctx.fillStyle = UCOL[ci % UCOL.length]; ctx.lineWidth = Math.max(2, S * 0.026);
+      ctx.beginPath(); ctx.moveTo(-R, cy); ctx.quadraticCurveTo(0, cy - R * 0.98, R, cy);         // vòm tán
+      for (i = 3; i >= 0; i--) { a = -R + (i + 0.5) * w; ctx.quadraticCurveTo(a, cy - R * 0.2, a - w / 2, cy); }   // mép sóng
+      ctx.closePath(); ctx.fill(); ctx.stroke();
+      ctx.strokeStyle = 'rgba(255,255,255,.45)'; ctx.lineWidth = Math.max(1.5, S * 0.017);         // gân tán
+      ctx.beginPath(); ctx.moveTo(0, cy - R * 0.48); ctx.lineTo(-R * 0.5, cy - R * 0.06); ctx.moveTo(0, cy - R * 0.48); ctx.lineTo(R * 0.5, cy - R * 0.06); ctx.stroke();
+      ctx.fillStyle = '#3a2418'; ctx.beginPath(); ctx.arc(0, cy - R * 0.5, Math.max(2, S * 0.024), 0, 6.283); ctx.fill();   // núm
+      if (fist) {   // các ngón tay nắm quanh cán (vẽ đè lên cán)
+        ctx.fillStyle = u.col; ctx.strokeStyle = '#3a2418'; ctx.lineWidth = Math.max(1.5, S * 0.016);
+        ctx.beginPath(); ctx.ellipse(0, 0, S * 0.03, S * 0.036, 0, 0, 6.283); ctx.fill(); ctx.stroke();
+      }
+    }
     ctx.restore();
   }
   /* mưa: hạt mưa rơi theo màn hình + vũng nước bắn tung toé trên mặt đất */
@@ -921,9 +954,11 @@ var G = window.G || (window.G = {});
     var py = o.stall ? o.y - 40 : o.y;   // người bán đứng sau quầy
     var top = im ? 138 : 118;
     shadow(o.x, py, 20);
+    var u = raining() && !o.stall ? (im ? holdAt(im, o.x - 62, py + 4 - 124, 124, false, 0, false) : avatarHold(n.av, o.x, py + 4, 104, dir, null)) : null;
+    if (u) umbrella(u, (o.x >> 3) % 6, 0, 'pole');
     if (im) G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, o.x, py + 4, 124, 'down', 0, false, 0.72);
     else G.drawAvatar(ctx, n.av, o.x, py + 4, 104, dir, 0, false);
-    if (raining() && !o.stall) umbrella(o.x + 10, py - (im ? 122 : 100), (o.x >> 3) % 6, 0);
+    if (u) umbrella(u, (o.x >> 3) % 6, 0, 'top', im || dir !== 'up');
     if (o.stall) { drawStallFront(o); py = o.y + 6; }   // tên người bán nằm dưới quầy
     // bong bóng 💬 nhấp nhô khi hôm nay chưa nói chuyện
     if (!talkedToday(o.life)) talkBubble(o.x, o.stall ? o.y - 210 : py - top);
@@ -942,7 +977,10 @@ var G = window.G || (window.G = {});
     var sh = P.moving ? 1 - Math.abs(Math.sin(P.t * 14)) * 0.12 : 1;
     if (G.S.nhanVat === 'custom' && G.S.avatar) {
       shadow(P.x, P.y, 24 * sh);
+      var ua = raining() ? avatarHold(G.S.avatar, P.x, P.y + 4, 112, P.dir, P.moving ? P.t * 14 : null) : null, swa = P.moving ? Math.sin(P.t * 14) * 0.035 : 0;
+      if (ua) umbrella(ua, 0, swa, 'pole');
       G.drawAvatar(ctx, G.S.avatar, P.x, P.y + 4, 112, P.dir, P.t * 14, P.moving);
+      if (ua) umbrella(ua, 0, swa, 'top', P.dir !== 'up');
       return;
     }
     var who = G.S.nhanVat || 'han';
@@ -952,15 +990,21 @@ var G = window.G || (window.G = {});
       var kf = kn === 'kai_left.png' ? kd === 'right' : kd === 'left';
       var kb = P.moving ? Math.abs(Math.sin(P.t * 14)) * 6 : Math.sin(Date.now() / 300) * 2;
       shadow(P.x, P.y, 22 * sh);
+      var ku = raining() ? holdAt(kn, P.x - 52, P.y - 100 - kb, 104, kf, 0, kn === 'kai_left.png') : null;
+      if (ku) umbrella(ku, 3, 0, 'pole');
       G.drawAsset(ctx, kn, P.x - 52, P.y - 100 - kb, 104, 104, kf);
-      if (raining()) umbrella(P.x + 14, P.y - 104 - kb, 3, 0);
+      if (ku) umbrella(ku, 3, 0, 'top', kd !== 'up');
       return;
     }
     var dir = P.dir === 'right' ? 'left' : P.dir, flip = P.dir === 'right';
     var name = 'player_' + who + '_' + dir + '.png';
     shadow(P.x, P.y, 26 * sh);
-    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, 0.72, G.ARMS[name]);
-    if (raining()) umbrella(P.x + (P.dir === 'left' ? -12 : 12), P.y - 112, 0, P.moving ? Math.sin(P.t * 14) * 0.05 : 0);
+    var u = raining() ? holdAt(name, P.x - 60, P.y + 8 - 120, 120, flip, P.moving ? -Math.abs(Math.sin(P.t * 14)) * 120 * 0.028 : 0, dir === 'left') : null;
+    var sw = P.moving ? Math.sin(P.t * 14) * 0.03 : 0;
+    if (u) umbrella(u, 0, sw, 'pole');
+    // tay cầm ô giữ yên (nhìn ngang: tay phía trước; nhìn trước / sau: tay bên phải màn hình)
+    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, 0.72, G.ARMS[name], u ? (dir === 'left' ? 0 : 1) : -1);
+    if (u) umbrella(u, 0, sw, 'top', dir !== 'up');
   }
   function drawKai() {
     var bob = Math.sin(Date.now() / 260) * 4, dir = K.dir || 'down';
