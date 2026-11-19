@@ -47,8 +47,9 @@ var G = window.G || (window.G = {});
       G.el('div', '🌱 Chưa biết tiếng Anh cũng làm bình thường: bấm “Không biết”, bài sẽ tự dừng sau vài câu.'),
       G.el('div', '🔊 Bật loa hoặc đeo tai nghe để làm phần Nghe.')));
     box.appendChild(G.el('button.btn.seal.big1.pl-go', { onclick: start }, 'Bắt đầu kiểm tra ›'));
-    // máy mới nhưng đã học ở máy khác: đăng nhập lấy tiến độ (có sẵn kết quả kiểm tra thì khỏi làm lại)
-    if (opts.first && G.cloudReady && G.cloudReady()) box.appendChild(G.el('button.btn.ghost.pl-cloud', { onclick: function () { G.openCloudLogin(); } }, '☁️ Đã học trên máy khác? Đăng nhập để lấy tiến độ'));
+    // đã học ở máy khác: đăng nhập lấy tiến độ; tiến độ trên mây có sẵn kết quả kiểm tra thì tải lại app là khỏi làm lại
+    if ((opts.first || opts.mandatory) && G.cloudReady && G.cloudReady() && !G.cloudUser())
+      box.appendChild(G.el('button.btn.ghost.pl-cloud', { onclick: function () { G.openCloudLogin(function (what) { if (what === 'pulled') setTimeout(function () { location.reload(); }, 900); }); } }, '☁️ Đã có tài khoản / học trên máy khác? Đăng nhập'));
     if (opts.canSkip) box.appendChild(G.el('button.btn.ghost.pl-later', { onclick: close }, 'Để sau'));
   }
   function start() {
