@@ -127,7 +127,7 @@ var G = window.G || (window.G = {});
             reveal();
             if (r.score >= 75) { G.sfx('right'); setTimeout(function () { if (q[k] === c) { grade(c, true); got++; k++; card(); } }, 1600); }
           });
-        } }, G.el('img.mk-mic-img', { src: 'assets/ic_mic.png', alt: '' }), G.el('span', 'Bấm rồi nói'));
+        } }, G.el('img.mk-mic-img', { src: G.assetUrl('ic_mic.png'), alt: '' }), G.el('span', 'Bấm rồi nói'));
         body.appendChild(G.el('div.mk-row', mic, res));
       }
       body.appendChild(G.el('button.btn.big1.rv-show', { onclick: function (e) { reveal(); e.currentTarget.style.display = 'none'; } }, 'Xem đáp án'));
@@ -200,7 +200,7 @@ var G = window.G || (window.G = {});
           for (var i = 0; i < alts.length; i++) { var s = G.scoreFree(alts[i], it.need).score; if (s > bs) { bs = s; best = alts[i]; } }
           last = check(best);
         });
-      } }, G.el('img.mk-mic-img', { src: 'assets/ic_mic.png', alt: '' }), G.el('span', 'Bấm rồi tự nói'));
+      } }, G.el('img.mk-mic-img', { src: G.assetUrl('ic_mic.png'), alt: '' }), G.el('span', 'Bấm rồi tự nói'));
       box.appendChild(G.el('div.mk-row', mic, G.el('div.small.faint', 'Tự nói bằng câu của bạn, không cần giống mẫu. Máy chấm theo ý chính.')));
     }
     box.appendChild(input);

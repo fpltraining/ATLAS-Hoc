@@ -59,6 +59,12 @@ G.ASSET_LIST = [
     return COLORS[p] || '#c9c2b4';
   }
 
+  /* địa chỉ hình kèm mã phiên bản (data/asset_rev.js): hình thay nội dung thì địa chỉ đổi, máy không dùng bản cũ */
+  G.assetUrl = function (name) {
+    var v = G.ASSET_REV && G.ASSET_REV[name];
+    return 'assets/' + name + (v ? '?v=' + v : '');
+  };
+
   /* Trả về đối tượng { img, ok, name }. ok = false khi file chưa có (vẽ ô màu thay thế). */
   G.asset = function (name) {
     if (cache[name]) return cache[name];
@@ -67,9 +73,9 @@ G.ASSET_LIST = [
     // lỗi tải (mạng chập chờn): thử lại tối đa 4 lần, mỗi lần chờ lâu hơn
     a.img.onerror = function () {
       a.ok = false; a.tried = true; a.fail = (a.fail || 0) + 1;
-      if (a.fail <= 4) setTimeout(function () { a.img.src = 'assets/' + name + '?r=' + a.fail; }, 1500 * a.fail);
+      if (a.fail <= 4) setTimeout(function () { var u = G.assetUrl(name); a.img.src = u + (u.indexOf('?') < 0 ? '?' : '&') + 'r=' + a.fail; }, 1500 * a.fail);
     };
-    a.img.src = 'assets/' + name;
+    a.img.src = G.assetUrl(name);
     cache[name] = a;
     return a;
   };
@@ -119,9 +125,9 @@ G.ASSET_LIST = [
     img.alt = '';
     img.onload = function () { wrap.innerHTML = ''; wrap.style.background = ''; wrap.appendChild(img); wrap.className = 'asset ok ' + (cls || ''); };
     img.onerror = function () {
-      if (fallback) { var f = fallback; fallback = null; name = f; img.src = 'assets/' + f; return; }
+      if (fallback) { var f = fallback; fallback = null; name = f; img.src = G.assetUrl(f); return; }
       wrap.innerHTML = ''; wrap.appendChild(G.el('span.asset-name', name)); wrap.style.background = colorOf(name); };
-    img.src = 'assets/' + name;
+    img.src = G.assetUrl(name);
     wrap.appendChild(G.el('span.asset-name', name));
     wrap.style.background = colorOf(name);
     return wrap;

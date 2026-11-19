@@ -184,7 +184,7 @@ var G = window.G || (window.G = {});
         G.sayBtns(opts.text, lang)));
       if (G.micOn()) micMode(); else selfMode();
     }
-    function icon(n, cls) { return G.el('img.' + (cls || 'mk-ic'), { src: 'assets/' + n, alt: '', draggable: 'false' }); }
+    function icon(n, cls) { return G.el('img.' + (cls || 'mk-ic'), { src: G.assetUrl(n), alt: '', draggable: 'false' }); }
     var busy = false, lastTap = 0;
     function tapOk() { var n = Date.now(); if (n - lastTap < 600) return false; lastTap = n; return true; }   // chống chạm đúp
     function micMode() {
