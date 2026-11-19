@@ -90,6 +90,10 @@ var G = window.G || (window.G = {});
   G.walkSprite = function (c, base, x, footY, S, dir, phase, moving, plain) {
     var d = dir === 'right' ? 'left' : dir, flip = dir === 'right', stand = base + '_' + d + '.png';
     if (!has(stand)) { stand = base + '_down.png'; d = 'down'; flip = false; }
+    if (!G.asset(stand).ok) {   // hình hướng này đang tải: tạm dùng hình mặt trước; chưa có gì thì chưa vẽ (không hiện ô chờ)
+      if (d === 'down' || !G.asset(base + '_down.png').ok) return;
+      stand = base + '_down.png'; d = 'down'; flip = false;
+    }
     var hw = G.hasWalk(base, d);
     if (hw && !moving) { G.asset(base + '_' + d + '_w1.png'); G.asset(base + '_' + d + '_w2.png'); }   // tải sẵn khung bước khi còn đứng
     if (!moving || plain || !hw) { G.hopDraw(c, function (cc, X, Y, SS) { G.drawAsset(cc, stand, X, Y, SS, SS, flip); }, x, footY, S, phase, moving); return; }

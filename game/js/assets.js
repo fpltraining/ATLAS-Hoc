@@ -93,7 +93,7 @@ G.ASSET_LIST = [
       return true;
     }
     // ảnh nhân vật / đồ vật chưa tải xong: không vẽ ô xám có tên file
-    if (!/^(body|hair|face|npc|player|kai|prop|souvenir|rank|badge|ic)_/.test(name)) G.drawPlaceholder(ctx, name, x, y, w, h);
+    if (!/^(body|hair|face|npc|player|person|kai|prop|pc|souvenir|rank|badge|ic)_/.test(name)) G.drawPlaceholder(ctx, name, x, y, w, h);
     return false;
   };
 
