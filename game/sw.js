@@ -1,6 +1,6 @@
 /* Chạy offline: giữ toàn bộ code game, dữ liệu và mọi file trong assets/ đã có.
    Hình mới bỏ vào assets/ được tải ở lần mở kế tiếp có mạng. Tệp giọng đọc được giữ lại khi đã nghe một lần. */
-var VERSION = 'thegioi-v66';
+var VERSION = 'thegioi-v67';
 // giọng đọc: tên tệp đặt theo nội dung câu nên không bao giờ đổi, giữ riêng một kho để cập nhật app không phải tải lại
 var AUDIO = 'connectlife-audio-v2';
 var CORE = [
