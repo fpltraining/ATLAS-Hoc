@@ -492,7 +492,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .pl-part { background: var(--paper); border: 1.5px solid var(--line); border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
 .pl-note { background: #fff6e6; border: 1.5px solid #f1dfb8; border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
 .pl-go { width: 100%; }
-.pl-zero, .pl-later { width: 100%; }
+.pl-cloud, .pl-later { width: 100%; }
 .pl-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .pl-prog { display: flex; gap: 6px; }
 .pl-prog i { width: 26px; height: 6px; border-radius: 3px; background: var(--line); }

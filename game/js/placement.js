@@ -36,21 +36,20 @@ var G = window.G || (window.G = {});
   /* ---------- màn mở đầu ---------- */
   function intro() {
     screen();
-    head('Trước khi vào học', 'Kiểm tra trình độ tiếng Anh', 'Để app chọn đúng độ khó cho bạn. Theo khung CEFR quốc tế, từ A0 (mới bắt đầu) tới B2.');
+    head(opts.first ? 'Bước 1/2 · Bắt buộc trước khi vào học' : opts.mandatory ? 'Bắt buộc trước khi học tiếp' : 'Làm lại để đo tiến bộ',
+      'Kiểm tra trình độ tiếng Anh', 'Ai vào app cũng làm bài này trước, để app chọn đúng độ khó cho bạn. Theo khung CEFR quốc tế, từ A0 (mới bắt đầu) tới B2.');
     box.appendChild(G.el('div.pl-parts', P.parts.map(function (p) {
       return G.el('div.pl-part', G.el('b', p.icon + ' ' + p.name), G.el('span.small.faint', p.what));
     })));
     box.appendChild(G.el('div.pl-note',
       G.el('div', '⏱ Bài tự dừng khi tới mức khó với bạn: người mới khoảng 3 phút, người đã học khoảng 10–12 phút.'),
       G.el('div', '🙅 Không tra từ. Không biết thì bấm “Không biết”, như vậy kết quả mới đúng.'),
+      G.el('div', '🌱 Chưa biết tiếng Anh cũng làm bình thường: bấm “Không biết”, bài sẽ tự dừng sau vài câu.'),
       G.el('div', '🔊 Bật loa hoặc đeo tai nghe để làm phần Nghe.')));
     box.appendChild(G.el('button.btn.seal.big1.pl-go', { onclick: start }, 'Bắt đầu kiểm tra ›'));
-    box.appendChild(G.el('button.btn.pl-zero', { onclick: zero }, '🌱 Mình chưa biết tiếng Anh, bắt đầu từ số 0'));
+    // máy mới nhưng đã học ở máy khác: đăng nhập lấy tiến độ (có sẵn kết quả kiểm tra thì khỏi làm lại)
+    if (opts.first && G.cloudReady && G.cloudReady()) box.appendChild(G.el('button.btn.ghost.pl-cloud', { onclick: function () { G.openCloudLogin(); } }, '☁️ Đã học trên máy khác? Đăng nhập để lấy tiến độ'));
     if (opts.canSkip) box.appendChild(G.el('button.btn.ghost.pl-later', { onclick: close }, 'Để sau'));
-  }
-  function zero() {
-    res = { nghe: 0, doc: 0, gt: 0, noi: null }; nAsk = 0; nRight = 0;
-    finish(true);
   }
   function start() {
     res = { nghe: null, doc: null, gt: null, noi: null }; pi = 0; nAsk = 0; nRight = 0;
@@ -196,9 +195,9 @@ var G = window.G || (window.G = {});
     v.sort(function (a, b) { return a - b; });
     return v[Math.floor((v.length - 1) / 2)];   // trung vị (lấy giá trị thấp hơn khi số phần chẵn)
   }
-  function finish(fromZero) {
+  function finish() {
     var lv = overall(res);
-    var rec = { lv: lv, nghe: res.nghe, doc: res.doc, gt: res.gt, noi: res.noi, luc: G.vnNow(), dung: nRight, tong: nAsk, so0: !!fromZero };
+    var rec = { lv: lv, nghe: res.nghe, doc: res.doc, gt: res.gt, noi: res.noi, luc: G.vnNow(), dung: nRight, tong: nAsk };
     var prev = G.S.dauVao;
     G.S.dauVao = rec;
     G.S.dauVaoLs = (G.S.dauVaoLs || []).concat([rec]).slice(-12);
@@ -206,7 +205,7 @@ var G = window.G || (window.G = {});
     G.save();
     G.sfx && G.sfx('done');
     screen();
-    head('Kết quả đầu vào', G.levelName(lv), fromZero ? 'Bắt đầu từ số 0. Học xong vài phòng thì làm bài này để đo tiến bộ.' : 'Đúng ' + nRight + '/' + nAsk + ' câu · ' + rec.luc.slice(0, 16) + ' (giờ Việt Nam)');
+    head('Kết quả đầu vào', G.levelName(lv), 'Đúng ' + nRight + '/' + nAsk + ' câu · ' + rec.luc.slice(0, 16) + ' (giờ Việt Nam)');
     box.appendChild(G.el('div.pl-lv', G.el('b', P.levels[lv]), G.el('span', P.names[lv])));
     box.appendChild(G.el('div.pl-skills', P.parts.map(function (p) {
       var v = res[p.id];
@@ -214,11 +213,11 @@ var G = window.G || (window.G = {});
         G.el('span.pl-bar', [1, 2, 3, 4, 5].map(function (k) { return G.el('i' + (v !== null && v >= k ? '.on' : '')); })),
         G.el('b.pl-sk-lv', v === null ? 'chưa đo' : P.levels[v]));
     })));
-    if (prev && !fromZero && prev.luc) box.appendChild(G.el('p.small', (lv > prev.lv ? '📈 Tiến bộ: ' : lv < prev.lv ? '📉 ' : '➖ ') + 'lần trước ' + P.levels[prev.lv] + ' (' + prev.luc.slice(0, 10) + ') → lần này ' + P.levels[lv]));
+    if (prev && prev.luc) box.appendChild(G.el('p.small', (lv > prev.lv ? '📈 Tiến bộ: ' : lv < prev.lv ? '📉 ' : '➖ ') + 'lần trước ' + P.levels[prev.lv] + ' (' + prev.luc.slice(0, 10) + ') → lần này ' + P.levels[lv]));
     box.appendChild(G.el('div.pl-can', G.el('b', 'Bạn đang ở mức: '), P.cando[lv]));
     box.appendChild(G.el('div.pl-plan', G.el('b', 'App sẽ chỉnh cho bạn:'), G.el('ul', plan(lv).map(function (t) { return G.el('li', t); }))));
     box.appendChild(G.el('p.small.faint', 'Học khoảng 30 ngày thì làm lại ở Sảnh → “Trình độ đầu vào” để xem mình lên cấp chưa.'));
-    box.appendChild(G.el('button.btn.seal.big1.pl-go', { onclick: close }, opts.canSkip ? 'Xong ›' : 'Vào Brightford ›'));
+    box.appendChild(G.el('button.btn.seal.big1.pl-go', { onclick: close }, opts.first ? 'Tiếp: chọn nhân vật ›' : opts.canSkip ? 'Xong ›' : 'Vào học ›'));
   }
   function plan(lv) {
     if (lv <= 1) return [
