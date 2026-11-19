@@ -117,6 +117,29 @@ var G = window.G || (window.G = {});
     if (arms && arms.length === 1) out.armDk = darken(out.arms[0], 'armDk');
     return out;
   }
+  /* Tượng giấy (phong cách mô hình giấy): không tách tay chân, mỗi bước là một cú nhún nhảy nhẹ —
+     nhấc lên theo đường cong mềm, chạm đất hơi bẹp rồi bật lại, lắc trái / phải quanh chân theo nhịp bước.
+     G.hopLift: độ nhấc hiện tại (để vẽ bóng, cầm ô theo). Hình nào là tượng giấy: G.PAPER_FIG. */
+  G.PAPER_FIG = { han: true, kai: true };
+  G.hopLift = function (S, phase, moving) { return moving ? Math.abs(Math.sin(phase)) * S * 0.07 : 0; };
+  G.hopDraw = function (c, paint, x, footY, S, phase, moving) {
+    var X = x - S / 2, Y = footY - S;
+    c.save();
+    if (!moving) {   // đứng yên: thở nhẹ
+      var br = 1 + Math.sin(Date.now() / 600) * 0.012;
+      c.translate(x, footY); c.scale(1, br); c.translate(-x, -footY);
+    } else {
+      var s = Math.sin(phase), up = Math.abs(s), land = Math.pow(1 - up, 4);   // land ≈ 1 lúc chạm đất
+      var lift = up * S * 0.07;
+      c.translate(x, footY - lift);
+      c.rotate(s * 0.07);                                        // lắc theo bước
+      c.scale(1 + land * 0.05, 1 - land * 0.07 + up * 0.025);   // chạm đất bẹp nhẹ, lên cao duỗi ra
+      c.translate(-x, -footY);
+    }
+    paint(c, X, Y, S);
+    c.restore();
+  };
+
   /* hold: số thứ tự tay đang cầm ô (trong arms) — tay đó giữ yên, không đánh theo bước chân */
   G.walkDraw = function (c, paint, x, footY, S, dir, phase, moving, hip, arms, hold) {
     var X = x - S / 2, Y = footY - S;
