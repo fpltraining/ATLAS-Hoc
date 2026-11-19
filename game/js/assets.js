@@ -5,6 +5,7 @@ var G = window.G || (window.G = {});
 G.TOWNIE_SETS = ['linda', 'walter', 'sofia', 'marco', 'amy', 'david', 'helen', 'kenji'];
 G.ASSET_LIST = [
   'player_han_down.png', 'player_han_up.png', 'player_han_left.png',
+  'player_han_down_w1.png', 'player_han_down_w2.png', 'player_han_up_w1.png', 'player_han_up_w2.png', 'player_han_left_w1.png', 'player_han_left_w2.png',
   'player_minh_down.png', 'player_minh_up.png', 'player_minh_left.png', 'kai_follow.png', 'kai_up.png', 'kai_left.png',
   'card_city_en.png', 'card_city_zh.png', 'card_city_soon.png', 'lobby_hero.png',
   'map_home_en_p.png', 'map_street_en.png',
