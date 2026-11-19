@@ -23,11 +23,11 @@ if (G.NPC_MORE) for (var nk in G.NPC_MORE) if (G.NPC_MORE.hasOwnProperty(nk)) G.
 
 /* Các phòng trong hành lang Trường Anh ngữ (5 cửa dọc tường trên) */
 G.EN_HALL_DOORS = [
-  { room: 'en-a1-1', label: 'A1-1', x: 243, sx: 300, sy: 500 },   // quầy lễ tân che trước cửa: đứng trước quầy để vào
-  { room: 'en-a1-2', label: 'A1-2', x: 507 },
-  { room: 'en-a1-3', label: 'A1-3', x: 771 },
-  { room: 'en-a1-4', label: 'A1-4', x: 1032 },
-  { room: 'en-a1-test', label: 'Thi A1', x: 1270 }
+  { room: 'en-a1-1', label: 'A1-1', x: 262, px: 250, sx: 330, sy: 570 },   // quầy lễ tân che trước cửa: đứng trong vòng quầy để vào
+  { room: 'en-a1-2', label: 'A1-2', x: 506, px: 496, sy: 395 },
+  { room: 'en-a1-3', label: 'A1-3', x: 757, px: 762, sy: 395 },
+  { room: 'en-a1-4', label: 'A1-4', x: 1008, px: 1020, sy: 395 },
+  { room: 'en-a1-test', label: 'Thi A1', x: 1248, px: 1268, sy: 395 }
 ];
 G.HALL_DOOR_Y = 345;   // chỗ đứng trước cửa (chân tường dưới các cửa trong ảnh hành lang)
 /* chỗ đứng để vào một cửa (cửa có vật che phía trước thì đứng ở sx, sy) */
@@ -43,11 +43,11 @@ G.ZH_HALL_DOORS = [
 ];
 /* Tầng 1 · Nền tảng (A0 → A1): 4 phòng, mỗi phòng 7–8 buổi (data/en_found.js), cửa cuối là phòng thi tầng */
 G.EN_F1_DOORS = [
-  { room: 'en-n1', label: 'N-1', x: 243, sx: 300, sy: 500 },
-  { room: 'en-n2', label: 'N-2', x: 507 },
-  { room: 'en-n3', label: 'N-3', x: 771 },
-  { room: 'en-n4', label: 'N-4', x: 1032 },
-  { room: 'en-n-test', label: 'Thi tầng 1', x: 1270 }
+  { room: 'en-n1', label: 'N-1', x: 262, px: 250, sx: 330, sy: 570 },
+  { room: 'en-n2', label: 'N-2', x: 506, px: 496, sy: 395 },
+  { room: 'en-n3', label: 'N-3', x: 757, px: 762, sy: 395 },
+  { room: 'en-n4', label: 'N-4', x: 1008, px: 1020, sy: 395 },
+  { room: 'en-n-test', label: 'Thi tầng 1', x: 1248, px: 1268, sy: 395 }
 ];
 /* Các tầng của Trường Anh ngữ. Tầng có scene là đã mở cửa; tầng soon đang xây (nội dung lấy từ Chặng 1–3 của lộ trình). */
 G.EN_FLOORS = [
@@ -130,26 +130,26 @@ G.SCENES = {
   en_hall: {
     city: 'en', doors: 'EN_HALL_DOORS', classroom: 'classroom_en', floor: 2,
     title: 'Trường Anh ngữ · Tầng 2 A1',
-    bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 42,
-    walk: { x0: 70, y0: 330, x1: 1466, y1: 990 },
-    exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
+    bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 78,
+    walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
+    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
     // thang máy (lên / xuống tầng) ở phía phải hành lang
-    gates: [{ x: 1250, y: 600, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy ›', to: { floors: true } }]
+    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]   // cửa thang máy có sẵn trong ảnh (tường phải)
   },
   en_hall_1: {
     city: 'en', doors: 'EN_F1_DOORS', classroom: 'classroom_en', floor: 1,
     title: 'Trường Anh ngữ · Tầng 1 Nền tảng',
-    bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 42,
-    walk: { x0: 70, y0: 330, x1: 1466, y1: 990 },
-    exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
-    gates: [{ x: 1250, y: 600, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy ›', to: { floors: true } }]
+    bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 78,
+    walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
+    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
+    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]   // cửa thang máy có sẵn trong ảnh (tường phải)
   },
   classroom_en: {
     city: 'en',
     title: 'Lớp học',
     bg: 'classroom_en.png', w: 1536, h: 1024, kind: 'classroom',
-    walk: { x0: 40, y0: 330, x1: 1496, y1: 990 },
-    teacher: { x: 735, y: 345 },
+    walk: { x0: 40, y0: 395, x1: 1496, y1: 990 },
+    teacher: { x: 770, y: 425 },
     exit: { x: 768, y: 985, label: 'Ra hành lang', to: { scene: 'en_hall', door: true } }
   }
 };

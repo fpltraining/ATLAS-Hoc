@@ -229,6 +229,7 @@ var G = window.G || (window.G = {});
     var PP = people();
     for (var pq = 0; pq < PP.length; pq++) {
       var po = PP[pq];
+      if (po.simg) { var sk0 = (po.ss || 280) / 280; if (Math.abs(x - po.x) < 128 * sk0 && y > po.y - 95 * sk0 && y < po.y + 10) return true; continue; }   // quầy hình giấy
       if (po.bimg) { var bk0 = (po.bs || 210) / 210; if (Math.abs(x - po.x) < 90 * bk0 && y > po.y - 120 * bk0 && y < po.y + 6) return true; continue; }   // tiệm có hình toà nhà
       var pd = x - po.x, pe = (y - po.y) * 2; if (pd * pd + pe * pe < 26 * 26) return true;
     }
@@ -966,6 +967,7 @@ var G = window.G || (window.G = {});
   }
   /* biển chỉ đường ở cổng sang khu khác */
   function drawGate(g) {
+    if (g.tag) { nameTag(g.sign, g.tag.x, g.tag.y); return; }   // cổng có sẵn trong ảnh (cửa thang máy): chỉ hiện tên
     var x = g.x + (g.side === 'left' ? 26 : -26), y = g.y, t = Date.now() / 1000;
     ctx.save();
     shadow(x, y, 14);
@@ -1005,10 +1007,10 @@ var G = window.G || (window.G = {});
     var n = G.NPCS[o.npc]; if (!n) return;
     if (o.bimg && G.asset(o.bimg).ok) { drawShopHouse(o); return; }
     var im = npcImg(n); if (!im && !n.av) return;
-    if (o.stall) drawStallBack(o);
+    if (o.stall && !o.simg) drawStallBack(o);
     var dx = P.x - o.x, dy = P.y - o.y, close = dx * dx + dy * dy < 200 * 200;
     var dir = close ? (Math.abs(dx) > Math.abs(dy) ? (dx < 0 ? 'left' : 'right') : (dy < 0 ? 'up' : 'down')) : o.dir;
-    var py = o.stall ? o.y - 40 : o.y;   // người bán đứng sau quầy
+    var py = o.stall ? o.y - (o.simg ? 58 : 40) : o.y;   // người bán đứng sau quầy
     var top = im ? 138 : 118;
     shadow(o.x, py, 20);
     var u = raining() && !o.stall ? (im ? holdAt(im, o.x - 62, py + 4 - 124, 124, false, 0, false) : avatarHold(n.av, o.x, py + 4, 104, dir, null)) : null;
@@ -1016,7 +1018,7 @@ var G = window.G || (window.G = {});
     if (im) G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, o.x, py + 4, 124, 0, false);
     else G.drawAvatar(ctx, n.av, o.x, py + 4, 104, dir, 0, false);
     if (u) umbrella(u, (o.x >> 3) % 6, 0, 'top', im || dir !== 'up');
-    if (o.stall) { drawStallFront(o); py = o.y + 6; }   // tên người bán nằm dưới quầy
+    if (o.stall) { if (o.simg) { var cs = o.ss || 280; G.drawAsset(ctx, o.simg, o.x - cs / 2, o.y + 12 - cs * 0.975, cs, cs); } else drawStallFront(o); py = o.y + 6; }   // quầy hình giấy vẽ trước người bán; tên nằm dưới quầy
     // bong bóng 💬 nhấp nhô khi hôm nay chưa nói chuyện
     if (!talkedToday(o.life)) talkBubble(o.x, o.stall ? o.y - 210 : py - top);
     nameTag(n.name, o.x, py + 22);
@@ -1093,18 +1095,19 @@ var G = window.G || (window.G = {});
       var stars = p ? (p.sao === 3 ? '★★★' : p.sao === 2 ? '★★☆' : p.sao === 1 ? '★☆☆' : '') : '';
       if (rg && rg.group) { var dn = 0; for (var q = 0; q < rg.group.length; q++) if (G.roomPassed(rg.group[q])) dn++; stars = dn ? dn + '/' + rg.group.length + ' buổi' : ''; }
       // khoá xích trên cửa chưa mở (có hình door_lock.png thì vẽ, chưa có thì chỉ hiện biển 🔒)
-      if (!open && G.asset('door_lock.png').ok) G.drawAsset(ctx, 'door_lock.png', door.x - 70, 120, 140, 140);
+      if (!open && G.asset('door_lock.png').ok) G.drawAsset(ctx, 'door_lock.png', door.x - 70, scene.plateY ? 175 : 120, 140, 140);
       ctx.fillStyle = open ? 'rgba(47,122,99,.95)' : 'rgba(27,33,64,.85)';
       var py = scene.plateY || 250;   // biển tên phòng: hành lang mới đặt ở tấm biển trên cửa
-      G.roundRect(ctx, door.x - 64, py, 128, 50, 12); ctx.fill();
+      var dx0 = door.px || door.x;
+      G.roundRect(ctx, dx0 - 64, py, 128, 50, 12); ctx.fill();
       ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.font = '800 19px -apple-system, system-ui, sans-serif';
       var lbl = (open ? '' : '🔒 ') + door.label;
       if (ctx.measureText(lbl).width > 118) ctx.font = '800 15px -apple-system, system-ui, sans-serif';
-      ctx.fillText(lbl, door.x, py + 16);
+      ctx.fillText(lbl, dx0, py + 16);
       ctx.font = '600 15px -apple-system, system-ui, sans-serif';
       ctx.fillStyle = '#ffd56b';
-      ctx.fillText(stars || (open ? 'Đang mở' : 'Khoá'), door.x, py + 37);
+      ctx.fillText(stars || (open ? 'Đang mở' : 'Khoá'), dx0, py + 37);
     }
   }
 
