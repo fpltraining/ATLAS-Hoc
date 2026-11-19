@@ -272,17 +272,17 @@ var G = window.G || (window.G = {});
 
   /* ---------- khu riêng (nội thất) cho từng tiệm ---------- */
   var SHOPS = {
-    'en-barber': { scene: 'barber_en', title: 'Tiệm cắt tóc của Tony', kind: 'barber', wall: '#e9d7c3', trim: '#2c3550', floor: 'check', sign: '💈 TONY\'S BARBERSHOP', signCol: '#c8553d', window: [520, 110, 300, 230], counter: '#2c3550', onCounter: ['✂️', '🧴', '💈'],
+    'en-barber': { scene: 'barber_en', title: 'Tiệm cắt tóc của Tony',
       boards: [{ x: 160, y: 230, title: 'PRICES', lines: [['Haircut – $20', 'Cắt tóc: 20 đô'], ['Students – $15', 'Học sinh: 15 đô'], ['Wash & style – $10', 'Gội và tạo kiểu: 10 đô'], ['Beard trim – $8', 'Tỉa râu: 8 đô'], ['Kids under 10 – $12', 'Trẻ dưới 10 tuổi: 12 đô']], q: ['Bạn là học sinh, cắt tóc và gội tạo kiểu hết bao nhiêu?', '$15 + $10 = $25'] }] },
-    'en-post': { scene: 'post_en', title: 'Bưu điện Brightford', kind: 'post', wall: '#d6e4ef', trim: '#c8553d', floor: 'tile', sign: '📮 POST OFFICE', signCol: '#1b2140', window: [480, 110, 300, 230], counter: '#c8553d', onCounter: ['⚖️', '✉️', '📦'],
+    'en-post': { scene: 'post_en', title: 'Bưu điện Brightford',
       boards: [{ x: 210, y: 230, title: 'SHIPPING', lines: [['Letter (local) – $0.70', 'Thư trong nước: 0,7 đô'], ['Letter (international) – $1.50', 'Thư quốc tế: 1,5 đô'], ['Standard parcel – 10–14 days', 'Bưu kiện thường: 10–14 ngày'], ['Express parcel – 3–5 days', 'Bưu kiện nhanh: 3–5 ngày'], ['Open Mon–Sat, 8 AM – 6 PM', 'Mở cửa thứ Hai – thứ Bảy, 8 giờ sáng – 6 giờ chiều']], q: ['Chủ nhật bưu điện có mở cửa không?', 'Không, chỉ mở thứ Hai đến thứ Bảy'] }] },
-    'en-bank': { scene: 'bank_en', title: 'Ngân hàng Brightford', kind: 'bank', wall: '#efe6d3', trim: '#2f7a63', floor: 'tile', sign: '🏦 BRIGHTFORD BANK', signCol: '#2f7a63', window: [560, 110, 300, 230], counter: '#5b6b7f', onCounter: ['💳', '🖊️', '💵'],
+    'en-bank': { scene: 'bank_en', title: 'Ngân hàng Brightford',
       boards: [{ x: 960, y: 230, title: 'EXCHANGE RATES', lines: [['1 USD = 25,400 VND', '1 đô Mỹ = 25.400 đồng'], ['1 EUR = 27,300 VND', '1 euro = 27.300 đồng'], ['Fee: $3 per exchange', 'Phí: 3 đô mỗi lần đổi'], ['Savings: 3% a year', 'Tiết kiệm: 3% một năm'], ['ATM open 24/7', 'ATM mở 24/7']], q: ['Đổi 100 đô được khoảng bao nhiêu tiền đồng (chưa trừ phí)?', 'Khoảng 2.540.000 đồng'] }] },
-    'en-super': { scene: 'super_en', title: 'Siêu thị mini', kind: 'super', wall: '#f4ead7', trim: '#2f7a63', floor: 'tile', sign: '🛒 FRESH MART', signCol: '#2f7a63', window: [760, 110, 300, 230], counter: '#2f7a63', onCounter: ['🧾', '🛍️', '💳'],
+    'en-super': { scene: 'super_en', title: 'Siêu thị mini',
       boards: [{ x: 1300, y: 230, title: 'TODAY\'S DEALS', lines: [['Yogurt – buy 1, get 1 free', 'Sữa chua: mua 1 tặng 1'], ['Bananas – $0.59 / lb', 'Chuối: 0,59 đô một pao'], ['Bread – 20% off', 'Bánh mì: giảm 20%'], ['Eggs (12) – $3.99', 'Trứng (12 quả): 3,99 đô'], ['Bring your own bag!', 'Hãy mang túi riêng!']], q: ['Mua 2 hộp sữa chua thì trả tiền mấy hộp?', 'Chỉ 1 hộp (mua 1 tặng 1)'] }] },
-    'en-pharmacy': { scene: 'pharmacy_en', title: 'Hiệu thuốc', kind: 'pharmacy', wall: '#e3f1ea', trim: '#2f7a63', floor: 'tile', sign: '💊 PHARMACY', signCol: '#2f7a63', window: [500, 110, 280, 230], counter: '#f8f4ee', onCounter: ['💊', '🧴', '🩹'],
+    'en-pharmacy': { scene: 'pharmacy_en', title: 'Hiệu thuốc',
       boards: [{ x: 1300, y: 230, title: 'OPEN HOURS', lines: [['Mon – Fri: 8 AM – 9 PM', 'Thứ Hai – thứ Sáu: 8 giờ sáng – 9 giờ tối'], ['Sat – Sun: 9 AM – 6 PM', 'Thứ Bảy – Chủ nhật: 9 giờ sáng – 6 giờ chiều'], ['Prescriptions ready in 15 min', 'Thuốc theo đơn có sau 15 phút'], ['Ask us about side effects', 'Hãy hỏi chúng tôi về tác dụng phụ'], ['Emergency? Call 911', 'Cấp cứu? Gọi 911']], q: ['Chủ nhật 8 giờ tối hiệu thuốc còn mở không?', 'Không, cuối tuần đóng cửa lúc 6 giờ chiều'] }] },
-    'en-gym': { scene: 'gym_en', title: 'Phòng gym', kind: 'gym', wall: '#dfe3ea', trim: '#c8553d', floor: 'wood', sign: '🏋️ POWER GYM', signCol: '#c8553d', window: [720, 110, 280, 230], counter: '#1b2140', onCounter: ['🧃', '🥤', '🔑'],
+    'en-gym': { scene: 'gym_en', title: 'Phòng gym',
       boards: [{ x: 1300, y: 230, title: 'CLASSES', lines: [['Yoga – Mon & Wed, 7 PM', 'Yoga: thứ Hai và thứ Tư, 7 giờ tối'], ['Spinning – Tue & Thu, 6 PM', 'Đạp xe: thứ Ba và thứ Năm, 6 giờ tối'], ['Boxing – Sat, 10 AM', 'Đấm bốc: thứ Bảy, 10 giờ sáng'], ['Book on the app', 'Đặt chỗ trên ứng dụng'], ['Towels are free', 'Khăn miễn phí']], q: ['Bạn chỉ rảnh thứ Bảy buổi sáng. Bạn tập lớp nào được?', 'Lớp đấm bốc (Boxing) 10 giờ sáng'] }] }
   };
   G.SHOPS = SHOPS;
@@ -310,25 +310,17 @@ var G = window.G || (window.G = {});
   var SM = G.SCENE_MORE || (G.SCENE_MORE = {});
   for (var lid in SHOPS) if (SHOPS.hasOwnProperty(lid)) {
     var S = SHOPS[lid], Y = LAY[lid];
-    if (Y) {
-      var bds = [], blk = (Y.blocks || []).slice();
-      for (var bi = 0; bi < S.boards.length; bi++) {
-        var b0 = S.boards[bi], bx = Y.board.x + bi * 200;
-        bds.push({ x: bx, y: Y.board.y, title: b0.title, lines: b0.lines, q: b0.q, floor: 1 });
-        blk.push([bx - 72, Y.board.y + 40, bx + 72, Y.board.y + 82]);   // chân bảng
-      }
-      SM[S.scene] = {
-        city: 'en', title: S.title, bg: Y.bg, w: 1536, h: 1024, kind: 'shop', life: lid, npc: L[lid].npc,
-        walk: Y.walk, teacher: Y.teacher, talk: Y.talk, room: S, lay: Y, boards: bds, blocks: blk,
-        exit: { x: Y.exit.x, y: Y.exit.y, label: 'Ra phố', to: { back: 1 } }
-      };
-      continue;
+    if (!Y) continue;   // tiệm nào cũng phải có ảnh nội thất và bố cục trong LAY
+    var bds = [], blk = (Y.blocks || []).slice();
+    for (var bi = 0; bi < S.boards.length; bi++) {
+      var b0 = S.boards[bi], bx = Y.board.x + bi * 200;
+      bds.push({ x: bx, y: Y.board.y, title: b0.title, lines: b0.lines, q: b0.q, floor: 1 });
+      blk.push([bx - 72, Y.board.y + 40, bx + 72, Y.board.y + 82]);   // chân bảng
     }
     SM[S.scene] = {
-      city: 'en', title: S.title, bg: '', w: 1536, h: 820, kind: 'shop', life: lid, npc: L[lid].npc,
-      walk: { x0: 90, y0: 600, x1: 1446, y1: 790 }, teacher: { x: 768, y: 480 },
-      room: S, boards: S.boards,
-      exit: { x: 768, y: 785, label: 'Ra phố', to: { back: 1 } }
+      city: 'en', title: S.title, bg: Y.bg, w: 1536, h: 1024, kind: 'shop', life: lid, npc: L[lid].npc,
+      walk: Y.walk, teacher: Y.teacher, talk: Y.talk, room: S, lay: Y, boards: bds, blocks: blk,
+      exit: { x: Y.exit.x, y: Y.exit.y, label: 'Ra phố', to: { back: 1 } }
     };
   }
 
