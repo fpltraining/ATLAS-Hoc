@@ -36,7 +36,7 @@ var G = window.G || (window.G = {});
   /* ---------- màn mở đầu ---------- */
   function intro() {
     screen();
-    head(opts.first ? 'Bước 1/2 · Bắt buộc trước khi vào học' : opts.mandatory ? 'Bắt buộc trước khi học tiếp' : 'Làm lại để đo tiến bộ',
+    head(opts.first ? (G.cloudReady && G.cloudReady() ? 'Bước 2/3' : 'Bước 1/2') + ' · Bắt buộc trước khi vào học' : opts.mandatory ? 'Bắt buộc trước khi học tiếp' : 'Làm lại để đo tiến bộ',
       'Kiểm tra trình độ tiếng Anh', 'Ai vào app cũng làm bài này trước, để app chọn đúng độ khó cho bạn. Theo khung CEFR quốc tế, từ A0 (mới bắt đầu) tới B2.');
     box.appendChild(G.el('div.pl-parts', P.parts.map(function (p) {
       return G.el('div.pl-part', G.el('b', p.icon + ' ' + p.name), G.el('span.small.faint', p.what));

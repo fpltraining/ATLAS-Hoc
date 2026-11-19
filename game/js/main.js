@@ -104,7 +104,18 @@ var G = window.G || (window.G = {});
     G.restoreCheck(function (restored) { if (restored && G.S.nhanVat) { G.initRank(); var cr = document.getElementById('create'); if (cr) cr.style.display = 'none'; G.renderLobby(); mustTest(); } });
     // lưu trên mây: mở app thì đồng bộ; nhận bản mới hơn từ máy khác thì tải lại app với tiến độ đó
     G.onCloudPulled = function () { G.toast('☁️ Đã lấy tiến độ mới nhất trên mây.'); setTimeout(function () { location.reload(); }, 1300); };
-    if (G.cloudReady && G.cloudReady() && G.cloudUser()) setTimeout(function () { G.cloudSync(); }, 600);
+    if (G.cloudReady && G.cloudReady() && G.cloudUser() && !/access_token=/.test(location.hash)) setTimeout(function () { G.cloudSync(); }, 600);
+    // vừa đăng nhập Google quay về: cất phiên, lấy tiến độ trên mây (có thì tải lại app), rồi vào như bình thường
+    if (!(G.cloudCatchRedirect && G.cloudCatchRedirect(function (err, what) { if (what === 'pulled') { location.reload(); return; } if (err) G.toast(err); begin(); }))) begin();
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(function () {});
+  }
+
+  /* chưa đăng nhập thì tạo tài khoản trước (bắt buộc), rồi mới kiểm tra trình độ / vào học */
+  function begin() {
+    if (G.cloudReady && G.cloudReady() && !G.cloudUser()) { G.openCloudGate(flow); return; }
+    flow();
+  }
+  function flow() {
     if (!G.S.nhanVat && !G.S.dauVao) {
       // lần đầu: kiểm tra trình độ (bắt buộc) → chọn nhân vật → lời mở đầu → ra khỏi nhà
       G.openPlacement(function () { G.openCreator(function () { G.introStory(function () { G.goCity('en'); }); }); }, { first: true });
@@ -116,7 +127,6 @@ var G = window.G || (window.G = {});
       G.renderLobby();
       mustTest(function () { G.renderLobby(); });
     }
-    if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(function () {});
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
