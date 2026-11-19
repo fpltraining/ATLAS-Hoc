@@ -39,10 +39,58 @@ G.ZH_HALL_DOORS = [
   { room: 'zh-1-4', label: 'HSK1-4', x: 1152 },
   { room: 'zh-1-test', label: 'Thi HSK1', x: 1408 }
 ];
-G.ROOM_TEACHER = { 'en-a1-1': 'emma', 'en-a1-2': 'tom', 'en-a1-3': 'lily', 'en-a1-4': 'sam', 'en-a1-test': 'kai',
+/* Tầng 1 · Nền tảng (A0 → A1): 4 phòng, mỗi phòng 7–8 buổi (data/en_found.js), cửa cuối là phòng thi tầng */
+G.EN_F1_DOORS = [
+  { room: 'en-n1', label: 'N-1', x: 172 },
+  { room: 'en-n2', label: 'N-2', x: 472 },
+  { room: 'en-n3', label: 'N-3', x: 768 },
+  { room: 'en-n4', label: 'N-4', x: 1068 },
+  { room: 'en-n-test', label: 'Thi tầng 1', x: 1364 }
+];
+/* Các tầng của Trường Anh ngữ. Tầng có scene là đã mở cửa; tầng soon đang xây (nội dung lấy từ Chặng 1–3 của lộ trình). */
+G.EN_FLOORS = [
+  { n: 1, name: 'Nền tảng', cefr: 'A0 → A1', sub: 'Phát âm, 600 từ lõi, ngữ pháp cơ bản · 30 buổi', scene: 'en_hall_1', doors: 'EN_F1_DOORS', grad: 'Nền tảng' },
+  { n: 2, name: 'A1', cefr: 'A1', sub: 'Giao tiếp hằng ngày như người bản xứ · 4 phòng và thi A1', scene: 'en_hall', doors: 'EN_HALL_DOORS', grad: 'A1' },
+  { n: 3, name: 'A2 – B1', cefr: 'A2 → B1', sub: 'Câu dài, đọc truyện dễ, nói 90 giây không ngắt', soon: true },
+  { n: 4, name: 'B1 – B2', cefr: 'B1 → B2', sub: 'Đọc rộng, nói trôi chảy, viết mạch lạc', soon: true }
+];
+G.ROOM_TEACHER = { 'en-n1': 'nora', 'en-n2': 'nora', 'en-n3': 'nora', 'en-n4': 'nora', 'en-n-test': 'kai',
+  'en-a1-1': 'emma', 'en-a1-2': 'tom', 'en-a1-3': 'lily', 'en-a1-4': 'sam', 'en-a1-test': 'kai',
   'zh-py': 'wang', 'zh-1-1': 'wang', 'zh-1-2': 'li', 'zh-1-3': 'zhang', 'zh-1-4': 'chen', 'zh-1-test': 'principal_li' };
 /* cửa nào thuộc hành lang nào */
-G.doorsOf = function (roomId) { return roomId.indexOf('zh') === 0 ? G.ZH_HALL_DOORS : G.EN_HALL_DOORS; };
+G.doorsOf = function (roomId) { return roomId.indexOf('zh') === 0 ? G.ZH_HALL_DOORS : roomId.indexOf('en-n') === 0 ? G.EN_F1_DOORS : G.EN_HALL_DOORS; };
+/* tầng của một phòng (buổi của phòng nhóm cũng thuộc tầng của phòng nhóm) */
+G.floorOfRoom = function (roomId) { return roomId && roomId.indexOf('en-n') === 0 ? 1 : 2; };
+G.floorInfo = function (n) { return G.EN_FLOORS[n - 1]; };
+/* tầng đã mở cho người học chưa: tầng 1 luôn mở; tầng 2 mở khi tốt nghiệp Nền tảng, đầu vào từ A1, hoặc đã học phòng A1 */
+G.floorUnlocked = function (n) {
+  var f = G.EN_FLOORS[n - 1]; if (!f || f.soon) return false;
+  if (n === 1) return true;
+  var t = G.S.totNghiep && G.S.totNghiep.en, lv = G.S.dauVao ? G.S.dauVao.lv : 2;
+  if (t && t['Nền tảng']) return true;
+  if (lv >= 2) return true;
+  for (var i = 0; i < G.EN_HALL_DOORS.length; i++) { var id = G.EN_HALL_DOORS[i].room; if (G.S.phong[id] || (G.S.dangHoc && G.S.dangHoc[id])) return true; }
+  return false;
+};
+/* tầng đang học: chọn ở thang máy (G.S.tangEn); chưa chọn thì theo đầu vào (A0, Pre-A1 học Nền tảng) */
+G.enFloorNow = function () {
+  var n = G.S.tangEn;
+  if (n && G.floorUnlocked(n)) return n;
+  return G.floorUnlocked(2) ? 2 : 1;
+};
+G.hallOfFloor = function (n) { return (G.EN_FLOORS[n - 1] || G.EN_FLOORS[1]).scene; };
+/* buổi đang học của phòng nhóm: buổi đầu tiên chưa qua (qua hết thì buổi cuối) */
+G.curSession = function (groupId) {
+  var g = G.ROOMS[groupId]; if (!g || !g.group) return null;
+  for (var i = 0; i < g.group.length; i++) if (!G.roomPassed(g.group[i])) return g.group[i];
+  return g.group[g.group.length - 1];
+};
+/* buổi thứ k trong phòng nhóm đã mở chưa: buổi đầu luôn mở, buổi sau cần qua buổi trước (đầu vào từ Pre-A1 được học vượt) */
+G.sessionOpen = function (groupId, k) {
+  var g = G.ROOMS[groupId];
+  if (k === 0 || (G.S.dauVao && G.S.dauVao.lv >= 1)) return true;
+  return G.roomPassed(g.group[k - 1]);
+};
 
 G.SCENES = {
   home_en: {
@@ -76,11 +124,21 @@ G.SCENES = {
     gates: [{ x: 1490, y: 512, side: 'right', label: 'Sang Phố mua sắm', sign: '🛍️ Phố mua sắm ›', to: { scene: 'street_en', x: 150, y: 420, dir: 'right' } }]
   },
   en_hall: {
-    city: 'en', doors: 'EN_HALL_DOORS', classroom: 'classroom_en',
-    title: 'Trường Anh ngữ',
+    city: 'en', doors: 'EN_HALL_DOORS', classroom: 'classroom_en', floor: 2,
+    title: 'Trường Anh ngữ · Tầng 2 A1',
     bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall',
     walk: { x0: 70, y0: 330, x1: 1466, y1: 990 },
-    exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } }
+    exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
+    // thang máy (lên / xuống tầng) ở phía phải hành lang
+    gates: [{ x: 1330, y: 470, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy ›', to: { floors: true } }]
+  },
+  en_hall_1: {
+    city: 'en', doors: 'EN_F1_DOORS', classroom: 'classroom_en', floor: 1,
+    title: 'Trường Anh ngữ · Tầng 1 Nền tảng',
+    bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall',
+    walk: { x0: 70, y0: 330, x1: 1466, y1: 990 },
+    exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
+    gates: [{ x: 1330, y: 470, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy ›', to: { floors: true } }]
   },
   classroom_en: {
     city: 'en',
@@ -158,6 +216,7 @@ G.SCENES.classroom_zh = {
 /* Đã qua phòng chưa: đạt từ 80% số câu (phòng thường 8/10, phòng thi 16/20) */
 G.roomPassed = function (id) {
   var p = G.S.phong[id], r = G.ROOMS[id];
+  if (r && r.group) { for (var i = 0; i < r.group.length; i++) if (!G.roomPassed(r.group[i])) return false; return true; }   // phòng nhóm: qua hết các buổi
   return !!(p && p.diem >= ((r && r.passN) || 8));
 };
 /* Phòng đã mở chưa: phòng đầu luôn mở, phòng sau cần qua phòng trước */
@@ -165,5 +224,6 @@ G.roomOpen = function (idx, doors) {
   doors = doors || G.EN_HALL_DOORS;
   if (idx === 0) return true;
   if (G.S && G.S.dauVao && G.S.dauVao.lv >= 3 && doors === G.EN_HALL_DOORS) return true;   // đầu vào từ A2: thi vượt các phòng A1
+  if (G.S && G.S.dauVao && G.S.dauVao.lv >= 1 && doors === G.EN_F1_DOORS) return true;     // đầu vào từ Pre-A1: học vượt, thi tầng 1 luôn
   return G.roomPassed(doors[idx - 1].room);
 };

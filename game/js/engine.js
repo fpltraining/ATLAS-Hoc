@@ -113,8 +113,12 @@ var G = window.G || (window.G = {});
   /* lời Kai khi vào hành lang: chỉ phòng nên học tiếp */
   function hallHint() {
     var d = doorsHere(), zh = scene.city === 'zh';
+    if (!zh && scene.floor) {   // lớp cần học ở tầng khác: chỉ ra thang máy
+      var nr = nextRoom();
+      if (nr && nr.floor !== scene.floor) return 'Đây là ' + scene.title + '. Lớp của bạn ở Tầng ' + nr.floor + ' · ' + G.floorInfo(nr.floor).name + ': đi thang máy bên phải nhé!';
+    }
     for (var i = 0; i < d.length; i++) if (!G.roomPassed(d[i].room)) return i === 0 ? 'Đây là ' + scene.title + '. Phòng ' + d[0].label + ' ở cửa đầu tiên bên trái!' : 'Phòng nên học tiếp: ' + d[i].label + ' (cửa thứ ' + (i + 1) + ' từ trái sang).';
-    return zh ? 'Bạn đã tốt nghiệp HSK1! HSK2 sẽ mở ở bản cập nhật sau.' : 'Bạn đã tốt nghiệp A1! Cấp A2 sẽ mở ở bản cập nhật sau.';
+    return zh ? 'Bạn đã tốt nghiệp HSK1! HSK2 sẽ mở ở bản cập nhật sau.' : scene.floor === 1 ? 'Bạn đã xong Tầng 1 · Nền tảng! Đi thang máy lên Tầng 2 học A1.' : 'Bạn đã tốt nghiệp A1! Tầng 3 (A2 – B1) đang được xây.';
   }
 
   function useBuilding(b) {
@@ -128,14 +132,17 @@ var G = window.G || (window.G = {});
       return;
     }
     if (b.home) { G.sfx('door'); G.openHome(); return; }
-    if (b.go) { G.sfx('door'); G.enterScene(b.go.scene, { x: b.go.x, y: b.go.y, dir: 'up' }); G.kaiSay(hallHint()); }
+    if (b.go) { G.sfx('door'); G.enterScene(b.go.scene === 'en_hall' ? G.hallOfFloor(G.enFloorNow()) : b.go.scene, { x: b.go.x, y: b.go.y, dir: 'up' }); G.kaiSay(hallHint()); }
     else G.kaiSay(b.soon);
   }
 
   var lastDoor = 0;
   function useDoor(idx) {
     var door = doorsHere()[idx];
-    if (!G.roomOpen(idx, doorsHere())) { G.sfx('wrong'); G.kaiSay('Cửa ' + door.label + ' còn khoá. Qua bài kiểm tra phòng trước (từ 8/10) để mở nhé.'); return; }
+    if (!G.roomOpen(idx, doorsHere())) {
+      var pv = G.ROOMS[doorsHere()[idx - 1].room];
+      G.sfx('wrong'); G.kaiSay('Cửa ' + door.label + ' còn khoá. ' + (pv && pv.group ? 'Qua hết ' + pv.group.length + ' buổi của phòng ' + pv.label + ' (mỗi buổi kiểm tra từ 8/10) để mở nhé.' : 'Qua bài kiểm tra phòng trước (từ 8/10) để mở nhé.')); return;
+    }
     if (!G.ROOMS[door.room]) { G.kaiSay('Phòng ' + door.label + ' sẽ có trong bản cập nhật sau.'); return; }
     lastDoor = idx;
     G.currentRoom = door.room;
@@ -154,9 +161,42 @@ var G = window.G || (window.G = {});
   }
   /* cổng sang khu khác của thành phố (trung tâm ↔ phố mua sắm) */
   function useGate(g) {
+    if (g.to.floors) { openFloors(); return; }
     G.sfx('door'); G.enterScene(g.to.scene, { x: g.to.x, y: g.to.y, dir: g.to.dir || 'down' });
     if (g.to.scene === 'street_en') G.kaiSay('Đây là Phố mua sắm: bưu điện, ngân hàng, hiệu thuốc, tiệm tóc và siêu thị. Vào tiệm nào cũng có người để nói chuyện!');
   }
+  /* thang máy: chọn tầng (tầng chưa mở thì nói cách mở, tầng đang xây thì báo sắp có) */
+  function openFloors() {
+    var cur = scene.floor || 0, wrap;
+    function close() { if (wrap && wrap.parentNode) wrap.parentNode.removeChild(wrap); }
+    function go(f) {
+      close();
+      if (f.n === cur) return;
+      G.S.tangEn = f.n; G.save();
+      G.sfx('door');
+      var lg = (G.SCENES[f.scene].gates || [])[0];
+      G.enterScene(f.scene, lg ? { x: lg.x - 70, y: lg.y + 30, dir: 'left' } : null);
+      G.kaiSay('Ding! Tầng ' + f.n + ' · ' + f.name + '. ' + hallHint());
+    }
+    var rows = G.EN_FLOORS.slice().reverse().map(function (f) {
+      var open = G.floorUnlocked(f.n), grad = G.S.totNghiep.en && f.grad && G.S.totNghiep.en[f.grad];
+      var tag = f.soon ? '🚧 Đang xây' : f.n === cur ? '📍 Bạn đang ở đây' : grad ? '🎓 Đã tốt nghiệp' : open ? 'Đã mở' : '🔒 Tốt nghiệp Nền tảng để mở';
+      return G.el('button.fl-row' + (f.soon || !open ? '.off' : '') + (f.n === cur ? '.cur' : ''), { onclick: function () {
+        if (f.soon) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' · ' + f.name + ' đang được xây. Sắp mở!'); return; }
+        if (!open) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' mở khi bạn tốt nghiệp Tầng 1 · Nền tảng (thi đạt 16/20).'); return; }
+        go(f);
+      } },
+        G.el('b.fl-n', String(f.n)),
+        G.el('span.fl-t', G.el('b', 'Tầng ' + f.n + ' · ' + f.name + ' '), G.el('span.fl-cefr', f.cefr), G.el('span.small', f.sub), G.el('span.fl-tag', tag)));
+    });
+    wrap = G.el('div.modal', { onclick: function (e) { if (e.target === wrap) close(); } }, G.el('div.choose.floors',
+      G.el('h2', '🛗 Thang máy'),
+      G.el('p.small', 'Chọn tầng muốn tới. Mỗi tầng là một cấp độ, học xong tầng dưới thì lên tầng trên.'),
+      G.el('div.fl-list', rows),
+      G.el('button.btn', { onclick: close }, 'Đóng')));
+    document.body.appendChild(wrap);
+  }
+  G.openFloors = openFloors;
   function gateTo(id) { var gs = scene.gates || []; for (var i = 0; i < gs.length; i++) if (gs[i].to.scene === id) return gs[i]; return null; }
   function useExit() {
     var to = scene.exit.to;
@@ -166,7 +206,10 @@ var G = window.G || (window.G = {});
       var bs = G.SCENES[to.scene].buildings;
       for (var i = 0; i < bs.length; i++) if (bs[i].id === to.building) { G.enterScene(to.scene, { x: bs[i].x, y: bs[i].y + 70, dir: 'down' }); return; }
     }
-    if (to.door) { G.enterScene(to.scene, { x: G[G.SCENES[to.scene].doors][lastDoor].x, y: G.HALL_DOOR_Y + 60, dir: 'down' }); return; }
+    if (to.door) {
+      var hs = G.currentRoom && G.currentRoom.indexOf('en') === 0 ? G.hallOfFloor(G.floorOfRoom(G.currentRoom)) : to.scene;
+      G.enterScene(hs, { x: G[G.SCENES[hs].doors][lastDoor].x, y: G.HALL_DOOR_Y + 60, dir: 'down' }); return;
+    }
     G.enterScene(to.scene);
   }
 
@@ -380,10 +423,15 @@ var G = window.G || (window.G = {});
   /* ---------- Việc tiếp theo: tính theo tiến độ, chỉ đường trong cảnh hiện tại ---------- */
   function bld(id) { var bs = scene.buildings || []; for (var i = 0; i < bs.length; i++) if (bs[i].id === id) return bs[i]; return null; }
   function nextRoom() {
-    var d = G.EN_HALL_DOORS;
-    for (var i = 0; i < d.length; i++) if (G.ROOMS[d[i].room] && !G.roomPassed(d[i].room)) return { door: d[i], idx: i };
+    var now = G.enFloorNow(), order = [now], f, i;
+    for (f = 1; f <= G.EN_FLOORS.length; f++) if (f !== now && G.floorUnlocked(f)) order.push(f);
+    for (var k = 0; k < order.length; k++) {
+      var d = G[G.floorInfo(order[k]).doors];
+      for (i = 0; i < d.length; i++) if (G.ROOMS[d[i].room] && !G.roomPassed(d[i].room)) return { door: d[i], idx: i, floor: order[k] };
+    }
     return null;
   }
+  function liftGate() { var gs = scene.gates || []; for (var i = 0; i < gs.length; i++) if (gs[i].to.floors) return gs[i]; return null; }
   function nextLife() {   // nơi đời sống đã mở mà chưa xong cả 3 tình huống
     for (var k in G.LIFE) {
       if (!G.LIFE.hasOwnProperty(k) || G.LIFE[k].lang !== 'en' || !G.roomPassed(G.LIFE[k].unlock)) continue;
@@ -396,11 +444,13 @@ var G = window.G || (window.G = {});
   function goal() {
     var nr = nextRoom(), lf = nr ? null : nextLife();
     var tName = nr ? G.NPCS[G.ROOM_TEACHER[nr.door.room]].name : '';
-    var what = nr ? 'Học phòng ' + nr.door.label + ' với ' + tName : lf ? 'Nói chuyện ở ' + G.LIFE[lf].title : 'Ôn lại một phòng bất kỳ để lấy thêm sao';
+    var ses = nr && G.ROOMS[nr.door.room].group ? G.ROOMS[G.curSession(nr.door.room)] : null;   // phòng nhóm: buổi đang học
+    var what = nr ? (ses ? 'Học Buổi ' + ses.n + ' (phòng ' + nr.door.label + ') với ' + tName : 'Học phòng ' + nr.door.label + ' với ' + tName) : lf ? 'Nói chuyện ở ' + G.LIFE[lf].title : 'Ôn lại một phòng bất kỳ để lấy thêm sao';
     var id = sceneId;
     var td = G.today().viec;
     // người mới (đầu vào dưới A1) chưa qua phòng đầu: chỉ thẳng tới trường học trước, nói chuyện ngoài phố để sau
-    var newbie = !!(G.S.dauVao && G.S.dauVao.lv <= 1 && !G.roomPassed(G.EN_HALL_DOORS[0].room));
+    var fd = G[G.floorInfo(G.enFloorNow()).doors][0], fr = G.ROOMS[fd.room];
+    var newbie = !!(G.S.dauVao && G.S.dauVao.lv <= 1 && !G.roomPassed(fr && fr.group ? fr.group[0] : fd.room));
     var mn = id === 'home_en' && !newbie ? morningNext() : null;
     if (mn === 'en-home') { var hm0 = bld('home'); return { text: 'Buổi sáng: vào nhà ăn sáng và nói chuyện với mẹ', x: hm0.x, y: hm0.y + 18, h: 260, label: 'Vào nhà · đọc truyện, ôn từ' }; }
     if (mn) { var pm = personOf(mn), nm = G.NPCS[G.LIFE[mn].npc].name; if (pm) return { text: 'Buổi sáng: ' + G.LIFE[mn].title + ' · nói chuyện với ' + nm, x: pm.x, y: pm.y + 40, h: 150, label: 'Nói chuyện với ' + nm }; }
@@ -426,14 +476,17 @@ var G = window.G || (window.G = {});
       var pc = personOf('en-canteen'); return { text: 'Giờ ăn trưa: ra căng tin gặp Ms. Pat', x: pc.x, y: pc.y + 40, h: 150, label: 'Nói chuyện với Ms. Pat' };
     }
     if (scene.kind === 'hall') {
-      if (!nr) return { text: lf ? 'Ra phố · ' + what : what, x: lf ? scene.exit.x : G.EN_HALL_DOORS[0].x, y: lf ? scene.exit.y : G.HALL_DOOR_Y, h: lf ? 120 : 220, label: lf ? scene.exit.label : 'Vào phòng ' + G.EN_HALL_DOORS[0].label };
+      var lg = liftGate();
+      if (nr && scene.floor && nr.floor !== scene.floor && lg) return { text: 'Đi thang máy ' + (nr.floor > scene.floor ? 'lên' : 'xuống') + ' Tầng ' + nr.floor + ' · ' + G.floorInfo(nr.floor).name, x: lg.x, y: lg.y, h: 170, label: lg.label };
+      var d0 = doorsHere()[0];
+      if (!nr) return { text: lf ? 'Ra phố · ' + what : what, x: lf ? scene.exit.x : d0.x, y: lf ? scene.exit.y : G.HALL_DOOR_Y, h: lf ? 120 : 220, label: lf ? scene.exit.label : 'Vào phòng ' + d0.label };
       return { text: 'Vào cửa ' + nr.door.label + ' (cửa thứ ' + (nr.idx + 1) + ' từ trái) · ' + tName, x: nr.door.x, y: G.HALL_DOOR_Y, h: 230, label: 'Vào phòng ' + nr.door.label };
     }
     if (scene.kind === 'classroom') {
       var here = G.currentRoom, hn = G.NPCS[G.ROOM_TEACHER[here]];
       if (nr && here !== nr.door.room) return { text: 'Phòng này đã qua. Ra hành lang, sang phòng ' + nr.door.label, x: scene.exit.x, y: scene.exit.y, h: 120, label: scene.exit.label };
-      var p = G.S.phong[here];
-      return { text: 'Gặp ' + hn.name + ' · ' + (p ? 'Kiểm tra lại để đạt từ 8/10' : 'Học → Luyện → Kiểm tra'), x: TX(), y: TY() + 40, h: 220, label: 'Nói chuyện với ' + hn.name };
+      var p = G.S.phong[here], hg = G.ROOMS[here] && G.ROOMS[here].group ? G.ROOMS[G.curSession(here)] : null;
+      return { text: 'Gặp ' + hn.name + ' · ' + (hg ? 'Buổi ' + hg.n + ': Học → Luyện → Kiểm tra' : p ? 'Kiểm tra lại để đạt từ 8/10' : 'Học → Luyện → Kiểm tra'), x: TX(), y: TY() + 40, h: 220, label: 'Nói chuyện với ' + hn.name };
     }
     if (scene.kind === 'shop') return { text: 'Gặp ' + G.NPCS[scene.npc].name + ' và chọn một tình huống', x: talkPt().x, y: talkPt().y, h: scene.lay ? talkPt().y - scene.lay.front[1] - 40 : 220, label: 'Nói chuyện với ' + G.NPCS[scene.npc].name };
     return null;
@@ -1034,15 +1087,18 @@ var G = window.G || (window.G = {});
   function drawDoorPlates() {
     var DR = doorsHere();
     for (var d = 0; d < DR.length; d++) {
-      var door = DR[d], open = G.roomOpen(d, DR), p = G.S.phong[door.room];
+      var door = DR[d], open = G.roomOpen(d, DR), p = G.S.phong[door.room], rg = G.ROOMS[door.room];
       var stars = p ? (p.sao === 3 ? '★★★' : p.sao === 2 ? '★★☆' : p.sao === 1 ? '★☆☆' : '') : '';
+      if (rg && rg.group) { var dn = 0; for (var q = 0; q < rg.group.length; q++) if (G.roomPassed(rg.group[q])) dn++; stars = dn ? dn + '/' + rg.group.length + ' buổi' : ''; }
       // khoá xích trên cửa chưa mở (có hình door_lock.png thì vẽ, chưa có thì chỉ hiện biển 🔒)
       if (!open && G.asset('door_lock.png').ok) G.drawAsset(ctx, 'door_lock.png', door.x - 70, 120, 140, 140);
       ctx.fillStyle = open ? 'rgba(47,122,99,.95)' : 'rgba(27,33,64,.85)';
       G.roundRect(ctx, door.x - 64, 250, 128, 50, 12); ctx.fill();
       ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.font = '800 19px -apple-system, system-ui, sans-serif';
-      ctx.fillText((open ? '' : '🔒 ') + door.label, door.x, 266);
+      var lbl = (open ? '' : '🔒 ') + door.label;
+      if (ctx.measureText(lbl).width > 118) ctx.font = '800 15px -apple-system, system-ui, sans-serif';
+      ctx.fillText(lbl, door.x, 266);
       ctx.font = '600 15px -apple-system, system-ui, sans-serif';
       ctx.fillStyle = '#ffd56b';
       ctx.fillText(stars || (open ? 'Đang mở' : 'Khoá'), door.x, 287);

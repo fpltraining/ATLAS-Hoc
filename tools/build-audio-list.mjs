@@ -81,13 +81,14 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
 {
   const vm = await import('node:vm');
   const ctx = { console }; ctx.window = ctx; ctx.G = {}; vm.createContext(ctx);
-  for (const f of ['game/data/en_a1.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js', 'game/data/placement_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
+  for (const f of ['game/data/en_a1.js', 'game/data/en_found.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js', 'game/data/placement_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
   const FEM = { emma: 1, lily: 1, rosa: 1, anna: 1, mom: 1, mia: 1, nora: 1, pat: 1, kim: 1, zoe: 1, lee: 1, ivy: 1 };
   for (const R of Object.values(ctx.G.ROOMS)) {
     if (R.lang !== 'en') continue;
     const sx = FEM[R.teacher] ? 'f' : 'm';
     add('en', R.intro[0], sx); add('en', R.outro, sx);
     R.items.forEach((it, i) => { add('en', it.en, alt(i)); add('en', it.ex, alt(i + 1)); });
+    if (R.gram) R.gram.ex.forEach(([t], i) => add('en', t, alt(i)));   // câu mẫu ngữ pháp của buổi Nền tảng
   }
   for (const L of Object.values(ctx.G.LIFE)) {
     if (L.lang !== 'en') continue;
@@ -110,7 +111,7 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
     for (let t = -5; t <= 38; t++) add('en', `It's ${t < 0 ? 'minus ' + -t : t} degrees and ${W.find((w) => t <= w[0])[1]}.`, 'f');
   }
   // lời chúc tốt nghiệp (grad.js)
-  for (const R of Object.values(ctx.G.ROOMS)) if (R.final && R.final.lang === 'en') for (const nm of ['Han', 'Minh', 'Kai']) add('en', `Congrats, ${nm}! You've finished ${R.final.level}. So proud of you!`, 'f');
+  for (const R of Object.values(ctx.G.ROOMS)) if (R.final && R.final.lang === 'en') for (const nm of ['Han', 'Minh', 'Kai']) add('en', `Congrats, ${nm}! You've finished ${R.final.levelEn || R.final.level}. So proud of you!`, 'f');
   {
   }
   // câu cố định trong js/ride.js, js/flight.js, js/grad.js (câu tiếng Anh viết hoa đầu, kết thúc bằng . ? !)

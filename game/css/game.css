@@ -551,3 +551,26 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .kai { left: max(12px, env(safe-area-inset-left)) !important; transform: translate(0, -10px) !important; width: calc(100% - 132px) !important; }
   .kai.show { transform: translate(0, 0) !important; }
 }
+
+/* thang máy: chọn tầng của Trường Anh ngữ */
+.floors { text-align: left; max-height: calc(100vh - 32px); overflow-y: auto; }
+.floors h2, .floors > p { text-align: center; }
+.fl-list { display: grid; gap: 8px; margin: 12px 0; }
+.fl-row { display: flex; gap: 12px; align-items: center; text-align: left; padding: 10px 12px; border-radius: 14px; border: 1.5px solid var(--line); background: var(--paper); color: var(--ink); font: inherit; }
+.fl-row.cur { background: var(--jade-soft); border-color: var(--jade); }
+.fl-row.off { opacity: .62; }
+.fl-n { flex: none; width: 42px; height: 42px; border-radius: 10px; background: var(--navy); color: #ffd56b; display: grid; place-items: center; font-size: 20px; }
+.fl-t { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.fl-cefr { font-size: 13px; color: var(--coral); font-weight: 700; }
+.fl-tag { font-size: 13px; font-weight: 700; color: var(--jade); }
+/* buổi học Nền tảng: âm hôm nay, ngữ pháp, danh sách buổi trong phòng */
+.snd-pairs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 10px 0; }
+.snd-pairs .btn { min-height: 48px; font-size: 17px; }
+.gram-b { white-space: pre-line; text-align: left; }
+.gram-ex { display: grid; gap: 6px; margin-top: 10px; text-align: left; }
+.gram-ex > div { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }
+.ses-list { display: grid; gap: 8px; margin-top: 12px; }
+.big.off { opacity: .6; }
+.big.cur { border-color: var(--jade); background: var(--jade-soft); }
+.wipa { color: var(--faint); font-size: 15px; }
+.back-ses { min-height: 36px; padding: 6px 12px; font-size: 14px; margin-bottom: 10px; }
