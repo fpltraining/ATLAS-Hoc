@@ -5,5 +5,6 @@
 var G = window.G || (window.G = {});
 G.CLOUD_URL = G.CLOUD_URL || 'https://zevvrhxqsplhifgrnfsa.supabase.co';
 G.CLOUD_KEY = G.CLOUD_KEY || 'sb_publishable_b9ozmqB3D5cVnIbJu3zltQ_ZGtuKZYz';   // khoá công khai (publishable), không phải khoá bí mật
-/* true khi đã bật Google trong Supabase (Authentication → Sign In / Providers → Google): hiện nút "Tiếp tục với Google" */
-G.CLOUD_GOOGLE = false;
+/* Nút "Tiếp tục với Google" tự hiện khi Supabase đã bật Google (Authentication → Sign In / Providers → Google);
+   app hỏi Supabase mỗi lần mở màn đăng nhập, không cần sửa dòng này. false = luôn ẩn. */
+G.CLOUD_GOOGLE = 'auto';

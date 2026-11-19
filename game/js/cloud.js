@@ -129,6 +129,24 @@ var G = window.G || (window.G = {});
     try { sessionStorage.setItem('cl-google', '1'); } catch (e) { /* bỏ qua */ }
     location.href = base() + '/auth/v1/authorize?provider=google&redirect_to=' + encodeURIComponent(appUrl());
   };
+  /* Supabase đã bật đăng nhập Google chưa (GET /auth/v1/settings), nhớ kết quả trong máy để lần sau hiện ngay */
+  function googleOn() { if (G.CLOUD_GOOGLE === false) return false; try { return localStorage.getItem('cl-google-on') === '1'; } catch (e) { return false; } }
+  function googleBox() {
+    var box = G.el('div.cl-gbox');
+    function draw() {
+      box.innerHTML = '';
+      if (!googleOn()) return;
+      box.appendChild(G.el('button.btn.cl-google', { onclick: G.cloudGoogle }, G.el('b', 'G'), ' Tiếp tục với Google'));
+      box.appendChild(G.el('div.cl-or', 'hoặc dùng email'));
+    }
+    draw();
+    if (G.CLOUD_GOOGLE !== false) http('GET', '/auth/v1/settings', null, null, null, function (err, j) {
+      if (err || !j || !j.external) return;
+      try { localStorage.setItem('cl-google-on', j.external.google ? '1' : '0'); } catch (e) { /* bỏ qua */ }
+      draw();
+    });
+    return box;
+  }
   /* mở app sau khi Google trả về: cất phiên đăng nhập, đồng bộ lần đầu. Trả về true nếu đang xử lý (cb gọi sau) */
   G.cloudCatchRedirect = function (cb) {
     var h = location.hash || '';
@@ -174,10 +192,7 @@ var G = window.G || (window.G = {});
     box.appendChild(G.el('div.kicker', 'Bước 1/3 · Bắt buộc'));
     box.appendChild(G.el('h1', 'Tạo tài khoản học'));
     box.appendChild(G.el('p', 'Tài khoản giữ toàn bộ tiến độ của bạn: đổi iPad, iPhone hay xoá app cũng không mất bài. Đăng nhập một lần, lần sau mở app là vào thẳng, tới khi bạn bấm Đăng xuất.'));
-    if (G.CLOUD_GOOGLE) {
-      box.appendChild(G.el('button.btn.cl-google', { onclick: G.cloudGoogle }, G.el('b', 'G'), ' Tiếp tục với Google'));
-      box.appendChild(G.el('div.cl-or', 'hoặc dùng email'));
-    }
+    box.appendChild(googleBox());
     box.appendChild(em); box.appendChild(pw); box.appendChild(msg);
     box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { go(true); } }, 'Tạo tài khoản ›'));
     box.appendChild(G.el('button.btn', { onclick: function () { go(false); } }, 'Đã có tài khoản? Đăng nhập'));
@@ -216,8 +231,7 @@ var G = window.G || (window.G = {});
     wrap = G.el('div.modal.cl-wrap', G.el('div.choose.story.cl-box',
       G.el('h2', '☁️ Lưu tiến độ trên mây'),
       G.el('p.small', 'Đăng nhập một lần, app tự lưu sau mỗi bài. Đổi sang iPad, iPhone khác chỉ cần đăng nhập là học tiếp, không cần sao lưu.'),
-      G.CLOUD_GOOGLE ? G.el('button.btn.cl-google', { onclick: G.cloudGoogle }, G.el('b', 'G'), ' Tiếp tục với Google') : null,
-      G.CLOUD_GOOGLE ? G.el('div.cl-or', 'hoặc dùng email') : null,
+      googleBox(),
       em, pw, msg,
       G.el('div.row',
         G.el('button.btn', { onclick: function () { go(true); } }, 'Tạo tài khoản mới'),
