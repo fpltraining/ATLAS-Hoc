@@ -575,3 +575,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .wipa { color: var(--faint); font-size: 15px; }
 .back-ses { min-height: 36px; padding: 6px 12px; font-size: 14px; margin-bottom: 10px; }
 .cl-wrap { z-index: 58; }   /* khung đăng nhập mây nằm trên màn kiểm tra đầu vào (55), dưới thông báo (60) */
+/* màn tạo tài khoản bắt buộc (trước bài kiểm tra trình độ) */
+.cgate { position: fixed; inset: 0; z-index: 56; background: var(--cream); overflow-y: auto; -webkit-overflow-scrolling: touch; display: flex; justify-content: center; padding: max(24px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom)); }
+.cgate-box { width: min(460px, 100%); display: flex; flex-direction: column; gap: 10px; margin: auto 0; }
+.cgate-box h1 { margin: 0; font-size: 28px; }
+.cgate-box .cl-in { width: 100%; }
+.cl-google { display: flex; align-items: center; justify-content: center; gap: 8px; background: #fff; border: 1.5px solid var(--line); font-size: 17px; }
+.cl-google b { font: 800 20px/1 Arial, sans-serif; color: #4285f4; }
+.cl-or { text-align: center; color: var(--faint); font-size: 13px; margin: 2px 0; }
