@@ -69,9 +69,6 @@ var G = window.G || (window.G = {});
      paint(c, X, Y, S) vẽ trọn hình trong khung vuông S; hip: tỉ lệ chiều cao tới hông;
      arms: danh sách tay { r: [x0, y0, x1, y1] (% khung), p: [x, y] vai } — không có thì tay đi theo thân. */
   G.ARMS = {
-    'player_han_down.png': [{ r: [28, 51, 37.5, 78], p: [36, 53] }, { r: [62.5, 51, 72, 78], p: [64, 53] }],
-    'player_han_up.png': [{ r: [28, 52, 37.5, 78], p: [36, 54] }, { r: [62.5, 52, 72, 78], p: [64, 54] }],
-    'player_han_left.png': [{ r: [36, 51, 46.5, 73], p: [43, 53], patch: [40, 46.5] }],
     'player_minh_down.png': [{ r: [22, 52, 36.5, 80], p: [35, 54] }, { r: [63.5, 52, 78, 80], p: [65, 54] }],
     'player_minh_up.png': [{ r: [22, 52, 36.5, 80], p: [35, 54] }, { r: [63.5, 52, 78, 80], p: [65, 54] }],
     'player_minh_left.png': [{ r: [44, 51, 55.5, 77], p: [50, 53], patch: [44, 55.5] }]

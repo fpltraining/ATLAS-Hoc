@@ -96,13 +96,14 @@ G.SCENES = {
   home_en: {
     city: 'en',
     title: 'Khu phố Maple',
-    bg: 'map_home_en.png', w: 1536, h: 1024, kind: 'city',
-    spawn: { x: 330, y: 790 },
+    // kiểu mô hình giấy: tờ giấy nền chỉ có đường, cỏ; nhà, cây, đồ vật là hình giấy dựng rời (s: cỡ vẽ)
+    bg: 'map_home_en_p.png', w: 1536, h: 1024, kind: 'city',
+    spawn: { x: 250, y: 650 },
     walk: { x0: 30, y0: 60, x1: 1506, y1: 1000 },
     buildings: [
-      { id: 'home', img: 'building_en_home.png', x: 330, y: 700, name: 'Nhà của bạn', home: true },
-      { id: 'busstop', img: 'building_en_busstop.png', x: 1240, y: 400, name: 'Bến xe buýt', ride: 'bus', toward: 'school' },
-      { id: 'metro', img: 'building_en_metro.png', x: 1190, y: 960, name: 'Ga tàu điện', ride: 'metro', toward: 'school' }
+      { id: 'home', img: 'pc_home.png', s: 330, x: 245, y: 590, name: 'Nhà của bạn', home: true },
+      { id: 'busstop', img: 'pc_busstop.png', s: 250, x: 1110, y: 500, name: 'Bến xe buýt', ride: 'bus', toward: 'school' },
+      { id: 'metro', img: 'pc_metro.png', s: 270, x: 1180, y: 880, name: 'Ga tàu điện', ride: 'metro', toward: 'school' }
     ]
   },
   city_en: {
@@ -162,7 +163,20 @@ G.SCENES.city_en.props = [
   { img: 'prop_mailbox.png', x: 1000, y: 150, s: 90, r: 16 }
 ];
 G.SCENES.home_en.props = [
-  { img: 'prop_flowers.png', x: 150, y: 790, s: 100, r: 30 }
+  { img: 'pc_tree_orange.png', x: 80, y: 270, s: 290, r: 24 }, { img: 'pc_tree_small.png', x: 45, y: 430, s: 200, r: 18 },
+  { img: 'pc_tree_pine.png', x: 1460, y: 230, s: 320, r: 20 }, { img: 'pc_tree_green.png', x: 1230, y: 180, s: 250, r: 22 },
+  { img: 'pc_tree_green.png', x: 1470, y: 1000, s: 290, r: 24 }, { img: 'pc_tree_birch.png', x: 940, y: 1000, s: 270, r: 22 },
+  { img: 'pc_tree_maple.png', x: 120, y: 930, s: 240, r: 20 },
+  { img: 'pc_bush_orange.png', x: 60, y: 560, s: 120, r: 34 }, { img: 'pc_bush_white.png', x: 430, y: 760, s: 120, r: 34 },
+  { img: 'pc_bush_orange.png', x: 900, y: 280, s: 110, r: 32 }, { img: 'pc_bush_white.png', x: 1330, y: 780, s: 110, r: 32 },
+  { img: 'pc_flowerbox.png', x: 120, y: 640, s: 110, r: 34 }, { img: 'pc_mailbox.png', x: 415, y: 625, s: 100, r: 14 },
+  { img: 'pc_fence.png', x: 330, y: 790, s: 130, r: 46 }, { img: 'pc_fence.png', x: 200, y: 790, s: 130, r: 46 },
+  { img: 'pc_signpost.png', x: 590, y: 330, s: 130, r: 12 },
+  { img: 'pc_lamp.png', x: 545, y: 450, s: 160, r: 10 }, { img: 'pc_lamp.png', x: 990, y: 250, s: 160, r: 10 }, { img: 'pc_lamp.png', x: 805, y: 790, s: 160, r: 10 },
+  { img: 'pc_cart.png', x: 1460, y: 505, s: 200, r: 52 }, { img: 'pc_bench.png', x: 1430, y: 800, s: 120, r: 30 },
+  { img: 'pc_bin.png', x: 990, y: 515, s: 80, r: 14 },
+  { img: 'pc_rock.png', x: 1050, y: 980, s: 90, r: 26 }, { img: 'pc_rock_moss.png', x: 300, y: 960, s: 110, r: 30 },
+  { img: 'pc_mushroom.png', x: 30, y: 760, s: 90, r: 18 }, { img: 'pc_mushroom.png', x: 1340, y: 960, s: 80, r: 16 }
 ];
 
 /* Khu đời sống Brightford: vào trong là gặp người bán / bác sĩ */
