@@ -528,3 +528,11 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .pl-plan li { margin: 3px 0; }
 @media (max-width: 420px) { .pl-part { padding: 8px 10px; } .pl-part .small { font-size: 12px; line-height: 1.35; } .pl-head h1 { font-size: 23px; } .pl-skill { grid-template-columns: 8em 1fr 4em; } .pl-sign { font-size: 24px; } }
 .pl-lobby { width: 100%; margin-top: 10px; }
+
+/* lưu trên mây */
+.cl-card { background: var(--paper); border: 1.5px solid var(--line); border-radius: 16px; padding: 12px 14px; display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.cl-card .row { display: flex; gap: 8px; flex-wrap: wrap; }
+.cl-box { display: flex; flex-direction: column; gap: 10px; text-align: left; }
+.cl-in { width: 100%; min-height: 46px; padding: 10px 12px; border-radius: 12px; border: 1.5px solid var(--line); font-size: 16px; background: #fff; }
+.cl-msg { min-height: 1.4em; color: var(--coral); }
+.cr-cloud { width: 100%; margin-top: 10px; }

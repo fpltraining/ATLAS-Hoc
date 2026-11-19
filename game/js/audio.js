@@ -117,6 +117,11 @@ var G = window.G || (window.G = {});
     if (ctx.state === 'suspended' && ctx.resume) ctx.resume();
     return ctx;
   }
+  G.audioCtx = ac;
+  /* đang có giọng đọc (để nhạc nền nhỏ lại) */
+  G.voiceBusy = function () {
+    try { return (!player.paused && !player.ended) || !!(window.speechSynthesis && speechSynthesis.speaking); } catch (e) { return false; }
+  };
   window.addEventListener('touchstart', function () { ac(); }, { once: true, passive: true });
   window.addEventListener('mousedown', function () { ac(); }, { once: true });
 

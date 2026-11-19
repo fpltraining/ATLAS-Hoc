@@ -33,7 +33,11 @@ var G = window.G || (window.G = {});
         G.el('p.small.faint', 'Nhân vật sẽ sống ở Brightford, đi xe buýt, tàu điện tới trường và học tiếng Anh mỗi ngày.')),
       grid,
       G.el('label.cr-label', 'Tên của bạn (không bắt buộc)', nameIn),
-      G.el('button.btn.seal.big1.cr-go', { onclick: finish }, 'Vào học ngay ›')
+      G.el('button.btn.seal.big1.cr-go', { onclick: finish }, 'Vào học ngay ›'),
+      // đã học ở máy khác: đăng nhập để lấy tiến độ trên mây, khỏi tạo lại từ đầu
+      G.cloudReady && G.cloudReady() ? G.el('button.btn.ghost.cr-cloud', { onclick: function () {
+        G.openCloudLogin(function () { if (G.S.nhanVat) { close(); G.renderLobby(); } });
+      } }, '☁️ Đã học trên máy khác? Đăng nhập để lấy tiến độ') : null
     ));
     window.scrollTo(0, 0);
   };

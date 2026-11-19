@@ -107,6 +107,9 @@ var G = window.G || (window.G = {});
     G.initRank(); G.importOldProgress(); setTimeout(G.checkAchievements, 1500);
     // bản sao IndexedDB mới hơn (localStorage bị mất) thì khôi phục rồi vẽ lại sảnh
     G.restoreCheck(function (restored) { if (restored && G.S.nhanVat) { G.initRank(); var cr = document.getElementById('create'); if (cr) cr.style.display = 'none'; G.renderLobby(); } });
+    // lưu trên mây: mở app thì đồng bộ; nhận bản mới hơn từ máy khác thì tải lại app với tiến độ đó
+    G.onCloudPulled = function () { G.toast('☁️ Đã lấy tiến độ mới nhất trên mây.'); setTimeout(function () { location.reload(); }, 1300); };
+    if (G.cloudReady && G.cloudReady() && G.cloudUser()) setTimeout(function () { G.cloudSync(); }, 600);
     if (!G.S.nhanVat) {
       // lần đầu: tạo nhân vật → lời mở đầu → ra khỏi nhà
       // lần đầu: chọn nhân vật → kiểm tra trình độ đầu vào → lời mở đầu → ra khỏi nhà

@@ -92,14 +92,28 @@ var G = window.G || (window.G = {});
     })));
 
     root.appendChild(G.el('h2.sec', 'Sao lưu và cài đặt'));
+    // lưu trên mây (Supabase): đăng nhập một lần, tự đồng bộ
+    if (G.cloudReady && G.cloudReady()) {
+      var cu = G.cloudUser(), cs = G.cloudStatus();
+      root.appendChild(cu
+        ? G.el('div.cl-card', G.el('b', '☁️ Đang lưu trên mây · ' + cu.email),
+            G.el('span.small.faint', cs.err ? '⚠️ ' + cs.err : cs.luc ? 'Đồng bộ lần cuối lúc ' + cs.luc + ' (giờ Việt Nam). App tự lưu sau mỗi bài.' : 'App tự lưu sau mỗi bài.'),
+            G.el('div.row',
+              G.el('button.btn.sm', { onclick: function () { G.cloudSync(function (e) { G.toast(e ? e : '☁️ Đã đồng bộ.'); G.renderLobby(); }); } }, '🔄 Đồng bộ ngay'),
+              G.el('button.btn.sm.ghost', { onclick: function () { G.confirm('Đăng xuất lưu trên mây? Tiến độ vẫn giữ trong máy này.', function () { G.cloudSignOut(); G.renderLobby(); }); } }, 'Đăng xuất')))
+        : G.el('div.cl-card', G.el('b', '☁️ Lưu tiến độ trên mây'),
+            G.el('span.small.faint', 'Đăng nhập một lần để app tự lưu, đổi máy hay xoá app cũng không mất bài. Không cần xuất file sao lưu nữa.'),
+            G.el('button.btn.seal.sm', { onclick: function () { G.openCloudLogin(function () { G.renderLobby(); }); } }, 'Đăng nhập / Tạo tài khoản')));
+    }
     var file = G.el('input', { type: 'file', accept: 'application/json,.json', style: { display: 'none' }, onchange: function (e) { if (e.target.files[0]) G.importSave(e.target.files[0], G.renderLobby); e.target.value = ''; } });
     root.appendChild(G.el('div.tools',
       G.el('button.btn', { onclick: G.exportSave }, '⤓ Xuất file sao lưu'),
       G.el('button.btn', { onclick: function () { file.click(); } }, '⤒ Nhập file sao lưu'),
       G.el('button.btn', { onclick: function () { G.S.caiDat.amThanh = !G.S.caiDat.amThanh; G.save(); G.renderLobby(); } }, G.S.caiDat.amThanh ? '🔔 Âm thanh: bật' : '🔕 Âm thanh: tắt'),
+      G.el('button.btn', { onclick: function () { G.setMusic(!G.musicOn()); G.renderLobby(); } }, G.musicOn() ? '🎹 Nhạc nền: bật' : '🎹 Nhạc nền: tắt'),
       file
     ));
-    root.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam). Nhớ xuất file sao lưu thỉnh thoảng nhé.'));
+    root.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam).' + (G.cloudReady && G.cloudReady() && G.cloudUser() ? ' Đã bật lưu trên mây.' : ' Nhớ xuất file sao lưu thỉnh thoảng nhé.')));
   };
 
   function stat(v, l) { return G.el('div.stat', G.el('b', String(v)), G.el('span', l)); }

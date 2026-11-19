@@ -75,6 +75,7 @@ var G = window.G || (window.G = {});
     try { r.start(); } catch (e4) { end({ code: 'start', msg: 'Không mở được micro. Thử lại sau giây lát.' }); }
   };
   G.stopListen = function () { if (cur) { try { cur.stop(); } catch (e) { /* bỏ qua */ } } };
+  G.listening = function () { return !!cur; };   // đang mở micro (nhạc nền tắt)
   G.abortListen = function () { if (cur) { var c = cur; cur = null; try { c.abort(); } catch (e) { /* bỏ qua */ } } };
 
   /* ---------- chấm điểm ---------- */
