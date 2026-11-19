@@ -598,19 +598,20 @@ var G = window.G || (window.G = {});
   }
   function drawTownie(p) {
     shadow(p.x, p.y, 20);
-    var d = p.dir === 'right' ? 'left' : p.dir, nm = 'person_' + p.set + '_' + d + '.png';
-    if (!G.asset(nm).ok) nm = 'person_' + p.set + '_down.png';
-    var S = 112, u = null, sw = 0, up = /_up\.png$/.test(nm);
-    if (raining()) {
+    var base = 'person_' + p.set, d = p.dir === 'right' ? 'left' : p.dir, nm = base + '_' + d + '.png';
+    if (!G.asset(nm).ok) nm = base + '_down.png';
+    var S = 112, u = null, sw = 0, up = /_up\.png$/.test(nm), rain = raining();
+    if (rain) {   // cầm ô: đi nhún nhảy (khung bước có tay đánh, không cầm ô được)
       if (p.uc === undefined) p.uc = Math.floor(Math.random() * 6);
-      u = holdAt(nm, p.x - S / 2, p.y + 6 - S, S, p.dir === 'right', p.moving ? -Math.abs(Math.sin(p.t * 9)) * S * 0.028 : 0, /_left\.png$/.test(nm));
-      sw = p.moving ? Math.sin(p.t * 9) * 0.035 : 0;
+      u = holdAt(nm, p.x - S / 2, p.y + 6 - S, S, p.dir === 'right', p.moving ? -G.hopLift(S, p.t * 9, true) : 0, /_left\.png$/.test(nm));
+      sw = p.moving ? Math.sin(p.t * 9) * 0.07 : 0;
       umbrella(u, p.uc, sw, 'pole');
     }
-    G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, nm, X, Y, S, S, p.dir === 'right'); }, p.x, p.y + 6, S, p.dir, p.t * 9, p.moving, 0.72);
+    G.walkSprite(ctx, base, p.x, p.y + 6, S, p.dir, p.t * 9, p.moving, rain);
     if (u) umbrella(u, p.uc, sw, 'top', !up);
     if (p.sayT > 0 && p.say) bubble(p.x, p.y - 108, p.say[0], Math.min(1, p.sayT * 2));
   }
+
   function bubble(x, y, text, a) {
     ctx.save(); ctx.globalAlpha = a;
     ctx.font = '700 18px -apple-system, system-ui, sans-serif';
@@ -1012,7 +1013,7 @@ var G = window.G || (window.G = {});
     shadow(o.x, py, 20);
     var u = raining() && !o.stall ? (im ? holdAt(im, o.x - 62, py + 4 - 124, 124, false, 0, false) : avatarHold(n.av, o.x, py + 4, 104, dir, null)) : null;
     if (u) umbrella(u, (o.x >> 3) % 6, 0, 'pole');
-    if (im) G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, o.x, py + 4, 124, 'down', 0, false, 0.72);
+    if (im) G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, o.x, py + 4, 124, 0, false);
     else G.drawAvatar(ctx, n.av, o.x, py + 4, 104, dir, 0, false);
     if (u) umbrella(u, (o.x >> 3) % 6, 0, 'top', im || dir !== 'up');
     if (o.stall) { drawStallFront(o); py = o.y + 6; }   // tên người bán nằm dưới quầy
@@ -1055,34 +1056,29 @@ var G = window.G || (window.G = {});
     var dir = P.dir === 'right' ? 'left' : P.dir, flip = P.dir === 'right';
     var name = 'player_' + who + '_' + dir + '.png';
     shadow(P.x, P.y, 26 * sh);
-    var paper = G.PAPER_FIG[who];
-    var u = raining() ? holdAt(name, P.x - 60, P.y + 8 - 120, 120, flip, P.moving ? -(paper ? G.hopLift(120, P.t * 14, true) : Math.abs(Math.sin(P.t * 14)) * 120 * 0.028) : 0, dir === 'left') : null;
-    var sw = P.moving ? Math.sin(P.t * 14) * (paper ? 0.07 : 0.03) : 0;   // tượng giấy: ô lắc cùng nhịp với người
+    var rain = raining(), base = 'player_' + who;
+    var u = rain ? holdAt(name, P.x - 60, P.y + 8 - 120, 120, flip, P.moving ? -G.hopLift(120, P.t * 14, true) : 0, dir === 'left') : null;
+    var sw = P.moving ? Math.sin(P.t * 14) * 0.07 : 0;   // ô lắc cùng nhịp
     if (u) umbrella(u, 0, sw, 'pole');
-    if (paper) G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.t * 14, P.moving);
-    // tay cầm ô giữ yên (nhìn ngang: tay phía trước; nhìn trước / sau: tay bên phải màn hình)
-    else G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, 0.72, G.ARMS[name], u ? (dir === 'left' ? 0 : 1) : -1);
+    // có khung bước (đánh tay, đánh chân) thì dùng; trời mưa cầm ô hoặc chưa có khung thì đi nhún nhảy
+    G.walkSprite(ctx, base, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, rain);
     if (u) umbrella(u, 0, sw, 'top', dir !== 'up');
   }
   function drawKai() {
-    var bob = Math.sin(Date.now() / 260) * 4, dir = K.dir || 'down';
+    var dir = K.dir || 'down';
     shadow(K.x, K.y, 16);
     // có hình riêng từng hướng (kai_up / kai_left) thì dùng; chưa có thì lật hình mặt trước theo hướng đi
     var side = dir === 'left' || dir === 'right';
     var name = dir === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : side && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
     var flip = name === 'kai_left.png' ? dir === 'right' : dir === 'left';
-    if (G.PAPER_FIG.kai) { G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, K.x, K.y - 6, 76, (K.t || 0) * 14, K.moving); return; }
-    var tilt = K.moving ? (dir === 'left' ? -0.12 : dir === 'right' ? 0.12 : 0) : 0;
-    ctx.save(); ctx.translate(K.x, K.y - 44 + bob); ctx.rotate(tilt); ctx.translate(-K.x, -(K.y - 44 + bob));
-    G.drawAsset(ctx, name, K.x - 38, K.y - 82 + bob, 76, 76, flip);
-    ctx.restore();
+    G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, K.x, K.y - 6, 76, (K.t || 0) * 14, K.moving);   // robot: nhún nhảy
   }
   function drawTeacher(id) {
     var n = G.NPCS[id];
     var tx = TX(), ty = TY();
     shadow(tx, ty, 34);
     var im = npcImg(n);
-    if (im) G.walkDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, tx, ty, 170, 'down', 0, false, 0.72);
+    if (im) G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, tx, ty, 170, 0, false);
     else if (n.av) G.drawAvatar(ctx, n.av, tx, ty + 4, 150, 'down', 0, false);
     var ly = scene.lay ? ty - 186 : ty + 8;   // tiệm có ảnh: quầy che phía dưới nên tên đặt trên đầu
     ctx.fillStyle = 'rgba(27,33,64,.85)';

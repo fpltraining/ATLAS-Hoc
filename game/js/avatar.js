@@ -59,68 +59,9 @@ var G = window.G || (window.G = {});
     ctx.drawImage(img, X + (hd.cx - 320 * r) * k, Y + (hd.top - 150 * r) * k, sz, sz);
   }
 
-  /* Bước đi như người thật: chân trái – chân phải bước so le, tay đánh ngược nhịp với chân
-     (bước chân trái thì tay phải đưa ra trước).
-     Hình được tách thành 3 lớp: tay (theo vùng tay khai báo ở G.ARMS), thân trên, phần chân dưới hông.
-     - Nhìn ngang: 2 chân xoay quanh hông ngược pha như cây kéo (chân sau tối hơn); tay trước và tay sau
-       (bản tối, sau lưng) xoay quanh vai ngược với chân cùng phía.
-     - Nhìn trước / sau: nửa chân trái – phải thay nhau nhấc (co gối); hai tay đánh lệch nhau quanh vai.
-     - Thân nhún lên khi một chân đang nhấc. Đứng yên: thở nhẹ.
-     paint(c, X, Y, S) vẽ trọn hình trong khung vuông S; hip: tỉ lệ chiều cao tới hông;
-     arms: danh sách tay { r: [x0, y0, x1, y1] (% khung), p: [x, y] vai } — không có thì tay đi theo thân. */
-  G.ARMS = {
-    'player_minh_down.png': [{ r: [22, 52, 36.5, 80], p: [35, 54] }, { r: [63.5, 52, 78, 80], p: [65, 54] }],
-    'player_minh_up.png': [{ r: [22, 52, 36.5, 80], p: [35, 54] }, { r: [63.5, 52, 78, 80], p: [65, 54] }],
-    'player_minh_left.png': [{ r: [44, 51, 55.5, 77], p: [50, 53], patch: [44, 55.5] }]
-  };
-  var CV = {};
-  function cvs(name, W, H) {
-    var c = CV[name];
-    if (!c) { c = CV[name] = document.createElement('canvas'); }
-    if (c.width !== W || c.height !== H) { c.width = W; c.height = H; }
-    var g = c.getContext('2d'); g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = 'source-over'; g.clearRect(0, 0, W, H);
-    return c;
-  }
-  function darken(src, name) {
-    var d = cvs(name, src.width, src.height), g = d.getContext('2d');
-    g.drawImage(src, 0, 0);
-    g.globalCompositeOperation = 'source-atop'; g.fillStyle = 'rgba(20,24,50,.32)'; g.fillRect(0, 0, d.width, d.height);
-    g.globalCompositeOperation = 'source-over';
-    return d;
-  }
-  /* tách lớp: full → (tay i), thân không tay → chân, thân trên */
-  function layers(paint, X, Y, S, hipFrac, arms, flipX) {
-    var W = Math.ceil(S), H = Math.ceil(S), k = S / 100;
-    var full = cvs('full', W, H), fg = full.getContext('2d');
-    fg.translate(-X, -Y); paint(fg, X, Y, S); fg.setTransform(1, 0, 0, 1, 0, 0);   // vẽ đúng toạ độ thật để lật hình đúng
-    var out = { arms: [] };
-    if (arms) for (var i = 0; i < arms.length; i++) {
-      var r0 = arms[i].r, r = flipX ? [100 - r0[2], r0[1], 100 - r0[0], r0[3]] : r0;   // hình lật thì lật cả vùng tay
-      // toạ độ nguyên để không có đường kẻ mờ ở mép cắt
-      var rx = Math.round(r[0] * k), ry = Math.round(r[1] * k), rw = Math.round(r[2] * k) - rx, rh = Math.round(r[3] * k) - ry;
-      var ac = cvs('arm' + i, W, H), ag = ac.getContext('2d');
-      ag.drawImage(full, rx, ry, rw, rh, rx, ry, rw, rh);
-      out.arms.push(ac);
-      if (arms[i].patch) {
-        // nhìn ngang: tay đè lên thân → chỗ tay để lại được vá bằng phần thân ngay phía sau tay (chỉ trong vùng thân)
-        var q = arms[i].patch, q0 = flipX ? 100 - q[1] : q[0], q1 = flipX ? 100 - q[0] : q[1];
-        var px0 = Math.round(q0 * k), pw = Math.round(q1 * k) - px0, dx = Math.round((flipX ? -1 : 1) * pw * 0.9);
-        var pc = cvs('patch', W, H), pg = pc.getContext('2d');
-        pg.drawImage(full, px0 + dx, ry, pw, rh, px0, ry, pw, rh);
-        fg.clearRect(rx, ry, rw, rh);
-        fg.drawImage(pc, 0, 0);
-      } else fg.clearRect(rx, ry, rw, rh);   // bỏ tay khỏi thân
-    }
-    var leg = cvs('leg', W, H), lg = leg.getContext('2d');
-    lg.drawImage(full, 0, 0); lg.clearRect(0, 0, W, Math.floor(S * (hipFrac - 0.07)));
-    out.body = full; out.leg = leg; out.legDk = darken(leg, 'legDk');
-    if (arms && arms.length === 1) out.armDk = darken(out.arms[0], 'armDk');
-    return out;
-  }
   /* Tượng giấy (phong cách mô hình giấy): không tách tay chân, mỗi bước là một cú nhún nhảy nhẹ —
      nhấc lên theo đường cong mềm, chạm đất hơi bẹp rồi bật lại, lắc trái / phải quanh chân theo nhịp bước.
-     G.hopLift: độ nhấc hiện tại (để vẽ bóng, cầm ô theo). Hình nào là tượng giấy: G.PAPER_FIG. */
-  G.PAPER_FIG = { han: true, kai: true };
+     G.hopLift: độ nhấc hiện tại (để vẽ bóng, cầm ô theo). */
   G.hopLift = function (S, phase, moving) { return moving ? Math.abs(Math.sin(phase)) * S * 0.07 : 0; };
   G.hopDraw = function (c, paint, x, footY, S, phase, moving) {
     var X = x - S / 2, Y = footY - S;
@@ -140,66 +81,22 @@ var G = window.G || (window.G = {});
     c.restore();
   };
 
-  /* hold: số thứ tự tay đang cầm ô (trong arms) — tay đó giữ yên, không đánh theo bước chân */
-  G.walkDraw = function (c, paint, x, footY, S, dir, phase, moving, hip, arms, hold) {
-    var X = x - S / 2, Y = footY - S;
-    if (!moving) {
-      var br = 1 + Math.sin(Date.now() / 600) * 0.012;
-      c.save(); c.translate(x, footY); c.scale(1, br); c.translate(-x, -footY); paint(c, X, Y, S); c.restore();
-      return;
-    }
-    var s = Math.sin(phase), co = Math.cos(phase), hipY = Y + S * hip, k = S / 100;
-    var bob = Math.abs(s) * S * 0.028;                 // nhún lên khi một chân đang nhấc
-    var side = dir === 'left' || dir === 'right';
-    var fwd = dir === 'right' ? -1 : 1;                 // hình nhìn ngang gốc quay sang trái; lật thì đảo chiều
-    var flipX = dir === 'right';
-    var L = layers(paint, X, Y, S, hip, arms, flipX);
-    function armAt(img, a, ang, sy) {
-      var px = X + (flipX ? 100 - a.p[0] : a.p[0]) * k, py = Y + a.p[1] * k - bob;
-      c.save(); c.translate(px, py); c.rotate(ang); c.scale(1, sy || 1); c.translate(-px, -py);
-      c.drawImage(img, X, Y - bob, S, S); c.restore();
-    }
-    var aSw = s * 0.38;                                 // biên độ đánh tay (radian), ngược pha với chân
-    // tay phía sau (nhìn ngang): bản tối, sau lưng, cùng pha với chân trước
-    if (side && L.armDk) armAt(L.armDk, arms[0], aSw * fwd, 1);
-    // chân
-    if (side) {
-      var sw = s * 0.42;
-      for (var j = 0; j < 2; j++) {
-        var ang = (j === 0 ? -sw : sw) * fwd;
-        var lift = Math.max(0, (j === 0 ? -co : co)) * S * 0.035;
-        c.save();
-        c.translate(x + (j === 0 ? -fwd * S * 0.02 : 0), hipY - bob * 0.5 - lift);
-        c.rotate(ang); c.translate(-x, -hipY);
-        c.drawImage(j === 0 ? L.legDk : L.leg, X, Y, S, S);
-        c.restore();
-      }
-    } else {
-      for (var sd = -1; sd <= 1; sd += 2) {
-        var up = Math.max(0, sd * s); up = up * up * (3 - 2 * up);
-        c.save(); c.beginPath(); c.rect(sd < 0 ? X - S : x, hipY - S * 0.07 - bob, sd < 0 ? x - (X - S) : S * 2, S * 1.2); c.clip();
-        c.translate(x, hipY - bob * 0.6); c.scale(1 + up * 0.03, 1 - up * 0.22); c.translate(-x, -hipY - up * S * 0.035);
-        c.drawImage(L.leg, X, Y, S, S);
-        c.restore();
-      }
-    }
-    // thân trên (không có tay)
-    var lean = dir === 'left' ? -0.05 : dir === 'right' ? 0.05 : 0;
-    var sway = side ? 0 : -s * S * 0.012;
-    c.save(); c.beginPath(); c.rect(X - S, Y - S, S * 3, hipY - (Y - S) + S * 0.02); c.clip();
-    c.translate(x + sway, hipY); c.rotate(lean + (side ? 0 : s * 0.02)); c.translate(-x, -hipY - bob);
-    c.drawImage(L.body, X, Y, S, S); c.restore();
-    // tay phía trước
-    if (arms) {
-      if (side) armAt(L.arms[0], arms[0], hold === 0 ? 0 : -aSw * fwd, 1);
-      else for (var ai = 0; ai < arms.length; ai++) {
-        // tay bên trái màn hình (ai = 0) đưa ra trước khi chân bên phải đang bước (s > 0) và ngược lại
-        var fw = (ai === 0 ? 1 : -1) * s;               // > 0: tay đang đưa ra trước
-        var out = (ai === 0 ? 1 : -1);                  // xoay ra ngoài
-        if (ai === hold) armAt(L.arms[ai], arms[ai], 0, 1);
-        else armAt(L.arms[ai], arms[ai], out * fw * 0.10, 1 - Math.max(0, fw) * 0.10);
-      }
-    }
+  /* Bước đi bằng khung hình vẽ sẵn (đặt ChatGPT, không cắt ghép bằng code): mỗi hướng có hình đứng <tên>_<hướng>.png
+     và 2 khung bước <tên>_<hướng>_w1.png (chân trái trước, tay phải trước), _w2.png (chân phải trước, tay trái trước).
+     Một chu kỳ 2 bước: đứng → bước 1 → đứng → bước 2; thân nhấp nhô nhẹ. Hướng phải = lật hình hướng trái.
+     Chưa có khung bước thì đi kiểu tượng giấy nhún nhảy (G.hopDraw). base: vd. 'player_han', 'person_linda'. */
+  function has(n) { return !!(G.ASSET_REV && G.ASSET_REV[n]); }   // chỉ hỏi tệp có thật (không gọi tệp chưa có → không lỗi 404)
+  G.hasWalk = function (base, dir) { var d = dir === 'right' ? 'left' : dir; return has(base + '_' + d + '_w1.png') && has(base + '_' + d + '_w2.png'); };
+  G.walkSprite = function (c, base, x, footY, S, dir, phase, moving, plain) {
+    var d = dir === 'right' ? 'left' : dir, flip = dir === 'right', stand = base + '_' + d + '.png';
+    if (!has(stand)) { stand = base + '_down.png'; d = 'down'; flip = false; }
+    if (!moving || plain || !G.hasWalk(base, d)) { G.hopDraw(c, function (cc, X, Y, SS) { G.drawAsset(cc, stand, X, Y, SS, SS, flip); }, x, footY, S, phase, moving); return; }
+    var ph = phase * 0.5;   // khung hình: khoảng 2 bước mỗi giây (nhún nhảy thì nhanh hơn)
+    var q = Math.floor(((ph % 6.2832) + 6.2832) % 6.2832 / 1.5708);   // 0..3
+    var nm = q === 1 ? base + '_' + d + '_w1.png' : q === 3 ? base + '_' + d + '_w2.png' : stand;
+    if (!G.asset(nm).ok) nm = stand;
+    var bob = (q === 0 || q === 2) ? S * 0.018 : 0;   // lúc hai chân khép thân cao hơn một chút
+    G.drawAsset(c, nm, x - S / 2, footY - S - bob, S, S, flip);
   };
 
   /* Vẽ nhân vật. x, footY: chân; h: chiều cao khung; dir: down / up / left / right; phase, moving: nhịp bước */
@@ -220,7 +117,7 @@ var G = window.G || (window.G = {});
       }
       c.restore();
     }
-    G.walkDraw(ctx, paint, x, footY, h, dir, phase, moving, 0.745);
+    G.hopDraw(ctx, paint, x, footY, h, phase, moving);
   };
 
   /* Ảnh nhỏ của nhân vật (canvas) để đặt trong trang; tự vẽ lại khi các lớp hình tải xong */
