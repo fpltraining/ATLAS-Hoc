@@ -7,12 +7,14 @@ G.ASSET_LIST = [
   'player_han_down.png', 'player_han_up.png', 'player_han_left.png',
   'player_minh_down.png', 'player_minh_up.png', 'player_minh_left.png', 'kai_follow.png', 'kai_up.png', 'kai_left.png',
   'card_city_en.png', 'card_city_zh.png', 'card_city_soon.png', 'lobby_hero.png',
-  'map_home_en_p.png', 'map_street_en.png', 'building_en_busstop.png', 'building_en_metro.png',
-  /* Khu phố Maple kiểu mô hình giấy */
+  'map_home_en_p.png', 'map_street_en.png',
+  /* kiểu mô hình giấy: Khu phố Maple, Trung tâm, Phố mua sắm */
+  'pc_airport.png', 'pc_school.png', 'pc_hospital.png', 'pc_market.png', 'pc_cafe.png', 'pc_fountain.png', 'pc_kiosk.png',
+  'pc_post.png', 'pc_bank.png', 'pc_pharmacy.png', 'pc_barber.png', 'pc_super.png',
   'pc_home.png', 'pc_busstop.png', 'pc_metro.png', 'pc_gym.png', 'pc_cart.png', 'pc_tree_orange.png', 'pc_tree_green.png', 'pc_tree_pine.png', 'pc_tree_birch.png', 'pc_tree_maple.png', 'pc_tree_small.png',
   'pc_bush_orange.png', 'pc_bush_white.png', 'pc_rock.png', 'pc_rock_moss.png', 'pc_fence.png', 'pc_signpost.png', 'pc_bench.png', 'pc_mailbox.png', 'pc_lamp.png', 'pc_mushroom.png', 'pc_flowerbox.png', 'pc_bin.png',
   'npc_driver.png', 'vehicle_bus.png', 'vehicle_metro.png', 'vehicle_metro_open.png', 'ride_bg_bus.png', 'ride_bg_metro.png',
-  'map_en.png', 'building_en_school.png', 'building_en_cafe.png', 'building_en_market.png', 'building_en_hospital.png', 'building_en_airport.png',
+  'map_en.png',
   'map_zh.png', 'building_zh_school.png', 'building_zh_teahouse.png', 'building_zh_market.png', 'building_zh_hospital.png', 'building_zh_airport.png',
   'interior_en_hall.png', 'classroom_en.png', 'interior_en_cafe.png', 'interior_en_market.png', 'interior_en_hospital.png', 'interior_en_airport.png',
   'interior_zh_hall.png', 'classroom_zh.png', 'interior_zh_teahouse.png', 'interior_zh_market.png', 'interior_zh_hospital.png', 'interior_zh_airport.png',
@@ -26,7 +28,7 @@ G.ASSET_LIST = [
   'npc_owen.png', 'npc_owen_talk.png', 'npc_jake.png', 'npc_jake_talk.png', 'npc_ivy.png', 'npc_ivy_talk.png', 'npc_grant.png', 'npc_grant_talk.png',
   'npc_kim.png', 'npc_kim_talk.png', 'npc_max.png', 'npc_max_talk.png', 'npc_pat.png', 'npc_pat_talk.png', 'npc_nora.png', 'npc_nora_talk.png',
   'npc_zoe.png', 'npc_zoe_talk.png', 'npc_lee.png', 'npc_lee_talk.png', 'npc_ray.png', 'npc_ray_talk.png', 'npc_tony.png', 'npc_tony_talk.png', 'interior_en_bank.png',
-  'building_en_bank.png', 'building_en_super.png', 'building_en_pharmacy.png', 'building_en_barber.png', 'building_en_post.png',
+ 
   'interior_en_barber.png', 'interior_en_post.png', 'interior_en_pharmacy.png', 'interior_en_gym.png', 'interior_en_super.png',
   'souvenir_tea.png', 'souvenir_coffee.png', 'souvenir_apples.png', 'souvenir_ticket.png', 'souvenir_medkit.png',
   /* người đi đường: mỗi người 3 hướng (nhìn ngang phải = lật hình nhìn ngang trái) */

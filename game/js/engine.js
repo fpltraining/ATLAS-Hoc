@@ -85,7 +85,8 @@ var G = window.G || (window.G = {});
       var DR = doorsHere();
       for (var d = 0; d < DR.length; d++) {
         var door = DR[d];
-        list.push({ x: door.x, y: G.HALL_DOOR_Y, r: 80, label: 'Vào phòng ' + door.label, act: (function (idx) { return function () { useDoor(idx); }; })(d) });
+        var ds = G.doorStand(door);
+        list.push({ x: ds.x, y: ds.y, r: 80, door: true, label: 'Vào phòng ' + door.label, act: (function (idx) { return function () { useDoor(idx); }; })(d) });
       }
     }
     if (scene.kind === 'shop') {
@@ -208,7 +209,8 @@ var G = window.G || (window.G = {});
     }
     if (to.door) {
       var hs = G.currentRoom && G.currentRoom.indexOf('en') === 0 ? G.hallOfFloor(G.floorOfRoom(G.currentRoom)) : to.scene;
-      G.enterScene(hs, { x: G[G.SCENES[hs].doors][lastDoor].x, y: G.HALL_DOOR_Y + 60, dir: 'down' }); return;
+      var dst = G.doorStand(G[G.SCENES[hs].doors][lastDoor]);
+      G.enterScene(hs, { x: dst.x, y: dst.y + 50, dir: 'down' }); return;
     }
     G.enterScene(to.scene);
   }
@@ -480,8 +482,10 @@ var G = window.G || (window.G = {});
       var lg = liftGate();
       if (nr && scene.floor && nr.floor !== scene.floor && lg) return { text: 'Đi thang máy ' + (nr.floor > scene.floor ? 'lên' : 'xuống') + ' Tầng ' + nr.floor + ' · ' + G.floorInfo(nr.floor).name, x: lg.x, y: lg.y, h: 170, label: lg.label };
       var d0 = doorsHere()[0];
-      if (!nr) return { text: lf ? 'Ra phố · ' + what : what, x: lf ? scene.exit.x : d0.x, y: lf ? scene.exit.y : G.HALL_DOOR_Y, h: lf ? 120 : 220, label: lf ? scene.exit.label : 'Vào phòng ' + d0.label };
-      return { text: 'Vào cửa ' + nr.door.label + ' (cửa thứ ' + (nr.idx + 1) + ' từ trái) · ' + tName, x: nr.door.x, y: G.HALL_DOOR_Y, h: 230, label: 'Vào phòng ' + nr.door.label };
+      var s0 = G.doorStand(d0);
+      if (!nr) return { text: lf ? 'Ra phố · ' + what : what, x: lf ? scene.exit.x : s0.x, y: lf ? scene.exit.y : s0.y, h: lf ? 120 : 220, label: lf ? scene.exit.label : 'Vào phòng ' + d0.label };
+      var sn = G.doorStand(nr.door);
+      return { text: 'Vào cửa ' + nr.door.label + ' (cửa thứ ' + (nr.idx + 1) + ' từ trái) · ' + tName, x: sn.x, y: sn.y, h: sn.y > G.HALL_DOOR_Y ? 360 : 230, label: 'Vào phòng ' + nr.door.label };
     }
     if (scene.kind === 'classroom') {
       var here = G.currentRoom, hn = G.NPCS[G.ROOM_TEACHER[here]];
@@ -732,10 +736,7 @@ var G = window.G || (window.G = {});
     }
   }
   /* đèn đường sáng lên lúc hoàng hôn và buổi tối */
-  var LAMPS = {
-    city_en: [[663, 287], [871, 287], [663, 693], [871, 693], [663, 953], [447, 60], [1093, 420], [400, 540]],
-    street_en: [[76, 530], [1492, 530], [344, 866], [1200, 866]]
-  };
+  var LAMPS = {};   // đèn đường lấy từ đồ vật đèn (pc_lamp) trong từng cảnh
   function drawLamps() {
     var part = G.dayPart(); if (part !== 'toi' && part !== 'hoanghon') return;
     var L0 = LAMPS[sceneId];
@@ -1098,15 +1099,16 @@ var G = window.G || (window.G = {});
       // khoá xích trên cửa chưa mở (có hình door_lock.png thì vẽ, chưa có thì chỉ hiện biển 🔒)
       if (!open && G.asset('door_lock.png').ok) G.drawAsset(ctx, 'door_lock.png', door.x - 70, 120, 140, 140);
       ctx.fillStyle = open ? 'rgba(47,122,99,.95)' : 'rgba(27,33,64,.85)';
-      G.roundRect(ctx, door.x - 64, 250, 128, 50, 12); ctx.fill();
+      var py = scene.plateY || 250;   // biển tên phòng: hành lang mới đặt ở tấm biển trên cửa
+      G.roundRect(ctx, door.x - 64, py, 128, 50, 12); ctx.fill();
       ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.font = '800 19px -apple-system, system-ui, sans-serif';
       var lbl = (open ? '' : '🔒 ') + door.label;
       if (ctx.measureText(lbl).width > 118) ctx.font = '800 15px -apple-system, system-ui, sans-serif';
-      ctx.fillText(lbl, door.x, 266);
+      ctx.fillText(lbl, door.x, py + 16);
       ctx.font = '600 15px -apple-system, system-ui, sans-serif';
       ctx.fillStyle = '#ffd56b';
-      ctx.fillText(stars || (open ? 'Đang mở' : 'Khoá'), door.x, 287);
+      ctx.fillText(stars || (open ? 'Đang mở' : 'Khoá'), door.x, py + 37);
     }
   }
 
@@ -1121,7 +1123,7 @@ var G = window.G || (window.G = {});
       var t = ts[i];
       // chạm vào nhà / cửa / NPC: đi tới rồi làm luôn
       var dx = w.x - t.x, dy = w.y - t.y;
-      var hitR = t.npc ? 120 : scene.kind === 'hall' && t.y === G.HALL_DOOR_Y ? 110 : 90;
+      var hitR = t.npc ? 120 : t.door ? 110 : 90;
       if (t.board) { if (Math.abs(w.x - t.board.x) < 110 && Math.abs(w.y - t.board.y) < 90) { hit = t; break; } continue; }   // bấm thẳng vào bảng trên tường
       if (Math.abs(dx) < hitR && dy > -(t.tall ? t.tall + 40 : 260) && dy < 60) { hit = t; break; }
     }

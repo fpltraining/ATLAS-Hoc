@@ -181,7 +181,7 @@ var G = window.G || (window.G = {});
       { npc: 'dan', life: 'en-crossing', x: 660, y: 470, dir: 'down' }
     ],
     city_en: [
-      { npc: 'nora', life: 'en-gate', x: 600, y: 930, dir: 'left' }
+      { npc: 'nora', life: 'en-gate', x: 700, y: 930, dir: 'left' }
     ]
   };
 })();

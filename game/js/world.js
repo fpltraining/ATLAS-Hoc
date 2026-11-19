@@ -23,13 +23,15 @@ if (G.NPC_MORE) for (var nk in G.NPC_MORE) if (G.NPC_MORE.hasOwnProperty(nk)) G.
 
 /* Các phòng trong hành lang Trường Anh ngữ (5 cửa dọc tường trên) */
 G.EN_HALL_DOORS = [
-  { room: 'en-a1-1', label: 'A1-1', x: 172 },
-  { room: 'en-a1-2', label: 'A1-2', x: 472 },
-  { room: 'en-a1-3', label: 'A1-3', x: 768 },
-  { room: 'en-a1-4', label: 'A1-4', x: 1068 },
-  { room: 'en-a1-test', label: 'Thi A1', x: 1364 }
+  { room: 'en-a1-1', label: 'A1-1', x: 243, sx: 300, sy: 500 },   // quầy lễ tân che trước cửa: đứng trước quầy để vào
+  { room: 'en-a1-2', label: 'A1-2', x: 507 },
+  { room: 'en-a1-3', label: 'A1-3', x: 771 },
+  { room: 'en-a1-4', label: 'A1-4', x: 1032 },
+  { room: 'en-a1-test', label: 'Thi A1', x: 1270 }
 ];
 G.HALL_DOOR_Y = 345;   // chỗ đứng trước cửa (chân tường dưới các cửa trong ảnh hành lang)
+/* chỗ đứng để vào một cửa (cửa có vật che phía trước thì đứng ở sx, sy) */
+G.doorStand = function (d) { return { x: d.sx || d.x, y: d.sy || G.HALL_DOOR_Y }; };
 /* Hành lang Học viện Hán ngữ: 6 cửa cách đều */
 G.ZH_HALL_DOORS = [
   { room: 'zh-py', label: 'Phát âm', x: 128 },
@@ -41,11 +43,11 @@ G.ZH_HALL_DOORS = [
 ];
 /* Tầng 1 · Nền tảng (A0 → A1): 4 phòng, mỗi phòng 7–8 buổi (data/en_found.js), cửa cuối là phòng thi tầng */
 G.EN_F1_DOORS = [
-  { room: 'en-n1', label: 'N-1', x: 172 },
-  { room: 'en-n2', label: 'N-2', x: 472 },
-  { room: 'en-n3', label: 'N-3', x: 768 },
-  { room: 'en-n4', label: 'N-4', x: 1068 },
-  { room: 'en-n-test', label: 'Thi tầng 1', x: 1364 }
+  { room: 'en-n1', label: 'N-1', x: 243, sx: 300, sy: 500 },
+  { room: 'en-n2', label: 'N-2', x: 507 },
+  { room: 'en-n3', label: 'N-3', x: 771 },
+  { room: 'en-n4', label: 'N-4', x: 1032 },
+  { room: 'en-n-test', label: 'Thi tầng 1', x: 1270 }
 ];
 /* Các tầng của Trường Anh ngữ. Tầng có scene là đã mở cửa; tầng soon đang xây (nội dung lấy từ Chặng 1–3 của lộ trình). */
 G.EN_FLOORS = [
@@ -109,44 +111,45 @@ G.SCENES = {
   city_en: {
     city: 'en',
     title: 'Trung tâm Brightford',
+    // kiểu mô hình giấy: quảng trường tròn ở giữa, các đường toả ra 6 bãi đất; toà nhà là hình giấy dựng rời
     bg: 'map_en.png', w: 1536, h: 1024, kind: 'city',
-    spawn: { x: 768, y: 640 },
+    spawn: { x: 768, y: 690 },
     walk: { x0: 30, y0: 60, x1: 1506, y1: 1000 },
     buildings: [
-      { id: 'airport', img: 'building_en_airport.png', x: 768, y: 205, name: 'Sân bay', fly: 'zh' },
-      { id: 'market', img: 'building_en_market.png', x: 330, y: 440, name: 'Chợ', life: 'en-market' },
-      { id: 'cafe', img: 'building_en_cafe.png', x: 1206, y: 440, name: 'Quán cà phê', life: 'en-cafe' },
-      { id: 'school', img: 'building_en_school.png', x: 420, y: 880, name: 'Trường Anh ngữ', go: { scene: 'en_hall', x: 768, y: 930 } },
-      { id: 'hospital', img: 'building_en_hospital.png', x: 1110, y: 880, name: 'Bệnh viện', life: 'en-hospital' },
-      { id: 'busstop', img: 'building_en_busstop.png', x: 125, y: 945, name: 'Bến xe buýt', ride: 'bus', toward: 'home' },
-      { id: 'metro', img: 'building_en_metro.png', x: 1395, y: 945, name: 'Ga tàu điện', ride: 'metro', toward: 'home' }
+      { id: 'airport', img: 'pc_airport.png', s: 250, x: 760, y: 236, name: 'Sân bay', fly: 'zh' },
+      { id: 'market', img: 'pc_market.png', s: 260, x: 244, y: 440, name: 'Chợ', life: 'en-market' },
+      { id: 'cafe', img: 'pc_cafe.png', s: 260, x: 1292, y: 440, name: 'Quán cà phê', life: 'en-cafe' },
+      { id: 'school', img: 'pc_school.png', s: 300, x: 466, y: 975, name: 'Trường Anh ngữ', go: { scene: 'en_hall', x: 768, y: 930 } },
+      { id: 'hospital', img: 'pc_hospital.png', s: 290, x: 1060, y: 975, name: 'Bệnh viện', life: 'en-hospital' },
+      { id: 'busstop', img: 'pc_busstop.png', s: 180, x: 92, y: 975, name: 'Bến xe buýt', ride: 'bus', toward: 'home' },
+      { id: 'metro', img: 'pc_metro.png', s: 190, x: 1450, y: 975, name: 'Ga tàu điện', ride: 'metro', toward: 'home' }
     ],
     // cuối đường bên phải: sang Phố mua sắm (bưu điện, ngân hàng, hiệu thuốc, tiệm tóc, siêu thị)
-    gates: [{ x: 1490, y: 512, side: 'right', label: 'Sang Phố mua sắm', sign: '🛍️ Phố mua sắm ›', to: { scene: 'street_en', x: 150, y: 330, dir: 'right' } }]
+    gates: [{ x: 1490, y: 508, side: 'right', label: 'Sang Phố mua sắm', sign: '🛍️ Phố mua sắm ›', to: { scene: 'street_en', x: 150, y: 380, dir: 'right' } }]
   },
   en_hall: {
     city: 'en', doors: 'EN_HALL_DOORS', classroom: 'classroom_en', floor: 2,
     title: 'Trường Anh ngữ · Tầng 2 A1',
-    bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall',
+    bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 42,
     walk: { x0: 70, y0: 330, x1: 1466, y1: 990 },
     exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
     // thang máy (lên / xuống tầng) ở phía phải hành lang
-    gates: [{ x: 1330, y: 470, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy ›', to: { floors: true } }]
+    gates: [{ x: 1250, y: 600, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy ›', to: { floors: true } }]
   },
   en_hall_1: {
     city: 'en', doors: 'EN_F1_DOORS', classroom: 'classroom_en', floor: 1,
     title: 'Trường Anh ngữ · Tầng 1 Nền tảng',
-    bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall',
+    bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 42,
     walk: { x0: 70, y0: 330, x1: 1466, y1: 990 },
     exit: { x: 768, y: 985, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
-    gates: [{ x: 1330, y: 470, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy ›', to: { floors: true } }]
+    gates: [{ x: 1250, y: 600, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy ›', to: { floors: true } }]
   },
   classroom_en: {
     city: 'en',
     title: 'Lớp học',
     bg: 'classroom_en.png', w: 1536, h: 1024, kind: 'classroom',
-    walk: { x0: 90, y0: 330, x1: 1446, y1: 990 },
-    teacher: { x: 900, y: 380 },
+    walk: { x0: 40, y0: 330, x1: 1496, y1: 990 },
+    teacher: { x: 735, y: 345 },
     exit: { x: 768, y: 985, label: 'Ra hành lang', to: { scene: 'en_hall', door: true } }
   }
 };
@@ -156,11 +159,18 @@ if (G.SCENE_MORE) for (var sk in G.SCENE_MORE) if (G.SCENE_MORE.hasOwnProperty(s
 
 /* Đồ vật rời trên bản đồ (vẽ theo chiều sâu, nhân vật đi ra sau được): img, chân x/y, cỡ s, bán kính chặn r */
 G.SCENES.city_en.props = [
-  { img: 'prop_oak.png', x: 90, y: 410, s: 190, r: 26 },
-  { img: 'prop_flowers.png', x: 300, y: 640, s: 110, r: 34 },
-  { img: 'prop_palm.png', x: 1300, y: 650, s: 200, r: 22 },
-  { img: 'prop_car.png', x: 990, y: 1010, s: 150, r: 46 },
-  { img: 'prop_mailbox.png', x: 1000, y: 150, s: 90, r: 16 }
+  { img: 'pc_fountain.png', x: 760, y: 520, s: 270, r: 110 },
+  { img: 'pc_kiosk.png', x: 600, y: 190, s: 170, r: 40 },
+  { img: 'pc_tree_green.png', x: 900, y: 175, s: 230, r: 22 }, { img: 'pc_tree_small.png', x: 1000, y: 110, s: 170, r: 18 },
+  { img: 'pc_tree_orange.png', x: 150, y: 230, s: 260, r: 24 }, { img: 'pc_tree_pine.png', x: 50, y: 130, s: 290, r: 20 },
+  { img: 'pc_tree_pine.png', x: 1300, y: 200, s: 290, r: 20 }, { img: 'pc_tree_green.png', x: 1460, y: 150, s: 240, r: 22 },
+  { img: 'pc_tree_birch.png', x: 70, y: 690, s: 240, r: 22 }, { img: 'pc_tree_orange.png', x: 1460, y: 700, s: 250, r: 24 },
+  { img: 'pc_tree_maple.png', x: 860, y: 1000, s: 190, r: 20 },
+  { img: 'pc_bush_orange.png', x: 230, y: 640, s: 110, r: 32 }, { img: 'pc_bush_white.png', x: 1300, y: 690, s: 110, r: 32 },
+  { img: 'pc_lamp.png', x: 540, y: 455, s: 160, r: 10 }, { img: 'pc_lamp.png', x: 985, y: 455, s: 160, r: 10 },
+  { img: 'pc_lamp.png', x: 560, y: 770, s: 160, r: 10 }, { img: 'pc_lamp.png', x: 965, y: 770, s: 160, r: 10 },
+  { img: 'pc_bench.png', x: 610, y: 640, s: 110, r: 28 }, { img: 'pc_bench.png', x: 915, y: 640, s: 110, r: 28 },
+  { img: 'pc_signpost.png', x: 1150, y: 455, s: 120, r: 12 }, { img: 'pc_mailbox.png', x: 860, y: 270, s: 80, r: 12 }
 ];
 G.SCENES.home_en.props = [
   { img: 'pc_tree_orange.png', x: 80, y: 270, s: 290, r: 24 }, { img: 'pc_tree_small.png', x: 45, y: 430, s: 200, r: 18 },
