@@ -21,7 +21,8 @@ var G = window.G || (window.G = {});
     var x = new XMLHttpRequest();
     x.open(method, base() + path);
     x.setRequestHeader('apikey', G.CLOUD_KEY);
-    x.setRequestHeader('Authorization', 'Bearer ' + (token || G.CLOUD_KEY));
+    // chỉ gửi Authorization khi đã đăng nhập: khoá mới (sb_publishable_…) không được đặt trong Authorization, khoá anon cũ thì không cần
+    if (token) x.setRequestHeader('Authorization', 'Bearer ' + token);
     x.setRequestHeader('Content-Type', 'application/json');
     if (prefer) x.setRequestHeader('Prefer', prefer);
     x.timeout = 20000;
