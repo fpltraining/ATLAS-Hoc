@@ -344,7 +344,7 @@ var G = window.G || (window.G = {});
   ];
   // phòng gym ở khu phố Maple, gần nhà
   G.PEOPLE.home_en = (G.PEOPLE.home_en || []).concat([
-    { npc: 'max', life: 'en-gym', x: 130, y: 420, dir: 'down', stall: 'Phòng gym', icon: '🏋️', bimg: 'building_en_gym.png' }
+    { npc: 'max', life: 'en-gym', x: 440, y: 250, dir: 'down', stall: 'Phòng gym', icon: '🏋️', bimg: 'pc_gym.png', bs: 260 }
   ]);
 
   /* nói tự do sau giờ học */

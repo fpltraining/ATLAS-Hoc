@@ -175,10 +175,10 @@ var G = window.G || (window.G = {});
   /* Người đứng trên bản đồ: nói chuyện ngay tại chỗ (không cần vào nhà). x, y: chân; dir: hướng nhìn */
   G.PEOPLE = {
     home_en: [
-      { npc: 'ben', life: 'en-neighbor', x: 560, y: 800, dir: 'left' },
-      { npc: 'mia', life: 'en-bakery', x: 1010, y: 300, dir: 'down', stall: 'Xe bánh Sunny' },
-      { npc: 'carlos', life: 'en-tourist', x: 960, y: 760, dir: 'left' },
-      { npc: 'dan', life: 'en-crossing', x: 1080, y: 520, dir: 'down' }
+      { npc: 'ben', life: 'en-neighbor', x: 520, y: 700, dir: 'left' },
+      { npc: 'mia', life: 'en-bakery', x: 1335, y: 545, dir: 'down' },          // đứng cạnh xe bánh (pc_cart trong props)
+      { npc: 'carlos', life: 'en-tourist', x: 965, y: 660, dir: 'left' },
+      { npc: 'dan', life: 'en-crossing', x: 660, y: 470, dir: 'down' }
     ],
     city_en: [
       { npc: 'nora', life: 'en-gate', x: 600, y: 930, dir: 'left' }

@@ -219,8 +219,8 @@ var G = window.G || (window.G = {});
     if (x < w.x0 || x > w.x1 || y < w.y0 || y > w.y1) return true;
     if (scene.buildings) {
       for (var i = 0; i < scene.buildings.length; i++) {
-        var b = scene.buildings[i];
-        if (x > b.x - 125 && x < b.x + 125 && y > b.y - 190 && y < b.y - 4) return true;
+        var b = scene.buildings[i], bk = (b.s || 300) / 300;
+        if (x > b.x - 125 * bk && x < b.x + 125 * bk && y > b.y - 190 * bk && y < b.y - 4) return true;
       }
     }
     if (scene.props) for (var pj = 0; pj < scene.props.length; pj++) { var pr = scene.props[pj], ddx = x - pr.x, ddy = (y - pr.y) * 2; if (ddx * ddx + ddy * ddy < pr.r * pr.r) return true; }
@@ -586,7 +586,7 @@ var G = window.G || (window.G = {});
   function drawProp(o) {
     shadow(o.x, o.y, o.r * 0.9 + 6);
     // cây đung đưa nhẹ trong gió
-    var sway = /oak|palm/.test(o.img) ? Math.sin(Date.now() / 900 + o.x) * 0.025 : 0;
+    var sway = /oak|palm|tree/.test(o.img) ? Math.sin(Date.now() / 900 + o.x) * 0.025 : 0;
     ctx.save(); ctx.translate(o.x, o.y); ctx.rotate(sway); ctx.translate(-o.x, -o.y);
     G.drawAsset(ctx, o.img, o.x - o.s / 2, o.y - o.s * 0.96, o.s, o.s);
     ctx.restore();
@@ -733,7 +733,6 @@ var G = window.G || (window.G = {});
   /* đèn đường sáng lên lúc hoàng hôn và buổi tối */
   var LAMPS = {
     city_en: [[663, 287], [871, 287], [663, 693], [871, 693], [663, 953], [447, 60], [1093, 420], [400, 540]],
-    home_en: [[867, 107], [720, 413], [1107, 567], [307, 687], [500, 920]],
     street_en: [[76, 530], [1492, 530], [344, 866], [1200, 866]]
   };
   function drawLamps() {
@@ -919,7 +918,9 @@ var G = window.G || (window.G = {});
   }
 
   function drawBuilding(b) {
-    G.drawAsset(ctx, b.img, b.x - 150, b.y - 290, 300, 300);
+    var S = b.s || 300;
+    if (b.s) shadow(b.x, b.y - 4, S * 0.36);   // nhà giấy: bóng mềm dưới đế
+    G.drawAsset(ctx, b.img, b.x - S / 2, b.y + 2.5 - S * 0.975, S, S);   // chân hình (97,5% khung) đặt ở b.y
   }
   /* biển tên nhà vẽ sau cùng để nhân vật không che chữ */
   function drawBuildingLabel(b) {
