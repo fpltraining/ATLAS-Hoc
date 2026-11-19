@@ -35,7 +35,6 @@ var G = window.G || (window.G = {});
 
   G.ASSET_LIST = G.ASSET_LIST.concat(G.avatarFiles());
 
-  G.defaultAvatar = function () { return { ao: 'hoodie', mat: 'smile', toc: 'messy', mauToc: '#5b3a29' }; };
   G.randomAvatar = function () {
     var A = G.AV;
     function r(a) { return a[Math.floor(Math.random() * a.length)]; }

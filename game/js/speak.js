@@ -23,7 +23,6 @@ var G = window.G || (window.G = {});
 
   /* nghe một lần: cb(err, [các cách nghe]) */
   var cur = null, dog = 0;
-  G.listening = function () { return !!cur; };
   G.listen = function (lang, cb, onInterim) {
     if (!SR) { cb('Máy này chưa nghe được giọng nói. Trên iPhone/iPad hãy mở bằng Safari và bật Siri.'); return; }
     if (cur) { var old = cur; cur = null; try { old.abort(); } catch (e0) { /* bỏ qua */ } }

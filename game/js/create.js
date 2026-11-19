@@ -9,7 +9,6 @@ var G = window.G || (window.G = {});
     { id: 'minh', name: 'Minh', img: 'player_minh_down.png', note: 'Tò mò, thích khám phá thành phố' },
     { id: 'kai', name: 'Kai', img: 'kai_follow.png', note: 'Robot nhỏ, học tiếng Anh cùng bạn' }
   ];
-  G.CHARS = CHARS;
 
   G.openCreator = function (cb) {
     done = cb;

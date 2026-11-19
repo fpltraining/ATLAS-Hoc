@@ -12,7 +12,6 @@ var G = window.G || (window.G = {});
     { id: 'noi', icon: '💬', name: 'Nói chuyện ngoài phố', hint: 'Quán cà phê, chợ, bệnh viện hoặc đi xe buýt, tàu điện', min: 30 },
     { id: 'on', icon: '🔁', name: 'Ôn câu đã học', hint: 'Về nhà, ôn các câu sắp quên', min: 20 }
   ];
-  G.TASKS = TASKS;
 
   function today() {
     var k = G.vnDay(), n = G.S.ngay || (G.S.ngay = {});

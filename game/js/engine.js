@@ -176,7 +176,6 @@ var G = window.G || (window.G = {});
       var pd = x - po.x, pe = (y - po.y) * 2; if (pd * pd + pe * pe < 26 * 26) return true;
     }
     if (scene.blocks) for (var bk = 0; bk < scene.blocks.length; bk++) { var B = scene.blocks[bk]; if (x > B[0] && x < B[2] && y > B[1] && y < B[3]) return true; }   // đồ đạc trong ảnh nội thất
-    if (scene.room && !scene.lay && Math.abs(x - TX()) < (scene.room.counterW || 420) / 2 + 10 && y > TY() - 20 && y < TY() + 90) return true;   // quầy
     if ((scene.kind === 'classroom' || scene.kind === 'shop') && Math.abs(x - TX()) < 60 && Math.abs(y - TY() + 20) < 36) return true; // giáo viên
     return false;
   }
@@ -472,7 +471,6 @@ var G = window.G || (window.G = {});
     ['Good luck at school!', 'Học tốt nhé!'], ['What a beautiful morning!', 'Buổi sáng đẹp quá!'],
     ['Excuse me, where\'s the bus stop?', 'Xin lỗi, bến xe buýt ở đâu vậy?'], ['See you around!', 'Gặp lại sau nhé!']
   ];
-  G.TOWN_LINES = LINES;
   function freeSpot() {
     var w = scene.walk;
     for (var i = 0; i < 40; i++) {
@@ -597,7 +595,6 @@ var G = window.G || (window.G = {});
     ctx.fillStyle = '#3a2418'; ctx.beginPath(); ctx.arc(x, cy - R * 0.48, 3, 0, 6.283); ctx.fill();
     ctx.restore();
   }
-  G._umbrella = function (x, y, ci, sway) { umbrella(x, y, ci, sway); };
   /* mưa: hạt mưa rơi theo màn hình + vũng nước bắn tung toé trên mặt đất */
   var drops = [], splash = [], rainLast = 0, flashT = 0, puddles = [];
   /* vũng nước trên mặt đất (toạ độ thế giới), gợn sóng khi mưa */
