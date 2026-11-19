@@ -48,6 +48,7 @@ var G = window.G || (window.G = {});
   }
 
   G.openLesson = function (roomId) {
+    if (G.ROOMS[roomId] && G.ROOMS[roomId].group) { openGroup(G.ROOMS[roomId]); return; }
     R = G.ROOMS[roomId];
     lang = R.lang;
     panel.className = 'panel open';
@@ -60,21 +61,47 @@ var G = window.G || (window.G = {});
     showHome();
   };
 
+  /* phòng nhiều buổi (Tầng 1 · Nền tảng): danh sách buổi, buổi đang học tô xanh, buổi chưa mở có khoá */
+  function openGroup(g) {
+    R = g; lang = 'en';
+    panel.className = 'panel open';
+    document.getElementById('panel-title').textContent = g.title;
+    document.getElementById('panel-py').style.display = 'none';
+    body.innerHTML = '';
+    var cur = G.curSession(g.id);
+    body.appendChild(teacherLine(g.intro[1], null));
+    body.appendChild(G.el('div.tline.small', G.el('div.tbubble.en', G.el('div', g.intro[0]), speakBtn(g.intro[0]))));
+    body.appendChild(G.el('div.ses-list', g.group.map(function (sid, k) {
+      var r = G.ROOMS[sid], p = G.S.phong[sid], done = G.roomPassed(sid), open = G.sessionOpen(g.id, k), d = G.S.dangHoc && G.S.dangHoc[sid];
+      var sub = done ? stars(p.sao) + ' · ' + p.diem + '/' + (r.testN || 10) + ' · học lại'
+        : !open ? 'Qua buổi ' + (r.n - 1) + ' để mở'
+        : d && (d.the || d.hocXong || d.luyenXong) ? 'Đang học dở · học tiếp'
+        : 'Âm: ' + G.FOUND_SOUNDS[r.sound].title + ' · 20 từ mới';
+      return G.el('button.big' + (sid === cur && !done ? '.cur' : '') + (open ? '' : '.off'), { onclick: function () {
+        if (!open) { G.sfx('wrong'); G.toast('Qua buổi ' + (r.n - 1) + ' (kiểm tra từ 8/10) để mở buổi ' + r.n + '.'); return; }
+        G.openLesson(sid);
+      } }, G.el('b', (done ? '✓ ' : open ? '' : '🔒 ') + r.title), G.el('span', sub));
+    })));
+  }
+
   /* màn đầu: lời giáo viên + 3 bước */
   function showHome() {
-    var p = G.S.phong[R.id], d = st();
+    var p = G.S.phong[R.id], d = st(), snd = R.sound !== undefined;
     body.innerHTML = '';
+    if (R.parent) body.appendChild(G.el('button.btn.back-ses', { onclick: function () { G.openLesson(R.parent); } }, '‹ Các buổi của phòng ' + G.ROOMS[R.parent].label));
     body.appendChild(teacherLine(R.intro[1], null));
     body.appendChild(G.el('div.tline.small', G.el('div.tbubble.en', G.el('div', R.intro[0]), pyEl(R.introPy), speakBtn(R.intro[0]))));
     say(R.intro[0]);
     body.appendChild(G.el('div.menu3',
-      G.el('button.big' + (d.hocXong ? '.done' : ''), { onclick: function () { learn(d.hocXong ? 0 : Math.min(d.the, R.items.length - 1)); } },
+      G.el('button.big' + (d.hocXong ? '.done' : ''), { onclick: function () { learn(d.the > 0 && !d.hocXong ? Math.min(d.the, R.items.length - 1) : snd ? -2 : 0); } },
         G.el('b', (d.hocXong ? '✓ ' : '') + (R.final ? '1 · Ôn tập' : '1 · Học')),
-        G.el('span', d.hocXong ? 'Đã học xong ' + R.items.length + ' thẻ · xem lại' : d.the > 0 ? 'Học tiếp từ thẻ ' + (d.the + 1) + '/' + R.items.length : R.items.length + ' từ và câu' + (R.final ? ' của cả cấp A1' : ', nghe và xem nghĩa'))),
+        G.el('span', d.hocXong ? 'Đã học xong ' + R.items.length + ' thẻ · xem lại' : d.the > 0 ? 'Học tiếp từ thẻ ' + (d.the + 1) + '/' + R.items.length
+          : snd ? 'Âm “' + G.FOUND_SOUNDS[R.sound].title + '”, ngữ pháp “' + R.gram.t + '” và ' + R.items.length + ' từ mới'
+          : R.items.length + ' từ và câu' + (R.final ? ' của cả cấp ' + R.final.level : ', nghe và xem nghĩa'))),
       G.el('button.big' + (d.luyenXong ? '.done' : ''), { onclick: practice },
         G.el('b', (d.luyenXong ? '✓ ' : '') + '2 · Luyện'),
         G.el('span', d.luyenXong ? 'Đã luyện xong · luyện lại' : d.tro > 0 ? 'Làm tiếp trò ' + (d.tro + 1) + '/4' : '4 trò ngắn: nghe, chọn câu, nói qua micro, xếp câu')),
-      G.el('button.big.seal', { onclick: test }, G.el('b', '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/' + TN() + ' ' + stars(p.sao) : TN() + ' câu, đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp' : 'qua phòng')))
+      G.el('button.big.seal', { onclick: test }, G.el('b', '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/' + TN() + ' ' + stars(p.sao) : TN() + ' câu, đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp' : R.parent ? 'qua buổi' : 'qua phòng')))
     ));
   }
   /* tiến độ đang học dở của phòng (lưu ngay, mở lại học tiếp, cập nhật app không mất) */
@@ -86,26 +113,61 @@ var G = window.G || (window.G = {});
 
   /* ---------- 1. Học: thẻ từ ---------- */
   function learn(i) {
+    if (i === -2) { soundPage(); return; }
+    if (i === -1) { gramPage(); return; }
     var it = R.items[i];
     if (G.srsAdd && lang === 'en') G.srsAdd({ t: 'item', en: it.en, vi: it.vi });
     if (i > st().the) keep('the', i);
     if (i === R.items.length - 1 && !st().hocXong) keep('hocXong', G.vnNow());
-    body.innerHTML = '';
+    body.innerHTML = ''; body.scrollTop = 0;
     body.appendChild(head(0, 'Thẻ ' + (i + 1) + '/' + R.items.length + ' · bấm 🔊 để nghe, nói to theo'));
     var card = G.el('div.wcard',
       G.el('div.wbig', T(it), speakBtn(T(it))),
       pyEl(it.py),
+      it.ipa ? G.el('div.wipa', it.ipa) : null,
       G.el('div.wvi', it.vi),
       G.el('div.wex', G.el('div', it.ex, speakBtn(it.ex)), pyEl(it.exPy), G.el('div.faint', it.exVi))
     );
     body.appendChild(card);
     say(T(it));
     body.appendChild(G.el('div.row',
-      i > 0 ? G.el('button.btn', { onclick: function () { learn(i - 1); } }, '‹ Trước') : G.el('span'),
+      i > 0 || R.gram ? G.el('button.btn', { onclick: function () { learn(i - 1); } }, i > 0 ? '‹ Trước' : '‹ Ngữ pháp') : G.el('span'),
       i < R.items.length - 1
         ? G.el('button.btn.seal', { onclick: function () { learn(i + 1); } }, 'Tiếp ›')
         : G.el('button.btn.seal', { onclick: practice }, 'Sang phần Luyện ›')
     ));
+  }
+
+  /* buổi Nền tảng: âm khó của hôm nay (nghe từng cặp từ rồi đọc to) */
+  function soundPage() {
+    var s = G.FOUND_SOUNDS[R.sound];
+    function sb(w) { return G.el('button.btn', { onclick: function () { say(w); } }, '🔊 ' + w); }
+    var pairs = [];
+    s.pairs.forEach(function (p) { pairs.push(sb(p[0])); pairs.push(sb(p[1])); });
+    body.innerHTML = ''; body.scrollTop = 0;
+    body.appendChild(head(0, 'Âm hôm nay · nghe từng cặp ba lần rồi tự đọc to'));
+    body.appendChild(G.el('div.wcard',
+      G.el('div.wbig', s.title),
+      G.el('p.gram-b', G.el('b', 'Vì sao quan trọng: '), s.why),
+      G.el('p.gram-b', G.el('b', 'Cách làm: '), s.how),
+      G.el('div.snd-pairs', pairs)
+    ));
+    body.appendChild(G.el('div.row', G.el('span'), G.el('button.btn.seal', { onclick: function () { learn(-1); } }, 'Tiếp: ngữ pháp ›')));
+  }
+  /* buổi Nền tảng: một điểm ngữ pháp, 4 câu mẫu có nghĩa */
+  function gramPage() {
+    var g = R.gram;
+    body.innerHTML = ''; body.scrollTop = 0;
+    body.appendChild(head(0, 'Ngữ pháp · đọc cách dùng, bấm 🔊 nghe câu mẫu'));
+    body.appendChild(G.el('div.wcard',
+      G.el('div.wbig', g.t),
+      G.el('p.gram-b', g.b),
+      G.el('div.gram-ex', g.ex.map(function (e) { return G.el('div', G.el('div', e[0], speakBtn(e[0])), G.el('div.faint', e[1])); }))
+    ));
+    say(g.ex[0][0]);
+    body.appendChild(G.el('div.row',
+      G.el('button.btn', { onclick: function () { learn(-2); } }, '‹ Âm hôm nay'),
+      G.el('button.btn.seal', { onclick: function () { learn(0); } }, 'Tiếp: ' + R.items.length + ' từ mới ›')));
   }
 
   /* ---------- câu hỏi trắc nghiệm dùng chung ---------- */
@@ -225,7 +287,7 @@ var G = window.G || (window.G = {});
     body.innerHTML = '';
     body.appendChild(head(1, 'Xong phần Luyện'));
     if (lang === 'en') G.markTask('bai');
-    body.appendChild(teacherLine('Luyện tốt lắm! Giờ làm bài kiểm tra ' + TN() + ' câu nhé. Đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp cấp A1.' : 'cửa phòng tiếp theo sẽ mở.'), 'Well done!'));
+    body.appendChild(teacherLine('Luyện tốt lắm! Giờ làm bài kiểm tra ' + TN() + ' câu nhé. Đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp ' + R.final.level + '.' : R.parent ? 'qua buổi này.' : 'cửa phòng tiếp theo sẽ mở.'), 'Well done!'));
     body.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { learn(0); } }, 'Xem lại thẻ'), G.el('button.btn.seal', { onclick: test }, 'Làm kiểm tra ›')));
     G.sfx('done');
   }
@@ -265,7 +327,7 @@ var G = window.G || (window.G = {});
       G.el('div.rscore', right + '/' + N),
       G.playerPic(112, 'rface', pass ? 'happy' : 'think'),
       G.el('div.rstars', pass ? stars(sao) : '☆☆☆'),
-      G.el('div', pass ? (R.final ? 'Đạt! Bạn đã tốt nghiệp cấp A1.' : firstPass ? 'Qua phòng! Cửa phòng tiếp theo đã mở.' : 'Qua phòng! Kết quả tốt nhất đã được lưu.') : 'Chưa đạt ' + PN() + '/' + N + '. Xem lại thẻ và luyện thêm rồi thử lại nhé.')
+      G.el('div', pass ? (R.final ? 'Đạt! Bạn đã tốt nghiệp ' + R.final.level + '.' : R.parent ? (firstPass ? 'Qua buổi ' + R.n + '! Buổi tiếp theo đã mở.' : 'Qua buổi ' + R.n + '! Kết quả tốt nhất đã được lưu.') : firstPass ? 'Qua phòng! Cửa phòng tiếp theo đã mở.' : 'Qua phòng! Kết quả tốt nhất đã được lưu.') : 'Chưa đạt ' + PN() + '/' + N + '. Xem lại thẻ và luyện thêm rồi thử lại nhé.')
     ));
     if (wrong.length) {
       body.appendChild(G.el('div.wrongs', G.el('b', 'Câu cần ôn lại:'), wrong.map(function (it) { return G.el('div', G.el('span', T(it)), it.py ? G.el('span.py.inl', ' ' + it.py) : null, ' · ', G.el('span.faint', it.vi), speakBtn(T(it))); })));
@@ -273,7 +335,11 @@ var G = window.G || (window.G = {});
     body.appendChild(teacherLine(pass ? R.outro : 'Don’t worry. Practice makes perfect!', pass ? R.outro : 'Don’t worry. Practice makes perfect!'));
     body.appendChild(G.el('div.row',
       G.el('button.btn', { onclick: test }, 'Làm lại'),
-      G.el('button.btn.seal', { onclick: function () { closePanel(); if (pass) afterPass(firstPass, sao, right); } }, pass ? (R.final ? 'Nhận bằng ›' : 'Xong ›') : 'Đóng')
+      G.el('button.btn.seal', { onclick: function () {
+        var par = R.parent;
+        if (par && pass) { afterPass(firstPass, sao, right); G.openLesson(par); return; }   // buổi Nền tảng: về danh sách buổi để học buổi sau
+        closePanel(); if (pass) afterPass(firstPass, sao, right);
+      } }, pass ? (R.final ? 'Nhận bằng ›' : R.parent ? 'Các buổi tiếp theo ›' : 'Xong ›') : 'Đóng')
     ));
     G.sfx(pass ? 'done' : 'wrong');
     if (pass) G.confetti();
@@ -284,12 +350,22 @@ var G = window.G || (window.G = {});
   function afterPass(firstPass, sao, right) {
     if (R.final) {
       var done = G.S.totNghiep[R.final.lang] && G.S.totNghiep[R.final.lang][R.final.level];
-      if (!done) { G.graduate(R.final.lang, R.final.level, right, TN()); return; }
+      if (!done) { G.graduate(R.final.lang, R.final.level, right, TN(), R.final.levelEn); return; }
       G.kaiSay('Bạn đã có bằng ' + R.final.level + ' rồi. Giỏi lắm!');
       return;
     }
-    var doors = G.doorsOf(R.id), next = null;
-    for (var i = 0; i < doors.length - 1; i++) if (doors[i].room === R.id) next = doors[i + 1];
+    var rid = R.id;
+    if (R.parent) {   // buổi trong phòng nhóm: mở buổi sau; qua hết buổi thì báo cửa phòng sau
+      var gp = G.ROOMS[R.parent];
+      if (!G.roomPassed(gp.id)) {
+        if (firstPass) { G.sfx('door'); G.kaiSay('Tuyệt! Buổi ' + R.n + ' đạt ' + stars(sao) + '. Buổi ' + (R.n + 1) + ' đã mở, học tiếp nhé!'); G.toast('🔓 Đã mở Buổi ' + (R.n + 1)); }
+        else G.kaiSay('Giỏi lắm! Kết quả tốt nhất đã được lưu.');
+        return;
+      }
+      rid = gp.id;
+    }
+    var doors = G.doorsOf(rid), next = null;
+    for (var i = 0; i < doors.length - 1; i++) if (doors[i].room === rid) next = doors[i + 1];
     if (firstPass && next) { G.sfx('door'); G.kaiSay('Tuyệt! ' + R.title.split(' ·')[0] + ' đạt ' + stars(sao) + '. Cửa ' + next.label + ' vừa mở, ra hành lang để vào nhé!'); G.toast('🔓 Đã mở ' + next.label); }
     else G.kaiSay('Giỏi lắm! Kết quả tốt nhất đã được lưu.');
   }

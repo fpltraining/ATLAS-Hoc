@@ -13,11 +13,12 @@ var G = window.G || (window.G = {});
 
   function rooms(doors) {
     var done = 0, stars = 0;
-    for (var i = 0; i < doors.length; i++) { var id = doors[i].room, p = G.S.phong[id]; if (G.roomPassed(id)) { done++; stars += p.sao; } }
+    for (var i = 0; i < doors.length; i++) { var id = doors[i].room, p = G.S.phong[id]; if (G.roomPassed(id)) { done++; stars += p ? p.sao : 0; } }
     return { done: done, stars: stars, all: doors.length };
   }
   function lastCity() { var sv = G.S.viTri && G.SCENES[G.S.viTri.canh]; return (sv && sv.city) || 'en'; }
   function enRooms() { return rooms(G.EN_HALL_DOORS); }
+  function foundDone() { var n = 0; for (var i = 1; i <= 30; i++) if (G.roomPassed('en-n-' + (i < 10 ? '0' : '') + i)) n++; return n; }
 
   G.renderLobby = function () {
     var root = document.getElementById('lobby');
@@ -39,7 +40,7 @@ var G = window.G || (window.G = {});
     root.appendChild(G.el('div.cities', CITIES.map(function (c) {
       var open = c.state === 'open';
       var z = rooms(G.ZH_HALL_DOORS);
-      var prog = c.id === 'en' ? (G.S.totNghiep.en && G.S.totNghiep.en.A1 ? '🎓 Đã tốt nghiệp A1 · ' : r.done + '/5 phòng A1 · ') + r.stars + '★'
+      var prog = c.id === 'en' ? (G.S.totNghiep.en && G.S.totNghiep.en.A1 ? '🎓 Đã tốt nghiệp A1 · ' + r.stars + '★' : G.enFloorNow() === 1 ? '🏫 Tầng 1 Nền tảng · ' + foundDone() + '/30 buổi' : r.done + '/5 phòng A1 · ' + r.stars + '★')
         : c.id === 'zh' ? (G.S.totNghiep.zh && G.S.totNghiep.zh.HSK1 ? '🎓 Đã tốt nghiệp HSK1 · ' : z.done + '/6 phòng HSK1 · ') + z.stars + '★' : '';
       return G.el('button.city' + (open ? '' : '.soon'), { onclick: function () { if (open) G.goCity(c.id); else G.toast(c.name + ': ' + (c.note || 'sắp ra mắt')); } },
         G.imgEl(c.card, 'city-img'),

@@ -4,7 +4,8 @@ var G = window.G || (window.G = {});
 (function () {
   var SCHOOL = { en: 'Trường Anh ngữ Brightford', zh: 'Học viện Hán ngữ Trường Lạc' };
 
-  G.graduate = function (lang, level, right, total) {
+  /* levelEn: tên cấp đọc bằng tiếng Anh trong lời chúc (vd. 'the Foundation level' cho Nền tảng) */
+  G.graduate = function (lang, level, right, total, levelEn) {
     G.S.totNghiep[lang] = G.S.totNghiep[lang] || {};
     G.S.totNghiep[lang][level] = { diem: right, tong: total, luc: G.vnNow() };
     G.addXp(100);
@@ -13,7 +14,10 @@ var G = window.G || (window.G = {});
     G.confetti();
     setTimeout(G.confetti, 900);
     var name = G.playerName();
-    var speech = 'Congrats, ' + name + '! You\'ve finished ' + level + '. So proud of you!';
+    var speech = 'Congrats, ' + name + '! You\'ve finished ' + (levelEn || level) + '. So proud of you!';
+    // tốt nghiệp Nền tảng: lên Tầng 2 · A1
+    var after = 'Bằng ' + level + ' đã lưu trong hồ sơ ở Ngôi nhà chung. Cấp tiếp theo sẽ mở ở bản cập nhật sau!';
+    if (lang === 'en' && level === 'Nền tảng') { G.S.tangEn = 2; G.save(); after = 'Tầng 2 · A1 đã mở! Ra hành lang, đi thang máy bên phải lên Tầng 2 nhé.'; }
     G.say(speech, 'en');
     var wrap = G.el('div.modal.grad',
       G.el('div.grad-card',
@@ -33,7 +37,7 @@ var G = window.G || (window.G = {});
         G.el('div.grad-xp', '+100 XP'),
         G.el('button.btn.seal.big1', { onclick: function () {
           document.body.removeChild(wrap);
-          G.kaiSay('Bằng ' + level + ' đã lưu trong hồ sơ ở Ngôi nhà chung. Cấp tiếp theo sẽ mở ở bản cập nhật sau!');
+          G.kaiSay(after);
         } }, 'Nhận bằng ›')
       )
     );

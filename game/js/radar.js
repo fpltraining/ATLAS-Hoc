@@ -97,7 +97,7 @@ var G = window.G || (window.G = {});
       g.fillStyle = st.talked(o.life) ? 'rgba(255,255,255,.55)' : '#ffd56b';
       g.beginPath(); g.arc(X(o.x), Y(o.y), Math.max(2.5, S * 0.03), 0, 6.283); g.fill();
     });
-    (sc.gates || []).forEach(function (gt) { emoji(g, '🛍️', X(gt.x), Y(gt.y), is * 0.9); });
+    (sc.gates || []).forEach(function (gt) { emoji(g, gt.to && gt.to.floors ? '🛗' : '🛍️', X(gt.x), Y(gt.y), is * 0.9); });
     if (sc.exit) emoji(g, '🚪', X(sc.exit.x), Y(sc.exit.y), is * 0.9);
     // nơi cần tới
     if (st.goal) {
