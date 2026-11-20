@@ -38,6 +38,7 @@ var G = window.G || (window.G = {});
         G.el('button.btn.seal.big1', { onclick: function () {
           document.body.removeChild(wrap);
           G.kaiSay(after);
+          if (G.checkFloorBadge) setTimeout(G.checkFloorBadge, 600);   // tốt nghiệp tầng: nhận huy hiệu trên đầu
         } }, 'Nhận bằng ›')
       )
     );
