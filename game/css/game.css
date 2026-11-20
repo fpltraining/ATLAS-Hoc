@@ -59,6 +59,20 @@ button { font: inherit; color: inherit; cursor: pointer; }
 /* ---------- bản đồ ---------- */
 #play { position: fixed; inset: 0; background: var(--navy); }
 #world { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; display: block; }
+/* bản đồ 3D: canvas 3D nằm dưới, canvas 2D trong suốt ở trên (chữ nói, mưa, mũi tên), dải trời ở giữa */
+#world3d { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.sky3d { position: absolute; left: 0; right: 0; top: 0; height: 32%; pointer-events: none; overflow: hidden;
+  -webkit-mask-image: linear-gradient(#000 45%, transparent); mask-image: linear-gradient(#000 45%, transparent); }
+.sky3d .sk-grad, .sky3d .sk-dark { position: absolute; inset: 0; }
+.sky3d .sk-dark { background: linear-gradient(rgba(38,42,58,.92), rgba(58,62,80,.55)); opacity: 0; }
+.sky3d .sk-stars { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; }
+.sky3d .sk-sun, .sky3d .sk-moon { position: absolute; width: 13vh; height: 13vh; margin: -6.5vh 0 0 -6.5vh; border-radius: 50%; opacity: 0; }
+.sky3d .sk-moon { width: 7vh; height: 7vh; margin: -3.5vh 0 0 -3.5vh; background: radial-gradient(circle at 38% 36%, #fffbe8 0 52%, rgba(255,250,220,.35) 60%, rgba(255,250,220,0) 72%); box-shadow: 0 0 24px rgba(255,250,220,.35); }
+.sky3d .sk-clouds img { position: absolute; left: 0; top: 0; will-change: transform; filter: drop-shadow(0 6px 10px rgba(90,70,40,.12)); }
+.glare3d { position: absolute; inset: 0; pointer-events: none; mix-blend-mode: screen; }
+.tilt3d { position: absolute; left: 0; right: 0; top: 0; height: 20%; pointer-events: none; -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+  -webkit-mask-image: linear-gradient(#000 25%, transparent); mask-image: linear-gradient(#000 25%, transparent); }
+#play.w3d #world { background: transparent; }
 .hud { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; gap: 10px; padding: max(10px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) 10px max(12px, env(safe-area-inset-left)); background: linear-gradient(rgba(27,33,64,.75), rgba(27,33,64,0)); color: #fff; pointer-events: none; }
 .hud > * { pointer-events: auto; }
 .hud b { flex: 1; font-size: 17px; text-shadow: 0 1px 3px rgba(0,0,0,.4); }

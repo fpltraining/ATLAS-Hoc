@@ -39,6 +39,10 @@
 
   <!-- Bản đồ -->
   <section id="play" style="display:none">
+    <canvas id="world3d" style="display:none"></canvas>
+    <div id="sky3d" class="sky3d" style="display:none"></div>
+    <div id="glare3d" class="glare3d" style="display:none"></div>
+    <div id="tilt3d" class="tilt3d" style="display:none"></div>
     <canvas id="world"></canvas>
     <div class="hud">
       <button id="hud-home" class="hud-btn" aria-label="Về Ngôi nhà chung">🏠</button>
@@ -85,6 +89,8 @@
   <script src="data/walkmask.js"></script>
   <script src="data/hands.js"></script>
   <script src="js/world.js"></script>
+  <script src="vendor/three.min.js"></script>
+  <script src="js/world3d.js"></script>
   <script src="js/rooms.js"></script>
   <script src="js/engine.js"></script>
   <script src="js/lesson.js"></script>

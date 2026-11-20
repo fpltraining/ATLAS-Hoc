@@ -10,7 +10,7 @@ var G = window.G || (window.G = {});
   var TASKS = [
     { id: 'bai', icon: '🏫', name: 'Học bài ở trường', hint: 'Học, luyện hoặc kiểm tra một phòng', min: 45 },
     { id: 'doc', icon: '📖', name: 'Đọc 1 chương truyện', hint: 'Về nhà, mở góc đọc truyện', min: 25 },
-    { id: 'noi', icon: '💬', name: 'Nói chuyện ngoài phố', hint: 'Quán cà phê, chợ, bệnh viện hoặc đi xe buýt, tàu điện', min: 30 },
+    { id: 'noi', icon: '💬', name: 'Nói chuyện ngoài phố', hint: 'Quán cà phê, chợ, bệnh viện hoặc đi xe buýt', min: 30 },
     { id: 'on', icon: '🔁', name: 'Ôn câu đã học', hint: 'Về nhà, ôn các câu sắp quên', min: 20 }
   ];
 

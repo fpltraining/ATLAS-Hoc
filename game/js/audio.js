@@ -112,6 +112,18 @@ var G = window.G || (window.G = {});
     } catch (e3) { rainNode = null; }
   };
 
+  /* sấm rền xa sau tia chớp (nhiễu trầm), chỉ khi bật âm thanh */
+  G.thunder = function () {
+    var a = ac(); if (!a || (G.S && G.S.caiDat && G.S.caiDat.amThanh === false)) return;
+    try {
+      var len = Math.floor(a.sampleRate * 3.2), buf = a.createBuffer(1, len, a.sampleRate), d = buf.getChannelData(0), last = 0;
+      for (var i = 0; i < len; i++) { var k = i / len; last = (last + 0.04 * (Math.random() * 2 - 1)) / 1.04; d[i] = last * 6 * Math.pow(1 - k, 1.6) * (k < 0.04 ? k / 0.04 : 1) * (0.7 + 0.3 * Math.sin(k * 40)); }
+      var s = a.createBufferSource(), f = a.createBiquadFilter(), g = a.createGain();
+      s.buffer = buf; f.type = 'lowpass'; f.frequency.value = 260; g.gain.value = 0.22;
+      s.connect(f); f.connect(g); g.connect(a.destination); s.start();
+    } catch (e) { /* bỏ qua */ }
+  };
+
   /* ---------- âm thanh hiệu ứng ---------- */
   var ctx = null;
   function ac() {
@@ -120,6 +132,7 @@ var G = window.G || (window.G = {});
     return ctx;
   }
   G.audioCtx = ac;
+  G.audioReady = function () { return ctx && ctx.state === 'running' ? ctx : null; };   // chỉ lấy khi đã mở (sau lần chạm đầu), không đánh thức mỗi khung
   /* đang có giọng đọc (để nhạc nền nhỏ lại) */
   G.voiceBusy = function () {
     try { return (!player.paused && !player.ended) || !!(window.speechSynthesis && speechSynthesis.speaking); } catch (e) { return false; }

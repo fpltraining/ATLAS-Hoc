@@ -30,7 +30,7 @@ var G = window.G || (window.G = {});
     draw();
     root.appendChild(G.el('div.cr-wrap',
       G.el('div.cr-top', G.el('div.kicker', 'Bắt đầu'), G.el('h1', 'Chọn nhân vật của bạn'),
-        G.el('p.small.faint', 'Nhân vật sẽ sống ở Brightford, đi xe buýt, tàu điện tới trường và học tiếng Anh mỗi ngày.')),
+        G.el('p.small.faint', 'Nhân vật sẽ sống ở Brightford, đi bộ hoặc đi xe buýt, xe đưa đón tới trường và học tiếng Anh mỗi ngày.')),
       grid,
       G.el('label.cr-label', 'Tên của bạn (không bắt buộc)', nameIn),
       G.el('button.btn.seal.big1.cr-go', { onclick: finish }, 'Vào học ngay ›'),
@@ -59,7 +59,7 @@ var G = window.G || (window.G = {});
         : 'Chào ' + G.playerName() + '! Mình là Kai, bạn robot sẽ đi cùng bạn.',
       'Bạn vừa chuyển tới Brightford, một thị trấn nhỏ ở nước Mỹ tương lai. Ở đây ai cũng nói tiếng Anh.',
       'Hôm nay là ngày đầu đi học ở Trường Anh ngữ. Nhà bạn ở khu phố Maple, trường ở trung tâm.',
-      'Ra bến xe buýt hoặc ga tàu điện, nghe thông báo trạm bằng tiếng Anh và xuống đúng trạm nhé!'
+      'Đi bộ sang Trung tâm tới trường, hoặc ra bến xe buýt nghe thông báo trạm bằng tiếng Anh và xuống đúng trạm nhé!'
     ];
     if (G.S.dauVao && G.S.dauVao.lv <= 1) lines.push('Bạn mới bắt đầu nên mình sẽ dẫn bạn tới trường học phòng A1-1 trước. Câu nào cũng có nghĩa tiếng Việt, bấm 🐢 để nghe chậm.');
     else if (G.S.dauVao && G.S.dauVao.lv >= 3) lines.push('Trình độ của bạn từ A2 trở lên: cả 4 phòng A1 đã mở, vào kiểm tra thẳng để lấy sao rồi ra Phố mua sắm luyện nói.');

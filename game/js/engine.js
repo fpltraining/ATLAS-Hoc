@@ -14,6 +14,8 @@ var G = window.G || (window.G = {});
   var last = 0, fade = 0, running = false;
   var near = null;
   var SPEED = 260;
+  var seat = null;   // ghế đang ngồi trong lớp (G.SEATS)
+  var mode3d = false, riding = false, tap3 = null, questWalk = false, lastDt = 0;   // mode3d: khu ngoài phố vẽ bằng bản đồ 3D (js/world3d.js)
   var STEP_RATE = 14;   // nhịp bước chung cho mọi nhân vật (cùng nhịp với Han): pha bước tăng 14 rad/giây khi đang đi
 
   G.engineInit = function () {
@@ -48,6 +50,9 @@ var G = window.G || (window.G = {});
   G.enterScene = function (id, at) {
     scene = G.SCENES[id]; sceneId = id;
     mask = maskOf(scene);
+    mode3d = !!(scene.kind === 'city' && G.W3D && G.WORLD3D && G.WORLD3D[id] && G.W3D.enabled() && G.W3D.init());
+    if (G.W3D && G.W3D.ready) G.W3D.show(mode3d);
+    riding = false; seat = null;
     resize(); // màn bản đồ vừa hiện ra: đo lại kích thước canvas
     var sp = at || scene.spawn || { x: scene.w / 2, y: scene.walk.y1 - 40 };
     var wk = scene.walk;   // luôn đặt nhân vật trong vùng đi được
@@ -80,7 +85,7 @@ var G = window.G || (window.G = {});
     if (scene.buildings) {
       for (var i = 0; i < scene.buildings.length; i++) {
         var b = scene.buildings[i];
-        var lb = b.ride === 'bus' ? 'Đợi xe buýt' + (b.toward === 'home' ? ' về nhà' : ' tới trường') : b.ride === 'metro' ? 'Vào ga tàu điện' : b.home ? 'Vào nhà · đọc truyện, ôn từ' : 'Vào ' + b.name;
+        var lb = b.ride === 'bus' ? 'Đợi xe buýt' + (b.toward === 'home' ? ' về nhà' : ' tới trường') : b.shuttle ? 'Gọi xe đưa đón ' + (b.shuttle === 'school' ? 'tới trường' : 'về nhà') : b.home ? 'Vào nhà · đọc truyện, ôn từ' : 'Vào ' + b.name;
         list.push({ x: b.x, y: b.y + 18, r: 70, label: lb, act: (function (bb) { return function () { useBuilding(bb); }; })(b) });
       }
     }
@@ -100,7 +105,9 @@ var G = window.G || (window.G = {});
     }
     if (scene.kind === 'classroom' && G.currentRoom) {
       var tid = G.ROOM_TEACHER[G.currentRoom];
-      if (tid) list.push({ x: TX(), y: TY() + 40, r: 110, npc: tid, label: 'Nói chuyện với ' + G.NPCS[tid].name, act: function () { G.openLesson(G.currentRoom); } });
+      // vào bài: đi tới ghế của mình, ngồi xuống rồi mới bắt đầu học (đang ngồi thì nút ở ngay chỗ ngồi)
+      if (tid && seat) list.push({ x: P.x, y: P.y, r: 9999, npc: tid, label: 'Nói chuyện với ' + G.NPCS[tid].name, act: function () { G.openLesson(G.currentRoom); } });
+      else if (tid) list.push({ x: TX(), y: TY() + 40, r: 110, npc: tid, label: 'Nói chuyện với ' + G.NPCS[tid].name, act: function () { sitDown(function () { G.openLesson(G.currentRoom); }); } });
     }
     var PP = people();
     for (var pi = 0; pi < PP.length; pi++) {
@@ -126,6 +133,7 @@ var G = window.G || (window.G = {});
   }
 
   function useBuilding(b) {
+    if (b.shuttle) { startShuttle(b.shuttle); return; }
     if (b.ride) { G.sfx('door'); G.openRide(b.ride, b.toward); return; }
     if (b.fly) { G.sfx('door'); G.openFlight(scene.city, b.fly); return; }
     if (b.life) {
@@ -166,6 +174,11 @@ var G = window.G || (window.G = {});
   /* cổng sang khu khác của thành phố (trung tâm ↔ phố mua sắm) */
   function useGate(g) {
     if (g.to.floors) { openFloors(); return; }
+    if (mode3d && G.WORLD3D[g.to.scene]) {   // bản 3D: hai khu nằm liền nhau, cứ đi bộ sang
+      var a = G.WORLD3D[sceneId], b = G.WORLD3D[g.to.scene], q = questWalk;
+      goTo(g.to.x + b.ox - a.ox, g.to.y + b.oy - a.oy); questWalk = q;
+      return;
+    }
     G.sfx('door'); G.enterScene(g.to.scene, { x: g.to.x, y: g.to.y, dir: g.to.dir || 'down' });
     if (g.to.scene === 'street_en') G.kaiSay('Đây là Phố mua sắm: bưu điện, ngân hàng, hiệu thuốc, tiệm tóc và siêu thị. Vào tiệm nào cũng có người để nói chuyện!');
   }
@@ -226,9 +239,28 @@ var G = window.G || (window.G = {});
   }
 
   /* ---------- va chạm ---------- */
+  /* bản đồ 3D: các khu ghép liền thành một thành phố, đi bộ xuyên qua chỗ nối (toạ độ px toàn thành phố) */
+  G.blockedWorld = function (gx, gy) {
+    var WD = G.WORLD3D, id, d, s, lx, ly;
+    for (id in WD) {
+      if (!WD.hasOwnProperty(id) || !(s = G.SCENES[id])) continue;
+      d = WD[id]; lx = gx - d.ox; ly = gy - d.oy;
+      if (lx >= 4 && lx < s.w - 4 && ly >= 50 && ly < s.h - 14) return blockedIn(s, id, lx, ly, true);
+    }
+    for (id in WD) {   // mép tờ: chỉ đi qua chỗ nối với khu bên cạnh
+      if (!WD.hasOwnProperty(id) || !(s = G.SCENES[id])) continue;
+      d = WD[id]; lx = gx - d.ox; ly = gy - d.oy;
+      if (lx >= 0 && lx < s.w && ly >= 50 && ly < s.h - 14) return blockedIn(s, id, Math.min(Math.max(lx, 5), s.w - 5), ly, true);
+    }
+    return true;
+  };
   function blocked(x, y) {
+    if (mode3d) { var o = G.WORLD3D[sceneId]; return G.blockedWorld(x + o.ox, y + o.oy); }
+    return blockedIn(scene, sceneId, x, y, false);
+  }
+  function blockedIn(scene, sid, x, y, edge) {
     var w = scene.walk;
-    if (x < w.x0 || x > w.x1 || y < w.y0 || y > w.y1) return true;
+    if (!edge && (x < w.x0 || x > w.x1 || y < w.y0 || y > w.y1)) return true;
     if (scene.buildings) {
       for (var i = 0; i < scene.buildings.length; i++) {
         var b = scene.buildings[i], bk = (b.s || 300) / 300;
@@ -236,7 +268,7 @@ var G = window.G || (window.G = {});
       }
     }
     if (scene.props) for (var pj = 0; pj < scene.props.length; pj++) { var pr = scene.props[pj], ddx = x - pr.x, ddy = (y - pr.y) * 2; if (ddx * ddx + ddy * ddy < pr.r * pr.r) return true; }
-    var PP = people();
+    var PP = (G.PEOPLE && G.PEOPLE[sid]) || [], mask = maskOf(scene);
     for (var pq = 0; pq < PP.length; pq++) {
       var po = PP[pq];
       if (po === skipP) continue;   // NPC đang đi: không tự chặn chính mình
@@ -258,7 +290,7 @@ var G = window.G || (window.G = {});
     if (!running) return;
     if (!W || cv.clientWidth !== W || cv.clientHeight !== H) resize();
     var dt = last ? Math.min(0.05, (ts - last) / 1000) : 0;
-    last = ts;
+    last = ts; lastDt = dt;
     update(dt);
     draw();
     requestAnimationFrame(loop);
@@ -266,7 +298,10 @@ var G = window.G || (window.G = {});
 
   function update(dt) {
     var vx = 0, vy = 0;
-    if (joy.on && (joy.dx || joy.dy)) { vx = joy.dx; vy = joy.dy; target = null; pending = null; path = []; }
+    if (riding) { target = null; path = []; pending = null; if (riding === 'go') rideFollow(); }
+    else if (G.seated && G.seated() && (joy.on && (joy.dx || joy.dy) || keys.l || keys.r || keys.u || keys.d)) G.standUp();   // đang ngồi học: kéo cần là đứng dậy
+    else if (G.seated && G.seated()) { /* ngồi yên */ }
+    else if (joy.on && (joy.dx || joy.dy)) { vx = joy.dx; vy = joy.dy; target = null; pending = null; path = []; }
     else if (keys.l || keys.r || keys.u || keys.d) { vx = (keys.r ? 1 : 0) - (keys.l ? 1 : 0); vy = (keys.d ? 1 : 0) - (keys.u ? 1 : 0); target = null; pending = null; path = []; }
     else if (target) {
       var tx = target.x - P.x, ty = target.y - P.y, dist = Math.sqrt(tx * tx + ty * ty);
@@ -298,6 +333,7 @@ var G = window.G || (window.G = {});
         }
       }
       if (!moved) P.moving = false;
+      if (mode3d) checkCross();
       // hướng nhìn có độ trễ: đi chéo gần 45° thì giữ hướng cũ, không nhấp nháy giữa hai hình
       var ax = Math.abs(vx), ay = Math.abs(vy), horiz = P.dir === 'left' || P.dir === 'right';
       if (horiz ? ay > ax * 1.3 : ax > ay * 1.3) horiz = !horiz;
@@ -305,6 +341,14 @@ var G = window.G || (window.G = {});
       P.t += dt;
     }
     // Kai đi theo dấu chân người chơi (cách ~70 px trên đường đi), nên không xuyên qua cây, nhà như đi thẳng
+    if (seat) { K.moving = false; K.dir = 'up'; } else kaiFollow(dt);
+
+    // chỗ tương tác gần nhất → nút hành động
+    nearUpdate();
+    if (mode3d) { updatePeople(dt); updateFx(dt); if (fade > 0) fade = Math.max(0, fade - dt * 3); return; }
+    cameraUpdate(dt);
+  }
+  function kaiFollow(dt) {
     if (!trail.length || Math.abs(P.x - trail[trail.length - 1].x) + Math.abs(P.y - trail[trail.length - 1].y) > 8) { trail.push({ x: P.x, y: P.y }); if (trail.length > 120) trail.shift(); }
     var lenAhead = 0, ti;
     for (ti = trail.length - 1; ti > 0; ti--) lenAhead += Math.abs(trail[ti].x - trail[ti - 1].x) + Math.abs(trail[ti].y - trail[ti - 1].y);
@@ -315,7 +359,7 @@ var G = window.G || (window.G = {});
       kgo = t0; break;
     }
     var kd = Math.sqrt((P.x - K.x) * (P.x - K.x) + (P.y - K.y) * (P.y - K.y));
-    if (kd > 420) { K.x = P.x - 50; K.y = P.y + 30; trail = [{ x: K.x, y: K.y }, { x: P.x, y: P.y }]; kgo = null; }   // bị bỏ quá xa (đổi cảnh, dịch chỗ): đứng lại cạnh người chơi
+    if (kd > 420 && !riding) { K.x = P.x - 50; K.y = P.y + 30; trail = [{ x: K.x, y: K.y }, { x: P.x, y: P.y }]; kgo = null; }   // bị bỏ quá xa (đổi cảnh, dịch chỗ): đứng lại cạnh người chơi
     K.moving = !!kgo;
     if (kgo) {
       var kx = kgo.x - K.x, ky = kgo.y - K.y, kl = Math.sqrt(kx * kx + ky * ky) || 1, ks = Math.min(kl, SPEED * dt * (lenAhead > 160 ? 1.3 : 1));
@@ -324,12 +368,14 @@ var G = window.G || (window.G = {});
     } else if (kd > 4) {   // đứng yên: quay về phía người chơi
       var fx0 = P.x - K.x, fy0 = P.y - K.y; K.dir = Math.abs(fx0) > Math.abs(fy0) * 0.8 ? (fx0 < 0 ? 'left' : 'right') : (fy0 < 0 ? 'up' : 'down');
     }
-
-    // chỗ tương tác gần nhất → nút hành động
+  }
+  function nearUpdate() {
     var ts = triggers(), best = null, bd = 1e9;
     for (var i = 0; i < ts.length; i++) { var dx = ts[i].x - P.x, dy = ts[i].y - P.y, d = Math.sqrt(dx * dx + dy * dy); if (d < ts[i].r && d < bd) { bd = d; best = ts[i]; } }
+    if (riding) best = null;   // đang ngồi xe đưa đón: không hiện nút
     if (best !== near) { near = best; G.showAction(near); }
-
+  }
+  function cameraUpdate(dt) {
     // camera: phóng đủ để ảnh nền phủ kín màn hình
     zoom = Math.max(baseZoom, W / scene.w, H / scene.h);
     var vw = W / zoom, vh = H / zoom;
@@ -363,6 +409,129 @@ var G = window.G || (window.G = {});
     return false;
   }
 
+  /* ---------- lớp học: ngồi vào ghế khi vào bài, bạn cùng lớp ngồi quanh, tường phía trước ---------- */
+  var seatHint = false;
+  function sitDown(cb) {
+    var S = G.SEATS && G.SEATS[sceneId];
+    if (!S) { cb(); return; }
+    if (seat) { cb(); return; }
+    goTo(S.stand.x, S.stand.y, function () {
+      var me = S.list[S.me]; seat = me; target = null; path = [];
+      P.x = me.x; P.y = me.y + 2; P.dir = 'up'; P.moving = false;
+      K.x = S.stand.x + 34; K.y = S.stand.y + 26; K.dir = 'up'; K.moving = false; trail = [{ x: K.x, y: K.y }];
+      G.sfx('door');
+      if (!seatHint) { seatHint = true; G.kaiSay('Ngồi vào chỗ rồi, bắt đầu học thôi! Muốn đứng dậy thì kéo cần điều khiển.'); }
+      setTimeout(cb, 450);
+    }, '__ghe');
+  }
+  G.seated = function () { return !!seat; };
+  G.standUp = function () {
+    if (!seat) return;
+    var S = G.SEATS[sceneId]; seat = null;
+    if (S) { P.x = S.stand.x; P.y = S.stand.y; }
+    P.dir = 'right'; trail = [{ x: K.x, y: K.y }, { x: P.x, y: P.y }];
+  };
+  /* người ngồi sau lưng ghế: chỉ vẽ phần trên mép lưng ghế (đầu, vai), phần dưới như bị lưng ghế che */
+  function seatedDraw(st, fn) {
+    ctx.save(); ctx.beginPath(); ctx.rect(st.x - st.s, st.y - st.s * 1.6, st.s * 2, st.s * 1.6); ctx.clip();
+    fn(st.x, st.y + st.s * 0.41, st.s);
+    ctx.restore();
+  }
+  /* bạn cùng lớp: mỗi phòng một nhóm cố định (chọn theo tên phòng), ngồi các ghế còn trống */
+  function classmates() {
+    var S = G.SEATS && G.SEATS[sceneId], room = G.currentRoom || '';
+    if (!S) return [];
+    var sets = (G.TOWNIE_SETS || []).filter(function (n) { return G.asset('person_' + n + '_up.png').ok; });
+    if (!sets.length) return [];
+    var h = 0; for (var i = 0; i < room.length; i++) h = (h * 31 + room.charCodeAt(i)) % 9973;
+    var out = [], order = [1, 2, 4, 6, 9, 11, 13, 0, 7, 10, 12, 14, 3, 8];
+    for (var k = 0; k < 7; k++) {
+      var si = order[(k * 2 + h) % order.length]; if (si === S.me) continue;
+      var dup = false; for (var q = 0; q < out.length; q++) if (out[q].seat === S.list[si]) dup = true;
+      if (!dup) out.push({ seat: S.list[si], set: sets[(h + k * 3) % sets.length], ph: k * 1.7 });
+    }
+    return out;
+  }
+  function drawClassmate(c) {
+    seatedDraw(c.seat, function (x, foot, S) {
+      var br = 1 + Math.sin(Date.now() / 700 + c.ph) * 0.012;   // thở nhẹ
+      ctx.save(); ctx.translate(x, foot); ctx.scale(1, br); ctx.translate(-x, -foot);
+      G.drawAsset(ctx, 'person_' + c.set + '_up.png', x - S / 2, foot - S, S, S);
+      ctx.restore();
+    });
+  }
+  function drawSeatedPlayer() {
+    var who = G.S.nhanVat || 'han';
+    seatedDraw(seat, function (x, foot, S) {
+      if (who === 'custom' && G.S.avatar) G.drawAvatar(ctx, G.S.avatar, x, foot, S * 0.93, 'up', 0, false);
+      else G.walkSprite(ctx, who === 'kai' ? 'kai' : 'player_' + who, x, foot, who === 'kai' ? S * 0.87 : S, 'up', 0, false);
+    });
+  }
+  /* tường phía trước lớp: lấy dải gỗ ốp tường của bức tường sau trong chính ảnh lớp, lát dọc mép dưới, chừa chỗ cửa */
+  function drawFrontWall() {
+    var f = scene.front, a = G.asset(scene.bg); if (!f || !a.ok) return;
+    var y0 = f.y, h = scene.h - y0, src = f.src, tw = src[2] * (h - 12) / src[3];
+    var segs = [[0, f.door[0]], [f.door[1], scene.w]];
+    var sh = ctx.createLinearGradient(0, y0 - 30, 0, y0);   // bóng tường đổ vào trong lớp
+    sh.addColorStop(0, 'rgba(60,40,20,0)'); sh.addColorStop(1, 'rgba(60,40,20,.16)');
+    for (var i = 0; i < segs.length; i++) {
+      var x0 = segs[i][0], x1 = segs[i][1];
+      ctx.fillStyle = sh; ctx.fillRect(x0, y0 - 30, x1 - x0, 30);
+      ctx.save(); ctx.beginPath(); ctx.rect(x0, y0, x1 - x0, h); ctx.clip();
+      for (var x = x0 - ((x0 * 0.37) % tw); x < x1; x += tw) ctx.drawImage(a.img, src[0], src[1], src[2], src[3], x, y0 + 12, tw + 1, h - 12);
+      ctx.restore();
+      ctx.fillStyle = '#efe4d0'; ctx.fillRect(x0, y0, x1 - x0, 12);              // mặt trên tường (sơn kem)
+      ctx.fillStyle = 'rgba(110,80,50,.35)'; ctx.fillRect(x0, y0 + 11, x1 - x0, 2);
+    }
+  }
+
+  /* ---------- bản đồ 3D: đi qua chỗ nối sang khu bên cạnh (không chuyển màn, không tối màn hình) ---------- */
+  function checkCross() {
+    if (P.x >= 0 && P.x < scene.w && P.y >= 0 && P.y < scene.h) return;
+    var a = G.WORLD3D[sceneId], gx = P.x + a.ox, gy = P.y + a.oy;
+    for (var id in G.WORLD3D) {
+      if (id === sceneId || !G.WORLD3D.hasOwnProperty(id) || !G.SCENES[id]) continue;
+      var b = G.WORLD3D[id], s = G.SCENES[id];
+      if (gx >= b.ox && gx < b.ox + s.w && gy >= b.oy && gy < b.oy + s.h) { crossTo(id); return; }
+    }
+  }
+  function crossTo(id) {
+    var a = G.WORLD3D[sceneId], b = G.WORLD3D[id], dx = a.ox - b.ox, dy = a.oy - b.oy, seen = [];
+    function mv(o) { if (o && seen.indexOf(o) < 0) { seen.push(o); o.x += dx; o.y += dy; } }
+    mv(P); mv(K); trail.forEach(mv); mv(target); path.forEach(mv); mv(finalT);
+    scene = G.SCENES[id]; sceneId = id; mask = maskOf(scene); near = null;
+    G.S.viTri = { canh: id, x: Math.round(P.x), y: Math.round(P.y) }; G.save();
+    fx = []; makePuddles(); weatherHint(); hudT = 0; hudWeather();
+    if (questWalk && target && !riding) { updateQuest(); G.goQuest(); }   // đang đi theo nhiệm vụ: sang khu mới thì chỉ tiếp tới đích
+  }
+  /* ---------- xe đưa đón học sinh (G.SHUTTLE ở world.js): bản 3D chạy trên đường, bản 2D chuyển cảnh nhanh ---------- */
+  function startShuttle(kind) {
+    var rt = G.SHUTTLE && G.SHUTTLE[kind]; if (!rt) return;
+    var toSchool = kind === 'school';
+    function arrive() {
+      var e = rt.end, WD = G.WORLD3D, id = e.scene;
+      if (mode3d && WD[id] && WD[sceneId] && id !== sceneId) {
+        var a = WD[sceneId], b = WD[id]; P.x = e.x + b.ox - a.ox; P.y = e.y + b.oy - a.oy; crossTo(id);
+      }
+      if (mode3d && id === sceneId) { P.x = e.x; P.y = e.y; }
+      else if (!mode3d) G.enterScene(id, { x: e.x, y: e.y, dir: 'down' });
+      P.dir = 'down'; K.x = P.x - 50; K.y = P.y + 30; trail = [{ x: K.x, y: K.y }]; riding = false;
+      if (rt.enter) { var bb = bld(rt.enter); if (bb) { useBuilding(bb); return; } }
+      G.kaiSay(toSchool ? 'Tới trường rồi!' : 'Về tới khu phố Maple rồi. Nghỉ ngơi thôi!');
+    }
+    if (mode3d && G.W3D.shuttle(rt.pts, rt.stop, function () { riding = 'go'; G.kaiSay(toSchool ? 'Lên xe rồi! Ngắm thành phố trên đường tới trường nhé.' : 'Lên xe về nhà thôi!'); }, arrive)) {
+      riding = 'wait'; target = null; path = []; pending = null; questWalk = false;
+      G.sfx('door'); G.kaiSay('Xe đưa đón học sinh đang tới, chờ một chút nhé!');
+      return;
+    }
+    G.sfx('door'); arrive();
+  }
+  function rideFollow() {
+    var sp = G.W3D.shuttlePos(); if (!sp) return;
+    var a = G.WORLD3D[sceneId]; P.x = sp.x - a.ox; P.y = sp.y - a.oy; P.moving = false;
+    checkCross(); K.x = P.x; K.y = P.y; trail = [{ x: K.x, y: K.y }];
+  }
+
   /* ---------- tìm đường A* trên lưới ô 20 đơn vị ---------- */
   var CELL = 20;
   function freeAt(x, y) { return !blocked(x, y); }
@@ -383,12 +552,15 @@ var G = window.G || (window.G = {});
   }
   function findPath(sx, sy, gx, gy) {
     if (lineFree(sx, sy, gx, gy)) return [{ x: gx, y: gy }];
-    var cols = Math.ceil(scene.w / CELL), rows = Math.ceil(scene.h / CELL), N = cols * rows;
+    // bản đồ 3D: đích ở khu bên cạnh thì lưới tìm đường phủ cả khu đó
+    var X0 = 0, Y0 = 0, X1 = scene.w, Y1 = scene.h;
+    if (mode3d && (gx < 0 || gx > scene.w || gy < 0 || gy > scene.h || sx < 0 || sx > scene.w)) { X0 = -1600; X1 = scene.w + 1600; Y0 = -200; Y1 = scene.h + 200; }
+    var cols = Math.ceil((X1 - X0) / CELL), rows = Math.ceil((Y1 - Y0) / CELL), N = cols * rows;
     var free = {}, g = {}, came = {}, closed = {};
-    function ok(i) { if (free[i] === undefined) free[i] = freeAt((i % cols) * CELL + CELL / 2, Math.floor(i / cols) * CELL + CELL / 2); return free[i]; }
-    function cx(i) { return (i % cols) * CELL + CELL / 2; }
-    function cy(i) { return Math.floor(i / cols) * CELL + CELL / 2; }
-    function idx(x, y) { return clamp(Math.floor(y / CELL), 0, rows - 1) * cols + clamp(Math.floor(x / CELL), 0, cols - 1); }
+    function ok(i) { if (free[i] === undefined) free[i] = freeAt(cx(i), cy(i)); return free[i]; }
+    function cx(i) { return X0 + (i % cols) * CELL + CELL / 2; }
+    function cy(i) { return Y0 + Math.floor(i / cols) * CELL + CELL / 2; }
+    function idx(x, y) { return clamp(Math.floor((y - Y0) / CELL), 0, rows - 1) * cols + clamp(Math.floor((x - X0) / CELL), 0, cols - 1); }
     var st = idx(sx, sy), go = idx(gx, gy);
     if (!ok(go)) { var nf = nearestFree(gx, gy); if (nf) { gx = nf.x; gy = nf.y; go = idx(gx, gy); } }   // vẫn kẹt thì A* tự chọn chỗ gần nhất đi được
     function h(i) { var ax = Math.abs(cx(i) - gx), ay = Math.abs(cy(i) - gy); return Math.max(ax, ay) + 0.414 * Math.min(ax, ay); }
@@ -434,7 +606,7 @@ var G = window.G || (window.G = {});
   function goTo(x, y, act, label) {
     pending = act || null; pendingLabel = label || '';
     var w = scene.walk;
-    x = clamp(x, w.x0 + 4, w.x1 - 4); y = clamp(y, w.y0 + 4, w.y1 - 4);
+    if (!mode3d) { x = clamp(x, w.x0 + 4, w.x1 - 4); y = clamp(y, w.y0 + 4, w.y1 - 4); }
     var pth = findPath(P.x, P.y, x, y);
     if (!pth || !pth.length) { target = null; path = []; if (pending && near) { var q = pending; pending = null; q(); } return; }
     path = pth; target = path.shift(); stuckT = 0; replans = 0; finalT = pth.length ? pth[pth.length - 1] : target;
@@ -496,7 +668,11 @@ var G = window.G || (window.G = {});
     if (id === 'street_en') { var gB = gateTo('city_en'); return { text: 'Về trung tâm · ' + what, x: gB.x, y: gB.y, h: 170, label: gB.label }; }
     if (id === 'city_en' && !newbie && G.LIFE['en-gate'] && !talkedToday('en-gate') && personOf('en-gate')) { var pg = personOf('en-gate'); return { text: 'Chào Ms. Nora ở cổng trường trước khi vào lớp', x: pg.x, y: pg.y + 40, h: 150, label: 'Nói chuyện với Ms. Nora' }; }
     if (id === 'home_en' && td.bai && (!td.doc || !td.on)) { var hm = bld('home'); return { text: 'Vào nhà ' + (!td.doc ? 'đọc 1 chương truyện' : 'ôn từ khó') + ' (việc hôm nay)', x: hm.x, y: hm.y + 18, h: 260, label: 'Vào nhà · đọc truyện, ôn từ' }; }
-    if (id === 'home_en') { var bs = bld('busstop'); return { text: 'Ra bến xe buýt đi tới trường · ' + what, x: bs.x, y: bs.y + 18, h: 230, label: 'Đợi xe buýt tới trường' }; }
+    if (id === 'home_en') {
+      var gC = gateTo('city_en');   // đi bộ sang Trung tâm (muốn nhanh thì gọi xe đưa đón hoặc đi xe buýt)
+      if (gC) return { text: 'Đi bộ sang Trung tâm tới trường (đi nhanh: gọi xe đưa đón) · ' + what, x: gC.x, y: gC.y, h: 170, label: gC.label };
+      var bs = bld('busstop'); return { text: 'Ra bến xe buýt đi tới trường · ' + what, x: bs.x, y: bs.y + 18, h: 230, label: 'Đợi xe buýt tới trường' };
+    }
     if (scene.city === 'zh') { var ap = bld('airport'); return ap ? { text: 'Bay về Brightford để học tiếng Anh', x: ap.x, y: ap.y + 18, h: 260, label: 'Vào Sân bay' } : (scene.exit ? { text: 'Ra ngoài, bay về Brightford', x: scene.exit.x, y: scene.exit.y, h: 120, label: scene.exit.label } : null); }
     if (id === 'city_en') {
       if (!nr && lf) { var lb = null, bs2 = scene.buildings; for (var i = 0; i < bs2.length; i++) if (bs2[i].life === lf) lb = bs2[i]; if (lb) return { text: what + ' (+20 XP mỗi tình huống)', x: lb.x, y: lb.y + 18, h: 260, label: 'Vào ' + lb.name }; }
@@ -533,7 +709,9 @@ var G = window.G || (window.G = {});
   }
   /* bấm thanh nhiệm vụ: tự đi tới chỗ cần đến rồi làm luôn */
   G.goQuest = function () {
-    if (!curGoal) return;
+    if (!curGoal || riding) return;
+    questWalk = true;
+    if (scene.kind === 'classroom' && !seat && G.SEATS && G.SEATS[sceneId] && G.currentRoom && curGoal.label.indexOf('Nói chuyện với') === 0) { sitDown(function () { G.openLesson(G.currentRoom); }); return; }   // vào bài: đi thẳng tới ghế
     var ts = triggers();
     for (var i = 0; i < ts.length; i++) if (ts[i].label === curGoal.label) {
       if (near === ts[i]) { ts[i].act(); return; }
@@ -589,7 +767,7 @@ var G = window.G || (window.G = {});
   function spawnTown() {
     town = [];
     var sets = (G.TOWNIE_SETS || []).filter(function (s) { return G.asset('person_' + s + '_down.png').ok; });
-    if (scene.kind !== 'city' || !sets.length) return;
+    if (scene.kind !== 'city' || !sets.length || mode3d) return;   // bản 3D có người đi đường riêng (đi xuyên các khu)
     var n = Math.min(sets.length, sceneId === 'home_en' ? 3 : 6), pick = G.shuffle(sets.slice());
     for (var i = 0; i < n; i++) {
       var sp = freeSpot(), tg = freeSpot();
@@ -720,6 +898,31 @@ var G = window.G || (window.G = {});
     var r = Math.abs(Math.sin(seed * 12.9898) * 43758.5453) % 1;
     return r < 0.2 ? 'rain' : r < 0.45 ? 'cloudy' : 'clear';
   };
+  function hourFrac() { if (HOUR_FORCE !== null) return HOUR_FORCE; var p = G.vnParts(); return p.h + p.mi / 60; }
+  /* thời tiết mượt theo phút: mây kéo tới dần, 40 phút trước cơn mưa trời tối sầm mây đen, gió nổi; mưa tạnh thì mây tan dần.
+     { kind, cloud 0..1 (độ phủ mây), gather 0..1 (mây đen sắp mưa), rain 0..1 (độ nặng hạt) } */
+  function wxKindAt(t) {
+    var p = G.vnParts(t), seed = p.y * 1000 + p.m * 37 + p.d * 101 + Math.floor(p.h / 3) * 13;
+    var r = Math.abs(Math.sin(seed * 12.9898) * 43758.5453) % 1;
+    return r < 0.2 ? 'rain' : r < 0.45 ? 'cloudy' : 'clear';
+  }
+  G.wxNow = function () {
+    var BASE = { clear: 0.12, cloudy: 0.55, rain: 1 };
+    if (WX_FORCE) {
+      if (WX_FORCE === 'gather') return { kind: 'cloudy', cloud: 0.9, gather: 0.85, rain: 0.15 };
+      return { kind: WX_FORCE, cloud: BASE[WX_FORCE] || 0.12, gather: 0, rain: WX_FORCE === 'rain' ? 1 : 0 };
+    }
+    var now = Date.now(), p = G.vnParts(now), m = (p.h % 3) * 60 + p.mi + new Date(now).getUTCSeconds() / 60;
+    var cur = wxKindAt(now), nxt = wxKindAt(now + (181 - m) * 60000), prv = wxKindAt(now - (m + 1) * 60000);
+    var o = { kind: cur, cloud: BASE[cur], gather: 0, rain: cur === 'rain' ? 1 : 0 };
+    if (cur === 'rain' && nxt !== 'rain' && m > 165) o.rain = Math.max(0, (180 - m) / 15);                    // mưa tạnh dần
+    if (cur !== 'rain' && nxt === 'rain' && m > 140) {                                                     // mây đen kéo tới
+      o.gather = Math.min(1, (m - 140) / 40); o.cloud = Math.max(o.cloud, 0.3 + o.gather * 0.7);
+      if (o.gather > 0.8) o.rain = (o.gather - 0.8) / 0.2 * 0.35;                                         // lất phất trước khi mưa to
+    }
+    if (cur !== 'rain' && prv === 'rain' && m < 25) o.cloud = Math.max(o.cloud, 1 - m / 25 * (1 - o.cloud));  // mưa xong mây tan dần
+    return o;
+  };
   G.dayPart = function () {
     var h = hourNow();
     return h >= 5 && h < 10 ? 'sang' : h >= 10 && h < 14 ? 'trua' : h >= 14 && h < 17 ? 'chieu' : h >= 17 && h < 19 ? 'hoanghon' : 'toi';
@@ -807,14 +1010,16 @@ var G = window.G || (window.G = {});
     }
     ctx.restore();
   }
-  function drawRain() {
+  function drawRain(level) {
     var now = Date.now(), dt = rainLast ? Math.min(0.05, (now - rainLast) / 1000) : 0; rainLast = now;
-    var want = Math.round(W * H / 4200);
+    var want = Math.round(W * H / 4200 * (level === undefined ? 1 : level));
+    if (drops.length > want) drops.length = want;
     // 3 lớp mưa: xa (mảnh, chậm, mờ) → gần (dày, nhanh, rõ); gió đổi hướng nhẹ theo thời gian
     while (drops.length < want) { var z = Math.random(); drops.push({ x: Math.random() * (W + 200) - 100, y: Math.random() * H, z: z, v: 500 + z * 700, l: 8 + z * 20 }); }
     var wind = 0.12 + Math.sin(now / 4000) * 0.08;
     ctx.save();
-    var sk = ctx.createLinearGradient(0, 0, 0, H); sk.addColorStop(0, 'rgba(30,40,70,.30)'); sk.addColorStop(1, 'rgba(40,52,84,.14)');
+    var lv = level === undefined ? 1 : level, k3 = mode3d ? 0.6 : 1;   // bản 3D đã tối trời bằng ánh sáng, lớp phủ nhẹ hơn
+    var sk = ctx.createLinearGradient(0, 0, 0, H); sk.addColorStop(0, 'rgba(30,40,70,' + (0.30 * lv * k3).toFixed(3) + ')'); sk.addColorStop(1, 'rgba(40,52,84,' + (0.14 * lv * k3).toFixed(3) + ')');
     ctx.fillStyle = sk; ctx.fillRect(0, 0, W, H);
     for (var layer = 0; layer < 3; layer++) {
       ctx.strokeStyle = 'rgba(215,228,255,' + (0.25 + layer * 0.2) + ')'; ctx.lineWidth = 0.8 + layer * 0.7; ctx.beginPath();
@@ -827,7 +1032,7 @@ var G = window.G || (window.G = {});
       ctx.stroke();
     }
     // chớp xa thỉnh thoảng
-    if (!flashT && Math.random() < dt / 35) flashT = 0.6;
+    if (!flashT && Math.random() < dt / 35 && (level === undefined || level > 0.6)) { flashT = 0.6; if (G.thunder) setTimeout(G.thunder, 600 + Math.random() * 1800); }
     if (flashT > 0) { flashT = Math.max(0, flashT - dt); var fa = flashT > 0.45 ? 0.35 : flashT > 0.3 ? 0.05 : flashT > 0.2 ? 0.22 : 0; if (fa) { ctx.fillStyle = 'rgba(235,240,255,' + fa + ')'; ctx.fillRect(0, 0, W, H); } }
     ctx.strokeStyle = 'rgba(220,235,255,.6)'; ctx.lineWidth = 1.2;
     for (var j = splash.length - 1; j >= 0; j--) {
@@ -893,6 +1098,7 @@ var G = window.G || (window.G = {});
 
   /* ---------- vẽ ---------- */
   function draw() {
+    if (mode3d) { draw3d(); return; }
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.fillStyle = '#1b2140';
     ctx.fillRect(0, 0, W, H);
@@ -908,6 +1114,7 @@ var G = window.G || (window.G = {});
     if (scene.buildings) for (var i = 0; i < scene.buildings.length; i++) items.push({ y: scene.buildings[i].y, draw: drawBuilding, o: scene.buildings[i] });
     if (scene.props) for (var pi = 0; pi < scene.props.length; pi++) items.push({ y: scene.props[pi].y, draw: drawProp, o: scene.props[pi] });
     if (scene.kind === 'classroom' && G.currentRoom) items.push({ y: TY(), draw: drawTeacher, o: G.ROOM_TEACHER[G.currentRoom] });
+    if (scene.kind === 'classroom') { var cms = classmates(); for (var cmi = 0; cmi < cms.length; cmi++) items.push({ y: cms[cmi].seat.y + 2, draw: drawClassmate, o: cms[cmi] }); }
     if (scene.kind === 'shop') items.push({ y: TY(), draw: drawTeacher, o: scene.npc });
     if (scene.room && G.drawRoomFront) items.push({ y: TY() + 30, draw: function () { G.drawRoomFront(ctx, scene); } });
     if (scene.lay && G.drawStandee) for (var sb = 0; sb < (scene.boards || []).length; sb++) items.push({ y: scene.boards[sb].y + 70, draw: function (b) { G.drawStandee(ctx, b); }, o: scene.boards[sb] });
@@ -918,9 +1125,10 @@ var G = window.G || (window.G = {});
     items.push({ y: P.y, draw: drawPlayer });
     items.sort(function (a, b) { return a.y - b.y; });
     for (var j = 0; j < items.length; j++) items[j].draw(items[j].o);
+    if (scene.front) drawFrontWall();
     if (scene.buildings) for (var bl = 0; bl < scene.buildings.length; bl++) drawBuildingLabel(scene.buildings[bl]);
     // huy hiệu rank lơ lửng trên đầu nhân vật
-    if (G.drawHeadBadge) G.drawHeadBadge(ctx, P.x, P.y - (raining() ? 170 : 104), P.moving, Date.now() / 1000);   // huy hiệu tầng (trời mưa: nằm trên chiếc ô)
+    if (G.drawHeadBadge && !seat) G.drawHeadBadge(ctx, P.x, P.y - (raining() ? 170 : 104), P.moving, Date.now() / 1000);   // huy hiệu tầng (trời mưa: nằm trên chiếc ô)
 
     if (scene.kind === 'hall') drawDoorPlates();
     updateQuest();
@@ -950,6 +1158,71 @@ var G = window.G || (window.G = {});
     drawGoalMark();
     if (G.drawRadar) G.drawRadar({ scene: scene, id: sceneId, P: P, goal: curGoal, people: people(), talked: talkedToday, dpr: dpr });
     if (fade > 0) { ctx.fillStyle = 'rgba(27,33,64,' + fade + ')'; ctx.fillRect(0, 0, W, H); }
+  }
+
+  /* bản đồ 3D vẽ thành phố; tấm canvas 2D phía trên chỉ còn vẽ chữ nói, huy hiệu, mưa, mũi tên nhiệm vụ, bản đồ nhỏ */
+  function playerWho() { return G.S.nhanVat === 'custom' && G.S.avatar ? 'custom' : (G.S.nhanVat || 'han'); }
+  function draw3d() {
+    var wx = G.wxNow();
+    G.W3D.frame({ id: sceneId, P: { x: P.x, y: P.y, dir: P.dir, moving: P.moving, t: P.t, hidden: riding === 'go' }, K: K, who: playerWho(), hour: hourFrac(), wx: wx, near: riding ? null : near, goal: riding ? null : curGoal, tap: tap3, dt: lastDt });
+    tap3 = null;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+    updateQuest();
+    var tw = G.W3D.walkers(), i, pr;
+    for (i = 0; i < tw.length; i++) {   // người đi đường nói chuyện
+      var w = tw[i]; if (!(w.sayT > 0 && w.say)) continue;
+      pr = G.W3D.project(null, w.x * 100, w.z * 100, 128); if (!pr || !pr.vis) continue;
+      ctx.setTransform(dpr * pr.k * 1.1, 0, 0, dpr * pr.k * 1.1, dpr * pr.x, dpr * pr.y); bubble(0, 0, w.say[0], Math.min(1, w.sayT * 2));
+    }
+    if (G.drawHeadBadge && !riding) {
+      pr = G.W3D.project(sceneId, P.x, P.y, raining() ? 160 : 112);
+      if (pr && pr.vis) { ctx.setTransform(dpr * pr.k, 0, 0, dpr * pr.k, dpr * pr.x, dpr * pr.y); G.drawHeadBadge(ctx, 0, 0, P.moving, Date.now() / 1000); }
+    }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (wx.rain > 0.02) drawRain(wx.rain);
+    hudWeather();
+    var vg = ctx.createRadialGradient(W / 2, H / 2, Math.min(W, H) * 0.45, W / 2, H / 2, Math.max(W, H) * 0.78);
+    vg.addColorStop(0, 'rgba(70,45,15,0)'); vg.addColorStop(1, 'rgba(70,45,15,.22)');
+    ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
+    if (curGoal && !riding) {   // đích ngoài màn hình: mũi tên ở mép chỉ hướng
+      pr = G.W3D.project(sceneId, curGoal.x, curGoal.y, curGoal.h || 150);
+      var m = 36, top = 110, bot = 40;
+      if (pr && !(pr.vis && pr.x > m && pr.x < W - m && pr.y > top && pr.y < H - bot)) {
+        var sx = pr.vis ? pr.x : W - pr.x, sy = pr.vis ? pr.y : H + 400;
+        var cx = W / 2, cy = (top + H - bot) / 2, dx = sx - cx, dy = sy - cy;
+        var k = Math.min(Math.abs((W / 2 - m) / (dx || 1e-6)), Math.abs(((H - top - bot) / 2) / (dy || 1e-6)));
+        ctx.save(); ctx.translate(cx + dx * k, cy + dy * k); ctx.rotate(Math.atan2(dy, dx));
+        ctx.fillStyle = 'rgba(200,85,61,.95)'; ctx.strokeStyle = '#fff'; ctx.lineWidth = 3;
+        ctx.beginPath(); ctx.moveTo(18, 0); ctx.lineTo(-12, -14); ctx.lineTo(-6, 0); ctx.lineTo(-12, 14); ctx.closePath(); ctx.fill(); ctx.stroke();
+        ctx.restore();
+      }
+    }
+    if (G.drawRadar) G.drawRadar({ scene: scene, id: sceneId, P: P, goal: curGoal, people: people(), talked: talkedToday, dpr: dpr });
+    if (fade > 0) { ctx.fillStyle = 'rgba(27,33,64,' + fade + ')'; ctx.fillRect(0, 0, W, H); }
+  }
+  /* người đi đường trong bản 3D: tự chào khi đi ngang, bấm vào thì nói một câu (có giọng đọc), Kai dịch nghĩa */
+  function sayLine(w, tapped) {
+    var LL = raining() && Math.random() < 0.6 ? RAIN_LINES : LINES;
+    w.say = LL[Math.floor(Math.random() * LL.length)]; w.sayT = tapped ? 3.5 : 3; w.wait = tapped ? 2.5 : 1.5; w.talkCd = tapped ? 10 : w.talkCd;
+    if (tapped) { G.say(w.say[0], 'en'); G.kaiSay('"' + w.say[0] + '" nghĩa là: ' + w.say[1]); }
+  }
+  if (G.W3D) G.W3D.greet = function (w) { sayLine(w, false); };
+  function tap3d(cx, cy) {
+    if (riding) return;
+    var r = cv.getBoundingClientRect(), pk = G.W3D.pick(cx - r.left, cy - r.top); if (!pk) return;
+    if (pk.kind === 'walker') { sayLine(pk.w, true); return; }
+    var a = G.WORLD3D[sceneId], lx, ly;
+    if (pk.kind === 'ground') { lx = pk.gx - a.ox; ly = pk.gy - a.oy; }
+    else { var b = G.WORLD3D[pk.id]; lx = pk.x + b.ox - a.ox; ly = pk.y + b.oy - a.oy; }
+    questWalk = false;
+    var ts = triggers(), hit = null, bd = 1e9;
+    for (var i = 0; i < ts.length; i++) {
+      var t = ts[i], dx = lx - t.x, dy = ly - t.y, d = Math.sqrt(dx * dx + dy * dy);
+      var lim = pk.kind === 'ground' ? (t.npc ? 70 : 60) : 150;
+      if (d < lim && d < bd) { bd = d; hit = t; }
+    }
+    if (hit) { tap3 = { x: hit.x, y: hit.y }; goTo(hit.x, hit.y + 10, hit.act, hit.label); }
+    else { tap3 = { x: lx, y: ly }; goTo(lx, ly); }
   }
 
   function drawBackground() {
@@ -1088,6 +1361,7 @@ var G = window.G || (window.G = {});
   function personOf(life) { var PP = people(); for (var i = 0; i < PP.length; i++) if (PP[i].life === life) return PP[i]; return null; }
 
   function drawPlayer() {
+    if (seat) { drawSeatedPlayer(); return; }
     // bóng dưới chân co giãn theo nhịp bước
     var sh = P.moving ? 1 - Math.abs(Math.sin(P.t * 14)) * 0.12 : 1;
     if (G.S.nhanVat === 'custom' && G.S.avatar) {
@@ -1181,7 +1455,12 @@ var G = window.G || (window.G = {});
   function toWorld(cx, cy) { var r = cv.getBoundingClientRect(); return { x: (cx - r.left) / zoom + cam.x, y: (cy - r.top) / zoom + cam.y }; }
 
   function tapAt(cx, cy) {
+    if (mode3d) { tap3d(cx, cy); return; }
     var w = toWorld(cx, cy);
+    if (seat) {   // đang ngồi: chạm cô giáo / thầy giáo thì học tiếp, chạm chỗ khác thì đứng dậy đi tới đó
+      if (G.currentRoom && Math.abs(w.x - TX()) < 120 && w.y < TY() + 60 && w.y > TY() - 260) { G.openLesson(G.currentRoom); return; }
+      G.standUp();
+    }
     if (tapTownie(w)) return;
     var ts = triggers(), hit = null;
     for (var i = 0; i < ts.length; i++) {
@@ -1192,6 +1471,7 @@ var G = window.G || (window.G = {});
       if (t.board) { if (Math.abs(w.x - t.board.x) < 110 && Math.abs(w.y - t.board.y) < 90) { hit = t; break; } continue; }   // bấm thẳng vào bảng trên tường
       if (Math.abs(dx) < hitR && dy > -(t.tall ? t.tall + 40 : 260) && dy < 60) { hit = t; break; }
     }
+    if (hit && scene.kind === 'classroom' && hit.npc && !seat && G.SEATS && G.SEATS[sceneId]) { hit.act(); return; }   // chạm thầy cô: đi thẳng tới ghế ngồi học
     if (hit) goTo(hit.x, hit.y + (scene.kind === 'city' ? 10 : 0), hit.act, hit.label);
     else goTo(w.x, w.y);
   }
@@ -1251,6 +1531,20 @@ var G = window.G || (window.G = {});
       el.addEventListener('touchend', tend);
       el.addEventListener('touchcancel', tend);
     });
+    /* bản đồ 3D: hai ngón tay để phóng to / thu nhỏ, cuộn chuột cũng được */
+    var pinch = null;
+    cv.addEventListener('touchstart', function (e) {
+      if (!mode3d || e.touches.length !== 2) return;
+      var t0 = e.touches[0], t1 = e.touches[1]; pinch = { d: Math.hypot(t0.clientX - t1.clientX, t0.clientY - t1.clientY), k: G.W3D.zoom() };
+      if (jid !== null) je();
+    }, { passive: true });
+    cv.addEventListener('touchmove', function (e) {
+      if (!pinch || e.touches.length !== 2) return;
+      var t0 = e.touches[0], t1 = e.touches[1], dd = Math.hypot(t0.clientX - t1.clientX, t0.clientY - t1.clientY);
+      G.W3D.zoom(pinch.k * pinch.d / Math.max(20, dd)); eatClick = Date.now() + 400; e.preventDefault();
+    }, { passive: false });
+    cv.addEventListener('touchend', function (e) { if (e.touches.length < 2) pinch = null; });
+    cv.addEventListener('wheel', function (e) { if (!mode3d) return; G.W3D.zoom(G.W3D.zoom() * (e.deltaY > 0 ? 1.08 : 0.93)); e.preventDefault(); }, { passive: false });
     cv.addEventListener('click', function (e) { var q = rel(e); if (Date.now() < eatClick && Math.abs(q.x - lastQ.x) + Math.abs(q.y - lastQ.y) < 40) return; tapAt(e.clientX, e.clientY); });
     base.addEventListener('mousedown', function (e) {
       var r = base.getBoundingClientRect(), pr = play.getBoundingClientRect();
@@ -1277,5 +1571,7 @@ var G = window.G || (window.G = {});
   G.debugPath = function (x0, y0, x1, y1) { var p = findPath(x0, y0, x1, y1); return p ? p.length : -1; };
   G.debugKai = function () { return { x: K.x, y: K.y }; };
   G.debugTown = function () { return town.map(function (t) { return { x: Math.round(t.x), y: Math.round(t.y), set: t.set, wait: t.wait, moving: !!t.moving }; }); };
-  G.debugState = function () { return { target: !!target, moving: P.moving, x: P.x, y: P.y, dir: P.dir, cx: cam.x, cy: cam.y, zoom: zoom, scene: sceneId, near: near ? near.label : null }; };
+  G.debugState = function () { return { target: !!target, moving: P.moving, x: P.x, y: P.y, dir: P.dir, cx: cam.x, cy: cam.y, zoom: zoom, scene: sceneId, near: near ? near.label : null, mode3d: mode3d, riding: riding, goal: curGoal ? curGoal.text : null }; };
+  G.debugTap = function (cx, cy) { tapAt(cx, cy); };
+  G.debugQuest = function () { return curGoal; };
 })();
