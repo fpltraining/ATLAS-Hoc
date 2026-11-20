@@ -585,3 +585,38 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .cl-or { text-align: center; color: var(--faint); font-size: 13px; margin: 2px 0; }
 .cl-gbox { display: flex; flex-direction: column; gap: 8px; }
 .cl-gbox:empty { display: none; }
+
+/* ===== Trang chủ kiểu giấy thủ công (theo mẫu anh Han đặt ChatGPT): nền giấy, thẻ giấy, nút đất sét ===== */
+body { background: #f4e9dc url(../assets/paper_tile.webp) repeat; background-size: 400px 320px; }
+#lobby { --paper: #fbf5ea; --line: #e6d8bf; --ink: #4a2f1d; --soft: #7d5a40; --faint: #a3876c; color: var(--ink); }
+#lobby .lhero { grid-template-columns: 1.2fr 1fr; gap: 18px; background: #f8f0e3; color: var(--ink); border-radius: 8px; padding: 12px;
+  box-shadow: 0 0 0 1px #e3d3b8, 0 3px 0 #e8dcc6, 0 12px 26px rgba(90,60,30,.14); }
+#lobby .hero-pic { border-radius: 6px; overflow: hidden; box-shadow: 0 0 0 1px #e3d3b8; }
+#lobby .hero-img { aspect-ratio: 900 / 835; display: block; }
+#lobby .hero-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#lobby .hero-text { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 8px 4px; }
+.lobby-title { width: min(100%, 380px); height: auto; display: block; }
+.hero-sub { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.45; max-width: 34ch; }
+.clay-btn { min-height: 54px; padding: 14px 34px; border: 0; border-radius: 24px; color: #fff; font-weight: 800; font-size: 20px; letter-spacing: .2px;
+  background: linear-gradient(#e46b50, #c94f39); text-shadow: 0 1px 0 rgba(0,0,0,.25);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,.28), inset 0 -3px 0 rgba(0,0,0,.14), 0 4px 0 #a5402d, 0 10px 18px rgba(120,50,30,.25); }
+.clay-btn:active { transform: translateY(3px); box-shadow: inset 0 2px 0 rgba(255,255,255,.2), inset 0 -2px 0 rgba(0,0,0,.14), 0 1px 0 #a5402d, 0 4px 8px rgba(120,50,30,.2); }
+#lobby .sec { color: #8a5532; font-size: 26px; font-weight: 900; letter-spacing: .2px; text-shadow: 0 1px 0 #fff8ec, 0 2px 0 #d9c4a4; margin: 28px 4px 12px; }
+#lobby .cities { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+#lobby .city { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 10px 10px 14px; gap: 5px; color: var(--ink);
+  box-shadow: 0 3px 0 #e2d2b6, 0 10px 20px rgba(90,60,30,.10); }
+#lobby .city:active { transform: translateY(2px); box-shadow: 0 1px 0 #e2d2b6, 0 4px 10px rgba(90,60,30,.10); }
+#lobby .city .city-img { aspect-ratio: 280 / 290; border-radius: 12px; overflow: hidden; margin-bottom: 4px; }
+#lobby .city .city-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+#lobby .city.soon { opacity: 1; }
+.city-name { color: #7a4526; font-size: 18px; font-weight: 900; line-height: 1.2; }
+.city-lang { color: var(--soft); font-size: 13px; }
+.city-prog { color: var(--faint); font-size: 12px; }
+#lobby .tag { margin-top: 4px; font-size: 14px; font-weight: 800; padding: 5px 16px; border-radius: 99px; background: #f1c766; color: #6b4320;
+  box-shadow: inset 0 -2px 0 rgba(0,0,0,.10), 0 2px 0 #c99a3a; }
+#lobby .tag.open { background: #d95a40; color: #fff; box-shadow: inset 0 -2px 0 rgba(0,0,0,.15), 0 2px 0 #a5402d; }
+#lobby .profile, #lobby .cl-card, #lobby .souv, #lobby .big, #lobby .rk-card, #lobby .bd, #lobby .wk-chart {
+  background: var(--paper); border-color: var(--line); box-shadow: 0 3px 0 #e6d8bf, 0 8px 16px rgba(90,60,30,.07); }
+#lobby .btn { background: #fffaf1; border-color: #e3d3b8; color: var(--ink); box-shadow: 0 2px 0 #e3d3b8; }
+#lobby .btn.seal { background: linear-gradient(#e46b50, #c94f39); border-color: #b9462f; color: #fff; box-shadow: 0 3px 0 #a5402d; }
+@media (max-width: 680px) { #lobby .lhero { grid-template-columns: 1fr; } .clay-btn { width: 100%; } }

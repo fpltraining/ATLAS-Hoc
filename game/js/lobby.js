@@ -4,11 +4,11 @@ var G = window.G || (window.G = {});
 
 (function () {
   var CITIES = [
-    { id: 'en', name: 'Brightford', lang: 'Tiếng Anh · Mỹ tương lai', card: 'card_city_en.png', state: 'open', scene: 'city_en' },
-    { id: 'zh', name: 'Trường Lạc trấn 长乐镇', lang: 'Tiếng Trung · Thị trấn Trung Quốc', card: 'card_city_zh.png', state: 'soon', note: 'Tạm dừng' },
-    { id: 'ja', name: 'Thành phố Nhật', lang: 'Tiếng Nhật', card: 'card_city_soon.png', state: 'soon' },
-    { id: 'ko', name: 'Thành phố Hàn', lang: 'Tiếng Hàn', card: 'card_city_soon.png', state: 'soon' },
-    { id: 'fr', name: 'Thành phố Pháp', lang: 'Tiếng Pháp', card: 'card_city_soon.png', state: 'soon' }
+    { id: 'en', name: 'Brightford', lang: 'Tiếng Anh · Mỹ tương lai', card: 'card_city_en.webp', state: 'open', scene: 'city_en' },
+    { id: 'zh', name: 'Trường Lạc trấn 长乐镇', lang: 'Tiếng Trung · Thị trấn Trung Quốc', card: 'card_city_zh.webp', state: 'soon', note: 'Tạm dừng' },
+    { id: 'ja', name: 'Thành phố Nhật', lang: 'Tiếng Nhật', card: 'card_city_ja.webp', state: 'soon' },
+    { id: 'ko', name: 'Thành phố Hàn', lang: 'Tiếng Hàn', card: 'card_city_ko.webp', state: 'soon' },
+    { id: 'fr', name: 'Thành phố Pháp', lang: 'Tiếng Pháp', card: 'card_city_fr.webp', state: 'soon' }
   ];
 
   function rooms(doors) {
@@ -25,14 +25,13 @@ var G = window.G || (window.G = {});
     root.innerHTML = '';
     var r = enRooms();
 
+    // đầu trang kiểu giấy thủ công: tranh hai hòn đảo (Brightford, Trường Lạc trấn) + chữ ConnectLife đất sét + nút vào thành phố
     root.appendChild(G.el('header.lhero',
-      G.imgEl('lobby_hero.png', 'hero-img'),
+      G.el('div.hero-pic', G.imgEl('lobby_hero.webp', 'hero-img')),
       G.el('div.hero-text',
-        G.el('img.lobby-logo', { src: G.assetUrl('logo_banner.png'), alt: 'ConnectLife' }),
-        G.el('div.kicker', 'Kết nối cuộc sống'),
-        G.el('h1', 'Học thêm một ngôn ngữ, sống thêm một cuộc đời.'),
-        G.el('p', 'Mỗi ngôn ngữ là một thành phố. Học ở trường, nói chuyện ở quán, bay sang thành phố khác để kết bạn.'),
-        G.el('button.btn.seal.big1', { onclick: function () { G.goCity(lastCity()); } }, 'Vào ' + (lastCity() === 'zh' ? 'Trường Lạc trấn' : 'Brightford') + ' ›')
+        G.el('img.lobby-title', { src: G.assetUrl('lobby_title.png'), alt: 'ConnectLife · Kết nối cuộc sống' }),
+        G.el('p.hero-sub', 'Mỗi ngôn ngữ là một thành phố. Học ở trường, nói chuyện ở quán, bay sang thành phố khác để kết bạn.'),
+        G.el('button.clay-btn', { onclick: function () { G.goCity(lastCity()); } }, 'Vào ' + (lastCity() === 'zh' ? 'Trường Lạc trấn' : 'Brightford') + ' ›')
       )
     ));
 
@@ -44,10 +43,10 @@ var G = window.G || (window.G = {});
         : c.id === 'zh' ? (G.S.totNghiep.zh && G.S.totNghiep.zh.HSK1 ? '🎓 Đã tốt nghiệp HSK1 · ' : z.done + '/6 phòng HSK1 · ') + z.stars + '★' : '';
       return G.el('button.city' + (open ? '' : '.soon'), { onclick: function () { if (open) G.goCity(c.id); else G.toast(c.name + ': ' + (c.note || 'sắp ra mắt')); } },
         G.imgEl(c.card, 'city-img'),
-        G.el('b', c.name),
-        G.el('span.small', c.lang),
+        G.el('b.city-name', c.name),
+        G.el('span.city-lang', c.lang),
         G.el('span.tag' + (open ? '.open' : ''), open ? 'Đang mở' : (c.note || 'Sắp ra mắt')),
-        prog ? G.el('span.small.faint', prog) : null
+        prog ? G.el('span.city-prog', prog) : null
       );
     })));
 
