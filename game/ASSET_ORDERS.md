@@ -517,3 +517,69 @@ SCHOOL CAMPUS:
 Âm thanh (Đơn J) và nhạc (Đơn K) giữ nguyên ở trên, thêm 2 tệp:
 | sfx_chair_pull.mp3 | wooden chair pulled back on a wooden floor, short scrape, 0.8 seconds |
 | amb_river.mp3 | gentle river flowing over stones, a few water drops, birds far away, seamless loop 60 seconds |
+
+---
+
+# Đơn M · Âm thanh + nhạc · một prompt (Meta AI) · thay Đơn J, Đơn K
+
+```
+Create the complete audio set for a cozy paper-craft language-learning town game called ConnectLife (a small watercolor town, a language school, a river with a bridge, a café, a market, a school minibus). Make EACH numbered item as a SEPARATE audio file with EXACTLY the file name given.
+General rules for everything: high quality and clean; absolutely no voices, no words, no singing, no lyrics; no copyrighted melodies; warm, gentle and cozy, never harsh or scary. Every "loop" must start and end seamlessly so it can repeat with no gap or click.
+
+PART A — AMBIENT LOOPS (60–90 seconds each, seamless loop, natural sounds only, no music):
+1. amb_birds_morning.mp3 — gentle morning birdsong in a quiet small town: a few different small birds chirping near and far, soft breeze in the leaves, no traffic.
+2. amb_city_day.mp3 — calm small-town daytime: distant soft crowd murmur without any clear words, footsteps passing, a car passing far away now and then, light breeze.
+3. amb_crickets_night.mp3 — peaceful summer night: crickets chirping, a soft warm wind, very calm.
+4. amb_wind_storm.mp3 — wind picking up before a storm: gusts rising and falling, leaves and branches rustling, no rain yet.
+5. amb_rain_light.mp3 — light rain falling on pavement and leaves, soft and cozy.
+6. amb_rain_heavy.mp3 — steady heavy rain with water running in gutters and dripping from roofs.
+7. amb_river.mp3 — a gentle river flowing over stones, small water drops, birds far away.
+8. amb_classroom.mp3 — a quiet classroom: soft murmur without clear words, pencils writing, pages turning, a chair creaking once in a while.
+9. amb_cafe.mp3 — a cozy café: cups and spoons clinking, an espresso machine, soft murmur without clear words.
+10. amb_market.mp3 — a small friendly market: distant voices without clear words, paper bags rustling, a few footsteps.
+
+PART B — SHORT SOUND EFFECTS (one-shot, no music, no echo tail unless natural):
+11. sfx_thunder_far_1.mp3 — distant thunder rolling across the sky, 4 seconds.
+12. sfx_thunder_far_2.mp3 — a different distant thunder rumble, 5 seconds.
+13. sfx_paper_pop_1.mp3 — a paper cut-out popping up from a pop-up book, soft crisp paper flip, 0.3 seconds.
+14. sfx_paper_pop_2.mp3 — same idea, slightly lighter paper, 0.3 seconds.
+15. sfx_paper_pop_3.mp3 — same idea, slightly heavier card, 0.4 seconds.
+16. sfx_step_grass_1.mp3, 17. sfx_step_grass_2.mp3, 18. sfx_step_grass_3.mp3, 19. sfx_step_grass_4.mp3 — one soft footstep on grass each (four slightly different steps), under 0.3 seconds each.
+20. sfx_step_stone_1.mp3, 21. sfx_step_stone_2.mp3, 22. sfx_step_stone_3.mp3, 23. sfx_step_stone_4.mp3 — one soft footstep on a stone path each (four slightly different steps), under 0.3 seconds each.
+24. sfx_step_wood_1.mp3, 25. sfx_step_wood_2.mp3 — one soft footstep on a wooden bridge each, under 0.3 seconds.
+26. sfx_door_wood.mp3 — a wooden door opening gently, 1 second.
+27. sfx_school_bell.mp3 — a friendly school bell ringing, 3 seconds.
+28. sfx_chair_pull.mp3 — a wooden chair pulled back on a wooden floor, short scrape, 0.8 seconds.
+29. sfx_chair_sit.mp3 — someone sitting down on a small wooden chair, 0.6 seconds.
+30. sfx_shuttle_arrive.mp3 — a small minibus arriving: engine slowing, gentle brakes, a sliding door opening, 4 seconds.
+31. sfx_shuttle_drive.mp3 — a small minibus engine driving at steady speed, seamless loop, 10 seconds.
+32. sfx_horn_soft.mp3 — a short friendly car horn, two light beeps.
+33. sfx_fish_splash.mp3 — a small fish jumping out of a river and splashing back, 1 second.
+34. sfx_duck.mp3 — one duck quacking softly twice, 1 second.
+35. sfx_ui_tap.mp3 — a soft wooden button tap, 0.1 seconds.
+36. sfx_ui_correct.mp3 — a bright happy two-note chime for a correct answer, 0.6 seconds.
+37. sfx_ui_wrong.mp3 — a soft low gentle "bonk" for a wrong answer, not harsh, 0.5 seconds.
+38. sfx_xp_coin.mp3 — a small sparkling coin sound, 0.5 seconds.
+39. sfx_level_up.mp3 — a short cheerful level-up jingle, 2 seconds.
+40. sfx_page_turn.mp3 — turning one page of a book, 0.6 seconds.
+
+PART C — BACKGROUND MUSIC (instrumental only, no vocals, 2–3 minutes, loopable unless a length is given; soft enough to play under spoken English lessons):
+41. music_lobby.mp3 — warm welcoming storybook theme: soft piano, glockenspiel, pizzicato strings, 90 BPM, major key.
+42. music_morning.mp3 — fresh morning walk: bright gentle acoustic guitar and piano, light shaker, optimistic, 100 BPM.
+43. music_noon.mp3 — sunny midday town: cheerful lo-fi jazz hop, upright bass, brushed drums, Rhodes piano, 85 BPM.
+44. music_afternoon.mp3 — relaxed afternoon: mellow nostalgic Rhodes piano and soft strings, 80 BPM.
+45. music_sunset.mp3 — golden-hour sunset: slow warm pads, felt piano and cello, a little bittersweet, 70 BPM.
+46. music_night.mp3 — quiet evening streets: calm lo-fi piano, soft vinyl crackle, warm bass, 65 BPM.
+47. music_latenight.mp3 — late night: very sparse ambient piano and music box, sleepy and peaceful, 55 BPM.
+48. music_storm.mp3 — dark clouds rolling in: low string tremolo, soft timpani rolls, a cozy feeling that a storm is coming, not scary, 75 BPM.
+49. music_rain.mp3 — rainy day: gentle melancholic piano with soft rain-like textures, warm and cozy, 70 BPM.
+50. music_river.mp3 — walking by the river: flowing harp and acoustic guitar, light flute, peaceful, 85 BPM.
+51. music_school.mp3 — school hallway: light curious marimba and piano, playful steps, 95 BPM.
+52. music_class.mp3 — in class, very quiet focus music: soft ambient pads, slow felt piano, no strong melody, 70 BPM.
+53. music_test.mp3 — taking a test: focused light tension, soft ticking percussion, minimal piano and synth arpeggio, 90 BPM.
+54. music_cert.mp3 — receiving a certificate: uplifting orchestral pop fanfare, 25 seconds, ends on a clear final chord (not a loop).
+55. music_graduation.mp3 — graduation day: emotional triumphant piano and strings with a soft wordless choir "aah", 75 seconds, ends on a clear final chord (not a loop).
+56. music_cafe.mp3 — inside a café: bossa nova nylon guitar, soft brushes, upright bass, 100 BPM.
+57. music_market.mp3 — market and shops: playful ukulele, hand claps, light percussion, 110 BPM.
+58. music_ride.mp3 — riding the bus or school minibus: light travelling groove, steady train-like rhythm, guitar and piano, 105 BPM.
+```
