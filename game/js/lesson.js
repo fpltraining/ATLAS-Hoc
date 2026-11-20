@@ -76,7 +76,7 @@ var G = window.G || (window.G = {});
       var sub = done ? stars(p.sao) + ' · ' + p.diem + '/' + (r.testN || 10) + ' · học lại'
         : !open ? 'Qua buổi ' + (r.n - 1) + ' để mở'
         : d && (d.the || d.hocXong || d.luyenXong) ? 'Đang học dở · học tiếp'
-        : 'Âm: ' + G.FOUND_SOUNDS[r.sound].title + ' · 20 từ mới';
+        : r.sound !== undefined ? 'Âm: ' + G.FOUND_SOUNDS[r.sound].title + ' · 20 từ mới' : 'Ngữ pháp: ' + r.gram.t + ' · ' + r.items.length + ' câu';
       return G.el('button.big' + (sid === cur && !done ? '.cur' : '') + (open ? '' : '.off'), { onclick: function () {
         if (!open) { G.sfx('wrong'); G.toast('Qua buổi ' + (r.n - 1) + ' (kiểm tra từ 8/10) để mở buổi ' + r.n + '.'); return; }
         G.openLesson(sid);
@@ -93,10 +93,11 @@ var G = window.G || (window.G = {});
     body.appendChild(G.el('div.tline.small', G.el('div.tbubble.en', G.el('div', R.intro[0]), pyEl(R.introPy), speakBtn(R.intro[0]))));
     say(R.intro[0]);
     body.appendChild(G.el('div.menu3',
-      G.el('button.big' + (d.hocXong ? '.done' : ''), { onclick: function () { learn(d.the > 0 && !d.hocXong ? Math.min(d.the, R.items.length - 1) : snd ? -2 : 0); } },
+      G.el('button.big' + (d.hocXong ? '.done' : ''), { onclick: function () { learn(d.the > 0 && !d.hocXong ? Math.min(d.the, R.items.length - 1) : snd ? -2 : R.gram ? -1 : 0); } },
         G.el('b', (d.hocXong ? '✓ ' : '') + (R.final ? '1 · Ôn tập' : '1 · Học')),
         G.el('span', d.hocXong ? 'Đã học xong ' + R.items.length + ' thẻ · xem lại' : d.the > 0 ? 'Học tiếp từ thẻ ' + (d.the + 1) + '/' + R.items.length
           : snd ? 'Âm “' + G.FOUND_SOUNDS[R.sound].title + '”, ngữ pháp “' + R.gram.t + '” và ' + R.items.length + ' từ mới'
+          : R.gram ? 'Ngữ pháp “' + R.gram.t + '” và ' + R.items.length + ' câu dùng thật'
           : R.items.length + ' từ và câu' + (R.final ? ' của cả cấp ' + R.final.level : ', nghe và xem nghĩa'))),
       G.el('button.big' + (d.luyenXong ? '.done' : ''), { onclick: practice },
         G.el('b', (d.luyenXong ? '✓ ' : '') + '2 · Luyện'),
@@ -166,8 +167,8 @@ var G = window.G || (window.G = {});
     ));
     say(g.ex[0][0]);
     body.appendChild(G.el('div.row',
-      G.el('button.btn', { onclick: function () { learn(-2); } }, '‹ Âm hôm nay'),
-      G.el('button.btn.seal', { onclick: function () { learn(0); } }, 'Tiếp: ' + R.items.length + ' từ mới ›')));
+      R.sound !== undefined ? G.el('button.btn', { onclick: function () { learn(-2); } }, '‹ Âm hôm nay') : G.el('span'),
+      G.el('button.btn.seal', { onclick: function () { learn(0); } }, 'Tiếp: ' + R.items.length + (R.sound !== undefined ? ' từ mới ›' : ' câu dùng thật ›'))));
   }
 
   /* ---------- câu hỏi trắc nghiệm dùng chung ---------- */

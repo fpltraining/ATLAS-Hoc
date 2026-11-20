@@ -1,0 +1,150 @@
+/* Tầng 3 · A2 – B1 của Trường Anh ngữ. Mỗi phòng là một nhóm buổi (giống Tầng 1): mỗi buổi 1 điểm ngữ pháp
+   (đọc cách dùng, nghe 4 câu mẫu) và 15 câu dùng thật ngoài đời, rồi Luyện và Kiểm tra (đạt 8/10 là qua buổi).
+   Phòng A2-1 · Kể chuyện đã qua (buổi 1–6). Các phòng A2-2 … A2-4 và phòng thi tầng thêm dần. */
+var G = window.G || (window.G = {});
+G.ROOMS = G.ROOMS || {};
+
+(function () {
+  /* gọn: [en, vi, ex, exVi] → { en, vi, ex, exVi } */
+  function I(a) { return a.map(function (r) { return { en: r[0], vi: r[1], ex: r[2], exVi: r[3] }; }); }
+  function S(id, parent, n, title, teacher, introEn, gram, items) {
+    G.ROOMS[id] = { id: id, lang: 'en', parent: parent, n: n, title: 'Buổi ' + n + ' · ' + title, teacher: teacher,
+      intro: [introEn, 'Buổi ' + n + ': ngữ pháp "' + gram.t + '" và ' + items.length + ' câu dùng thật ngoài đời. Bấm 1 · Học để bắt đầu.'],
+      gram: gram, items: I(items), outro: 'Nice work! See you next lesson.' };
+  }
+
+  /* ===== Phòng A2-1 · Kể chuyện đã qua · Mr. Owen ===== */
+  var P = 'en-a2-1', T = 'owen';
+  S('en-a2-01', P, 1, 'Quá khứ đơn có -ed', T, 'Hi! Let\'s talk about yesterday.',
+    { t: 'Quá khứ đơn: động từ thêm -ed',
+      b: 'Kể việc đã xong trong quá khứ: thêm -ed vào động từ (work → worked, play → played, study → studied).\nCâu hỏi và phủ định dùng did / didn\'t, động từ trở về nguyên mẫu: Did you work? · I didn\'t work.\nHay đi với mốc thời gian: yesterday, last night, last week, two days ago.',
+      ex: [['I worked late yesterday.', 'Hôm qua tôi làm muộn.'], ['We watched a movie last night.', 'Tối qua chúng tôi xem phim.'],
+        ['She moved to Brightford two years ago.', 'Cô ấy chuyển tới Brightford hai năm trước.'], ['They stayed home all weekend.', 'Họ ở nhà cả cuối tuần.']] },
+    [['yesterday morning', 'sáng hôm qua', 'I called my mom yesterday morning.', 'Sáng hôm qua tôi gọi cho mẹ.'],
+      ['last night', 'tối qua', 'We cooked dinner together last night.', 'Tối qua chúng tôi nấu bữa tối cùng nhau.'],
+      ['last weekend', 'cuối tuần trước', 'What did you do last weekend?', 'Cuối tuần trước bạn làm gì?'],
+      ['two days ago', 'hai ngày trước', 'I started a new job two days ago.', 'Tôi bắt đầu công việc mới hai ngày trước.'],
+      ['I stayed up late.', 'Tôi thức khuya.', 'I stayed up late and watched a series.', 'Tôi thức khuya xem phim bộ.'],
+      ['I walked to work.', 'Tôi đi bộ đi làm.', 'It was sunny, so I walked to work.', 'Trời nắng nên tôi đi bộ đi làm.'],
+      ['I visited my grandparents.', 'Tôi về thăm ông bà.', 'I visited my grandparents on Sunday.', 'Chủ nhật tôi về thăm ông bà.'],
+      ['We cleaned the house.', 'Chúng tôi dọn nhà.', 'We cleaned the house before the party.', 'Chúng tôi dọn nhà trước bữa tiệc.'],
+      ['I finished my homework.', 'Tôi làm xong bài tập.', 'I finished my homework at ten.', 'Tôi làm xong bài tập lúc mười giờ.'],
+      ['She called me back.', 'Cô ấy gọi lại cho tôi.', 'I missed her call, but she called me back.', 'Tôi lỡ cuộc gọi, nhưng cô ấy gọi lại.'],
+      ['I waited for the bus.', 'Tôi chờ xe buýt.', 'I waited for the bus for twenty minutes.', 'Tôi chờ xe buýt hai mươi phút.'],
+      ['It rained all day.', 'Trời mưa cả ngày.', 'It rained all day, so we stayed in.', 'Trời mưa cả ngày nên chúng tôi ở trong nhà.'],
+      ['I didn\'t like it.', 'Tôi không thích nó.', 'I tried sushi, but I didn\'t like it.', 'Tôi ăn thử sushi nhưng không thích.'],
+      ['Did you enjoy it?', 'Bạn có thích không?', 'You went to the concert? Did you enjoy it?', 'Bạn đi xem hoà nhạc à? Có hay không?'],
+      ['It happened so fast.', 'Mọi chuyện xảy ra quá nhanh.', 'I don\'t remember. It happened so fast.', 'Tôi không nhớ. Mọi chuyện xảy ra quá nhanh.']]);
+
+  S('en-a2-02', P, 2, 'Động từ bất quy tắc hay dùng', T, 'Ready? These verbs are everywhere.',
+    { t: 'Động từ bất quy tắc hay dùng nhất',
+      b: 'Các động từ hay gặp nhất không thêm -ed mà đổi hẳn dạng: go → went, have → had, see → saw, get → got, make → made, take → took, eat → ate, buy → bought, come → came, meet → met.\nHọc theo cụm (went home, had lunch) thì nhớ lâu hơn học từng chữ.',
+      ex: [['I went home early.', 'Tôi về nhà sớm.'], ['We had lunch at a small café.', 'Chúng tôi ăn trưa ở một quán cà phê nhỏ.'],
+        ['I saw your brother downtown.', 'Tôi thấy anh trai bạn ở trung tâm.'], ['She bought a new phone.', 'Cô ấy mua điện thoại mới.']] },
+    [['went shopping', 'đã đi mua sắm', 'I went shopping with my sister.', 'Tôi đi mua sắm với chị gái.'],
+      ['had a great time', 'đã rất vui', 'We had a great time at the beach.', 'Chúng tôi đã rất vui ở bãi biển.'],
+      ['got home', 'về tới nhà', 'I got home at midnight.', 'Tôi về tới nhà lúc nửa đêm.'],
+      ['got up early', 'dậy sớm', 'I got up early to go jogging.', 'Tôi dậy sớm để chạy bộ.'],
+      ['took a taxi', 'đi taxi', 'It was late, so we took a taxi.', 'Muộn rồi nên chúng tôi đi taxi.'],
+      ['took a photo', 'chụp ảnh', 'I took a photo of the sunset.', 'Tôi chụp ảnh hoàng hôn.'],
+      ['made dinner', 'nấu bữa tối', 'My dad made dinner for everyone.', 'Bố tôi nấu bữa tối cho cả nhà.'],
+      ['made a mistake', 'mắc lỗi', 'I made a mistake on the test.', 'Tôi làm sai một câu trong bài kiểm tra.'],
+      ['ate out', 'ăn ở ngoài', 'We ate out on Friday night.', 'Tối thứ Sáu chúng tôi ăn ngoài.'],
+      ['bought tickets', 'mua vé', 'I bought the tickets online.', 'Tôi mua vé trên mạng.'],
+      ['saw a movie', 'xem phim (ở rạp)', 'We saw a movie at the new cinema.', 'Chúng tôi xem phim ở rạp mới.'],
+      ['met an old friend', 'gặp một người bạn cũ', 'I met an old friend at the station.', 'Tôi gặp một người bạn cũ ở nhà ga.'],
+      ['came back', 'quay về', 'She came back from Japan last month.', 'Cô ấy từ Nhật về tháng trước.'],
+      ['lost my keys', 'làm mất chìa khoá', 'I lost my keys again!', 'Tôi lại làm mất chìa khoá rồi!'],
+      ['forgot to', 'quên (làm gì)', 'Sorry, I forgot to text you.', 'Xin lỗi, mình quên nhắn cho bạn.']]);
+
+  S('en-a2-03', P, 3, 'Hỏi chuyện đã qua', T, 'So, how was your weekend?',
+    { t: 'Câu hỏi quá khứ: did, was / were',
+      b: 'Câu hỏi Có/Không: Did + chủ ngữ + động từ nguyên mẫu? → Did you see it? — Yes, I did. / No, I didn\'t.\nCó từ để hỏi: What / Where / When / Who / How + did …? → Where did you go?\nRiêng to be dùng was / were: How was your day? · Were you tired?',
+      ex: [['Where did you go last summer?', 'Hè năm ngoái bạn đi đâu?'], ['How was your weekend?', 'Cuối tuần của bạn thế nào?'],
+        ['Did you get my message?', 'Bạn nhận được tin nhắn của mình chưa?'], ['Who did you go with?', 'Bạn đi với ai?']] },
+    [['How was your day?', 'Hôm nay của bạn thế nào?', 'Hey! How was your day?', 'Này! Hôm nay của bạn thế nào?'],
+      ['It was pretty good.', 'Cũng khá ổn.', 'It was pretty good, thanks.', 'Cũng khá ổn, cảm ơn.'],
+      ['It was a long day.', 'Hôm nay dài thật.', 'Ugh, it was a long day.', 'Ôi, hôm nay dài thật.'],
+      ['What did you do?', 'Bạn đã làm gì?', 'So what did you do on Saturday?', 'Vậy thứ Bảy bạn làm gì?'],
+      ['Where did you go?', 'Bạn đã đi đâu?', 'Where did you go for your vacation?', 'Kỳ nghỉ bạn đi đâu?'],
+      ['Who did you go with?', 'Bạn đi với ai?', 'Nice! Who did you go with?', 'Hay đấy! Bạn đi với ai?'],
+      ['How long did you stay?', 'Bạn ở đó bao lâu?', 'How long did you stay in Da Nang?', 'Bạn ở Đà Nẵng bao lâu?'],
+      ['Did you have fun?', 'Bạn có vui không?', 'Did you have fun at the party?', 'Đi tiệc có vui không?'],
+      ['Yes, I did.', 'Có.', 'Yes, I did. It was amazing.', 'Có chứ. Tuyệt lắm.'],
+      ['Not really.', 'Không hẳn.', 'Not really. It was too crowded.', 'Không hẳn. Đông quá.'],
+      ['What happened?', 'Có chuyện gì vậy?', 'You look upset. What happened?', 'Trông bạn buồn thế. Có chuyện gì vậy?'],
+      ['When did you get back?', 'Bạn về lúc nào?', 'When did you get back from your trip?', 'Bạn đi chơi về lúc nào?'],
+      ['Were you busy?', 'Lúc đó bạn bận à?', 'I called you earlier. Were you busy?', 'Lúc nãy mình gọi. Bạn bận à?'],
+      ['I was so tired.', 'Tôi mệt quá.', 'I was so tired, I fell asleep on the couch.', 'Tôi mệt quá, ngủ quên trên ghế sofa.'],
+      ['Tell me everything!', 'Kể hết cho mình nghe đi!', 'You went to New York? Tell me everything!', 'Bạn đi New York à? Kể hết cho mình nghe đi!']]);
+
+  S('en-a2-04', P, 4, 'Kể theo thứ tự', T, 'A good story has a first, a then and a finally.',
+    { t: 'Nối các việc theo thứ tự',
+      b: 'Kể mạch lạc bằng từ nối thứ tự: First, … Then, … After that, … Finally, …\nNối hai việc bằng before / after (After work, I went to the gym.) và when (When I got home, I took a shower.).\nĐừng lặp "and then" liên tục: đổi qua lại giữa then, after that, later.',
+      ex: [['First, I made a coffee.', 'Đầu tiên, tôi pha một ly cà phê.'], ['Then I checked my email.', 'Sau đó tôi kiểm tra email.'],
+        ['After lunch, we went for a walk.', 'Ăn trưa xong, chúng tôi đi dạo.'], ['Finally, I went to bed at eleven.', 'Cuối cùng, tôi đi ngủ lúc mười một giờ.']] },
+    [['First of all', 'Trước hết', 'First of all, I took a shower.', 'Trước hết, tôi đi tắm.'],
+      ['Then', 'Rồi, sau đó', 'Then I had breakfast with my family.', 'Rồi tôi ăn sáng với gia đình.'],
+      ['After that', 'Sau đó', 'After that, I caught the bus to school.', 'Sau đó, tôi bắt xe buýt tới trường.'],
+      ['Later', 'Lát sau', 'Later, my friends came over.', 'Lát sau, bạn tôi ghé chơi.'],
+      ['In the end', 'Rốt cuộc', 'In the end, we decided to stay home.', 'Rốt cuộc, chúng tôi quyết định ở nhà.'],
+      ['Finally', 'Cuối cùng', 'Finally, the bus arrived.', 'Cuối cùng xe buýt cũng tới.'],
+      ['after work', 'sau giờ làm', 'After work, I went to the gym.', 'Sau giờ làm, tôi đi tập gym.'],
+      ['before dinner', 'trước bữa tối', 'I did my homework before dinner.', 'Tôi làm bài tập trước bữa tối.'],
+      ['When I got home', 'Khi tôi về tới nhà', 'When I got home, the lights were off.', 'Khi tôi về tới nhà, đèn đã tắt.'],
+      ['As soon as', 'Ngay khi', 'As soon as I sat down, my phone rang.', 'Vừa ngồi xuống thì điện thoại reo.'],
+      ['Suddenly', 'Bỗng nhiên', 'Suddenly, it started to rain.', 'Bỗng nhiên trời đổ mưa.'],
+      ['Luckily', 'May mà', 'Luckily, I had an umbrella.', 'May mà tôi có mang ô.'],
+      ['Unfortunately', 'Không may là', 'Unfortunately, the museum was closed.', 'Không may là bảo tàng đóng cửa.'],
+      ['The next day', 'Ngày hôm sau', 'The next day, we drove to the mountains.', 'Ngày hôm sau, chúng tôi lái xe lên núi.'],
+      ['That\'s what happened.', 'Chuyện là vậy đó.', 'So yeah, that\'s what happened.', 'Ừ, chuyện là vậy đó.']]);
+
+  S('en-a2-05', P, 5, 'Đang làm thì có việc xen vào', T, 'What were you doing when the lights went out?',
+    { t: 'Quá khứ tiếp diễn: was / were + -ing',
+      b: 'Was / were + động từ -ing: việc đang diễn ra ở một lúc trong quá khứ.\nHay đi với when + quá khứ đơn: việc dài đang diễn ra thì việc ngắn xen vào → I was cooking when you called.\nWhile + việc dài: While I was walking home, I saw an accident.',
+      ex: [['I was sleeping when you called.', 'Bạn gọi lúc tôi đang ngủ.'], ['What were you doing at eight?', 'Lúc tám giờ bạn đang làm gì?'],
+        ['It was raining when we left.', 'Lúc chúng tôi đi trời đang mưa.'], ['While I was waiting, I read a book.', 'Trong lúc chờ, tôi đọc sách.']] },
+    [['I was driving.', 'Lúc đó tôi đang lái xe.', 'Sorry, I was driving. I couldn\'t answer.', 'Xin lỗi, lúc đó mình đang lái xe, không nghe máy được.'],
+      ['I was taking a shower.', 'Lúc đó tôi đang tắm.', 'I was taking a shower when the doorbell rang.', 'Tôi đang tắm thì chuông cửa reo.'],
+      ['We were having dinner.', 'Lúc đó chúng tôi đang ăn tối.', 'We were having dinner when the power went out.', 'Chúng tôi đang ăn tối thì mất điện.'],
+      ['the power went out', 'mất điện', 'The power went out for two hours.', 'Mất điện hai tiếng.'],
+      ['the phone rang', 'điện thoại reo', 'The phone rang in the middle of the night.', 'Điện thoại reo lúc nửa đêm.'],
+      ['I was walking home', 'tôi đang đi bộ về nhà', 'I was walking home when I saw a fox.', 'Tôi đang đi bộ về thì thấy một con cáo.'],
+      ['It was snowing.', 'Trời đang có tuyết.', 'It was snowing when we arrived.', 'Lúc chúng tôi tới, trời đang có tuyết.'],
+      ['while I was waiting', 'trong lúc tôi đang chờ', 'While I was waiting, I chatted with a stranger.', 'Trong lúc chờ, tôi nói chuyện với một người lạ.'],
+      ['What were you doing?', 'Lúc đó bạn đang làm gì?', 'What were you doing when it happened?', 'Lúc chuyện xảy ra bạn đang làm gì?'],
+      ['I wasn\'t paying attention.', 'Tôi không để ý.', 'Sorry, I wasn\'t paying attention.', 'Xin lỗi, tôi không để ý.'],
+      ['I fell asleep', 'tôi ngủ quên', 'I fell asleep while I was watching TV.', 'Tôi ngủ quên trong lúc xem TV.'],
+      ['I dropped my phone', 'tôi đánh rơi điện thoại', 'I dropped my phone while I was running.', 'Tôi đánh rơi điện thoại khi đang chạy.'],
+      ['Everyone was laughing.', 'Mọi người đang cười.', 'When I walked in, everyone was laughing.', 'Lúc tôi bước vào, mọi người đang cười.'],
+      ['at that moment', 'đúng lúc đó', 'At that moment, the teacher walked in.', 'Đúng lúc đó, cô giáo bước vào.'],
+      ['by the time', 'tới lúc', 'By the time we got there, the show was over.', 'Tới lúc chúng tôi tới nơi thì buổi diễn đã hết.']]);
+
+  S('en-a2-06', P, 6, 'Kể một chuyến đi', T, 'Now you can tell a whole story. Let\'s try!',
+    { t: 'Kể một câu chuyện ngắn trong 60 giây',
+      b: 'Khung kể chuyện 4 bước: Bối cảnh (Last summer, I went to …) → Việc chính (First … then …) → Sự cố, điểm nhấn (Suddenly … / Unfortunately …) → Kết và cảm nghĩ (In the end … It was the best trip ever.).\nDùng quá khứ đơn cho các việc nối tiếp nhau, quá khứ tiếp diễn cho cảnh nền.',
+      ex: [['Last summer, I went to Da Lat with my friends.', 'Hè năm ngoái, tôi đi Đà Lạt với bạn bè.'],
+        ['We were walking around the lake when it started to rain.', 'Chúng tôi đang đi dạo quanh hồ thì trời đổ mưa.'],
+        ['Luckily, we found a cozy café.', 'May mà chúng tôi tìm được một quán cà phê ấm cúng.'],
+        ['It was the best trip ever.', 'Đó là chuyến đi tuyệt nhất từ trước tới giờ.']] },
+    [['went on a trip', 'đi một chuyến', 'We went on a trip to the coast.', 'Chúng tôi đi một chuyến ra biển.'],
+      ['stayed at a hotel', 'ở khách sạn', 'We stayed at a small hotel near the beach.', 'Chúng tôi ở một khách sạn nhỏ gần biển.'],
+      ['went sightseeing', 'đi tham quan', 'On the first day, we went sightseeing.', 'Ngày đầu tiên, chúng tôi đi tham quan.'],
+      ['tried the local food', 'ăn thử món địa phương', 'We tried a lot of the local food.', 'Chúng tôi ăn thử rất nhiều món địa phương.'],
+      ['The weather was perfect.', 'Thời tiết tuyệt đẹp.', 'The weather was perfect all week.', 'Cả tuần thời tiết tuyệt đẹp.'],
+      ['missed the train', 'lỡ chuyến tàu', 'We missed the train by five minutes.', 'Chúng tôi lỡ tàu năm phút.'],
+      ['got lost', 'bị lạc', 'We got lost in the old town.', 'Chúng tôi bị lạc trong phố cổ.'],
+      ['asked for directions', 'hỏi đường', 'We asked a local for directions.', 'Chúng tôi hỏi đường một người dân ở đó.'],
+      ['The view was amazing.', 'Cảnh đẹp tuyệt.', 'From the top, the view was amazing.', 'Từ trên đỉnh, cảnh đẹp tuyệt.'],
+      ['It was worth it.', 'Rất đáng.', 'The hike was hard, but it was worth it.', 'Leo núi mệt nhưng rất đáng.'],
+      ['I\'ll never forget it.', 'Tôi sẽ không bao giờ quên.', 'It was so beautiful. I\'ll never forget it.', 'Đẹp lắm. Tôi sẽ không bao giờ quên.'],
+      ['The best part was', 'Phần thích nhất là', 'The best part was the night market.', 'Phần thích nhất là chợ đêm.'],
+      ['The worst part was', 'Phần tệ nhất là', 'The worst part was the long bus ride.', 'Phần tệ nhất là ngồi xe buýt quá lâu.'],
+      ['had a blast', 'chơi cực vui', 'We had a blast at the water park.', 'Chúng tôi chơi cực vui ở công viên nước.'],
+      ['I can\'t wait to go back.', 'Tôi rất muốn quay lại.', 'I loved it. I can\'t wait to go back.', 'Tôi mê nơi đó. Rất muốn quay lại.']]);
+
+  G.ROOMS[P] = { id: P, lang: 'en', label: 'A2-1', title: 'A2-1 · Kể chuyện đã qua (buổi 1–6)', teacher: T,
+    group: ['en-a2-01', 'en-a2-02', 'en-a2-03', 'en-a2-04', 'en-a2-05', 'en-a2-06'],
+    intro: ['Hi, I\'m Mr. Owen. Let\'s tell some stories!', 'Phòng A2-1 có 6 buổi. Mỗi buổi: 1 điểm ngữ pháp, 15 câu dùng thật ngoài đời, rồi luyện và kiểm tra (đạt 8/10 là qua buổi). Học xong bạn kể được chuyện hôm qua, cuối tuần, một chuyến đi.'],
+    items: [], outro: 'Great storytelling! See you in the next room.' };
+})();

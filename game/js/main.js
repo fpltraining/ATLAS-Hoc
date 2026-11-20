@@ -23,8 +23,8 @@ var G = window.G || (window.G = {});
     G.updateHud();
     // vị trí đã lưu thuộc thành phố này thì đi tiếp từ đó, không thì vào cổng chính của thành phố
     var v = G.S.viTri, sv = v && G.SCENES[v.canh];
+    id = 'en';   // chỉ còn tiếng Anh: vị trí cũ ở Trường Lạc trấn thì về nhà ở Brightford
     if (sv && sv.city === id && sv.kind !== 'classroom') G.enterScene(v.canh, { x: v.x, y: v.y, dir: 'down' });
-    else if (id === 'zh') G.enterScene('city_zh');
     else G.enterScene('home_en');
     var sc = G.S.viTri.canh;
     G.kaiSay(sc === 'home_en' ? 'Chào ' + G.playerName() + '! Đi học thôi: bến xe buýt ở góc trên bên phải, ga tàu điện ở góc dưới bên phải.'
