@@ -259,7 +259,7 @@ var G = window.G || (window.G = {});
 
   function update(dt) {
     var vx = 0, vy = 0;
-    if (joy.on && (Math.abs(joy.dx) > 0.15 || Math.abs(joy.dy) > 0.15)) { vx = joy.dx; vy = joy.dy; target = null; pending = null; path = []; }
+    if (joy.on && (joy.dx || joy.dy)) { vx = joy.dx; vy = joy.dy; target = null; pending = null; path = []; }
     else if (keys.l || keys.r || keys.u || keys.d) { vx = (keys.r ? 1 : 0) - (keys.l ? 1 : 0); vy = (keys.d ? 1 : 0) - (keys.u ? 1 : 0); target = null; pending = null; path = []; }
     else if (target) {
       var tx = target.x - P.x, ty = target.y - P.y, dist = Math.sqrt(tx * tx + ty * ty);
@@ -291,7 +291,10 @@ var G = window.G || (window.G = {});
         }
       }
       if (!moved) P.moving = false;
-      if (Math.abs(vx) > Math.abs(vy)) P.dir = vx < 0 ? 'left' : 'right'; else P.dir = vy < 0 ? 'up' : 'down';
+      // hướng nhìn có độ trễ: đi chéo gần 45° thì giữ hướng cũ, không nhấp nháy giữa hai hình
+      var ax = Math.abs(vx), ay = Math.abs(vy), horiz = P.dir === 'left' || P.dir === 'right';
+      if (horiz ? ay > ax * 1.3 : ax > ay * 1.3) horiz = !horiz;
+      if (horiz) P.dir = vx < 0 ? 'left' : 'right'; else P.dir = vy < 0 ? 'up' : 'down';
       P.t += dt;
     }
     // Kai đi theo dấu chân người chơi (cách ~70 px trên đường đi), nên không xuyên qua cây, nhà như đi thẳng
@@ -1118,7 +1121,7 @@ var G = window.G || (window.G = {});
     var side = dir === 'left' || dir === 'right';
     var name = dir === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : side && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
     var flip = name === 'kai_left.png' ? dir === 'right' : dir === 'left';
-    G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, K.x, K.y - 6, 76, (K.t || 0) * 14, K.moving);   // robot: nhún nhảy
+    G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, K.x, K.y + 3, 82, (K.t || 0) * 14, K.moving);   // robot: nhún nhảy (hình đã bỏ đám cỏ: thân chạm bóng)
   }
   function drawTeacher(id) {
     var n = G.NPCS[id];
@@ -1176,26 +1179,59 @@ var G = window.G || (window.G = {});
   }
 
   function bindInput() {
-    cv.addEventListener('click', function (e) { tapAt(e.clientX, e.clientY); });
-    var base = document.getElementById('joy'), knob = document.getElementById('joy-knob');
-    function jm(e) {
-      var t = e.touches ? e.touches[0] : e;
-      var r = base.getBoundingClientRect();
-      var dx = t.clientX - (r.left + r.width / 2), dy = t.clientY - (r.top + r.height / 2);
-      var m = Math.sqrt(dx * dx + dy * dy), max = r.width / 2;
-      if (m > max) { dx = dx / m * max; dy = dy / m * max; }
-      joy.dx = dx / max; joy.dy = dy / max;
+    /* Cần điều khiển nổi: chạm và kéo ở nửa trái màn hình (phần dưới) thì cần hiện ngay dưới ngón tay; chạm nhẹ (không kéo)
+       vẫn là bấm đi tới chỗ đó như cũ. Kéo quá vành thì đế trượt theo ngón tay (không phải nhấc tay đặt lại).
+       Vùng chết nhỏ ở giữa; kéo quá 60% vành là chạy hết tốc. Theo đúng ngón tay đã chạm (chạm thêm nút khác không bị nhảy). */
+    var play = document.getElementById('play'), base = document.getElementById('joy'), knob = document.getElementById('joy-knob');
+    var JR = 60, DZ = 0.16, jid = null, jx = 0, jy = 0, jsx = 0, jsy = 0, jlive = false, eatClick = 0;
+    function rel(t) { var r = play.getBoundingClientRect(); return { x: t.clientX - r.left, y: t.clientY - r.top }; }
+    function inZone(q) { var w = play.clientWidth, h = play.clientHeight; return q.x < w * 0.45 && q.y > h * 0.3; }
+    function place() { base.style.left = (jx - JR) + 'px'; base.style.top = (jy - JR) + 'px'; base.style.bottom = 'auto'; }
+    function aim(q) {
+      var dx = q.x - jx, dy = q.y - jy, m = Math.sqrt(dx * dx + dy * dy);
+      if (m > JR) { var k = (m - JR) / m; jx += dx * k; jy += dy * k; place(); dx = q.x - jx; dy = q.y - jy; m = JR; }
       knob.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
-      e.preventDefault();
+      var n = m / JR;
+      if (n < DZ) { joy.dx = 0; joy.dy = 0; return; }
+      var sp = 0.4 + 0.6 * Math.min(1, (n - DZ) / (0.6 - DZ));   // nhích nhẹ là đi chậm, kéo quá 60% là hết tốc
+      joy.dx = dx / m * sp; joy.dy = dy / m * sp;
     }
-    function je() { joy.on = false; joy.dx = 0; joy.dy = 0; knob.style.transform = ''; }
-    base.addEventListener('touchstart', function (e) { joy.on = true; jm(e); }, { passive: false });
-    base.addEventListener('touchmove', jm, { passive: false });
-    base.addEventListener('touchend', je);
-    base.addEventListener('touchcancel', je);
+    function goLive(cx, cy) { JR = (base.offsetWidth / 2) || 60; jlive = true; joy.on = true; jx = cx; jy = cy; place(); base.className = 'joy live'; }
+    function je() {
+      if (jlive) eatClick = Date.now() + 400;
+      jid = null; jlive = false; joy.on = false; joy.dx = 0; joy.dy = 0;
+      knob.style.transform = ''; base.className = 'joy'; base.style.left = ''; base.style.top = ''; base.style.bottom = '';
+    }
+    function find(e) { for (var i = 0; i < e.changedTouches.length; i++) if (e.changedTouches[i].identifier === jid) return e.changedTouches[i]; return null; }
+    function tmove(e) {
+      if (jid === null) return;
+      var t = find(e); if (!t) return;
+      var q = rel(t);
+      if (!jlive) { if (Math.abs(q.x - jsx) + Math.abs(q.y - jsy) < 10) return; goLive(jsx, jsy); }
+      aim(q); e.preventDefault();
+    }
+    function tend(e) { if (jid !== null && find(e)) je(); }
+    cv.addEventListener('touchstart', function (e) {
+      if (jid !== null) return;
+      var t = e.changedTouches[0], q = rel(t);
+      if (!inZone(q)) return;
+      jid = t.identifier; jsx = q.x; jsy = q.y; jlive = false;
+    }, { passive: true });
+    base.addEventListener('touchstart', function (e) {
+      if (jid !== null) return;
+      var t = e.changedTouches[0], r = base.getBoundingClientRect(), pr = play.getBoundingClientRect();
+      jid = t.identifier; goLive(r.left - pr.left + r.width / 2, r.top - pr.top + r.height / 2); aim(rel(t)); e.preventDefault();
+    }, { passive: false });
+    [cv, base].forEach(function (el) {
+      el.addEventListener('touchmove', tmove, { passive: false });
+      el.addEventListener('touchend', tend);
+      el.addEventListener('touchcancel', tend);
+    });
+    cv.addEventListener('click', function (e) { if (Date.now() < eatClick) return; tapAt(e.clientX, e.clientY); });
     base.addEventListener('mousedown', function (e) {
-      joy.on = true; jm(e);
-      function mv(ev) { jm(ev); }
+      var r = base.getBoundingClientRect(), pr = play.getBoundingClientRect();
+      goLive(r.left - pr.left + r.width / 2, r.top - pr.top + r.height / 2); aim(rel(e)); e.preventDefault();
+      function mv(ev) { aim(rel(ev)); }
       function up() { je(); window.removeEventListener('mousemove', mv); window.removeEventListener('mouseup', up); }
       window.addEventListener('mousemove', mv); window.addEventListener('mouseup', up);
     });
@@ -1217,5 +1253,5 @@ var G = window.G || (window.G = {});
   G.debugPath = function (x0, y0, x1, y1) { var p = findPath(x0, y0, x1, y1); return p ? p.length : -1; };
   G.debugKai = function () { return { x: K.x, y: K.y }; };
   G.debugTown = function () { return town.map(function (t) { return { x: Math.round(t.x), y: Math.round(t.y), set: t.set, wait: t.wait, moving: !!t.moving }; }); };
-  G.debugState = function () { return { target: !!target, moving: P.moving, x: P.x, y: P.y, cx: cam.x, cy: cam.y, zoom: zoom, scene: sceneId, near: near ? near.label : null }; };
+  G.debugState = function () { return { target: !!target, moving: P.moving, x: P.x, y: P.y, dir: P.dir, cx: cam.x, cy: cam.y, zoom: zoom, scene: sceneId, near: near ? near.label : null }; };
 })();
