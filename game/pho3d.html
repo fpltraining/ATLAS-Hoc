@@ -189,7 +189,8 @@
       if (o.bimg) { var bs = o.bs || 210, g = card(o.bimg, d.ox + o.x, d.oy + o.y + 14, bs, 0.975, { own: true }); FADE.push(g); BUILD.push({ name: o.stall, x: (d.ox + o.x) * U, z: (d.oy + o.y + 34) * U, b: o }); plate((o.icon || '') + ' ' + o.stall, d.ox + o.x, d.oy + o.y + 40); return; }
       if (!n || !n.img) return;
       var py = o.stall ? o.y - (o.simg ? 58 : 40) : o.y;
-      var np = card(n.img, d.ox + o.x, d.oy + py, 124, 0.957); blob(0.22).position.set((d.ox + o.x) * U, 0.012, (d.oy + py) * U);
+      var simg = !o.stall && has('walk_' + o.npc + '_down.png') ? 'walk_' + o.npc + '_down.png' : n.img;
+      var np = card(simg, d.ox + o.x, d.oy + py, 124, 0.957); blob(0.22).position.set((d.ox + o.x) * U, 0.012, (d.oy + py) * U);
       STAND.push({ g: np, ph: Math.random() * 6 });
       if (o.simg) { var cs = o.ss || 280; card(o.simg, d.ox + o.x, d.oy + o.y + 12, cs, 0.975); }
       plate(n.name, d.ox + o.x, d.oy + py + 22);
@@ -272,8 +273,9 @@
 
   var START = { x: (768) * U, z: 690 * U };
   var P = walker('player_han', START.x, START.z, 120, 0.957);
-  var K = { x: P.x - 0.5, z: P.z + 0.3, dir: 'down', t: 0, moving: false }, trail = [];
-  K.g = card('kai_follow.png', K.x / U, K.z / U, 82, 497 / 512, { own: true }); K.blob = blob(0.18);
+  var K, trail = [];
+  if (has('kai_down_w1.png')) { K = walker('kai', P.x - 0.5, P.z + 0.3, 86, 490 / 512); K.blob.scale.set(0.36, 1, 0.16); }   // Kai có chân: bước như Han
+  else { K = { x: P.x - 0.5, z: P.z + 0.3, dir: 'down', t: 0, moving: false }; K.g = card('kai_follow.png', K.x / U, K.z / U, 82, 497 / 512, { own: true }); K.blob = blob(0.18); }
 
   /* người đi đường: mỗi khu vài người, đi tới điểm ngẫu nhiên rồi dừng nghỉ */
   var SETS = (G.TOWNIE_SETS || []).filter(function (s) { return has('person_' + s + '_down_w1.png') || has('person_' + s + '_left_w1.png'); });
@@ -288,6 +290,52 @@
       w.d = d; w.wait = Math.random() * 2; w.sp = 1.0 + Math.random() * 0.35; w.t = Math.random() * 3; TOWN.push(w);
     }
   });
+
+  /* ---------- xe cộ: chạy hai chiều trên đường Phố mua sắm, giữ khoảng cách, dừng khi có người đi ngang trước mũi xe ---------- */
+  var CAR_T = [
+    { n: 'car_red', h: 86, k: 403 / 219, v: 190 }, { n: 'car_taxi', h: 86, k: 415 / 221, v: 210 }, { n: 'car_blue', h: 86, k: 434 / 214, v: 180 },
+    { n: 'car_van', h: 104, k: 409 / 256, v: 160 }, { n: 'bus', h: 118, k: 510 / 214, v: 140 }
+  ].filter(function (t) { return has(t.n + '_side.png'); });
+  var STREET = DIST[2], LANES = [{ y: STREET.oy + 488, dir: -1 }, { y: STREET.oy + 622, dir: 1 }];
+  var X0 = STREET.ox + 30, X1 = STREET.ox + STREET.s.w - 30, CARS = [];
+  function carCard(t) {
+    var w = t.h * t.k, m = new THREE.Mesh(PLANE, new THREE.MeshLambertMaterial({ map: tex(t.n + '_side.png'), emissive: 0x5a5a5a, emissiveMap: tex(t.n + '_side.png'), alphaTest: 0.5, side: THREE.DoubleSide, transparent: true }));
+    m.castShadow = true; m.receiveShadow = true; m.customDepthMaterial = dmat(t.n + '_side.png');
+    var g = new THREE.Group(); g.add(m); g.scale.set(w * U, t.h * U, t.h * U); g.rotation.x = -LEAN; g.userData.mesh = m; SC.add(g);
+    var b = blob(w * U * 0.45); b.material = BLOBM.clone(); b.scale.set(w * U * 0.95, 1, 0.32);
+    return { g: g, b: b, w: w };
+  }
+  function spawnCar(L, x) {
+    if (!CAR_T.length) return;
+    var t = CAR_T[Math.floor(Math.random() * CAR_T.length)], c = carCard(t);
+    c.t = t; c.L = L; c.x = x !== undefined ? x : (L.dir > 0 ? X0 : X1); c.v = t.v * (0.85 + Math.random() * 0.3); c.max = c.v; c.ph = Math.random() * 6;
+    c.g.scale.x = (L.dir > 0 ? -1 : 1) * c.w * U;   // hình xe hướng sang trái: chạy sang phải thì lật
+    CARS.push(c); return c;
+  }
+  LANES.forEach(function (L) { L.next = 1 + Math.random() * 3; spawnCar(L, X0 + 300 + Math.random() * 500); });
+  function updateCars(dt) {
+    var i, j;
+    LANES.forEach(function (L) {
+      L.next -= dt;
+      if (L.next <= 0) {
+        var last = null; for (j = 0; j < CARS.length; j++) if (CARS[j].L === L && (!last || (L.dir > 0 ? CARS[j].x < last.x : CARS[j].x > last.x))) last = CARS[j];
+        if (!last || Math.abs(last.x - (L.dir > 0 ? X0 : X1)) > 360) { spawnCar(L); L.next = 3 + Math.random() * 6; } else L.next = 1;
+      }
+    });
+    for (i = CARS.length - 1; i >= 0; i--) {
+      var c = CARS[i], L = c.L, front = c.x + L.dir * c.w / 2, want = c.max;
+      for (j = 0; j < CARS.length; j++) { var o = CARS[j]; if (o === c || o.L !== L) continue; var gap = (o.x - c.x) * L.dir - (o.w + c.w) / 2; if (gap > 0 && gap < 220) want = Math.min(want, o.v * (gap > 90 ? 1 : 0)); }
+      var peds = [P].concat(TOWN); if (K) peds.push(K);   // người trên đường trước mũi xe: phanh lại
+      for (j = 0; j < peds.length; j++) { var q = peds[j], px = q.x / U, pz = q.z / U, ahead = (px - front) * L.dir; if (Math.abs(pz - L.y) < 80 && ahead > -20 && ahead < 200) want = 0; }
+      c.v += (want - c.v) * Math.min(1, dt * (want < c.v ? 4 : 1.2));
+      c.x += L.dir * c.v * dt;
+      var edge = Math.min(c.x - X0, X1 - c.x), op = Math.max(0, Math.min(1, edge / 140));
+      var mm = c.g.userData.mesh.material; mm.opacity = op; mm.alphaTest = 0.5 * op;
+      var bump = c.v > 5 ? Math.abs(Math.sin(T * 14 + c.ph)) * 0.008 : 0;
+      c.g.position.set(c.x * U, bump, L.y * U); c.b.position.set(c.x * U, 0.012, L.y * U); c.b.material.opacity = op;
+      if ((L.dir > 0 && c.x > X1) || (L.dir < 0 && c.x < X0)) { SC.remove(c.g); SC.remove(c.b); CARS.splice(i, 1); }
+    }
+  }
 
   /* ---------- điều khiển: cần nổi, bàn phím, chạm mặt đất để đi tới, hai ngón phóng to ---------- */
   var joy = { on: false, dx: 0, dy: 0 }, keys = {}, target = null, zoomK = 1;
@@ -414,10 +462,13 @@
     if (Math.hypot(P.x - K.x, P.z - K.z) > 4.2) { K.x = P.x - 0.5; K.z = P.z + 0.3; trail = [{ x: K.x, z: K.z }, { x: P.x, z: P.z }]; kgo = null; }
     K.moving = !!kgo;
     if (kgo) { var kx = kgo.x - K.x, kz = kgo.z - K.z, kl = Math.hypot(kx, kz) || 1, ks = Math.min(kl, SPEED * dt * (ahead > 1.6 ? 1.3 : 1)); K.x += kx / kl * ks; K.z += kz / kl * ks; K.t += dt; setDir(K, kx, kz); }
-    var kn2 = K.dir === 'up' ? 'kai_up.png' : (K.dir === 'left' || K.dir === 'right') ? 'kai_left.png' : 'kai_follow.png';
-    var km = K.g.userData.mesh; if (km.material.map !== tex(kn2)) { km.material.map = tex(kn2); km.customDepthMaterial = dmat(kn2); }
-    K.g.scale.x = (kn2 === 'kai_left.png' ? (K.dir === 'right' ? -1 : 1) : 1) * 82 * U;
-    K.g.position.set(K.x, K.moving ? Math.abs(Math.sin(K.t * 7)) * 0.06 : 0, K.z); K.blob.position.set(K.x, 0.012, K.z);
+    if (K.base) drawWalker(K);
+    else {
+      var kn2 = K.dir === 'up' ? 'kai_up.png' : (K.dir === 'left' || K.dir === 'right') ? 'kai_left.png' : 'kai_follow.png';
+      var km = K.g.userData.mesh; if (km.material.map !== tex(kn2)) { km.material.map = tex(kn2); km.customDepthMaterial = dmat(kn2); }
+      K.g.scale.x = (kn2 === 'kai_left.png' ? (K.dir === 'right' ? -1 : 1) : 1) * 82 * U;
+      K.g.position.set(K.x, K.moving ? Math.abs(Math.sin(K.t * 7)) * 0.06 : 0, K.z); K.blob.position.set(K.x, 0.012, K.z);
+    }
     // người đi đường
     for (i = 0; i < TOWN.length; i++) {
       var w = TOWN[i];
@@ -436,6 +487,7 @@
       if (!w.moving && pdx * pdx + pdz * pdz < 1.4) setDir(w, pdx, pdz);
       drawWalker(w);
     }
+    updateCars(dt);
     // cây đung đưa, người đứng thở nhẹ
     for (i = 0; i < SWAY.length; i++) { var sw = SWAY[i]; sw.g.rotation.z = Math.sin(T * 1.3 * sw.k + sw.ph) * 0.025 + Math.sin(T * 0.37 + sw.ph) * 0.012; }
     for (i = 0; i < STAND.length; i++) { var st = STAND[i]; st.g.scale.y = 1.24 * (1 + Math.sin(T * 1.6 + st.ph) * 0.012); }
@@ -479,7 +531,7 @@
 
   /* để thử tự động */
   window.__T = { R: R, SC: SC, SUN: SUN, CAM: CAM };
-  window.P3D = { go: function (x, z) { target = { x: x, z: z }; }, place: function (x, z) { P.x = x; P.z = z; first = true; }, state: function () { return { x: P.x, z: P.z, dir: P.dir, moving: P.moving, near: near && near.name, walkers: TOWN.length, hour: hour }; }, setHour: function (h) { useLive = false; hour = h; }, zoom: function (k) { zoomK = k; } };
+  window.P3D = { go: function (x, z) { target = { x: x, z: z }; }, place: function (x, z) { P.x = x; P.z = z; first = true; }, state: function () { return { x: P.x, z: P.z, dir: P.dir, moving: P.moving, near: near && near.name, walkers: TOWN.length, cars: CARS.length, carV: CARS.map(function (c) { return Math.round(c.v); }), hour: hour, kaiWalk: !!K.base }; }, setHour: function (h) { useLive = false; hour = h; }, zoom: function (k) { zoomK = k; } };
 })();
 </script>
 </body>

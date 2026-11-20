@@ -35,6 +35,16 @@ The 13 characters (numbers match image 2):
 13. Ms. Nora: a young woman with long straight black hair, a green cardigan, a navy skirt and red shoes, holding a clipboard.
 ```
 
+## ĐƠN 21/11/2026 · A-bis. Đặt lại 2 nhân vật (gửi MỘT tin, cùng cuộc trò chuyện đơn A)
+
+11/13 tấm đã vào game. Kenji vung tay dang ngang quá rộng (trông giả), Jake bị vẽ trên các tấm giấy nền nên không tách được.
+```
+Two of the walk sheets need to be redrawn. Same rules as before, please fix these problems:
+9. Kenji: his arms are spread out wide like wings. Redraw with arms hanging down close to the body, swinging only slightly, exactly like the example walk sheet. The back view row must be three poses of Kenji only (stand, left foot, right foot), not three copies of the standing pose. Keep his straw hat on in every pose, including the back view.
+12. Jake: do NOT put cream paper rectangles behind him. Each pose must be only Jake with his thin cream cut-out border, directly on the flat magenta background, like all the other sheets.
+Draw Kenji first, then Jake. Do not ask me any questions.
+```
+
 ## ĐƠN 21/11/2026 · B. Thành phố sống cho bản 3D (gửi MỘT tin)
 
 Cuộc trò chuyện khác, đính kèm **art/orders/B_style.png** (mẫu nét vẽ), dán nguyên khối dưới. Dừng giữa chừng thì gõ "next".
