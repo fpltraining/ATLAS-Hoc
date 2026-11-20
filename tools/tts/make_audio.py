@@ -53,7 +53,11 @@ def write_manifest():
         d = os.path.join(OUT, lang)
         if os.path.isdir(d):
             have[lang] = sorted(f[:-4] for f in os.listdir(d) if f.endswith('.mp3'))
-    json.dump(have, open(os.path.join(ROOT, 'data', 'audio.json'), 'w'), separators=(',', ':'))
+    mf = os.path.join(ROOT, 'data', 'audio.json')
+    try: have['fix'] = json.load(open(mf)).get('fix', [])   # tệp đã chỉnh âm lượng (tools/tts/loudness.py): giữ lại
+    except Exception: pass
+    json.dump(have, open(mf, 'w'), separators=(',', ':'))
+    have.pop('fix', None)
     return have
 
 def exists(it):
