@@ -102,8 +102,11 @@ var G = window.G || (window.G = {});
       G.el('button.big' + (d.luyenXong ? '.done' : ''), { onclick: practice },
         G.el('b', (d.luyenXong ? '✓ ' : '') + '2 · Luyện'),
         G.el('span', d.luyenXong ? 'Đã luyện xong · luyện lại' : d.tro > 0 ? 'Làm tiếp trò ' + (d.tro + 1) + '/4' : '4 trò ngắn: nghe, chọn câu, nói qua micro, xếp câu')),
-      G.el('button.big.seal', { onclick: test }, G.el('b', '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/' + TN() + ' ' + stars(p.sao) : TN() + ' câu, đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp' : R.parent ? 'qua buổi' : 'qua phòng')))
+      G.el('button.big.seal', { onclick: test }, G.el('b', R.final && speakList() ? '3 · Thi phần 1 · Hiểu' : '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/' + TN() + ' ' + stars(p.sao) : TN() + ' câu, đạt từ ' + PN() + ' câu là ' + (R.final ? (speakList() ? 'qua phần 1' : 'nhận chứng chỉ') : R.parent ? 'qua buổi' : 'qua phòng')))
     ));
+    // thi chứng chỉ: đã qua phần Hiểu mà chưa có chứng chỉ thì thi tiếp phần Nói (không phải làm lại phần 1)
+    if (R.final && speakList() && !certOf() && p && p.diem >= PN()) body.appendChild(G.el('button.big.seal.cert-speak', { onclick: function () { speakPart(p.diem); } },
+      G.el('b', '🗣 Phần 2 · Nói'), G.el('span', '5 tình huống, tự nói bằng câu của bạn · trung bình từ 60/100 là nhận chứng chỉ' + (G.S.thiNoi && G.S.thiNoi[R.id] ? ' · lần trước ' + G.S.thiNoi[R.id] + '/100' : ''))));
   }
   /* tiến độ đang học dở của phòng (lưu ngay, mở lại học tiếp, cập nhật app không mất) */
   function st() { G.S.dangHoc = G.S.dangHoc || {}; return G.S.dangHoc[R.id] || (G.S.dangHoc[R.id] = { the: 0, hocXong: '', tro: 0, luyenXong: '' }); }
@@ -288,7 +291,7 @@ var G = window.G || (window.G = {});
     body.innerHTML = '';
     body.appendChild(head(1, 'Xong phần Luyện'));
     if (lang === 'en') G.markTask('bai');
-    body.appendChild(teacherLine('Luyện tốt lắm! Giờ làm bài kiểm tra ' + TN() + ' câu nhé. Đạt từ ' + PN() + ' câu là ' + (R.final ? 'tốt nghiệp ' + R.final.level + '.' : R.parent ? 'qua buổi này.' : 'cửa phòng tiếp theo sẽ mở.'), 'Well done!'));
+    body.appendChild(teacherLine('Luyện tốt lắm! Giờ làm bài kiểm tra ' + TN() + ' câu nhé. Đạt từ ' + PN() + ' câu là ' + (R.final ? (speakList() ? 'qua phần 1, rồi thi phần nói.' : 'nhận chứng chỉ ' + R.final.level + '.') : R.parent ? 'qua buổi này.' : 'cửa phòng tiếp theo sẽ mở.'), 'Well done!'));
     body.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { learn(0); } }, 'Xem lại thẻ'), G.el('button.btn.seal', { onclick: test }, 'Làm kiểm tra ›')));
     G.sfx('done');
   }
@@ -328,7 +331,7 @@ var G = window.G || (window.G = {});
       G.el('div.rscore', right + '/' + N),
       G.playerPic(112, 'rface', pass ? 'happy' : 'think'),
       G.el('div.rstars', pass ? stars(sao) : '☆☆☆'),
-      G.el('div', pass ? (R.final ? 'Đạt! Bạn đã tốt nghiệp ' + R.final.level + '.' : R.parent ? (firstPass ? 'Qua buổi ' + R.n + '! Buổi tiếp theo đã mở.' : 'Qua buổi ' + R.n + '! Kết quả tốt nhất đã được lưu.') : firstPass ? 'Qua phòng! Cửa phòng tiếp theo đã mở.' : 'Qua phòng! Kết quả tốt nhất đã được lưu.') : 'Chưa đạt ' + PN() + '/' + N + '. Xem lại thẻ và luyện thêm rồi thử lại nhé.')
+      G.el('div', pass ? (R.final ? (speakList() && !certOf() ? 'Đạt phần 1 · Hiểu! Tiếp theo là phần 2 · Nói.' : 'Đạt! Chứng chỉ ConnectLife · ' + R.final.level + '.') : R.parent ? (firstPass ? 'Qua buổi ' + R.n + '! Buổi tiếp theo đã mở.' : 'Qua buổi ' + R.n + '! Kết quả tốt nhất đã được lưu.') : firstPass ? 'Qua phòng! Cửa phòng tiếp theo đã mở.' : 'Qua phòng! Kết quả tốt nhất đã được lưu.') : 'Chưa đạt ' + PN() + '/' + N + '. Xem lại thẻ và luyện thêm rồi thử lại nhé.')
     ));
     if (wrong.length) {
       body.appendChild(G.el('div.wrongs', G.el('b', 'Câu cần ôn lại:'), wrong.map(function (it) { return G.el('div', G.el('span', T(it)), it.py ? G.el('span.py.inl', ' ' + it.py) : null, ' · ', G.el('span.faint', it.vi), speakBtn(T(it))); })));
@@ -340,19 +343,42 @@ var G = window.G || (window.G = {});
         var par = R.parent;
         if (par && pass) { afterPass(firstPass, sao, right); G.openLesson(par); return; }   // buổi Nền tảng: về danh sách buổi để học buổi sau
         closePanel(); if (pass) afterPass(firstPass, sao, right);
-      } }, pass ? (R.final ? 'Nhận bằng ›' : R.parent ? 'Các buổi tiếp theo ›' : 'Xong ›') : 'Đóng')
+      } }, pass ? (R.final ? (speakList() && !certOf() ? 'Sang phần 2 · Nói ›' : 'Nhận chứng chỉ ›') : R.parent ? 'Các buổi tiếp theo ›' : 'Xong ›') : 'Đóng')
     ));
     G.sfx(pass ? 'done' : 'wrong');
     if (pass) G.confetti();
     G.updateHud();
   }
 
-  /* sau khi qua phòng: báo cửa mới mở, hoặc lễ tốt nghiệp nếu là phòng thi cuối cấp */
+  /* thi chứng chỉ ConnectLife: phần 2 · Nói (data/cert_en.js) */
+  function speakList() { return R && R.final && G.CERT_SPEAK && G.CERT_SPEAK[R.id]; }
+  function certOf() { return R && R.final && G.S.totNghiep[R.final.lang] && G.S.totNghiep[R.final.lang][R.final.level]; }
+  function speakPart(right) {
+    var list = speakList(), room = R;
+    G.openLesson(room.id); body.innerHTML = '';
+    body.appendChild(G.el('div.lhead', G.el('div.lsteps', G.el('span.done', '1 · Hiểu ' + right + '/' + TN()), G.el('span.on', '2 · Nói'), G.el('span', '🏅 Chứng chỉ')), G.el('div.lsub', 'Thi chứng chỉ · phần 2')));
+    body.appendChild(teacherLine('Phần 1 đạt ' + right + '/' + TN() + '! Phần 2 · Nói: ' + list.length + ' tình huống ngoài đời. Không có câu gợi ý, bạn tự nói bằng câu của mình (bấm micro hoặc gõ). Máy chấm theo ý chính, không bắt bẻ ngữ pháp. Trung bình từ 60/100 là nhận Chứng chỉ ConnectLife · ' + room.final.level + '.', 'You can do it!'));
+    body.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { G.openLesson(room.id); } }, '‹ Để sau'), G.el('button.btn.seal', { onclick: function () {
+      G.openFree(G.shuffle(list), '🗣 Thi chứng chỉ · Nói', null, function (avg) {
+        G.S.thiNoi = G.S.thiNoi || {}; G.S.thiNoi[room.id] = Math.max(G.S.thiNoi[room.id] || 0, avg); G.save();
+        R = room;
+        if (avg >= 60) { G.closeLesson(); G.graduate(room.final.lang, room.final.level, right, TN(), room.final.levelEn, avg); return; }
+        G.openLesson(room.id); body.innerHTML = '';
+        body.appendChild(G.el('div.result', G.el('div.rscore', avg + '/100'), G.playerPic(112, 'rface', 'think'), G.el('div', 'Phần nói chưa đạt 60/100. Phần 1 · Hiểu vẫn được giữ, chỉ cần thi lại phần nói.')));
+        body.appendChild(teacherLine('Gợi ý: nói đủ các ý của tình huống, mỗi ý một câu ngắn là được. Ôn lại câu mẫu, luyện "Nói tự do" ở các tiệm, rồi quay lại thi nhé.', 'Keep going!'));
+        body.appendChild(G.el('div.row', G.el('button.btn', { onclick: G.closeLesson }, 'Để sau'), G.el('button.btn.seal', { onclick: function () { speakPart(right); } }, 'Thi lại phần nói ›')));
+      });
+    } }, 'Bắt đầu phần nói ›')));
+  }
+
+  /* sau khi qua phòng: báo cửa mới mở, hoặc thi chứng chỉ nếu là phòng thi của tầng */
   function afterPass(firstPass, sao, right) {
     if (R.final) {
-      var done = G.S.totNghiep[R.final.lang] && G.S.totNghiep[R.final.lang][R.final.level];
-      if (!done) { G.graduate(R.final.lang, R.final.level, right, TN(), R.final.levelEn); return; }
-      G.kaiSay('Bạn đã có bằng ' + R.final.level + ' rồi. Giỏi lắm!');
+      if (!certOf()) {
+        if (speakList()) { speakPart(right); return; }   // chứng chỉ cần thêm phần nói
+        G.graduate(R.final.lang, R.final.level, right, TN(), R.final.levelEn); return;
+      }
+      G.kaiSay('Bạn đã có Chứng chỉ ConnectLife · ' + R.final.level + ' rồi. Giỏi lắm!');
       return;
     }
     var rid = R.id;

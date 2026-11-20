@@ -59,7 +59,7 @@ G.LIFE = {
     ]
   },
   'en-hospital': {
-    lang: 'en', title: 'Bệnh viện Brightford', npc: 'anna', scene: 'hospital_en', unlock: 'en-a1-test', unlockText: 'Tốt nghiệp A1 để mở bệnh viện (tình huống khó hơn).',
+    lang: 'en', title: 'Bệnh viện Brightford', npc: 'anna', scene: 'hospital_en', unlock: 'en-a1-test', unlockText: 'Qua bài thi chứng chỉ A1 (phần hiểu) để mở bệnh viện (tình huống khó hơn).',
     souvenir: { img: 'souvenir_medkit.png', name: 'Hộp cứu thương' },
     talks: [
       { title: 'Đau đầu', turns: [

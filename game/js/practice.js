@@ -207,13 +207,14 @@ var G = window.G || (window.G = {});
     box.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { var v = input.value.replace(/^\s+|\s+$/g, ''); if (!v) { G.toast('Gõ câu trả lời trước nhé'); return; } last = check(v); } }, 'Kiểm tra câu gõ'), next));
     body.appendChild(box); body.appendChild(res);
   }
-  G.openFree = function (list, title, back) {
+  G.openFree = function (list, title, back, onEnd) {
     var k = 0, sum = 0;
     (function one() {
-      var body = panelOpen((title || '💡 Nói tự do') + ' · ' + (k + 1) + '/' + list.length);
+      var body = panelOpen((title || '💡 Nói tự do') + ' · ' + Math.min(k + 1, list.length) + '/' + list.length);
       if (k >= list.length) {
         var avg = Math.round(sum / list.length);
         G.markStudy(); G.markTask('noi'); G.addXp(10); G.logSpeak(avg);
+        if (onEnd) { onEnd(avg); return; }   // thi chứng chỉ: bên gọi tự hiện kết quả
         body.appendChild(G.el('div.result' + (avg >= 60 ? '.pass' : ''), G.el('b', 'Điểm tự nói: ' + avg + '/100'), G.el('div', avg >= 60 ? 'Bạn tự xử lý được tình huống bằng câu của mình!' : 'Xem lại câu mẫu, lần sau thử nói đủ các ý nhé.')));
         body.appendChild(G.el('div.row', back ? G.el('button.btn', { onclick: back }, '‹ Quay lại') : G.el('span'), G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
         return;

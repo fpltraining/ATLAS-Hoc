@@ -690,3 +690,18 @@ body { background: #f4e9dc url(../assets/paper_tile.webp) repeat; background-siz
 .joy.paper .joy-knob { background: center / 100% 100% no-repeat; border: 0; box-shadow: none; filter: drop-shadow(0 4px 6px rgba(60,40,20,.35)); }
 
 .p3d-link { display: inline-block; margin-top: 4px; text-decoration: none; background: #fbf5ea; border: 1px solid #e3d3b8; color: #4a2f1d; border-radius: 12px; padding: 8px 14px; font-weight: 700; }
+
+/* lộ trình tới giao tiếp (sảnh) */
+.road-note { margin: -4px 0 10px; }
+.road { display: grid; gap: 0; position: relative; margin-bottom: 8px; }
+.road-step { display: flex; gap: 12px; align-items: flex-start; padding: 10px 12px; position: relative; }
+.road-step:not(:last-child)::after { content: ''; position: absolute; left: 31px; top: 46px; bottom: -8px; width: 2px; background: var(--line); }
+.road-dot { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: #efe4d2; color: var(--ink); font-weight: 800; font-size: 17px; z-index: 1; box-shadow: 0 0 0 3px var(--paper); }
+.road-step.got .road-dot { background: var(--jade); color: #fff; }
+.road-step.here .road-dot { background: var(--coral); color: #fff; }
+.road-step.here { background: var(--paper); border-radius: 14px; box-shadow: 0 0 0 1.5px var(--coral); }
+.road-step.final .road-dot { background: #1b2140; color: #ffd56b; font-size: 20px; }
+.road-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.road-cefr { font-size: 13px; color: var(--coral); font-weight: 700; }
+.road-tag { font-size: 13px; font-weight: 700; color: var(--jade); margin-top: 2px; }
+.cert-speak { margin-top: 10px; width: 100%; }
