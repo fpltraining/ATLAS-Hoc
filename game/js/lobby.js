@@ -22,7 +22,7 @@ var G = window.G || (window.G = {});
     var i, k = 0, all = 0;
     if (n === 1) { for (i = 1; i <= 30; i++) { all++; if (G.roomPassed('en-n-' + (i < 10 ? '0' : '') + i)) k++; } }
     else if (n === 2) { for (i = 0; i < G.EN_HALL_DOORS.length; i++) { all++; if (G.roomPassed(G.EN_HALL_DOORS[i].room)) k++; } }
-    else if (n === 3) { for (i = 1; i <= 24; i++) { all++; if (G.roomPassed('en-a2-' + (i < 10 ? '0' : '') + i)) k++; } }
+    else if (n === 3 || n === 4) { var pre = n === 3 ? 'en-a2-' : 'en-b1-'; for (i = 1; i <= 24; i++) { all++; if (G.roomPassed(pre + (i < 10 ? '0' : '') + i)) k++; } }
     return all ? k / all : 0;
   }
   function remainHours() {   // giờ còn lại tới từng bước (cộng dồn)

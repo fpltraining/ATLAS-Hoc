@@ -122,7 +122,7 @@ var G = window.G || (window.G = {});
       if (nr && nr.floor !== scene.floor) return 'Đây là ' + scene.title + '. Lớp của bạn ở Tầng ' + nr.floor + ' · ' + G.floorInfo(nr.floor).name + ': đi thang máy bên phải nhé!';
     }
     for (var i = 0; i < d.length; i++) if (!G.roomPassed(d[i].room)) return i === 0 ? 'Đây là ' + scene.title + '. Phòng ' + d[0].label + ' ở cửa đầu tiên bên trái!' : 'Phòng nên học tiếp: ' + d[i].label + ' (cửa thứ ' + (i + 1) + ' từ trái sang).';
-    return zh ? 'Bạn đã tốt nghiệp HSK1! HSK2 sẽ mở ở bản cập nhật sau.' : scene.floor === 1 ? 'Bạn đã xong Tầng 1 · Nền tảng! Đi thang máy lên Tầng 2 học A1.' : scene.floor === 3 ? 'Bạn đã có chứng chỉ Tầng 3! Tầng 4 · B1 – B2 đang được xây.' : 'Bạn đã có chứng chỉ A1! Đi thang máy lên Tầng 3 học A2 – B1.';
+    return zh ? 'Bạn đã tốt nghiệp HSK1! HSK2 sẽ mở ở bản cập nhật sau.' : scene.floor === 1 ? 'Bạn đã xong Tầng 1 · Nền tảng! Đi thang máy lên Tầng 2 học A1.' : scene.floor === 4 ? 'Bạn đã có chứng chỉ Tầng 4! Bài thi đầu ra để Tốt nghiệp ConnectLife sẽ mở ở bản cập nhật sau.' : scene.floor === 3 ? 'Bạn đã có chứng chỉ Tầng 3! Đi thang máy lên Tầng 4 học B1 – B2.' : 'Bạn đã có chứng chỉ A1! Đi thang máy lên Tầng 3 học A2 – B1.';
   }
 
   function useBuilding(b) {
@@ -184,11 +184,11 @@ var G = window.G || (window.G = {});
     }
     var rows = G.EN_FLOORS.slice().reverse().map(function (f) {
       var open = G.floorUnlocked(f.n), grad = G.S.totNghiep.en && f.grad && G.S.totNghiep.en[f.grad];
-      var need = f.n === 3 ? 'Đạt chứng chỉ A1' : 'Đạt chứng chỉ Nền tảng';
+      var need = f.n === 4 ? 'Đạt chứng chỉ A2 – B1' : f.n === 3 ? 'Đạt chứng chỉ A1' : 'Đạt chứng chỉ Nền tảng';
       var tag = f.soon ? '🚧 Đang xây' : f.n === cur ? '📍 Bạn đang ở đây' : grad ? '🏅 Đã có chứng chỉ' : open ? 'Đã mở' : '🔒 ' + need + ' để mở';
       return G.el('button.fl-row' + (f.soon || !open ? '.off' : '') + (f.n === cur ? '.cur' : ''), { onclick: function () {
         if (f.soon) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' · ' + f.name + ' đang được xây. Sắp mở!'); return; }
-        if (!open) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' mở khi bạn ' + (f.n === 3 ? 'đạt chứng chỉ A1 (thi hiểu và thi nói) hoặc kiểm tra đầu vào từ A2.' : 'đạt chứng chỉ Tầng 1 · Nền tảng (thi hiểu và thi nói).')); return; }
+        if (!open) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' mở khi bạn ' + (f.n === 4 ? 'đạt chứng chỉ A2 – B1 (thi hiểu và thi nói) hoặc kiểm tra đầu vào từ B1.' : f.n === 3 ? 'đạt chứng chỉ A1 (thi hiểu và thi nói) hoặc kiểm tra đầu vào từ A2.' : 'đạt chứng chỉ Tầng 1 · Nền tảng (thi hiểu và thi nói).')); return; }
         go(f);
       } },
         G.el('b.fl-n', String(f.n)),
