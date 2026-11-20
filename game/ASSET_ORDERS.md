@@ -385,7 +385,7 @@ Chưa có file nào thì game vẫn chạy bằng ô màu ghi tên file. Anh đ�
 
 Gửi lại tệp đúng tên dưới đây là em gắn vào game. Tệp nào chưa có thì game vẫn chạy (hình tạm, tiếng chim / dế / gió / sấm tạo bằng máy).
 
-## Đơn I · Hình (ChatGPT, dán một tin nhắn)
+## Đơn I · Hình (ChatGPT, dán một tin nhắn) · ĐÃ GỘP vào Đơn L bên dưới, đặt theo Đơn L
 
 ```
 Make these images in the SAME style as the paper-craft watercolor pieces I sent before (Brightford town: watercolor paper cut-outs with a thin white paper border, soft shadow, warm cozy colors). Transparent background (PNG) for every object. One image per item, exact file names:
@@ -463,3 +463,57 @@ Mỗi dòng là một prompt. Phong cách chung: cozy paper-craft town, warm, ge
 | music_cafe.mp3 | Quán cà phê | bossa nova nylon guitar, soft brushes, upright bass, 100 BPM, loopable |
 | music_market.mp3 | Chợ, tiệm | playful ukulele, hand claps, light percussion, 110 BPM, loopable |
 | music_ride.mp3 | Ngồi xe buýt, xe đưa đón | light travelling groove, steady train-like rhythm, guitar and piano, 105 BPM, loopable |
+
+---
+
+# Đơn L · Hình gom một lần (21/11) · thay Đơn I · không vẽ bằng code nữa
+
+Anh Han chốt: mọi hình trong game đều đặt vẽ, không vẽ bằng code. Hình code đang tạm (dải trời, mặt trời, trăng, sao,
+ô che mưa, tường trước lớp, người ngồi bị cắt ngang lưng ghế) sẽ thay bằng hình dưới đây khi có.
+Bạn cùng lớp cắt từ hình người đi đường (có cả bà cụ) đã gỡ; chờ hình học sinh ngồi thật.
+
+Cách ngồi sẽ làm khi có hình: ghế là hình rời → nhân vật đi tới cạnh ghế → ghế trượt ra (tiếng kéo ghế) →
+nhân vật chuyển sang hình ngồi → ghế đẩy vào, lưng ghế che phần hông như ngồi thật.
+
+Bản đồ sẽ thành: Khu phố Maple → Bờ sông (cầu, cá bơi) → Trung tâm → Phố mua sắm, khuôn viên trường ở phía dưới Trung tâm:
+đường tới trường dài gấp đôi, đi bộ qua cầu.
+
+```
+Make ALL these images in the SAME style as the paper-craft watercolor pieces I sent before (Brightford town: watercolor paper cut-outs with a thin white paper border, soft shadow, warm cozy colors, same camera as the town: 3/4 top-down). Transparent background (PNG) for every object and character. One image per item, exact file names.
+
+CLASSROOM (I will attach classroom_en.png):
+1. classroom_en_v2.png — redraw THIS exact classroom (same camera, same desks in the same places, 1536×1024) but: remove ALL the chairs, and add a low front wall along the bottom edge (cream plaster with the same wood panel as the other walls) with the wooden door in the middle of it.
+2. chair_wood_back.png — one classroom chair exactly like the wooden chairs in that classroom, seen from behind and slightly above (we see the backrest), 512×512.
+3. chair_green_back.png — the same chair in the green color from that classroom, 512×512.
+4. player_han_sit.png, player_minh_sit.png, kai_sit.png — Han, Minh and robot Kai (same characters as their walking sprites) SITTING at a school desk, seen from BEHIND and slightly above, hands resting forward on the desk, NO chair drawn, NO desk drawn, same size and scale as their walking sprites, 1024×1024.
+5. Six classmates (young students: 2 kids about 10–12, 2 teenagers, 2 young adults, different looks), each in 2 poses, seen from BEHIND sitting at a desk, NO chair, NO desk, same scale as the walking sprites, 1024×1024:
+   student_lily_sit.png / student_lily_hand.png (raising hand), student_tom_sit.png / student_tom_hand.png, student_ana_sit.png / student_ana_hand.png, student_ken_sit.png / student_ken_hand.png, student_mai_sit.png / student_mai_hand.png, student_leo_sit.png / student_leo_hand.png.
+
+SKY (wide backdrops for the top of the screen, landscape 1536×1024; layered paper clouds; along the very bottom a thin band of distant paper hills, faraway trees and tiny rooftops in soft colors; nothing in the foreground):
+6. sky_dawn.png (5–6 am, deep blue to peach, last stars), 7. sky_sunrise.png (sun just above the hills, pink-gold), 8. sky_morning.png (fresh light blue, white clouds), 9. sky_noon.png (bright blue, few clouds), 10. sky_afternoon.png (warm soft blue, golden light), 11. sky_sunset.png (orange-pink-purple, sun touching the hills), 12. sky_dusk.png (purple-blue, first stars, lit windows far away), 13. sky_night.png (navy, stars, crescent moon), 14. sky_latenight.png (very dark navy, many stars), 15. sky_cloudy.png (grey-white overcast), 16. sky_storm.png (dark grey-blue storm clouds rolling in, a bit of light breaking through), 17. sky_rain.png (dark rainy sky with rain streaks far away).
+18. sun_paper.png — paper cut-out sun with soft glow, 512×512. 19. moon_paper.png — crescent moon with soft glow, 512×512.
+20. cloud_dark_1.png … cloud_dark_4.png — dark grey-blue storm clouds, puffy, different shapes, landscape.
+
+RIVER (new map tile and objects):
+21. map_river_en.png — top-down town map tile 1536×1024, same look as the Brightford map tiles: a gentle river flowing from the TOP edge to the BOTTOM edge through the middle (about 200 px wide, blue-green watercolor water, sandy banks, small stones, reeds). A light footpath enters at the middle of the LEFT edge and leaves at the middle of the RIGHT edge, crossing the river on a wooden arched footbridge painted in the map. A second small stone bridge near the bottom. Grass with flowers and 3 empty lots. No fish, no ducks drawn.
+22. fish_1.png … fish_4.png — small fish seen from directly ABOVE, swimming, facing RIGHT: orange-white koi, goldfish, grey-blue river fish, spotted carp, 512×512 each.
+23. fish_jump.png — a fish jumping out of the water with a small splash, side view, 512×512.
+24. duck_1.png, duck_2.png — a duck swimming, side view facing LEFT (two different ducks), 512×512.
+25. pc_lilypads.png (cluster of lily pads with one flower, top view), pc_reeds.png (tall reeds, standing), pc_rowboat.png (small wooden rowboat on water, 3/4 view), pc_bench_river.png (bench facing the river), 1024×1024 each.
+26. water_sparkle.png — small white-blue sparkle highlights on water, scattered, seamless tileable, transparent, 1024×1024.
+
+STREET LIFE:
+27. umbrella_1.png … umbrella_6.png — an open umbrella with its handle, held up (seen from slightly below and in front), red, green, blue, yellow, purple, navy, 512×512 each.
+
+SCHOOL SHUTTLE:
+28. shuttle_side.png — small yellow school minibus (8 seats, rounded, friendly, "SCHOOL" sign on top), side view facing LEFT. 29. shuttle_front.png — the same minibus from the front. 30. shuttle_back.png — the same minibus from the back. 31. pc_shuttle_stop.png — small stop sign with a yellow school-bus icon and a little bench.
+
+SCHOOL CAMPUS:
+32. map_campus_en.png — top-down town map tile 1536×1024 (same look as the Brightford tiles): school grounds, schoolyard, light paths, basketball court, small garden, bike parking, 4 EMPTY grass lots; a light path enters at the middle of the TOP edge. No buildings drawn.
+33. pc_school_big.png — big friendly 4-floor language school (red sign "Brightford English School", windows on 4 floors, wide entrance with steps), front view, 1024×1024.
+34. pc_school_gate.png (gate with arch sign "Brightford"), 35. pc_flagpole.png, 36. pc_basketball_hoop.png.
+```
+
+Âm thanh (Đơn J) và nhạc (Đơn K) giữ nguyên ở trên, thêm 2 tệp:
+| sfx_chair_pull.mp3 | wooden chair pulled back on a wooden floor, short scrape, 0.8 seconds |
+| amb_river.mp3 | gentle river flowing over stones, a few water drops, birds far away, seamless loop 60 seconds |
