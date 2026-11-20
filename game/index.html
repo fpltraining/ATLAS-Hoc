@@ -10,8 +10,17 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="../icons/icon-180.png">
 <link rel="stylesheet" href="css/game.css">
+<script>/* điện thoại (cạnh ngắn < 600 px, màn cảm ứng): app chạy ngang, cầm dọc thì hiện lời nhắc xoay ngang */
+(function () { var s = Math.min(screen.width, screen.height); if (s < 600 && (navigator.maxTouchPoints > 0 || 'ontouchstart' in window)) document.documentElement.className += ' phone'; })();</script>
 </head>
 <body>
+  <!-- Điện thoại cầm dọc: nhắc xoay ngang (iPhone không cho web app tự khoá màn hình ngang) -->
+  <div id="rotate" class="rotate" aria-live="polite">
+    <div class="rot-ico"><span class="rot-phone">📱</span></div>
+    <b>Xoay ngang điện thoại nhé</b>
+    <p>ConnectLife chơi trên màn hình ngang để thấy rộng cả thành phố.</p>
+    <small>Xoay mà màn hình không đổi? Vuốt từ góc trên bên phải xuống để mở Trung tâm điều khiển, tắt nút 🔒 Khoá xoay màn hình rồi xoay lại.</small>
+  </div>
   <!-- Ngôi nhà chung -->
   <main id="lobby"></main>
 

@@ -1,5 +1,22 @@
 # Danh sách đặt hình: ConnectLife
 
+## ĐƠN MỚI 20/11/2026 · kiểu giấy màu nước (đính kèm 1 hình Han và 1 hình Kai đang có trong game để giữ nét)
+
+Quy tắc mới cho MỌI hình nhân vật (kể cả các đơn bước đi đang chờ: KAI-WALK, WALK-…): **không có đế giấy, ván, cỏ hay mặt đất dưới chân**, đáy hình là đế giày.
+
+```
+Please create the following images for my 2D mobile game, ONE image per message, in this order.
+Attached: two characters from my game (a boy in a red hoodie and a small teal robot). Match their art style exactly:
+soft watercolor on cut paper, a thin cream paper border around every shape like a paper cut-out, gentle shadows.
+No text, letters or numbers anywhere. Isolated subject on a solid flat magenta #FF00FF background unless said otherwise.
+Characters must stand with NOTHING under their feet: no paper base, no stand, no grass, no ground.
+
+1. APP ICON, square, NOT magenta: the little teal robot (red headphones, navy cap) waving, standing in front of a tiny paper-craft town with a school bell tower, cream paper sky. Simple, readable when very small, no text, nothing touching the edges.
+2. The little teal robot holding a smartphone turned SIDEWAYS in both hands, showing it to the viewer, happy face, a curved arrow above the phone showing rotation. Full body, front view.
+3. A round game joystick seen from the top, paper-craft style: a big flat cream paper disc with a soft brown edge and 4 tiny arrow notches (up, down, left, right), and next to it, separately, a smaller round cream paper knob with a soft shadow. Two separate objects side by side.
+4. Wide landscape 4:3 launch screen, NOT magenta: the paper-craft town of Brightford seen from above at morning, the boy in the red hoodie and the teal robot walking together on the path in the lower middle, empty sky area at the top for the title.
+```
+
 ## ĐƠN ĐANG CHỜ (chỉ phần tiếng Anh · copy nguyên khối, đính kèm hình Ms. Emma để giữ nét vẽ)
 
 Phần tiếng Trung tạm dừng nên không có trong đơn. Làm xong anh cứ dán hình vào chat với em, em tự cắt, đặt tên và lưu vào game.
