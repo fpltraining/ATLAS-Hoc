@@ -654,9 +654,8 @@ body { background: #f4e9dc url(../assets/paper_tile.webp) repeat; background-siz
 .rotate b { font-size: 24px; }
 .rotate p { margin: 0; font-size: 16px; line-height: 1.45; color: #7d5a40; }
 .rotate small { font-size: 13.5px; line-height: 1.45; color: #a3876c; max-width: 320px; }
-.rot-ico { width: 120px; height: 120px; border-radius: 50%; display: grid; place-items: center; background: #fbf5ea; box-shadow: 0 0 0 1px #e3d3b8, 0 10px 24px rgba(90,60,30,.16); }
-.rot-phone { font-size: 64px; display: inline-block; animation: rotp 2.4s ease-in-out infinite; }
-@keyframes rotp { 0%, 20% { transform: rotate(0); } 45%, 75% { transform: rotate(-90deg); } 100% { transform: rotate(0); } }
+.rot-img { width: 150px; height: auto; filter: drop-shadow(0 8px 14px rgba(90,60,30,.22)); animation: rotb 2.6s ease-in-out infinite; transform-origin: 50% 90%; }
+@keyframes rotb { 0%, 100% { transform: rotate(0) translateY(0); } 30% { transform: rotate(-4deg) translateY(-6px); } 60% { transform: rotate(3deg) translateY(0); } }
 @media (max-height: 500px) {
   .hud { padding-top: max(6px, env(safe-area-inset-top)); padding-bottom: 6px; gap: 8px; }
   .hud-btn { width: 38px; height: 38px; font-size: 18px; border-radius: 10px; }
@@ -676,3 +675,16 @@ body { background: #f4e9dc url(../assets/paper_tile.webp) repeat; background-siz
   .modal .choose { max-height: calc(100vh - 20px); overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 14px 18px; }
   .fb-big { width: 112px; height: 112px; }
 }
+
+/* màn chờ lúc mở app */
+.splash { position: fixed; inset: 0; z-index: 9000; background: #f6efe2 center bottom / cover no-repeat; pointer-events: none; display: flex; justify-content: center; align-items: flex-start; padding-top: max(5vh, env(safe-area-inset-top)); transition: opacity .5s ease; }
+.splash.out { opacity: 0; }
+.sp-title { width: min(46vw, 440px); height: auto; filter: drop-shadow(0 6px 10px rgba(90,60,30,.18)); animation: spin .7s ease-out both; }
+@keyframes spin { from { opacity: 0; transform: translateY(-14px) scale(.96); } to { opacity: 1; transform: none; } }
+@media (orientation: portrait) { .splash { background-size: auto 100%; } .sp-title { width: min(78vw, 440px); } }
+@media (max-height: 500px) and (orientation: landscape) { .splash { background-position: center 64%; padding-top: max(10px, env(safe-area-inset-top)); } .sp-title { width: min(36vw, 300px); } }
+/* cần điều khiển bằng giấy (hình anh Han đặt) */
+.joy.paper { background: center / 100% 100% no-repeat; border: 0; box-shadow: none; opacity: .8; filter: drop-shadow(0 4px 8px rgba(60,40,20,.25)); }
+.joy.paper::before { display: none; }
+.joy.paper.live { opacity: 1; }
+.joy.paper .joy-knob { background: center / 100% 100% no-repeat; border: 0; box-shadow: none; filter: drop-shadow(0 4px 6px rgba(60,40,20,.35)); }

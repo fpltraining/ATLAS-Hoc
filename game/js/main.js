@@ -92,7 +92,15 @@ var G = window.G || (window.G = {});
     })();
   };
 
+  /* màn chờ: hiện ít nhất 1,1 giây kể từ lúc mở app rồi mờ dần */
+  function hideSplash() {
+    var sp = document.getElementById('splash'); if (!sp) return;
+    var t0 = (window.performance && performance.now) ? performance.now() : 0, wait = Math.max(0, 1100 - t0);
+    setTimeout(function () { sp.className = 'splash out'; setTimeout(function () { if (sp.parentNode) sp.parentNode.removeChild(sp); }, 600); }, wait);
+  }
+
   function start() {
+    hideSplash();
     G.engineInit();
     G.lessonInit();
     document.getElementById('hud-home').onclick = G.goLobby;
