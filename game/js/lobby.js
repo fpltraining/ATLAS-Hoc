@@ -3,12 +3,9 @@
 var G = window.G || (window.G = {});
 
 (function () {
+  /* chỉ làm tiếng Anh (anh Han chốt 20/11/2026): các thành phố khác ẩn hẳn, dữ liệu tiến độ cũ vẫn giữ */
   var CITIES = [
-    { id: 'en', name: 'Brightford', lang: 'Tiếng Anh · Mỹ tương lai', card: 'card_city_en.webp', state: 'open', scene: 'city_en' },
-    { id: 'zh', name: 'Trường Lạc trấn 长乐镇', lang: 'Tiếng Trung · Thị trấn Trung Quốc', card: 'card_city_zh.webp', state: 'soon', note: 'Tạm dừng' },
-    { id: 'ja', name: 'Thành phố Nhật', lang: 'Tiếng Nhật', card: 'card_city_ja.webp', state: 'soon' },
-    { id: 'ko', name: 'Thành phố Hàn', lang: 'Tiếng Hàn', card: 'card_city_ko.webp', state: 'soon' },
-    { id: 'fr', name: 'Thành phố Pháp', lang: 'Tiếng Pháp', card: 'card_city_fr.webp', state: 'soon' }
+    { id: 'en', name: 'Brightford', lang: 'Tiếng Anh · Thành phố Mỹ', card: 'card_city_en.webp', state: 'open', scene: 'city_en' }
   ];
 
   function rooms(doors) {
@@ -16,7 +13,7 @@ var G = window.G || (window.G = {});
     for (var i = 0; i < doors.length; i++) { var id = doors[i].room, p = G.S.phong[id]; if (G.roomPassed(id)) { done++; stars += p ? p.sao : 0; } }
     return { done: done, stars: stars, all: doors.length };
   }
-  function lastCity() { var sv = G.S.viTri && G.SCENES[G.S.viTri.canh]; return (sv && sv.city) || 'en'; }
+  function lastCity() { return 'en'; }
   function enRooms() { return rooms(G.EN_HALL_DOORS); }
   function foundDone() { var n = 0; for (var i = 1; i <= 30; i++) if (G.roomPassed('en-n-' + (i < 10 ? '0' : '') + i)) n++; return n; }
 
@@ -30,12 +27,12 @@ var G = window.G || (window.G = {});
       G.el('div.hero-pic', G.imgEl('lobby_hero.webp', 'hero-img')),
       G.el('div.hero-text',
         G.el('img.lobby-title', { src: G.assetUrl('lobby_title.png'), alt: 'ConnectLife · Kết nối cuộc sống' }),
-        G.el('p.hero-sub', 'Mỗi ngôn ngữ là một thành phố. Học ở trường, nói chuyện ở quán, bay sang thành phố khác để kết bạn.'),
-        G.el('button.clay-btn', { onclick: function () { G.goCity(lastCity()); } }, 'Vào ' + (lastCity() === 'zh' ? 'Trường Lạc trấn' : 'Brightford') + ' ›')
+        G.el('p.hero-sub', 'Sống ở Brightford, học tiếng Anh như người bản xứ: học ở trường, nói chuyện ở quán, đi khắp thành phố.'),
+        G.el('button.clay-btn', { onclick: function () { G.goCity(lastCity()); } }, 'Vào Brightford ›')
       )
     ));
 
-    root.appendChild(G.el('h2.sec', 'Các thành phố'));
+    root.appendChild(G.el('h2.sec', 'Thành phố của bạn'));
     root.appendChild(G.el('div.cities', CITIES.map(function (c) {
       var open = c.state === 'open';
       var z = rooms(G.ZH_HALL_DOORS);
@@ -59,7 +56,6 @@ var G = window.G || (window.G = {});
         stat(G.S.xp, 'XP'),
         stat(G.S.chuoi.hienTai + ' ngày', 'Chuỗi học'),
         stat(r.done + '/5', 'Phòng A1 đã qua'),
-        stat(rooms(G.ZH_HALL_DOORS).done + '/6', 'Phòng HSK1 đã qua'),
         stat(G.S.tuKho.length, 'Từ cần ôn')
       ),
       G.diplomas().length ? G.el('div.dips', G.diplomas().map(function (d) {
