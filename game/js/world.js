@@ -193,27 +193,29 @@ G.SCENES = {
   classroom_en: {
     city: 'en',
     title: 'Lớp học',
-    bg: 'classroom_en.png', w: 1536, h: 1024, kind: 'classroom',
-    walk: { x0: 40, y0: 395, x1: 1496, y1: 990 },
-    teacher: { x: 770, y: 425 },
-    exit: { x: 768, y: 985, label: 'Ra hành lang', to: { scene: 'en_hall', door: true } },
-    // tường phía trước lớp (ảnh lớp vẽ kiểu nhà búp bê, không có tường trước): chặn hai bên cửa
-    blocks: [[0, 948, 600, 1024], [930, 948, 1536, 1024]],
-    front: { y: 950, door: [598, 932], src: [600, 306, 360, 78] }
+    // lớp học vẽ mới (classroom_en_v2): 6 bàn, cửa sổ phía trên, tường trước có cửa ra vào; ghế là hình rời (G.SEATS)
+    bg: 'classroom_en_v2.webp', w: 1536, h: 1024, kind: 'classroom',
+    walk: { x0: 100, y0: 192, x1: 1440, y1: 772 },
+    teacher: { x: 775, y: 240 },
+    exit: { x: 775, y: 765, label: 'Ra hành lang', to: { scene: 'en_hall', door: true } },
+    blocks: [[266, 246, 554, 452], [641, 246, 909, 452], [996, 246, 1284, 452], [241, 508, 544, 722], [634, 508, 916, 722], [1011, 508, 1304, 722],
+      [20, 570, 190, 780], [0, 0, 212, 320], [0, 320, 175, 560], [0, 560, 132, 780], [1340, 0, 1536, 320], [1380, 320, 1536, 560], [1420, 560, 1536, 780]]
   }
 };
-/* Chỗ ngồi trong lớp (theo ảnh classroom_en.png): x giữa ghế, y mép trên lưng ghế, s cỡ người (xa nhỏ, gần to).
-   Học sinh ngồi quay lưng về phía người xem, nhìn lên bảng: chỉ thấy đầu và vai phía trên lưng ghế.
-   me: ghế của người chơi; stand: chỗ đứng ở lối đi cạnh ghế (đi tới đó rồi ngồi xuống). */
+/* Chỗ ngồi trong lớp (theo ảnh classroom_en_v2.webp): mỗi bàn 2 ghế ở phía trước bàn, lưng ghế quay về phía người xem.
+   x giữa ghế, y chân ghế, c màu ghế (w gỗ, g xanh), k cỡ (hàng trên xa hơn nên nhỏ hơn chút).
+   me: ghế người chơi (bàn dưới bên trái, gần lối đi), kai: Kai ngồi cùng bàn, stand: chỗ đứng ở lối đi trước khi kéo ghế,
+   mates: bạn cùng lớp (student_<n>_sit.png, giơ tay: student_<n>_hand.png). */
 G.SEATS = {
   classroom_en: {
-    me: 5, stand: { x: 472, y: 768 },
+    me: 7, kai: 6, stand: { x: 592, y: 752 },
     list: [
-      { x: 300, y: 497, s: 92 }, { x: 422, y: 497, s: 92 }, { x: 261, y: 601, s: 102 }, { x: 391, y: 601, s: 102 },
-      { x: 197, y: 730, s: 112 }, { x: 349, y: 729, s: 112 }, { x: 131, y: 892, s: 120 }, { x: 301, y: 891, s: 120 },
-      { x: 1182, y: 497, s: 92 }, { x: 1105, y: 601, s: 102 }, { x: 1224, y: 601, s: 102 }, { x: 1150, y: 730, s: 112 },
-      { x: 1287, y: 730, s: 112 }, { x: 1201, y: 895, s: 120 }, { x: 1372, y: 895, s: 120 }
-    ]
+      { x: 348, y: 505, c: 'w', k: 0.95 }, { x: 472, y: 505, c: 'w', k: 0.95 }, { x: 713, y: 505, c: 'g', k: 0.95 }, { x: 837, y: 505, c: 'g', k: 0.95 },
+      { x: 1078, y: 505, c: 'w', k: 0.95 }, { x: 1202, y: 505, c: 'w', k: 0.95 },
+      { x: 330, y: 770, c: 'g', k: 1 }, { x: 454, y: 770, c: 'g', k: 1 }, { x: 700, y: 770, c: 'w', k: 1 }, { x: 850, y: 770, c: 'w', k: 1 },
+      { x: 1096, y: 770, c: 'g', k: 1 }, { x: 1220, y: 770, c: 'g', k: 1 }
+    ],
+    mates: [{ i: 3, n: 'lily' }, { i: 10, n: 'tom' }, { i: 1, n: 'ana' }, { i: 4, n: 'ken' }, { i: 11, n: 'mai' }, { i: 2, n: 'leo' }]
   }
 };
 

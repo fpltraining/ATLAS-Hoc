@@ -430,14 +430,44 @@ var G = window.G || (window.G = {});
   }
 
   /* ---------- trời: dải trời phía trên màn hình (màu theo giờ, mặt trời, trăng, sao, mây giấy, mây đen trước mưa) ---------- */
-  var skyEl = null, skyGrad, skySun, skyMoon, skyStars, skyDark, skyGlare, CLOUDS = [], skyT = 0;
+  var skyEl = null, skyGrad, skySun, skyMoon, skyStars, skyDark, skyGlare, CLOUDS = [], skyT = 0, SKYIMG = null;
+  /* tranh trời theo giờ: [giờ bắt đầu, tranh, tranh thay khi chưa có (kèm chỉnh sáng tạm), màu chân trời]. Chuyển dần 40 phút trước mốc sau. */
+  var SKYK = [
+    [4.5, 'sky_dawn', null, '', 0x979a9a], [5.9, 'sky_sunrise', null, '', 0xb2a89f], [7.4, 'sky_morning', null, '', 0xc0c4bd],
+    [10.5, 'sky_noon', null, '', 0xb6bbb3], [15.3, 'sky_afternoon', 'sky_noon', 'sepia(.22) saturate(1.1)', 0xbdb4a2],
+    [17.2, 'sky_sunset', 'sky_sunrise', 'saturate(1.25) hue-rotate(-8deg)', 0xb49a8c], [18.5, 'sky_dusk', 'sky_dawn', 'brightness(.9)', 0x8a8a96],
+    [19.5, 'sky_night', 'sky_dawn', 'brightness(.5) saturate(.85)', 0x4a5266], [23.5, 'sky_latenight', 'sky_dawn', 'brightness(.36) saturate(.7)', 0x323a4e]
+  ];
+  function skyKey(i) {
+    var k = SKYK[(i + SKYK.length) % SKYK.length], n = has(k[1] + '.webp') ? k[1] : k[2];
+    return { url: 'url(' + G.assetUrl(n + '.webp') + ')', f: has(k[1] + '.webp') ? '' : k[3], fog: k[4] };
+  }
+  var skyShown = ['', '', '', '', ''];
+  function skyImages(hour, cloud, dark, out) {
+    var h = hour < SKYK[0][0] ? hour + 24 : hour, i = 0;
+    while (i < SKYK.length - 1 && h >= SKYK[i + 1][0]) i++;
+    var nextH = i + 1 < SKYK.length ? SKYK[i + 1][0] : SKYK[0][0] + 24, fadeK = Math.max(0, Math.min(1, (h - (nextH - 0.66)) / 0.66));
+    var a = skyKey(i), b = skyKey(i + 1), wx = ' grayscale(' + (cloud * 0.55).toFixed(2) + ') brightness(' + (1 - dark * 0.45).toFixed(2) + ')';
+    if (skyShown[0] !== a.url) { SKYIMG[0].style.backgroundImage = a.url; skyShown[0] = a.url; }
+    if (skyShown[1] !== b.url) { SKYIMG[1].style.backgroundImage = b.url; skyShown[1] = b.url; }
+    var fa = (a.f + wx).trim(), fb = (b.f + wx).trim(), op = fadeK.toFixed(2);
+    if (skyShown[2] !== fa) { SKYIMG[0].style.filter = fa; skyShown[2] = fa; }
+    if (skyShown[3] !== fb) { SKYIMG[1].style.filter = fb; skyShown[3] = fb; }
+    if (skyShown[4] !== op) { SKYIMG[1].style.opacity = op; skyShown[4] = op; }
+    cA.setHex(a.fog); cB.setHex(b.fog); out.copy(cA).lerp(cB, fadeK);
+  }
   function buildSky() {
     skyEl = document.getElementById('sky3d');
     if (!skyEl) return;
     skyEl.innerHTML = '';
     skyGrad = el('div', 'sk-grad'); skyStars = el('canvas', 'sk-stars'); skySun = el('div', 'sk-sun'); skyMoon = el('div', 'sk-moon');
+    if (has('sky_morning.webp')) {   // tranh trời đặt vẽ: hai lớp tranh chuyển dần theo giờ (thay dải màu, mặt trời, trăng, sao vẽ bằng code)
+      SKYIMG = [el('div', 'sk-img'), el('div', 'sk-img')]; skyEl.className = 'sky3d img';
+      skyEl.appendChild(SKYIMG[0]); skyEl.appendChild(SKYIMG[1]);
+    }
     var cl = el('div', 'sk-clouds'); skyDark = el('div', 'sk-dark');
-    skyEl.appendChild(skyGrad); skyEl.appendChild(skyStars); skyEl.appendChild(skySun); skyEl.appendChild(skyMoon); skyEl.appendChild(cl); skyEl.appendChild(skyDark);
+    if (!SKYIMG) { skyEl.appendChild(skyGrad); skyEl.appendChild(skyStars); skyEl.appendChild(skySun); skyEl.appendChild(skyMoon); }
+    skyEl.appendChild(cl); skyEl.appendChild(skyDark);
     skyGlare = document.getElementById('glare3d');
     skyStars.width = 600; skyStars.height = 200;
     var x = skyStars.getContext('2d');
@@ -476,6 +506,7 @@ var G = window.G || (window.G = {});
     night = up < -0.02 ? 1 : up < 0.18 ? 1 - (up + 0.02) / 0.2 : 0;
     var day = 1 - night;
     cZ.lerp(GRAY, cloud * 0.55 * day).lerp(DARK, dark * 0.6 * day); cH.lerp(GRAY, cloud * 0.4 * day).lerp(DARK, dark * 0.45 * day);
+    if (SKYIMG) { skyImages(hour, cloud, dark, cZ); cH.lerp(cZ, 0.55); }   // sương xa hoà với chân trời trong tranh
     SC.fog.color.copy(cH); SC.background.copy(cH);
     var p = seg(PAL, hour);
     mixHex(p.a[1], p.b[1], p.k, HEMI.color); mixHex(p.a[2], p.b[2], p.k, HEMI.groundColor); HEMI.intensity = (p.a[3] + (p.b[3] - p.a[3]) * p.k) * (1 - 0.18 * cloud - 0.12 * dark);
@@ -489,7 +520,7 @@ var G = window.G || (window.G = {});
     cloudsM.material.opacity = 0.12 + cloud * 0.22;
     cloudTex.offset.x += dt * (0.0035 + w.gather * 0.01 + w.rain * 0.006); cloudTex.offset.y += dt * 0.0012;
     skyT -= dt; if (skyT > 0 || !skyEl) return; skyT = 0.2;   // dải trời: cập nhật 5 lần/giây là đủ mượt
-    skyGrad.style.background = 'linear-gradient(' + css(cZ) + ', ' + css(cH) + ')';
+    if (!SKYIMG) skyGrad.style.background = 'linear-gradient(' + css(cZ) + ', ' + css(cH) + ')';
     var sx = 50 + Math.cos(ang) * 44, sy = 88 - Math.max(-0.2, up) * 92, hz = Math.max(0, 1 - up * 3);   // mặt trời gần chân trời thì to, cam
     skySun.style.left = sx.toFixed(1) + '%'; skySun.style.top = sy.toFixed(1) + '%';
     skySun.style.opacity = up > -0.08 ? ((1 - cloud * 0.85) * Math.min(1, (up + 0.08) * 6)).toFixed(2) : '0';
@@ -501,7 +532,7 @@ var G = window.G || (window.G = {});
     skyDark.style.opacity = (dark * 0.85).toFixed(2);
     var cb = (1 - night * 0.55) * (1 - dark * 0.5), cg = Math.min(1, cloud * 0.6 + dark * 0.4);
     var flt = 'brightness(' + cb.toFixed(2) + ') grayscale(' + cg.toFixed(2) + ')' + (hour > 17.2 && hour < 19 ? ' sepia(.35) saturate(1.4)' : '');
-    for (var i = 0; i < CLOUDS.length; i++) { var c = CLOUDS[i]; c.el.style.filter = flt; c.el.style.opacity = c.far ? (0.55 + cloud * 0.35).toFixed(2) : (cloud > 0.4 ? Math.min(0.95, (cloud - 0.4) * 2.2) : 0).toFixed(2); }
+    for (var i = 0; i < CLOUDS.length; i++) { var c = CLOUDS[i]; c.el.style.filter = flt; c.el.style.opacity = c.far ? (SKYIMG ? 0 : 0.55 + cloud * 0.35).toFixed(2) : (cloud > 0.4 ? Math.min(0.95, (cloud - 0.4) * 2.2) : 0).toFixed(2); }
     if (skyGlare) {
       var gi = up > 0 ? (0.16 + 0.32 * (1 - up)) * (1 - cloud) : 0;
       skyGlare.style.background = gi > 0.01 ? 'radial-gradient(circle at ' + sx.toFixed(0) + '% -8%, rgba(255,' + (hz > 0.5 ? 180 : 214) + ',150,' + gi.toFixed(2) + '), rgba(255,214,150,0) 55%)' : 'none';

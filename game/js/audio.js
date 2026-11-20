@@ -132,6 +132,12 @@ var G = window.G || (window.G = {});
     return ctx;
   }
   G.audioCtx = ac;
+  /* tiếng hiệu ứng từ tệp thật (anh Han gửi): G.SFX_FILES[tên] = đường dẫn; chưa có tệp thì im lặng */
+  G.SFX_FILES = G.SFX_FILES || {};
+  G.sfxFile = function (n) {
+    var u = G.SFX_FILES[n]; if (!u || (G.S && G.S.caiDat && G.S.caiDat.amThanh === false)) return;
+    try { var au = new Audio(u); au.volume = 0.7; var pr = au.play(); if (pr && pr.catch) pr.catch(function () { /* bỏ qua */ }); } catch (e) { /* bỏ qua */ }
+  };
   G.audioReady = function () { return ctx && ctx.state === 'running' ? ctx : null; };   // chỉ lấy khi đã mở (sau lần chạm đầu), không đánh thức mỗi khung
   /* đang có giọng đọc (để nhạc nền nhỏ lại) */
   G.voiceBusy = function () {

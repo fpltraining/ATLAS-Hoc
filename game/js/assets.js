@@ -17,7 +17,7 @@ G.ASSET_LIST = [
   'npc_driver.png', 'vehicle_bus.png', 'ride_bg_bus.png',
   'map_en.png',
   'map_zh.png', 'building_zh_school.png', 'building_zh_teahouse.png', 'building_zh_market.png', 'building_zh_hospital.png', 'building_zh_airport.png',
-  'interior_en_hall.png', 'classroom_en.png', 'interior_en_cafe.png', 'interior_en_market.png', 'interior_en_hospital.png', 'interior_en_airport.png',
+  'interior_en_hall.png', 'classroom_en_v2.webp', 'chair_wood_back.png', 'chair_green_back.png', 'interior_en_cafe.png', 'interior_en_market.png', 'interior_en_hospital.png', 'interior_en_airport.png',
   'interior_zh_hall.png', 'classroom_zh.png', 'interior_zh_teahouse.png', 'interior_zh_market.png', 'interior_zh_hospital.png', 'interior_zh_airport.png',
   'npc_emma.png', 'npc_tom.png', 'npc_lily.png', 'npc_sam.png', 'npc_principal_li.png', 'npc_wang.png', 'npc_li.png', 'npc_zhang.png', 'npc_chen.png',
   'npc_emma_talk.png', 'npc_wang_talk.png', 'npc_principal_li_talk.png',

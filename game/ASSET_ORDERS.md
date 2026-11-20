@@ -583,3 +583,23 @@ PART C — BACKGROUND MUSIC (instrumental only, no vocals, 2–3 minutes, loopab
 57. music_market.mp3 — market and shops: playful ukulele, hand claps, light percussion, 110 BPM.
 58. music_ride.mp3 — riding the bus or school minibus: light travelling groove, steady train-like rhythm, guitar and piano, 105 BPM.
 ```
+
+## Đã nhận 21/11 (Đơn L, đợt 1) · đã gắn vào game
+
+- classroom_en_v2 (lớp mới có tường trước, cửa ra vào), chair_wood_back, chair_green_back
+- player_minh_sit, kai_sit, student_lily_sit/_hand, student_tom_sit/_hand, student_ana_hand, student_ken_hand
+- sky_dawn, sky_sunrise, sky_morning, sky_noon
+- Hình "HANOI 1989" (mũ đen, áo khoác xanh rêu) chưa dùng: không giống nhân vật Han trong game (tóc nâu xoăn, áo hoodie đỏ)
+
+## Còn thiếu sau đợt 21/11 (đặt lại đúng tên)
+
+```
+Same style as before, transparent background, seen from BEHIND sitting at a desk, NO chair, NO desk, 1024×1024:
+- player_han_sit.png — the SAME Han as his walking sprite: chibi kid, curly brown hair, red hoodie, dark blue shorts.
+- student_ana_sit.png (curly brown hair, yellow sweater), student_ken_sit.png (blond hair, red t-shirt).
+- student_mai_sit.png / student_mai_hand.png (teen girl, short black bob hair, green cardigan).
+- student_leo_sit.png / student_leo_hand.png (young adult man, dark skin, short hair, orange hoodie).
+Sky backdrops (same look as sky_morning.png I sent, landscape, distant paper hills at the bottom):
+- sky_afternoon.png, sky_sunset.png, sky_dusk.png, sky_night.png, sky_latenight.png, sky_cloudy.png, sky_storm.png, sky_rain.png
+```
+Các mục khác của Đơn L (sông, cá, vịt, ô, xe đưa đón, khuôn viên trường, mây đen, mặt trời, trăng) vẫn chờ.

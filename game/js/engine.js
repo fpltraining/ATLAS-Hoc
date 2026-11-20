@@ -52,7 +52,7 @@ var G = window.G || (window.G = {});
     mask = maskOf(scene);
     mode3d = !!(scene.kind === 'city' && G.W3D && G.WORLD3D && G.WORLD3D[id] && G.W3D.enabled() && G.W3D.init());
     if (G.W3D && G.W3D.ready) G.W3D.show(mode3d);
-    riding = false; seat = null;
+    riding = false; seat = null; seatAnim = null; seatedNow = false; kaiSeated = false; chairOff = 0;
     resize(); // màn bản đồ vừa hiện ra: đo lại kích thước canvas
     var sp = at || scene.spawn || { x: scene.w / 2, y: scene.walk.y1 - 40 };
     var wk = scene.walk;   // luôn đặt nhân vật trong vùng đi được
@@ -106,7 +106,7 @@ var G = window.G || (window.G = {});
     if (scene.kind === 'classroom' && G.currentRoom) {
       var tid = G.ROOM_TEACHER[G.currentRoom];
       // vào bài: đi tới ghế của mình, ngồi xuống rồi mới bắt đầu học (đang ngồi thì nút ở ngay chỗ ngồi)
-      if (tid && seat) list.push({ x: P.x, y: P.y, r: 9999, npc: tid, label: 'Nói chuyện với ' + G.NPCS[tid].name, act: function () { G.openLesson(G.currentRoom); } });
+      if (tid && seat && !seatAnim) list.push({ x: P.x, y: P.y, r: 9999, npc: tid, label: 'Nói chuyện với ' + G.NPCS[tid].name, act: function () { G.openLesson(G.currentRoom); } });
       else if (tid) list.push({ x: TX(), y: TY() + 40, r: 110, npc: tid, label: 'Nói chuyện với ' + G.NPCS[tid].name, act: function () { sitDown(function () { G.openLesson(G.currentRoom); }); } });
     }
     var PP = people();
@@ -268,7 +268,8 @@ var G = window.G || (window.G = {});
       }
     }
     if (scene.props) for (var pj = 0; pj < scene.props.length; pj++) { var pr = scene.props[pj], ddx = x - pr.x, ddy = (y - pr.y) * 2; if (ddx * ddx + ddy * ddy < pr.r * pr.r) return true; }
-    var PP = (G.PEOPLE && G.PEOPLE[sid]) || [], mask = maskOf(scene);
+    var PP = (G.PEOPLE && G.PEOPLE[sid]) || [], mask = maskOf(scene), SS = G.SEATS && G.SEATS[sid];
+    if (SS) for (var si = 0; si < SS.list.length; si++) { var cs0 = SS.list[si]; if (Math.abs(x - cs0.x) < 22 && y > cs0.y - 14 && y < cs0.y + 4) return true; }   // chân ghế
     for (var pq = 0; pq < PP.length; pq++) {
       var po = PP[pq];
       if (po === skipP) continue;   // NPC đang đi: không tự chặn chính mình
@@ -299,8 +300,9 @@ var G = window.G || (window.G = {});
   function update(dt) {
     var vx = 0, vy = 0;
     if (riding) { target = null; path = []; pending = null; if (riding === 'go') rideFollow(); }
-    else if (G.seated && G.seated() && (joy.on && (joy.dx || joy.dy) || keys.l || keys.r || keys.u || keys.d)) G.standUp();   // đang ngồi học: kéo cần là đứng dậy
-    else if (G.seated && G.seated()) { /* ngồi yên */ }
+    else if (seatAnim) { /* đang kéo ghế */ }
+    else if (seat && (joy.on && (joy.dx || joy.dy) || keys.l || keys.r || keys.u || keys.d)) G.standUp();   // đang ngồi học: kéo cần là đứng dậy
+    else if (seat) { /* ngồi yên */ }
     else if (joy.on && (joy.dx || joy.dy)) { vx = joy.dx; vy = joy.dy; target = null; pending = null; path = []; }
     else if (keys.l || keys.r || keys.u || keys.d) { vx = (keys.r ? 1 : 0) - (keys.l ? 1 : 0); vy = (keys.d ? 1 : 0) - (keys.u ? 1 : 0); target = null; pending = null; path = []; }
     else if (target) {
@@ -341,6 +343,7 @@ var G = window.G || (window.G = {});
       P.t += dt;
     }
     // Kai đi theo dấu chân người chơi (cách ~70 px trên đường đi), nên không xuyên qua cây, nhà như đi thẳng
+    updateSeat(dt);
     if (seat) { K.moving = false; K.dir = 'up'; } else kaiFollow(dt);
 
     // chỗ tương tác gần nhất → nút hành động
@@ -409,56 +412,93 @@ var G = window.G || (window.G = {});
     return false;
   }
 
-  /* ---------- lớp học: ngồi vào ghế khi vào bài, bạn cùng lớp ngồi quanh, tường phía trước ---------- */
-  var seatHint = false;
+  /* ---------- lớp học: ghế rời, kéo ghế ra rồi ngồi xuống, đẩy ghế vào; bạn cùng lớp ngồi học (hình đặt vẽ) ----------
+     G.SEATS[cảnh]: list ghế { x, y: chân ghế, c: 'w' gỗ / 'g' xanh, k: cỡ }, me: ghế người chơi, kai: ghế Kai, stand: chỗ đứng ở lối đi,
+     mates: bạn cùng lớp { i: ghế, n: tên hình student_<n>_sit / _hand }. Người ngồi vẽ trước, ghế vẽ sau nên lưng ghế che hông. */
+  var seatHint = false, seatAnim = null, seatedNow = false, kaiSeated = false, chairOff = 0, handT = 4, handWho = -1, handLeft = 0;
+  var PULL = 26, CH = 72;   // ghế kéo ra (px về phía người xem), chiều cao ghế
+  function seatsHere() { return (G.SEATS && G.SEATS[sceneId]) || null; }
+  function hasImg(n) { return !!(G.ASSET_REV && G.ASSET_REV[n]); }
+  function easeIO(t) { t = t < 0 ? 0 : t > 1 ? 1 : t; return t * t * (3 - 2 * t); }
   function sitDown(cb) {
-    var S = G.SEATS && G.SEATS[sceneId];
+    var S = seatsHere();
     if (!S) { cb(); return; }
+    if (seatAnim) return;
     if (seat) { cb(); return; }
     goTo(S.stand.x, S.stand.y, function () {
-      var me = S.list[S.me]; seat = me; target = null; path = [];
-      P.x = me.x; P.y = me.y + 2; P.dir = 'up'; P.moving = false;
-      K.x = S.stand.x + 34; K.y = S.stand.y + 26; K.dir = 'up'; K.moving = false; trail = [{ x: K.x, y: K.y }];
-      G.sfx('door');
-      if (!seatHint) { seatHint = true; G.kaiSay('Ngồi vào chỗ rồi, bắt đầu học thôi! Muốn đứng dậy thì kéo cần điều khiển.'); }
-      setTimeout(cb, 450);
+      seat = S.list[S.me]; target = null; path = [];
+      seatAnim = { kind: 'sit', t: 0, cb: cb, x0: P.x, y0: P.y };
+      if (G.sfxFile) G.sfxFile('sfx_chair_pull');
     }, '__ghe');
   }
   G.seated = function () { return !!seat; };
   G.standUp = function () {
-    if (!seat) return;
-    var S = G.SEATS[sceneId]; seat = null;
-    if (S) { P.x = S.stand.x; P.y = S.stand.y; }
-    P.dir = 'right'; trail = [{ x: K.x, y: K.y }, { x: P.x, y: P.y }];
+    if (!seat || seatAnim) return;
+    seatAnim = { kind: 'stand', t: 0 };
+    if (G.sfxFile) G.sfxFile('sfx_chair_pull');
   };
-  /* người ngồi sau lưng ghế: chỉ vẽ phần trên mép lưng ghế (đầu, vai), phần dưới như bị lưng ghế che */
-  function seatedDraw(st, fn) {
-    ctx.save(); ctx.beginPath(); ctx.rect(st.x - st.s, st.y - st.s * 1.6, st.s * 2, st.s * 1.6); ctx.clip();
-    fn(st.x, st.y + st.s * 0.41, st.s);
-    ctx.restore();
+  /* kéo ghế: ghế trượt ra → bước vào chỗ → ngồi → đẩy ghế vào (đứng dậy thì ngược lại) */
+  function updateSeat(dt) {
+    var S = seatsHere();
+    handT -= dt;   // bạn cùng lớp thỉnh thoảng giơ tay phát biểu
+    if (handLeft > 0) { handLeft -= dt; if (handLeft <= 0) handWho = -1; }
+    if (S && S.mates && handT <= 0) { handT = 6 + Math.random() * 8; var mi = Math.floor(Math.random() * S.mates.length); if (hasImg('student_' + S.mates[mi].n + '_hand.png')) { handWho = mi; handLeft = 2.2; } }
+    if (!seatAnim || !S) return;
+    var A = seatAnim, me = S.list[S.me], sx = me.x, sy = me.y;
+    A.t += dt; target = null; path = [];
+    if (A.kind === 'sit') {
+      if (A.t < 0.35) { chairOff = PULL * easeIO(A.t / 0.35); P.moving = false; P.dir = sx < P.x ? 'left' : 'right'; }
+      else if (A.t < 0.8) {   // bước vào chỗ trước ghế
+        chairOff = PULL; var k = easeIO((A.t - 0.35) / 0.45);
+        P.x = A.x0 + (sx - A.x0) * k; P.y = A.y0 + (sy + PULL + 4 - A.y0) * k; P.moving = true; P.t += dt;
+      } else {
+        if (!seatedNow) { seatedNow = true; P.x = sx; P.y = sy + 1; P.dir = 'up'; P.moving = false; if (G.sfxFile) G.sfxFile('sfx_chair_sit'); }
+        chairOff = PULL * (1 - easeIO((A.t - 0.8) / 0.35));
+        if (A.t >= 1.15) {
+          chairOff = 0; seatAnim = null;
+          if (S.kai !== undefined && G.S.nhanVat !== 'kai' && hasImg('kai_sit.png')) kaiSeated = true;   // Kai ngồi cùng bàn
+          if (!seatHint) { seatHint = true; G.kaiSay('Ngồi vào chỗ rồi, bắt đầu học thôi! Muốn đứng dậy thì kéo cần điều khiển.'); }
+          if (A.cb) setTimeout(A.cb, 250);
+        }
+      }
+    } else {
+      if (A.t < 0.3) { chairOff = PULL * easeIO(A.t / 0.3); kaiSeated = false; K.x = S.stand.x - 40; K.y = S.stand.y + 6; K.dir = 'up'; trail = [{ x: K.x, y: K.y }]; }
+      else if (A.t < 0.7) {
+        if (seatedNow) { seatedNow = false; P.x = sx; P.y = sy + PULL + 4; }
+        chairOff = PULL; var k2 = easeIO((A.t - 0.3) / 0.4);
+        P.x = sx + (S.stand.x - sx) * k2; P.y = sy + PULL + 4 + (S.stand.y - sy - PULL - 4) * k2; P.moving = true; P.t += dt; P.dir = S.stand.x > sx ? 'right' : 'left';
+      } else {
+        P.moving = false; chairOff = PULL * (1 - easeIO((A.t - 0.7) / 0.3));
+        if (A.t >= 1) { chairOff = 0; seatAnim = null; seat = null; trail = [{ x: K.x, y: K.y }, { x: P.x, y: P.y }]; }
+      }
+    }
   }
-  function drawSeatedPlayer() {
-    var who = G.S.nhanVat || 'han';
-    seatedDraw(seat, function (x, foot, S) {
-      if (who === 'custom' && G.S.avatar) G.drawAvatar(ctx, G.S.avatar, x, foot, S * 0.93, 'up', 0, false);
-      else G.walkSprite(ctx, who === 'kai' ? 'kai' : 'player_' + who, x, foot, who === 'kai' ? S * 0.87 : S, 'up', 0, false);
-    });
+  /* một chỗ ngồi: người (nếu có) rồi tới ghế */
+  function imgWH(n) { var a = G.asset(n); return a.ok ? { w: a.img.naturalWidth || a.img.width, h: a.img.naturalHeight || a.img.height } : null; }
+  function drawSitImg(n, x, seatY, H) { var d = imgWH(n); if (!d) return; var w = H * d.w / d.h; G.drawAsset(ctx, n, x - w / 2, seatY + 6 - H, w, H); }
+  function drawSeatItem(o) {
+    var S = seatsHere(), s = o.s, k = s.k || 1, off = s === (S && S.list[S.me]) ? chairOff : 0;
+    var ch = CH * k, foot = s.y + off, seatY = foot - ch * 0.4, who = o.who;
+    if (who === 'me' && seatedNow) {
+      var w0 = G.S.nhanVat || 'han', base = w0 === 'kai' ? 'kai' : 'player_' + w0;
+      if (w0 !== 'custom' && hasImg(base + '_sit.png')) drawSitImg(base + '_sit.png', s.x, seatY, (w0 === 'kai' ? 100 : 112) * k);
+      else {   // chưa có hình ngồi riêng: hình đứng nhìn sau, lưng ghế che phần dưới
+        ctx.save(); ctx.beginPath(); ctx.rect(s.x - 90, seatY - 200, 180, 200 + 4); ctx.clip();
+        if (w0 === 'custom' && G.S.avatar) G.drawAvatar(ctx, G.S.avatar, s.x, seatY + 22 * k, 104 * k, 'up', 0, false);
+        else G.walkSprite(ctx, base, s.x, seatY + 24 * k, (w0 === 'kai' ? 100 : 116) * k, 'up', 0, false);
+        ctx.restore();
+      }
+    } else if (who === 'kai' && kaiSeated) drawSitImg('kai_sit.png', s.x, seatY, 100 * k);
+    else if (o.mate) drawSitImg('student_' + o.mate.n + (o.mi === handWho ? '_hand' : '_sit') + '.png', s.x, seatY, (o.mi === handWho ? 128 : 104) * k);
+    var cn = s.c === 'g' ? 'chair_green_back.png' : 'chair_wood_back.png', d = imgWH(cn);
+    if (d) G.drawAsset(ctx, cn, s.x - ch * d.w / d.h / 2, foot - ch, ch * d.w / d.h, ch);
   }
-  /* tường phía trước lớp: lấy dải gỗ ốp tường của bức tường sau trong chính ảnh lớp, lát dọc mép dưới, chừa chỗ cửa */
-  function drawFrontWall() {
-    var f = scene.front, a = G.asset(scene.bg); if (!f || !a.ok) return;
-    var y0 = f.y, h = scene.h - y0, src = f.src, tw = src[2] * (h - 12) / src[3];
-    var segs = [[0, f.door[0]], [f.door[1], scene.w]];
-    var sh = ctx.createLinearGradient(0, y0 - 30, 0, y0);   // bóng tường đổ vào trong lớp
-    sh.addColorStop(0, 'rgba(60,40,20,0)'); sh.addColorStop(1, 'rgba(60,40,20,.16)');
-    for (var i = 0; i < segs.length; i++) {
-      var x0 = segs[i][0], x1 = segs[i][1];
-      ctx.fillStyle = sh; ctx.fillRect(x0, y0 - 30, x1 - x0, 30);
-      ctx.save(); ctx.beginPath(); ctx.rect(x0, y0, x1 - x0, h); ctx.clip();
-      for (var x = x0 - ((x0 * 0.37) % tw); x < x1; x += tw) ctx.drawImage(a.img, src[0], src[1], src[2], src[3], x, y0 + 12, tw + 1, h - 12);
-      ctx.restore();
-      ctx.fillStyle = '#efe4d0'; ctx.fillRect(x0, y0, x1 - x0, 12);              // mặt trên tường (sơn kem)
-      ctx.fillStyle = 'rgba(110,80,50,.35)'; ctx.fillRect(x0, y0 + 11, x1 - x0, 2);
+  function seatItems(items) {
+    var S = seatsHere(); if (!S) return;
+    for (var i = 0; i < S.list.length; i++) {
+      var o = { s: S.list[i], who: i === S.me ? 'me' : i === S.kai ? 'kai' : null, mate: null, mi: -1 };
+      if (S.mates) for (var m = 0; m < S.mates.length; m++) if (S.mates[m].i === i && hasImg('student_' + S.mates[m].n + '_sit.png')) { o.mate = S.mates[m]; o.mi = m; }
+      items.push({ y: S.list[i].y + (i === S.me ? chairOff : 0), draw: drawSeatItem, o: o });
     }
   }
 
@@ -1062,7 +1102,7 @@ var G = window.G || (window.G = {});
   }
   /* chỗ đang đứng gần (cửa, người): vòng sáng vàng nhấp nháy */
   function drawNearGlow() {
-    if (!near) return;
+    if (!near || seat) return;
     var a = 0.35 + Math.sin(Date.now() / 220) * 0.15;
     var g = ctx.createRadialGradient(near.x, near.y, 4, near.x, near.y, 70);
     g.addColorStop(0, 'rgba(255,213,107,' + a + ')'); g.addColorStop(1, 'rgba(255,213,107,0)');
@@ -1095,13 +1135,13 @@ var G = window.G || (window.G = {});
     if (scene.room && G.drawRoomFront) items.push({ y: TY() + 30, draw: function () { G.drawRoomFront(ctx, scene); } });
     if (scene.lay && G.drawStandee) for (var sb = 0; sb < (scene.boards || []).length; sb++) items.push({ y: scene.boards[sb].y + 70, draw: function (b) { G.drawStandee(ctx, b); }, o: scene.boards[sb] });
     for (var ti = 0; ti < town.length; ti++) items.push({ y: town[ti].y, draw: drawTownie, o: town[ti] });
-    if (G.S.nhanVat !== 'kai') items.push({ y: K.y, draw: drawKai });   // chơi bằng Kai thì không có robot đi theo
+    if (G.S.nhanVat !== 'kai' && !kaiSeated) items.push({ y: K.y, draw: drawKai });
+    if (scene.kind === 'classroom') seatItems(items);   // chơi bằng Kai thì không có robot đi theo
     var PP = people(); for (var pk = 0; pk < PP.length; pk++) items.push({ y: PP[pk].y, draw: drawPerson, o: PP[pk] });
     if (scene.gates) for (var gk = 0; gk < scene.gates.length; gk++) items.push({ y: scene.gates[gk].y, draw: drawGate, o: scene.gates[gk] });
-    items.push({ y: P.y, draw: drawPlayer });
+    if (!seatedNow) items.push({ y: P.y, draw: drawPlayer });
     items.sort(function (a, b) { return a.y - b.y; });
     for (var j = 0; j < items.length; j++) items[j].draw(items[j].o);
-    if (scene.front) drawFrontWall();
     if (scene.buildings) for (var bl = 0; bl < scene.buildings.length; bl++) drawBuildingLabel(scene.buildings[bl]);
     // huy hiệu rank lơ lửng trên đầu nhân vật
     if (G.drawHeadBadge && !seat) G.drawHeadBadge(ctx, P.x, P.y - (raining() ? 170 : 104), P.moving, Date.now() / 1000);   // huy hiệu tầng (trời mưa: nằm trên chiếc ô)
@@ -1337,7 +1377,6 @@ var G = window.G || (window.G = {});
   function personOf(life) { var PP = people(); for (var i = 0; i < PP.length; i++) if (PP[i].life === life) return PP[i]; return null; }
 
   function drawPlayer() {
-    if (seat) { drawSeatedPlayer(); return; }
     // bóng dưới chân co giãn theo nhịp bước
     var sh = P.moving ? 1 - Math.abs(Math.sin(P.t * 14)) * 0.12 : 1;
     if (G.S.nhanVat === 'custom' && G.S.avatar) {
