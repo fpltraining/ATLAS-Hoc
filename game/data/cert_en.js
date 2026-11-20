@@ -91,6 +91,6 @@ var G = window.G || (window.G = {});
     { floor: 2, key: 'A1', name: 'Tầng 2 · A1', cefr: 'A1', hours: 50, out: 'Chào hỏi, giới thiệu, gọi món, mua đồ, hỏi và chỉ đường đơn giản.' },
     { floor: 3, key: 'A2 – B1', name: 'Tầng 3 · A2 – B1', cefr: 'A2 → B1', hours: 140, out: 'Kể chuyện đã qua, hẹn gặp, gọi điện, đi lại du lịch, đi khám, nói về công việc, nêu ý kiến.' },
     { floor: 4, key: 'B1 – B2', name: 'Tầng 4 · B1 – B2', cefr: 'B1 → B2', hours: 180, out: 'Nói tự nhiên 3 phút không ngắt, xử lý tình huống khó (khiếu nại, thương lượng), thảo luận có lý lẽ.' },
-    { final: true, name: 'Tốt nghiệp ConnectLife', cefr: 'Đầu ra giao tiếp', hours: 30, out: 'Bài thi đầu ra: nói chuyện 5 phút với người lạ về đời sống, tự xử lý 5 tình huống không có gợi ý, nghe hiểu hội thoại tốc độ thật. Qua bài này mới gọi là tốt nghiệp.', soon: true }
+    { final: true, name: 'Tốt nghiệp ConnectLife', cefr: 'Đầu ra giao tiếp', hours: 30, out: 'Bài thi đầu ra: nói chuyện 5 phút với người lạ về đời sống, tự xử lý 5 tình huống không có gợi ý, nghe hiểu hội thoại tốc độ thật. Qua bài này mới gọi là tốt nghiệp.' }
   ];
 })();

@@ -30,6 +30,7 @@ var G = window.G || (window.G = {});
     G.ROADMAP_EN.forEach(function (st) {
       var h = st.hours || 0;
       if (!st.final) { if (certs[st.key] || st.floor < cur) h = 0; else if (st.floor === cur) h = h * (1 - floorProgress(st.floor) * 0.85); }
+      else if (G.S.totNghiepCL) h = 0;
       sum += h; out.push({ st: st, left: h, cum: sum });
     });
     return out;
@@ -105,10 +106,10 @@ var G = window.G || (window.G = {});
       root.appendChild(planCard());
       root.appendChild(G.el('div.road', G.ROADMAP_EN.map(function (st) {
         var got = !st.final && certs[st.key], here = !st.final && st.floor === cur && !got;
-        var tag = st.final ? (st.soon ? '🔒 Mở khi có đủ 4 chứng chỉ' : '🎓') : got ? '🏅 Đã có chứng chỉ' + (got.noi ? ' · nói ' + got.noi + '/100' : '') : here ? '📍 Đang học' : st.soon ? '🚧 Đang xây' : st.floor < cur ? '✓ Vượt theo trình độ đầu vào' : '🔒 Chưa mở';
+        var tag = st.final ? (G.finalDone && G.finalDone() ? '🎓 Đã tốt nghiệp ConnectLife' : G.finalUnlocked && G.finalUnlocked() ? '🔓 Đã mở · vào thi ngay' : '🔒 Mở khi có Chứng chỉ Tầng 4') : got ? '🏅 Đã có chứng chỉ' + (got.noi ? ' · nói ' + got.noi + '/100' : '') : here ? '📍 Đang học' : st.soon ? '🚧 Đang xây' : st.floor < cur ? '✓ Vượt theo trình độ đầu vào' : '🔒 Chưa mở';
         return G.el('div.road-step' + (st.final ? '.final' : '') + (got ? '.got' : '') + (here ? '.here' : ''),
           G.el('div.road-dot', st.final ? '🎓' : String(st.floor)),
-          G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), G.el('span.road-tag', tag), G.el('span.road-eta', { id: 'eta-' + (st.final ? 'final' : st.floor) })));
+          G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), G.el('span.road-tag', tag), st.final && G.finalUnlocked && G.finalUnlocked() ? G.el('button.btn.seal.sm.road-go', { onclick: G.openFinalExam }, G.finalDone() ? 'Xem bài thi tốt nghiệp ›' : 'Vào thi Tốt nghiệp ConnectLife ›') : null, G.el('span.road-eta', { id: 'eta-' + (st.final ? 'final' : st.floor) })));
       })));
     }
 
@@ -124,6 +125,7 @@ var G = window.G || (window.G = {});
         stat(G.diplomas().filter(function (d) { return d.lang === 'en'; }).length + '/4', 'Chứng chỉ'),
         stat(G.S.tuKho.length, 'Từ cần ôn')
       ),
+      G.S.totNghiepCL ? G.el('div.dips', G.el('span.dip-chip.cl', '🎓 Tốt nghiệp ConnectLife · ' + G.S.totNghiepCL.luc.slice(0, 10).split('-').reverse().join('/'))) : null,
       G.diplomas().length ? G.el('div.dips', G.diplomas().map(function (d) {
         return G.el('span.dip-chip', '🏅 Chứng chỉ ' + (d.lang === 'en' ? 'tiếng Anh ' : 'tiếng Trung ') + d.level + ' · hiểu ' + d.info.diem + '/' + d.info.tong + (d.info.noi ? ' · nói ' + d.info.noi : ''));
       })) : null

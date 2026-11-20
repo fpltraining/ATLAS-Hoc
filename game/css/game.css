@@ -718,3 +718,11 @@ body { background: #f4e9dc url(../assets/paper_tile.webp) repeat; background-siz
 .plan-big b { font-size: 24px; color: #ffd56b; }
 .plan-big .small { color: rgba(255,255,255,.75); }
 @media (max-width: 480px) { .plan-row { grid-template-columns: 4.5em 1fr 7em; gap: 6px; } }
+
+/* thi Tốt nghiệp ConnectLife */
+.fl-play { display: flex; flex-direction: column; align-items: stretch; gap: 10px; margin: 12px 0; }
+.fl-listen { text-align: center; font-weight: 700; font-size: 18px; padding: 18px; border-radius: 16px; background: var(--paper); border: 1px dashed var(--line); }
+.fl-meter { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.fl-meter span { background: #1b2140; color: #fff; border-radius: 10px; padding: 4px 10px; font-size: 13px; font-weight: 700; }
+.road-go { margin-top: 6px; align-self: flex-start; }
+.dip-chip.cl { background: #1b2140; color: #ffd56b; }

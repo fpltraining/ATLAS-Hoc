@@ -129,9 +129,9 @@ export function setAiVoice(on) { aiOn = on !== false; }
 
 function loadManifest() {
   if (have) return;
-  have = { en: new Set(), zh: new Set() };
+  have = { en: new Set(), zh: new Set(), fix: new Set() };
   fetch('data/audio.json').then((r) => r.json()).then((m) => {
-    have = { en: new Set(m.en || []), zh: new Set(m.zh || []) };
+    have = { en: new Set(m.en || []), zh: new Set(m.zh || []), fix: new Set(m.fix || []) };
   }).catch(() => {});
 }
 
@@ -153,7 +153,7 @@ function playAi(text, { rate, onEnd, lang }) {
   try { speechSynthesis.cancel(); } catch { /* bỏ qua */ }
   a.onended = null; a.onerror = null;
   a.pause();
-  a.src = `audio/${lang}/${key}.mp3`;
+  a.src = `audio/${lang}/${key}.mp3` + (have.fix && have.fix.has(`${lang}/${key}`) ? '?v=3' : '');   // tệp đã chỉnh âm lượng: tải bản mới
   // Tốc độ trong Cài đặt (0,85 là bình thường) quy về tốc độ phát của tệp
   a.playbackRate = Math.max(0.5, Math.min(1.5, rate / 0.85));
   let fellBack = false;

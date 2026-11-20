@@ -3,7 +3,7 @@
     python tools/tts/make_audio.py            # đọc data-src/audio-list.json, ghi audio/<lang>/<khoá>.mp3
 
 Cài: pip install torch "kokoro>=0.9.4" "misaki[zh,en]" soundfile, cùng ffmpeg và espeak-ng.
-Chạy lại được nhiều lần: câu nào đã có tệp thì bỏ qua. Cuối cùng ghi data/audio.json
+Chạy lại được nhiều lần: câu nào đã có tệp thì bỏ qua. Tạo xong nhớ chạy tools/tts/loudness.py (cân âm lượng theo LUFS). Cuối cùng ghi data/audio.json
 (danh sách khoá đã có tệp) để app biết câu nào có giọng AI.
 """
 import json, os, subprocess, sys, time
@@ -53,7 +53,11 @@ def write_manifest():
         d = os.path.join(OUT, lang)
         if os.path.isdir(d):
             have[lang] = sorted(f[:-4] for f in os.listdir(d) if f.endswith('.mp3'))
-    json.dump(have, open(os.path.join(ROOT, 'data', 'audio.json'), 'w'), separators=(',', ':'))
+    mf = os.path.join(ROOT, 'data', 'audio.json')
+    try: have['fix'] = json.load(open(mf)).get('fix', [])   # tệp đã chỉnh âm lượng (tools/tts/loudness.py): giữ lại
+    except Exception: pass
+    json.dump(have, open(mf, 'w'), separators=(',', ':'))
+    have.pop('fix', None)
     return have
 
 def exists(it):
