@@ -378,3 +378,88 @@ Câu mở đầu chung (dán ở đầu mỗi câu lệnh):
 | GĐ5 | 4 video | 4 |
 
 Chưa có file nào thì game vẫn chạy bằng ô màu ghi tên file. Anh đặt tới đâu, game đẹp lên tới đó.
+
+---
+
+# Đơn 20/11 tối · gom một lần: hình + âm thanh + nhạc (sau khi ghép bản đồ 3D)
+
+Gửi lại tệp đúng tên dưới đây là em gắn vào game. Tệp nào chưa có thì game vẫn chạy (hình tạm, tiếng chim / dế / gió / sấm tạo bằng máy).
+
+## Đơn I · Hình (ChatGPT, dán một tin nhắn)
+
+```
+Make these images in the SAME style as the paper-craft watercolor pieces I sent before (Brightford town: watercolor paper cut-outs with a thin white paper border, soft shadow, warm cozy colors). Transparent background (PNG) for every object. One image per item, exact file names:
+
+1. shuttle_side.png — small yellow school minibus (8 seats, rounded, friendly, "SCHOOL" sign on top), side view facing LEFT, wheels visible, 1024×640.
+2. shuttle_front.png — the same minibus seen from the front, 640×640.
+3. shuttle_back.png — the same minibus seen from the back, 640×640.
+4. pc_shuttle_stop.png — a small stop sign post with a yellow school-bus icon and a little bench, 1024×1024.
+5. cloud_dark_1.png, cloud_dark_2.png, cloud_dark_3.png, cloud_dark_4.png — dark grey-blue storm clouds, paper cut-out, heavy and puffy, different shapes, wide (about 1024×560 each).
+6. moon_paper.png — a soft glowing crescent moon, paper cut-out, 512×512.
+7. map_campus_en.png — a NEW top-down town map tile 1536×1024 (same look as the Brightford map tiles): school grounds with a schoolyard, light paths, a basketball court, a small garden, bike parking area and 4 EMPTY grass lots for buildings; a light path enters at the middle of the TOP edge and another at the middle of the LEFT edge. No buildings drawn on the map.
+8. pc_school_big.png — a big friendly 4-floor language school building (red sign "Brightford English School", windows on 4 floors, wide entrance with steps), front view, 1024×1024.
+9. pc_school_gate.png — school gate with an arch sign "Brightford", 1024×1024.
+10. pc_flagpole.png — flagpole with a small flag, 512×1024.
+11. pc_basketball_hoop.png — basketball hoop on a pole, 512×1024.
+```
+
+## Đơn J · Âm thanh (app tạo hiệu ứng âm thanh, vd. ElevenLabs Sound Effects) · mp3
+
+Tiếng nền (lặp liền mạch, 60–90 giây, không có lời, không nhạc):
+
+| Tệp | Mô tả để dán vào app |
+|---|---|
+| amb_birds_morning.mp3 | gentle morning birdsong in a quiet small town, a few different birds, soft breeze, no traffic, seamless loop |
+| amb_city_day.mp3 | calm small-town daytime ambience, distant soft chatter without clear words, a car passing far away, light breeze, seamless loop |
+| amb_crickets_night.mp3 | peaceful night crickets with a soft warm wind, very calm, seamless loop |
+| amb_wind_storm.mp3 | wind picking up before a storm, leaves rustling, gusts, no rain yet, seamless loop |
+| amb_rain_light.mp3 | light rain on pavement and leaves, cozy, seamless loop |
+| amb_rain_heavy.mp3 | steady heavy rain with gutters dripping, seamless loop |
+| amb_classroom.mp3 | quiet classroom murmur, pencils writing, pages turning, no clear words, seamless loop |
+| amb_cafe.mp3 | cozy café, cups and spoons, espresso machine, soft murmur, seamless loop |
+| amb_market.mp3 | small friendly market, distant voices, paper bags, seamless loop |
+
+Tiếng ngắn (1 lần):
+
+| Tệp | Mô tả |
+|---|---|
+| sfx_thunder_far_1.mp3, sfx_thunder_far_2.mp3 | distant rolling thunder, 4 seconds |
+| sfx_paper_pop_1.mp3 … sfx_paper_pop_3.mp3 | a paper cut-out popping up from a pop-up book, soft crisp paper flip, 0.3 seconds |
+| sfx_step_grass_1.mp3 … _4 | one soft footstep on grass, very short |
+| sfx_step_stone_1.mp3 … _4 | one soft footstep on stone path, very short |
+| sfx_door_wood.mp3 | wooden door opening, 1 second |
+| sfx_school_bell.mp3 | friendly school bell ringing, 3 seconds |
+| sfx_chair_sit.mp3 | small wooden chair pulled out and someone sitting down, 1 second |
+| sfx_shuttle_arrive.mp3 | small minibus arriving, gentle brakes, door sliding open, 4 seconds |
+| sfx_shuttle_drive.mp3 | small minibus engine driving steady, seamless loop 10 seconds |
+| sfx_horn_soft.mp3 | short friendly car horn, two beeps |
+| sfx_ui_tap.mp3 | soft wooden UI tap, 0.1 seconds |
+| sfx_ui_correct.mp3 | bright happy two-note chime |
+| sfx_ui_wrong.mp3 | soft low "bonk", not harsh |
+| sfx_xp_coin.mp3 | small sparkle coin, 0.5 seconds |
+| sfx_level_up.mp3 | short cheerful level-up jingle, 2 seconds |
+| sfx_page_turn.mp3 | turning a book page |
+
+## Đơn K · Nhạc (Suno / Udio) · instrumental, không lời, mp3, 2–3 phút, đầu cuối nối vòng được
+
+Mỗi dòng là một prompt. Phong cách chung: cozy paper-craft town, warm, gentle, lo-fi friendly, không trống mạnh.
+
+| Tệp | Lúc phát | Prompt |
+|---|---|---|
+| music_lobby.mp3 | Sảnh, màn chọn | warm welcoming instrumental, soft piano, glockenspiel, pizzicato strings, 90 BPM, major key, cozy storybook feeling, loopable |
+| music_morning.mp3 | Phố buổi sáng 5–10h | bright gentle acoustic guitar and piano, light shaker, fresh morning walk, 100 BPM, optimistic, loopable |
+| music_noon.mp3 | Phố buổi trưa 10–14h | cheerful lo-fi jazz hop, upright bass, brushed drums, Rhodes piano, sunny town, 85 BPM, loopable |
+| music_afternoon.mp3 | Phố buổi chiều 14–17h | mellow nostalgic Rhodes and soft strings, relaxed afternoon, 80 BPM, loopable |
+| music_sunset.mp3 | Hoàng hôn 17–19h | golden hour, slow warm pads, felt piano and cello, a little bittersweet, 70 BPM, loopable |
+| music_night.mp3 | Tối 19–23h | calm lo-fi piano, soft vinyl crackle, warm bass, quiet evening streets, 65 BPM, loopable |
+| music_latenight.mp3 | Khuya 23–5h | very sparse ambient piano and music box, sleepy, peaceful, 55 BPM, loopable |
+| music_storm.mp3 | Mây đen kéo tới | low string tremolo, soft timpani rolls, a cozy sense of a storm coming, not scary, 75 BPM, loopable |
+| music_rain.mp3 | Trời mưa | gentle melancholic piano with soft rain-like textures, warm and cozy, 70 BPM, loopable |
+| music_school.mp3 | Hành lang trường | light curious marimba and piano, playful steps, 95 BPM, loopable |
+| music_class.mp3 | Trong lớp (rất nhỏ) | quiet focus study music, soft ambient pads, slow felt piano, no strong melody, 70 BPM, loopable |
+| music_test.mp3 | Bài kiểm tra | focused light tension, soft ticking percussion, minimal piano and synth arpeggio, 90 BPM, loopable |
+| music_cert.mp3 | Nhận chứng chỉ | uplifting orchestral pop fanfare, 25 seconds, ends with a clear final chord |
+| music_graduation.mp3 | Tốt nghiệp ConnectLife | emotional triumphant piano and strings, soft wordless choir, 75 seconds, ends with a clear final chord |
+| music_cafe.mp3 | Quán cà phê | bossa nova nylon guitar, soft brushes, upright bass, 100 BPM, loopable |
+| music_market.mp3 | Chợ, tiệm | playful ukulele, hand claps, light percussion, 110 BPM, loopable |
+| music_ride.mp3 | Ngồi xe buýt, xe đưa đón | light travelling groove, steady train-like rhythm, guitar and piano, 105 BPM, loopable |

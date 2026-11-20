@@ -38,7 +38,7 @@ var G = window.G || (window.G = {});
 
   /* ---------- radar ---------- */
   var RD = { cv: null, g: null, far: false, lx: null, ly: null, ang: -Math.PI / 2, off: {} };
-  var ICON = { home: '🏠', busstop: '🚌', metro: '🚇', school: '🏫', cafe: '☕', market: '🍎', hospital: '🏥', airport: '✈️', teahouse: '🍵' };
+  var ICON = { home: '🏠', busstop: '🚌', shuttle: '🚐', school: '🏫', cafe: '☕', market: '🍎', hospital: '🏥', airport: '✈️', teahouse: '🍵' };
   function sceneImage(sc, id) {
     if (sc.bg) { var a = G.asset(sc.bg); return a.ok ? a.img : null; }
     return null;

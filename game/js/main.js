@@ -27,8 +27,8 @@ var G = window.G || (window.G = {});
     if (sv && sv.city === id && sv.kind !== 'classroom') G.enterScene(v.canh, { x: v.x, y: v.y, dir: 'down' });
     else G.enterScene('home_en');
     var sc = G.S.viTri.canh;
-    G.kaiSay(sc === 'home_en' ? 'Chào ' + G.playerName() + '! Đi học thôi: bến xe buýt ở góc trên bên phải, ga tàu điện ở góc dưới bên phải.'
-      : sc === 'city_en' ? 'Trường Anh ngữ ở góc dưới bên trái, có biển màu đỏ. Bến xe buýt và ga tàu điện để về nhà ở hai góc dưới.'
+    G.kaiSay(sc === 'home_en' ? 'Chào ' + G.playerName() + '! Đi học thôi: đi bộ theo đường mòn bên phải sang Trung tâm là tới trường. Muốn nhanh thì gọi xe đưa đón ở góc dưới.'
+      : sc === 'city_en' ? 'Trường Anh ngữ ở góc dưới bên trái, có biển màu đỏ. Về nhà: đi bộ sang trái, hoặc đi xe buýt, xe đưa đón ở góc dưới.'
       : sc === 'city_zh' ? '欢迎！Chào mừng tới Trường Lạc trấn. Học viện Hán ngữ ở góc dưới bên trái, sân bay ở phía trên.' : 'Tiếp tục học nào!');
   };
 
