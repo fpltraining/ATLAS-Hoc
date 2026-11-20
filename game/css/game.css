@@ -73,6 +73,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tilt3d { position: absolute; left: 0; right: 0; top: 0; height: 20%; pointer-events: none; -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
   -webkit-mask-image: linear-gradient(#000 25%, transparent); mask-image: linear-gradient(#000 25%, transparent); }
 #play.w3d #world { background: transparent; }
+.sky3d.img { height: 40%; -webkit-mask-image: linear-gradient(#000 66%, transparent); mask-image: linear-gradient(#000 66%, transparent); }
+.sky3d .sk-img { position: absolute; inset: 0; background: center bottom / cover no-repeat; }
 .hud { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; gap: 10px; padding: max(10px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) 10px max(12px, env(safe-area-inset-left)); background: linear-gradient(rgba(27,33,64,.75), rgba(27,33,64,0)); color: #fff; pointer-events: none; }
 .hud > * { pointer-events: auto; }
 .hud b { flex: 1; font-size: 17px; text-shadow: 0 1px 3px rgba(0,0,0,.4); }
