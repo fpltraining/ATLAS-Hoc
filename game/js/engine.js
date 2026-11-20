@@ -437,29 +437,6 @@ var G = window.G || (window.G = {});
     fn(st.x, st.y + st.s * 0.41, st.s);
     ctx.restore();
   }
-  /* bạn cùng lớp: mỗi phòng một nhóm cố định (chọn theo tên phòng), ngồi các ghế còn trống */
-  function classmates() {
-    var S = G.SEATS && G.SEATS[sceneId], room = G.currentRoom || '';
-    if (!S) return [];
-    var sets = (G.TOWNIE_SETS || []).filter(function (n) { return G.asset('person_' + n + '_up.png').ok; });
-    if (!sets.length) return [];
-    var h = 0; for (var i = 0; i < room.length; i++) h = (h * 31 + room.charCodeAt(i)) % 9973;
-    var out = [], order = [1, 2, 4, 6, 9, 11, 13, 0, 7, 10, 12, 14, 3, 8];
-    for (var k = 0; k < 7; k++) {
-      var si = order[(k * 2 + h) % order.length]; if (si === S.me) continue;
-      var dup = false; for (var q = 0; q < out.length; q++) if (out[q].seat === S.list[si]) dup = true;
-      if (!dup) out.push({ seat: S.list[si], set: sets[(h + k * 3) % sets.length], ph: k * 1.7 });
-    }
-    return out;
-  }
-  function drawClassmate(c) {
-    seatedDraw(c.seat, function (x, foot, S) {
-      var br = 1 + Math.sin(Date.now() / 700 + c.ph) * 0.012;   // thở nhẹ
-      ctx.save(); ctx.translate(x, foot); ctx.scale(1, br); ctx.translate(-x, -foot);
-      G.drawAsset(ctx, 'person_' + c.set + '_up.png', x - S / 2, foot - S, S, S);
-      ctx.restore();
-    });
-  }
   function drawSeatedPlayer() {
     var who = G.S.nhanVat || 'han';
     seatedDraw(seat, function (x, foot, S) {
@@ -1114,7 +1091,6 @@ var G = window.G || (window.G = {});
     if (scene.buildings) for (var i = 0; i < scene.buildings.length; i++) items.push({ y: scene.buildings[i].y, draw: drawBuilding, o: scene.buildings[i] });
     if (scene.props) for (var pi = 0; pi < scene.props.length; pi++) items.push({ y: scene.props[pi].y, draw: drawProp, o: scene.props[pi] });
     if (scene.kind === 'classroom' && G.currentRoom) items.push({ y: TY(), draw: drawTeacher, o: G.ROOM_TEACHER[G.currentRoom] });
-    if (scene.kind === 'classroom') { var cms = classmates(); for (var cmi = 0; cmi < cms.length; cmi++) items.push({ y: cms[cmi].seat.y + 2, draw: drawClassmate, o: cms[cmi] }); }
     if (scene.kind === 'shop') items.push({ y: TY(), draw: drawTeacher, o: scene.npc });
     if (scene.room && G.drawRoomFront) items.push({ y: TY() + 30, draw: function () { G.drawRoomFront(ctx, scene); } });
     if (scene.lay && G.drawStandee) for (var sb = 0; sb < (scene.boards || []).length; sb++) items.push({ y: scene.boards[sb].y + 70, draw: function (b) { G.drawStandee(ctx, b); }, o: scene.boards[sb] });
