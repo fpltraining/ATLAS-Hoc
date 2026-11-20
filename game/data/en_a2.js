@@ -544,11 +544,11 @@ G.ROOMS = G.ROOMS || {};
     intro: ['Good morning! I\'m Mr. Grant. Let\'s talk about health, work and ideas.', 'Phòng A2-4 có 6 buổi (buổi 19–24). Học xong bạn kể được triệu chứng khi đi khám, hỏi cách dùng thuốc, nói về công việc, trả lời phỏng vấn xin việc, nêu ý kiến và nói lý do, kết quả, điều kiện.'],
     items: [], outro: 'Excellent! Now you\'re ready for the floor test.' };
 
-  /* ===== Phòng thi Tầng 3: 20 câu lấy ngẫu nhiên trong 360 câu của 24 buổi, đạt 16/20 là tốt nghiệp A2 – B1 ===== */
+  /* ===== Phòng thi Tầng 3: 20 câu lấy ngẫu nhiên trong 360 câu của 24 buổi, đạt 16/20 rồi thi nói (data/cert_en.js) là nhận Chứng chỉ ConnectLife · A2 – B1 ===== */
   var all = [], n;
   for (n = 1; n <= 24; n++) all = all.concat(G.ROOMS['en-a2-' + (n < 10 ? '0' : '') + n].items);
   G.ROOMS['en-a2-test'] = { id: 'en-a2-test', lang: 'en', title: 'Thi Tầng 3 · A2 – B1', teacher: 'kai',
     final: { lang: 'en', level: 'A2 – B1', levelEn: 'the A2 to B1 level' }, testN: 20, passN: 16,
-    intro: ['Welcome to the Floor 3 final! You\'ve come so far. Let\'s do this!', 'Bài thi 20 câu lấy ngẫu nhiên trong 360 câu của 24 buổi Tầng 3. Đạt từ 16/20 là tốt nghiệp A2 – B1 và nhận huy hiệu Ngôi sao thành phố.'],
+    intro: ['Welcome to the Floor 3 final! You\'ve come so far. Let\'s do this!', 'Bài thi 20 câu lấy ngẫu nhiên trong 360 câu của 24 buổi Tầng 3. Đạt từ 16/20 rồi thi nói là nhận Chứng chỉ ConnectLife · A2 – B1 và huy hiệu Ngôi sao thành phố.'],
     items: all, outro: 'Fantastic! You\'ve finished A2 to B1!' };
 })();

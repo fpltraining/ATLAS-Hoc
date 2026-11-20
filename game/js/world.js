@@ -266,6 +266,7 @@ G.SCENES.classroom_zh = {
 G.roomPassed = function (id) {
   var p = G.S.phong[id], r = G.ROOMS[id];
   if (r && r.group) { for (var i = 0; i < r.group.length; i++) if (!G.roomPassed(r.group[i])) return false; return true; }   // phòng nhóm: qua hết các buổi
+  if (r && r.final && G.CERT_SPEAK && G.CERT_SPEAK[id] && G.S.totNghiep) { var tn = G.S.totNghiep[r.final.lang]; return !!(tn && tn[r.final.level]); }   // phòng thi chứng chỉ: phải đạt cả phần nói
   return !!(p && p.diem >= ((r && r.passN) || 8));
 };
 /* Phòng đã mở chưa: phòng đầu luôn mở, phòng sau cần qua phòng trước */

@@ -60,7 +60,7 @@ var G = window.G || (window.G = {});
     { id: 'story1', img: 'badge_7.webp', name: 'Truyện đầu tiên', how: 'Đọc xong một chương truyện', ok: function () { return chapters() >= 1; } },
     { id: 'speak', img: 'badge_8.webp', name: 'Giọng nói chuẩn', how: 'Nói qua micro đạt từ 90 điểm 20 lần', ok: function () { return (G.S.noiTot || 0) >= 20; } },
     { id: 'reader', img: 'badge_9.webp', name: 'Mọt sách', how: 'Đọc xong 20 chương truyện', ok: function () { return chapters() >= 20; } },
-    { id: 'enA1', img: 'badge_10.webp', name: 'Tốt nghiệp A1', how: 'Qua bài thi cuối cấp A1 tiếng Anh', ok: gradEn },
+    { id: 'enA1', img: 'badge_10.webp', name: 'Chứng chỉ A1', how: 'Đạt chứng chỉ ConnectLife · A1 tiếng Anh', ok: gradEn },
     { id: 'perfect', img: 'badge_11.webp', name: 'Điểm tuyệt đối', how: 'Đúng hết bài kiểm tra của một phòng học', ok: function () { return !!G.S.tuyetDoi; } },
     { id: 'fullday', img: 'badge_12.webp', name: 'Ngày trọn vẹn', how: 'Xong cả 4 việc trong một ngày', ok: fullDay }
   ];

@@ -37,7 +37,7 @@ var G = window.G || (window.G = {});
     root.appendChild(G.el('div.cities', CITIES.map(function (c) {
       var open = c.state === 'open';
       var z = rooms(G.ZH_HALL_DOORS);
-      var prog = c.id === 'en' ? (G.S.totNghiep.en && G.S.totNghiep.en.A1 ? '🎓 Đã tốt nghiệp A1 · ' + r.stars + '★' : G.enFloorNow() === 1 ? '🏫 Tầng 1 Nền tảng · ' + foundDone() + '/30 buổi' : r.done + '/5 phòng A1 · ' + r.stars + '★')
+      var prog = c.id === 'en' ? (G.S.totNghiep.en && G.S.totNghiep.en.A1 ? '🏅 Chứng chỉ A1 · ' + r.stars + '★' : G.enFloorNow() === 1 ? '🏫 Tầng 1 Nền tảng · ' + foundDone() + '/30 buổi' : r.done + '/5 phòng A1 · ' + r.stars + '★')
         : c.id === 'zh' ? (G.S.totNghiep.zh && G.S.totNghiep.zh.HSK1 ? '🎓 Đã tốt nghiệp HSK1 · ' : z.done + '/6 phòng HSK1 · ') + z.stars + '★' : '';
       return G.el('button.city' + (open ? '' : '.soon'), { onclick: function () { if (open) G.goCity(c.id); else G.toast(c.name + ': ' + (c.note || 'sắp ra mắt')); } },
         G.imgEl(c.card, 'city-img'),
@@ -48,6 +48,20 @@ var G = window.G || (window.G = {});
       );
     })));
 
+    // lộ trình tới đầu ra giao tiếp: mỗi tầng một Chứng chỉ ConnectLife, cuối cùng là Tốt nghiệp ConnectLife
+    if (G.ROADMAP_EN) {
+      var cur = G.enFloorNow(), certs = (G.S.totNghiep && G.S.totNghiep.en) || {};
+      root.appendChild(G.el('h2.sec', 'Lộ trình tới giao tiếp'));
+      root.appendChild(G.el('p.small.faint.road-note', 'Mỗi tầng học xong thi 2 phần (hiểu và nói) để nhận Chứng chỉ ConnectLife. Chỉ khi qua bài thi đầu ra giao tiếp mới là Tốt nghiệp ConnectLife.'));
+      root.appendChild(G.el('div.road', G.ROADMAP_EN.map(function (st) {
+        var got = !st.final && certs[st.key], here = !st.final && st.floor === cur && !got;
+        var tag = st.final ? (st.soon ? '🔒 Mở khi có đủ 4 chứng chỉ' : '🎓') : got ? '🏅 Đã có chứng chỉ' + (got.noi ? ' · nói ' + got.noi + '/100' : '') : here ? '📍 Đang học' : st.soon ? '🚧 Đang xây' : st.floor < cur ? '✓ Vượt theo trình độ đầu vào' : '🔒 Chưa mở';
+        return G.el('div.road-step' + (st.final ? '.final' : '') + (got ? '.got' : '') + (here ? '.here' : ''),
+          G.el('div.road-dot', st.final ? '🎓' : String(st.floor)),
+          G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), G.el('span.road-tag', tag)));
+      })));
+    }
+
     var who = G.S.nhanVat || 'han';
     root.appendChild(G.el('h2.sec', 'Hồ sơ của bạn'));
     root.appendChild(G.el('div.profile',
@@ -57,10 +71,11 @@ var G = window.G || (window.G = {});
         stat(G.S.xp, 'XP'),
         stat(G.S.chuoi.hienTai + ' ngày', 'Chuỗi học'),
         stat(r.done + '/5', 'Phòng A1 đã qua'),
+        stat(G.diplomas().filter(function (d) { return d.lang === 'en'; }).length + '/4', 'Chứng chỉ'),
         stat(G.S.tuKho.length, 'Từ cần ôn')
       ),
       G.diplomas().length ? G.el('div.dips', G.diplomas().map(function (d) {
-        return G.el('span.dip-chip', '🎓 ' + (d.lang === 'en' ? 'Tiếng Anh ' : 'Tiếng Trung ') + d.level + ' · ' + d.info.diem + '/' + d.info.tong);
+        return G.el('span.dip-chip', '🏅 Chứng chỉ ' + (d.lang === 'en' ? 'tiếng Anh ' : 'tiếng Trung ') + d.level + ' · hiểu ' + d.info.diem + '/' + d.info.tong + (d.info.noi ? ' · nói ' + d.info.noi : ''));
       })) : null
     ));
 

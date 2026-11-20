@@ -1,15 +1,15 @@
 /* Huy hiệu trên đầu theo tầng của Trường Anh ngữ Brightford (hình giấy anh Han đặt ChatGPT: fbadge_1 … fbadge_4.png).
-   Tốt nghiệp tầng nào thì đội huy hiệu tầng đó; bài kiểm tra đầu vào cũng tính (A1 → tầng 1, A2 → tầng 2, B1 → tầng 3, B2 → tầng 4).
+   Có chứng chỉ tầng nào thì đội huy hiệu tầng đó; bài kiểm tra đầu vào cũng tính (A1 → tầng 1, A2 → tầng 2, B1 → tầng 3, B2 → tầng 4).
    Chưa có huy hiệu nào thì trên đầu để trống. Rank 9 bậc theo điểm (Đồng → Chiến Thần) chỉ còn ở trang hồ sơ.
    Chưa có tệp hình thì giữ huy hiệu rank cũ trên đầu như trước. */
 var G = window.G || (window.G = {});
 
 (function () {
   G.FLOOR_BADGES = [
-    { n: 1, img: 'fbadge_1.png', name: 'Tân binh Brightford', floor: 'Tầng 1 · Nền tảng', how: 'Tốt nghiệp Tầng 1 · Nền tảng' },
-    { n: 2, img: 'fbadge_2.png', name: 'Nhà thám hiểm', floor: 'Tầng 2 · A1', how: 'Tốt nghiệp Tầng 2 · A1' },
-    { n: 3, img: 'fbadge_3.png', name: 'Ngôi sao thành phố', floor: 'Tầng 3 · A2 – B1', how: 'Tốt nghiệp Tầng 3 · A2 – B1' },
-    { n: 4, img: 'fbadge_4.png', name: 'Bậc thầy ngôn ngữ', floor: 'Tầng 4 · B1 – B2', how: 'Tốt nghiệp Tầng 4 · B1 – B2' }
+    { n: 1, img: 'fbadge_1.png', name: 'Tân binh Brightford', floor: 'Tầng 1 · Nền tảng', how: 'Đạt chứng chỉ Tầng 1 · Nền tảng' },
+    { n: 2, img: 'fbadge_2.png', name: 'Nhà thám hiểm', floor: 'Tầng 2 · A1', how: 'Đạt chứng chỉ Tầng 2 · A1' },
+    { n: 3, img: 'fbadge_3.png', name: 'Ngôi sao thành phố', floor: 'Tầng 3 · A2 – B1', how: 'Đạt chứng chỉ Tầng 3 · A2 – B1' },
+    { n: 4, img: 'fbadge_4.png', name: 'Bậc thầy ngôn ngữ', floor: 'Tầng 4 · B1 – B2', how: 'Đạt chứng chỉ Tầng 4 · B1 – B2' }
   ];
   function has(n) { return !!(G.ASSET_REV && G.ASSET_REV[n]); }
   G.floorBadgeReady = function () { return has('fbadge_1.png'); };

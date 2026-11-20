@@ -122,7 +122,7 @@ var G = window.G || (window.G = {});
       if (nr && nr.floor !== scene.floor) return 'Đây là ' + scene.title + '. Lớp của bạn ở Tầng ' + nr.floor + ' · ' + G.floorInfo(nr.floor).name + ': đi thang máy bên phải nhé!';
     }
     for (var i = 0; i < d.length; i++) if (!G.roomPassed(d[i].room)) return i === 0 ? 'Đây là ' + scene.title + '. Phòng ' + d[0].label + ' ở cửa đầu tiên bên trái!' : 'Phòng nên học tiếp: ' + d[i].label + ' (cửa thứ ' + (i + 1) + ' từ trái sang).';
-    return zh ? 'Bạn đã tốt nghiệp HSK1! HSK2 sẽ mở ở bản cập nhật sau.' : scene.floor === 1 ? 'Bạn đã xong Tầng 1 · Nền tảng! Đi thang máy lên Tầng 2 học A1.' : scene.floor === 3 ? 'Bạn đã học hết các phòng đang mở của Tầng 3. Phòng mới sắp có!' : 'Bạn đã tốt nghiệp A1! Đi thang máy lên Tầng 3 học A2 – B1.';
+    return zh ? 'Bạn đã tốt nghiệp HSK1! HSK2 sẽ mở ở bản cập nhật sau.' : scene.floor === 1 ? 'Bạn đã xong Tầng 1 · Nền tảng! Đi thang máy lên Tầng 2 học A1.' : scene.floor === 3 ? 'Bạn đã có chứng chỉ Tầng 3! Tầng 4 · B1 – B2 đang được xây.' : 'Bạn đã có chứng chỉ A1! Đi thang máy lên Tầng 3 học A2 – B1.';
   }
 
   function useBuilding(b) {
@@ -184,11 +184,11 @@ var G = window.G || (window.G = {});
     }
     var rows = G.EN_FLOORS.slice().reverse().map(function (f) {
       var open = G.floorUnlocked(f.n), grad = G.S.totNghiep.en && f.grad && G.S.totNghiep.en[f.grad];
-      var need = f.n === 3 ? 'Tốt nghiệp A1' : 'Tốt nghiệp Nền tảng';
-      var tag = f.soon ? '🚧 Đang xây' : f.n === cur ? '📍 Bạn đang ở đây' : grad ? '🎓 Đã tốt nghiệp' : open ? 'Đã mở' : '🔒 ' + need + ' để mở';
+      var need = f.n === 3 ? 'Đạt chứng chỉ A1' : 'Đạt chứng chỉ Nền tảng';
+      var tag = f.soon ? '🚧 Đang xây' : f.n === cur ? '📍 Bạn đang ở đây' : grad ? '🏅 Đã có chứng chỉ' : open ? 'Đã mở' : '🔒 ' + need + ' để mở';
       return G.el('button.fl-row' + (f.soon || !open ? '.off' : '') + (f.n === cur ? '.cur' : ''), { onclick: function () {
         if (f.soon) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' · ' + f.name + ' đang được xây. Sắp mở!'); return; }
-        if (!open) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' mở khi bạn ' + (f.n === 3 ? 'tốt nghiệp A1 (thi A1 đạt 16/20) hoặc kiểm tra đầu vào từ A2.' : 'tốt nghiệp Tầng 1 · Nền tảng (thi đạt 16/20).')); return; }
+        if (!open) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' mở khi bạn ' + (f.n === 3 ? 'đạt chứng chỉ A1 (thi hiểu và thi nói) hoặc kiểm tra đầu vào từ A2.' : 'đạt chứng chỉ Tầng 1 · Nền tảng (thi hiểu và thi nói).')); return; }
         go(f);
       } },
         G.el('b.fl-n', String(f.n)),
@@ -448,7 +448,7 @@ var G = window.G || (window.G = {});
   function bld(id) { var bs = scene.buildings || []; for (var i = 0; i < bs.length; i++) if (bs[i].id === id) return bs[i]; return null; }
   function nextRoom() {
     var now = G.enFloorNow(), order = [now], f, i;
-    for (f = 1; f <= G.EN_FLOORS.length; f++) if (f !== now && G.floorUnlocked(f)) order.push(f);
+    for (f = now + 1; f <= G.EN_FLOORS.length; f++) if (G.floorUnlocked(f)) order.push(f);   // chỉ chỉ lên tầng trên: tầng dưới đã vượt theo đầu vào thì không kéo xuống
     for (var k = 0; k < order.length; k++) {
       var d = G[G.floorInfo(order[k]).doors];
       for (i = 0; i < d.length; i++) if (G.ROOMS[d[i].room] && !G.roomPassed(d[i].room)) return { door: d[i], idx: i, floor: order[k] };
