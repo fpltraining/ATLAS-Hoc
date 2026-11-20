@@ -67,6 +67,11 @@ var G = window.G || (window.G = {});
       })) : null
     ));
 
+    // huy hiệu trên đầu theo tầng (khi đã có hình)
+    var fbg = G.floorBadgeGrid && G.floorBadgeGrid();
+    if (fbg) { root.appendChild(G.el('h2.sec', 'Huy hiệu trên đầu')); root.appendChild(fbg); }
+    if (G.checkFloorBadge) setTimeout(G.checkFloorBadge, 700);
+
     if (G.weeklyChart) {
       root.appendChild(G.el('h2.sec', 'Đầu ra của bạn'));
       root.appendChild(G.el('div.out-row',

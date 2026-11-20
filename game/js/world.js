@@ -53,8 +53,8 @@ G.EN_F1_DOORS = [
 G.EN_FLOORS = [
   { n: 1, name: 'Nền tảng', cefr: 'A0 → A1', sub: 'Phát âm, 600 từ lõi, ngữ pháp cơ bản · 30 buổi', scene: 'en_hall_1', doors: 'EN_F1_DOORS', grad: 'Nền tảng' },
   { n: 2, name: 'A1', cefr: 'A1', sub: 'Giao tiếp hằng ngày như người bản xứ · 4 phòng và thi A1', scene: 'en_hall', doors: 'EN_HALL_DOORS', grad: 'A1' },
-  { n: 3, name: 'A2 – B1', cefr: 'A2 → B1', sub: 'Câu dài, đọc truyện dễ, nói 90 giây không ngắt', soon: true },
-  { n: 4, name: 'B1 – B2', cefr: 'B1 → B2', sub: 'Đọc rộng, nói trôi chảy, viết mạch lạc', soon: true }
+  { n: 3, name: 'A2 – B1', cefr: 'A2 → B1', sub: 'Câu dài, đọc truyện dễ, nói 90 giây không ngắt', grad: 'A2 – B1', soon: true },
+  { n: 4, name: 'B1 – B2', cefr: 'B1 → B2', sub: 'Đọc rộng, nói trôi chảy, viết mạch lạc', grad: 'B1 – B2', soon: true }
 ];
 G.ROOM_TEACHER = { 'en-n1': 'nora', 'en-n2': 'nora', 'en-n3': 'nora', 'en-n4': 'nora', 'en-n-test': 'kai',
   'en-a1-1': 'emma', 'en-a1-2': 'tom', 'en-a1-3': 'lily', 'en-a1-4': 'sam', 'en-a1-test': 'kai',

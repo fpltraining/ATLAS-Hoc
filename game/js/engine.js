@@ -57,6 +57,7 @@ var G = window.G || (window.G = {});
     G.S.viTri = { canh: id, x: Math.round(P.x), y: Math.round(P.y) };
     G.save();
     var PH = people(); for (var ph = 0; ph < PH.length; ph++) if (PH[ph].hx !== undefined) { PH[ph].x = PH[ph].hx; PH[ph].pmov = false; }   // NPC đi dạo: vào cảnh thì đứng lại chỗ cũ
+    if (G.checkFloorBadge && scene.kind === 'city') setTimeout(G.checkFloorBadge, 900);   // huy hiệu mới (vd. vừa kiểm tra đầu vào): chúc mừng khi ra phố
     camSnap = true; spawnTown(); fx = []; hudT = 0; weatherHint(); makePuddles();
     if (G.rainSound) G.rainSound(scene.kind === 'city' && G.weather() === 'rain');
     document.getElementById('hud-title').textContent = scene.title;
@@ -887,7 +888,7 @@ var G = window.G || (window.G = {});
     for (var j = 0; j < items.length; j++) items[j].draw(items[j].o);
     if (scene.buildings) for (var bl = 0; bl < scene.buildings.length; bl++) drawBuildingLabel(scene.buildings[bl]);
     // huy hiệu rank lơ lửng trên đầu nhân vật
-    if (G.drawRankBadge) G.drawRankBadge(ctx, P.x, P.y - (raining() ? 170 : 104), P.moving, Date.now() / 1000);   // trời mưa: huy hiệu nằm trên chiếc ô
+    if (G.drawHeadBadge) G.drawHeadBadge(ctx, P.x, P.y - (raining() ? 170 : 104), P.moving, Date.now() / 1000);   // huy hiệu tầng (trời mưa: nằm trên chiếc ô)
 
     if (scene.kind === 'hall') drawDoorPlates();
     updateQuest();

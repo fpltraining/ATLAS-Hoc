@@ -620,3 +620,23 @@ body { background: #f4e9dc url(../assets/paper_tile.webp) repeat; background-siz
 #lobby .btn { background: #fffaf1; border-color: #e3d3b8; color: var(--ink); box-shadow: 0 2px 0 #e3d3b8; }
 #lobby .btn.seal { background: linear-gradient(#e46b50, #c94f39); border-color: #b9462f; color: #fff; box-shadow: 0 3px 0 #a5402d; }
 @media (max-width: 680px) { #lobby .lhero { grid-template-columns: 1fr; } .clay-btn { width: 100%; } }
+
+/* huy hiệu trên đầu theo tầng: lưới ở trang hồ sơ, màn chúc mừng; vệt sáng quét qua như clip mẫu */
+.fb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.fb { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 3px; padding: 12px 10px; border-radius: 18px;
+  background: var(--paper); border: 1px solid var(--line); box-shadow: 0 3px 0 #e6d8bf, 0 8px 16px rgba(90,60,30,.07); }
+.fb.cur { border-color: #d95a40; box-shadow: 0 0 0 2px #f3b9a8, 0 3px 0 #e6d8bf; }
+.fb.lock .fb-pic { filter: grayscale(1) opacity(.45); }
+.fb.lock .fb-pic::after { display: none; }
+.fb-pic, .fb-big { position: relative; border-radius: 50%; overflow: hidden; }
+.fb-pic { width: 96px; height: 96px; }
+.fb-big { width: 180px; height: 180px; margin: 6px auto 4px; }
+.fb-img { width: 100%; height: 100%; }
+.fb-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.shine::after { content: ''; position: absolute; inset: -20%; pointer-events: none;
+  background: linear-gradient(115deg, transparent 38%, rgba(255,252,235,.8) 50%, transparent 62%);
+  transform: translateX(-120%); animation: fb-shine 3.5s ease-in-out infinite; }
+@keyframes fb-shine { 0% { transform: translateX(-120%); } 32%, 100% { transform: translateX(120%); } }
+.fb-card { text-align: center; }
+.fb-card h2 { margin: 4px 0; color: #7a4526; }
+@media (prefers-reduced-motion: reduce) { .shine::after { animation: none; display: none; } }
