@@ -1,6 +1,6 @@
 """Cân bằng âm lượng các tệp giọng AI để nghe không lúc to lúc nhỏ.
 
-    python tools/tts/loudness.py [số luồng]
+    python tools/tts/loudness.py [số luồng] [tệp danh sách khoá]   # có danh sách (mỗi dòng en/abcd1234) thì chỉ đo các tệp đó
 
 Đo độ to cảm nhận (LUFS, chuẩn EBU R128) của mọi tệp trong audio/en và audio/zh. Tệp nào lệch quá 1,5 LU so với mức chung
 (-18,7 LUFS, mức của đa số tệp) thì tăng / giảm đều cả tệp về mức chung, có giới hạn đỉnh để không vỡ tiếng.
@@ -27,6 +27,7 @@ def fix(p, cur):
 if __name__ == '__main__':
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     files = [os.path.join(AUD, l, f) for l in ('en', 'zh') if os.path.isdir(os.path.join(AUD, l)) for f in sorted(os.listdir(os.path.join(AUD, l))) if f.endswith('.mp3')]
+    if len(sys.argv) > 2: files = [os.path.join(AUD, k.strip() + '.mp3') for k in open(sys.argv[2]) if k.strip() and os.path.exists(os.path.join(AUD, k.strip() + '.mp3'))]
     print('Đo', len(files), 'tệp', flush=True)
     with ThreadPoolExecutor(n) as ex: vals = list(ex.map(lufs, files))
     ok = [v for v in vals if v is not None and v > -70]

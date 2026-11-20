@@ -122,7 +122,7 @@ var G = window.G || (window.G = {});
       if (nr && nr.floor !== scene.floor) return 'Đây là ' + scene.title + '. Lớp của bạn ở Tầng ' + nr.floor + ' · ' + G.floorInfo(nr.floor).name + ': đi thang máy bên phải nhé!';
     }
     for (var i = 0; i < d.length; i++) if (!G.roomPassed(d[i].room)) return i === 0 ? 'Đây là ' + scene.title + '. Phòng ' + d[0].label + ' ở cửa đầu tiên bên trái!' : 'Phòng nên học tiếp: ' + d[i].label + ' (cửa thứ ' + (i + 1) + ' từ trái sang).';
-    return zh ? 'Bạn đã tốt nghiệp HSK1! HSK2 sẽ mở ở bản cập nhật sau.' : scene.floor === 1 ? 'Bạn đã xong Tầng 1 · Nền tảng! Đi thang máy lên Tầng 2 học A1.' : scene.floor === 4 ? 'Bạn đã có chứng chỉ Tầng 4! Bài thi đầu ra để Tốt nghiệp ConnectLife sẽ mở ở bản cập nhật sau.' : scene.floor === 3 ? 'Bạn đã có chứng chỉ Tầng 3! Đi thang máy lên Tầng 4 học B1 – B2.' : 'Bạn đã có chứng chỉ A1! Đi thang máy lên Tầng 3 học A2 – B1.';
+    return zh ? 'Bạn đã tốt nghiệp HSK1! HSK2 sẽ mở ở bản cập nhật sau.' : scene.floor === 1 ? 'Bạn đã xong Tầng 1 · Nền tảng! Đi thang máy lên Tầng 2 học A1.' : scene.floor === 4 ? (G.finalDone && G.finalDone() ? 'Bạn đã Tốt nghiệp ConnectLife! Ôn lại phòng nào cũng được.' : 'Bạn đã có chứng chỉ Tầng 4! Đi thang máy lên Tầng thượng thi Tốt nghiệp ConnectLife.') : scene.floor === 3 ? 'Bạn đã có chứng chỉ Tầng 3! Đi thang máy lên Tầng 4 học B1 – B2.' : 'Bạn đã có chứng chỉ A1! Đi thang máy lên Tầng 3 học A2 – B1.';
   }
 
   function useBuilding(b) {
@@ -194,6 +194,12 @@ var G = window.G || (window.G = {});
         G.el('b.fl-n', String(f.n)),
         G.el('span.fl-t', G.el('b', 'Tầng ' + f.n + ' · ' + f.name + ' '), G.el('span.fl-cefr', f.cefr), G.el('span.small', f.sub), G.el('span.fl-tag', tag)));
     });
+    // tầng thượng: phòng thi Tốt nghiệp ConnectLife (mở khi có Chứng chỉ Tầng 4)
+    var clOpen = G.finalUnlocked && G.finalUnlocked(), clDone = G.finalDone && G.finalDone();
+    rows.unshift(G.el('button.fl-row' + (clOpen ? '' : '.off'), { onclick: function () {
+      if (!clOpen) { G.sfx('wrong'); G.toast('Phòng thi Tốt nghiệp ConnectLife mở khi bạn có Chứng chỉ Tầng 4 · B1 – B2.'); return; }
+      close(); G.sfx('door'); G.openFinalExam();
+    } }, G.el('b.fl-n', '🎓'), G.el('span.fl-t', G.el('b', 'Tầng thượng · Thi Tốt nghiệp ConnectLife '), G.el('span.fl-cefr', 'Đầu ra giao tiếp'), G.el('span.small', 'Nghe hội thoại thật, tự xử lý tình huống, trò chuyện 5 phút với người lạ'), G.el('span.fl-tag', clDone ? '🎓 Đã tốt nghiệp' : clOpen ? '🔓 Đã mở' : '🔒 Đạt chứng chỉ Tầng 4 để mở'))));
     wrap = G.el('div.modal', { onclick: function (e) { if (e.target === wrap) close(); } }, G.el('div.choose.floors',
       G.el('h2', '🛗 Thang máy'),
       G.el('p.small', 'Chọn tầng muốn tới. Mỗi tầng là một cấp độ, học xong tầng dưới thì lên tầng trên.'),

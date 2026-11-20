@@ -81,7 +81,7 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
 {
   const vm = await import('node:vm');
   const ctx = { console }; ctx.window = ctx; ctx.G = {}; vm.createContext(ctx);
-  for (const f of ['game/data/en_a1.js', 'game/data/en_found.js', 'game/data/en_a2.js', 'game/data/en_b1.js', 'game/data/cert_en.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js', 'game/data/placement_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
+  for (const f of ['game/data/en_a1.js', 'game/data/en_found.js', 'game/data/en_a2.js', 'game/data/en_b1.js', 'game/data/cert_en.js', 'game/data/final_en.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js', 'game/data/placement_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
   const FEM = { emma: 1, lily: 1, rosa: 1, anna: 1, mom: 1, mia: 1, nora: 1, pat: 1, kim: 1, zoe: 1, lee: 1, ivy: 1, grace: 1 };
   for (const R of Object.values(ctx.G.ROOMS)) {
     if (R.lang !== 'en') continue;
@@ -113,6 +113,15 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
   }
   // lời chúc khi nhận Chứng chỉ ConnectLife (grad.js)
   for (const R of Object.values(ctx.G.ROOMS)) if (R.final && R.final.lang === 'en') for (const nm of ['Han', 'Minh', 'Kai']) add('en', `Congrats, ${nm}! You've earned your ConnectLife certificate for ${R.final.levelEn || R.final.level}. So proud of you!`, 'f');
+  // thi Tốt nghiệp ConnectLife (data/final_en.js): hội thoại nghe (giọng theo người nói), câu hỏi, câu mẫu, lời chúc tốt nghiệp
+  const FN = ctx.G.FINAL_EN;
+  if (FN) {
+    add('en', FN.intro, 'm');
+    for (const d of FN.listen) for (const [sx, , t] of d.lines) add('en', t, sx);
+    for (const f of FN.handle) { add('en', f.q, FEM[f.npc] ? 'f' : 'm'); f.sample.forEach((t) => add('en', t, 'm')); }
+    for (const t of FN.talk.turns) add('en', t.q, FEM[FN.talk.npc] ? 'f' : 'm');
+    for (const nm of ['Han', 'Minh', 'Kai']) add('en', `Congratulations, ${nm}! You are now a ConnectLife graduate. You can really communicate in English!`, 'f');
+  }
   // thi chứng chỉ phần nói (data/cert_en.js): câu người kia hỏi và câu mẫu
   for (const list of Object.values(ctx.G.CERT_SPEAK || {})) for (const f of list) { add('en', f.q, FEM[f.npc] ? 'f' : 'm'); f.sample.forEach((t) => add('en', t, 'm')); }
   {
