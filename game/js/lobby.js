@@ -17,6 +17,55 @@ var G = window.G || (window.G = {});
   function enRooms() { return rooms(G.EN_HALL_DOORS); }
   function foundDone() { var n = 0; for (var i = 1; i <= 30; i++) if (G.roomPassed('en-n-' + (i < 10 ? '0' : '') + i)) n++; return n; }
 
+  /* ---------- Ước tính thời gian: kéo phút mỗi ngày, ngày mỗi tuần → còn bao nhiêu giờ, khi nào có từng chứng chỉ ---------- */
+  function floorProgress(n) {   // phần đã học của một tầng (0 … 1)
+    var i, k = 0, all = 0;
+    if (n === 1) { for (i = 1; i <= 30; i++) { all++; if (G.roomPassed('en-n-' + (i < 10 ? '0' : '') + i)) k++; } }
+    else if (n === 2) { for (i = 0; i < G.EN_HALL_DOORS.length; i++) { all++; if (G.roomPassed(G.EN_HALL_DOORS[i].room)) k++; } }
+    else if (n === 3) { for (i = 1; i <= 24; i++) { all++; if (G.roomPassed('en-a2-' + (i < 10 ? '0' : '') + i)) k++; } }
+    return all ? k / all : 0;
+  }
+  function remainHours() {   // giờ còn lại tới từng bước (cộng dồn)
+    var cur = G.enFloorNow(), certs = (G.S.totNghiep && G.S.totNghiep.en) || {}, sum = 0, out = [];
+    G.ROADMAP_EN.forEach(function (st) {
+      var h = st.hours || 0;
+      if (!st.final) { if (certs[st.key] || st.floor < cur) h = 0; else if (st.floor === cur) h = h * (1 - floorProgress(st.floor) * 0.85); }
+      sum += h; out.push({ st: st, left: h, cum: sum });
+    });
+    return out;
+  }
+  function monthOf(days) { var p = G.vnParts(Date.now() + days * 86400000); return 'tháng ' + p.m + '/' + p.y; }
+  function span(days) { var m = days / 30.4; return m < 1.5 ? Math.max(1, Math.round(days / 7)) + ' tuần' : m < 24 ? Math.round(m) + ' tháng' : (Math.round(m / 12 * 10) / 10 + ' năm').replace('.', ','); }
+  function planCard() {
+    var cd = G.S.caiDat = G.S.caiDat || {}, mins = cd.phutNgay || 40, dpw = cd.ngayTuan || 6;
+    var out = G.el('div.plan-out'), minsL = G.el('b'), dpwL = G.el('b');
+    function draw() {
+      minsL.textContent = mins + ' phút / ngày'; dpwL.textContent = dpw + ' ngày / tuần';
+      var perWeek = mins * dpw / 60, rows = remainHours(), last = rows[rows.length - 1];
+      rows.forEach(function (r) {
+        var el = document.getElementById('eta-' + (r.st.final ? 'final' : r.st.floor)); if (!el) return;
+        el.textContent = r.left <= 0 ? '' : '⏱ Dự kiến ' + monthOf(r.cum / perWeek * 7) + ' (còn khoảng ' + Math.round(r.left) + ' giờ)';
+      });
+      var days = last.cum / perWeek * 7;
+      out.innerHTML = '';
+      out.appendChild(G.el('div.plan-big', G.el('span', '🎓 Tốt nghiệp ConnectLife khoảng'), G.el('b', monthOf(days)), G.el('span.small', 'sau khoảng ' + span(days) + ' · còn ' + Math.round(last.cum) + ' giờ học · ' + (Math.round(perWeek * 10) / 10 + '').replace('.', ',') + ' giờ mỗi tuần')));
+      var faster = Math.min(180, mins + 20);
+      if (mins < 180) out.appendChild(G.el('div.small.faint', 'Nếu học ' + faster + ' phút mỗi ngày: khoảng ' + span(last.cum / (faster * dpw / 60) * 7) + '.'));
+    }
+    function slider(min, max, step, val, on) {
+      return G.el('input.plan-range', { type: 'range', min: min, max: max, step: step, value: val, oninput: function (e) { on(+e.target.value); draw(); },
+        onchange: function () { cd.phutNgay = mins; cd.ngayTuan = dpw; G.save(); if (G.updateHud) G.updateHud(); } });
+    }
+    var card = G.el('div.plan',
+      G.el('b.plan-h', '⏱ Bạn học bao lâu mỗi ngày?'),
+      G.el('div.plan-row', G.el('span', 'Thời gian'), slider(10, 180, 5, mins, function (v) { mins = v; }), minsL),
+      G.el('div.plan-row', G.el('span', 'Số ngày'), slider(3, 7, 1, dpw, function (v) { dpw = v; }), dpwL),
+      out,
+      G.el('div.small.faint', 'Ước chừng theo số giờ cần để đạt từng cấp (gồm học bài, ôn tập và luyện nói ngoài phố), tính từ chỗ bạn đang học. Số phút bạn chọn cũng là mục tiêu mỗi ngày trên vòng tiến độ. Học đều mỗi ngày hiệu quả hơn học dồn.'));
+    draw(); setTimeout(draw, 0);   // vẽ ngay phần tổng; dòng ước tính từng tầng điền sau khi danh sách tầng đã có
+    return card;
+  }
+
   G.renderLobby = function () {
     var root = document.getElementById('lobby');
     root.innerHTML = '';
@@ -53,12 +102,13 @@ var G = window.G || (window.G = {});
       var cur = G.enFloorNow(), certs = (G.S.totNghiep && G.S.totNghiep.en) || {};
       root.appendChild(G.el('h2.sec', 'Lộ trình tới giao tiếp'));
       root.appendChild(G.el('p.small.faint.road-note', 'Mỗi tầng học xong thi 2 phần (hiểu và nói) để nhận Chứng chỉ ConnectLife. Chỉ khi qua bài thi đầu ra giao tiếp mới là Tốt nghiệp ConnectLife.'));
+      root.appendChild(planCard());
       root.appendChild(G.el('div.road', G.ROADMAP_EN.map(function (st) {
         var got = !st.final && certs[st.key], here = !st.final && st.floor === cur && !got;
         var tag = st.final ? (st.soon ? '🔒 Mở khi có đủ 4 chứng chỉ' : '🎓') : got ? '🏅 Đã có chứng chỉ' + (got.noi ? ' · nói ' + got.noi + '/100' : '') : here ? '📍 Đang học' : st.soon ? '🚧 Đang xây' : st.floor < cur ? '✓ Vượt theo trình độ đầu vào' : '🔒 Chưa mở';
         return G.el('div.road-step' + (st.final ? '.final' : '') + (got ? '.got' : '') + (here ? '.here' : ''),
           G.el('div.road-dot', st.final ? '🎓' : String(st.floor)),
-          G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), G.el('span.road-tag', tag)));
+          G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), G.el('span.road-tag', tag), G.el('span.road-eta', { id: 'eta-' + (st.final ? 'final' : st.floor) })));
       })));
     }
 

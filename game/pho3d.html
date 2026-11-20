@@ -12,6 +12,10 @@
   #c { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
   .sky { position: fixed; left: 0; right: 0; top: 0; height: 30vh; pointer-events: none; overflow: hidden; z-index: 1; transition: opacity 1s, filter 1s; }
   .sky img { position: absolute; left: 0; top: 0; will-change: transform; opacity: .72; filter: drop-shadow(0 6px 10px rgba(90,70,40,.12)); }
+  .tilt { position: fixed; left: 0; right: 0; pointer-events: none; z-index: 2; -webkit-backdrop-filter: blur(2.5px); backdrop-filter: blur(2.5px); }
+  .tilt.top { top: 0; height: 22vh; -webkit-mask-image: linear-gradient(#000 20%, transparent); mask-image: linear-gradient(#000 20%, transparent); }
+  .tilt.bot { bottom: 0; height: 8vh; -webkit-mask-image: linear-gradient(transparent, #000 75%); mask-image: linear-gradient(transparent, #000 75%); }
+  .vign { position: fixed; inset: 0; pointer-events: none; z-index: 2; background: radial-gradient(ellipse 75% 70% at 50% 55%, rgba(0,0,0,0) 60%, rgba(70,45,15,.22) 100%); }
   .glare { position: fixed; inset: 0; pointer-events: none; mix-blend-mode: screen; transition: background 1s; }
   .hud { position: fixed; top: 0; left: 0; right: 0; display: flex; align-items: center; gap: 10px; padding: max(10px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) 8px max(12px, env(safe-area-inset-left)); pointer-events: none; z-index: 5; }
   .hud > * { pointer-events: auto; }
@@ -38,12 +42,13 @@
 <canvas id="c"></canvas>
 <div id="sky" class="sky"></div>
 <div id="glare" class="glare"></div>
+<div class="tilt top"></div><div class="tilt bot"></div><div class="vign"></div>
 <div class="hud">
   <a class="hb" href="./" aria-label="Về game">🏠</a>
   <div id="ttl" class="ttl">Brightford</div>
   <div class="clock"><span id="clk">--:--</span><input id="hr" type="range" min="4" max="23.5" step="0.25" aria-label="Giờ trong ngày"><button id="live">Giờ thật</button></div>
 </div>
-<div id="tip" class="tip">Bản thử 3D · kéo cần bên trái để đi, chạm mặt đất để tới đó, hai ngón để phóng to thu nhỏ, kéo thanh giờ để xem nắng đổi</div>
+<div id="tip" class="tip">Bản thử 3D · đi tới đâu, cây cối nhà cửa bật lên tới đó · kéo cần bên trái để đi, chạm mặt đất để tới đó, hai ngón để phóng to thu nhỏ, kéo thanh giờ để xem nắng đổi</div>
 <div id="joy" class="joy"><div id="knob" class="knob"></div></div>
 <button id="act" class="act"></button>
 <div id="toast" class="toast"></div>
@@ -103,16 +108,31 @@
   function mat(n) { return MATS[n] || (MATS[n] = new THREE.MeshLambertMaterial({ map: tex(n), emissive: 0x5a5a5a, emissiveMap: tex(n), alphaTest: 0.5, side: THREE.DoubleSide })); }
   function dmat(n) { return DMATS[n] || (DMATS[n] = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking, map: tex(n), alphaTest: 0.5 })); }
   var PLANE = new THREE.PlaneGeometry(1, 1); PLANE.translate(0, 0.5, 0);
+  /* tấm giấy gấp đôi theo chiều dọc (như cây giấy trong clip anh Han gửi): nếp giữa nhô về phía người xem, hai nửa
+     hứng nắng khác nhau nên thấy rõ nếp gấp. depth: độ nhô của nếp (so với bề ngang tấm) */
+  function folded(depth) {
+    var gm = new THREE.PlaneGeometry(1, 1, 2, 1); gm.translate(0, 0.5, 0);
+    var pos = gm.attributes.position;
+    for (var i = 0; i < pos.count; i++) if (Math.abs(pos.getX(i)) < 0.01) pos.setZ(i, depth);
+    pos.needsUpdate = true; gm.computeVertexNormals(); return gm;
+  }
+  var FOLD_T = folded(0.16), FOLD_B = folded(0.06);
+  /* bật lên như sách pop-up: vật ở xa nằm rạp trên mặt giấy, nhân vật đi tới gần thì dựng đứng (có nảy) */
+  var POPS = [], POP_UP = 5.4, POP_DOWN = 6.8;
 
   /* tấm giấy đứng: chân tại (gx, gy) px toàn thành phố, cỡ s px, foot = tỉ lệ chân trong khung hình */
   function card(n, gx, gy, s, foot, opt) {
     opt = opt || {};
-    var g = new THREE.Group(), m = new THREE.Mesh(PLANE, opt.own ? mat(n).clone() : mat(n));
+    var g = new THREE.Group(), m = new THREE.Mesh(opt.fold === 'tree' ? FOLD_T : opt.fold === 'b' ? FOLD_B : PLANE, opt.own ? mat(n).clone() : mat(n));
     m.castShadow = true; m.receiveShadow = true; m.customDepthMaterial = dmat(n);
     m.position.y = -(1 - (foot || 0.96)) * s * U;
     g.add(m); g.scale.set(s * U, s * U, s * U); m.scale.set(1, 1, 1);
     g.position.set(gx * U, 0, gy * U); g.rotation.x = -LEAN;
     SC.add(g); g.userData.mesh = m;
+    if (opt.pop !== false) {   // người, xe đi lại thì luôn đứng; mọi vật khác bật lên khi tới gần
+      var pp = { g: g, a: 0, v: 0, up: false, wait: 0, x: g.position.x, z: g.position.z, jit: Math.random() * 0.12 };
+      g.rotation.x = -Math.PI / 2; g.userData.pop = pp; POPS.push(pp);
+    }
     return g;
   }
   /* bóng mềm dưới chân (bổ sung cho bóng đổ thật) */
@@ -159,45 +179,45 @@
     x.fillStyle = gr; x.fillRect(0, 0, 128, 128); return new THREE.CanvasTexture(c);
   }
   var GLOW = glowTex();
-  function plate(text, gx, gy) {   // biển tên nổi (luôn quay về phía camera)
+  function plate(text, gx, gy, pop) {   // biển tên nổi (luôn quay về phía camera); pop: hiện theo vật đã dựng
     var c = document.createElement('canvas'), x = c.getContext('2d'); x.font = '800 44px -apple-system, system-ui, sans-serif';
     var w = Math.ceil(x.measureText(text).width) + 56; c.width = w; c.height = 72; x = c.getContext('2d');
     x.fillStyle = 'rgba(27,33,64,.86)'; x.beginPath(); if (x.roundRect) x.roundRect(0, 0, w, 72, 36); else x.rect(0, 0, w, 72); x.fill();
     x.fillStyle = '#fff'; x.font = '800 44px -apple-system, system-ui, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(text, w / 2, 38);
     var t = new THREE.CanvasTexture(c); t.encoding = THREE.sRGBEncoding;
     var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: t, depthTest: false, transparent: true }));
-    sp.scale.set(w / 72 * 0.24, 0.24, 1); sp.position.set(gx * U, 0.16, gy * U + 0.25); sp.renderOrder = 10; SC.add(sp); PLATES.push(sp); return sp;
+    sp.scale.set(w / 72 * 0.24, 0.24, 1); sp.position.set(gx * U, 0.16, gy * U + 0.25); sp.renderOrder = 10; sp.userData.pop = pop; SC.add(sp); PLATES.push(sp); return sp;
   }
   DIST.forEach(function (d) {
     var s = d.s;
     (s.buildings || []).forEach(function (b) {
-      var S = b.s || 300, g = card(b.img, d.ox + b.x, d.oy + b.y, S, 0.975, { own: true });
+      var S = b.s || 300, g = card(b.img, d.ox + b.x, d.oy + b.y, S, 0.975, { own: true, fold: 'b' });
       FADE.push(g); blob(S * U * 0.38).position.set((d.ox + b.x) * U, 0.012, (d.oy + b.y - 10) * U);
       BUILD.push({ name: b.name, x: (d.ox + b.x) * U, z: (d.oy + b.y + 20) * U, b: b });
-      plate(b.name, d.ox + b.x, d.oy + b.y + 26);
+      plate(b.name, d.ox + b.x, d.oy + b.y + 26, g.userData.pop);
     });
     (s.props || []).forEach(function (p) {
-      var g = card(p.img, d.ox + p.x, d.oy + p.y, p.s, 0.96, { own: /tree|fountain/.test(p.img) });
+      var g = card(p.img, d.ox + p.x, d.oy + p.y, p.s, 0.96, { own: /tree|fountain/.test(p.img), fold: /tree|bush/.test(p.img) ? 'tree' : /fountain|kiosk|cart|news/.test(p.img) ? 'b' : null });
       if (/tree/.test(p.img)) { SWAY.push({ g: g, ph: Math.random() * 6, k: 0.6 + Math.random() * 0.5 }); FADE.push(g); }
-      if (/traffic_light/.test(p.img)) TLS.push({ x: (d.ox + p.x) * U, z: (d.oy + p.y) * U, s: p.s, lx: d.ox + p.x });
+      if (/traffic_light/.test(p.img)) TLS.push({ x: (d.ox + p.x) * U, z: (d.oy + p.y) * U, s: p.s, lx: d.ox + p.x, pop: g.userData.pop });
       if (/lamp/.test(p.img)) {
         var gl = new THREE.Sprite(new THREE.SpriteMaterial({ map: GLOW, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, opacity: 0 }));
         gl.scale.set(0.9, 0.9, 1); gl.position.set((d.ox + p.x) * U, p.s * U * 0.82, (d.oy + p.y) * U - 0.25); SC.add(gl);
         var pool = new THREE.Mesh(BLOBG, new THREE.MeshBasicMaterial({ map: GLOW, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, opacity: 0 }));
         pool.scale.set(2.2, 1, 1.4); pool.position.set((d.ox + p.x) * U, 0.015, (d.oy + p.y) * U + 0.1); SC.add(pool);
-        LAMPS.push(gl, pool);
+        gl.userData.pop = pool.userData.pop = g.userData.pop; LAMPS.push(gl, pool);
       }
     });
     ((G.PEOPLE && G.PEOPLE[d.id]) || []).forEach(function (o) {
       var n = G.NPCS[o.npc];
-      if (o.bimg) { var bs = o.bs || 210, g = card(o.bimg, d.ox + o.x, d.oy + o.y + 14, bs, 0.975, { own: true }); FADE.push(g); BUILD.push({ name: o.stall, x: (d.ox + o.x) * U, z: (d.oy + o.y + 34) * U, b: o }); plate((o.icon || '') + ' ' + o.stall, d.ox + o.x, d.oy + o.y + 40); return; }
+      if (o.bimg) { var bs = o.bs || 210, g = card(o.bimg, d.ox + o.x, d.oy + o.y + 14, bs, 0.975, { own: true, fold: 'b' }); FADE.push(g); BUILD.push({ name: o.stall, x: (d.ox + o.x) * U, z: (d.oy + o.y + 34) * U, b: o }); plate((o.icon || '') + ' ' + o.stall, d.ox + o.x, d.oy + o.y + 40, g.userData.pop); return; }
       if (!n || !n.img) return;
       var py = o.stall ? o.y - (o.simg ? 58 : 40) : o.y;
       var simg = !o.stall && has('walk_' + o.npc + '_down.png') ? 'walk_' + o.npc + '_down.png' : n.img;
       var np = card(simg, d.ox + o.x, d.oy + py, 124, 0.957); blob(0.22).position.set((d.ox + o.x) * U, 0.012, (d.oy + py) * U);
       STAND.push({ g: np, ph: Math.random() * 6 });
       if (o.simg) { var cs = o.ss || 280; card(o.simg, d.ox + o.x, d.oy + o.y + 12, cs, 0.975); }
-      plate(n.name, d.ox + o.x, d.oy + py + 22);
+      plate(n.name, d.ox + o.x, d.oy + py + 22, np.userData.pop);
     });
   });
 
@@ -249,7 +269,7 @@
   /* ---------- nhân vật đi bằng khung hình (đứng → bước 1 → đứng → bước 2), giống nhân vật chính ---------- */
   function walker(base, x, z, S, foot) {
     var w = { base: base, x: x, z: z, dir: 'down', t: 0, moving: false, S: S || 120, foot: foot || 0.957 };
-    w.g = card(firstFrame(base), x / U, z / U, w.S, w.foot, { own: true });
+    w.g = card(firstFrame(base), x / U, z / U, w.S, w.foot, { own: true, pop: false });
     w.blob = blob(0.24);
     return w;
   }
@@ -279,7 +299,7 @@
   var P = walker('player_han', START.x, START.z, 120, 0.957);
   var K, trail = [];
   if (has('kai_down_w1.png')) { K = walker('kai', P.x - 0.5, P.z + 0.3, 86, 490 / 512); K.blob.scale.set(0.36, 1, 0.16); }   // Kai có chân: bước như Han
-  else { K = { x: P.x - 0.5, z: P.z + 0.3, dir: 'down', t: 0, moving: false }; K.g = card('kai_follow.png', K.x / U, K.z / U, 82, 497 / 512, { own: true }); K.blob = blob(0.18); }
+  else { K = { x: P.x - 0.5, z: P.z + 0.3, dir: 'down', t: 0, moving: false }; K.g = card('kai_follow.png', K.x / U, K.z / U, 82, 497 / 512, { own: true, pop: false }); K.blob = blob(0.18); }
 
   /* người đi đường: mỗi khu vài người, đi tới điểm ngẫu nhiên rồi dừng nghỉ */
   var SETS = (G.TOWNIE_SETS || []).filter(function (s) { return has('person_' + s + '_down_w1.png') || has('person_' + s + '_left_w1.png'); });
@@ -329,7 +349,7 @@
     TLS.forEach(function (t) {
       var h = (0.96 - LIGHT_Y[LIGHT]) * t.s * U;
       t.glow.position.set(t.x, h * Math.cos(LEAN), t.z - h * Math.sin(LEAN) + 0.03);
-      t.glow.material.color.setHex(LIGHT_C[LIGHT]); t.glow.material.opacity = 0.75 + 0.25 * Math.sin(T * 6);
+      t.glow.material.color.setHex(LIGHT_C[LIGHT]); t.glow.material.opacity = (0.75 + 0.25 * Math.sin(T * 6)) * (t.pop ? Math.max(0, Math.min(1, t.pop.a)) : 1);
     });
   }
   function updateCars(dt) {
@@ -401,6 +421,34 @@
     }
     skyEl.style.opacity = night > 0.5 ? 0.35 : 1 - night * 0.5;
     skyEl.style.filter = night > 0.1 ? 'brightness(' + (1 - night * 0.45).toFixed(2) + ')' : 'none';
+  }
+
+  /* ---------- bật lên khi tới gần: lò xo có nảy, vật gần dựng trước, tiếng giấy lật khe khẽ ---------- */
+  var AC = null, lastFlip = 0;
+  function flip(vol) {
+    var now = performance.now(); if (!AC || now - lastFlip < 70) return; lastFlip = now;
+    try {
+      var len = 0.09, buf = AC.createBuffer(1, Math.floor(AC.sampleRate * len), AC.sampleRate), ch = buf.getChannelData(0);
+      for (var i = 0; i < ch.length; i++) { var k = i / ch.length; ch[i] = (Math.random() * 2 - 1) * Math.pow(1 - k, 3) * (k < 0.08 ? k / 0.08 : 1); }
+      var src = AC.createBufferSource(), f = AC.createBiquadFilter(), gn = AC.createGain();
+      src.buffer = buf; f.type = 'bandpass'; f.frequency.value = 1800 + Math.random() * 1400; f.Q.value = 0.9; gn.gain.value = vol;
+      src.connect(f); f.connect(gn); gn.connect(AC.destination); src.start();
+    } catch (e) { /* không có âm thanh thì thôi */ }
+  }
+  function unlockAudio() { if (AC) return; try { AC = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { AC = null; } }
+  addEventListener('touchstart', unlockAudio, { passive: true }); addEventListener('mousedown', unlockAudio);
+  function updatePops(dt) {
+    for (var i = 0; i < POPS.length; i++) {
+      var p = POPS[i], dx = p.x - P.x, dz = (p.z - P.z) * (p.z < P.z ? 0.7 : 1), d = Math.sqrt(dx * dx + dz * dz);
+      if (!p.up && d < POP_UP) { p.up = true; p.wait = p.jit + d / POP_UP * 0.22; }
+      else if (p.up && d > POP_DOWN) { p.up = false; p.wait = p.jit * 0.5; }
+      if (p.wait > 0) { p.wait -= dt; if (p.wait <= 0 && p.up && d < POP_UP + 0.5) flip(0.05 * (1 - d / POP_UP) + 0.012); else if (p.wait > 0) continue; }
+      var tgt = p.up ? 1 : 0, k = p.up ? 110 : 60, damp = p.up ? 10 : 14;
+      p.v += ((tgt - p.a) * k - p.v * damp) * dt; p.a += p.v * dt;
+      if (!p.up && p.a < 0) { p.a = 0; p.v = 0; }
+      p.g.rotation.x = -Math.PI / 2 + p.a * (Math.PI / 2 - LEAN);
+      var mm = p.g.userData.mesh; mm.castShadow = p.a > 0.25;
+    }
   }
 
   /* ---------- điều khiển: cần nổi, bàn phím, chạm mặt đất để đi tới, hai ngón phóng to ---------- */
@@ -494,7 +542,7 @@
     if (up < 0) dir.set(-0.35, 1.1, -0.4);   // đêm: ánh trăng nhạt
     SUN.position.copy(P.g.position).add(dir.normalize().multiplyScalar(30)); SUN.target.position.copy(P.g.position);
     night = up < -0.02 ? 1 : up < 0.18 ? 1 - (up + 0.02) / 0.2 : 0;
-    for (var l = 0; l < LAMPS.length; l++) LAMPS[l].material.opacity = night * (l % 2 ? 0.55 : 0.95);
+    for (var l = 0; l < LAMPS.length; l++) { var lp = LAMPS[l].userData.pop; LAMPS[l].material.opacity = night * (l % 2 ? 0.55 : 0.95) * (lp ? Math.max(0, Math.min(1, lp.a)) : 1); }
     var gx = 50 + Math.cos(ang) * 42, gi = up > 0 ? (0.16 + 0.32 * (1 - up)) : 0;
     glare.style.background = gi ? 'radial-gradient(circle at ' + gx + '% -8%, rgba(255,214,150,' + gi.toFixed(2) + '), rgba(255,214,150,0) 55%)' : 'none';
   }
@@ -553,7 +601,7 @@
       if (!w.moving && pdx * pdx + pdz * pdz < 1.4) setDir(w, pdx, pdz);
       drawWalker(w);
     }
-    updateCars(dt); updateBirds(dt); updateClouds(dt);
+    updateCars(dt); updateBirds(dt); updateClouds(dt); updatePops(dt);
     // cây đung đưa, người đứng thở nhẹ
     for (i = 0; i < SWAY.length; i++) { var sw = SWAY[i]; sw.g.rotation.z = Math.sin(T * 1.3 * sw.k + sw.ph) * 0.025 + Math.sin(T * 0.37 + sw.ph) * 0.012; }
     for (i = 0; i < STAND.length; i++) { var st = STAND[i]; st.g.scale.y = 1.24 * (1 + Math.sin(T * 1.6 + st.ph) * 0.012); }
@@ -567,7 +615,7 @@
       if (Math.abs(mm.opacity - want) > 0.01) { mm.transparent = true; mm.opacity += (want - mm.opacity) * Math.min(1, dt * 6); mm.alphaTest = 0.5 * mm.opacity; }
       else if (want === 1 && mm.transparent) { mm.transparent = false; mm.opacity = 1; mm.alphaTest = 0.5; }
     }
-    for (i = 0; i < PLATES.length; i++) { var pl = PLATES[i], pd2 = Math.hypot(pl.position.x - P.x, pl.position.z - P.z); pl.material.opacity = pd2 < 6 ? 1 : Math.max(0, 1 - (pd2 - 6) / 3); pl.visible = pl.material.opacity > 0.02; }
+    for (i = 0; i < PLATES.length; i++) { var pl = PLATES[i], pd2 = Math.hypot(pl.position.x - P.x, pl.position.z - P.z); pl.material.opacity = (pd2 < 6 ? 1 : Math.max(0, 1 - (pd2 - 6) / 3)) * (pl.userData.pop ? Math.max(0, Math.min(1, (pl.userData.pop.a - 0.6) / 0.4)) : 1); pl.visible = pl.material.opacity > 0.02; }
     // nút hành động khi đứng gần cửa
     near = null;
     for (i = 0; i < BUILD.length; i++) { var bd = BUILD[i]; if (Math.hypot(bd.x - P.x, bd.z - P.z) < 1.1) { near = bd; break; } }
@@ -597,7 +645,7 @@
 
   /* để thử tự động */
   window.__T = { R: R, SC: SC, SUN: SUN, CAM: CAM };
-  window.P3D = { skip: function (sec) { T += sec; }, go: function (x, z) { target = { x: x, z: z }; }, place: function (x, z) { P.x = x; P.z = z; first = true; }, state: function () { return { x: P.x, z: P.z, dir: P.dir, moving: P.moving, near: near && near.name, walkers: TOWN.length, light: LIGHT, birds: BIRDS.length, clouds: CLOUDS.length, cars: CARS.length, carX: CARS.map(function (c) { return Math.round(c.x - STREET.ox) + '/' + c.L.dir + '/' + c.t.n; }), carV: CARS.map(function (c) { return Math.round(c.v); }), hour: hour, kaiWalk: !!K.base }; }, setHour: function (h) { useLive = false; hour = h; }, zoom: function (k) { zoomK = k; } };
+  window.P3D = { skip: function (sec) { T += sec; }, go: function (x, z) { target = { x: x, z: z }; }, place: function (x, z) { P.x = x; P.z = z; first = true; }, state: function () { var up = 0; for (var q = 0; q < POPS.length; q++) if (POPS[q].a > 0.9) up++; return { pops: POPS.length, up: up, x: P.x, z: P.z, dir: P.dir, moving: P.moving, near: near && near.name, walkers: TOWN.length, light: LIGHT, birds: BIRDS.length, clouds: CLOUDS.length, cars: CARS.length, carX: CARS.map(function (c) { return Math.round(c.x - STREET.ox) + '/' + c.L.dir + '/' + c.t.n; }), carV: CARS.map(function (c) { return Math.round(c.v); }), hour: hour, kaiWalk: !!K.base }; }, setHour: function (h) { useLive = false; hour = h; }, zoom: function (k) { zoomK = k; } };
 })();
 </script>
 </body>
