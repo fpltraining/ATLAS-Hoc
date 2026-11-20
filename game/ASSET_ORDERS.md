@@ -1,5 +1,55 @@
 # Danh sách đặt hình: ConnectLife
 
+## ĐƠN 21/11/2026 · A. Khung bước đi cho mọi nhân vật (WALK-ALL · 13 tấm)
+
+Mục tiêu: mọi nhân vật biết đi đều bước bằng chân như Han, không trượt, không nhún. Cách gửi ChatGPT: **mở một cuộc trò chuyện mới**, dán TIN 1 (luật chung) kèm 1 hình Han đang đi trong game (player_han_down_w1.png) làm mẫu. Sau đó mỗi tin tiếp theo dán đúng một dòng ở danh sách, **kèm hình hiện tại của nhân vật đó** (lấy trong game/assets). Mỗi tin ChatGPT vẽ một tấm.
+
+TIN 1 · luật chung:
+```
+I will send you characters from my 2D mobile game one by one. For EACH character, draw ONE walk sheet with these exact rules:
+- Match the art style of the attached images exactly: soft watercolor on cut paper, a thin cream paper border around the character like a paper cut-out.
+- A 3 x 3 grid, all 9 poses the same size, evenly spaced, on a solid flat magenta #FF00FF background, nothing else.
+- Row 1: FRONT view (walking toward the viewer). Row 2: BACK view (walking away). Row 3: SIDE view facing LEFT.
+- Column 1: standing still. Column 2: mid-step with the LEFT foot forward. Column 3: mid-step with the RIGHT foot forward.
+- Natural, SMALL steps like a real person walking calmly: the stride is narrow (feet no wider apart than half the body height), arms swing only a little and stay close to the body.
+- Feet must touch an invisible ground line. NOTHING under the feet: no paper base, no stand, no grass, no shadow, no ground.
+- Same face, hair, clothes and colors as the attached character in every pose. No text anywhere.
+Reply "ready" and wait for the first character.
+```
+
+Các tin tiếp theo (mỗi tin một dòng, kèm hình nhân vật đó):
+```
+1. Kai: a small teal robot with a navy baseball cap, red headphones and a little antenna. Give him two short legs and small round feet (he walks, he does not hover). Attached: Kai.
+2. Minh: a teenage boy with neat black hair, a navy hoodie, beige pants and a red backpack. Attached: Minh.
+3. Amy: a young woman with red hair in a high bun, a light blue t-shirt and black leggings. Attached: Amy.
+4. David: a young man with short black hair in a black suit and tie. Attached: David.
+5. Helen: a kind grandmother with grey hair in a bun, round glasses, a purple dress and a brown handbag. Attached: Helen.
+6. Linda: a young woman with a brown bob haircut, a navy jacket and a grey skirt. Attached: Linda (side view only, please draw her front and back too).
+7. Marco: a cheerful boy with a red cap, a red t-shirt, a black crossbody bag and black pants. Attached: Marco.
+8. Walter: an old man with a brown flat cap, round glasses, a white moustache and a green sweater. Attached: Walter.
+9. Kenji: a happy tourist with a straw hat, a floral shirt, a camera around his neck, khaki shorts and sandals. Attached: Kenji.
+10. Sofia: a girl with long wavy brown hair and a green knitted dress. Attached: Sofia.
+11. Carlos: a young man with curly black hair, a white and navy jacket and a backpack, holding a phone. Attached: Carlos.
+12. Jake: a teenage boy with spiky blond hair, a navy hoodie, jeans and a green backpack. Attached: Jake.
+13. Ms. Nora: a young woman with long straight black hair, a green jacket and a navy skirt, holding a clipboard. Attached: Nora.
+```
+
+## ĐƠN 21/11/2026 · B. Thành phố sống (cho bản 3D)
+
+Gửi trong một cuộc trò chuyện khác, mỗi tin một hình. Không cần đính kèm gì ngoài 1 hình nhà giấy trong game (ví dụ pc_cafe.png) để giữ nét vẽ.
+```
+Please create the following images for my 2D mobile game, ONE image per message, in this order. Match the attached image's art style exactly:
+soft watercolor on cut paper, a thin cream paper border around every object like a paper cut-out. No text anywhere.
+Solid flat magenta #FF00FF background unless said otherwise. Nothing under the objects: no base, no stand, no ground.
+
+1. Four small city cars side by side in a row, each seen from the SIDE facing LEFT: a red hatchback, a yellow taxi, a blue family car, a white delivery van.
+2. The same four cars again, but each seen from the FRONT and from the BACK: a 4 x 2 grid (top row front views, bottom row back views).
+3. A city bus seen from the side facing left, the front and the back, three views side by side. Cream and jade green colors.
+4. A bicycle with a rider and a scooter with a rider, each seen from the side facing left. Riders are cute chibi adults with helmets.
+5. Five small paper birds in different flying poses, and five fluffy paper clouds of different sizes, all separate.
+6. Street details, all separate: a traffic light, a pedestrian crossing sign, a fire hydrant, a bus stop sign, a flower pot, a bicycle rack, a street clock, a newspaper stand.
+```
+
 ## ĐƠN MỚI 20/11/2026 · kiểu giấy màu nước (đính kèm 1 hình Han và 1 hình Kai đang có trong game để giữ nét)
 
 Quy tắc mới cho MỌI hình nhân vật (kể cả các đơn bước đi đang chờ: KAI-WALK, WALK-…): **không có đế giấy, ván, cỏ hay mặt đất dưới chân**, đáy hình là đế giày.
