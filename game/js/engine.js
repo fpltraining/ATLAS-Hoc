@@ -1183,7 +1183,7 @@ var G = window.G || (window.G = {});
        vẫn là bấm đi tới chỗ đó như cũ. Kéo quá vành thì đế trượt theo ngón tay (không phải nhấc tay đặt lại).
        Vùng chết nhỏ ở giữa; kéo quá 60% vành là chạy hết tốc. Theo đúng ngón tay đã chạm (chạm thêm nút khác không bị nhảy). */
     var play = document.getElementById('play'), base = document.getElementById('joy'), knob = document.getElementById('joy-knob');
-    var JR = 60, DZ = 0.16, jid = null, jx = 0, jy = 0, jsx = 0, jsy = 0, jlive = false, eatClick = 0;
+    var JR = 60, DZ = 0.16, jid = null, jx = 0, jy = 0, jsx = 0, jsy = 0, jlive = false, eatClick = 0, lastQ = { x: -999, y: -999 };
     function rel(t) { var r = play.getBoundingClientRect(); return { x: t.clientX - r.left, y: t.clientY - r.top }; }
     function inZone(q) { var w = play.clientWidth, h = play.clientHeight; return q.x < w * 0.45 && q.y > h * 0.3; }
     function place() { base.style.left = (jx - JR) + 'px'; base.style.top = (jy - JR) + 'px'; base.style.bottom = 'auto'; }
@@ -1196,11 +1196,17 @@ var G = window.G || (window.G = {});
       var sp = 0.4 + 0.6 * Math.min(1, (n - DZ) / (0.6 - DZ));   // nhích nhẹ là đi chậm, kéo quá 60% là hết tốc
       joy.dx = dx / m * sp; joy.dy = dy / m * sp;
     }
-    function goLive(cx, cy) { JR = (base.offsetWidth / 2) || 60; jlive = true; joy.on = true; jx = cx; jy = cy; place(); base.className = 'joy live'; }
+    // hình đế và núm bằng giấy (có hình thì dùng, chưa có thì giữ vòng tròn vẽ bằng CSS)
+    var JC = 'joy';
+    if (G.ASSET_REV && G.ASSET_REV['joy_base.png'] && G.ASSET_REV['joy_knob.png']) {
+      JC = 'joy paper'; base.className = JC;
+      base.style.backgroundImage = 'url(' + G.assetUrl('joy_base.png') + ')'; knob.style.backgroundImage = 'url(' + G.assetUrl('joy_knob.png') + ')';
+    }
+    function goLive(cx, cy) { JR = (base.offsetWidth / 2) || 60; jlive = true; joy.on = true; jx = cx; jy = cy; place(); base.className = JC + ' live'; }
     function je() {
-      if (jlive) eatClick = Date.now() + 400;
+      if (jlive) eatClick = Date.now() + 400;   // bỏ cú bấm (nếu có) ngay chỗ vừa thả cần
       jid = null; jlive = false; joy.on = false; joy.dx = 0; joy.dy = 0;
-      knob.style.transform = ''; base.className = 'joy'; base.style.left = ''; base.style.top = ''; base.style.bottom = '';
+      knob.style.transform = ''; base.className = JC; base.style.left = ''; base.style.top = ''; base.style.bottom = '';
     }
     function find(e) { for (var i = 0; i < e.changedTouches.length; i++) if (e.changedTouches[i].identifier === jid) return e.changedTouches[i]; return null; }
     function tmove(e) {
@@ -1208,7 +1214,7 @@ var G = window.G || (window.G = {});
       var t = find(e); if (!t) return;
       var q = rel(t);
       if (!jlive) { if (Math.abs(q.x - jsx) + Math.abs(q.y - jsy) < 10) return; goLive(jsx, jsy); }
-      aim(q); e.preventDefault();
+      lastQ = q; aim(q); e.preventDefault();
     }
     function tend(e) { if (jid !== null && find(e)) je(); }
     cv.addEventListener('touchstart', function (e) {
@@ -1227,7 +1233,7 @@ var G = window.G || (window.G = {});
       el.addEventListener('touchend', tend);
       el.addEventListener('touchcancel', tend);
     });
-    cv.addEventListener('click', function (e) { if (Date.now() < eatClick) return; tapAt(e.clientX, e.clientY); });
+    cv.addEventListener('click', function (e) { var q = rel(e); if (Date.now() < eatClick && Math.abs(q.x - lastQ.x) + Math.abs(q.y - lastQ.y) < 40) return; tapAt(e.clientX, e.clientY); });
     base.addEventListener('mousedown', function (e) {
       var r = base.getBoundingClientRect(), pr = play.getBoundingClientRect();
       goLive(r.left - pr.left + r.width / 2, r.top - pr.top + r.height / 2); aim(rel(e)); e.preventDefault();

@@ -8,19 +8,29 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <title>ConnectLife Town</title>
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="../icons/icon-180.png">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="css/game.css">
+<script src="data/asset_rev.js"></script>
 <script>/* điện thoại (cạnh ngắn < 600 px, màn cảm ứng): app chạy ngang, cầm dọc thì hiện lời nhắc xoay ngang */
 (function () { var s = Math.min(screen.width, screen.height); if (s < 600 && (navigator.maxTouchPoints > 0 || 'ontouchstart' in window)) document.documentElement.className += ' phone'; })();</script>
 </head>
 <body>
   <!-- Điện thoại cầm dọc: nhắc xoay ngang (iPhone không cho web app tự khoá màn hình ngang) -->
   <div id="rotate" class="rotate" aria-live="polite">
-    <div class="rot-ico"><span class="rot-phone">📱</span></div>
+    <img id="rot-img" class="rot-img" alt="">
     <b>Xoay ngang điện thoại nhé</b>
     <p>ConnectLife chơi trên màn hình ngang để thấy rộng cả thành phố.</p>
     <small>Xoay mà màn hình không đổi? Vuốt từ góc trên bên phải xuống để mở Trung tâm điều khiển, tắt nút 🔒 Khoá xoay màn hình rồi xoay lại.</small>
   </div>
+  <!-- Màn chờ lúc mở app (hình anh Han đặt): tắt dần khi app sẵn sàng -->
+  <div id="splash" class="splash" aria-hidden="true"><img id="sp-title" class="sp-title" alt=""></div>
+  <script>(function () {
+    var R = (window.G && G.ASSET_REV) || {}, u = function (n) { return 'assets/' + n + (R[n] ? '?v=' + R[n] : ''); };
+    document.getElementById('rot-img').src = u('kai_rotate.png');
+    document.getElementById('splash').style.backgroundImage = 'radial-gradient(ellipse 60% 42% at 50% 16%, rgba(246,239,226,.92), rgba(246,239,226,0)), url(' + u('splash.webp') + ')';
+    document.getElementById('sp-title').src = u('lobby_title.png');
+  })();</script>
   <!-- Ngôi nhà chung -->
   <main id="lobby"></main>
 
@@ -54,7 +64,6 @@
 
   <script src="js/util.js"></script>
   <script src="js/save.js"></script>
-  <script src="data/asset_rev.js"></script>
   <script src="js/assets.js"></script>
   <script src="js/audio.js"></script>
   <script src="js/speak.js"></script>
