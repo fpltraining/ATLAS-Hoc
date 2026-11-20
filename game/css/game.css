@@ -688,3 +688,5 @@ body { background: #f4e9dc url(../assets/paper_tile.webp) repeat; background-siz
 .joy.paper::before { display: none; }
 .joy.paper.live { opacity: 1; }
 .joy.paper .joy-knob { background: center / 100% 100% no-repeat; border: 0; box-shadow: none; filter: drop-shadow(0 4px 6px rgba(60,40,20,.35)); }
+
+.p3d-link { display: inline-block; margin-top: 4px; text-decoration: none; background: #fbf5ea; border: 1px solid #e3d3b8; color: #4a2f1d; border-radius: 12px; padding: 8px 14px; font-weight: 700; }

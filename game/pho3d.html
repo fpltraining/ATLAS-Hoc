@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#f4e9dc">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Dạo phố Brightford</title>
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #f4e9dc; font-family: -apple-system, system-ui, sans-serif; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+  #c { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+  .glare { position: fixed; inset: 0; pointer-events: none; mix-blend-mode: screen; transition: background 1s; }
+  .hud { position: fixed; top: 0; left: 0; right: 0; display: flex; align-items: center; gap: 10px; padding: max(10px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) 8px max(12px, env(safe-area-inset-left)); pointer-events: none; z-index: 5; }
+  .hud > * { pointer-events: auto; }
+  .hb { width: 42px; height: 42px; border-radius: 12px; border: 0; background: rgba(255,250,240,.94); color: #4a2f1d; font-size: 20px; display: grid; place-items: center; text-decoration: none; box-shadow: 0 4px 12px rgba(60,40,20,.2); }
+  .ttl { flex: 1; color: #fff; font-weight: 800; font-size: 16px; text-shadow: 0 1px 4px rgba(0,0,0,.45); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .clock { display: flex; align-items: center; gap: 8px; background: rgba(27,33,64,.82); color: #fff; border-radius: 14px; padding: 6px 10px; font-size: 13px; font-weight: 700; box-shadow: 0 4px 12px rgba(0,0,0,.25); }
+  .clock input { width: 130px; accent-color: #ffd56b; }
+  .clock button { border: 0; border-radius: 9px; padding: 5px 8px; background: #ffd56b; color: #1b2140; font-weight: 800; font-size: 12px; }
+  .clock button.off { background: rgba(255,255,255,.2); color: #fff; }
+  .joy { position: fixed; left: max(22px, env(safe-area-inset-left)); bottom: max(22px, env(safe-area-inset-bottom)); width: 120px; height: 120px; z-index: 6; touch-action: none; opacity: .8; background: center / 100% 100% no-repeat; filter: drop-shadow(0 4px 8px rgba(60,40,20,.25)); }
+  .joy.live { opacity: 1; }
+  .knob { position: absolute; left: 50%; top: 50%; width: 54px; height: 54px; margin: -27px 0 0 -27px; background: center / 100% 100% no-repeat; pointer-events: none; filter: drop-shadow(0 4px 6px rgba(60,40,20,.35)); }
+  .act { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(30px, env(safe-area-inset-bottom)); min-height: 52px; padding: 10px 18px; border: 0; border-radius: 16px; background: #c8553d; color: #fff; font-weight: 800; font-size: 16px; box-shadow: 0 8px 20px rgba(0,0,0,.25); transform: translateY(30px); opacity: 0; pointer-events: none; transition: .18s; z-index: 6; }
+  .act.show { transform: none; opacity: 1; pointer-events: auto; }
+  .toast { position: fixed; left: 50%; bottom: max(96px, env(safe-area-inset-bottom)); transform: translateX(-50%); background: rgba(255,250,240,.97); color: #4a2f1d; border-radius: 14px; padding: 10px 16px; font-size: 14px; font-weight: 600; max-width: 80vw; text-align: center; box-shadow: 0 8px 22px rgba(0,0,0,.2); opacity: 0; transition: opacity .25s; pointer-events: none; z-index: 7; }
+  .toast.show { opacity: 1; }
+  .load { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; background: #f4e9dc; color: #7d5a40; font-size: 18px; font-weight: 700; transition: opacity .6s; }
+  .load.out { opacity: 0; pointer-events: none; }
+  .tip { position: fixed; left: 50%; top: calc(max(10px, env(safe-area-inset-top)) + 54px); transform: translateX(-50%); background: rgba(255,250,240,.95); color: #4a2f1d; border-radius: 14px; padding: 8px 14px; font-size: 13.5px; font-weight: 600; box-shadow: 0 6px 16px rgba(60,40,20,.18); z-index: 5; max-width: 86vw; text-align: center; transition: opacity .5s; }
+  @media (max-height: 500px) { .clock input { width: 90px; } .hb { width: 38px; height: 38px; } .joy { width: 106px; height: 106px; } .act { min-height: 44px; font-size: 14px; bottom: max(14px, env(safe-area-inset-bottom)); } .tip { font-size: 12px; } }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="glare" class="glare"></div>
+<div class="hud">
+  <a class="hb" href="./" aria-label="Về game">🏠</a>
+  <div id="ttl" class="ttl">Brightford</div>
+  <div class="clock"><span id="clk">--:--</span><input id="hr" type="range" min="4" max="23.5" step="0.25" aria-label="Giờ trong ngày"><button id="live">Giờ thật</button></div>
+</div>
+<div id="tip" class="tip">Bản thử 3D · kéo cần bên trái để đi, chạm mặt đất để tới đó, hai ngón để phóng to thu nhỏ, kéo thanh giờ để xem nắng đổi</div>
+<div id="joy" class="joy"><div id="knob" class="knob"></div></div>
+<button id="act" class="act"></button>
+<div id="toast" class="toast"></div>
+<div id="load" class="load">Đang dựng thành phố…</div>
+
+<script src="vendor/three.min.js"></script>
+<script src="data/asset_rev.js"></script>
+<script src="js/util.js"></script>
+<script src="js/assets.js"></script>
+<script src="data/life.js"></script>
+<script src="data/life_morning.js"></script>
+<script src="data/life_school.js"></script>
+<script src="data/life_after.js"></script>
+<script src="data/walkmask.js"></script>
+<script src="js/world.js"></script>
+<script>
+/* Bản thử thành phố 3D kiểu sách pop-up: ba khu (Khu phố Maple · Trung tâm · Phố mua sắm) ghép liền, đi bộ xuyên suốt.
+   Nền giấy là mặt đất; nhà, cây, người là tấm giấy dựng đứng (hơi ngả về sau) có bóng đổ theo mặt trời giờ Việt Nam.
+   Camera đi theo nhân vật. Người đi đường bước bằng khung hình như nhân vật chính. Dùng lại toàn bộ hình và vị trí của game 2D. */
+(function () {
+  var U = 0.01;                 // 1 px bản đồ 2D = 0.01 đơn vị 3D
+  var LEAN = 0.3;               // tấm giấy ngả về sau (rad) để nhìn từ trên xuống không bị dẹt
+  var SPEED = 2.6, STEP = 7;    // tốc độ đi (đơn vị/giây), nhịp bước (khung/giây)
+  var DIST = [                  // các khu ghép liền: gốc toạ độ (px) của từng tờ bản đồ
+    { id: 'home_en', ox: -1536, oy: 0 },
+    { id: 'city_en', ox: 0, oy: 0 },
+    { id: 'street_en', ox: 1536, oy: 128 }
+  ];
+  var cv = document.getElementById('c');
+  var R = new THREE.WebGLRenderer({ canvas: cv, antialias: true, powerPreference: 'high-performance' });
+  R.setPixelRatio(Math.min(2, window.devicePixelRatio || 1));
+  R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap;
+  R.outputEncoding = THREE.sRGBEncoding;
+  var SC = new THREE.Scene();
+  SC.fog = new THREE.Fog(0xf3e6cf, 16, 40);
+  SC.background = new THREE.Color(0xf3e6cf);
+  var CAM = new THREE.PerspectiveCamera(40, 1, 0.1, 200);
+  var HEMI = new THREE.HemisphereLight(0xfff6e6, 0xc9d6a8, 0.8); SC.add(HEMI);
+  var SUN = new THREE.DirectionalLight(0xfff1d6, 0.6);
+  SUN.castShadow = true; SUN.shadow.mapSize.set(2048, 2048);
+  var shc = SUN.shadow.camera; shc.left = -13; shc.right = 13; shc.top = 13; shc.bottom = -13; shc.near = 1; shc.far = 70;
+  SUN.shadow.bias = -0.0006; SUN.shadow.normalBias = 0.02;
+  SC.add(SUN); SC.add(SUN.target);
+
+  /* ---------- hình ---------- */
+  var manager = new THREE.LoadingManager();
+  manager.onLoad = function () { var l = document.getElementById('load'); l.className = 'load out'; setTimeout(function () { l.style.display = 'none'; }, 700); };
+  var loader = new THREE.TextureLoader(manager), TEX = {};
+  function has(n) { return !!(G.ASSET_REV && G.ASSET_REV[n]); }
+  function tex(n) {
+    if (TEX[n]) return TEX[n];
+    var t = loader.load(G.assetUrl(n)); t.encoding = THREE.sRGBEncoding; t.anisotropy = Math.min(4, R.capabilities.getMaxAnisotropy());
+    return (TEX[n] = t);
+  }
+  var MATS = {}, DMATS = {};
+  /* tấm giấy: sáng tối theo nắng nhưng luôn giữ một nền sáng (emissive) để hình không bị tối khi nắng chiếu xiên */
+  function mat(n) { return MATS[n] || (MATS[n] = new THREE.MeshLambertMaterial({ map: tex(n), emissive: 0x5a5a5a, emissiveMap: tex(n), alphaTest: 0.5, side: THREE.DoubleSide })); }
+  function dmat(n) { return DMATS[n] || (DMATS[n] = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking, map: tex(n), alphaTest: 0.5 })); }
+  var PLANE = new THREE.PlaneGeometry(1, 1); PLANE.translate(0, 0.5, 0);
+
+  /* tấm giấy đứng: chân tại (gx, gy) px toàn thành phố, cỡ s px, foot = tỉ lệ chân trong khung hình */
+  function card(n, gx, gy, s, foot, opt) {
+    opt = opt || {};
+    var g = new THREE.Group(), m = new THREE.Mesh(PLANE, opt.own ? mat(n).clone() : mat(n));
+    m.castShadow = true; m.receiveShadow = true; m.customDepthMaterial = dmat(n);
+    m.position.y = -(1 - (foot || 0.96)) * s * U;
+    g.add(m); g.scale.set(s * U, s * U, s * U); m.scale.set(1, 1, 1);
+    g.position.set(gx * U, 0, gy * U); g.rotation.x = -LEAN;
+    SC.add(g); g.userData.mesh = m;
+    return g;
+  }
+  /* bóng mềm dưới chân (bổ sung cho bóng đổ thật) */
+  var blobTex = (function () {
+    var c = document.createElement('canvas'); c.width = c.height = 64; var x = c.getContext('2d');
+    var gr = x.createRadialGradient(32, 32, 2, 32, 32, 31); gr.addColorStop(0, 'rgba(40,25,10,.45)'); gr.addColorStop(1, 'rgba(40,25,10,0)');
+    x.fillStyle = gr; x.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c);
+  })();
+  var BLOBM = new THREE.MeshBasicMaterial({ map: blobTex, transparent: true, depthWrite: false });
+  var BLOBG = new THREE.PlaneGeometry(1, 1); BLOBG.rotateX(-Math.PI / 2);
+  function blob(r) { var b = new THREE.Mesh(BLOBG, BLOBM); b.scale.set(r * 2, 1, r * 0.9); b.position.y = 0.012; SC.add(b); return b; }
+
+  /* ---------- mặt đất: nền giấy rộng + tờ bản đồ từng khu ---------- */
+  var paper = tex('paper_tile.webp'); paper.wrapS = paper.wrapT = THREE.RepeatWrapping; paper.repeat.set(26, 18);
+  var base = new THREE.Mesh(new THREE.PlaneGeometry(140, 100), new THREE.MeshLambertMaterial({ map: paper, color: 0xd9e4c0 }));
+  base.rotation.x = -Math.PI / 2; base.position.set(7.68, -0.01, 5.12); base.receiveShadow = true; SC.add(base);
+  var SCN = {};
+  DIST.forEach(function (d) {
+    var s = G.SCENES[d.id]; SCN[d.id] = s; d.s = s;
+    var gm = new THREE.Mesh(new THREE.PlaneGeometry(s.w * U, s.h * U), new THREE.MeshLambertMaterial({ map: tex(s.bg) }));
+    gm.rotation.x = -Math.PI / 2; gm.position.set((d.ox + s.w / 2) * U, 0, (d.oy + s.h / 2) * U); gm.receiveShadow = true; SC.add(gm);
+  });
+
+  /* bóng mây trôi trên mặt đất */
+  var cloudTex = (function () {
+    var c = document.createElement('canvas'); c.width = c.height = 256; var x = c.getContext('2d');
+    for (var i = 0; i < 9; i++) {
+      var cx = Math.random() * 256, cy = Math.random() * 256, r = 30 + Math.random() * 50;
+      for (var ox = -256; ox <= 256; ox += 256) for (var oy = -256; oy <= 256; oy += 256) {
+        var gr = x.createRadialGradient(cx + ox, cy + oy, 0, cx + ox, cy + oy, r); gr.addColorStop(0, 'rgba(30,30,50,.55)'); gr.addColorStop(1, 'rgba(30,30,50,0)');
+        x.fillStyle = gr; x.beginPath(); x.arc(cx + ox, cy + oy, r, 0, 6.283); x.fill();
+      }
+    }
+    var t = new THREE.CanvasTexture(c); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.repeat.set(3, 2); return t;
+  })();
+  var clouds = new THREE.Mesh(new THREE.PlaneGeometry(140, 100), new THREE.MeshBasicMaterial({ map: cloudTex, transparent: true, opacity: 0.16, depthWrite: false }));
+  clouds.rotation.x = -Math.PI / 2; clouds.position.set(7.68, 0.02, 5.12); SC.add(clouds);
+
+  /* ---------- toà nhà, đồ vật, người đứng ---------- */
+  var BUILD = [], SWAY = [], LAMPS = [], FADE = [], STAND = [], PLATES = [];
+  function glowTex() {
+    var c = document.createElement('canvas'); c.width = c.height = 128; var x = c.getContext('2d');
+    var gr = x.createRadialGradient(64, 64, 0, 64, 64, 64); gr.addColorStop(0, 'rgba(255,220,140,1)'); gr.addColorStop(0.3, 'rgba(255,200,110,.5)'); gr.addColorStop(1, 'rgba(255,190,90,0)');
+    x.fillStyle = gr; x.fillRect(0, 0, 128, 128); return new THREE.CanvasTexture(c);
+  }
+  var GLOW = glowTex();
+  function plate(text, gx, gy) {   // biển tên nổi (luôn quay về phía camera)
+    var c = document.createElement('canvas'), x = c.getContext('2d'); x.font = '800 44px -apple-system, system-ui, sans-serif';
+    var w = Math.ceil(x.measureText(text).width) + 56; c.width = w; c.height = 72; x = c.getContext('2d');
+    x.fillStyle = 'rgba(27,33,64,.86)'; x.beginPath(); if (x.roundRect) x.roundRect(0, 0, w, 72, 36); else x.rect(0, 0, w, 72); x.fill();
+    x.fillStyle = '#fff'; x.font = '800 44px -apple-system, system-ui, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(text, w / 2, 38);
+    var t = new THREE.CanvasTexture(c); t.encoding = THREE.sRGBEncoding;
+    var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: t, depthTest: false, transparent: true }));
+    sp.scale.set(w / 72 * 0.24, 0.24, 1); sp.position.set(gx * U, 0.16, gy * U + 0.25); sp.renderOrder = 10; SC.add(sp); PLATES.push(sp); return sp;
+  }
+  DIST.forEach(function (d) {
+    var s = d.s;
+    (s.buildings || []).forEach(function (b) {
+      var S = b.s || 300, g = card(b.img, d.ox + b.x, d.oy + b.y, S, 0.975, { own: true });
+      FADE.push(g); blob(S * U * 0.38).position.set((d.ox + b.x) * U, 0.012, (d.oy + b.y - 10) * U);
+      BUILD.push({ name: b.name, x: (d.ox + b.x) * U, z: (d.oy + b.y + 20) * U, b: b });
+      plate(b.name, d.ox + b.x, d.oy + b.y + 26);
+    });
+    (s.props || []).forEach(function (p) {
+      var g = card(p.img, d.ox + p.x, d.oy + p.y, p.s, 0.96, { own: /tree|fountain/.test(p.img) });
+      if (/tree/.test(p.img)) { SWAY.push({ g: g, ph: Math.random() * 6, k: 0.6 + Math.random() * 0.5 }); FADE.push(g); }
+      if (/lamp/.test(p.img)) {
+        var gl = new THREE.Sprite(new THREE.SpriteMaterial({ map: GLOW, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, opacity: 0 }));
+        gl.scale.set(0.9, 0.9, 1); gl.position.set((d.ox + p.x) * U, p.s * U * 0.82, (d.oy + p.y) * U - 0.25); SC.add(gl);
+        var pool = new THREE.Mesh(BLOBG, new THREE.MeshBasicMaterial({ map: GLOW, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, opacity: 0 }));
+        pool.scale.set(2.2, 1, 1.4); pool.position.set((d.ox + p.x) * U, 0.015, (d.oy + p.y) * U + 0.1); SC.add(pool);
+        LAMPS.push(gl, pool);
+      }
+    });
+    ((G.PEOPLE && G.PEOPLE[d.id]) || []).forEach(function (o) {
+      var n = G.NPCS[o.npc];
+      if (o.bimg) { var bs = o.bs || 210, g = card(o.bimg, d.ox + o.x, d.oy + o.y + 14, bs, 0.975, { own: true }); FADE.push(g); BUILD.push({ name: o.stall, x: (d.ox + o.x) * U, z: (d.oy + o.y + 34) * U, b: o }); plate((o.icon || '') + ' ' + o.stall, d.ox + o.x, d.oy + o.y + 40); return; }
+      if (!n || !n.img) return;
+      var py = o.stall ? o.y - (o.simg ? 58 : 40) : o.y;
+      var np = card(n.img, d.ox + o.x, d.oy + py, 124, 0.957); blob(0.22).position.set((d.ox + o.x) * U, 0.012, (d.oy + py) * U);
+      STAND.push({ g: np, ph: Math.random() * 6 });
+      if (o.simg) { var cs = o.ss || 280; card(o.simg, d.ox + o.x, d.oy + o.y + 12, cs, 0.975); }
+      plate(n.name, d.ox + o.x, d.oy + py + 22);
+    });
+  });
+
+  /* ---------- va chạm (giống game 2D: lớp chặn ảnh nền, toà nhà, đồ vật, người đứng) ---------- */
+  var MASK = {};
+  function maskOf(s) {
+    if (MASK[s.bg] !== undefined) return MASK[s.bg];
+    var src = G.WALKMASK && G.WALKMASK[s.bg]; if (!src) return (MASK[s.bg] = null);
+    var rows = src.r, w = rows[0].length * 4, a = [];
+    for (var y = 0; y < rows.length; y++) for (var x = 0; x < w; x++) a.push((parseInt(rows[y].charAt(x >> 2), 16) >> (3 - (x & 3))) & 1);
+    return (MASK[s.bg] = { c: src.c, w: w, h: rows.length, a: a });
+  }
+  function blockedIn(s, id, x, y) {
+    var i;
+    if (s.buildings) for (i = 0; i < s.buildings.length; i++) { var b = s.buildings[i], bk = (b.s || 300) / 300; if (x > b.x - 125 * bk && x < b.x + 125 * bk && y > b.y - 190 * bk && y < b.y - 4) return true; }
+    if (s.props) for (i = 0; i < s.props.length; i++) { var pr = s.props[i], dx = x - pr.x, dy = (y - pr.y) * 2; if (dx * dx + dy * dy < pr.r * pr.r) return true; }
+    var PP = (G.PEOPLE && G.PEOPLE[id]) || [];
+    for (i = 0; i < PP.length; i++) {
+      var po = PP[i];
+      if (po.simg) { var sk = (po.ss || 280) / 280; if (Math.abs(x - po.x) < 128 * sk && y > po.y - 95 * sk && y < po.y + 10) return true; continue; }
+      if (po.bimg) { var bk0 = (po.bs || 210) / 210; if (Math.abs(x - po.x) < 90 * bk0 && y > po.y - 120 * bk0 && y < po.y + 6) return true; continue; }
+      var pd = x - po.x, pe = (y - po.y) * 2; if (pd * pd + pe * pe < 26 * 26) return true;
+    }
+    var m = maskOf(s);
+    if (m) { var mx = (x / m.c) | 0, my = (y / m.c) | 0; if (mx >= 0 && my >= 0 && mx < m.w && my < m.h && m.a[my * m.w + mx]) return true; }
+    return false;
+  }
+  function blocked(wx, wz) {
+    var gx = wx / U, gy = wz / U;
+    for (var i = 0; i < DIST.length; i++) {
+      var d = DIST[i], s = d.s, lx = gx - d.ox, ly = gy - d.oy;
+      if (lx >= 4 && lx < s.w - 4 && ly >= 50 && ly < s.h - 14) return blockedIn(s, d.id, lx, ly);
+      if (lx >= 0 && lx < s.w && ly >= 0 && ly < s.h) {   // mép tờ: chỉ đi qua chỗ nối với khu bên cạnh
+        for (var j = 0; j < DIST.length; j++) if (j !== i) { var e = DIST[j], ex = gx - e.ox, ey = gy - e.oy; if (ex >= 4 && ex < e.s.w - 4 && ey >= 50 && ey < e.s.h - 14) return blockedIn(e.s, e.id, ex, ey); }
+        if (ly >= 50 && ly < s.h - 14) return blockedIn(s, d.id, Math.min(Math.max(lx, 5), s.w - 5), ly);
+        return true;
+      }
+    }
+    return true;
+  }
+  function tryMove(o, vx, vz, step) {
+    var nx = o.x + vx * step, nz = o.z + vz * step;
+    if (!blocked(nx, nz)) { o.x = nx; o.z = nz; return true; }
+    if (Math.abs(vx) > 0.2 && !blocked(o.x + (vx > 0 ? 1 : -1) * step * Math.abs(vx), o.z)) { o.x += (vx > 0 ? 1 : -1) * step * Math.abs(vx); return true; }
+    if (Math.abs(vz) > 0.2 && !blocked(o.x, o.z + (vz > 0 ? 1 : -1) * step * Math.abs(vz))) { o.z += (vz > 0 ? 1 : -1) * step * Math.abs(vz); return true; }
+    return false;
+  }
+
+  /* ---------- nhân vật đi bằng khung hình (đứng → bước 1 → đứng → bước 2), giống nhân vật chính ---------- */
+  function walker(base, x, z, S, foot) {
+    var w = { base: base, x: x, z: z, dir: 'down', t: 0, moving: false, S: S || 120, foot: foot || 0.957 };
+    w.g = card(firstFrame(base), x / U, z / U, w.S, w.foot, { own: true });
+    w.blob = blob(0.24);
+    return w;
+  }
+  function firstFrame(base) { return has(base + '_down.png') ? base + '_down.png' : base + '_left.png'; }
+  function frameOf(w) {
+    var d = w.dir === 'right' ? 'left' : w.dir, flip = w.dir === 'right', b = w.base;
+    if (d === 'up' && !has(b + '_up_w1.png') && w.moving && has(b + '_left_w1.png')) { d = 'left'; flip = w.vx > 0; }   // chưa có khung bước nhìn sau: bước ngang theo hướng đi
+    if (!has(b + '_' + d + '.png')) { d = has(b + '_down.png') ? 'down' : 'left'; }
+    var n = b + '_' + d + '.png';
+    if (w.moving && has(b + '_' + d + '_w1.png')) { var f = Math.floor(w.t * STEP) % 4; n = f === 1 ? b + '_' + d + '_w1.png' : f === 3 ? b + '_' + d + '_w2.png' : n; }
+    return { n: n, flip: flip, hop: w.moving && !has(b + '_' + d + '_w1.png') };
+  }
+  function drawWalker(w) {
+    var fr = frameOf(w), m = w.g.userData.mesh, t = tex(fr.n);
+    if (m.material.map !== t) { m.material.map = t; m.customDepthMaterial = dmat(fr.n); }
+    w.g.scale.x = (fr.flip ? -1 : 1) * w.S * U;
+    var lift = fr.hop ? Math.abs(Math.sin(w.t * STEP * 0.5)) * 0.07 * w.S * U : 0;
+    w.g.position.set(w.x, lift, w.z); w.blob.position.set(w.x, 0.012, w.z);
+  }
+  function setDir(w, vx, vz) {   // hướng nhìn có độ trễ: đi chéo không nhấp nháy
+    var ax = Math.abs(vx), az = Math.abs(vz), horiz = w.dir === 'left' || w.dir === 'right';
+    if (horiz ? az > ax * 1.3 : ax > az * 1.3) horiz = !horiz;
+    w.dir = horiz ? (vx < 0 ? 'left' : 'right') : (vz < 0 ? 'up' : 'down'); w.vx = vx;
+  }
+
+  var START = { x: (768) * U, z: 690 * U };
+  var P = walker('player_han', START.x, START.z, 120, 0.957);
+  var K = { x: P.x - 0.5, z: P.z + 0.3, dir: 'down', t: 0, moving: false }, trail = [];
+  K.g = card('kai_follow.png', K.x / U, K.z / U, 82, 497 / 512, { own: true }); K.blob = blob(0.18);
+
+  /* người đi đường: mỗi khu vài người, đi tới điểm ngẫu nhiên rồi dừng nghỉ */
+  var SETS = (G.TOWNIE_SETS || []).filter(function (s) { return has('person_' + s + '_down_w1.png') || has('person_' + s + '_left_w1.png'); });
+  var TOWN = [];
+  function freeSpot(d) {
+    for (var k = 0; k < 60; k++) { var x = (d.ox + 80 + Math.random() * (d.s.w - 160)) * U, z = (d.oy + 120 + Math.random() * (d.s.h - 200)) * U; if (!blocked(x, z)) return { x: x, z: z }; }
+    return { x: (d.ox + d.s.w / 2) * U, z: (d.oy + d.s.h / 2) * U };
+  }
+  DIST.forEach(function (d, di) {
+    for (var i = 0; i < 6 && SETS.length; i++) {
+      var sp = freeSpot(d), w = walker('person_' + SETS[(i + di * 2) % SETS.length], sp.x, sp.z, 118, 0.957);
+      w.d = d; w.wait = Math.random() * 2; w.sp = 1.0 + Math.random() * 0.35; w.t = Math.random() * 3; TOWN.push(w);
+    }
+  });
+
+  /* ---------- điều khiển: cần nổi, bàn phím, chạm mặt đất để đi tới, hai ngón phóng to ---------- */
+  var joy = { on: false, dx: 0, dy: 0 }, keys = {}, target = null, zoomK = 1;
+  var jb = document.getElementById('joy'), kn = document.getElementById('knob');
+  if (has('joy_base.png')) { jb.style.backgroundImage = 'url(' + G.assetUrl('joy_base.png') + ')'; kn.style.backgroundImage = 'url(' + G.assetUrl('joy_knob.png') + ')'; }
+  var JR = 60, jid = null, jx = 0, jy = 0, sx0 = 0, sy0 = 0, jlive = false, eat = 0, pinch = null;
+  function place() { jb.style.left = (jx - JR) + 'px'; jb.style.top = (jy - JR) + 'px'; jb.style.bottom = 'auto'; }
+  function aim(x, y) {
+    var dx = x - jx, dy = y - jy, m = Math.sqrt(dx * dx + dy * dy);
+    if (m > JR) { var k = (m - JR) / m; jx += dx * k; jy += dy * k; place(); dx = x - jx; dy = y - jy; m = JR; }
+    kn.style.transform = 'translate(' + dx + 'px,' + dy + 'px)';
+    var n = m / JR; if (n < 0.16) { joy.dx = joy.dy = 0; return; }
+    var sp = 0.4 + 0.6 * Math.min(1, (n - 0.16) / 0.44); joy.dx = dx / m * sp; joy.dy = dy / m * sp;
+  }
+  function live(x, y) { JR = jb.offsetWidth / 2 || 60; jlive = true; joy.on = true; jx = x; jy = y; place(); jb.className = 'joy live'; target = null; }
+  function jend() { if (jlive) eat = Date.now() + 350; jid = null; jlive = false; joy.on = false; joy.dx = joy.dy = 0; kn.style.transform = ''; jb.className = 'joy'; jb.style.left = jb.style.top = jb.style.bottom = ''; }
+  function findT(e) { for (var i = 0; i < e.changedTouches.length; i++) if (e.changedTouches[i].identifier === jid) return e.changedTouches[i]; return null; }
+  cv.addEventListener('touchstart', function (e) {
+    if (e.touches.length === 2) { var a = e.touches[0], b = e.touches[1]; pinch = { d: Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY), k: zoomK }; if (jid !== null) jend(); return; }
+    if (jid !== null) return;
+    var t = e.changedTouches[0];
+    if (t.clientX < innerWidth * 0.45 && t.clientY > innerHeight * 0.3) { jid = t.identifier; sx0 = t.clientX; sy0 = t.clientY; jlive = false; }
+  }, { passive: true });
+  cv.addEventListener('touchmove', function (e) {
+    if (pinch && e.touches.length === 2) { var a = e.touches[0], b = e.touches[1], dd = Math.hypot(a.clientX - b.clientX, a.clientY - b.clientY); zoomK = Math.max(0.6, Math.min(1.7, pinch.k * pinch.d / dd)); e.preventDefault(); return; }
+    if (jid === null) return; var t = findT(e); if (!t) return;
+    if (!jlive) { if (Math.abs(t.clientX - sx0) + Math.abs(t.clientY - sy0) < 10) return; live(sx0, sy0); }
+    aim(t.clientX, t.clientY); e.preventDefault();
+  }, { passive: false });
+  function tend(e) { if (e.touches.length < 2) pinch = null; if (jid !== null && findT(e)) jend(); }
+  cv.addEventListener('touchend', tend); cv.addEventListener('touchcancel', tend);
+  jb.addEventListener('touchstart', function (e) { if (jid !== null) return; var t = e.changedTouches[0], r = jb.getBoundingClientRect(); jid = t.identifier; live(r.left + r.width / 2, r.top + r.height / 2); aim(t.clientX, t.clientY); e.preventDefault(); }, { passive: false });
+  jb.addEventListener('touchmove', function (e) { var t = findT(e); if (t) { aim(t.clientX, t.clientY); e.preventDefault(); } }, { passive: false });
+  jb.addEventListener('touchend', tend);
+  jb.addEventListener('mousedown', function (e) {
+    var r = jb.getBoundingClientRect(); live(r.left + r.width / 2, r.top + r.height / 2); aim(e.clientX, e.clientY); e.preventDefault();
+    function mv(ev) { aim(ev.clientX, ev.clientY); } function up() { jend(); removeEventListener('mousemove', mv); removeEventListener('mouseup', up); }
+    addEventListener('mousemove', mv); addEventListener('mouseup', up);
+  });
+  cv.addEventListener('wheel', function (e) { zoomK = Math.max(0.6, Math.min(1.7, zoomK * (e.deltaY > 0 ? 1.08 : 0.93))); e.preventDefault(); }, { passive: false });
+  var RAY = new THREE.Raycaster(), GROUND = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0), HIT = new THREE.Vector3();
+  cv.addEventListener('click', function (e) {
+    if (Date.now() < eat) return;
+    RAY.setFromCamera({ x: e.clientX / innerWidth * 2 - 1, y: -(e.clientY / innerHeight) * 2 + 1 }, CAM);
+    if (RAY.ray.intersectPlane(GROUND, HIT)) { target = { x: HIT.x, z: HIT.z }; tapMark(HIT.x, HIT.z); }
+  });
+  var KM = { ArrowLeft: 'l', ArrowRight: 'r', ArrowUp: 'u', ArrowDown: 'd', a: 'l', d: 'r', w: 'u', s: 'd' };
+  addEventListener('keydown', function (e) { if (KM[e.key]) { keys[KM[e.key]] = true; target = null; e.preventDefault(); } });
+  addEventListener('keyup', function (e) { if (KM[e.key]) keys[KM[e.key]] = false; });
+  var mark = new THREE.Mesh(new THREE.RingGeometry(0.12, 0.17, 32), new THREE.MeshBasicMaterial({ color: 0xfff8ea, transparent: true, opacity: 0, depthWrite: false }));
+  mark.rotation.x = -Math.PI / 2; mark.position.y = 0.02; SC.add(mark);
+  function tapMark(x, z) { mark.position.x = x; mark.position.z = z; mark.material.opacity = 0.9; mark.scale.set(1, 1, 1); }
+
+  /* ---------- nút hành động gần nhà ---------- */
+  var act = document.getElementById('act'), near = null, toastT = 0;
+  function toast(s) { var t = document.getElementById('toast'); t.textContent = s; t.className = 'toast show'; clearTimeout(toastT); toastT = setTimeout(function () { t.className = 'toast'; }, 3200); }
+  act.onclick = function () { if (near) toast('Bản thử 3D: bước vào "' + near.name + '" sẽ nối với bài học của game chính ở bước sau.'); };
+
+  /* ---------- giờ trong ngày: mặt trời, màu trời, đèn đường ---------- */
+  var hrIn = document.getElementById('hr'), liveBtn = document.getElementById('live'), clk = document.getElementById('clk'), glare = document.getElementById('glare');
+  var useLive = true, hour = 12;
+  function vnHour() { var d = new Date(Date.now() + 7 * 3600e3); return d.getUTCHours() + d.getUTCMinutes() / 60; }
+  hrIn.oninput = function () { useLive = false; liveBtn.className = 'off'; hour = +hrIn.value; };
+  liveBtn.onclick = function () { useLive = true; liveBtn.className = ''; };
+  // bảng màu theo giờ: [giờ, sương/trời, trời (bán cầu), đất, cường độ bán cầu, màu nắng, cường độ nắng]
+  var PAL = [
+    [0, 0x1c2340, 0x4a5a99, 0x223022, 0.32, 0x8899cc, 0.18],
+    [5, 0x2e3555, 0x6a74a8, 0x2c3a2a, 0.36, 0x9aa6d6, 0.2],
+    [6, 0xf0c9a6, 0xffd9b8, 0x9aa47a, 0.42, 0xffb070, 0.7],
+    [8, 0xf3e6cf, 0xfff3e0, 0xc9d6a8, 0.5, 0xffe7c4, 0.95],
+    [12, 0xf3ead8, 0xffffff, 0xd2dcb4, 0.52, 0xfff6e8, 1.0],
+    [16, 0xf3e3c8, 0xfff0d8, 0xc9d0a0, 0.5, 0xffe0b0, 0.95],
+    [18, 0xf0b98c, 0xffc49a, 0x9c8a66, 0.42, 0xff9a5a, 0.75],
+    [19.3, 0x3a3558, 0x7a6aa0, 0x34343a, 0.36, 0xb08ab0, 0.2],
+    [24, 0x1c2340, 0x4a5a99, 0x223022, 0.32, 0x8899cc, 0.18]
+  ];  var cA = new THREE.Color(), cB = new THREE.Color();
+  function mix(a, b, k, out) { cA.setHex(a); cB.setHex(b); return out.copy(cA).lerp(cB, k); }
+  var night = 0;
+  function applyTime() {
+    if (useLive) { hour = vnHour(); hrIn.value = Math.min(23.5, Math.max(4, hour)); }
+    var hh = Math.floor(hour), mm = Math.floor((hour - hh) * 60); clk.textContent = '🕐 ' + (hh < 10 ? '0' : '') + hh + ':' + (mm < 10 ? '0' : '') + mm;
+    var i = 0; while (i < PAL.length - 2 && hour >= PAL[i + 1][0]) i++;
+    var a = PAL[i], b = PAL[i + 1], k = (hour - a[0]) / (b[0] - a[0]);
+    mix(a[1], b[1], k, SC.fog.color); SC.background.copy(SC.fog.color);
+    mix(a[2], b[2], k, HEMI.color); mix(a[3], b[3], k, HEMI.groundColor); HEMI.intensity = a[4] + (b[4] - a[4]) * k;
+    mix(a[5], b[5], k, SUN.color); SUN.intensity = a[6] + (b[6] - a[6]) * k;
+    var ang = (hour - 6) / 12 * Math.PI, up = Math.sin(ang);
+    // đường đi của mặt trời: đông (phải) → hơi về phía sau thành phố lúc trưa → tây (trái); bóng ngả về phía người xem cho thấy chiều sâu
+    var dir = new THREE.Vector3(Math.cos(ang), Math.max(0.1, up) * 1.25 + 0.08, -0.45 - 0.15 * up);
+    if (up < 0) dir.set(-0.35, 1.1, -0.4);   // đêm: ánh trăng nhạt
+    SUN.position.copy(P.g.position).add(dir.normalize().multiplyScalar(30)); SUN.target.position.copy(P.g.position);
+    night = up < -0.02 ? 1 : up < 0.18 ? 1 - (up + 0.02) / 0.2 : 0;
+    for (var l = 0; l < LAMPS.length; l++) LAMPS[l].material.opacity = night * (l % 2 ? 0.55 : 0.95);
+    var gx = 50 + Math.cos(ang) * 42, gi = up > 0 ? (0.16 + 0.32 * (1 - up)) : 0;
+    glare.style.background = gi ? 'radial-gradient(circle at ' + gx + '% -8%, rgba(255,214,150,' + gi.toFixed(2) + '), rgba(255,214,150,0) 55%)' : 'none';
+  }
+
+  /* ---------- vòng lặp ---------- */
+  var last = performance.now(), T = 0, camPos = new THREE.Vector3(), camLook = new THREE.Vector3(), first = true;
+  function resize() { var w = innerWidth, h = innerHeight; R.setSize(w, h, false); CAM.aspect = w / h; CAM.updateProjectionMatrix(); }
+  addEventListener('resize', resize); resize();
+  setTimeout(function () { var t = document.getElementById('tip'); t.style.opacity = '0'; setTimeout(function () { t.style.display = 'none'; }, 600); }, 9000);
+
+  function update(dt) {
+    T += dt;
+    var vx = 0, vz = 0;
+    if (joy.on && (joy.dx || joy.dy)) { vx = joy.dx; vz = joy.dy; }
+    else if (keys.l || keys.r || keys.u || keys.d) { vx = (keys.r ? 1 : 0) - (keys.l ? 1 : 0); vz = (keys.d ? 1 : 0) - (keys.u ? 1 : 0); }
+    else if (target) { var tx = target.x - P.x, tz = target.z - P.z, dd = Math.sqrt(tx * tx + tz * tz); if (dd < 0.08) target = null; else { vx = tx / dd; vz = tz / dd; } }
+    var len = Math.sqrt(vx * vx + vz * vz);
+    P.moving = len > 0.01;
+    if (P.moving) {
+      if (len > 1) { vx /= len; vz /= len; }
+      var step = SPEED * dt;
+      if (!tryMove(P, vx, vz, step) && target) target = null;
+      setDir(P, vx, vz); P.t += dt;
+    }
+    drawWalker(P);
+    // Kai đi theo dấu chân
+    if (!trail.length || Math.abs(P.x - trail[trail.length - 1].x) + Math.abs(P.z - trail[trail.length - 1].z) > 0.08) { trail.push({ x: P.x, z: P.z }); if (trail.length > 120) trail.shift(); }
+    var ahead = 0, i; for (i = trail.length - 1; i > 0; i--) ahead += Math.abs(trail[i].x - trail[i - 1].x) + Math.abs(trail[i].z - trail[i - 1].z);
+    var kgo = null;
+    while (trail.length > 1 && ahead > 0.7) { var t0 = trail[0], dk = Math.hypot(t0.x - K.x, t0.z - K.z); if (dk < 0.04) { ahead -= Math.abs(trail[1].x - t0.x) + Math.abs(trail[1].z - t0.z); trail.shift(); continue; } kgo = t0; break; }
+    if (Math.hypot(P.x - K.x, P.z - K.z) > 4.2) { K.x = P.x - 0.5; K.z = P.z + 0.3; trail = [{ x: K.x, z: K.z }, { x: P.x, z: P.z }]; kgo = null; }
+    K.moving = !!kgo;
+    if (kgo) { var kx = kgo.x - K.x, kz = kgo.z - K.z, kl = Math.hypot(kx, kz) || 1, ks = Math.min(kl, SPEED * dt * (ahead > 1.6 ? 1.3 : 1)); K.x += kx / kl * ks; K.z += kz / kl * ks; K.t += dt; setDir(K, kx, kz); }
+    var kn2 = K.dir === 'up' ? 'kai_up.png' : (K.dir === 'left' || K.dir === 'right') ? 'kai_left.png' : 'kai_follow.png';
+    var km = K.g.userData.mesh; if (km.material.map !== tex(kn2)) { km.material.map = tex(kn2); km.customDepthMaterial = dmat(kn2); }
+    K.g.scale.x = (kn2 === 'kai_left.png' ? (K.dir === 'right' ? -1 : 1) : 1) * 82 * U;
+    K.g.position.set(K.x, K.moving ? Math.abs(Math.sin(K.t * 7)) * 0.06 : 0, K.z); K.blob.position.set(K.x, 0.012, K.z);
+    // người đi đường
+    for (i = 0; i < TOWN.length; i++) {
+      var w = TOWN[i];
+      if (w.wait > 0) { w.wait -= dt; w.moving = false; }
+      else {
+        if (!w.goal) { var g = freeSpot(w.d); var gdx = g.x - w.x, gdz = g.z - w.z, gl = Math.hypot(gdx, gdz); if (gl > 5) { g.x = w.x + gdx / gl * 5; g.z = w.z + gdz / gl * 5; } w.goal = g; }
+        var ex = w.goal.x - w.x, ez = w.goal.z - w.z, el = Math.hypot(ex, ez);
+        if (el < 0.08) { w.goal = null; w.wait = 0.8 + Math.random() * 3; w.moving = false; }
+        else {
+          var ok = tryMove(w, ex / el, ez / el, Math.min(el, w.sp * dt));
+          if (!ok) { w.goal = null; w.wait = 0.3; w.moving = false; } else { w.moving = true; w.t += dt; setDir(w, ex, ez); }
+        }
+      }
+      // gặp người chơi thì quay mặt lại
+      var pdx = P.x - w.x, pdz = P.z - w.z;
+      if (!w.moving && pdx * pdx + pdz * pdz < 1.4) setDir(w, pdx, pdz);
+      drawWalker(w);
+    }
+    // cây đung đưa, người đứng thở nhẹ
+    for (i = 0; i < SWAY.length; i++) { var sw = SWAY[i]; sw.g.rotation.z = Math.sin(T * 1.3 * sw.k + sw.ph) * 0.025 + Math.sin(T * 0.37 + sw.ph) * 0.012; }
+    for (i = 0; i < STAND.length; i++) { var st = STAND[i]; st.g.scale.y = 1.24 * (1 + Math.sin(T * 1.6 + st.ph) * 0.012); }
+    cloudTex.offset.x += dt * 0.0035; cloudTex.offset.y += dt * 0.0012;
+    if (mark.material.opacity > 0) { mark.material.opacity = Math.max(0, mark.material.opacity - dt * 0.9); mark.scale.multiplyScalar(1 + dt * 0.6); }
+    // nhà, cây che nhân vật thì mờ đi
+    for (i = 0; i < FADE.length; i++) {
+      var f = FADE[i], mm = f.userData.mesh.material, sx = Math.abs(f.scale.x) * 0.42;
+      var hide = f.position.z > P.z + 0.05 && f.position.z - P.z < Math.abs(f.scale.y) * 0.8 && Math.abs(f.position.x - P.x) < sx;
+      var want = hide ? 0.35 : 1;
+      if (Math.abs(mm.opacity - want) > 0.01) { mm.transparent = true; mm.opacity += (want - mm.opacity) * Math.min(1, dt * 6); mm.alphaTest = 0.5 * mm.opacity; }
+      else if (want === 1 && mm.transparent) { mm.transparent = false; mm.opacity = 1; mm.alphaTest = 0.5; }
+    }
+    for (i = 0; i < PLATES.length; i++) { var pl = PLATES[i], pd2 = Math.hypot(pl.position.x - P.x, pl.position.z - P.z); pl.material.opacity = pd2 < 6 ? 1 : Math.max(0, 1 - (pd2 - 6) / 3); pl.visible = pl.material.opacity > 0.02; }
+    // nút hành động khi đứng gần cửa
+    near = null;
+    for (i = 0; i < BUILD.length; i++) { var bd = BUILD[i]; if (Math.hypot(bd.x - P.x, bd.z - P.z) < 1.1) { near = bd; break; } }
+    if (near) { act.textContent = 'Vào ' + near.name + ' ›'; act.className = 'act show'; } else act.className = 'act';
+    applyTime();
+  }
+  function camera(dt) {
+    var dist = 8.4 * zoomK, hgt = 5.2 * zoomK;
+    var look = new THREE.Vector3(P.x, 0.7, P.z - 0.6);
+    var want = new THREE.Vector3(P.x, hgt, P.z + dist);
+    var k = first ? 1 : 1 - Math.exp(-dt * 5);
+    camPos.lerp(want, k); camLook.lerp(look, k); first = false;
+    CAM.position.copy(camPos); CAM.lookAt(camLook);
+    // tiêu đề theo khu đang đứng
+    var gx = P.x / U, gy = P.z / U, nm = 'Brightford';
+    for (var i = 0; i < DIST.length; i++) { var d = DIST[i]; if (gx >= d.ox && gx < d.ox + d.s.w && gy >= d.oy && gy < d.oy + d.s.h) { nm = d.s.title; break; } }
+    document.getElementById('ttl').textContent = nm + ' · bản thử 3D';
+  }
+  function loop(now) {
+    var dt = Math.min(0.05, (now - last) / 1000); last = now;
+    update(dt); camera(dt);
+    R.render(SC, CAM);
+    requestAnimationFrame(loop);
+  }
+  camPos.set(P.x, 5.2, P.z + 8.4); camLook.set(P.x, 0.7, P.z);
+  requestAnimationFrame(loop);
+
+  /* để thử tự động */
+  window.__T = { R: R, SC: SC, SUN: SUN, CAM: CAM };
+  window.P3D = { go: function (x, z) { target = { x: x, z: z }; }, place: function (x, z) { P.x = x; P.z = z; first = true; }, state: function () { return { x: P.x, z: P.z, dir: P.dir, moving: P.moving, near: near && near.name, walkers: TOWN.length, hour: hour }; }, setHour: function (h) { useLive = false; hour = h; }, zoom: function (k) { zoomK = k; } };
+})();
+</script>
+</body>
+</html>
