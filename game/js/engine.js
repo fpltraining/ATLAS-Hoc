@@ -6,7 +6,7 @@ var G = window.G || (window.G = {});
   var cv, ctx, W = 0, H = 0, dpr = 1, zoom = 1, baseZoom = 1;
   var scene = null, sceneId = '';
   var P = { x: 768, y: 300, dir: 'down', moving: false, t: 0 };
-  var K = { x: 740, y: 260 };
+  var K = { x: 740, y: 260 }, trail = [];   // trail: dấu chân người chơi để Kai đi theo
   var target = null, pending = null, pendingLabel = '';
   var joy = { on: false, dx: 0, dy: 0 };
   var keys = {};
@@ -14,6 +14,7 @@ var G = window.G || (window.G = {});
   var last = 0, fade = 0, running = false;
   var near = null;
   var SPEED = 260;
+  var STEP_RATE = 14;   // nhịp bước chung cho mọi nhân vật (cùng nhịp với Han): pha bước tăng 14 rad/giây khi đang đi
 
   G.engineInit = function () {
     cv = document.getElementById('world');
@@ -52,7 +53,7 @@ var G = window.G || (window.G = {});
     var wk = scene.walk;   // luôn đặt nhân vật trong vùng đi được
     P.x = clamp(sp.x, wk.x0 + 5, wk.x1 - 5); P.y = clamp(sp.y, wk.y0 + 5, wk.y1 - 5); P.dir = sp.dir || 'up';
     unstick();
-    K.x = P.x - 50; K.y = P.y + 30;
+    K.x = P.x - 50; K.y = P.y + 30; trail = [{ x: K.x, y: K.y }];
     target = null; pending = null; path = []; fade = 1;
     G.S.viTri = { canh: id, x: Math.round(P.x), y: Math.round(P.y) };
     G.save();
@@ -293,14 +294,26 @@ var G = window.G || (window.G = {});
       if (Math.abs(vx) > Math.abs(vy)) P.dir = vx < 0 ? 'left' : 'right'; else P.dir = vy < 0 ? 'up' : 'down';
       P.t += dt;
     }
-    // Kai đi theo sau, cách một khoảng
-    var kx = P.x - 60 - K.x, ky = P.y + 20 - K.y, kd = Math.sqrt(kx * kx + ky * ky);
-    // hướng của Kai: theo hướng đang bay, đứng yên thì quay về phía người chơi
-    var kvx = kd > 30 ? kx : P.x - K.x, kvy = kd > 30 ? ky : P.y - K.y;
-    K.moving = kd > 30;
-    if (K.moving) K.t = (K.t || 0) + dt;
-    if (Math.abs(kvx) > 4 || Math.abs(kvy) > 4) K.dir = Math.abs(kvx) > Math.abs(kvy) * 0.8 ? (kvx < 0 ? 'left' : 'right') : (kvy < 0 ? 'up' : 'down');
-    if (kd > 30) { K.x += (kx / kd) * Math.min(kd, SPEED * 0.95 * dt * (kd > 160 ? 1.6 : 1)); K.y += (ky / kd) * Math.min(kd, SPEED * 0.95 * dt * (kd > 160 ? 1.6 : 1)); }
+    // Kai đi theo dấu chân người chơi (cách ~70 px trên đường đi), nên không xuyên qua cây, nhà như đi thẳng
+    if (!trail.length || Math.abs(P.x - trail[trail.length - 1].x) + Math.abs(P.y - trail[trail.length - 1].y) > 8) { trail.push({ x: P.x, y: P.y }); if (trail.length > 120) trail.shift(); }
+    var lenAhead = 0, ti;
+    for (ti = trail.length - 1; ti > 0; ti--) lenAhead += Math.abs(trail[ti].x - trail[ti - 1].x) + Math.abs(trail[ti].y - trail[ti - 1].y);
+    var kgo = null;
+    while (trail.length > 1 && lenAhead > 70) {   // điểm dấu chân cũ nhất còn xa người chơi hơn 70 px: Kai đi tới đó
+      var t0 = trail[0], dk = Math.sqrt((t0.x - K.x) * (t0.x - K.x) + (t0.y - K.y) * (t0.y - K.y));
+      if (dk < 4) { lenAhead -= Math.abs(trail[1].x - t0.x) + Math.abs(trail[1].y - t0.y); trail.shift(); continue; }
+      kgo = t0; break;
+    }
+    var kd = Math.sqrt((P.x - K.x) * (P.x - K.x) + (P.y - K.y) * (P.y - K.y));
+    if (kd > 420) { K.x = P.x - 50; K.y = P.y + 30; trail = [{ x: K.x, y: K.y }, { x: P.x, y: P.y }]; kgo = null; }   // bị bỏ quá xa (đổi cảnh, dịch chỗ): đứng lại cạnh người chơi
+    K.moving = !!kgo;
+    if (kgo) {
+      var kx = kgo.x - K.x, ky = kgo.y - K.y, kl = Math.sqrt(kx * kx + ky * ky) || 1, ks = Math.min(kl, SPEED * dt * (lenAhead > 160 ? 1.3 : 1));
+      K.x += kx / kl * ks; K.y += ky / kl * ks; K.t = (K.t || 0) + dt;
+      if (Math.abs(kx) > 1 || Math.abs(ky) > 1) K.dir = Math.abs(kx) > Math.abs(ky) * 0.8 ? (kx < 0 ? 'left' : 'right') : (ky < 0 ? 'up' : 'down');
+    } else if (kd > 4) {   // đứng yên: quay về phía người chơi
+      var fx0 = P.x - K.x, fy0 = P.y - K.y; K.dir = Math.abs(fx0) > Math.abs(fy0) * 0.8 ? (fx0 < 0 ? 'left' : 'right') : (fy0 < 0 ? 'up' : 'down');
+    }
 
     // chỗ tương tác gần nhất → nút hành động
     var ts = triggers(), best = null, bd = 1e9;
@@ -570,7 +583,7 @@ var G = window.G || (window.G = {});
     var n = Math.min(sets.length, sceneId === 'home_en' ? 3 : 6), pick = G.shuffle(sets.slice());
     for (var i = 0; i < n; i++) {
       var sp = freeSpot(), tg = freeSpot();
-      town.push({ set: pick[i], x: sp.x, y: sp.y, tx: tg.x, ty: tg.y, dir: 'down', t: Math.random() * 6, sp: 60 + Math.random() * 40, wait: Math.random() * 2, say: null, sayT: 0, talkCd: 5 + Math.random() * 15 });
+      town.push({ set: pick[i], x: sp.x, y: sp.y, tx: tg.x, ty: tg.y, dir: 'down', t: Math.random() * 6, sp: 105 + Math.random() * 30, wait: Math.random() * 2, path: [], say: null, sayT: 0, talkCd: 5 + Math.random() * 15 });
     }
   }
   G.TOWNIE_SETS = G.TOWNIE_SETS || [];
@@ -588,11 +601,19 @@ var G = window.G || (window.G = {});
       o.pnear = dx * dx + dy * dy < 230 * 230;
       if (o.pnear || rain) { o.pmov = false; continue; }
       if (o.pw > 0) { o.pw -= dt; o.pmov = false; continue; }
-      var nx = o.x + o.pv * 36 * dt;
+      var nx = o.x + o.pv * 62 * dt;
       skipP = o; var bad = Math.abs(nx - o.hx) > 85 || blocked(nx + o.pv * 22, o.y); skipP = null;
       if (bad) { o.pv = -o.pv; o.pw = 1.5 + Math.random() * 3; o.pmov = false; continue; }
       o.x = nx; o.pmov = true; o.pt += dt; o.pdir = o.pv < 0 ? 'left' : 'right';
     }
+  }
+  /* người đi đường chọn đích mới và tìm đường (đi vòng vật cản, không cắt góc) */
+  function townRoute(p) {
+    for (var k = 0; k < 4; k++) {
+      var tg = freeSpot(), pth = findPath(p.x, p.y, tg.x, tg.y);
+      if (pth && pth.length) { p.path = pth; p.tx = tg.x; p.ty = tg.y; return; }
+    }
+    p.path = [];
   }
   function updateTown(dt) {
     for (var i = 0; i < town.length; i++) {
@@ -603,10 +624,11 @@ var G = window.G || (window.G = {});
       var dx = P.x - p.x, dy = P.y - p.y;
       if (p.talkCd <= 0 && dx * dx + dy * dy < 170 * 170) { var LL = raining() && Math.random() < 0.6 ? RAIN_LINES : LINES; p.say = LL[Math.floor(Math.random() * LL.length)]; p.sayT = 3; p.talkCd = 18 + Math.random() * 15; p.wait = 1.5; p.dir = Math.abs(dx) > Math.abs(dy) ? (dx < 0 ? 'left' : 'right') : (dy < 0 ? 'up' : 'down'); }
       if (p.wait > 0) { p.wait -= dt; p.moving = false; continue; }
-      var mx = p.tx - p.x, my = p.ty - p.y, d = Math.sqrt(mx * mx + my * my);
-      if (d < 6) { p.wait = raining() ? 4 + Math.random() * 6 : 1 + Math.random() * 3; /* mưa: hay đứng lại che ô */ var tg = freeSpot(); p.tx = tg.x; p.ty = tg.y; p.moving = false; continue; }
+      if (!p.path || !p.path.length) { townRoute(p); if (!p.path.length) { p.wait = 0.6; p.moving = false; continue; } }
+      var wp = p.path[0], mx = wp.x - p.x, my = wp.y - p.y, d = Math.sqrt(mx * mx + my * my);
+      if (d < 6) { p.path.shift(); if (!p.path.length) { p.wait = raining() ? 4 + Math.random() * 6 : 1 + Math.random() * 3; /* mưa: hay đứng lại che ô */ p.moving = false; } continue; }
       var st = Math.min(d, p.sp * (raining() ? 0.7 : 1) * dt), nx = p.x + mx / d * st, ny = p.y + my / d * st;
-      if (blocked(nx, ny)) { var t2 = freeSpot(); p.tx = t2.x; p.ty = t2.y; p.wait = 0.5; p.moving = false; continue; }
+      if (blocked(nx, ny)) { p.path = []; p.wait = 0.3; p.moving = false; continue; }   // có người vừa đứng chắn: tìm đường khác
       p.x = nx; p.y = ny; p.moving = true; p.t += dt;
       p.dir = Math.abs(mx) > Math.abs(my) ? (mx < 0 ? 'left' : 'right') : (my < 0 ? 'up' : 'down');
     }
@@ -626,11 +648,11 @@ var G = window.G || (window.G = {});
     var S = 112, u = null, sw = 0, up = /_up\.png$/.test(nm), rain = raining();
     if (rain) {   // cầm ô: đi nhún nhảy (khung bước có tay đánh, không cầm ô được)
       if (p.uc === undefined) p.uc = Math.floor(Math.random() * 6);
-      u = holdAt(nm, p.x - S / 2, p.y + 6 - S, S, p.dir === 'right', p.moving ? -G.hopLift(S, p.t * 9, true) : 0, /_left\.png$/.test(nm));
-      sw = p.moving ? Math.sin(p.t * 9) * 0.07 : 0;
+      u = holdAt(nm, p.x - S / 2, p.y + 6 - S, S, p.dir === 'right', p.moving ? -G.hopLift(S, p.t * STEP_RATE, true) : 0, /_left\.png$/.test(nm));
+      sw = p.moving ? Math.sin(p.t * STEP_RATE) * 0.07 : 0;
       umbrella(u, p.uc, sw, 'pole');
     }
-    G.walkSprite(ctx, base, p.x, p.y + 6, S, p.dir, p.t * 9, p.moving, rain);
+    G.walkSprite(ctx, base, p.x, p.y + 6, S, p.dir, p.t * STEP_RATE, p.moving, rain);
     if (u) umbrella(u, p.uc, sw, 'top', !up);
     if (p.sayT > 0 && p.say) bubble(p.x, p.y - 108, p.say[0], Math.min(1, p.sayT * 2));
   }
@@ -1037,7 +1059,7 @@ var G = window.G || (window.G = {});
     shadow(o.x, py, 20);
     var u = raining() && !o.stall ? (im ? holdAt(im, o.x - 62, py + 4 - 124, 124, false, 0, false) : avatarHold(n.av, o.x, py + 4, 104, dir, null)) : null;
     if (u) umbrella(u, (o.x >> 3) % 6, 0, 'pole');
-    if (o.pmov) G.walkSprite(ctx, 'walk_' + o.npc, o.x, py + 4, 124, o.pdir, o.pt * 9, true);   // đang đi dạo: khung bước nhìn ngang
+    if (o.pmov) G.walkSprite(ctx, 'walk_' + o.npc, o.x, py + 4, 124, o.pdir, o.pt * STEP_RATE, true);   // đang đi dạo: khung bước nhìn ngang
     else if (im) G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, o.x, py + 4, 124, 0, false);
     else G.drawAvatar(ctx, n.av, o.x, py + 4, 104, dir, 0, false);
     if (u) umbrella(u, (o.x >> 3) % 6, 0, 'top', im || dir !== 'up');
@@ -1086,7 +1108,7 @@ var G = window.G || (window.G = {});
     var sw = P.moving ? Math.sin(P.t * 14) * 0.07 : 0;   // ô lắc cùng nhịp
     if (u) umbrella(u, 0, sw, 'pole');
     // có khung bước (đánh tay, đánh chân) thì dùng; trời mưa cầm ô hoặc chưa có khung thì đi nhún nhảy
-    G.walkSprite(ctx, base, P.x, P.y + 8, 120, P.dir, P.t * 14, P.moving, rain);
+    G.walkSprite(ctx, base, P.x, P.y + 8, 120, P.dir, P.t * STEP_RATE, P.moving, rain);
     if (u) umbrella(u, 0, sw, 'top', dir !== 'up');
   }
   function drawKai() {
@@ -1189,6 +1211,11 @@ var G = window.G || (window.G = {});
   G.doNear = function () { if (near) near.act(); };
   /* để thử tự động: vị trí nhân vật, camera, cảnh, chỗ tương tác gần nhất */
   G.debugGo = function (x, y) { goTo(x, y); return { path: path.length + (target ? 1 : 0) }; };
-  G.debugTown = function () { return town.map(function (t) { return { x: Math.round(t.x), y: Math.round(t.y), av: t.av }; }); };
+  /* kiểm thử: đặt người chơi ở (x, y) không đi qua cửa; đọc vị trí người đi đường và Kai */
+  G.debugPlace = function (x, y) { P.x = x; P.y = y; target = null; path = []; pending = null; K.x = x - 50; K.y = y + 30; trail = [{ x: K.x, y: K.y }]; };
+  G.debugFree = function (x, y) { return !blocked(x, y); };
+  G.debugPath = function (x0, y0, x1, y1) { var p = findPath(x0, y0, x1, y1); return p ? p.length : -1; };
+  G.debugKai = function () { return { x: K.x, y: K.y }; };
+  G.debugTown = function () { return town.map(function (t) { return { x: Math.round(t.x), y: Math.round(t.y), set: t.set, wait: t.wait, moving: !!t.moving }; }); };
   G.debugState = function () { return { target: !!target, moving: P.moving, x: P.x, y: P.y, cx: cam.x, cy: cam.y, zoom: zoom, scene: sceneId, near: near ? near.label : null }; };
 })();
