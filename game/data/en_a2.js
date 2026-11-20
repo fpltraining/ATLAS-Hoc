@@ -1,6 +1,6 @@
 /* Tầng 3 · A2 – B1 của Trường Anh ngữ. Mỗi phòng là một nhóm buổi (giống Tầng 1): mỗi buổi 1 điểm ngữ pháp
    (đọc cách dùng, nghe 4 câu mẫu) và 15 câu dùng thật ngoài đời, rồi Luyện và Kiểm tra (đạt 8/10 là qua buổi).
-   Phòng A2-1 · Kể chuyện đã qua (buổi 1–6), A2-2 · Hẹn gặp và kế hoạch (buổi 7–12), A2-3 · Đi lại và du lịch (buổi 13–18). A2-4 và phòng thi tầng thêm dần. */
+   Phòng A2-1 · Kể chuyện đã qua (buổi 1–6), A2-2 · Hẹn gặp và kế hoạch (buổi 7–12), A2-3 · Đi lại và du lịch (buổi 13–18), A2-4 · Sức khoẻ, công việc, nêu ý kiến (buổi 19–24), phòng thi Tầng 3. */
 var G = window.G || (window.G = {});
 G.ROOMS = G.ROOMS || {};
 
@@ -197,7 +197,7 @@ G.ROOMS = G.ROOMS || {};
       ex: [['I\'m meeting a client at ten.', 'Mười giờ tôi gặp một khách hàng.'], ['What are you doing on Saturday?', 'Thứ Bảy bạn làm gì?'],
         ['We\'re having a party on Friday night.', 'Tối thứ Sáu nhà mình có tiệc.'], ['She\'s flying to Singapore tomorrow.', 'Mai cô ấy bay đi Singapore.']] },
     [['Are you doing anything tonight?', 'Tối nay bạn có bận gì không?', 'Are you doing anything tonight? Let\'s eat out.', 'Tối nay bạn có bận gì không? Đi ăn ngoài đi.'],
-      ['What are you up to?', 'Bạn định làm gì?', 'Hey! What are you up to this weekend?', 'Này! Cuối tuần này bạn định làm gì?'],
+      ['What are you up to?', 'Bạn có dự định gì? (thân mật)', 'Hey! What are you up to this weekend?', 'Này! Cuối tuần này bạn định làm gì?'],
       ['I\'m meeting a friend.', 'Tôi có hẹn với một người bạn.', 'Sorry, I can\'t. I\'m meeting a friend.', 'Xin lỗi, không được rồi. Tôi có hẹn với bạn.'],
       ['I\'m working late.', 'Tôi phải làm muộn.', 'I\'m working late on Thursday.', 'Thứ Năm tôi phải làm muộn.'],
       ['We\'re having a party.', 'Nhà mình có tiệc.', 'We\'re having a party on Saturday. Come!', 'Thứ Bảy nhà mình có tiệc. Đến chơi nhé!'],
@@ -411,4 +411,144 @@ G.ROOMS = G.ROOMS || {};
     group: ['en-a2-13', 'en-a2-14', 'en-a2-15', 'en-a2-16', 'en-a2-17', 'en-a2-18'],
     intro: ['Hey! I\'m Carlos. Let\'s travel the world in English!', 'Phòng A2-3 có 6 buổi (buổi 13–18). Học xong bạn so sánh được nơi chốn, hỏi và chỉ đường, làm thủ tục ở sân bay, nhận phòng khách sạn, xử lý sự cố khi đi xa và kể những nơi mình từng đến.'],
     items: [], outro: 'Bon voyage! You\'re ready to travel in English.' };
+  /* ===== Phòng A2-4 · Sức khoẻ, công việc, nêu ý kiến · Mr. Grant ===== */
+  P = 'en-a2-4'; T = 'grant';
+  S('en-a2-19', P, 19, 'Kể triệu chứng: for và since', T, 'Good morning. I\'m Mr. Grant. How long have you felt like this?',
+    { t: 'Hiện tại hoàn thành với for / since',
+      b: 'Việc bắt đầu trong quá khứ và vẫn còn tới bây giờ: have / has + V3 + for (khoảng thời gian) hoặc since (mốc bắt đầu).\nI\'ve had a headache for two days. · I\'ve had a headache since Monday.\nHỏi: How long have you had …? · How long have you been sick?\nKể triệu chứng: I have a cough / a fever / a sore throat. · My back hurts. · I feel dizzy.',
+      ex: [['I\'ve had a cough for a week.', 'Tôi bị ho một tuần nay.'], ['She\'s been sick since Friday.', 'Cô ấy ốm từ thứ Sáu.'],
+        ['How long have you had this pain?', 'Bạn bị đau thế này bao lâu rồi?'], ['My stomach has hurt since breakfast.', 'Tôi đau bụng từ sau bữa sáng.']] },
+    [['I don\'t feel well.', 'Tôi thấy không khoẻ.', 'Sorry, I don\'t feel well today.', 'Xin lỗi, hôm nay tôi thấy không khoẻ.'],
+      ['a headache', 'đau đầu', 'I\'ve had a headache since this morning.', 'Tôi đau đầu từ sáng nay.'],
+      ['a sore throat', 'đau họng', 'I have a sore throat and a runny nose.', 'Tôi đau họng và sổ mũi.'],
+      ['a fever', 'sốt', 'He\'s had a fever for two days.', 'Anh ấy sốt hai ngày rồi.'],
+      ['a cough', 'ho', 'I can\'t sleep because of this cough.', 'Tôi không ngủ được vì cơn ho này.'],
+      ['My back hurts.', 'Tôi đau lưng.', 'My back hurts when I sit too long.', 'Ngồi lâu là tôi đau lưng.'],
+      ['I feel dizzy.', 'Tôi thấy chóng mặt.', 'I feel dizzy when I stand up.', 'Tôi chóng mặt mỗi khi đứng dậy.'],
+      ['I\'m allergic to', 'tôi bị dị ứng với', 'I\'m allergic to peanuts.', 'Tôi bị dị ứng đậu phộng.'],
+      ['for three days', 'ba ngày nay', 'I\'ve felt tired for three days.', 'Ba ngày nay tôi thấy mệt.'],
+      ['since Monday', 'từ thứ Hai', 'I\'ve stayed home since Monday.', 'Tôi ở nhà từ thứ Hai.'],
+      ['How long have you had it?', 'Bạn bị bao lâu rồi?', 'A rash? How long have you had it?', 'Nổi mẩn à? Bạn bị bao lâu rồi?'],
+      ['It\'s getting worse.', 'Nó đang nặng hơn.', 'The pain is getting worse every day.', 'Cơn đau mỗi ngày một nặng hơn.'],
+      ['I caught a cold.', 'Tôi bị cảm.', 'I caught a cold in the rain.', 'Tôi dầm mưa nên bị cảm.'],
+      ['I hurt my ankle.', 'Tôi bị đau mắt cá chân.', 'I hurt my ankle playing football.', 'Tôi bị đau mắt cá chân khi đá bóng.'],
+      ['I\'m feeling better.', 'Tôi thấy đỡ hơn rồi.', 'Thanks, I\'m feeling much better now.', 'Cảm ơn, giờ tôi thấy đỡ hơn nhiều rồi.']]);
+
+  S('en-a2-20', P, 20, 'Khám bệnh và mua thuốc', T, 'Let\'s see what the doctor says.',
+    { t: 'Tần suất và lời dặn: how often, twice a day',
+      b: 'Hỏi tần suất: How often should I take it? — Twice a day. · Every six hours. · Once a day before bed.\nLời dặn với should / shouldn\'t / have to: You should drink lots of water. · You shouldn\'t drink coffee. · You have to finish all the pills.\nHỏi lại cho chắc: So I take one pill after each meal, right?',
+      ex: [['Take two pills twice a day.', 'Uống hai viên, ngày hai lần.'], ['How often should I take this?', 'Thuốc này tôi uống bao lâu một lần?'],
+        ['You should get some rest.', 'Bạn nên nghỉ ngơi.'], ['You shouldn\'t take it on an empty stomach.', 'Bạn không nên uống lúc bụng đói.']] },
+    [['make an appointment', 'đặt lịch khám', 'I\'d like to make an appointment with Dr. Anna.', 'Tôi muốn đặt lịch khám với bác sĩ Anna.'],
+      ['What seems to be the problem?', 'Bạn bị sao vậy?', 'Come in. What seems to be the problem?', 'Mời vào. Bạn bị sao vậy?'],
+      ['a prescription', 'đơn thuốc', 'Here\'s your prescription. Take it to the pharmacy.', 'Đơn thuốc của bạn đây. Mang tới hiệu thuốc nhé.'],
+      ['How often should I take it?', 'Bao lâu uống một lần?', 'Thank you. How often should I take it?', 'Cảm ơn. Bao lâu tôi uống một lần?'],
+      ['twice a day', 'ngày hai lần', 'Take one tablet twice a day.', 'Uống một viên, ngày hai lần.'],
+      ['after meals', 'sau bữa ăn', 'Take this medicine after meals.', 'Uống thuốc này sau bữa ăn.'],
+      ['every six hours', 'cứ sáu tiếng một lần', 'You can take it every six hours.', 'Bạn có thể uống cứ sáu tiếng một lần.'],
+      ['You should rest.', 'Bạn nên nghỉ ngơi.', 'You should rest and drink lots of water.', 'Bạn nên nghỉ ngơi và uống nhiều nước.'],
+      ['side effects', 'tác dụng phụ', 'Does this medicine have any side effects?', 'Thuốc này có tác dụng phụ gì không?'],
+      ['It might make you sleepy.', 'Nó có thể làm bạn buồn ngủ.', 'Don\'t drive. It might make you sleepy.', 'Đừng lái xe. Thuốc có thể làm bạn buồn ngủ.'],
+      ['painkillers', 'thuốc giảm đau', 'Do you have any painkillers for a headache?', 'Có thuốc giảm đau đầu không?'],
+      ['without a prescription', 'không cần đơn', 'Can I buy this without a prescription?', 'Thuốc này mua không cần đơn được không?'],
+      ['Get well soon!', 'Mau khoẻ nhé!', 'Take care and get well soon!', 'Giữ gìn sức khoẻ, mau khoẻ nhé!'],
+      ['a sick note', 'giấy nghỉ ốm', 'Could I get a sick note for work?', 'Cho tôi xin giấy nghỉ ốm để nộp chỗ làm được không?'],
+      ['Call an ambulance!', 'Gọi xe cấp cứu đi!', 'He fell down! Call an ambulance!', 'Anh ấy ngã rồi! Gọi xe cấp cứu đi!']]);
+
+  S('en-a2-21', P, 21, 'Công việc của bạn', T, 'So, what do you do?',
+    { t: 'Nói về công việc: hiện tại đơn và tiếp diễn',
+      b: 'Việc thường ngày, cố định: hiện tại đơn → I work in marketing. · She teaches math.\nViệc đang làm dạo này: hiện tại tiếp diễn → I\'m working on a new project. · He\'s training a new team.\nHỏi nghề: What do you do? (không hỏi "What is your job?" cho tự nhiên) — I\'m a nurse. / I work for a bank. / I\'m between jobs.',
+      ex: [['What do you do?', 'Bạn làm nghề gì?'], ['I work for a tech company.', 'Tôi làm cho một công ty công nghệ.'],
+        ['I\'m working on a big project this month.', 'Tháng này tôi đang làm một dự án lớn.'], ['She\'s in charge of the sales team.', 'Cô ấy phụ trách đội bán hàng.']] },
+    [['What do you do?', 'Bạn làm nghề gì?', 'Nice to meet you! So, what do you do?', 'Rất vui được gặp bạn! Vậy bạn làm nghề gì?'],
+      ['I work for', 'tôi làm cho (công ty)', 'I work for a small travel agency.', 'Tôi làm cho một công ty du lịch nhỏ.'],
+      ['I work in', 'tôi làm trong ngành', 'I work in customer service.', 'Tôi làm trong ngành chăm sóc khách hàng.'],
+      ['I\'m in charge of', 'tôi phụ trách', 'I\'m in charge of the online shop.', 'Tôi phụ trách cửa hàng trực tuyến.'],
+      ['I\'m working on', 'tôi đang làm (dự án)', 'I\'m working on a new website right now.', 'Hiện tôi đang làm một trang web mới.'],
+      ['full-time', 'toàn thời gian', 'She works full-time at the hospital.', 'Cô ấy làm toàn thời gian ở bệnh viện.'],
+      ['part-time', 'bán thời gian', 'I have a part-time job at a café.', 'Tôi làm bán thời gian ở một quán cà phê.'],
+      ['work from home', 'làm việc tại nhà', 'I work from home on Fridays.', 'Thứ Sáu tôi làm việc tại nhà.'],
+      ['my boss', 'sếp của tôi', 'My boss is strict but fair.', 'Sếp tôi nghiêm nhưng công bằng.'],
+      ['my coworkers', 'đồng nghiệp của tôi', 'I have lunch with my coworkers.', 'Tôi ăn trưa với đồng nghiệp.'],
+      ['a deadline', 'hạn chót', 'We have a deadline on Friday.', 'Thứ Sáu là hạn chót của chúng tôi.'],
+      ['a meeting', 'cuộc họp', 'Sorry, I have a meeting at ten.', 'Xin lỗi, mười giờ tôi có cuộc họp.'],
+      ['It pays well.', 'Lương cao.', 'The job is hard, but it pays well.', 'Công việc vất vả nhưng lương cao.'],
+      ['I\'m between jobs.', 'Tôi đang tìm việc mới.', 'Right now I\'m between jobs.', 'Hiện giờ tôi đang tìm việc mới.'],
+      ['How do you like your job?', 'Bạn thấy công việc thế nào?', 'How do you like your new job?', 'Bạn thấy công việc mới thế nào?']]);
+
+  S('en-a2-22', P, 22, 'Phỏng vấn xin việc', T, 'Please have a seat. Tell me about yourself.',
+    { t: 'Nói điểm mạnh và kinh nghiệm',
+      b: 'Điểm mạnh: I\'m good at + V-ing / danh từ → I\'m good at solving problems. · I\'m good with people.\nKinh nghiệm: I have three years of experience in … · I used to work as … (trước đây tôi từng làm …, giờ không làm nữa).\nMong muốn: I\'d like to … · I\'m interested in this job because …',
+      ex: [['I\'m good at working in a team.', 'Tôi làm việc nhóm tốt.'], ['I used to work as a waiter.', 'Trước đây tôi từng làm bồi bàn.'],
+        ['I have two years of experience in sales.', 'Tôi có hai năm kinh nghiệm bán hàng.'], ['I\'m interested in this job because I love travel.', 'Tôi quan tâm công việc này vì tôi mê du lịch.']] },
+    [['Tell me about yourself.', 'Hãy giới thiệu về bản thân.', 'Let\'s start. Tell me about yourself.', 'Ta bắt đầu nhé. Hãy giới thiệu về bản thân bạn.'],
+      ['I\'m good at', 'tôi giỏi về', 'I\'m good at talking to customers.', 'Tôi giỏi nói chuyện với khách hàng.'],
+      ['I\'m good with computers.', 'Tôi rành máy tính.', 'I\'m good with computers and design apps.', 'Tôi rành máy tính và các ứng dụng thiết kế.'],
+      ['years of experience', 'năm kinh nghiệm', 'I have five years of experience in teaching.', 'Tôi có năm năm kinh nghiệm dạy học.'],
+      ['I used to work as', 'trước đây tôi từng làm', 'I used to work as a tour guide.', 'Trước đây tôi từng làm hướng dẫn viên du lịch.'],
+      ['my strengths', 'điểm mạnh của tôi', 'One of my strengths is patience.', 'Một trong những điểm mạnh của tôi là kiên nhẫn.'],
+      ['my weakness', 'điểm yếu của tôi', 'My weakness is public speaking, but I\'m improving.', 'Điểm yếu của tôi là nói trước đám đông, nhưng tôi đang tiến bộ.'],
+      ['I\'m a fast learner.', 'Tôi học nhanh.', 'I don\'t know this software yet, but I\'m a fast learner.', 'Tôi chưa biết phần mềm này, nhưng tôi học nhanh.'],
+      ['Why do you want this job?', 'Vì sao bạn muốn công việc này?', 'So, why do you want this job?', 'Vậy vì sao bạn muốn công việc này?'],
+      ['I\'m interested in', 'tôi quan tâm tới', 'I\'m interested in working with children.', 'Tôi quan tâm tới công việc với trẻ em.'],
+      ['When can you start?', 'Khi nào bạn có thể bắt đầu?', 'Great. When can you start?', 'Tốt lắm. Khi nào bạn có thể bắt đầu?'],
+      ['I can start next week.', 'Tôi có thể bắt đầu tuần sau.', 'I can start next week if you like.', 'Nếu được, tôi có thể bắt đầu tuần sau.'],
+      ['the salary', 'mức lương', 'Could you tell me about the salary?', 'Anh chị cho tôi biết về mức lương được không?'],
+      ['Do you have any questions?', 'Bạn có câu hỏi nào không?', 'Before we finish, do you have any questions?', 'Trước khi kết thúc, bạn có câu hỏi nào không?'],
+      ['Thank you for your time.', 'Cảm ơn anh chị đã dành thời gian.', 'Thank you for your time. I hope to hear from you.', 'Cảm ơn anh chị đã dành thời gian. Mong nhận được tin.']]);
+
+  S('en-a2-23', P, 23, 'Nêu ý kiến, đồng ý, phản đối', T, 'What do you think? I want to hear your opinion.',
+    { t: 'Nêu ý kiến lịch sự',
+      b: 'Nêu ý kiến: I think … · In my opinion, … · I feel that … · To be honest, …\nĐồng ý: I agree. · Exactly! · That\'s a good point.\nPhản đối nhẹ nhàng (người Mỹ ít nói thẳng "You\'re wrong"): I see your point, but … · I\'m not so sure. · I don\'t really agree.\nHỏi ý kiến: What do you think? · How do you feel about …?',
+      ex: [['In my opinion, the bus is better.', 'Theo tôi, đi xe buýt tốt hơn.'], ['I see your point, but it\'s too expensive.', 'Tôi hiểu ý bạn, nhưng nó đắt quá.'],
+        ['That\'s a good point.', 'Ý đó hay đấy.'], ['How do you feel about working from home?', 'Bạn thấy làm việc ở nhà thế nào?']] },
+    [['I think', 'tôi nghĩ', 'I think we should leave early.', 'Tôi nghĩ chúng ta nên đi sớm.'],
+      ['In my opinion', 'theo tôi', 'In my opinion, this plan is too risky.', 'Theo tôi, kế hoạch này rủi ro quá.'],
+      ['To be honest', 'nói thật', 'To be honest, I didn\'t like the movie.', 'Nói thật, tôi không thích bộ phim đó.'],
+      ['What do you think?', 'Bạn nghĩ sao?', 'Here\'s my idea. What do you think?', 'Đây là ý của tôi. Bạn nghĩ sao?'],
+      ['How do you feel about …?', 'Bạn thấy … thế nào?', 'How do you feel about the new rules?', 'Bạn thấy quy định mới thế nào?'],
+      ['I agree.', 'Tôi đồng ý.', 'I agree. It\'s a great idea.', 'Tôi đồng ý. Ý tưởng hay lắm.'],
+      ['Exactly!', 'Chính xác!', 'Exactly! That\'s what I was thinking.', 'Chính xác! Tôi cũng đang nghĩ vậy.'],
+      ['That\'s a good point.', 'Ý đó hay đấy.', 'That\'s a good point. I didn\'t think of that.', 'Ý đó hay đấy. Tôi chưa nghĩ tới.'],
+      ['I see your point, but', 'tôi hiểu ý bạn, nhưng', 'I see your point, but we don\'t have time.', 'Tôi hiểu ý bạn, nhưng chúng ta không có thời gian.'],
+      ['I\'m not so sure.', 'Tôi không chắc lắm.', 'Is it really cheaper? I\'m not so sure.', 'Có thật rẻ hơn không? Tôi không chắc lắm.'],
+      ['I don\'t really agree.', 'Tôi không đồng ý lắm.', 'I don\'t really agree with that idea.', 'Tôi không đồng ý lắm với ý đó.'],
+      ['on the other hand', 'mặt khác', 'It\'s fast. On the other hand, it\'s expensive.', 'Nó nhanh. Mặt khác, nó đắt.'],
+      ['It\'s worth a try.', 'Đáng để thử.', 'It might not work, but it\'s worth a try.', 'Có thể không thành, nhưng đáng để thử.'],
+      ['Let\'s agree to disagree.', 'Mỗi người một ý vậy.', 'Okay, let\'s agree to disagree.', 'Thôi được, mỗi người một ý vậy.'],
+      ['You have a point.', 'Bạn nói cũng có lý.', 'Hmm, you have a point there.', 'Ừm, bạn nói cũng có lý.']]);
+
+  S('en-a2-24', P, 24, 'Lý do, kết quả, điều kiện', T, 'If you finish this lesson, you\'ll be ready for the floor test!',
+    { t: 'Because, so, although và câu điều kiện loại 1',
+      b: 'Lý do: because (vì) → I stayed home because I was sick.\nKết quả: so (nên) → I was sick, so I stayed home.\nTương phản: although (mặc dù) → Although it was raining, we went out.\nĐiều kiện có thể xảy ra: If + hiện tại đơn, will + động từ → If it rains, we\'ll stay home. (Không dùng will sau if.)',
+      ex: [['If it rains, we\'ll stay home.', 'Nếu trời mưa, chúng ta sẽ ở nhà.'], ['I was tired, so I went to bed early.', 'Tôi mệt nên đi ngủ sớm.'],
+        ['Although it was cold, we went swimming.', 'Mặc dù trời lạnh, chúng tôi vẫn đi bơi.'], ['I\'m learning English because I want to travel.', 'Tôi học tiếng Anh vì tôi muốn đi du lịch.']] },
+    [['because', 'vì', 'I\'m late because the bus broke down.', 'Tôi đến trễ vì xe buýt bị hỏng.'],
+      ['so', 'nên', 'It was late, so we took a taxi.', 'Muộn rồi nên chúng tôi đi taxi.'],
+      ['although', 'mặc dù', 'Although he\'s young, he\'s very wise.', 'Mặc dù còn trẻ, anh ấy rất khôn ngoan.'],
+      ['because of', 'vì (+ danh từ)', 'The game was canceled because of the rain.', 'Trận đấu bị huỷ vì trời mưa.'],
+      ['If I have time', 'nếu tôi có thời gian', 'If I have time, I\'ll call you tonight.', 'Nếu có thời gian, tối nay tôi sẽ gọi bạn.'],
+      ['If you hurry', 'nếu bạn nhanh lên', 'If you hurry, you\'ll catch the bus.', 'Nếu nhanh lên, bạn sẽ kịp xe buýt.'],
+      ['If it\'s sunny', 'nếu trời nắng', 'If it\'s sunny tomorrow, we\'ll go to the beach.', 'Nếu mai trời nắng, chúng ta sẽ đi biển.'],
+      ['unless', 'trừ khi', 'I won\'t go unless you come too.', 'Tôi sẽ không đi trừ khi bạn đi cùng.'],
+      ['That\'s why', 'đó là lý do', 'I love cooking. That\'s why I became a chef.', 'Tôi mê nấu ăn. Đó là lý do tôi làm đầu bếp.'],
+      ['The reason is', 'lý do là', 'The reason is simple: it\'s cheaper.', 'Lý do đơn giản thôi: nó rẻ hơn.'],
+      ['As a result', 'kết quả là', 'He practiced every day. As a result, he passed.', 'Anh ấy luyện mỗi ngày. Kết quả là anh ấy đã đậu.'],
+      ['even though', 'dù cho', 'She smiled even though she was tired.', 'Cô ấy vẫn cười dù đang mệt.'],
+      ['in case', 'phòng khi', 'Take an umbrella in case it rains.', 'Mang ô theo phòng khi trời mưa.'],
+      ['What will you do if …?', 'Bạn sẽ làm gì nếu …?', 'What will you do if you miss the flight?', 'Bạn sẽ làm gì nếu lỡ chuyến bay?'],
+      ['It depends on', 'còn tuỳ vào', 'It depends on the weather.', 'Còn tuỳ vào thời tiết.']]);
+
+  G.ROOMS[P] = { id: P, lang: 'en', label: 'A2-4', title: 'A2-4 · Sức khoẻ, công việc, nêu ý kiến (buổi 19–24)', teacher: T,
+    group: ['en-a2-19', 'en-a2-20', 'en-a2-21', 'en-a2-22', 'en-a2-23', 'en-a2-24'],
+    intro: ['Good morning! I\'m Mr. Grant. Let\'s talk about health, work and ideas.', 'Phòng A2-4 có 6 buổi (buổi 19–24). Học xong bạn kể được triệu chứng khi đi khám, hỏi cách dùng thuốc, nói về công việc, trả lời phỏng vấn xin việc, nêu ý kiến và nói lý do, kết quả, điều kiện.'],
+    items: [], outro: 'Excellent! Now you\'re ready for the floor test.' };
+
+  /* ===== Phòng thi Tầng 3: 20 câu lấy ngẫu nhiên trong 360 câu của 24 buổi, đạt 16/20 là tốt nghiệp A2 – B1 ===== */
+  var all = [], n;
+  for (n = 1; n <= 24; n++) all = all.concat(G.ROOMS['en-a2-' + (n < 10 ? '0' : '') + n].items);
+  G.ROOMS['en-a2-test'] = { id: 'en-a2-test', lang: 'en', title: 'Thi Tầng 3 · A2 – B1', teacher: 'kai',
+    final: { lang: 'en', level: 'A2 – B1', levelEn: 'the A2 to B1 level' }, testN: 20, passN: 16,
+    intro: ['Welcome to the Floor 3 final! You\'ve come so far. Let\'s do this!', 'Bài thi 20 câu lấy ngẫu nhiên trong 360 câu của 24 buổi Tầng 3. Đạt từ 16/20 là tốt nghiệp A2 – B1 và nhận huy hiệu Ngôi sao thành phố.'],
+    items: all, outro: 'Fantastic! You\'ve finished A2 to B1!' };
 })();
