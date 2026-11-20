@@ -1064,6 +1064,7 @@ var G = window.G || (window.G = {});
     var u = raining() && !o.stall ? (im ? holdAt(im, o.x - 62, py + 4 - 124, 124, false, 0, false) : avatarHold(n.av, o.x, py + 4, 104, dir, null)) : null;
     if (u) umbrella(u, (o.x >> 3) % 6, 0, 'pole');
     if (o.pmov) G.walkSprite(ctx, 'walk_' + o.npc, o.x, py + 4, 124, o.pdir, o.pt * STEP_RATE, true);   // đang đi dạo: khung bước nhìn ngang
+    else if (!o.stall && G.hasWalk('walk_' + o.npc, 'down')) G.walkSprite(ctx, 'walk_' + o.npc, o.x, py + 4, 124, o.pmov ? o.pdir : dir, 0, false);   // có bộ khung bước đủ 3 hướng: đứng cũng dùng hình đó (không đế giấy), quay mặt về phía người chơi
     else if (im) G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, o.x, py + 4, 124, 0, false);
     else G.drawAvatar(ctx, n.av, o.x, py + 4, 104, dir, 0, false);
     if (u) umbrella(u, (o.x >> 3) % 6, 0, 'top', im || dir !== 'up');
@@ -1092,6 +1093,15 @@ var G = window.G || (window.G = {});
       return;
     }
     var who = G.S.nhanVat || 'han';
+    if (who === 'kai' && G.hasWalk('kai', 'down')) {   // chơi bằng robot Kai: có khung bước 3 hướng thì đi bằng chân như Han
+      var kd0 = P.dir === 'right' ? 'left' : P.dir, kraw = raining(), kname = 'kai_' + kd0 + '.png';
+      shadow(P.x, P.y, 22 * sh);
+      var kuu = kraw ? holdAt(kname, P.x - 52, P.y + 4 - 104, 104, P.dir === 'right', P.moving ? -G.hopLift(104, P.t * 14, true) : 0, kd0 === 'left') : null;
+      if (kuu) umbrella(kuu, 3, 0, 'pole');
+      G.walkSprite(ctx, 'kai', P.x, P.y + 4, 104, P.dir, P.t * STEP_RATE, P.moving, kraw);
+      if (kuu) umbrella(kuu, 3, 0, 'top', kd0 !== 'up');
+      return;
+    }
     if (who === 'kai') {   // chơi bằng robot Kai: dùng hình Kai 3 hướng, to hơn khi đi theo
       var kd = P.dir, kside = kd === 'left' || kd === 'right';
       var kn = kd === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : kside && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
@@ -1120,6 +1130,7 @@ var G = window.G || (window.G = {});
     shadow(K.x, K.y, 16);
     // có hình riêng từng hướng (kai_up / kai_left) thì dùng; chưa có thì lật hình mặt trước theo hướng đi
     var side = dir === 'left' || dir === 'right';
+    if (G.hasWalk('kai', 'down')) { G.walkSprite(ctx, 'kai', K.x, K.y + 3, 84, dir, (K.t || 0) * STEP_RATE, K.moving); return; }   // Kai có chân: bước như Han
     var name = dir === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : side && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
     var flip = name === 'kai_left.png' ? dir === 'right' : dir === 'left';
     G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, K.x, K.y + 3, 82, (K.t || 0) * 14, K.moving);   // robot: nhún nhảy (hình đã bỏ đám cỏ: thân chạm bóng)
