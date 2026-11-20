@@ -56,6 +56,7 @@ var G = window.G || (window.G = {});
     target = null; pending = null; path = []; fade = 1;
     G.S.viTri = { canh: id, x: Math.round(P.x), y: Math.round(P.y) };
     G.save();
+    var PH = people(); for (var ph = 0; ph < PH.length; ph++) if (PH[ph].hx !== undefined) { PH[ph].x = PH[ph].hx; PH[ph].pmov = false; }   // NPC đi dạo: vào cảnh thì đứng lại chỗ cũ
     camSnap = true; spawnTown(); fx = []; hudT = 0; weatherHint(); makePuddles();
     if (G.rainSound) G.rainSound(scene.kind === 'city' && G.weather() === 'rain');
     document.getElementById('hud-title').textContent = scene.title;
@@ -229,6 +230,7 @@ var G = window.G || (window.G = {});
     var PP = people();
     for (var pq = 0; pq < PP.length; pq++) {
       var po = PP[pq];
+      if (po === skipP) continue;   // NPC đang đi: không tự chặn chính mình
       if (po.simg) { var sk0 = (po.ss || 280) / 280; if (Math.abs(x - po.x) < 128 * sk0 && y > po.y - 95 * sk0 && y < po.y + 10) return true; continue; }   // quầy hình giấy
       if (po.bimg) { var bk0 = (po.bs || 210) / 210; if (Math.abs(x - po.x) < 90 * bk0 && y > po.y - 120 * bk0 && y < po.y + 6) return true; continue; }   // tiệm có hình toà nhà
       var pd = x - po.x, pe = (y - po.y) * 2; if (pd * pd + pe * pe < 26 * 26) return true;
@@ -314,7 +316,7 @@ var G = window.G || (window.G = {});
     // camera đi theo mượt (trễ nhẹ), vào cảnh mới thì đặt ngay
     if (camSnap) { cam.x = cx; cam.y = cy; camSnap = false; }
     else { var kf = Math.min(1, dt * 7); cam.x += (cx - cam.x) * kf; cam.y += (cy - cam.y) * kf; }
-    updateTown(dt); updateFx(dt);
+    updateTown(dt); updatePeople(dt); updateFx(dt);
     if (fade > 0) fade = Math.max(0, fade - dt * 3);
   }
 
@@ -572,6 +574,25 @@ var G = window.G || (window.G = {});
   }
   G.TOWNIE_SETS = G.TOWNIE_SETS || [];
   for (var tsI = 0; tsI < G.TOWNIE_SETS.length; tsI++) G.asset('person_' + G.TOWNIE_SETS[tsI] + '_down.png');   // tải sẵn
+  /* NPC có khung bước (walk_<npc>_left / _w1 / _w2, đặt ChatGPT): đi chậm qua lại quanh chỗ đứng, nghỉ ở hai đầu
+     (lúc nghỉ quay mặt ra như hình đứng). Người chơi lại gần hoặc trời mưa (đang cầm ô) thì đứng yên, quay mặt ra. */
+  var skipP = null;
+  function updatePeople(dt) {
+    var PP = people(), rain = raining();
+    for (var i = 0; i < PP.length; i++) {
+      var o = PP[i];
+      if (o.stall || o.bimg || !G.hasWalk('walk_' + o.npc, 'left')) continue;
+      if (o.hx === undefined) { o.hx = o.x; o.pt = 0; o.pw = 1 + Math.random() * 3; o.pv = Math.random() < 0.5 ? -1 : 1; o.pdir = o.pv < 0 ? 'left' : 'right'; }
+      var dx = P.x - o.x, dy = P.y - o.y;
+      o.pnear = dx * dx + dy * dy < 230 * 230;
+      if (o.pnear || rain) { o.pmov = false; continue; }
+      if (o.pw > 0) { o.pw -= dt; o.pmov = false; continue; }
+      var nx = o.x + o.pv * 36 * dt;
+      skipP = o; var bad = Math.abs(nx - o.hx) > 85 || blocked(nx + o.pv * 22, o.y); skipP = null;
+      if (bad) { o.pv = -o.pv; o.pw = 1.5 + Math.random() * 3; o.pmov = false; continue; }
+      o.x = nx; o.pmov = true; o.pt += dt; o.pdir = o.pv < 0 ? 'left' : 'right';
+    }
+  }
   function updateTown(dt) {
     for (var i = 0; i < town.length; i++) {
       var p = town[i];
@@ -1015,7 +1036,8 @@ var G = window.G || (window.G = {});
     shadow(o.x, py, 20);
     var u = raining() && !o.stall ? (im ? holdAt(im, o.x - 62, py + 4 - 124, 124, false, 0, false) : avatarHold(n.av, o.x, py + 4, 104, dir, null)) : null;
     if (u) umbrella(u, (o.x >> 3) % 6, 0, 'pole');
-    if (im) G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, o.x, py + 4, 124, 0, false);
+    if (o.pmov) G.walkSprite(ctx, 'walk_' + o.npc, o.x, py + 4, 124, o.pdir, o.pt * 9, true);   // đang đi dạo: khung bước nhìn ngang
+    else if (im) G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, im, X, Y, S, S); }, o.x, py + 4, 124, 0, false);
     else G.drawAvatar(ctx, n.av, o.x, py + 4, 104, dir, 0, false);
     if (u) umbrella(u, (o.x >> 3) % 6, 0, 'top', im || dir !== 'up');
     if (o.stall) { if (o.simg) { var cs = o.ss || 280; G.drawAsset(ctx, o.simg, o.x - cs / 2, o.y + 12 - cs * 0.975, cs, cs); } else drawStallFront(o); py = o.y + 6; }   // quầy hình giấy vẽ trước người bán; tên nằm dưới quầy

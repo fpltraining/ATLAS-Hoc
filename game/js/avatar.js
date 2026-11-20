@@ -91,7 +91,7 @@ var G = window.G || (window.G = {});
     var d = dir === 'right' ? 'left' : dir, flip = dir === 'right', stand = base + '_' + d + '.png';
     if (!has(stand)) { stand = base + '_down.png'; d = 'down'; flip = false; }
     if (!G.asset(stand).ok) {   // hình hướng này đang tải: tạm dùng hình mặt trước; chưa có gì thì chưa vẽ (không hiện ô chờ)
-      if (d === 'down' || !G.asset(base + '_down.png').ok) return;
+      if (d === 'down' || !has(base + '_down.png') || !G.asset(base + '_down.png').ok) return;
       stand = base + '_down.png'; d = 'down'; flip = false;
     }
     var hw = G.hasWalk(base, d);
