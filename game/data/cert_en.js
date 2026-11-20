@@ -58,6 +58,25 @@ var G = window.G || (window.G = {});
     ]
   };
 
+  /* Tầng 4 · B1 – B2: tình huống khó, phải nói dài hơn và có lý lẽ */
+  G.CERT_SPEAK['en-b1-test'] = [
+    { id: 'cert-b1-1', npc: 'zoe', sit: 'Kể một chuyện đáng nhớ đã xảy ra với bạn: lúc đó bạn đang làm gì, chuyện gì bất ngờ xảy ra, kết thúc ra sao và bạn thấy thế nào.', q: 'Tell me about a day you\'ll never forget.', vi: 'Kể cho mình nghe về một ngày bạn không bao giờ quên.',
+      need: [['was', 'were', 'went', 'had', 'happened', 'got', 'saw', 'met'], ['suddenly', 'all of a sudden', 'then', 'when', 'while', 'turned out'], ['in the end', 'finally', 'eventually', 'after that'], ['felt', 'feel', 'happy', 'scared', 'excited', 'surprised', 'amazing', 'never forget', 'relieved', 'proud']],
+      sample: ['It was my first day in Hanoi. I was walking to the station when suddenly it started to pour. In the end, a stranger shared her umbrella with me. I felt so grateful.', 'Last year I went hiking with friends. While we were climbing, we got lost. Eventually we found the path, and I was really relieved.'] },
+    { id: 'cert-b1-2', npc: 'ray', sit: 'Bạn mua tai nghe trên mạng, giao tới bị hỏng một bên. Gọi cửa hàng: nói rõ vấn đề, mã đơn, và yêu cầu đổi hoặc hoàn tiền.', q: 'Customer service, how can I help you today?', vi: 'Chăm sóc khách hàng xin nghe, tôi giúp gì được ạ?',
+      need: [['problem', 'broken', 'doesn\'t work', 'not working', 'damaged'], ['order', 'number', 'bought', 'ordered'], ['refund', 'exchange', 'replacement', 'new one', 'replace']],
+      sample: ['Hi, I\'m afraid there\'s a problem with my order. My order number is 4 7 2 1. The headphones arrived damaged, the left side doesn\'t work. I\'d like a replacement or a refund, please.', 'Hello, I ordered headphones last week, order number 5 5 3. One side is broken. Could I get a refund, please?'] },
+    { id: 'cert-b1-3', npc: 'max', sit: 'Bạn muốn thuê căn hộ 500 đô một tháng, chủ nhà muốn 600. Thương lượng: đưa giá, lý do, và một điều kiện đổi lại.', q: 'The rent is six hundred a month. Is that okay for you?', vi: 'Tiền thuê là sáu trăm một tháng. Bạn thấy được không?',
+      need: [['five hundred', 'five fifty', 'lower', 'less', 'discount', 'cheaper', 'flexibility'], ['because', 'since', 'the reason', 'market', 'budget', 'afford'], ['if', 'as long as', 'provided', 'in return', 'one year', 'longer contract', 'meet halfway']],
+      sample: ['That\'s a bit more than my budget. Could you do it for five fifty? I can sign a one-year contract in return.', 'Six hundred is over my budget. If I paid three months in advance, would you accept five hundred and fifty? Let\'s meet halfway.'] },
+    { id: 'cert-b1-4', npc: 'anna', sit: 'Thảo luận: làm việc ở nhà tốt hơn hay lên văn phòng tốt hơn? Nêu ý kiến, ưu và nhược điểm, cho ví dụ, rồi kết luận.', q: 'Do you think working from home is better than working in an office?', vi: 'Bạn nghĩ làm việc ở nhà có tốt hơn lên văn phòng không?',
+      need: [['i think', 'in my opinion', 'i believe', 'personally', 'it seems'], ['on the one hand', 'on the other hand', 'however', 'but', 'downside', 'advantage', 'whereas'], ['for example', 'for instance', 'such as', 'take'], ['overall', 'to sum up', 'all in all', 'in the end', 'at the end of the day', 'so']],
+      sample: ['In my opinion, working from home is better for most people. On the one hand, you save time, for example two hours of traffic a day. On the other hand, you can feel lonely. Overall, I\'d say a mix of both is best.', 'Personally, I prefer the office. However, working from home saves money, for instance on lunch and gas. To sum up, it depends on the job.'] },
+    { id: 'cert-b1-5', npc: 'grant', sit: 'Đồng nghiệp đề xuất bỏ họp sáng thứ Hai. Bạn không đồng ý: phản biện lịch sự, nêu lý do và đưa phương án khác.', q: 'I think we should cancel the Monday meetings. They\'re a waste of time.', vi: 'Tôi nghĩ mình nên bỏ họp sáng thứ Hai. Tốn thời gian quá.',
+      need: [['i see', 'that may be true', 'fair point', 'i understand', 'i take your point'], ['but', 'however', 'disagree', 'not sure'], ['because', 'since', 'the reason', 'that\'s why'], ['how about', 'what if', 'suggest', 'instead', 'shorter', 'maybe we could', 'why don\'t we']],
+      sample: ['I see where you\'re coming from, but I don\'t really agree, because the meeting helps us plan the week. How about making it shorter, maybe fifteen minutes?', 'That may be true, however it\'s the only time the whole team talks. Instead of canceling it, why don\'t we change it to every two weeks?'] }
+  ];
+
   /* tên phòng thi và lời mở đầu: thi chứng chỉ (không gọi là tốt nghiệp) */
   function patch(id, title, intro1) { var r = G.ROOMS[id]; if (!r) return; r.title = title; r.intro[1] = intro1; }
   patch('en-n-test', 'Thi chứng chỉ Nền tảng', 'Phần 1 · Hiểu: 20 câu lấy ngẫu nhiên trong 600 từ lõi (đạt từ 16/20). Phần 2 · Nói: 5 tình huống, tự nói bằng câu của bạn (trung bình từ 60/100). Đạt cả hai là nhận Chứng chỉ ConnectLife · Nền tảng và mở Tầng 2.');
@@ -71,7 +90,7 @@ var G = window.G || (window.G = {});
     { floor: 1, key: 'Nền tảng', name: 'Tầng 1 · Nền tảng', cefr: 'A0 → A1', hours: 60, out: 'Phát âm rõ, 600 từ lõi, nói câu ngắn về bản thân, gia đình, sở thích.' },
     { floor: 2, key: 'A1', name: 'Tầng 2 · A1', cefr: 'A1', hours: 50, out: 'Chào hỏi, giới thiệu, gọi món, mua đồ, hỏi và chỉ đường đơn giản.' },
     { floor: 3, key: 'A2 – B1', name: 'Tầng 3 · A2 – B1', cefr: 'A2 → B1', hours: 140, out: 'Kể chuyện đã qua, hẹn gặp, gọi điện, đi lại du lịch, đi khám, nói về công việc, nêu ý kiến.' },
-    { floor: 4, key: 'B1 – B2', name: 'Tầng 4 · B1 – B2', cefr: 'B1 → B2', hours: 180, out: 'Nói tự nhiên 3 phút không ngắt, xử lý tình huống khó (khiếu nại, thương lượng), thảo luận có lý lẽ.', soon: true },
+    { floor: 4, key: 'B1 – B2', name: 'Tầng 4 · B1 – B2', cefr: 'B1 → B2', hours: 180, out: 'Nói tự nhiên 3 phút không ngắt, xử lý tình huống khó (khiếu nại, thương lượng), thảo luận có lý lẽ.' },
     { final: true, name: 'Tốt nghiệp ConnectLife', cefr: 'Đầu ra giao tiếp', hours: 30, out: 'Bài thi đầu ra: nói chuyện 5 phút với người lạ về đời sống, tự xử lý 5 tình huống không có gợi ý, nghe hiểu hội thoại tốc độ thật. Qua bài này mới gọi là tốt nghiệp.', soon: true }
   ];
 })();

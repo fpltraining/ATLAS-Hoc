@@ -21,7 +21,8 @@ var G = window.G || (window.G = {});
     var after = 'Chứng chỉ ' + level + ' đã lưu trong hồ sơ ở Ngôi nhà chung. Cấp tiếp theo sẽ mở ở bản cập nhật sau!';
     if (lang === 'en' && level === 'Nền tảng') { G.S.tangEn = 2; G.save(); after = 'Tầng 2 · A1 đã mở! Ra hành lang, đi thang máy bên phải lên Tầng 2 nhé.'; }
     if (lang === 'en' && level === 'A1') { G.S.tangEn = 3; G.save(); after = 'Tầng 3 · A2 – B1 đã mở! Ra hành lang, đi thang máy bên phải lên Tầng 3 nhé.'; }
-    if (lang === 'en' && level === 'A2 – B1') after = 'Bạn đã có chứng chỉ Tầng 3! Huy hiệu Ngôi sao thành phố đã lên đầu. Tầng 4 · B1 – B2 sẽ mở ở bản cập nhật sau, rồi tới bài thi đầu ra để Tốt nghiệp ConnectLife.';
+    if (lang === 'en' && level === 'A2 – B1') { G.S.tangEn = 4; G.save(); after = 'Tầng 4 · B1 – B2 đã mở! Huy hiệu Ngôi sao thành phố đã lên đầu. Ra hành lang, đi thang máy lên Tầng 4 nhé.'; }
+    if (lang === 'en' && level === 'B1 – B2') after = 'Bạn đã có đủ 4 chứng chỉ! Huy hiệu Bậc thầy ngôn ngữ đã lên đầu. Bài thi đầu ra để Tốt nghiệp ConnectLife sẽ mở ở bản cập nhật sau.';
     G.say(speech, 'en');
     var wrap = G.el('div.modal.grad',
       G.el('div.grad-card',
