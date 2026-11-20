@@ -127,8 +127,16 @@ G.ASSET_LIST = [
     var img = new Image();
     img.alt = '';
     img.onload = function () { wrap.innerHTML = ''; wrap.style.background = ''; wrap.appendChild(img); wrap.className = 'asset ok ' + (cls || ''); };
+    var tries = 0;
     img.onerror = function () {
-      if (fallback) { var f = fallback; fallback = null; name = f; img.src = G.assetUrl(f); return; }
+      // hình lỗi (thường do bản lưu trong máy bị hỏng khi mạng chập chờn): xoá bản lưu đó rồi tải lại từ mạng, tối đa 2 lần
+      if (tries < 2) {
+        tries++; var u = G.assetUrl(name), again = function () { img.src = u + (u.indexOf('?') < 0 ? '?' : '&') + 'r=' + tries + Date.now() % 1e6; };
+        if (window.caches && caches.keys) caches.keys().then(function (ks) { return Promise.all(ks.map(function (k) { return caches.open(k).then(function (c) { return c['delete'](u, { ignoreSearch: false }); }); })); }).then(again, again);
+        else setTimeout(again, 600 * tries);
+        return;
+      }
+      if (fallback) { var f = fallback; fallback = null; name = f; tries = 2; img.src = G.assetUrl(f); return; }
       wrap.innerHTML = ''; wrap.appendChild(G.el('span.asset-name', name)); wrap.style.background = colorOf(name); };
     img.src = G.assetUrl(name);
     wrap.appendChild(G.el('span.asset-name', name));

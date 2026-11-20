@@ -78,8 +78,7 @@ var G = window.G || (window.G = {});
       G.el('div.hero-text',
         G.el('img.lobby-title', { src: G.assetUrl('lobby_title.png'), alt: 'ConnectLife · Kết nối cuộc sống' }),
         G.el('p.hero-sub', 'Sống ở Brightford, học tiếng Anh như người bản xứ: học ở trường, nói chuyện ở quán, đi khắp thành phố.'),
-        G.el('button.clay-btn', { onclick: function () { G.goCity(lastCity()); } }, 'Vào Brightford ›'),
-        G.el('a.btn.sm.p3d-link', { href: 'pho3d.html' }, '🌆 Dạo phố 3D (bản thử)')
+        G.el('button.clay-btn', { onclick: function () { G.goCity(lastCity()); } }, 'Vào Brightford ›')
       )
     ));
 
