@@ -7,7 +7,7 @@ G.ASSET_LIST = [
   'player_han_down.png', 'player_han_up.png', 'player_han_left.png',
   'player_han_down_w1.png', 'player_han_down_w2.png', 'player_han_up_w1.png', 'player_han_up_w2.png', 'player_han_left_w1.png', 'player_han_left_w2.png',
   'player_minh_down.png', 'player_minh_up.png', 'player_minh_left.png', 'kai_follow.png', 'kai_up.png', 'kai_left.png',
-  'card_city_en.png', 'card_city_zh.png', 'card_city_soon.png', 'lobby_hero.png',
+  'card_city_en.webp', 'card_city_zh.webp', 'card_city_ja.webp', 'card_city_ko.webp', 'card_city_fr.webp', 'lobby_hero.webp', 'lobby_title.png', 'paper_tile.webp',
   'map_home_en_p.png', 'map_street_en.png',
   /* kiểu mô hình giấy: Khu phố Maple, Trung tâm, Phố mua sắm */
   'pc_airport.png', 'pc_school.png', 'pc_hospital.png', 'pc_market.png', 'pc_cafe.png', 'pc_fountain.png', 'pc_kiosk.png',
@@ -23,7 +23,7 @@ G.ASSET_LIST = [
   'npc_emma_talk.png', 'npc_wang_talk.png', 'npc_principal_li_talk.png',
   'player_han_happy.png', 'player_han_wow.png', 'player_han_think.png', 'player_minh_happy.png', 'player_minh_wow.png', 'player_minh_think.png',
   'npc_leo.png', 'npc_xiaolin.png', 'npc_rosa.png', 'npc_wangdama.png', 'npc_grace.png', 'npc_zhou.png', 'npc_anna.png', 'npc_sun.png',
-  'door_locked.png', 'door_open.png', 'door_lock.png', 'npc_tom_talk.png', 'npc_lily_talk.png', 'npc_sam_talk.png', 'plane.png', 'prop_oak.png', 'prop_palm.png', 'prop_lamp.png', 'prop_bench.png', 'prop_car.png', 'prop_mailbox.png', 'prop_flowers.png', 'prop_drone.png', 'logo_banner.png', 'logo_icon.png', 'flight_bg.png', 'npc_zhou_talk.png', 'npc_grace_talk.png', 'npc_li_talk.png', 'npc_zhang_talk.png', 'npc_chen_talk.png', 'diploma_en.png', 'diploma_zh.png',
+  'door_locked.png', 'door_open.png', 'door_lock.png', 'npc_tom_talk.png', 'npc_lily_talk.png', 'npc_sam_talk.png', 'plane.png', 'prop_oak.png', 'prop_palm.png', 'prop_lamp.png', 'prop_bench.png', 'prop_car.png', 'prop_mailbox.png', 'prop_flowers.png', 'prop_drone.png', 'logo_icon.png', 'flight_bg.png', 'npc_zhou_talk.png', 'npc_grace_talk.png', 'npc_li_talk.png', 'npc_zhang_talk.png', 'npc_chen_talk.png', 'diploma_en.png', 'diploma_zh.png',
   /* ảnh ChatGPT: người trong đời sống, toà nhà và nội thất các tiệm */
   'npc_mom.png', 'npc_mom_talk.png', 'npc_mia.png', 'npc_mia_talk.png', 'npc_ben.png', 'npc_ben_talk.png', 'npc_carlos.png', 'npc_carlos_talk.png', 'npc_dan.png', 'npc_dan_talk.png',
   'npc_owen.png', 'npc_owen_talk.png', 'npc_jake.png', 'npc_jake_talk.png', 'npc_ivy.png', 'npc_ivy_talk.png', 'npc_grant.png', 'npc_grant_talk.png',
