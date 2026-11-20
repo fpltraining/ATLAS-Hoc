@@ -337,7 +337,14 @@ var G = window.G || (window.G = {});
       { img: 'pc_lamp.png', x: 400, y: 425, s: 150, r: 10 }, { img: 'pc_lamp.png', x: 1130, y: 425, s: 150, r: 10 },
       { img: 'pc_lamp.png', x: 300, y: 720, s: 150, r: 10 }, { img: 'pc_lamp.png', x: 1230, y: 720, s: 150, r: 10 },
       { img: 'pc_bench.png', x: 420, y: 870, s: 110, r: 28 }, { img: 'pc_bench.png', x: 1110, y: 870, s: 110, r: 28 },
-      { img: 'pc_bush_orange.png', x: 200, y: 900, s: 110, r: 32 }, { img: 'pc_bush_white.png', x: 1330, y: 900, s: 110, r: 32 }
+      { img: 'pc_bush_orange.png', x: 200, y: 900, s: 110, r: 32 }, { img: 'pc_bush_white.png', x: 1330, y: 900, s: 110, r: 32 },
+      // đồ đường phố (đơn B 21/11): đèn giao thông hai đầu vạch qua đường, biển người đi bộ, trụ cứu hoả, biển xe buýt, chậu hoa, giá xe đạp, đồng hồ, sạp báo
+      { img: 'pc_traffic_light.png', x: 690, y: 424, s: 190, r: 10 }, { img: 'pc_traffic_light.png', x: 852, y: 736, s: 190, r: 10 },
+      { img: 'pc_crossing_sign.png', x: 862, y: 424, s: 130, r: 10 }, { img: 'pc_crossing_sign.png', x: 680, y: 736, s: 130, r: 10 },
+      { img: 'pc_hydrant.png', x: 1010, y: 422, s: 90, r: 14 }, { img: 'pc_bus_sign.png', x: 1440, y: 422, s: 140, r: 10 },
+      { img: 'pc_street_clock.png', x: 560, y: 422, s: 170, r: 10 }, { img: 'pc_news_stand.png', x: 230, y: 738, s: 110, r: 26 },
+      { img: 'pc_flowerpot.png', x: 520, y: 738, s: 80, r: 18 }, { img: 'pc_flowerpot.png', x: 1020, y: 738, s: 80, r: 18 },
+      { img: 'pc_bike_rack.png', x: 1330, y: 738, s: 120, r: 34 }
     ]
   };
   G.PEOPLE = G.PEOPLE || {};
