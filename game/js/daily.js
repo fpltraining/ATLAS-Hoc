@@ -5,7 +5,8 @@
 var G = window.G || (window.G = {});
 
 (function () {
-  var GOAL_MIN = 120;
+  var GOAL_MIN = 120;   // mặc định; người học chọn ở thanh kéo Lộ trình (G.S.caiDat.phutNgay)
+  function goalMin() { return (G.S && G.S.caiDat && G.S.caiDat.phutNgay) || GOAL_MIN; }
   var TASKS = [
     { id: 'bai', icon: '🏫', name: 'Học bài ở trường', hint: 'Học, luyện hoặc kiểm tra một phòng', min: 45 },
     { id: 'doc', icon: '📖', name: 'Đọc 1 chương truyện', hint: 'Về nhà, mở góc đọc truyện', min: 25 },
@@ -40,8 +41,8 @@ var G = window.G || (window.G = {});
     var d = today(), done = 0;
     for (var i = 0; i < TASKS.length; i++) if (d.viec[TASKS[i].id]) done++;
     var mins = Math.floor(d.giay / 60);
-    var pct = Math.min(100, Math.round(((done / TASKS.length) + Math.min(1, mins / GOAL_MIN)) / 2 * 100));
-    return { done: done, all: TASKS.length, mins: mins, goal: GOAL_MIN, pct: pct };
+    var gm = goalMin(), pct = Math.min(100, Math.round(((done / TASKS.length) + Math.min(1, mins / gm)) / 2 * 100));
+    return { done: done, all: TASKS.length, mins: mins, goal: gm, pct: pct };
   };
 
   /* đếm thời gian học thật */

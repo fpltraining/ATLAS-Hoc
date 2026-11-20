@@ -64,12 +64,14 @@ var G = window.G || (window.G = {});
   patch('en-a1-test', 'Thi chứng chỉ A1', 'Phần 1 · Hiểu: 20 câu lấy từ cả 4 phòng (đạt từ 16/20). Phần 2 · Nói: 5 tình huống đời thường, tự nói bằng câu của bạn (trung bình từ 60/100). Đạt cả hai là nhận Chứng chỉ ConnectLife · A1 và mở Tầng 3.');
   patch('en-a2-test', 'Thi chứng chỉ Tầng 3 · A2 – B1', 'Phần 1 · Hiểu: 20 câu lấy ngẫu nhiên trong 360 câu của 24 buổi (đạt từ 16/20). Phần 2 · Nói: 5 tình huống thật, tự nói bằng câu của bạn (trung bình từ 60/100). Đạt cả hai là nhận Chứng chỉ ConnectLife · A2 – B1.');
 
-  /* Lộ trình tới đầu ra giao tiếp: mỗi tầng một chứng chỉ, cuối cùng là Tốt nghiệp ConnectLife */
+  /* Lộ trình tới đầu ra giao tiếp: mỗi tầng một chứng chỉ, cuối cùng là Tốt nghiệp ConnectLife.
+     hours: số giờ học ước chừng để đạt bước đó (gồm bài học, ôn tập, luyện nói ngoài phố), tham khảo số giờ học có hướng dẫn
+     cho từng cấp CEFR (từ 0 tới B1 khoảng 350 giờ, tới B2 khoảng 500 giờ), app tập trung giao tiếp nên tổng khoảng 460 giờ. */
   G.ROADMAP_EN = [
-    { floor: 1, key: 'Nền tảng', name: 'Tầng 1 · Nền tảng', cefr: 'A0 → A1', out: 'Phát âm rõ, 600 từ lõi, nói câu ngắn về bản thân, gia đình, sở thích.' },
-    { floor: 2, key: 'A1', name: 'Tầng 2 · A1', cefr: 'A1', out: 'Chào hỏi, giới thiệu, gọi món, mua đồ, hỏi và chỉ đường đơn giản.' },
-    { floor: 3, key: 'A2 – B1', name: 'Tầng 3 · A2 – B1', cefr: 'A2 → B1', out: 'Kể chuyện đã qua, hẹn gặp, gọi điện, đi lại du lịch, đi khám, nói về công việc, nêu ý kiến.' },
-    { floor: 4, key: 'B1 – B2', name: 'Tầng 4 · B1 – B2', cefr: 'B1 → B2', out: 'Nói tự nhiên 3 phút không ngắt, xử lý tình huống khó (khiếu nại, thương lượng), thảo luận có lý lẽ.', soon: true },
-    { final: true, name: 'Tốt nghiệp ConnectLife', cefr: 'Đầu ra giao tiếp', out: 'Bài thi đầu ra: nói chuyện 5 phút với người lạ về đời sống, tự xử lý 5 tình huống không có gợi ý, nghe hiểu hội thoại tốc độ thật. Qua bài này mới gọi là tốt nghiệp.', soon: true }
+    { floor: 1, key: 'Nền tảng', name: 'Tầng 1 · Nền tảng', cefr: 'A0 → A1', hours: 60, out: 'Phát âm rõ, 600 từ lõi, nói câu ngắn về bản thân, gia đình, sở thích.' },
+    { floor: 2, key: 'A1', name: 'Tầng 2 · A1', cefr: 'A1', hours: 50, out: 'Chào hỏi, giới thiệu, gọi món, mua đồ, hỏi và chỉ đường đơn giản.' },
+    { floor: 3, key: 'A2 – B1', name: 'Tầng 3 · A2 – B1', cefr: 'A2 → B1', hours: 140, out: 'Kể chuyện đã qua, hẹn gặp, gọi điện, đi lại du lịch, đi khám, nói về công việc, nêu ý kiến.' },
+    { floor: 4, key: 'B1 – B2', name: 'Tầng 4 · B1 – B2', cefr: 'B1 → B2', hours: 180, out: 'Nói tự nhiên 3 phút không ngắt, xử lý tình huống khó (khiếu nại, thương lượng), thảo luận có lý lẽ.', soon: true },
+    { final: true, name: 'Tốt nghiệp ConnectLife', cefr: 'Đầu ra giao tiếp', hours: 30, out: 'Bài thi đầu ra: nói chuyện 5 phút với người lạ về đời sống, tự xử lý 5 tình huống không có gợi ý, nghe hiểu hội thoại tốc độ thật. Qua bài này mới gọi là tốt nghiệp.', soon: true }
   ];
 })();
