@@ -305,38 +305,132 @@ var G = window.G || (window.G = {});
       (pt.cham ? ' Đang chậm so với mốc nên phần học mỗi ngày đã tăng để kịp.' : pt.nhanh ? ' Bạn đang nhanh hơn tiến độ 👍' : '');
   };
   G.goalLine = function () { return G.planLine(); };
-  /* thẻ chọn mục tiêu + mốc thời gian (kết quả đầu vào, Sảnh); onChange khi đổi */
+  /* ngày học trong tuần (1 = thứ Hai … 7 = Chủ nhật, giờ Việt Nam); chưa chọn thì trải đều theo số ngày mỗi tuần */
+  var SPREAD = { 2: [2, 5], 3: [1, 3, 5], 4: [1, 2, 4, 5], 5: [1, 2, 3, 4, 5], 6: [1, 2, 3, 4, 5, 6], 7: [1, 2, 3, 4, 5, 6, 7] };
+  function dowOf(t) { var d = new Date(t + 7 * 3600000).getUTCDay(); return d === 0 ? 7 : d; }
+  G.studyDays = function () { var cd = G.S.caiDat || {}; return cd.ngayHoc && cd.ngayHoc.length >= 2 ? cd.ngayHoc.slice() : (SPREAD[cd.ngayTuan || 5] || SPREAD[5]).slice(); };
+  G.isStudyDay = function (t) { return G.studyDays().indexOf(dowOf(t || Date.now())) >= 0; };
+
+  /* ---------- thẻ "Kế hoạch của bạn" (kết quả đầu vào, Sảnh) ----------
+     Con số kết quả là trung tâm (phút mỗi ngày, ngày mỗi tuần, tháng); chọn ngày học trên dải 7 ngày; mục tiêu là thẻ chữ lớn;
+     thời gian là thước có nấc; cuối thẻ là chặng đường tới mục tiêu. Không emoji.
+     Chuyển động: số chạy tới giá trị mới rồi nảy nhẹ, chạm thì nhún, núm thước và thanh chặng đường trượt êm
+     (tắt khi máy bật Giảm chuyển động). */
+  var DAYN = ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'];
+  function calm() { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); }
+  function bump(el) { el.classList.remove('pv-bump'); void el.offsetWidth; el.classList.add('pv-bump'); }
+  function countTo(el, to, txt) {
+    el._tk = (el._tk || 0) + 1;
+    if (txt !== undefined) { el.textContent = txt; el.removeAttribute('data-v'); return; }
+    var from = el.hasAttribute('data-v') ? +el.getAttribute('data-v') : 0, tk = el._tk, t0 = 0;
+    el.setAttribute('data-v', to);
+    if (from === to || calm() || !window.requestAnimationFrame) { el.textContent = to; return; }
+    function step(t) {
+      if (el._tk !== tk) return;
+      if (!t0) t0 = t;
+      var k = Math.min(1, (t - t0) / 520); k = 1 - Math.pow(1 - k, 3);
+      el.textContent = Math.round(from + (to - from) * k);
+      if (k < 1) window.requestAnimationFrame(step); else bump(el);
+    }
+    window.requestAnimationFrame(step);
+  }
+  function lvOf(st) { return st.final ? 'Tốt nghiệp' : st.floor === 1 ? 'Nền tảng' : st.cefr.split('→').pop().replace(/^\s+|\s+$/g, ''); }
+  function ddmm(s) { var a = s.split('-'); return +a[2] + '/' + +a[1]; }
   G.goalCard = function (onChange) {
     var cd = G.S.caiDat = G.S.caiDat || {};
-    var line = G.el('div.gl-line'), gRow = G.el('div.gl-chips'), dRow = G.el('div.gl-chips'), mRow = G.el('div.gl-chips');
+    function changed() { if (G.S.mocHoc) G.setPlan(G.S.mocHoc.thang); else G.save(); draw(); if (onChange) onChange(); }
+    var title = G.el('div.pv-title'), sub = G.el('div.pv-sub');
+    var nMin = G.el('b.pv-num'), nDay = G.el('b.pv-num'), nMon = G.el('b.pv-num');
+    var week = G.el('div.pv-week'), goals = G.el('div.pv-goals'), stops = G.el('div.pv-stops'), fill = G.el('span.pv-fill'), thumb = G.el('span.pv-thumb');
+    var bar = G.el('i'), pct = G.el('b.pv-pctn'), road = G.el('div.pv-road'), note = G.el('div.pv-note'), weekHint = G.el('span.pv-hint'), rulerHint = G.el('span.pv-hint');
+    var root = G.el('div.pv',
+      G.el('div.pv-head', G.el('span.pv-kicker', 'Kế hoạch của bạn'), title, sub),
+      G.el('div.pv-stats',
+        G.el('div.pv-stat.main', nMin, G.el('span', 'phút mỗi ngày')),
+        G.el('div.pv-stat', nDay, G.el('span', 'ngày mỗi tuần')),
+        G.el('div.pv-stat', nMon, G.el('span', 'tháng'))),
+      G.el('div.pv-sec.pv-s-goal',
+        G.el('div.pv-lab', G.el('b', 'Mục tiêu')),
+        goals),
+      G.el('div.pv-sec.pv-s-week',
+        G.el('div.pv-lab', G.el('b', 'Ngày học trong tuần'), weekHint),
+        week),
+      G.el('div.pv-sec.pv-s-time',
+        G.el('div.pv-lab', G.el('b', 'Đạt mục tiêu trong'), rulerHint),
+        G.el('div.pv-ruler', G.el('span.pv-track'), fill, thumb, stops)),
+      G.el('div.pv-sec.pv-way',
+        G.el('div.pv-lab', G.el('b', 'Chặng đường'), G.el('span.pv-hint', pct, ' đã đi')),
+        G.el('div.pv-bar', bar), road),
+      note);
     function draw() {
-      var g = G.goalOf(), m = G.S.mocHoc, step = stepOf(), dpw = cd.ngayTuan || 5;
-      gRow.innerHTML = ''; dRow.innerHTML = ''; mRow.innerHTML = '';
-      [2, 3, 4, 5, 6, 7].forEach(function (nd) {   // không ai học đủ 7 ngày: để người học tự chọn, mặc định 5 ngày
-        dRow.appendChild(G.el('button.gl-chip' + (dpw === nd ? '.on' : ''), { onclick: function () {
-          cd.ngayTuan = nd; if (G.S.mocHoc) G.setPlan(G.S.mocHoc.thang); else G.save(); draw(); if (onChange) onChange();
-        } }, nd === 7 ? '7 ngày (cả tuần)' : nd + ' ngày'));
-      });
+      var g = G.goalOf(), m = G.S.mocHoc, step = stepOf(), tg = m ? m.buoc : step, days = G.studyDays(), dpw = days.length;
+      var pt = G.planToday ? G.planToday() : null, st = G.ROADMAP_EN[tg] || {};
+      title.textContent = g ? g.name : 'Bạn học tiếng Anh để làm gì?';
+      sub.textContent = !m ? 'Chọn mục tiêu, ngày học và thời gian. App tính mỗi ngày cần học bao lâu và giao đủ phần đó.' :
+        pt && pt.xong ? 'Bạn đã đạt mục tiêu này. Chọn mục tiêu cao hơn để học tiếp.' :
+        (st.final ? 'Tốt nghiệp ConnectLife' : 'Đạt trình độ ' + lvOf(st)) + ' trước ' + fmtDay(m.den);
+      var empty = !m || (pt && pt.xong);
+      nMin.parentNode.className = 'pv-stat main' + (empty ? ' empty' : '');
+      countTo(nMin, pt && !pt.xong ? pt.phut : 0, empty ? (m ? 'Đã đạt' : 'Chọn mốc') : undefined);
+      countTo(nDay, dpw);
+      countTo(nMon, m ? m.thang : 0, m ? undefined : '–');
+      // mục tiêu
+      goals.innerHTML = '';
       GOALS.forEach(function (x) {
-        gRow.appendChild(G.el('button.gl-chip' + (g && g.id === x.id ? '.on' : ''), { onclick: function () {
-          G.S.mucTieu = { id: x.id, luc: G.vnNow() }; if (G.S.mocHoc) G.setPlan(G.S.mocHoc.thang); G.save(); draw(); if (onChange) onChange();
-        } }, x.icon + ' ' + x.name));
+        var r = G.ROADMAP_EN[x.step] || {};
+        goals.appendChild(G.el('button.pv-goal' + (g && g.id === x.id ? '.on' : ''), { 'aria-pressed': g && g.id === x.id ? 'true' : 'false', onclick: function () { G.S.mucTieu = { id: x.id, luc: G.vnNow() }; changed(); } },
+          G.el('b', x.name), G.el('span', r.final ? 'Đầu ra giao tiếp' : 'Trình độ ' + lvOf(r))));
       });
-      MOCS.forEach(function (mo) {
-        var need = G.planNeed(mo, step, dpw), hard = need > 240;
-        mRow.appendChild(G.el('button.gl-chip.gl-moc' + (m && m.thang === mo ? '.on' : '') + (hard ? '.hard' : ''), { onclick: function () {
+      // ngày học
+      week.innerHTML = '';
+      DAYN.forEach(function (lb, i) {
+        var d = i + 1, on = days.indexOf(d) >= 0;
+        week.appendChild(G.el('button.pv-day' + (on ? '.on' : '') + (d === dowOf(Date.now()) ? '.today' : ''), { 'aria-pressed': on ? 'true' : 'false', 'aria-label': (on ? 'Ngày học ' : 'Ngày nghỉ ') + lb, onclick: function () {
+          var ds = G.studyDays(), k = ds.indexOf(d);
+          if (k >= 0) { if (ds.length <= 2) { G.toast('Học ít nhất 2 ngày mỗi tuần để không quên bài.'); return; } ds.splice(k, 1); } else ds.push(d);
+          ds.sort(function (x, y) { return x - y; }); cd.ngayHoc = ds; cd.ngayTuan = ds.length; changed();
+        } }, lb));
+      });
+      weekHint.textContent = dpw + ' ngày học, ' + (7 - dpw) + ' ngày nghỉ';
+      // thước thời gian
+      stops.innerHTML = '';
+      var sel = -1;
+      MOCS.forEach(function (mo, i) {
+        var need = G.planNeed(mo, step, dpw), hard = need > 240, on = !!m && m.thang === mo;
+        if (on) sel = i;
+        stops.appendChild(G.el('button.pv-stop' + (on ? '.on' : '') + (hard ? '.hard' : ''), { style: { left: (i / (MOCS.length - 1) * 100) + '%' }, 'aria-pressed': on ? 'true' : 'false', onclick: function () {
           if (hard) { G.toast('Mốc ' + mo + ' tháng cần hơn 4 giờ mỗi ngày, quá gấp. Chọn mốc dài hơn nhé.'); return; }
           G.setPlan(mo); draw(); if (onChange) onChange();
-        } }, G.el('b', mo + ' tháng'), G.el('span', need <= 0 ? 'đã đạt' : hard ? 'quá gấp' : '~' + Math.max(10, need) + ' phút/ngày')));
+        } }, G.el('i'), G.el('b', mo + ''), G.el('span', need <= 0 ? 'đã đạt' : hard ? 'quá gấp' : Math.max(10, need) + ' ph')));
       });
-      line.textContent = G.planLine();
+      var left = sel < 0 ? 0 : sel / (MOCS.length - 1) * 100;
+      thumb.style.left = left + '%'; fill.style.width = left + '%';
+      thumb.className = 'pv-thumb' + (sel < 0 ? ' off' : '');
+      rulerHint.textContent = sel < 0 ? 'chạm một mốc (tháng)' : 'tháng · phút mỗi ngày';
+      // chặng đường: phần đã học trên tổng số giờ tới mục tiêu, các mốc trình độ và tháng dự kiến
+      var rows = G.etaPlan ? G.etaPlan(pt && !pt.xong ? pt.phut : (cd.phutNgay || 40), dpw) : [], all = 0, i;
+      for (i = 0; i <= tg && i < G.ROADMAP_EN.length; i++) all += G.ROADMAP_EN[i].hours || 0;
+      var leftH = rows[tg] ? rows[tg].cum : all, prog = all ? Math.max(0, Math.min(1, 1 - leftH / all)) : 0;
+      bar.style.width = Math.round(prog * 100) + '%';
+      countTo(pct, Math.round(prog * 100)); pct.setAttribute('data-suf', '%');
+      // theo thứ tự thời gian: các mốc đã qua, hôm nay, các mốc sắp tới
+      road.innerHTML = '';
+      var nowPt = G.el('div.pv-pt.now', G.el('i'), G.el('b', 'Hôm nay'), G.el('span', ddmm(G.vnDay())));
+      rows.forEach(function (r, k) {
+        if (k > tg) return;
+        var done = r.left <= 0;
+        if (!done && nowPt) { road.appendChild(nowPt); nowPt = null; }
+        road.appendChild(G.el('div.pv-pt' + (done ? '.done' : '') + (k === tg ? '.goal' : ''), G.el('i'), G.el('b', lvOf(G.ROADMAP_EN[k])),
+          G.el('span', done ? 'đã qua' : m ? r.month.replace('tháng ', 'th ') : r.span)));
+      });
+      if (nowPt) road.appendChild(nowPt);
+      note.textContent = !m ? 'Chặng đường đang ước tính theo 40 phút mỗi ngày. Chọn mốc thời gian để app tính và giao đủ phần mỗi ngày.' :
+        pt && pt.cham ? 'Đang chậm so với mốc, phần mỗi ngày đã tăng để kịp.' : pt && pt.nhanh ? 'Bạn đang nhanh hơn tiến độ, phần mỗi ngày đã giảm.' :
+        'Học đủ phần mỗi ngày là kịp mốc. Ngày nghỉ trong lịch không làm đứt chuỗi.';
     }
     draw();
-    var el = G.el('div.gl-card', G.el('b.gl-h', '🎯 Bạn học tiếng Anh để làm gì?'), gRow,
-      G.el('b.gl-h', '📆 Mỗi tuần học mấy ngày?'), dRow,
-      G.el('b.gl-h', '📅 Muốn đạt mục tiêu trong bao lâu?'), mRow, line);
-    el.redraw = draw;
-    return el;
+    root.redraw = draw;
+    return root;
   };
 
   /* ---------- kết quả ---------- */

@@ -105,10 +105,12 @@ var G = window.G || (window.G = {});
     var today = G.vnDay();
     var c = G.S.chuoi;
     if (c.ngayCuoi === today) return;
-    // học N ngày mỗi tuần (người học chọn): nghỉ trong lịch không đứt chuỗi, cách nhau tối đa ceil(7 / N) ngày
-    var dpw = (G.S.caiDat && G.S.caiDat.ngayTuan) || 5, gap = Math.ceil(7 / dpw);
-    var last = c.ngayCuoi ? Date.parse(c.ngayCuoi + 'T00:00:00+07:00') : 0, days = last ? Math.round((Date.parse(today + 'T00:00:00+07:00') - last) / 86400000) : 99;
-    c.hienTai = days <= gap ? c.hienTai + 1 : 1;
+    // người học chọn ngày học trong tuần: ngày nghỉ theo lịch không đứt chuỗi, chỉ bỏ lỡ một ngày học mới đứt
+    var last = c.ngayCuoi ? Date.parse(c.ngayCuoi + 'T00:00:00+07:00') : 0, t1 = Date.parse(today + 'T00:00:00+07:00');
+    var days = last ? Math.round((t1 - last) / 86400000) : 99, ok = days <= 14;
+    if (ok && G.isStudyDay) { for (var k = 1; k < days; k++) if (G.isStudyDay(last + k * 86400000 + 43200000)) { ok = false; break; } }
+    else if (ok) ok = days <= Math.ceil(7 / ((G.S.caiDat && G.S.caiDat.ngayTuan) || 5));
+    c.hienTai = ok ? c.hienTai + 1 : 1;
     c.ngayCuoi = today;
     G.save();
   };
