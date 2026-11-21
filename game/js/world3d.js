@@ -3,7 +3,9 @@
    ba tờ bản đồ ghép liền (Khu phố Maple · Trung tâm · Phố mua sắm) đi bộ xuyên suốt, nhà cây bật lên như sách pop-up
    khi tới gần, người đi đường, xe cộ, chim, trời theo giờ Việt Nam (sáng → khuya, hoàng hôn, sao, trăng, mây đen kéo tới
    trước mưa), tiếng chim, dế, gió, và xe đưa đón học sinh chạy trên đường.
-   Máy không có WebGL (hoặc mở game với ?2d) thì engine tự vẽ bản 2D như cũ. */
+   Camera xoay quanh nhân vật kiểu GTA: tay trái đi (cần điều khiển, theo hướng camera), tay phải vuốt để xoay góc nhìn.
+   Mọi tấm giấy (người, nhà, cây, xe, ô) luôn quay mặt về camera; hướng khung hình người, xe tính theo góc camera.
+   Máy không có WebGL thì engine tự vẽ bản 2D (không còn nút chọn 2D). */
 var G = window.G || (window.G = {});
 
 (function () {
@@ -18,11 +20,11 @@ var G = window.G || (window.G = {});
 
   W3.can = function () {
     if (W3._can !== undefined) return W3._can;
-    var ok = !!window.THREE && !/[?&]2d\b/.test(location.search);
+    var ok = !!window.THREE;
     if (ok) { try { var c = document.createElement('canvas'); ok = !!(c.getContext('webgl') || c.getContext('experimental-webgl')); } catch (e) { ok = false; } }
     return (W3._can = ok);
   };
-  W3.enabled = function () { return W3.can() && !(G.S && G.S.caiDat && G.S.caiDat.ban3d === false); };
+  W3.enabled = function () { return W3.can(); };   // chỉ còn bản 3D (anh Han chốt): máy không có WebGL mới vẽ 2D
   W3.inWorld = function (id) { return !!G.WORLD3D[id]; };
 
   var R, SC, CAM, HEMI, SUN, cv3, Wc = 1, Hc = 1, loader, TEX = {}, TEXF = {}, MATS = {}, DMATS = {};
@@ -30,6 +32,34 @@ var G = window.G || (window.G = {});
   var FLATS = [], POPS = [], BUILD = [], SWAY = [], LAMPS = [], FADE = [], PLATES = [], TLS = [], NPCW = [], TOWN = [], CARS = [], BIRDS = [], PICK = [], STAND = [];
   var P3 = null, K3 = null, mark, ring, PIN, T = 0, night = 0, wxNow = { cloud: 0.1, rain: 0, gather: 0, kind: 'clear' };
   var FX = 0, FZ = 0, zoomK = 1, camPos, camLook, snap = true, ST = null, isTouch = 'ontouchstart' in window;
+  /* góc camera: YAW quay quanh nhân vật (0 = nhìn về phía bắc như bản cũ), PITCH nâng / hạ góc nhìn (lệch so với mặc định) */
+  var YAW = 0, PITCH = 0, BILL = [], billYaw = null;
+  function bill(g) { g.rotation.order = 'YXZ'; g.rotation.y = YAW; BILL.push(g); return g; }   // tấm giấy luôn quay về camera
+  function applyYaw() {
+    if (billYaw === YAW) return; billYaw = YAW;
+    for (var i = BILL.length - 1; i >= 0; i--) { var g = BILL[i]; if (!g.parent) { BILL.splice(i, 1); continue; } g.rotation.y = YAW; }
+  }
+  /* (vx, vz) thế giới → (sang phải màn hình, xuống màn hình) theo góc camera */
+  function rel(vx, vz) { var c = Math.cos(YAW), sn = Math.sin(YAW); return [vx * c - vz * sn, vx * sn + vz * c]; }
+  /* vector "lên trên" của tấm giấy ngả (h đơn vị): dùng cho bong bóng, dấu nhiệm vụ, toạ độ màn hình */
+  function upv(h) { var sl = Math.sin(LEAN) * h; return [-Math.sin(YAW) * sl, Math.cos(LEAN) * h, -Math.cos(YAW) * sl]; }
+  W3.yaw = function () { return YAW; };
+  W3.orbit = function (dy, dp) {
+    YAW += dy; while (YAW > Math.PI) YAW -= 2 * Math.PI; while (YAW < -Math.PI) YAW += 2 * Math.PI;
+    PITCH = Math.max(-0.22, Math.min(0.42, PITCH + (dp || 0)));
+    camBtn();
+  };
+  /* nút đưa camera về hướng cũ (hiện khi đã xoay) */
+  var camEl = null, camBack = 0;
+  function camBtn() {
+    if (!camEl) {
+      var play = document.getElementById('play'); if (!play) return;
+      camEl = document.createElement('button'); camEl.id = 'camreset'; camEl.className = 'cam-reset'; camEl.setAttribute('aria-label', 'Đưa góc nhìn về hướng cũ');
+      camEl.textContent = '🧭'; camEl.onclick = function (e) { e.stopPropagation(); camBack = 1; };
+      play.appendChild(camEl);
+    }
+    camEl.style.display = W3.active && (Math.abs(YAW) > 0.12 || Math.abs(PITCH) > 0.08) ? 'block' : 'none';
+  }
 
   /* ---------- hình ---------- */
   function tex(n) {
@@ -68,7 +98,7 @@ var G = window.G || (window.G = {});
     m.castShadow = true; m.receiveShadow = true; m.customDepthMaterial = dmat(n);
     m.position.y = -(1 - (foot || 0.96));
     g.add(m); g.scale.set(s * U, s * U, s * U);
-    g.position.set(gx * U, 0, gy * U); g.rotation.x = -LEAN;
+    g.position.set(gx * U, 0, gy * U); g.rotation.x = -LEAN; bill(g);
     SC.add(g); g.userData.mesh = m;
     if (opt.pop !== false) {   // người, xe đi lại thì luôn đứng; mọi vật khác bật lên khi tới gần
       var pp = { g: g, a: 0, v: 0, up: false, wait: 0, x: g.position.x, z: g.position.z, jit: Math.random() * 0.12 };
@@ -112,18 +142,27 @@ var G = window.G || (window.G = {});
     return { n: n, flip: flip, lift: lift };
   }
   function drawWalker(w) {
+    keepDir(w);
     var fr = frameOf(w), m = w.g.userData.mesh;
     setMap(m, fr.n); w.fr = fr;
     w.g.scale.x = (fr.flip ? -1 : 1) * w.S * U;
     w.g.position.set(w.x, fr.lift * w.S * U, w.z); w.blob.position.set(w.x, 0.012, w.z);
     if (w.um) placeUmbrella(w);
   }
-  function setDir(w, vx, vz) {   // hướng nhìn có độ trễ (giống bản 2D): đi chéo không nhấp nháy
-    var ax = Math.abs(vx), az = Math.abs(vz), horiz = w.dir === 'left' || w.dir === 'right';
+  /* hướng nhìn có độ trễ (giống bản 2D): đi chéo không nhấp nháy. (vx, vz) là hướng trong thế giới; khung hình chọn theo góc camera */
+  function setDir(w, vx, vz) {
+    w.hx = vx; w.hz = vz; w.hyaw = YAW;
+    var q = rel(vx, vz), ax = Math.abs(q[0]), az = Math.abs(q[1]), horiz = w.dir === 'left' || w.dir === 'right';
     if (horiz ? az > ax * 1.3 : ax > az * 1.3) horiz = !horiz;
-    w.dir = horiz ? (vx < 0 ? 'left' : 'right') : (vz < 0 ? 'up' : 'down'); w.vx = vx;
+    w.dir = horiz ? (q[0] < 0 ? 'left' : 'right') : (q[1] < 0 ? 'up' : 'down'); w.vx = q[0];
   }
-  function faceTo(w, dx, dz) { w.dir = Math.abs(dx) > Math.abs(dz) * 0.8 ? (dx < 0 ? 'left' : 'right') : (dz < 0 ? 'up' : 'down'); }
+  function faceTo(w, dx, dz) {
+    w.hx = dx; w.hz = dz; w.hyaw = YAW;
+    var q = rel(dx, dz); w.dir = Math.abs(q[0]) > Math.abs(q[1]) * 0.8 ? (q[0] < 0 ? 'left' : 'right') : (q[1] < 0 ? 'up' : 'down');
+  }
+  var DIRV = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] };
+  /* camera xoay mà người đứng yên: chọn lại khung hình theo hướng cũ trong thế giới */
+  function keepDir(w) { if (w.hx !== undefined && w.hyaw !== YAW) setDir(w, w.hx, w.hz); }
 
   /* ô che mưa (cầm trên đầu) cho người đi ngoài phố */
   var UCOL = ['#c8553d', '#2f7a63', '#4a68d8', '#e0a43a', '#b46fc0', '#1b2140'], UTEX = [];
@@ -143,32 +182,46 @@ var G = window.G || (window.G = {});
       x.beginPath(); x.moveTo(64, cy - 27); x.lineTo(36, cy - 3); x.moveTo(64, cy - 27); x.lineTo(92, cy - 3); x.stroke();
     }));
   }
+  /* phần cán của hình ô (từ mép tán trở xuống): vẽ đè lên bàn tay để cán nằm đúng trong lòng bàn tay */
+  var TEXP = {};
+  function texPart(n, rim) {
+    if (TEXP[n]) return TEXP[n];
+    var t = loader.load(G.assetUrl(n), function (tt) { if (R.initTexture) R.initTexture(tt); });
+    t.encoding = THREE.sRGBEncoding; t.repeat.set(1, 1 - rim); t.offset.set(0, 0);
+    return (TEXP[n] = t);
+  }
+  function umMat(t) { return new THREE.MeshLambertMaterial({ map: t, emissive: 0x5a5a5a, emissiveMap: t, alphaTest: 0.4, side: THREE.DoubleSide }); }
   function addUmbrella(w, i) {
     if (!PLANE_C) PLANE_C = new THREE.PlaneGeometry(1, 1);
-    // tấm giấy song song với tấm nhân vật (cùng độ nghiêng), nằm ngay sau (nhìn trước / ngang) hoặc ngay trước (nhìn sau lưng)
-    var t = umbrellaTex(i), m = new THREE.Mesh(PLANE_C, new THREE.MeshLambertMaterial({ map: t, emissive: 0x5a5a5a, emissiveMap: t, alphaTest: 0.4, side: THREE.DoubleSide }));
-    var g = new THREE.Group(); g.add(m); g.rotation.x = -LEAN; g.visible = false; SC.add(g);
-    w.um = g; w.umMesh = m; w.umName = 'umbrella_' + (i % 6 + 1) + '.png';
+    var n = 'umbrella_' + (i % 6 + 1) + '.png', gp = (G.UMB_GRIP && G.UMB_GRIP[n]) || [0.5, 0.86, 0.72];
+    var cm = new THREE.Mesh(PLANE_C, umMat(umbrellaTex(i))), inner = new THREE.Group(); inner.add(cm); cm.castShadow = true;
+    var hm = null;
+    if (has(n)) {   // tấm thứ hai: chỉ phần cán + móc, nằm trước bàn tay
+      hm = new THREE.Mesh(PLANE_C, umMat(texPart(n, gp[2]))); hm.scale.set(1, 1 - gp[2], 1); hm.position.y = -gp[2] / 2; inner.add(hm);
+    }
+    var g = new THREE.Group(); g.add(inner); g.rotation.x = -LEAN; bill(g); g.visible = false; SC.add(g);
+    w.um = g; w.umIn = inner; w.umC = cm; w.umH = hm; w.umName = n; w.umGrip = gp;
   }
-  /* ô trong tay: điểm cầm trên cán (G.UMB_GRIP) đặt vào bàn tay của khung hình đang vẽ (G.HANDS), cán ngả qua vai, tán nghiêng về phía đầu.
-     Nhìn trước / ngang: móc khuất sau người nên nâng cán lên vai cho tán che trên đầu; nhìn sau lưng: móc đúng trong bàn tay. */
+  /* ô trong tay: điểm cầm trên cán (G.UMB_GRIP) đặt đúng lòng bàn tay của khung hình đang vẽ (G.HANDS, có cả khung bước),
+     cán ngả về phía đầu. Nhìn trước / ngang: tán nằm sau đầu, phần cán vẽ đè lên tay; nhìn sau lưng: cả ô ở phía người xem. */
   function placeUmbrella(w) {
     var on = wxNow.rain > 0.25 && w.g.visible;
     w.um.visible = on; if (!on) return;
     var fr = w.fr, d = w.dir === 'right' ? 'left' : w.dir, n, back = w.dir === 'up';
-    if (fr) n = fr.n.replace(/_w[12]\.png$/, '.png');
+    if (fr) n = fr.n;
     else if (w.base === 'custom' && G.S.avatar) n = 'body_' + G.S.avatar.ao + '_' + d + '.png';
     else n = (w.base || 'kai') + '_' + d + '.png';
-    var hd = G.HANDS && G.HANDS[n], hx = hd ? hd[0] / 100 : 0.7, hy = hd ? hd[1] / 100 : 0.72;
+    var hd = G.HANDS && (G.HANDS[n] || G.HANDS[n.replace(/_w[12]\.png$/, '.png')]), hx = hd ? hd[0] / 100 : 0.7, hy = hd ? hd[1] / 100 : 0.72;
     if (fr ? fr.flip : w.dir === 'right') hx = 1 - hx;
-    var S = w.S * U, lift = fr ? fr.lift * S : 0, sway = w.moving ? Math.sin(w.t * 14) * 0.02 : 0;
-    var lx = (hx - 0.5) * S + sway, ly = ((w.foot || 0.957) - hy) * S + lift + (back ? 0 : S * 0.2);
-    var k = S * 0.9, gp = (G.UMB_GRIP && G.UMB_GRIP[w.umName]) || [0.5, 0.86];
-    var th = (lx > 0.01 ? 1 : lx < -0.01 ? -1 : 0) * 0.32;
+    var S = w.S * U, lift = fr ? fr.lift * S : 0;
+    var lx = (hx - 0.5) * S, ly = ((w.foot || 0.957) - hy) * S + lift;   // lòng bàn tay trên tấm hình (tính từ chân)
+    var k = S * 0.9, gp = w.umGrip;
+    var th = (lx > 0.01 ? 1 : lx < -0.01 ? -1 : 0) * 0.3;
     var ox = (0.5 - gp[0]) * k, oy = (gp[1] - 0.5) * k, rx = ox * Math.cos(th) - oy * Math.sin(th), ry = ox * Math.sin(th) + oy * Math.cos(th);
     w.um.position.set(w.x, 0, w.z);
-    w.umMesh.position.set(lx + rx, ly + ry, back ? 0.035 : -0.035);
-    w.umMesh.rotation.z = th; w.umMesh.scale.set(k, k, 1);
+    w.umIn.position.set(lx + rx, ly + ry, 0); w.umIn.rotation.z = th; w.umIn.scale.set(k, k, 1);
+    w.umC.position.z = back ? 0.03 : -0.03;          // tán: sau đầu (nhìn trước / ngang) hoặc phía người xem (nhìn sau lưng)
+    if (w.umH) w.umH.position.z = back ? 0.04 : 0.035;   // cán: luôn trước bàn tay
   }
 
   /* ---------- dựng thành phố (một lần) ---------- */
@@ -360,7 +413,7 @@ var G = window.G || (window.G = {});
   function carCard(n, h, k) {
     var w = h * k, m = new THREE.Mesh(PLANE, new THREE.MeshLambertMaterial({ map: tex(n), emissive: 0x5a5a5a, emissiveMap: tex(n), alphaTest: 0.5, side: THREE.DoubleSide, transparent: true }));
     m.castShadow = true; m.receiveShadow = true; m.customDepthMaterial = dmat(n);
-    var g = new THREE.Group(); g.add(m); g.scale.set(w * U, h * U, h * U); g.rotation.x = -LEAN; g.userData.mesh = m; SC.add(g);
+    var g = new THREE.Group(); g.add(m); g.scale.set(w * U, h * U, h * U); g.rotation.x = -LEAN; bill(g); g.userData.mesh = m; SC.add(g);
     var b = blob(w * U * 0.45); b.material = BLOBM.clone(); b.scale.set(w * U * 0.95, 1, 0.32);
     return { g: g, b: b, w: w };
   }
@@ -393,7 +446,7 @@ var G = window.G || (window.G = {});
     var cyc = T % 18; LIGHT = cyc < 9 ? 'green' : cyc < 11.5 ? 'yellow' : 'red';
     TLS.forEach(function (t) {
       var h = (0.96 - LIGHT_Y[LIGHT]) * t.s * U;
-      t.glow.position.set(t.x, h * Math.cos(LEAN), t.z - h * Math.sin(LEAN) + 0.03);
+      var tv = upv(h); t.glow.position.set(t.x + tv[0] + Math.sin(YAW) * 0.03, tv[1], t.z + tv[2] + Math.cos(YAW) * 0.03);
       t.glow.material.color.setHex(LIGHT_C[LIGHT]); t.glow.material.opacity = (0.75 + 0.25 * Math.sin(T * 6)) * (t.pop ? Math.max(0, Math.min(1, t.pop.a)) : 1);
     });
     LANES.forEach(function (L) {
@@ -418,6 +471,7 @@ var G = window.G || (window.G = {});
       var mm = c.g.userData.mesh.material; mm.opacity = op; mm.alphaTest = 0.5 * op;
       var bump = c.v > 5 ? Math.abs(Math.sin(T * 14 + c.ph)) * 0.008 : 0;
       c.g.position.set(c.x * U, bump, L.y * U); c.b.position.set(c.x * U, 0.012, L.y * U); c.b.material.opacity = op;
+      c.g.scale.x = (L.dir * Math.cos(YAW) > 0 ? -1 : 1) * c.w * U;   // hình xe hướng sang trái: chạy sang phải màn hình thì lật
       if ((L.dir > 0 && c.x > X1) || (L.dir < 0 && c.x < X0)) { SC.remove(c.g); SC.remove(c.b); CARS.splice(i, 1); }
     }
   }
@@ -551,6 +605,7 @@ var G = window.G || (window.G = {});
     // đường đi của mặt trời: đông (phải) → hơi về phía sau thành phố lúc trưa → tây (trái); bóng ngả về phía người xem
     var dir = new THREE.Vector3(Math.cos(ang), Math.max(0.1, up) * 1.25 + 0.08, -0.45 - 0.15 * up);
     if (up < 0) dir.set(-0.35, 1.1, -0.4);   // đêm: ánh trăng nhạt
+    var cy0 = Math.cos(YAW), sy0 = Math.sin(YAW); dir.set(dir.x * cy0 + dir.z * sy0, dir.y, -dir.x * sy0 + dir.z * cy0);   // xoay theo camera
     SUN.position.set(FX, 0, FZ).add(dir.normalize().multiplyScalar(30)); SUN.target.position.set(FX, 0, FZ);
     var lampOn = Math.max(night, dark * 0.6 * day);
     for (var l = 0; l < LAMPS.length; l++) { var lp = LAMPS[l].userData.pop; LAMPS[l].material.opacity = lampOn * (l % 2 ? 0.55 : 0.95) * (lp ? Math.max(0, Math.min(1, lp.a)) : 1); }
@@ -583,7 +638,7 @@ var G = window.G || (window.G = {});
     var wind = 1 + wxNow.gather * 2.5 + wxNow.rain * 1.5;   // mây đen kéo tới nhanh hơn
     for (var i = 0; i < CLOUDS.length; i++) {
       var c = CLOUDS[i]; c.x += c.v * dt * wind;
-      var x = ((c.x - FX * c.par) % (100 + c.w) + (100 + c.w)) % (100 + c.w) - c.w;
+      var x = ((c.x - FX * c.par + YAW * 60 * (c.par + 0.3)) % (100 + c.w) + (100 + c.w)) % (100 + c.w) - c.w;
       c.el.style.transform = 'translate(' + (x * Wc / 100).toFixed(1) + 'px,' + (c.y * Hc / 100).toFixed(1) + 'px)';
     }
   }
@@ -604,7 +659,7 @@ var G = window.G || (window.G = {});
   }
   function updatePops(dt) {
     for (var i = 0; i < POPS.length; i++) {
-      var p = POPS[i], dx = p.x - FX, dz = (p.z - FZ) * (p.z < FZ ? 0.7 : 1), d = Math.sqrt(dx * dx + dz * dz);
+      var p = POPS[i], rq = rel(p.x - FX, p.z - FZ), dx = rq[0], dz = rq[1] * (rq[1] < 0 ? 0.7 : 1), d = Math.sqrt(dx * dx + dz * dz);
       if (snap) { p.up = d < POP_UP; p.a = p.up ? 1 : 0; p.v = 0; p.wait = 0; }
       else if (!p.up && d < POP_UP) { p.up = true; p.wait = p.jit + d / POP_UP * 0.22; }
       else if (p.up && d > POP_DOWN) { p.up = false; p.wait = p.jit * 0.5; }
@@ -651,7 +706,7 @@ var G = window.G || (window.G = {});
       avCanvas = document.createElement('canvas'); avCanvas.width = avCanvas.height = 256;
       avTex = new THREE.CanvasTexture(avCanvas); avTex.encoding = THREE.sRGBEncoding;
       var m = new THREE.Mesh(PLANE, new THREE.MeshLambertMaterial({ map: avTex, emissive: 0x5a5a5a, emissiveMap: avTex, alphaTest: 0.5, side: THREE.DoubleSide }));
-      m.castShadow = true; m.position.y = -0.02; var g = new THREE.Group(); g.add(m); g.scale.set(1.2, 1.2, 1.2); g.rotation.x = -LEAN; g.userData.mesh = m; SC.add(g);
+      m.castShadow = true; m.position.y = -0.02; var g = new THREE.Group(); g.add(m); g.scale.set(1.2, 1.2, 1.2); g.rotation.x = -LEAN; bill(g); g.userData.mesh = m; SC.add(g);
       P3 = { base: 'custom', g: g, blob: blob(0.26), S: 120, x: 0, z: 0, dir: 'down', t: 0 }; avMesh = m;
     } else P3 = walker(base, 0, 0, who === 'kai' ? 104 : 120, who === 'kai' ? 490 / 512 : 0.957);
     addUmbrella(P3, who === 'kai' ? 3 : 0);
@@ -663,16 +718,22 @@ var G = window.G || (window.G = {});
   }
   function drawPlayer(st) {
     var p = st.P, d = G.WORLD3D[st.id];
-    P3.x = (d.ox + p.x) * U; P3.z = (d.oy + p.y) * U; P3.dir = p.dir; P3.moving = p.moving; P3.t = p.t; P3.vx = p.dir === 'right' ? 1 : -1;
+    var px = (d.ox + p.x) * U, pz = (d.oy + p.y) * U;
+    headTo(P3, px, pz, p.dir, p.moving);
+    P3.x = px; P3.z = pz; P3.moving = p.moving; P3.t = p.t;
     P3.g.visible = P3.blob.visible = !p.hidden;
     if (P3.base === 'custom') {
       var x = avCanvas.getContext('2d'); x.clearRect(0, 0, 256, 256);
-      if (G.S.avatar && G.drawAvatar) G.drawAvatar(x, G.S.avatar, 128, 250, 240, p.dir, p.t * 14, p.moving);
+      keepDir(P3);
+      if (G.S.avatar && G.drawAvatar) G.drawAvatar(x, G.S.avatar, 128, 250, 240, P3.dir, p.t * 14, p.moving);
       avTex.needsUpdate = true;
       P3.g.position.set(P3.x, 0, P3.z); P3.blob.position.set(P3.x, 0.012, P3.z); if (P3.um) placeUmbrella(P3);
     } else drawWalker(P3);
     if (!K3) return;
-    var k = st.K; K3.x = (d.ox + k.x) * U; K3.z = (d.oy + k.y) * U; K3.dir = k.dir || 'down'; K3.moving = !!k.moving; K3.t = k.t || 0;
+    var k = st.K, kx = (d.ox + k.x) * U, kz = (d.oy + k.y) * U;
+    headTo(K3, kx, kz, k.dir || 'down', !!k.moving);
+    K3.x = kx; K3.z = kz; K3.moving = !!k.moving; K3.t = k.t || 0;
+    if (!K3.base) keepDir(K3);
     K3.g.visible = K3.blob.visible = !p.hidden;
     if (K3.base) drawWalker(K3);
     else {
@@ -681,6 +742,13 @@ var G = window.G || (window.G = {});
       K3.g.scale.x = (kn === 'kai_left.png' ? (K3.dir === 'right' ? -1 : 1) : 1) * 82 * U;
       K3.g.position.set(K3.x, K3.moving ? Math.abs(Math.sin(K3.t * 7)) * 0.06 : 0, K3.z); K3.blob.position.set(K3.x, 0.012, K3.z);
     }
+  }
+  /* hướng của người chơi / Kai: đang đi thì theo quãng vừa đi trong thế giới; đứng yên mà engine đổi hướng (vd. quay vào cửa) thì theo hướng đó */
+  function headTo(w, nx, nz, edir, moving) {
+    var dx = nx - (w.lx === undefined ? nx : w.lx), dz = nz - (w.lz === undefined ? nz : w.lz);
+    if (moving && dx * dx + dz * dz > 1e-8) setDir(w, dx, dz);
+    else if (w.hx === undefined || (!moving && edir !== w.edir)) { var v = DIRV[edir] || DIRV.down; setDir(w, v[0], v[1]); }
+    w.lx = nx; w.lz = nz; w.edir = edir;
   }
   function talked(life) { var d = G.today && G.today(); return !!(d && d.sang && d.sang[life]); }
   var talkT = 0;
@@ -694,18 +762,18 @@ var G = window.G || (window.G = {});
         w.x = (d.ox + ox) * U; w.z = (d.oy + e.py) * U;
         var dx = FX - w.x, dz = FZ - w.z, close = dx * dx + dz * dz < 4;
         w.moving = here && !!o.pmov; w.t = o.pt || 0;
-        if (w.moving) { w.dir = o.pdir; w.vx = o.pdir === 'right' ? 1 : -1; } else if (close) faceTo(w, dx, dz); else w.dir = 'down';
+        if (w.moving) { var pv = DIRV[o.pdir] || DIRV.down; setDir(w, pv[0], pv[1]); } else if (close) faceTo(w, dx, dz); else { w.dir = 'down'; w.hx = undefined; }
         drawWalker(w);
         e.plate.position.set(w.x, 0.16, w.z + 0.47);
         var pd2 = Math.sqrt(dx * dx + dz * dz); e.plate.material.opacity = pd2 < 6 ? 1 : Math.max(0, 1 - (pd2 - 6) / 3); e.plate.visible = e.plate.material.opacity > 0.02;
         e.bub.visible = !!e.need && pd2 < 6.5;
-        if (e.bub.visible) { var hh = 1.42 + Math.sin(T * 3 + i) * 0.04; e.bub.position.set(w.x, hh * Math.cos(LEAN), w.z - hh * Math.sin(LEAN)); }
+        if (e.bub.visible) { var hv = upv(1.42 + Math.sin(T * 3 + i) * 0.04); e.bub.position.set(w.x + hv[0], hv[1], w.z + hv[2]); }
       } else {
         var a = e.pop ? e.pop.a : 1, ex0 = (e.bx !== undefined ? e.bx : (d.ox + o.x) * U) - FX, ez0 = (e.bz !== undefined ? e.bz : (d.oy + (e.py || o.y)) * U) - FZ;
         e.bub.visible = !!e.need && a > 0.7 && ex0 * ex0 + ez0 * ez0 < 42;
         if (e.bub.visible) {
           var bx = e.bx !== undefined ? e.bx : (d.ox + o.x) * U, bz = e.bz !== undefined ? e.bz : (d.oy + e.py) * U, bh = (e.bh || (o.stall ? 2.1 : 1.42)) + Math.sin(T * 3 + i) * 0.04;
-          e.bub.position.set(bx, bh * Math.cos(LEAN), bz - bh * Math.sin(LEAN));
+          var bv = upv(bh); e.bub.position.set(bx + bv[0], bv[1], bz + bv[2]);
         }
       }
     }
@@ -824,9 +892,12 @@ var G = window.G || (window.G = {});
         if (s.i >= last) { s.phase = s.phase === 'come' ? 'board' : 'drop'; s.t = 0; if (s.phase === 'board' && G.sfxFile) { G.sfxFile('sfx_horn_soft', 0.3); } }
       } else {
         s.x += dx / dist * st; s.y += dy / dist * st;
-        var ax = Math.abs(dx), ay = Math.abs(dy);
-        s.face = ax > ay * 0.8 ? 'side' : dy > 0 ? 'front' : 'back'; s.fl = dx > 0;
+        s.hx = dx; s.hz = dy;
       }
+    }
+    if (s.hx !== undefined) {   // hình ngang / trước / sau theo hướng chạy so với camera
+      var rq = rel(s.hx, s.hz), ax = Math.abs(rq[0]), ay = Math.abs(rq[1]);
+      s.face = ax > ay * 0.8 ? 'side' : rq[1] > 0 ? 'front' : 'back'; s.fl = rq[0] > 0;
     }
     var nm = s.n + '_' + s.face + '.png'; if (!has(nm)) nm = s.n + '_side.png';
     var m = s.c.g.userData.mesh; setMap(m, nm);
@@ -844,18 +915,30 @@ var G = window.G || (window.G = {});
     Wc = w; Hc = h; R.setSize(w, h, false); CAM.aspect = w / h; CAM.updateProjectionMatrix();
   }
   function camera(dt) {
-    var dist = 8.4 * zoomK, hgt = 5.2 * zoomK;
-    var lx = FX, lz = FZ - 0.6, k = snap ? 1 : 1 - Math.exp(-dt * 6);
-    // không để lộ khoảng giấy trắng ngoài mép bản đồ (giống bản 2D: camera dừng ở mép)
-    var hw = 2.6 * zoomK * CAM.aspect, X0 = 1e9, X1 = -1e9, zMax = 0;
-    for (var i = 0; i < DIST.length; i++) {
-      var d = DIST[i]; X0 = Math.min(X0, d.ox * U); X1 = Math.max(X1, (d.ox + d.s.w) * U);
-      if (FX >= d.ox * U - 1 && FX < (d.ox + d.s.w) * U + 1) zMax = Math.max(zMax, (d.oy + d.s.h) * U);
+    if (camBack) {   // bấm 🧭: xoay về hướng cũ
+      YAW *= 1 - Math.min(1, dt * 6); PITCH *= 1 - Math.min(1, dt * 6);
+      if (Math.abs(YAW) < 0.003 && Math.abs(PITCH) < 0.003) { YAW = 0; PITCH = 0; camBack = 0; }
+      camBtn();
     }
-    if (X1 - X0 > hw * 2) lx = Math.max(X0 + hw, Math.min(X1 - hw, lx));
-    if (zMax) lz = Math.min(lz, zMax - 0.6 - 3.48 * zoomK);
+    applyYaw();
+    var cy = Math.cos(YAW), sy = Math.sin(YAW);
+    var hd0 = 8.4 * zoomK + 0.6, vh0 = 5.2 * zoomK - 0.7, Rr = Math.sqrt(hd0 * hd0 + vh0 * vh0), el = Math.atan2(vh0, hd0) + PITCH;
+    var lx = FX - sy * 0.6, lz = FZ - cy * 0.6, k = snap ? 1 : 1 - Math.exp(-dt * 6);
+    // nhìn thẳng về phía bắc (góc cũ): không để lộ khoảng giấy trắng ngoài mép bản đồ; xoay đi thì bớt dần việc giữ mép
+    var wgt = Math.max(0, 1 - Math.abs(YAW) / 0.5);
+    if (wgt > 0) {
+      var hw = 2.6 * zoomK * CAM.aspect, X0 = 1e9, X1 = -1e9, zMax = 0, cx0 = lx, cz0 = lz;
+      for (var i = 0; i < DIST.length; i++) {
+        var dd = DIST[i]; X0 = Math.min(X0, dd.ox * U); X1 = Math.max(X1, (dd.ox + dd.s.w) * U);
+        if (FX >= dd.ox * U - 1 && FX < (dd.ox + dd.s.w) * U + 1) zMax = Math.max(zMax, (dd.oy + dd.s.h) * U);
+      }
+      if (X1 - X0 > hw * 2) cx0 = Math.max(X0 + hw, Math.min(X1 - hw, cx0));
+      if (zMax) cz0 = Math.min(cz0, zMax - 0.6 - 3.48 * zoomK);
+      lx += (cx0 - lx) * wgt; lz += (cz0 - lz) * wgt;
+    }
     camLook.x += (lx - camLook.x) * k; camLook.y = 0.7; camLook.z += (lz - camLook.z) * k;
-    camPos.set(camLook.x, hgt, camLook.z + 0.6 + dist);
+    var hd = Rr * Math.cos(el), vh = Rr * Math.sin(el);
+    camPos.set(camLook.x + sy * hd, camLook.y + vh, camLook.z + cy * hd);
     CAM.position.copy(camPos); CAM.lookAt(camLook);
   }
   W3.show = function (on) {
@@ -868,6 +951,7 @@ var G = window.G || (window.G = {});
     var pl = document.getElementById('play'); if (pl) pl.className = on ? 'w3d' : '';
     if (on) { snap = true; resize(); }
     else if (G.ambSet) G.ambSet('shuttle', 0);
+    camBtn();
   };
   W3.snap = function () { snap = true; };
   W3.zoom = function (k) { if (k !== undefined) zoomK = Math.max(0.6, Math.min(1.7, k)); return zoomK; };
@@ -887,7 +971,8 @@ var G = window.G || (window.G = {});
     // nhà, cây che nhân vật thì mờ đi
     for (i = 0; i < FADE.length; i++) {
       var f = FADE[i], mm = f.userData.mesh.material, sx = Math.abs(f.scale.x) * 0.42;
-      var hide = f.position.z > FZ + 0.05 && f.position.z - FZ < Math.abs(f.scale.y) * 0.8 && Math.abs(f.position.x - FX) < sx && (!f.userData.pop || f.userData.pop.a > 0.5);
+      var fq = rel(f.position.x - FX, f.position.z - FZ);
+      var hide = fq[1] > 0.05 && fq[1] < Math.abs(f.scale.y) * 0.8 && Math.abs(fq[0]) < sx && (!f.userData.pop || f.userData.pop.a > 0.5);
       var want = hide ? 0.35 : 1;
       if (Math.abs(mm.opacity - want) > 0.01) { mm.transparent = true; mm.opacity += (want - mm.opacity) * Math.min(1, dt * 6); mm.alphaTest = 0.5 * mm.opacity; }
       else if (want === 1 && mm.transparent) { mm.transparent = false; mm.opacity = 1; mm.alphaTest = 0.5; }
@@ -903,7 +988,7 @@ var G = window.G || (window.G = {});
     ring.material.opacity = st.near && !st.P.hidden ? 0.45 + Math.sin(T * 4.5) * 0.15 : 0;
     if (st.near) ring.position.set((d.ox + st.near.x) * U, 0.016, (d.oy + st.near.y) * U);
     PIN.visible = !!st.goal && !st.P.hidden;
-    if (st.goal) { var gh = (st.goal.h || 200) * U + 0.42 + Math.sin(T * 3.3) * 0.08; PIN.position.set((d.ox + st.goal.x) * U, gh * Math.cos(LEAN), (d.oy + st.goal.y) * U - gh * Math.sin(LEAN)); }
+    if (st.goal) { var gv = upv((st.goal.h || 200) * U + 0.42 + Math.sin(T * 3.3) * 0.08); PIN.position.set((d.ox + st.goal.x) * U + gv[0], gv[1], (d.oy + st.goal.y) * U + gv[2]); }
     applyTime(st.hour, dt);
     ambient(dt);
     camera(dt);
@@ -915,9 +1000,9 @@ var G = window.G || (window.G = {});
   W3.project = function (id, x, y, h) {
     var d = id ? G.WORLD3D[id] : { ox: 0, oy: 0 }; if (!d || !CAM) return null;
     if (!V) V = new THREE.Vector3();
-    var hh = (h || 0) * U, X = (d.ox + x) * U, Y = hh * Math.cos(LEAN), Z = (d.oy + y) * U - hh * Math.sin(LEAN);
+    var uv = upv((h || 0) * U), X = (d.ox + x) * U + uv[0], Y = uv[1], Z = (d.oy + y) * U + uv[2];
     V.set(X, Y, Z).project(CAM); var sx = (V.x + 1) / 2 * Wc, sy = (1 - V.y) / 2 * Hc, front = V.z < 1;
-    V.set(X + 0.1, Y, Z).project(CAM); var k = Math.abs((V.x + 1) / 2 * Wc - sx) / 10;
+    V.set(X + 0.1 * Math.cos(YAW), Y, Z - 0.1 * Math.sin(YAW)).project(CAM); var k = Math.abs((V.x + 1) / 2 * Wc - sx) / 10;
     return { x: sx, y: sy, k: k, vis: front };
   };
   /* chạm màn hình: người đi đường / nhà / NPC được chạm, không thì điểm trên mặt đất (px toàn thành phố) */

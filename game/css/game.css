@@ -835,3 +835,6 @@ body { background: #f4e9dc url(../assets/paper_tile.webp) repeat; background-siz
 .gl-moc span { font-size: 12px; font-weight: 600; opacity: .8; }
 .gl-moc.hard { opacity: .45; }
 .td-plan { background: #fff6e6; border: 1.5px solid #f1dfb8; border-radius: 14px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; margin: 8px 0; }
+/* nút đưa góc nhìn 3D về hướng cũ (hiện khi đã vuốt xoay camera) */
+.cam-reset { position: absolute; right: calc(max(12px, env(safe-area-inset-right)) + 124px); top: calc(max(10px, env(safe-area-inset-top)) + 88px); z-index: 6; width: 46px; height: 46px; border-radius: 50%; border: 2px solid rgba(255,255,255,.8); background: rgba(27,33,64,.78); color: #fff; font-size: 22px; display: none; box-shadow: 0 3px 10px rgba(0,0,0,.25); }
+@media (max-height: 520px) { .cam-reset { right: calc(max(12px, env(safe-area-inset-right)) + 84px); top: calc(max(6px, env(safe-area-inset-top)) + 60px); width: 40px; height: 40px; font-size: 19px; } }

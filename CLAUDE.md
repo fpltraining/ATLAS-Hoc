@@ -11,6 +11,12 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 - Người học tự chọn **mốc thời gian** (3 / 6 / 9 / 12 / 18 / 24 tháng) để đạt mục tiêu (Sảnh → Mục tiêu và mốc thời gian, hoặc màn kết quả đầu vào).
 - App tính mỗi ngày cần học bao nhiêu (giờ còn lại tới mục tiêu ÷ số ngày học còn lại) và **giao đủ phần đó mỗi ngày** (vòng Hôm nay). Học chậm thì phần mỗi ngày tự tăng, nhanh thì giảm. Code: `G.setPlan`, `G.planToday` (game/js/placement.js), `goalMin` (game/js/daily.js).
 
+## Bản đồ ngoài phố: chỉ bản 3D
+
+- Đã chốt bỏ bản 2D (không còn nút chọn). Máy không có WebGL mới tự vẽ 2D.
+- Camera kiểu GTA: tay trái là cần điều khiển (đi theo hướng camera), tay phải vuốt để xoay góc nhìn quanh nhân vật; nút 🧭 đưa về hướng cũ. Mọi tấm giấy (người, nhà, cây, xe, ô) luôn quay mặt về camera (`bill`, `YAW` trong game/js/world3d.js).
+- Ô che mưa: điểm cầm trên cán (`G.UMB_GRIP`) đặt đúng lòng bàn tay (`G.HANDS`, có cả khung bước); phần cán vẽ đè lên tay.
+
 ## Quy tắc làm việc
 
 - **Không vẽ hình bằng code.** Mọi hình là hình đặt (anh Han đặt qua ChatGPT): viết đơn đặt hàng trong `game/ASSET_ORDERS.md`, nhận hình thì cắt nền rồi gắn vào game.
