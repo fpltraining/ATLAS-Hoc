@@ -545,7 +545,61 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .pl-can, .pl-plan { background: var(--paper); border: 1.5px solid var(--line); border-radius: 16px; padding: 12px 14px; }
 .pl-plan ul { margin: 6px 0 0; padding-left: 20px; }
 .pl-plan li { margin: 3px 0; }
-@media (max-width: 420px) { .pl-part { padding: 8px 10px; } .pl-part .small { font-size: 12px; line-height: 1.35; } .pl-head h1 { font-size: 23px; } .pl-skill { grid-template-columns: 8em 1fr 4em; } .pl-sign { font-size: 24px; } }
+/* "Ngày đầu tới Brightford": cảnh nơi chốn (ảnh có sẵn của game), người nói đứng trong cảnh, Kai dẫn đường */
+.pl-scene { position: relative; height: 170px; border-radius: 18px; overflow: hidden; background-color: #e9e2d3; background-size: cover; background-position: center 40%; border: 1.5px solid var(--line); box-shadow: inset 0 -60px 50px -40px rgba(0, 0, 0, .28); }
+.pl-scene-intro { height: 210px; }
+.pl-place { position: absolute; top: 10px; right: 10px; background: rgba(255, 255, 255, .92); color: var(--navy); border-radius: 999px; padding: 5px 12px; font-size: 13px; font-weight: 800; box-shadow: 0 2px 6px rgba(0, 0, 0, .12); }
+.pl-npc { position: absolute; left: 8px; bottom: -6px; width: 150px; height: 150px; background: transparent !important; }
+.pl-npc .asset-name { display: none; }
+.pl-npc img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .25)); }
+.pl-kai-big { width: 170px; height: 170px; }
+.pl-prop { position: absolute; right: 14%; bottom: 4px; width: 150px; height: 150px; background: transparent !important; }
+.pl-prop .asset-name, .pl-map-prop .asset-name { display: none; }
+.pl-prop img, .pl-map-prop img { width: 100%; height: 100%; object-fit: contain; object-position: bottom; filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .25)); }
+.pl-map-prop { position: absolute; right: 8px; bottom: 2px; width: 58px; height: 58px; background: transparent !important; }
+.pl-scene-say { position: absolute; left: 170px; right: 12px; bottom: 14px; background: rgba(255, 255, 255, .95); border-radius: 16px; padding: 10px 12px; font-size: 15px; line-height: 1.4; display: flex; flex-direction: column; gap: 2px; }
+.pl-kai { display: flex; align-items: center; gap: 8px; background: #eef6f2; border: 1.5px solid #cfe6dc; border-radius: 14px; padding: 6px 12px 6px 6px; font-size: 15px; line-height: 1.35; }
+.pl-kai-img { flex: none; width: 44px; height: 44px; background: transparent !important; }
+.pl-kai-img .asset-name { display: none; }
+.pl-kai-img img { width: 100%; height: 100%; object-fit: contain; }
+.pl-bub.pl-bub-npc { flex-direction: column; align-items: stretch; gap: 6px; position: relative; }
+.pl-bub-name { font-size: 13px; font-weight: 800; color: var(--coral); }
+.pl-bub-row { display: flex; gap: 10px; align-items: center; justify-content: space-between; }
+.pl-bub-npc .pl-listen { padding: 4px 0; }
+/* bản đồ kết quả */
+.pl-map { background: var(--paper); border: 1.5px solid var(--line); border-radius: 16px; padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; }
+.pl-map-head { display: flex; flex-direction: column; gap: 2px; }
+.pl-map-head b { font-size: 18px; }
+.pl-map-an { font-size: 13px; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+.pl-map-row { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+.pl-map-card { border-radius: 12px; overflow: hidden; border: 1.5px solid var(--line); background: #fff; display: flex; flex-direction: column; }
+.pl-map-pic { position: relative; height: 64px; background-size: cover; background-position: center 40%; background-color: #e9e2d3; }
+.pl-map-name { padding: 6px 8px; display: flex; flex-direction: column; gap: 1px; font-size: 13px; line-height: 1.3; }
+.pl-map-card.ok { border-color: var(--jade); box-shadow: 0 0 0 2px rgba(47, 122, 99, .15); }
+.pl-map-card.off .pl-map-pic { filter: grayscale(1) brightness(.85); opacity: .6; }
+.pl-map-card.off .pl-map-name { color: #8a8478; }
+@media (min-width: 700px) { .pl-scene { height: 210px; } .pl-npc { width: 190px; height: 190px; } }
+/* điện thoại nằm ngang (màn thấp): cảnh và lời Kai bên trái, câu hỏi bên phải, không phải cuộn mới thấy đáp án */
+@media (max-height: 520px) and (min-width: 640px) {
+  .pl-wrap.pl-qs { max-width: 980px; display: grid; grid-template-columns: minmax(250px, 40%) 1fr; grid-auto-rows: min-content; column-gap: 16px; row-gap: 10px; align-items: start; }
+  .pl-qs .pl-top { grid-column: 1 / -1; }
+  .pl-qs .pl-kai, .pl-qs .pl-scene { grid-column: 1; }
+  .pl-qs .pl-card { grid-column: 2; grid-row: 2 / span 3; }
+  .pl-qs .pl-scene { height: 200px; }
+  .pl-qs .pl-npc { width: 150px; height: 150px; }
+  .pl-qs .pl-kai { font-size: 13px; padding: 4px 10px 4px 4px; }
+  .pl-qs .pl-kai-img { width: 34px; height: 34px; }
+  .pl-qs .pl-card { padding: 12px; gap: 8px; }
+  .pl-qs .pl-play { min-height: 48px; padding: 6px 16px; font-size: 16px; }
+  .pl-qs .pl-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .pl-qs .pl-opts .opt { min-height: 50px; padding: 8px 12px; font-size: 16px; line-height: 1.3; }
+  .pl-qs .pl-sign { font-size: 22px; padding: 8px 18px; }
+  .pl-qs .pl-msg { font-size: 16px; padding: 10px 12px; }
+  .pl-qs .pl-q { font-size: 16px; }
+  .pl-scene-intro { height: 170px; }
+}
+@media (max-width: 420px) { .pl-part { padding: 8px 10px; } .pl-part .small { font-size: 12px; line-height: 1.35; } .pl-head h1 { font-size: 23px; } .pl-skill { grid-template-columns: 8em 1fr 4em; } .pl-sign { font-size: 24px; }
+  .pl-scene { height: 140px; } .pl-npc { width: 120px; height: 120px; } .pl-kai-big { width: 130px; height: 130px; } .pl-scene-say { left: 128px; font-size: 13px; } .pl-map-row { grid-template-columns: 1fr 1fr; } }
 .pl-lobby { width: 100%; margin-top: 10px; }
 
 /* lưu trên mây */
