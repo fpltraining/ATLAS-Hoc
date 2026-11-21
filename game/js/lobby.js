@@ -188,7 +188,6 @@ var G = window.G || (window.G = {});
       G.el('button.btn', { onclick: G.exportSave }, '⤓ Xuất file sao lưu'),
       G.el('button.btn', { onclick: function () { file.click(); } }, '⤒ Nhập file sao lưu'),
       G.el('button.btn', { onclick: function () { G.S.caiDat.amThanh = !G.S.caiDat.amThanh; G.save(); G.renderLobby(); } }, G.S.caiDat.amThanh ? '🔔 Âm thanh: bật' : '🔕 Âm thanh: tắt'),
-      G.W3D && G.W3D.can() ? G.el('button.btn', { onclick: function () { G.S.caiDat.ban3d = G.S.caiDat.ban3d === false; G.save(); G.renderLobby(); } }, G.S.caiDat.ban3d === false ? '🗺 Bản đồ: 2D (nhẹ máy)' : '🏙 Bản đồ: 3D') : null,
       G.el('button.btn', { onclick: function () { G.setMusic(!G.musicOn()); G.renderLobby(); } }, G.musicOn() ? '🎹 Nhạc nền: bật' : '🎹 Nhạc nền: tắt'),
       file
     ));

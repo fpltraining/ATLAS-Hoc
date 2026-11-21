@@ -58,6 +58,9 @@ var G = window.G || (window.G = {});
       var te = document.getElementById('temp');
       if (te) te.onclick = function () { var t = G.tempNow(), w = G.tempWord(t), s = skyWord(); G.say(G.tempSentence(t), 'en'); G.kaiSay(G.tempSentence(t) + ' → Trời ' + t + ' độ, ' + w.vi + ', ' + s.vi + '.'); };
     }
+    // camera 3D xoay (vuốt tay phải): radar xoay theo, phía trước màn hình luôn ở trên như GTA
+    var ya = G.W3D && G.W3D.active && G.W3D.yaw ? G.W3D.yaw() : 0;
+    if (RD.ya !== ya) { RD.ya = ya; RD.cv.style.transform = ya ? 'rotate(' + ya.toFixed(3) + 'rad)' : ''; }
     updateTemp();
     var css = RD.cv.clientWidth; if (!css) return;
     var S = Math.round(css * st.dpr); if (RD.cv.width !== S) { RD.cv.width = S; RD.cv.height = S; }

@@ -308,13 +308,13 @@ var G = window.G || (window.G = {});
   }
 
   function update(dt) {
-    var vx = 0, vy = 0;
+    var vx = 0, vy = 0, camRel = false;
     if (riding) { target = null; path = []; pending = null; if (riding === 'go') rideFollow(); }
     else if (seatAnim) { /* đang kéo ghế */ }
     else if (seat && (joy.on && (joy.dx || joy.dy) || keys.l || keys.r || keys.u || keys.d)) G.standUp();   // đang ngồi học: kéo cần là đứng dậy
     else if (seat) { /* ngồi yên */ }
-    else if (joy.on && (joy.dx || joy.dy)) { vx = joy.dx; vy = joy.dy; target = null; pending = null; path = []; }
-    else if (keys.l || keys.r || keys.u || keys.d) { vx = (keys.r ? 1 : 0) - (keys.l ? 1 : 0); vy = (keys.d ? 1 : 0) - (keys.u ? 1 : 0); target = null; pending = null; path = []; }
+    else if (joy.on && (joy.dx || joy.dy)) { vx = joy.dx; vy = joy.dy; target = null; pending = null; path = []; camRel = true; }
+    else if (keys.l || keys.r || keys.u || keys.d) { vx = (keys.r ? 1 : 0) - (keys.l ? 1 : 0); vy = (keys.d ? 1 : 0) - (keys.u ? 1 : 0); target = null; pending = null; path = []; camRel = true; }
     else if (target) {
       var tx = target.x - P.x, ty = target.y - P.y, dist = Math.sqrt(tx * tx + ty * ty);
       if (pending && near && near.label === pendingLabel) {
@@ -324,6 +324,8 @@ var G = window.G || (window.G = {});
         else { target = null; if (pending) { var p = pending; pending = null; p(); } }
       } else { vx = tx / dist; vy = ty / dist; }
     }
+    // bản 3D: cần điều khiển / phím đi theo hướng camera đang nhìn (đẩy lên là đi về phía trước màn hình)
+    if (camRel && mode3d && G.W3D.yaw) { var ya = G.W3D.yaw(); if (ya) { var cya = Math.cos(ya), sya = Math.sin(ya), rvx = vx * cya + vy * sya; vy = -vx * sya + vy * cya; vx = rvx; } }
     var len = Math.sqrt(vx * vx + vy * vy);
     P.moving = len > 0.01;
     if (P.moving) {
@@ -1063,12 +1065,16 @@ var G = window.G || (window.G = {});
   function umbrella(u, ci, sway, part, fist) {
     var S = u.S, R = S * 0.38, lw = Math.max(2, S * 0.024), un = 'umbrella_' + (ci % 6 + 1) + '.png';
     if (G.ASSET_REV && G.ASSET_REV[un]) {   // ô vẽ giấy (đặt hình): cán ô ở bàn tay, tán che trên đầu
-      // vác ô qua vai: nhìn trước / nhìn ngang thì tán nằm sau đầu (vẽ trước thân), nhìn sau lưng thì tán ở phía người xem (vẽ sau thân)
-      if ((part === 'top') !== !!u.back || !G.asset(un).ok) return;
+      // điểm cầm trên cán đặt đúng lòng bàn tay. Nhìn trước / ngang: tán vẽ trước thân (nằm sau đầu), phần cán vẽ sau thân (đè lên tay);
+      // nhìn sau lưng: cả ô vẽ sau thân (ở phía người xem)
+      if (!G.asset(un).ok) return;
       var im = G.asset(un).img, ih = S * 0.92, iw = ih * im.width / im.height, ag = Math.atan2(u.ux - u.hx, -(u.uy - u.hy)) * 0.5 + (sway || 0);
-      var gp = (G.UMB_GRIP && G.UMB_GRIP[un]) || [0.5, 0.86];   // điểm cầm trên cán (ngay trên móc) đặt đúng vào bàn tay
-      // nhìn trước / ngang: móc khuất sau người, tay như nâng cán lên vai (tán cao hơn, che trên đầu); nhìn sau lưng: móc đúng trong bàn tay
-      ctx.save(); ctx.translate(u.hx, u.hy - (u.back ? 0 : S * 0.2)); ctx.rotate(ag); ctx.drawImage(im, -iw * gp[0], -ih * gp[1], iw, ih); ctx.restore();
+      var gp = (G.UMB_GRIP && G.UMB_GRIP[un]) || [0.5, 0.86, 0.72], whole = u.back ? part === 'top' : part === 'pole', grip = !u.back && part === 'top';
+      if (!whole && !grip) return;
+      ctx.save(); ctx.translate(u.hx, u.hy); ctx.rotate(ag);
+      if (whole) ctx.drawImage(im, -iw * gp[0], -ih * gp[1], iw, ih);
+      else ctx.drawImage(im, 0, im.height * gp[2], im.width, im.height * (1 - gp[2]), -iw * gp[0], -ih * gp[1] + ih * gp[2], iw, ih * (1 - gp[2]));
+      ctx.restore();
       return;
     }
     var vx = u.ux - u.hx, vy = u.uy - u.hy, L = Math.sqrt(vx * vx + vy * vy), ang = Math.atan2(vx, -vy) + (sway || 0);
@@ -1651,12 +1657,42 @@ var G = window.G || (window.G = {});
       el.addEventListener('touchend', tend);
       el.addEventListener('touchcancel', tend);
     });
+    /* bản đồ 3D kiểu GTA: tay trái đi (cần điều khiển), tay phải vuốt để xoay góc nhìn quanh nhân vật (ngang: xoay, dọc: nâng hạ).
+       Chạm nhẹ không vuốt vẫn là bấm đi tới chỗ đó. Máy tính: kéo chuột trên bản đồ, hoặc phím Q / E. */
+    var lid = null, lsx = 0, lsy = 0, lpx = 0, lpy = 0, ldrag = false;
+    function lfind(e) { for (var i = 0; i < e.changedTouches.length; i++) if (e.changedTouches[i].identifier === lid) return e.changedTouches[i]; return null; }
+    cv.addEventListener('touchstart', function (e) {
+      if (!mode3d || lid !== null || e.touches.length > 1) return;
+      var t = e.changedTouches[0]; if (t.identifier === jid) return;
+      var q = rel(t); if (inZone(q)) return;
+      lid = t.identifier; lsx = lpx = q.x; lsy = lpy = q.y; ldrag = false;
+    }, { passive: true });
+    cv.addEventListener('touchmove', function (e) {
+      if (lid === null) return;
+      var t = lfind(e); if (!t) return;
+      var q = rel(t);
+      if (!ldrag && Math.abs(q.x - lsx) + Math.abs(q.y - lsy) > 10) ldrag = true;
+      if (ldrag) { G.W3D.orbit(-(q.x - lpx) * 0.0072, (q.y - lpy) * 0.0045); e.preventDefault(); }
+      lpx = q.x; lpy = q.y;
+    }, { passive: false });
+    function lend(e) { var t = lid !== null && lfind(e); if (!t) return; if (ldrag) { eatClick = Date.now() + 400; lastQ = rel(t); } lid = null; ldrag = false; }
+    cv.addEventListener('touchend', lend); cv.addEventListener('touchcancel', lend);
+    var md = null;
+    cv.addEventListener('mousedown', function (e) { if (mode3d && e.button === 0) md = { x: e.clientX, y: e.clientY, px: e.clientX, py: e.clientY, drag: false }; });
+    window.addEventListener('mousemove', function (e) {
+      if (!md || !(e.buttons & 1)) { md = null; return; }
+      if (!md.drag && Math.abs(e.clientX - md.x) + Math.abs(e.clientY - md.y) > 6) md.drag = true;
+      if (md.drag) G.W3D.orbit(-(e.clientX - md.px) * 0.0072, (e.clientY - md.py) * 0.0045);
+      md.px = e.clientX; md.py = e.clientY;
+    });
+    window.addEventListener('mouseup', function (e) { if (md && md.drag) { eatClick = Date.now() + 400; lastQ = rel(e); } md = null; });
     /* bản đồ 3D: hai ngón tay để phóng to / thu nhỏ, cuộn chuột cũng được */
     var pinch = null;
     cv.addEventListener('touchstart', function (e) {
       if (!mode3d || e.touches.length !== 2) return;
       var t0 = e.touches[0], t1 = e.touches[1]; pinch = { d: Math.hypot(t0.clientX - t1.clientX, t0.clientY - t1.clientY), k: G.W3D.zoom() };
       if (jid !== null) je();
+      lid = null; ldrag = false;
     }, { passive: true });
     cv.addEventListener('touchmove', function (e) {
       if (!pinch || e.touches.length !== 2) return;
@@ -1677,6 +1713,7 @@ var G = window.G || (window.G = {});
     window.addEventListener('keydown', function (e) {
       if (document.getElementById('panel').className.indexOf('open') >= 0 || !running) return;
       if (MAP[e.key]) { keys[MAP[e.key]] = true; e.preventDefault(); }
+      if (mode3d && (e.key === 'q' || e.key === 'e')) G.W3D.orbit(e.key === 'q' ? 0.15 : -0.15, 0);   // xoay góc nhìn
       if ((e.key === 'Enter' || e.key === ' ') && near) { e.preventDefault(); near.act(); }
     });
     window.addEventListener('keyup', function (e) { if (MAP[e.key]) keys[MAP[e.key]] = false; });
