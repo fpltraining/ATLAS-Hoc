@@ -277,7 +277,7 @@ var G = window.G || (window.G = {});
   function ceil5(x) { return Math.ceil(x / 5) * 5; }
   G.planNeed = function (months, step, dpw) { var h = hoursTo(step, dpw); return h <= 0 ? 0 : ceil5(h * 60 / (months * 30.4 * dpw / 7)); };
   G.setPlan = function (months) {
-    var cd = G.S.caiDat = G.S.caiDat || {}, dpw = cd.ngayTuan || 6, step = stepOf(), need = Math.max(10, G.planNeed(months, step, dpw));
+    var cd = G.S.caiDat = G.S.caiDat || {}, dpw = cd.ngayTuan || 5, step = stepOf(), need = Math.max(10, G.planNeed(months, step, dpw));
     var e = G.vnParts(Date.now() + months * 30.4 * 86400000);
     G.S.mocHoc = { thang: months, buoc: step, tu: G.vnDay(), den: e.y + '-' + pad2(e.m) + '-' + pad2(e.d), phut0: need };
     cd.phutNgay = need; ptAt = 0; G.save(); if (G.updateHud) G.updateHud();
@@ -287,7 +287,7 @@ var G = window.G || (window.G = {});
   G.planToday = function () {
     var m = G.S.mocHoc; if (!m || !G.etaPlan) return null;
     if (ptCache && Date.now() - ptAt < 60000) return ptCache;
-    var cd = G.S.caiDat || {}, dpw = cd.ngayTuan || 6, end = Date.parse(m.den + 'T23:59:59+07:00');
+    var cd = G.S.caiDat || {}, dpw = cd.ngayTuan || 5, end = Date.parse(m.den + 'T23:59:59+07:00');
     var daysLeft = (end - Date.now()) / 86400000, h = hoursTo(m.buoc, dpw);
     var o = { thang: m.thang, den: m.den, ngay: Math.max(0, Math.ceil(daysLeft)), xong: h <= 0, het: daysLeft <= 0, phut0: m.phut0 };
     o.phut = o.xong || o.het ? (cd.phutNgay || m.phut0) : Math.min(240, Math.max(10, ceil5(h * 60 / Math.max(1, daysLeft * dpw / 7))));
@@ -296,22 +296,27 @@ var G = window.G || (window.G = {});
   };
   /* một dòng nói rõ kế hoạch: đạt gì, trước ngày nào, mỗi ngày bao lâu */
   G.planLine = function () {
-    var m = G.S.mocHoc, g = G.goalOf(), cd = G.S.caiDat || {}, dpw = cd.ngayTuan || 6;
+    var m = G.S.mocHoc, g = G.goalOf(), cd = G.S.caiDat || {}, dpw = cd.ngayTuan || 5;
     if (!m) return 'Chọn mốc thời gian: app tính mỗi ngày cần học bao nhiêu và giao đủ phần đó mỗi ngày.';
     var pt = G.planToday(), st = G.ROADMAP_EN[m.buoc] || {}, who = g ? g.icon + ' ' + g.name + ': ' : '🎯 ';
     if (pt.xong) return '🎉 Bạn đã đạt ' + st.name + '! Chọn mục tiêu cao hơn để học tiếp.';
     if (pt.het) return 'Mốc ' + fmtDay(m.den) + ' đã qua mà chưa đạt ' + st.name + '. Chọn mốc mới, app tính lại phần học mỗi ngày.';
-    return who + 'đạt ' + st.name + ' (' + st.cefr + ') trước ' + fmtDay(m.den) + ' (mốc ' + m.thang + ' tháng). Mỗi ngày học khoảng ' + pt.phut + ' phút, ' + dpw + ' ngày/tuần.' +
+    return who + 'đạt ' + st.name + ' (' + st.cefr + ') trước ' + fmtDay(m.den) + ' (mốc ' + m.thang + ' tháng). Học ' + dpw + ' ngày/tuần, mỗi ngày học khoảng ' + pt.phut + ' phút' + (dpw < 7 ? ', còn lại nghỉ' : '') + '.' +
       (pt.cham ? ' Đang chậm so với mốc nên phần học mỗi ngày đã tăng để kịp.' : pt.nhanh ? ' Bạn đang nhanh hơn tiến độ 👍' : '');
   };
   G.goalLine = function () { return G.planLine(); };
   /* thẻ chọn mục tiêu + mốc thời gian (kết quả đầu vào, Sảnh); onChange khi đổi */
   G.goalCard = function (onChange) {
     var cd = G.S.caiDat = G.S.caiDat || {};
-    var line = G.el('div.gl-line'), gRow = G.el('div.gl-chips'), mRow = G.el('div.gl-chips');
+    var line = G.el('div.gl-line'), gRow = G.el('div.gl-chips'), dRow = G.el('div.gl-chips'), mRow = G.el('div.gl-chips');
     function draw() {
-      var g = G.goalOf(), m = G.S.mocHoc, step = stepOf(), dpw = cd.ngayTuan || 6;
-      gRow.innerHTML = ''; mRow.innerHTML = '';
+      var g = G.goalOf(), m = G.S.mocHoc, step = stepOf(), dpw = cd.ngayTuan || 5;
+      gRow.innerHTML = ''; dRow.innerHTML = ''; mRow.innerHTML = '';
+      [2, 3, 4, 5, 6, 7].forEach(function (nd) {   // không ai học đủ 7 ngày: để người học tự chọn, mặc định 5 ngày
+        dRow.appendChild(G.el('button.gl-chip' + (dpw === nd ? '.on' : ''), { onclick: function () {
+          cd.ngayTuan = nd; if (G.S.mocHoc) G.setPlan(G.S.mocHoc.thang); else G.save(); draw(); if (onChange) onChange();
+        } }, nd === 7 ? '7 ngày (cả tuần)' : nd + ' ngày'));
+      });
       GOALS.forEach(function (x) {
         gRow.appendChild(G.el('button.gl-chip' + (g && g.id === x.id ? '.on' : ''), { onclick: function () {
           G.S.mucTieu = { id: x.id, luc: G.vnNow() }; if (G.S.mocHoc) G.setPlan(G.S.mocHoc.thang); G.save(); draw(); if (onChange) onChange();
@@ -328,6 +333,7 @@ var G = window.G || (window.G = {});
     }
     draw();
     var el = G.el('div.gl-card', G.el('b.gl-h', '🎯 Bạn học tiếng Anh để làm gì?'), gRow,
+      G.el('b.gl-h', '📆 Mỗi tuần học mấy ngày?'), dRow,
       G.el('b.gl-h', '📅 Muốn đạt mục tiêu trong bao lâu?'), mRow, line);
     el.redraw = draw;
     return el;

@@ -9,6 +9,7 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 ## Tiến độ học
 
 - Người học tự chọn **mốc thời gian** (3 / 6 / 9 / 12 / 18 / 24 tháng) để đạt mục tiêu (Sảnh → Mục tiêu và mốc thời gian, hoặc màn kết quả đầu vào).
+- Người học tự chọn **mỗi tuần học mấy ngày** (2–7, mặc định 5): không ai học đủ 7 ngày. Số phút mỗi ngày tính theo số ngày đó; ngày nghỉ trong lịch không làm đứt chuỗi học (`G.markStudy`: cách nhau tối đa ceil(7 / N) ngày); bảng Hôm nay hiện tuần này đã học mấy ngày (`G.weekStudy`).
 - App tính mỗi ngày cần học bao nhiêu (giờ còn lại tới mục tiêu ÷ số ngày học còn lại) và **giao đủ phần đó mỗi ngày** (vòng Hôm nay). Học chậm thì phần mỗi ngày tự tăng, nhanh thì giảm. Code: `G.setPlan`, `G.planToday` (game/js/placement.js), `goalMin` (game/js/daily.js).
 
 ## Bản đồ ngoài phố: chỉ bản 3D

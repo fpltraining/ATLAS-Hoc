@@ -41,6 +41,13 @@ var G = window.G || (window.G = {});
     if (G.updateHud) G.updateHud();
   };
 
+  /* tuần này (thứ Hai → Chủ nhật, giờ Việt Nam) đã học mấy ngày: ngày có học từ 10 phút hoặc xong một việc */
+  G.weekStudy = function () {
+    var dow = new Date(Date.now() + 7 * 3600000).getUTCDay(), mon = G.vnDay(Date.now() - ((dow + 6) % 7) * 86400000), today0 = G.vnDay(), n = 0, N = G.S.ngay || {};
+    for (var k in N) if (N.hasOwnProperty(k) && k >= mon && k <= today0) { var r = N[k], v = 0; for (var t in r.viec) if (r.viec.hasOwnProperty(t)) v++; if (r.giay >= 600 || v) n++; }
+    var want = (G.S.caiDat && G.S.caiDat.ngayTuan) || 5;
+    return { n: n, want: want };
+  };
   /* % hôm nay: một nửa theo số việc xong, một nửa theo phút học / 120 */
   G.dayProgress = function () {
     var d = today(), done = 0;
@@ -82,8 +89,10 @@ var G = window.G || (window.G = {});
     var ring = G.el('div.td-ring', G.el('b', p.pct + '%'));
     ring.style.setProperty('--p', p.pct);
     body.appendChild(G.el('div.td-head', ring,
-      G.el('div', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc · chuỗi ' + G.S.chuoi.hienTai + ' ngày'))));
+      G.el('div', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc · chuỗi ' + G.S.chuoi.hienTai + ' ngày học'))));
+    var wk = G.weekStudy();
     if (G.planLine) body.appendChild(G.el('div.td-plan', G.el('b', '📅 Tiến độ theo mốc'), G.el('div.small', G.planLine()),
+      G.el('div.small', '📆 Tuần này đã học ' + wk.n + '/' + wk.want + ' ngày' + (wk.n >= wk.want ? ': đủ rồi, học thêm là vượt tiến độ 👍' : ', ngày nghỉ trong lịch không đứt chuỗi.')),
       G.S.mocHoc ? null : G.el('button.btn.sm', { onclick: function () { G.goLobby && G.goLobby(); } }, 'Chọn mốc ở Sảnh')));
     if (G.rankCard) body.appendChild(G.rankCard());
     body.appendChild(G.el('div.td-list', TASKS.map(function (t) {

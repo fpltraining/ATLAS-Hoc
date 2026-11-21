@@ -100,13 +100,15 @@ var G = window.G || (window.G = {});
     mirror();
   };
 
-  /* Ghi một lần học trong ngày: cập nhật chuỗi ngày theo giờ Việt Nam */
+  /* Ghi một lần học trong ngày: cập nhật chuỗi ngày học theo giờ Việt Nam (theo số ngày học mỗi tuần đã chọn) */
   G.markStudy = function () {
     var today = G.vnDay();
     var c = G.S.chuoi;
     if (c.ngayCuoi === today) return;
-    var y = G.vnDay(Date.now() - 86400000);
-    c.hienTai = c.ngayCuoi === y ? c.hienTai + 1 : 1;
+    // học N ngày mỗi tuần (người học chọn): nghỉ trong lịch không đứt chuỗi, cách nhau tối đa ceil(7 / N) ngày
+    var dpw = (G.S.caiDat && G.S.caiDat.ngayTuan) || 5, gap = Math.ceil(7 / dpw);
+    var last = c.ngayCuoi ? Date.parse(c.ngayCuoi + 'T00:00:00+07:00') : 0, days = last ? Math.round((Date.parse(today + 'T00:00:00+07:00') - last) / 86400000) : 99;
+    c.hienTai = days <= gap ? c.hienTai + 1 : 1;
     c.ngayCuoi = today;
     G.save();
   };
