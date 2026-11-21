@@ -54,6 +54,7 @@ var G = window.G || (window.G = {});
     panel.className = 'panel open';
     document.getElementById('panel-title').textContent = R.title;
     G.markStudy();
+    if (G.sfxFile) G.sfxFile('sfx_page_turn', 0.4);   // mở sách vào bài
     G.warmAudio(R.items.map(T).concat(R.items.map(function (x) { return x.ex; })), lang);
     var pb = document.getElementById('panel-py');
     pb.style.display = lang === 'zh' ? '' : 'none';

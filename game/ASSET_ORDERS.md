@@ -621,3 +621,12 @@ Same style as before, transparent background, seen from BEHIND sitting at a desk
 - student_leo_sit.png / student_leo_hand.png (young adult man, dark skin, short hair, orange hoodie).
 ```
 Âm thanh + nhạc: Đơn M (Meta AI), chưa nhận.
+
+## Âm thanh lấy từ nguồn miễn phí (21/11) · đã gắn vào game
+
+Thay phần lớn Đơn M bằng ghi âm thật miễn phí (Kenney, OpenGameArt, Wikimedia Commons; CC0 / phạm vi công cộng, 3 tệp CC BY / CC BY-SA). Nguồn từng tệp: `game/sfx/CREDITS.md`.
+
+- Tiếng nền: chim buổi sáng, phố ban ngày, dế đêm, gió trước mưa, mưa nhỏ, mưa to, sông chảy, lớp học, máy xe đưa đón
+- Tiếng động: bước chân trên cỏ / đá / gỗ (5 tiếng mỗi loại), cửa gỗ, kéo ghế, đẩy ghế, ngồi ghế, lật sách, giấy bật lên, cá quẫy, vịt kêu, sấm xa (2), còi xe, cửa xe xì hơi, chuông vào lớp
+
+Còn thiếu (Meta AI hoặc tìm thêm): amb_cafe, amb_market, amb_playground (sân trường). Nhạc nền vẫn dùng 4 bản piano cũ.
