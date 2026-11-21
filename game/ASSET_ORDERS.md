@@ -603,3 +603,21 @@ Sky backdrops (same look as sky_morning.png I sent, landscape, distant paper hil
 - sky_afternoon.png, sky_sunset.png, sky_dusk.png, sky_night.png, sky_latenight.png, sky_cloudy.png, sky_storm.png, sky_rain.png
 ```
 Các mục khác của Đơn L (sông, cá, vịt, ô, xe đưa đón, khuôn viên trường, mây đen, mặt trời, trăng) vẫn chờ.
+
+## Đã nhận 21/11 (Đơn L, đợt 2 + 3) · đã gắn vào game
+
+- 8 tranh trời còn lại (chiều, hoàng hôn, chạng vạng, đêm, khuya, nhiều mây, sắp bão, mưa), mặt trời, trăng, 4 mây đen
+- Bờ sông: map_river_en (cầu gỗ, cầu đá), 4 cá, cá nhảy, 2 vịt, lá sen, lau sậy, thuyền, ghế bờ sông, mặt nước lấp lánh
+- 6 ô che mưa, xe đưa đón (ngang, trước, sau), biển trạm xe đưa đón
+- Khuôn viên trường: map_campus_en, toà trường 4 tầng, cổng Brightford, cột cờ, rổ bóng rổ
+
+## Còn thiếu (đặt lại đúng tên)
+
+```
+Same style as before, transparent background, seen from BEHIND sitting at a desk, NO chair, NO desk, 1024×1024:
+- player_han_sit.png — the SAME Han as his walking sprite: chibi kid, curly brown hair, red hoodie, dark blue shorts.
+- student_ana_sit.png (curly brown hair, yellow sweater), student_ken_sit.png (blond hair, red t-shirt).
+- student_mai_sit.png / student_mai_hand.png (teen girl, short black bob hair, green cardigan).
+- student_leo_sit.png / student_leo_hand.png (young adult man, dark skin, short hair, orange hoodie).
+```
+Âm thanh + nhạc: Đơn M (Meta AI), chưa nhận.

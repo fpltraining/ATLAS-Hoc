@@ -76,7 +76,7 @@ var G = window.G || (window.G = {});
   G.arriveBy = function (type, toward) {
     var sc = toward === 'school' ? 'city_en' : 'home_en', bs = G.SCENES[sc].buildings;
     for (var i = 0; i < bs.length; i++) if (bs[i].ride === type) { G.enterScene(sc, { x: bs[i].x, y: bs[i].y + 80, dir: 'down' }); break; }
-    G.kaiSay(toward === 'school' ? 'Tới trung tâm rồi! Trường Anh ngữ là toà có biển đỏ. Đi tới đó nhé.' : 'Về tới khu phố Maple rồi. Nghỉ ngơi thôi!');
+    G.kaiSay(toward === 'school' ? 'Tới trung tâm rồi! Trường Anh ngữ ở Khuôn viên phía dưới, đi theo đường giữa xuống nhé.' : 'Về tới khu phố Maple rồi. Nghỉ ngơi thôi!');
   };
 
   /* Danh sách thứ có thể tương tác trong cảnh hiện tại */
@@ -247,10 +247,15 @@ var G = window.G || (window.G = {});
       d = WD[id]; lx = gx - d.ox; ly = gy - d.oy;
       if (lx >= 4 && lx < s.w - 4 && ly >= 50 && ly < s.h - 14) return blockedIn(s, id, lx, ly, true);
     }
-    for (id in WD) {   // mép tờ: chỉ đi qua chỗ nối với khu bên cạnh
+    for (id in WD) {   // mép tờ: chỉ đi qua chỗ nối với khu bên cạnh (trái, phải, trên, dưới)
       if (!WD.hasOwnProperty(id) || !(s = G.SCENES[id])) continue;
       d = WD[id]; lx = gx - d.ox; ly = gy - d.oy;
-      if (lx >= 0 && lx < s.w && ly >= 50 && ly < s.h - 14) return blockedIn(s, id, Math.min(Math.max(lx, 5), s.w - 5), ly, true);
+      if (lx < 0 || lx >= s.w || ly < 0 || ly >= s.h) continue;
+      for (var j in WD) {
+        var e = WD[j], es = G.SCENES[j]; if (j === id || !es) continue;
+        if (gx >= e.ox - 40 && gx < e.ox + es.w + 40 && gy >= e.oy - 70 && gy < e.oy + es.h + 40) return blockedIn(s, id, Math.min(Math.max(lx, 5), s.w - 5), Math.min(Math.max(ly, 50), s.h - 15), true);
+      }
+      return true;
     }
     return true;
   };
@@ -264,6 +269,7 @@ var G = window.G || (window.G = {});
     if (scene.buildings) {
       for (var i = 0; i < scene.buildings.length; i++) {
         var b = scene.buildings[i], bk = (b.s || 300) / 300;
+        if (b.nb) continue;   // biển trạm nhỏ: không chặn đường
         if (x > b.x - 125 * bk && x < b.x + 125 * bk && y > b.y - 190 * bk && y < b.y - 4) return true;
       }
     }
@@ -571,7 +577,9 @@ var G = window.G || (window.G = {});
     if (lineFree(sx, sy, gx, gy)) return [{ x: gx, y: gy }];
     // bản đồ 3D: đích ở khu bên cạnh thì lưới tìm đường phủ cả khu đó
     var X0 = 0, Y0 = 0, X1 = scene.w, Y1 = scene.h;
-    if (mode3d && (gx < 0 || gx > scene.w || gy < 0 || gy > scene.h || sx < 0 || sx > scene.w)) { X0 = -1600; X1 = scene.w + 1600; Y0 = -200; Y1 = scene.h + 200; }
+    if (mode3d && (gx < 0 || gx > scene.w || gy < 0 || gy > scene.h || sx < 0 || sx > scene.w || sy < 0 || sy > scene.h)) {
+      X0 = Math.min(0, sx, gx) - 200; X1 = Math.max(scene.w, sx, gx) + 200; Y0 = Math.min(0, sy, gy) - 200; Y1 = Math.max(scene.h, sy, gy) + 200;
+    }
     var cols = Math.ceil((X1 - X0) / CELL), rows = Math.ceil((Y1 - Y0) / CELL), N = cols * rows;
     var free = {}, g = {}, came = {}, closed = {};
     function ok(i) { if (free[i] === undefined) free[i] = freeAt(cx(i), cy(i)); return free[i]; }
@@ -683,18 +691,21 @@ var G = window.G || (window.G = {});
       if (gS) return { text: 'Sau giờ học: sang Phố mua sắm, ghé ' + G.LIFE[pickA].title, x: gS.x, y: gS.y, h: 170, label: gS.label };
     }
     if (id === 'street_en') { var gB = gateTo('city_en'); return { text: 'Về trung tâm · ' + what, x: gB.x, y: gB.y, h: 170, label: gB.label }; }
-    if (id === 'city_en' && !newbie && G.LIFE['en-gate'] && !talkedToday('en-gate') && personOf('en-gate')) { var pg = personOf('en-gate'); return { text: 'Chào Ms. Nora ở cổng trường trước khi vào lớp', x: pg.x, y: pg.y + 40, h: 150, label: 'Nói chuyện với Ms. Nora' }; }
+    if (id === 'river_en') { var gR = gateTo('city_en'); if (gR) return { text: 'Qua cầu sang Trung tâm · ' + what, x: gR.x, y: gR.y, h: 170, label: gR.label }; }
+    if ((id === 'city_en' || id === 'campus_en') && !newbie && G.LIFE['en-gate'] && !talkedToday('en-gate') && personOf('en-gate')) { var pg = personOf('en-gate'); return { text: 'Chào Ms. Nora ở cổng trường trước khi vào lớp', x: pg.x, y: pg.y + 40, h: 150, label: 'Nói chuyện với Ms. Nora' }; }
     if (id === 'home_en' && td.bai && (!td.doc || !td.on)) { var hm = bld('home'); return { text: 'Vào nhà ' + (!td.doc ? 'đọc 1 chương truyện' : 'ôn từ khó') + ' (việc hôm nay)', x: hm.x, y: hm.y + 18, h: 260, label: 'Vào nhà · đọc truyện, ôn từ' }; }
     if (id === 'home_en') {
-      var gC = gateTo('city_en');   // đi bộ sang Trung tâm (muốn nhanh thì gọi xe đưa đón hoặc đi xe buýt)
-      if (gC) return { text: 'Đi bộ sang Trung tâm tới trường (đi nhanh: gọi xe đưa đón) · ' + what, x: gC.x, y: gC.y, h: 170, label: gC.label };
+      var gC = gateTo('river_en') || gateTo('city_en');   // đi bộ qua Bờ sông sang Trung tâm (muốn nhanh thì gọi xe đưa đón hoặc đi xe buýt)
+      if (gC) return { text: 'Đi bộ qua cầu sang Trung tâm tới trường (đi nhanh: gọi xe đưa đón) · ' + what, x: gC.x, y: gC.y, h: 170, label: gC.label };
       var bs = bld('busstop'); return { text: 'Ra bến xe buýt đi tới trường · ' + what, x: bs.x, y: bs.y + 18, h: 230, label: 'Đợi xe buýt tới trường' };
     }
     if (scene.city === 'zh') { var ap = bld('airport'); return ap ? { text: 'Bay về Brightford để học tiếng Anh', x: ap.x, y: ap.y + 18, h: 260, label: 'Vào Sân bay' } : (scene.exit ? { text: 'Ra ngoài, bay về Brightford', x: scene.exit.x, y: scene.exit.y, h: 120, label: scene.exit.label } : null); }
     if (id === 'city_en') {
       if (!nr && lf) { var lb = null, bs2 = scene.buildings; for (var i = 0; i < bs2.length; i++) if (bs2[i].life === lf) lb = bs2[i]; if (lb) return { text: what + ' (+20 XP mỗi tình huống)', x: lb.x, y: lb.y + 18, h: 260, label: 'Vào ' + lb.name }; }
-      var sc = bld('school'); return { text: 'Vào Trường Anh ngữ · ' + what, x: sc.x, y: sc.y + 18, h: 260, label: 'Vào ' + sc.name };
+      var gK = gateTo('campus_en');   // trường nằm ở khuôn viên phía dưới Trung tâm
+      if (gK) return { text: 'Đi xuống Khuôn viên trường · ' + what, x: gK.x, y: gK.y, h: 170, label: gK.label };
     }
+    if (id === 'campus_en') { var sc = bld('school'); if (sc) return { text: 'Vào Trường Anh ngữ · ' + what, x: sc.x, y: sc.y + 18, h: 330, label: 'Vào ' + sc.name }; }
     if (scene.kind === 'hall' && td.bai && G.LIFE['en-canteen'] && !talkedToday('en-canteen') && personOf('en-canteen')) {
       var pc = personOf('en-canteen'); return { text: 'Giờ ăn trưa: ra căng tin gặp Ms. Pat', x: pc.x, y: pc.y + 40, h: 150, label: 'Nói chuyện với Ms. Pat' };
     }
@@ -965,7 +976,13 @@ var G = window.G || (window.G = {});
     return holdAt('body_' + av.ao + '_' + d + '.png', x - h / 2, footY - h, h, dir === 'right', phase == null ? 0 : -Math.abs(Math.sin(phase)) * h * 0.028, d === 'left');
   }
   function umbrella(u, ci, sway, part, fist) {
-    var S = u.S, R = S * 0.38, lw = Math.max(2, S * 0.024);
+    var S = u.S, R = S * 0.38, lw = Math.max(2, S * 0.024), un = 'umbrella_' + (ci % 6 + 1) + '.png';
+    if (G.ASSET_REV && G.ASSET_REV[un]) {   // ô vẽ giấy (đặt hình): cán ô ở bàn tay, tán che trên đầu
+      if (part !== 'top' || !G.asset(un).ok) return;
+      var im = G.asset(un).img, ih = S * 0.92, iw = ih * im.width / im.height, ag = Math.atan2(u.ux - u.hx, -(u.uy - u.hy)) * 0.5 + (sway || 0);
+      ctx.save(); ctx.translate(u.hx, u.hy + S * 0.04); ctx.rotate(ag); ctx.drawImage(im, -iw * 0.55, -ih, iw, ih); ctx.restore();
+      return;
+    }
     var vx = u.ux - u.hx, vy = u.uy - u.hy, L = Math.sqrt(vx * vx + vy * vy), ang = Math.atan2(vx, -vy) + (sway || 0);
     ctx.save(); ctx.translate(u.hx, u.hy); ctx.rotate(ang);
     ctx.strokeStyle = '#3a2418'; ctx.lineCap = 'round'; ctx.lineJoin = 'round';

@@ -132,10 +132,10 @@ G.SCENES = {
     buildings: [
       { id: 'home', img: 'pc_home.png', s: 330, x: 245, y: 590, name: 'Nhà của bạn', home: true },
       { id: 'busstop', img: 'pc_busstop.png', s: 250, x: 1110, y: 500, name: 'Bến xe buýt', ride: 'bus', toward: 'school' },
-      { id: 'shuttle', img: 'pc_bus_sign.png', s: 150, x: 1040, y: 935, name: 'Xe đưa đón học sinh', shuttle: 'school' }
+      { id: 'shuttle', img: 'pc_shuttle_stop.png', s: 130, x: 1040, y: 935, name: 'Xe đưa đón học sinh', shuttle: 'school', nb: true }
     ],
-    // đường mòn bên phải nối sang Trung tâm: đi bộ tới trường (bản 3D đi liền một mạch, bản 2D qua cổng)
-    gates: [{ x: 1490, y: 548, side: 'right', label: 'Đi bộ sang Trung tâm', sign: '🏫 Trung tâm ›', to: { scene: 'city_en', x: 120, y: 508, dir: 'right' } }]
+    // đường mòn bên phải ra Bờ sông, qua cầu sang Trung tâm: đi bộ tới trường (bản 3D đi liền một mạch, bản 2D qua cổng)
+    gates: [{ x: 1490, y: 548, side: 'right', label: 'Đi bộ ra Bờ sông', sign: '🌊 Bờ sông ›', to: { scene: 'river_en', x: 80, y: 505, dir: 'right' } }]
   },
   city_en: {
     city: 'en',
@@ -148,21 +148,20 @@ G.SCENES = {
       { id: 'airport', img: 'pc_airport.png', s: 250, x: 760, y: 236, name: 'Sân bay', soon: 'Sân bay đang xây: chuyến bay đầu tiên mở cùng bài học Du lịch ở Tầng 3 (A2 – B1).' },
       { id: 'market', img: 'pc_market.png', s: 260, x: 244, y: 440, name: 'Chợ', life: 'en-market' },
       { id: 'cafe', img: 'pc_cafe.png', s: 260, x: 1292, y: 440, name: 'Quán cà phê', life: 'en-cafe' },
-      { id: 'school', img: 'pc_school.png', s: 300, x: 466, y: 975, name: 'Trường Anh ngữ', go: { scene: 'en_hall', x: 768, y: 930 } },
       { id: 'hospital', img: 'pc_hospital.png', s: 290, x: 1060, y: 975, name: 'Bệnh viện', life: 'en-hospital' },
-      { id: 'busstop', img: 'pc_busstop.png', s: 180, x: 92, y: 975, name: 'Bến xe buýt', ride: 'bus', toward: 'home' },
-      { id: 'shuttle', img: 'pc_bus_sign.png', s: 150, x: 720, y: 985, name: 'Xe đưa đón học sinh', shuttle: 'home' }
+      { id: 'busstop', img: 'pc_busstop.png', s: 180, x: 92, y: 975, name: 'Bến xe buýt', ride: 'bus', toward: 'home' }
     ],
     // cuối đường bên phải: sang Phố mua sắm (bưu điện, ngân hàng, hiệu thuốc, tiệm tóc, siêu thị); bên trái: về Khu phố Maple
     gates: [{ x: 1490, y: 508, side: 'right', label: 'Sang Phố mua sắm', sign: '🛍️ Phố mua sắm ›', to: { scene: 'street_en', x: 150, y: 380, dir: 'right' } },
-      { x: 46, y: 508, side: 'left', label: 'Đi bộ về Khu phố Maple', sign: '‹ 🏡 Khu phố Maple', to: { scene: 'home_en', x: 1400, y: 548, dir: 'left' } }]
+      { x: 46, y: 520, side: 'left', label: 'Đi bộ ra Bờ sông', sign: '‹ 🌊 Bờ sông', to: { scene: 'river_en', x: 1440, y: 412, dir: 'left' } },
+      { x: 798, y: 996, side: 'down', label: 'Đi bộ tới Trường Anh ngữ', sign: '🏫 Trường Anh ngữ', to: { scene: 'campus_en', x: 798, y: 90, dir: 'down' } }]
   },
   en_hall: {
     city: 'en', doors: 'EN_HALL_DOORS', classroom: 'classroom_en', floor: 2,
     title: 'Trường Anh ngữ · Tầng 2 A1',
     bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 78,
     walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
-    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
+    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'campus_en', building: 'school' } },
     // thang máy (lên / xuống tầng) ở phía phải hành lang
     gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]   // cửa thang máy có sẵn trong ảnh (tường phải)
   },
@@ -171,7 +170,7 @@ G.SCENES = {
     title: 'Trường Anh ngữ · Tầng 1 Nền tảng',
     bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 78,
     walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
-    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
+    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'campus_en', building: 'school' } },
     gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]   // cửa thang máy có sẵn trong ảnh (tường phải)
   },
   en_hall_3: {
@@ -179,7 +178,7 @@ G.SCENES = {
     title: 'Trường Anh ngữ · Tầng 3 A2 – B1',
     bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 78,
     walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
-    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
+    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'campus_en', building: 'school' } },
     gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]
   },
   en_hall_4: {
@@ -187,7 +186,7 @@ G.SCENES = {
     title: 'Trường Anh ngữ · Tầng 4 B1 – B2',
     bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 78,
     walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
-    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'city_en', building: 'school' } },
+    exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'campus_en', building: 'school' } },
     gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]
   },
   classroom_en: {
@@ -222,14 +221,15 @@ G.SEATS = {
 /* Xe đưa đón học sinh: đường chạy theo đường mòn trên bản đồ (px toàn thành phố, Khu phố Maple lệch -1536).
    stop: điểm đón (xe chạy từ điểm 0 tới đây rồi đợi lên xe); end: chỗ xuống xe; enter: tự vào toà nhà khi tới. */
 (function () {
-  function H(x, y) { return { x: x - 1536, y: y }; }   // toạ độ trong Khu phố Maple
-  function C(x, y) { return { x: x, y: y }; }          // toạ độ trong Trung tâm
-  var toSchool = [H(860, 1070), H(930, 965), H(972, 800), H(1004, 640), H(1080, 552), H(1300, 548), C(0, 528), C(440, 510), C(530, 585), C(551, 663),
-    C(300, 813), C(112, 930), C(160, 1004), C(400, 1008)];
-  var toHome = [C(640, 1070), C(420, 1008), C(160, 1004), C(112, 930), C(300, 813), C(551, 663), C(530, 585), C(440, 510), C(0, 528), H(1300, 548),
-    H(1080, 552), H(1004, 640), H(972, 800), H(930, 965)];
+  function at(id) { return function (x, y) { var o = G.WORLD3D && G.WORLD3D[id] || { ox: 0, oy: 0 }; return { x: x + o.ox, y: y + o.oy }; }; }
+  var H = at('home_en'), R = at('river_en'), C = at('city_en'), K = at('campus_en');
+  var mid = [H(1080, 552), H(1300, 548), H(1530, 548), R(8, 505), R(264, 505), R(520, 502), R(600, 470), R(700, 456), R(880, 456), R(960, 440),
+    R(1100, 515), R(1290, 470), R(1420, 415), R(1530, 410), C(30, 528), C(440, 510), C(530, 585), C(551, 663), C(640, 760), C(780, 880), C(798, 1010),
+    K(798, 40), K(798, 170), K(600, 250), K(520, 400), K(470, 500), K(340, 520)];
+  var toSchool = [H(860, 1070), H(930, 965), H(972, 800), H(1004, 640)].concat(mid);
+  var toHome = [K(300, 680), K(470, 520)].concat(mid.slice(0, -2).reverse(), [H(1004, 640), H(972, 800), H(930, 965)]);
   G.SHUTTLE = {
-    school: { pts: toSchool, stop: 1, end: { scene: 'city_en', x: 466, y: 1000 }, enter: 'school' },
+    school: { pts: toSchool, stop: 1, end: { scene: 'campus_en', x: 330, y: 520 }, enter: 'school' },
     home: { pts: toHome, stop: 1, end: { scene: 'home_en', x: 1010, y: 985 } }
   };
 })();
