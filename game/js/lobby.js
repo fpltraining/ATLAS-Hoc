@@ -43,26 +43,17 @@ var G = window.G || (window.G = {});
     return remainHours().map(function (r) { var d = r.cum / perWeek * 7; return { name: r.st.name, left: r.left, cum: r.cum, month: monthOf(d), span: span(d) }; });
   };
   function planCard() {
-    var cd = G.S.caiDat = G.S.caiDat || {};
-    function mins() { var pt = G.planToday && G.planToday(); return pt ? pt.phut : (cd.phutNgay || 40); }
-    var out = G.el('div.plan-out'), gc = G.goalCard ? G.goalCard(function () { draw(); }) : null;
+    // thẻ "Kế hoạch của bạn" (placement.js) + dòng dự kiến từng tầng trên lộ trình
+    function mins() { var pt = G.planToday && G.planToday(); return pt && !pt.xong ? pt.phut : ((G.S.caiDat && G.S.caiDat.phutNgay) || 40); }
     function draw() {
-      var mn = mins(), dpw = cd.ngayTuan || 5;
-      var perWeek = mn * dpw / 60, rows = remainHours(), last = rows[rows.length - 1];
-      rows.forEach(function (r) {
+      var mn = mins(), dpw = (G.S.caiDat && G.S.caiDat.ngayTuan) || 5, perWeek = mn * dpw / 60;
+      remainHours().forEach(function (r) {
         var el = document.getElementById('eta-' + (r.st.final ? 'final' : r.st.floor)); if (!el) return;
-        el.textContent = r.left <= 0 ? '' : '⏱ Dự kiến ' + monthOf(r.cum / perWeek * 7) + ' (còn khoảng ' + Math.round(r.left) + ' giờ)';
+        el.textContent = r.left <= 0 ? '' : 'Dự kiến ' + monthOf(r.cum / perWeek * 7) + ' · còn khoảng ' + Math.round(r.left) + ' giờ';
       });
-      var days = last.cum / perWeek * 7;
-      out.innerHTML = '';
-      out.appendChild(G.el('div.plan-big', G.el('span', '🎓 Tốt nghiệp ConnectLife khoảng'), G.el('b', monthOf(days)), G.el('span.small', 'học ' + mn + ' phút/ngày, ' + dpw + ' ngày/tuần · còn ' + Math.round(last.cum) + ' giờ học · ' + (Math.round(perWeek * 10) / 10 + '').replace('.', ',') + ' giờ / tuần')));
     }
-    var card = G.el('div.plan',
-      G.el('b.plan-h', '📅 Mục tiêu và mốc thời gian'),
-      gc,
-      out,
-      G.el('div.small.faint', 'Mỗi ngày app giao đủ phần cần học để kịp mốc bạn chọn (vòng Hôm nay ở góc trên). Học chậm thì phần mỗi ngày tự tăng, học nhanh thì giảm. Tính theo số giờ cần cho từng cấp (học bài, ôn tập, luyện nói ngoài phố), từ chỗ bạn đang học.'));
-    draw(); setTimeout(draw, 0);   // vẽ ngay phần tổng; dòng ước tính từng tầng điền sau khi danh sách tầng đã có
+    var card = G.goalCard(draw);
+    draw(); setTimeout(draw, 0);   // dòng ước tính từng tầng điền sau khi danh sách tầng đã có
     return card;
   }
 

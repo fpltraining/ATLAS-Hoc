@@ -48,6 +48,17 @@ var G = window.G || (window.G = {});
     var want = (G.S.caiDat && G.S.caiDat.ngayTuan) || 5;
     return { n: n, want: want };
   };
+  /* 7 ngày tuần này cho dải ngày ở bảng Hôm nay: ngày học theo lịch, ngày đã học, hôm nay */
+  G.weekDots = function () {
+    var dow = new Date(Date.now() + 7 * 3600000).getUTCDay(), off = (dow + 6) % 7, N = G.S.ngay || {}, out = [];
+    var plan = G.studyDays ? G.studyDays() : [1, 2, 3, 4, 5];
+    for (var i = 0; i < 7; i++) {
+      var key = G.vnDay(Date.now() + (i - off) * 86400000), r = N[key], v = 0;
+      if (r) for (var t in r.viec) if (r.viec.hasOwnProperty(t)) v++;
+      out.push({ lb: ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'][i], plan: plan.indexOf(i + 1) >= 0, done: !!(r && (r.giay >= 600 || v)), today: i === off, past: i < off });
+    }
+    return out;
+  };
   /* % hôm nay: một nửa theo số việc xong, một nửa theo phút học / 120 */
   G.dayProgress = function () {
     var d = today(), done = 0;
@@ -91,8 +102,10 @@ var G = window.G || (window.G = {});
     body.appendChild(G.el('div.td-head', ring,
       G.el('div', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc · chuỗi ' + G.S.chuoi.hienTai + ' ngày học'))));
     var wk = G.weekStudy();
-    if (G.planLine) body.appendChild(G.el('div.td-plan', G.el('b', '📅 Tiến độ theo mốc'), G.el('div.small', G.planLine()),
-      G.el('div.small', '📆 Tuần này đã học ' + wk.n + '/' + wk.want + ' ngày' + (wk.n >= wk.want ? ': đủ rồi, học thêm là vượt tiến độ 👍' : ', ngày nghỉ trong lịch không đứt chuỗi.')),
+    var rest = G.isStudyDay && !G.isStudyDay();
+    if (G.planLine) body.appendChild(G.el('div.td-plan', G.el('b', 'Tiến độ theo mốc'), G.el('div.small', G.planLine()),
+      G.el('div.td-week', G.weekDots().map(function (d) { return G.el('span' + (d.plan ? '.plan' : '') + (d.done ? '.done' : '') + (d.today ? '.today' : '') + (d.past && d.plan && !d.done ? '.miss' : ''), d.lb); })),
+      G.el('div.small', 'Tuần này đã học ' + wk.n + '/' + wk.want + ' ngày' + (wk.n >= wk.want ? ': đủ rồi, học thêm là vượt tiến độ.' : rest ? '. Hôm nay là ngày nghỉ theo lịch, học thêm vẫn được tính.' : '. Ngày nghỉ trong lịch không đứt chuỗi.')),
       G.S.mocHoc ? null : G.el('button.btn.sm', { onclick: function () { G.goLobby && G.goLobby(); } }, 'Chọn mốc ở Sảnh')));
     if (G.rankCard) body.appendChild(G.rankCard());
     body.appendChild(G.el('div.td-list', TASKS.map(function (t) {
