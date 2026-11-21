@@ -8,7 +8,7 @@
 var G = window.G || (window.G = {});
 
 (function () {
-  var P, root, box, done, opts, res, pi, nAsk, nRight, seen = {}, asked = [], lastPl = '';
+  var P, root, box, done, opts, res, pi, nAsk, nRight, seen = {}, asked = [], lastPl = '', pronRes = null;
 
   G.levelName = function (lv) { var p = G.PLACE_EN; return p.levels[lv] + ' · ' + p.names[lv]; };
 
@@ -61,7 +61,7 @@ var G = window.G || (window.G = {});
     if (opts.canSkip) box.appendChild(G.el('button.btn.ghost.pl-later', { onclick: close }, 'Để sau'));
   }
   function start() {
-    res = { nghe: null, doc: null, gt: null, noi: null }; pi = 0; nAsk = 0; nRight = 0; asked = []; lastPl = '';
+    res = { nghe: null, doc: null, gt: null, noi: null }; pi = 0; nAsk = 0; nRight = 0; asked = []; lastPl = ''; pronRes = null;
     seen = {}; var ds = G.S.dauVaoDaHoi || []; for (var i = 0; i < ds.length; i++) seen[ds[i]] = 1;
     part();
   }
@@ -76,7 +76,7 @@ var G = window.G || (window.G = {});
 
   /* ---------- từng phần ---------- */
   function part() {
-    if (pi >= P.parts.length) { finish(); return; }
+    if (pi >= P.parts.length) { pronStep(); return; }
     var p = P.parts[pi];
     screen();
     head('Phần ' + (pi + 1) + '/' + P.parts.length, p.icon + ' ' + p.name, p.what);
@@ -246,6 +246,55 @@ var G = window.G || (window.G = {});
     }
   }
 
+  /* phần thêm (1 phút): bắt lỗi phát âm hay gặp của người Việt, chỉ khi đã làm phần Nói bằng micro */
+  function pronStep() {
+    if (!G.pronCheck || res.noi === null || res.noi === undefined || !(G.micOn && G.micOn())) { finish(); return; }
+    screen();
+    head('Phần thêm · 1 phút', '🗣 Bắt lỗi phát âm', 'Đọc to 12 từ ngắn. Người Việt hay đọc card thành car, three thành tree, cats thành cat… Máy nghe xem bạn có mắc lỗi nào, rồi gợi ý cách sửa và bài luyện riêng.');
+    box.appendChild(G.el('button.btn.seal.big1', { onclick: function () {
+      G.pronCheck(root, function (kq) { pronRes = kq; root.innerHTML = ''; box = G.el('div.pl-wrap'); root.appendChild(box); finish(); });
+    } }, 'Bắt đầu ›'));
+    box.appendChild(G.el('button.btn', { onclick: finish }, 'Bỏ qua, xem kết quả'));
+  }
+
+  /* ---------- mục tiêu học và thời gian mỗi ngày → dự kiến khi nào đạt (cùng cách tính với thanh kéo ở Sảnh) ---------- */
+  var GOALS = [
+    { id: 'giaotiep', icon: '💬', name: 'Giao tiếp hằng ngày', step: 2 },
+    { id: 'dulich', icon: '✈️', name: 'Đi du lịch', step: 2 },
+    { id: 'dilam', icon: '💼', name: 'Đi làm, công việc', step: 3 },
+    { id: 'con', icon: '🧒', name: 'Học cùng con', step: 1 },
+    { id: 'thi', icon: '🎓', name: 'Thi chứng chỉ, du học', step: 4 }
+  ];
+  G.GOALS_EN = GOALS;
+  G.goalOf = function () { var m = G.S.mucTieu; for (var i = 0; i < GOALS.length; i++) if (m && GOALS[i].id === m.id) return GOALS[i]; return null; };
+  /* dòng dự kiến cho mục tiêu: "Đi làm cần Tầng 4 · B1 – B2. 30 phút/ngày: khoảng tháng 9/2027" */
+  G.goalLine = function (mins, dpw) {
+    var g = G.goalOf(); if (!g || !G.etaPlan || !G.ROADMAP_EN) return '';
+    var rows = G.etaPlan(mins, dpw), r = rows[g.step]; if (!r) return '';
+    var st = G.ROADMAP_EN[g.step];
+    if (r.cum <= 0) return g.icon + ' ' + g.name + ': bạn đã đủ trình độ (' + st.name + '). Học tiếp để nói tự nhiên hơn!';
+    return g.icon + ' ' + g.name + ' cần ' + st.name + ' (' + st.cefr + '). Học ' + mins + ' phút/ngày, ' + dpw + ' ngày/tuần: dự kiến đạt khoảng ' + r.month + ' (sau ' + r.span + ').';
+  };
+  /* thẻ chọn mục tiêu + phút mỗi ngày; số phút cũng là mục tiêu mỗi ngày trên vòng ở thanh trên */
+  G.goalCard = function (onChange) {
+    var cd = G.S.caiDat = G.S.caiDat || {}, mins = cd.phutNgay || 30, dpw = cd.ngayTuan || 6;
+    var line = G.el('div.gl-line'), gRow = G.el('div.gl-chips'), mRow = G.el('div.gl-chips');
+    function draw() {
+      var g = G.goalOf();
+      gRow.innerHTML = ''; mRow.innerHTML = '';
+      GOALS.forEach(function (x) {
+        gRow.appendChild(G.el('button.gl-chip' + (g && g.id === x.id ? '.on' : ''), { onclick: function () { G.S.mucTieu = { id: x.id, luc: G.vnNow() }; G.save(); draw(); if (onChange) onChange(); } }, x.icon + ' ' + x.name));
+      });
+      [10, 15, 20, 30, 45, 60, 90].forEach(function (m) {
+        mRow.appendChild(G.el('button.gl-chip' + (m === mins ? '.on' : ''), { onclick: function () { mins = m; cd.phutNgay = m; cd.ngayTuan = dpw; G.save(); if (G.updateHud) G.updateHud(); draw(); if (onChange) onChange(); } }, m + ' phút'));
+      });
+      line.textContent = g ? G.goalLine(mins, dpw) : 'Chọn mục tiêu để xem bao lâu nữa bạn đạt được.';
+    }
+    draw();
+    return G.el('div.gl-card', G.el('b.gl-h', '🎯 Bạn học tiếng Anh để làm gì?'), gRow,
+      G.el('b.gl-h', '⏱ Mỗi ngày học được bao lâu?'), mRow, line);
+  };
+
   /* ---------- kết quả ---------- */
   function overall(r) {
     var v = [r.nghe, r.doc, r.gt]; if (r.noi !== null && r.noi !== undefined) v.push(r.noi);
@@ -274,6 +323,11 @@ var G = window.G || (window.G = {});
     if (prev && prev.luc) box.appendChild(G.el('p.small', (lv > prev.lv ? '📈 Tiến bộ: ' : lv < prev.lv ? '📉 ' : '➖ ') + 'lần trước ' + P.levels[prev.lv] + ' (' + prev.luc.slice(0, 10) + ') → lần này ' + P.levels[lv]));
     box.appendChild(G.el('div.pl-can', G.el('b', 'Bạn đang ở mức: '), P.cando[lv]));
     box.appendChild(cityMap(lv));
+    if (pronRes && G.pronCard) {   // vừa bắt lỗi phát âm: 3 lỗi hay mắc nhất, cách sửa, nút luyện ngay
+      var det = {}; pronRes.loi.forEach(function (x) { det[x.tag] = x.heard; });
+      box.appendChild(G.pronCard(function () { G.openPronPractice(function () {}); }, det));
+    }
+    box.appendChild(G.goalCard());
     box.appendChild(G.el('div.pl-plan', G.el('b', 'App sẽ chỉnh cho bạn:'), G.el('ul', plan(lv).map(function (t) { return G.el('li', t); }))));
     box.appendChild(G.el('p.small.faint', 'Học khoảng 30 ngày thì làm lại ở Sảnh → “Trình độ đầu vào” để xem mình lên cấp chưa.'));
     box.appendChild(G.el('button.btn.seal.big1.pl-go', { onclick: close }, opts.first ? 'Tiếp: chọn nhân vật ›' : opts.canSkip ? 'Xong ›' : 'Vào học ›'));

@@ -81,7 +81,7 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
 {
   const vm = await import('node:vm');
   const ctx = { console }; ctx.window = ctx; ctx.G = {}; vm.createContext(ctx);
-  for (const f of ['game/data/en_a1.js', 'game/data/en_found.js', 'game/data/en_a2.js', 'game/data/en_b1.js', 'game/data/cert_en.js', 'game/data/final_en.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js', 'game/data/placement_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
+  for (const f of ['game/data/en_a1.js', 'game/data/en_found.js', 'game/data/en_a2.js', 'game/data/en_b1.js', 'game/data/cert_en.js', 'game/data/final_en.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js', 'game/data/placement_en.js', 'game/data/pron_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
   const FEM = { emma: 1, lily: 1, rosa: 1, anna: 1, mom: 1, mia: 1, nora: 1, pat: 1, kim: 1, zoe: 1, lee: 1, ivy: 1, grace: 1 };
   for (const R of Object.values(ctx.G.ROOMS)) {
     if (R.lang !== 'en') continue;
@@ -112,6 +112,9 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
     PL.gt.forEach((it, i) => add('en', it.p, sexOf(it, alt(i + 1))));
     PL.noi.forEach((it) => add('en', it.read || it.ask, it.ask ? sexOf(it, 'f') : 'f'));
   }
+  // bắt lỗi phát âm, luyện theo lỗi (game/data/pron_en.js): từng từ của các cặp từ và 12 từ bẫy
+  const PR = ctx.G.PRON_EN;
+  if (PR) { for (const ps of Object.values(PR.pairs)) for (const p of ps) for (const w of p) add('en', w.split('|')[0], 'f'); for (const it of PR.test) add('en', it.w, 'f'); }
   // nhiệt độ ngoài trời (js/radar.js): "It's 13 degrees and cool." từ -5 tới 38 độ
   {
     const W = [[4, 'freezing'], [11, 'cold'], [17, 'cool'], [23, 'mild'], [29, 'warm'], [34, 'hot'], [99, 'boiling hot']];

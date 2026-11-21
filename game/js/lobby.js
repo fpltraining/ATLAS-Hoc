@@ -37,6 +37,11 @@ var G = window.G || (window.G = {});
   }
   function monthOf(days) { var p = G.vnParts(Date.now() + days * 86400000); return 'tháng ' + p.m + '/' + p.y; }
   function span(days) { var m = days / 30.4; return m < 1.5 ? Math.max(1, Math.round(days / 7)) + ' tuần' : m < 24 ? Math.round(m) + ' tháng' : (Math.round(m / 12 * 10) / 10 + ' năm').replace('.', ','); }
+  /* dự kiến từng bước lộ trình với số phút / ngày, ngày / tuần (dùng cả ở kết quả đầu vào, thẻ mục tiêu) */
+  G.etaPlan = function (mins, dpw) {
+    var perWeek = mins * dpw / 60;
+    return remainHours().map(function (r) { var d = r.cum / perWeek * 7; return { name: r.st.name, left: r.left, cum: r.cum, month: monthOf(d), span: span(d) }; });
+  };
   function planCard() {
     var cd = G.S.caiDat = G.S.caiDat || {}, mins = cd.phutNgay || 40, dpw = cd.ngayTuan || 6;
     var out = G.el('div.plan-out'), minsL = G.el('b'), dpwL = G.el('b');
@@ -50,6 +55,7 @@ var G = window.G || (window.G = {});
       var days = last.cum / perWeek * 7;
       out.innerHTML = '';
       out.appendChild(G.el('div.plan-big', G.el('span', '🎓 Tốt nghiệp ConnectLife khoảng'), G.el('b', monthOf(days)), G.el('span.small', 'sau khoảng ' + span(days) + ' · còn ' + Math.round(last.cum) + ' giờ học · ' + (Math.round(perWeek * 10) / 10 + '').replace('.', ',') + ' giờ mỗi tuần')));
+      if (G.goalOf && G.goalOf()) out.appendChild(G.el('div.plan-goal', G.goalLine(mins, dpw)));
       var faster = Math.min(180, mins + 20);
       if (mins < 180) out.appendChild(G.el('div.small.faint', 'Nếu học ' + faster + ' phút mỗi ngày: khoảng ' + span(last.cum / (faster * dpw / 60) * 7) + '.'));
     }
@@ -147,6 +153,13 @@ var G = window.G || (window.G = {});
           G.el('b', '📏 Trình độ đầu vào' + (dv ? ': ' + G.levelName(dv.lv) : '')),
           G.el('span', dv ? 'Làm ngày ' + dv.luc.slice(8, 10) + '/' + dv.luc.slice(5, 7) + ' · Nghe ' + G.PLACE_EN.levels[dv.nghe] + ' · Đọc ' + G.PLACE_EN.levels[dv.doc] + ' · Giao tiếp ' + G.PLACE_EN.levels[dv.gt] + ' · Nói ' + (dv.noi === null ? 'chưa đo' : G.PLACE_EN.levels[dv.noi]) + ' · bấm để làm lại'
             : 'Chưa làm · 4 kỹ năng theo CEFR, 3–12 phút')));
+      }
+      // luyện phát âm theo lỗi của mình (bắt lỗi trước nếu chưa làm)
+      if (G.openPronFromLobby) {
+        var pe = G.pronErrors(), pk = G.S.phatAmKiem;
+        root.appendChild(G.el('button.big.pl-lobby', { onclick: function () { G.openPronFromLobby(function () { G.goLobby(); }); } },
+          G.el('b', '🗣 Luyện phát âm theo lỗi'),
+          G.el('span', pe.length ? 'Lỗi cần sửa: ' + pe.slice(0, 3).map(function (e) { return G.PRON_EN.tags[e.tag]; }).join(' · ') : pk ? 'Chưa thấy lỗi nào · luyện thêm âm cuối, đuôi -s, th' : 'Đọc 12 từ, máy tìm lỗi người Việt hay mắc rồi luyện riêng')));
       }
       root.appendChild(G.weeklyChart());
     }
