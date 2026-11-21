@@ -27,7 +27,7 @@ var G = window.G || (window.G = {});
 
   var R, SC, CAM, HEMI, SUN, cv3, Wc = 1, Hc = 1, loader, TEX = {}, TEXF = {}, MATS = {}, DMATS = {};
   var PLANE, FOLD_T, FOLD_B, BLOBG, BLOBM, GLOW, DIST = [];
-  var POPS = [], BUILD = [], SWAY = [], LAMPS = [], FADE = [], PLATES = [], TLS = [], NPCW = [], TOWN = [], CARS = [], BIRDS = [], PICK = [], STAND = [];
+  var FLATS = [], POPS = [], BUILD = [], SWAY = [], LAMPS = [], FADE = [], PLATES = [], TLS = [], NPCW = [], TOWN = [], CARS = [], BIRDS = [], PICK = [], STAND = [];
   var P3 = null, K3 = null, mark, ring, PIN, T = 0, night = 0, wxNow = { cloud: 0.1, rain: 0, gather: 0, kind: 'clear' };
   var FX = 0, FZ = 0, zoomK = 1, camPos, camLook, snap = true, ST = null, isTouch = 'ontouchstart' in window;
 
@@ -127,6 +127,7 @@ var G = window.G || (window.G = {});
   /* ô che mưa (cầm trên đầu) cho người đi ngoài phố */
   var UCOL = ['#c8553d', '#2f7a63', '#4a68d8', '#e0a43a', '#b46fc0', '#1b2140'], UTEX = [];
   function umbrellaTex(i) {
+    if (has('umbrella_' + (i % 6 + 1) + '.png')) return tex('umbrella_' + (i % 6 + 1) + '.png');   // ô vẽ giấy (đặt hình)
     if (UTEX[i]) return UTEX[i];
     return (UTEX[i] = canvasTex(128, 128, function (x) {
       var R0 = 56, cy = 50;
@@ -146,7 +147,7 @@ var G = window.G || (window.G = {});
     var k = w.S * U * 0.82; sp.scale.set(k, k, 1); sp.visible = false; SC.add(sp); w.um = sp;
   }
   function placeUmbrella(w) {
-    var on = wxNow.rain > 0.25 && w.g.visible, h = w.S * U * 0.62, k = w.S * U * 0.82;
+    var on = wxNow.rain > 0.25 && w.g.visible, h = w.S * U * 0.5, k = w.S * U * 0.95;
     w.um.visible = on; if (!on) return;
     var sway = w.moving ? Math.sin(w.t * 14) * 0.03 : 0;
     w.um.position.set(w.x + sway + (w.dir === 'left' ? -0.06 : w.dir === 'right' ? 0.06 : 0.1), h * Math.cos(LEAN) + k * 0.5, w.z - h * Math.sin(LEAN) + 0.02);
@@ -201,7 +202,7 @@ var G = window.G || (window.G = {});
     });
     buildShadows();
     DIST.forEach(buildDistrict);
-    buildTown(); buildCars(); buildBirds(); buildSky();
+    buildTown(); buildCars(); buildBirds(); buildSky(); buildRiver();
     /* dấu chạm đất, vòng sáng chỗ tương tác, dấu nhiệm vụ */
     mark = new THREE.Mesh(new THREE.RingGeometry(0.12, 0.17, 32), new THREE.MeshBasicMaterial({ color: 0xfff8ea, transparent: true, opacity: 0, depthWrite: false }));
     mark.rotation.x = -Math.PI / 2; mark.position.y = 0.02; SC.add(mark);
@@ -247,6 +248,11 @@ var G = window.G || (window.G = {});
       plate(b.name, d.ox + b.x, d.oy + b.y + 26, g.userData.pop);
     });
     (s.props || []).forEach(function (p) {
+      if (p.flat) {   // nằm sát mặt nước / mặt đất (lá sen)
+        var fm = new THREE.Mesh(BLOBG, new THREE.MeshLambertMaterial({ map: tex(p.img), transparent: true, alphaTest: 0.4, depthWrite: false }));
+        fm.scale.set(p.s * U, 1, p.s * U); fm.position.set((d.ox + p.x) * U, 0.02, (d.oy + p.y) * U); fm.renderOrder = 1; SC.add(fm); FLATS.push({ m: fm, ph: Math.random() * 6 });
+        return;
+      }
       var g = card(p.img, d.ox + p.x, d.oy + p.y, p.s, 0.96, { own: /tree|fountain/.test(p.img), fold: /tree|bush/.test(p.img) ? 'tree' : /fountain|kiosk|cart|news/.test(p.img) ? 'b' : null });
       if (/tree/.test(p.img)) { SWAY.push({ g: g, ph: Math.random() * 6, k: 0.6 + Math.random() * 0.5 }); FADE.push(g); }
       if (/traffic_light/.test(p.img)) TLS.push({ x: (d.ox + p.x) * U, z: (d.oy + p.y) * U, s: p.s, pop: g.userData.pop });
@@ -454,6 +460,14 @@ var G = window.G || (window.G = {});
     if (skyShown[2] !== fa) { SKYIMG[0].style.filter = fa; skyShown[2] = fa; }
     if (skyShown[3] !== fb) { SKYIMG[1].style.filter = fb; skyShown[3] = fb; }
     if (skyShown[4] !== op) { SKYIMG[1].style.opacity = op; skyShown[4] = op; }
+    var w = wxNow, wn = w.rain > 0.5 ? 'sky_rain' : w.gather > 0.25 || w.rain > 0.05 ? 'sky_storm' : w.cloud > 0.45 ? 'sky_cloudy' : '';
+    var wo = wn ? Math.min(1, wn === 'sky_cloudy' ? (w.cloud - 0.35) * 1.6 : Math.max(w.gather, w.rain) * 1.2) : 0, night0 = Math.max(0, Math.min(1, Math.abs(hour - 13) > 6.5 ? 1 : 0));
+    if (wn && has(wn + '.webp')) {
+      var wu = 'url(' + G.assetUrl(wn + '.webp') + ')'; if (skyShown[5] !== wu) { SKYIMG[2].style.backgroundImage = wu; skyShown[5] = wu; }
+    } else wo = 0;
+    var wf = night0 ? 'brightness(.42) saturate(.8)' : '', wos = (wo * (night0 ? 0.85 : 1)).toFixed(2);
+    if (skyShown[6] !== wos) { SKYIMG[2].style.opacity = wos; skyShown[6] = wos; }
+    if (skyShown[7] !== wf) { SKYIMG[2].style.filter = wf; skyShown[7] = wf; }
     cA.setHex(a.fog); cB.setHex(b.fog); out.copy(cA).lerp(cB, fadeK);
   }
   function buildSky() {
@@ -462,8 +476,8 @@ var G = window.G || (window.G = {});
     skyEl.innerHTML = '';
     skyGrad = el('div', 'sk-grad'); skyStars = el('canvas', 'sk-stars'); skySun = el('div', 'sk-sun'); skyMoon = el('div', 'sk-moon');
     if (has('sky_morning.webp')) {   // tranh trời đặt vẽ: hai lớp tranh chuyển dần theo giờ (thay dải màu, mặt trời, trăng, sao vẽ bằng code)
-      SKYIMG = [el('div', 'sk-img'), el('div', 'sk-img')]; skyEl.className = 'sky3d img';
-      skyEl.appendChild(SKYIMG[0]); skyEl.appendChild(SKYIMG[1]);
+      SKYIMG = [el('div', 'sk-img'), el('div', 'sk-img'), el('div', 'sk-img')]; skyEl.className = 'sky3d img';
+      skyEl.appendChild(SKYIMG[0]); skyEl.appendChild(SKYIMG[1]); skyEl.appendChild(SKYIMG[2]); SKYIMG[2].style.opacity = '0';   // lớp 3: trời mây / sắp bão / mưa
     }
     var cl = el('div', 'sk-clouds'); skyDark = el('div', 'sk-dark');
     if (!SKYIMG) { skyEl.appendChild(skyGrad); skyEl.appendChild(skyStars); skyEl.appendChild(skySun); skyEl.appendChild(skyMoon); }
@@ -472,6 +486,11 @@ var G = window.G || (window.G = {});
     skyStars.width = 600; skyStars.height = 200;
     var x = skyStars.getContext('2d');
     for (var i = 0; i < 140; i++) { var r = Math.random(); x.fillStyle = 'rgba(255,255,240,' + (0.35 + r * 0.65).toFixed(2) + ')'; x.beginPath(); x.arc(Math.random() * 600, Math.random() * 200, r < 0.9 ? 0.8 : 1.6, 0, 6.283); x.fill(); }
+    for (var di = 1; di <= 4; di++) {   // mây đen: chỉ hiện khi sắp mưa, mưa
+      if (!has('cloud_dark_' + di + '.png')) continue;
+      var dm = document.createElement('img'); dm.src = G.assetUrl('cloud_dark_' + di + '.png'); dm.alt = ''; var dw = 20 + Math.random() * 12; dm.style.width = dw + 'vw'; cl.appendChild(dm);
+      CLOUDS.push({ el: dm, w: dw, x: di * 27 - 20, y: -4 + Math.random() * 10, v: 0.6 + Math.random() * 0.5, par: 0.9 + Math.random(), dark: true });
+    }
     for (var ci = 1; ci <= 5; ci++) {
       if (!has('cloud_' + ci + '.png')) continue;
       for (var rep = 0; rep < 2; rep++) {   // hai lớp: lớp xa nhỏ, lớp gần to (trời nhiều mây thì hiện cả hai lớp)
@@ -500,7 +519,7 @@ var G = window.G || (window.G = {});
   function seg(tab, h) { var i = 0; while (i < tab.length - 2 && h >= tab[i + 1][0]) i++; return { a: tab[i], b: tab[i + 1], k: (h - tab[i][0]) / (tab[i + 1][0] - tab[i][0]) }; }
   function css(c) { return '#' + c.getHexString(); }
   function applyTime(hour, dt) {
-    var w = wxNow, cloud = w.cloud, dark = Math.min(1, w.gather * 0.9 + w.rain);   // mây đen: sắp mưa và mưa
+    var w = wxNow, cloud = w.cloud, dark = Math.min(1, w.gather * 0.6 + w.rain * 0.55);   // mây đen: sắp mưa và mưa
     var s = seg(SKY, hour); mixHex(s.a[1], s.b[1], s.k, cZ); mixHex(s.a[2], s.b[2], s.k, cH);
     var ang = (hour - 6) / 12 * Math.PI, up = Math.sin(ang);
     night = up < -0.02 ? 1 : up < 0.18 ? 1 - (up + 0.02) / 0.2 : 0;
@@ -532,7 +551,11 @@ var G = window.G || (window.G = {});
     skyDark.style.opacity = (dark * 0.85).toFixed(2);
     var cb = (1 - night * 0.55) * (1 - dark * 0.5), cg = Math.min(1, cloud * 0.6 + dark * 0.4);
     var flt = 'brightness(' + cb.toFixed(2) + ') grayscale(' + cg.toFixed(2) + ')' + (hour > 17.2 && hour < 19 ? ' sepia(.35) saturate(1.4)' : '');
-    for (var i = 0; i < CLOUDS.length; i++) { var c = CLOUDS[i]; c.el.style.filter = flt; c.el.style.opacity = c.far ? (SKYIMG ? 0 : 0.55 + cloud * 0.35).toFixed(2) : (cloud > 0.4 ? Math.min(0.95, (cloud - 0.4) * 2.2) : 0).toFixed(2); }
+    for (var i = 0; i < CLOUDS.length; i++) {
+      var c = CLOUDS[i];
+      if (c.dark) { c.el.style.opacity = Math.min(1, dark * 1.3).toFixed(2); c.el.style.filter = night > 0.5 ? 'brightness(.5)' : 'none'; continue; }
+      c.el.style.filter = flt; c.el.style.opacity = c.far ? (SKYIMG ? 0 : 0.55 + cloud * 0.35).toFixed(2) : (cloud > 0.4 ? Math.min(0.95, (cloud - 0.4) * 2.2) : 0).toFixed(2);
+    }
     if (skyGlare) {
       var gi = up > 0 ? (0.16 + 0.32 * (1 - up)) * (1 - cloud) : 0;
       skyGlare.style.background = gi > 0.01 ? 'radial-gradient(circle at ' + sx.toFixed(0) + '% -8%, rgba(255,' + (hz > 0.5 ? 180 : 214) + ',150,' + gi.toFixed(2) + '), rgba(255,214,150,0) 55%)' : 'none';
@@ -703,6 +726,88 @@ var G = window.G || (window.G = {});
     }
   }
 
+  /* ---------- sông: cá bơi dưới nước (lặn qua gầm cầu, thỉnh thoảng nhảy lên), vịt bơi, mặt nước lấp lánh ---------- */
+  var FISH = [], DUCKS = [], JUMP = null, SPARK = [], RV = null, jumpT = 4;
+  function chanAt(y) {   // lòng sông tại y (px trong tờ bản đồ sông)
+    var c = RV.ch, i = Math.max(0, Math.min(c.length - 2, Math.floor((y - c[0][0]) / (c[1][0] - c[0][0]))));
+    var a = c[i], b = c[i + 1], k = Math.max(0, Math.min(1, (y - a[0]) / (b[0] - a[0])));
+    return [a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k];
+  }
+  function underBridge(y) { for (var i = 0; i < RV.bridges.length; i++) if (y > RV.bridges[i][0] - 10 && y < RV.bridges[i][1] + 10) return true; return false; }
+  function buildRiver() {
+    if (!G.RIVER || !G.WORLD3D[G.RIVER.id]) return;
+    RV = G.RIVER; RV.d = G.WORLD3D[RV.id];
+    for (var i = 0; i < 8; i++) {
+      var n = 'fish_' + (i % 4 + 1) + '.png'; if (!has(n)) continue;
+      var m = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: tex(n), transparent: true, alphaTest: 0.3, depthWrite: false, opacity: 0.92 }));
+      m.rotation.x = -Math.PI / 2; m.renderOrder = 2; SC.add(m);
+      var sz = 46 + Math.random() * 26;
+      FISH.push({ m: m, y: 40 + Math.random() * 940, v: (Math.random() < 0.5 ? -1 : 1) * (30 + Math.random() * 40), u: Math.random(), ph: Math.random() * 6, sz: sz, rest: 0 });
+    }
+    for (var k = 1; k <= 2; k++) {
+      if (!has('duck_' + k + '.png')) continue;
+      var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex('duck_' + k + '.png'), transparent: true, alphaTest: 0.3 }));
+      sp.scale.set(0.62, 0.43, 1); SC.add(sp);
+      DUCKS.push({ sp: sp, tn: tex('duck_' + k + '.png'), tf: texFlip('duck_' + k + '.png'), y: k === 1 ? 260 : 640, v: (k === 1 ? 1 : -1) * 18, u: 0.3 + k * 0.2, ph: k * 2 });
+    }
+    if (has('fish_jump.png')) { JUMP = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex('fish_jump.png'), transparent: true, alphaTest: 0.3 })); JUMP.visible = false; SC.add(JUMP); }
+    if (has('water_sparkle.png')) {   // hai lớp lấp lánh trên lòng sông, chớp tắt xen kẽ
+      var st = tex('water_sparkle.png'); st.wrapS = st.wrapT = THREE.RepeatWrapping;
+      for (var L = 0; L < 2; L++) {
+        var cv2 = document.createElement('canvas'); cv2.width = 256; cv2.height = 1024; var x2 = cv2.getContext('2d');
+        for (var y = 0; y < 1024; y += 8) {
+          if (underBridge(y)) continue;
+          var cc = chanAt(y), x0 = cc[0] - 640, x1 = cc[1] - 640;
+          x2.fillStyle = '#fff'; x2.fillRect(Math.max(0, x0 + 14), y, Math.max(0, x1 - x0 - 28), 8);
+        }
+        var cb = document.createElement('canvas'); cb.width = 256; cb.height = 1024; var xb = cb.getContext('2d');   // làm mềm mép
+        xb.filter = 'blur(10px)'; xb.drawImage(cv2, 0, 0); if (xb.filter === 'blur(10px)') cv2 = cb;
+        var am = new THREE.CanvasTexture(cv2);
+        var mm = new THREE.Mesh(new THREE.PlaneGeometry(256 * U, 1024 * U), new THREE.MeshBasicMaterial({ map: st, alphaMap: am, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending }));
+        mm.rotation.x = -Math.PI / 2; mm.position.set((RV.d.ox + 768) * U, 0.018 + L * 0.001, (RV.d.oy + 512) * U); mm.renderOrder = 1; SC.add(mm);
+        SPARK.push(mm);
+      }
+    }
+  }
+  function updateRiver(dt) {
+    if (!RV) return;
+    var near = Math.abs(FX - (RV.d.ox + 768) * U) < 14, i;
+    for (i = 0; i < FISH.length; i++) {
+      var f = FISH[i];
+      f.m.visible = near; if (!near) continue;
+      f.y += f.v * dt;
+      if (f.y < 20 || f.y > 1000) { f.v = -f.v; f.y = Math.max(20, Math.min(1000, f.y)); }
+      if (Math.random() < dt * 0.08) f.v = -f.v;   // thỉnh thoảng quay đầu
+      var cc = chanAt(f.y), x = cc[0] + 16 + (cc[1] - cc[0] - 32) * (f.u + Math.sin(T * 0.5 + f.ph) * 0.12), dive = underBridge(f.y);
+      f.m.material.opacity += ((dive ? 0 : 0.92) - f.m.material.opacity) * Math.min(1, dt * 5);
+      var wig = Math.sin(T * 6 + f.ph) * 0.12, dir = f.v > 0 ? Math.PI / 2 : -Math.PI / 2;   // hình cá nhìn sang phải: xoay theo hướng bơi (dọc sông)
+      f.m.rotation.z = -dir + wig; f.m.scale.set(f.sz * U, f.sz * 0.5 * U, 1);
+      f.m.position.set((RV.d.ox + x) * U, 0.017, (RV.d.oy + f.y) * U);
+    }
+    for (i = 0; i < DUCKS.length; i++) {
+      var k = DUCKS[i]; k.sp.visible = near; if (!near) continue;
+      k.y += k.v * dt; if (k.y < 60 || k.y > 980 || underBridge(k.y + (k.v > 0 ? 40 : -40))) { k.v = -k.v; k.y += k.v * dt * 2; }
+      var ck = chanAt(k.y), xk = ck[0] + (ck[1] - ck[0]) * k.u;
+      var m2 = k.v > 0 ? k.tf : k.tn; if (k.sp.material.map !== m2) { k.sp.material.map = m2; k.sp.material.needsUpdate = true; }   // hình vịt nhìn trái
+      k.sp.position.set((RV.d.ox + xk) * U, 0.2 + Math.sin(T * 2 + k.ph) * 0.015, (RV.d.oy + k.y) * U);
+    }
+    if (JUMP) {   // cá nhảy khỏi mặt nước gần người chơi
+      jumpT -= dt;
+      if (near && jumpT <= 0 && !JUMP.visible) {
+        jumpT = 5 + Math.random() * 7;
+        var jy = Math.max(30, Math.min(990, FZ / U - RV.d.oy + (Math.random() * 2 - 1) * 260));
+        if (!underBridge(jy)) { var cj = chanAt(jy); JUMP.visible = true; JUMP.userData = { t: 0, x: (RV.d.ox + (cj[0] + cj[1]) / 2) * U, z: (RV.d.oy + jy) * U }; if (G.sfxFile) G.sfxFile('sfx_fish_splash'); }
+      }
+      if (JUMP.visible) {
+        var J = JUMP.userData; J.t += dt; var q = J.t / 1.1, hgt = Math.sin(Math.min(1, q) * Math.PI) * 0.5;
+        JUMP.scale.set(0.55, 0.6, 1); JUMP.position.set(J.x, 0.22 + hgt, J.z); JUMP.material.opacity = q < 0.85 ? 1 : (1 - q) / 0.15;
+        if (q >= 1) JUMP.visible = false;
+      }
+    }
+    for (i = 0; i < SPARK.length; i++) { var o = SPARK[i]; o.visible = near; o.material.opacity = 0.75 * (0.5 + 0.5 * Math.sin(T * 1.7 + i * Math.PI)) * (1 - night * 0.6); }
+    for (i = 0; i < FLATS.length; i++) FLATS[i].m.rotation.y = Math.sin(T * 0.6 + FLATS[i].ph) * 0.06;   // lá sen dập dềnh
+  }
+
   /* ---------- xe đưa đón học sinh: chạy theo đường (điểm px toàn thành phố), camera đi theo xe ---------- */
   var SH = null;
   W3.shuttle = function (pts, stopAt, onBoard, onDone) {
@@ -791,7 +896,7 @@ var G = window.G || (window.G = {});
     var d = G.WORLD3D[st.id];
     if (SH && SH.phase !== 'come') { FX = SH.x * U; FZ = SH.y * U; } else { FX = (d.ox + st.P.x) * U; FZ = (d.oy + st.P.y) * U; }
     drawPlayer(st);
-    updateNpcs(dt, st); updateTown(dt); updateCars(dt); updateShuttle(dt); updateBirds(dt); updateClouds(dt); updatePops(dt);
+    updateNpcs(dt, st); updateTown(dt); updateCars(dt); updateRiver(dt); updateShuttle(dt); updateBirds(dt); updateClouds(dt); updatePops(dt);
     var wind = 1 + wxNow.gather * 2 + wxNow.rain * 1.4;   // gió mạnh trước cơn mưa: cây lắc nhiều hơn
     for (var i = 0; i < SWAY.length; i++) { var sw = SWAY[i]; sw.g.rotation.z = (Math.sin(T * 1.3 * sw.k * Math.min(1.8, wind) + sw.ph) * 0.025 + Math.sin(T * 0.37 + sw.ph) * 0.012) * wind; }
     for (i = 0; i < STAND.length; i++) { var sd = STAND[i]; sd.g.scale.y = 1.24 * (1 + Math.sin(T * 1.6 + sd.ph) * 0.012); }
