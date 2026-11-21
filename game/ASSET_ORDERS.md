@@ -611,15 +611,11 @@ Các mục khác của Đơn L (sông, cá, vịt, ô, xe đưa đón, khuôn vi
 - 6 ô che mưa, xe đưa đón (ngang, trước, sau), biển trạm xe đưa đón
 - Khuôn viên trường: map_campus_en, toà trường 4 tầng, cổng Brightford, cột cờ, rổ bóng rổ
 
-## Còn thiếu (đặt lại đúng tên)
+## Lớp học: đủ người ngồi (anh Han chốt 21/11)
 
-```
-Same style as before, transparent background, seen from BEHIND sitting at a desk, NO chair, NO desk, 1024×1024:
-- player_han_sit.png — the SAME Han as his walking sprite: chibi kid, curly brown hair, red hoodie, dark blue shorts.
-- student_ana_sit.png (curly brown hair, yellow sweater), student_ken_sit.png (blond hair, red t-shirt).
-- student_mai_sit.png / student_mai_hand.png (teen girl, short black bob hair, green cardigan).
-- student_leo_sit.png / student_leo_hand.png (young adult man, dark skin, short hair, orange hoodie).
-```
+Lớp giữ như hiện tại: Lily, Tom ngồi học cùng nhân vật chính và Kai. Huỷ đơn hình ngồi của Ana, Ken, Mai, Leo (game chỉ hiện bạn nào có hình ngồi, nên không cần sửa code).
+Tuỳ chọn (chưa cần): player_han_sit.png, Han ngồi nhìn từ phía sau (tóc nâu xoăn, áo hoodie đỏ). Chưa có thì game dùng hình Han đứng quay lưng, cắt phần chân.
+
 Âm thanh + nhạc: Đơn M (Meta AI), chưa nhận.
 
 ## Âm thanh lấy từ nguồn miễn phí (21/11) · đã gắn vào game
