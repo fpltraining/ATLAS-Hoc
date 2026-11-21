@@ -69,7 +69,7 @@ var G = window.G || (window.G = {});
     document.getElementById('hud-title').textContent = scene.title;
     if (!running) { running = true; last = 0; requestAnimationFrame(loop); }
   };
-  G.stopEngine = function () { running = false; };
+  G.stopEngine = function () { running = false; if (G.ambKill) G.ambKill(); };
   /* quay lại cảnh đang đứng (sau khi thoát xe) */
   G.resumeScene = function () { G.enterScene(sceneId, { x: P.x, y: P.y + 30, dir: 'down' }); };
   /* xuống xe ở trạm của thành phố đích */
@@ -132,6 +132,10 @@ var G = window.G || (window.G = {});
     return zh ? 'Bạn đã tốt nghiệp HSK1! HSK2 sẽ mở ở bản cập nhật sau.' : scene.floor === 1 ? 'Bạn đã xong Tầng 1 · Nền tảng! Đi thang máy lên Tầng 2 học A1.' : scene.floor === 4 ? (G.finalDone && G.finalDone() ? 'Bạn đã Tốt nghiệp ConnectLife! Ôn lại phòng nào cũng được.' : 'Bạn đã có chứng chỉ Tầng 4! Đi thang máy lên Tầng thượng thi Tốt nghiệp ConnectLife.') : scene.floor === 3 ? 'Bạn đã có chứng chỉ Tầng 3! Đi thang máy lên Tầng 4 học B1 – B2.' : 'Bạn đã có chứng chỉ A1! Đi thang máy lên Tầng 3 học A2 – B1.';
   }
 
+  /* cửa gỗ thật (tệp sfx), chưa tải xong thì dùng tiếng chuông nhỏ cũ */
+  function doorSfx() { if (!(G.sfxFile && G.sfxFile('sfx_door_wood', 0.45))) G.sfx('door'); }
+  var bellAt = 0;   // chuông vào lớp: tối đa 5 phút một lần
+  function bellSfx() { var n = Date.now(); if (n - bellAt < 300000 || !G.sfxFile) return; bellAt = n; setTimeout(function () { G.sfxFile('sfx_school_bell', 0.3); }, 700); }
   function useBuilding(b) {
     if (b.shuttle) { startShuttle(b.shuttle); return; }
     if (b.ride) { G.sfx('door'); G.openRide(b.ride, b.toward); return; }
@@ -139,12 +143,12 @@ var G = window.G || (window.G = {});
     if (b.life) {
       var L = G.LIFE[b.life];
       if (!G.roomPassed(L.unlock)) { G.sfx('wrong'); G.kaiSay(b.name + ' chưa mở. ' + L.unlockText); return; }
-      G.sfx('door'); G.enterScene(L.scene, { x: 768, y: 930, dir: 'up' });
+      doorSfx(); G.enterScene(L.scene, { x: 768, y: 930, dir: 'up' });
       G.kaiSay('Đi tới gặp ' + G.NPCS[L.npc].name + ' rồi bấm "Nói chuyện". Ở đây chỉ nói tiếng Anh nhé!');
       return;
     }
-    if (b.home) { G.sfx('door'); G.openHome(); return; }
-    if (b.go) { G.sfx('door'); G.enterScene(b.go.scene === 'en_hall' ? G.hallOfFloor(G.enFloorNow()) : b.go.scene, { x: b.go.x, y: b.go.y, dir: 'up' }); G.kaiSay(hallHint()); }
+    if (b.home) { doorSfx(); G.openHome(); return; }
+    if (b.go) { doorSfx(); G.enterScene(b.go.scene === 'en_hall' ? G.hallOfFloor(G.enFloorNow()) : b.go.scene, { x: b.go.x, y: b.go.y, dir: 'up' }); G.kaiSay(hallHint()); }
     else G.kaiSay(b.soon);
   }
 
@@ -158,7 +162,7 @@ var G = window.G || (window.G = {});
     if (!G.ROOMS[door.room]) { G.kaiSay('Phòng ' + door.label + ' sẽ có trong bản cập nhật sau.'); return; }
     lastDoor = idx;
     G.currentRoom = door.room;
-    G.sfx('door');
+    doorSfx(); bellSfx();
     G.enterScene(scene.classroom, { x: 768, y: 930, dir: 'up' });
     var t = G.NPCS[G.ROOM_TEACHER[door.room]];
     G.kaiSay('Đi lên gặp ' + t.name + ' rồi bấm "Nói chuyện" để bắt đầu học.');
@@ -168,7 +172,7 @@ var G = window.G || (window.G = {});
   function enterShop(sh, pp) {
     G._outside = { scene: sceneId, x: pp.x, y: pp.y + 70 };
     var ex = G.SCENES[sh.scene] && G.SCENES[sh.scene].exit;
-    G.sfx('door'); G.enterScene(sh.scene, ex ? { x: ex.x, y: ex.y - 70, dir: 'up' } : { x: 768, y: 760, dir: 'up' });
+    doorSfx(); G.enterScene(sh.scene, ex ? { x: ex.x, y: ex.y - 70, dir: 'up' } : { x: 768, y: 760, dir: 'up' });
     G.kaiSay('Vào ' + sh.title + ' rồi! Gặp ' + G.NPCS[G.LIFE[scene.life].npc].name + ' ở quầy để nói chuyện, hoặc đọc bảng thông tin trên tường.');
   }
   /* cổng sang khu khác của thành phố (trung tâm ↔ phố mua sắm) */
@@ -224,7 +228,7 @@ var G = window.G || (window.G = {});
   function gateTo(id) { var gs = scene.gates || []; for (var i = 0; i < gs.length; i++) if (gs[i].to.scene === id) return gs[i]; return null; }
   function useExit() {
     var to = scene.exit.to;
-    G.sfx('door');
+    doorSfx();
     if (to.back) { var o = G._outside || { scene: 'city_en' }; G.enterScene(o.scene, o.x ? { x: o.x, y: o.y, dir: 'down' } : null); return; }
     if (to.building) {
       var bs = G.SCENES[to.scene].buildings;
@@ -347,16 +351,96 @@ var G = window.G || (window.G = {});
       if (horiz ? ay > ax * 1.3 : ax > ay * 1.3) horiz = !horiz;
       if (horiz) P.dir = vx < 0 ? 'left' : 'right'; else P.dir = vy < 0 ? 'up' : 'down';
       P.t += dt;
+      stepSfx();
     }
     // Kai đi theo dấu chân người chơi (cách ~70 px trên đường đi), nên không xuyên qua cây, nhà như đi thẳng
     updateSeat(dt);
     if (seat) { K.moving = false; K.dir = 'up'; } else kaiFollow(dt);
 
+    ambience(dt);
     // chỗ tương tác gần nhất → nút hành động
     nearUpdate();
     if (mode3d) { updatePeople(dt); updateFx(dt); if (fade > 0) fade = Math.max(0, fade - dt * 3); return; }
     cameraUpdate(dt);
   }
+  /* ---------- bước chân: 2,2 bước/giây theo nhịp đi; mặt đất lấy theo màu bản đồ dưới chân (xanh = cỏ, còn lại = đá),
+     trên cầu qua sông = gỗ, trong nhà = sàn gỗ ---------- */
+  var stepN = -1, BGS = {};
+  function bgSample(bg) {
+    if (BGS[bg] !== undefined) return BGS[bg];
+    var a = G.asset && G.asset(bg); if (!a || !a.ok) return null;
+    try {
+      var c = document.createElement('canvas'); c.width = 192; c.height = 128; var x = c.getContext('2d');
+      x.drawImage(a.img, 0, 0, 192, 128); BGS[bg] = { w: 192, h: 128, d: x.getImageData(0, 0, 192, 128).data };
+    } catch (e) { BGS[bg] = null; }
+    return BGS[bg];
+  }
+  function riverChan(y) {
+    var c = G.RIVER.ch, i = Math.max(0, Math.min(c.length - 2, Math.floor((y - c[0][0]) / (c[1][0] - c[0][0]))));
+    var a = c[i], b = c[i + 1], k = Math.max(0, Math.min(1, (y - a[0]) / (b[0] - a[0])));
+    return [a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k];
+  }
+  function surfaceAt(x, y) {
+    if (scene.kind !== 'city') return 'wood';
+    if (G.RIVER && sceneId === G.RIVER.id) {
+      for (var i = 0; i < G.RIVER.bridges.length; i++) {
+        var br = G.RIVER.bridges[i];
+        if (y > br[0] - 8 && y < br[1] + 8) { var ch = riverChan(y); if (x > ch[0] - 26 && x < ch[1] + 26) return 'wood'; }
+      }
+    }
+    var m = bgSample(scene.bg); if (!m) return 'stone';
+    var px = clamp(Math.floor(x / scene.w * m.w), 0, m.w - 1), py = clamp(Math.floor(y / scene.h * m.h), 0, m.h - 1), j = (py * m.w + px) * 4;
+    var r = m.d[j], g = m.d[j + 1], b2 = m.d[j + 2];
+    return g > r + 6 && g > b2 + 6 ? 'grass' : 'stone';
+  }
+  function stepSfx() {
+    var sn = Math.floor(P.t * 7 / Math.PI);
+    if (sn === stepN) return;
+    stepN = sn;
+    if (G.footstep && !seatAnim && !riding) G.footstep(surfaceAt(P.x, P.y), scene.kind === 'city' ? 0.3 : 0.24);
+  }
+  /* ---------- tiếng nền theo khu, giờ và thời tiết (5 lần mỗi giây) ----------
+     ngoài phố: chim buổi sáng, phố ban ngày, dế ban đêm, gió khi mây đen kéo tới, mưa nhỏ / mưa to, sông chảy khi lại gần,
+     sân trường giờ học; trong nhà: lớp học, quán cà phê, chợ, tiếng mưa vọng vào nhỏ */
+  var AMBK = ['birds', 'city', 'crickets', 'wind', 'rain', 'rainHeavy', 'river', 'classroom', 'cafe', 'market', 'playground'], ambT = 0, ambV = {};
+  function riverNear() {
+    if (!G.RIVER || !G.WORLD3D || !G.WORLD3D[sceneId] || !G.WORLD3D[G.RIVER.id]) return sceneId === (G.RIVER && G.RIVER.id) ? 0.6 : 0;
+    var a = G.WORLD3D[sceneId], r = G.WORLD3D[G.RIVER.id], x = a.ox + P.x - r.ox, y = a.oy + P.y - r.oy;
+    var yy = clamp(y, 0, 1024), ch = riverChan(yy), dx = x < ch[0] ? ch[0] - x : x > ch[1] ? x - ch[1] : 0, dy = Math.abs(y - yy);
+    var d = Math.sqrt(dx * dx + dy * dy), k = clamp(1 - d / 620, 0, 1);
+    return k * k;
+  }
+  function ambience(dt) {
+    if (!G.ambSet) return;
+    ambT -= dt; if (ambT > 0) return; ambT = 0.2;
+    var i, pn = document.getElementById('panel'), rd = document.getElementById('ride');
+    for (i = 0; i < AMBK.length; i++) ambV[AMBK[i]] = 0;
+    var quiet = document.hidden || (G.S.caiDat && G.S.caiDat.amThanh === false) || (pn && /\bopen\b/.test(pn.className)) ||
+      (rd && rd.innerHTML && rd.style.display !== 'none' && rd.getClientRects().length) || G._placementOpen;
+    if (!quiet) {
+      var hr = hourFrac(), w = G.wxNow(), rain = w.rain;
+      var light = rain > 0 ? Math.min(1, rain * 2.5) : 0, heavy = Math.max(0, (rain - 0.5) * 2);
+      if (scene.kind === 'city') {
+        var morning = hr >= 5 && hr < 10 ? 1 : hr >= 10 && hr < 17 ? 0.45 : hr >= 17 && hr < 18.6 ? 0.55 : 0;
+        ambV.birds = 0.55 * morning * (1 - Math.min(1, w.gather * 1.4 + rain));
+        ambV.crickets = (hr >= 19 || hr < 4.8 ? 0.5 : hr >= 18.6 ? 0.25 : 0) * (1 - rain);
+        var busy = sceneId === 'city_en' || sceneId === 'street_en' ? 1 : sceneId === 'campus_en' ? 0.45 : 0.25;
+        ambV.city = hr >= 6.5 && hr < 21.5 ? 0.42 * busy * (1 - rain * 0.5) : 0;
+        ambV.wind = 0.55 * Math.min(1, w.gather * 1.2 + rain * 0.45 + (w.kind === 'cloudy' ? 0.12 : 0));
+        ambV.rain = 0.5 * light * (1 - heavy * 0.6); ambV.rainHeavy = 0.55 * heavy;
+        ambV.river = 0.65 * riverNear();
+        ambV.playground = sceneId === 'campus_en' && hr >= 7 && hr < 17 && rain < 0.1 ? 0.22 : 0;
+      } else {
+        ambV.rain = 0.12 * light; ambV.rainHeavy = 0.1 * heavy;   // trong nhà nghe mưa vọng vào
+        if (scene.kind === 'classroom') ambV.classroom = seat ? 0.22 : 0.32;
+        else if (scene.kind === 'hall') ambV.classroom = 0.1;
+        else if (sceneId === 'cafe_en') ambV.cafe = 0.45;
+        else if (sceneId === 'market_en') ambV.market = 0.45;
+      }
+    }
+    for (i = 0; i < AMBK.length; i++) G.ambSet(AMBK[i], ambV[AMBK[i]]);
+  }
+  G.ambNow = function () { return ambV; };
   function kaiFollow(dt) {
     if (!trail.length || Math.abs(P.x - trail[trail.length - 1].x) + Math.abs(P.y - trail[trail.length - 1].y) > 8) { trail.push({ x: P.x, y: P.y }); if (trail.length > 120) trail.shift(); }
     var lenAhead = 0, ti;
@@ -434,14 +518,14 @@ var G = window.G || (window.G = {});
     goTo(S.stand.x, S.stand.y, function () {
       seat = S.list[S.me]; target = null; path = [];
       seatAnim = { kind: 'sit', t: 0, cb: cb, x0: P.x, y0: P.y };
-      if (G.sfxFile) G.sfxFile('sfx_chair_pull');
+      if (G.sfxFile) G.sfxFile('sfx_chair_pull', 0.5);
     }, '__ghe');
   }
   G.seated = function () { return !!seat; };
   G.standUp = function () {
     if (!seat || seatAnim) return;
     seatAnim = { kind: 'stand', t: 0 };
-    if (G.sfxFile) G.sfxFile('sfx_chair_pull');
+    if (G.sfxFile) G.sfxFile('sfx_chair_pull', 0.5);
   };
   /* kéo ghế: ghế trượt ra → bước vào chỗ → ngồi → đẩy ghế vào (đứng dậy thì ngược lại) */
   function updateSeat(dt) {
@@ -458,7 +542,7 @@ var G = window.G || (window.G = {});
         chairOff = PULL; var k = easeIO((A.t - 0.35) / 0.45);
         P.x = A.x0 + (sx - A.x0) * k; P.y = A.y0 + (sy + PULL + 4 - A.y0) * k; P.moving = true; P.t += dt;
       } else {
-        if (!seatedNow) { seatedNow = true; P.x = sx; P.y = sy + 1; P.dir = 'up'; P.moving = false; if (G.sfxFile) G.sfxFile('sfx_chair_sit'); }
+        if (!seatedNow) { seatedNow = true; P.x = sx; P.y = sy + 1; P.dir = 'up'; P.moving = false; if (G.sfxFile) { G.sfxFile('sfx_chair_sit', 0.55); setTimeout(function () { G.sfxFile('sfx_chair_push', 0.4); }, 120); } }
         chairOff = PULL * (1 - easeIO((A.t - 0.8) / 0.35));
         if (A.t >= 1.15) {
           chairOff = 0; seatAnim = null;
@@ -474,6 +558,7 @@ var G = window.G || (window.G = {});
         chairOff = PULL; var k2 = easeIO((A.t - 0.3) / 0.4);
         P.x = sx + (S.stand.x - sx) * k2; P.y = sy + PULL + 4 + (S.stand.y - sy - PULL - 4) * k2; P.moving = true; P.t += dt; P.dir = S.stand.x > sx ? 'right' : 'left';
       } else {
+        if (!A.pushed) { A.pushed = true; if (G.sfxFile) G.sfxFile('sfx_chair_push', 0.4); }
         P.moving = false; chairOff = PULL * (1 - easeIO((A.t - 0.7) / 0.3));
         if (A.t >= 1) { chairOff = 0; seatAnim = null; seat = null; trail = [{ x: K.x, y: K.y }, { x: P.x, y: P.y }]; }
       }
@@ -1597,6 +1682,7 @@ var G = window.G || (window.G = {});
   G.doNear = function () { if (near) near.act(); };
   /* để thử tự động: vị trí nhân vật, camera, cảnh, chỗ tương tác gần nhất */
   G.debugGo = function (x, y) { goTo(x, y); return { path: path.length + (target ? 1 : 0) }; };
+  G.debugShuttle = function (k) { startShuttle(k || 'school'); };
   /* kiểm thử: đặt người chơi ở (x, y) không đi qua cửa; đọc vị trí người đi đường và Kai */
   G.debugPlace = function (x, y) { P.x = x; P.y = y; target = null; path = []; pending = null; K.x = x - 50; K.y = y + 30; trail = [{ x: K.x, y: K.y }]; };
   G.debugFree = function (x, y) { return !blocked(x, y); };

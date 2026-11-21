@@ -575,6 +575,7 @@ var G = window.G || (window.G = {});
   function flip(vol) {
     var now = performance.now(), AC = G.audioReady && G.audioReady();
     if (!AC || now - lastFlip < 70 || !soundOn()) return; lastFlip = now;
+    if (G.sfxFile && G.sfxFile('sfx_paper_pop_' + (1 + Math.floor(Math.random() * 3)), Math.min(0.45, vol * 7), 0.9 + Math.random() * 0.25)) return;   // tiếng giấy thật
     try {
       var len = 0.09, buf = AC.createBuffer(1, Math.floor(AC.sampleRate * len), AC.sampleRate), ch = buf.getChannelData(0);
       for (var i = 0; i < ch.length; i++) { var k = i / ch.length; ch[i] = (Math.random() * 2 - 1) * Math.pow(1 - k, 3) * (k < 0.08 ? k / 0.08 : 1); }
@@ -599,60 +600,26 @@ var G = window.G || (window.G = {});
     }
   }
 
-  /* ---------- âm thanh môi trường: chim hót buổi sáng, dế kêu ban đêm, gió khi sắp mưa ----------
-     Có tệp thật (G.AMB_FILES, vd. { birds: 'sfx/amb_birds_morning.mp3' }) thì phát tệp lặp; chưa có thì tạo tiếng nhẹ bằng máy. */
+  /* ---------- âm thanh riêng của bản 3D: tiếng máy xe đưa đón, vịt kêu khi lại gần bờ sông ----------
+     (tiếng nền chung: chim, phố, dế, gió, mưa, sông do engine lo, G.ambSet trong audio.js) */
   function soundOn() { return !(G.S && G.S.caiDat && G.S.caiDat.amThanh === false); }
   function quiet() { var pn = document.getElementById('panel'); return document.hidden || !W3.active || (pn && /\bopen\b/.test(pn.className)); }
-  var AMB = { birdT: 1.5, crT: 0.5, wind: null, files: {} };
-  function tone(a, t0, f0, f1, dur, vol, type) {
-    var o = a.createOscillator(), g = a.createGain();
-    o.type = type || 'sine'; o.frequency.setValueAtTime(f0, t0); o.frequency.exponentialRampToValueAtTime(f1, t0 + dur);
-    g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(vol, t0 + Math.min(0.02, dur * 0.3)); g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
-    o.connect(g); g.connect(a.destination); o.start(t0); o.stop(t0 + dur + 0.02);
-  }
-  function birdSong(a, k) {   // một câu hót: 2–6 tiếng líu lo
-    var t = a.currentTime + 0.05, n = 2 + Math.floor(Math.random() * 5), base = 2600 + Math.random() * 2000, kind = Math.random();
-    for (var i = 0; i < n; i++) {
-      var f0 = base * (0.9 + Math.random() * 0.35), d = 0.05 + Math.random() * 0.08;
-      if (kind < 0.5) tone(a, t, f0, f0 * (0.55 + Math.random() * 0.3), d, 0.018 * k);
-      else { tone(a, t, f0 * 0.8, f0 * 1.25, d * 0.7, 0.016 * k); tone(a, t + d * 0.7, f0 * 1.2, f0 * 0.9, d * 0.6, 0.014 * k); }
-      t += d + 0.04 + Math.random() * 0.1;
+  var AMB = { duckT: 4 };
+  function ambient(dt) {
+    if (!G.ambSet) return;
+    var on = soundOn() && !quiet(), sv = 0;
+    if (SH && on) {
+      var dd = Math.sqrt((SH.x * U - FX) * (SH.x * U - FX) + (SH.y * U - FZ) * (SH.y * U - FZ));
+      sv = W3.riding() ? 0.3 + Math.min(1, SH.v / 300) * 0.25 : (0.15 + Math.min(1, SH.v / 250) * 0.4) * Math.max(0, 1 - dd / 12);
     }
-  }
-  function cricket(a, k) { var t = a.currentTime + 0.02, f = 4300 + Math.random() * 500; for (var i = 0; i < 3; i++) { tone(a, t, f, f * 0.98, 0.03, 0.009 * k); t += 0.055; } }
-  function windNode(a) {
-    var len = a.sampleRate * 3, buf = a.createBuffer(1, len, a.sampleRate), d = buf.getChannelData(0), last = 0;
-    for (var i = 0; i < len; i++) { last = (last + 0.02 * (Math.random() * 2 - 1)) / 1.02; d[i] = last * 3.5; }
-    var s = a.createBufferSource(); s.buffer = buf; s.loop = true;
-    var f = a.createBiquadFilter(); f.type = 'bandpass'; f.frequency.value = 500; f.Q.value = 0.6;
-    var g = a.createGain(); g.gain.value = 0; s.connect(f); f.connect(g); g.connect(a.destination); s.start();
-    return { s: s, f: f, g: g };
-  }
-  function fileLoop(kind, vol) {   // tệp âm thanh thật (khi anh Han gửi): phát lặp, âm lượng qua WebAudio (iPhone bỏ qua audio.volume)
-    var url = G.AMB_FILES && G.AMB_FILES[kind]; if (!url) return false;
-    var f = AMB.files[kind], a = G.audioReady && G.audioReady();
-    if (!a && !f) return true;
-    if (!f) {
-      var au = new Audio(url); au.loop = true; au.preload = 'auto'; f = AMB.files[kind] = { au: au, g: null };
-      if (a && a.createMediaElementSource) { try { var src = a.createMediaElementSource(au); f.g = a.createGain(); f.g.gain.value = 0; src.connect(f.g); f.g.connect(a.destination); } catch (e) { f.g = null; } }
-    }
-    if (vol > 0.002 && f.au.paused) { var pr = f.au.play(); if (pr && pr.catch) pr.catch(function () { /* chờ chạm màn hình */ }); }
-    if (f.g && a) f.g.gain.setTargetAtTime(vol, a.currentTime, 0.8); else { try { f.au.volume = Math.min(1, vol * 3); } catch (e2) { /* bỏ qua */ } }
-    if (vol <= 0.002 && !f.au.paused) f.au.pause();
-    return true;
-  }
-  function ambient(dt, hour) {
-    var a = G.audioReady && G.audioReady(), on = !!a && soundOn() && !quiet();
-    var morning = hour >= 5 && hour < 10 ? 1 : hour >= 10 && hour < 17 ? 0.35 : hour >= 17 && hour < 18.6 ? 0.5 : 0;
-    var birds = on ? morning * (1 - Math.min(1, wxNow.gather * 1.4 + wxNow.rain)) : 0;
-    var crickets = on ? (hour >= 19 || hour < 4.8 ? 1 : 0) * (1 - wxNow.rain) : 0;
-    var wind = on ? Math.min(1, wxNow.gather * 1.2 + wxNow.rain * 0.6 + (wxNow.kind === 'cloudy' ? 0.15 : 0)) : 0;
-    if (!fileLoop('birds', birds * 0.25) && birds > 0.05) { AMB.birdT -= dt; if (AMB.birdT <= 0) { birdSong(a, birds); AMB.birdT = 1.6 + Math.random() * 5 / birds; } }
-    if (!fileLoop('crickets', crickets * 0.2) && crickets > 0.05) { AMB.crT -= dt; if (AMB.crT <= 0) { cricket(a, crickets); AMB.crT = 0.7 + Math.random() * 1.3; } }
-    fileLoop('city', on && hour >= 6.5 && hour < 21 ? 0.12 * (1 - wxNow.rain * 0.5) : 0);
-    if (!fileLoop('wind', wind * 0.25)) {
-      if (wind > 0.02 && a && !AMB.wind) { try { AMB.wind = windNode(a); } catch (e) { AMB.wind = null; } }
-      if (AMB.wind) { AMB.wind.g.gain.setTargetAtTime(wind * 0.05, a.currentTime, 1.2); AMB.wind.f.frequency.setTargetAtTime(380 + 260 * Math.sin(T * 0.3), a.currentTime, 1); }
+    G.ambSet('shuttle', sv);
+    if (on && RV && DUCKS.length && Math.abs(FX - (RV.d.ox + 768) * U) < 9) {
+      AMB.duckT -= dt;
+      if (AMB.duckT <= 0) {
+        AMB.duckT = 6 + Math.random() * 12;
+        var best = 1e9; for (var i = 0; i < DUCKS.length; i++) { var p = DUCKS[i].sp.position; best = Math.min(best, Math.sqrt((p.x - FX) * (p.x - FX) + (p.z - FZ) * (p.z - FZ))); }
+        if (best < 6 && G.sfxFile) G.sfxFile('sfx_duck', 0.35 * (1 - best / 7), 0.92 + Math.random() * 0.16);
+      }
     }
   }
 
@@ -825,7 +792,7 @@ var G = window.G || (window.G = {});
     var s = SH;
     if (s.phase === 'board' || s.phase === 'drop') {
       s.t += dt; s.v = 0;
-      if (s.phase === 'board' && s.t > 1.1) { s.phase = 'go'; s.t = 0; if (s.onBoard) s.onBoard(); G.sfx && G.sfx('door'); }
+      if (s.phase === 'board' && s.t > 1.1) { s.phase = 'go'; s.t = 0; if (s.onBoard) s.onBoard(); if (!(G.sfxFile && G.sfxFile('sfx_shuttle_door', 0.4))) G.sfx && G.sfx('door'); }
       if (s.phase === 'drop' && s.t > 0.8) { var done = s.onDone; SC.remove(s.c.g); SC.remove(s.c.b); SH = null; if (done) done(); return; }
     } else {
       var last = s.phase === 'come' ? s.stopAt : s.pts.length - 1;
@@ -836,7 +803,7 @@ var G = window.G || (window.G = {});
       var st = s.v * dt;
       if (dist <= st || dist < 1) {
         s.x = tgt.x; s.y = tgt.y; s.i = Math.min(s.i + 1, last);
-        if (s.i >= last) { s.phase = s.phase === 'come' ? 'board' : 'drop'; s.t = 0; if (s.phase === 'board') G.sfx && G.sfx('door'); }
+        if (s.i >= last) { s.phase = s.phase === 'come' ? 'board' : 'drop'; s.t = 0; if (s.phase === 'board' && G.sfxFile) { G.sfxFile('sfx_horn_soft', 0.3); } }
       } else {
         s.x += dx / dist * st; s.y += dy / dist * st;
         var ax = Math.abs(dx), ay = Math.abs(dy);
@@ -882,8 +849,7 @@ var G = window.G || (window.G = {});
     if (tl) tl.style.display = on ? 'block' : 'none';
     var pl = document.getElementById('play'); if (pl) pl.className = on ? 'w3d' : '';
     if (on) { snap = true; resize(); }
-    else if (AMB.wind) { try { AMB.wind.g.gain.value = 0; } catch (e) { /* bỏ qua */ } }
-    if (!on) for (var k in AMB.files) if (AMB.files.hasOwnProperty(k)) AMB.files[k].au.pause();
+    else if (G.ambSet) G.ambSet('shuttle', 0);
   };
   W3.snap = function () { snap = true; };
   W3.zoom = function (k) { if (k !== undefined) zoomK = Math.max(0.6, Math.min(1.7, k)); return zoomK; };
@@ -921,7 +887,7 @@ var G = window.G || (window.G = {});
     PIN.visible = !!st.goal && !st.P.hidden;
     if (st.goal) { var gh = (st.goal.h || 200) * U + 0.42 + Math.sin(T * 3.3) * 0.08; PIN.position.set((d.ox + st.goal.x) * U, gh * Math.cos(LEAN), (d.oy + st.goal.y) * U - gh * Math.sin(LEAN)); }
     applyTime(st.hour, dt);
-    ambient(dt, st.hour);
+    ambient(dt);
     camera(dt);
     snap = false;
     R.render(SC, CAM);

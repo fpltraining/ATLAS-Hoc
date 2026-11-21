@@ -1,7 +1,7 @@
 /* Chạy offline: giữ toàn bộ code game, dữ liệu và mọi hình trong assets/.
    Hình tải qua assets/<tên>?v=<mã nội dung> (data/asset_rev.js): mỗi lần cập nhật app chỉ tải hình mới hoặc hình đã thay,
    hình không đổi chép lại từ bản trong máy. Tệp giọng đọc được giữ lại khi đã nghe một lần. */
-var VERSION = 'thegioi-v103';
+var VERSION = 'thegioi-v104';
 // giọng đọc: tên tệp đặt theo nội dung câu nên không bao giờ đổi, giữ riêng một kho để cập nhật app không phải tải lại
 var AUDIO = 'connectlife-audio-v2';
 var CORE = [
@@ -43,7 +43,7 @@ self.addEventListener('fetch', function (e) {
   var url = new URL(req.url);
   if (url.origin !== location.origin) return;
   // assets/ và tệp giọng: có trong máy thì dùng, chưa có thì tải rồi giữ (không lưu lỗi 404 để file mới vẫn hiện)
-  var isAudio = url.pathname.indexOf('/audio/') >= 0 || url.pathname.indexOf('/music/') >= 0;   // giọng đọc và nhạc nền: tên tệp không đổi
+  var isAudio = url.pathname.indexOf('/audio/') >= 0 || url.pathname.indexOf('/music/') >= 0 || url.pathname.indexOf('/sfx/') >= 0;   // giọng đọc, nhạc nền, tiếng động (sfx có ?v=): tên tệp không đổi
   e.respondWith(caches.match(req).then(function (hit) {
     if (hit && isAudio) return hit;   // giọng đọc đã có thì dùng luôn, không tải lại
     if (hit && url.pathname.indexOf('/assets/') >= 0 && /[?&]v=/.test(url.search)) return hit;   // hình có mã phiên bản: không bao giờ cũ
