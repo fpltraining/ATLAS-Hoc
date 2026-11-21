@@ -62,3 +62,5 @@ G.HANDS = {
     'walk_carlos_down.png': [60, 62, '#f6dcc8', 4.9],
     'walk_nora_down.png': [62, 64, '#f6dcc8', 4.9]
 };
+/* điểm cầm trên cán của từng hình ô (tỉ lệ x, y trong hình, ngay trên móc): đặt điểm này vào bàn tay */
+G.UMB_GRIP = {"umbrella_1.png": [0.618, 0.854], "umbrella_2.png": [0.5, 0.85], "umbrella_3.png": [0.567, 0.856], "umbrella_4.png": [0.43, 0.833], "umbrella_5.png": [0.373, 0.848], "umbrella_6.png": [0.44, 0.839]};

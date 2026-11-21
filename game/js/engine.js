@@ -1053,7 +1053,7 @@ var G = window.G || (window.G = {});
     var cx = X + S / 2;
     // nhìn trước / sau: cán dựng sát cạnh đầu, hơi ngả ra ngoài; nhìn ngang: ngả ra sau lưng như tựa lên vai
     var ux = side ? cx + (flip ? -1 : 1) * S * 0.12 : hx + (hx >= cx ? 1 : -1) * S * 0.04;
-    return { hx: hx, hy: hy, ux: ux, uy: top - S * 0.025, S: S, col: h[2] };
+    return { hx: hx, hy: hy, ux: ux, uy: top - S * 0.025, S: S, col: h[2], back: /_up(_w\d)?\.png$/.test(img) };
   }
   /* ô của nhân vật ghép (thân body_<áo>_<hướng>.png): x, footY, h như G.drawAvatar; phase: nhịp bước (null = đứng) */
   function avatarHold(av, x, footY, h, dir, phase) {
@@ -1063,9 +1063,12 @@ var G = window.G || (window.G = {});
   function umbrella(u, ci, sway, part, fist) {
     var S = u.S, R = S * 0.38, lw = Math.max(2, S * 0.024), un = 'umbrella_' + (ci % 6 + 1) + '.png';
     if (G.ASSET_REV && G.ASSET_REV[un]) {   // ô vẽ giấy (đặt hình): cán ô ở bàn tay, tán che trên đầu
-      if (part !== 'top' || !G.asset(un).ok) return;
+      // vác ô qua vai: nhìn trước / nhìn ngang thì tán nằm sau đầu (vẽ trước thân), nhìn sau lưng thì tán ở phía người xem (vẽ sau thân)
+      if ((part === 'top') !== !!u.back || !G.asset(un).ok) return;
       var im = G.asset(un).img, ih = S * 0.92, iw = ih * im.width / im.height, ag = Math.atan2(u.ux - u.hx, -(u.uy - u.hy)) * 0.5 + (sway || 0);
-      ctx.save(); ctx.translate(u.hx, u.hy + S * 0.04); ctx.rotate(ag); ctx.drawImage(im, -iw * 0.55, -ih, iw, ih); ctx.restore();
+      var gp = (G.UMB_GRIP && G.UMB_GRIP[un]) || [0.5, 0.86];   // điểm cầm trên cán (ngay trên móc) đặt đúng vào bàn tay
+      // nhìn trước / ngang: móc khuất sau người, tay như nâng cán lên vai (tán cao hơn, che trên đầu); nhìn sau lưng: móc đúng trong bàn tay
+      ctx.save(); ctx.translate(u.hx, u.hy - (u.back ? 0 : S * 0.2)); ctx.rotate(ag); ctx.drawImage(im, -iw * gp[0], -ih * gp[1], iw, ih); ctx.restore();
       return;
     }
     var vx = u.ux - u.hx, vy = u.uy - u.hy, L = Math.sqrt(vx * vx + vy * vy), ang = Math.atan2(vx, -vy) + (sway || 0);
