@@ -43,32 +43,29 @@ var G = window.G || (window.G = {});
     return remainHours().map(function (r) { var d = r.cum / perWeek * 7; return { name: r.st.name, left: r.left, cum: r.cum, month: monthOf(d), span: span(d) }; });
   };
   function planCard() {
-    var cd = G.S.caiDat = G.S.caiDat || {}, mins = cd.phutNgay || 40, dpw = cd.ngayTuan || 6;
-    var out = G.el('div.plan-out'), minsL = G.el('b'), dpwL = G.el('b');
+    var cd = G.S.caiDat = G.S.caiDat || {}, dpw = cd.ngayTuan || 6;
+    function mins() { var pt = G.planToday && G.planToday(); return pt ? pt.phut : (cd.phutNgay || 40); }
+    var out = G.el('div.plan-out'), dpwL = G.el('b'), gc = G.goalCard ? G.goalCard(function () { draw(); }) : null;
     function draw() {
-      minsL.textContent = mins + ' phút / ngày'; dpwL.textContent = dpw + ' ngày / tuần';
-      var perWeek = mins * dpw / 60, rows = remainHours(), last = rows[rows.length - 1];
+      var mn = mins();
+      dpwL.textContent = dpw + ' ngày / tuần';
+      var perWeek = mn * dpw / 60, rows = remainHours(), last = rows[rows.length - 1];
       rows.forEach(function (r) {
         var el = document.getElementById('eta-' + (r.st.final ? 'final' : r.st.floor)); if (!el) return;
         el.textContent = r.left <= 0 ? '' : '⏱ Dự kiến ' + monthOf(r.cum / perWeek * 7) + ' (còn khoảng ' + Math.round(r.left) + ' giờ)';
       });
       var days = last.cum / perWeek * 7;
       out.innerHTML = '';
-      out.appendChild(G.el('div.plan-big', G.el('span', '🎓 Tốt nghiệp ConnectLife khoảng'), G.el('b', monthOf(days)), G.el('span.small', 'sau khoảng ' + span(days) + ' · còn ' + Math.round(last.cum) + ' giờ học · ' + (Math.round(perWeek * 10) / 10 + '').replace('.', ',') + ' giờ mỗi tuần')));
-      if (G.goalOf && G.goalOf()) out.appendChild(G.el('div.plan-goal', G.goalLine(mins, dpw)));
-      var faster = Math.min(180, mins + 20);
-      if (mins < 180) out.appendChild(G.el('div.small.faint', 'Nếu học ' + faster + ' phút mỗi ngày: khoảng ' + span(last.cum / (faster * dpw / 60) * 7) + '.'));
-    }
-    function slider(min, max, step, val, on) {
-      return G.el('input.plan-range', { type: 'range', min: min, max: max, step: step, value: val, oninput: function (e) { on(+e.target.value); draw(); },
-        onchange: function () { cd.phutNgay = mins; cd.ngayTuan = dpw; G.save(); if (G.updateHud) G.updateHud(); } });
+      out.appendChild(G.el('div.plan-big', G.el('span', '🎓 Tốt nghiệp ConnectLife khoảng'), G.el('b', monthOf(days)), G.el('span.small', 'học ' + mn + ' phút/ngày · còn ' + Math.round(last.cum) + ' giờ học · ' + (Math.round(perWeek * 10) / 10 + '').replace('.', ',') + ' giờ / tuần')));
     }
     var card = G.el('div.plan',
-      G.el('b.plan-h', '⏱ Bạn học bao lâu mỗi ngày?'),
-      G.el('div.plan-row', G.el('span', 'Thời gian'), slider(10, 180, 5, mins, function (v) { mins = v; }), minsL),
-      G.el('div.plan-row', G.el('span', 'Số ngày'), slider(3, 7, 1, dpw, function (v) { dpw = v; }), dpwL),
+      G.el('b.plan-h', '📅 Mục tiêu và mốc thời gian'),
+      gc,
+      G.el('div.plan-row', G.el('span', 'Số ngày'), G.el('input.plan-range', { type: 'range', min: 3, max: 7, step: 1, value: dpw,
+        oninput: function (e) { dpw = +e.target.value; dpwL.textContent = dpw + ' ngày / tuần'; },
+        onchange: function () { cd.ngayTuan = dpw; if (G.S.mocHoc) G.setPlan(G.S.mocHoc.thang); else G.save(); if (gc) gc.redraw(); draw(); } }), dpwL),
       out,
-      G.el('div.small.faint', 'Ước chừng theo số giờ cần để đạt từng cấp (gồm học bài, ôn tập và luyện nói ngoài phố), tính từ chỗ bạn đang học. Số phút bạn chọn cũng là mục tiêu mỗi ngày trên vòng tiến độ. Học đều mỗi ngày hiệu quả hơn học dồn.'));
+      G.el('div.small.faint', 'Mỗi ngày app giao đủ phần cần học để kịp mốc bạn chọn (vòng Hôm nay ở góc trên). Học chậm thì phần mỗi ngày tự tăng, học nhanh thì giảm. Tính theo số giờ cần cho từng cấp (học bài, ôn tập, luyện nói ngoài phố), từ chỗ bạn đang học.'));
     draw(); setTimeout(draw, 0);   // vẽ ngay phần tổng; dòng ước tính từng tầng điền sau khi danh sách tầng đã có
     return card;
   }

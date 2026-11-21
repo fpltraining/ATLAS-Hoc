@@ -5,8 +5,13 @@
 var G = window.G || (window.G = {});
 
 (function () {
-  var GOAL_MIN = 120;   // mặc định; người học chọn ở thanh kéo Lộ trình (G.S.caiDat.phutNgay)
-  function goalMin() { return (G.S && G.S.caiDat && G.S.caiDat.phutNgay) || GOAL_MIN; }
+  var GOAL_MIN = 120;   // mặc định khi chưa chọn mốc thời gian (Sảnh → Mục tiêu và mốc thời gian)
+  /* phút cần học hôm nay: theo mốc thời gian người học chọn (G.planToday), chưa chọn mốc thì theo số phút đã đặt */
+  function goalMin() {
+    var pt = G.planToday && G.planToday();
+    if (pt && !pt.xong && !pt.het) return pt.phut;
+    return (G.S && G.S.caiDat && G.S.caiDat.phutNgay) || GOAL_MIN;
+  }
   var TASKS = [
     { id: 'bai', icon: '🏫', name: 'Học bài ở trường', hint: 'Học, luyện hoặc kiểm tra một phòng', min: 45 },
     { id: 'doc', icon: '📖', name: 'Đọc 1 chương truyện', hint: 'Về nhà, mở góc đọc truyện', min: 25 },
@@ -78,6 +83,8 @@ var G = window.G || (window.G = {});
     ring.style.setProperty('--p', p.pct);
     body.appendChild(G.el('div.td-head', ring,
       G.el('div', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc · chuỗi ' + G.S.chuoi.hienTai + ' ngày'))));
+    if (G.planLine) body.appendChild(G.el('div.td-plan', G.el('b', '📅 Tiến độ theo mốc'), G.el('div.small', G.planLine()),
+      G.S.mocHoc ? null : G.el('button.btn.sm', { onclick: function () { G.goLobby && G.goLobby(); } }, 'Chọn mốc ở Sảnh')));
     if (G.rankCard) body.appendChild(G.rankCard());
     body.appendChild(G.el('div.td-list', TASKS.map(function (t) {
       var ok = !!d.viec[t.id];
@@ -113,7 +120,7 @@ var G = window.G || (window.G = {});
     }
     drawMic();
     body.appendChild(micBox);
-    body.appendChild(G.el('p.small.faint', 'Làm đủ 4 việc và học đủ 2 giờ là tròn vòng hôm nay. Thanh 📍 Việc tiếp theo luôn chỉ chỗ cần đến.'));
+    body.appendChild(G.el('p.small.faint', 'Làm đủ 4 việc và học đủ ' + p.goal + ' phút là tròn vòng hôm nay, đúng tiến độ theo mốc. Thanh 📍 Việc tiếp theo luôn chỉ chỗ cần đến.'));
   };
 
   function weekLine() {

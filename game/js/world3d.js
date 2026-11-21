@@ -47,6 +47,7 @@ var G = window.G || (window.G = {});
   }
   function ready(t) { return !!(t && t.image && t.image.width); }
   /* tấm giấy: sáng tối theo nắng nhưng luôn giữ một nền sáng (emissive) để hình không bị tối khi nắng chiếu xiên */
+  var PLANE_C = null;   // mặt phẳng 1×1 tâm ở giữa (ô cầm tay)
   function mat(n) { return MATS[n] || (MATS[n] = new THREE.MeshLambertMaterial({ map: tex(n), emissive: 0x5a5a5a, emissiveMap: tex(n), alphaTest: 0.5, side: THREE.DoubleSide })); }
   function dmat(n) { return DMATS[n] || (DMATS[n] = new THREE.MeshDepthMaterial({ depthPacking: THREE.RGBADepthPacking, map: tex(n), alphaTest: 0.5 })); }
   function setMap(m, n) {   // đổi hình của một tấm (cả lớp sáng nền), chỉ khi hình mới đã tải xong
@@ -112,7 +113,7 @@ var G = window.G || (window.G = {});
   }
   function drawWalker(w) {
     var fr = frameOf(w), m = w.g.userData.mesh;
-    setMap(m, fr.n);
+    setMap(m, fr.n); w.fr = fr;
     w.g.scale.x = (fr.flip ? -1 : 1) * w.S * U;
     w.g.position.set(w.x, fr.lift * w.S * U, w.z); w.blob.position.set(w.x, 0.012, w.z);
     if (w.um) placeUmbrella(w);
@@ -143,14 +144,31 @@ var G = window.G || (window.G = {});
     }));
   }
   function addUmbrella(w, i) {
-    var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: umbrellaTex(i), transparent: true, alphaTest: 0.3 }));
-    var k = w.S * U * 0.82; sp.scale.set(k, k, 1); sp.visible = false; SC.add(sp); w.um = sp;
+    if (!PLANE_C) PLANE_C = new THREE.PlaneGeometry(1, 1);
+    // tấm giấy song song với tấm nhân vật (cùng độ nghiêng), nằm ngay sau (nhìn trước / ngang) hoặc ngay trước (nhìn sau lưng)
+    var t = umbrellaTex(i), m = new THREE.Mesh(PLANE_C, new THREE.MeshLambertMaterial({ map: t, emissive: 0x5a5a5a, emissiveMap: t, alphaTest: 0.4, side: THREE.DoubleSide }));
+    var g = new THREE.Group(); g.add(m); g.rotation.x = -LEAN; g.visible = false; SC.add(g);
+    w.um = g; w.umMesh = m; w.umName = 'umbrella_' + (i % 6 + 1) + '.png';
   }
+  /* ô trong tay: điểm cầm trên cán (G.UMB_GRIP) đặt vào bàn tay của khung hình đang vẽ (G.HANDS), cán ngả qua vai, tán nghiêng về phía đầu.
+     Nhìn trước / ngang: móc khuất sau người nên nâng cán lên vai cho tán che trên đầu; nhìn sau lưng: móc đúng trong bàn tay. */
   function placeUmbrella(w) {
-    var on = wxNow.rain > 0.25 && w.g.visible, h = w.S * U * 0.5, k = w.S * U * 0.95;
+    var on = wxNow.rain > 0.25 && w.g.visible;
     w.um.visible = on; if (!on) return;
-    var sway = w.moving ? Math.sin(w.t * 14) * 0.03 : 0;
-    w.um.position.set(w.x + sway + (w.dir === 'left' ? -0.06 : w.dir === 'right' ? 0.06 : 0.1), h * Math.cos(LEAN) + k * 0.5, w.z - h * Math.sin(LEAN) + 0.02);
+    var fr = w.fr, d = w.dir === 'right' ? 'left' : w.dir, n, back = w.dir === 'up';
+    if (fr) n = fr.n.replace(/_w[12]\.png$/, '.png');
+    else if (w.base === 'custom' && G.S.avatar) n = 'body_' + G.S.avatar.ao + '_' + d + '.png';
+    else n = (w.base || 'kai') + '_' + d + '.png';
+    var hd = G.HANDS && G.HANDS[n], hx = hd ? hd[0] / 100 : 0.7, hy = hd ? hd[1] / 100 : 0.72;
+    if (fr ? fr.flip : w.dir === 'right') hx = 1 - hx;
+    var S = w.S * U, lift = fr ? fr.lift * S : 0, sway = w.moving ? Math.sin(w.t * 14) * 0.02 : 0;
+    var lx = (hx - 0.5) * S + sway, ly = ((w.foot || 0.957) - hy) * S + lift + (back ? 0 : S * 0.2);
+    var k = S * 0.9, gp = (G.UMB_GRIP && G.UMB_GRIP[w.umName]) || [0.5, 0.86];
+    var th = (lx > 0.01 ? 1 : lx < -0.01 ? -1 : 0) * 0.32;
+    var ox = (0.5 - gp[0]) * k, oy = (gp[1] - 0.5) * k, rx = ox * Math.cos(th) - oy * Math.sin(th), ry = ox * Math.sin(th) + oy * Math.cos(th);
+    w.um.position.set(w.x, 0, w.z);
+    w.umMesh.position.set(lx + rx, ly + ry, back ? 0.035 : -0.035);
+    w.umMesh.rotation.z = th; w.umMesh.scale.set(k, k, 1);
   }
 
   /* ---------- dựng thành phố (một lần) ---------- */

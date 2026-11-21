@@ -267,32 +267,70 @@ var G = window.G || (window.G = {});
   ];
   G.GOALS_EN = GOALS;
   G.goalOf = function () { var m = G.S.mucTieu; for (var i = 0; i < GOALS.length; i++) if (m && GOALS[i].id === m.id) return GOALS[i]; return null; };
-  /* dòng dự kiến cho mục tiêu: "Đi làm cần Tầng 4 · B1 – B2. 30 phút/ngày: khoảng tháng 9/2027" */
-  G.goalLine = function (mins, dpw) {
-    var g = G.goalOf(); if (!g || !G.etaPlan || !G.ROADMAP_EN) return '';
-    var rows = G.etaPlan(mins, dpw), r = rows[g.step]; if (!r) return '';
-    var st = G.ROADMAP_EN[g.step];
-    if (r.cum <= 0) return g.icon + ' ' + g.name + ': bạn đã đủ trình độ (' + st.name + '). Học tiếp để nói tự nhiên hơn!';
-    return g.icon + ' ' + g.name + ' cần ' + st.name + ' (' + st.cefr + '). Học ' + mins + ' phút/ngày, ' + dpw + ' ngày/tuần: dự kiến đạt khoảng ' + r.month + ' (sau ' + r.span + ').';
+  /* ---------- mốc thời gian: người học chọn muốn đạt mục tiêu trong bao lâu; app tính mỗi ngày cần học bao nhiêu
+     (giờ còn lại tới mục tiêu ÷ số ngày học còn lại, tính lại mỗi ngày: học chậm thì phần mỗi ngày tăng, nhanh thì giảm) ---------- */
+  var MOCS = [3, 6, 9, 12, 18, 24];
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
+  function fmtDay(s) { var a = s.split('-'); return +a[2] + '/' + +a[1] + '/' + a[0]; }
+  function stepOf() { var g = G.goalOf(); return g ? g.step : 4; }   // chưa chọn mục tiêu: tới Tốt nghiệp ConnectLife (nói, đọc hiểu, nghe trôi chảy)
+  function hoursTo(step, dpw) { if (!G.etaPlan) return 0; var r = G.etaPlan(60, dpw)[step]; return r ? r.cum : 0; }
+  function ceil5(x) { return Math.ceil(x / 5) * 5; }
+  G.planNeed = function (months, step, dpw) { var h = hoursTo(step, dpw); return h <= 0 ? 0 : ceil5(h * 60 / (months * 30.4 * dpw / 7)); };
+  G.setPlan = function (months) {
+    var cd = G.S.caiDat = G.S.caiDat || {}, dpw = cd.ngayTuan || 6, step = stepOf(), need = Math.max(10, G.planNeed(months, step, dpw));
+    var e = G.vnParts(Date.now() + months * 30.4 * 86400000);
+    G.S.mocHoc = { thang: months, buoc: step, tu: G.vnDay(), den: e.y + '-' + pad2(e.m) + '-' + pad2(e.d), phut0: need };
+    cd.phutNgay = need; ptAt = 0; G.save(); if (G.updateHud) G.updateHud();
   };
-  /* thẻ chọn mục tiêu + phút mỗi ngày; số phút cũng là mục tiêu mỗi ngày trên vòng ở thanh trên */
+  /* tiến độ hôm nay theo mốc: { phut cần học hôm nay, den, ngay còn lại, xong, het (quá mốc), cham, nhanh } */
+  var ptCache = null, ptAt = 0;
+  G.planToday = function () {
+    var m = G.S.mocHoc; if (!m || !G.etaPlan) return null;
+    if (ptCache && Date.now() - ptAt < 60000) return ptCache;
+    var cd = G.S.caiDat || {}, dpw = cd.ngayTuan || 6, end = Date.parse(m.den + 'T23:59:59+07:00');
+    var daysLeft = (end - Date.now()) / 86400000, h = hoursTo(m.buoc, dpw);
+    var o = { thang: m.thang, den: m.den, ngay: Math.max(0, Math.ceil(daysLeft)), xong: h <= 0, het: daysLeft <= 0, phut0: m.phut0 };
+    o.phut = o.xong || o.het ? (cd.phutNgay || m.phut0) : Math.min(240, Math.max(10, ceil5(h * 60 / Math.max(1, daysLeft * dpw / 7))));
+    o.cham = !o.xong && !o.het && o.phut > m.phut0 * 1.1; o.nhanh = !o.xong && !o.het && o.phut < m.phut0 * 0.9;
+    ptCache = o; ptAt = Date.now(); return o;
+  };
+  /* một dòng nói rõ kế hoạch: đạt gì, trước ngày nào, mỗi ngày bao lâu */
+  G.planLine = function () {
+    var m = G.S.mocHoc, g = G.goalOf(), cd = G.S.caiDat || {}, dpw = cd.ngayTuan || 6;
+    if (!m) return 'Chọn mốc thời gian: app tính mỗi ngày cần học bao nhiêu và giao đủ phần đó mỗi ngày.';
+    var pt = G.planToday(), st = G.ROADMAP_EN[m.buoc] || {}, who = g ? g.icon + ' ' + g.name + ': ' : '🎯 ';
+    if (pt.xong) return '🎉 Bạn đã đạt ' + st.name + '! Chọn mục tiêu cao hơn để học tiếp.';
+    if (pt.het) return 'Mốc ' + fmtDay(m.den) + ' đã qua mà chưa đạt ' + st.name + '. Chọn mốc mới, app tính lại phần học mỗi ngày.';
+    return who + 'đạt ' + st.name + ' (' + st.cefr + ') trước ' + fmtDay(m.den) + ' (mốc ' + m.thang + ' tháng). Mỗi ngày học khoảng ' + pt.phut + ' phút, ' + dpw + ' ngày/tuần.' +
+      (pt.cham ? ' Đang chậm so với mốc nên phần học mỗi ngày đã tăng để kịp.' : pt.nhanh ? ' Bạn đang nhanh hơn tiến độ 👍' : '');
+  };
+  G.goalLine = function () { return G.planLine(); };
+  /* thẻ chọn mục tiêu + mốc thời gian (kết quả đầu vào, Sảnh); onChange khi đổi */
   G.goalCard = function (onChange) {
-    var cd = G.S.caiDat = G.S.caiDat || {}, mins = cd.phutNgay || 30, dpw = cd.ngayTuan || 6;
+    var cd = G.S.caiDat = G.S.caiDat || {};
     var line = G.el('div.gl-line'), gRow = G.el('div.gl-chips'), mRow = G.el('div.gl-chips');
     function draw() {
-      var g = G.goalOf();
+      var g = G.goalOf(), m = G.S.mocHoc, step = stepOf(), dpw = cd.ngayTuan || 6;
       gRow.innerHTML = ''; mRow.innerHTML = '';
       GOALS.forEach(function (x) {
-        gRow.appendChild(G.el('button.gl-chip' + (g && g.id === x.id ? '.on' : ''), { onclick: function () { G.S.mucTieu = { id: x.id, luc: G.vnNow() }; G.save(); draw(); if (onChange) onChange(); } }, x.icon + ' ' + x.name));
+        gRow.appendChild(G.el('button.gl-chip' + (g && g.id === x.id ? '.on' : ''), { onclick: function () {
+          G.S.mucTieu = { id: x.id, luc: G.vnNow() }; if (G.S.mocHoc) G.setPlan(G.S.mocHoc.thang); G.save(); draw(); if (onChange) onChange();
+        } }, x.icon + ' ' + x.name));
       });
-      [10, 15, 20, 30, 45, 60, 90].forEach(function (m) {
-        mRow.appendChild(G.el('button.gl-chip' + (m === mins ? '.on' : ''), { onclick: function () { mins = m; cd.phutNgay = m; cd.ngayTuan = dpw; G.save(); if (G.updateHud) G.updateHud(); draw(); if (onChange) onChange(); } }, m + ' phút'));
+      MOCS.forEach(function (mo) {
+        var need = G.planNeed(mo, step, dpw), hard = need > 240;
+        mRow.appendChild(G.el('button.gl-chip.gl-moc' + (m && m.thang === mo ? '.on' : '') + (hard ? '.hard' : ''), { onclick: function () {
+          if (hard) { G.toast('Mốc ' + mo + ' tháng cần hơn 4 giờ mỗi ngày, quá gấp. Chọn mốc dài hơn nhé.'); return; }
+          G.setPlan(mo); draw(); if (onChange) onChange();
+        } }, G.el('b', mo + ' tháng'), G.el('span', need <= 0 ? 'đã đạt' : hard ? 'quá gấp' : '~' + Math.max(10, need) + ' phút/ngày')));
       });
-      line.textContent = g ? G.goalLine(mins, dpw) : 'Chọn mục tiêu để xem bao lâu nữa bạn đạt được.';
+      line.textContent = G.planLine();
     }
     draw();
-    return G.el('div.gl-card', G.el('b.gl-h', '🎯 Bạn học tiếng Anh để làm gì?'), gRow,
-      G.el('b.gl-h', '⏱ Mỗi ngày học được bao lâu?'), mRow, line);
+    var el = G.el('div.gl-card', G.el('b.gl-h', '🎯 Bạn học tiếng Anh để làm gì?'), gRow,
+      G.el('b.gl-h', '📅 Muốn đạt mục tiêu trong bao lâu?'), mRow, line);
+    el.redraw = draw;
+    return el;
   };
 
   /* ---------- kết quả ---------- */
