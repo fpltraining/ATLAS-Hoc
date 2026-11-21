@@ -1,11 +1,14 @@
-/* Bài kiểm tra đầu vào tiếng Anh (dữ liệu: data/placement_en.js).
+/* Bài kiểm tra đầu vào tiếng Anh · "Ngày đầu tới Brightford" (dữ liệu: data/placement_en.js).
+   Kai dẫn người học đi một vòng thành phố: mỗi câu diễn ra ở một nơi (ảnh nơi đó, người ở đó nói với bạn).
    4 phần Nghe · Đọc · Phản xạ giao tiếp · Nói, mỗi phần đi từ Pre-A1 lên B2 và tự dừng khi tới mức khó.
+   Mỗi cấp rút ngẫu nhiên từ kho câu, câu đã gặp ở lần làm trước để sau cùng (G.S.dauVaoDaHoi), nên làm lại sau 30 ngày gặp câu mới.
+   Kết quả có thêm bản đồ Brightford: nơi bạn đã tự lo được sáng lên, nơi cần học khoá lại.
    Kết quả lưu G.S.dauVao = { lv, nghe, doc, gt, noi, luc, dung, tong } (giờ Việt Nam), lịch sử ở G.S.dauVaoLs.
    Game dùng kết quả để chỉnh độ khó: người mới hiện nghĩa đáp án, từ A2 mở khoá thi vượt các phòng A1. */
 var G = window.G || (window.G = {});
 
 (function () {
-  var P, root, box, done, opts, res, pi, nAsk, nRight;
+  var P, root, box, done, opts, res, pi, nAsk, nRight, seen = {}, asked = [], lastPl = '';
 
   G.levelName = function (lv) { var p = G.PLACE_EN; return p.levels[lv] + ' · ' + p.names[lv]; };
 
@@ -37,7 +40,12 @@ var G = window.G || (window.G = {});
   function intro() {
     screen();
     head(opts.first ? (G.cloudReady && G.cloudReady() ? 'Bước 2/3' : 'Bước 1/2') + ' · Bắt buộc trước khi vào học' : opts.mandatory ? 'Bắt buộc trước khi học tiếp' : 'Làm lại để đo tiến bộ',
-      'Kiểm tra trình độ tiếng Anh', 'Ai vào app cũng làm bài này trước, để app chọn đúng độ khó cho bạn. Theo khung CEFR quốc tế, từ A0 (mới bắt đầu) tới B2.');
+      'Ngày đầu tới Brightford', 'Kiểm tra trình độ tiếng Anh theo khung CEFR quốc tế, từ A0 (mới bắt đầu) tới B2. Kai dẫn bạn đi một vòng thành phố: sân bay, xe buýt, quán cà phê, chợ, bệnh viện, ngân hàng… Ở mỗi nơi, người ta nói với bạn, bạn nghe, đọc, đáp lời như thật.');
+    var intro = P.places.airport;
+    var sc = G.el('div.pl-scene.pl-scene-intro'); sc.style.backgroundImage = 'url("' + G.assetUrl(intro.bg) + '")';
+    sc.appendChild(G.imgEl('kai_follow.png', 'pl-npc pl-kai-big'));
+    sc.appendChild(G.el('div.pl-scene-say', G.el('b', 'Kai'), G.el('span', 'Chào mừng tới Brightford! Đi một vòng với mình nhé. Xong vòng này, mình biết bạn đã tự lo được ở đâu trong thành phố.')));
+    box.appendChild(sc);
     box.appendChild(G.el('div.pl-parts', P.parts.map(function (p) {
       return G.el('div.pl-part', G.el('b', p.icon + ' ' + p.name), G.el('span.small.faint', p.what));
     })));
@@ -53,8 +61,17 @@ var G = window.G || (window.G = {});
     if (opts.canSkip) box.appendChild(G.el('button.btn.ghost.pl-later', { onclick: close }, 'Để sau'));
   }
   function start() {
-    res = { nghe: null, doc: null, gt: null, noi: null }; pi = 0; nAsk = 0; nRight = 0;
+    res = { nghe: null, doc: null, gt: null, noi: null }; pi = 0; nAsk = 0; nRight = 0; asked = []; lastPl = '';
+    seen = {}; var ds = G.S.dauVaoDaHoi || []; for (var i = 0; i < ds.length; i++) seen[ds[i]] = 1;
     part();
+  }
+  /* khoá của một câu (để nhớ câu đã gặp) */
+  function keyOf(pid, it) { return pid + '|' + (it.a || it.t || it.p || it.read || it.ask); }
+  /* rút câu của một cấp: ngẫu nhiên, câu chưa gặp ở lần trước đứng trước */
+  function pick(pid, L) {
+    var a = G.shuffle(L), u = [], o = [];
+    for (var i = 0; i < a.length; i++) (seen[keyOf(pid, a[i])] ? o : u).push(a[i]);
+    return u.concat(o);
   }
 
   /* ---------- từng phần ---------- */
@@ -77,29 +94,43 @@ var G = window.G || (window.G = {});
     box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { runPart(p); } }, 'Bắt đầu ›'));
   }
 
-  /* đi từ cấp 1 lên 5: đúng 2 câu đầu thì lên cấp, sai cả 2 thì dừng, đúng 1 thì làm câu thứ 3 */
+  /* đi từ cấp 1 lên 5: đúng 2 câu đầu thì lên cấp, sai cả 2 thì dừng, đúng 1 thì làm câu thứ 3.
+     Đúng 1 sai 2 (có thể do bấm nhầm): thêm 2 câu xác nhận, đúng cả 2 thì vẫn lên cấp. Phần Nói: mỗi cấp một bài, chưa đạt thì thử bài thứ hai. */
   function runPart(p) {
     var bank = P[p.id], lv = 1, passed = 0, tried = false;
     function itemsOf(l) { return bank.filter(function (it) { return it.lv === l; }); }
+    function up() { passed = lv; lv++; level(); }
     function level() {
       var L = itemsOf(lv);
       if (lv > 5 || !L.length) { end(); return; }
-      if (p.id === 'noi') {   // phần nói: mỗi cấp một bài
-        ask(p, L[0], lv, function (ok) {
-          if (ok === null) { end(); return; }   // chuyển sang không dùng micro: dừng phần nói
-          tried = true;
-          if (ok) { passed = lv; lv++; level(); } else end();
-        });
+      var q = pick(p.id, L), k = 0;
+      if (p.id === 'noi') {
+        var again = false;
+        (function speakOne() {
+          ask(p, q[k++], lv, function (ok) {
+            if (ok === null) { end(); return; }   // chuyển sang không dùng micro: dừng phần nói
+            tried = true;
+            if (ok) { up(); return; }
+            if (!again && k < q.length) { again = true; speakOne(); return; }   // máy nghe nhầm: cho thử bài thứ hai
+            end();
+          });
+        })();
         return;
       }
-      ask(p, L[0], lv, function (a) {
-        ask(p, L[1], lv, function (b) {
-          var c = (a ? 1 : 0) + (b ? 1 : 0);
-          if (c === 2) { passed = lv; lv++; level(); return; }
-          if (c === 0) { end(); return; }
-          ask(p, L[2], lv, function (d) { if (d) { passed = lv; lv++; level(); } else end(); });
+      var right = 0, wrong = 0, confirm = false;
+      (function one() {
+        if (k >= q.length) { if (right >= 2) up(); else end(); return; }
+        ask(p, q[k++], lv, function (ok) {
+          if (ok) right++; else wrong++;
+          if (confirm) { if (!ok) end(); else if (right >= 2) up(); else one(); return; }
+          if (right >= 2) { up(); return; }
+          if (wrong >= 2) {
+            if (right === 1 && q.length - k >= 2) { confirm = true; right = 0; wrong = 0; one(); return; }
+            end(); return;
+          }
+          one();
         });
-      });
+      })();
     }
     function end() {
       res[p.id] = p.id === 'noi' && !tried ? null : passed;
@@ -108,25 +139,49 @@ var G = window.G || (window.G = {});
     level();
   }
 
+  /* nơi diễn ra câu hỏi và người nói */
+  function placeOf(it) { return P.places[it.pl] || P.places.airport; }
+  function whoOf(it) { var w = P.who[it.who || placeOf(it).who]; return w || null; }
+  /* cảnh: ảnh nơi đó, tên nơi, người nói đứng trong cảnh (phần Đọc không có người nói) */
+  function scene(p, it) {
+    var pl = placeOf(it), w = whoOf(it), sc = G.el('div.pl-scene');
+    sc.style.backgroundImage = 'url("' + G.assetUrl(pl.bg) + '")';
+    sc.appendChild(G.el('span.pl-place', '📍 ' + pl.name));
+    if (pl.prop) sc.appendChild(G.imgEl(pl.prop, 'pl-prop'));
+    if (w && w[1] && p.id !== 'doc') sc.appendChild(G.imgEl(w[1].replace('.png', '_talk.png'), 'pl-npc', w[1]));
+    return sc;
+  }
+  /* Kai dẫn đường: chỉ nói khi tới nơi mới */
+  function kaiLine(it) {
+    if (it.pl === lastPl) return null;
+    lastPl = it.pl;
+    return G.el('div.pl-kai', G.imgEl('kai_follow.png', 'pl-kai-img'), G.el('span', placeOf(it).kai));
+  }
   /* ---------- một câu hỏi ---------- */
   function ask(p, it, lv, cb) {
     screen();
+    asked.push(keyOf(p.id, it)); G._plCur = it;   // G._plCur: để kiểm tra tự động
+    box.className = 'pl-wrap pl-qs';   // màn câu hỏi: điện thoại nằm ngang xếp cảnh bên trái, câu hỏi bên phải
     var dots = G.el('div.pl-prog', P.parts.map(function (q, i) { return G.el('i' + (i < pi ? '.done' : i === pi ? '.on' : '')); }));
     box.appendChild(G.el('div.pl-top', G.el('span.small.faint', p.icon + ' ' + p.name + ' · câu ' + (nAsk + 1)), dots));
+    var kl = kaiLine(it); if (kl) box.appendChild(kl);
+    box.appendChild(scene(p, it));
     if (p.id === 'noi') { askSpeak(it, cb); return; }
-    var card = G.el('div.pl-card');
+    var card = G.el('div.pl-card'), w = whoOf(it);
     if (p.id === 'nghe') {
-      card.appendChild(G.el('div.pl-listen',
-        G.el('button.pl-play', { onclick: function () { G.say(it.a, 'en'); } }, '🔊 Nghe lại'),
-        G.el('button.pl-play.slow', { onclick: function () { G.saySlow(it.a, 'en'); } }, '🐢 Nghe chậm')));
-      setTimeout(function () { G.say(it.a, 'en'); }, 350);
+      card.appendChild(G.el('div.pl-bub.pl-bub-npc', G.el('b.pl-bub-name', (w ? w[0] : '') + ' nói:'),
+        G.el('div.pl-listen',
+          G.el('button.pl-play', { onclick: function () { G.say(it.a, 'en'); } }, '🔊 Nghe lại'),
+          G.el('button.pl-play.slow', { onclick: function () { G.saySlow(it.a, 'en'); } }, '🐢 Nghe chậm'))));
+      setTimeout(function () { G.say(it.a, 'en'); }, 450);
     } else if (p.id === 'doc') {
       var sign = it.t.length <= 26 && it.t.indexOf(':') < 0;
       card.appendChild(G.el('div' + (sign ? '.pl-sign' : '.pl-msg'), it.t));
     } else if (p.id === 'gt') {
-      card.appendChild(G.el('div.pl-say', G.el('span.pl-who', '🧑'), G.el('div.pl-bub', G.el('div', it.p), G.el('button.pl-mini', { onclick: function () { G.say(it.p, 'en'); } }, '🔊'))));
+      card.appendChild(G.el('div.pl-bub.pl-bub-npc', G.el('b.pl-bub-name', w ? w[0] : ''),
+        G.el('div.pl-bub-row', G.el('div', it.p), G.el('button.pl-mini', { 'aria-label': 'Nghe', onclick: function () { G.say(it.p, 'en'); } }, '🔊'))));
       card.appendChild(G.el('div.small.faint', 'Bạn đáp lại thế nào cho tự nhiên?'));
-      setTimeout(function () { G.say(it.p, 'en'); }, 350);
+      setTimeout(function () { G.say(it.p, 'en'); }, 450);
     }
     if (it.q) card.appendChild(G.el('div.pl-q', it.q));
     var picked = false;
@@ -161,8 +216,9 @@ var G = window.G || (window.G = {});
       return;
     }
     // tự trả lời câu hỏi: đếm số từ máy nghe được và có từ nối hợp ý không
-    var tries = 0, out = G.el('div.pl-heard');
-    card.appendChild(G.el('div.pl-say', G.el('span.pl-who', '🧑'), G.el('div.pl-bub', G.el('div', it.ask), G.el('button.pl-mini', { onclick: function () { G.say(it.ask, 'en'); } }, '🔊'))));
+    var tries = 0, out = G.el('div.pl-heard'), w = whoOf(it);
+    card.appendChild(G.el('div.pl-bub.pl-bub-npc', G.el('b.pl-bub-name', w ? w[0] : ''),
+      G.el('div.pl-bub-row', G.el('div', it.ask), G.el('button.pl-mini', { 'aria-label': 'Nghe', onclick: function () { G.say(it.ask, 'en'); } }, '🔊'))));
     card.appendChild(G.el('div.small.faint', it.vi));
     var mic = G.el('button.mk-mic', { onclick: go }, G.el('span', '🎤'), G.el('b', 'Bấm rồi nói'));
     card.appendChild(G.el('div.pl-microw', mic, out));
@@ -202,6 +258,7 @@ var G = window.G || (window.G = {});
     var prev = G.S.dauVao;
     G.S.dauVao = rec;
     G.S.dauVaoLs = (G.S.dauVaoLs || []).concat([rec]).slice(-12);
+    G.S.dauVaoDaHoi = asked.slice(0, 120);   // lần sau rút câu khác
     if (G.S.caiDat) delete G.S.caiDat.nghiaDapAn;   // để nghĩa đáp án tự bật/tắt theo trình độ mới
     G.save();
     G.sfx && G.sfx('done');
@@ -216,9 +273,29 @@ var G = window.G || (window.G = {});
     })));
     if (prev && prev.luc) box.appendChild(G.el('p.small', (lv > prev.lv ? '📈 Tiến bộ: ' : lv < prev.lv ? '📉 ' : '➖ ') + 'lần trước ' + P.levels[prev.lv] + ' (' + prev.luc.slice(0, 10) + ') → lần này ' + P.levels[lv]));
     box.appendChild(G.el('div.pl-can', G.el('b', 'Bạn đang ở mức: '), P.cando[lv]));
+    box.appendChild(cityMap(lv));
     box.appendChild(G.el('div.pl-plan', G.el('b', 'App sẽ chỉnh cho bạn:'), G.el('ul', plan(lv).map(function (t) { return G.el('li', t); }))));
     box.appendChild(G.el('p.small.faint', 'Học khoảng 30 ngày thì làm lại ở Sảnh → “Trình độ đầu vào” để xem mình lên cấp chưa.'));
     box.appendChild(G.el('button.btn.seal.big1.pl-go', { onclick: close }, opts.first ? 'Tiếp: chọn nhân vật ›' : opts.canSkip ? 'Xong ›' : 'Vào học ›'));
+  }
+  /* bản đồ Brightford của bạn: nơi đã tự lo được (đủ cấp) sáng lên, nơi cần học khoá lại kèm cấp cần đạt */
+  function cityMap(lv) {
+    var ids = [], n = 0, k;
+    for (k in P.places) if (P.places.hasOwnProperty(k)) { ids.push(k); if (lv >= P.places[k].lv) n++; }
+    var wrap = G.el('div.pl-map', G.el('div.pl-map-head', G.el('b', '🗺 Bản đồ Brightford của bạn'),
+      G.el('span.small', 'Tự lo được ' + n + '/' + ids.length + ' nơi. Nơi có 🔒 sẽ mở dần khi bạn học lên.')));
+    P.areas.forEach(function (ar) {
+      var row = G.el('div.pl-map-row');
+      ids.forEach(function (id) {
+        var pl = P.places[id]; if (pl.area !== ar.id) return;
+        var ok = lv >= pl.lv, th = G.el('div.pl-map-pic'); th.style.backgroundImage = 'url("' + G.assetUrl(pl.bg) + '")';
+        if (pl.prop) th.appendChild(G.imgEl(pl.prop, 'pl-map-prop'));
+        row.appendChild(G.el('div.pl-map-card' + (ok ? '.ok' : '.off'), th,
+          G.el('div.pl-map-name', G.el('b', (ok ? '✅ ' : '🔒 ') + pl.name), G.el('span.small', ok ? 'Tự lo được' : 'Cần ' + P.levels[pl.lv]))));
+      });
+      wrap.appendChild(G.el('div.pl-map-area', G.el('div.pl-map-an', ar.name), row));
+    });
+    return wrap;
   }
   function plan(lv) {
     if (lv <= 1) return [

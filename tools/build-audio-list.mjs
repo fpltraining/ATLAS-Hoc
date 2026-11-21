@@ -105,7 +105,13 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
   for (const f of ctx.G.FREE_TALK || []) { add('en', f.q, FEM[f.npc] ? 'f' : 'm'); f.sample.forEach((t) => add('en', t, 'm')); }
   // bài kiểm tra đầu vào (data/placement_en.js): câu nghe, câu người ta nói ở phần giao tiếp, câu đọc to và câu hỏi phần nói
   const PL = ctx.G.PLACE_EN;
-  if (PL) { PL.nghe.forEach((it, i) => add('en', it.a, alt(i))); PL.gt.forEach((it, i) => add('en', it.p, alt(i + 1))); PL.noi.forEach((it) => add('en', it.read || it.ask, 'f')); }
+  // giọng theo người nói (who[...][2]); câu cũ đã có tệp giữ nguyên giọng cũ (khoá theo nội dung câu)
+  if (PL) {
+    const sexOf = (it, d) => { const w = it.who || (PL.places && PL.places[it.pl] && PL.places[it.pl].who); return (PL.who && PL.who[w] && PL.who[w][2]) || d; };
+    PL.nghe.forEach((it, i) => add('en', it.a, sexOf(it, alt(i))));
+    PL.gt.forEach((it, i) => add('en', it.p, sexOf(it, alt(i + 1))));
+    PL.noi.forEach((it) => add('en', it.read || it.ask, it.ask ? sexOf(it, 'f') : 'f'));
+  }
   // nhiệt độ ngoài trời (js/radar.js): "It's 13 degrees and cool." từ -5 tới 38 độ
   {
     const W = [[4, 'freezing'], [11, 'cold'], [17, 'cool'], [23, 'mild'], [29, 'warm'], [34, 'hot'], [99, 'boiling hot']];
