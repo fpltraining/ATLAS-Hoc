@@ -103,7 +103,13 @@ const SCREENS = [
   ['Hôm nay', () => { G.openToday(); }],
   ['Bản đồ nhớ từ', () => { G.openMemMap(0); }],
   ['Bài học', () => { G.closeLesson(); G.openLesson('en-a1-1'); }],
-  ['Luyện', () => { const b = [...document.querySelectorAll('button.big')].find((x) => /2 · Luyện/.test(x.textContent)); if (b) b.click(); }]
+  ['Luyện', () => { const b = [...document.querySelectorAll('button.big')].find((x) => /2 · Luyện/.test(x.textContent)); if (b) b.click(); }],
+  ['Nhà', () => { G.openHome(); }],
+  ['Đọc truyện', () => { G.openReader(); }],
+  ['Ôn câu', () => { G.openReview(); }],
+  ['Kiểm tra tuần', () => { G.openWeekly(); }],
+  ['Mình nói được', () => { G.openCanDo(); }],
+  ['Hội thoại', () => { G.openLife('en-home'); }]
 ];
 
 const b = await chromium.launch();

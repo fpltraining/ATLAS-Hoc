@@ -59,6 +59,22 @@ var G = window.G || (window.G = {});
     }
     return out;
   };
+  /* phút học 14 ngày gần nhất (mẫu "stat" của taste-skill): một con số lớn, so với tuần trước, 14 cột, cột hôm nay màu cam */
+  G.studyChart = function () {
+    var N = G.S.ngay || {}, mins = [], i;
+    for (i = 13; i >= 0; i--) { var r = N[G.vnDay(Date.now() - i * 86400000)]; mins.push(r ? Math.round((r.giay || 0) / 60) : 0); }
+    var wk = 0, prev = 0; for (i = 0; i < 7; i++) { prev += mins[i]; wk += mins[i + 7]; }
+    var mx = Math.max.apply(null, mins.concat([20])), big = G.el('b', '0');
+    var chg = prev ? Math.round((wk - prev) / prev * 100) : null;
+    var bars = G.el('div.sc-bars', mins.map(function (m, k) { var c = G.el('i' + (k === 13 ? '.today' : '')); c.style.transform = 'scaleY(' + Math.max(0.04, m / mx) + ')'; return G.el('span', { title: m + ' phút' }, c); }));
+    G.countUp(big, 0, wk, { dur: 900, delay: 150 });
+    if (window.anime && !G.calm()) window.anime({ targets: bars.querySelectorAll('i'), scaleY: function (el) { var v = parseFloat(el.style.transform.replace(/[^\d.]/g, '')) || 0.04; return [0.04, v]; }, delay: window.anime.stagger(35, { start: 200 }), duration: 700, easing: 'easeOutCubic' });
+    return G.el('div.sc-card',
+      G.el('div.sc-h', G.el('span', 'Phút học 7 ngày qua'), G.el('span.small.faint', '14 ngày gần nhất')),
+      G.el('div.sc-n', big, G.el('span', 'phút'), chg === null ? null : G.el('span.sc-chg' + (chg >= 0 ? '.up' : '.down'), (chg >= 0 ? '+' : '') + chg + '% so với tuần trước')),
+      bars,
+      G.el('div.sc-ax', G.el('span', G.vnDay(Date.now() - 13 * 86400000).split('-').reverse().slice(0, 2).join('/')), G.el('span', 'Hôm nay')));
+  };
   /* % hôm nay: một nửa theo số việc xong, một nửa theo phút học / 120 */
   G.dayProgress = function () {
     var d = today(), done = 0;
@@ -88,7 +104,7 @@ var G = window.G || (window.G = {});
   function panelOpen(title) {
     var panel = document.getElementById('panel');
     panel.className = 'panel open';
-    document.getElementById('panel-title').textContent = title;
+    G.setTitle(title);
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     var body = document.getElementById('panel-body');
     body.innerHTML = ''; body.className = 'panel-body';
@@ -116,6 +132,10 @@ var G = window.G || (window.G = {});
       G.el('div.small', 'Tuần này đã học ' + wk.n + '/' + wk.want + ' ngày' + (wk.n >= wk.want ? ': đủ rồi, học thêm là vượt tiến độ.' : rest ? '. Hôm nay là ngày nghỉ theo lịch, học thêm vẫn được tính.' : '. Ngày nghỉ trong lịch không đứt chuỗi.')),
       G.S.mocHoc ? null : G.el('button.btn.sm', { onclick: function () { G.goLobby && G.goLobby(); } }, 'Chọn mốc ở Sảnh')));
     if (G.rankCard) body.appendChild(G.rankCard());
+    // danh sách việc hôm nay (mẫu "checklist" của taste-skill): thanh tiến độ, việc xong có dấu tick và gạch ngang
+    var nDone = 0; TASKS.forEach(function (t) { if (d.viec[t.id]) nDone++; });
+    var clBar = G.el('i'); clBar.style.transform = 'scaleX(' + (nDone / TASKS.length) + ')';
+    body.appendChild(G.el('div.cl-h', G.el('b', 'Việc hôm nay'), G.el('span', nDone + '/' + TASKS.length + ' xong'), G.el('span.cl-bar', clBar)));
     body.appendChild(G.el('div.td-list', TASKS.map(function (t) {
       var ok = !!d.viec[t.id];
       return G.el('div.td-item' + (ok ? '.ok' : ''),
@@ -194,7 +214,7 @@ var G = window.G || (window.G = {});
     }).catch(function () { G.toast('Chưa tải được kho truyện. Mở khi có mạng một lần nhé.'); });
   }
   var SHELF = ['future', 'ai', 'true', 'mystery', 'news', 'essay', 'long'];
-  var SHELF_NAME = { future: '🌆 Brightford 2080 · vấn đề xã hội tương lai', ai: '🤖 Chuyện về AI', true: '📜 Chuyện có thật', mystery: '🔭 Bí ẩn chưa có lời giải', news: '📰 Tin tức 2025–2026', essay: '🧠 Bài luận B2 · kỹ năng sống', long: '📚 Truyện dài' };
+  var SHELF_NAME = { future: 'Brightford 2080 · vấn đề xã hội tương lai', ai: 'Chuyện về AI', true: 'Chuyện có thật', mystery: 'Bí ẩn chưa có lời giải', news: 'Tin tức 2025–2026', essay: 'Bài luận B2 · kỹ năng sống', long: 'Truyện dài' };
   function shelfRank(s) { var i = SHELF.indexOf(s.shelf); return i < 0 ? SHELF.length : i; }
   function readN(id) { return (G.S.truyen && G.S.truyen[id]) || 0; }
   G.openReader = function () {
@@ -206,12 +226,12 @@ var G = window.G || (window.G = {});
       var next = null;
       for (var i = 0; i < list.length && !next; i++) { var r = readN(list[i].id); if (r > 0 && r < list[i].chapters.length) next = list[i]; }
       for (var j = 0; j < list.length && !next; j++) if (readN(list[j].id) < list[j].chapters.length) next = list[j];
-      if (next) body.appendChild(G.el('button.big.seal.rd-next', { onclick: function () { chapter(next, readN(next.id)); } },
-        G.el('b', '▶ Đọc tiếp: ' + next.title), G.el('span', next.vi + ' · chương ' + (readN(next.id) + 1) + '/' + next.chapters.length + ' · ' + next.level)));
+      if (next) body.appendChild(G.el('button.big.bic.seal.rd-next', { onclick: function () { chapter(next, readN(next.id)); } },
+        G.bigIc('book', 'Đọc tiếp: ' + next.title), G.el('span', next.vi + ' · chương ' + (readN(next.id) + 1) + '/' + next.chapters.length + ' · ' + next.level)));
       var lv = '';
       list.forEach(function (s) {
         var grp = s.shelf || 'long';
-        if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', SHELF_NAME[grp] || '📚 Truyện khác')); }
+        if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', SHELF_NAME[grp] || 'Truyện khác')); }
         var r = readN(s.id);
         body.appendChild(G.el('button.rd-story' + (s.shelf === 'future' ? '.future' : ''), { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
           G.el('b', s.title), G.el('span.small.faint', s.vi + ' · ' + s.level + ' · ' + s.chapters.length + ' chương'),

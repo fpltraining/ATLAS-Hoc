@@ -131,6 +131,7 @@ var G = window.G || (window.G = {});
 
     if (G.weeklyChart) {
       root.appendChild(G.el('h2.sec', 'Đầu ra của bạn'));
+      if (G.studyChart) root.appendChild(G.studyChart());
       root.appendChild(G.el('div.out-row',
         G.el('button.big.bic', { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', G.weekLine())),
         G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được'))));
@@ -180,10 +181,14 @@ var G = window.G || (window.G = {});
     root.appendChild(G.el('div.tools',
       G.el('button.btn', { onclick: G.exportSave }, '⤓ Xuất file sao lưu'),
       G.el('button.btn', { onclick: function () { file.click(); } }, '⤒ Nhập file sao lưu'),
-      G.el('button.btn', { onclick: function () { G.S.caiDat.amThanh = !G.S.caiDat.amThanh; G.save(); G.renderLobby(); } }, G.ic3('bell', 'ic3-s'), G.S.caiDat.amThanh ? 'Âm thanh: bật' : 'Âm thanh: tắt'),
-      G.el('button.btn', { onclick: function () { G.setMusic(!G.musicOn()); G.renderLobby(); } }, G.ic3('piano', 'ic3-s'), G.musicOn() ? 'Nhạc nền: bật' : 'Nhạc nền: tắt'),
       file
     ));
+    // cài đặt dạng nút gạt (mẫu "toggles" của taste-skill)
+    root.appendChild(G.el('div.tg-list',
+      G.switchRow('bell', 'Âm thanh', 'Tiếng bấm, tiếng đúng sai, tiếng ăn mừng', G.S.caiDat.amThanh !== false, function (on) { G.S.caiDat.amThanh = on; G.save(); }),
+      G.switchRow('piano', 'Nhạc nền', 'Nhạc nhẹ khi đi trong thành phố', G.musicOn(), function (on) { G.setMusic(on); }),
+      G.switchRow('turtle', 'Đọc truyện chậm', 'Giọng đọc truyện chậm hơn để nghe rõ từng chữ', !!G.S.caiDat.docCham, function (on) { G.S.caiDat.docCham = on; G.save(); }),
+      G.canListen ? G.switchRow('mic', 'Dùng micro khi luyện nói', 'Máy nghe bạn nói và chấm điểm phát âm', G.micOn(), function (on) { G.setMic(on); }) : null));
     root.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam).' + (G.cloudReady && G.cloudReady() && G.cloudUser() ? ' Đã bật lưu trên mây.' : ' Nhớ xuất file sao lưu thỉnh thoảng nhé.')));
   };
 

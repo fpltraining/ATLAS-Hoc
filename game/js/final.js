@@ -8,7 +8,7 @@ var G = window.G || (window.G = {});
   function st() { G.S.thiCL = G.S.thiCL || {}; return G.S.thiCL; }
   function panel(title) {
     var p = document.getElementById('panel'); p.className = 'panel open';
-    document.getElementById('panel-title').textContent = title;
+    G.setTitle(title);
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     var b = document.getElementById('panel-body'); b.innerHTML = ''; b.scrollTop = 0; return b;
   }

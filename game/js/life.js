@@ -73,16 +73,13 @@ var G = window.G || (window.G = {});
     })));
     // nói tự do ở nơi này + chế độ chỉ nghe
     var fr = G.freeFor ? G.freeFor(id) : [];
-    if (fr.length) body.appendChild(G.el('button.big.fr-btn', { onclick: function () { G.openFree(fr, '💡 Nói tự do · ' + L.title, function () { G.openLife(id); }); } },
-      G.el('b', '💡 Tự nói (không có câu gợi ý)'), G.el('span', fr.length + ' tình huống · tự trả lời bằng câu của bạn')));
+    if (fr.length) body.appendChild(G.el('button.big.bic.fr-btn', { onclick: function () { G.openFree(fr, '💡 Nói tự do · ' + L.title, function () { G.openLife(id); }); } },
+      G.bigIc('speak', 'Tự nói (không có câu gợi ý)'), G.el('span', fr.length + ' tình huống · tự trả lời bằng câu của bạn')));
     var cd = G.S.caiDat || (G.S.caiDat = {});
-    body.appendChild(G.el('div.td-seg.lf-mode',
-      G.el('button' + (!cd.chiNgheNoi ? '.on' : ''), { onclick: function () { cd.chiNgheNoi = false; G.save(); home(); } }, '👀 Hiện chữ'),
-      G.el('button' + (cd.chiNgheNoi ? '.on' : ''), { onclick: function () { cd.chiNgheNoi = true; G.save(); home(); } }, '👂 Chỉ nghe (ẩn chữ)')));
-    var ov = showOptVi();
-    body.appendChild(G.el('div.td-seg.lf-mode',
-      G.el('button' + (ov ? '.on' : ''), { onclick: function () { cd.nghiaDapAn = true; G.save(); home(); } }, '🇻🇳 Hiện nghĩa đáp án'),
-      G.el('button' + (!ov ? '.on' : ''), { onclick: function () { cd.nghiaDapAn = false; G.save(); home(); } }, '🧠 Tự hiểu (ẩn nghĩa)')));
+    // hai chế độ dạng nút gạt (mẫu "toggles" của taste-skill)
+    body.appendChild(G.el('div.tg-list.lf-mode',
+      G.switchRow('headphone', 'Chỉ nghe, ẩn chữ', 'Nghe người kia nói rồi chọn câu đáp, nói xong mới hiện chữ', !!cd.chiNgheNoi, function (on) { cd.chiNgheNoi = on; G.save(); }),
+      G.switchRow('book', 'Hiện nghĩa tiếng Việt dưới câu đáp', 'Tắt để tự hiểu câu tiếng Anh', showOptVi(), function (on) { cd.nghiaDapAn = on; G.save(); })));
     if (L.souvenir) body.appendChild(G.el('div.souv-row', G.imgEl(L.souvenir.img, 'souv-img'),
       G.el('div', G.el('b', 'Đồ kỷ niệm: ' + L.souvenir.name), G.el('div.small.faint', st.kyNiem ? 'Đã nhận, bày ở Ngôi nhà chung.' : 'Xong cả 3 tình huống để nhận (' + n + '/3).'))));
   }
