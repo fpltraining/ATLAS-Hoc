@@ -92,13 +92,19 @@ var G = window.G || (window.G = {});
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     var body = document.getElementById('panel-body');
     body.innerHTML = ''; body.className = 'panel-body';
+    G.viewIn(body);
     return body;
   }
   G.openToday = function () {
     var body = panelOpen('Hôm nay · ' + G.vnDay().split('-').reverse().join('/'));
     var p = G.dayProgress(), d = today();
-    var ring = G.el('div.td-ring', G.el('b', p.pct + '%'));
+    var ringN = G.el('b', p.pct + '%'), ring = G.el('div.td-ring', ringN);
     ring.style.setProperty('--p', p.pct);
+    // vòng % hôm nay quét từ 0 tới giá trị
+    if (window.anime && !G.calm() && p.pct > 0) {
+      var rv = { v: 0 }; ring.style.setProperty('--p', 0); ringN.textContent = '0%';
+      window.anime({ targets: rv, v: p.pct, delay: 150, duration: 1100, easing: 'easeOutExpo', update: function () { ring.style.setProperty('--p', rv.v); ringN.textContent = Math.round(rv.v) + '%'; } });
+    }
     var fire = G.ic3('fire', 'td-fire'), sn = G.el('b.td-sn', String(G.S.chuoi.hienTai));
     body.appendChild(G.el('div.td-head', ring,
       G.el('div.td-txt', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc hôm nay')),
@@ -117,6 +123,8 @@ var G = window.G || (window.G = {});
         G.el('div.td-txt', G.el('b', t.name), G.el('div.small.faint', ok ? 'Xong lúc ' + d.viec[t.id] : t.hint + ' · khoảng ' + t.min + ' phút')),
         !ok && (t.id === 'doc' || t.id === 'on') ? G.el('button.btn.sm', { onclick: function () { t.id === 'doc' ? G.openReader() : G.openReview(); } }, 'Làm ngay') : null);
     })));
+    if (G.openMemMap) body.appendChild(G.el('button.big.bic.td-mm', { onclick: function () { G.openMemMap(); } }, G.bigIc('brain', 'Bản đồ nhớ từ'),
+      G.el('span', G.srsDue ? (G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn · xem buổi nào sắp quên' : 'Xem buổi nào nhớ chắc, buổi nào sắp quên') : '')));
     // kiểm tra tuần + sổ mình nói được
     if (G.openWeekly) body.appendChild(G.el('div.td-week',
       G.el('button.big.bic' + (G.weeklyInfo().due ? '.seal' : ''), { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),

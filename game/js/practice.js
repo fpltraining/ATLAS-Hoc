@@ -15,6 +15,7 @@ var G = window.G || (window.G = {});
     document.getElementById('panel-title').textContent = title;
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     var body = document.getElementById('panel-body'); body.innerHTML = ''; body.scrollTop = 0;
+    G.viewIn(body);
     return body;
   }
   function S() { G.S.cau = G.S.cau || {}; return G.S.cau; }
@@ -47,6 +48,16 @@ var G = window.G || (window.G = {});
       var u = t.turns[i], nm = G.playerName();
       G.srsAdd({ t: 'reply', en: u.ok.replace(/\{name\}/g, nm), npc: u.npc.replace(/\{name\}/g, nm), npcVi: u.vi, who: L.npc, noi: L.title });
     }
+  };
+  G.srsSeed = function () { seed(); pullHard(); };
+  /* ôn đúng các câu cho trước (Bản đồ nhớ từ: câu sắp quên của một buổi); câu đến hạn trước, tối đa 15 câu */
+  G.openReviewOf = function (ens) {
+    seed();
+    var all = S(), q = [];
+    for (var i = 0; i < ens.length; i++) if (all[ens[i]]) q.push(all[ens[i]]);
+    q.sort(function (a, b) { return a.due < b.due ? -1 : a.due > b.due ? 1 : a.box - b.box; });
+    if (!q.length) { G.toast('Buổi này chưa có câu nào trong kho ôn. Học buổi đó trước nhé.'); return; }
+    run(q.slice(0, 15), false);
   };
   G.srsDue = function () {
     var all = S(), out = [], today = day(0);

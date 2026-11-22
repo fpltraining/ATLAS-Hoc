@@ -109,7 +109,7 @@ var G = window.G || (window.G = {});
         G.el('button.btn.sm', { onclick: function () { G.openCreator(function () { G.goLobby(); }); } }, 'Đổi nhân vật')),
       G.el('div.pstats',
         stat(G.S.xp, 'XP', 'star'),
-        stat(G.S.chuoi.hienTai + ' ngày', 'Chuỗi học', 'fire'),
+        stat(G.S.chuoi.hienTai, 'Chuỗi học', 'fire', ' ngày'),
         stat(r.done + '/5', 'Phòng A1 đã qua'),
         stat(G.diplomas().filter(function (d) { return d.lang === 'en'; }).length + '/4', 'Chứng chỉ'),
         stat(G.S.tuKho.length, 'Từ cần ôn')
@@ -131,6 +131,8 @@ var G = window.G || (window.G = {});
       root.appendChild(G.el('div.out-row',
         G.el('button.big.bic', { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', G.weekLine())),
         G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được'))));
+      if (G.openMemMap) root.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openMemMap(); } }, G.bigIc('brain', 'Bản đồ nhớ từ'),
+        G.el('span', G.srsDue && G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn hôm nay · xem buổi nào sắp quên' : 'Mỗi ô là một buổi học, màu càng xanh là càng nhớ chắc')));
       // trình độ đầu vào (kiểm tra 4 kỹ năng), làm lại để đo đầu ra
       if (G.openPlacement) {
         var dv = G.S.dauVao;
@@ -182,6 +184,11 @@ var G = window.G || (window.G = {});
     root.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam).' + (G.cloudReady && G.cloudReady() && G.cloudUser() ? ' Đã bật lưu trên mây.' : ' Nhớ xuất file sao lưu thỉnh thoảng nhé.')));
   };
 
-  function stat(v, l, ic) { return G.el('div.stat' + (ic ? '.has-ic' : ''), ic ? G.ic3(ic) : null, G.el('b', String(v)), G.el('span', l)); }
+  // số chạy từ 0 khi mở Sảnh (con số kiểu bảng điều khiển)
+  function stat(v, l, ic, suf) {
+    var b = G.el('b', String(v) + (suf || ''));
+    if (typeof v === 'number' && v > 0) G.countUp(b, 0, v, { suf: suf || '', dur: 900, delay: 150 });
+    return G.el('div.stat' + (ic ? '.has-ic' : ''), ic ? G.ic3(ic) : null, b, G.el('span', l));
+  }
 
 })();
