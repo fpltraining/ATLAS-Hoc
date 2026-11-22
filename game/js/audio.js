@@ -60,6 +60,53 @@ var G = window.G || (window.G = {});
   };
 
   /* đọc câu; slow = true thì đọc chậm (70% tốc độ, giữ nguyên cao độ giọng) */
+  /* ---------- phụ đề sáng theo chữ khi nghe (mẫu "voice" của taste-skill): câu đang đọc trên màn hình,
+     chữ nào đã đọc tới thì rõ, chữ chưa đọc mờ đi, chữ đang đọc màu cam; đọc xong cả câu rõ lại như cũ.
+     Thời điểm từng chữ chia theo độ dài chữ trên thời lượng tệp giọng (giọng máy: ước theo tốc độ đọc). ---------- */
+  var kw = null;
+  function ownText(el) {
+    if (el._kw) return el._kw.map(function (k) { return k.textContent; }).join(' ');   // đã tách chữ ở lần nghe trước
+    var t = ''; for (var n = el.firstChild; n; n = n.nextSibling) if (n.nodeType === 3) t += n.nodeValue; return t.replace(/\s+/g, ' ').replace(/^\s+|\s+$/g, ''); }
+  function wrapWords(el) {
+    if (el._kw) return el._kw;
+    var spans = [], kids = [];
+    for (var n = el.firstChild; n; n = n.nextSibling) if (n.nodeType === 3 && /\S/.test(n.nodeValue)) kids.push(n);
+    kids.forEach(function (tn) {
+      var frag = document.createDocumentFragment(), parts = tn.nodeValue.split(/(\s+)/);
+      parts.forEach(function (p) {
+        if (!p) return;
+        if (/^\s+$/.test(p)) { frag.appendChild(document.createTextNode(p)); return; }
+        var s = document.createElement('span'); s.className = 'kw'; s.textContent = p; frag.appendChild(s); spans.push(s);
+      });
+      el.replaceChild(frag, tn);
+    });
+    el._kw = spans;
+    return spans;
+  }
+  function kwStop() {
+    if (!kw) return;
+    clearInterval(kw.t);
+    kw.hosts.forEach(function (h) { h.classList.remove('kw-on'); var s = h._kw || []; for (var i = 0; i < s.length; i++) s[i].className = 'kw'; });
+    kw = null;
+  }
+  function kwStart(text, slow, viaPlayer) {
+    kwStop();
+    if (!text || (G.calm && G.calm())) return;
+    var hosts = [], all = document.querySelectorAll('.en, .wbig, .wex > div:first-child, .rd-line > span, [data-say]');
+    for (var i = 0; i < all.length; i++) { var el = all[i]; if (el.offsetParent && ownText(el) === text) hosts.push(el); }
+    if (!hosts.length) return;
+    var lists = hosts.map(wrapWords), n = lists[0].length, w = [], tot = 0;
+    for (i = 0; i < n; i++) { tot += lists[0][i].textContent.length + 1; w.push(tot); }
+    var est = (tot * (slow ? 95 : 62)) + 300, t0 = Date.now();
+    hosts.forEach(function (h) { h.classList.add('kw-on'); });
+    kw = { hosts: hosts, t: setInterval(function () {
+      var f, d = viaPlayer && player.duration;
+      if (viaPlayer && d && isFinite(d)) f = player.ended ? 1 : player.currentTime / d; else f = (Date.now() - t0) / est;
+      var at = f * tot, k;
+      lists.forEach(function (sp) { for (k = 0; k < sp.length; k++) sp[k].className = 'kw' + (w[k] <= at ? ' lit' : (k === 0 || w[k - 1] <= at) ? ' lit cur' : ''); });
+      if (f >= 1 || (viaPlayer && player.paused && Date.now() - t0 > 400)) kwStop();
+    }, 60) };
+  }
   G.say = function (text, lang, slow) {
     lang = lang || 'en';
     // danh sách giọng AI chưa tải xong: chờ một chút thay vì đọc bằng giọng máy (to nhỏ khác nhau)
@@ -75,8 +122,9 @@ var G = window.G || (window.G = {});
         player.defaultPlaybackRate = rate; player.playbackRate = rate;
       } catch (e) { /* máy cũ không đổi được tốc độ */ }
       var p = player.play();
-      if (p && p.catch) p.catch(function () { speakTts(text, lang, slow); });
-    } else speakTts(text, lang, slow);
+      if (p && p.catch) p.catch(function () { speakTts(text, lang, slow); kwStart(text, slow, false); });
+      kwStart(text, slow, true);
+    } else { speakTts(text, lang, slow); kwStart(text, slow, false); }
   };
   G.saySlow = function (text, lang) { G.say(text, lang, true); };
   /* cặp nút nghe thường 🔊 và nghe chậm 🐢 */

@@ -116,9 +116,25 @@ var G = window.G || (window.G = {});
     if (go) setTimeout(function () { pill.style.setProperty('--i', i); pill.className = 'epill go'; }, 30);
   };
 
+  /* hàng cài đặt có nút gạt (mẫu "toggles" của taste-skill): icon, tên, một dòng giải thích, công tắc; chạm cả hàng để gạt */
+  G.switchRow = function (ic, label, sub, on, onChange) {
+    var row = G.el('button.tg-row', { role: 'switch', 'aria-checked': on ? 'true' : 'false', onclick: function () {
+      on = !on; row.setAttribute('aria-checked', on ? 'true' : 'false'); onChange(on);
+    } }, ic ? G.ic3(ic) : null, G.el('span.tg-txt', G.el('b', label), sub ? G.el('span', sub) : null), G.el('span.tg-sw', G.el('i')));
+    return row;
+  };
+  // ô nhập có nhãn nhìn thấy được (taste-skill: chữ mờ trong ô không thay được nhãn)
+  G.field = function (label, input) { return G.el('label.fld', G.el('span', label), input); };
+  /* thông báo dạng thẻ (mẫu "notify"): emoji đầu câu đổi thành icon 3D */
+  var TOAST_IC = { '☁️': 'cloud', '✅': 'check', '✓': 'check', '🔒': 'lock', '📍': 'pin', '🎉': 'star', '⭐': 'star', '🔥': 'fire', '🎓': 'grad', '🔔': 'bell', '📖': 'book', '🎤': 'mic' };
   G.toast = function (msg, ms) {
     var t = document.getElementById('toast');
-    t.textContent = msg;
+    msg = String(msg);
+    var m = msg.match(/^(\S+)\s+/), ic = m && TOAST_IC[m[1]];
+    t.innerHTML = '';
+    if (ic && G.ic3) { t.appendChild(G.ic3(ic)); msg = msg.slice(m[0].length); }
+    else if (m && /[\u2600-\u27bf]|[\ud83c-\ud83e][\udc00-\udfff]/.test(m[1])) msg = msg.slice(m[0].length);
+    t.appendChild(G.el('span', msg));
     t.className = 'toast show';
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () { t.className = 'toast'; }, ms || 2600);

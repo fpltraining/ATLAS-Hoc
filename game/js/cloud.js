@@ -193,7 +193,7 @@ var G = window.G || (window.G = {});
     box.appendChild(G.el('h1', 'Tạo tài khoản học'));
     box.appendChild(G.el('p', 'Tài khoản giữ toàn bộ tiến độ của bạn: đổi iPad, iPhone hay xoá app cũng không mất bài. Đăng nhập một lần, lần sau mở app là vào thẳng, tới khi bạn bấm Đăng xuất.'));
     box.appendChild(googleBox());
-    box.appendChild(em); box.appendChild(pw); box.appendChild(msg);
+    box.appendChild(G.field('Email', em)); box.appendChild(G.field('Mật khẩu', pw)); box.appendChild(msg);
     box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { go(true); } }, 'Tạo tài khoản ›'));
     box.appendChild(G.el('button.btn', { onclick: function () { go(false); } }, 'Đã có tài khoản? Đăng nhập'));
     box.appendChild(later);
@@ -232,7 +232,7 @@ var G = window.G || (window.G = {});
       G.el('h2', '☁️ Lưu tiến độ trên mây'),
       G.el('p.small', 'Đăng nhập một lần, app tự lưu sau mỗi bài. Đổi sang iPad, iPhone khác chỉ cần đăng nhập là học tiếp, không cần sao lưu.'),
       googleBox(),
-      em, pw, msg,
+      G.field('Email', em), G.field('Mật khẩu', pw), msg,
       G.el('div.row',
         G.el('button.btn', { onclick: function () { go(true); } }, 'Tạo tài khoản mới'),
         G.el('button.btn.seal', { onclick: function () { go(false); } }, 'Đăng nhập ›')),

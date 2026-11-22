@@ -49,7 +49,13 @@ var G = window.G || (window.G = {});
     window.scrollTo(0, 0);
     // về Sảnh: trang rõ dần từ nhoè, các phần đầu trang hiện lần lượt
     G.viewIn(lob);
-    G.enter([].slice.call(lob.children, 0, 8), { gap: 60, start: 80 });
+    var hero = lob.querySelector('.lhero');
+    if (hero && !G._heroIn && window.anime && !G.calm()) {
+      G._heroIn = true;   // chỉ một lần mỗi lần mở app
+      window.anime({ targets: hero.querySelector('.hero-img'), scale: [1.05, 1], duration: 1100, easing: 'easeOutCubic' });
+      G.enter(hero.querySelectorAll('.hero-text > *'), { gap: 70, start: 120, y: 12, dur: 520 });
+      G.enter([].slice.call(lob.children, 1, 8), { gap: 60, start: 450 });
+    } else G.enter([].slice.call(lob.children, 0, 8), { gap: 60, start: 80 });
   };
 
   /* Kai nói một câu ngắn ở góc màn hình */

@@ -59,6 +59,22 @@ var G = window.G || (window.G = {});
     }
     return out;
   };
+  /* phút học 14 ngày gần nhất (mẫu "stat" của taste-skill): một con số lớn, so với tuần trước, 14 cột, cột hôm nay màu cam */
+  G.studyChart = function () {
+    var N = G.S.ngay || {}, mins = [], i;
+    for (i = 13; i >= 0; i--) { var r = N[G.vnDay(Date.now() - i * 86400000)]; mins.push(r ? Math.round((r.giay || 0) / 60) : 0); }
+    var wk = 0, prev = 0; for (i = 0; i < 7; i++) { prev += mins[i]; wk += mins[i + 7]; }
+    var mx = Math.max.apply(null, mins.concat([20])), big = G.el('b', '0');
+    var chg = prev ? Math.round((wk - prev) / prev * 100) : null;
+    var bars = G.el('div.sc-bars', mins.map(function (m, k) { var c = G.el('i' + (k === 13 ? '.today' : '')); c.style.transform = 'scaleY(' + Math.max(0.04, m / mx) + ')'; return G.el('span', { title: m + ' phút' }, c); }));
+    G.countUp(big, 0, wk, { dur: 900, delay: 150 });
+    if (window.anime && !G.calm()) window.anime({ targets: bars.querySelectorAll('i'), scaleY: function (el) { var v = parseFloat(el.style.transform.replace(/[^\d.]/g, '')) || 0.04; return [0.04, v]; }, delay: window.anime.stagger(35, { start: 200 }), duration: 700, easing: 'easeOutCubic' });
+    return G.el('div.sc-card',
+      G.el('div.sc-h', G.el('span', 'Phút học 7 ngày qua'), G.el('span.small.faint', '14 ngày gần nhất')),
+      G.el('div.sc-n', big, G.el('span', 'phút'), chg === null ? null : G.el('span.sc-chg' + (chg >= 0 ? '.up' : '.down'), (chg >= 0 ? '+' : '') + chg + '% so với tuần trước')),
+      bars,
+      G.el('div.sc-ax', G.el('span', G.vnDay(Date.now() - 13 * 86400000).split('-').reverse().slice(0, 2).join('/')), G.el('span', 'Hôm nay')));
+  };
   /* % hôm nay: một nửa theo số việc xong, một nửa theo phút học / 120 */
   G.dayProgress = function () {
     var d = today(), done = 0;
@@ -116,6 +132,10 @@ var G = window.G || (window.G = {});
       G.el('div.small', 'Tuần này đã học ' + wk.n + '/' + wk.want + ' ngày' + (wk.n >= wk.want ? ': đủ rồi, học thêm là vượt tiến độ.' : rest ? '. Hôm nay là ngày nghỉ theo lịch, học thêm vẫn được tính.' : '. Ngày nghỉ trong lịch không đứt chuỗi.')),
       G.S.mocHoc ? null : G.el('button.btn.sm', { onclick: function () { G.goLobby && G.goLobby(); } }, 'Chọn mốc ở Sảnh')));
     if (G.rankCard) body.appendChild(G.rankCard());
+    // danh sách việc hôm nay (mẫu "checklist" của taste-skill): thanh tiến độ, việc xong có dấu tick và gạch ngang
+    var nDone = 0; TASKS.forEach(function (t) { if (d.viec[t.id]) nDone++; });
+    var clBar = G.el('i'); clBar.style.transform = 'scaleX(' + (nDone / TASKS.length) + ')';
+    body.appendChild(G.el('div.cl-h', G.el('b', 'Việc hôm nay'), G.el('span', nDone + '/' + TASKS.length + ' xong'), G.el('span.cl-bar', clBar)));
     body.appendChild(G.el('div.td-list', TASKS.map(function (t) {
       var ok = !!d.viec[t.id];
       return G.el('div.td-item' + (ok ? '.ok' : ''),
