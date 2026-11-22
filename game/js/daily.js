@@ -132,7 +132,7 @@ var G = window.G || (window.G = {});
     // các cuộc nói chuyện hôm nay
     var ht = d.hoiThoai || [];
     body.appendChild(G.el('div.td-talks',
-      G.el('b', '💬 Nói chuyện hôm nay · ' + ht.length + ' tình huống'),
+      G.el('b', G.ic3('talk', 'ic3-s'), 'Nói chuyện hôm nay · ' + ht.length + ' tình huống'),
       ht.length ? G.el('div.td-talk-list', ht.slice().reverse().map(function (h) {
         return G.el('div.td-talk', G.el('span.small.faint', h.luc), G.el('span', h.ten + ' · ' + h.tinhHuong), h.diem !== null && h.diem !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(h.diem)[1], '🎤 ' + h.diem) : G.el('span.small.faint', 'không micro'));
       })) : G.el('div.small.faint', 'Chưa nói chuyện với ai hôm nay. Ra phố gặp mẹ, ông Ben, xe bánh Sunny… (người có 💬 trên đầu).')));

@@ -108,14 +108,12 @@ var G = window.G || (window.G = {});
   /* ô chọn co giãn trên thanh nhiều nút (.etabs, .lsteps): mép phía trước chạy trước, mép sau đuổi theo rồi nảy về đúng chỗ.
      pill là span.epill nằm trong thanh (position: relative), i là ô đang chọn, n số ô, from ô cũ (để trượt từ đó) */
   G.pillTo = function (pill, i, n, from) {
-    function pos(k) {
-      pill.style.left = 'calc((100% + var(--gap, 6px)) * ' + k + ' / ' + n + ')';
-      pill.style.right = 'calc((100% + var(--gap, 6px)) * ' + (n - 1 - k) + ' / ' + n + ')';
-    }
+    // chỉ dùng transform (translate + scale), không đụng left/width: êm trên iPhone
+    var go = !(from === undefined || from === null || from < 0 || from === i || G.calm());
     pill.className = 'epill';
-    if (from === undefined || from === null || from < 0 || from === i || G.calm()) { pos(i); return; }
-    pos(from);
-    setTimeout(function () { pill.className = 'epill ' + (i > from ? 'fwd' : 'back'); pos(i); }, 30);
+    pill.style.setProperty('--n', n);
+    pill.style.setProperty('--i', go ? from : i);
+    if (go) setTimeout(function () { pill.style.setProperty('--i', i); pill.className = 'epill go'; }, 30);
   };
 
   G.toast = function (msg, ms) {
