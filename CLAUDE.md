@@ -22,6 +22,8 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 ## Quy tắc làm việc
 
 - **Không vẽ hình bằng code.** Mọi hình là hình đặt (anh Han đặt qua ChatGPT): viết đơn đặt hàng trong `game/ASSET_ORDERS.md`, nhận hình thì cắt nền rồi gắn vào game.
+- Ngoại lệ anh Han đã duyệt (21/11/2026): icon 3D Microsoft Fluent Emoji (MIT) thay emoji trong giao diện (`G.ic3`, `G.bigIc`, tệp `game/assets/ic3_*.webp`, thu về 128 px); hoạt ảnh Lottie làm sẵn trong `game/anim/` (ghi nguồn ở `game/anim/CREDITS.md`, hoạt ảnh mới anh Han tải trên LottieFiles hoặc đặt riêng). Pháo giấy `G.confetti` phát bằng Lottie, không vẽ bằng code.
+- Thư viện ngoài để trong `game/vendor/`, ghi nguồn và giấy phép ở `game/vendor/CREDITS.md`: three.js, lottie-web (nạp khi cần), anime.js 3.2.2 (`G.enter`, `G.pop`, `G.countUp` trong util.js), AutoAnimate (trò xếp câu), biến chuyển động và bóng của Open Props trong `:root` của game.css. Thêm tệp vendor thì thêm vào `CORE` trong `game/sw.js`.
 - Âm thanh: ghi âm thật từ nguồn miễn phí (CC0, phạm vi công cộng, CC BY) hoặc anh Han làm bằng Meta AI; ghi nguồn ở `game/sfx/CREDITS.md`. Giọng đọc: Kokoro (af_heart, am_michael).
 - Code game là **ES5 thuần** (không arrow function, let/const, template literal, optional chaining) để chạy trên Safari iOS. Kiểm tra bằng acorn `ecmaVersion: 5`.
 - Dữ liệu lưu Supabase; chỉ dùng khoá anon / publishable, không bao giờ dùng khoá service_role. Giờ luôn theo giờ Việt Nam (UTC+7). Không làm mất tiến độ học.

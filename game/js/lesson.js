@@ -270,13 +270,23 @@ var G = window.G || (window.G = {});
       var line = G.el('div.oline');
       var pool = G.el('div.opool');
       body.appendChild(G.el('div.qbox', G.el('div.qtext', '“' + it.exVi + '”', speakBtn(it.ex)), pyEl(it.exPy), line, pool));
+      // mỗi từ là một chip cố định: chạm thì chip chuyển giữa hàng câu và kho từ, hai hàng tự trượt êm (AutoAnimate)
+      if (window.autoAnimate && !G.calm()) { try { window.autoAnimate(line, { duration: 260 }); window.autoAnimate(pool, { duration: 260 }); } catch (e) {} }
+      function place(box, list, cls) {   // chỉ dời những chip sai chỗ để hàng còn lại không bị vẽ lại
+        list.forEach(function (w, i) { w.el.className = cls; if (box.children[i] !== w.el) box.insertBefore(w.el, box.children[i] || null); });
+      }
       function draw() {
-        line.innerHTML = '';
-        picked.forEach(function (w, i) { line.appendChild(G.el('button.chip.on', { onclick: function () { picked.splice(i, 1); draw(); } }, w.t)); });
-        pool.innerHTML = '';
-        shuffled.forEach(function (w) { if (picked.indexOf(w) < 0) pool.appendChild(G.el('button.chip', { onclick: function () { picked.push(w); draw(); check(); } }, w.t)); });
+        place(line, picked, 'chip on');
+        place(pool, shuffled.filter(function (w) { return picked.indexOf(w) < 0; }), 'chip');
       }
       var shuffled = G.shuffle(words.map(function (t, i) { return { t: t, i: i }; }));
+      shuffled.forEach(function (w) {
+        w.el = G.el('button.chip', { onclick: function () {
+          var k = picked.indexOf(w);
+          if (k >= 0) picked.splice(k, 1); else picked.push(w);
+          draw(); if (k < 0) check();
+        } }, w.t);
+      });
       function check() {
         if (picked.length < words.length) return;
         var s = picked.map(function (w) { return w.t; }).join(' ');

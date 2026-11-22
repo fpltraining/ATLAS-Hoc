@@ -69,6 +69,10 @@ G.ASSET_LIST = [
   };
 
   /* Trả về đối tượng { img, ok, name }. ok = false khi file chưa có (vẽ ô màu thay thế). */
+  /* icon 3D (Microsoft Fluent Emoji, MIT, vendor/fluentui-emoji.LICENSE; anh Han duyệt 21/11/2026 để thay emoji của máy).
+     Tệp assets/ic3_<tên>.webp. G.bigIc: icon + tiêu đề cho nút .big.bic */
+  G.ic3 = function (name, cls) { return G.el('img.ic3' + (cls ? '.' + cls : ''), { src: G.assetUrl('ic3_' + name + '.webp'), alt: '', draggable: 'false' }); };
+  G.bigIc = function (name, title) { return [G.ic3(name), G.el('b', title)]; };
   G.asset = function (name) {
     if (cache[name]) return cache[name];
     var a = { name: name, ok: false, img: new Image(), tried: false };

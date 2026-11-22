@@ -75,22 +75,45 @@ var G = window.G || (window.G = {});
     document.body.appendChild(wrap);
   };
 
-  G.confetti = function () {
-    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var c = document.createElement('canvas');
-    c.className = 'confetti';
-    document.body.appendChild(c);
-    var w = c.width = innerWidth, h = c.height = innerHeight, g = c.getContext('2d');
-    var cols = ['#c8553d', '#2f7a63', '#f2bf3c', '#4a68d8', '#8bbac0'], ps = [];
-    for (var i = 0; i < 110; i++) ps.push({ x: w / 2 + (Math.random() - 0.5) * 140, y: h * 0.35, vx: (Math.random() - 0.5) * 11, vy: -Math.random() * 10 - 5, r: Math.random() * 7 + 5, a: Math.random() * 6, c: cols[i % cols.length] });
-    var t0 = Date.now();
-    (function f() {
-      var k = (Date.now() - t0) / 1700;
-      g.clearRect(0, 0, w, h);
-      for (var j = 0; j < ps.length; j++) { var p = ps[j]; p.vy += 0.3; p.x += p.vx; p.y += p.vy; p.a += 0.2; g.save(); g.globalAlpha = Math.max(0, 1 - k * k); g.translate(p.x, p.y); g.rotate(p.a); g.fillStyle = p.c; g.fillRect(-p.r / 2, -p.r / 4, p.r, p.r / 2); g.restore(); }
-      if (k < 1) requestAnimationFrame(f); else c.parentNode.removeChild(c);
-    })();
+  /* nạp thêm một tệp script khi cần (chạy cả offline: service worker giữ sẵn tệp trong CORE) */
+  var loading = {};
+  G.loadScript = function (src, cb) {
+    if (loading[src] === true) { cb(); return; }
+    if (loading[src]) { loading[src].push(cb); return; }
+    loading[src] = [cb];
+    var s = document.createElement('script');
+    s.src = src;
+    s.onload = function () { var q = loading[src]; loading[src] = true; for (var i = 0; i < q.length; i++) q[i](); };
+    s.onerror = function () { delete loading[src]; };
+    document.head.appendChild(s);
   };
+  /* pháo giấy: hoạt ảnh Lottie làm sẵn (anim/confetti.json, xem anim/CREDITS.md), phát bằng lottie-web (vendor/lottie_light.min.js).
+     Không vẽ bằng code. Nạp thư viện và tệp lần đầu khi cần, rồi giữ lại. */
+  var confTxt = null, confWait = null;
+  function confData(cb) {
+    if (confTxt) { cb(confTxt); return; }
+    if (confWait) { confWait.push(cb); return; }
+    confWait = [cb];
+    fetch('anim/confetti.json').then(function (r) { return r.text(); }).then(function (t) {
+      confTxt = t; var q = confWait; confWait = null; for (var i = 0; i < q.length; i++) q[i](t);
+    }).catch(function () { confWait = null; });
+  }
+  G.confetti = function () {
+    if (G.calm()) return;
+    G.loadScript('vendor/lottie_light.min.js', function () {
+      confData(function (t) {
+        if (!window.lottie) return;
+        var box = G.el('div.confetti'); document.body.appendChild(box);
+        var a = window.lottie.loadAnimation({ container: box, renderer: 'svg', loop: false, autoplay: true, animationData: JSON.parse(t),
+          rendererSettings: { preserveAspectRatio: 'xMidYMid slice' } });
+        var gone = false;
+        function end() { if (gone) return; gone = true; a.destroy(); if (box.parentNode) box.parentNode.removeChild(box); }
+        a.addEventListener('complete', end); setTimeout(end, 6500);
+      });
+    });
+  };
+  // nạp sẵn sau khi mở app vài giây để lần ăn mừng đầu tiên hiện ngay
+  setTimeout(function () { if (!G.calm()) G.loadScript('vendor/lottie_light.min.js', function () { confData(function () {}); }); }, 6000);
 
   /* màn chờ: hiện ít nhất 1,1 giây kể từ lúc mở app rồi mờ dần */
   function hideSplash() {

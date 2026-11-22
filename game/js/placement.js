@@ -259,11 +259,11 @@ var G = window.G || (window.G = {});
 
   /* ---------- mục tiêu học và thời gian mỗi ngày → dự kiến khi nào đạt (cùng cách tính với thanh kéo ở Sảnh) ---------- */
   var GOALS = [
-    { id: 'giaotiep', icon: '💬', name: 'Giao tiếp hằng ngày', step: 2 },
-    { id: 'dulich', icon: '✈️', name: 'Đi du lịch', step: 2 },
-    { id: 'dilam', icon: '💼', name: 'Đi làm, công việc', step: 3 },
-    { id: 'con', icon: '🧒', name: 'Học cùng con', step: 1 },
-    { id: 'thi', icon: '🎓', name: 'Thi chứng chỉ, du học', step: 4 }
+    { id: 'giaotiep', icon: '💬', ic3: 'talk', name: 'Giao tiếp hằng ngày', step: 2 },
+    { id: 'dulich', icon: '✈️', ic3: 'plane', name: 'Đi du lịch', step: 2 },
+    { id: 'dilam', icon: '💼', ic3: 'work', name: 'Đi làm, công việc', step: 3 },
+    { id: 'con', icon: '🧒', ic3: 'child', name: 'Học cùng con', step: 1 },
+    { id: 'thi', icon: '🎓', ic3: 'grad', name: 'Thi chứng chỉ, du học', step: 4 }
   ];
   G.GOALS_EN = GOALS;
   G.goalOf = function () { var m = G.S.mucTieu; for (var i = 0; i < GOALS.length; i++) if (m && GOALS[i].id === m.id) return GOALS[i]; return null; };
@@ -298,11 +298,11 @@ var G = window.G || (window.G = {});
   G.planLine = function () {
     var m = G.S.mocHoc, g = G.goalOf(), cd = G.S.caiDat || {}, dpw = cd.ngayTuan || 5;
     if (!m) return 'Chọn mốc thời gian: app tính mỗi ngày cần học bao nhiêu và giao đủ phần đó mỗi ngày.';
-    var pt = G.planToday(), st = G.ROADMAP_EN[m.buoc] || {}, who = g ? g.icon + ' ' + g.name + ': ' : '🎯 ';
-    if (pt.xong) return '🎉 Bạn đã đạt ' + st.name + '! Chọn mục tiêu cao hơn để học tiếp.';
+    var pt = G.planToday(), st = G.ROADMAP_EN[m.buoc] || {}, who = g ? g.name + ': ' : '';
+    if (pt.xong) return 'Bạn đã đạt ' + st.name + '! Chọn mục tiêu cao hơn để học tiếp.';
     if (pt.het) return 'Mốc ' + fmtDay(m.den) + ' đã qua mà chưa đạt ' + st.name + '. Chọn mốc mới, app tính lại phần học mỗi ngày.';
     return who + 'đạt ' + st.name + ' (' + st.cefr + ') trước ' + fmtDay(m.den) + ' (mốc ' + m.thang + ' tháng). Học ' + dpw + ' ngày/tuần, mỗi ngày học khoảng ' + pt.phut + ' phút' + (dpw < 7 ? ', còn lại nghỉ' : '') + '.' +
-      (pt.cham ? ' Đang chậm so với mốc nên phần học mỗi ngày đã tăng để kịp.' : pt.nhanh ? ' Bạn đang nhanh hơn tiến độ 👍' : '');
+      (pt.cham ? ' Đang chậm so với mốc nên phần học mỗi ngày đã tăng để kịp.' : pt.nhanh ? ' Bạn đang nhanh hơn tiến độ.' : '');
   };
   G.goalLine = function () { return G.planLine(); };
   /* ngày học trong tuần (1 = thứ Hai … 7 = Chủ nhật, giờ Việt Nam); chưa chọn thì trải đều theo số ngày mỗi tuần */
@@ -322,17 +322,9 @@ var G = window.G || (window.G = {});
   function countTo(el, to, txt) {
     el._tk = (el._tk || 0) + 1;
     if (txt !== undefined) { el.textContent = txt; el.removeAttribute('data-v'); return; }
-    var from = el.hasAttribute('data-v') ? +el.getAttribute('data-v') : 0, tk = el._tk, t0 = 0;
+    var from = el.hasAttribute('data-v') ? +el.getAttribute('data-v') : 0, tk = el._tk;
     el.setAttribute('data-v', to);
-    if (from === to || calm() || !window.requestAnimationFrame) { el.textContent = to; return; }
-    function step(t) {
-      if (el._tk !== tk) return;
-      if (!t0) t0 = t;
-      var k = Math.min(1, (t - t0) / 520); k = 1 - Math.pow(1 - k, 3);
-      el.textContent = Math.round(from + (to - from) * k);
-      if (k < 1) window.requestAnimationFrame(step); else bump(el);
-    }
-    window.requestAnimationFrame(step);
+    G.countUp(el, from, to, { dur: 560, done: function () { if (el._tk === tk && from !== to && !calm()) bump(el); } });
   }
   function lvOf(st) { return st.final ? 'Tốt nghiệp' : st.floor === 1 ? 'Nền tảng' : st.cefr.split('→').pop().replace(/^\s+|\s+$/g, ''); }
   function ddmm(s) { var a = s.split('-'); return +a[2] + '/' + +a[1]; }
@@ -379,7 +371,7 @@ var G = window.G || (window.G = {});
       GOALS.forEach(function (x) {
         var r = G.ROADMAP_EN[x.step] || {};
         goals.appendChild(G.el('button.pv-goal' + (g && g.id === x.id ? '.on' : ''), { 'aria-pressed': g && g.id === x.id ? 'true' : 'false', onclick: function () { G.S.mucTieu = { id: x.id, luc: G.vnNow() }; changed(); } },
-          G.el('b', x.name), G.el('span', r.final ? 'Đầu ra giao tiếp' : 'Trình độ ' + lvOf(r))));
+          G.ic3(x.ic3), G.el('div', G.el('b', x.name), G.el('span', r.final ? 'Đầu ra giao tiếp' : 'Trình độ ' + lvOf(r)))));
       });
       // ngày học
       week.innerHTML = '';
@@ -429,6 +421,8 @@ var G = window.G || (window.G = {});
         'Học đủ phần mỗi ngày là kịp mốc. Ngày nghỉ trong lịch không làm đứt chuỗi.';
     }
     draw();
+    // lần đầu hiện thẻ: các phần trượt lên lần lượt (anime.js)
+    G.enter([root.querySelector('.pv-head')].concat([].slice.call(root.querySelectorAll('.pv-stat, .pv-sec, .pv-note'))), { gap: 60 });
     root.redraw = draw;
     return root;
   };
