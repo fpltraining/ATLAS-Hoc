@@ -21,6 +21,11 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 - Thẻ và đáp án hiện lần lượt (`G.enter`), số chạy (`G.countUp`), vòng % hôm nay quét từ 0, lưới hiện như gợn sóng.
 - Giữ màu giấy kem của app, không dùng nền tối. Mỗi chuyển động 0,2–0,5 giây, tắt hết khi máy bật Giảm chuyển động.
 
+## Thẩm mỹ giao diện (taste-skill, anh Han duyệt 22/11/2026)
+
+- Luật đầy đủ ở skill dự án `.claude/skills/connectlife-taste/SKILL.md` (chuyển thể từ github.com/Leonxlnx/taste-skill, MIT): ô chạm từ 44 px, nhấn lún 1px và co .985, vòng focus 2px cam, chữ đủ tương phản 4,5:1, không emoji làm đầu dòng (dùng icon 3D), không màu tím, chuyển động chỉ trên transform/opacity, thao tác thường không nảy quá đích (nảy chỉ cho ăn mừng).
+- Sửa giao diện xong chạy `node tools/ui-check.mjs` (cần Playwright) đến khi `Tổng: 0 · đạt`.
+
 ## Bản đồ ngoài phố: chỉ bản 3D
 
 - Đã chốt bỏ bản 2D (không còn nút chọn). Máy không có WebGL mới tự vẽ 2D.

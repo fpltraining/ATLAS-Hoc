@@ -82,8 +82,8 @@ var G = window.G || (window.G = {});
   /* cặp nút nghe thường 🔊 và nghe chậm 🐢 */
   G.sayBtns = function (text, lang) {
     return G.el('span.say2',
-      G.el('button.speak', { 'aria-label': 'Nghe', onclick: function (e) { e.stopPropagation(); G.say(text, lang); } }, '🔊'),
-      G.el('button.speak.slow', { 'aria-label': 'Nghe chậm', onclick: function (e) { e.stopPropagation(); G.say(text, lang, true); } }, '🐢'));
+      G.el('button.speak', { 'aria-label': 'Nghe', onclick: function (e) { e.stopPropagation(); G.say(text, lang); } }, G.ic3('speaker')),
+      G.el('button.speak.slow', { 'aria-label': 'Nghe chậm', onclick: function (e) { e.stopPropagation(); G.say(text, lang, true); } }, G.ic3('turtle')));
   };
 
   /* Tải sẵn tệp giọng của một phòng để học được khi mất mạng (service worker giữ lại) */

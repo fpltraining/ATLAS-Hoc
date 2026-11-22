@@ -95,7 +95,10 @@ var G = window.G || (window.G = {});
       root.appendChild(planCard());
       root.appendChild(G.el('div.road', G.ROADMAP_EN.map(function (st) {
         var got = !st.final && certs[st.key], here = !st.final && st.floor === cur && !got;
-        var tag = st.final ? (G.finalDone && G.finalDone() ? '🎓 Đã tốt nghiệp ConnectLife' : G.finalUnlocked && G.finalUnlocked() ? '🔓 Đã mở · vào thi ngay' : '🔒 Mở khi có Chứng chỉ Tầng 4') : got ? '🏅 Đã có chứng chỉ' + (got.noi ? ' · nói ' + got.noi + '/100' : '') : here ? '📍 Đang học' : st.soon ? '🚧 Đang xây' : st.floor < cur ? '✓ Vượt theo trình độ đầu vào' : '🔒 Chưa mở';
+        // nhãn trạng thái: icon 3D + chữ (taste-skill: không dùng emoji làm đầu dòng)
+        var tag = st.final ? (G.finalDone && G.finalDone() ? ['grad', 'Đã tốt nghiệp ConnectLife'] : G.finalUnlocked && G.finalUnlocked() ? ['target', 'Đã mở · vào thi ngay'] : ['lock', 'Mở khi có Chứng chỉ Tầng 4'])
+          : got ? ['star', 'Đã có chứng chỉ' + (got.noi ? ' · nói ' + got.noi + '/100' : '')] : here ? ['pin', 'Đang học'] : st.soon ? [null, 'Đang xây'] : st.floor < cur ? ['check', 'Vượt theo trình độ đầu vào'] : ['lock', 'Chưa mở'];
+        tag = [tag[0] ? G.ic3(tag[0], 'ic3-s') : null, tag[1]];
         return G.el('div.road-step' + (st.final ? '.final' : '') + (got ? '.got' : '') + (here ? '.here' : ''),
           G.el('div.road-dot', st.final ? '🎓' : String(st.floor)),
           G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), G.el('span.road-tag', tag), st.final && G.finalUnlocked && G.finalUnlocked() ? G.el('button.btn.seal.sm.road-go', { onclick: G.openFinalExam }, G.finalDone() ? 'Xem bài thi tốt nghiệp ›' : 'Vào thi Tốt nghiệp ConnectLife ›') : null, G.el('span.road-eta', { id: 'eta-' + (st.final ? 'final' : st.floor) })));
@@ -164,12 +167,12 @@ var G = window.G || (window.G = {});
     if (G.cloudReady && G.cloudReady()) {
       var cu = G.cloudUser(), cs = G.cloudStatus();
       root.appendChild(cu
-        ? G.el('div.cl-card', G.el('b', '☁️ Đang lưu trên mây · ' + cu.email),
+        ? G.el('div.cl-card', G.el('b', G.ic3('cloud', 'ic3-s'), 'Đang lưu trên mây · ' + cu.email),
             G.el('span.small.faint', cs.err ? '⚠️ ' + cs.err : cs.luc ? 'Đồng bộ lần cuối lúc ' + cs.luc + ' (giờ Việt Nam). App tự lưu sau mỗi bài.' : 'App tự lưu sau mỗi bài.'),
             G.el('div.row',
-              G.el('button.btn.sm', { onclick: function () { G.cloudSync(function (e) { G.toast(e ? e : '☁️ Đã đồng bộ.'); G.renderLobby(); }); } }, '🔄 Đồng bộ ngay'),
+              G.el('button.btn.sm', { onclick: function () { G.cloudSync(function (e) { G.toast(e ? e : '☁️ Đã đồng bộ.'); G.renderLobby(); }); } }, G.ic3('repeat', 'ic3-s'), 'Đồng bộ ngay'),
               G.el('button.btn.sm.ghost', { onclick: function () { G.confirm('Đăng xuất lưu trên mây? Tiến độ vẫn giữ trong máy này.', function () { G.cloudSignOut(); G.renderLobby(); }); } }, 'Đăng xuất')))
-        : G.el('div.cl-card', G.el('b', '☁️ Lưu tiến độ trên mây'),
+        : G.el('div.cl-card', G.el('b', G.ic3('cloud', 'ic3-s'), 'Lưu tiến độ trên mây'),
             G.el('span.small.faint', 'Đăng nhập một lần để app tự lưu, đổi máy hay xoá app cũng không mất bài. Không cần xuất file sao lưu nữa.'),
             G.el('button.btn.seal.sm', { onclick: function () { G.openCloudLogin(function () { G.renderLobby(); }); } }, 'Đăng nhập / Tạo tài khoản')));
     }
@@ -177,8 +180,8 @@ var G = window.G || (window.G = {});
     root.appendChild(G.el('div.tools',
       G.el('button.btn', { onclick: G.exportSave }, '⤓ Xuất file sao lưu'),
       G.el('button.btn', { onclick: function () { file.click(); } }, '⤒ Nhập file sao lưu'),
-      G.el('button.btn', { onclick: function () { G.S.caiDat.amThanh = !G.S.caiDat.amThanh; G.save(); G.renderLobby(); } }, G.S.caiDat.amThanh ? '🔔 Âm thanh: bật' : '🔕 Âm thanh: tắt'),
-      G.el('button.btn', { onclick: function () { G.setMusic(!G.musicOn()); G.renderLobby(); } }, G.musicOn() ? '🎹 Nhạc nền: bật' : '🎹 Nhạc nền: tắt'),
+      G.el('button.btn', { onclick: function () { G.S.caiDat.amThanh = !G.S.caiDat.amThanh; G.save(); G.renderLobby(); } }, G.ic3('bell', 'ic3-s'), G.S.caiDat.amThanh ? 'Âm thanh: bật' : 'Âm thanh: tắt'),
+      G.el('button.btn', { onclick: function () { G.setMusic(!G.musicOn()); G.renderLobby(); } }, G.ic3('piano', 'ic3-s'), G.musicOn() ? 'Nhạc nền: bật' : 'Nhạc nền: tắt'),
       file
     ));
     root.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam).' + (G.cloudReady && G.cloudReady() && G.cloudUser() ? ' Đã bật lưu trên mây.' : ' Nhớ xuất file sao lưu thỉnh thoảng nhé.')));

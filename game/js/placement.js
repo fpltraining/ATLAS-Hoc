@@ -333,7 +333,7 @@ var G = window.G || (window.G = {});
     function changed() { if (G.S.mocHoc) G.setPlan(G.S.mocHoc.thang); else G.save(); draw(); if (onChange) onChange(); }
     var title = G.el('div.pv-title'), sub = G.el('div.pv-sub');
     var nMin = G.el('b.pv-num'), nDay = G.el('b.pv-num'), nMon = G.el('b.pv-num');
-    var week = G.el('div.pv-week'), goals = G.el('div.pv-goals'), stops = G.el('div.pv-stops'), fill = G.el('span.pv-fill'), thumb = G.el('span.pv-thumb');
+    var week = G.el('div.pv-week'), goals = G.el('div.pv-goals'), stops = G.el('div.pv-stops'), fill = G.el('span.pv-fill'), thumb = G.el('span.pv-thumb'), thumbw = G.el('span.pv-thumbw', thumb);
     var bar = G.el('i'), pct = G.el('b.pv-pctn'), road = G.el('div.pv-road'), note = G.el('div.pv-note'), weekHint = G.el('span.pv-hint'), rulerHint = G.el('span.pv-hint');
     var root = G.el('div.pv',
       G.el('div.pv-head', G.el('span.pv-kicker', 'Kế hoạch của bạn'), title, sub),
@@ -349,7 +349,7 @@ var G = window.G || (window.G = {});
         week),
       G.el('div.pv-sec.pv-s-time',
         G.el('div.pv-lab', G.el('b', 'Đạt mục tiêu trong'), rulerHint),
-        G.el('div.pv-ruler', G.el('span.pv-track'), fill, thumb, stops)),
+        G.el('div.pv-ruler', G.el('span.pv-track'), fill, thumbw, stops)),
       G.el('div.pv-sec.pv-way',
         G.el('div.pv-lab', G.el('b', 'Chặng đường'), G.el('span.pv-hint', pct, ' đã đi')),
         G.el('div.pv-bar', bar), road),
@@ -396,14 +396,14 @@ var G = window.G || (window.G = {});
         } }, G.el('i'), G.el('b', mo + ''), G.el('span', need <= 0 ? 'đã đạt' : hard ? 'quá gấp' : Math.max(10, need) + ' ph')));
       });
       var left = sel < 0 ? 0 : sel / (MOCS.length - 1) * 100;
-      thumb.style.left = left + '%'; fill.style.width = left + '%';
+      thumbw.style.transform = 'translateX(' + left + '%)'; fill.style.transform = 'scaleX(' + (left / 100) + ')';
       thumb.className = 'pv-thumb' + (sel < 0 ? ' off' : '');
       rulerHint.textContent = sel < 0 ? 'chạm một mốc (tháng)' : 'tháng · phút mỗi ngày';
       // chặng đường: phần đã học trên tổng số giờ tới mục tiêu, các mốc trình độ và tháng dự kiến
       var rows = G.etaPlan ? G.etaPlan(pt && !pt.xong ? pt.phut : (cd.phutNgay || 40), dpw) : [], all = 0, i;
       for (i = 0; i <= tg && i < G.ROADMAP_EN.length; i++) all += G.ROADMAP_EN[i].hours || 0;
       var leftH = rows[tg] ? rows[tg].cum : all, prog = all ? Math.max(0, Math.min(1, 1 - leftH / all)) : 0;
-      bar.style.width = Math.round(prog * 100) + '%';
+      bar.style.transform = 'scaleX(' + prog + ')';
       countTo(pct, Math.round(prog * 100)); pct.setAttribute('data-suf', '%');
       // theo thứ tự thời gian: các mốc đã qua, hôm nay, các mốc sắp tới
       road.innerHTML = '';
