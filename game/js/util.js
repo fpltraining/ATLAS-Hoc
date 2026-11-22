@@ -72,6 +72,32 @@ var G = window.G || (window.G = {});
 
   /* Thông báo nhỏ */
   var toastTimer = 0;
+  /* ---------- chuyển động (anime.js 3.2.2, vendor/anime.min.js, MIT) ----------
+     Máy bật Giảm chuyển động hoặc chưa có thư viện thì bỏ qua, mọi thứ hiện ngay ở trạng thái cuối. */
+  G.calm = function () { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); };
+  function moving() { return !!window.anime && !G.calm(); }
+  // xuất hiện lần lượt: trượt lên và hiện dần
+  G.enter = function (els, o) {
+    if (!moving() || !els || !els.length) return;
+    o = o || {};
+    window.anime({ targets: els, translateY: [o.y || 14, 0], opacity: [0, 1], delay: window.anime.stagger(o.gap || 55, { start: o.start || 0 }), duration: o.dur || 520, easing: 'easeOutCubic' });
+  };
+  // bật lên kiểu lò xo (icon ngọn lửa, cúp…)
+  G.pop = function (el, delay) {
+    if (!moving() || !el) return;
+    window.anime({ targets: el, scale: [0.3, 1], rotate: [-18, 0], delay: delay || 0, duration: 900, easing: 'spring(1, 80, 10, 0)' });
+  };
+  // số chạy từ giá trị cũ tới giá trị mới; xong thì gọi done (nếu có)
+  G.countUp = function (el, from, to, o) {
+    o = o || {};
+    var suf = o.suf || '';
+    if (!moving() || from === to) { el.textContent = to + suf; if (o.done) o.done(); return; }
+    var v = { n: from };
+    if (el._anim) el._anim.pause();
+    el._anim = window.anime({ targets: v, n: to, round: 1, delay: o.delay || 0, duration: o.dur || 600, easing: 'easeOutCubic',
+      update: function () { el.textContent = v.n + suf; }, complete: function () { el._anim = null; if (o.done) o.done(); } });
+  };
+
   G.toast = function (msg, ms) {
     var t = document.getElementById('toast');
     t.textContent = msg;

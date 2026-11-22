@@ -108,8 +108,8 @@ var G = window.G || (window.G = {});
       G.el('div.pchar', G.playerPic(96, 'pchar-img'), G.el('b', G.playerName()),
         G.el('button.btn.sm', { onclick: function () { G.openCreator(function () { G.goLobby(); }); } }, 'Đổi nhân vật')),
       G.el('div.pstats',
-        stat(G.S.xp, 'XP'),
-        stat(G.S.chuoi.hienTai + ' ngày', 'Chuỗi học'),
+        stat(G.S.xp, 'XP', 'star'),
+        stat(G.S.chuoi.hienTai + ' ngày', 'Chuỗi học', 'fire'),
         stat(r.done + '/5', 'Phòng A1 đã qua'),
         stat(G.diplomas().filter(function (d) { return d.lang === 'en'; }).length + '/4', 'Chứng chỉ'),
         stat(G.S.tuKho.length, 'Từ cần ôn')
@@ -120,6 +120,7 @@ var G = window.G || (window.G = {});
       })) : null
     ));
 
+    G.enter(root.querySelectorAll('.pstats .stat'), { gap: 50 });
     // huy hiệu trên đầu theo tầng (khi đã có hình)
     var fbg = G.floorBadgeGrid && G.floorBadgeGrid();
     if (fbg) { root.appendChild(G.el('h2.sec', 'Huy hiệu trên đầu')); root.appendChild(fbg); }
@@ -128,21 +129,21 @@ var G = window.G || (window.G = {});
     if (G.weeklyChart) {
       root.appendChild(G.el('h2.sec', 'Đầu ra của bạn'));
       root.appendChild(G.el('div.out-row',
-        G.el('button.big', { onclick: G.openWeekly }, G.el('b', '📝 Kiểm tra tuần'), G.el('span', G.weekLine())),
-        G.el('button.big', { onclick: G.openCanDo }, G.el('b', '📒 Mình nói được'), G.el('span', G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được'))));
+        G.el('button.big.bic', { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', G.weekLine())),
+        G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được'))));
       // trình độ đầu vào (kiểm tra 4 kỹ năng), làm lại để đo đầu ra
       if (G.openPlacement) {
         var dv = G.S.dauVao;
-        root.appendChild(G.el('button.big.pl-lobby', { onclick: function () { G.openPlacement(function () { G.goLobby(); }, { canSkip: true }); } },
-          G.el('b', '📏 Trình độ đầu vào' + (dv ? ': ' + G.levelName(dv.lv) : '')),
+        root.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openPlacement(function () { G.goLobby(); }, { canSkip: true }); } },
+          G.bigIc('target', 'Trình độ đầu vào' + (dv ? ': ' + G.levelName(dv.lv) : '')),
           G.el('span', dv ? 'Làm ngày ' + dv.luc.slice(8, 10) + '/' + dv.luc.slice(5, 7) + ' · Nghe ' + G.PLACE_EN.levels[dv.nghe] + ' · Đọc ' + G.PLACE_EN.levels[dv.doc] + ' · Giao tiếp ' + G.PLACE_EN.levels[dv.gt] + ' · Nói ' + (dv.noi === null ? 'chưa đo' : G.PLACE_EN.levels[dv.noi]) + ' · bấm để làm lại'
             : 'Chưa làm · 4 kỹ năng theo CEFR, 3–12 phút')));
       }
       // luyện phát âm theo lỗi của mình (bắt lỗi trước nếu chưa làm)
       if (G.openPronFromLobby) {
         var pe = G.pronErrors(), pk = G.S.phatAmKiem;
-        root.appendChild(G.el('button.big.pl-lobby', { onclick: function () { G.openPronFromLobby(function () { G.goLobby(); }); } },
-          G.el('b', '🗣 Luyện phát âm theo lỗi'),
+        root.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openPronFromLobby(function () { G.goLobby(); }); } },
+          G.bigIc('mic', 'Luyện phát âm theo lỗi'),
           G.el('span', pe.length ? 'Lỗi cần sửa: ' + pe.slice(0, 3).map(function (e) { return G.PRON_EN.tags[e.tag]; }).join(' · ') : pk ? 'Chưa thấy lỗi nào · luyện thêm âm cuối, đuôi -s, th' : 'Đọc 12 từ, máy tìm lỗi người Việt hay mắc rồi luyện riêng')));
       }
       root.appendChild(G.weeklyChart());
@@ -181,6 +182,6 @@ var G = window.G || (window.G = {});
     root.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam).' + (G.cloudReady && G.cloudReady() && G.cloudUser() ? ' Đã bật lưu trên mây.' : ' Nhớ xuất file sao lưu thỉnh thoảng nhé.')));
   };
 
-  function stat(v, l) { return G.el('div.stat', G.el('b', String(v)), G.el('span', l)); }
+  function stat(v, l, ic) { return G.el('div.stat' + (ic ? '.has-ic' : ''), ic ? G.ic3(ic) : null, G.el('b', String(v)), G.el('span', l)); }
 
 })();
