@@ -104,7 +104,7 @@ var G = window.G || (window.G = {});
   function panelOpen(title) {
     var panel = document.getElementById('panel');
     panel.className = 'panel open';
-    document.getElementById('panel-title').textContent = title;
+    G.setTitle(title);
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     var body = document.getElementById('panel-body');
     body.innerHTML = ''; body.className = 'panel-body';
@@ -214,7 +214,7 @@ var G = window.G || (window.G = {});
     }).catch(function () { G.toast('Chưa tải được kho truyện. Mở khi có mạng một lần nhé.'); });
   }
   var SHELF = ['future', 'ai', 'true', 'mystery', 'news', 'essay', 'long'];
-  var SHELF_NAME = { future: '🌆 Brightford 2080 · vấn đề xã hội tương lai', ai: '🤖 Chuyện về AI', true: '📜 Chuyện có thật', mystery: '🔭 Bí ẩn chưa có lời giải', news: '📰 Tin tức 2025–2026', essay: '🧠 Bài luận B2 · kỹ năng sống', long: '📚 Truyện dài' };
+  var SHELF_NAME = { future: 'Brightford 2080 · vấn đề xã hội tương lai', ai: 'Chuyện về AI', true: 'Chuyện có thật', mystery: 'Bí ẩn chưa có lời giải', news: 'Tin tức 2025–2026', essay: 'Bài luận B2 · kỹ năng sống', long: 'Truyện dài' };
   function shelfRank(s) { var i = SHELF.indexOf(s.shelf); return i < 0 ? SHELF.length : i; }
   function readN(id) { return (G.S.truyen && G.S.truyen[id]) || 0; }
   G.openReader = function () {
@@ -226,12 +226,12 @@ var G = window.G || (window.G = {});
       var next = null;
       for (var i = 0; i < list.length && !next; i++) { var r = readN(list[i].id); if (r > 0 && r < list[i].chapters.length) next = list[i]; }
       for (var j = 0; j < list.length && !next; j++) if (readN(list[j].id) < list[j].chapters.length) next = list[j];
-      if (next) body.appendChild(G.el('button.big.seal.rd-next', { onclick: function () { chapter(next, readN(next.id)); } },
-        G.el('b', '▶ Đọc tiếp: ' + next.title), G.el('span', next.vi + ' · chương ' + (readN(next.id) + 1) + '/' + next.chapters.length + ' · ' + next.level)));
+      if (next) body.appendChild(G.el('button.big.bic.seal.rd-next', { onclick: function () { chapter(next, readN(next.id)); } },
+        G.bigIc('book', 'Đọc tiếp: ' + next.title), G.el('span', next.vi + ' · chương ' + (readN(next.id) + 1) + '/' + next.chapters.length + ' · ' + next.level)));
       var lv = '';
       list.forEach(function (s) {
         var grp = s.shelf || 'long';
-        if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', SHELF_NAME[grp] || '📚 Truyện khác')); }
+        if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', SHELF_NAME[grp] || 'Truyện khác')); }
         var r = readN(s.id);
         body.appendChild(G.el('button.rd-story' + (s.shelf === 'future' ? '.future' : ''), { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
           G.el('b', s.title), G.el('span.small.faint', s.vi + ' · ' + s.level + ' · ' + s.chapters.length + ' chương'),

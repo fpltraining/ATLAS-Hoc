@@ -68,7 +68,7 @@ var G = window.G || (window.G = {});
   /* bảng thông tin: bấm để đọc */
   G.openBoard = function (b) {
     var panel = document.getElementById('panel'); panel.className = 'panel open';
-    document.getElementById('panel-title').textContent = '📋 ' + b.title;
+    G.setTitle('📋 ' + b.title);
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     var body = document.getElementById('panel-body'); body.innerHTML = '';
     body.appendChild(G.el('div.wk-hint', '📖 Đọc bảng như ngoài đời. Bấm từng dòng để nghe và xem nghĩa.'));

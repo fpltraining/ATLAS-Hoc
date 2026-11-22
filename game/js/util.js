@@ -127,6 +127,17 @@ var G = window.G || (window.G = {});
   G.field = function (label, input) { return G.el('label.fld', G.el('span', label), input); };
   /* thông báo dạng thẻ (mẫu "notify"): emoji đầu câu đổi thành icon 3D */
   var TOAST_IC = { '☁️': 'cloud', '✅': 'check', '✓': 'check', '🔒': 'lock', '📍': 'pin', '🎉': 'star', '⭐': 'star', '🔥': 'fire', '🎓': 'grad', '🔔': 'bell', '📖': 'book', '🎤': 'mic' };
+  // tiêu đề bảng: emoji đầu câu đổi thành icon 3D (hoặc bỏ), theo luật taste-skill
+  var TITLE_IC = { '📖': 'book', '🔁': 'repeat', '📝': 'memo', '📒': 'speak', '📋': 'calendar', '💡': 'speak', '🗣': 'mic', '🎓': 'grad' };
+  G.setTitle = function (title) {
+    var el = document.getElementById('panel-title'); if (!el) return;
+    title = String(title);
+    var m = title.match(/^(\S+)\s+/), ic = m && TITLE_IC[m[1]];
+    if (m && (ic || /[\u2600-\u27bf]|[\ud83c-\ud83e][\udc00-\udfff]/.test(m[1]))) title = title.slice(m[0].length);
+    el.innerHTML = '';
+    if (ic && G.ic3) el.appendChild(G.ic3(ic, 'ic3-s'));
+    el.appendChild(document.createTextNode(title));
+  };
   G.toast = function (msg, ms) {
     var t = document.getElementById('toast');
     msg = String(msg);

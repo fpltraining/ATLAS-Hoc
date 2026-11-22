@@ -12,7 +12,7 @@ var G = window.G || (window.G = {});
   function day(n) { return G.vnDay(Date.now() + (n || 0) * 86400000); }
   function panelOpen(title) {
     var panel = document.getElementById('panel'); panel.className = 'panel open';
-    document.getElementById('panel-title').textContent = title;
+    G.setTitle(title);
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     var body = document.getElementById('panel-body'); body.innerHTML = ''; body.scrollTop = 0;
     G.viewIn(body);
@@ -328,7 +328,7 @@ var G = window.G || (window.G = {});
     return t >= 90 ? '🌟 Sẵn sàng giao tiếp thật' : t >= 75 ? '💪 Tự tin trong đời sống hằng ngày' : t >= 50 ? '🙂 Xử lý được tình huống quen thuộc' : '🌱 Cần luyện thêm các tình huống cơ bản';
   }
   function advice(s) {
-    var low = [['nghe', s.nghe, 'Nghe: bật chế độ "👂 Chỉ nghe" khi nói chuyện ngoài phố.'], ['doc', s.doc, 'Đọc: đọc thêm 1 chương truyện mỗi ngày.'], ['noi', s.noi, 'Nói: mỗi ngày làm 2–3 câu "💡 Nói tự do" ở các nơi đời sống.']];
+    var low = [['nghe', s.nghe, 'Nghe: bật nút gạt "Chỉ nghe, ẩn chữ" khi nói chuyện ngoài phố.'], ['doc', s.doc, 'Đọc: đọc thêm 1 chương truyện mỗi ngày.'], ['noi', s.noi, 'Nói: mỗi ngày làm 2–3 câu "Tự nói" ở các nơi đời sống.']];
     low.sort(function (a, b) { return a[1] - b[1]; });
     if (low[0][1] >= 90) return 'Rất tốt! Tuần này giữ nhịp: nói chuyện ngoài phố mỗi ngày và thử các tình huống công việc trong "📒 Mình nói được".';
     return 'Tuần này nên tập trung: ' + low[0][2];
@@ -377,7 +377,7 @@ var G = window.G || (window.G = {});
       body.appendChild(G.el('div.cd-place', G.el('b', L.title), rows));
     }
     var work = G.freeFor('work');
-    body.appendChild(G.el('div.cd-place', G.el('b', '💼 Công việc'), work.map(function (f) {
+    body.appendChild(G.el('div.cd-place', G.el('b', G.ic3('work', 'ic3-s'), 'Công việc'), work.map(function (f) {
       var v = (G.S.tuNoi || {})[f.id];
       return G.el('div.cd-row' + (v >= 60 ? '.ok' : ''), G.el('span', v >= 60 ? '🌟' : '⚪'), G.el('span', f.sit));
     }), G.el('button.btn.sm', { onclick: function () { G.openFree(G.shuffle(work).slice(0, 3), '💼 Nói tự do · công việc', G.openCanDo); } }, 'Luyện 3 tình huống công việc ›')));
