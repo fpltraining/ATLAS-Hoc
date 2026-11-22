@@ -43,9 +43,13 @@ var G = window.G || (window.G = {});
     document.getElementById('create').style.display = 'none';
     G.closeLesson();
     document.getElementById('play').style.display = 'none';
-    document.getElementById('lobby').style.display = 'block';
+    var lob = document.getElementById('lobby');
+    lob.style.display = 'block';
     G.renderLobby();
     window.scrollTo(0, 0);
+    // về Sảnh: trang rõ dần từ nhoè, các phần đầu trang hiện lần lượt
+    G.viewIn(lob);
+    G.enter([].slice.call(lob.children, 0, 8), { gap: 60, start: 80 });
   };
 
   /* Kai nói một câu ngắn ở góc màn hình */

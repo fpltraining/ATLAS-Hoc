@@ -33,12 +33,18 @@ var G = window.G || (window.G = {});
   function say(t) { G.say(t, lang); }
   function speakBtn(t) { return G.sayBtns(t, lang); }
 
+  /* thanh 3 bước: ô chọn co giãn trượt sang bước mới, bảng mới hiện từ nhoè sang rõ */
+  var lastStep = -1;
   function head(step, sub) {
-    var steps = ['Học', 'Luyện', 'Kiểm tra'];
-    return G.el('div.lhead',
-      G.el('div.lsteps', steps.map(function (s, i) { return G.el('span' + (i === step ? '.on' : i < step ? '.done' : ''), (i + 1) + ' · ' + s); })),
+    var steps = ['Học', 'Luyện', 'Kiểm tra'], pill = G.el('i.epill');
+    var el = G.el('div.lhead',
+      G.el('div.lsteps', pill, steps.map(function (s, i) { return G.el('span' + (i === step ? '.on' : i < step ? '.done' : ''), (i < step ? '✓ ' : (i + 1) + ' · ') + s); })),
       G.el('div.lsub', sub || '')
     );
+    G.pillTo(pill, step, 3, lastStep);
+    if (step !== lastStep) G.viewIn(body);
+    lastStep = step;
+    return el;
   }
   function teacherLine(text, en) {
     var n = teacher();
@@ -68,7 +74,7 @@ var G = window.G || (window.G = {});
     panel.className = 'panel open';
     document.getElementById('panel-title').textContent = g.title;
     document.getElementById('panel-py').style.display = 'none';
-    body.innerHTML = '';
+    body.innerHTML = ''; lastStep = -1; G.viewIn(body);
     var cur = G.curSession(g.id);
     body.appendChild(teacherLine(g.intro[1], null));
     body.appendChild(G.el('div.tline.small', G.el('div.tbubble.en', G.el('div', g.intro[0]), speakBtn(g.intro[0]))));
@@ -88,7 +94,7 @@ var G = window.G || (window.G = {});
   /* màn đầu: lời giáo viên + 3 bước */
   function showHome() {
     var p = G.S.phong[R.id], d = st(), snd = R.sound !== undefined;
-    body.innerHTML = '';
+    body.innerHTML = ''; lastStep = -1; G.viewIn(body);
     if (R.parent) body.appendChild(G.el('button.btn.back-ses', { onclick: function () { G.openLesson(R.parent); } }, '‹ Các buổi của phòng ' + G.ROOMS[R.parent].label));
     body.appendChild(teacherLine(R.intro[1], null));
     body.appendChild(G.el('div.tline.small', G.el('div.tbubble.en', G.el('div', R.intro[0]), pyEl(R.introPy), speakBtn(R.intro[0]))));
@@ -200,6 +206,7 @@ var G = window.G || (window.G = {});
       }, 'data-v': o }, label(o));
       opts.appendChild(b);
     });
+    G.enter(opts.children, { gap: 45, y: 8, dur: 360 });
     box.appendChild(opts);
     body.appendChild(box);
   }
@@ -338,8 +345,10 @@ var G = window.G || (window.G = {});
     if (G.achSoon) G.achSoon();
     body.innerHTML = '';
     body.appendChild(head(2, 'Kết quả'));
+    var rsc = G.el('div.rscore', '0/' + N);
+    G.countUp(rsc, 0, right, { suf: '/' + N, dur: 900, delay: 200 });
     body.appendChild(G.el('div.result' + (pass ? '.pass' : ''),
-      G.el('div.rscore', right + '/' + N),
+      rsc,
       G.playerPic(112, 'rface', pass ? 'happy' : 'think'),
       G.el('div.rstars', pass ? stars(sao) : '☆☆☆'),
       G.el('div', pass ? (R.final ? (speakList() && !certOf() ? 'Đạt phần 1 · Hiểu! Tiếp theo là phần 2 · Nói.' : 'Đạt! Chứng chỉ ConnectLife · ' + R.final.level + '.') : R.parent ? (firstPass ? 'Qua buổi ' + R.n + '! Buổi tiếp theo đã mở.' : 'Qua buổi ' + R.n + '! Kết quả tốt nhất đã được lưu.') : firstPass ? 'Qua phòng! Cửa phòng tiếp theo đã mở.' : 'Qua phòng! Kết quả tốt nhất đã được lưu.') : 'Chưa đạt ' + PN() + '/' + N + '. Xem lại thẻ và luyện thêm rồi thử lại nhé.')

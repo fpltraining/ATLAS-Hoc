@@ -12,6 +12,14 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 - Người học tự chọn **ngày học trong tuần** (chạm dải T2…CN, ít nhất 2 ngày; mặc định T2–T6): lưu `G.S.caiDat.ngayHoc` (1 = thứ Hai … 7 = CN), `ngayTuan` = số ngày đó (`G.studyDays`, `G.isStudyDay`). Số phút mỗi ngày tính theo số ngày đó; chuỗi học chỉ đứt khi bỏ lỡ một ngày học trong lịch (`G.markStudy`); bảng Hôm nay hiện dải 7 ngày tuần này (`G.weekDots`, `G.weekStudy`).
 - App tính mỗi ngày cần học bao nhiêu (giờ còn lại tới mục tiêu ÷ số ngày học còn lại) và **giao đủ phần đó mỗi ngày** (vòng Hôm nay). Học chậm thì phần mỗi ngày tự tăng, nhanh thì giảm. Code: `G.setPlan`, `G.planToday` (game/js/placement.js), `goalMin` (game/js/daily.js).
 - Thẻ "Kế hoạch của bạn" (`G.goalCard`, class `.pv-*`): con số là trung tâm, không emoji, chuyển động nhẹ (số chạy, nhún khi chạm, tắt khi máy bật Giảm chuyển động). Dùng ở kết quả đầu vào và Sảnh.
+- **Bản đồ nhớ từ** (`G.openMemMap`, game/js/memmap.js): mỗi ô là một buổi, tô màu theo mức nhớ các câu trong kho ôn (`G.S.cau`); ô đỏ nhạt là buổi có nhiều câu đến hạn, chạm để ôn đúng các câu đó (`G.openReviewOf`). Mở từ Sảnh và bảng Hôm nay.
+
+## Chuyển động (theo video anh Han gửi 22/11/2026)
+
+- Bảng mới hiện từ nhoè sang rõ (`G.viewIn`): khi đổi bước Học / Luyện / Kiểm tra, mở bảng (Hôm nay, ôn tập…), về Sảnh.
+- Ô chọn co giãn khi trượt (`G.pillTo`, `.epill`): thanh 3 bước của bài học, thanh chọn tầng ở Bản đồ nhớ từ.
+- Thẻ và đáp án hiện lần lượt (`G.enter`), số chạy (`G.countUp`), vòng % hôm nay quét từ 0, lưới hiện như gợn sóng.
+- Giữ màu giấy kem của app, không dùng nền tối. Mỗi chuyển động 0,2–0,5 giây, tắt hết khi máy bật Giảm chuyển động.
 
 ## Bản đồ ngoài phố: chỉ bản 3D
 

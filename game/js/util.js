@@ -98,6 +98,26 @@ var G = window.G || (window.G = {});
       update: function () { el.textContent = v.n + suf; }, complete: function () { el._anim = null; if (o.done) o.done(); } });
   };
 
+  // bảng mới hiện từ nhoè sang rõ (kiểu chuyển trang trong video anh Han gửi 22/11/2026)
+  G.viewIn = function (el) {
+    if (!moving() || !el) return;
+    window.anime.remove(el);
+    window.anime({ targets: el, filter: ['blur(7px)', 'blur(0px)'], opacity: [0.25, 1], translateY: [8, 0], duration: 380, easing: 'easeOutCubic',
+      complete: function () { el.style.filter = ''; el.style.transform = ''; el.style.opacity = ''; } });
+  };
+  /* ô chọn co giãn trên thanh nhiều nút (.etabs, .lsteps): mép phía trước chạy trước, mép sau đuổi theo rồi nảy về đúng chỗ.
+     pill là span.epill nằm trong thanh (position: relative), i là ô đang chọn, n số ô, from ô cũ (để trượt từ đó) */
+  G.pillTo = function (pill, i, n, from) {
+    function pos(k) {
+      pill.style.left = 'calc((100% + var(--gap, 6px)) * ' + k + ' / ' + n + ')';
+      pill.style.right = 'calc((100% + var(--gap, 6px)) * ' + (n - 1 - k) + ' / ' + n + ')';
+    }
+    pill.className = 'epill';
+    if (from === undefined || from === null || from < 0 || from === i || G.calm()) { pos(i); return; }
+    pos(from);
+    setTimeout(function () { pill.className = 'epill ' + (i > from ? 'fwd' : 'back'); pos(i); }, 30);
+  };
+
   G.toast = function (msg, ms) {
     var t = document.getElementById('toast');
     t.textContent = msg;
