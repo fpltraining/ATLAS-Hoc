@@ -158,6 +158,40 @@ var G = window.G || (window.G = {});
       });
     });
   };
+  /* hoạt ảnh emoji Noto của Google (Lottie, CC BY 4.0, anim/noto_*.json): lửa chuỗi học, rương, cúp, pháo hoa.
+     Trả về một khung hiện icon 3D tĩnh trước, tải xong thì phát hoạt ảnh. Máy bật Giảm chuyển động: giữ icon tĩnh.
+     Khung bị gỡ khỏi màn (đóng bảng) thì tự huỷ hoạt ảnh. */
+  var NOTO = {}, NOTO_IC = { gift: 'gift', fire: 'fire', trophy: 'trophy', party: 'star' };
+  G.lottieIc = function (name, cls, o) {
+    o = o || {};
+    var box = G.el('span.lot' + (cls ? '.' + cls : ''), G.ic3(NOTO_IC[name] || 'star'));
+    if (G.calm()) return box;
+    function play(t) {
+      if (!window.lottie) return;
+      var a = null, tries = 0;
+      (function wait() {   // chờ khung được gắn vào màn rồi mới phát
+        if (!document.body.contains(box)) { if (++tries < 40) setTimeout(wait, 100); return; }
+        box.innerHTML = '';
+        a = window.lottie.loadAnimation({ container: box, renderer: 'svg', loop: !!o.loop, autoplay: true, animationData: JSON.parse(t) });
+        if (o.loop) { var chk = setInterval(function () { if (!document.body.contains(box)) { clearInterval(chk); a.destroy(); } }, 1500); }
+      })();
+    }
+    G.loadScript('vendor/lottie_light.min.js', function () {
+      if (NOTO[name]) { play(NOTO[name]); return; }
+      fetch('anim/noto_' + name + '.json').then(function (r) { return r.text(); }).then(function (t) { NOTO[name] = t; play(t); }).catch(function () {});
+    });
+    return box;
+  };
+  /* mở rương: hộp quà Noto nhún rồi bật, pháo giấy, +XP; chạm để đóng */
+  G.chestPop = function (xp) {
+    var ov = G.el('div.chest-pop', { onclick: function () { close(); } },
+      G.el('div.chest-card', G.lottieIc('gift', 'chest-anim'), G.el('b', '+' + xp + ' XP'), G.el('span', 'Rương hôm nay: xong cả 5 nhiệm vụ')));
+    function close() { if (ov.parentNode) ov.parentNode.removeChild(ov); }
+    document.body.appendChild(ov);
+    if (G.pop) G.pop(ov.firstChild, 0);
+    setTimeout(function () { if (G.confetti) G.confetti(); }, 900);
+    setTimeout(close, 3200);
+  };
   // nạp sẵn sau khi mở app vài giây để lần ăn mừng đầu tiên hiện ngay
   setTimeout(function () { if (!G.calm()) G.loadScript('vendor/lottie_light.min.js', function () { confData(function () {}); }); }, 6000);
 

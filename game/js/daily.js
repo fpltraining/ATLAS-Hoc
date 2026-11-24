@@ -133,8 +133,9 @@ var G = window.G || (window.G = {});
     var d = today(); if (d.ruong) return false;
     var p = G.dayProgress(); if (p.done < p.all) return false;
     d.ruong = G.vnNow().slice(11, 16); G.save(); G.addXp(CHEST_XP);
-    if (G.sfx) G.sfx('done'); if (G.confetti) G.confetti();
-    G.toast('🎉 Mở rương hôm nay: +' + CHEST_XP + ' XP'); if (G.updateHud) G.updateHud();
+    if (G.sfx) G.sfx('done');
+    if (G.chestPop) G.chestPop(CHEST_XP); else { if (G.confetti) G.confetti(); G.toast('🎉 Mở rương hôm nay: +' + CHEST_XP + ' XP'); }
+    if (G.updateHud) G.updateHud();
     return true;
   };
   /* danh sách nhiệm vụ: o.noSeal = không tô cam (Sảnh đã có thẻ Bắt đầu từ đây tô cam) */
@@ -158,9 +159,9 @@ var G = window.G || (window.G = {});
           ok ? G.el('span.qs-done', 'Xong') : G.el('button.btn.sm' + (!o.noSeal && t.id === first ? '.seal' : ''), { onclick: function () { G.questAct(t.id); } }, 'Làm ngay'));
       })));
       // rương: xong cả 5 nhiệm vụ thì mở được
-      if (d.ruong) wrap.appendChild(G.el('div.qs-chest.got', G.ic3('trophy'), G.el('div', G.el('b', 'Đã mở rương hôm nay · +' + CHEST_XP + ' XP'), G.el('span', 'Mai có 5 nhiệm vụ mới.'))));
+      if (d.ruong) wrap.appendChild(G.el('div.qs-chest.got', G.lottieIc ? G.lottieIc('trophy', 'ic3') : G.ic3('trophy'), G.el('div', G.el('b', 'Đã mở rương hôm nay · +' + CHEST_XP + ' XP'), G.el('span', 'Mai có 5 nhiệm vụ mới.'))));
       else if (p.done >= p.all) wrap.appendChild(G.el('button.big.bic.qs-chest.ready' + (o.noSeal ? '' : '.seal'), { onclick: function () { if (G.claimChest()) { draw(); if (o.onChange) o.onChange(); } } },
-        G.bigIc('gift', 'Mở rương hôm nay'), G.el('span', '+' + CHEST_XP + ' XP thưởng vì xong cả ' + p.all + ' nhiệm vụ')));
+        G.lottieIc ? G.lottieIc('gift', 'ic3', { loop: true }) : G.ic3('gift'), G.el('b', 'Mở rương hôm nay'), G.el('span', '+' + CHEST_XP + ' XP thưởng vì xong cả ' + p.all + ' nhiệm vụ')));
       else wrap.appendChild(G.el('div.qs-chest', G.ic3('gift'), G.el('div', G.el('b', 'Rương hôm nay +' + CHEST_XP + ' XP'), G.el('span', 'Còn ' + (p.all - p.done) + ' nhiệm vụ nữa là mở được.'))));
       G.enter(wrap.querySelectorAll('.qs-row'), { gap: 55, y: 8, dur: 320 });
     }
@@ -205,7 +206,7 @@ var G = window.G || (window.G = {});
       var rv = { v: 0 }; ring.style.setProperty('--p', 0); ringN.textContent = '0%';
       window.anime({ targets: rv, v: p.pct, delay: 150, duration: 1100, easing: 'easeOutExpo', update: function () { ring.style.setProperty('--p', rv.v); ringN.textContent = Math.round(rv.v) + '%'; } });
     }
-    var fire = G.ic3('fire', 'td-fire'), sn = G.el('b.td-sn', String(G.S.chuoi.hienTai));
+    var fire = G.S.chuoi.hienTai > 0 && G.lottieIc ? G.lottieIc('fire', 'td-fire', { loop: true }) : G.ic3('fire', 'td-fire'), sn = G.el('b.td-sn', String(G.S.chuoi.hienTai));
     body.appendChild(G.el('div.td-head', ring,
       G.el('div.td-txt', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc hôm nay')),
       G.el('div.td-streak', fire, G.el('div', sn, G.el('span', 'ngày học liên tiếp')))));

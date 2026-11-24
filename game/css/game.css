@@ -1295,3 +1295,16 @@ body { background: #f4e9dc url(../assets/paper_tile_1600.webp) repeat; backgroun
 .hero-next span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .hero-next { transition: transform .12s var(--ease-ui), background-color .15s; }
 .hero-next:active { transform: translateY(1px) scale(.985); }
+
+/* ---------- hoạt ảnh emoji Noto (G.lottieIc): lửa chuỗi học, rương, cúp; màn mở rương (G.chestPop) ---------- */
+.lot { display: inline-grid; place-items: center; overflow: visible; }
+.lot > img.ic3, .lot > svg { width: 100% !important; height: 100% !important; }
+.td-streak .lot { width: 48px; height: 48px; }
+.qs-chest.ready > .lot { animation: none; }
+.chest-pop { position: fixed; inset: 0; z-index: 9000; display: grid; place-items: center; background: rgba(40,25,10,.38); }
+.chest-card { display: flex; flex-direction: column; align-items: center; gap: 4px; width: min(300px, 80vw); padding: 18px 18px 22px; border-radius: 26px; background: #fffdf8; border: 2px solid #ecdcc0; box-shadow: 0 24px 60px -20px rgba(40,25,10,.6); text-align: center; }
+.chest-anim { width: 170px; height: 170px; }
+.chest-card b { font-size: 36px; color: var(--coral); letter-spacing: -.02em; }
+.chest-card span { font-size: 14px; color: var(--soft); font-weight: 600; }
+@media (max-height: 500px) { .chest-anim { width: 120px; height: 120px; } }
+.tp-party { width: 84px; height: 84px; margin: 0 auto -4px; }

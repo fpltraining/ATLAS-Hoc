@@ -239,6 +239,7 @@ var G = window.G || (window.G = {});
       if (got === rows.length && G.confetti) G.confetti();
       var s = G.topicStat(id), left = s.all - s.learned, n = G.el('b', '0');
       body.appendChild(G.el('div.result.pass.tp-res',
+        got >= rows.length - 1 && G.lottieIc ? G.lottieIc('party', 'tp-party') : null,
         G.el('div.tp-num', n, G.el('span', '/' + rows.length + ' nghe đúng')),
         G.el('div', (fromRound ? 'Học xong ' + rows.length + ' từ mới · ' : '') + '+' + (5 + got) + ' XP · chủ đề ' + s.learned + '/' + s.all + ' từ'),
         G.el('div.small.faint', miss.length ? 'Từ nghe sai sẽ quay lại hôm nay trong Ôn câu đã học: ' + miss.map(function (r) { return r[0]; }).join(', ') + '.' : 'Từ mới sẽ quay lại ôn từ ngày mai, đúng lúc sắp quên.')));
