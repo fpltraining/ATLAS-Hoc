@@ -6,6 +6,18 @@ Game học ngoại ngữ ConnectLife (thư mục `game/`) và app ATLAS gốc (t
 
 Học viên học xong phải **nói được, đọc hiểu và nghe trôi chảy tiếng Anh**. Mọi tính năng, bài học, trò chơi phải phục vụ ba kỹ năng này; cái gì không giúp nói, đọc hiểu hoặc nghe thì không ưu tiên.
 
+## Việc chờ anh Han (nhắc khi anh quay lại)
+
+Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính tiếp sau. Mở phiên làm việc mới thì nhắc anh danh sách này một lần, ngắn gọn; việc nào anh báo xong thì xoá khỏi đây.
+
+1. Supabase: chạy một lần `supabase/migrations/20261124_app_events.sql` trong SQL Editor để app gửi số liệu dùng và lỗi ẩn danh.
+2. Thử tay khoảng 10 phút trên iPhone và iPad thật: micro ở phần Nói, nhại có ghi âm, thêm lịch nhắc học (.ics), bản đồ 3D trên máy yếu (bộ soát `tools/qa-run.mjs` chỉ giả lập micro).
+3. Đặt 12 tranh bìa truyện còn thiếu (Đơn P trong `game/ASSET_ORDERS.md`).
+4. Thêm bài Tầng 3–4 trước khi học viên đầu tiên lên tới đó: bài có sẵn khoảng 123 giờ (Tầng 1: 38/60 giờ chuẩn, Tầng 2: 21/50, Tầng 3: 31/140, Tầng 4: 33/180), học 40 phút × 5 ngày/tuần thì đủ khoảng 8 tháng.
+5. Người bản ngữ đọc soát nội dung; hiệu chỉnh bài đầu vào khi có vài chục học viên thật (số liệu `app_events`).
+6. Pháp lý (anh hẹn làm sau).
+7. UI/UX: hỏi anh những chỗ thấy vướng khi tự học bằng app, rồi làm tiếp phần giao diện.
+
 ## Tiến độ học
 
 - Người học tự chọn **mốc thời gian** (3 / 6 / 9 / 12 / 18 / 24 tháng) để đạt mục tiêu (Sảnh → Mục tiêu và mốc thời gian, hoặc màn kết quả đầu vào).
