@@ -1437,10 +1437,8 @@ var G = window.G || (window.G = {});
   }
   function talkBubble(x, y) {
     var t = Date.now() / 1000, by = y + Math.sin(t * 3 + x) * 4;
-    ctx.save(); ctx.fillStyle = '#fff'; ctx.strokeStyle = '#1b2140'; ctx.lineWidth = 3;
-    ctx.beginPath(); ctx.arc(x, by, 18, 0, 6.283); ctx.fill(); ctx.stroke();
-    ctx.font = '20px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillText('💬', x, by + 1);
-    ctx.restore();
+    var a = G.asset('talk_bubble_paper.png');   // bong bóng chat kiểu giấy (hình đặt, Đơn N)
+    if (a && a.ok) ctx.drawImage(a.img, x - 22, by - 22, 44, 44);
   }
   function nameTag(text, x, y) {
     ctx.save(); ctx.font = '700 15px -apple-system, system-ui, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
