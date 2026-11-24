@@ -96,7 +96,18 @@ var G = window.G || (window.G = {});
     "weren't": 'were not', "you'll": 'you will', "we'll": 'we will', "it'll": 'it will', "you've": 'you have',
     "we've": 'we have', "they've": 'they have', "couldn't": 'could not', "wouldn't": 'would not', "shouldn't": 'should not',
     "here's": 'here is', "where's": 'where is', "how's": 'how is', "who's": 'who is', ok: 'okay', gonna: 'going to', wanna: 'want to' };
+  /* tiếng Trung: tách từng chữ Hán (số Ả Rập máy nghe ra đổi thành chữ số Hán: 8 → 八); khi chấm thì so theo pinyin có thanh
+     của từng chữ (G.zhPyOf, zh.js) để chữ đồng âm 他 / 她 / 它 không bị tính sai, nói sai thanh thì máy ra chữ khác nên bị trừ */
+  var CJK = /[\u3400-\u9fff]/, ZN = '零一二三四五六七八九';
+  function zhNum(n) {
+    if (n < 10) return ZN.charAt(n);
+    if (n < 100) return (n >= 20 ? ZN.charAt(Math.floor(n / 10)) : '') + '十' + (n % 10 ? ZN.charAt(n % 10) : '');
+    return String(n).split('').map(function (d) { return ZN.charAt(+d); }).join('');
+  }
+  function zhKey(ch) { return G.zhPyOf ? G.zhPyOf(ch) : ch; }
+  G.isZh = function (s) { return CJK.test(String(s)); };
   G.words = function (s) {
+    if (CJK.test(String(s))) return String(s).replace(/\d+/g, function (d) { return zhNum(+d); }).match(/[\u3400-\u9fff]/g) || [];
     var t = String(s).toLowerCase().replace(/[’‘]/g, "'").replace(/\d+/g, function (d) { return ' ' + num(+d) + ' '; })
       .replace(/[^a-z' ]+/g, ' ').split(/\s+/);
     var out = [];
@@ -148,11 +159,11 @@ var G = window.G || (window.G = {});
   }
   /* chấm: trả {score 0–100, marks[] theo từ câu mẫu, words[], heard} */
   G.scoreSpeech = function (target, alts) {
-    var T = G.words(target), best = null;
+    var T = G.words(target), zh = CJK.test(String(target)), TK = zh ? T.map(zhKey) : T, best = null;
     for (var k = 0; k < alts.length; k++) {
-      var H = G.words(alts[k]);
+      var H = G.words(alts[k]), HK = zh ? H.map(zhKey) : H;
       if (!T.length) break;
-      var a = align(T, H);
+      var a = align(TK, HK);
       var raw = a.total / T.length;
       // nói thừa nhiều từ thì trừ nhẹ
       var extra = Math.max(0, H.length - T.length * 1.5) / T.length;
@@ -180,6 +191,7 @@ var G = window.G || (window.G = {});
     function render() {
       box.innerHTML = '';
       box.appendChild(G.el('div.mk-q', G.el('div.mk-t', opts.text),
+        opts.py ? G.el('div.py.mk-py', opts.py) : null,
         opts.vi ? G.el('div.small.faint', opts.vi) : null,
         G.sayBtns(opts.text, lang)));
       if (G.micOn()) micMode(); else selfMode();

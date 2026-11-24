@@ -30,12 +30,15 @@ var G = window.G || (window.G = {});
     c.box = 0; c.due = day(1); c.lan = 0; c.them = G.vnNow();
     all[k] = c; G.save();
   };
+  /* thẻ ôn của một mục bài học: tiếng Trung giữ chữ Hán ở en (khoá của thẻ) kèm pinyin */
+  function card(it, L) { return L === 'zh' ? { t: 'item', en: it.zh, py: it.py, vi: it.vi, l: 'zh' } : { t: 'item', en: it.en, vi: it.vi }; }
   function seed() {
     if (G.S.cauSeeded) return;
     var id, i;
-    for (id in G.ROOMS) if (G.ROOMS.hasOwnProperty(id) && G.ROOMS[id].lang === 'en' && (G.S.phong[id] || (G.S.dangHoc && G.S.dangHoc[id]))) {
+    var L = G.lang ? G.lang() : 'en';
+    for (id in G.ROOMS) if (G.ROOMS.hasOwnProperty(id) && G.ROOMS[id].lang === L && (G.S.phong[id] || (G.S.dangHoc && G.S.dangHoc[id]))) {
       var R = G.ROOMS[id];
-      for (i = 0; i < R.items.length; i++) { G.srsAdd({ t: 'item', en: R.items[i].en, vi: R.items[i].vi }); }
+      for (i = 0; i < R.items.length; i++) G.srsAdd(card(R.items[i], L));
     }
     for (id in G.S.doiSong) if (G.S.doiSong.hasOwnProperty(id) && G.LIFE[id]) {
       var xs = G.S.doiSong[id].xong || {};
@@ -82,11 +85,12 @@ var G = window.G || (window.G = {});
   // từ làm sai trong bài kiểm tra phòng học → vào kho câu, đến hạn ngay
   function pullHard() {
     for (var i = G.S.tuKho.length - 1; i >= 0; i--) {
-      var w = String(G.S.tuKho[i].id || G.S.tuKho[i]); if (w.indexOf('en:') !== 0) continue;
+      var w = String(G.S.tuKho[i].id || G.S.tuKho[i]), L = w.slice(0, 3) === 'zh:' ? 'zh' : w.slice(0, 3) === 'en:' ? 'en' : '';
+      if (!L) continue;
       w = w.slice(3);
       var it = null;
-      for (var id in G.ROOMS) if (G.ROOMS.hasOwnProperty(id) && G.ROOMS[id].lang === 'en') for (var j = 0; j < G.ROOMS[id].items.length; j++) if (G.ROOMS[id].items[j].en === w) it = G.ROOMS[id].items[j];
-      if (it) { G.srsAdd({ t: 'item', en: it.en, vi: it.vi }); var c = S()[it.en]; c.box = 0; c.due = day(0); }
+      for (var id in G.ROOMS) if (G.ROOMS.hasOwnProperty(id) && G.ROOMS[id].lang === L) for (var j = 0; j < G.ROOMS[id].items.length; j++) if ((L === 'zh' ? G.ROOMS[id].items[j].zh : G.ROOMS[id].items[j].en) === w) it = G.ROOMS[id].items[j];
+      if (it) { var cd0 = card(it, L); G.srsAdd(cd0); var c = S()[cd0.en]; c.box = 0; c.due = day(0); }
       G.S.tuKho.splice(i, 1);
     }
     G.save();
@@ -123,14 +127,15 @@ var G = window.G || (window.G = {});
         body.appendChild(G.el('div.row', G.el('button.btn', { onclick: G.openHome }, '‹ Về góc học'), G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
         return;
       }
-      var c = q[k], done = false, best = -1, mic = G.micOn();
+      var c = q[k], done = false, best = -1, mic = G.micOn(), CL = c.l === 'zh' ? 'zh' : 'en';
       function next(r) { grade(c, r); if (r === 2) got++; k++; card(); }
       var prompt = c.t === 'reply'
         ? G.el('div.rv-q', G.el('div.small.faint', (c.noi || 'Nói chuyện') + ' · người kia nói:'), G.el('div.wbig.sm', c.npc, G.sayBtns(c.npc, 'en')), G.el('div.faint', c.npcVi), G.el('b', 'Bạn đáp thế nào?'))
-        : G.el('div.rv-q', G.el('div.small.faint', 'Nói bằng tiếng Anh:'), G.el('div.wbig.sm', c.vi));
+        : G.el('div.rv-q', G.el('div.small.faint', CL === 'zh' ? 'Nói bằng tiếng Trung:' : 'Nói bằng tiếng Anh:'), G.el('div.wbig.sm', c.vi));
       if (c.t === 'reply') G.say(c.npc, 'en');
       body.appendChild(G.el('div.wcard', c.kho ? G.el('span.rv-kho', 'Câu khó') : null, prompt));
-      var ans = G.el('div.rv-ans', { style: { display: 'none' } }, G.el('div.small.faint', 'Câu tiếng Anh:'), G.el('div.wbig.sm', c.en, G.sayBtns(c.en, 'en')),
+      var ans = G.el('div.rv-ans', { style: { display: 'none' } }, G.el('div.small.faint', CL === 'zh' ? 'Tiếng Trung:' : 'Câu tiếng Anh:'), G.el('div.wbig.sm', c.en, G.sayBtns(c.en, CL)),
+        c.py ? G.el('div.py', c.py) : null,
         c.cd && G.topicExEl ? G.topicExEl(c) : null, G.shadowBtn ? G.shadowBtn(c.en) : null);
       body.appendChild(ans);
       // chấm: có micro thì phải nói đạt mới được tính "Nhớ"; không micro thì 3 mức để bớt tự chấm cao
@@ -147,12 +152,12 @@ var G = window.G || (window.G = {});
           row.appendChild(G.el('button.btn.seal', { onclick: function () { next(2); } }, 'Nhớ chắc'));
         }
       }
-      function reveal() { if (done) return; done = true; ans.style.display = ''; row.style.display = ''; drawRow(); G.say(c.en, 'en'); }
+      function reveal() { if (done) return; done = true; ans.style.display = ''; row.style.display = ''; drawRow(); G.say(c.en, CL); }
       if (mic) {
         var res = G.el('div.mk-res');
         var mb = G.el('button.mk-mic', { onclick: function () {
           mb.className = 'mk-mic on';
-          G.listen('en', function (err, alts) {
+          G.listen(CL, function (err, alts) {
             mb.className = 'mk-mic';
             if (err) { res.innerHTML = ''; res.appendChild(G.el('div.mk-err', err.msg || err)); return; }
             var r = G.scoreSpeech(c.en, alts); res.innerHTML = '';

@@ -2,7 +2,7 @@
 var G = window.G || (window.G = {});
 
 (function () {
-  G.S = G.load();
+  G.useRoot(G.load());   // G.R bản lưu gốc, G.S hồ sơ thứ tiếng đang học (save.js)
 
   /* vòng tiến độ góc phải: số phòng A1 đã qua (kể cả phòng thi), XP */
   /* thẻ Nhiệm vụ hôm nay góc phải ngoài phố (to, dễ thấy): rương + số việc còn lại, 5 ô nhiệm vụ sáng dần, thanh tiến độ,
@@ -69,7 +69,8 @@ var G = window.G || (window.G = {});
 
   /* Bài kiểm tra trình độ là bước bắt buộc đầu tiên: chưa có kết quả thì chưa vào học được (kể cả người đang học dở) */
   function mustTest(after) {
-    if (G.S.dauVao || G._placementOpen) { if (after) after(); return; }
+    // bài đầu vào bắt buộc chỉ cho tiếng Anh; hồ sơ tiếng Trung bắt đầu từ Phát âm ở Học viện Hán ngữ
+    if ((G.lang && G.lang() === 'zh') || G.S.dauVao || G._placementOpen) { if (after) after(); return; }
     G.openPlacement(after, { mandatory: true, quick: true });
   }
   // người mới: mở thẳng buổi học đầu (học ngay, không phải đi bộ tới trường lần đầu)

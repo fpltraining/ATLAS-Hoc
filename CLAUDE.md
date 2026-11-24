@@ -17,6 +17,17 @@ Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính 
 5. Người bản ngữ đọc soát nội dung; hiệu chỉnh bài đầu vào khi có vài chục học viên thật (số liệu `app_events`).
 6. Pháp lý (anh hẹn làm sau).
 7. UI/UX: hỏi anh những chỗ thấy vướng khi tự học bằng app, rồi làm tiếp phần giao diện.
+8. Đặt hình Đơn Q (Trường Lạc trấn): Q1 Tiểu Long + thẻ thành phố trước, Q2 bản đồ 3D sau (`game/ASSET_ORDERS.md`).
+
+## Thành phố Trung Hoa: Trường Lạc trấn 长乐镇 (anh Han chốt 24/11/2026)
+
+- Cùng một app ConnectLife, Sảnh có nút chọn thành phố: Brightford (tiếng Anh) · Trường Lạc trấn (tiếng Trung). Thị trấn phố cổ sông nước + khu mới; bạn đồng hành mới là rồng con Tiểu Long (chờ hình Đơn Q, trong lúc chờ không hiện bạn đồng hành ở phần tiếng Trung); học trước, bản đồ 3D lật giấy như Brightford làm sau khi có hình.
+- **Tiến độ riêng hoàn toàn** (save.js): bản lưu gốc `G.R` là hồ sơ tiếng Anh như cũ, hồ sơ tiếng Trung ở `G.R.zh`; `G.S` là hồ sơ đang học (`G.useRoot`, `G.setLang`, `G.lang`, `G.root`). XP, chuỗi ngày, rank, phòng, kho ôn, nhiệm vụ, ngày học riêng; nhân vật, tên, micro dùng chung. Lưu, IndexedDB, xuất file, đồng bộ mây đi theo `G.R`; `G.mergeSave` gộp riêng `zh`, thứ tiếng đang học giữ theo máy này. Kiểm thử: tools/test/lang.test.mjs.
+- game/js/zh.js: `G.ROADMAP_ZH` (Tầng 1 Nền tảng · Tầng 2 HSK 1–2 · Tầng 3 HSK 3–4 · Tầng 4 HSK 5–6 · Tốt nghiệp), `G.ZH_FLOORS` (phòng theo tầng, dữ liệu mới đẩy thêm vào đây), `G.zhNextLesson` (`G.nextLesson` tự rẽ khi đang học tiếng Trung), Học viện Hán ngữ mở từ Sảnh `G.openZhHall`, luyện nói `G.openSpeakZh`, Sảnh tiếng Trung `G.zhStartHere`, `G.zhRoad`; pinyin từng chữ `G.zhPyOf` (data/hanviet.json, tải khi vào tiếng Trung).
+- Nhiệm vụ hôm nay tiếng Trung (daily.js, `G.QUESTS` là getter theo thứ tiếng): học bài, luyện nói 5 câu, ôn câu, đọc 1 chương truyện (sẽ thêm viết chữ). Kho truyện lọc theo thứ tiếng; truyện tiếng Trung có dòng pinyin, nút Ẩn pinyin. Ôn câu: thẻ tiếng Trung có `l: 'zh'`, `en` là chữ Hán, kèm `py`.
+- Chấm nói tiếng Trung (speak.js): tách từng chữ Hán (số Ả Rập đổi sang chữ số Hán), so pinyin có thanh của từng chữ nên chữ đồng âm không bị tính sai, nói sai thanh bị trừ.
+- Dữ liệu tiếng Trung có sẵn ở app ATLAS gốc để dùng tiếp: data/curriculum (308 bài HSK 1–5), data/strokes (nét viết 1.669 chữ, hanzi-writer-data) + js/pen (bảng viết Apple Pencil, chấm nét, tiếng bút; ES6, cần chuyển ES5), data/hanviet.json, data/decomp.json, data/radicals.json, data/char-vi.json, data/zh-dict.json, data/zh-full.json (CVDICT, CC BY-SA 4.0), data/pinyin-grid.json, data/pron/zh.json + combos.json, data/exams (thi thử HSK 1–4), data/stories (30 truyện tiếng Trung), audio/zh (6.713 tệp Kokoro v1.1-zh, giọng zm_010 và zf_001).
+- Làm tiếp theo thứ tự: viết chữ từng nét (Xem nét → Tô theo → Tự viết → Viết từ trí nhớ), Tầng 1 Nền tảng đầy đủ (pinyin, thanh, tổ hợp thanh, nét, bộ thủ), HSK 1–2 đủ bài từ data/curriculum + bài đầu vào tiếng Trung, rồi bản đồ 3D khi có hình.
 
 ## Tiến độ học
 
@@ -60,7 +71,7 @@ Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính 
 - Số liệu và lỗi ẩn danh: `G.track(tên, {…})` (game/js/track.js) ghi vào bảng `app_events` (supabase/migrations/20261124_app_events.sql, chạy một lần trong SQL Editor; bảng chưa có thì app tự thôi gửi). Không gửi tên, email, câu nói. Tắt được trong Cài đặt.
 - Giọng đọc chuyển CDN được: đặt `G.AUDIO_BASE` trong game/js/cloud_config.js.
 - Kho truyện chỉ tải tranh bìa có trong `data/covers.json`; truyện mới chưa có bìa hiện kiểu thẻ chữ (đơn đặt bìa: Đơn P trong game/ASSET_ORDERS.md). Hình đang tải chỉ có nền giấy nhạt, không hiện tên tệp (`G.imgEl`).
-- **Soát trước khi phát hành**: `node tools/qa-run.mjs` (cần Playwright, 10–15 phút) chạy như người học thật: 3 người mới (mới tinh iPhone dọc, A1 iPhone ngang, A2 iPad) học trọn ngày đầu và 5 nhiệm vụ; Kiểm tra tuần, buổi A1/A2/B1, thi chứng chỉ A1 có phần nói, Bắt lỗi câu, đọc truyện chỉ nghe; quét mọi phòng, nơi, chủ đề, truyện, bảng; đã đăng nhập mây thì vào map, lưu không bị văng ra (`may`). Phải ra `✓ Đạt`. Trình lái trong trang: tools/qa/driver.js.
+- **Soát trước khi phát hành**: `node tools/qa-run.mjs` (cần Playwright, 10–15 phút) chạy như người học thật: 3 người mới (mới tinh iPhone dọc, A1 iPhone ngang, A2 iPad) học trọn ngày đầu và 5 nhiệm vụ; Kiểm tra tuần, buổi A1/A2/B1, thi chứng chỉ A1 có phần nói, Bắt lỗi câu, đọc truyện chỉ nghe; quét mọi phòng, nơi, chủ đề, truyện, bảng; đã đăng nhập mây thì vào map, lưu không bị văng ra (`may`); chuyển sang Trường Lạc trấn học phòng Phát âm, đủ nhiệm vụ, về tiếng Anh còn nguyên (`zh`). Phải ra `✓ Đạt`. Trình lái trong trang: tools/qa/driver.js.
 
 ## Chuyển động (theo video anh Han gửi 22/11/2026)
 

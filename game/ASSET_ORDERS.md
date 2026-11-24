@@ -736,3 +736,85 @@ Câu mở đầu chung (dán trước mỗi dòng): `Book cover illustration for
 | `future-lonely.webp` | A Thousand Friends | A teenage girl alone in her room at night surrounded by many floating chat bubbles and a friendly AI avatar on a screen, looking lonely. |
 | `future-fake.webp` | The Video That Never Happened | A crowd of townspeople staring at phones showing a fake video of a woman doctor, the real doctor standing shocked in the background. |
 | `future-care.webp` | Grandpa's New Nurse | An old grandfather in an armchair with a perfect white robot nurse, his grandson arriving at the door with a gift. |
+
+---
+
+# Đơn Q · Trường Lạc trấn 长乐镇 (tiếng Trung) · 24/11/2026
+
+Anh Han chốt: thị trấn **phố cổ sông nước + khu mới**, bạn đồng hành mới là **rồng con Tiểu Long 小龙**, cùng kiểu giấy màu nước của Brightford nhưng **đậm nét Trung Hoa** (tường trắng ngói đen, cầu đá, kênh, đèn lồng đỏ, liễu, hoa mai; khu mới có ga tàu cao tốc, tàu điện, cửa hàng tiện lợi, trà sữa, xe giao đồ ăn, xe đạp công cộng).
+Luật chung: **không có chữ nào trên hình**, kể cả chữ Hán (máy vẽ hay sai chữ; biển, câu đối, đèn lồng để trống, game tự đặt chữ thật). Không màu tím. Đáy nhân vật là đế giày, không đế giấy, không cỏ.
+Tiếng Trung đang học được từ Sảnh (Học viện Hán ngữ) không cần chờ hình; hình về tới đâu em gắn tới đó: Q1 thay Kai bằng Tiểu Long ở thành phố Trung Hoa, Q2 mở bản đồ 3D lật giấy như Brightford.
+
+## Q1 · Tiểu Long và thẻ thành phố (đặt trước · gửi MỘT tin)
+
+Cuộc trò chuyện ChatGPT mới, đính kèm **art/orders/B_style.png** (nét vẽ), **art/orders/A1_walk_example.png** (bố cục tấm bước), **game/assets/kai_sit.png** và **game/assets/kai_rotate.png** (tư thế mẫu), dán nguyên khối:
+```
+I'm making a 2D mobile language-learning game. Please create the following 5 images, ONE image per message, in this order. Do not ask me any questions. After each image, go straight on to the next one. If you have to stop, I will type "next".
+Match the attached style exactly: soft watercolor on cut paper, a thin cream paper border around every shape like a paper cut-out, gentle shadows.
+ABSOLUTELY no text, letters, numbers or Chinese characters anywhere. No purple. Solid flat magenta #FF00FF background unless said otherwise.
+Characters stand with NOTHING under their feet: no paper base, no stand, no grass, no ground.
+
+The new character "Little Dragon": a small, cute, chubby baby dragon made of paper, about knee-high to an adult, the same size as a small robot companion. Vermilion red body (#C8402E) with a cream belly, two tiny golden horns, a soft jade-green mane, little gold cloud-pattern markings on the shoulders, big friendly dark eyes, short arms, a short curled tail. It walks upright on two short legs with small round feet. Same character, same colors in every image.
+
+1. long_walk.png — a walk sheet for Little Dragon, EXACTLY the layout of the attached walk example: a 3 x 3 grid, all 9 poses the same size, evenly spaced. Row 1: FRONT view (walking toward the viewer). Row 2: BACK view (walking away). Row 3: SIDE view facing LEFT. Column 1: standing still. Column 2: mid-step, LEFT foot forward. Column 3: mid-step, RIGHT foot forward. Small calm steps, arms close to the body.
+2. long_poses.png — a 3 x 2 grid of single full-body poses, same size, evenly spaced: (a) waving happily, front view; (b) talking with one hand raised, mouth open, front view; (c) thinking with a hand on the chin; (d) holding a smartphone turned SIDEWAYS in both hands, showing it to the viewer, a curved arrow above the phone (like the attached rotate pose); (e) sitting at a school desk seen from BEHIND and slightly above, hands resting forward, NO chair and NO desk drawn (like the attached sitting pose); (f) jumping with joy with three tiny paper clouds around it.
+3. long_face.png — head and shoulders of Little Dragon smiling, front view, centered, for a round avatar, 1024 x 1024.
+4. card_city_zh_v2.png — NOT magenta, landscape 1536 x 1024: the paper-craft Chinese water town "Changle" seen from above in the morning. Left half: the old town with white walls and black tile roofs, a canal with two stone arch bridges, a small wooden boat, red lanterns (blank), willow and plum blossom trees, a two-storey wooden teahouse. Right half: a small modern district with a high-speed train station with a curved roof, a metro entrance, a convenience store and a milk tea shop (all signs blank), shared bicycles, a delivery scooter. Little Dragon and a boy in a red hoodie walking together on the front bridge. Empty sky area at the top.
+5. long_icon.png — NOT magenta, square 1024 x 1024: Little Dragon waving in front of a tiny paper-craft Chinese water town with a red lantern and a stone bridge, cream paper sky. Simple, readable when very small, nothing touching the edges.
+```
+
+## Q2 · Bản đồ 3D Trường Lạc trấn (đặt sau Q1 · gửi từng phần, mỗi phần MỘT tin)
+
+Đính kèm **art/orders/B_style.png** và 1 tờ bản đồ Brightford đang có (`game/assets/map_*.webp` bất kỳ) để giữ đúng góc nhìn và nét. Kích thước theo bản Brightford: tờ bản đồ 1536×1024, nhà và vật 1024×1024 nền hồng, nhân vật tấm bước 3×3 như Đơn A.
+
+**Phần 1 · tờ bản đồ (mặt đất, chưa có nhà)**
+```
+Same style as the attached Brightford map tile: top-down town map tile, 1536 x 1024, watercolor paper cut-outs, soft shadows, warm colors, a 3/4 top-down camera. No buildings drawn, only the ground with paths and EMPTY flat lots where buildings will stand. Absolutely no text, letters, numbers or Chinese characters.
+1. map_zh_oldtown.png — a Chinese canal water town: grey stone-slab lanes, a canal flowing from the LEFT edge to the RIGHT edge through the middle with two stone arch bridges, willow trees along the water, a small stone plaza with an old well, 5 empty lots. A lane leaves at the middle of the TOP edge.
+2. map_zh_center.png — the town center: a stone square with a red paifang gate (blank, no writing) at the BOTTOM edge entrance, a small park with plum trees and a pavilion, 5 empty lots. Lanes enter at the middle of the BOTTOM edge and leave at the middle of the TOP edge.
+3. map_zh_newtown.png — a small modern district: light grey pavement, a crosswalk, a road with lane lines, rows of trees, bicycle parking lines, 5 empty lots. A path enters at the middle of the BOTTOM edge.
+```
+
+**Phần 2 · nhà và nơi nói chuyện (1024 vuông, nền hồng, cửa ở giữa cạnh dưới)**
+```
+Same style. Each item is ONE building or structure only, centered, front door at the bottom center, solid flat magenta #FF00FF background, 1024 x 1024. Absolutely no text, letters or Chinese characters: every sign, plaque, couplet and lantern is blank.
+1. building_zh_home.png — a small Jiangnan courtyard house: white walls, black tile roof with curled eaves, a dark wooden door with two blank red couplet strips, a potted plant.
+2. building_zh_school.png — the Chinese language academy: a traditional academy gate with a curved dark tile roof, red pillars, two stone lions, a blank wooden plaque, a courtyard tree behind.
+3. building_zh_teahouse.png — a two-storey wooden teahouse with lattice windows, hanging red lanterns, bamboo plants, a blank teapot-shaped sign.
+4. building_zh_market.png — an open morning market under a tiled roof: vegetable and fruit stalls, bamboo baskets, a scale.
+5. building_zh_station.png — a high-speed train station with a long curved white roof and glass front, a sleek white train partly visible.
+6. building_zh_metro.png — a metro entrance with stairs going down, a glass canopy and a round blank sign.
+7. building_zh_store.png — a small 24-hour convenience store with a glass front and blank sign.
+8. building_zh_milktea.png — a cute milk tea shop with a pastel front, a big cup-shaped blank sign and a small counter window.
+9. building_zh_clinic.png — a small clinic with white walls, a green cross sign and a traditional herb-medicine corner with wooden drawers.
+10. building_zh_bank.png — a small modern bank with stone steps and a blank sign.
+11. building_zh_busstop.png — a bus stop shelter with a bench and a blank route board.
+12. building_zh_pagoda.png — a small five-storey pagoda as a landmark, on a stone base.
+```
+
+**Phần 3 · vật trang trí (1024 vuông, nền hồng, mỗi vật một hình)**
+```
+Same style, solid flat magenta #FF00FF background, 1024 x 1024, one object per image, no text or Chinese characters anywhere.
+1. pc_zh_lantern_post.png (a wooden post with two red lanterns), 2. pc_zh_bridge.png (a stone arch bridge, 3/4 view), 3. pc_zh_boat.png (a small wooden canal boat with a black awning), 4. pc_zh_willow.png (weeping willow tree), 5. pc_zh_plum.png (plum blossom tree, pink flowers), 6. pc_zh_bamboo.png (cluster of bamboo), 7. pc_zh_lion.png (stone lion statue), 8. pc_zh_bikes.png (a row of three shared bicycles), 9. pc_zh_foodcart.png (street food cart with steaming baskets of buns), 10. pc_zh_chess.png (a stone table with a Chinese chess board and two stools under a small tree), 11. pc_zh_well.png (an old stone well), 12. pc_zh_gate.png (a red paifang archway, blank, no writing).
+```
+
+**Phần 4 · người dân (tấm bước 3×3 như Đơn A, đính kèm A1_walk_example.png)**
+```
+Same walk sheet rules as before: a 3 x 3 grid on solid flat magenta #FF00FF, row 1 FRONT, row 2 BACK, row 3 SIDE facing LEFT, column 1 standing, column 2 LEFT foot forward, column 3 RIGHT foot forward, small calm steps, nothing under the feet, no text. One sheet per character:
+1. Teacher Wang: a young female Chinese teacher, black hair in a low bun, round glasses, a jade-green cardigan over a white blouse, a navy skirt, holding a book.
+2. Grandma Li: a cheerful old lady who sells vegetables, grey short hair, a floral blouse, an apron, a woven bamboo basket.
+3. Grandpa Chen: a calm old man in a dark blue Tang-style jacket with knot buttons, cloth shoes, holding a folding fan.
+4. Uncle Zhang: a friendly taxi driver in his forties, short hair, a light blue shirt, dark trousers.
+5. Xiaomei: a teenage student girl with a high ponytail, a blue-and-white Chinese school tracksuit, a backpack.
+6. Sister Lin: a young woman who runs the teahouse, black hair in a braid, a simple dark red qipao-style top and black trousers.
+7. A delivery rider: a young man in a yellow jacket and helmet (helmet blank), carrying a delivery box.
+8. Doctor Zhou: a middle-aged doctor in a white coat with a stethoscope, short hair, glasses.
+```
+
+**Phần 5 · xe (nền hồng, mỗi xe 3 góc: bên trái, trước, sau, như Đơn B)**
+```
+Same style, solid flat magenta #FF00FF background, no text or Chinese characters, side view facing LEFT, front view and back view side by side in one image:
+1. car_zh_bus.png — a green and white city bus. 2. car_zh_taxi.png — a teal-and-yellow taxi. 3. car_zh_scooter.png — an electric scooter with a delivery rider and a box. 4. car_zh_bike.png — a shared bicycle with a young rider.
+```
+
+Gắn vào game khi nhận: cắt nền hồng bằng công cụ cũ, đặt tên đúng như trên, chạy `node tools/asset-rev.mjs`; Tiểu Long thay Kai ở mọi chỗ của hồ sơ tiếng Trung (lời dẫn, đi theo, ngồi học), bản đồ 3D Trường Lạc trấn bật khi đủ Phần 1–3.

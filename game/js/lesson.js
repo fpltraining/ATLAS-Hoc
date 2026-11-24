@@ -130,6 +130,7 @@ var G = window.G || (window.G = {});
     if (i === -1) { gramPage(); return; }
     var it = R.items[i];
     if (G.srsAdd && lang === 'en') G.srsAdd({ t: 'item', en: it.en, vi: it.vi });
+    else if (G.srsAdd && lang === 'zh' && it.zh) G.srsAdd({ t: 'item', en: it.zh, py: it.py, vi: it.vi, l: 'zh' });   // kho ôn của hồ sơ tiếng Trung: en = câu cần nhớ
     if (i > st().the) keep('the', i);
     if (i === R.items.length - 1 && !st().hocXong) keep('hocXong', G.vnNow());
     body.innerHTML = ''; body.scrollTop = 0;
@@ -140,7 +141,7 @@ var G = window.G || (window.G = {});
       it.ipa ? G.el('div.wipa', it.ipa) : null,
       G.el('div.wvi', it.vi),
       G.el('div.wex', G.el('div', it.ex, speakBtn(it.ex)), pyEl(it.exPy), G.el('div.faint', it.exVi)),
-      lang === 'en' && G.shadowBtn ? G.shadowBtn(it.ex) : null
+      G.shadowBtn ? G.shadowBtn(it.ex) : null
     );
     body.appendChild(card);
     say(T(it));
@@ -311,7 +312,7 @@ var G = window.G || (window.G = {});
     var dd = st(); dd.luyenXong = G.vnNow(); dd.tro = 0; G.save();
     body.innerHTML = '';
     body.appendChild(head(1, 'Xong phần Luyện'));
-    if (lang === 'en') G.markTask('bai');
+    if (lang === (G.lang ? G.lang() : 'en')) G.markTask('bai');   // nhiệm vụ Học bài của hồ sơ đang học
     body.appendChild(teacherLine('Luyện tốt lắm! Giờ làm bài kiểm tra ' + TN() + ' câu nhé. Đạt từ ' + PN() + ' câu là ' + (R.final ? (speakList() ? 'qua phần 1, rồi thi phần nói.' : 'nhận chứng chỉ ' + R.final.level + '.') : R.parent ? 'qua buổi này.' : 'cửa phòng tiếp theo sẽ mở.'), 'Well done!'));
     body.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { learn(0); } }, 'Xem lại thẻ'), G.el('button.btn.seal', { onclick: test }, 'Làm kiểm tra ›')));
     G.sfx('done');
@@ -336,7 +337,7 @@ var G = window.G || (window.G = {});
 
   function finish(right, wrong) {
     var N = TN(), pass = right >= PN();
-    if (lang === 'en') G.markTask('bai');
+    if (lang === (G.lang ? G.lang() : 'en')) G.markTask('bai');   // nhiệm vụ Học bài của hồ sơ đang học
     var sao = right >= N ? 3 : right >= Math.ceil(N * 0.9) ? 2 : pass ? 1 : 0;
     var p = G.S.phong[R.id] || { sao: 0, diem: 0, lan: 0 };
     var firstPass = pass && !(p.diem >= PN());

@@ -46,7 +46,7 @@ window.__qa = (function () {
     if (line && pool && vis(pool) && pool.children.length) {
       var q = body.querySelector('.qtext').firstChild.nodeValue.replace(/[“”]/g, ''), it = R.items.filter(function (x) { return x.exVi === q; })[0];
       if (!it) return 'order?';
-      var words = it.ex.split(' '), have = [].map.call(line.children, function (c) { return c.textContent; });
+      var words = (it.w || it.ex).split(' ').filter(function (x) { return x; }), have = [].map.call(line.children, function (c) { return c.textContent; });
       var nextW = words[have.length]; var c = [].filter.call(pool.children, function (x) { return x.textContent === nextW; })[0];
       click(c); return 'order ' + nextW;
     }
@@ -54,9 +54,10 @@ window.__qa = (function () {
     var qt = body.querySelector('.qbox .qtext'), opts = all('#panel-body .opts .opt');
     if (qt && opts.length && !body.querySelector('.opt.ok')) {
       var t = qt.firstChild && qt.firstChild.nodeType === 3 ? qt.firstChild.nodeValue : qt.textContent, ans = null, m2;
-      if (/^Nghe và chọn nghĩa đúng/.test(t)) { var last = said[said.length - 1]; R.items.forEach(function (x) { if (x.en === last) ans = x.vi; }); }
-      else if ((m2 = /^“(.*)” nói thế nào\?$/.exec(t))) { R.items.forEach(function (x) { if (x.vi === m2[1]) ans = x.en; }); }
-      else { R.items.forEach(function (x) { if (x.en === t) ans = x.vi; }); }
+      var T = function (x) { return x.en || x.zh; };   // mục tiếng Trung: chữ Hán ở zh
+      if (/^Nghe và chọn nghĩa đúng/.test(t)) { var last = said[said.length - 1]; R.items.forEach(function (x) { if (T(x) === last) ans = x.vi; }); }
+      else if ((m2 = /^“(.*)” nói thế nào\?$/.exec(t))) { R.items.forEach(function (x) { if (x.vi === m2[1]) ans = T(x); }); }
+      else { R.items.forEach(function (x) { if (T(x) === t) ans = x.vi; }); }
       var b = opts.filter(function (o) { return o.getAttribute('data-v') === ans; })[0];
       if (!b) { b = opts.filter(function (o) { return o.className.indexOf(' no') < 0; })[0]; }
       click(b); return 'mcq ' + (ans ? 'ok' : 'guess');
