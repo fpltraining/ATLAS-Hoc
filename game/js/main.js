@@ -78,7 +78,7 @@ var G = window.G || (window.G = {});
   }
 
   G.goLobby = function () {
-    if (G._newVer) { G._newVer = false; G.save(); location.reload(); return; }   // bản app mới: nạp lại khi về Sảnh (tiến độ đã lưu)
+    if (G._newVer) { G._newVer = false; G.save(); location.reload(); return; }   // bản app mới / tiến độ từ máy khác: nạp lại khi về Sảnh (tiến độ đã lưu)
     document.documentElement.classList.remove('in-city');
     G.stopEngine();
     document.getElementById('create').style.display = 'none';
@@ -88,6 +88,8 @@ var G = window.G || (window.G = {});
     lob.style.display = 'block';
     G.renderLobby();
     window.scrollTo(0, 0);
+    // máy khác đã lưu tiến độ lúc người học đang ngoài phố / trong bài: giờ ở Sảnh mới gộp (G.cloudSync)
+    if (G._cloudWait && G.cloudSync) { G._cloudWait = false; setTimeout(function () { G.cloudSync(); }, 400); }
     // về Sảnh: trang rõ dần từ nhoè, các phần đầu trang hiện lần lượt
     G.viewIn(lob);
     var hero = lob.querySelector('.lhero');
@@ -237,8 +239,13 @@ var G = window.G || (window.G = {});
     G.initRank(); G.importOldProgress(); setTimeout(G.checkAchievements, 1500);
     // bản sao IndexedDB mới hơn (localStorage bị mất) thì khôi phục rồi vẽ lại sảnh
     G.restoreCheck(function (restored) { if (restored && G.S.nhanVat) { G.initRank(); var cr = document.getElementById('create'); if (cr) cr.style.display = 'none'; G.renderLobby(); mustTest(); } });
-    // lưu trên mây: mở app thì đồng bộ; nhận bản mới hơn từ máy khác thì tải lại app với tiến độ đó
-    G.onCloudPulled = function () { G.toast('☁️ Đã lấy tiến độ mới nhất trên mây.'); setTimeout(function () { location.reload(); }, 1300); };
+    // lưu trên mây: mở app thì đồng bộ; nhận tiến độ mới từ máy khác thì nạp lại app với tiến độ đó,
+    // nhưng không cắt ngang: đang ngoài phố / trong bài thì chờ người học về Sảnh mới nạp lại (G.goLobby)
+    G.onCloudPulled = function (first) {
+      G.toast('Đã lấy tiến độ học ở máy khác từ trên mây.');
+      if (first || !G.cloudCalm || G.cloudCalm()) setTimeout(function () { location.reload(); }, 1300);
+      else G._newVer = true;
+    };
     if (G.cloudReady && G.cloudReady() && G.cloudUser() && !/access_token=/.test(location.hash)) setTimeout(function () { G.cloudSync(); }, 600);
     // vừa đăng nhập Google quay về: cất phiên, lấy tiến độ trên mây (có thì tải lại app), rồi vào như bình thường
     if (!(G.cloudCatchRedirect && G.cloudCatchRedirect(function (err, what) { if (what === 'pulled') { location.reload(); return; } if (err) G.toast(err); begin(); }))) begin();

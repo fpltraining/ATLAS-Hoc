@@ -204,8 +204,63 @@ async function crawl() {
   await P.ctx.close();
 }
 
-// node tools/qa-run.mjs [moi|moi1|dau-ra|quet] để chạy riêng một phần (moi1: một người học A1, khoảng 3 phút)
+// ---------- 4. lưu trên mây: đã đăng nhập, vào map và học thì không bị văng ra (lỗi 24/11/2026) ----------
+// Supabase giả có nhớ bản lưu. Một máy: lưu ngoài phố chỉ đẩy lên, không nạp lại app. Máy khác lưu lúc đang ngoài phố:
+// chờ, không đụng tiến độ, không ghi đè mây; về Sảnh mới gộp (có buổi của máy kia, giữ XP của máy này).
+async function cloudFlow() {
+  const ctx = await browser.newContext({ ...devices['iPhone 15 landscape'], serviceWorkers: 'block' });
+  const cloud = { row: null, posts: 0 }, J = (o) => JSON.stringify(o), user = { id: 'qa-user', email: 'qa@test' };
+  await ctx.route('**/*supabase.co/**', (r) => {
+    const u = r.request().url(), m = r.request().method(), json = (b, s) => r.fulfill({ status: s || 200, contentType: 'application/json', body: J(b) });
+    if (/settings/.test(u)) return json({ external: { google: false } });
+    if (/\/auth\/v1\/token/.test(u)) return json({ access_token: 'a', refresh_token: 'r', expires_in: 3600, user });
+    if (/connectlife_save/.test(u) && m === 'GET') return json(cloud.row ? [cloud.row] : []);
+    if (/connectlife_save/.test(u) && m === 'POST') {
+      const b = JSON.parse(r.request().postData() || '{}'); cloud.posts++;
+      if (!cloud.row || b.luu_luc >= cloud.row.luu_luc) cloud.row = { data: b.data, luu_luc: b.luu_luc };
+      return json([{ luu_luc: cloud.row.luu_luc }], 201);
+    }
+    return json([], /app_events/.test(u) ? 201 : 200);
+  });
+  const s0 = seed({ hhTang: 2, rank: 3, dauVao: dv(2) });
+  cloud.row = { data: Object.assign({}, s0, { xp: 300, luuLuc: 3 }), luu_luc: 3 };   // trên mây: bản cũ hơn của chính máy này
+  await ctx.addInitScript(DRV);
+  await ctx.addInitScript(([s, u]) => {
+    if (localStorage.getItem('qa-seed')) return;
+    localStorage.setItem('qa-seed', 1); localStorage.setItem('thegioi-save-v1', JSON.stringify(s));
+    localStorage.setItem('cl-cloud', JSON.stringify({ at: 'a', rt: 'r', exp: Date.now() + 3600e3, user: u }));
+  }, [s0, user]);
+  const p = await ctx.newPage(), errs = [];
+  p.on('pageerror', (e) => errs.push(e.message));
+  // trang tự nạp lại giữa chừng (lỗi cũ) thì lệnh đang chạy hỏng: coi như bị văng ra, không dừng cả bộ soát
+  const ev = (f, a) => p.evaluate(f, a).catch((e) => ({ navErr: String(e.message || e).slice(0, 80) }));
+  await p.goto(BASE); await wait(3000);
+  await ev(() => { document.querySelectorAll('.modal, .cgate').forEach((m) => m.remove()); window.__stay = 1; G.goCity('en'); });
+  await wait(1500);
+  // ngoài phố app tự lưu vài giây một lần (mỗi lần lưu đặt lại 5 giây chờ đồng bộ): gọi đồng bộ ngay như lúc hết 5 giây chờ
+  await ev(() => { G.S.xp += 5; G.save(); G.cloudSync(); }); await wait(4000);
+  const a = await ev(() => ({ stay: window.__stay === 1, city: getComputedStyle(document.getElementById('play')).display !== 'none', xp: G.S.xp }));
+  const fine = a.stay && a.city && cloud.row.data.xp === a.xp;
+  // máy khác (iPad) học thêm buổi en-a1-02 và lưu lúc máy này đang ngoài phố
+  const other = JSON.parse(J(cloud.row.data)); other.phong = other.phong || {}; other.phong['en-a1-02'] = { sao: 2, diem: 9 }; other.luuLuc = cloud.row.luu_luc + 5000;
+  cloud.row = { data: other, luu_luc: other.luuLuc };
+  await ev(() => { G.S.xp += 7; G.save(); G.cloudSync(); }); await wait(4000);
+  const b = await ev(() => ({ stay: window.__stay === 1, wait: G._cloudWait === true, notYet: !(G.S.phong || {})['en-a1-02'], xp: G.S.xp }));
+  const held = b.stay && b.wait && b.notYet && !!cloud.row.data.phong['en-a1-02'];
+  await ev(() => G.goLobby()); await wait(5000);
+  const c = await ev(() => ({ got: !!(G.S.phong || {})['en-a1-02'], xp: G.S.xp }));
+  const merged = c.got && c.xp === b.xp;
+  report.push(`Mây: vào map lưu ${fine ? 'không bị văng ra' : 'BỊ VĂNG RA / KHÔNG ĐẨY LÊN ' + J(Object.assign({ cloudXp: cloud.row.data.xp }, a))}; máy khác lưu lúc ngoài phố: ${held ? 'chờ, không cắt ngang' : 'CẮT NGANG HOẶC GHI ĐÈ ' + J(Object.assign({ cloudCo: !!cloud.row.data.phong['en-a1-02'] }, b))}; về Sảnh: ${merged ? 'đã gộp buổi của máy kia, giữ XP ' + c.xp : 'CHƯA GỘP ĐỦ'}`);
+  if (!fine) problems.push('mây: vào map lưu thì bị văng ra hoặc không đẩy lên');
+  if (!held) problems.push('mây: máy khác lưu lúc đang ngoài phố thì bị cắt ngang / ghi đè');
+  if (!merged) problems.push('mây: về Sảnh chưa gộp đủ tiến độ hai máy');
+  errs.forEach((e) => problems.push('mây lỗi JS: ' + e));
+  await ctx.close();
+}
+
+// node tools/qa-run.mjs [moi|moi1|dau-ra|quet|may] để chạy riêng một phần (moi1: một người học A1, khoảng 3 phút; may: lưu trên mây)
 const ONLY = process.argv[2] || '';
+if (!ONLY || ONLY === 'may') await cloudFlow();
 if (ONLY === 'moi1') await newLearner('iPhone 15 landscape', 2, 'A1-iPhone-ngang');
 if (!ONLY || ONLY === 'moi') {
   await newLearner('iPhone 15', 0, 'moi-tinh-iPhone-doc');

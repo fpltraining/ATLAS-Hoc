@@ -1,6 +1,7 @@
 /* Lưu tiến độ lên mây (Supabase): đăng nhập email + mật khẩu một lần, sau đó app tự đồng bộ.
    - Mỗi lần lưu: chờ 5 giây yên rồi đẩy lên mây; thoát app / mất mạng có lại thì đẩy ngay.
-   - Mở app: lấy bản trên mây nếu bản đó được lưu sau (học ở máy khác), bản trong máy cất lại làm dự phòng.
+   - Máy khác lưu bản mới thì gộp từng phần (G.mergeSave), bản trong máy cất lại làm dự phòng; máy khác chưa lưu gì thì chỉ đẩy lên.
+     Đang ngoài phố hay trong bài thì chờ về Sảnh mới gộp và nạp lại app, không cắt ngang.
    - Lần đầu đăng nhập trên máy mới: giữ bản nhiều tiến độ hơn (XP cao hơn) để không đè mất bài đã học.
    - Trên mây giữ bản lưu theo giờ (60 bản gần nhất) và từ chối bản cũ hơn ghi đè bản mới.
    Cấu hình ở js/cloud_config.js; bảng ở supabase/migrations/20261119_connectlife_save.sql. Không gọi thư viện ngoài. */
@@ -74,37 +75,71 @@ var G = window.G || (window.G = {});
     G.applySave(row.data);
   }
 
+  /* mốc lưu của bản trên mây mà máy này đã có (đã đẩy lên hoặc đã gộp vào). Trên mây vẫn đúng mốc đó nghĩa là máy khác
+     chưa lưu gì: chỉ việc đẩy bản trong máy lên, không gộp (gộp với bản cũ của chính máy này làm sống lại thứ đã xoá). */
+  var LK = 'cl-cloud-luc';
+  function lastLuc(s) { try { var o = JSON.parse(localStorage.getItem(LK) || 'null'); return o && s && s.user && o.u === s.user.id ? o.l : -1; } catch (e) { return -1; } }
+  function setLast(s, l) { try { if (s && s.user && typeof l === 'number') localStorage.setItem(LK, JSON.stringify({ u: s.user.id, l: l })); } catch (e) { /* bỏ qua */ } }
+  /* người học không dở việc gì (đang ở Sảnh, không mở bảng hay hộp thoại): lúc này mới được gộp bản của máy khác và nạp lại app.
+     Ngoài phố, trong bài học, bài đầu vào, màn chọn nhân vật thì chờ (về Sảnh mới gộp: G.goLobby). */
+  G.cloudCalm = function () {
+    if (!document.querySelector) return true;
+    function shown(id) {
+      var e = document.getElementById(id); if (!e) return false;
+      try { return window.getComputedStyle(e).display !== 'none'; } catch (x) { return e.style.display !== 'none'; }
+    }
+    var pn = document.getElementById('panel');
+    return !((pn && pn.classList.contains('open')) || document.querySelector('.modal, .cgate') || shown('play') || shown('placement') || shown('create'));
+  };
+
   /* đồng bộ: gộp từng phần bản trong máy và bản trên mây (G.mergeSave, save.js), không mất tiến độ của máy nào.
+     Chỉ gộp khi máy khác đã lưu bản mới; chỉ báo "đã lấy tiến độ" (và nạp lại app) khi bản đó thật sự mang thêm tiến độ về.
      first = lần đầu đăng nhập ở máy này: danh tính, cài đặt theo tài khoản (bản đã có nhân vật) */
   G.cloudSync = function (cb, first) {
     if (!G.cloudReady() || !getS()) { if (cb) cb('off'); return; }
     if (st.busy) { st.again = true; if (cb) cb('busy'); return; }
     st.busy = true;
+    var gotNew = false;
     token(function (err, s) {
       if (err) { done(err); return; }
       pull(s, function (err2, row) {
         if (err2) { done(err2); return; }
-        var rd = row && row.data, gotNew = false;
-        if (rd && rd.v === 1) {
-          if (!first && (row.luu_luc || 0) === (G.S.luuLuc || 0)) { done(null, 'same'); return; }
-          // hai bản khác nhau: gộp từng phần (không bản nào ghi đè bản nào), máy này nhận bản gộp rồi đẩy lên
-          var mg = G.mergeSave(G.S, rd, first);
-          gotNew = JSON.stringify(mg) !== JSON.stringify(G.S);
-          take({ data: mg });
+        var rd = row && row.data, rl = row ? (row.luu_luc || 0) : 0;
+        if (rd && rd.v === 1 && !first && rl === (G.S.luuLuc || 0)) { setLast(s, rl); done(null, 'same'); return; }
+        if (rd && rd.v === 1 && (first || rl !== lastLuc(s))) {
+          // máy khác đã lưu bản mới (hoặc lần đầu đăng nhập ở máy này): gộp từng phần, không bản nào ghi đè bản nào
+          if (!first && !G.cloudCalm()) { G._cloudWait = true; done(null, 'wait'); return; }
+          if (merge(rd, first)) gotNew = true;
+          setLast(s, rl);
         }
-        push(s, function (err3, kept) {
-          if (err3 || !kept || kept <= (G.S.luuLuc || 0)) { done(err3, gotNew ? 'pulled' : 'pushed'); return; }
-          pull(s, function (err4, row2) {   // máy khác vừa lưu sau: gộp thêm bản đó
-            if (!err4 && row2 && row2.data && row2.data.v === 1) { take({ data: G.mergeSave(G.S, row2.data) }); done(null, 'pulled'); } else done(err4, 'pushed');
-          });
-        });
+        send(s);
       });
     });
+    // gộp bản trên mây vào máy này; trả về true nếu bản đó mang thêm tiến độ (so với gộp bản trong máy với chính nó)
+    function merge(data, fst) {
+      var mg = G.mergeSave(G.S, data, fst), more = !G.sameProgress(mg, G.mergeSave(G.S, G.S, fst));
+      take({ data: mg });
+      return more;
+    }
+    function send(s) {
+      push(s, function (err3, kept) {
+        if (!err3 && kept === (G.S.luuLuc || 0)) setLast(s, kept);
+        if (err3 || !kept || kept <= (G.S.luuLuc || 0)) { done(err3, gotNew ? 'pulled' : 'pushed'); return; }
+        // máy khác vừa lưu sau lúc máy này lấy về: lấy bản đó gộp thêm rồi đẩy lại
+        pull(s, function (err4, row2) {
+          if (err4 || !row2 || !row2.data || row2.data.v !== 1) { done(err4, gotNew ? 'pulled' : 'pushed'); return; }
+          if (!G.cloudCalm()) { G._cloudWait = true; done(null, gotNew ? 'pulled' : 'wait'); return; }
+          if (merge(row2.data)) gotNew = true;
+          setLast(s, row2.luu_luc || 0);
+          push(s, function (err5, k5) { if (!err5 && k5 === (G.S.luuLuc || 0)) setLast(s, k5); done(err5, gotNew ? 'pulled' : 'pushed'); });
+        });
+      });
+    }
     function done(e, what) {
       st.busy = false; st.err = e || '';
       if (!e) st.luc = G.vnNow().slice(11, 16);
       if (cb) cb(e || null, what);
-      if (what === 'pulled' && G.onCloudPulled) G.onCloudPulled();
+      if (what === 'pulled' && G.onCloudPulled) G.onCloudPulled(!!first);
       if (st.again) { st.again = false; setTimeout(function () { G.cloudSync(); }, 800); }
     }
   };
