@@ -18,7 +18,7 @@ var G = window.G || (window.G = {});
     document.getElementById('panel-py').textContent = on ? 'Pinyin: hiện' : 'Pinyin: ẩn';
   }
 
-  function closePanel() { panel.className = 'panel'; if (G._stopStory) G._stopStory(); if (window.speechSynthesis) speechSynthesis.cancel(); }
+  function closePanel() { panel.className = 'panel'; G.panelGen = (G.panelGen || 0) + 1; if (G._stopStory) G._stopStory(); if (window.speechSynthesis) speechSynthesis.cancel(); }
   G.closeLesson = closePanel;
 
   function teacher() { return G.NPCS[R.teacher]; }

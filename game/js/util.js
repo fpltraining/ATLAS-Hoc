@@ -129,7 +129,11 @@ var G = window.G || (window.G = {});
   var TOAST_IC = { '☁️': 'cloud', '✅': 'check', '✓': 'check', '🔒': 'lock', '📍': 'pin', '🎉': 'star', '⭐': 'star', '🔥': 'fire', '🎓': 'grad', '🔔': 'bell', '📖': 'book', '🎤': 'mic' };
   // tiêu đề bảng: emoji đầu câu đổi thành icon 3D (hoặc bỏ), theo luật taste-skill
   var TITLE_IC = { '📖': 'book', '🔁': 'repeat', '📝': 'memo', '📒': 'speak', '📋': 'calendar', '💡': 'speak', '🗣': 'mic', '🎓': 'grad', '📚': 'books' };
+  G.panelGen = 0;
+  /* bảng gen còn đang mở không (tải xong muộn mà người học đã đóng hoặc mở bảng khác thì thôi, không ghi đè) */
+  G.panelLive = function (gen) { var p = document.getElementById('panel'); return gen === G.panelGen && !!p && p.classList.contains('open'); };
   G.setTitle = function (title) {
+    G.panelGen++;
     var el = document.getElementById('panel-title'); if (!el) return;
     title = String(title);
     var m = title.match(/^(\S+)\s+/), ic = m && TITLE_IC[m[1]];

@@ -312,9 +312,10 @@ var G = window.G || (window.G = {});
   function readN(id) { return (G.S.truyen && G.S.truyen[id]) || 0; }
   G.openReader = function () {
     stopListen();
-    var body = panelOpen('Đọc truyện');
+    var body = panelOpen('Đọc truyện'), gen = G.panelGen;
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));
     loadIndex(function (list) {
+      if (!G.panelLive(gen)) return;   // đã đóng hoặc mở bảng khác trong lúc tải
       body.innerHTML = '';
       // gợi ý: truyện đang đọc dở, không có thì truyện dễ nhất chưa đọc
       var next = null;
@@ -352,9 +353,10 @@ var G = window.G || (window.G = {});
   function shuffled(n) { var a = [], i, j, t; for (i = 0; i < n; i++) a.push(i); for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function chapter(s, k) {
     stopListen();
-    var body = panelOpen(s.title);
+    var body = panelOpen(s.title), gen = G.panelGen;
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));
     fetch('../data/stories/' + s.id + '.json').then(function (r) { return r.json(); }).then(function (full) {
+      if (!G.panelLive(gen)) return;   // người học đã đóng hoặc mở bảng khác: không ghi đè bảng đó
       var ch = full.chapters[k], lines = [], texts = [];
       body.innerHTML = '';
       body.appendChild(G.el('div.lhead', G.el('div.lsub', 'Chương ' + ch.n + '/' + full.chapters.length + ' · ' + ch.title + ' · ' + (ch.vi || '') + ' · bấm câu để nghe')));
@@ -446,7 +448,7 @@ var G = window.G || (window.G = {});
           if (k + 1 < full.chapters.length) chapter(s, k + 1); else { G.openReader(); G.toast('Đọc xong truyện ' + s.title + '. Giỏi lắm!'); }
         } }, k + 1 < full.chapters.length ? 'Đọc xong · chương sau ›' : 'Đọc xong truyện')));
       body.scrollTop = 0;
-    }).catch(function () { body.innerHTML = ''; body.appendChild(G.el('p', 'Chưa tải được chương này. Thử lại khi có mạng.')); });
+    }).catch(function () { if (!G.panelLive(gen)) return; body.innerHTML = ''; body.appendChild(G.el('p', 'Chưa tải được chương này. Thử lại khi có mạng.')); });
   }
 
   /* Ôn câu đã học: xem js/practice.js (G.openReview) */

@@ -76,10 +76,13 @@ async function newLearner(dev, maxLv, tag) {
   await P.shot(tag + '-2-lesson-result');
   const pass = await P.ev((x) => G.S.phong[x], id);
   await P.ev(() => G.closeLesson()); await wait(1500);
+  const qlog = {};
   const quest = async (q, fn, max) => {
     await P.ev(() => { G.closeLesson(); document.querySelectorAll('.modal').forEach((m) => m.remove()); });
     await P.ev((x) => G.questAct(x), q); await wait(1500);
-    return loop(P, fn, null, max, 800, /^done$/);
+    qlog[q] = await loop(P, fn, null, max, 800, /^done$/);
+    if (qlog[q] !== 'done') await P.shot(tag + '-quest-' + q);
+    return qlog[q];
   };
   await quest('doc', async () => {
     const q = window.__qa; let s;
@@ -118,9 +121,9 @@ async function newLearner(dev, maxLv, tag) {
   }, 80);
   await P.ev(() => { G.closeLesson(); G.claimChest(); }); await wait(1500);
   await P.ev(() => __qa.common()); await P.ev(() => G.goLobby()); await wait(1200); await P.shot(tag + '-3-lobby');
-  const day = await P.ev(() => ({ p: G.dayProgress(), chest: !!G.today().ruong }));
+  const day = await P.ev(() => ({ p: G.dayProgress(), chest: !!G.today().ruong, viec: Object.keys(G.today().viec) }));
   const ok = pass && pass.diem >= 8 && day.p.done === day.p.all && day.chest && !covered;
-  report.push(`Người mới ${tag}: đầu vào ${placed} → buổi ${id} ${pass ? pass.diem + '/10' : 'chưa qua'}${auto ? ' (tự mở)' : ''}, nhiệm vụ ${day.p.done}/${day.p.all}, rương ${day.chest ? 'đã mở' : 'chưa'}${covered ? ', CÓ MÀN CHE BÀI ĐẦU' : ''}`);
+  report.push(`Người mới ${tag}: đầu vào ${placed} → buổi ${id} ${pass ? pass.diem + '/10' : 'chưa qua'}${auto ? ' (tự mở)' : ''}, nhiệm vụ ${day.p.done}/${day.p.all} (${day.viec.join(', ')}), rương ${day.chest ? 'đã mở' : 'chưa'}${covered ? ', CÓ MÀN CHE BÀI ĐẦU' : ''}${Object.keys(qlog).filter((k) => qlog[k] !== 'done').map((k) => ' · ' + k + ' dừng ở "' + qlog[k] + '"').join('')}`);
   if (!ok) problems.push('Người mới ' + tag + ' chưa chạy hết ngày học đầu');
   P.errs.forEach((e) => problems.push(tag + ' lỗi JS: ' + e)); [...new Set(P.fails)].forEach((f) => problems.push(tag + ' tệp hỏng: ' + f));
   await P.ctx.close();
@@ -201,11 +204,16 @@ async function crawl() {
   await P.ctx.close();
 }
 
-await newLearner('iPhone 15', 0, 'moi-tinh-iPhone-doc');
-await newLearner('iPhone 15 landscape', 2, 'A1-iPhone-ngang');
-await newLearner('iPad Pro 11 landscape', 3, 'A2-iPad');
-await outcome();
-await crawl();
+// node tools/qa-run.mjs [moi|moi1|dau-ra|quet] để chạy riêng một phần (moi1: một người học A1, khoảng 3 phút)
+const ONLY = process.argv[2] || '';
+if (ONLY === 'moi1') await newLearner('iPhone 15 landscape', 2, 'A1-iPhone-ngang');
+if (!ONLY || ONLY === 'moi') {
+  await newLearner('iPhone 15', 0, 'moi-tinh-iPhone-doc');
+  await newLearner('iPhone 15 landscape', 2, 'A1-iPhone-ngang');
+  await newLearner('iPad Pro 11 landscape', 3, 'A2-iPad');
+}
+if (!ONLY || ONLY === 'dau-ra') await outcome();
+if (!ONLY || ONLY === 'quet') await crawl();
 await browser.close(); server.close();
 console.log(report.map((r) => '· ' + r).join('\n'));
 console.log(problems.length ? '\n✗ ' + problems.length + ' vấn đề:\n' + [...new Set(problems)].map((x) => '  - ' + x).join('\n') : '\n✓ Đạt: học được trọn từ đầu, không lỗi JS, không tệp hỏng');

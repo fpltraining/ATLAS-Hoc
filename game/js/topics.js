@@ -73,7 +73,7 @@ var G = window.G || (window.G = {});
   }
   G.topicNext = function () { var s = nextTopic(); return s ? { id: s.id, name: s.t.name, left: s.all - s.learned } : null; };
   /* vào thẳng một lượt 10 từ (nhiệm vụ hôm nay "Học 10 từ"): tải kho từ nếu chưa có */
-  G.topicLearn = function (id) { if (DATA) learn(id); else load(function () { learn(id); }); };
+  G.topicLearn = function (id) { if (DATA) { learn(id); return; } var gen = G.panelGen; load(function () { if (gen === G.panelGen) learn(id); }); };
   /* câu ví dụ của từ chủ đề trong thẻ ôn (practice.js): điền khi kho từ đã tải */
   G.topicExEl = function (c) {
     var box = G.el('div.wex.tp-rvex');
@@ -123,9 +123,10 @@ var G = window.G || (window.G = {});
   /* ---------- một chủ đề ---------- */
   G.openTopic = function (id) {
     var t = byId(id); if (!t) return;
-    var body = panelOpen(t.name);
+    var body = panelOpen(t.name), gen = G.panelGen;
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));
     load(function () {
+      if (!G.panelLive(gen)) return;   // đã đóng hoặc mở bảng khác trong lúc tải kho từ
       body = panelOpen(t.name);
       var s = G.topicStat(id), left = s.all - s.learned;
       var nL = G.el('b', '0'), nD = G.el('b', '0'), nM = G.el('b', s.n ? '0' : '–');
