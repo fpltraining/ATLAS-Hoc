@@ -1,11 +1,11 @@
-/* Hôm nay: kế hoạch học mỗi ngày (mặc định 2 giờ) gom hết vào game.
+/* Hôm nay: kế hoạch học mỗi ngày (theo mốc thời gian người học chọn; chưa chọn mốc thì 40 phút) gom hết vào game.
    5 việc: Học bài ở trường · Đọc truyện ở nhà · Nói chuyện ngoài phố · Ôn từ khó ở nhà · Học 10 từ theo chủ đề.
    Đếm phút học thật (trang đang mở và có thao tác trong 60 giây gần nhất), theo giờ Việt Nam.
    Nhà của bạn = góc học: đọc truyện song ngữ (kho truyện của app) và ôn từ khó. */
 var G = window.G || (window.G = {});
 
 (function () {
-  var GOAL_MIN = 120;   // mặc định khi chưa chọn mốc thời gian (Sảnh → Mục tiêu và mốc thời gian)
+  var GOAL_MIN = 40;    // chưa chọn mốc thời gian: 40 phút, khớp với thẻ Kế hoạch ("Chặng đường đang ước tính theo 40 phút mỗi ngày", G.goalCard)
   /* phút cần học hôm nay: theo mốc thời gian người học chọn (G.planToday), chưa chọn mốc thì theo số phút đã đặt */
   function goalMin() {
     var pt = G.planToday && G.planToday();
@@ -98,7 +98,7 @@ var G = window.G || (window.G = {});
       bars,
       G.el('div.sc-ax', G.el('span', G.vnDay(Date.now() - 13 * 86400000).split('-').reverse().slice(0, 2).join('/')), G.el('span', 'Hôm nay')));
   };
-  /* % hôm nay: một nửa theo số việc xong, một nửa theo phút học / 120 */
+  /* % hôm nay: một nửa theo số việc xong, một nửa theo phút học / phút cần học hôm nay (goalMin) */
   G.dayProgress = function () {
     var d = today(), done = 0;
     for (var i = 0; i < TASKS.length; i++) if (d.viec[TASKS[i].id]) done++;
