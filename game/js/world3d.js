@@ -101,7 +101,7 @@ var G = window.G || (window.G = {});
     g.position.set(gx * U, 0, gy * U); g.rotation.x = -LEAN; bill(g);
     SC.add(g); g.userData.mesh = m;
     if (opt.pop !== false) {   // người, xe đi lại thì luôn đứng; mọi vật khác bật lên khi tới gần
-      var pp = { g: g, a: 0, v: 0, up: false, wait: 0, x: g.position.x, z: g.position.z, jit: Math.random() * 0.12 };
+      var pp = { g: g, a: 0, v: 0, up: false, wait: 0, x: g.position.x, z: g.position.z, jit: Math.random() * 0.12, r: s * U * (opt.fold === 'b' ? 0.42 : 0.18) };
       g.rotation.x = -Math.PI / 2; g.userData.pop = pp; POPS.push(pp);
     }
     return g;
@@ -262,10 +262,11 @@ var G = window.G || (window.G = {});
       x.fillStyle = gr; x.fillRect(0, 0, 128, 128);
     });
 
-    /* mặt đất: nền giấy rộng + tờ bản đồ từng khu */
-    var paper = tex('paper_tile.webp'); paper.wrapS = paper.wrapT = THREE.RepeatWrapping; paper.repeat.set(26, 18);
-    var base = new THREE.Mesh(new THREE.PlaneGeometry(140, 100), new THREE.MeshLambertMaterial({ map: paper, color: 0xd9e4c0 }));
-    base.rotation.x = -Math.PI / 2; base.position.set(7.68, -0.01, 5.12); base.receiveShadow = true; SC.add(base);
+    /* mặt đất: đồng cỏ màu nước trải tới chân trời (grass_tile.webp: ghép từ cỏ trong các tờ bản đồ, lặp liền mép)
+       + tờ bản đồ từng khu; ngoài các khu có cây, bụi, đá rải ra để nhìn xa không thấy mép bản đồ */
+    var grass = tex('grass_tile.webp'); grass.wrapS = grass.wrapT = THREE.RepeatWrapping; grass.repeat.set(43, 31);
+    var base = new THREE.Mesh(new THREE.PlaneGeometry(220, 160), new THREE.MeshLambertMaterial({ map: grass, color: 0xf6f3e6 }));
+    base.rotation.x = -Math.PI / 2; base.position.set(0, -0.01, 10.24); base.receiveShadow = true; SC.add(base);
     for (var id in G.WORLD3D) if (G.WORLD3D.hasOwnProperty(id) && G.SCENES[id]) DIST.push({ id: id, ox: G.WORLD3D[id].ox, oy: G.WORLD3D[id].oy, s: G.SCENES[id] });
     DIST.forEach(function (d) {
       var s = d.s, gm = new THREE.Mesh(new THREE.PlaneGeometry(s.w * U, s.h * U), new THREE.MeshLambertMaterial({ map: tex(s.bg) }));
@@ -273,6 +274,7 @@ var G = window.G || (window.G = {});
     });
     buildShadows();
     DIST.forEach(buildDistrict);
+    buildCountry();
     buildTown(); buildCars(); buildBirds(); buildSky(); buildRiver();
     /* dấu chạm đất, vòng sáng chỗ tương tác, dấu nhiệm vụ */
     mark = new THREE.Mesh(new THREE.RingGeometry(0.12, 0.17, 32), new THREE.MeshBasicMaterial({ color: 0xfff8ea, transparent: true, opacity: 0, depthWrite: false }));
@@ -297,8 +299,9 @@ var G = window.G || (window.G = {});
       }
     });
     cloudTex.wrapS = cloudTex.wrapT = THREE.RepeatWrapping; cloudTex.repeat.set(3, 2);
-    cloudsM = new THREE.Mesh(new THREE.PlaneGeometry(140, 100), new THREE.MeshBasicMaterial({ map: cloudTex, transparent: true, opacity: 0.16, depthWrite: false }));
-    cloudsM.rotation.x = -Math.PI / 2; cloudsM.position.set(7.68, 0.02, 5.12); SC.add(cloudsM);
+    cloudTex.repeat.set(4.7, 3.4);
+    cloudsM = new THREE.Mesh(new THREE.PlaneGeometry(220, 160), new THREE.MeshBasicMaterial({ map: cloudTex, transparent: true, opacity: 0.16, depthWrite: false }));
+    cloudsM.rotation.x = -Math.PI / 2; cloudsM.position.set(0, 0.02, 10.24); SC.add(cloudsM);
   }
   var BUBBLE_T = null;
   function talkBubble() {
@@ -310,6 +313,28 @@ var G = window.G || (window.G = {});
     }
     var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: BUBBLE_T, depthTest: false, transparent: true }));
     sp.scale.set(0.34, 0.34, 1); sp.renderOrder = 11; sp.visible = false; SC.add(sp); return sp;
+  }
+  /* vùng quê quanh thành phố: cây, bụi, đá (hình đã đặt) rải ngoài các tờ bản đồ, luôn đứng, mờ dần theo sương xa */
+  function buildCountry() {
+    var seed = 20261124; function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+    var RECT = DIST.map(function (d) { return [d.ox * U - 0.25, d.oy * U - 0.25, (d.ox + d.s.w) * U + 0.25, (d.oy + d.s.h) * U + 0.25]; });
+    var x0 = 1e9, z0 = 1e9, x1 = -1e9, z1 = -1e9;
+    RECT.forEach(function (r) { x0 = Math.min(x0, r[0]); z0 = Math.min(z0, r[1]); x1 = Math.max(x1, r[2]); z1 = Math.max(z1, r[3]); });
+    function inside(x, z) { for (var i = 0; i < RECT.length; i++) { var r = RECT[i]; if (x > r[0] && x < r[2] && z > r[1] && z < r[3]) return true; } return false; }
+    var KIND = [['pc_tree_green.png', 230, 'tree'], ['pc_tree_birch.png', 220, 'tree'], ['pc_tree_maple.png', 220, 'tree'], ['pc_tree_orange.png', 220, 'tree'],
+      ['pc_tree_pine.png', 250, 'tree'], ['pc_tree_small.png', 160, 'tree'], ['pc_tree_green.png', 260, 'tree'], ['pc_tree_pine.png', 280, 'tree'],
+      ['pc_bush_orange.png', 120, 'tree'], ['pc_bush_white.png', 120, 'tree'], ['pc_rock_moss.png', 95, null], ['pc_rock.png', 85, null]];
+    var STEP = 2.1, n = 0, M = 16;   // rải trong dải 16 đơn vị quanh thành phố (xa hơn đã chìm trong sương)
+    for (var z = z0 - M; z < z1 + M; z += STEP) for (var x = x0 - M; x < x1 + M; x += STEP) {
+      var px = x + (rnd() - 0.5) * STEP * 0.9, pz = z + (rnd() - 0.5) * STEP * 0.9;
+      if (inside(px, pz)) continue;
+      var edge = Math.max(x0 - px, px - x1, z0 - pz, pz - z1, 0);   // càng xa thành phố càng thưa
+      if (rnd() > (edge < 3 ? 0.5 : 0.32)) continue;
+      var k = KIND[Math.floor(rnd() * KIND.length)], s = k[1] * (0.8 + rnd() * 0.45);
+      card(k[0], px / U, pz / U, s, 0.96, { fold: k[2], pop: false });
+      n++;
+    }
+    W3.countryN = n;
   }
   function buildDistrict(d) {
     var s = d.s;
@@ -660,8 +685,11 @@ var G = window.G || (window.G = {});
     } catch (e) { /* không có âm thanh thì thôi */ }
   }
   function updatePops(dt) {
+    // bán kính dựng theo khung nhìn: màn càng rộng (máy tính, iPad ngang) hoặc lùi camera càng xa thì vùng dựng càng rộng,
+    // để vật nằm trong màn hình luôn đứng lên; vật to (nhà) tính từ mép chứ không từ tâm
+    var ax = Math.max(1, (CAM.aspect || 1.45) / 1.45) * Math.max(1, zoomK), az = Math.max(1, zoomK);
     for (var i = 0; i < POPS.length; i++) {
-      var p = POPS[i], rq = rel(p.x - FX, p.z - FZ), dx = rq[0], dz = rq[1] * (rq[1] < 0 ? 0.7 : 1), d = Math.sqrt(dx * dx + dz * dz);
+      var p = POPS[i], rq = rel(p.x - FX, p.z - FZ), dx = rq[0] / ax, dz = rq[1] * (rq[1] < 0 ? 0.7 : 1) / az, d = Math.max(0, Math.sqrt(dx * dx + dz * dz) - p.r);
       if (snap) { p.up = d < POP_UP; p.a = p.up ? 1 : 0; p.v = 0; p.wait = 0; }
       else if (!p.up && d < POP_UP) { p.up = true; p.wait = p.jit + d / POP_UP * 0.22; }
       else if (p.up && d > POP_DOWN) { p.up = false; p.wait = p.jit * 0.5; }
