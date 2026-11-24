@@ -123,7 +123,7 @@ async function newLearner(dev, maxLv, tag) {
   await P.ev(() => __qa.common()); await P.ev(() => G.goLobby()); await wait(1200); await P.shot(tag + '-3-lobby');
   const day = await P.ev(() => ({ p: G.dayProgress(), chest: !!G.today().ruong, viec: Object.keys(G.today().viec) }));
   const ok = pass && pass.diem >= 8 && day.p.done === day.p.all && day.chest && !covered;
-  report.push(`Người mới ${tag}: đầu vào ${placed} → buổi ${id} ${pass ? pass.diem + '/10' : 'chưa qua'}${auto ? ' (tự mở)' : ''}, nhiệm vụ ${day.p.done}/${day.p.all} (${day.viec.join(', ')}), rương ${day.chest ? 'đã mở' : 'chưa'}${covered ? ', CÓ MÀN CHE BÀI ĐẦU' : ''}${Object.keys(qlog).filter((k) => qlog[k] !== 'done').map((k) => ' · ' + k + ' dừng ở "' + qlog[k] + '"').join('')}`);
+  report.push(`Người mới ${tag}: đầu vào ${placed} → buổi ${id} ${pass ? pass.diem + '/10' : 'chưa qua'}${auto ? ' (tự mở)' : ''}, nhiệm vụ ${day.p.done}/${day.p.all} (${day.viec.join(', ')}), ${day.p.mins}/${day.p.goal} phút, rương ${day.chest ? 'đã mở' : 'chưa'}${covered ? ', CÓ MÀN CHE BÀI ĐẦU' : ''}${Object.keys(qlog).filter((k) => qlog[k] !== 'done').map((k) => ' · ' + k + ' dừng ở "' + qlog[k] + '"').join('')}`);
   if (!ok) problems.push('Người mới ' + tag + ' chưa chạy hết ngày học đầu');
   P.errs.forEach((e) => problems.push(tag + ' lỗi JS: ' + e)); [...new Set(P.fails)].forEach((f) => problems.push(tag + ' tệp hỏng: ' + f));
   await P.ctx.close();
