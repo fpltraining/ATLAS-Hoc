@@ -128,7 +128,7 @@ var G = window.G || (window.G = {});
   /* thông báo dạng thẻ (mẫu "notify"): emoji đầu câu đổi thành icon 3D */
   var TOAST_IC = { '☁️': 'cloud', '✅': 'check', '✓': 'check', '🔒': 'lock', '📍': 'pin', '🎉': 'star', '⭐': 'star', '🔥': 'fire', '🎓': 'grad', '🔔': 'bell', '📖': 'book', '🎤': 'mic' };
   // tiêu đề bảng: emoji đầu câu đổi thành icon 3D (hoặc bỏ), theo luật taste-skill
-  var TITLE_IC = { '📖': 'book', '🔁': 'repeat', '📝': 'memo', '📒': 'speak', '📋': 'calendar', '💡': 'speak', '🗣': 'mic', '🎓': 'grad' };
+  var TITLE_IC = { '📖': 'book', '🔁': 'repeat', '📝': 'memo', '📒': 'speak', '📋': 'calendar', '💡': 'speak', '🗣': 'mic', '🎓': 'grad', '📚': 'books' };
   G.setTitle = function (title) {
     var el = document.getElementById('panel-title'); if (!el) return;
     title = String(title);

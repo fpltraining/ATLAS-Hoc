@@ -29,7 +29,11 @@ var G = window.G || (window.G = {});
     var cur = G.enFloorNow(), certs = (G.S.totNghiep && G.S.totNghiep.en) || {}, sum = 0, out = [];
     G.ROADMAP_EN.forEach(function (st) {
       var h = st.hours || 0;
-      if (!st.final) { if (certs[st.key] || st.floor < cur) h = 0; else if (st.floor === cur) h = h * (1 - floorProgress(st.floor) * 0.85); }
+      if (!st.final) {
+        if (certs[st.key] || st.floor < cur) h = 0; else if (st.floor === cur) h = h * (1 - floorProgress(st.floor) * 0.85);
+        // từ theo chủ đề của tầng (2 phút / từ chưa học), tầng đã qua coi như đã biết
+        if (G.topicHours && st.floor >= cur && !certs[st.key]) h += G.topicHours(st.floor).left;
+      }
       else if (G.S.totNghiepCL) h = 0;
       sum += h; out.push({ st: st, left: h, cum: sum });
     });
@@ -42,6 +46,12 @@ var G = window.G || (window.G = {});
     var perWeek = mins * dpw / 60;
     return remainHours().map(function (r) { var d = r.cum / perWeek * 7; return { name: r.st.name, left: r.left, cum: r.cum, month: monthOf(d), span: span(d) }; });
   };
+  /* lộ trình: tầng này gồm những chủ đề từ nào, đã học bao nhiêu từ */
+  function topicLine(f) {
+    var ts = G.topicsOfFloor(f); if (!ts.length) return null;
+    var h = G.topicHours(f);
+    return G.el('button.road-tp', { onclick: G.openTopics }, G.ic3('books', 'ic3-s'), G.el('span', 'Từ theo chủ đề: ' + ts.map(function (t) { return t.name; }).join(', ') + ' · ' + (h.words - h.wordsLeft) + '/' + h.words + ' từ'));
+  }
   function planCard() {
     // thẻ "Kế hoạch của bạn" (placement.js) + dòng dự kiến từng tầng trên lộ trình
     function mins() { var pt = G.planToday && G.planToday(); return pt && !pt.xong ? pt.phut : ((G.S.caiDat && G.S.caiDat.phutNgay) || 40); }
@@ -110,7 +120,7 @@ var G = window.G || (window.G = {});
         tag = [tag[0] ? G.ic3(tag[0], 'ic3-s') : null, tag[1]];
         return G.el('div.road-step' + (st.final ? '.final' : '') + (got ? '.got' : '') + (here ? '.here' : ''),
           G.el('div.road-dot', st.final ? '🎓' : String(st.floor)),
-          G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), G.el('span.road-tag', tag), st.final && G.finalUnlocked && G.finalUnlocked() ? G.el('button.btn.seal.sm.road-go', { onclick: G.openFinalExam }, G.finalDone() ? 'Xem bài thi tốt nghiệp ›' : 'Vào thi Tốt nghiệp ConnectLife ›') : null, G.el('span.road-eta', { id: 'eta-' + (st.final ? 'final' : st.floor) })));
+          G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), st.final || !G.topicsOfFloor ? null : topicLine(st.floor), G.el('span.road-tag', tag), st.final && G.finalUnlocked && G.finalUnlocked() ? G.el('button.btn.seal.sm.road-go', { onclick: G.openFinalExam }, G.finalDone() ? 'Xem bài thi tốt nghiệp ›' : 'Vào thi Tốt nghiệp ConnectLife ›') : null, G.el('span.road-eta', { id: 'eta-' + (st.final ? 'final' : st.floor) })));
       })));
     }
 
@@ -138,13 +148,15 @@ var G = window.G || (window.G = {});
     if (G.checkFloorBadge) setTimeout(G.checkFloorBadge, 700);
 
     if (G.weeklyChart) {
-      P.home.appendChild(G.el('button.big.bic.pl-lobby.lb-today', { onclick: G.openToday }, G.bigIc('calendar', 'Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/4 việc · ' + G.dayProgress().mins + ' phút · bấm để xem việc cần làm')));
+      P.home.appendChild(G.el('button.big.bic.pl-lobby.lb-today', { onclick: G.openToday }, G.bigIc('calendar', 'Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/' + G.dayProgress().all + ' việc · ' + G.dayProgress().mins + ' phút · bấm để xem việc cần làm')));
       if (G.studyChart) P.home.appendChild(G.studyChart());
       P.home.appendChild(G.el('div.out-row',
         G.el('button.big.bic', { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', G.weekLine())),
         G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được'))));
       if (G.openMemMap) P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openMemMap(); } }, G.bigIc('brain', 'Bản đồ nhớ từ'),
         G.el('span', G.srsDue && G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn hôm nay · xem buổi nào sắp quên' : 'Mỗi ô là một buổi học, màu càng xanh là càng nhớ chắc')));
+      if (G.openTopics) { var tt = G.topicTotals(); P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: G.openTopics }, G.bigIc('books', 'Từ theo chủ đề'),
+        G.el('span', tt.got + '/' + tt.all + ' từ đã học · ' + tt.open + '/' + tt.topics + ' chủ đề đang mở · đọc tin, công sở, kinh tế…'))); }
       // trình độ đầu vào (kiểm tra 4 kỹ năng), làm lại để đo đầu ra
       if (G.openPlacement) {
         var dv = G.S.dauVao;

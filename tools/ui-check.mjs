@@ -105,6 +105,10 @@ const SCREENS = [
   ['Sảnh · Cài đặt', () => { G.goLobby(); document.querySelectorAll('.lb-tabs button')[3].click(); }],
   ['Hôm nay', () => { G.openToday(); }],
   ['Bản đồ nhớ từ', () => { G.openMemMap(0); }],
+  ['Bản đồ nhớ · Chủ đề', () => { G.openMemMap(4); }],
+  ['Từ theo chủ đề', () => { G.openTopics(); }],
+  ['Một chủ đề', () => { G.openTopic('core'); }],
+  ['Thẻ từ chủ đề', () => { const b = [...document.querySelectorAll('#panel-body button.big')].find((x) => /từ mới/.test(x.textContent)); if (b) b.click(); }],
   ['Bài học', () => { G.closeLesson(); G.openLesson('en-a1-1'); }],
   ['Luyện', () => { const b = [...document.querySelectorAll('button.big')].find((x) => /2 · Luyện/.test(x.textContent)); if (b) b.click(); }],
   ['Nhà', () => { G.openHome(); }],
@@ -125,7 +129,7 @@ for (const dn of ['iPad Pro 11 landscape', 'iPhone 15 landscape']) {
   await p.goto(BASE); await p.waitForTimeout(1500);
   await p.evaluate(() => { if (!G.S.dauVao) { G.S.dauVao = { lv: 1, nghe: 1, doc: 1, gt: 1, noi: 1, luc: G.vnNow(), dung: 6, tong: 12 }; G.save(); } });
   for (const [nm, go] of SCREENS) {
-    await p.evaluate(() => { document.querySelectorAll('.modal').forEach((m) => m.remove()); if (G.stopEngine) G.stopEngine(); });
+    await p.evaluate(() => { document.querySelectorAll('.modal, .cgate').forEach((m) => m.remove()); if (G.stopEngine) G.stopEngine(); });
     await p.evaluate(go); await p.waitForTimeout(900);
     await p.evaluate(() => { document.querySelectorAll('.modal').forEach((m) => m.remove()); });
     const r = await p.evaluate(audit, dn.split(' ')[0] + ' · ' + nm);

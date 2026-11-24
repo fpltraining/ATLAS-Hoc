@@ -118,7 +118,7 @@ var G = window.G || (window.G = {});
         : G.el('div.rv-q', G.el('div.small.faint', 'Nói bằng tiếng Anh:'), G.el('div.wbig.sm', c.vi));
       if (c.t === 'reply') G.say(c.npc, 'en');
       body.appendChild(G.el('div.wcard', prompt));
-      var ans = G.el('div.rv-ans', { style: { display: 'none' } }, G.el('div.small.faint', 'Câu tiếng Anh:'), G.el('div.wbig.sm', c.en, G.sayBtns(c.en, 'en')));
+      var ans = G.el('div.rv-ans', { style: { display: 'none' } }, G.el('div.small.faint', 'Câu tiếng Anh:'), G.el('div.wbig.sm', c.en, G.sayBtns(c.en, 'en')), c.cd && G.topicExEl ? G.topicExEl(c) : null);
       body.appendChild(ans);
       var row = G.el('div.row', { style: { display: 'none' } },
         G.el('button.btn', { onclick: function () { grade(c, false); k++; card(); } }, '😕 Quên rồi'),

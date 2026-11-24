@@ -1,5 +1,5 @@
 /* Hôm nay: kế hoạch học mỗi ngày (mặc định 2 giờ) gom hết vào game.
-   4 việc: Học bài ở trường · Đọc truyện ở nhà · Nói chuyện ngoài phố · Ôn từ khó ở nhà.
+   5 việc: Học bài ở trường · Đọc truyện ở nhà · Nói chuyện ngoài phố · Ôn từ khó ở nhà · Học 10 từ theo chủ đề.
    Đếm phút học thật (trang đang mở và có thao tác trong 60 giây gần nhất), theo giờ Việt Nam.
    Nhà của bạn = góc học: đọc truyện song ngữ (kho truyện của app) và ôn từ khó. */
 var G = window.G || (window.G = {});
@@ -16,7 +16,8 @@ var G = window.G || (window.G = {});
     { id: 'bai', icon: '🏫', ic3: 'school', name: 'Học bài ở trường', hint: 'Học, luyện hoặc kiểm tra một phòng', min: 45 },
     { id: 'doc', icon: '📖', ic3: 'book', name: 'Đọc 1 chương truyện', hint: 'Về nhà, mở góc đọc truyện', min: 25 },
     { id: 'noi', icon: '💬', ic3: 'talk', name: 'Nói chuyện ngoài phố', hint: 'Quán cà phê, chợ, bệnh viện hoặc đi xe buýt', min: 30 },
-    { id: 'on', icon: '🔁', ic3: 'repeat', name: 'Ôn câu đã học', hint: 'Về nhà, ôn các câu sắp quên', min: 20 }
+    { id: 'on', icon: '🔁', ic3: 'repeat', name: 'Ôn câu đã học', hint: 'Về nhà, ôn các câu sắp quên', min: 20 },
+    { id: 'tu', icon: '📚', ic3: 'books', name: 'Học 10 từ theo chủ đề', hint: 'Từ đọc tin, công sở, kinh tế…', min: 10 }
   ];
 
   function today() {
@@ -161,7 +162,7 @@ var G = window.G || (window.G = {});
       return G.el('div.td-item' + (ok ? '.ok' : ''),
         G.el('span.td-ic', G.ic3(ok ? 'check' : t.ic3)),
         G.el('div.td-txt', G.el('b', t.name), G.el('div.small.faint', ok ? 'Xong lúc ' + d.viec[t.id] : t.hint + ' · khoảng ' + t.min + ' phút')),
-        !ok && (t.id === 'doc' || t.id === 'on') ? G.el('button.btn.sm', { onclick: function () { t.id === 'doc' ? G.openReader() : G.openReview(); } }, 'Làm ngay') : null);
+        !ok && (t.id === 'doc' || t.id === 'on' || (t.id === 'tu' && G.openTopics)) ? G.el('button.btn.sm', { onclick: function () { if (t.id === 'doc') G.openReader(); else if (t.id === 'tu') G.openTopics(); else G.openReview(); } }, 'Làm ngay') : null);
     })));
     if (G.openMemMap) body.appendChild(G.el('button.big.bic.td-mm', { onclick: function () { G.openMemMap(); } }, G.bigIc('brain', 'Bản đồ nhớ từ'),
       G.el('span', G.srsDue ? (G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn · xem buổi nào sắp quên' : 'Xem buổi nào nhớ chắc, buổi nào sắp quên') : '')));
@@ -193,7 +194,7 @@ var G = window.G || (window.G = {});
     }
     drawMic();
     body.appendChild(micBox);
-    body.appendChild(G.el('p.small.faint', 'Làm đủ 4 việc và học đủ ' + p.goal + ' phút là tròn vòng hôm nay, đúng tiến độ theo mốc. Thanh 📍 Việc tiếp theo luôn chỉ chỗ cần đến.'));
+    body.appendChild(G.el('p.small.faint', 'Làm đủ ' + p.all + ' việc và học đủ ' + p.goal + ' phút là tròn vòng hôm nay, đúng tiến độ theo mốc. Thanh 📍 Việc tiếp theo luôn chỉ chỗ cần đến.'));
     // chuyển động khi mở bảng: ngọn lửa bật lên, số chuỗi chạy, 7 ngày và 4 việc hiện lần lượt
     G.pop(fire, 120);
     G.countUp(sn, 0, G.S.chuoi.hienTai, { delay: 250, dur: 700 });
@@ -223,7 +224,8 @@ var G = window.G || (window.G = {});
       G.el('button.big.bic' + (d.viec.on ? '.done' : hl('on')), { onclick: G.openReview }, G.bigIc(d.viec.on ? 'check' : 'repeat', 'Ôn câu đã học'), G.el('span', G.srsDue ? (G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn hôm nay' : 'Không có câu đến hạn · ôn thêm tuỳ ý') : '')),
       G.el('button.big.bic' + hl('wk'), { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),
       G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats ? G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được bằng tiếng Anh' : '')),
-      G.el('button.big.bic', { onclick: G.openToday }, G.bigIc('calendar', 'Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/4 việc · ' + G.dayProgress().mins + ' phút'))));
+      G.el('button.big.bic', { onclick: G.openToday }, G.bigIc('calendar', 'Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/' + G.dayProgress().all + ' việc · ' + G.dayProgress().mins + ' phút')),
+      G.openTopics ? G.el('button.big.bic', { onclick: G.openTopics }, G.bigIc('books', 'Từ theo chủ đề'), G.el('span', G.topicTotals().got + '/' + G.topicTotals().all + ' từ đọc tin, công sở, kinh tế…')) : null));
   };
 
   /* ---------- Đọc truyện ---------- */
