@@ -10,6 +10,8 @@ Mọi tệp đều là ghi âm thật, lấy từ nguồn miễn phí, được 
 | sfx_step_grass_1–5, sfx_step_stone_1–5, sfx_step_wood_1–5 | Kenney · Impact Sounds (kenney.nl), CC0 |
 | sfx_door_wood, sfx_page_turn | Kenney · RPG Audio (kenney.nl), CC0 |
 | sfx_paper_pop_1–3 | Kenney · Casino Audio (kenney.nl), CC0 |
+| sfx_ui_right, sfx_ui_wrong, sfx_ui_done, sfx_ui_quest, sfx_ui_tap, sfx_ui_tab | Kenney · Interface Sounds 1.0 (kenney.nl, bản GitHub Calinou/kenney-interface-sounds), CC0 (`kenney-interface-sounds.LICENSE.txt`): confirmation_002, error_006, confirmation_004, confirmation_003, select_001, toggle_002 |
+| sfx_ui_chest | Kenney · Interface Sounds: maximize_006 trộn glass_002 (trễ 0,23 s), CC0 |
 | amb_birds_morning | kresiek-the-furry · AMB Morning Sounds (Perfect Loop), OpenGameArt, CC0 |
 | amb_rain_light | kresiek-the-furry · AMB Rain Loop 1, OpenGameArt, CC0 |
 | amb_rain_heavy | ogrebane · Rain in the Gutter Loop, OpenGameArt, CC0 |

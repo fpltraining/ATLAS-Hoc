@@ -209,6 +209,13 @@ var G = window.G || (window.G = {});
     document.getElementById('hud-home').onclick = G.goLobby;
     document.getElementById('act').onclick = G.doNear;
     document.getElementById('hud-xp').onclick = G.openToday;
+    // tiếng chạm nhẹ khi bấm nút, tiếng gạt khi đổi tab (không áp cho đáp án, loa, micro: các nút đó có tiếng riêng)
+    document.addEventListener('click', function (e) {
+      var t = e.target && e.target.closest ? e.target.closest('button, .hud-q') : null;
+      if (!t || t.disabled || (t.closest && t.closest('.opt, .speak, .mk-mic, .pl-yn-w'))) return;
+      if (/\b(opt|speak|mk-mic|pl-play|pl-mini)\b/.test(t.className)) return;
+      G.sfx(t.parentNode && /\betabs\b/.test(t.parentNode.className) ? 'tab' : 'tap');
+    }, true);
     document.getElementById('quest').onclick = function () { G.goQuest(); };
     G.initRank(); G.importOldProgress(); setTimeout(G.checkAchievements, 1500);
     // bản sao IndexedDB mới hơn (localStorage bị mất) thì khôi phục rồi vẽ lại sảnh

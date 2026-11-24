@@ -37,7 +37,7 @@ var G = window.G || (window.G = {});
     d.viec[id] = G.vnNow().slice(11, 16);
     G.save();
     var t = null; for (var i = 0; i < TASKS.length; i++) if (TASKS[i].id === id) t = TASKS[i];
-    if (t) G.toast('✅ Xong việc hôm nay: ' + t.name);
+    if (t) { G.toast('✅ Xong việc hôm nay: ' + t.name); if (G.sfx) G.sfx('quest'); }
     if (G.achSoon) G.achSoon();
     if (G.updateHud) G.updateHud();
   };
@@ -133,7 +133,7 @@ var G = window.G || (window.G = {});
     var d = today(); if (d.ruong) return false;
     var p = G.dayProgress(); if (p.done < p.all) return false;
     d.ruong = G.vnNow().slice(11, 16); G.save(); G.addXp(CHEST_XP);
-    if (G.sfx) G.sfx('done');
+    if (G.sfx) G.sfx('chest');
     if (G.chestPop) G.chestPop(CHEST_XP); else { if (G.confetti) G.confetti(); G.toast('🎉 Mở rương hôm nay: +' + CHEST_XP + ' XP'); }
     if (G.updateHud) G.updateHud();
     return true;

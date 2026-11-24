@@ -644,3 +644,74 @@ Three images for my paper-craft English-learning game "ConnectLife" (handmade cu
 ```
 
 **Đã nhận Đơn N 24/11 · đã gắn vào game:** paper_tile_1600.webp (em làm liền mép bốn cạnh rồi dùng làm nền Sảnh, hiển thị 800 px), share_card.jpg (ảnh khi gửi link, thẻ og:image), talk_bubble_paper.png (bong bóng chat trên đầu người qua đường, cả bản 3D và 2D).
+
+# Đơn O · Kai và Han cử động bằng Rive (24/11/2026)
+
+Mục tiêu: Kai và Han sống động như nhân vật của Duolingo (Duolingo dựng nhân vật bằng Rive): thở, chớp mắt, mấp máy môi theo câu đang đọc,
+vui khi trả lời đúng, động viên khi sai, nghiêng tai khi đang nghe micro, ăn mừng khi xong bài. Giữ nguyên nét màu nước giấy cắt hiện tại.
+Thư viện chạy trên web của Rive là mã nguồn mở (MIT); phần hình là của mình đặt, nên mình giữ toàn quyền.
+
+Làm 2 bước. Bước 1 anh đặt ChatGPT như mọi lần (em cắt nền). Bước 2 gửi các mảnh đã cắt cho người dựng Rive (thuê trên Rive Community / Fiverr / Upwork,
+tìm từ khoá "Rive character animator", "Duolingo style Rive"), hoặc anh tự dựng bằng trình Rive (kiểm tra gói Rive đang dùng có cho xuất tệp .riv không).
+
+## Bước 1 · Mảnh tách lớp (ChatGPT, gửi MỘT tin, đính kèm kai_down.png, player_han_down.png, player_han_happy.png)
+
+```
+I'm making a 2D learning game. I attached my two main characters: Kai (a small teal robot) and Han (a boy in a red hoodie).
+I need them split into separate body PARTS so an animator can rig them in Rive. Please create 4 images, one after another, do not ask questions.
+
+Rules for every image:
+- Match the attached art style EXACTLY: soft watercolor on cut paper, same colors, same proportions, same faces.
+- Every part is drawn complete (also the hidden area that will be covered by other parts), separated from the others with space around it.
+- A thin cream paper border around each part, like a paper cut-out.
+- Solid flat magenta #FF00FF background, nothing else. No text, letters or numbers.
+
+Image 1 · KAI PARTS (front view): head with cap and headphones but NO eyes and NO mouth; antenna (stick + red light) separate; body; left arm; right arm;
+left leg with foot; right leg with foot; the small screen on his chest as a separate piece.
+Image 2 · KAI FACE SET: eyes open, eyes closed (blink), happy eyes (upside-down U), surprised eyes (big round), sad eyes;
+9 mouths for talking: closed smile, A/I (open), E (wide), O (round), U/W (small round), M/B/P (pressed), F/V (teeth on lip), L/TH (tongue), big laugh.
+Image 3 · HAN PARTS (front view): head with hair but NO eyes, NO eyebrows and NO mouth; front hair fringe as a separate piece; hood (behind the head);
+body in the red hoodie with the 2 strings; left arm (sleeve + hand); right arm (sleeve + hand); a raised right hand waving; a hand cupped behind the ear;
+shorts; left leg with shoe; right leg with shoe.
+Image 4 · HAN FACE SET: eyes open, eyes closed (blink), happy closed eyes (like the attached happy image), surprised eyes, thinking eyes looking up;
+eyebrows: normal, raised, worried; the same 9 talking mouths as Kai; rosy cheeks as a separate piece.
+```
+
+Nhận hình: em cắt nền, xuất từng mảnh PNG trong suốt (đặt tên theo mảnh) vào `art/rive/kai/`, `art/rive/han/` để gửi người dựng.
+
+## Bước 2 · Yêu cầu cho người dựng Rive (gửi nguyên khối, kèm thư mục mảnh ở bước 1)
+
+```
+Rive character rig for a language-learning web game (like Duolingo's characters). Two characters: KAI (small teal robot) and HAN (boy in a red hoodie).
+I provide every body part as transparent PNG (watercolor, cut-paper look). Keep the art exactly as provided; animate it, do not redraw it.
+
+Deliverables
+- One .riv file with 2 artboards named "Kai" and "Han", 1024 x 1024, transparent background, character centered, feet on the same ground line.
+- The .rev source file and a short screen recording of every state below.
+- Total .riv size under 800 KB (compress the images inside Rive). 60 fps.
+- Full commercial rights to the rig and animations transferred to me. No third-party assets.
+- Must run on the official Rive Web runtime (@rive-app/canvas), tested on Safari iOS 16+ (iPad and iPhone) and Chrome.
+
+State machine: ONE state machine per artboard, named exactly "main", with these inputs (exact names):
+- Number "mood": 0 idle, 1 happy, 2 sad/encouraging, 3 thinking, 4 surprised. Smooth 0.25 s blends between moods.
+- Boolean "talking": while true, a natural talking loop (mouth shapes + small head bob). Used when I can't send visemes.
+- Number "viseme": 0 rest, 1 A/I, 2 E, 3 O, 4 U/W, 5 M/B/P, 6 F/V, 7 L/TH, 8 laugh. I will drive it from code ~12 times per second
+  while the voice plays (lip sync). Mouth must switch instantly, no blend.
+- Trigger "correct": quick happy reaction (~0.9 s: small hop, thumbs up / Kai's antenna light blinks), then back to the current mood.
+- Trigger "wrong": gentle encouraging reaction (~0.9 s: small head tilt, soft "aww", NOT mocking), then back.
+- Trigger "wave": friendly hello wave (~1.2 s).
+- Trigger "cheer": big celebration (~1.5 s: jump, arms up) for finishing a lesson or opening a reward chest.
+- Boolean "listening": lean in a little, hand cupped behind the ear (Han) / antenna light pulsing (Kai), while true.
+- Number "look": -1 left … 0 center … 1 right, eyes and head turn slightly.
+
+Always-on idle layer: soft breathing (2–3 s loop), random blink every 3–6 s, Kai's headphones and antenna bob slightly, Han's hair and hood strings sway.
+Motion style: calm and short (0.2–0.5 s for normal changes), squash and stretch only on "correct" and "cheer". No flashing.
+```
+
+## Gắn vào game (em làm khi nhận tệp .riv)
+
+- Thư viện `@rive-app/canvas` (MIT) vào `game/vendor/`, nạp khi cần như three.js; ghi nguồn `vendor/CREDITS.md`, thêm vào `CORE` của sw.js.
+- Kai: dẫn bài học, câu nói ngoài phố (`G.kaiSay`), bài đầu vào, bảng Nhiệm vụ và mở rương (`cheer`), thẻ ôn (`correct` / `wrong`).
+- Han (khi người chơi chọn Han): Hồ sơ, màn kết quả, luyện nói (`listening` khi micro đang nghe, `viseme` khi phát câu mẫu).
+- Khẩu hình: giọng Kokoro không kèm mốc âm, em ước lượng khẩu hình theo chữ của câu và độ dài tệp giọng (đủ khớp mắt thường).
+- Máy bật Giảm chuyển động hoặc chưa tải xong tệp .riv: hiện hình PNG hiện tại như cũ.

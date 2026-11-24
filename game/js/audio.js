@@ -190,7 +190,8 @@ var G = window.G || (window.G = {});
   G.AMB_FILES = G.AMB_FILES || {};
   (function () {
     var s = ['door_wood', 'page_turn', 'paper_pop_1', 'paper_pop_2', 'paper_pop_3', 'chair_pull', 'chair_push', 'chair_sit', 'fish_splash',
-      'thunder_far_1', 'thunder_far_2', 'duck', 'horn_soft', 'school_bell', 'shuttle_door'];
+      'thunder_far_1', 'thunder_far_2', 'duck', 'horn_soft', 'school_bell', 'shuttle_door',
+      'ui_right', 'ui_wrong', 'ui_done', 'ui_quest', 'ui_chest', 'ui_tap', 'ui_tab'];   // ui_*: Kenney Interface Sounds (CC0)
     for (var i = 1; i <= 5; i++) s.push('step_grass_' + i, 'step_stone_' + i, 'step_wood_' + i);
     for (var j = 0; j < s.length; j++) if (!G.SFX_FILES['sfx_' + s[j]]) G.SFX_FILES['sfx_' + s[j]] = 'sfx/sfx_' + s[j] + '.mp3?v=' + SFXV;
     var a = { birds: 'birds_morning', city: 'city_day', crickets: 'crickets_night', wind: 'wind_storm', rain: 'rain_light', rainHeavy: 'rain_heavy',
@@ -283,8 +284,11 @@ var G = window.G || (window.G = {});
     o.connect(g); g.connect(a.destination);
     o.start(t); o.stop(t + dur + 0.05);
   }
+  /* tiếng giao diện: ghi âm thật của Kenney Interface Sounds (CC0, sfx/sfx_ui_*.mp3); chưa tải xong thì dùng tiếng tổng hợp cũ */
+  var UI_SND = { right: 0.5, wrong: 0.42, done: 0.55, quest: 0.45, chest: 0.6, tap: 0.16, tab: 0.22 };
   G.sfx = function (kind) {
     if (G.S && G.S.caiDat && G.S.caiDat.amThanh === false) return;
+    if (UI_SND[kind] && G.sfxFile('sfx_ui_' + kind, UI_SND[kind])) return;
     if (kind === 'right') { tone(880, 0, 0.12); tone(1318.5, 0.08, 0.22); }
     else if (kind === 'wrong') { tone(233, 0, 0.16, 'triangle', 0.12); tone(185, 0.1, 0.24, 'triangle', 0.1); }
     else if (kind === 'done') { var f = [523.25, 659.25, 783.99, 1046.5]; for (var i = 0; i < f.length; i++) tone(f[i], i * 0.085, 0.3, 'triangle', 0.14); }
