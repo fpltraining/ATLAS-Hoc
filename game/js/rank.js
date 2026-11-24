@@ -62,7 +62,7 @@ var G = window.G || (window.G = {});
     { id: 'reader', img: 'badge_9.webp', name: 'Mọt sách', how: 'Đọc xong 20 chương truyện', ok: function () { return chapters() >= 20; } },
     { id: 'enA1', img: 'badge_10.webp', name: 'Chứng chỉ A1', how: 'Đạt chứng chỉ ConnectLife · A1 tiếng Anh', ok: gradEn },
     { id: 'perfect', img: 'badge_11.webp', name: 'Điểm tuyệt đối', how: 'Đúng hết bài kiểm tra của một phòng học', ok: function () { return !!G.S.tuyetDoi; } },
-    { id: 'fullday', img: 'badge_12.webp', name: 'Ngày trọn vẹn', how: 'Xong cả 4 việc trong một ngày', ok: fullDay }
+    { id: 'fullday', img: 'badge_12.webp', name: 'Ngày trọn vẹn', how: 'Xong 4 việc trong một ngày', ok: fullDay }
   ];
   G.badgeGot = function (id) { return !!(G.S.huyHieu && G.S.huyHieu[id]); };
 

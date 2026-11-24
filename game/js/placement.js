@@ -401,7 +401,7 @@ var G = window.G || (window.G = {});
       rulerHint.textContent = sel < 0 ? 'chạm một mốc (tháng)' : 'tháng · phút mỗi ngày';
       // chặng đường: phần đã học trên tổng số giờ tới mục tiêu, các mốc trình độ và tháng dự kiến
       var rows = G.etaPlan ? G.etaPlan(pt && !pt.xong ? pt.phut : (cd.phutNgay || 40), dpw) : [], all = 0, i;
-      for (i = 0; i <= tg && i < G.ROADMAP_EN.length; i++) all += G.ROADMAP_EN[i].hours || 0;
+      for (i = 0; i <= tg && i < G.ROADMAP_EN.length; i++) all += (G.ROADMAP_EN[i].hours || 0) + (G.topicHours && !G.ROADMAP_EN[i].final ? G.topicHours(G.ROADMAP_EN[i].floor).all : 0);
       var leftH = rows[tg] ? rows[tg].cum : all, prog = all ? Math.max(0, Math.min(1, 1 - leftH / all)) : 0;
       bar.style.transform = 'scaleX(' + prog + ')';
       countTo(pct, Math.round(prog * 100)); pct.setAttribute('data-suf', '%');

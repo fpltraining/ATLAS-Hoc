@@ -22,6 +22,7 @@ var G = window.G || (window.G = {});
       tuKho: [],
       ngay: {},
       truyen: {},
+      tuChuDe: {},
       dangHoc: {},
       huyHieu: {},
       chuoi: { hienTai: 0, ngayCuoi: '' },

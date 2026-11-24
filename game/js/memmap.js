@@ -1,6 +1,7 @@
 /* Bản đồ nhớ từ: mỗi ô là một buổi học, tô màu theo mức nhớ các câu của buổi đó trong kho ôn (G.S.cau, hộp 0 → 6).
    Ô đỏ nhạt: nhiều câu đã đến hạn, nên ôn hôm nay. Chạm ô để xem và ôn đúng các câu sắp quên của buổi đó.
-   Chuyển tầng bằng thanh chọn co giãn, lưới hiện như gợn sóng (anime.js). Giờ theo giờ Việt Nam. */
+   Chuyển tầng bằng thanh chọn co giãn, lưới hiện như gợn sóng (anime.js). Tab cuối "Chủ đề": mỗi ô là một nhóm từ ATLAS
+   (G.topicStat), chạm để ôn từ sắp quên hoặc học từ mới. Giờ theo giờ Việt Nam. */
 var G = window.G || (window.G = {});
 
 (function () {
@@ -9,7 +10,8 @@ var G = window.G || (window.G = {});
     { name: 'Tầng 1', sub: 'Nền tảng', ids: range('en-n-', 30, true), cols: 6 },
     { name: 'Tầng 2', sub: 'A1', ids: ['en-a1-1', 'en-a1-2', 'en-a1-3', 'en-a1-4', 'en-a1-test'], cols: 5 },
     { name: 'Tầng 3', sub: 'A2 – B1', ids: range('en-a2-', 24, true), cols: 6 },
-    { name: 'Tầng 4', sub: 'B1 – B2', ids: range('en-b1-', 24, true), cols: 6 }
+    { name: 'Tầng 4', sub: 'B1 – B2', ids: range('en-b1-', 24, true), cols: 6 },
+    { name: 'Chủ đề', sub: '15 nhóm từ', topics: true, cols: 5 }   // từ theo chủ đề (topics.js)
   ];
   var LV = {
     warn: 'Sắp quên, nên ôn hôm nay',
@@ -40,7 +42,8 @@ var G = window.G || (window.G = {});
     if (R.parent && G.ROOMS[R.parent] && G.ROOMS[R.parent].group) return G.sessionOpen(R.parent, G.ROOMS[R.parent].group.indexOf(id));
     return G.roomPassed(id) || (G.enFloorNow && G.enFloorNow() >= 2);
   }
-  function floorNow() { var f = G.enFloorNow ? G.enFloorNow() : 1; return Math.max(0, Math.min(FLOORS.length - 1, f - 1)); }
+  function floorNow() { var f = G.enFloorNow ? G.enFloorNow() : 1; return Math.max(0, Math.min(3, f - 1)); }
+  var TABS = function () { return FLOORS.filter(function (f) { return !f.topics || (G.TOPICS_EN && G.topicStat); }); };
 
   var cur = -1;
   G.openMemMap = function (fi) {
@@ -55,7 +58,7 @@ var G = window.G || (window.G = {});
 
     // tổng toàn bộ: số câu đến hạn, số buổi nhớ chắc
     var dueAll = G.srsDue ? G.srsDue().length : 0, strong = 0, warn = 0;
-    FLOORS.forEach(function (f) { f.ids.forEach(function (id) { var s = statOf(id); if (!s) return; if (s.lv === 'l4') strong++; if (s.lv === 'warn') warn++; }); });
+    FLOORS.forEach(function (f) { (f.ids || []).forEach(function (id) { var s = statOf(id); if (!s) return; if (s.lv === 'l4') strong++; if (s.lv === 'warn') warn++; }); });
     var nDue = G.el('b', '0'), nStrong = G.el('b', '0'), nWarn = G.el('b', '0');
     body.appendChild(G.el('div.mm-sum',
       G.el('div.mm-k.warn', nDue, G.el('span', 'câu đến hạn ôn hôm nay')),
@@ -65,15 +68,18 @@ var G = window.G || (window.G = {});
 
     // thanh chọn tầng: ô chọn co giãn khi trượt
     var pill = G.el('i.epill');
-    var tabs = G.el('div.etabs', pill, FLOORS.map(function (f, i) {
+    var FL = TABS();
+    var tabs = G.el('div.etabs', pill, FL.map(function (f, i) {
       return G.el('button' + (i === cur ? '.on' : ''), { 'aria-pressed': i === cur ? 'true' : 'false', onclick: function () { if (i !== cur) G.openMemMap(i); } },
         G.el('b', f.name), G.el('span', f.sub));
     }));
-    tabs.style.setProperty('--n', FLOORS.length);
+    tabs.style.setProperty('--n', FL.length);
     body.appendChild(tabs);
-    G.pillTo(pill, cur, FLOORS.length, from < 0 ? cur : from);
+    G.pillTo(pill, cur, FL.length, from < 0 ? cur : from);
 
-    var F = FLOORS[cur], stats = F.ids.map(statOf).filter(function (s) { return !!s; });
+    var F = FL[cur] || FL[0];
+    if (F.topics) { topicGrid(body); return; }
+    var stats = F.ids.map(statOf).filter(function (s) { return !!s; });
     var detail = G.el('div.mm-detail');
     var grid = G.el('div.mm-grid', { style: { gridTemplateColumns: 'repeat(' + F.cols + ', minmax(0, 1fr))' } }, stats.map(function (s, k) {
       var label = s.R.label || (s.R.n ? String(s.R.n) : String(k + 1));
@@ -108,4 +114,37 @@ var G = window.G || (window.G = {});
       G.enter(detail.children, { y: 10, dur: 360 });
     }
   };
+
+  /* tab "Chủ đề": 15 ô, mỗi ô một nhóm từ, tô màu theo mức nhớ các từ đã học của nhóm đó */
+  function topicGrid(body) {
+    var stats = G.TOPICS_EN.map(function (t) { return G.topicStat(t.id); });
+    var detail = G.el('div.mm-detail');
+    var grid = G.el('div.mm-grid.mm-tpg', { style: { gridTemplateColumns: 'repeat(5, minmax(0, 1fr))' } }, stats.map(function (s) {
+      var cell = G.el('button.mm-c.mm-tp.' + s.lv + (s.open ? '' : '.lock'), { 'aria-label': s.t.name + ': ' + LV[s.lv], onclick: function () { pick(s, cell); } }, G.ic3(s.t.ic, 'mm-tpic'));
+      return cell;
+    }));
+    body.appendChild(G.el('div.mm-main',
+      G.el('div.mm-left', grid, G.el('div.mm-legend', ['warn', 'l2', 'l3', 'l4', 'none'].map(function (k) { return G.el('span', G.el('i.mm-c.' + k), k === 'none' ? 'Chưa học từ nào' : LV[k].replace(', nên ôn hôm nay', '')); }))),
+      detail));
+    detail.appendChild(G.el('div.small.faint', 'Chạm một ô để xem nhóm từ đó nhớ tới đâu, ôn từ sắp quên hoặc học từ mới.'));
+    if (window.anime && !G.calm()) window.anime({ targets: grid.children, opacity: [0, 1], scale: [0.6, 1], delay: window.anime.stagger(30, { grid: [5, 3], from: 0, start: 160 }), duration: 480, easing: 'easeOutBack' });
+    var picked = null;
+    function pick(s, cell) {
+      if (picked) picked.classList.remove('sel');
+      picked = cell; cell.classList.add('sel');
+      detail.innerHTML = '';
+      var fl = G.ROADMAP_EN && G.ROADMAP_EN[s.t.floor - 1] ? G.ROADMAP_EN[s.t.floor - 1].name : 'Tầng ' + s.t.floor;
+      detail.appendChild(G.el('div.mm-card',
+        G.el('div.mm-h', G.el('i.mm-c.' + s.lv), G.el('div', G.el('b', s.t.name), G.el('div.small.faint', fl + ' · ' + (s.n ? LV[s.lv] : s.open ? 'Chưa học từ nào' : 'Chưa mở')))),
+        G.el('div.mm-bars',
+          G.el('div', G.el('span', 'Từ đã học'), G.el('b', s.learned + '/' + s.all)),
+          G.el('div', G.el('span', 'Đến hạn ôn hôm nay'), G.el('b', String(s.due.length))),
+          G.el('div', G.el('span', 'Mức nhớ trung bình'), G.el('b', s.n ? (Math.round(s.avg / 6 * 100) + '%') : '–'))),
+        G.el('div.row',
+          s.due.length ? G.el('button.btn.seal', { onclick: function () { G.openReviewOf(s.due); } }, 'Ôn ' + s.due.length + ' từ sắp quên') :
+            s.n ? G.el('button.btn', { onclick: function () { G.openReviewOf(s.t.w); } }, 'Ôn lại nhóm này') : null,
+          s.open ? G.el('button.btn', { onclick: function () { G.openTopic(s.id); } }, s.learned < s.all ? 'Học từ mới ›' : 'Xem nhóm từ ›') : G.el('span.small.faint', 'Mở ở ' + fl.split(' · ')[0]))));
+      G.enter(detail.children, { y: 10, dur: 360 });
+    }
+  }
 })();
