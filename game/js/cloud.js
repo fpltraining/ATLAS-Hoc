@@ -74,7 +74,8 @@ var G = window.G || (window.G = {});
     G.applySave(row.data);
   }
 
-  /* đồng bộ: bản nào lưu sau thì thắng. first = lần đầu sau khi đăng nhập: bản nào nhiều XP hơn thì thắng */
+  /* đồng bộ: gộp từng phần bản trong máy và bản trên mây (G.mergeSave, save.js), không mất tiến độ của máy nào.
+     first = lần đầu đăng nhập ở máy này: danh tính, cài đặt theo tài khoản (bản đã có nhân vật) */
   G.cloudSync = function (cb, first) {
     if (!G.cloudReady() || !getS()) { if (cb) cb('off'); return; }
     if (st.busy) { st.again = true; if (cb) cb('busy'); return; }
@@ -83,16 +84,18 @@ var G = window.G || (window.G = {});
       if (err) { done(err); return; }
       pull(s, function (err2, row) {
         if (err2) { done(err2); return; }
-        var rd = row && row.data;
+        var rd = row && row.data, gotNew = false;
         if (rd && rd.v === 1) {
-          var remoteWins = first ? ((rd.xp || 0) > (G.S.xp || 0) || !G.S.nhanVat) : (row.luu_luc || 0) > (G.S.luuLuc || 0);
-          if (remoteWins) { take(row); done(null, 'pulled'); return; }
           if (!first && (row.luu_luc || 0) === (G.S.luuLuc || 0)) { done(null, 'same'); return; }
+          // hai bản khác nhau: gộp từng phần (không bản nào ghi đè bản nào), máy này nhận bản gộp rồi đẩy lên
+          var mg = G.mergeSave(G.S, rd, first);
+          gotNew = JSON.stringify(mg) !== JSON.stringify(G.S);
+          take({ data: mg });
         }
         push(s, function (err3, kept) {
-          if (err3 || !kept || kept <= (G.S.luuLuc || 0)) { done(err3, 'pushed'); return; }
-          pull(s, function (err4, row2) {   // máy khác vừa lưu sau: lấy bản đó về
-            if (!err4 && row2 && row2.data && row2.data.v === 1) { take(row2); done(null, 'pulled'); } else done(err4, 'pushed');
+          if (err3 || !kept || kept <= (G.S.luuLuc || 0)) { done(err3, gotNew ? 'pulled' : 'pushed'); return; }
+          pull(s, function (err4, row2) {   // máy khác vừa lưu sau: gộp thêm bản đó
+            if (!err4 && row2 && row2.data && row2.data.v === 1) { take({ data: G.mergeSave(G.S, row2.data) }); done(null, 'pulled'); } else done(err4, 'pushed');
           });
         });
       });
@@ -172,7 +175,8 @@ var G = window.G || (window.G = {});
 
   /* Màn tạo tài khoản bắt buộc khi mở app lần đầu (trước bài kiểm tra trình độ).
      Mất mạng thì cho học trước, lần mở app sau hỏi lại. */
-  G.openCloudGate = function (after) {
+  G.openCloudGate = function (after, o) {
+    o = o || {};
     var root = G.el('div.cgate'), box = G.el('div.cgate-box');
     var em = G.el('input.cl-in', { type: 'email', placeholder: 'Email của bạn', autocomplete: 'email' });
     var pw = G.el('input.cl-in', { type: 'password', placeholder: 'Mật khẩu (ít nhất 6 ký tự)', autocomplete: 'new-password' });
@@ -196,13 +200,18 @@ var G = window.G || (window.G = {});
         } }, '📴 Không có mạng? Học trước, đăng nhập sau'));
       });
     }
-    box.appendChild(G.el('div.kicker', 'Bước 1/3 · Bắt buộc'));
-    box.appendChild(G.el('h1', 'Tạo tài khoản học'));
+    // học thử trước, tài khoản sau: hỏi sau buổi học đầu, có nút Để sau (o.soft)
+    box.appendChild(G.el('div.kicker', o.soft ? 'Bạn vừa học xong buổi đầu' : 'Lưu tiến độ'));
+    box.appendChild(G.el('h1', o.soft ? 'Lưu tiến độ của bạn' : 'Tạo tài khoản học'));
     box.appendChild(G.el('p', 'Tài khoản giữ toàn bộ tiến độ của bạn: đổi iPad, iPhone hay xoá app cũng không mất bài. Đăng nhập một lần, lần sau mở app là vào thẳng, tới khi bạn bấm Đăng xuất.'));
     box.appendChild(googleBox());
     box.appendChild(G.field('Email', em)); box.appendChild(G.field('Mật khẩu', pw)); box.appendChild(msg);
     box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { go(true); } }, 'Tạo tài khoản ›'));
     box.appendChild(G.el('button.btn', { onclick: function () { go(false); } }, 'Đã có tài khoản? Đăng nhập'));
+    if (o.soft) box.appendChild(G.el('button.btn.ghost', { onclick: function () {
+      var cd = G.S.caiDat || (G.S.caiDat = {}); cd.hoiTK = (cd.hoiTK || 0) + 1; cd.hoiTKluc = G.vnDay(); G.save();
+      if (root.parentNode) root.parentNode.removeChild(root); after();
+    } }, 'Để sau, học tiếp'));
     box.appendChild(later);
     root.appendChild(box);
     document.body.appendChild(root);

@@ -33,6 +33,7 @@ var G = window.G || (window.G = {});
   };
 
   G.goCity = function (id) {
+    document.documentElement.classList.add('in-city');   // điện thoại cầm dọc: chỉ ngoài phố mới nhắc xoay ngang
     document.getElementById('lobby').style.display = 'none';
     document.getElementById('play').style.display = 'block';
     G.updateHud();
@@ -69,10 +70,15 @@ var G = window.G || (window.G = {});
   /* Bài kiểm tra trình độ là bước bắt buộc đầu tiên: chưa có kết quả thì chưa vào học được (kể cả người đang học dở) */
   function mustTest(after) {
     if (G.S.dauVao || G._placementOpen) { if (after) after(); return; }
-    G.openPlacement(after, { mandatory: true });
+    G.openPlacement(after, { mandatory: true, quick: true });
+  }
+  // người mới: mở thẳng buổi học đầu (học ngay, không phải đi bộ tới trường lần đầu)
+  function firstLesson() {
+    setTimeout(function () { var nl = G.nextLesson && G.nextLesson(); if (nl && G.openLesson && !G.S.phong[nl.id]) { G.openLesson(nl.id); G.toast('📖 Buổi học đầu tiên của bạn. Học xong rồi ra phố đi dạo nhé.'); } }, 1400);
   }
 
   G.goLobby = function () {
+    document.documentElement.classList.remove('in-city');
     G.stopEngine();
     document.getElementById('create').style.display = 'none';
     G.closeLesson();
@@ -236,17 +242,22 @@ var G = window.G || (window.G = {});
   }
 
   /* chưa đăng nhập thì tạo tài khoản trước (bắt buộc), rồi mới kiểm tra trình độ / vào học */
-  function begin() {
-    if (G.cloudReady && G.cloudReady() && !G.cloudUser()) { G.openCloudGate(flow); return; }
-    flow();
-  }
+  /* học thử trước, tài khoản sau (như các app học hàng đầu): mở app là vào học, không bắt tạo tài khoản.
+     Tài khoản được mời sau khi xong buổi học đầu (G.askAccount, gọi từ G.markTask), có nút Để sau. */
+  function begin() { flow(); }
+  G.askAccount = function () {
+    if (!(G.cloudReady && G.cloudReady()) || G.cloudUser() || !G.openCloudGate || document.querySelector('.cgate')) return;
+    var cd = G.S.caiDat || {};
+    if (cd.hoiTK >= 3 || cd.hoiTKluc === G.vnDay()) return;   // hỏi tối đa 3 lần, mỗi ngày một lần
+    setTimeout(function () { G.openCloudGate(function () {}, { soft: true }); }, 1800);
+  };
   function flow() {
     if (!G.S.nhanVat && !G.S.dauVao) {
-      // lần đầu: kiểm tra trình độ (bắt buộc) → chọn nhân vật → lời mở đầu → ra khỏi nhà
-      G.openPlacement(function () { G.openCreator(function () { G.introStory(function () { G.goCity('en'); }); }); }, { first: true });
+      // lần đầu: kiểm tra nhanh 3 phút (Từ vựng) → chọn nhân vật → lời mở đầu → vào thành phố và mở ngay buổi học đầu
+      G.openPlacement(function () { G.openCreator(function () { G.introStory(function () { G.goCity('en'); firstLesson(); }); }); }, { first: true, quick: true });
     } else if (!G.S.nhanVat) {
       // đã làm bài kiểm tra nhưng thoát trước khi chọn nhân vật
-      G.openCreator(function () { G.introStory(function () { G.goCity('en'); }); });
+      G.openCreator(function () { G.introStory(function () { G.goCity('en'); firstLesson(); }); });
     } else {
       // người đang học: chưa có kết quả đầu vào thì phải làm trước khi vào sảnh
       G.renderLobby();

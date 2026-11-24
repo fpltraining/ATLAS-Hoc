@@ -92,6 +92,55 @@ var G = window.G || (window.G = {});
     if (!ok) G.toast('Không lưu được tiến độ (bộ nhớ máy đầy?). Hãy xuất file sao lưu.');
     return ok;
   };
+  /* ---------- gộp hai bản tiến độ (máy này + trên mây) mà không mất gì ----------
+     Học trên iPad lúc mất mạng rồi học tiếp trên iPhone: trước đây bản lưu sau ghi đè cả khối, mất buổi học của máy kia.
+     Giờ: lấy bản lưu sau làm gốc, rồi đưa vào mọi tiến độ chỉ có ở bản kia (gộp từng phần); số tiến độ lấy giá trị lớn hơn. */
+  function isObj(x) { return x && typeof x === 'object' && !(x instanceof Array); }
+  function union(base, other) {   // giữ base, thêm khoá chỉ có ở other (đệ quy)
+    if (!isObj(base) || !isObj(other)) return base === undefined ? other : base;
+    var out = {}, k;
+    for (k in base) if (base.hasOwnProperty(k)) out[k] = base[k];
+    for (k in other) if (other.hasOwnProperty(k)) out[k] = k in base ? union(base[k], other[k]) : other[k];
+    return out;
+  }
+  function eachBoth(a, b, fn) { var out = union(a || {}, b || {}); for (var k in out) if (out.hasOwnProperty(k) && a && b && k in a && k in b) out[k] = fn(a[k], b[k], k); return out; }
+  function num(x) { return typeof x === 'number' ? x : 0; }
+  G.mergeSave = function (x, y, first) {
+    if (!x || x.v !== 1) return y; if (!y || y.v !== 1) return x;
+    x = JSON.parse(JSON.stringify(x)); y = JSON.parse(JSON.stringify(y));
+    // gốc: bản lưu sau; lần đầu đăng nhập ở máy mới thì gốc là bản đã có nhân vật (danh tính, cài đặt giữ theo tài khoản)
+    var base = first ? (y.nhanVat ? y : x) : ((y.luuLuc || 0) > (x.luuLuc || 0) ? y : x), other = base === x ? y : x;
+    var m = union(base, other);
+    m.xp = Math.max(num(x.xp), num(y.xp));
+    m.phong = eachBoth(base.phong, other.phong, function (p, q) { return (num(q.sao) > num(p.sao) || (num(q.sao) === num(p.sao) && num(q.diem) > num(p.diem))) ? q : p; });
+    m.truyen = eachBoth(base.truyen, other.truyen, function (p, q) { return Math.max(num(p), num(q)); });
+    m.thiNoi = eachBoth(base.thiNoi, other.thiNoi, function (p, q) { return Math.max(num(p), num(q)); });
+    m.dangHoc = eachBoth(base.dangHoc, other.dangHoc, function (p, q) {
+      var o = union(p, q); o.the = Math.max(num(p.the), num(q.the)); o.tro = Math.max(num(p.tro), num(q.tro));
+      o.hocXong = p.hocXong || q.hocXong || ''; o.luyenXong = p.luyenXong || q.luyenXong || ''; return o;
+    });
+    m.ngay = eachBoth(base.ngay, other.ngay, function (p, q) {
+      var o = union(p, q); o.giay = Math.max(num(p.giay), num(q.giay));
+      var h = (p.hoiThoai || []).slice(), seen = {}; h.forEach(function (e) { seen[e.luc + '|' + e.ten] = 1; });
+      (q.hoiThoai || []).forEach(function (e) { if (!seen[e.luc + '|' + e.ten]) h.push(e); }); if (h.length) o.hoiThoai = h;
+      if (p.noi && q.noi) o.noi = num(q.noi.n) > num(p.noi.n) ? q.noi : p.noi;
+      return o;
+    });
+    // kho ôn: mỗi câu lấy bản đã ôn nhiều lần hơn
+    m.cau = eachBoth(base.cau, other.cau, function (p, q) { return num(q.lan) > num(p.lan) ? q : p; });
+    // chuỗi ngày học: cùng ngày cuối thì lấy chuỗi dài hơn, khác thì lấy bản học gần hơn; kỷ lục lấy lớn nhất
+    var cx = x.chuoi || {}, cy = y.chuoi || {};
+    m.chuoi = (cx.ngayCuoi || '') === (cy.ngayCuoi || '') ? (num(cx.hienTai) >= num(cy.hienTai) ? cx : cy) : ((cx.ngayCuoi || '') > (cy.ngayCuoi || '') ? cx : cy);
+    m.chuoi = union(m.chuoi, {}); m.chuoi.daiNhat = Math.max(num(cx.daiNhat), num(cy.daiNhat), num(cx.hienTai), num(cy.hienTai));
+    // bài đầu vào: lấy lần làm gần nhất, lịch sử gộp theo thời điểm
+    var dx = x.dauVao, dy = y.dauVao; m.dauVao = dx && dy ? ((dx.luc || '') >= (dy.luc || '') ? dx : dy) : (dx || dy || null);
+    var ls = (x.dauVaoLs || []).concat(y.dauVaoLs || []), seenL = {}; m.dauVaoLs = [];
+    ls.sort(function (a, b) { return (a.luc || '') < (b.luc || '') ? -1 : 1; }).forEach(function (e) { if (!seenL[e.luc]) { seenL[e.luc] = 1; m.dauVaoLs.push(e); } });
+    m.dauVaoLs = m.dauVaoLs.slice(-12);
+    m.tuKho = base.tuKho || [];   // hàng chờ tạm: lấy theo bản gốc (gộp sẽ làm câu đã ôn bị đặt lại)
+    m.luuLuc = Math.max(num(x.luuLuc), num(y.luuLuc)) + 1;
+    return m;
+  };
   /* nhận bản tiến độ từ mây: ghi vào máy (không đẩy ngược lên mây) */
   G.applySave = function (obj) {
     G.S = fill(obj);

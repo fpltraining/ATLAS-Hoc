@@ -32,6 +32,8 @@ var G = window.G || (window.G = {});
     if (G.openPlacement && !dv) return { ic: 'target', t: 'Làm bài kiểm tra đầu vào', s: 'Khoảng 12–15 phút · app xếp bạn vào đúng tầng', go: place, b: 'Bắt đầu' };
     if (G.openPlacement && !dv.ban) return { ic: 'target', t: 'Làm lại bài kiểm tra đầu vào', s: 'Bài mới có phần Từ vựng và chấm chặt hơn để xếp đúng tầng · khoảng 12–15 phút', go: place, b: 'Làm lại' };
     var d = G.today(), p = G.dayProgress(), Q = G.QUESTS || [], order = ['bai', 'tu', 'on', 'doc', 'noi'];
+    // đã học xong buổi đầu bằng kết quả nhanh: mời làm bài đầy đủ một lần
+    if (G.openPlacement && dv.nhanh && d.viec.bai) return { ic: 'target', t: 'Làm bài đầu vào đầy đủ', s: 'Nghe, Đọc, Giao tiếp, Nói · 12–15 phút · xếp tầng chính xác hơn, giỏi thì lên thẳng Tầng 4', go: place, b: 'Làm bài' };
     for (var i = 0; i < order.length; i++) {
       if (d.viec[order[i]]) continue;
       for (var j = 0; j < Q.length; j++) if (Q[j].id === order[i]) {
@@ -216,7 +218,7 @@ var G = window.G || (window.G = {});
         var dv = G.S.dauVao;
         P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openPlacement(function () { G.goLobby(); }, { canSkip: true }); } },
           G.bigIc('target', 'Trình độ đầu vào' + (dv ? ': ' + G.levelName(dv.lv) : '')),
-          G.el('span', dv && !dv.ban ? 'Bài đầu vào đã sửa (thêm phần Từ vựng, chấm chặt hơn) · nên làm lại để xếp đúng tầng' : dv ? 'Làm ngày ' + dv.luc.slice(8, 10) + '/' + dv.luc.slice(5, 7) + (dv.tv !== undefined && dv.tv !== null ? ' · Từ vựng ' + G.PLACE_EN.levels[dv.tv] : '') + ' · Nghe ' + G.PLACE_EN.levels[dv.nghe] + ' · Đọc ' + G.PLACE_EN.levels[dv.doc] + ' · Giao tiếp ' + G.PLACE_EN.levels[dv.gt] + ' · Nói ' + (dv.noi === null ? 'chưa đo' : G.PLACE_EN.levels[dv.noi]) + ' · bấm để làm lại'
+          G.el('span', dv && !dv.ban ? 'Bài đầu vào đã sửa (thêm phần Từ vựng, chấm chặt hơn) · nên làm lại để xếp đúng tầng' : dv && dv.nhanh ? 'Kết quả nhanh theo vốn từ · làm bài đầy đủ 4 kỹ năng để xếp chính xác hơn' : dv ? 'Làm ngày ' + dv.luc.slice(8, 10) + '/' + dv.luc.slice(5, 7) + (dv.tv !== undefined && dv.tv !== null ? ' · Từ vựng ' + G.PLACE_EN.levels[dv.tv] : '') + ' · Nghe ' + G.PLACE_EN.levels[dv.nghe] + ' · Đọc ' + G.PLACE_EN.levels[dv.doc] + ' · Giao tiếp ' + G.PLACE_EN.levels[dv.gt] + ' · Nói ' + (dv.noi === null ? 'chưa đo' : G.PLACE_EN.levels[dv.noi]) + ' · bấm để làm lại'
             : 'Chưa làm · 4 kỹ năng theo CEFR, 3–12 phút')));
       }
       // luyện phát âm theo lỗi của mình (bắt lỗi trước nếu chưa làm)

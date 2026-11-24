@@ -13,12 +13,14 @@
 var G = window.G || (window.G = {});
 
 (function () {
-  var P, root, box, done, opts, res, pi, nAsk, nRight, seen = {}, asked = [], lastPl = '', pronRes = null;
+  var P, PARTS, root, box, done, opts, res, pi, nAsk, nRight, seen = {}, asked = [], lastPl = '', pronRes = null;
 
   G.levelName = function (lv) { var p = G.PLACE_EN; return p.levels[lv] + ' · ' + p.names[lv]; };
 
   G.openPlacement = function (cb, o) {
     P = G.PLACE_EN; done = cb; opts = o || {};
+    // kiểm tra nhanh (lần đầu mở app): chỉ phần Từ vựng, khoảng 3 phút; bài đầy đủ làm sau ở Sảnh
+    PARTS = opts.quick ? P.parts.filter(function (p) { return p.id === 'tv'; }) : P.parts;
     root = document.getElementById('placement');
     if (!root) { root = G.el('div', { id: 'placement' }); document.body.appendChild(root); }
     root.style.display = 'block';
@@ -44,17 +46,18 @@ var G = window.G || (window.G = {});
   /* ---------- màn mở đầu ---------- */
   function intro() {
     screen();
-    head(opts.first ? (G.cloudReady && G.cloudReady() ? 'Bước 2/3' : 'Bước 1/2') + ' · Bắt buộc trước khi vào học' : opts.mandatory ? 'Bắt buộc trước khi học tiếp' : 'Làm lại để đo tiến bộ',
+    if (opts.quick) head(opts.first ? 'Bước 1/2 · khoảng 3 phút' : 'Khoảng 3 phút', 'Kiểm tra nhanh vốn từ', 'Chạm những từ bạn biết nghĩa, app xếp bạn vào đúng tầng để học ngay. Bài đầy đủ 4 kỹ năng (Nghe, Đọc, Giao tiếp, Nói) làm sau ở Sảnh để xếp chính xác hơn.');
+    else head(opts.mandatory ? 'Bắt buộc trước khi học tiếp' : 'Làm lại để đo tiến bộ',
       'Ngày đầu tới Brightford', 'Kiểm tra trình độ tiếng Anh theo khung CEFR quốc tế, từ A0 (mới bắt đầu) tới B2. Kai dẫn bạn đi một vòng thành phố: sân bay, xe buýt, quán cà phê, chợ, bệnh viện, ngân hàng… Ở mỗi nơi, người ta nói với bạn, bạn nghe, đọc, đáp lời như thật.');
     var intro = P.places.airport;
     var sc = G.el('div.pl-scene.pl-scene-intro'); sc.style.backgroundImage = 'url("' + G.assetUrl(intro.bg) + '")';
     sc.appendChild(G.imgEl('kai_follow.png', 'pl-npc pl-kai-big'));
     sc.appendChild(G.el('div.pl-scene-say', G.el('b', 'Kai'), G.el('span', 'Chào mừng tới Brightford! Đi một vòng với mình nhé. Xong vòng này, mình biết bạn đã tự lo được ở đâu trong thành phố.')));
     box.appendChild(sc);
-    box.appendChild(G.el('div.pl-parts', P.parts.map(function (p) {
+    box.appendChild(G.el('div.pl-parts', PARTS.map(function (p) {
       return G.el('div.pl-part', G.el('b', p.icon + ' ' + p.name), G.el('span.small.faint', p.what));
     })));
-    box.appendChild(G.el('div.pl-note',
+    if (!opts.quick) box.appendChild(G.el('div.pl-note',
       G.el('div', '⏱ Bài tự điều chỉnh theo bạn: người mới khoảng 4 phút, người đã học khoảng 12–15 phút.'),
       G.el('div', '🔤 Phần đầu là Từ vựng: có từ giả trộn vào, chỉ chạm từ bạn thật sự biết nghĩa.'),
       G.el('div', '🙅 Không tra từ. Không biết thì bấm “Không biết”, như vậy kết quả mới đúng.'),
@@ -82,10 +85,10 @@ var G = window.G || (window.G = {});
 
   /* ---------- từng phần ---------- */
   function part() {
-    if (pi >= P.parts.length) { pronStep(); return; }
-    var p = P.parts[pi];
+    if (pi >= PARTS.length) { pronStep(); return; }
+    var p = PARTS[pi];
     screen();
-    head('Phần ' + (pi + 1) + '/' + P.parts.length, p.icon + ' ' + p.name, p.what);
+    head(opts.quick ? 'Kiểm tra nhanh · 3 phút' : 'Phần ' + (pi + 1) + '/' + PARTS.length, p.icon + ' ' + p.name, p.what);
     if (p.id === 'noi' && !G.canListen) {
       box.appendChild(G.el('p', 'Máy này chưa hỗ trợ micro chấm điểm, nên bỏ qua phần Nói. Kết quả tính theo 3 phần còn lại.'));
       box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { pi++; part(); } }, 'Xem kết quả ›'));
@@ -176,8 +179,8 @@ var G = window.G || (window.G = {});
   }
   function vocabTop(sub) {
     box.className = 'pl-wrap pl-qs pl-tvw';
-    var dots = G.el('div.pl-prog', P.parts.map(function (q, i) { return G.el('i' + (i < pi ? '.done' : i === pi ? '.on' : '')); }));
-    box.appendChild(G.el('div.pl-top', G.el('span.small.faint', P.parts[pi].icon + ' ' + P.parts[pi].name + ' · ' + sub), dots));
+    var dots = G.el('div.pl-prog', PARTS.map(function (q, i) { return G.el('i' + (i < pi ? '.done' : i === pi ? '.on' : '')); }));
+    box.appendChild(G.el('div.pl-top', G.el('span.small.faint', PARTS[pi].icon + ' ' + PARTS[pi].name + ' · ' + sub), dots));
   }
   function grid(lv, real, fake, cb) {
     screen(); vocabTop('màn ' + lv + '/5');
@@ -238,7 +241,7 @@ var G = window.G || (window.G = {});
     screen();
     asked.push(keyOf(p.id, it)); G._plCur = it;   // G._plCur: để kiểm tra tự động
     box.className = 'pl-wrap pl-qs';   // màn câu hỏi: điện thoại nằm ngang xếp cảnh bên trái, câu hỏi bên phải
-    var dots = G.el('div.pl-prog', P.parts.map(function (q, i) { return G.el('i' + (i < pi ? '.done' : i === pi ? '.on' : '')); }));
+    var dots = G.el('div.pl-prog', PARTS.map(function (q, i) { return G.el('i' + (i < pi ? '.done' : i === pi ? '.on' : '')); }));
     box.appendChild(G.el('div.pl-top', G.el('span.small.faint', p.icon + ' ' + p.name + ' · câu ' + (nAsk + 1)), dots));
     var kl = kaiLine(it); if (kl) box.appendChild(kl);
     box.appendChild(scene(p, it));
@@ -514,8 +517,10 @@ var G = window.G || (window.G = {});
   /* tầng nên học theo trình độ: A0, Pre-A1 → Tầng 1 Nền tảng; A1 → Tầng 2; A2 → Tầng 3; B1 trở lên → Tầng 4 */
   G.floorForLevel = function (lv) { return lv >= 4 ? 4 : lv === 3 ? 3 : lv === 2 ? 2 : 1; };
   function finish() {
-    var lv = overall(res);
+    // kiểm tra nhanh: xếp theo vốn từ, tối đa A2 (lên thẳng Tầng 4 cần bài đầy đủ)
+    var lv = opts.quick ? Math.min(res.tv || 0, 3) : overall(res);
     var rec = { lv: lv, tv: res.tv, nghe: res.nghe, doc: res.doc, gt: res.gt, noi: res.noi, luc: G.vnNow(), dung: nRight, tong: nAsk, ban: 2 };
+    if (opts.quick) rec.nhanh = 1;
     var floorWas = G.enFloorNow ? G.enFloorNow() : 1;
     var prev = G.S.dauVao;
     G.S.dauVao = rec;
@@ -535,6 +540,7 @@ var G = window.G || (window.G = {});
     })));
     if (prev && prev.luc) box.appendChild(G.el('p.small', (lv > prev.lv ? '📈 Tiến bộ: ' : lv < prev.lv ? '📉 ' : '➖ ') + 'lần trước ' + P.levels[prev.lv] + ' (' + prev.luc.slice(0, 10) + ') → lần này ' + P.levels[lv]));
     if (res.tv !== null && res.tv !== undefined && lv < skillMid(res)) box.appendChild(G.el('p.small.pl-cap', 'Nghe, đọc, giao tiếp của bạn ở mức ' + P.levels[skillMid(res)] + ', nhưng vốn từ mới ở mức ' + P.levels[res.tv] + '. Trình độ chung tính theo vốn từ, vì thiếu từ nền thì học lên cao sẽ hổng. Học từ ở tầng dưới nhanh thôi, thấy dễ thì thi vượt.'));
+    if (opts.quick) box.appendChild(G.el('p.small.pl-cap', 'Đây là kết quả nhanh theo vốn từ. Khi rảnh, làm bài đầy đủ 4 kỹ năng ở Sảnh (12–15 phút) để xếp chính xác hơn, giỏi thì lên thẳng Tầng 4.'));
     box.appendChild(G.el('div.pl-can', G.el('b', 'Bạn đang ở mức: '), P.cando[lv]));
     // tầng nên học theo kết quả này; khác tầng đang học thì cho chọn (tiến độ cũ giữ nguyên, thang máy vẫn đi được tầng đã học)
     var fl = G.floorForLevel(lv), moveBtn = null;

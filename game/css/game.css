@@ -736,11 +736,14 @@ body { background: #f4e9dc url(../assets/paper_tile_1600.webp) repeat; backgroun
 
 /* ===== Điện thoại nằm ngang (cao dưới 500 px): gọn thanh trên, lời Kai xuống giữa đáy để không che nhân vật ===== */
 .rotate { display: none; }
+/* điện thoại cầm dọc: Sảnh và mọi bảng học dùng dọc được; chỉ bản đồ 3D ngoài phố (khi không mở bảng) mới nhắc xoay ngang */
 @media (orientation: portrait) {
-  html.phone .rotate { display: flex; position: fixed; inset: 0; z-index: 9999; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 32px 28px; text-align: center;
+  html.phone.in-city:not(:has(#panel.open)):not(:has(#placement[style*="block"])) .rotate { display: flex; position: fixed; inset: 0; z-index: 9999; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 32px 28px; text-align: center;
     background: #f4e9dc url(../assets/paper_tile_1600.webp) repeat; background-size: 800px 800px; color: #4a2f1d; }
-  html.phone body { overflow: hidden; }
+  html.phone.in-city body { overflow: hidden; }
 }
+.rotate { display: none; }
+html:not(.in-city) .rotate { display: none !important; }
 .rotate b { font-size: 24px; }
 .rotate p { margin: 0; font-size: 16px; line-height: 1.45; color: #7d5a40; }
 .rotate small { font-size: 13.5px; line-height: 1.45; color: #80654d; max-width: 320px; }
@@ -1351,3 +1354,6 @@ body { background: #f4e9dc url(../assets/paper_tile_1600.webp) repeat; backgroun
 .hud-q .hq-m .hq-c { font-size: 14px; color: var(--coral); font-weight: 800; }
 @media (max-height: 500px) { .hud-q .hq-t { font-size: 15px; } .hud-q .hq-m .hq-c { font-size: 12.5px; } }
 @media (max-height: 500px) { .rd-name { max-width: 170px; } }
+.rot-back { margin-top: 6px; min-height: 48px; }
+/* điện thoại cầm dọc: tranh đầu Sảnh thấp lại để thấy ngay Việc nên làm */
+@media (orientation: portrait) and (max-width: 520px) { .lhero .hero-pic { max-height: 30vh; overflow: hidden; } .lhero .hero-pic img { width: 100%; height: 30vh; object-fit: cover; } .lobby-title { max-width: 70%; } .hero-sub { display: none; } }

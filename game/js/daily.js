@@ -38,6 +38,7 @@ var G = window.G || (window.G = {});
     G.save();
     var t = null; for (var i = 0; i < TASKS.length; i++) if (TASKS[i].id === id) t = TASKS[i];
     if (t) { G.toast('✅ Xong việc hôm nay: ' + t.name); if (G.sfx) G.sfx('quest'); }
+    if (G.askAccount) G.askAccount();
     if (G.achSoon) G.achSoon();
     if (G.updateHud) G.updateHud();
   };
