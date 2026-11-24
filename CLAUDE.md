@@ -46,7 +46,7 @@ Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính 
 
 ## Ra mắt (24/11/2026, làm theo phân tích A–E, phần pháp lý để sau)
 
-- Học thử trước, tài khoản sau: lần đầu chỉ làm bài đầu vào nhanh (Từ vựng) rồi vào học; mời lưu tiến độ sau buổi đầu (`G.askAccount`, tối đa 3 lần). Lời mời và huy hiệu tầng (`G.checkFloorBadge`) không bao giờ chen vào giữa bài: chờ tới khi đóng bảng học, không còn màn nào khác. Đồng bộ hai máy gộp theo từng phần (`G.mergeSave`), không ghi đè.
+- Học thử trước, tài khoản sau: lần đầu chỉ làm bài đầu vào nhanh (Từ vựng) rồi vào học; mời lưu tiến độ sau buổi đầu (`G.askAccount`, tối đa 3 lần). Lời mời và huy hiệu tầng (`G.checkFloorBadge`) không bao giờ chen vào giữa bài: chờ tới khi đóng bảng học, không còn màn nào khác. Đồng bộ hai máy gộp theo từng phần (`G.mergeSave`), không ghi đè. Máy nhớ mốc bản trên mây mình đã có (`cl-cloud-luc`): máy khác chưa lưu gì thì chỉ đẩy lên, không gộp, không nạp lại app; máy khác lưu thì gộp, nhưng đang ngoài phố / trong bài thì chờ về Sảnh (`G.cloudCalm`, `G._cloudWait`); chỉ báo "đã lấy tiến độ" và nạp lại khi bản trên mây thật sự mang thêm tiến độ (`G.sameProgress`). Lỗi cũ 24/11/2026: vào map bị văng ra vì lần đồng bộ nào cũng tưởng có bản mới. Kiểm thử: tools/test/cloud.test.mjs.
 - Điện thoại cầm dọc dùng được Sảnh và các bảng học; chỉ bản đồ 3D mới nhắc xoay ngang. iPhone nằm ngang: bảng rộng, danh sách chia 2 cột.
 - Ôn câu (practice.js): mốc 0…120 ngày; có micro thì phải nói đạt mới tính nhớ; không micro thì Quên / Nhớ lờ mờ / Nhớ chắc; quên 3 lần thành câu khó (`c.kho`, `G.srsHard`, `G.openReviewHard`).
 - Nhại có ghi âm `G.shadowBtn(câu)` (speak.js, MediaRecorder, bản ghi chỉ trong máy): thẻ bài học, thẻ từ, thẻ ôn, bắt lỗi câu.
@@ -60,7 +60,7 @@ Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính 
 - Số liệu và lỗi ẩn danh: `G.track(tên, {…})` (game/js/track.js) ghi vào bảng `app_events` (supabase/migrations/20261124_app_events.sql, chạy một lần trong SQL Editor; bảng chưa có thì app tự thôi gửi). Không gửi tên, email, câu nói. Tắt được trong Cài đặt.
 - Giọng đọc chuyển CDN được: đặt `G.AUDIO_BASE` trong game/js/cloud_config.js.
 - Kho truyện chỉ tải tranh bìa có trong `data/covers.json`; truyện mới chưa có bìa hiện kiểu thẻ chữ (đơn đặt bìa: Đơn P trong game/ASSET_ORDERS.md). Hình đang tải chỉ có nền giấy nhạt, không hiện tên tệp (`G.imgEl`).
-- **Soát trước khi phát hành**: `node tools/qa-run.mjs` (cần Playwright, 10–15 phút) chạy như người học thật: 3 người mới (mới tinh iPhone dọc, A1 iPhone ngang, A2 iPad) học trọn ngày đầu và 5 nhiệm vụ; Kiểm tra tuần, buổi A1/A2/B1, thi chứng chỉ A1 có phần nói, Bắt lỗi câu, đọc truyện chỉ nghe; quét mọi phòng, nơi, chủ đề, truyện, bảng. Phải ra `✓ Đạt`. Trình lái trong trang: tools/qa/driver.js.
+- **Soát trước khi phát hành**: `node tools/qa-run.mjs` (cần Playwright, 10–15 phút) chạy như người học thật: 3 người mới (mới tinh iPhone dọc, A1 iPhone ngang, A2 iPad) học trọn ngày đầu và 5 nhiệm vụ; Kiểm tra tuần, buổi A1/A2/B1, thi chứng chỉ A1 có phần nói, Bắt lỗi câu, đọc truyện chỉ nghe; quét mọi phòng, nơi, chủ đề, truyện, bảng; đã đăng nhập mây thì vào map, lưu không bị văng ra (`may`). Phải ra `✓ Đạt`. Trình lái trong trang: tools/qa/driver.js.
 
 ## Chuyển động (theo video anh Han gửi 22/11/2026)
 

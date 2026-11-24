@@ -150,6 +150,20 @@ var G = window.G || (window.G = {});
     m.luuLuc = Math.max(num(x.luuLuc), num(y.luuLuc)) + 1;
     return m;
   };
+  /* hai bản tiến độ có như nhau không: bỏ qua mốc lưu (luuLuc) và thứ tự khoá.
+     Dùng sau khi gộp với bản trên mây để biết bản đó có thật sự mang thêm gì về không (G.cloudSync). */
+  function canon(o) {
+    if (o === null || o === undefined || typeof o !== 'object') return JSON.stringify(o === undefined ? null : o);
+    if (o instanceof Array) return '[' + o.map(canon).join(',') + ']';
+    var ks = [], k;
+    for (k in o) if (o.hasOwnProperty(k) && o[k] !== undefined) ks.push(k);
+    ks.sort();
+    return '{' + ks.map(function (x) { return JSON.stringify(x) + ':' + canon(o[x]); }).join(',') + '}';
+  }
+  G.sameProgress = function (a, b) {
+    function top(o) { var c = {}, k; for (k in o) if (o.hasOwnProperty(k) && k !== 'luuLuc') c[k] = o[k]; return canon(c); }
+    return !!a && !!b && top(a) === top(b);
+  };
   /* nhận bản tiến độ từ mây: ghi vào máy (không đẩy ngược lên mây) */
   G.applySave = function (obj) {
     G.S = fill(obj);

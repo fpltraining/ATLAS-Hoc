@@ -4,7 +4,7 @@ import vm from 'vm';
 import path from 'path';
 import { fileURLToPath } from 'url';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-export function loadGame(files) {
+export function loadGame(files, extra) {   // extra: thêm / thay biến toàn cục (vd. XMLHttpRequest giả, localStorage riêng)
   const store = {};
   const ctx = {
     console, Date, Math, JSON, setTimeout: () => 0, clearTimeout: () => {}, setInterval: () => 0,
@@ -12,6 +12,7 @@ export function loadGame(files) {
     navigator: {}, document: { addEventListener() {}, getElementById: () => null, createElement: () => ({ style: {}, appendChild() {} }) },
     addEventListener() {}, location: { href: '', hash: '', search: '', origin: '', pathname: '' }, performance: { now: () => 0 }
   };
+  Object.assign(ctx, extra || {});
   ctx.window = ctx; ctx.self = ctx; ctx.G = ctx.window.G = {};
   vm.createContext(ctx);
   for (const f of files) vm.runInContext(fs.readFileSync(path.join(ROOT, 'game', f), 'utf8'), ctx, { filename: f });
