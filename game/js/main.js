@@ -5,24 +5,31 @@ var G = window.G || (window.G = {});
   G.S = G.load();
 
   /* vòng tiến độ góc phải: số phòng A1 đã qua (kể cả phòng thi), XP */
-  /* ô Nhiệm vụ hôm nay góc phải ngoài phố: rương thưởng, 5 biểu tượng nhiệm vụ (xong thì sáng), thanh tiến độ.
-     Còn việc thì rương lắc nhẹ mời bấm; bấm mở bảng Hôm nay với nút Làm ngay cho từng việc. */
+  /* thẻ Nhiệm vụ hôm nay góc phải ngoài phố (to, dễ thấy): rương + số việc còn lại, 5 ô nhiệm vụ sáng dần, thanh tiến độ,
+     dòng "Tiếp: …" mời bấm. Bấm mở bảng Hôm nay với nút Làm ngay. Bản đồ nhỏ tự xếp ngay dưới thẻ (placeRadar). */
   var hudLast = -1;
+  function placeRadar() {
+    var el = document.getElementById('hud-xp'), rd = document.getElementById('radar'); if (!el || !rd || !el.offsetHeight) return;
+    var top = el.getBoundingClientRect().bottom - (rd.offsetParent ? rd.offsetParent.getBoundingClientRect().top : 0) + 8;
+    rd.style.top = Math.round(top) + 'px';
+  }
+  addEventListener('resize', function () { setTimeout(placeRadar, 50); });
   G.updateHud = function () {
     var p = G.dayProgress(), n = p.done * 1000 + p.mins, el = document.getElementById('hud-xp'), d = G.today();
-    var all = p.done >= p.all, claim = all && !d.ruong;
+    var all = p.done >= p.all, claim = all && !d.ruong, nextQ = null, Q = G.QUESTS || [];
+    for (var i = 0; i < Q.length; i++) if (!d.viec[Q[i].id]) { nextQ = Q[i]; break; }
     el.innerHTML = '';
     el.className = 'hud-xp hud-q' + (all ? (claim ? ' claim' : ' full') : '');
     el.setAttribute('role', 'button'); el.setAttribute('aria-label', 'Nhiệm vụ hôm nay: xong ' + p.done + ' trên ' + p.all + '. Bấm để xem và làm.');
     var bar = G.el('i'); bar.style.transform = 'scaleX(' + (p.done / p.all) + ')';
     el.appendChild(G.el('span.hq-chest', G.ic3(all && !claim ? 'trophy' : 'gift'), !all ? G.el('b.hq-n', String(p.all - p.done)) : null));
-    el.appendChild(G.el('span.hq-mid',
-      G.el('b.hq-t', claim ? 'Mở rương +30 XP' : all ? 'Xong hôm nay' : 'Nhiệm vụ ' + p.done + '/' + p.all),
-      G.el('span.hq-icons', G.questIcons ? G.questIcons() : null),
-      G.el('span.hq-bar', bar),
-      G.el('small.hq-m', p.mins + '/' + p.goal + ' phút · ' + G.S.xp + ' XP')));
+    el.appendChild(G.el('span.hq-head', G.el('b.hq-t', 'Nhiệm vụ hôm nay')));
+    el.appendChild(G.el('span.hq-icons', G.questIcons ? G.questIcons() : null));
+    el.appendChild(G.el('span.hq-barw', G.el('span.hq-bar', bar), G.el('small.hq-m', G.el('b.hq-c', p.done + '/' + p.all), ' · ' + p.mins + '/' + p.goal + ' phút')));
+    el.appendChild(G.el('span.hq-next', claim ? 'Mở rương +30 XP ›' : all ? 'Xong hết hôm nay · ' + G.S.xp + ' XP' : 'Tiếp: ' + (nextQ ? nextQ.name : '') + ' ›'));
     if (hudLast >= 0 && n > hudLast) { el.classList.add('bump'); setTimeout(function () { el.classList.remove('bump'); }, 800); }
     hudLast = n;
+    placeRadar(); setTimeout(placeRadar, 60);
   };
 
   G.goCity = function (id) {

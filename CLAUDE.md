@@ -25,7 +25,8 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 ## Nhiệm vụ hôm nay và Sảnh (24/11/2026)
 
 - 5 nhiệm vụ (`G.QUESTS`, daily.js): học bài, đọc truyện, nói chuyện, ôn câu, học 10 từ chủ đề. `G.questList` (Sảnh, bảng Hôm nay) có nút Làm ngay mở thẳng đúng chỗ (`G.questAct`, dùng `G.nextLesson`, `G.nextLifeId` trong engine.js); xong cả 5 mở rương +30 XP (`G.claimChest`, `G.today().ruong`).
-- Ngoài phố, ô góc phải (`G.updateHud`, class `.hud-q`) là ô nhiệm vụ: rương có số việc còn lại, 5 icon sáng dần, thanh tiến độ; bấm mở bảng Hôm nay.
+- Ngoài phố, thẻ góc phải (`G.updateHud`, class `.hud-q`, rộng 268 px, iPhone 228 px) là thẻ Nhiệm vụ hôm nay: rương có số việc còn lại, 5 ô nhiệm vụ sáng dần, thanh tiến độ, dòng "Tiếp: …"; bấm mở bảng Hôm nay. Bản đồ nhỏ tự xếp ngay dưới thẻ (`placeRadar`).
+- Bản đồ nhỏ (thay radar, `G.drawRadar` trong radar.js): tờ bản đồ màu nước của khu và các khu liền kề trên nền cỏ, viền giấy kem, N trên nhãn đỏ, nhà / trường / bến xe là icon 3D, người chưa nói chuyện là bong bóng chat, mình là mặt nhân vật có mũi nhọn chỉ hướng, nơi cần tới là ghim đỏ; nhãn tên khu bên dưới; bấm để xem cả khu.
 - Sảnh tab Hôm nay: thẻ "Bắt đầu từ đây" (`startHere` trong lobby.js, một nút cam) rồi Nhiệm vụ hôm nay; tab Lộ trình có "Bạn đang ở đây"; tab Hồ sơ có "Trình độ của bạn".
 - Font giao diện: Be Vietnam Pro (OFL, `game/vendor/fonts/`).
 

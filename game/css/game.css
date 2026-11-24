@@ -1308,3 +1308,46 @@ body { background: #f4e9dc url(../assets/paper_tile_1600.webp) repeat; backgroun
 .chest-card span { font-size: 14px; color: var(--soft); font-weight: 600; }
 @media (max-height: 500px) { .chest-anim { width: 120px; height: 120px; } }
 .tp-party { width: 84px; height: 84px; margin: 0 auto -4px; }
+
+/* ---------- thẻ Nhiệm vụ hôm nay ngoài phố: to, nằm riêng ở góc phải (anh Han: "đừng để kẹt trong góc") ---------- */
+.hud-xp.hud-q { position: absolute; top: max(10px, env(safe-area-inset-top)); right: max(12px, env(safe-area-inset-right)); width: 268px; min-height: 0;
+  display: grid; grid-template-columns: 48px minmax(0, 1fr); grid-template-areas: "chest head" "icons icons" "bar bar" "next next"; align-items: center; gap: 8px 10px;
+  padding: 10px 12px 10px; border-radius: 20px; z-index: 7; }
+.hud-q .hq-chest { grid-area: chest; width: 48px; height: 48px; }
+.hud-q .hq-chest .ic3 { width: 46px; height: 46px; }
+.hud-q .hq-n { top: -5px; right: -6px; min-width: 22px; height: 22px; line-height: 22px; font-size: 13px; }
+.hq-head { grid-area: head; display: flex; align-items: baseline; justify-content: space-between; gap: 6px; min-width: 0; }
+.hud-q .hq-t { font-size: 16px; line-height: 1.15; }
+.hq-c { font-size: 22px; line-height: 1; letter-spacing: -.02em; color: var(--coral); font-variant-numeric: tabular-nums; }
+.hud-q .hq-icons { grid-area: icons; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.hud-q .qi { width: auto; height: 38px; border-radius: 11px; background: #f1e8d8; position: relative; }
+.hud-q .qi .ic3 { width: 28px; height: 28px; }
+.hud-q .qi.on { background: #d3eddf; box-shadow: inset 0 0 0 1.5px #8cc6ab; }
+.hud-q .qi.on::after { content: ''; position: absolute; right: -3px; bottom: -3px; width: 15px; height: 15px; border-radius: 50%; background: #2f7a63 url(../assets/ic3_check.webp) center / 13px no-repeat; box-shadow: 0 0 0 2px #fffbf2; }
+.hq-barw { grid-area: bar; display: flex; align-items: center; gap: 8px; }
+.hud-q .hq-bar { flex: 1; height: 8px; }
+.hud-q .hq-m { font-size: 12px; color: var(--soft); font-weight: 700; white-space: nowrap; display: block; }
+.hq-next { grid-area: next; font-size: 13.5px; font-weight: 800; color: var(--coral); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.hud-q.full .hq-next { color: #1d5a45; }
+@media (max-height: 500px) {
+  .hud-xp.hud-q { width: 228px; padding: 7px 10px; gap: 5px 8px; grid-template-columns: 38px minmax(0, 1fr); border-radius: 16px; min-height: 0; }
+  .hud-q .hq-chest, .hud-q .hq-chest .ic3 { width: 36px; height: 36px; }
+  .hud-q .hq-t { font-size: 14px; } .hq-c { font-size: 18px; }
+  .hud-q .qi { height: 30px; } .hud-q .qi .ic3 { width: 22px; height: 22px; }
+  .hud-q .hq-m { display: block; font-size: 11px; } .hq-next { font-size: 12.5px; }
+}
+
+/* ---------- bản đồ nhỏ (radar.js): tờ bản đồ giấy, tên khu, nhiệt độ cùng kiểu giấy kem ---------- */
+.radar canvas { width: 136px; height: 136px; border-radius: 50%; box-shadow: 0 10px 22px -8px rgba(60,35,10,.55), 0 0 0 1.5px #ecdcc0; }
+.rd-name { max-width: 150px; padding: 3px 10px; border-radius: 99px; background: rgba(255,251,242,.96); border: 1.5px solid #ecdcc0; color: #5b3a22; font-size: 12px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; box-shadow: 0 4px 10px -4px rgba(60,35,10,.4); }
+.rd-name:empty { display: none; }
+.temp { background: rgba(255,251,242,.96); color: var(--ink); border: 1.5px solid #ecdcc0; box-shadow: 0 6px 14px -6px rgba(60,35,10,.45); }
+.temp .tp-en { color: var(--coral); }
+.temp small { color: var(--soft); opacity: 1; }
+@media (max-height: 500px) { .radar canvas { width: 100px; height: 100px; } .rd-name { font-size: 11px; max-width: 120px; } .temp small { display: none; } }
+@media (max-width: 640px) { .radar canvas { width: 96px; height: 96px; } }
+.hud-q .hq-head { display: block; }
+.hud-q .hq-t { font-size: 17px; white-space: nowrap; }
+.hud-q .hq-m .hq-c { font-size: 14px; color: var(--coral); font-weight: 800; }
+@media (max-height: 500px) { .hud-q .hq-t { font-size: 15px; } .hud-q .hq-m .hq-c { font-size: 12.5px; } }
+@media (max-height: 500px) { .rd-name { max-width: 170px; } }
