@@ -160,7 +160,7 @@ var G = window.G || (window.G = {});
     /* tự đọc từ khó của cặp (từ có âm dễ mất), máy nghe; được thử 2 lần */
     function sayQ(q, card) {
       var t = q.a, tries = 0, out = G.el('div.pl-heard'), fin = false;
-      card.appendChild(G.el('div.small.faint', 'Đọc to từ này (bấm 🔊 để nghe mẫu):'));
+      card.appendChild(G.el('div.small.faint', 'Đọc to từ này (bấm loa để nghe mẫu):'));
       card.appendChild(G.el('div.pr-word', t.w, ' ', G.el('button.pl-mini', { onclick: function () { G.say(t.w, 'en'); } }, G.ic3('speaker', 'ic3-s'))));
       card.appendChild(G.el('div.pr-vi', t.ipa + ' · ' + t.vi + ' (không phải ' + q.b.w + ')'));
       card.appendChild(G.el('div.pl-microw', micBtn(out, function (alts) {

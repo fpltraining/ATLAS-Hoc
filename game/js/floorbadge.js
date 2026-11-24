@@ -69,14 +69,18 @@ var G = window.G || (window.G = {});
   };
 
   /* có huy hiệu mới (tốt nghiệp tầng, kiểm tra đầu vào, lấy tiến độ từ máy khác): màn chúc mừng một lần */
+  var fbT = 0;
   G.checkFloorBadge = function () {
     if (!G.floorBadgeReady() || !G.S) return;
     var lv = G.floorBadgeLevel(), seen = G.S.hhTang || 0;
     if (lv <= seen) { if (lv < seen) { G.S.hhTang = lv; G.save(); } return; }
-    // đang có màn khác (bằng tốt nghiệp, kiểm tra, chọn nhân vật) thì để lần sau
-    if (document.querySelector('.modal')) return;
-    var pl = document.getElementById('placement'), cr = document.getElementById('create');
-    if ((pl && pl.style.display !== 'none' && pl.offsetParent) || (cr && cr.style.display !== 'none')) return;
+    // đang có màn khác (bằng tốt nghiệp, kiểm tra, chọn nhân vật, bảng bài học) thì chờ, hiện sau khi màn đó đóng
+    var pl = document.getElementById('placement'), cr = document.getElementById('create'), pn = document.getElementById('panel');
+    if (document.querySelector('.modal, .cgate') || (pn && pn.classList.contains('open')) || (pl && pl.style.display !== 'none' && pl.offsetParent) || (cr && cr.style.display !== 'none')) {
+      clearTimeout(fbT); if ((G._fbTries = (G._fbTries || 0) + 1) < 900) fbT = setTimeout(G.checkFloorBadge, 2500);
+      return;
+    }
+    G._fbTries = 0;
     var b = G.FLOOR_BADGES[lv - 1];
     G.S.hhTang = lv; G.save();
     G.sfx('done'); if (G.confetti) G.confetti();

@@ -72,6 +72,8 @@ var G = window.G || (window.G = {});
     return null;
   }
   G.topicNext = function () { var s = nextTopic(); return s ? { id: s.id, name: s.t.name, left: s.all - s.learned } : null; };
+  /* vào thẳng một lượt 10 từ (nhiệm vụ hôm nay "Học 10 từ"): tải kho từ nếu chưa có */
+  G.topicLearn = function (id) { if (DATA) learn(id); else load(function () { learn(id); }); };
   /* câu ví dụ của từ chủ đề trong thẻ ôn (practice.js): điền khi kho từ đã tải */
   G.topicExEl = function (c) {
     var box = G.el('div.wex.tp-rvex');

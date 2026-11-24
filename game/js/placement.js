@@ -585,16 +585,16 @@ var G = window.G || (window.G = {});
   function plan(lv) {
     if (lv <= 1) return [
       'Hiện nghĩa tiếng Việt dưới mọi câu, kể cả các câu trả lời để chọn.',
-      'Nên học phòng A1-1 ở Trường Anh ngữ trước, rồi mới nói chuyện ngoài phố.',
-      'Bấm 🐢 để nghe chậm, nghe lại bao nhiêu lần cũng được.'
+      'Học Tầng 1 · Nền tảng trước (phát âm và những từ dùng nhiều nhất), rồi mới nói chuyện ngoài phố.',
+      'Bấm nút con rùa để nghe chậm, nghe lại bao nhiêu lần cũng được.'
     ];
     if (lv === 2) return [
-      'Học lần lượt các phòng A1-1 → A1-4 rồi thi cuối cấp A1.',
+      'Học lần lượt 16 buổi của 4 phòng A1 rồi thi chứng chỉ A1.',
       'Mỗi sáng nói chuyện với mẹ, hàng xóm, tiệm bánh; nghĩa đáp án ẩn đi để bạn tự hiểu (bật lại được).',
       'Đọc truyện ở kệ dễ, nghe chậm khi cần.'
     ];
     return [
-      'Mở khoá cả 4 phòng A1: vào thẳng phần Kiểm tra từng phòng để lấy sao.',
+      lv >= 4 ? 'Bắt đầu ở Tầng 4 · B1 – B2; các tầng dưới vẫn mở để ôn lại.' : 'Bắt đầu ở Tầng 3 · A2 – B1; các phòng A1 vẫn mở nếu muốn ôn lại.',
       'Ưu tiên Phố mua sắm và “Tự nói” để luyện phản xạ thật.',
       lv >= 4 ? 'Đọc kệ Tin tức, Tiểu luận B2 và truyện dài.' : 'Đọc kệ Tin tức và truyện bí ẩn, làm Kiểm tra tuần mỗi tuần.'
     ];
