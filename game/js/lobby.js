@@ -278,7 +278,8 @@ var G = window.G || (window.G = {});
     P.set.appendChild(G.el('div.tg-list',
       G.switchRow('bell', 'Âm thanh', 'Tiếng bấm, tiếng đúng sai, tiếng ăn mừng', G.S.caiDat.amThanh !== false, function (on) { G.S.caiDat.amThanh = on; G.save(); }),
       G.switchRow('piano', 'Nhạc nền', 'Nhạc nhẹ khi đi trong thành phố', G.musicOn(), function (on) { G.setMusic(on); }),
-      G.canListen ? G.switchRow('mic', 'Dùng micro khi luyện nói', 'Máy nghe bạn nói và chấm điểm phát âm', G.micOn(), function (on) { G.setMic(on); }) : null));
+      G.canListen ? G.switchRow('mic', 'Dùng micro khi luyện nói', 'Máy nghe bạn nói và chấm điểm phát âm', G.micOn(), function (on) { G.setMic(on); }) : null,
+      G.track ? G.switchRow('chart', 'Gửi số liệu ẩn danh', 'Giúp sửa lỗi và làm bài tốt hơn. Không gửi tên, email hay câu bạn nói.', G.S.caiDat.soLieu !== false, function (on) { G.S.caiDat.soLieu = on; G.save(); }) : null));
     // tốc độ giọng đọc cho cả app: chậm / thường / nhanh (nghe nhanh dần để quen tốc độ người thật)
     var spd = G.el('div.td-seg.set-speed');
     (function drawSpd() {
@@ -290,6 +291,7 @@ var G = window.G || (window.G = {});
     })();
     P.set.appendChild(G.el('div.cl-card', G.el('b', G.ic3('headphone', 'ic3-s'), 'Tốc độ giọng đọc'),
       G.el('span.small.faint', 'Áp dụng cho bài học, truyện, ôn tập. Nghe quen rồi thì chuyển sang Nhanh để gần tốc độ người thật. Nút con rùa vẫn luôn đọc chậm.'), spd));
+    if (G.reminderCard) P.set.appendChild(G.reminderCard());
     P.set.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam).' + (G.cloudReady && G.cloudReady() && G.cloudUser() ? ' Đã bật lưu trên mây.' : ' Nhớ xuất file sao lưu thỉnh thoảng nhé.')));
   };
 

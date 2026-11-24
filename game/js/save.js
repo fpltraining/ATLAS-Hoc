@@ -166,12 +166,20 @@ var G = window.G || (window.G = {});
     if (c.ngayCuoi === today) return;
     // người học chọn ngày học trong tuần: ngày nghỉ theo lịch không đứt chuỗi, chỉ bỏ lỡ một ngày học mới đứt
     var last = c.ngayCuoi ? Date.parse(c.ngayCuoi + 'T00:00:00+07:00') : 0, t1 = Date.parse(today + 'T00:00:00+07:00');
-    var days = last ? Math.round((t1 - last) / 86400000) : 99, ok = days <= 14;
-    if (ok && G.isStudyDay) { for (var k = 1; k < days; k++) if (G.isStudyDay(last + k * 86400000 + 43200000)) { ok = false; break; } }
+    var days = last ? Math.round((t1 - last) / 86400000) : 99, ok = days <= 14, missed = 0;
+    if (ok && G.isStudyDay) { for (var k = 1; k < days; k++) if (G.isStudyDay(last + k * 86400000 + 43200000)) missed++; ok = !missed; }
     else if (ok) ok = days <= Math.ceil(7 / ((G.S.caiDat && G.S.caiDat.ngayTuan) || 5));
+    // băng giữ chuỗi: lỡ ngày học mà còn đủ băng thì băng tự giữ chuỗi (mỗi ngày lỡ tốn 1 băng)
+    var used = 0;
+    if (!ok && missed && days <= 14 && c.hienTai > 0 && (c.bang || 0) >= missed) { used = missed; c.bang -= missed; ok = true; c.dungBang = today; }
     c.hienTai = ok ? c.hienTai + 1 : 1;
     c.ngayCuoi = today;
+    // mỗi 7 ngày học liên tiếp được 1 băng, giữ tối đa 2
+    var got = c.hienTai > 0 && c.hienTai % 7 === 0 && (c.bang || 0) < 2;
+    if (got) c.bang = (c.bang || 0) + 1;
     G.save();
+    if (used && G.toast) G.toast('Hôm trước lỡ ' + used + ' ngày học: dùng ' + used + ' băng giữ chuỗi, chuỗi vẫn còn ' + c.hienTai + ' ngày.');
+    else if (got && G.toast) G.toast(c.hienTai + ' ngày liên tiếp: nhận 1 băng giữ chuỗi (đang có ' + c.bang + ').');
   };
 
   G.addXp = function (n) { G.S.xp += n; G.save(); if (G.updateHud) G.updateHud(); achSoon(); };

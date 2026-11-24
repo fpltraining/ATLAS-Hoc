@@ -241,6 +241,7 @@ var G = window.G || (window.G = {});
         if (err) { msg.textContent = err; return; }
         if (wrap.parentNode) document.body.removeChild(wrap);
         G.toast(what === 'pulled' ? 'Đã lấy tiến độ trên mây về máy này.' : 'Đã bật lưu trên mây.');
+        if (G.track) G.track('tai_khoan', { moi: signup ? 1 : 0, lay: what === 'pulled' ? 1 : 0 });
         if (after) after(what);
       });
     }

@@ -527,6 +527,7 @@ var G = window.G || (window.G = {});
     var floorWas = G.enFloorNow ? G.enFloorNow() : 1;
     var prev = G.S.dauVao;
     G.S.dauVao = rec;
+    if (G.track) G.track('dau_vao', { lv: rec.lv, tv: rec.tv, nhanh: rec.nhanh ? 1 : 0 });
     G.S.dauVaoLs = (G.S.dauVaoLs || []).concat([rec]).slice(-12);
     G.S.dauVaoDaHoi = asked.slice(0, 120);   // lần sau rút câu khác
     if (G.S.caiDat) delete G.S.caiDat.nghiaDapAn;   // để nghĩa đáp án tự bật/tắt theo trình độ mới

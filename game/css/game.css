@@ -1390,7 +1390,7 @@ html:not(.in-city) .rotate { display: none !important; }
 .rv-nomic { display: block; margin: 6px 0; }
 /* bắt lỗi câu */
 .fx-row { display: flex; flex-wrap: wrap; gap: 8px; }
-.fx-ch { min-height: 48px; padding: 8px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; font-size: 19px; font-weight: 600; color: var(--ink); }
+.fx-ch { min-height: 48px; min-width: 48px; padding: 8px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; font-size: 19px; font-weight: 600; color: var(--ink); }
 .fx-ch.ok { border-color: var(--jade); background: var(--jade-soft); }
 .fx-ch.no { border-color: var(--coral); background: var(--coral-soft); }
 .fx-ch.was { border-color: var(--coral); border-style: dashed; }
@@ -1430,3 +1430,11 @@ html:not(.in-city) .rotate { display: none !important; }
 }
 .rd-w { min-height: 44px; }
 .rd-quiz .faint { color: var(--soft); }
+/* băng giữ chuỗi */
+.td-freeze { display: flex; align-items: center; gap: 4px; margin-top: 2px; font-size: 13px; font-weight: 650; color: #2f5f86; }
+.td-freeze .ic3-s { width: 18px; height: 18px; }
+.td-freeze-n { margin: -4px 0 10px; }
+/* nhắc học qua Lịch, chia sẻ */
+.rm-row { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px; margin-top: 8px; }
+.rm-time { min-height: 44px; padding: 6px 10px; border-radius: 10px; border: 1.5px solid var(--line); background: #fff; font: inherit; font-size: 17px; color: var(--ink); }
+.grad-share { margin: 6px auto 10px; display: flex; align-items: center; gap: 6px; }

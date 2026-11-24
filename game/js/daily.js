@@ -36,6 +36,7 @@ var G = window.G || (window.G = {});
     if (d.viec[id]) return;
     d.viec[id] = G.vnNow().slice(11, 16);
     G.save();
+    if (G.track) G.track('nhiem_vu', { id: id });
     var t = null; for (var i = 0; i < TASKS.length; i++) if (TASKS[i].id === id) t = TASKS[i];
     if (t) { G.toast('✅ Xong việc hôm nay: ' + t.name); if (G.sfx) G.sfx('quest'); }
     if (G.askAccount) G.askAccount();
@@ -210,7 +211,9 @@ var G = window.G || (window.G = {});
     var fire = G.S.chuoi.hienTai > 0 && G.lottieIc ? G.lottieIc('fire', 'td-fire', { loop: true }) : G.ic3('fire', 'td-fire'), sn = G.el('b.td-sn', String(G.S.chuoi.hienTai));
     body.appendChild(G.el('div.td-head', ring,
       G.el('div.td-txt', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc hôm nay')),
-      G.el('div.td-streak', fire, G.el('div', sn, G.el('span', 'ngày học liên tiếp')))));
+      G.el('div.td-streak', fire, G.el('div', sn, G.el('span', 'ngày học liên tiếp'),
+        G.el('span.td-freeze', { title: 'Mỗi 7 ngày học liên tiếp được 1 băng (giữ tối đa 2). Lỡ một ngày học, băng tự giữ chuỗi.' }, G.ic3('ice', 'ic3-s'), (G.S.chuoi.bang || 0) + ' băng giữ chuỗi')))));
+    body.appendChild(G.el('div.small.faint.td-freeze-n', 'Băng giữ chuỗi: học đủ 7 ngày liên tiếp được 1 băng (giữ tối đa 2). Lỡ một ngày học trong lịch, băng tự giữ chuỗi cho bạn.'));
     // nhiệm vụ hôm nay ngay dưới vòng %: việc cần làm là trung tâm của bảng
     body.appendChild(G.questList({ onChange: function () { G.openToday(); } }));
     var wk = G.weekStudy();
@@ -435,6 +438,7 @@ var G = window.G || (window.G = {});
           stopListen();
           G.S.truyen = G.S.truyen || {};
           if ((G.S.truyen[s.id] || 0) <= k) { G.S.truyen[s.id] = k + 1; G.addXp(10 + (quiz.length && got === quiz.length ? 5 : 0)); }
+          if (G.track) G.track('truyen', { id: s.id, ch: k + 1, dung: got, hoi: quiz.length });
           G.markStudy(); G.markTask('doc'); G.sfx('done');
           if (k + 1 < full.chapters.length) chapter(s, k + 1); else { G.openReader(); G.toast('Đọc xong truyện ' + s.title + '. Giỏi lắm!'); }
         } }, k + 1 < full.chapters.length ? 'Đọc xong · chương sau ›' : 'Đọc xong truyện')));

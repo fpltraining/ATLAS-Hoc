@@ -13,7 +13,9 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 - App tính mỗi ngày cần học bao nhiêu (giờ còn lại tới mục tiêu ÷ số ngày học còn lại) và **giao đủ phần đó mỗi ngày** (vòng Hôm nay). Học chậm thì phần mỗi ngày tự tăng, nhanh thì giảm. Code: `G.setPlan`, `G.planToday` (game/js/placement.js), `goalMin` (game/js/daily.js).
 - Thẻ "Kế hoạch của bạn" (`G.goalCard`, class `.pv-*`): con số là trung tâm, không emoji, chuyển động nhẹ (số chạy, nhún khi chạm, tắt khi máy bật Giảm chuyển động). Dùng ở kết quả đầu vào và Sảnh.
 - **Bản đồ nhớ từ** (`G.openMemMap`, game/js/memmap.js): mỗi ô là một buổi, tô màu theo mức nhớ các câu trong kho ôn (`G.S.cau`); ô đỏ nhạt là buổi có nhiều câu đến hạn, chạm để ôn đúng các câu đó (`G.openReviewOf`). Mở từ Sảnh và bảng Hôm nay. Tab cuối "Chủ đề": 15 ô, mỗi ô một nhóm từ.
-- **Từ theo chủ đề** (`G.openTopics`, `G.openTopic`, game/js/topics.js): 15 nhóm từ của ATLAS (1334 từ trong `data/en/bank.json`), dựng bằng `node tools/build-topic-game.mjs` ra `game/data/topic_en_index.js` (nạp cùng game) và `game/data/topic_en.json` (tải khi mở bảng). Chia tầng (anh Han duyệt 24/11/2026): nền tảng, số đếm → Tầng 1; ngày giờ → Tầng 2; tiền, bán hàng, công sở, doanh nghiệp → Tầng 3; kinh tế vĩ mô, thương mại, nhà nước, quốc tế, xã hội, khí hậu, công nghệ, đọc tin → Tầng 4. Chủ đề mở khi tới tầng đó. Một lượt 10 thẻ từ rồi nghe chọn nghĩa; từ đã học vào kho ôn (`G.srsAdd`, có `cd` = mã chủ đề để thẻ ôn hiện câu ví dụ) và `G.S.tuChuDe`. Mỗi từ chưa học tính 2 phút vào giờ còn lại của lộ trình (`G.topicHours`, `remainHours` trong lobby.js), nên phần học mỗi ngày đã gồm cả từ. Việc hôm nay thứ 5: "Học 10 từ theo chủ đề" (`tu`).
+- **Tầng 2 A1 có 16 buổi** (game/data/en_a1_more.js, nạp sau en_a1.js): 4 phòng A1 thành nhóm 4 buổi (`en-a1-01` … `en-a1-16`), buổi 1 mỗi phòng là nội dung phòng cũ, mỗi buổi 1 điểm ngữ pháp + 12–15 câu. Bản lưu cũ: `migrate()` trong save.js chép điểm phòng cũ sang buổi 1; phòng nhóm có điểm cũ từ 8 vẫn tính là qua (`G.roomPassed`).
+- **Lộ trình nói thật**: `G.CONTENT_EN` (game/data/content_en.js, dựng bằng `node tools/build-content-hours.mjs` mỗi khi thêm bài, truyện, hội thoại) đếm giờ bài có sẵn từng tầng; tab Lộ trình ghi "Bài có sẵn: khoảng X giờ" và số giờ luyện thêm để đủ giờ chuẩn (`G.ROADMAP_EN[].hours`).
+- **Từ theo chủ đề** (`G.openTopics`, `G.openTopic`, game/js/topics.js): 15 nhóm từ của ATLAS (1334 từ trong `data/en/bank.json`), dựng bằng `node tools/build-topic-game.mjs` ra `game/data/topic_en_index.js` (nạp cùng game) và `game/data/topic_en.json` (tải khi mở bảng). Chia tầng (anh Han duyệt 24/11/2026): nền tảng, số đếm → Tầng 1; ngày giờ → Tầng 2; tiền, bán hàng, công sở, doanh nghiệp → Tầng 3; kinh tế vĩ mô, thương mại, nhà nước, quốc tế, xã hội, khí hậu, công nghệ, đọc tin → Tầng 4. Chủ đề mở khi tới tầng đó. Một lượt 10 thẻ từ, nghe chọn nghĩa, rồi nói 3 câu ví dụ (`G.speakCard`); từ đã học vào kho ôn (`G.srsAdd`, có `cd` = mã chủ đề để thẻ ôn hiện câu ví dụ) và `G.S.tuChuDe`. Mỗi từ chưa học tính 2 phút vào giờ còn lại của lộ trình (`G.topicHours`, `remainHours` trong lobby.js), nên phần học mỗi ngày đã gồm cả từ. Việc hôm nay thứ 5: "Học 10 từ theo chủ đề" (`tu`).
 
 ## Bài kiểm tra đầu vào (chuẩn như Duolingo English Test, EF SET, Cambridge · sửa 24/11/2026)
 
@@ -29,6 +31,22 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 - Bản đồ nhỏ (thay radar, `G.drawRadar` trong radar.js): tờ bản đồ màu nước của khu và các khu liền kề trên nền cỏ, viền giấy kem, N trên nhãn đỏ, nhà / trường / bến xe là icon 3D, người chưa nói chuyện là bong bóng chat, mình là mặt nhân vật có mũi nhọn chỉ hướng, nơi cần tới là ghim đỏ; nhãn tên khu bên dưới; bấm để xem cả khu.
 - Sảnh tab Hôm nay: thẻ "Bắt đầu từ đây" (`startHere` trong lobby.js, một nút cam) rồi Nhiệm vụ hôm nay; tab Lộ trình có "Bạn đang ở đây"; tab Hồ sơ có "Trình độ của bạn".
 - Font giao diện: Be Vietnam Pro (OFL, `game/vendor/fonts/`).
+
+## Ra mắt (24/11/2026, làm theo phân tích A–E, phần pháp lý để sau)
+
+- Học thử trước, tài khoản sau: lần đầu chỉ làm bài đầu vào nhanh (Từ vựng) rồi vào học; mời lưu tiến độ sau buổi đầu (`G.askAccount`, tối đa 3 lần). Đồng bộ hai máy gộp theo từng phần (`G.mergeSave`), không ghi đè.
+- Điện thoại cầm dọc dùng được Sảnh và các bảng học; chỉ bản đồ 3D mới nhắc xoay ngang. iPhone nằm ngang: bảng rộng, danh sách chia 2 cột.
+- Ôn câu (practice.js): mốc 0…120 ngày; có micro thì phải nói đạt mới tính nhớ; không micro thì Quên / Nhớ lờ mờ / Nhớ chắc; quên 3 lần thành câu khó (`c.kho`, `G.srsHard`, `G.openReviewHard`).
+- Nhại có ghi âm `G.shadowBtn(câu)` (speak.js, MediaRecorder, bản ghi chỉ trong máy): thẻ bài học, thẻ từ, thẻ ôn, bắt lỗi câu.
+- Kho truyện: kệ "Truyện dễ A1" (data-src/stories/09-en-a1-easy.txt, 6 truyện; build-stories.mjs ghi đè truyện cũ nên chỉ chép tệp mới và thêm mục vào index), nghe cả chương (`G.sayList`), 3 tốc độ, ẩn chữ chỉ nghe, câu hỏi đọc hiểu (`quiz`), từ đáng nhớ (`vocab` hoặc `gloss`).
+- Bắt lỗi câu B1–B2 (`G.openFix`, game/js/fixit.js, dữ liệu game/data/fix_en.js 48 câu), mở từ Tầng 3.
+- Tốc độ giọng đọc chung trong Cài đặt (`G.S.caiDat.tocDo`: 0,7 / 1 / 1,2).
+- Giữ chân: băng giữ chuỗi (`G.S.chuoi.bang`, 7 ngày liên tiếp được 1, tối đa 2, tự dùng trong `G.markStudy`); nhắc học qua Lịch (`G.reminderCard`, tệp .ics giờ Việt Nam theo ngày học); chia sẻ kết quả `G.share` / `G.shareBtn` (kiểm tra tuần, chứng chỉ).
+- Một màn một nút cam: "Vào Brightford" là nút đất sét màu kem. Thanh việc tiếp theo ngoài phố có "Học ngay ›" khi việc tiếp theo là buổi học. Pháo giấy chỉ cho mốc lớn (lên rank, qua bài thi tầng lần đầu, chứng chỉ, tốt nghiệp, đồ kỷ niệm, kiểm tra tuần từ 90).
+- Nhãn tên trên bản đồ 3D là nhãn giấy kem viền nâu (`plate` trong world3d.js). Lời Kai hiện tới 3 dòng.
+- Tải lần đầu nhẹ: service worker chỉ tải trước hình giao diện (`LIGHT`, khoảng 2 MB); trang gửi 'warm' sau 25 giây để tải dần hình còn lại (bỏ qua khi Tiết kiệm dữ liệu).
+- Số liệu và lỗi ẩn danh: `G.track(tên, {…})` (game/js/track.js) ghi vào bảng `app_events` (supabase/migrations/20261124_app_events.sql, chạy một lần trong SQL Editor; bảng chưa có thì app tự thôi gửi). Không gửi tên, email, câu nói. Tắt được trong Cài đặt.
+- Giọng đọc chuyển CDN được: đặt `G.AUDIO_BASE` trong game/js/cloud_config.js.
 
 ## Chuyển động (theo video anh Han gửi 22/11/2026)
 
@@ -58,8 +76,8 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 - Thư viện ngoài để trong `game/vendor/`, ghi nguồn và giấy phép ở `game/vendor/CREDITS.md`: three.js, lottie-web (nạp khi cần), anime.js 3.2.2 (`G.enter`, `G.pop`, `G.countUp` trong util.js), AutoAnimate (trò xếp câu), biến chuyển động và bóng của Open Props trong `:root` của game.css. Thêm tệp vendor thì thêm vào `CORE` trong `game/sw.js`.
 - Âm thanh: ghi âm thật từ nguồn miễn phí (CC0, phạm vi công cộng, CC BY) hoặc anh Han làm bằng Meta AI; ghi nguồn ở `game/sfx/CREDITS.md`. Tiếng giao diện (`G.sfx`: right, wrong, done, quest, chest, tap, tab) là Kenney Interface Sounds (CC0, `sfx/sfx_ui_*.mp3`); chạm nút có tiếng nhẹ, đổi tab tiếng gạt (bộ nghe trong main.js, bỏ qua đáp án, loa, micro).
 - Kai và Han cử động bằng Rive: đơn ở `game/ASSET_ORDERS.md` (Đơn O), chờ tệp .riv. Giọng đọc: Kokoro (af_heart, am_michael).
-- Code game là **ES5 thuần** (không arrow function, let/const, template literal, optional chaining) để chạy trên Safari iOS. Kiểm tra bằng acorn `ecmaVersion: 5`.
+- Code game là **ES5 thuần** (không arrow function, let/const, template literal, optional chaining) để chạy trên Safari iOS. Kiểm tra: `npm i --no-save acorn && node tools/es5-check.mjs`. Kiểm thử logic: `node tools/test/run.mjs` (thêm tệp `tools/test/*.test.mjs` khi thêm logic). GitHub Actions (.github/workflows/check.yml) chạy ES5, kiểm thử và `tools/placement-check.mjs` mỗi lần đẩy code.
 - Dữ liệu lưu Supabase; chỉ dùng khoá anon / publishable, không bao giờ dùng khoá service_role. Giờ luôn theo giờ Việt Nam (UTC+7). Không làm mất tiến độ học.
 - App dùng trên iPad / iPhone (mở từ màn hình chính, điện thoại nằm ngang): kiểm tra cả hai cỡ màn hình.
-- Đổi hình trong `game/assets/`: chạy `node tools/asset-rev.mjs` (từ thư mục gốc). Đổi code / dữ liệu game: tăng `VERSION` trong `game/sw.js`.
+- Đổi hình trong `game/assets/`: chạy `node tools/asset-rev.mjs` (từ thư mục gốc). Đổi code / dữ liệu game: tăng `VERSION` trong `game/sw.js` và `G.APP_VER` trong `game/js/track.js` cho giống nhau.
 - Thêm câu tiếng Anh có giọng đọc: `node tools/build-audio-list.mjs` rồi tạo giọng còn thiếu, cập nhật `data/audio.json`.

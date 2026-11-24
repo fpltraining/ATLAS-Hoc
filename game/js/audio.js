@@ -34,7 +34,8 @@ var G = window.G || (window.G = {});
     var k = G.audioKey(lang, text);
     if (!index[lang][k]) return null;
     // v=2: giọng đã chuẩn hoá âm lượng; v=3: tệp lệch âm lượng đã chỉnh lại (21/11/2026, data/audio.json mục fix)
-    return '../audio/' + lang + '/' + k + '.mp3?v=' + (index.fix && index.fix[lang + '/' + k] ? 3 : 2);
+    // G.AUDIO_BASE: đặt trong js/cloud_config.js khi chuyển kho giọng đọc (24.000 tệp) sang CDN, vd 'https://cdn.example.com/audio/'
+    return (G.AUDIO_BASE || '../audio/') + lang + '/' + k + '.mp3?v=' + (index.fix && index.fix[lang + '/' + k] ? 3 : 2);
   };
 
   function speakTts(text, lang, slow) {

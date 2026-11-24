@@ -396,6 +396,7 @@ var G = window.G || (window.G = {});
 
   /* sau khi qua phòng: báo cửa mới mở, hoặc thi chứng chỉ nếu là phòng thi của tầng */
   function afterPass(firstPass, sao, right) {
+    if (G.track) G.track('bai_qua', { phong: R.id, diem: right, lanDau: firstPass ? 1 : 0 });
     if (R.final) {
       if (!certOf()) {
         if (speakList()) { speakPart(right); return; }   // chứng chỉ cần thêm phần nói

@@ -70,6 +70,7 @@ var G = window.G || (window.G = {});
     })();
     function done(body) {
       G.markStudy(); G.addXp(5 + got); G.sfx('done');
+      if (G.track) G.track('bat_loi', { n: q.length, dung: got });
       var st = G.fixStats(), n = G.el('b', '0');
       body.appendChild(G.el('div.result.pass.tp-res',
         G.el('div.tp-num', n, G.el('span', '/' + q.length + ' chỗ sai tìm đúng')),

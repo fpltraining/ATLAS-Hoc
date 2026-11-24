@@ -116,6 +116,7 @@ var G = window.G || (window.G = {});
       var body = panelOpen('Ôn câu đã học · ' + Math.min(k + 1, q.length) + '/' + q.length);
       if (k >= q.length) {
         G.markStudy(); G.markTask('on'); G.addXp(5 + got); G.sfx('done');
+        if (G.track) G.track('on_xong', { n: q.length, nho: got, mic: G.micOn() ? 1 : 0 });
         var nh = G.srsHard().length;
         body.appendChild(G.el('div.result.pass', G.el('b', 'Ôn xong ' + q.length + ' câu'), G.el('div', 'Nhớ chắc ' + got + '/' + q.length + ' · +' + (5 + got) + ' XP'),
           G.el('div.small.faint', 'Câu nhớ chắc quay lại sau vài ngày tới 4 tháng, câu quên sẽ gặp lại ngày mai.' + (nh ? ' Đang có ' + nh + ' câu khó, ôn riêng ở nút Ôn câu.' : ''))));
@@ -345,7 +346,9 @@ var G = window.G || (window.G = {});
       body.appendChild(skillCards(sc));
       body.appendChild(G.el('p.small', advice(sc)));
       body.appendChild(G.weeklyChart());
-      body.appendChild(G.el('div.row', G.el('button.btn', { onclick: G.openCanDo }, G.ic3('speak', 'ic3-s'), 'Mình nói được'), G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
+      body.appendChild(G.el('div.row', G.el('button.btn', { onclick: G.openCanDo }, G.ic3('speak', 'ic3-s'), 'Mình nói được'),
+        G.shareBtn ? G.shareBtn('Kiểm tra tuần ConnectLife', 'Kiểm tra tuần ConnectLife: ' + tong + '/100 (nghe ' + sc.nghe + ', đọc ' + sc.doc + ', nói ' + sc.noi + '). ' + levelOf(tong) + '.') : null,
+        G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
     }
     partListen();
   };
@@ -355,7 +358,7 @@ var G = window.G || (window.G = {});
   function advice(s) {
     var low = [['nghe', s.nghe, 'Nghe: bật nút gạt "Chỉ nghe, ẩn chữ" khi nói chuyện ngoài phố.'], ['doc', s.doc, 'Đọc: đọc thêm 1 chương truyện mỗi ngày.'], ['noi', s.noi, 'Nói: mỗi ngày làm 2–3 câu "Tự nói" ở các nơi đời sống.']];
     low.sort(function (a, b) { return a[1] - b[1]; });
-    if (low[0][1] >= 90) return 'Rất tốt! Tuần này giữ nhịp: nói chuyện ngoài phố mỗi ngày và thử các tình huống công việc trong "📒 Mình nói được".';
+    if (low[0][1] >= 90) return 'Rất tốt! Tuần này giữ nhịp: nói chuyện ngoài phố mỗi ngày và thử các tình huống công việc trong "Mình nói được".';
     return 'Tuần này nên tập trung: ' + low[0][2];
   }
   /* kết quả theo kỹ năng (mẫu "stat" của taste-skill): mỗi kỹ năng một con số lớn, so với lần trước, cột qua các tuần */

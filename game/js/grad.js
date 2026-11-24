@@ -40,6 +40,7 @@ var G = window.G || (window.G = {});
         G.el('div.grad-talk', G.imgEl('kai_follow.png', 'grad-kai'),
           G.el('div', G.el('b', 'Hiệu trưởng Kai'), G.el('div.en', speech), G.el('div.small.faint', 'Chúc mừng ' + name + '! Bạn đã đạt chứng chỉ cấp ' + level + '. Đi tiếp lộ trình tới bài thi đầu ra giao tiếp để Tốt nghiệp ConnectLife nhé.'))),
         G.el('div.grad-xp', '+100 XP'),
+        G.shareBtn ? G.shareBtn('Chứng chỉ ConnectLife', 'Mình vừa đạt Chứng chỉ ConnectLife cấp ' + level + ' (hiểu ' + right + '/' + total + (noi !== undefined && noi !== null ? ', nói ' + noi + '/100' : '') + '). Học tiếng Anh bằng cách sống ở Brightford!', '.grad-share') : null,
         G.el('button.btn.seal.big1', { onclick: function () {
           document.body.removeChild(wrap);
           G.kaiSay(after);

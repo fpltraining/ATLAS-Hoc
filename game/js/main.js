@@ -241,7 +241,16 @@ var G = window.G || (window.G = {});
     if (G.cloudReady && G.cloudReady() && G.cloudUser() && !/access_token=/.test(location.hash)) setTimeout(function () { G.cloudSync(); }, 600);
     // vừa đăng nhập Google quay về: cất phiên, lấy tiến độ trên mây (có thì tải lại app), rồi vào như bình thường
     if (!(G.cloudCatchRedirect && G.cloudCatchRedirect(function (err, what) { if (what === 'pulled') { location.reload(); return; } if (err) G.toast(err); begin(); }))) begin();
-    if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(function () {});
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      navigator.serviceWorker.register('sw.js').catch(function () {});
+      // app chạy ổn được 25 giây: nhờ service worker tải dần hình còn thiếu để học offline (máy bật Tiết kiệm dữ liệu hoặc mạng 2G thì thôi)
+      setTimeout(function () {
+        try {
+          var cn = navigator.connection; if (cn && (cn.saveData || /2g/.test(cn.effectiveType || ''))) return;
+          if (navigator.serviceWorker.controller) navigator.serviceWorker.controller.postMessage('warm');
+        } catch (e) { /* bỏ qua */ }
+      }, 25000);
+    }
   }
 
   /* chưa đăng nhập thì tạo tài khoản trước (bắt buộc), rồi mới kiểm tra trình độ / vào học */

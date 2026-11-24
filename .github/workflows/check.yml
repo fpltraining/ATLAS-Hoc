@@ -1,0 +1,23 @@
+# Soát tự động mỗi lần đẩy code hoặc mở PR: cú pháp ES5 (Safari iOS), kiểm thử logic, bài đầu vào không lệch độ dài.
+name: Soát code game
+on:
+  push:
+    branches: [main]
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Cài acorn
+        run: npm i --no-save acorn@8
+      - name: Cú pháp ES5
+        run: node tools/es5-check.mjs
+      - name: Kiểm thử logic (gộp tiến độ, chuỗi, dữ liệu A1, nhắc học)
+        run: node tools/test/run.mjs
+      - name: Bài đầu vào không lệch độ dài
+        run: node tools/placement-check.mjs
