@@ -24,7 +24,8 @@ var G = window.G || (window.G = {});
     { id: 'bai', ic3: 'school', name: 'Học bài ở Học viện Hán ngữ', hint: 'Học, luyện hoặc kiểm tra một phòng', min: 30 },
     { id: 'noi', ic3: 'talk', name: 'Luyện nói 5 câu', hint: 'Nghe câu mẫu rồi nói theo, máy chấm từng chữ và thanh', min: 10 },
     { id: 'on', ic3: 'repeat', name: 'Ôn câu đã học', hint: 'Ôn các câu sắp quên', min: 15 },
-    { id: 'doc', ic3: 'book', name: 'Đọc 1 chương truyện', hint: 'Truyện tiếng Trung có pinyin và nghĩa', min: 20 }
+    { id: 'doc', ic3: 'book', name: 'Đọc 1 chương truyện', hint: 'Truyện tiếng Trung có pinyin và nghĩa', min: 20 },
+    { id: 'viet', ic3: 'pencil', name: 'Viết 5 chữ Hán', hint: 'Xem nét, tô theo rồi tự viết từng nét', min: 10 }
   ];
   function tasks() { return G.lang && G.lang() === 'zh' ? TASKS_ZH : TASKS; }
 
@@ -132,6 +133,7 @@ var G = window.G || (window.G = {});
     if (id === 'bai') { var nl = G.nextLesson && G.nextLesson(); if (nl && G.openLesson) G.openLesson(nl.id); else G.toast('Đã học hết các phòng đang mở. Ôn lại một phòng bất kỳ ở trường nhé.'); }
     else if (id === 'doc') G.openReader();
     else if (id === 'noi' && G.lang() === 'zh') { if (G.openSpeakZh) G.openSpeakZh(); }
+    else if (id === 'viet') { if (G.openWriteToday) G.openWriteToday(); }
     else if (id === 'noi') { var lf = G.nextLifeId && G.nextLifeId(); if (lf && G.openLife) G.openLife(lf); else G.toast('Ra phố gặp người có bong bóng chat trên đầu nhé.'); }
     else if (id === 'on') G.openReview();
     else if (id === 'tu') { var tn = G.topicNext && G.topicNext(); if (tn && G.topicLearn) G.topicLearn(tn.id); else if (G.openTopics) G.openTopics(); }

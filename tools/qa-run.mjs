@@ -252,6 +252,18 @@ async function zhFlow() {
     return 'wait';
   }, 40);
   pyRows = await P.ev(() => window.__zhPy || 0);
+  // viết 5 chữ Hán: vẽ từng nét theo nét mẫu (driver.js writeStroke); thử một nét sai chiều phải bị báo lỗi
+  await P.ev(() => { G.closeLesson(); G.questAct('viet'); }); await wait(2500);
+  await P.ev(() => __qa.writeStroke(true)); await wait(300);
+  const wrongMsg = await P.ev(() => (document.querySelector('.wr-fb') || {}).textContent || '');
+  for (let i = 0; i < 700; i++) {
+    const r = await P.ev(() => __qa.writeStroke()); zlog.viet = r;
+    if (r === 'no-pad') break;
+    await wait(r === 'anim' || r === 'round-wait' ? 350 : 110);
+  }
+  const wr = await P.ev(() => ({ n: Object.keys(G.S.vietChu || {}).length, done: !!G.today().viec.viet }));
+  if (wr.done) zlog.viet = 'done';
+  await P.shot('zh-4-write-done');
   await P.ev(() => { G.closeLesson(); G.claimChest(); }); await wait(1200);
   await P.ev(() => { __qa.common(); G.goLobby(); }); await wait(1000); await P.shot('zh-3-lobby-done');
   const day = await P.ev(() => ({ p: G.dayProgress(), chest: !!G.today().ruong, xp: G.S.xp }));
@@ -260,8 +272,8 @@ async function zhFlow() {
   await wait(1200);
   const en1 = await P.ev(() => ({ lang: G.lang(), xp: G.S.xp, viec: Object.keys(G.today().viec).length, zhXp: G.R.zh.xp }));
   const back = en1.lang === 'en' && en1.xp === en0.xp && en1.viec === en0.viec && en1.zhXp === day.xp;
-  const ok = switched && les.p && les.p.diem >= 8 && les.bai && day.p.done === day.p.all && day.chest && pyRows > 0 && back;
-  report.push(`Trường Lạc trấn: ${switched ? 'đổi sang tiếng Trung, hồ sơ riêng' : 'ĐỔI THÀNH PHỐ LỖI ' + JSON.stringify(a)}; phòng Phát âm ${les.p ? les.p.diem + '/10' : 'chưa qua'}, ${les.cards} thẻ ôn; nhiệm vụ ${day.p.done}/${day.p.all}${Object.keys(zlog).filter((k) => zlog[k] !== 'done').map((k) => ' · ' + k + ' dừng ở "' + zlog[k] + '"').join('')}, rương ${day.chest ? 'đã mở' : 'chưa'}, ${day.xp} XP tiếng Trung; truyện có pinyin ${pyRows} dòng; về Brightford ${back ? 'XP và nhiệm vụ tiếng Anh còn nguyên' : 'LỆCH ' + JSON.stringify([en0, en1])}`);
+  const ok = switched && les.p && les.p.diem >= 8 && les.bai && day.p.done === day.p.all && day.chest && pyRows > 0 && back && wr.n >= 5 && /ngược chiều|chiều|thứ tự/i.test(wrongMsg);
+  report.push(`Trường Lạc trấn: ${switched ? 'đổi sang tiếng Trung, hồ sơ riêng' : 'ĐỔI THÀNH PHỐ LỖI ' + JSON.stringify(a)}; phòng Phát âm ${les.p ? les.p.diem + '/10' : 'chưa qua'}, ${les.cards} thẻ ôn; nhiệm vụ ${day.p.done}/${day.p.all}${Object.keys(zlog).filter((k) => zlog[k] !== 'done').map((k) => ' · ' + k + ' dừng ở "' + zlog[k] + '"').join('')}, rương ${day.chest ? 'đã mở' : 'chưa'}, ${day.xp} XP tiếng Trung; truyện có pinyin ${pyRows} dòng; viết ${wr.n} chữ từng nét${/ngược chiều|chiều|thứ tự/i.test(wrongMsg) ? ', nét sai chiều bị báo' : ', NÉT SAI KHÔNG BỊ BÁO'}; về Brightford ${back ? 'XP và nhiệm vụ tiếng Anh còn nguyên' : 'LỆCH ' + JSON.stringify([en0, en1])}`);
   if (!ok) problems.push('Trường Lạc trấn: luồng học tiếng Trung chưa chạy hết');
   P.errs.forEach((e) => problems.push('tiếng Trung lỗi JS: ' + e)); [...new Set(P.fails)].forEach((f) => problems.push('tiếng Trung tệp hỏng: ' + f));
   await P.ctx.close();

@@ -5,7 +5,7 @@
 var G = window.G || (window.G = {});
 
 (function () {
-  G.APP_VER = 'thegioi-v127';
+  G.APP_VER = 'thegioi-v128';
   var Q = [], off = false, timer = 0, errs = {}, nErr = 0;
   function on() {
     if (off || !G.CLOUD_URL || !G.CLOUD_KEY) return false;

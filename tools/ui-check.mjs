@@ -128,6 +128,7 @@ const SCREENS = [
   ['Bài học tiếng Trung', () => { G.closeLesson(); G.openLesson('zh-py'); }],
   ['Truyện tiếng Trung', () => { G.openReader(); setTimeout(() => { const b = document.querySelector('.rd-next'); if (b) b.click(); }, 300); }],
   ['Luyện nói tiếng Trung', () => { G.S.phong['zh-py'] = { sao: 3, diem: 10 }; G.openSpeakZh(); }],
+  ['Viết chữ Hán', () => { G.openWrite(['人', '大']); }],
   ['Về tiếng Anh', () => { G.closeLesson(); G.setLang('en'); G.goLobby(); }],
   ['Kiểm tra nhanh', () => { window._keepPl = true; G.openPlacement(function () {}, { quick: true, canSkip: true }); }],
   ['Kiểm tra nhanh · Từ vựng', () => { [...document.querySelectorAll('#placement button')].find((x) => /Bắt đầu/.test(x.textContent)).click(); setTimeout(() => { const b = [...document.querySelectorAll('#placement button')].find((x) => /Bắt đầu ›/.test(x.textContent)); if (b) b.click(); }, 200); }]

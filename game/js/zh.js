@@ -129,7 +129,7 @@ var G = window.G || (window.G = {});
 
   /* ---------- Sảnh tiếng Trung: việc nên làm ngay (một nút cam) ---------- */
   G.zhStartHere = function () {
-    var d = G.today(), p = G.dayProgress(), Q = G.QUESTS || [], order = ['bai', 'noi', 'on', 'doc', 'viet'];
+    var d = G.today(), p = G.dayProgress(), Q = G.QUESTS || [], order = ['bai', 'viet', 'noi', 'on', 'doc'];
     if (!G.roomPassed('zh-py') && !(G.S.phong['zh-py'])) return { ic: 'speak', t: 'Làm quen tiếng Trung: pinyin và 4 thanh', s: 'Với cô Vương · khoảng 15 phút · nghe, nói theo, phân biệt thanh điệu', go: function () { G.openLesson('zh-py'); }, b: 'Bắt đầu' };
     for (var i = 0; i < order.length; i++) {
       if (d.viec[order[i]]) continue;

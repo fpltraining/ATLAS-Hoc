@@ -244,6 +244,7 @@ var G = window.G || (window.G = {});
           G.el('button.big.bic', { onclick: G.openZhHall }, G.bigIc('school', 'Học viện Hán ngữ'), G.el('span', G.ROADMAP_ZH[zf - 1].name + ' · ' + zc.k + '/' + zc.all + ' phòng đã qua')),
           G.el('button.big.bic', { onclick: G.openReview }, G.bigIc('repeat', 'Ôn câu đã học'), G.el('span', due ? due + ' câu đến hạn ôn hôm nay' : 'Câu nào sắp quên sẽ tự quay lại'))));
         P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: G.openReader }, G.bigIc('book', 'Truyện tiếng Trung'), G.el('span', 'Truyện theo cấp HSK, thành ngữ, chuyện bí ẩn · có pinyin, nghĩa và giọng đọc')));
+        if (G.openWriteToday) { var ws = G.writeStats(); P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: G.openWriteToday }, G.bigIc('pencil', 'Viết chữ Hán'), G.el('span', (ws.n ? 'Đã viết ' + ws.n + ' chữ, ' + ws.good + ' chữ từ 75 điểm · ' : '') + 'Xem nét, tô theo rồi tự viết, bằng Apple Pencil hoặc ngón tay'))); }
         P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: G.openSpeakZh }, G.bigIc('mic', 'Luyện nói'), G.el('span', 'Nghe câu mẫu rồi nói theo, máy chấm từng chữ và thanh điệu')));
         P.home.appendChild(G.el('h2.sec', 'Thống kê'));
         if (G.studyChart) P.home.appendChild(G.studyChart());

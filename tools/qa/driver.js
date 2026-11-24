@@ -116,3 +116,19 @@ window.__qa.fix = function () {
   if (document.querySelector('#panel-body .tp-res')) return 'done';
   return 'wait';
 };
+// viết chữ Hán (write.js): vẽ đúng nét đang chờ theo đường xương sống của nét mẫu, bằng sự kiện chạm như ngón tay thật
+window.__qa.writeStroke = function (bad) {
+  var w = G._wr; if (!w || !w.pad || !document.querySelector('.pad')) return 'no-pad';
+  var S = w.S, d = w.data(); if (!d) return 'no-data';
+  if (S.anim) return 'anim';
+  if (S.expect >= d.mediansView.length) { var nb = document.querySelector('.wr-next'); if (nb && nb.style.display !== 'none') { nb.click(); return 'next'; } return 'round-wait'; }
+  var m = d.mediansView[S.expect], el = w.pad.ink, r = el.getBoundingClientRect(), k = r.width / 1024, pts = [], i, t;
+  if (bad) m = m.slice().reverse();   // viết ngược chiều để thử báo lỗi
+  for (i = 0; i < m.length; i++) {
+    if (!i) { pts.push(m[0]); continue; }
+    for (t = 1; t <= 4; t++) pts.push([m[i - 1][0] + (m[i][0] - m[i - 1][0]) * t / 4, m[i - 1][1] + (m[i][1] - m[i - 1][1]) * t / 4]);
+  }
+  function ev(type, p) { el.dispatchEvent(new PointerEvent(type, { pointerId: 7, pointerType: 'touch', isPrimary: true, clientX: r.left + p[0] * k, clientY: r.top + p[1] * k, pressure: 0.5, bubbles: true, cancelable: true })); }
+  ev('pointerdown', pts[0]); for (i = 1; i < pts.length; i++) ev('pointermove', pts[i]); ev('pointerup', pts[pts.length - 1]);
+  return 'stroke';
+};
