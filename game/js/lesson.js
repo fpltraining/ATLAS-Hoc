@@ -18,7 +18,7 @@ var G = window.G || (window.G = {});
     document.getElementById('panel-py').textContent = on ? 'Pinyin: hiện' : 'Pinyin: ẩn';
   }
 
-  function closePanel() { panel.className = 'panel'; if (window.speechSynthesis) speechSynthesis.cancel(); }
+  function closePanel() { panel.className = 'panel'; if (G._stopStory) G._stopStory(); if (window.speechSynthesis) speechSynthesis.cancel(); }
   G.closeLesson = closePanel;
 
   function teacher() { return G.NPCS[R.teacher]; }
@@ -133,13 +133,14 @@ var G = window.G || (window.G = {});
     if (i > st().the) keep('the', i);
     if (i === R.items.length - 1 && !st().hocXong) keep('hocXong', G.vnNow());
     body.innerHTML = ''; body.scrollTop = 0;
-    body.appendChild(head(0, 'Thẻ ' + (i + 1) + '/' + R.items.length + ' · bấm 🔊 để nghe, nói to theo'));
+    body.appendChild(head(0, 'Thẻ ' + (i + 1) + '/' + R.items.length + ' · bấm loa để nghe, nói to theo'));
     var card = G.el('div.wcard',
       G.el('div.wbig', T(it), speakBtn(T(it))),
       pyEl(it.py),
       it.ipa ? G.el('div.wipa', it.ipa) : null,
       G.el('div.wvi', it.vi),
-      G.el('div.wex', G.el('div', it.ex, speakBtn(it.ex)), pyEl(it.exPy), G.el('div.faint', it.exVi))
+      G.el('div.wex', G.el('div', it.ex, speakBtn(it.ex)), pyEl(it.exPy), G.el('div.faint', it.exVi)),
+      lang === 'en' && G.shadowBtn ? G.shadowBtn(it.ex) : null
     );
     body.appendChild(card);
     say(T(it));
@@ -154,7 +155,7 @@ var G = window.G || (window.G = {});
   /* buổi Nền tảng: âm khó của hôm nay (nghe từng cặp từ rồi đọc to) */
   function soundPage() {
     var s = G.FOUND_SOUNDS[R.sound];
-    function sb(w) { return G.el('button.btn', { onclick: function () { say(w); } }, '🔊 ' + w); }
+    function sb(w) { return G.el('button.btn', { onclick: function () { say(w); } }, G.ic3('speaker', 'ic3-s'), ' ' + w); }
     var pairs = [];
     s.pairs.forEach(function (p) { pairs.push(sb(p[0])); pairs.push(sb(p[1])); });
     body.innerHTML = ''; body.scrollTop = 0;
@@ -368,7 +369,7 @@ var G = window.G || (window.G = {});
       } }, pass ? (R.final ? (speakList() && !certOf() ? 'Sang phần 2 · Nói ›' : 'Nhận chứng chỉ ›') : R.parent ? 'Các buổi tiếp theo ›' : 'Xong ›') : 'Đóng')
     ));
     G.sfx(pass ? 'done' : 'wrong');
-    if (pass) G.confetti();
+    if (pass && firstPass && (R.final || /test/.test(R.id))) G.confetti();   // pháo giấy chỉ cho mốc lớn: qua bài thi tầng lần đầu
     G.updateHud();
   }
 
@@ -378,10 +379,10 @@ var G = window.G || (window.G = {});
   function speakPart(right) {
     var list = speakList(), room = R;
     G.openLesson(room.id); body.innerHTML = '';
-    body.appendChild(G.el('div.lhead', G.el('div.lsteps', G.el('span.done', '1 · Hiểu ' + right + '/' + TN()), G.el('span.on', '2 · Nói'), G.el('span', '🏅 Chứng chỉ')), G.el('div.lsub', 'Thi chứng chỉ · phần 2')));
+    body.appendChild(G.el('div.lhead', G.el('div.lsteps', G.el('span.done', '1 · Hiểu ' + right + '/' + TN()), G.el('span.on', '2 · Nói'), G.el('span', G.ic3('medal', 'ic3-s'), ' Chứng chỉ')), G.el('div.lsub', 'Thi chứng chỉ · phần 2')));
     body.appendChild(teacherLine('Phần 1 đạt ' + right + '/' + TN() + '! Phần 2 · Nói: ' + list.length + ' tình huống ngoài đời. Không có câu gợi ý, bạn tự nói bằng câu của mình (bấm micro hoặc gõ). Máy chấm theo ý chính, không bắt bẻ ngữ pháp. Trung bình từ 60/100 là nhận Chứng chỉ ConnectLife · ' + room.final.level + '.', 'You can do it!'));
     body.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { G.openLesson(room.id); } }, '‹ Để sau'), G.el('button.btn.seal', { onclick: function () {
-      G.openFree(G.shuffle(list), '🗣 Thi chứng chỉ · Nói', null, function (avg) {
+      G.openFree(G.shuffle(list), 'Thi chứng chỉ · Nói', null, function (avg) {
         G.S.thiNoi = G.S.thiNoi || {}; G.S.thiNoi[room.id] = Math.max(G.S.thiNoi[room.id] || 0, avg); G.save();
         R = room;
         if (avg >= 60) { G.closeLesson(); G.graduate(room.final.lang, room.final.level, right, TN(), room.final.levelEn, avg); return; }
@@ -395,6 +396,7 @@ var G = window.G || (window.G = {});
 
   /* sau khi qua phòng: báo cửa mới mở, hoặc thi chứng chỉ nếu là phòng thi của tầng */
   function afterPass(firstPass, sao, right) {
+    if (G.track) G.track('bai_qua', { phong: R.id, diem: right, lanDau: firstPass ? 1 : 0 });
     if (R.final) {
       if (!certOf()) {
         if (speakList()) { speakPart(right); return; }   // chứng chỉ cần thêm phần nói

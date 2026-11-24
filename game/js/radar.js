@@ -21,9 +21,9 @@ var G = window.G || (window.G = {});
   G.tempSentence = function (t) { return 'It\'s ' + (t < 0 ? 'minus ' + (-t) : t) + ' degrees and ' + G.tempWord(t).en + '.'; };
   function skyWord() {
     var w = G.weather ? G.weather() : 'clear', night = G.dayPart && G.dayPart() === 'toi';
-    if (w === 'rain') return { ic: '🌧', en: 'rainy', vi: 'có mưa' };
-    if (w === 'cloudy') return { ic: '☁️', en: 'cloudy', vi: 'nhiều mây' };
-    return night ? { ic: '🌙', en: 'clear', vi: 'trời quang' } : { ic: '☀️', en: 'sunny', vi: 'nắng' };
+    if (w === 'rain') return { ic: 'rain', en: 'rainy', vi: 'có mưa' };
+    if (w === 'cloudy') return { ic: 'cloud', en: 'cloudy', vi: 'nhiều mây' };
+    return night ? { ic: 'moon', en: 'clear', vi: 'trời quang' } : { ic: 'sun', en: 'sunny', vi: 'nắng' };
   }
   var lastT = 0;
   function updateTemp() {
@@ -31,7 +31,7 @@ var G = window.G || (window.G = {});
     if (Date.now() - lastT < 20000 && el.innerHTML) return; lastT = Date.now();
     var t = G.tempNow(), w = G.tempWord(t), s = skyWord();
     el.innerHTML = '';
-    el.appendChild(G.el('b', s.ic + ' ' + t + '°C'));
+    el.appendChild(G.el('b', G.ic3(s.ic, 'ic3-s'), ' ' + t + '°C'));
     el.appendChild(G.el('span.tp-en', w.en + ' · ' + s.en));
     el.appendChild(G.el('small', w.vi + ' · ' + s.vi));
   }

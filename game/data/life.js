@@ -5,7 +5,7 @@ var G = window.G || (window.G = {});
 
 G.LIFE = {
   'en-cafe': {
-    lang: 'en', title: 'Quán cà phê của Leo', npc: 'leo', scene: 'cafe_en', unlock: 'en-a1-4', unlockText: 'Qua phòng A1-4 (đồ ăn, đồ uống) để mở quán cà phê.',
+    lang: 'en', title: 'Quán cà phê của Leo', npc: 'leo', scene: 'cafe_en', unlock: 'en-a1-13', unlockText: 'Qua buổi 13 ở phòng A1-4 (đồ ăn, đồ uống) để mở quán cà phê.',
     souvenir: { img: 'souvenir_coffee.png', name: 'Ly cà phê của Leo' },
     talks: [
       { title: 'Gọi đồ uống', turns: [
@@ -32,7 +32,7 @@ G.LIFE = {
     ]
   },
   'en-market': {
-    lang: 'en', title: 'Chợ nông sản', npc: 'rosa', scene: 'market_en', unlock: 'en-a1-2', unlockText: 'Qua phòng A1-2 (số, giờ) để mở chợ.',
+    lang: 'en', title: 'Chợ nông sản', npc: 'rosa', scene: 'market_en', unlock: 'en-a1-05', unlockText: 'Qua buổi 5 ở phòng A1-2 (số, giờ) để mở chợ.',
     souvenir: { img: 'souvenir_apples.png', name: 'Túi táo của Mrs. Rosa' },
     talks: [
       { title: 'Mua táo', turns: [

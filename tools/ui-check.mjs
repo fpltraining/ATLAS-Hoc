@@ -109,14 +109,20 @@ const SCREENS = [
   ['Từ theo chủ đề', () => { G.openTopics(); }],
   ['Một chủ đề', () => { G.openTopic('core'); }],
   ['Thẻ từ chủ đề', () => { const b = [...document.querySelectorAll('#panel-body button.big')].find((x) => /từ mới/.test(x.textContent)); if (b) b.click(); }],
-  ['Bài học', () => { G.closeLesson(); G.openLesson('en-a1-1'); }],
+  ['Phòng A1 (4 buổi)', () => { G.closeLesson(); G.openLesson('en-a1-1'); }],
+  ['Bài học', () => { G.closeLesson(); G.openLesson('en-a1-02'); }],
   ['Luyện', () => { const b = [...document.querySelectorAll('button.big')].find((x) => /2 · Luyện/.test(x.textContent)); if (b) b.click(); }],
   ['Nhà', () => { G.openHome(); }],
   ['Đọc truyện', () => { G.openReader(); }],
+  ['Chương truyện', () => { G.openReader(); setTimeout(() => { const b = document.querySelector('.rd-next'); if (b) b.click(); }, 300); }],
   ['Ôn câu', () => { G.openReview(); }],
+  ['Bắt lỗi câu', () => { G.openFix(); }],
+  ['Bắt lỗi câu · đã chọn', () => { const b = document.querySelector('.fx-ch'); if (b) b.click(); }],
   ['Kiểm tra tuần', () => { G.openWeekly(); }],
   ['Mình nói được', () => { G.openCanDo(); }],
-  ['Hội thoại', () => { G.openLife('en-home'); }]
+  ['Hội thoại', () => { G.openLife('en-home'); }],
+  ['Kiểm tra nhanh', () => { window._keepPl = true; G.openPlacement(function () {}, { quick: true, canSkip: true }); }],
+  ['Kiểm tra nhanh · Từ vựng', () => { [...document.querySelectorAll('#placement button')].find((x) => /Bắt đầu/.test(x.textContent)).click(); setTimeout(() => { const b = [...document.querySelectorAll('#placement button')].find((x) => /Bắt đầu ›/.test(x.textContent)); if (b) b.click(); }, 200); }]
 ];
 
 const b = await chromium.launch();
@@ -129,7 +135,7 @@ for (const dn of ['iPad Pro 11 landscape', 'iPhone 15 landscape']) {
   await p.goto(BASE); await p.waitForTimeout(1500);
   await p.evaluate(() => { if (!G.S.dauVao) { G.S.dauVao = { lv: 1, nghe: 1, doc: 1, gt: 1, noi: 1, luc: G.vnNow(), dung: 6, tong: 12 }; G.save(); } });
   for (const [nm, go] of SCREENS) {
-    await p.evaluate(() => { document.querySelectorAll('.modal, .cgate').forEach((m) => m.remove()); if (G.stopEngine) G.stopEngine(); });
+    await p.evaluate(() => { document.querySelectorAll('.modal, .cgate').forEach((m) => m.remove()); const pl = document.getElementById('placement'); if (pl && !window._keepPl) { pl.style.display = 'none'; G._placementOpen = false; } if (G.stopEngine) G.stopEngine(); });
     await p.evaluate(go); await p.waitForTimeout(900);
     await p.evaluate(() => { document.querySelectorAll('.modal').forEach((m) => m.remove()); });
     const r = await p.evaluate(audit, dn.split(' ')[0] + ' · ' + nm);

@@ -1,6 +1,8 @@
 /* Đảm bảo đầu ra, theo kiểu đời sống thật (không học thuật):
    1. Ôn lại thông minh (G.openReview): mọi câu đã học — từ phòng học và câu đáp khi nói chuyện ngoài phố —
-      quay lại đúng lúc sắp quên (hộp 0 → 6: sau 0, 1, 2, 4, 7, 15, 30 ngày). Nhìn nghĩa / nghe người kia nói → tự nói câu tiếng Anh.
+      quay lại đúng lúc sắp quên (hộp 0 → 8: sau 0, 1, 2, 4, 7, 15, 30, 60, 120 ngày). Nhìn nghĩa / nghe người kia nói → tự nói câu tiếng Anh.
+      Có micro: phải nói đạt mới tính là nhớ (không tự chấm). Không micro: ba mức Quên / Nhớ lờ mờ / Nhớ chắc.
+      Câu quên từ 3 lần trở lên thành "câu khó" (c.kho), có lượt ôn riêng (G.srsHard).
    2. Nói tự do (G.openFree): có người hỏi, bạn tự trả lời bằng câu của mình. Chấm theo ý chính, không bắt đúng từng chữ.
    3. Kiểm tra tuần (G.openWeekly): Nghe không nhìn chữ · Đọc đồ thật (biển báo, tin nhắn, email…) · Nói tự do. Lưu kết quả theo tuần.
    4. Sổ "Mình nói được" (G.openCanDo): những việc bạn đã xử lý được bằng tiếng Anh — đây là đầu ra đo được.
@@ -8,7 +10,7 @@
 var G = window.G || (window.G = {});
 
 (function () {
-  var GAP = [0, 1, 2, 4, 7, 15, 30];
+  var GAP = [0, 1, 2, 4, 7, 15, 30, 60, 120];
   function day(n) { return G.vnDay(Date.now() + (n || 0) * 86400000); }
   function panelOpen(title) {
     var panel = document.getElementById('panel'); panel.className = 'panel open';
@@ -66,12 +68,17 @@ var G = window.G || (window.G = {});
     return out;
   };
   G.srsCount = function () { var n = 0; for (var k in S()) n++; return n; };
-  function grade(c, ok) {
+  /* r: 0 quên · 1 nhớ lờ mờ (giữ hộp, gặp lại sớm hơn) · 2 nhớ chắc (lên hộp) */
+  function grade(c, r) {
+    r = r === true ? 2 : r === false ? 0 : r;
     c.lan = (c.lan || 0) + 1;
-    if (ok) { c.box = Math.min(GAP.length - 1, (c.box || 0) + 1); c.due = day(GAP[c.box]); }
-    else { c.box = 0; c.due = day(1); }   // quên: mai gặp lại
+    if (r === 2) { c.box = Math.min(GAP.length - 1, (c.box || 0) + 1); c.due = day(GAP[c.box]); if (c.kho && c.box >= 4) c.kho = 0; }
+    else if (r === 1) { c.box = c.box || 0; c.due = day(Math.max(1, Math.round(GAP[c.box] / 2))); }
+    else { c.box = 0; c.due = day(1); c.quen = (c.quen || 0) + 1; if (c.quen >= 3) c.kho = 1; }   // quên: mai gặp lại; quên nhiều lần thành câu khó
     G.save();
   }
+  /* câu khó: quên từ 3 lần, chưa nhớ chắc lại */
+  G.srsHard = function () { var all = S(), out = []; for (var k in all) if (all.hasOwnProperty(k) && all[k].kho) out.push(all[k]); return out; };
   // từ làm sai trong bài kiểm tra phòng học → vào kho câu, đến hạn ngay
   function pullHard() {
     for (var i = G.S.tuKho.length - 1; i >= 0; i--) {
@@ -87,13 +94,14 @@ var G = window.G || (window.G = {});
 
   G.openReview = function () {
     seed(); pullHard();
-    var q = G.srsDue().slice(0, 15), extra = false;
+    var q = G.srsDue().slice(0, 15), extra = false, hard = G.srsHard();
     if (!q.length) {
-      var body0 = panelOpen('🔁 Ôn câu đã học');
+      var body0 = panelOpen('Ôn câu đã học');
       var total = G.srsCount();
-      body0.appendChild(G.el('div.result.pass', G.el('b', total ? 'Hôm nay không có câu nào đến hạn ôn 🎉' : 'Kho câu đang trống'),
+      body0.appendChild(G.el('div.result.pass', G.el('b', total ? 'Hôm nay không có câu nào đến hạn ôn' : 'Kho câu đang trống'),
         G.el('div', total ? 'Bạn đang giữ ' + total + ' câu trong trí nhớ. Câu nào sắp quên sẽ tự quay lại.' : 'Học một phòng hoặc nói chuyện ngoài phố, câu sẽ tự vào kho để ôn.')));
-      if (total) body0.appendChild(G.el('button.btn.seal.big1', { onclick: function () {
+      if (hard.length) body0.appendChild(G.el('button.btn.seal.big1', { onclick: function () { run(G.shuffle(hard).slice(0, 10), true); } }, 'Ôn ' + Math.min(10, hard.length) + ' câu khó (hay quên)'));
+      if (total) body0.appendChild(G.el('button.btn' + (hard.length ? '' : '.seal') + '.big1', { onclick: function () {
         var all = S(), arr = []; for (var k in all) if (all.hasOwnProperty(k)) arr.push(all[k]);
         run(G.shuffle(arr).slice(0, 5), true);
       } }, 'Ôn thêm 5 câu ngẫu nhiên'));
@@ -101,45 +109,63 @@ var G = window.G || (window.G = {});
     }
     run(q, extra);
   };
+  G.openReviewHard = function () { seed(); var h = G.srsHard(); if (!h.length) { G.openReview(); return; } run(G.shuffle(h).slice(0, 10), true); };
   function run(q, extra) {
     var k = 0, got = 0;
     (function card() {
-      var body = panelOpen('🔁 Ôn câu đã học · ' + (k + 1) + '/' + q.length);
+      var body = panelOpen('Ôn câu đã học · ' + Math.min(k + 1, q.length) + '/' + q.length);
       if (k >= q.length) {
         G.markStudy(); G.markTask('on'); G.addXp(5 + got); G.sfx('done');
-        body.appendChild(G.el('div.result.pass', G.el('b', 'Ôn xong ' + q.length + ' câu'), G.el('div', 'Nhớ ' + got + '/' + q.length + ' · +' + (5 + got) + ' XP'),
-          G.el('div.small.faint', 'Câu nhớ tốt sẽ quay lại sau vài ngày, câu quên sẽ gặp lại sớm.')));
+        if (G.track) G.track('on_xong', { n: q.length, nho: got, mic: G.micOn() ? 1 : 0 });
+        var nh = G.srsHard().length;
+        body.appendChild(G.el('div.result.pass', G.el('b', 'Ôn xong ' + q.length + ' câu'), G.el('div', 'Nhớ chắc ' + got + '/' + q.length + ' · +' + (5 + got) + ' XP'),
+          G.el('div.small.faint', 'Câu nhớ chắc quay lại sau vài ngày tới 4 tháng, câu quên sẽ gặp lại ngày mai.' + (nh ? ' Đang có ' + nh + ' câu khó, ôn riêng ở nút Ôn câu.' : ''))));
         body.appendChild(G.el('div.row', G.el('button.btn', { onclick: G.openHome }, '‹ Về góc học'), G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
         return;
       }
-      var c = q[k], done = false;
+      var c = q[k], done = false, best = -1, mic = G.micOn();
+      function next(r) { grade(c, r); if (r === 2) got++; k++; card(); }
       var prompt = c.t === 'reply'
-        ? G.el('div.rv-q', G.el('div.small.faint', '💬 ' + (c.noi || 'Nói chuyện') + ' · người kia nói:'), G.el('div.wbig.sm', c.npc, G.sayBtns(c.npc, 'en')), G.el('div.faint', c.npcVi), G.el('b', 'Bạn đáp thế nào?'))
+        ? G.el('div.rv-q', G.el('div.small.faint', (c.noi || 'Nói chuyện') + ' · người kia nói:'), G.el('div.wbig.sm', c.npc, G.sayBtns(c.npc, 'en')), G.el('div.faint', c.npcVi), G.el('b', 'Bạn đáp thế nào?'))
         : G.el('div.rv-q', G.el('div.small.faint', 'Nói bằng tiếng Anh:'), G.el('div.wbig.sm', c.vi));
       if (c.t === 'reply') G.say(c.npc, 'en');
-      body.appendChild(G.el('div.wcard', prompt));
-      var ans = G.el('div.rv-ans', { style: { display: 'none' } }, G.el('div.small.faint', 'Câu tiếng Anh:'), G.el('div.wbig.sm', c.en, G.sayBtns(c.en, 'en')), c.cd && G.topicExEl ? G.topicExEl(c) : null);
+      body.appendChild(G.el('div.wcard', c.kho ? G.el('span.rv-kho', 'Câu khó') : null, prompt));
+      var ans = G.el('div.rv-ans', { style: { display: 'none' } }, G.el('div.small.faint', 'Câu tiếng Anh:'), G.el('div.wbig.sm', c.en, G.sayBtns(c.en, 'en')),
+        c.cd && G.topicExEl ? G.topicExEl(c) : null, G.shadowBtn ? G.shadowBtn(c.en) : null);
       body.appendChild(ans);
-      var row = G.el('div.row', { style: { display: 'none' } },
-        G.el('button.btn', { onclick: function () { grade(c, false); k++; card(); } }, '😕 Quên rồi'),
-        G.el('button.btn.seal', { onclick: function () { grade(c, true); got++; k++; card(); } }, '😊 Nhớ'));
-      function reveal() { if (done) return; done = true; ans.style.display = ''; row.style.display = ''; G.say(c.en, 'en'); }
-      // nói bằng micro: máy chấm, đạt từ 75 thì tự tính là nhớ
-      if (G.micOn()) {
+      // chấm: có micro thì phải nói đạt mới được tính "Nhớ"; không micro thì 3 mức để bớt tự chấm cao
+      var row = G.el('div.row.rv-grade', { style: { display: 'none' } });
+      function drawRow() {
+        row.innerHTML = '';
+        if (mic) {
+          row.appendChild(G.el('button.btn', { onclick: function () { next(0); } }, 'Quên rồi'));
+          if (best >= G.PASS_SCORE) row.appendChild(G.el('button.btn.seal', { onclick: function () { next(best >= 75 ? 2 : 1); } }, best >= 75 ? 'Nhớ chắc' : 'Nhớ lờ mờ'));
+          else row.appendChild(G.el('div.small.faint.rv-hint', 'Nói đạt từ ' + G.PASS_SCORE + ' điểm mới tính là nhớ. Bấm micro nói lại, hoặc chọn Quên rồi.'));
+        } else {
+          row.appendChild(G.el('button.btn', { onclick: function () { next(0); } }, 'Quên rồi'));
+          row.appendChild(G.el('button.btn', { onclick: function () { next(1); } }, 'Nhớ lờ mờ'));
+          row.appendChild(G.el('button.btn.seal', { onclick: function () { next(2); } }, 'Nhớ chắc'));
+        }
+      }
+      function reveal() { if (done) return; done = true; ans.style.display = ''; row.style.display = ''; drawRow(); G.say(c.en, 'en'); }
+      if (mic) {
         var res = G.el('div.mk-res');
-        var mic = G.el('button.mk-mic', { onclick: function () {
-          mic.className = 'mk-mic on';
+        var mb = G.el('button.mk-mic', { onclick: function () {
+          mb.className = 'mk-mic on';
           G.listen('en', function (err, alts) {
-            mic.className = 'mk-mic';
+            mb.className = 'mk-mic';
             if (err) { res.innerHTML = ''; res.appendChild(G.el('div.mk-err', err.msg || err)); return; }
             var r = G.scoreSpeech(c.en, alts); res.innerHTML = '';
+            best = Math.max(best, r.score);
             res.appendChild(G.el('div.mk-score.' + G.scoreLabel(r.score)[1], G.el('b', r.score), G.el('span', '/100')));
             res.appendChild(G.el('div.small.faint', 'Máy nghe: “' + r.heard + '”'));
-            reveal();
-            if (r.score >= 75) { G.sfx('right'); setTimeout(function () { if (q[k] === c) { grade(c, true); got++; k++; card(); } }, 1600); }
+            reveal(); drawRow();
+            if (r.score >= 75) { G.sfx('right'); setTimeout(function () { if (q[k] === c) next(2); }, 1600); }
+            else G.sfx(r.score >= G.PASS_SCORE ? 'right' : 'wrong');
           });
         } }, G.el('img.mk-mic-img', { src: G.assetUrl('ic_mic.png'), alt: '' }), G.el('span', 'Bấm rồi nói'));
-        body.appendChild(G.el('div.mk-row', mic, res));
+        body.appendChild(G.el('div.mk-row', mb, res));
+        body.appendChild(G.el('button.link.rv-nomic', { onclick: function () { mic = false; if (done) drawRow(); } }, 'Micro không nghe được? Tự chấm câu này'));
       }
       body.appendChild(G.el('button.btn.big1.rv-show', { onclick: function (e) { reveal(); e.currentTarget.style.display = 'none'; } }, 'Xem đáp án'));
       body.appendChild(row);
@@ -181,7 +207,7 @@ var G = window.G || (window.G = {});
   function freeCard(body, it, onDone) {
     var n = G.NPCS[it.npc] || {}, pic = G.el('div.tpic');
     if (n.img) pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img)); else if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));
-    body.appendChild(G.el('div.fr-sit', G.el('b', '🎯 Tình huống'), G.el('div', it.sit)));
+    body.appendChild(G.el('div.fr-sit', G.el('b', G.ic3('target', 'ic3-s'), ' Tình huống'), G.el('div', it.sit)));
     body.appendChild(G.el('div.tline', pic, G.el('div.tbubble', G.el('b', n.name || ''), G.el('div.en', it.q), G.el('div.small.faint', it.vi), G.sayBtns(it.q, 'en'))));
     G.say(it.q, 'en');
     var res = G.el('div.fr-res'), box = G.el('div.fr-box'), fin = false;
@@ -221,7 +247,7 @@ var G = window.G || (window.G = {});
   G.openFree = function (list, title, back, onEnd) {
     var k = 0, sum = 0;
     (function one() {
-      var body = panelOpen((title || '💡 Nói tự do') + ' · ' + Math.min(k + 1, list.length) + '/' + list.length);
+      var body = panelOpen((title || 'Nói tự do') + ' · ' + Math.min(k + 1, list.length) + '/' + list.length);
       if (k >= list.length) {
         var avg = Math.round(sum / list.length);
         G.markStudy(); G.markTask('noi'); G.addXp(10); G.logSpeak(avg);
@@ -266,7 +292,7 @@ var G = window.G || (window.G = {});
       if (k >= listen.length) { sc.nghe = Math.round(right / listen.length * 100); k = 0; right = 0; partRead(); return; }
       var it = listen[k], text = it.u.npc.replace(/\{name\}/g, nm), meaning = k % 2 === 1;
       var body = panelOpen('📝 Kiểm tra tuần · 1/3 Nghe · câu ' + (k + 1) + '/' + listen.length);
-      body.appendChild(G.el('div.wk-hint', '👂 Chỉ nghe, không có chữ — như ngoài đời. Nghe lại thoải mái.'));
+      body.appendChild(G.el('div.wk-hint', G.ic3('headphone', 'ic3-s'), ' Chỉ nghe, không có chữ — như ngoài đời. Nghe lại thoải mái.'));
       var hidden = G.el('div.wk-hidden', G.el('div.en', text), G.el('div.small.faint', it.u.vi.replace(/\{name\}/g, nm)));
       body.appendChild(G.el('div.wk-audio', G.el('b', (G.NPCS[it.L.npc] || {}).name || ''), G.sayBtns(text, 'en'), hidden));
       G.say(text, 'en');
@@ -288,7 +314,7 @@ var G = window.G || (window.G = {});
     function partRead() {
       if (k >= reads.length) { sc.doc = Math.round(right / reads.length * 100); k = 0; partSpeak(); return; }
       var it = reads[k], body = panelOpen('📝 Kiểm tra tuần · 2/3 Đọc · ' + (k + 1) + '/' + reads.length);
-      body.appendChild(G.el('div.wk-hint', '📄 Đọc những thứ bạn gặp thật ngoài đời và ở chỗ làm.'));
+      body.appendChild(G.el('div.wk-hint', G.ic3('memo', 'ic3-s'), ' Đọc những thứ bạn gặp thật ngoài đời và ở chỗ làm.'));
       body.appendChild(G.el('div.wk-doc', G.el('div.small.faint', it.kind), G.el('pre', it.text)));
       body.appendChild(G.el('b.wk-q', it.q));
       var ans = it.opts[it.ok], answered = false;
@@ -307,20 +333,22 @@ var G = window.G || (window.G = {});
     function partSpeak() {
       if (k >= speak.length) { sc.noi = Math.round(sum / speak.length); finish(); return; }
       var body = panelOpen('📝 Kiểm tra tuần · 3/3 Nói · ' + (k + 1) + '/' + speak.length);
-      body.appendChild(G.el('div.wk-hint', '🗣 Tự trả lời bằng câu của bạn (micro hoặc gõ). Chấm theo ý chính, không chấm ngữ pháp.'));
+      body.appendChild(G.el('div.wk-hint', G.ic3('speak', 'ic3-s'), ' Tự trả lời bằng câu của bạn (micro hoặc gõ). Chấm theo ý chính, không chấm ngữ pháp.'));
       freeCard(body, speak[k], function (s) { sum += s; k++; partSpeak(); });
     }
     function finish() {
       var tong = Math.round((sc.nghe + sc.doc + sc.noi) / 3), info = G.weeklyInfo(), prev = info.last;
       G.S.tuan = G.S.tuan || []; G.S.tuan.push({ ngay: day(0), luc: G.vnNow(), nghe: sc.nghe, doc: sc.doc, noi: sc.noi, tong: tong });
-      G.markStudy(); G.addXp(30); G.save(); G.sfx('done'); if (tong >= 75 && G.confetti) G.confetti();
+      G.markStudy(); G.addXp(30); G.save(); G.sfx('done'); if (tong >= 90 && G.confetti) G.confetti();
       var body = panelOpen('📝 Kết quả kiểm tra tuần');
       body.appendChild(G.el('div.wk-total', G.el('b', tong), G.el('span', '/100'), G.el('div', levelOf(tong))));
       if (prev) body.appendChild(G.el('div.small.faint.wk-cmp', (tong >= prev.tong ? '▲ +' : '▼ ') + (tong - prev.tong) + ' điểm so với lần trước (' + prev.ngay.split('-').reverse().join('/') + ')'));
       body.appendChild(skillCards(sc));
       body.appendChild(G.el('p.small', advice(sc)));
       body.appendChild(G.weeklyChart());
-      body.appendChild(G.el('div.row', G.el('button.btn', { onclick: G.openCanDo }, G.ic3('speak', 'ic3-s'), 'Mình nói được'), G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
+      body.appendChild(G.el('div.row', G.el('button.btn', { onclick: G.openCanDo }, G.ic3('speak', 'ic3-s'), 'Mình nói được'),
+        G.shareBtn ? G.shareBtn('Kiểm tra tuần ConnectLife', 'Kiểm tra tuần ConnectLife: ' + tong + '/100 (nghe ' + sc.nghe + ', đọc ' + sc.doc + ', nói ' + sc.noi + '). ' + levelOf(tong) + '.') : null,
+        G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
     }
     partListen();
   };
@@ -330,7 +358,7 @@ var G = window.G || (window.G = {});
   function advice(s) {
     var low = [['nghe', s.nghe, 'Nghe: bật nút gạt "Chỉ nghe, ẩn chữ" khi nói chuyện ngoài phố.'], ['doc', s.doc, 'Đọc: đọc thêm 1 chương truyện mỗi ngày.'], ['noi', s.noi, 'Nói: mỗi ngày làm 2–3 câu "Tự nói" ở các nơi đời sống.']];
     low.sort(function (a, b) { return a[1] - b[1]; });
-    if (low[0][1] >= 90) return 'Rất tốt! Tuần này giữ nhịp: nói chuyện ngoài phố mỗi ngày và thử các tình huống công việc trong "📒 Mình nói được".';
+    if (low[0][1] >= 90) return 'Rất tốt! Tuần này giữ nhịp: nói chuyện ngoài phố mỗi ngày và thử các tình huống công việc trong "Mình nói được".';
     return 'Tuần này nên tập trung: ' + low[0][2];
   }
   /* kết quả theo kỹ năng (mẫu "stat" của taste-skill): mỗi kỹ năng một con số lớn, so với lần trước, cột qua các tuần */
@@ -402,6 +430,6 @@ var G = window.G || (window.G = {});
     var work = G.freeFor('work'), wd = 0;
     var wrows = work.map(function (f) { var v = (G.S.tuNoi || {})[f.id]; if (v >= 60) wd++; return row(v >= 60 ? 'star' : '', f.sit, true); });
     body.appendChild(place('Công việc', 'work', wrows, wd,
-      G.el('button.btn.sm', { onclick: function () { G.openFree(G.shuffle(work).slice(0, 3), '💼 Nói tự do · công việc', G.openCanDo); } }, 'Luyện 3 tình huống công việc ›')));
+      G.el('button.btn.sm', { onclick: function () { G.openFree(G.shuffle(work).slice(0, 3), 'Nói tự do · công việc', G.openCanDo); } }, 'Luyện 3 tình huống công việc ›')));
   };
 })();

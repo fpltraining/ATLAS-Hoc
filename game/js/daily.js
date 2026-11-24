@@ -36,8 +36,10 @@ var G = window.G || (window.G = {});
     if (d.viec[id]) return;
     d.viec[id] = G.vnNow().slice(11, 16);
     G.save();
+    if (G.track) G.track('nhiem_vu', { id: id });
     var t = null; for (var i = 0; i < TASKS.length; i++) if (TASKS[i].id === id) t = TASKS[i];
     if (t) { G.toast('✅ Xong việc hôm nay: ' + t.name); if (G.sfx) G.sfx('quest'); }
+    if (G.askAccount) G.askAccount();
     if (G.achSoon) G.achSoon();
     if (G.updateHud) G.updateHud();
   };
@@ -134,7 +136,7 @@ var G = window.G || (window.G = {});
     var p = G.dayProgress(); if (p.done < p.all) return false;
     d.ruong = G.vnNow().slice(11, 16); G.save(); G.addXp(CHEST_XP);
     if (G.sfx) G.sfx('chest');
-    if (G.chestPop) G.chestPop(CHEST_XP); else { if (G.confetti) G.confetti(); G.toast('🎉 Mở rương hôm nay: +' + CHEST_XP + ' XP'); }
+    if (G.chestPop) G.chestPop(CHEST_XP); else G.toast('Mở rương hôm nay: +' + CHEST_XP + ' XP');
     if (G.updateHud) G.updateHud();
     return true;
   };
@@ -209,7 +211,9 @@ var G = window.G || (window.G = {});
     var fire = G.S.chuoi.hienTai > 0 && G.lottieIc ? G.lottieIc('fire', 'td-fire', { loop: true }) : G.ic3('fire', 'td-fire'), sn = G.el('b.td-sn', String(G.S.chuoi.hienTai));
     body.appendChild(G.el('div.td-head', ring,
       G.el('div.td-txt', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc hôm nay')),
-      G.el('div.td-streak', fire, G.el('div', sn, G.el('span', 'ngày học liên tiếp')))));
+      G.el('div.td-streak', fire, G.el('div', sn, G.el('span', 'ngày học liên tiếp'),
+        G.el('span.td-freeze', { title: 'Mỗi 7 ngày học liên tiếp được 1 băng (giữ tối đa 2). Lỡ một ngày học, băng tự giữ chuỗi.' }, G.ic3('ice', 'ic3-s'), (G.S.chuoi.bang || 0) + ' băng giữ chuỗi')))));
+    body.appendChild(G.el('div.small.faint.td-freeze-n', 'Băng giữ chuỗi: học đủ 7 ngày liên tiếp được 1 băng (giữ tối đa 2). Lỡ một ngày học trong lịch, băng tự giữ chuỗi cho bạn.'));
     // nhiệm vụ hôm nay ngay dưới vòng %: việc cần làm là trung tâm của bảng
     body.appendChild(G.questList({ onChange: function () { G.openToday(); } }));
     var wk = G.weekStudy();
@@ -232,7 +236,7 @@ var G = window.G || (window.G = {});
     body.appendChild(G.el('div.td-talks',
       G.el('b', G.ic3('talk', 'ic3-s'), 'Nói chuyện hôm nay · ' + ht.length + ' tình huống'),
       ht.length ? G.el('div.td-talk-list', ht.slice().reverse().map(function (h) {
-        return G.el('div.td-talk', G.el('span.small.faint', h.luc), G.el('span', h.ten + ' · ' + h.tinhHuong), h.diem !== null && h.diem !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(h.diem)[1], '🎤 ' + h.diem) : G.el('span.small.faint', 'không micro'));
+        return G.el('div.td-talk', G.el('span.small.faint', h.luc), G.el('span', h.ten + ' · ' + h.tinhHuong), h.diem !== null && h.diem !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(h.diem)[1], G.ic3('mic', 'ic3-s'), ' ' + h.diem) : G.el('span.small.faint', 'không micro'));
       })) : G.el('div.small.faint', 'Chưa nói chuyện với ai hôm nay. Ra phố gặp mẹ, ông Ben, xe bánh Sunny… (người có 💬 trên đầu).')));
     // luyện nói: điểm hôm nay + bật/tắt micro
     var sp = d.noi && d.noi.n ? Math.round(d.noi.tong / d.noi.n) : null;
@@ -264,23 +268,24 @@ var G = window.G || (window.G = {});
   }
   G.weekLine = weekLine;
   /* ---------- Nhà của bạn: góc học ---------- */
+  /* Nhà của bạn: cùng một danh sách Nhiệm vụ hôm nay như ở Sảnh và thẻ góc phải (một lối vào cho việc hằng ngày),
+     dưới đó là việc chỉ có ở nhà (nói chuyện với mẹ) và phần học thêm. Chỉ nút "Làm ngay" của nhiệm vụ kế tiếp tô cam. */
   G.openHome = function () {
     var body = panelOpen('Nhà của bạn');
-    var d = today(), n = G.S.tuKho.length;
-    var momDone = !!(d.sang && d.sang['en-home']);
-    // chỉ tô cam một việc nên làm tiếp (taste-skill: một nút chính mỗi màn)
-    var wkDue = !!(G.weeklyInfo && G.weeklyInfo().due);
-    var next = G.LIFE['en-home'] && !momDone ? 'me' : !d.viec.doc ? 'doc' : !d.viec.on ? 'on' : wkDue ? 'wk' : '';
-    function hl(k) { return next === k ? '.seal' : ''; }
-    body.appendChild(G.el('div.menu3',
-      G.LIFE['en-home'] ? G.el('button.big.bic' + (momDone ? '.done' : hl('me')), { onclick: function () { G.openLife('en-home'); } },
+    var d = today(), momDone = !!(d.sang && d.sang['en-home']);
+    body.appendChild(G.questList({ more: true, onChange: G.openHome }));
+    var extra = [
+      G.LIFE['en-home'] ? G.el('button.big.bic' + (momDone ? '.done' : ''), { onclick: function () { G.openLife('en-home'); } },
         G.bigIc(momDone ? 'check' : 'talk', 'Nói chuyện với mẹ'), G.el('span', 'Buổi sáng ở nhà: thức dậy, ăn sáng, chuẩn bị đi học')) : null,
-      G.el('button.big.bic' + (d.viec.doc ? '.done' : hl('doc')), { onclick: G.openReader }, G.bigIc(d.viec.doc ? 'check' : 'book', 'Đọc truyện'), G.el('span', 'Truyện song ngữ theo cấp, bấm câu để xem nghĩa, nghe giọng đọc')),
-      G.el('button.big.bic' + (d.viec.on ? '.done' : hl('on')), { onclick: G.openReview }, G.bigIc(d.viec.on ? 'check' : 'repeat', 'Ôn câu đã học'), G.el('span', G.srsDue ? (G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn hôm nay' : 'Không có câu đến hạn · ôn thêm tuỳ ý') : '')),
-      G.el('button.big.bic' + hl('wk'), { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),
+      G.el('button.big.bic', { onclick: G.openReader }, G.bigIc('book', 'Kho truyện'), G.el('span', 'Truyện song ngữ theo cấp, nghe cả chương, câu hỏi đọc hiểu')),
+      G.el('button.big.bic', { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),
       G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats ? G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được bằng tiếng Anh' : '')),
-      G.el('button.big.bic', { onclick: G.openToday }, G.bigIc('calendar', 'Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/' + G.dayProgress().all + ' việc · ' + G.dayProgress().mins + ' phút')),
-      G.openTopics ? G.el('button.big.bic', { onclick: G.openTopics }, G.bigIc('books', 'Từ theo chủ đề'), G.el('span', G.topicTotals().got + '/' + G.topicTotals().all + ' từ đọc tin, công sở, kinh tế…')) : null));
+      G.openTopics ? G.el('button.big.bic', { onclick: G.openTopics }, G.bigIc('books', 'Từ theo chủ đề'), G.el('span', G.topicTotals().got + '/' + G.topicTotals().all + ' từ đọc tin, công sở, kinh tế…')) : null,
+      G.openFix && G.enFloorNow && G.enFloorNow() >= 3 ? G.el('button.big.bic', { onclick: G.openFix }, G.bigIc('magnifier', 'Bắt lỗi câu'), G.el('span', G.fixStats().ok + '/' + G.fixStats().all + ' lỗi hay gặp đã nắm')) : null,
+      G.srsHard && G.srsHard().length ? G.el('button.big.bic', { onclick: G.openReviewHard }, G.bigIc('brain', 'Câu khó'), G.el('span', G.srsHard().length + ' câu bạn hay quên · ôn riêng')) : null
+    ];
+    body.appendChild(G.el('h3.home-sec', 'Ở nhà và học thêm'));
+    body.appendChild(G.el('div.menu3', extra));
   };
 
   /* ---------- Đọc truyện ---------- */
@@ -296,18 +301,28 @@ var G = window.G || (window.G = {});
     }).catch(function () { G.toast('Chưa tải được kho truyện. Mở khi có mạng một lần nhé.'); });
   }
   var SHELF = ['future', 'ai', 'true', 'mystery', 'news', 'essay', 'long'];
-  var SHELF_NAME = { future: 'Brightford 2080 · vấn đề xã hội tương lai', ai: 'Chuyện về AI', true: 'Chuyện có thật', mystery: 'Bí ẩn chưa có lời giải', news: 'Tin tức 2025–2026', essay: 'Bài luận B2 · kỹ năng sống', long: 'Truyện dài' };
-  function shelfRank(s) { var i = SHELF.indexOf(s.shelf); return i < 0 ? SHELF.length : i; }
+  var SHELF_NAME = { easy: 'Truyện dễ A1 · đời thường ở Brightford', future: 'Brightford 2080 · vấn đề xã hội tương lai', ai: 'Chuyện về AI', true: 'Chuyện có thật', mystery: 'Bí ẩn chưa có lời giải', news: 'Tin tức 2025–2026', essay: 'Bài luận B2 · kỹ năng sống', long: 'Truyện dài' };
+  function shelfRank(s) {
+    if (s.shelf === 'easy') return lowLv() ? -1 : SHELF.length;   // người mới (tầng 1–2): kệ truyện dễ lên đầu
+    var i = SHELF.indexOf(s.shelf); return i < 0 ? SHELF.length : i;
+  }
+  function lowLv() { return (G.enFloorNow ? G.enFloorNow() : 1) <= 2; }
   function readN(id) { return (G.S.truyen && G.S.truyen[id]) || 0; }
   G.openReader = function () {
-    var body = panelOpen('📖 Đọc truyện');
+    stopListen();
+    var body = panelOpen('Đọc truyện');
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));
     loadIndex(function (list) {
       body.innerHTML = '';
       // gợi ý: truyện đang đọc dở, không có thì truyện dễ nhất chưa đọc
       var next = null;
       for (var i = 0; i < list.length && !next; i++) { var r = readN(list[i].id); if (r > 0 && r < list[i].chapters.length) next = list[i]; }
-      for (var j = 0; j < list.length && !next; j++) if (readN(list[j].id) < list[j].chapters.length) next = list[j];
+      // chưa đọc dở truyện nào: truyện chưa đọc gần trình độ nhất (tầng 1–2 → A1, tầng 3 → A2, tầng 4 → B1)
+      var want = [1, 1, 2, 3][(G.enFloorNow ? G.enFloorNow() : 1) - 1] || 1, ORD = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5 }, best = 99;
+      if (!next) for (var j = 0; j < list.length; j++) {
+        if (readN(list[j].id) >= list[j].chapters.length) continue;
+        var d0 = Math.abs((ORD[list[j].level] || 3) - want); if (d0 < best) { best = d0; next = list[j]; }
+      }
       if (next) body.appendChild(G.el('button.big.bic.seal.rd-next', { onclick: function () { chapter(next, readN(next.id)); } },
         G.bigIc('book', 'Đọc tiếp: ' + next.title), G.el('span', next.vi + ' · chương ' + (readN(next.id) + 1) + '/' + next.chapters.length + ' · ' + next.level)));
       var lv = '';
@@ -325,48 +340,108 @@ var G = window.G || (window.G = {});
       });
     });
   };
+  /* tốc độ nghe trong kho truyện: chậm / thường / nhanh (nhớ cho lần sau; bản cũ chỉ có "đọc chậm") */
+  var SPEEDS = [[0.7, 'Chậm'], [1, 'Thường'], [1.2, 'Nhanh']];
+  function rdRate() { var cd = G.S.caiDat || {}; return cd.tocDo || (cd.docCham ? 0.7 : 1); }
+  var stopList = null;
+  function stopListen() { if (stopList) { stopList(); stopList = null; } }
+  G._stopStory = stopListen;
+  function shuffled(n) { var a = [], i, j, t; for (i = 0; i < n; i++) a.push(i); for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function chapter(s, k) {
-    var body = panelOpen('📖 ' + s.title);
+    stopListen();
+    var body = panelOpen(s.title);
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));
     fetch('../data/stories/' + s.id + '.json').then(function (r) { return r.json(); }).then(function (full) {
-      var ch = full.chapters[k];
+      var ch = full.chapters[k], lines = [], texts = [];
       body.innerHTML = '';
       body.appendChild(G.el('div.lhead', G.el('div.lsub', 'Chương ' + ch.n + '/' + full.chapters.length + ' · ' + ch.title + ' · ' + (ch.vi || '') + ' · bấm câu để nghe')));
-      // tốc độ đọc: thường / chậm (nhớ cho lần sau)
       var cd = G.S.caiDat || (G.S.caiDat = {});
+      // tốc độ nghe: chậm / thường / nhanh
       var spd = G.el('div.td-seg.rd-speed');
       function drawSpd() {
         spd.innerHTML = '';
-        spd.appendChild(G.el('button' + (!cd.docCham ? '.on' : ''), { onclick: function () { cd.docCham = false; G.save(); drawSpd(); } }, '🔊 Tốc độ thường'));
-        spd.appendChild(G.el('button' + (cd.docCham ? '.on' : ''), { onclick: function () { cd.docCham = true; G.save(); drawSpd(); } }, '🐢 Đọc chậm'));
+        SPEEDS.forEach(function (x) {
+          spd.appendChild(G.el('button' + (rdRate() === x[0] ? '.on' : ''), { onclick: function () { cd.tocDo = x[0]; cd.docCham = x[0] < 1; G.save(); drawSpd(); } }, x[1]));
+        });
       }
-      drawSpd(); body.appendChild(spd);
+      drawSpd();
+      // nghe cả chương: đọc lần lượt từng câu, câu đang đọc được tô sáng và cuộn tới
+      var lb = G.el('button.btn.sm.rd-listen');
+      function drawLb() { lb.innerHTML = ''; lb.appendChild(G.ic3(stopList ? 'pause' : 'headphone', 'ic3-s')); lb.appendChild(document.createTextNode(stopList ? ' Dừng nghe' : ' Nghe cả chương')); }
+      function mark(i) { for (var q = 0; q < lines.length; q++) lines[q].classList.toggle('rd-now', q === i); if (i >= 0 && lines[i] && lines[i].scrollIntoView) lines[i].scrollIntoView({ block: 'center', behavior: G.calm && G.calm() ? 'auto' : 'smooth' }); }
+      lb.onclick = function () {
+        if (stopList) { stopListen(); mark(-1); drawLb(); return; }
+        stopList = G.sayList(texts, 'en', rdRate(), mark, function () { stopList = null; mark(-1); drawLb(); G.markStudy(); });
+        drawLb();
+      };
+      drawLb();
       // hiện / ẩn nghĩa tiếng Việt (mặc định hiện, nhớ cho lần sau)
       var viBtn = G.el('button.btn.sm.rd-vibtn', { onclick: function () { cd.anNghia = !cd.anNghia; G.save(); applyVi(); } });
-      function applyVi() { body.className = 'panel-body' + (cd.anNghia ? ' rd-hidevi' : ''); viBtn.textContent = cd.anNghia ? '👀 Hiện nghĩa tiếng Việt' : '🙈 Ẩn nghĩa (tự đọc)'; }
-      body.appendChild(viBtn); applyVi();
+      // chỉ nghe: câu tiếng Anh mờ đi (luyện nghe như podcast), chạm câu nào hiện câu đó
+      var enBtn = G.el('button.btn.sm.rd-vibtn', { onclick: function () { cd.anChu = !cd.anChu; G.save(); applyVi(); } });
+      function applyVi() {
+        body.className = 'panel-body' + (cd.anNghia ? ' rd-hidevi' : '') + (cd.anChu ? ' rd-hideen' : '');
+        viBtn.textContent = cd.anNghia ? 'Hiện nghĩa tiếng Việt' : 'Ẩn nghĩa (tự đọc)';
+        enBtn.textContent = cd.anChu ? 'Hiện chữ tiếng Anh' : 'Ẩn chữ (chỉ nghe)';
+      }
+      body.appendChild(G.el('div.rd-tools', spd, lb, viBtn, enBtn)); applyVi();
       (ch.paras || []).forEach(function (para) {
         body.appendChild(G.el('div.rd-para', para.map(function (ln) {
           // nghĩa tiếng Việt luôn hiện ngay dưới câu (ẩn được bằng nút "Ẩn nghĩa" để tự luyện đọc); bấm câu để nghe
           var vi = G.el('div.rd-vi.show', ln[1]);
-          return G.el('div.rd-line', { onclick: function () { G.say(ln[0], 'en', !!(G.S.caiDat && G.S.caiDat.docCham)); } }, G.el('span', ln[0]), vi);
+          var row = G.el('div.rd-line', { onclick: function () { if (stopList) { stopListen(); mark(-1); drawLb(); } row.classList.add('seen'); G.say(ln[0], 'en', rdRate()); } }, G.el('span', ln[0]), vi);
+          lines.push(row); texts.push(ln[0]);
+          return row;
         })));
       });
-      if (ch.vocab && ch.vocab.length) body.appendChild(G.el('div.rd-box',
-        G.el('b', '📝 Từ đáng nhớ'),
-        G.el('div.rd-vocab', ch.vocab.map(function (v) { return G.el('button.rd-w', { onclick: function () { G.say(v[0], 'en', !!(G.S.caiDat && G.S.caiDat.docCham)); } }, G.el('b', v[0]), ' · ' + v[1]); }))));
-      if (ch.think && ch.think.length) body.appendChild(G.el('div.rd-box.think',
-        G.el('b', '💭 Suy ngẫm'),
-        G.el('ol', ch.think.map(function (q) { return G.el('li', q); })),
+      // từ đáng nhớ: vocab [[từ, nghĩa]] hoặc gloss {từ: nghĩa}
+      var voc = ch.vocab || (ch.gloss ? Object.keys(ch.gloss).map(function (w) { return [w, ch.gloss[w]]; }) : []);
+      if (voc.length) body.appendChild(G.el('div.rd-box',
+        G.el('b.rd-bh', G.ic3('memo', 'ic3-s'), ' Từ đáng nhớ'),
+        G.el('div.rd-vocab', voc.map(function (v) { return G.el('button.rd-w', { onclick: function () { G.say(v[0], 'en', rdRate()); } }, G.el('b', v[0]), ' · ' + v[1]); }))));
+      // đọc hiểu: câu hỏi trắc nghiệm của chương (đáp án xáo mỗi lần mở)
+      var quiz = ch.quiz || [], got = 0, answered = 0;
+      if (quiz.length) {
+        var qBox = G.el('div.rd-box.rd-quiz', G.el('b.rd-bh', G.ic3('target', 'ic3-s'), ' Bạn hiểu tới đâu?'));
+        var qRes = G.el('div.small.faint', 'Chọn đáp án đúng theo nội dung chương.');
+        quiz.forEach(function (q, qi) {
+          var done = false, opts = G.el('div.rd-opts');
+          shuffled(q.opts.length).forEach(function (oi) {
+            var b = G.el('button.rd-opt', { onclick: function () {
+              if (done) return; done = true; answered++;
+              var ok = oi === q.a;
+              b.classList.add(ok ? 'ok' : 'no');
+              if (!ok) { var all = opts.children; for (var z = 0; z < all.length; z++) if (all[z]._oi === q.a) all[z].classList.add('ok'); }
+              if (ok) got++;
+              G.sfx(ok ? 'right' : 'wrong');
+              if (answered === quiz.length) { qRes.className = 'small rd-qres'; qRes.textContent = 'Đúng ' + got + '/' + quiz.length + (got === quiz.length ? ' · hiểu trọn chương này' : ' · đọc lại đoạn có câu trả lời nhé'); }
+            } }, q.opts[oi]);
+            b._oi = oi; opts.appendChild(b);
+          });
+          qBox.appendChild(G.el('div.rd-q', G.el('div', G.el('b', (qi + 1) + '. ' + q.q)), q.qVi ? G.el('div.small.faint', q.qVi) : null, opts));
+        });
+        qBox.appendChild(qRes);
+        body.appendChild(qBox);
+      }
+      var think = ch.think || [];
+      if (think.length) body.appendChild(G.el('div.rd-box.think',
+        G.el('b.rd-bh', G.ic3('thought', 'ic3-s'), ' Suy ngẫm'),
+        G.el('ol', think.map(function (q) { return G.el('li', q); })),
         G.el('div.small.faint', 'Nghĩ hoặc nói to câu trả lời bằng tiếng Việt, rồi thử nói một câu bằng tiếng Anh.')));
+      if (ch.say) body.appendChild(G.el('div.rd-box.think',
+        G.el('b.rd-bh', G.ic3('speak', 'ic3-s'), ' Nói thử'),
+        G.el('div', ch.say),
+        G.el('div.small.faint', 'Nói to bằng tiếng Anh, dùng lại câu trong chương.')));
       body.appendChild(G.el('div.row',
-        G.el('button.btn', { onclick: G.openReader }, '‹ Kho truyện'),
+        G.el('button.btn', { onclick: function () { stopListen(); G.openReader(); } }, '‹ Kho truyện'),
         G.el('button.btn.seal', { onclick: function () {
+          stopListen();
           G.S.truyen = G.S.truyen || {};
-          if ((G.S.truyen[s.id] || 0) <= k) { G.S.truyen[s.id] = k + 1; G.addXp(10); }
+          if ((G.S.truyen[s.id] || 0) <= k) { G.S.truyen[s.id] = k + 1; G.addXp(10 + (quiz.length && got === quiz.length ? 5 : 0)); }
+          if (G.track) G.track('truyen', { id: s.id, ch: k + 1, dung: got, hoi: quiz.length });
           G.markStudy(); G.markTask('doc'); G.sfx('done');
-          if (k + 1 < full.chapters.length) chapter(s, k + 1); else { G.confetti(); G.openReader(); }
-        } }, k + 1 < full.chapters.length ? 'Đọc xong · chương sau ›' : 'Đọc xong truyện 🎉')));
+          if (k + 1 < full.chapters.length) chapter(s, k + 1); else { G.openReader(); G.toast('Đọc xong truyện ' + s.title + '. Giỏi lắm!'); }
+        } }, k + 1 < full.chapters.length ? 'Đọc xong · chương sau ›' : 'Đọc xong truyện')));
       body.scrollTop = 0;
     }).catch(function () { body.innerHTML = ''; body.appendChild(G.el('p', 'Chưa tải được chương này. Thử lại khi có mạng.')); });
   }

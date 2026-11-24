@@ -116,7 +116,7 @@ G.curSession = function (groupId) {
 /* buổi thứ k trong phòng nhóm đã mở chưa: buổi đầu luôn mở, buổi sau cần qua buổi trước (đầu vào từ Pre-A1 được học vượt) */
 G.sessionOpen = function (groupId, k) {
   var g = G.ROOMS[groupId];
-  var skip = groupId.indexOf('en-b1') === 0 ? 5 : groupId.indexOf('en-a2') === 0 ? 4 : 1;
+  var skip = groupId.indexOf('en-b1') === 0 ? 5 : groupId.indexOf('en-a2') === 0 ? 4 : groupId.indexOf('en-a1') === 0 ? 3 : 1;
   if (k === 0 || (G.S.dauVao && G.S.dauVao.lv >= skip)) return true;
   return G.roomPassed(g.group[k - 1]);
 };
@@ -135,7 +135,7 @@ G.SCENES = {
       { id: 'shuttle', img: 'pc_shuttle_stop.png', s: 130, x: 1040, y: 935, name: 'Xe đưa đón học sinh', shuttle: 'school', nb: true }
     ],
     // đường mòn bên phải ra Bờ sông, qua cầu sang Trung tâm: đi bộ tới trường (bản 3D đi liền một mạch, bản 2D qua cổng)
-    gates: [{ x: 1490, y: 548, side: 'right', label: 'Đi bộ ra Bờ sông', sign: '🌊 Bờ sông ›', to: { scene: 'river_en', x: 80, y: 505, dir: 'right' } }]
+    gates: [{ x: 1490, y: 548, side: 'right', label: 'Đi bộ ra Bờ sông', sign: 'Bờ sông ›', to: { scene: 'river_en', x: 80, y: 505, dir: 'right' } }]
   },
   city_en: {
     city: 'en',
@@ -152,9 +152,9 @@ G.SCENES = {
       { id: 'busstop', img: 'pc_busstop.png', s: 180, x: 92, y: 975, name: 'Bến xe buýt', ride: 'bus', toward: 'home' }
     ],
     // cuối đường bên phải: sang Phố mua sắm (bưu điện, ngân hàng, hiệu thuốc, tiệm tóc, siêu thị); bên trái: về Khu phố Maple
-    gates: [{ x: 1490, y: 508, side: 'right', label: 'Sang Phố mua sắm', sign: '🛍️ Phố mua sắm ›', to: { scene: 'street_en', x: 150, y: 380, dir: 'right' } },
+    gates: [{ x: 1490, y: 508, side: 'right', label: 'Sang Phố mua sắm', sign: 'Phố mua sắm ›', to: { scene: 'street_en', x: 150, y: 380, dir: 'right' } },
       { x: 46, y: 520, side: 'left', label: 'Đi bộ ra Bờ sông', sign: '‹ 🌊 Bờ sông', to: { scene: 'river_en', x: 1440, y: 412, dir: 'left' } },
-      { x: 798, y: 996, side: 'down', label: 'Đi bộ tới Trường Anh ngữ', sign: '🏫 Trường Anh ngữ', to: { scene: 'campus_en', x: 798, y: 90, dir: 'down' } }]
+      { x: 798, y: 996, side: 'down', label: 'Đi bộ tới Trường Anh ngữ', sign: 'Trường Anh ngữ', to: { scene: 'campus_en', x: 798, y: 90, dir: 'down' } }]
   },
   en_hall: {
     city: 'en', doors: 'EN_HALL_DOORS', classroom: 'classroom_en', floor: 2,
@@ -163,7 +163,7 @@ G.SCENES = {
     walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
     exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'campus_en', building: 'school' } },
     // thang máy (lên / xuống tầng) ở phía phải hành lang
-    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]   // cửa thang máy có sẵn trong ảnh (tường phải)
+    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: 'Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]   // cửa thang máy có sẵn trong ảnh (tường phải)
   },
   en_hall_1: {
     city: 'en', doors: 'EN_F1_DOORS', classroom: 'classroom_en', floor: 1,
@@ -171,7 +171,7 @@ G.SCENES = {
     bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 78,
     walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
     exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'campus_en', building: 'school' } },
-    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]   // cửa thang máy có sẵn trong ảnh (tường phải)
+    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: 'Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]   // cửa thang máy có sẵn trong ảnh (tường phải)
   },
   en_hall_3: {
     city: 'en', doors: 'EN_F3_DOORS', classroom: 'classroom_en', floor: 3,
@@ -179,7 +179,7 @@ G.SCENES = {
     bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 78,
     walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
     exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'campus_en', building: 'school' } },
-    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]
+    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: 'Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]
   },
   en_hall_4: {
     city: 'en', doors: 'EN_F4_DOORS', classroom: 'classroom_en', floor: 4,
@@ -187,7 +187,7 @@ G.SCENES = {
     bg: 'interior_en_hall.png', w: 1536, h: 1024, kind: 'hall', plateY: 78,
     walk: { x0: 60, y0: 385, x1: 1500, y1: 995 },
     exit: { x: 768, y: 968, label: 'Ra phố', to: { scene: 'campus_en', building: 'school' } },
-    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: '🛗 Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]
+    gates: [{ x: 1330, y: 525, side: 'right', label: 'Đi thang máy', sign: 'Thang máy', tag: { x: 1425, y: 212 }, to: { floors: true } }]
   },
   classroom_en: {
     city: 'en',
@@ -320,6 +320,7 @@ G.SCENES.classroom_zh = {
 /* Đã qua phòng chưa: đạt từ 80% số câu (phòng thường 8/10, phòng thi 16/20) */
 G.roomPassed = function (id) {
   var p = G.S.phong[id], r = G.ROOMS[id];
+  if (r && r.group && p && p.diem >= 8) return true;   // đã qua phòng này khi nó còn là phòng đơn (A1 trước 24/11/2026): giữ nguyên
   if (r && r.group) { for (var i = 0; i < r.group.length; i++) if (!G.roomPassed(r.group[i])) return false; return true; }   // phòng nhóm: qua hết các buổi
   if (r && r.final && G.CERT_SPEAK && G.CERT_SPEAK[id] && G.S.totNghiep) { var tn = G.S.totNghiep[r.final.lang]; return !!(tn && tn[r.final.level]); }   // phòng thi chứng chỉ: phải đạt cả phần nói
   return !!(p && p.diem >= ((r && r.passN) || 8));

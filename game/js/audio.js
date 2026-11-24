@@ -34,7 +34,8 @@ var G = window.G || (window.G = {});
     var k = G.audioKey(lang, text);
     if (!index[lang][k]) return null;
     // v=2: giọng đã chuẩn hoá âm lượng; v=3: tệp lệch âm lượng đã chỉnh lại (21/11/2026, data/audio.json mục fix)
-    return '../audio/' + lang + '/' + k + '.mp3?v=' + (index.fix && index.fix[lang + '/' + k] ? 3 : 2);
+    // G.AUDIO_BASE: đặt trong js/cloud_config.js khi chuyển kho giọng đọc (24.000 tệp) sang CDN, vd 'https://cdn.example.com/audio/'
+    return (G.AUDIO_BASE || '../audio/') + lang + '/' + k + '.mp3?v=' + (index.fix && index.fix[lang + '/' + k] ? 3 : 2);
   };
 
   function speakTts(text, lang, slow) {
@@ -43,7 +44,7 @@ var G = window.G || (window.G = {});
       speechSynthesis.cancel();
       var u = new SpeechSynthesisUtterance(text);
       u.lang = lang === 'zh' ? 'zh-CN' : 'en-US';
-      u.rate = slow ? 0.55 : 0.85;
+      u.rate = typeof slow === 'number' ? 0.85 * slow : slow ? 0.55 : 0.85;
       u.volume = 0.6;   // giọng máy to hơn giọng AI: hạ xuống cho đều
       var vs = speechSynthesis.getVoices();
       for (var i = 0; i < vs.length; i++) if (vs[i].lang && vs[i].lang.replace('_', '-').indexOf(u.lang) === 0) { u.voice = vs[i]; break; }
@@ -97,7 +98,7 @@ var G = window.G || (window.G = {});
     if (!hosts.length) return;
     var lists = hosts.map(wrapWords), n = lists[0].length, w = [], tot = 0;
     for (i = 0; i < n; i++) { tot += lists[0][i].textContent.length + 1; w.push(tot); }
-    var est = (tot * (slow ? 95 : 62)) + 300, t0 = Date.now();
+    var est = (tot * (typeof slow === 'number' ? 62 / slow : slow ? 95 : 62)) + 300, t0 = Date.now();
     hosts.forEach(function (h) { h.classList.add('kw-on'); });
     kw = { hosts: hosts, t: setInterval(function () {
       var f, d = viaPlayer && player.duration;
@@ -109,13 +110,14 @@ var G = window.G || (window.G = {});
   }
   G.say = function (text, lang, slow) {
     lang = lang || 'en';
+    if (!slow && G.S && G.S.caiDat && G.S.caiDat.tocDo && G.S.caiDat.tocDo !== 1) slow = G.S.caiDat.tocDo;   // tốc độ chung (Cài đặt)
     // danh sách giọng AI chưa tải xong: chờ một chút thay vì đọc bằng giọng máy (to nhỏ khác nhau)
     if (!index && (G._sayWait = (G._sayWait || 0) + 1) < 15) { setTimeout(function () { G.say(text, lang, slow); }, 200); return; }
     G._sayWait = 0;
     player.volume = 1;
     var url = G.audioUrl(text, lang);
     if (url) {
-      var rate = slow ? 0.7 : 1;
+      var rate = typeof slow === 'number' ? slow : slow ? 0.7 : 1;   // slow: true = chậm 70%, hoặc một tốc độ cụ thể (0,7 … 1,2)
       player.src = url;
       try {
         player.preservesPitch = true; player.webkitPreservesPitch = true; player.mozPreservesPitch = true;
@@ -127,6 +129,25 @@ var G = window.G || (window.G = {});
     } else { speakTts(text, lang, slow); kwStart(text, slow, false); }
   };
   G.saySlow = function (text, lang) { G.say(text, lang, true); };
+  /* Đọc lần lượt nhiều câu (nghe cả chương): onLine(i) báo câu đang đọc, onDone khi hết. Trả về hàm dừng.
+     Chờ tệp giọng đọc xong mới sang câu sau; máy không phát được tệp thì ước theo độ dài câu. */
+  G.sayList = function (texts, lang, slow, onLine, onDone) {
+    var i = -1, stopped = false, tm = 0, p = null;
+    function next() {
+      clearTimeout(tm); if (p) p.onended = null;
+      if (stopped) return;
+      i++;
+      if (i >= texts.length) { stopped = true; if (onDone) onDone(); return; }
+      if (onLine) onLine(i);
+      var t = texts[i], rate = typeof slow === 'number' ? slow : slow ? 0.7 : 1;
+      G.say(t, lang, slow);
+      p = player;
+      p.onended = function () { p.onended = null; clearTimeout(tm); tm = setTimeout(next, 450); };
+      tm = setTimeout(next, (t.length * 75 / rate) * 1.8 + 2500);   // dự phòng khi không có sự kiện kết thúc (giọng máy)
+    }
+    next();
+    return function () { stopped = true; clearTimeout(tm); if (p) p.onended = null; G.hush(); };
+  };
   /* cặp nút nghe thường 🔊 và nghe chậm 🐢 */
   G.sayBtns = function (text, lang) {
     return G.el('span.say2',

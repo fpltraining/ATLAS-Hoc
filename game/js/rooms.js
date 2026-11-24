@@ -59,26 +59,26 @@ var G = window.G || (window.G = {});
     c.fillStyle = '#fff'; c.font = '800 17px -apple-system, system-ui, sans-serif'; c.fillText(b.title, x, y - 46);
     c.font = '600 13px -apple-system, system-ui, sans-serif'; c.fillStyle = '#d8f0e4';
     for (var i = 0; i < Math.min(3, b.lines.length); i++) c.fillText(b.lines[i][0].slice(0, 24), x, y - 20 + i * 20);
-    c.font = '700 13px sans-serif'; var tw = c.measureText('👆 bấm để đọc').width + 16;
+    c.font = '700 13px sans-serif'; var tw = c.measureText('bấm để đọc').width + 16;
     c.fillStyle = 'rgba(27,33,64,.85)'; rr(c, x - tw / 2, y + 62, tw, 22, 11); c.fill();
-    c.fillStyle = '#ffd56b'; c.fillText('👆 bấm để đọc', x, y + 73);
+    c.fillStyle = '#ffd56b'; c.fillText('bấm để đọc', x, y + 73);
     c.restore();
   };
 
   /* bảng thông tin: bấm để đọc */
   G.openBoard = function (b) {
     var panel = document.getElementById('panel'); panel.className = 'panel open';
-    G.setTitle('📋 ' + b.title);
+    G.setTitle(b.title);
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     var body = document.getElementById('panel-body'); body.innerHTML = '';
-    body.appendChild(G.el('div.wk-hint', '📖 Đọc bảng như ngoài đời. Bấm từng dòng để nghe và xem nghĩa.'));
+    body.appendChild(G.el('div.wk-hint', G.ic3('book', 'ic3-s'), ' Đọc bảng như ngoài đời. Bấm từng dòng để nghe và xem nghĩa.'));
     var doc = G.el('div.wk-doc');
     b.lines.forEach(function (ln) {
       var vi = G.el('div.small.faint', { style: { display: 'none' } }, ln[1]);
       doc.appendChild(G.el('div.bd-line', { onclick: function () { vi.style.display = vi.style.display === 'none' ? '' : 'none'; G.say(ln[0], 'en'); } }, G.el('b', ln[0]), vi));
     });
     body.appendChild(doc);
-    if (b.q) body.appendChild(G.el('p', G.el('b', '❓ ' + b.q[0]), G.el('div.small.faint', 'Gợi ý: ' + b.q[1])));
+    if (b.q) body.appendChild(G.el('p', G.el('b', G.ic3('question', 'ic3-s'), ' ' + b.q[0]), G.el('div.small.faint', 'Gợi ý: ' + b.q[1])));
     G.markStudy();
   };
 })();

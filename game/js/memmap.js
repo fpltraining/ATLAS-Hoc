@@ -8,7 +8,7 @@ var G = window.G || (window.G = {});
   function range(pre, n, pad) { var a = []; for (var i = 1; i <= n; i++) a.push(pre + (pad && i < 10 ? '0' : '') + i); return a; }
   var FLOORS = [
     { name: 'Tầng 1', sub: 'Nền tảng', ids: range('en-n-', 30, true), cols: 6 },
-    { name: 'Tầng 2', sub: 'A1', ids: ['en-a1-1', 'en-a1-2', 'en-a1-3', 'en-a1-4', 'en-a1-test'], cols: 5 },
+    { name: 'Tầng 2', sub: 'A1', ids: range('en-a1-', 16, true).concat(['en-a1-test']), cols: 6 },
     { name: 'Tầng 3', sub: 'A2 – B1', ids: range('en-a2-', 24, true), cols: 6 },
     { name: 'Tầng 4', sub: 'B1 – B2', ids: range('en-b1-', 24, true), cols: 6 },
     { name: 'Chủ đề', sub: '15 nhóm từ', topics: true, cols: 5 }   // từ theo chủ đề (topics.js)

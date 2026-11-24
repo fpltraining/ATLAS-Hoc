@@ -27,8 +27,9 @@
   <!-- Điện thoại cầm dọc: nhắc xoay ngang (iPhone không cho web app tự khoá màn hình ngang) -->
   <div id="rotate" class="rotate" aria-live="polite">
     <img id="rot-img" class="rot-img" alt="">
-    <b>Xoay ngang điện thoại nhé</b>
-    <p>ConnectLife chơi trên màn hình ngang để thấy rộng cả thành phố.</p>
+    <b>Xoay ngang để đi dạo thành phố</b>
+    <p>Bản đồ Brightford cần màn hình ngang. Bài học, ôn tập, nhiệm vụ ở Sảnh thì cầm dọc vẫn học được.</p>
+    <button class="btn rot-back" onclick="G.goLobby && G.goLobby()">‹ Về Sảnh học tiếp</button>
     <small>Xoay mà màn hình không đổi? Vuốt từ góc trên bên phải xuống để mở Trung tâm điều khiển, tắt nút 🔒 Khoá xoay màn hình rồi xoay lại.</small>
   </div>
   <!-- Màn chờ lúc mở app (hình anh Han đặt): tắt dần khi app sẵn sàng -->
@@ -76,14 +77,17 @@
 
   <script src="js/util.js"></script>
   <script src="js/save.js"></script>
+  <script src="js/track.js"></script>
   <script src="js/assets.js"></script>
   <script src="js/audio.js"></script>
   <script src="js/speak.js"></script>
   <script src="data/en_a1.js"></script>
+  <script src="data/en_a1_more.js"></script>
   <script src="data/en_found.js"></script>
   <script src="data/en_a2.js"></script>
   <script src="data/en_b1.js"></script>
   <script src="data/cert_en.js"></script>
+  <script src="data/content_en.js"></script>
   <script src="data/final_en.js"></script>
   <script src="data/zh_hsk1.js"></script>
   <script src="data/life.js"></script>
@@ -116,6 +120,9 @@
   <script src="js/memmap.js"></script>
   <script src="data/topic_en_index.js"></script>
   <script src="js/topics.js"></script>
+  <script src="data/fix_en.js"></script>
+  <script src="js/fixit.js"></script>
+  <script src="js/retain.js"></script>
   <script src="js/final.js"></script>
   <script src="js/rank.js"></script>
   <script src="js/floorbadge.js"></script>

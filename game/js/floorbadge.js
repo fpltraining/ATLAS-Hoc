@@ -64,7 +64,7 @@ var G = window.G || (window.G = {});
         G.el('div.fb-pic.shine', G.imgEl(b.img, 'fb-img')),
         G.el('b', got ? null : G.ic3('lock', 'ic3-s'), b.name),
         G.el('span.small', b.floor),
-        G.el('span.small.faint', cur ? '✨ Đang đội trên đầu' : got ? 'Đã có' : b.how));
+        G.el('span.small.faint', cur ? 'Đang đội trên đầu' : got ? 'Đã có' : b.how));
     }));
   };
 

@@ -22,7 +22,7 @@ var G = window.G || (window.G = {});
   function floorCount(n) {
     var i, k = 0, all = 0;
     if (n === 1) { for (i = 1; i <= 30; i++) { all++; if (G.roomPassed('en-n-' + (i < 10 ? '0' : '') + i)) k++; } }
-    else if (n === 2) { for (i = 0; i < G.EN_HALL_DOORS.length; i++) { all++; if (G.roomPassed(G.EN_HALL_DOORS[i].room)) k++; } }
+    else if (n === 2) { for (i = 0; i < G.EN_HALL_DOORS.length; i++) { var r2 = G.ROOMS[G.EN_HALL_DOORS[i].room], ids = r2 && r2.group ? r2.group : [G.EN_HALL_DOORS[i].room]; for (var j = 0; j < ids.length; j++) { all++; if (G.roomPassed(ids[j]) || (r2 && r2.group && G.roomPassed(r2.id) && j === 0)) k++; } } }   // phòng A1 = 4 buổi, cộng thi A1
     else if (n === 3 || n === 4) { var pre = n === 3 ? 'en-a2-' : 'en-b1-'; for (i = 1; i <= 24; i++) { all++; if (G.roomPassed(pre + (i < 10 ? '0' : '') + i)) k++; } }
     return { k: k, all: all };
   }
@@ -32,6 +32,8 @@ var G = window.G || (window.G = {});
     if (G.openPlacement && !dv) return { ic: 'target', t: 'Làm bài kiểm tra đầu vào', s: 'Khoảng 12–15 phút · app xếp bạn vào đúng tầng', go: place, b: 'Bắt đầu' };
     if (G.openPlacement && !dv.ban) return { ic: 'target', t: 'Làm lại bài kiểm tra đầu vào', s: 'Bài mới có phần Từ vựng và chấm chặt hơn để xếp đúng tầng · khoảng 12–15 phút', go: place, b: 'Làm lại' };
     var d = G.today(), p = G.dayProgress(), Q = G.QUESTS || [], order = ['bai', 'tu', 'on', 'doc', 'noi'];
+    // đã học xong buổi đầu bằng kết quả nhanh: mời làm bài đầy đủ một lần
+    if (G.openPlacement && dv.nhanh && d.viec.bai) return { ic: 'target', t: 'Làm bài đầu vào đầy đủ', s: 'Nghe, Đọc, Giao tiếp, Nói · 12–15 phút · xếp tầng chính xác hơn, giỏi thì lên thẳng Tầng 4', go: place, b: 'Làm bài' };
     for (var i = 0; i < order.length; i++) {
       if (d.viec[order[i]]) continue;
       for (var j = 0; j < Q.length; j++) if (Q[j].id === order[i]) {
@@ -63,6 +65,16 @@ var G = window.G || (window.G = {});
     var perWeek = mins * dpw / 60;
     return remainHours().map(function (r) { var d = r.cum / perWeek * 7; return { name: r.st.name, left: r.left, cum: r.cum, month: monthOf(d), span: span(d) }; });
   };
+  /* lộ trình nói thật: bài có sẵn trong app bao nhiêu giờ (G.CONTENT_EN, đếm từ nội dung) so với số giờ cần để vững cấp */
+  function contentLine(st) {
+    var c = G.CONTENT_EN && G.CONTENT_EN[st.floor]; if (!c || !st.hours) return null;
+    var tp = G.topicHours ? Math.round(G.topicHours(st.floor).all) : 0, inApp = c.h + tp, more = Math.max(0, st.hours + tp - inApp);
+    var parts = [c.buoi + ' buổi'];
+    if (c.chuong) parts.push(c.chuong + ' chương truyện');
+    if (c.hoiThoai) parts.push(c.hoiThoai + ' hội thoại');
+    return G.el('div.small.road-hrs', G.el('b', 'Bài có sẵn: khoảng ' + inApp + ' giờ'), ' (' + parts.join(', ') + (tp ? ', từ chủ đề' : '') + ')',
+      more ? ' · để vững cấp cần thêm khoảng ' + more + ' giờ luyện: nói ngoài phố, đọc và nghe lại truyện, ôn câu.' : '');
+  }
   /* lộ trình: tầng này gồm những chủ đề từ nào, đã học bao nhiêu từ */
   function topicLine(f) {
     var ts = G.topicsOfFloor(f); if (!ts.length) return null;
@@ -139,7 +151,7 @@ var G = window.G || (window.G = {});
         G.el('div.small', stNow.out),
         topicLine(cur),
         nl ? G.el('button.btn.seal.sh-go', { onclick: function () { G.openLesson(nl.id); } }, 'Học tiếp: ' + nl.label + ' ›') : null));
-      P.road.appendChild(G.el('p.small.faint.road-note', 'Mỗi tầng học xong thi 2 phần (hiểu và nói) để nhận Chứng chỉ ConnectLife. Chỉ khi qua bài thi đầu ra giao tiếp mới là Tốt nghiệp ConnectLife.'));
+      P.road.appendChild(G.el('p.small.faint.road-note', 'Mỗi tầng học xong thi 2 phần (hiểu và nói) để nhận Chứng chỉ ConnectLife. Chỉ khi qua bài thi đầu ra giao tiếp mới là Tốt nghiệp ConnectLife. Số giờ mỗi tầng theo chuẩn quốc tế (Cambridge: khoảng 500–600 giờ có hướng dẫn để lên B2); app ghi rõ phần nào là bài có sẵn, phần nào là giờ luyện thêm.'));
       P.road.appendChild(planCard());
       P.road.appendChild(G.el('div.road', G.ROADMAP_EN.map(function (st) {
         var got = !st.final && certs[st.key], here = !st.final && st.floor === cur && !got;
@@ -148,8 +160,8 @@ var G = window.G || (window.G = {});
           : got ? ['star', 'Đã có chứng chỉ' + (got.noi ? ' · nói ' + got.noi + '/100' : '')] : here ? ['pin', 'Đang học'] : st.soon ? [null, 'Đang xây'] : st.floor < cur ? ['check', 'Vượt theo trình độ đầu vào'] : ['lock', 'Chưa mở'];
         tag = [tag[0] ? G.ic3(tag[0], 'ic3-s') : null, tag[1]];
         return G.el('div.road-step' + (st.final ? '.final' : '') + (got ? '.got' : '') + (here ? '.here' : ''),
-          G.el('div.road-dot', st.final ? '🎓' : String(st.floor)),
-          G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), st.final || !G.topicsOfFloor ? null : topicLine(st.floor), G.el('span.road-tag', tag), st.final && G.finalUnlocked && G.finalUnlocked() ? G.el('button.btn.seal.sm.road-go', { onclick: G.openFinalExam }, G.finalDone() ? 'Xem bài thi tốt nghiệp ›' : 'Vào thi Tốt nghiệp ConnectLife ›') : null, G.el('span.road-eta', { id: 'eta-' + (st.final ? 'final' : st.floor) })));
+          G.el('div.road-dot', st.final ? G.ic3('grad', 'ic3-s') : String(st.floor)),
+          G.el('div.road-body', G.el('b', st.name + ' '), G.el('span.road-cefr', st.cefr), G.el('div.small', st.out), st.final || !G.topicsOfFloor ? null : topicLine(st.floor), st.final ? null : contentLine(st), G.el('span.road-tag', tag), st.final && G.finalUnlocked && G.finalUnlocked() ? G.el('button.btn.seal.sm.road-go', { onclick: G.openFinalExam }, G.finalDone() ? 'Xem bài thi tốt nghiệp ›' : 'Vào thi Tốt nghiệp ConnectLife ›') : null, G.el('span.road-eta', { id: 'eta-' + (st.final ? 'final' : st.floor) })));
       })));
     }
 
@@ -181,9 +193,9 @@ var G = window.G || (window.G = {});
         stat(G.diplomas().filter(function (d) { return d.lang === 'en'; }).length + '/4', 'Chứng chỉ'),
         stat(G.S.tuKho.length, 'Từ cần ôn')
       ),
-      G.S.totNghiepCL ? G.el('div.dips', G.el('span.dip-chip.cl', '🎓 Tốt nghiệp ConnectLife · ' + G.S.totNghiepCL.luc.slice(0, 10).split('-').reverse().join('/'))) : null,
+      G.S.totNghiepCL ? G.el('div.dips', G.el('span.dip-chip.cl', 'Tốt nghiệp ConnectLife · ' + G.S.totNghiepCL.luc.slice(0, 10).split('-').reverse().join('/'))) : null,
       G.diplomas().length ? G.el('div.dips', G.diplomas().map(function (d) {
-        return G.el('span.dip-chip', '🏅 Chứng chỉ ' + (d.lang === 'en' ? 'tiếng Anh ' : 'tiếng Trung ') + d.level + ' · hiểu ' + d.info.diem + '/' + d.info.tong + (d.info.noi ? ' · nói ' + d.info.noi : ''));
+        return G.el('span.dip-chip', 'Chứng chỉ ' + (d.lang === 'en' ? 'tiếng Anh ' : 'tiếng Trung ') + d.level + ' · hiểu ' + d.info.diem + '/' + d.info.tong + (d.info.noi ? ' · nói ' + d.info.noi : ''));
       })) : null
     ));
 
@@ -211,12 +223,15 @@ var G = window.G || (window.G = {});
         G.el('span', G.srsDue && G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn hôm nay · xem buổi nào sắp quên' : 'Mỗi ô là một buổi học, màu càng xanh là càng nhớ chắc')));
       if (G.openTopics) { var tt = G.topicTotals(); P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: G.openTopics }, G.bigIc('books', 'Từ theo chủ đề'),
         G.el('span', tt.got + '/' + tt.all + ' từ đã học · ' + tt.open + '/' + tt.topics + ' chủ đề đang mở · đọc tin, công sở, kinh tế…'))); }
+      // bắt lỗi câu (B1–B2): mở từ Tầng 3
+      if (G.openFix && G.enFloorNow() >= 3) { var fs = G.fixStats(); P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: G.openFix }, G.bigIc('magnifier', 'Bắt lỗi câu'),
+        G.el('span', fs.ok + '/' + fs.all + ' lỗi hay gặp đã nắm · thì, giới từ, mạo từ, -ed / -ing… mỗi lượt 10 câu'))); }
       // trình độ đầu vào (kiểm tra 4 kỹ năng), làm lại để đo đầu ra
       if (G.openPlacement) {
         var dv = G.S.dauVao;
         P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openPlacement(function () { G.goLobby(); }, { canSkip: true }); } },
           G.bigIc('target', 'Trình độ đầu vào' + (dv ? ': ' + G.levelName(dv.lv) : '')),
-          G.el('span', dv && !dv.ban ? 'Bài đầu vào đã sửa (thêm phần Từ vựng, chấm chặt hơn) · nên làm lại để xếp đúng tầng' : dv ? 'Làm ngày ' + dv.luc.slice(8, 10) + '/' + dv.luc.slice(5, 7) + (dv.tv !== undefined && dv.tv !== null ? ' · Từ vựng ' + G.PLACE_EN.levels[dv.tv] : '') + ' · Nghe ' + G.PLACE_EN.levels[dv.nghe] + ' · Đọc ' + G.PLACE_EN.levels[dv.doc] + ' · Giao tiếp ' + G.PLACE_EN.levels[dv.gt] + ' · Nói ' + (dv.noi === null ? 'chưa đo' : G.PLACE_EN.levels[dv.noi]) + ' · bấm để làm lại'
+          G.el('span', dv && !dv.ban ? 'Bài đầu vào đã sửa (thêm phần Từ vựng, chấm chặt hơn) · nên làm lại để xếp đúng tầng' : dv && dv.nhanh ? 'Kết quả nhanh theo vốn từ · làm bài đầy đủ 4 kỹ năng để xếp chính xác hơn' : dv ? 'Làm ngày ' + dv.luc.slice(8, 10) + '/' + dv.luc.slice(5, 7) + (dv.tv !== undefined && dv.tv !== null ? ' · Từ vựng ' + G.PLACE_EN.levels[dv.tv] : '') + ' · Nghe ' + G.PLACE_EN.levels[dv.nghe] + ' · Đọc ' + G.PLACE_EN.levels[dv.doc] + ' · Giao tiếp ' + G.PLACE_EN.levels[dv.gt] + ' · Nói ' + (dv.noi === null ? 'chưa đo' : G.PLACE_EN.levels[dv.noi]) + ' · bấm để làm lại'
             : 'Chưa làm · 4 kỹ năng theo CEFR, 3–12 phút')));
       }
       // luyện phát âm theo lỗi của mình (bắt lỗi trước nếu chưa làm)
@@ -245,9 +260,9 @@ var G = window.G || (window.G = {});
       var cu = G.cloudUser(), cs = G.cloudStatus();
       P.set.appendChild(cu
         ? G.el('div.cl-card', G.el('b', G.ic3('cloud', 'ic3-s'), 'Đang lưu trên mây · ' + cu.email),
-            G.el('span.small.faint', cs.err ? '⚠️ ' + cs.err : cs.luc ? 'Đồng bộ lần cuối lúc ' + cs.luc + ' (giờ Việt Nam). App tự lưu sau mỗi bài.' : 'App tự lưu sau mỗi bài.'),
+            G.el('span.small.faint', cs.err ? 'Lỗi: ' + cs.err : cs.luc ? 'Đồng bộ lần cuối lúc ' + cs.luc + ' (giờ Việt Nam). App tự lưu sau mỗi bài.' : 'App tự lưu sau mỗi bài.'),
             G.el('div.row',
-              G.el('button.btn.sm', { onclick: function () { G.cloudSync(function (e) { G.toast(e ? e : '☁️ Đã đồng bộ.'); G.renderLobby(); }); } }, G.ic3('repeat', 'ic3-s'), 'Đồng bộ ngay'),
+              G.el('button.btn.sm', { onclick: function () { G.cloudSync(function (e) { G.toast(e ? e : 'Đã đồng bộ.'); G.renderLobby(); }); } }, G.ic3('repeat', 'ic3-s'), 'Đồng bộ ngay'),
               G.el('button.btn.sm.ghost', { onclick: function () { G.confirm('Đăng xuất lưu trên mây? Tiến độ vẫn giữ trong máy này.', function () { G.cloudSignOut(); G.renderLobby(); }); } }, 'Đăng xuất')))
         : G.el('div.cl-card', G.el('b', G.ic3('cloud', 'ic3-s'), 'Lưu tiến độ trên mây'),
             G.el('span.small.faint', 'Đăng nhập một lần để app tự lưu, đổi máy hay xoá app cũng không mất bài. Không cần xuất file sao lưu nữa.'),
@@ -263,8 +278,20 @@ var G = window.G || (window.G = {});
     P.set.appendChild(G.el('div.tg-list',
       G.switchRow('bell', 'Âm thanh', 'Tiếng bấm, tiếng đúng sai, tiếng ăn mừng', G.S.caiDat.amThanh !== false, function (on) { G.S.caiDat.amThanh = on; G.save(); }),
       G.switchRow('piano', 'Nhạc nền', 'Nhạc nhẹ khi đi trong thành phố', G.musicOn(), function (on) { G.setMusic(on); }),
-      G.switchRow('turtle', 'Đọc truyện chậm', 'Giọng đọc truyện chậm hơn để nghe rõ từng chữ', !!G.S.caiDat.docCham, function (on) { G.S.caiDat.docCham = on; G.save(); }),
-      G.canListen ? G.switchRow('mic', 'Dùng micro khi luyện nói', 'Máy nghe bạn nói và chấm điểm phát âm', G.micOn(), function (on) { G.setMic(on); }) : null));
+      G.canListen ? G.switchRow('mic', 'Dùng micro khi luyện nói', 'Máy nghe bạn nói và chấm điểm phát âm', G.micOn(), function (on) { G.setMic(on); }) : null,
+      G.track ? G.switchRow('chart', 'Gửi số liệu ẩn danh', 'Giúp sửa lỗi và làm bài tốt hơn. Không gửi tên, email hay câu bạn nói.', G.S.caiDat.soLieu !== false, function (on) { G.S.caiDat.soLieu = on; G.save(); }) : null));
+    // tốc độ giọng đọc cho cả app: chậm / thường / nhanh (nghe nhanh dần để quen tốc độ người thật)
+    var spd = G.el('div.td-seg.set-speed');
+    (function drawSpd() {
+      spd.innerHTML = '';
+      var now = G.S.caiDat.tocDo || (G.S.caiDat.docCham ? 0.7 : 1);
+      [[0.7, 'Chậm'], [1, 'Thường'], [1.2, 'Nhanh']].forEach(function (x) {
+        spd.appendChild(G.el('button' + (now === x[0] ? '.on' : ''), { onclick: function () { G.S.caiDat.tocDo = x[0]; G.S.caiDat.docCham = x[0] < 1; G.save(); drawSpd(); G.say('Nice to meet you.', 'en'); } }, x[1]));
+      });
+    })();
+    P.set.appendChild(G.el('div.cl-card', G.el('b', G.ic3('headphone', 'ic3-s'), 'Tốc độ giọng đọc'),
+      G.el('span.small.faint', 'Áp dụng cho bài học, truyện, ôn tập. Nghe quen rồi thì chuyển sang Nhanh để gần tốc độ người thật. Nút con rùa vẫn luôn đọc chậm.'), spd));
+    if (G.reminderCard) P.set.appendChild(G.reminderCard());
     P.set.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam).' + (G.cloudReady && G.cloudReady() && G.cloudUser() ? ' Đã bật lưu trên mây.' : ' Nhớ xuất file sao lưu thỉnh thoảng nhé.')));
   };
 

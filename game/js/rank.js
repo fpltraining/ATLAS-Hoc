@@ -98,7 +98,7 @@ var G = window.G || (window.G = {});
 
   function celebrate(r, badges) {
     var items = [];
-    if (r) items.push({ img: r.img, t: 'Lên rank ' + r.label + '!', s: 'Tiếp tục học để lên ' + (r.next || 'cao hơn nữa') + '.' });
+    if (r) items.push({ img: r.img, t: 'Lên rank ' + r.label + '!', s: 'Tiếp tục học để lên ' + (r.next || 'cao hơn nữa') + '.', big: true });
     for (var i = 0; i < badges.length; i++) items.push({ img: badges[i].img, t: 'Huy hiệu mới: ' + badges[i].name, s: badges[i].how });
     var k = 0;
     function show() {
@@ -109,7 +109,7 @@ var G = window.G || (window.G = {});
         G.el('b', it.t), G.el('div.small.faint', it.s),
         G.el('button.btn.seal', { onclick: function () { document.body.removeChild(wrap); show(); } }, 'Tuyệt! ›')));
       document.body.appendChild(wrap);
-      if (G.confetti) G.confetti();
+      if (it.big && G.confetti) G.confetti();   // pháo giấy chỉ khi lên rank; huy hiệu nhỏ chỉ có tiếng
       if (G.sfx) G.sfx('done');
     }
     show();
