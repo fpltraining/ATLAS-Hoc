@@ -15,6 +15,20 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 - **Bản đồ nhớ từ** (`G.openMemMap`, game/js/memmap.js): mỗi ô là một buổi, tô màu theo mức nhớ các câu trong kho ôn (`G.S.cau`); ô đỏ nhạt là buổi có nhiều câu đến hạn, chạm để ôn đúng các câu đó (`G.openReviewOf`). Mở từ Sảnh và bảng Hôm nay. Tab cuối "Chủ đề": 15 ô, mỗi ô một nhóm từ.
 - **Từ theo chủ đề** (`G.openTopics`, `G.openTopic`, game/js/topics.js): 15 nhóm từ của ATLAS (1334 từ trong `data/en/bank.json`), dựng bằng `node tools/build-topic-game.mjs` ra `game/data/topic_en_index.js` (nạp cùng game) và `game/data/topic_en.json` (tải khi mở bảng). Chia tầng (anh Han duyệt 24/11/2026): nền tảng, số đếm → Tầng 1; ngày giờ → Tầng 2; tiền, bán hàng, công sở, doanh nghiệp → Tầng 3; kinh tế vĩ mô, thương mại, nhà nước, quốc tế, xã hội, khí hậu, công nghệ, đọc tin → Tầng 4. Chủ đề mở khi tới tầng đó. Một lượt 10 thẻ từ rồi nghe chọn nghĩa; từ đã học vào kho ôn (`G.srsAdd`, có `cd` = mã chủ đề để thẻ ôn hiện câu ví dụ) và `G.S.tuChuDe`. Mỗi từ chưa học tính 2 phút vào giờ còn lại của lộ trình (`G.topicHours`, `remainHours` trong lobby.js), nên phần học mỗi ngày đã gồm cả từ. Việc hôm nay thứ 5: "Học 10 từ theo chủ đề" (`tu`).
 
+## Bài kiểm tra đầu vào (chuẩn như Duolingo English Test, EF SET, Cambridge · sửa 24/11/2026)
+
+- Phần 1 Từ vựng kiểu Có/Không (game/data/vocab_test_en.js, dựng bằng `node tools/build-vocab-test.mjs`): mỗi cấp 12 từ, 8 thật 4 giả (từ giả đã soát với từ điển); chạm từ giả bị trừ, 2 từ đã chạm hỏi lại nghĩa. Điểm cấp = thật/8 − giả/4, đạt từ 0,75.
+- Nghe, Đọc, Giao tiếp, Nói thích ứng: bắt đầu ở cấp từ vựng, đạt thì lên, chưa đạt thì xuống. Từ A2 cần đúng 3 câu trước khi sai 2.
+- Trình độ chung = trung vị các kỹ năng nhưng không vượt cấp từ vựng. Kết quả gợi ý tầng (`G.floorForLevel`), đổi tầng không mất tiến độ. Bản ghi mới có `ban: 2`; bản cũ được nhắc làm lại.
+- Phương án sai phải đúng ngữ pháp, dài tương đương đáp án đúng, có dính từ khoá. Sửa câu xong chạy `node tools/placement-check.mjs` (đáp án đúng dài nhất tối đa 3/10 câu mỗi cấp từ A2).
+
+## Nhiệm vụ hôm nay và Sảnh (24/11/2026)
+
+- 5 nhiệm vụ (`G.QUESTS`, daily.js): học bài, đọc truyện, nói chuyện, ôn câu, học 10 từ chủ đề. `G.questList` (Sảnh, bảng Hôm nay) có nút Làm ngay mở thẳng đúng chỗ (`G.questAct`, dùng `G.nextLesson`, `G.nextLifeId` trong engine.js); xong cả 5 mở rương +30 XP (`G.claimChest`, `G.today().ruong`).
+- Ngoài phố, ô góc phải (`G.updateHud`, class `.hud-q`) là ô nhiệm vụ: rương có số việc còn lại, 5 icon sáng dần, thanh tiến độ; bấm mở bảng Hôm nay.
+- Sảnh tab Hôm nay: thẻ "Bắt đầu từ đây" (`startHere` trong lobby.js, một nút cam) rồi Nhiệm vụ hôm nay; tab Lộ trình có "Bạn đang ở đây"; tab Hồ sơ có "Trình độ của bạn".
+- Font giao diện: Be Vietnam Pro (OFL, `game/vendor/fonts/`).
+
 ## Chuyển động (theo video anh Han gửi 22/11/2026)
 
 - Bảng mới hiện từ nhoè sang rõ (`G.viewIn`): khi đổi bước Học / Luyện / Kiểm tra, mở bảng (Hôm nay, ôn tập…), về Sảnh.
@@ -33,6 +47,7 @@ Học viên học xong phải **nói được, đọc hiểu và nghe trôi ch�
 
 - Đã chốt bỏ bản 2D (không còn nút chọn). Máy không có WebGL mới tự vẽ 2D.
 - Camera kiểu GTA: tay trái là cần điều khiển (đi theo hướng camera), tay phải vuốt để xoay góc nhìn quanh nhân vật; nút 🧭 đưa về hướng cũ. Mọi tấm giấy (người, nhà, cây, xe, ô) luôn quay mặt về camera (`bill`, `YAW` trong game/js/world3d.js).
+- Ngoài các khu là đồng cỏ màu nước (`grass_tile.webp`, ghép từ cỏ trong các tờ bản đồ đã đặt) và cây, bụi, đá rải tới chân trời (`buildCountry`). Vật trong khung nhìn luôn bật lên: bán kính dựng theo tỉ lệ màn và độ lùi camera, vật to tính từ mép (`updatePops`).
 - Ô che mưa: điểm cầm trên cán (`G.UMB_GRIP`) đặt đúng lòng bàn tay (`G.HANDS`, có cả khung bước); phần cán vẽ đè lên tay.
 
 ## Quy tắc làm việc

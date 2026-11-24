@@ -5,14 +5,22 @@ var G = window.G || (window.G = {});
   G.S = G.load();
 
   /* vòng tiến độ góc phải: số phòng A1 đã qua (kể cả phòng thi), XP */
+  /* ô Nhiệm vụ hôm nay góc phải ngoài phố: rương thưởng, 5 biểu tượng nhiệm vụ (xong thì sáng), thanh tiến độ.
+     Còn việc thì rương lắc nhẹ mời bấm; bấm mở bảng Hôm nay với nút Làm ngay cho từng việc. */
   var hudLast = -1;
   G.updateHud = function () {
-    var p = G.dayProgress(), n = p.pct, el = document.getElementById('hud-xp');
+    var p = G.dayProgress(), n = p.done * 1000 + p.mins, el = document.getElementById('hud-xp'), d = G.today();
+    var all = p.done >= p.all, claim = all && !d.ruong;
     el.innerHTML = '';
-    el.style.setProperty('--p', p.pct);
-    el.className = 'hud-xp ring' + (p.pct >= 100 ? ' full' : '');
-    el.appendChild(G.el('span.hr-ring', G.el('b', p.pct >= 100 ? '✓' : p.pct + '%')));
-    el.appendChild(G.el('span.hr-txt', G.el('b', 'Hôm nay ' + p.done + '/' + p.all), G.el('small', p.mins + '/' + p.goal + '′ · ' + G.S.xp + ' XP')));
+    el.className = 'hud-xp hud-q' + (all ? (claim ? ' claim' : ' full') : '');
+    el.setAttribute('role', 'button'); el.setAttribute('aria-label', 'Nhiệm vụ hôm nay: xong ' + p.done + ' trên ' + p.all + '. Bấm để xem và làm.');
+    var bar = G.el('i'); bar.style.transform = 'scaleX(' + (p.done / p.all) + ')';
+    el.appendChild(G.el('span.hq-chest', G.ic3(all && !claim ? 'trophy' : 'gift'), !all ? G.el('b.hq-n', String(p.all - p.done)) : null));
+    el.appendChild(G.el('span.hq-mid',
+      G.el('b.hq-t', claim ? 'Mở rương +30 XP' : all ? 'Xong hôm nay' : 'Nhiệm vụ ' + p.done + '/' + p.all),
+      G.el('span.hq-icons', G.questIcons ? G.questIcons() : null),
+      G.el('span.hq-bar', bar),
+      G.el('small.hq-m', p.mins + '/' + p.goal + ' phút · ' + G.S.xp + ' XP')));
     if (hudLast >= 0 && n > hudLast) { el.classList.add('bump'); setTimeout(function () { el.classList.remove('bump'); }, 800); }
     hudLast = n;
   };
