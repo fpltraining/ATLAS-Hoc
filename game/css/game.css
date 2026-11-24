@@ -1181,3 +1181,20 @@ body { background: #f4e9dc url(../assets/paper_tile_1600.webp) repeat; backgroun
 .mm-c.mm-tp .mm-tpic { width: 60%; max-width: 44px; height: auto; aspect-ratio: 1; }
 .mm-c.mm-tp.lock .mm-tpic { opacity: .45; filter: grayscale(.7); }
 @media (max-width: 520px) { .tp-grid, .tp-words { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- bài đầu vào: phần Từ vựng Có/Không (có từ giả), tầng nên học ---------- */
+.pl-tvw { max-width: 760px; }
+.pl-yn-h { display: flex; flex-direction: column; gap: 4px; margin: 6px 0 12px; }
+.pl-yn-h b { font-size: 20px; }
+.pl-yn { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.pl-yn-w { min-height: 56px; padding: 8px 6px; border-radius: 14px; border: 1.5px solid var(--line); background: #fff; font-size: 18px; font-weight: 700; color: var(--ink); text-align: center; word-break: break-word; }
+.pl-yn-w.on { background: var(--jade-soft); border-color: var(--jade); color: #1d5a45; box-shadow: inset 0 0 0 1.5px var(--jade); }
+.pl-yn-go { margin-top: 14px; }
+.pl-tvword { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 32px; font-weight: 800; color: var(--navy); }
+.pl-cap { background: #fff4e5; border: 1px solid #f0d3a8; border-radius: 14px; padding: 10px 12px; }
+.pl-floor { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1.5px solid var(--coral); border-radius: 16px; padding: 12px 14px; }
+.pl-floor .btn { align-self: flex-start; }
+@media (max-width: 520px) { .pl-yn { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-height: 500px) { .pl-tvw .pl-yn-w { min-height: 48px; font-size: 16px; } .pl-tvw.pl-qs { display: block; } }
+.pl-yn-w { transition: transform .12s var(--ease-ui), background-color .15s, border-color .15s; }
+.pl-yn-w:active { transform: translateY(1px) scale(.985); }
