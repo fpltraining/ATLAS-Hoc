@@ -202,7 +202,6 @@ var G = window.G || (window.G = {});
     function close() { if (ov.parentNode) ov.parentNode.removeChild(ov); }
     document.body.appendChild(ov);
     if (G.pop) G.pop(ov.firstChild, 0);
-    setTimeout(function () { if (G.confetti) G.confetti(); }, 900);
     setTimeout(close, 3200);
   };
   // nạp sẵn sau khi mở app vài giây để lần ăn mừng đầu tiên hiện ngay
@@ -229,7 +228,11 @@ var G = window.G || (window.G = {});
       if (/\b(opt|speak|mk-mic|pl-play|pl-mini)\b/.test(t.className)) return;
       G.sfx(t.parentNode && /\betabs\b/.test(t.parentNode.className) ? 'tab' : 'tap');
     }, true);
-    document.getElementById('quest').onclick = function () { G.goQuest(); };
+    document.getElementById('quest').onclick = function (e) {
+      var nl = G.questNow && G.questNow() && e && e.target && e.target.closest && e.target.closest('.q-go') ? G.nextLesson() : null;
+      if (nl) { G.openLesson(nl.id); return; }   // Học ngay: không cần đi bộ tới trường
+      G.goQuest();
+    };
     G.initRank(); G.importOldProgress(); setTimeout(G.checkAchievements, 1500);
     // bản sao IndexedDB mới hơn (localStorage bị mất) thì khôi phục rồi vẽ lại sảnh
     G.restoreCheck(function (restored) { if (restored && G.S.nhanVat) { G.initRank(); var cr = document.getElementById('create'); if (cr) cr.style.display = 'none'; G.renderLobby(); mustTest(); } });

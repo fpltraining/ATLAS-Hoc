@@ -17,7 +17,7 @@ var G = window.G || (window.G = {});
     if (n.img) pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));   // có ảnh riêng thì dùng ảnh
     else if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));   // chưa có: ghép từ lớp hình
     var hide = G.S.caiDat && G.S.caiDat.chiNgheNoi && vi;   // chế độ chỉ nghe: ẩn chữ, đáp xong mới hiện
-    var bub = G.el('div.tbubble' + (hide ? '.hidetext' : ''), G.el('b', n.name), hide ? G.el('div.small.listen-tag', '👂 Nghe rồi chọn câu đáp') : null, G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null, speak(text));
+    var bub = G.el('div.tbubble' + (hide ? '.hidetext' : ''), G.el('b', n.name), hide ? G.el('div.small.listen-tag', G.ic3('headphone', 'ic3-s'), ' Nghe rồi chọn câu đáp') : null, G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null, speak(text));
     if (hide) lastHidden = bub;
     return G.el('div.tline', pic, bub);
   }
@@ -35,7 +35,7 @@ var G = window.G || (window.G = {});
   function meLine(text, sc) {
     var vi = okVi(text);
     return G.el('div.tline.me', G.el('div.tbubble.mine', G.el('b', name()), G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null,
-      sc !== null && sc !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(sc)[1], '🎤 ' + sc + '/100') : null), G.el('div.tpic', G.playerPic(56, 'tpic-img')));
+      sc !== null && sc !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(sc)[1], G.ic3('mic', 'ic3-s'), ' ' + sc + '/100') : null), G.el('div.tpic', G.playerPic(56, 'tpic-img')));
   }
 
   /* câu sai: lấy câu đáp của các nơi khác cùng ngôn ngữ */
@@ -73,7 +73,7 @@ var G = window.G || (window.G = {});
     })));
     // nói tự do ở nơi này + chế độ chỉ nghe
     var fr = G.freeFor ? G.freeFor(id) : [];
-    if (fr.length) body.appendChild(G.el('button.big.bic.fr-btn', { onclick: function () { G.openFree(fr, '💡 Nói tự do · ' + L.title, function () { G.openLife(id); }); } },
+    if (fr.length) body.appendChild(G.el('button.big.bic.fr-btn', { onclick: function () { G.openFree(fr, 'Nói tự do · ' + L.title, function () { G.openLife(id); }); } },
       G.bigIc('speak', 'Tự nói (không có câu gợi ý)'), G.el('span', fr.length + ' tình huống · tự trả lời bằng câu của bạn')));
     var cd = G.S.caiDat || (G.S.caiDat = {});
     // hai chế độ dạng nút gạt (mẫu "toggles" của taste-skill)
@@ -103,7 +103,7 @@ var G = window.G || (window.G = {});
             G.sfx('right'); box.innerHTML = '';
             if (lastHidden) { lastHidden.className = 'tbubble'; lastHidden = null; }
             // chọn đúng rồi thì nói câu đó thành tiếng (có micro thì chấm điểm 0–100)
-            box.appendChild(G.el('div.small.faint', '🗣 Giờ hãy nói câu này với ' + npc().name + ':'));
+            box.appendChild(G.el('div.small.faint', 'Giờ hãy nói câu này với ' + npc().name + ':'));
             box.appendChild(G.speakCard({ text: o, vi: okVi(o), lang: L.lang, onDone: function (sc) {
               if (sc !== null) { scores.push(sc); G.logSpeak(sc); }
               box.innerHTML = '';
@@ -143,11 +143,11 @@ var G = window.G || (window.G = {});
     var avg = null;
     if (scores && scores.length) { var sum = 0; for (var si = 0; si < scores.length; si++) sum += scores[si]; avg = Math.round(sum / scores.length); }
     body.appendChild(G.el('div.result.pass', G.el('b', 'Xong: ' + L.talks[ti].title), G.el('div', '+' + (first ? 20 : 5) + ' XP'),
-      avg !== null ? G.el('div', '🎤 Điểm nói trung bình: ' + avg + '/100 · ' + G.scoreLabel(avg)[0]) : null));
+      avg !== null ? G.el('div', 'Điểm nói trung bình: ' + avg + '/100 · ' + G.scoreLabel(avg)[0]) : null));
     if (gift) {
       G.confetti();
       body.appendChild(G.el('div.souv-gift', G.imgEl(L.souvenir.img, 'souv-big'),
-        G.el('b', '🎁 Nhận đồ kỷ niệm: ' + L.souvenir.name), G.el('div.small', 'Đã bày ở Ngôi nhà chung.')));
+        G.el('b', 'Nhận đồ kỷ niệm: ' + L.souvenir.name), G.el('div.small', 'Đã bày ở Ngôi nhà chung.')));
     }
     body.appendChild(G.el('div.row', G.el('button.btn', { onclick: home }, '‹ Các tình huống'),
       G.el('button.btn.seal', { onclick: function () { G.closeLesson(); G.kaiSay(gift ? 'Bạn nhận được ' + L.souvenir.name + '!' : 'Nói chuyện giỏi lắm!'); } }, 'Xong ›')));

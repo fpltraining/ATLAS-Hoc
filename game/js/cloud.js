@@ -191,13 +191,13 @@ var G = window.G || (window.G = {});
       var e = (em.value || '').replace(/^\s+|\s+$/g, ''), p = pw.value || '';
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)) { msg.textContent = 'Nhập email hợp lệ.'; return; }
       if (p.length < 6) { msg.textContent = 'Mật khẩu cần ít nhất 6 ký tự.'; return; }
-      msg.textContent = '⏳ Đang kết nối…';
+      msg.textContent = 'Đang kết nối…';
       (signup ? G.cloudSignUp : G.cloudSignIn)(e, p, function (err, what) {
         if (!err) { done(what); return; }
         msg.textContent = err;
         if (/kết nối/.test(err) && !later.firstChild) later.appendChild(G.el('button.btn.ghost', { onclick: function () {
           if (root.parentNode) root.parentNode.removeChild(root); G.toast('Đang không có mạng: học trước, lần mở app sau đăng nhập.'); after();
-        } }, '📴 Không có mạng? Học trước, đăng nhập sau'));
+        } }, 'Không có mạng? Học trước, đăng nhập sau'));
       });
     }
     // học thử trước, tài khoản sau: hỏi sau buổi học đầu, có nút Để sau (o.soft)
@@ -236,16 +236,16 @@ var G = window.G || (window.G = {});
       var e = (em.value || '').replace(/^\s+|\s+$/g, ''), p = pw.value || '';
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)) { msg.textContent = 'Nhập email hợp lệ.'; return; }
       if (p.length < 6) { msg.textContent = 'Mật khẩu cần ít nhất 6 ký tự.'; return; }
-      msg.textContent = '⏳ Đang kết nối…';
+      msg.textContent = 'Đang kết nối…';
       (signup ? G.cloudSignUp : G.cloudSignIn)(e, p, function (err, what) {
         if (err) { msg.textContent = err; return; }
         if (wrap.parentNode) document.body.removeChild(wrap);
-        G.toast(what === 'pulled' ? '☁️ Đã lấy tiến độ trên mây về máy này.' : '☁️ Đã bật lưu trên mây.');
+        G.toast(what === 'pulled' ? 'Đã lấy tiến độ trên mây về máy này.' : 'Đã bật lưu trên mây.');
         if (after) after(what);
       });
     }
     wrap = G.el('div.modal.cl-wrap', G.el('div.choose.story.cl-box',
-      G.el('h2', '☁️ Lưu tiến độ trên mây'),
+      G.el('h2', G.ic3('cloud', 'ic3-s'), ' Lưu tiến độ trên mây'),
       G.el('p.small', 'Đăng nhập một lần, app tự lưu sau mỗi bài. Đổi sang iPad, iPhone khác chỉ cần đăng nhập là học tiếp, không cần sao lưu.'),
       googleBox(),
       G.field('Email', em), G.field('Mật khẩu', pw), msg,

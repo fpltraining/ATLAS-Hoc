@@ -135,7 +135,7 @@ var G = window.G || (window.G = {});
     var p = G.dayProgress(); if (p.done < p.all) return false;
     d.ruong = G.vnNow().slice(11, 16); G.save(); G.addXp(CHEST_XP);
     if (G.sfx) G.sfx('chest');
-    if (G.chestPop) G.chestPop(CHEST_XP); else { if (G.confetti) G.confetti(); G.toast('🎉 Mở rương hôm nay: +' + CHEST_XP + ' XP'); }
+    if (G.chestPop) G.chestPop(CHEST_XP); else G.toast('Mở rương hôm nay: +' + CHEST_XP + ' XP');
     if (G.updateHud) G.updateHud();
     return true;
   };
@@ -233,7 +233,7 @@ var G = window.G || (window.G = {});
     body.appendChild(G.el('div.td-talks',
       G.el('b', G.ic3('talk', 'ic3-s'), 'Nói chuyện hôm nay · ' + ht.length + ' tình huống'),
       ht.length ? G.el('div.td-talk-list', ht.slice().reverse().map(function (h) {
-        return G.el('div.td-talk', G.el('span.small.faint', h.luc), G.el('span', h.ten + ' · ' + h.tinhHuong), h.diem !== null && h.diem !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(h.diem)[1], '🎤 ' + h.diem) : G.el('span.small.faint', 'không micro'));
+        return G.el('div.td-talk', G.el('span.small.faint', h.luc), G.el('span', h.ten + ' · ' + h.tinhHuong), h.diem !== null && h.diem !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(h.diem)[1], G.ic3('mic', 'ic3-s'), ' ' + h.diem) : G.el('span.small.faint', 'không micro'));
       })) : G.el('div.small.faint', 'Chưa nói chuyện với ai hôm nay. Ra phố gặp mẹ, ông Ben, xe bánh Sunny… (người có 💬 trên đầu).')));
     // luyện nói: điểm hôm nay + bật/tắt micro
     var sp = d.noi && d.noi.n ? Math.round(d.noi.tong / d.noi.n) : null;
@@ -265,24 +265,24 @@ var G = window.G || (window.G = {});
   }
   G.weekLine = weekLine;
   /* ---------- Nhà của bạn: góc học ---------- */
+  /* Nhà của bạn: cùng một danh sách Nhiệm vụ hôm nay như ở Sảnh và thẻ góc phải (một lối vào cho việc hằng ngày),
+     dưới đó là việc chỉ có ở nhà (nói chuyện với mẹ) và phần học thêm. Chỉ nút "Làm ngay" của nhiệm vụ kế tiếp tô cam. */
   G.openHome = function () {
     var body = panelOpen('Nhà của bạn');
-    var d = today(), n = G.S.tuKho.length;
-    var momDone = !!(d.sang && d.sang['en-home']);
-    // chỉ tô cam một việc nên làm tiếp (taste-skill: một nút chính mỗi màn)
-    var wkDue = !!(G.weeklyInfo && G.weeklyInfo().due);
-    var next = G.LIFE['en-home'] && !momDone ? 'me' : !d.viec.doc ? 'doc' : !d.viec.on ? 'on' : wkDue ? 'wk' : '';
-    function hl(k) { return next === k ? '.seal' : ''; }
-    body.appendChild(G.el('div.menu3',
-      G.LIFE['en-home'] ? G.el('button.big.bic' + (momDone ? '.done' : hl('me')), { onclick: function () { G.openLife('en-home'); } },
+    var d = today(), momDone = !!(d.sang && d.sang['en-home']);
+    body.appendChild(G.questList({ more: true, onChange: G.openHome }));
+    var extra = [
+      G.LIFE['en-home'] ? G.el('button.big.bic' + (momDone ? '.done' : ''), { onclick: function () { G.openLife('en-home'); } },
         G.bigIc(momDone ? 'check' : 'talk', 'Nói chuyện với mẹ'), G.el('span', 'Buổi sáng ở nhà: thức dậy, ăn sáng, chuẩn bị đi học')) : null,
-      G.el('button.big.bic' + (d.viec.doc ? '.done' : hl('doc')), { onclick: G.openReader }, G.bigIc(d.viec.doc ? 'check' : 'book', 'Đọc truyện'), G.el('span', 'Truyện song ngữ theo cấp, bấm câu để xem nghĩa, nghe giọng đọc')),
-      G.el('button.big.bic' + (d.viec.on ? '.done' : hl('on')), { onclick: G.openReview }, G.bigIc(d.viec.on ? 'check' : 'repeat', 'Ôn câu đã học'), G.el('span', G.srsDue ? (G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn hôm nay' : 'Không có câu đến hạn · ôn thêm tuỳ ý') : '')),
-      G.el('button.big.bic' + hl('wk'), { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),
+      G.el('button.big.bic', { onclick: G.openReader }, G.bigIc('book', 'Kho truyện'), G.el('span', 'Truyện song ngữ theo cấp, nghe cả chương, câu hỏi đọc hiểu')),
+      G.el('button.big.bic', { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),
       G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats ? G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được bằng tiếng Anh' : '')),
-      G.el('button.big.bic', { onclick: G.openToday }, G.bigIc('calendar', 'Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/' + G.dayProgress().all + ' việc · ' + G.dayProgress().mins + ' phút')),
       G.openTopics ? G.el('button.big.bic', { onclick: G.openTopics }, G.bigIc('books', 'Từ theo chủ đề'), G.el('span', G.topicTotals().got + '/' + G.topicTotals().all + ' từ đọc tin, công sở, kinh tế…')) : null,
-      G.openFix && G.enFloorNow && G.enFloorNow() >= 3 ? G.el('button.big.bic', { onclick: G.openFix }, G.bigIc('magnifier', 'Bắt lỗi câu'), G.el('span', G.fixStats().ok + '/' + G.fixStats().all + ' lỗi hay gặp đã nắm')) : null));
+      G.openFix && G.enFloorNow && G.enFloorNow() >= 3 ? G.el('button.big.bic', { onclick: G.openFix }, G.bigIc('magnifier', 'Bắt lỗi câu'), G.el('span', G.fixStats().ok + '/' + G.fixStats().all + ' lỗi hay gặp đã nắm')) : null,
+      G.srsHard && G.srsHard().length ? G.el('button.big.bic', { onclick: G.openReviewHard }, G.bigIc('brain', 'Câu khó'), G.el('span', G.srsHard().length + ' câu bạn hay quên · ôn riêng')) : null
+    ];
+    body.appendChild(G.el('h3.home-sec', 'Ở nhà và học thêm'));
+    body.appendChild(G.el('div.menu3', extra));
   };
 
   /* ---------- Đọc truyện ---------- */
@@ -374,13 +374,19 @@ var G = window.G || (window.G = {});
       drawLb();
       // hiện / ẩn nghĩa tiếng Việt (mặc định hiện, nhớ cho lần sau)
       var viBtn = G.el('button.btn.sm.rd-vibtn', { onclick: function () { cd.anNghia = !cd.anNghia; G.save(); applyVi(); } });
-      function applyVi() { body.className = 'panel-body' + (cd.anNghia ? ' rd-hidevi' : ''); viBtn.textContent = cd.anNghia ? 'Hiện nghĩa tiếng Việt' : 'Ẩn nghĩa (tự đọc)'; }
-      body.appendChild(G.el('div.rd-tools', spd, lb, viBtn)); applyVi();
+      // chỉ nghe: câu tiếng Anh mờ đi (luyện nghe như podcast), chạm câu nào hiện câu đó
+      var enBtn = G.el('button.btn.sm.rd-vibtn', { onclick: function () { cd.anChu = !cd.anChu; G.save(); applyVi(); } });
+      function applyVi() {
+        body.className = 'panel-body' + (cd.anNghia ? ' rd-hidevi' : '') + (cd.anChu ? ' rd-hideen' : '');
+        viBtn.textContent = cd.anNghia ? 'Hiện nghĩa tiếng Việt' : 'Ẩn nghĩa (tự đọc)';
+        enBtn.textContent = cd.anChu ? 'Hiện chữ tiếng Anh' : 'Ẩn chữ (chỉ nghe)';
+      }
+      body.appendChild(G.el('div.rd-tools', spd, lb, viBtn, enBtn)); applyVi();
       (ch.paras || []).forEach(function (para) {
         body.appendChild(G.el('div.rd-para', para.map(function (ln) {
           // nghĩa tiếng Việt luôn hiện ngay dưới câu (ẩn được bằng nút "Ẩn nghĩa" để tự luyện đọc); bấm câu để nghe
           var vi = G.el('div.rd-vi.show', ln[1]);
-          var row = G.el('div.rd-line', { onclick: function () { if (stopList) { stopListen(); mark(-1); drawLb(); } G.say(ln[0], 'en', rdRate()); } }, G.el('span', ln[0]), vi);
+          var row = G.el('div.rd-line', { onclick: function () { if (stopList) { stopListen(); mark(-1); drawLb(); } row.classList.add('seen'); G.say(ln[0], 'en', rdRate()); } }, G.el('span', ln[0]), vi);
           lines.push(row); texts.push(ln[0]);
           return row;
         })));

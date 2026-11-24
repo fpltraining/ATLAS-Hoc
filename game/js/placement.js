@@ -61,11 +61,11 @@ var G = window.G || (window.G = {});
       return G.el('div.pl-part', G.el('b', pic(p), p.name), G.el('span.small.faint', p.what));
     })));
     if (!opts.quick) box.appendChild(G.el('div.pl-note',
-      G.el('div', '⏱ Bài tự điều chỉnh theo bạn: người mới khoảng 4 phút, người đã học khoảng 12–15 phút.'),
-      G.el('div', '🔤 Phần đầu là Từ vựng: có từ giả trộn vào, chỉ chạm từ bạn thật sự biết nghĩa.'),
-      G.el('div', '🙅 Không tra từ. Không biết thì bấm “Không biết”, như vậy kết quả mới đúng.'),
-      G.el('div', '🌱 Chưa biết tiếng Anh cũng làm bình thường: bấm “Không biết”, bài sẽ tự dừng sau vài câu.'),
-      G.el('div', '🔊 Bật loa hoặc đeo tai nghe để làm phần Nghe.')));
+      G.el('div', G.ic3('stopwatch', 'ic3-s'), ' Bài tự điều chỉnh theo bạn: người mới khoảng 4 phút, người đã học khoảng 12–15 phút.'),
+      G.el('div', G.ic3('books', 'ic3-s'), ' Phần đầu là Từ vựng: có từ giả trộn vào, chỉ chạm từ bạn thật sự biết nghĩa.'),
+      G.el('div', 'Không tra từ. Không biết thì bấm “Không biết”, như vậy kết quả mới đúng.'),
+      G.el('div', G.ic3('seedling', 'ic3-s'), ' Chưa biết tiếng Anh cũng làm bình thường: bấm “Không biết”, bài sẽ tự dừng sau vài câu.'),
+      G.el('div', G.ic3('speaker', 'ic3-s'), ' Bật loa hoặc đeo tai nghe để làm phần Nghe.')));
     box.appendChild(G.el('button.btn.seal.big1.pl-go', { onclick: start }, 'Bắt đầu kiểm tra ›'));
     // đã học ở máy khác: đăng nhập lấy tiến độ; tiến độ trên mây có sẵn kết quả kiểm tra thì tải lại app là khỏi làm lại
     if ((opts.first || opts.mandatory) && G.cloudReady && G.cloudReady() && !G.cloudUser())
@@ -99,7 +99,7 @@ var G = window.G || (window.G = {});
     }
     if (p.id === 'noi' && !G.micOn()) {
       box.appendChild(G.el('p', 'Micro đang tắt. Bật micro để đo kỹ năng nói, hoặc bỏ qua phần này.'));
-      box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { G.setMic(true); runPart(p); } }, '🎤 Bật micro và làm phần Nói'));
+      box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { G.setMic(true); runPart(p); } }, G.ic3('mic', 'ic3-s'), ' Bật micro và làm phần Nói'));
       box.appendChild(G.el('button.btn', { onclick: function () { pi++; part(); } }, 'Bỏ qua phần Nói'));
       return;
     }
@@ -228,7 +228,7 @@ var G = window.G || (window.G = {});
   function scene(p, it) {
     var pl = placeOf(it), w = whoOf(it), sc = G.el('div.pl-scene');
     sc.style.backgroundImage = 'url("' + G.assetUrl(pl.bg) + '")';
-    sc.appendChild(G.el('span.pl-place', '📍 ' + pl.name));
+    sc.appendChild(G.el('span.pl-place', G.ic3('pin', 'ic3-s'), ' ' + pl.name));
     if (pl.prop) sc.appendChild(G.imgEl(pl.prop, 'pl-prop'));
     if (w && w[1] && p.id !== 'doc') sc.appendChild(G.imgEl(w[1].replace('.png', '_talk.png'), 'pl-npc', w[1]));
     return sc;
@@ -253,15 +253,15 @@ var G = window.G || (window.G = {});
     if (p.id === 'nghe') {
       card.appendChild(G.el('div.pl-bub.pl-bub-npc', G.el('b.pl-bub-name', (w ? w[0] : '') + ' nói:'),
         G.el('div.pl-listen',
-          G.el('button.pl-play', { onclick: function () { G.say(it.a, 'en'); } }, '🔊 Nghe lại'),
-          G.el('button.pl-play.slow', { onclick: function () { G.saySlow(it.a, 'en'); } }, '🐢 Nghe chậm'))));
+          G.el('button.pl-play', { onclick: function () { G.say(it.a, 'en'); } }, G.ic3('speaker', 'ic3-s'), ' Nghe lại'),
+          G.el('button.pl-play.slow', { onclick: function () { G.saySlow(it.a, 'en'); } }, G.ic3('turtle', 'ic3-s'), ' Nghe chậm'))));
       setTimeout(function () { G.say(it.a, 'en'); }, 450);
     } else if (p.id === 'doc') {
       var sign = it.t.length <= 26 && it.t.indexOf(':') < 0;
       card.appendChild(G.el('div' + (sign ? '.pl-sign' : '.pl-msg'), it.t));
     } else if (p.id === 'gt') {
       card.appendChild(G.el('div.pl-bub.pl-bub-npc', G.el('b.pl-bub-name', w ? w[0] : ''),
-        G.el('div.pl-bub-row', G.el('div', it.p), G.el('button.pl-mini', { 'aria-label': 'Nghe', onclick: function () { G.say(it.p, 'en'); } }, '🔊'))));
+        G.el('div.pl-bub-row', G.el('div', it.p), G.el('button.pl-mini', { 'aria-label': 'Nghe', onclick: function () { G.say(it.p, 'en'); } }, G.ic3('speaker', 'ic3-s')))));
       card.appendChild(G.el('div.small.faint', 'Bạn đáp lại thế nào cho tự nhiên?'));
       setTimeout(function () { G.say(it.p, 'en'); }, 450);
     }
@@ -300,9 +300,9 @@ var G = window.G || (window.G = {});
     // tự trả lời câu hỏi: đếm số từ máy nghe được và có từ nối hợp ý không
     var tries = 0, out = G.el('div.pl-heard'), w = whoOf(it);
     card.appendChild(G.el('div.pl-bub.pl-bub-npc', G.el('b.pl-bub-name', w ? w[0] : ''),
-      G.el('div.pl-bub-row', G.el('div', it.ask), G.el('button.pl-mini', { 'aria-label': 'Nghe', onclick: function () { G.say(it.ask, 'en'); } }, '🔊'))));
+      G.el('div.pl-bub-row', G.el('div', it.ask), G.el('button.pl-mini', { 'aria-label': 'Nghe', onclick: function () { G.say(it.ask, 'en'); } }, G.ic3('speaker', 'ic3-s')))));
     card.appendChild(G.el('div.small.faint', it.vi));
-    var mic = G.el('button.mk-mic', { onclick: go }, G.el('span', '🎤'), G.el('b', 'Bấm rồi nói'));
+    var mic = G.el('button.mk-mic', { onclick: go }, G.el('span', G.ic3('mic', 'ic3-s')), G.el('b', 'Bấm rồi nói'));
     card.appendChild(G.el('div.pl-microw', mic, out));
     card.appendChild(G.el('div.row',
       G.el('button.btn.ghost', { onclick: function () { nAsk++; cb(false); } }, 'Không trả lời được'),
@@ -310,7 +310,7 @@ var G = window.G || (window.G = {});
     setTimeout(function () { G.say(it.ask, 'en'); }, 350);
     function go() {
       if (mic.className.indexOf('on') >= 0) return;
-      mic.className = 'mk-mic on'; out.innerHTML = ''; out.appendChild(G.el('div.small', '🎙 Đang nghe… nói xong máy tự dừng'));
+      mic.className = 'mk-mic on'; out.innerHTML = ''; out.appendChild(G.el('div.small', G.ic3('mic', 'ic3-s'), ' Đang nghe… nói xong máy tự dừng'));
       G.listen('en', function (err, alts) {
         mic.className = 'mk-mic';
         out.innerHTML = '';
@@ -332,7 +332,7 @@ var G = window.G || (window.G = {});
   function pronStep() {
     if (!G.pronCheck || res.noi === null || res.noi === undefined || !(G.micOn && G.micOn())) { finish(); return; }
     screen();
-    head('Phần thêm · 1 phút', '🗣 Bắt lỗi phát âm', 'Đọc to 12 từ ngắn. Người Việt hay đọc card thành car, three thành tree, cats thành cat… Máy nghe xem bạn có mắc lỗi nào, rồi gợi ý cách sửa và bài luyện riêng.');
+    head('Phần thêm · 1 phút', 'Bắt lỗi phát âm', 'Đọc to 12 từ ngắn. Người Việt hay đọc card thành car, three thành tree, cats thành cat… Máy nghe xem bạn có mắc lỗi nào, rồi gợi ý cách sửa và bài luyện riêng.');
     box.appendChild(G.el('button.btn.seal.big1', { onclick: function () {
       G.pronCheck(root, function (kq) { pronRes = kq; root.innerHTML = ''; box = G.el('div.pl-wrap'); root.appendChild(box); finish(); });
     } }, 'Bắt đầu ›'));
@@ -541,7 +541,7 @@ var G = window.G || (window.G = {});
         G.el('span.pl-bar', [1, 2, 3, 4, 5].map(function (k) { return G.el('i' + (v !== null && v >= k ? '.on' : '')); })),
         G.el('b.pl-sk-lv', v === null ? 'chưa đo' : P.levels[v]));
     })));
-    if (prev && prev.luc) box.appendChild(G.el('p.small', (lv > prev.lv ? '📈 Tiến bộ: ' : lv < prev.lv ? '📉 ' : '➖ ') + 'lần trước ' + P.levels[prev.lv] + ' (' + prev.luc.slice(0, 10) + ') → lần này ' + P.levels[lv]));
+    if (prev && prev.luc) box.appendChild(G.el('p.small', (lv > prev.lv ? 'Tiến bộ: ' : lv < prev.lv ? 'Lùi một chút: ' : 'Giữ nguyên: ') + 'lần trước ' + P.levels[prev.lv] + ' (' + prev.luc.slice(0, 10) + ') → lần này ' + P.levels[lv]));
     if (res.tv !== null && res.tv !== undefined && lv < skillMid(res)) box.appendChild(G.el('p.small.pl-cap', 'Nghe, đọc, giao tiếp của bạn ở mức ' + P.levels[skillMid(res)] + ', nhưng vốn từ mới ở mức ' + P.levels[res.tv] + '. Trình độ chung tính theo vốn từ, vì thiếu từ nền thì học lên cao sẽ hổng. Học từ ở tầng dưới nhanh thôi, thấy dễ thì thi vượt.'));
     if (opts.quick) box.appendChild(G.el('p.small.pl-cap', 'Đây là kết quả nhanh theo vốn từ. Khi rảnh, làm bài đầy đủ 4 kỹ năng ở Sảnh (12–15 phút) để xếp chính xác hơn, giỏi thì lên thẳng Tầng 4.'));
     box.appendChild(G.el('div.pl-can', G.el('b', 'Bạn đang ở mức: '), P.cando[lv]));
@@ -566,7 +566,7 @@ var G = window.G || (window.G = {});
   function cityMap(lv) {
     var ids = [], n = 0, k;
     for (k in P.places) if (P.places.hasOwnProperty(k)) { ids.push(k); if (lv >= P.places[k].lv) n++; }
-    var wrap = G.el('div.pl-map', G.el('div.pl-map-head', G.el('b', '🗺 Bản đồ Brightford của bạn'),
+    var wrap = G.el('div.pl-map', G.el('div.pl-map-head', G.el('b', G.ic3('map', 'ic3-s'), ' Bản đồ Brightford của bạn'),
       G.el('span.small', 'Tự lo được ' + n + '/' + ids.length + ' nơi. Nơi có 🔒 sẽ mở dần khi bạn học lên.')));
     P.areas.forEach(function (ar) {
       var row = G.el('div.pl-map-row');
@@ -575,7 +575,7 @@ var G = window.G || (window.G = {});
         var ok = lv >= pl.lv, th = G.el('div.pl-map-pic'); th.style.backgroundImage = 'url("' + G.assetUrl(pl.bg) + '")';
         if (pl.prop) th.appendChild(G.imgEl(pl.prop, 'pl-map-prop'));
         row.appendChild(G.el('div.pl-map-card' + (ok ? '.ok' : '.off'), th,
-          G.el('div.pl-map-name', G.el('b', (ok ? '✅ ' : '🔒 ') + pl.name), G.el('span.small', ok ? 'Tự lo được' : 'Cần ' + P.levels[pl.lv]))));
+          G.el('div.pl-map-name', G.el('b', G.ic3(ok ? 'check' : 'lock', 'ic3-s'), ' ' + pl.name), G.el('span.small', ok ? 'Tự lo được' : 'Cần ' + P.levels[pl.lv]))));
       });
       wrap.appendChild(G.el('div.pl-map-area', G.el('div.pl-map-an', ar.name), row));
     });

@@ -31,7 +31,7 @@ var G = window.G || (window.G = {});
     cv = G.el('canvas.ride-cv'); ctx = cv.getContext('2d');
     ui.box = G.el('div.ride-box'); ui.kai = G.el('div.ride-kai');
     root.appendChild(G.el('div.ride-top',
-      G.el('div.ride-title', G.el('b', '✈ Bay sang ' + CITY[to]), G.el('span.ride-goal', from === 'en' ? 'Làm thủ tục bằng tiếng Anh' : 'Làm thủ tục bằng tiếng Trung')),
+      G.el('div.ride-title', G.el('b', 'Bay sang ' + CITY[to]), G.el('span.ride-goal', from === 'en' ? 'Làm thủ tục bằng tiếng Anh' : 'Làm thủ tục bằng tiếng Trung')),
       G.el('button.hud-btn', { onclick: cancel, 'aria-label': 'Thoát' }, '✕')));
     root.appendChild(cv);
     root.appendChild(G.el('div.ride-ui', ui.box, ui.kai));
@@ -40,7 +40,7 @@ var G = window.G || (window.G = {});
     last = 0; cancelAnimationFrame(raf); raf = requestAnimationFrame(loop);
   };
 
-  function kai(text) { ui.kai.innerHTML = ''; ui.kai.appendChild(G.el('span.rk-face', '🤖')); ui.kai.appendChild(G.el('span', text)); }
+  function kai(text) { ui.kai.innerHTML = ''; ui.kai.appendChild(G.el('span.rk-face', G.ic3('robot', 'ic3-s'))); ui.kai.appendChild(G.el('span', text)); }
   function close() { cancelAnimationFrame(raf); if (root) { root.className = 'ride'; root.innerHTML = ''; } if (window.speechSynthesis) speechSynthesis.cancel(); F = null; }
   function cancel() { var from = F.from; G.confirm('Huỷ chuyến bay và quay lại sân bay?', function () { close(); G.resumeScene(); }); }
 
@@ -48,7 +48,7 @@ var G = window.G || (window.G = {});
     G.say(text, lang);
     return G.el('div.rd-talk', G.imgEl(img, 'rd-pic'),
       G.el('div.rd-bub', G.el('b', who), G.el('div.en', text), py ? G.el('div.py', py) : null, G.el('div.small.faint', vi),
-        G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(text, lang); }, 'aria-label': 'Nghe lại' }, '🔊'), G.el('button.spk.slow', { onclick: function () { G.say(text, lang, true); }, 'aria-label': 'Nghe chậm' }, '🐢'))));
+        G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(text, lang); }, 'aria-label': 'Nghe lại' }, G.ic3('speaker', 'ic3-s')), G.el('button.spk.slow', { onclick: function () { G.say(text, lang, true); }, 'aria-label': 'Nghe chậm' }, G.ic3('turtle', 'ic3-s')))));
   }
 
   function desk(i) {
@@ -76,7 +76,7 @@ var G = window.G || (window.G = {});
     ui.box.innerHTML = '';
     G.say(d.air[k], d.lang);
     ui.box.appendChild(G.el('div.rd-ann',
-      G.el('div.rd-ann-top', G.el('span.small', '📢 Thông báo trên máy bay'), G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(d.air[k], d.lang); }, 'aria-label': 'Nghe lại' }, '🔊'), G.el('button.spk.slow', { onclick: function () { G.say(d.air[k], d.lang, true); }, 'aria-label': 'Nghe chậm' }, '🐢'))),
+      G.el('div.rd-ann-top', G.el('span.small', G.ic3('bell', 'ic3-s'), ' Thông báo trên máy bay'), G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(d.air[k], d.lang); }, 'aria-label': 'Nghe lại' }, G.ic3('speaker', 'ic3-s')), G.el('button.spk.slow', { onclick: function () { G.say(d.air[k], d.lang, true); }, 'aria-label': 'Nghe chậm' }, G.ic3('turtle', 'ic3-s')))),
       G.el('div.en', d.air[k]), d.airPy ? G.el('div.py', d.airPy[k]) : null, G.el('div.small.faint', d.airVi[k])));
   }
   function land() {

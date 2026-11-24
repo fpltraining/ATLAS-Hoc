@@ -37,7 +37,7 @@ var G = window.G || (window.G = {});
       // đã học ở máy khác: đăng nhập để lấy tiến độ trên mây, khỏi tạo lại từ đầu
       G.cloudReady && G.cloudReady() ? G.el('button.btn.ghost.cr-cloud', { onclick: function () {
         G.openCloudLogin(function () { if (G.S.nhanVat) { close(); G.renderLobby(); } });
-      } }, '☁️ Đã học trên máy khác? Đăng nhập để lấy tiến độ') : null
+      } }, G.ic3('cloud', 'ic3-s'), ' Đã học trên máy khác? Đăng nhập để lấy tiến độ') : null
     ));
     window.scrollTo(0, 0);
   };

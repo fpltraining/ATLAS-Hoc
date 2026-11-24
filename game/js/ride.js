@@ -60,7 +60,7 @@ var G = window.G || (window.G = {});
     drawRoute();
   }
 
-  function kai(text) { ui.kai.innerHTML = ''; ui.kai.appendChild(G.el('span.rk-face', '🤖')); ui.kai.appendChild(G.el('span', text)); }
+  function kai(text) { ui.kai.innerHTML = ''; ui.kai.appendChild(G.el('span.rk-face', G.ic3('robot', 'ic3-s'))); ui.kai.appendChild(G.el('span', text)); }
 
   function drawRoute() {
     ui.route.innerHTML = '';
@@ -101,9 +101,9 @@ var G = window.G || (window.G = {});
 
   function talk(who, pic, en, vi) {
     G.say(en, 'en');
-    return G.el('div.rd-talk', pic ? G.imgEl(pic, 'rd-pic') : G.el('div.rd-pic.machine', '🎫'),
+    return G.el('div.rd-talk', pic ? G.imgEl(pic, 'rd-pic') : G.el('div.rd-pic.machine', G.ic3('ticket')),
       G.el('div.rd-bub', G.el('b', who), G.el('div.en', en), vi ? G.el('div.small.faint', vi) : null,
-        G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(en, 'en'); }, 'aria-label': 'Nghe lại' }, '🔊'), G.el('button.spk.slow', { onclick: function () { G.say(en, 'en', true); }, 'aria-label': 'Nghe chậm' }, '🐢'))));
+        G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(en, 'en'); }, 'aria-label': 'Nghe lại' }, G.ic3('speaker', 'ic3-s')), G.el('button.spk.slow', { onclick: function () { G.say(en, 'en', true); }, 'aria-label': 'Nghe chậm' }, G.ic3('turtle', 'ic3-s')))));
   }
 
   function choices(opts, right, onRight, onWrong) {
@@ -123,7 +123,7 @@ var G = window.G || (window.G = {});
       ui.box.appendChild(talk('Mr. Joe · tài xế', 'npc_driver.png', greet() + ' Where you headed?', 'Tài xế hỏi: Bạn đi đâu? (nói tắt của Where are you headed?)'));
       ui.box.appendChild(choices(['To ' + R.goal + ', please.', 'Pretty good, thanks.', 'Yeah, I\'m a student.'], 'To ' + R.goal + ', please.',
         function () { boardDialog(1); }, function () { kai('Tài xế hỏi bạn đi đâu. Hãy nói "To … , please." kèm tên trạm.'); }));
-      if ((G.S.diLai.bus || 0) >= 3) ui.box.appendChild(G.el('button.btn.sm.rd-skip', { onclick: function () { finish(true, true); } }, '⏩ Đi nhanh tới nơi'));
+      if ((G.S.diLai.bus || 0) >= 3) ui.box.appendChild(G.el('button.btn.sm.rd-skip', { onclick: function () { finish(true, true); } }, 'Đi nhanh tới nơi'));
     } else if (step === 1) {
       ui.box.appendChild(talk('Mr. Joe · tài xế', 'npc_driver.png', 'Two bucks. Just tap your card right there.', 'Hai đô. Quẹt thẻ ngay chỗ đó nhé. (bucks = đô la, cách nói thường)'));
       ui.box.appendChild(choices(['Got it, thanks.', 'I\'m going to school.', 'Good night!'], 'Got it, thanks.',
@@ -155,7 +155,7 @@ var G = window.G || (window.G = {});
       ui.box.appendChild(choices(['One', 'Two', 'Three'], 'One', function () { ticketMachine(2); }, function () { kai('Chỉ cần 1 vé: "One".'); }));
     } else {
       ui.box.appendChild(talk('Máy bán vé', null, 'That\'s two fifty. Tap your card to pay.', 'Hai đô năm mươi. Quẹt thẻ để trả tiền.'));
-      ui.box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { G.sfx('done'); setPhase('platform'); } }, '💳 Quẹt thẻ'));
+      ui.box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { G.sfx('done'); setPhase('platform'); } }, G.ic3('card', 'ic3-s'), ' Quẹt thẻ'));
     }
   }
 
@@ -180,8 +180,8 @@ var G = window.G || (window.G = {});
     G.say(en, 'en');
     ui.box.appendChild(announce(en, R.type === 'bus' ? 'Trạm kế tiếp: ' + name : 'Ga kế tiếp: ' + name));
     if (R.type === 'bus') {
-      ui.box.appendChild(G.el('button.btn.big1.rd-act' + (R.bell ? '.on' : ''), { onclick: ringBell }, R.bell ? '🔔 Đã bấm chuông, xe sẽ dừng' : '🔔 Bấm chuông xuống xe'));
-    } else ui.box.appendChild(G.el('button.btn.big1.rd-act.off', { disabled: true }, '🚪 Cửa đang đóng'));
+      ui.box.appendChild(G.el('button.btn.big1.rd-act' + (R.bell ? '.on' : ''), { onclick: ringBell }, R.bell ? 'Đã bấm chuông, xe sẽ dừng' : 'Bấm chuông xuống xe'));
+    } else ui.box.appendChild(G.el('button.btn.big1.rd-act.off', { disabled: true }, G.ic3('door', 'ic3-s'), ' Cửa đang đóng'));
   }
   function stopUi() {
     var name = R.stops[R.cur];
@@ -189,18 +189,18 @@ var G = window.G || (window.G = {});
       var en = 'This is ' + name + '.' + (R.cur === R.stops.length - 1 ? ' This is the last stop.' : ' Please mind the gap.');
       G.say(en, 'en');
       ui.box.appendChild(announce(en, 'Đây là ga ' + name + '. Chú ý khoảng trống giữa tàu và sân ga.'));
-      ui.box.appendChild(G.el('button.btn.seal.big1.rd-act', { onclick: function () { finish(R.cur === R.target); } }, '🚪 Xuống tàu ở ga này'));
+      ui.box.appendChild(G.el('button.btn.seal.big1.rd-act', { onclick: function () { finish(R.cur === R.target); } }, G.ic3('door', 'ic3-s'), ' Xuống tàu ở ga này'));
     } else {
       ui.box.appendChild(announce(name, 'Xe đang dừng ở trạm ' + name));
-      ui.box.appendChild(G.el('button.btn.seal.big1.rd-act', { onclick: function () { finish(R.cur === R.target); } }, '⬇ Xuống ở trạm này'));
+      ui.box.appendChild(G.el('button.btn.seal.big1.rd-act', { onclick: function () { finish(R.cur === R.target); } }, 'Xuống ở trạm này'));
     }
   }
   function announce(en, vi) {
     var t = G.el('div.en', en), v = G.el('div.small.faint', vi);
     if (R.hideText) { t.className = 'en hide'; v.style.display = 'none'; }
     return G.el('div.rd-ann',
-      G.el('div.rd-ann-top', G.el('span.small', '📢 Thông báo'),
-        G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(en, 'en'); }, 'aria-label': 'Nghe lại' }, '🔊'), G.el('button.spk.slow', { onclick: function () { G.say(en, 'en', true); }, 'aria-label': 'Nghe chậm' }, '🐢')),
+      G.el('div.rd-ann-top', G.el('span.small', G.ic3('bell', 'ic3-s'), ' Thông báo'),
+        G.el('span.spk2', G.el('button.spk', { onclick: function () { G.say(en, 'en'); }, 'aria-label': 'Nghe lại' }, G.ic3('speaker', 'ic3-s')), G.el('button.spk.slow', { onclick: function () { G.say(en, 'en', true); }, 'aria-label': 'Nghe chậm' }, G.ic3('turtle', 'ic3-s'))),
         G.el('button.btn.sm', { onclick: function () { R.hideText = !R.hideText; G.S.caiDat.chiNghe = R.hideText; G.save(); t.className = 'en' + (R.hideText ? ' hide' : ''); v.style.display = R.hideText ? 'none' : ''; } }, R.hideText ? 'Hiện chữ' : 'Chỉ nghe')),
       t, v);
   }
@@ -208,7 +208,7 @@ var G = window.G || (window.G = {});
     if (R.phase !== 'ride' || R.bell) return;
     R.bell = true; G.sfx('door');
     var b = ui.box.querySelector('.rd-act');
-    if (b) { b.className = 'btn big1 rd-act on'; b.textContent = '🔔 Đã bấm chuông, xe sẽ dừng'; }
+    if (b) { b.className = 'btn big1 rd-act on'; b.textContent = 'Đã bấm chuông, xe sẽ dừng'; }
   }
 
   /* ---------- kết thúc ---------- */
@@ -224,7 +224,6 @@ var G = window.G || (window.G = {});
       if (xp) G.addXp(xp); else G.save();
       G.updateHud();
       G.sfx('done');
-      if (!skipped) G.confetti();
       ui.box.appendChild(G.el('div.result.pass',
         G.el('b', R.toward === 'school' ? 'Tới trường rồi!' : 'Về tới nhà rồi!'),
         G.el('div', skipped ? 'Đi nhanh không cộng XP.' : 'Xuống đúng ' + (R.type === 'bus' ? 'trạm' : 'ga') + ' ' + here + '. +' + xp + ' XP'),

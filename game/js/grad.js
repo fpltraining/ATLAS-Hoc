@@ -27,7 +27,7 @@ var G = window.G || (window.G = {});
     var wrap = G.el('div.modal.grad',
       G.el('div.grad-card',
         G.el('div.kicker', 'Chứng chỉ ConnectLife'),
-        G.el('h2', '🏅 Chứng chỉ cấp ' + level),
+        G.el('h2', 'Chứng chỉ cấp ' + level),
         G.el('div.diploma',
           G.imgEl('diploma_' + lang + '.png', 'dip-img'),
           G.el('div.dip-text',

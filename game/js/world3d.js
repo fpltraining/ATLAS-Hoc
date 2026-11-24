@@ -55,7 +55,7 @@ var G = window.G || (window.G = {});
     if (!camEl) {
       var play = document.getElementById('play'); if (!play) return;
       camEl = document.createElement('button'); camEl.id = 'camreset'; camEl.className = 'cam-reset'; camEl.setAttribute('aria-label', 'Đưa góc nhìn về hướng cũ');
-      camEl.textContent = '🧭'; camEl.onclick = function (e) { e.stopPropagation(); camBack = 1; };
+      camEl.innerHTML = ''; camEl.appendChild(G.ic3('compass', 'ic3-s')); camEl.onclick = function (e) { e.stopPropagation(); camBack = 1; };
       play.appendChild(camEl);
     }
     camEl.style.display = W3.active && (Math.abs(YAW) > 0.12 || Math.abs(PITCH) > 0.08) ? 'block' : 'none';
@@ -112,13 +112,18 @@ var G = window.G || (window.G = {});
     var t = new THREE.CanvasTexture(c); t.encoding = THREE.sRGBEncoding; return t;
   }
   function plate(text, gx, gy, pop) {   // biển tên nổi (luôn quay về phía camera); pop: hiện theo vật đã dựng
-    var c = document.createElement('canvas'), x = c.getContext('2d'); x.font = '800 44px -apple-system, system-ui, sans-serif';
-    var w = Math.ceil(x.measureText(text).width) + 56; c.width = w; c.height = 72; x = c.getContext('2d');
-    x.fillStyle = 'rgba(27,33,64,.86)'; x.beginPath(); if (x.roundRect) x.roundRect(0, 0, w, 72, 36); else x.rect(0, 0, w, 72); x.fill();
-    x.fillStyle = '#fff'; x.font = '800 44px -apple-system, system-ui, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(text, w / 2, 38);
+    // nhãn giấy kem viền nâu, chữ nâu đậm (cùng chất liệu giấy của app, không dùng mảng navy đậm)
+    var F = '800 44px "Be Vietnam Pro", -apple-system, system-ui, sans-serif';
+    var c = document.createElement('canvas'), x = c.getContext('2d'); x.font = F;
+    var w = Math.ceil(x.measureText(text).width) + 60; c.width = w; c.height = 76; x = c.getContext('2d');
+    function rr(a, b, ww, hh, r) { x.beginPath(); if (x.roundRect) x.roundRect(a, b, ww, hh, r); else x.rect(a, b, ww, hh); }
+    x.fillStyle = 'rgba(120,80,40,.28)'; rr(2, 6, w - 4, 68, 34); x.fill();            // bóng giấy dưới nhãn
+    x.fillStyle = '#fff8ec'; rr(2, 2, w - 4, 66, 33); x.fill();
+    x.lineWidth = 4; x.strokeStyle = '#cfb48c'; rr(4, 4, w - 8, 62, 31); x.stroke();
+    x.fillStyle = '#6e3d20'; x.font = F; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText(text, w / 2, 37);
     var t = new THREE.CanvasTexture(c); t.encoding = THREE.sRGBEncoding;
     var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: t, depthTest: false, transparent: true }));
-    sp.scale.set(w / 72 * 0.24, 0.24, 1); sp.position.set(gx * U, 0.16, gy * U + 0.25); sp.renderOrder = 10; sp.userData.pop = pop; SC.add(sp); PLATES.push(sp); return sp;
+    sp.scale.set(w / 76 * 0.25, 0.25, 1); sp.position.set(gx * U, 0.16, gy * U + 0.25); sp.renderOrder = 10; sp.userData.pop = pop; SC.add(sp); PLATES.push(sp); return sp;
   }
 
   /* ---------- người, robot đi bằng khung hình (đứng → bước 1 → đứng → bước 2), cùng nhịp với bản 2D ---------- */
@@ -281,7 +286,7 @@ var G = window.G || (window.G = {});
     mark.rotation.x = -Math.PI / 2; mark.position.y = 0.02; SC.add(mark);
     ring = new THREE.Mesh(BLOBG, new THREE.MeshBasicMaterial({ map: GLOW, transparent: true, depthWrite: false, opacity: 0 }));
     ring.scale.set(1.7, 1, 0.75); ring.position.y = 0.016; SC.add(ring);
-    PIN = new THREE.Sprite(new THREE.SpriteMaterial({ map: canvasTex(96, 96, function (x) { x.font = '78px -apple-system, system-ui, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('📍', 48, 52); }), depthTest: false, transparent: true }));
+    PIN = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex('ic3_pin.webp'), depthTest: false, transparent: true }));
     PIN.scale.set(0.5, 0.5, 1); PIN.renderOrder = 12; PIN.visible = false; SC.add(PIN);
     camPos = new THREE.Vector3(); camLook = new THREE.Vector3();
     addEventListener('resize', resize); resize();

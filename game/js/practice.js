@@ -206,7 +206,7 @@ var G = window.G || (window.G = {});
   function freeCard(body, it, onDone) {
     var n = G.NPCS[it.npc] || {}, pic = G.el('div.tpic');
     if (n.img) pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img)); else if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));
-    body.appendChild(G.el('div.fr-sit', G.el('b', '🎯 Tình huống'), G.el('div', it.sit)));
+    body.appendChild(G.el('div.fr-sit', G.el('b', G.ic3('target', 'ic3-s'), ' Tình huống'), G.el('div', it.sit)));
     body.appendChild(G.el('div.tline', pic, G.el('div.tbubble', G.el('b', n.name || ''), G.el('div.en', it.q), G.el('div.small.faint', it.vi), G.sayBtns(it.q, 'en'))));
     G.say(it.q, 'en');
     var res = G.el('div.fr-res'), box = G.el('div.fr-box'), fin = false;
@@ -246,7 +246,7 @@ var G = window.G || (window.G = {});
   G.openFree = function (list, title, back, onEnd) {
     var k = 0, sum = 0;
     (function one() {
-      var body = panelOpen((title || '💡 Nói tự do') + ' · ' + Math.min(k + 1, list.length) + '/' + list.length);
+      var body = panelOpen((title || 'Nói tự do') + ' · ' + Math.min(k + 1, list.length) + '/' + list.length);
       if (k >= list.length) {
         var avg = Math.round(sum / list.length);
         G.markStudy(); G.markTask('noi'); G.addXp(10); G.logSpeak(avg);
@@ -291,7 +291,7 @@ var G = window.G || (window.G = {});
       if (k >= listen.length) { sc.nghe = Math.round(right / listen.length * 100); k = 0; right = 0; partRead(); return; }
       var it = listen[k], text = it.u.npc.replace(/\{name\}/g, nm), meaning = k % 2 === 1;
       var body = panelOpen('📝 Kiểm tra tuần · 1/3 Nghe · câu ' + (k + 1) + '/' + listen.length);
-      body.appendChild(G.el('div.wk-hint', '👂 Chỉ nghe, không có chữ — như ngoài đời. Nghe lại thoải mái.'));
+      body.appendChild(G.el('div.wk-hint', G.ic3('headphone', 'ic3-s'), ' Chỉ nghe, không có chữ — như ngoài đời. Nghe lại thoải mái.'));
       var hidden = G.el('div.wk-hidden', G.el('div.en', text), G.el('div.small.faint', it.u.vi.replace(/\{name\}/g, nm)));
       body.appendChild(G.el('div.wk-audio', G.el('b', (G.NPCS[it.L.npc] || {}).name || ''), G.sayBtns(text, 'en'), hidden));
       G.say(text, 'en');
@@ -313,7 +313,7 @@ var G = window.G || (window.G = {});
     function partRead() {
       if (k >= reads.length) { sc.doc = Math.round(right / reads.length * 100); k = 0; partSpeak(); return; }
       var it = reads[k], body = panelOpen('📝 Kiểm tra tuần · 2/3 Đọc · ' + (k + 1) + '/' + reads.length);
-      body.appendChild(G.el('div.wk-hint', '📄 Đọc những thứ bạn gặp thật ngoài đời và ở chỗ làm.'));
+      body.appendChild(G.el('div.wk-hint', G.ic3('memo', 'ic3-s'), ' Đọc những thứ bạn gặp thật ngoài đời và ở chỗ làm.'));
       body.appendChild(G.el('div.wk-doc', G.el('div.small.faint', it.kind), G.el('pre', it.text)));
       body.appendChild(G.el('b.wk-q', it.q));
       var ans = it.opts[it.ok], answered = false;
@@ -332,13 +332,13 @@ var G = window.G || (window.G = {});
     function partSpeak() {
       if (k >= speak.length) { sc.noi = Math.round(sum / speak.length); finish(); return; }
       var body = panelOpen('📝 Kiểm tra tuần · 3/3 Nói · ' + (k + 1) + '/' + speak.length);
-      body.appendChild(G.el('div.wk-hint', '🗣 Tự trả lời bằng câu của bạn (micro hoặc gõ). Chấm theo ý chính, không chấm ngữ pháp.'));
+      body.appendChild(G.el('div.wk-hint', G.ic3('speak', 'ic3-s'), ' Tự trả lời bằng câu của bạn (micro hoặc gõ). Chấm theo ý chính, không chấm ngữ pháp.'));
       freeCard(body, speak[k], function (s) { sum += s; k++; partSpeak(); });
     }
     function finish() {
       var tong = Math.round((sc.nghe + sc.doc + sc.noi) / 3), info = G.weeklyInfo(), prev = info.last;
       G.S.tuan = G.S.tuan || []; G.S.tuan.push({ ngay: day(0), luc: G.vnNow(), nghe: sc.nghe, doc: sc.doc, noi: sc.noi, tong: tong });
-      G.markStudy(); G.addXp(30); G.save(); G.sfx('done'); if (tong >= 75 && G.confetti) G.confetti();
+      G.markStudy(); G.addXp(30); G.save(); G.sfx('done'); if (tong >= 90 && G.confetti) G.confetti();
       var body = panelOpen('📝 Kết quả kiểm tra tuần');
       body.appendChild(G.el('div.wk-total', G.el('b', tong), G.el('span', '/100'), G.el('div', levelOf(tong))));
       if (prev) body.appendChild(G.el('div.small.faint.wk-cmp', (tong >= prev.tong ? '▲ +' : '▼ ') + (tong - prev.tong) + ' điểm so với lần trước (' + prev.ngay.split('-').reverse().join('/') + ')'));
@@ -427,6 +427,6 @@ var G = window.G || (window.G = {});
     var work = G.freeFor('work'), wd = 0;
     var wrows = work.map(function (f) { var v = (G.S.tuNoi || {})[f.id]; if (v >= 60) wd++; return row(v >= 60 ? 'star' : '', f.sit, true); });
     body.appendChild(place('Công việc', 'work', wrows, wd,
-      G.el('button.btn.sm', { onclick: function () { G.openFree(G.shuffle(work).slice(0, 3), '💼 Nói tự do · công việc', G.openCanDo); } }, 'Luyện 3 tình huống công việc ›')));
+      G.el('button.btn.sm', { onclick: function () { G.openFree(G.shuffle(work).slice(0, 3), 'Nói tự do · công việc', G.openCanDo); } }, 'Luyện 3 tình huống công việc ›')));
   };
 })();

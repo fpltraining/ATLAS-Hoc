@@ -200,7 +200,7 @@ var G = window.G || (window.G = {});
       function start() {
         busy = true;
         mic.className = 'mk-mic on'; lbl.textContent = 'Đang nghe… bấm để dừng';
-        res.innerHTML = ''; res.appendChild(G.el('div.mk-live', '🎙 Nói to, rõ câu ở trên'));
+        res.innerHTML = ''; res.appendChild(G.el('div.mk-live', G.ic3('mic', 'ic3-s'), ' Nói to, rõ câu ở trên'));
         G.listen(lang, function (err, alts) {
           busy = false; lastTap = Date.now();
           if (fin || !box.parentNode) return;            // thẻ đã đóng
@@ -243,7 +243,7 @@ var G = window.G || (window.G = {});
         G.el('div.small', 'Bấm 🔊 nghe mẫu (🐢 để nghe chậm), rồi nhắc lại thật to 2 lần. Nói xong thì bấm nút bên dưới.')));
       box.appendChild(G.el('div.mk-foot',
         G.canListen ? G.el('button.mk-sw', { onclick: function () { G.setMic(true); render(); } }, icon('ic_mic.png'), 'Dùng micro chấm điểm') : G.el('span.small.faint', 'Máy này chưa có micro chấm điểm'),
-        G.el('button.btn.seal.sm', { onclick: function () { G.sfx('right'); G.addXp(1); finish(null); } }, '✓ Mình đã nói xong')));
+        G.el('button.btn.seal.sm', { onclick: function () { G.sfx('right'); G.addXp(1); finish(null); } }, 'Mình đã nói xong')));
     }
     var fin = false;
     function finish(s) { if (fin) return; fin = true; G.abortListen(); if (opts.onDone) opts.onDone(s); }

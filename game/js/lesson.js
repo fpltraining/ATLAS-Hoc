@@ -155,7 +155,7 @@ var G = window.G || (window.G = {});
   /* buổi Nền tảng: âm khó của hôm nay (nghe từng cặp từ rồi đọc to) */
   function soundPage() {
     var s = G.FOUND_SOUNDS[R.sound];
-    function sb(w) { return G.el('button.btn', { onclick: function () { say(w); } }, '🔊 ' + w); }
+    function sb(w) { return G.el('button.btn', { onclick: function () { say(w); } }, G.ic3('speaker', 'ic3-s'), ' ' + w); }
     var pairs = [];
     s.pairs.forEach(function (p) { pairs.push(sb(p[0])); pairs.push(sb(p[1])); });
     body.innerHTML = ''; body.scrollTop = 0;
@@ -369,7 +369,7 @@ var G = window.G || (window.G = {});
       } }, pass ? (R.final ? (speakList() && !certOf() ? 'Sang phần 2 · Nói ›' : 'Nhận chứng chỉ ›') : R.parent ? 'Các buổi tiếp theo ›' : 'Xong ›') : 'Đóng')
     ));
     G.sfx(pass ? 'done' : 'wrong');
-    if (pass) G.confetti();
+    if (pass && firstPass && (R.final || /test/.test(R.id))) G.confetti();   // pháo giấy chỉ cho mốc lớn: qua bài thi tầng lần đầu
     G.updateHud();
   }
 
@@ -379,10 +379,10 @@ var G = window.G || (window.G = {});
   function speakPart(right) {
     var list = speakList(), room = R;
     G.openLesson(room.id); body.innerHTML = '';
-    body.appendChild(G.el('div.lhead', G.el('div.lsteps', G.el('span.done', '1 · Hiểu ' + right + '/' + TN()), G.el('span.on', '2 · Nói'), G.el('span', '🏅 Chứng chỉ')), G.el('div.lsub', 'Thi chứng chỉ · phần 2')));
+    body.appendChild(G.el('div.lhead', G.el('div.lsteps', G.el('span.done', '1 · Hiểu ' + right + '/' + TN()), G.el('span.on', '2 · Nói'), G.el('span', G.ic3('medal', 'ic3-s'), ' Chứng chỉ')), G.el('div.lsub', 'Thi chứng chỉ · phần 2')));
     body.appendChild(teacherLine('Phần 1 đạt ' + right + '/' + TN() + '! Phần 2 · Nói: ' + list.length + ' tình huống ngoài đời. Không có câu gợi ý, bạn tự nói bằng câu của mình (bấm micro hoặc gõ). Máy chấm theo ý chính, không bắt bẻ ngữ pháp. Trung bình từ 60/100 là nhận Chứng chỉ ConnectLife · ' + room.final.level + '.', 'You can do it!'));
     body.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { G.openLesson(room.id); } }, '‹ Để sau'), G.el('button.btn.seal', { onclick: function () {
-      G.openFree(G.shuffle(list), '🗣 Thi chứng chỉ · Nói', null, function (avg) {
+      G.openFree(G.shuffle(list), 'Thi chứng chỉ · Nói', null, function (avg) {
         G.S.thiNoi = G.S.thiNoi || {}; G.S.thiNoi[room.id] = Math.max(G.S.thiNoi[room.id] || 0, avg); G.save();
         R = room;
         if (avg >= 60) { G.closeLesson(); G.graduate(room.final.lang, room.final.level, right, TN(), room.final.levelEn, avg); return; }

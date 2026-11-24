@@ -202,7 +202,7 @@ var G = window.G || (window.G = {});
     var rows = G.EN_FLOORS.slice().reverse().map(function (f) {
       var open = G.floorUnlocked(f.n), grad = G.S.totNghiep.en && f.grad && G.S.totNghiep.en[f.grad];
       var need = f.n === 4 ? 'Đạt chứng chỉ A2 – B1' : f.n === 3 ? 'Đạt chứng chỉ A1' : 'Đạt chứng chỉ Nền tảng';
-      var tag = f.soon ? '🚧 Đang xây' : f.n === cur ? '📍 Bạn đang ở đây' : grad ? '🏅 Đã có chứng chỉ' : open ? 'Đã mở' : '🔒 ' + need + ' để mở';
+      var tag = f.soon ? 'Đang xây' : f.n === cur ? 'Bạn đang ở đây' : grad ? 'Đã có chứng chỉ' : open ? 'Đã mở' : 'Khoá · ' + need + ' để mở';
       return G.el('button.fl-row' + (f.soon || !open ? '.off' : '') + (f.n === cur ? '.cur' : ''), { onclick: function () {
         if (f.soon) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' · ' + f.name + ' đang được xây. Sắp mở!'); return; }
         if (!open) { G.sfx('wrong'); G.toast('Tầng ' + f.n + ' mở khi bạn ' + (f.n === 4 ? 'đạt chứng chỉ A2 – B1 (thi hiểu và thi nói) hoặc kiểm tra đầu vào từ B1.' : f.n === 3 ? 'đạt chứng chỉ A1 (thi hiểu và thi nói) hoặc kiểm tra đầu vào từ A2.' : 'đạt chứng chỉ Tầng 1 · Nền tảng (thi hiểu và thi nói).')); return; }
@@ -216,9 +216,9 @@ var G = window.G || (window.G = {});
     rows.unshift(G.el('button.fl-row' + (clOpen ? '' : '.off'), { onclick: function () {
       if (!clOpen) { G.sfx('wrong'); G.toast('Phòng thi Tốt nghiệp ConnectLife mở khi bạn có Chứng chỉ Tầng 4 · B1 – B2.'); return; }
       close(); G.sfx('door'); G.openFinalExam();
-    } }, G.el('b.fl-n', '🎓'), G.el('span.fl-t', G.el('b', 'Tầng thượng · Thi Tốt nghiệp ConnectLife '), G.el('span.fl-cefr', 'Đầu ra giao tiếp'), G.el('span.small', 'Nghe hội thoại thật, tự xử lý tình huống, trò chuyện 5 phút với người lạ'), G.el('span.fl-tag', clDone ? '🎓 Đã tốt nghiệp' : clOpen ? '🔓 Đã mở' : '🔒 Đạt chứng chỉ Tầng 4 để mở'))));
+    } }, G.el('b.fl-n', G.ic3('grad', 'ic3-s')), G.el('span.fl-t', G.el('b', 'Tầng thượng · Thi Tốt nghiệp ConnectLife '), G.el('span.fl-cefr', 'Đầu ra giao tiếp'), G.el('span.small', 'Nghe hội thoại thật, tự xử lý tình huống, trò chuyện 5 phút với người lạ'), G.el('span.fl-tag', clDone ? 'Đã tốt nghiệp' : clOpen ? 'Đã mở' : 'Đạt chứng chỉ Tầng 4 để mở'))));
     wrap = G.el('div.modal', { onclick: function (e) { if (e.target === wrap) close(); } }, G.el('div.choose.floors',
-      G.el('h2', '🛗 Thang máy'),
+      G.el('h2', G.ic3('elevator', 'ic3-s'), ' Thang máy'),
       G.el('p.small', 'Chọn tầng muốn tới. Mỗi tầng là một cấp độ, học xong tầng dưới thì lên tầng trên.'),
       G.el('div.fl-list', rows),
       G.el('button.btn', { onclick: close }, 'Đóng')));
@@ -832,7 +832,12 @@ var G = window.G || (window.G = {});
     if (!q) return;
     q.style.display = curGoal ? '' : 'none';
     if (curGoal && curGoal.text !== lastGoalText) { lastGoalText = curGoal.text; document.getElementById('quest-text').textContent = curGoal.text; }
+    // "Học ngay": việc tiếp theo là buổi học và chưa ở trong lớp → chạm nút cam mở thẳng bài, chạm phần chữ thì đi bộ tới như cũ
+    var now = !!(curGoal && scene && scene.kind !== 'classroom' && G.nextLesson && G.nextLesson() && /Học Buổi|Học phòng|thang máy|Tầng \d/.test(curGoal.text));
+    if (now !== questNow) { questNow = now; var go = q.querySelector('.q-go'); if (go) go.textContent = now ? 'Học ngay ›' : 'Đi ›'; }
   }
+  var questNow = null;
+  G.questNow = function () { return !!questNow; };
   /* bấm thanh nhiệm vụ: tự đi tới chỗ cần đến rồi làm luôn */
   G.goQuest = function () {
     if (!curGoal || riding) return;
@@ -1576,7 +1581,7 @@ var G = window.G || (window.G = {});
       G.roundRect(ctx, dx0 - 64, py, 128, 50, 12); ctx.fill();
       ctx.fillStyle = '#fff'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.font = '800 19px -apple-system, system-ui, sans-serif';
-      var lbl = (open ? '' : '🔒 ') + door.label;
+      var lbl = door.label + (open ? '' : ' · khoá');
       if (ctx.measureText(lbl).width > 118) ctx.font = '800 15px -apple-system, system-ui, sans-serif';
       ctx.fillText(lbl, dx0, py + 16);
       ctx.font = '600 15px -apple-system, system-ui, sans-serif';

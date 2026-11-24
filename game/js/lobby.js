@@ -193,9 +193,9 @@ var G = window.G || (window.G = {});
         stat(G.diplomas().filter(function (d) { return d.lang === 'en'; }).length + '/4', 'Chứng chỉ'),
         stat(G.S.tuKho.length, 'Từ cần ôn')
       ),
-      G.S.totNghiepCL ? G.el('div.dips', G.el('span.dip-chip.cl', '🎓 Tốt nghiệp ConnectLife · ' + G.S.totNghiepCL.luc.slice(0, 10).split('-').reverse().join('/'))) : null,
+      G.S.totNghiepCL ? G.el('div.dips', G.el('span.dip-chip.cl', 'Tốt nghiệp ConnectLife · ' + G.S.totNghiepCL.luc.slice(0, 10).split('-').reverse().join('/'))) : null,
       G.diplomas().length ? G.el('div.dips', G.diplomas().map(function (d) {
-        return G.el('span.dip-chip', '🏅 Chứng chỉ ' + (d.lang === 'en' ? 'tiếng Anh ' : 'tiếng Trung ') + d.level + ' · hiểu ' + d.info.diem + '/' + d.info.tong + (d.info.noi ? ' · nói ' + d.info.noi : ''));
+        return G.el('span.dip-chip', 'Chứng chỉ ' + (d.lang === 'en' ? 'tiếng Anh ' : 'tiếng Trung ') + d.level + ' · hiểu ' + d.info.diem + '/' + d.info.tong + (d.info.noi ? ' · nói ' + d.info.noi : ''));
       })) : null
     ));
 
