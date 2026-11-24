@@ -32,7 +32,16 @@ var G = window.G || (window.G = {});
   }
 
   function readLS(key) { try { var o = JSON.parse(localStorage.getItem(key) || 'null'); return o && o.v === 1 ? o : null; } catch (e) { return null; } }
-  function fill(s) { var b = blank(); for (var k in b) if (!(k in s)) s[k] = b[k]; return s; }
+  function fill(s) { var b = blank(); for (var k in b) if (!(k in s)) s[k] = b[k]; migrate(s); return s; }
+  /* Nâng cấp bản lưu cũ, không mất tiến độ. 24/11/2026: 4 phòng A1 thành nhóm 4 buổi (data/en_a1_more.js);
+     điểm phòng cũ chép sang buổi 1 (cùng nội dung), bài đang học dở chuyển sang buổi 1. Điểm phòng cũ vẫn giữ nên phòng vẫn tính là đã qua. */
+  function migrate(s) {
+    var A1 = { 'en-a1-1': 'en-a1-01', 'en-a1-2': 'en-a1-05', 'en-a1-3': 'en-a1-09', 'en-a1-4': 'en-a1-13' };
+    for (var o in A1) {
+      if (s.phong && s.phong[o] && !s.phong[A1[o]]) s.phong[A1[o]] = JSON.parse(JSON.stringify(s.phong[o]));
+      if (s.dangHoc && s.dangHoc[o] && !s.dangHoc[A1[o]]) { s.dangHoc[A1[o]] = s.dangHoc[o]; delete s.dangHoc[o]; }
+    }
+  }
   function newer(a, b) {   // bản nào "nhiều tiến độ" hơn / lưu sau hơn
     if (!a) return b; if (!b) return a;
     if ((a.luuLuc || 0) !== (b.luuLuc || 0)) return (a.luuLuc || 0) > (b.luuLuc || 0) ? a : b;

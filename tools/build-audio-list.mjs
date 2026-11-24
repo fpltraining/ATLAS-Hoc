@@ -81,8 +81,10 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
 {
   const vm = await import('node:vm');
   const ctx = { console }; ctx.window = ctx; ctx.G = {}; vm.createContext(ctx);
-  for (const f of ['game/data/en_a1.js', 'game/data/en_found.js', 'game/data/en_a2.js', 'game/data/en_b1.js', 'game/data/cert_en.js', 'game/data/final_en.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js', 'game/data/placement_en.js', 'game/data/pron_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
+  for (const f of ['game/data/en_a1.js', 'game/data/en_a1_more.js', 'game/data/en_found.js', 'game/data/en_a2.js', 'game/data/en_b1.js', 'game/data/cert_en.js', 'game/data/final_en.js', 'game/data/life.js', 'game/data/life_morning.js', 'game/data/life_school.js', 'game/data/life_after.js', 'game/data/practice_en.js', 'game/data/placement_en.js', 'game/data/pron_en.js', 'game/data/fix_en.js']) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx);
   const FEM = { emma: 1, lily: 1, rosa: 1, anna: 1, mom: 1, mia: 1, nora: 1, pat: 1, kim: 1, zoe: 1, lee: 1, ivy: 1, grace: 1 };
+  // bắt lỗi câu (game/data/fix_en.js): câu đúng
+  (ctx.G.FIX_EN || []).forEach((x, i) => add('en', ctx.G.fixSentence(x), alt(i)));
   for (const R of Object.values(ctx.G.ROOMS)) {
     if (R.lang !== 'en') continue;
     const sx = FEM[R.teacher] ? 'f' : 'm';

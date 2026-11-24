@@ -1357,3 +1357,43 @@ html:not(.in-city) .rotate { display: none !important; }
 .rot-back { margin-top: 6px; min-height: 48px; }
 /* điện thoại cầm dọc: tranh đầu Sảnh thấp lại để thấy ngay Việc nên làm */
 @media (orientation: portrait) and (max-width: 520px) { .lhero .hero-pic { max-height: 30vh; overflow: hidden; } .lhero .hero-pic img { width: 100%; height: 30vh; object-fit: cover; } .lobby-title { max-width: 70%; } .hero-sub { display: none; } }
+
+/* ---------- Kho truyện: thanh công cụ, nghe cả chương, câu hỏi đọc hiểu (24/11/2026) ---------- */
+.rd-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 8px 0 6px; }
+.rd-tools .rd-speed { margin: 0; }
+.rd-tools .rd-vibtn { margin: 0; }
+.rd-listen { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
+.rd-listen .ic3-s { width: 22px; height: 22px; }
+.rd-line.rd-now { background: #fff3d9; box-shadow: inset 3px 0 0 var(--coral); }
+.rd-bh { display: flex; align-items: center; gap: 6px; }
+.rd-bh .ic3-s { width: 22px; height: 22px; }
+.rd-quiz { background: #eef3fb; }
+.rd-q { margin: 10px 0 4px; }
+.rd-opts { display: grid; gap: 6px; margin-top: 6px; }
+.rd-opt { min-height: 44px; text-align: left; padding: 9px 12px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; font-weight: 600; color: var(--ink); }
+.rd-opt.ok { border-color: var(--jade); background: var(--jade-soft); }
+.rd-opt.no { border-color: var(--coral); background: var(--coral-soft); }
+.rd-qres { margin-top: 8px; font-weight: 700; color: var(--jade); }
+.road-hrs { margin-top: 4px; color: var(--soft); }
+.road-hrs b { color: var(--ink); font-weight: 650; }
+.road-dot .ic3-s { width: 22px; height: 22px; }
+/* nhại có ghi âm */
+.shd { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); }
+.shd-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.shd-b { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
+.shd-b .ic3-s { width: 20px; height: 20px; }
+.shd-b.on { border-color: var(--coral); background: var(--coral-soft); }
+.rv-kho { display: inline-block; font-size: 12px; font-weight: 700; color: var(--coral); background: var(--coral-soft); border-radius: 8px; padding: 2px 8px; margin-bottom: 6px; }
+.rv-grade { flex-wrap: wrap; }
+.rv-hint { flex: 1 1 100%; }
+.rv-nomic { display: block; margin: 6px 0; }
+/* bắt lỗi câu */
+.fx-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.fx-ch { min-height: 48px; padding: 8px 14px; border-radius: 12px; border: 1.5px solid var(--line); background: #fff; font-size: 19px; font-weight: 600; color: var(--ink); }
+.fx-ch.ok { border-color: var(--jade); background: var(--jade-soft); }
+.fx-ch.no { border-color: var(--coral); background: var(--coral-soft); }
+.fx-ch.was { border-color: var(--coral); border-style: dashed; }
+.fx-res { margin: 10px 0 6px; font-weight: 700; }
+.fx-res.ok { color: var(--jade); } .fx-res.no { color: var(--coral); }
+.fx-why { margin-top: 8px; line-height: 1.45; }
+.set-speed { margin-top: 8px; }

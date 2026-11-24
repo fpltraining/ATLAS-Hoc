@@ -281,7 +281,8 @@ var G = window.G || (window.G = {});
       G.el('button.big.bic' + hl('wk'), { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),
       G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats ? G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được bằng tiếng Anh' : '')),
       G.el('button.big.bic', { onclick: G.openToday }, G.bigIc('calendar', 'Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/' + G.dayProgress().all + ' việc · ' + G.dayProgress().mins + ' phút')),
-      G.openTopics ? G.el('button.big.bic', { onclick: G.openTopics }, G.bigIc('books', 'Từ theo chủ đề'), G.el('span', G.topicTotals().got + '/' + G.topicTotals().all + ' từ đọc tin, công sở, kinh tế…')) : null));
+      G.openTopics ? G.el('button.big.bic', { onclick: G.openTopics }, G.bigIc('books', 'Từ theo chủ đề'), G.el('span', G.topicTotals().got + '/' + G.topicTotals().all + ' từ đọc tin, công sở, kinh tế…')) : null,
+      G.openFix && G.enFloorNow && G.enFloorNow() >= 3 ? G.el('button.big.bic', { onclick: G.openFix }, G.bigIc('magnifier', 'Bắt lỗi câu'), G.el('span', G.fixStats().ok + '/' + G.fixStats().all + ' lỗi hay gặp đã nắm')) : null));
   };
 
   /* ---------- Đọc truyện ---------- */
@@ -297,18 +298,28 @@ var G = window.G || (window.G = {});
     }).catch(function () { G.toast('Chưa tải được kho truyện. Mở khi có mạng một lần nhé.'); });
   }
   var SHELF = ['future', 'ai', 'true', 'mystery', 'news', 'essay', 'long'];
-  var SHELF_NAME = { future: 'Brightford 2080 · vấn đề xã hội tương lai', ai: 'Chuyện về AI', true: 'Chuyện có thật', mystery: 'Bí ẩn chưa có lời giải', news: 'Tin tức 2025–2026', essay: 'Bài luận B2 · kỹ năng sống', long: 'Truyện dài' };
-  function shelfRank(s) { var i = SHELF.indexOf(s.shelf); return i < 0 ? SHELF.length : i; }
+  var SHELF_NAME = { easy: 'Truyện dễ A1 · đời thường ở Brightford', future: 'Brightford 2080 · vấn đề xã hội tương lai', ai: 'Chuyện về AI', true: 'Chuyện có thật', mystery: 'Bí ẩn chưa có lời giải', news: 'Tin tức 2025–2026', essay: 'Bài luận B2 · kỹ năng sống', long: 'Truyện dài' };
+  function shelfRank(s) {
+    if (s.shelf === 'easy') return lowLv() ? -1 : SHELF.length;   // người mới (tầng 1–2): kệ truyện dễ lên đầu
+    var i = SHELF.indexOf(s.shelf); return i < 0 ? SHELF.length : i;
+  }
+  function lowLv() { return (G.enFloorNow ? G.enFloorNow() : 1) <= 2; }
   function readN(id) { return (G.S.truyen && G.S.truyen[id]) || 0; }
   G.openReader = function () {
-    var body = panelOpen('📖 Đọc truyện');
+    stopListen();
+    var body = panelOpen('Đọc truyện');
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));
     loadIndex(function (list) {
       body.innerHTML = '';
       // gợi ý: truyện đang đọc dở, không có thì truyện dễ nhất chưa đọc
       var next = null;
       for (var i = 0; i < list.length && !next; i++) { var r = readN(list[i].id); if (r > 0 && r < list[i].chapters.length) next = list[i]; }
-      for (var j = 0; j < list.length && !next; j++) if (readN(list[j].id) < list[j].chapters.length) next = list[j];
+      // chưa đọc dở truyện nào: truyện chưa đọc gần trình độ nhất (tầng 1–2 → A1, tầng 3 → A2, tầng 4 → B1)
+      var want = [1, 1, 2, 3][(G.enFloorNow ? G.enFloorNow() : 1) - 1] || 1, ORD = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5 }, best = 99;
+      if (!next) for (var j = 0; j < list.length; j++) {
+        if (readN(list[j].id) >= list[j].chapters.length) continue;
+        var d0 = Math.abs((ORD[list[j].level] || 3) - want); if (d0 < best) { best = d0; next = list[j]; }
+      }
       if (next) body.appendChild(G.el('button.big.bic.seal.rd-next', { onclick: function () { chapter(next, readN(next.id)); } },
         G.bigIc('book', 'Đọc tiếp: ' + next.title), G.el('span', next.vi + ' · chương ' + (readN(next.id) + 1) + '/' + next.chapters.length + ' · ' + next.level)));
       var lv = '';
@@ -326,48 +337,101 @@ var G = window.G || (window.G = {});
       });
     });
   };
+  /* tốc độ nghe trong kho truyện: chậm / thường / nhanh (nhớ cho lần sau; bản cũ chỉ có "đọc chậm") */
+  var SPEEDS = [[0.7, 'Chậm'], [1, 'Thường'], [1.2, 'Nhanh']];
+  function rdRate() { var cd = G.S.caiDat || {}; return cd.tocDo || (cd.docCham ? 0.7 : 1); }
+  var stopList = null;
+  function stopListen() { if (stopList) { stopList(); stopList = null; } }
+  G._stopStory = stopListen;
+  function shuffled(n) { var a = [], i, j, t; for (i = 0; i < n; i++) a.push(i); for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function chapter(s, k) {
-    var body = panelOpen('📖 ' + s.title);
+    stopListen();
+    var body = panelOpen(s.title);
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));
     fetch('../data/stories/' + s.id + '.json').then(function (r) { return r.json(); }).then(function (full) {
-      var ch = full.chapters[k];
+      var ch = full.chapters[k], lines = [], texts = [];
       body.innerHTML = '';
       body.appendChild(G.el('div.lhead', G.el('div.lsub', 'Chương ' + ch.n + '/' + full.chapters.length + ' · ' + ch.title + ' · ' + (ch.vi || '') + ' · bấm câu để nghe')));
-      // tốc độ đọc: thường / chậm (nhớ cho lần sau)
       var cd = G.S.caiDat || (G.S.caiDat = {});
+      // tốc độ nghe: chậm / thường / nhanh
       var spd = G.el('div.td-seg.rd-speed');
       function drawSpd() {
         spd.innerHTML = '';
-        spd.appendChild(G.el('button' + (!cd.docCham ? '.on' : ''), { onclick: function () { cd.docCham = false; G.save(); drawSpd(); } }, '🔊 Tốc độ thường'));
-        spd.appendChild(G.el('button' + (cd.docCham ? '.on' : ''), { onclick: function () { cd.docCham = true; G.save(); drawSpd(); } }, '🐢 Đọc chậm'));
+        SPEEDS.forEach(function (x) {
+          spd.appendChild(G.el('button' + (rdRate() === x[0] ? '.on' : ''), { onclick: function () { cd.tocDo = x[0]; cd.docCham = x[0] < 1; G.save(); drawSpd(); } }, x[1]));
+        });
       }
-      drawSpd(); body.appendChild(spd);
+      drawSpd();
+      // nghe cả chương: đọc lần lượt từng câu, câu đang đọc được tô sáng và cuộn tới
+      var lb = G.el('button.btn.sm.rd-listen');
+      function drawLb() { lb.innerHTML = ''; lb.appendChild(G.ic3(stopList ? 'pause' : 'headphone', 'ic3-s')); lb.appendChild(document.createTextNode(stopList ? ' Dừng nghe' : ' Nghe cả chương')); }
+      function mark(i) { for (var q = 0; q < lines.length; q++) lines[q].classList.toggle('rd-now', q === i); if (i >= 0 && lines[i] && lines[i].scrollIntoView) lines[i].scrollIntoView({ block: 'center', behavior: G.calm && G.calm() ? 'auto' : 'smooth' }); }
+      lb.onclick = function () {
+        if (stopList) { stopListen(); mark(-1); drawLb(); return; }
+        stopList = G.sayList(texts, 'en', rdRate(), mark, function () { stopList = null; mark(-1); drawLb(); G.markStudy(); });
+        drawLb();
+      };
+      drawLb();
       // hiện / ẩn nghĩa tiếng Việt (mặc định hiện, nhớ cho lần sau)
       var viBtn = G.el('button.btn.sm.rd-vibtn', { onclick: function () { cd.anNghia = !cd.anNghia; G.save(); applyVi(); } });
-      function applyVi() { body.className = 'panel-body' + (cd.anNghia ? ' rd-hidevi' : ''); viBtn.textContent = cd.anNghia ? '👀 Hiện nghĩa tiếng Việt' : '🙈 Ẩn nghĩa (tự đọc)'; }
-      body.appendChild(viBtn); applyVi();
+      function applyVi() { body.className = 'panel-body' + (cd.anNghia ? ' rd-hidevi' : ''); viBtn.textContent = cd.anNghia ? 'Hiện nghĩa tiếng Việt' : 'Ẩn nghĩa (tự đọc)'; }
+      body.appendChild(G.el('div.rd-tools', spd, lb, viBtn)); applyVi();
       (ch.paras || []).forEach(function (para) {
         body.appendChild(G.el('div.rd-para', para.map(function (ln) {
           // nghĩa tiếng Việt luôn hiện ngay dưới câu (ẩn được bằng nút "Ẩn nghĩa" để tự luyện đọc); bấm câu để nghe
           var vi = G.el('div.rd-vi.show', ln[1]);
-          return G.el('div.rd-line', { onclick: function () { G.say(ln[0], 'en', !!(G.S.caiDat && G.S.caiDat.docCham)); } }, G.el('span', ln[0]), vi);
+          var row = G.el('div.rd-line', { onclick: function () { if (stopList) { stopListen(); mark(-1); drawLb(); } G.say(ln[0], 'en', rdRate()); } }, G.el('span', ln[0]), vi);
+          lines.push(row); texts.push(ln[0]);
+          return row;
         })));
       });
-      if (ch.vocab && ch.vocab.length) body.appendChild(G.el('div.rd-box',
-        G.el('b', '📝 Từ đáng nhớ'),
-        G.el('div.rd-vocab', ch.vocab.map(function (v) { return G.el('button.rd-w', { onclick: function () { G.say(v[0], 'en', !!(G.S.caiDat && G.S.caiDat.docCham)); } }, G.el('b', v[0]), ' · ' + v[1]); }))));
-      if (ch.think && ch.think.length) body.appendChild(G.el('div.rd-box.think',
-        G.el('b', '💭 Suy ngẫm'),
-        G.el('ol', ch.think.map(function (q) { return G.el('li', q); })),
+      // từ đáng nhớ: vocab [[từ, nghĩa]] hoặc gloss {từ: nghĩa}
+      var voc = ch.vocab || (ch.gloss ? Object.keys(ch.gloss).map(function (w) { return [w, ch.gloss[w]]; }) : []);
+      if (voc.length) body.appendChild(G.el('div.rd-box',
+        G.el('b.rd-bh', G.ic3('memo', 'ic3-s'), ' Từ đáng nhớ'),
+        G.el('div.rd-vocab', voc.map(function (v) { return G.el('button.rd-w', { onclick: function () { G.say(v[0], 'en', rdRate()); } }, G.el('b', v[0]), ' · ' + v[1]); }))));
+      // đọc hiểu: câu hỏi trắc nghiệm của chương (đáp án xáo mỗi lần mở)
+      var quiz = ch.quiz || [], got = 0, answered = 0;
+      if (quiz.length) {
+        var qBox = G.el('div.rd-box.rd-quiz', G.el('b.rd-bh', G.ic3('target', 'ic3-s'), ' Bạn hiểu tới đâu?'));
+        var qRes = G.el('div.small.faint', 'Chọn đáp án đúng theo nội dung chương.');
+        quiz.forEach(function (q, qi) {
+          var done = false, opts = G.el('div.rd-opts');
+          shuffled(q.opts.length).forEach(function (oi) {
+            var b = G.el('button.rd-opt', { onclick: function () {
+              if (done) return; done = true; answered++;
+              var ok = oi === q.a;
+              b.classList.add(ok ? 'ok' : 'no');
+              if (!ok) { var all = opts.children; for (var z = 0; z < all.length; z++) if (all[z]._oi === q.a) all[z].classList.add('ok'); }
+              if (ok) got++;
+              G.sfx(ok ? 'right' : 'wrong');
+              if (answered === quiz.length) { qRes.className = 'small rd-qres'; qRes.textContent = 'Đúng ' + got + '/' + quiz.length + (got === quiz.length ? ' · hiểu trọn chương này' : ' · đọc lại đoạn có câu trả lời nhé'); }
+            } }, q.opts[oi]);
+            b._oi = oi; opts.appendChild(b);
+          });
+          qBox.appendChild(G.el('div.rd-q', G.el('div', G.el('b', (qi + 1) + '. ' + q.q)), q.qVi ? G.el('div.small.faint', q.qVi) : null, opts));
+        });
+        qBox.appendChild(qRes);
+        body.appendChild(qBox);
+      }
+      var think = ch.think || [];
+      if (think.length) body.appendChild(G.el('div.rd-box.think',
+        G.el('b.rd-bh', G.ic3('thought', 'ic3-s'), ' Suy ngẫm'),
+        G.el('ol', think.map(function (q) { return G.el('li', q); })),
         G.el('div.small.faint', 'Nghĩ hoặc nói to câu trả lời bằng tiếng Việt, rồi thử nói một câu bằng tiếng Anh.')));
+      if (ch.say) body.appendChild(G.el('div.rd-box.think',
+        G.el('b.rd-bh', G.ic3('speak', 'ic3-s'), ' Nói thử'),
+        G.el('div', ch.say),
+        G.el('div.small.faint', 'Nói to bằng tiếng Anh, dùng lại câu trong chương.')));
       body.appendChild(G.el('div.row',
-        G.el('button.btn', { onclick: G.openReader }, '‹ Kho truyện'),
+        G.el('button.btn', { onclick: function () { stopListen(); G.openReader(); } }, '‹ Kho truyện'),
         G.el('button.btn.seal', { onclick: function () {
+          stopListen();
           G.S.truyen = G.S.truyen || {};
-          if ((G.S.truyen[s.id] || 0) <= k) { G.S.truyen[s.id] = k + 1; G.addXp(10); }
+          if ((G.S.truyen[s.id] || 0) <= k) { G.S.truyen[s.id] = k + 1; G.addXp(10 + (quiz.length && got === quiz.length ? 5 : 0)); }
           G.markStudy(); G.markTask('doc'); G.sfx('done');
-          if (k + 1 < full.chapters.length) chapter(s, k + 1); else { G.confetti(); G.openReader(); }
-        } }, k + 1 < full.chapters.length ? 'Đọc xong · chương sau ›' : 'Đọc xong truyện 🎉')));
+          if (k + 1 < full.chapters.length) chapter(s, k + 1); else { G.openReader(); G.toast('Đọc xong truyện ' + s.title + '. Giỏi lắm!'); }
+        } }, k + 1 < full.chapters.length ? 'Đọc xong · chương sau ›' : 'Đọc xong truyện')));
       body.scrollTop = 0;
     }).catch(function () { body.innerHTML = ''; body.appendChild(G.el('p', 'Chưa tải được chương này. Thử lại khi có mạng.')); });
   }

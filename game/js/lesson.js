@@ -18,7 +18,7 @@ var G = window.G || (window.G = {});
     document.getElementById('panel-py').textContent = on ? 'Pinyin: hiện' : 'Pinyin: ẩn';
   }
 
-  function closePanel() { panel.className = 'panel'; if (window.speechSynthesis) speechSynthesis.cancel(); }
+  function closePanel() { panel.className = 'panel'; if (G._stopStory) G._stopStory(); if (window.speechSynthesis) speechSynthesis.cancel(); }
   G.closeLesson = closePanel;
 
   function teacher() { return G.NPCS[R.teacher]; }
@@ -133,13 +133,14 @@ var G = window.G || (window.G = {});
     if (i > st().the) keep('the', i);
     if (i === R.items.length - 1 && !st().hocXong) keep('hocXong', G.vnNow());
     body.innerHTML = ''; body.scrollTop = 0;
-    body.appendChild(head(0, 'Thẻ ' + (i + 1) + '/' + R.items.length + ' · bấm 🔊 để nghe, nói to theo'));
+    body.appendChild(head(0, 'Thẻ ' + (i + 1) + '/' + R.items.length + ' · bấm loa để nghe, nói to theo'));
     var card = G.el('div.wcard',
       G.el('div.wbig', T(it), speakBtn(T(it))),
       pyEl(it.py),
       it.ipa ? G.el('div.wipa', it.ipa) : null,
       G.el('div.wvi', it.vi),
-      G.el('div.wex', G.el('div', it.ex, speakBtn(it.ex)), pyEl(it.exPy), G.el('div.faint', it.exVi))
+      G.el('div.wex', G.el('div', it.ex, speakBtn(it.ex)), pyEl(it.exPy), G.el('div.faint', it.exVi)),
+      lang === 'en' && G.shadowBtn ? G.shadowBtn(it.ex) : null
     );
     body.appendChild(card);
     say(T(it));

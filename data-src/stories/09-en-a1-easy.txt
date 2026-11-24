@@ -1,0 +1,501 @@
+@id a1-first-day
+@shelf easy
+@level A1
+@title Lan's First Day
+@vi Ngày đầu của Lan
+@blurb Lan từ Đà Nẵng tới Brightford để học tiếng Anh. Ngày đầu tiên: sân bay, căn phòng mới, lớp học mới và một người bạn mới. Câu ngắn, dùng đúng các câu chào hỏi, giới thiệu ở phòng A1-1.
+
+## 1 | The Airport | Sân bay
+Lan is twenty-four years old. | Lan hai mươi bốn tuổi.
+She is from Da Nang, in Vietnam. | Cô đến từ Đà Nẵng, Việt Nam.
+Today she is in Brightford. | Hôm nay cô ở Brightford.
+It is her first time here. | Đây là lần đầu cô tới đây.
+
+The airport is big and busy. | Sân bay to và đông.
+Lan has one big bag and one small bag. | Lan có một túi to và một túi nhỏ.
+She is tired, but she is happy. | Cô mệt, nhưng cô vui.
+
+A woman waves at her. | Một người phụ nữ vẫy tay với cô.
+"Hi! Are you Lan?" | "Chào! Bạn là Lan à?"
+"Yes, I am. Nice to meet you." | "Vâng, là tôi. Rất vui được gặp chị."
+"I'm Rosa. Welcome to Brightford!" | "Tôi là Rosa. Chào mừng tới Brightford!"
+Rosa has short gray hair and a big smile. | Rosa tóc ngắn màu xám và cười rất tươi.
+"Can I help you with your bag?" | "Để tôi xách túi giúp nhé?"
+"Thank you so much." | "Cảm ơn chị nhiều lắm."
+
+~ wave = vẫy tay
+~ busy = đông, bận rộn
+? Where is Lan from? | Lan đến từ đâu? | Da Nang, in Vietnam* | Hanoi, in Vietnam | Brightford
+? Who helps Lan with her bag? | Ai xách túi giúp Lan? | Rosa* | Her teacher | A taxi driver
+> Nói 3 câu giới thiệu bạn: tên, tuổi, bạn đến từ đâu.
+
+## 2 | A New Room | Căn phòng mới
+Rosa has a small house near the park. | Rosa có một ngôi nhà nhỏ gần công viên.
+Lan's room is upstairs. | Phòng của Lan ở trên lầu.
+There is a bed, a desk and a lamp. | Có một cái giường, một cái bàn và một cây đèn.
+There are two windows. | Có hai cửa sổ.
+The room is small, but it is very cozy. | Phòng nhỏ, nhưng rất ấm cúng.
+
+"The bathroom is next to your room," says Rosa. | "Phòng tắm cạnh phòng em," Rosa nói.
+"The kitchen is downstairs. Help yourself!" | "Bếp ở dưới nhà. Cứ tự nhiên nhé!"
+"Thank you, Rosa. Can I ask a question?" | "Cảm ơn chị Rosa. Em hỏi một câu được không?"
+"Of course." | "Tất nhiên rồi."
+"Is there a supermarket near here?" | "Gần đây có siêu thị không ạ?"
+"Yes, there's one on Maple Street." | "Có, có một cái ở phố Maple."
+
+That night, Lan calls her mom. | Tối đó, Lan gọi cho mẹ.
+"Mom, I'm here. I'm OK. My room is nice." | "Mẹ ơi, con tới rồi. Con ổn. Phòng con đẹp lắm."
+Then she goes to bed at nine. | Rồi cô đi ngủ lúc chín giờ.
+
+~ upstairs = trên lầu
+~ downstairs = dưới nhà
+~ cozy = ấm cúng
+? How many windows are in Lan's room? | Phòng của Lan có mấy cửa sổ? | Two* | One | Three
+? Where is the supermarket? | Siêu thị ở đâu? | On Maple Street* | Next to the park | Near the airport
+> Tả phòng của bạn bằng 3 câu với There is / There are.
+
+## 3 | The Language School | Trường ngôn ngữ
+The next morning, Lan gets up at seven. | Sáng hôm sau, Lan dậy lúc bảy giờ.
+She has breakfast with Rosa. | Cô ăn sáng với Rosa.
+Then she takes the bus to school. | Rồi cô đi xe buýt tới trường.
+
+The classroom is full. | Lớp học đông kín.
+The teacher is tall and friendly. | Cô giáo cao và thân thiện.
+"Good morning, everyone! I'm Ms. Emma." | "Chào buổi sáng cả lớp! Cô là cô Emma."
+"Please tell us your name and where you're from." | "Các em nói tên và quê của mình nhé."
+
+A young man stands up. | Một chàng trai đứng dậy.
+"Hi, I'm Carlos. I'm from Mexico." | "Chào, mình là Carlos. Mình đến từ Mexico."
+Then it is Lan's turn. | Rồi tới lượt Lan.
+"Hi, I'm Lan. I'm from Vietnam." | "Chào, mình là Lan. Mình đến từ Việt Nam."
+"I'm a little nervous. Sorry!" | "Mình hơi run. Xin lỗi nhé!"
+Everyone laughs, and Ms. Emma smiles. | Mọi người cười, cô Emma mỉm cười.
+"Don't worry, Lan. We're all new here." | "Đừng lo, Lan. Ở đây ai cũng mới cả."
+
+After class, Carlos says, "Do you want coffee?" | Sau giờ học, Carlos nói: "Bạn đi cà phê không?"
+"Sure!" says Lan. Her first friend in Brightford. | "Được chứ!" Lan nói. Người bạn đầu tiên của cô ở Brightford.
+
+~ nervous = hồi hộp, run
+~ turn = lượt
+? Where is Carlos from? | Carlos đến từ đâu? | Mexico* | Vietnam | Brightford
+? How does Lan go to school? | Lan đi học bằng gì? | By bus* | On foot | By taxi
+> Bạn là Lan. Nói lời giới thiệu của bạn trước lớp, 3 câu.
+
+@id a1-where-mochi
+@shelf easy
+@level A1
+@title Where Is Mochi?
+@vi Mochi đâu rồi?
+@blurb Con mèo Mochi của bé Mai biến mất. Cả nhà đi hỏi hàng xóm: con mèo trông thế nào, ở đâu, khi nào. Câu ngắn về nhà cửa, tả người và vật, There is / There are.
+
+## 1 | Mochi Is Gone | Mochi biến mất
+Mai is eight years old. | Mai tám tuổi.
+She lives in an apartment with her mom and dad. | Bé sống ở một căn hộ với bố mẹ.
+She has a cat. His name is Mochi. | Bé có một con mèo. Nó tên là Mochi.
+Mochi is small and white. | Mochi nhỏ và trắng.
+He has one black ear and green eyes. | Nó có một tai đen và mắt xanh lá.
+
+Every morning, Mochi sleeps on Mai's bed. | Sáng nào Mochi cũng ngủ trên giường của Mai.
+But today, the bed is empty. | Nhưng hôm nay, giường trống trơn.
+"Mochi? Mochi!" | "Mochi? Mochi ơi!"
+He is not in the kitchen. | Nó không ở trong bếp.
+He is not in the living room. | Nó không ở phòng khách.
+He is not in the bathroom. | Nó không ở phòng tắm.
+
+Mai runs to her mom. | Mai chạy tới chỗ mẹ.
+"Mom! Where's Mochi?" | "Mẹ ơi! Mochi đâu rồi?"
+Mom looks at the window. It is open. | Mẹ nhìn ra cửa sổ. Cửa đang mở.
+"Oh no," says Mom. | "Ôi không," mẹ nói.
+
+~ empty = trống
+~ ear = tai
+? What does Mochi look like? | Mochi trông thế nào? | Small and white, with one black ear* | Big and black, with green ears | Small and gray, with blue eyes
+? What is open? | Cái gì đang mở? | The window* | The door | The fridge
+> Tả một con vật bạn biết: to hay nhỏ, màu gì, mắt màu gì.
+
+## 2 | Asking the Neighbors | Hỏi hàng xóm
+Mai and her dad go outside. | Mai và bố ra ngoài.
+There are many houses on their street. | Trên phố nhà bé có nhiều ngôi nhà.
+They knock on the first door. | Họ gõ cửa nhà đầu tiên.
+
+An old man opens the door. He wears glasses. | Một ông cụ mở cửa. Ông đeo kính.
+"Hello. Sorry to bother you," says Dad. | "Chào bác. Xin lỗi đã làm phiền," bố nói.
+"We can't find our cat. He's small and white." | "Nhà cháu không tìm thấy con mèo. Nó nhỏ và trắng."
+"Sorry, I didn't see a cat," says the man. | "Xin lỗi, bác không thấy con mèo nào," ông nói.
+
+At the next house, a young woman is in the yard. | Ở nhà kế bên, một cô gái đang ở ngoài sân.
+She has long red hair. | Cô có mái tóc dài màu đỏ.
+"A white cat? With one black ear?" | "Mèo trắng à? Có một tai đen?"
+"Yes! That's Mochi!" says Mai. | "Đúng rồi! Là Mochi đó!" Mai nói.
+"I saw him this morning, at the bakery." | "Sáng nay chị thấy nó ở tiệm bánh."
+"Thank you so much!" | "Cảm ơn chị nhiều lắm!"
+
+~ knock = gõ cửa
+~ yard = sân
+~ bakery = tiệm bánh
+? Who wears glasses? | Ai đeo kính? | The old man* | The young woman | Mai's dad
+? Where did the woman see Mochi? | Cô gái thấy Mochi ở đâu? | At the bakery* | In the park | On the bus
+> Bạn mất một món đồ. Hỏi hàng xóm bằng 2 câu lịch sự.
+
+## 3 | At the Bakery | Ở tiệm bánh
+The bakery is on the corner. | Tiệm bánh ở góc phố.
+It smells good. | Thơm quá.
+There are cakes, cookies and bread. | Có bánh ngọt, bánh quy và bánh mì.
+Behind the counter is Rosa. | Sau quầy là bà Rosa.
+
+"Good morning, Rosa. Is there a white cat here?" | "Chào bà Rosa. Ở đây có con mèo trắng nào không ạ?"
+Rosa laughs. "Come and see." | Bà Rosa cười. "Lại đây mà xem."
+Under a table, in a box, there is a small white cat. | Dưới gầm bàn, trong một cái hộp, có một con mèo trắng nhỏ.
+He has one black ear. | Nó có một tai đen.
+He is eating a little fish. | Nó đang ăn một con cá nhỏ.
+
+"Mochi!" Mai picks him up. | "Mochi!" Mai bế nó lên.
+"He comes here every day," says Rosa. | "Ngày nào nó cũng tới đây," bà Rosa nói.
+"Every day?" says Dad. | "Ngày nào cũng tới ạ?" bố nói.
+"Yes. He likes my fish. He's a smart cat." | "Ừ. Nó thích cá của bà. Mèo khôn đấy."
+Dad buys a loaf of bread and some cookies. | Bố mua một ổ bánh mì và ít bánh quy.
+That night, Mai closes the window. | Tối hôm đó, Mai đóng cửa sổ lại.
+
+~ corner = góc phố
+~ counter = quầy
+~ pick up = bế lên, nhặt lên
+? Where is Mochi in the bakery? | Mochi ở đâu trong tiệm bánh? | In a box under a table* | On the counter | Next to the door
+? Why does Mochi come to the bakery? | Vì sao Mochi tới tiệm bánh? | He likes Rosa's fish* | He likes the bread | He sleeps there at night
+> Kể lại chuyện Mochi bằng 4 câu ngắn.
+
+@id a1-market-day
+@shelf easy
+@level A1
+@title Saturday at the Market
+@vi Thứ Bảy ở chợ
+@blurb Tom có sáu người khách tới ăn tối mà nhà gần hết đồ. Một buổi sáng ở chợ: danh sách đi chợ, hỏi giá, mặc cả, đếm tiền. Câu ngắn về số, giá tiền, some / any, How much / How many.
+
+## 1 | The Shopping List | Danh sách đi chợ
+It is Saturday morning. | Đang là sáng thứ Bảy.
+Tom opens the fridge. | Tom mở tủ lạnh.
+There isn't any milk. | Không còn sữa.
+There aren't any eggs. | Không còn quả trứng nào.
+There is only one tomato. | Chỉ còn một quả cà chua.
+
+Tonight, six friends are coming for dinner. | Tối nay sáu người bạn tới ăn tối.
+"I need some food," says Tom. | "Mình cần mua ít đồ ăn," Tom nói.
+He takes a pen and writes a list. | Anh lấy bút ra viết danh sách.
+A dozen eggs. A bottle of milk. | Một tá trứng. Một chai sữa.
+A kilo of beef. Some tomatoes. | Một ký thịt bò. Ít cà chua.
+Some rice and some fruit. | Ít gạo và ít trái cây.
+
+He looks in his wallet. He has fifty dollars. | Anh nhìn vào ví. Anh có năm mươi đô.
+"Is that enough?" he thinks. | "Có đủ không nhỉ?" anh nghĩ.
+He takes a big bag and walks to the market. | Anh cầm một cái túi to và đi bộ ra chợ.
+
+~ fridge = tủ lạnh
+~ wallet = ví
+~ enough = đủ
+? How many friends are coming for dinner? | Bao nhiêu người bạn tới ăn tối? | Six* | Five | Eight
+? How much money does Tom have? | Tom có bao nhiêu tiền? | Fifty dollars* | Fifteen dollars | Five dollars
+> Viết danh sách đi chợ của bạn cho tuần này, 4 món, có số lượng.
+
+## 2 | How Much? | Bao nhiêu tiền?
+The market is busy on Saturdays. | Chợ đông vào thứ Bảy.
+There are fresh vegetables and fruit everywhere. | Rau và trái cây tươi ở khắp nơi.
+
+"Good morning! How much are the eggs?" | "Chào buổi sáng! Trứng bao nhiêu tiền ạ?"
+"Four dollars a dozen," says the farmer. | "Bốn đô một tá," bác nông dân nói.
+"OK, one dozen, please." | "Vâng, cho cháu một tá."
+
+At the meat stall, the beef is twelve dollars a kilo. | Ở sạp thịt, thịt bò mười hai đô một ký.
+"That's a little expensive," says Tom. | "Hơi đắt ạ," Tom nói.
+"It's very fresh. OK, eleven dollars." | "Thịt tươi lắm. Thôi, mười một đô."
+"Great. I'll take one kilo." | "Tuyệt. Cháu lấy một ký."
+
+Tom buys milk, rice and tomatoes. | Tom mua sữa, gạo và cà chua.
+Then he sees some beautiful mangoes. | Rồi anh thấy mấy quả xoài rất đẹp.
+"How many do you want?" asks the woman. | "Anh lấy mấy quả?" người phụ nữ hỏi.
+"Six, please. One for each friend." | "Sáu quả ạ. Mỗi người bạn một quả."
+"That's six dollars." | "Sáu đô."
+
+~ stall = sạp hàng
+~ farmer = nông dân
+~ each = mỗi
+? How much is the beef after the farmer's new price? | Thịt bò giá bao nhiêu sau khi người bán bớt? | Eleven dollars a kilo* | Twelve dollars a kilo | Four dollars a kilo
+? How many mangoes does Tom buy? | Tom mua mấy quả xoài? | Six* | One | Twelve
+> Bạn ở chợ. Hỏi giá 2 món và mua 1 món.
+
+## 3 | Dinner for Six | Bữa tối cho sáu người
+Tom counts his money. | Tom đếm tiền.
+He has three dollars left. | Anh còn lại ba đô.
+"Not bad," he says with a smile. | "Không tệ," anh mỉm cười nói.
+
+At home, he cooks for three hours. | Về nhà, anh nấu ăn ba tiếng.
+Beef with tomatoes. Rice. A big salad. | Bò xào cà chua. Cơm. Một đĩa salad lớn.
+The kitchen smells good. | Căn bếp thơm phức.
+
+At seven o'clock, his friends arrive. | Lúc bảy giờ, bạn bè anh tới.
+"Come in! Help yourself!" | "Vào đi! Cứ tự nhiên nhé!"
+Everyone eats and talks and laughs. | Mọi người ăn, nói chuyện và cười.
+"This is delicious, Tom!" | "Ngon quá, Tom ơi!"
+"Is there any more rice?" | "Còn cơm không?"
+"Sorry, there isn't any more!" | "Xin lỗi, hết sạch rồi!"
+
+After dinner, Tom gives everyone a mango. | Sau bữa tối, Tom đưa mỗi người một quả xoài.
+"One for each friend," he says. | "Mỗi người bạn một quả," anh nói.
+But there are seven people at the table. | Nhưng quanh bàn có bảy người.
+Tom has no mango. He laughs. "Next time!" | Tom không có xoài. Anh cười. "Lần sau vậy!"
+
+~ count = đếm
+~ arrive = tới nơi
+~ left = còn lại
+? How much money does Tom have after the market? | Sau khi đi chợ Tom còn bao nhiêu tiền? | Three dollars* | Thirteen dollars | No money
+? Why doesn't Tom have a mango? | Vì sao Tom không có xoài? | He bought six, but there are seven people* | He doesn't like mangoes | His friends took two each
+> Kể bữa tối gần nhất của bạn: ăn gì, với ai, mấy giờ.
+
+@id a1-late-bus
+@shelf easy
+@level A1
+@title The Late Bus
+@vi Chuyến xe trễ
+@blurb Ngày nào Minh cũng đi chuyến xe buýt 7 giờ 15. Một sáng thứ Hai mọi thứ đều trễ, và nhờ vậy anh gặp một người bạn mới. Câu ngắn về thói quen hằng ngày, giờ giấc, at / on / in.
+
+## 1 | Every Morning | Mỗi buổi sáng
+Minh works in an office downtown. | Minh làm văn phòng ở trung tâm.
+He has the same morning every day. | Sáng nào của anh cũng giống nhau.
+He gets up at six thirty. | Anh dậy lúc sáu rưỡi.
+He takes a shower and gets dressed. | Anh tắm rồi mặc quần áo.
+He has bread and coffee for breakfast. | Bữa sáng anh ăn bánh mì và uống cà phê.
+
+At seven o'clock, he leaves home. | Lúc bảy giờ, anh ra khỏi nhà.
+He walks to the bus stop. | Anh đi bộ ra trạm xe buýt.
+The bus comes at seven fifteen. | Xe buýt tới lúc bảy giờ mười lăm.
+It is always on time. | Xe luôn đúng giờ.
+
+On the bus, Minh never talks. | Trên xe, Minh không bao giờ nói chuyện.
+He listens to music. | Anh nghe nhạc.
+He looks out the window. | Anh nhìn ra cửa sổ.
+He gets to work at eight. | Anh tới chỗ làm lúc tám giờ.
+Every day is the same. And that is fine. | Ngày nào cũng giống nhau. Vậy cũng ổn.
+
+~ downtown = trung tâm thành phố
+~ on time = đúng giờ
+~ the same = giống nhau
+? What time does the bus come? | Xe buýt tới lúc mấy giờ? | At seven fifteen* | At seven o'clock | At eight
+? What does Minh do on the bus? | Minh làm gì trên xe buýt? | He listens to music* | He talks to people | He reads a book
+> Kể buổi sáng của bạn bằng 4 câu: mấy giờ dậy, ăn gì, đi bằng gì.
+
+## 2 | A Bad Monday | Một ngày thứ Hai tệ hại
+On Monday, Minh's alarm doesn't ring. | Thứ Hai, chuông báo thức của Minh không kêu.
+He wakes up at seven ten! | Anh thức dậy lúc bảy giờ mười!
+"Oh no! I'm late!" | "Ôi không! Trễ rồi!"
+No shower. No breakfast. No coffee. | Không tắm. Không ăn sáng. Không cà phê.
+He runs to the bus stop. | Anh chạy ra trạm xe buýt.
+
+It is seven twenty. The bus is gone. | Đã bảy giờ hai mươi. Xe đi mất rồi.
+It is raining, and he has no umbrella. | Trời đang mưa, mà anh không có ô.
+"What a bad day," he says. | "Ngày gì mà tệ thế," anh nói.
+
+A young woman is at the bus stop too. | Một cô gái cũng đang ở trạm xe.
+She has a big umbrella. | Cô có một cái ô to.
+"Are you waiting for the seven fifteen?" she asks. | "Anh cũng đợi chuyến bảy giờ mười lăm à?" cô hỏi.
+"Yes. I missed it," says Minh. | "Ừ. Tôi lỡ mất rồi," Minh nói.
+"Me too. The next bus is at seven forty." | "Tôi cũng vậy. Chuyến sau lúc bảy giờ bốn mươi."
+"Here, share my umbrella." | "Này, che chung ô với tôi đi."
+
+~ alarm = chuông báo thức
+~ miss = lỡ (xe)
+~ share = dùng chung
+? What time does Minh wake up on Monday? | Thứ Hai Minh thức dậy lúc mấy giờ? | At seven ten* | At six thirty | At seven forty
+? What does the woman have? | Cô gái có gì? | A big umbrella* | A cup of coffee | A car
+> Kể một buổi sáng bạn bị trễ: chuyện gì xảy ra?
+
+## 3 | A New Friend | Một người bạn mới
+They wait together under the umbrella. | Hai người đứng đợi chung dưới cái ô.
+"I'm Minh, by the way." | "À mà, tôi là Minh."
+"I'm Anna. Nice to meet you." | "Tôi là Anna. Rất vui được gặp anh."
+"What do you do, Anna?" | "Anna làm nghề gì?"
+"I'm a nurse. I work at Brightford Hospital." | "Tôi là y tá. Tôi làm ở Bệnh viện Brightford."
+
+The seven forty bus comes. | Chuyến bảy giờ bốn mươi tới.
+They sit together and talk. | Họ ngồi cạnh nhau và nói chuyện.
+Anna likes cooking. Minh likes music. | Anna thích nấu ăn. Minh thích âm nhạc.
+They both love pho. | Cả hai đều mê phở.
+"There's a great pho place near my office," says Minh. | "Gần văn phòng tôi có quán phở ngon lắm," Minh nói.
+"Really? Let's go on Friday!" | "Thật à? Thứ Sáu đi ăn đi!"
+
+Minh gets to work at eight thirty. | Minh tới chỗ làm lúc tám rưỡi.
+He is late. He is wet. He has no coffee. | Anh trễ. Anh ướt. Anh chưa có cà phê.
+But he is smiling. | Nhưng anh đang cười.
+Maybe Mondays aren't so bad. | Có lẽ thứ Hai cũng không tệ lắm.
+
+~ by the way = à mà, nhân tiện
+~ wet = ướt
+~ both = cả hai
+? What is Ivy's job? | Ivy làm nghề gì? | She's a nurse* | She's a teacher | She's a cook
+? When do they want to eat pho? | Khi nào họ muốn đi ăn phở? | On Friday* | On Monday | Tonight
+> Hẹn một người bạn đi ăn: nói ngày, giờ và chỗ.
+
+@id a1-rainy-weekend
+@shelf easy
+@level A1
+@title A Rainy Weekend
+@vi Cuối tuần mưa
+@blurb Cả nhà Lily định đi biển, nhưng trời mưa suốt cuối tuần. Thay vào đó, họ tới nhà bà và học làm chả giò. Câu ngắn về thời tiết, gia đình, sở thích ăn uống, like + V-ing.
+
+## 1 | No Beach Today | Hôm nay không đi biển
+It is summer in Brightford. | Đang là mùa hè ở Brightford.
+Lily's family has a plan for the weekend. | Nhà Lily có kế hoạch cho cuối tuần.
+"We're going to the beach on Saturday!" says Dad. | "Thứ Bảy cả nhà đi biển!" bố nói.
+Lily is ten. She loves swimming. | Lily mười tuổi. Bé mê bơi.
+Her little brother, Ben, loves sand. | Em trai bé, Ben, mê cát.
+
+On Saturday morning, Lily opens the curtains. | Sáng thứ Bảy, Lily kéo rèm ra.
+The sky is gray. | Trời xám xịt.
+It's raining. It's windy. It's cold. | Trời mưa. Trời có gió. Trời lạnh.
+"Oh no," says Lily. | "Ôi không," Lily nói.
+
+Mom checks the weather on her phone. | Mẹ xem thời tiết trên điện thoại.
+"Rain all day today. Rain tomorrow too." | "Hôm nay mưa cả ngày. Mai cũng mưa."
+Ben starts to cry. | Ben bắt đầu khóc.
+Dad thinks for a moment. | Bố suy nghĩ một lúc.
+"How about Grandma's house?" | "Hay mình tới nhà bà?"
+
+~ curtains = rèm cửa
+~ sand = cát
+~ for a moment = một lúc
+? What does Lily love? | Lily mê gì? | Swimming* | Sand | Rain
+? What is the weather like on Saturday? | Thời tiết thứ Bảy thế nào? | Rainy, windy and cold* | Sunny and hot | Cloudy but warm
+> Nói thời tiết hôm nay ở chỗ bạn bằng 2 câu.
+
+## 2 | Grandma's Kitchen | Căn bếp của bà
+Grandma lives in a small house with a big kitchen. | Bà sống trong một ngôi nhà nhỏ có căn bếp lớn.
+She is seventy-five, and she is very funny. | Bà bảy mươi lăm tuổi, và rất vui tính.
+"Come in, come in! You're all wet!" | "Vào đi, vào đi! Ướt hết cả rồi!"
+
+"What are we doing today, Grandma?" asks Lily. | "Hôm nay mình làm gì hả bà?" Lily hỏi.
+"We're cooking. Do you like spring rolls?" | "Mình nấu ăn. Cháu thích chả giò không?"
+"I love spring rolls!" says Ben. | "Cháu mê chả giò!" Ben nói.
+
+Grandma puts everything on the table. | Bà bày mọi thứ ra bàn.
+There is rice paper, pork, carrots and noodles. | Có bánh tráng, thịt heo, cà rốt và miến.
+"First, you put some meat here. Then you roll." | "Đầu tiên đặt ít thịt vào đây. Rồi cuốn lại."
+Lily's rolls are small and neat. | Cuốn của Lily nhỏ và gọn.
+Ben's rolls are big and ugly. | Cuốn của Ben to và xấu.
+Everyone laughs. | Cả nhà cười.
+"It's OK," says Grandma. "Ugly rolls taste good too." | "Không sao," bà nói. "Cuốn xấu cũng ngon mà."
+
+~ spring rolls = chả giò
+~ roll = cuốn
+~ neat = gọn gàng
+~ ugly = xấu
+? How old is Grandma? | Bà bao nhiêu tuổi? | Seventy-five* | Fifty-seven | Sixty-five
+? Whose rolls are big and ugly? | Cuốn của ai to và xấu? | Ben's* | Lily's | Grandma's
+> Nói món bạn thích nhất và món bạn không thích.
+
+## 3 | The Sun Comes Back | Mặt trời trở lại
+They fry the spring rolls. | Họ chiên chả giò.
+The kitchen smells wonderful. | Căn bếp thơm nức.
+Mom makes a fish sauce dip. | Mẹ pha nước chấm.
+Dad sets the table. | Bố dọn bàn.
+
+"Mmm, this is delicious!" says Dad. | "Ừm, ngon quá!" bố nói.
+"Ben, your big ones are the best," says Mom. | "Ben, mấy cuốn to của con ngon nhất đấy," mẹ nói.
+Ben is very proud. | Ben rất tự hào.
+
+On Sunday afternoon, the rain stops. | Chiều Chủ nhật, mưa tạnh.
+The sun comes out. | Mặt trời ló ra.
+"Can we go to the beach now?" asks Lily. | "Giờ mình đi biển được không ạ?" Lily hỏi.
+Dad looks at the time. It's four o'clock. | Bố nhìn đồng hồ. Đã bốn giờ.
+"Next weekend. I promise." | "Cuối tuần sau. Bố hứa."
+
+Lily is a little sad, but not very sad. | Lily hơi buồn, nhưng không buồn lắm.
+Now she can make spring rolls. | Giờ bé biết làm chả giò rồi.
+"Can we come back next Saturday, Grandma?" | "Thứ Bảy sau tụi cháu tới nữa được không bà?"
+"Rain or sun, you're always welcome." | "Mưa hay nắng, lúc nào bà cũng chào đón."
+
+~ fry = chiên
+~ proud = tự hào
+~ promise = hứa
+? When does the rain stop? | Khi nào mưa tạnh? | On Sunday afternoon* | On Saturday morning | On Monday
+? What can Lily make now? | Giờ Lily làm được món gì? | Spring rolls* | Fish sauce | Pho
+> Kể cuối tuần vừa rồi của bạn bằng 3 câu.
+
+@id a1-cafe-job
+@shelf easy
+@level A1
+@title Nam's New Job
+@vi Công việc mới của Nam
+@blurb Nam có việc làm thêm đầu tiên ở quán cà phê của Leo. Gọi món, ghi nhầm, xin lỗi và sửa sai. Câu ngắn về gọi món ở quán, I'd like / Can I have, nói lịch sự khi mắc lỗi.
+
+## 1 | Help Wanted | Cần người làm
+Nam is nineteen. He is a student. | Nam mười chín tuổi. Cậu là sinh viên.
+He needs some money for his books. | Cậu cần ít tiền mua sách.
+One day, he sees a sign on a cafe window. | Một hôm, cậu thấy tấm biển trên cửa kính một quán cà phê.
+HELP WANTED. WEEKENDS. | CẦN NGƯỜI LÀM. CUỐI TUẦN.
+
+Nam goes in. The cafe is small and warm. | Nam bước vào. Quán nhỏ và ấm áp.
+A tall man is behind the counter. | Một người đàn ông cao đứng sau quầy.
+"Hi. I'm Leo. Can I help you?" | "Chào. Tôi là Leo. Tôi giúp gì được cậu?"
+"Hi. I'd like the job, please." | "Chào anh. Em muốn xin việc ạ."
+Leo smiles. "Do you like coffee?" | Leo cười. "Cậu thích cà phê không?"
+"I love coffee." | "Em mê cà phê."
+"Can you work on Saturdays and Sundays?" | "Cậu làm được thứ Bảy và Chủ nhật không?"
+"Yes, I can." | "Dạ được ạ."
+"Great. You start this Saturday at eight." | "Tuyệt. Thứ Bảy này cậu bắt đầu, lúc tám giờ."
+
+~ sign = tấm biển
+~ help wanted = cần người làm
+? Why does Nam need money? | Vì sao Nam cần tiền? | For his books* | For a new phone | For a trip
+? When does Nam start? | Khi nào Nam bắt đầu làm? | This Saturday at eight* | This Sunday at nine | On Monday
+> Bạn đi xin việc ở quán cà phê. Nói 3 câu với chủ quán.
+
+## 2 | The First Order | Đơn đầu tiên
+On Saturday, the cafe is very busy. | Thứ Bảy, quán rất đông.
+Leo makes the coffee. Nam takes the orders. | Leo pha cà phê. Nam nhận đơn.
+
+A woman comes to the counter. | Một người phụ nữ tới quầy.
+"Hi. I'd like an iced latte, please." | "Chào em. Cho chị một ly latte đá."
+"Sure. For here or to go?" | "Dạ. Uống tại đây hay mang đi ạ?"
+"To go, please. And can I have a muffin?" | "Mang đi em nhé. Cho chị thêm một cái bánh muffin."
+"That's seven dollars." | "Của chị bảy đô."
+
+Then a man with two kids comes in. | Rồi một người đàn ông dẫn hai đứa nhỏ bước vào.
+"Two hot chocolates and a black coffee, please." | "Cho hai ca cao nóng và một cà phê đen."
+"Any sugar?" | "Có lấy đường không ạ?"
+"No sugar, thanks." | "Không đường, cảm ơn."
+
+Nam writes everything on small papers. | Nam ghi mọi thứ lên mấy mảnh giấy nhỏ.
+There are many papers now. | Giờ có rất nhiều mảnh giấy.
+Some are on the counter. Some are on the floor. | Vài tờ trên quầy. Vài tờ dưới sàn.
+Nam is getting nervous. | Nam bắt đầu luống cuống.
+
+~ order = đơn gọi món
+~ hot chocolate = ca cao nóng
+~ floor = sàn nhà
+? What does the woman order? | Người phụ nữ gọi gì? | An iced latte and a muffin* | A black coffee and a cake | Two hot chocolates
+? Does the man want sugar? | Người đàn ông có lấy đường không? | No* | Yes, one | Yes, two
+> Gọi món của bạn ở quán cà phê bằng câu I'd like… hoặc Can I have…?
+
+## 3 | A Big Mistake | Một lỗi to
+Leo calls the names. | Leo gọi tên khách.
+"Two hot chocolates and a black coffee!" | "Hai ca cao nóng và một cà phê đen!"
+The man looks at the cups. | Người đàn ông nhìn mấy cái ly.
+"Sorry, these are iced. We wanted hot." | "Xin lỗi, mấy ly này là đá. Chúng tôi muốn nóng."
+
+Nam looks at his paper. He wrote "iced." | Nam nhìn tờ giấy. Cậu đã ghi "đá".
+His face is red. | Mặt cậu đỏ bừng.
+"I'm so sorry. That's my mistake." | "Em thật sự xin lỗi. Là lỗi của em."
+"That's OK," says the man. "Don't worry." | "Không sao," người đàn ông nói. "Đừng lo."
+Leo makes three new drinks, fast. | Leo pha ba ly mới, rất nhanh.
+"Here you go. And two free cookies for the kids." | "Của anh đây. Tặng thêm hai bánh quy cho các bé."
+The kids are very happy. | Hai đứa nhỏ vui lắm.
+
+After work, Nam says, "Leo, I'm sorry about today." | Sau giờ làm, Nam nói: "Anh Leo, em xin lỗi chuyện hôm nay."
+"Everyone makes mistakes on the first day," says Leo. | "Ngày đầu ai cũng có lỗi cả," Leo nói.
+He gives Nam a small notebook. | Anh đưa Nam một cuốn sổ nhỏ.
+"Next time, use this. No more small papers." | "Lần sau dùng cái này nhé. Đừng ghi giấy lẻ nữa."
+Nam laughs. "See you tomorrow, boss!" | Nam cười. "Mai gặp lại sếp!"
+
+~ mistake = lỗi
+~ free = miễn phí
+~ notebook = cuốn sổ
+? What was Nam's mistake? | Nam đã ghi nhầm gì? | He wrote iced, not hot* | He forgot the coffee | He gave the wrong change
+? What does Leo give Nam? | Leo đưa Nam cái gì? | A small notebook* | A free coffee | A new job
+> Bạn làm sai một việc nhỏ. Xin lỗi và nói bạn sẽ sửa thế nào, 2 câu.

@@ -261,3 +261,55 @@ var G = window.G || (window.G = {});
     G.save();
   };
 })();
+
+/* ---------- Nhại có ghi âm (shadowing): nghe mẫu → ghi giọng mình → nghe lại mẫu rồi giọng mình để so ----------
+   MediaRecorder (Safari iOS 14.3+, Chrome). Máy không hỗ trợ thì không hiện nút. Bản ghi chỉ nằm trong máy, không gửi đi đâu. */
+(function () {
+  G.canRecord = function () { return !!(window.MediaRecorder && navigator.mediaDevices && navigator.mediaDevices.getUserMedia); };
+  var live = null;   // chỉ một bản ghi chạy cùng lúc
+  G.shadowBtn = function (text, lang) {
+    if (!G.canRecord() || !text) return null;
+    lang = lang || 'en';
+    var url = null, rec = null, stream = null, chunks = [], tm = 0;
+    var recB = G.el('button.btn.sm.shd-b'), mineB = G.el('button.btn.sm.shd-b'), cmpB = G.el('button.btn.sm.shd-b');
+    function label(b, ic, t) { b.innerHTML = ''; b.appendChild(G.ic3(ic, 'ic3-s')); b.appendChild(document.createTextNode(' ' + t)); }
+    function draw() {
+      label(recB, rec ? 'pause' : 'record', rec ? 'Dừng ghi' : url ? 'Ghi lại' : 'Ghi âm giọng mình');
+      recB.className = 'btn sm shd-b' + (rec ? ' on' : '');
+      mineB.style.display = cmpB.style.display = url ? '' : 'none';
+    }
+    label(mineB, 'speaker', 'Nghe mình'); label(cmpB, 'repeat', 'Mẫu rồi mình');
+    function stopTracks() { if (stream) { stream.getTracks().forEach(function (t) { t.stop(); }); stream = null; } }
+    function stop() { clearTimeout(tm); try { if (rec && rec.state !== 'inactive') rec.stop(); } catch (e) { /* bỏ qua */ } }
+    function playMine() { if (!url) return; var a = new Audio(url); var p = a.play(); if (p && p.catch) p.catch(function () { /* bỏ qua */ }); }
+    recB.onclick = function (e) {
+      e.stopPropagation();
+      if (rec) { stop(); return; }
+      if (live) live();
+      if (G.hush) G.hush();
+      navigator.mediaDevices.getUserMedia({ audio: true }).then(function (s) {
+        stream = s; chunks = [];
+        var types = ['audio/mp4', 'audio/webm;codecs=opus', 'audio/webm'], type = null;
+        for (var i = 0; i < types.length && !type; i++) if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported(types[i])) type = types[i];
+        try { rec = type ? new MediaRecorder(s, { mimeType: type }) : new MediaRecorder(s); } catch (er) { rec = new MediaRecorder(s); }
+        var r0 = rec;
+        rec.ondataavailable = function (ev) { if (ev.data && ev.data.size) chunks.push(ev.data); };
+        rec.onstop = function () {
+          stopTracks();
+          if (url) URL.revokeObjectURL(url);
+          url = chunks.length ? URL.createObjectURL(new Blob(chunks, { type: r0.mimeType || type || 'audio/mp4' })) : null;
+          rec = null; live = null; draw();
+          if (G.audioReset) G.audioReset();   // iPad: sau micro âm thanh nhỏ lại, tạo lại trình phát
+          if (url) setTimeout(playMine, 150);
+        };
+        rec.start(); live = stop;
+        tm = setTimeout(stop, Math.min(12000, 2500 + text.length * 110));   // tự dừng theo độ dài câu
+        draw();
+      }).catch(function () { G.toast('Chưa mở được micro. Cho phép micro cho app trong Cài đặt của máy nhé.'); });
+    };
+    mineB.onclick = function (e) { e.stopPropagation(); playMine(); };
+    cmpB.onclick = function (e) { e.stopPropagation(); G.sayList([text], lang, false, null, function () { setTimeout(playMine, 250); }); };
+    draw();
+    return G.el('div.shd', G.el('div.small.faint.shd-k', 'Nhại: nghe mẫu, ghi giọng mình, nghe lại để so'), G.el('div.shd-row', recB, mineB, cmpB));
+  };
+})();

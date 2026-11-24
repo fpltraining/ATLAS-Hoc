@@ -188,7 +188,8 @@ var G = window.G || (window.G = {});
         G.el('div.wbig', r[0], G.sayBtns(r[0], 'en')),
         G.el('div.wipa', (r[1] ? r[1] + ' · ' : '') + (POS[r[2]] || r[2])),
         G.el('div.wvi', r[3]),
-        r[4] ? G.el('div.wex', G.el('div', r[4], G.sayBtns(r[4], 'en')), G.el('div.faint', r[5])) : null);
+        r[4] ? G.el('div.wex', G.el('div', r[4], G.sayBtns(r[4], 'en')), G.el('div.faint', r[5])) : null,
+        G.shadowBtn ? G.shadowBtn(r[4] || r[0]) : null);
       body.appendChild(cardEl);
       body.appendChild(G.el('div.small.faint.tp-hint', 'Nghe rồi nói to theo cả từ và câu ví dụ, như đang nói với người thật.'));
       G.say(r[0], 'en');
@@ -202,11 +203,11 @@ var G = window.G || (window.G = {});
 
   /* ---------- nghe chọn nghĩa: chỉ nghe, không nhìn chữ, chọn 1 trong 4 nghĩa ---------- */
   function quiz(id, rows, fromRound) {
-    var t = byId(id), k = 0, got = 0, miss = [];
+    var t = byId(id), k = 0, got = 0, miss = [], spoke = false, sum = 0, sn = 0;
     var pool = DATA[id];
     (function q() {
       var body = panelOpen(t.name + ' · nghe ' + Math.min(k + 1, rows.length) + '/' + rows.length);
-      if (k >= rows.length) { done(body); return; }
+      if (k >= rows.length) { if (fromRound && !spoke) { spoke = true; speakStep(); return; } done(body); return; }
       var r = rows[k], opts = [r[3]], tries = 0;
       while (opts.length < 4 && tries++ < 60) { var o = pool[Math.floor(Math.random() * pool.length)][3]; if (opts.indexOf(o) < 0) opts.push(o); }
       opts = G.shuffle(opts);
@@ -233,15 +234,29 @@ var G = window.G || (window.G = {});
       body.appendChild(box);
       G.enter(box.children, { gap: 45, y: 8, dur: 340 });
     })();
+    /* nói ra: 3 câu ví dụ có từ vừa học (ưu tiên từ nghe sai), micro chấm điểm, không micro thì nghe rồi nhắc lại */
+    function speakStep() {
+      var ex = miss.concat(rows).filter(function (r, i, a) { return r[4] && a.indexOf(r) === i; }).slice(0, 3), j = 0;
+      if (!ex.length) { done(panelOpen(t.name)); return; }
+      (function one() {
+        var body = panelOpen(t.name + ' · nói câu ví dụ ' + Math.min(j + 1, ex.length) + '/' + ex.length);
+        if (j >= ex.length) { done(body); return; }
+        body.appendChild(G.el('div.tp-prog', bar(j / ex.length)));
+        body.appendChild(G.el('div.small.faint.tp-hint', 'Dùng từ "' + ex[j][0] + '" trong câu thật: nghe mẫu rồi nói to cả câu.'));
+        body.appendChild(G.speakCard({ text: ex[j][4], vi: ex[j][5], lang: 'en', onDone: function (sc) {
+          if (sc !== null) { sum += sc; sn++; if (G.logSpeak) G.logSpeak(sc); }
+          j++; one();
+        } }));
+      })();
+    }
     function done(body) {
       G.markStudy(); G.addXp(5 + got); G.sfx('done');
       if (fromRound && G.markTask) G.markTask('tu');
-      if (got === rows.length && G.confetti) G.confetti();
       var s = G.topicStat(id), left = s.all - s.learned, n = G.el('b', '0');
       body.appendChild(G.el('div.result.pass.tp-res',
         got >= rows.length - 1 && G.lottieIc ? G.lottieIc('party', 'tp-party') : null,
         G.el('div.tp-num', n, G.el('span', '/' + rows.length + ' nghe đúng')),
-        G.el('div', (fromRound ? 'Học xong ' + rows.length + ' từ mới · ' : '') + '+' + (5 + got) + ' XP · chủ đề ' + s.learned + '/' + s.all + ' từ'),
+        G.el('div', (fromRound ? 'Học xong ' + rows.length + ' từ mới · ' : '') + '+' + (5 + got) + ' XP · chủ đề ' + s.learned + '/' + s.all + ' từ' + (sn ? ' · nói trung bình ' + Math.round(sum / sn) + '/100' : '')),
         G.el('div.small.faint', miss.length ? 'Từ nghe sai sẽ quay lại hôm nay trong Ôn câu đã học: ' + miss.map(function (r) { return r[0]; }).join(', ') + '.' : 'Từ mới sẽ quay lại ôn từ ngày mai, đúng lúc sắp quên.')));
       G.countUp(n, 0, got, { dur: 600 });
       body.appendChild(G.el('div.row',

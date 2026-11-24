@@ -116,7 +116,7 @@ G.curSession = function (groupId) {
 /* buổi thứ k trong phòng nhóm đã mở chưa: buổi đầu luôn mở, buổi sau cần qua buổi trước (đầu vào từ Pre-A1 được học vượt) */
 G.sessionOpen = function (groupId, k) {
   var g = G.ROOMS[groupId];
-  var skip = groupId.indexOf('en-b1') === 0 ? 5 : groupId.indexOf('en-a2') === 0 ? 4 : 1;
+  var skip = groupId.indexOf('en-b1') === 0 ? 5 : groupId.indexOf('en-a2') === 0 ? 4 : groupId.indexOf('en-a1') === 0 ? 3 : 1;
   if (k === 0 || (G.S.dauVao && G.S.dauVao.lv >= skip)) return true;
   return G.roomPassed(g.group[k - 1]);
 };
@@ -320,6 +320,7 @@ G.SCENES.classroom_zh = {
 /* Đã qua phòng chưa: đạt từ 80% số câu (phòng thường 8/10, phòng thi 16/20) */
 G.roomPassed = function (id) {
   var p = G.S.phong[id], r = G.ROOMS[id];
+  if (r && r.group && p && p.diem >= 8) return true;   // đã qua phòng này khi nó còn là phòng đơn (A1 trước 24/11/2026): giữ nguyên
   if (r && r.group) { for (var i = 0; i < r.group.length; i++) if (!G.roomPassed(r.group[i])) return false; return true; }   // phòng nhóm: qua hết các buổi
   if (r && r.final && G.CERT_SPEAK && G.CERT_SPEAK[id] && G.S.totNghiep) { var tn = G.S.totNghiep[r.final.lang]; return !!(tn && tn[r.final.level]); }   // phòng thi chứng chỉ: phải đạt cả phần nói
   return !!(p && p.diem >= ((r && r.passN) || 8));

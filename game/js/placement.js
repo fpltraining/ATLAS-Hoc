@@ -15,6 +15,9 @@ var G = window.G || (window.G = {});
 (function () {
   var P, PARTS, root, box, done, opts, res, pi, nAsk, nRight, seen = {}, asked = [], lastPl = '', pronRes = null;
 
+  /* icon 3D cho từng phần (thay emoji đầu dòng) */
+  var PIC = { tv: 'books', nghe: 'headphone', doc: 'book', gt: 'talk', noi: 'mic' };
+  function pic(p) { return G.ic3 ? G.ic3(PIC[p.id] || 'star', 'ic3-s') : null; }
   G.levelName = function (lv) { var p = G.PLACE_EN; return p.levels[lv] + ' · ' + p.names[lv]; };
 
   G.openPlacement = function (cb, o) {
@@ -55,7 +58,7 @@ var G = window.G || (window.G = {});
     sc.appendChild(G.el('div.pl-scene-say', G.el('b', 'Kai'), G.el('span', 'Chào mừng tới Brightford! Đi một vòng với mình nhé. Xong vòng này, mình biết bạn đã tự lo được ở đâu trong thành phố.')));
     box.appendChild(sc);
     box.appendChild(G.el('div.pl-parts', PARTS.map(function (p) {
-      return G.el('div.pl-part', G.el('b', p.icon + ' ' + p.name), G.el('span.small.faint', p.what));
+      return G.el('div.pl-part', G.el('b', pic(p), p.name), G.el('span.small.faint', p.what));
     })));
     if (!opts.quick) box.appendChild(G.el('div.pl-note',
       G.el('div', '⏱ Bài tự điều chỉnh theo bạn: người mới khoảng 4 phút, người đã học khoảng 12–15 phút.'),
@@ -66,7 +69,7 @@ var G = window.G || (window.G = {});
     box.appendChild(G.el('button.btn.seal.big1.pl-go', { onclick: start }, 'Bắt đầu kiểm tra ›'));
     // đã học ở máy khác: đăng nhập lấy tiến độ; tiến độ trên mây có sẵn kết quả kiểm tra thì tải lại app là khỏi làm lại
     if ((opts.first || opts.mandatory) && G.cloudReady && G.cloudReady() && !G.cloudUser())
-      box.appendChild(G.el('button.btn.ghost.pl-cloud', { onclick: function () { G.openCloudLogin(function (what) { if (what === 'pulled') setTimeout(function () { location.reload(); }, 900); }); } }, '☁️ Đã có tài khoản / học trên máy khác? Đăng nhập'));
+      box.appendChild(G.el('button.btn.ghost.pl-cloud', { onclick: function () { G.openCloudLogin(function (what) { if (what === 'pulled') setTimeout(function () { location.reload(); }, 900); }); } }, G.ic3 ? G.ic3('cloud', 'ic3-s') : null, 'Đã có tài khoản / học trên máy khác? Đăng nhập'));
     if (opts.canSkip) box.appendChild(G.el('button.btn.ghost.pl-later', { onclick: close }, 'Để sau'));
   }
   function start() {
@@ -88,7 +91,7 @@ var G = window.G || (window.G = {});
     if (pi >= PARTS.length) { pronStep(); return; }
     var p = PARTS[pi];
     screen();
-    head(opts.quick ? 'Kiểm tra nhanh · 3 phút' : 'Phần ' + (pi + 1) + '/' + PARTS.length, p.icon + ' ' + p.name, p.what);
+    head(opts.quick ? 'Kiểm tra nhanh · 3 phút' : 'Phần ' + (pi + 1) + '/' + PARTS.length, p.name, p.what);
     if (p.id === 'noi' && !G.canListen) {
       box.appendChild(G.el('p', 'Máy này chưa hỗ trợ micro chấm điểm, nên bỏ qua phần Nói. Kết quả tính theo 3 phần còn lại.'));
       box.appendChild(G.el('button.btn.seal.big1', { onclick: function () { pi++; part(); } }, 'Xem kết quả ›'));
@@ -180,7 +183,7 @@ var G = window.G || (window.G = {});
   function vocabTop(sub) {
     box.className = 'pl-wrap pl-qs pl-tvw';
     var dots = G.el('div.pl-prog', PARTS.map(function (q, i) { return G.el('i' + (i < pi ? '.done' : i === pi ? '.on' : '')); }));
-    box.appendChild(G.el('div.pl-top', G.el('span.small.faint', PARTS[pi].icon + ' ' + PARTS[pi].name + ' · ' + sub), dots));
+    box.appendChild(G.el('div.pl-top', G.el('span.small.faint', pic(PARTS[pi]), PARTS[pi].name + ' · ' + sub), dots));
   }
   function grid(lv, real, fake, cb) {
     screen(); vocabTop('màn ' + lv + '/5');
@@ -242,7 +245,7 @@ var G = window.G || (window.G = {});
     asked.push(keyOf(p.id, it)); G._plCur = it;   // G._plCur: để kiểm tra tự động
     box.className = 'pl-wrap pl-qs';   // màn câu hỏi: điện thoại nằm ngang xếp cảnh bên trái, câu hỏi bên phải
     var dots = G.el('div.pl-prog', PARTS.map(function (q, i) { return G.el('i' + (i < pi ? '.done' : i === pi ? '.on' : '')); }));
-    box.appendChild(G.el('div.pl-top', G.el('span.small.faint', p.icon + ' ' + p.name + ' · câu ' + (nAsk + 1)), dots));
+    box.appendChild(G.el('div.pl-top', G.el('span.small.faint', pic(p), p.name + ' · câu ' + (nAsk + 1)), dots));
     var kl = kaiLine(it); if (kl) box.appendChild(kl);
     box.appendChild(scene(p, it));
     if (p.id === 'noi') { askSpeak(it, cb); return; }
@@ -534,7 +537,7 @@ var G = window.G || (window.G = {});
     box.appendChild(G.el('div.pl-lv', G.el('b', P.levels[lv]), G.el('span', P.names[lv])));
     box.appendChild(G.el('div.pl-skills', P.parts.map(function (p) {
       var v = res[p.id];
-      return G.el('div.pl-skill', G.el('span.pl-sk-name', p.icon + ' ' + p.name),
+      return G.el('div.pl-skill', G.el('span.pl-sk-name', pic(p), p.name),
         G.el('span.pl-bar', [1, 2, 3, 4, 5].map(function (k) { return G.el('i' + (v !== null && v >= k ? '.on' : '')); })),
         G.el('b.pl-sk-lv', v === null ? 'chưa đo' : P.levels[v]));
     })));
