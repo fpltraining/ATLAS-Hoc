@@ -32,6 +32,25 @@ var G = window.G || (window.G = {});
       : sc === 'city_zh' ? '欢迎！Chào mừng tới Trường Lạc trấn. Học viện Hán ngữ ở góc dưới bên trái, sân bay ở phía trên.' : 'Tiếp tục học nào!');
   };
 
+  /* thư viện 3D (three.js ~600 KB) và js/world3d.js chỉ nạp khi vào thành phố (taste-skill perf: mở app nhẹ hơn);
+     nạp sẵn ở nền vài giây sau khi mở app để lúc bấm "Vào Brightford" không phải chờ. SW giữ sẵn hai tệp này để chạy offline. */
+  var goCity0 = G.goCity, load3dQ = null;
+  function need3d(cb) {
+    if (window.THREE && G.W3D) { cb(); return; }
+    if (load3dQ) { load3dQ.push(cb); return; }
+    load3dQ = [cb];
+    var done = function () { var q = load3dQ; load3dQ = null; for (var i = 0; i < q.length; i++) q[i](); };
+    G.loadScript('vendor/three.min.js', function () { G.loadScript('js/world3d.js', done); });
+    setTimeout(function () { if (load3dQ) done(); }, 15000);   // mạng hỏng: vẫn vào được thành phố (vẽ 2D)
+  }
+  G.need3d = need3d;
+  G.goCity = function (id) {
+    if (window.THREE && G.W3D) { goCity0(id); return; }
+    G.toast('Đang mở Brightford…', 1500);
+    need3d(function () { goCity0(id); });
+  };
+  setTimeout(function () { need3d(function () {}); }, 3500);
+
   /* Bài kiểm tra trình độ là bước bắt buộc đầu tiên: chưa có kết quả thì chưa vào học được (kể cả người đang học dở) */
   function mustTest(after) {
     if (G.S.dauVao || G._placementOpen) { if (after) after(); return; }
@@ -58,14 +77,23 @@ var G = window.G || (window.G = {});
     } else G.enter([].slice.call(lob.children, 0, 8), { gap: 60, start: 80 });
   };
 
+  // hình tĩnh trong index.html (nút nhà, ghim nhiệm vụ, mặt Kai) lấy qua mã phiên bản như mọi hình khác
+  function fillAssets() { var im = document.querySelectorAll('img[data-asset]'); for (var i = 0; i < im.length; i++) if (!im[i].src) im[i].src = G.assetUrl(im[i].getAttribute('data-asset')); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', fillAssets); else fillAssets();
+
   /* Kai nói một câu ngắn ở góc màn hình */
   var kaiTimer = 0;
+  // taste-skill: lời Kai gọn một dòng để không che cảnh; chạm để đọc hết (giữ lâu hơn), chạm lần nữa để đóng
   G.kaiSay = function (text) {
     var k = document.getElementById('kai');
-    document.getElementById('kai-text').textContent = text;
+    document.getElementById('kai-text').textContent = String(text).replace(/^(?:[☀-➿]|[\ud83c-\ud83e][\udc00-\udfff])[️‍]*\s*/, '');
     k.className = 'kai show';
     clearTimeout(kaiTimer);
-    kaiTimer = setTimeout(function () { k.className = 'kai'; }, 5200);
+    kaiTimer = setTimeout(function () { k.className = 'kai'; }, 6500);
+    if (!k._tap) { k._tap = true; k.addEventListener('click', function () {
+      if (k.className.indexOf('open') >= 0) { k.className = 'kai'; clearTimeout(kaiTimer); return; }
+      k.className = 'kai show open'; clearTimeout(kaiTimer); kaiTimer = setTimeout(function () { k.className = 'kai'; }, 12000);
+    }); }
   };
 
   /* Nút hành động khi đứng gần cửa / NPC */

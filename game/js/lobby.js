@@ -68,32 +68,41 @@ var G = window.G || (window.G = {});
       G.el('div.hero-text',
         G.el('img.lobby-title', { src: G.assetUrl('lobby_title.png'), alt: 'ConnectLife · Kết nối cuộc sống' }),
         G.el('p.hero-sub', 'Sống ở Brightford, học tiếng Anh như người bản xứ: học ở trường, nói chuyện ở quán, đi khắp thành phố.'),
-        G.el('button.clay-btn', { onclick: function () { G.goCity(lastCity()); } }, 'Vào Brightford ›')
+        G.el('button.clay-btn', { onclick: function () { G.goCity(lastCity()); } }, 'Vào Brightford ›'),
+        G.el('p.hero-prog', G.S.totNghiep.en && G.S.totNghiep.en.A1 ? 'Đã có Chứng chỉ A1 · ' + r.stars + ' sao' : G.enFloorNow() === 1 ? 'Tầng 1 Nền tảng · ' + foundDone() + '/30 buổi' : 'Tầng ' + G.enFloorNow() + ' · ' + r.done + '/5 phòng A1 · ' + r.stars + ' sao')
       )
     ));
 
-    root.appendChild(G.el('h2.sec', 'Thành phố của bạn'));
-    root.appendChild(G.el('div.cities', CITIES.map(function (c) {
-      var open = c.state === 'open';
-      var z = rooms(G.ZH_HALL_DOORS);
-      var prog = c.id === 'en' ? (G.S.totNghiep.en && G.S.totNghiep.en.A1 ? '🏅 Chứng chỉ A1 · ' + r.stars + '★' : G.enFloorNow() === 1 ? '🏫 Tầng 1 Nền tảng · ' + foundDone() + '/30 buổi' : r.done + '/5 phòng A1 · ' + r.stars + '★')
-        : c.id === 'zh' ? (G.S.totNghiep.zh && G.S.totNghiep.zh.HSK1 ? '🎓 Đã tốt nghiệp HSK1 · ' : z.done + '/6 phòng HSK1 · ') + z.stars + '★' : '';
-      return G.el('button.city' + (open ? '' : '.soon'), { onclick: function () { if (open) G.goCity(c.id); else G.toast(c.name + ': ' + (c.note || 'sắp ra mắt')); } },
-        G.imgEl(c.card, 'city-img'),
-        G.el('b.city-name', c.name),
-        G.el('span.city-lang', c.lang),
-        G.el('span.tag' + (open ? '.open' : ''), open ? 'Đang mở' : (c.note || 'Sắp ra mắt')),
-        prog ? G.el('span.city-prog', prog) : null
-      );
-    })));
+    // Sảnh chia 4 tab (taste-skill: mỗi màn một ý chính); thanh tab dính trên cùng khi cuộn
+    var TABS = [['home', 'Hôm nay', 'calendar'], ['road', 'Lộ trình', 'pin'], ['me', 'Hồ sơ', 'star'], ['set', 'Cài đặt', 'bell']];
+    function tabIdx(k) { for (var i = 0; i < TABS.length; i++) if (TABS[i][0] === k) return i; return 0; }
+    var curTab = G._lobbyTab || 'home', P = {}, tabPill = G.el('i.epill'), tabBtns = [];
+    var tabBar = G.el('nav.etabs.lb-tabs', { 'aria-label': 'Các mục của Sảnh' }, tabPill, TABS.map(function (t, i) {
+      var b = G.el('button' + (t[0] === curTab ? '.on' : ''), { 'aria-pressed': t[0] === curTab ? 'true' : 'false', onclick: function () { showTab(i); } }, G.ic3(t[2]), G.el('b', t[1]));
+      tabBtns.push(b); return b;
+    }));
+    tabBar.style.setProperty('--n', TABS.length);
+    root.appendChild(tabBar);
+    TABS.forEach(function (t) { P[t[0]] = G.el('section.lb-pane', { hidden: t[0] !== curTab }); root.appendChild(P[t[0]]); });
+    G.pillTo(tabPill, tabIdx(curTab), TABS.length);
+    function showTab(i) {
+      var from = tabIdx(G._lobbyTab || 'home'), k = TABS[i][0];
+      if (TABS[from][0] === k) return;
+      G._lobbyTab = k;
+      tabBtns.forEach(function (b, j) { b.className = j === i ? 'on' : ''; b.setAttribute('aria-pressed', j === i ? 'true' : 'false'); });
+      TABS.forEach(function (t) { P[t[0]].hidden = t[0] !== k; });
+      G.pillTo(tabPill, i, TABS.length, from);
+      G.viewIn(P[k]);
+      var top = tabBar.getBoundingClientRect().top;
+      if (top < 0 || top > innerHeight * 0.6) window.scrollTo(0, window.pageYOffset + top - 4);
+    }
 
     // lộ trình tới đầu ra giao tiếp: mỗi tầng một Chứng chỉ ConnectLife, cuối cùng là Tốt nghiệp ConnectLife
     if (G.ROADMAP_EN) {
       var cur = G.enFloorNow(), certs = (G.S.totNghiep && G.S.totNghiep.en) || {};
-      root.appendChild(G.el('h2.sec', 'Lộ trình tới giao tiếp'));
-      root.appendChild(G.el('p.small.faint.road-note', 'Mỗi tầng học xong thi 2 phần (hiểu và nói) để nhận Chứng chỉ ConnectLife. Chỉ khi qua bài thi đầu ra giao tiếp mới là Tốt nghiệp ConnectLife.'));
-      root.appendChild(planCard());
-      root.appendChild(G.el('div.road', G.ROADMAP_EN.map(function (st) {
+      P.road.appendChild(G.el('p.small.faint.road-note', 'Mỗi tầng học xong thi 2 phần (hiểu và nói) để nhận Chứng chỉ ConnectLife. Chỉ khi qua bài thi đầu ra giao tiếp mới là Tốt nghiệp ConnectLife.'));
+      P.road.appendChild(planCard());
+      P.road.appendChild(G.el('div.road', G.ROADMAP_EN.map(function (st) {
         var got = !st.final && certs[st.key], here = !st.final && st.floor === cur && !got;
         // nhãn trạng thái: icon 3D + chữ (taste-skill: không dùng emoji làm đầu dòng)
         var tag = st.final ? (G.finalDone && G.finalDone() ? ['grad', 'Đã tốt nghiệp ConnectLife'] : G.finalUnlocked && G.finalUnlocked() ? ['target', 'Đã mở · vào thi ngay'] : ['lock', 'Mở khi có Chứng chỉ Tầng 4'])
@@ -106,8 +115,7 @@ var G = window.G || (window.G = {});
     }
 
     var who = G.S.nhanVat || 'han';
-    root.appendChild(G.el('h2.sec', 'Hồ sơ của bạn'));
-    root.appendChild(G.el('div.profile',
+    P.me.appendChild(G.el('div.profile',
       G.el('div.pchar', G.playerPic(96, 'pchar-img'), G.el('b', G.playerName()),
         G.el('button.btn.sm', { onclick: function () { G.openCreator(function () { G.goLobby(); }); } }, 'Đổi nhân vật')),
       G.el('div.pstats',
@@ -126,21 +134,21 @@ var G = window.G || (window.G = {});
     G.enter(root.querySelectorAll('.pstats .stat'), { gap: 50 });
     // huy hiệu trên đầu theo tầng (khi đã có hình)
     var fbg = G.floorBadgeGrid && G.floorBadgeGrid();
-    if (fbg) { root.appendChild(G.el('h2.sec', 'Huy hiệu trên đầu')); root.appendChild(fbg); }
+    if (fbg) { P.me.appendChild(G.el('h2.sec', 'Huy hiệu trên đầu')); P.me.appendChild(fbg); }
     if (G.checkFloorBadge) setTimeout(G.checkFloorBadge, 700);
 
     if (G.weeklyChart) {
-      root.appendChild(G.el('h2.sec', 'Đầu ra của bạn'));
-      if (G.studyChart) root.appendChild(G.studyChart());
-      root.appendChild(G.el('div.out-row',
+      P.home.appendChild(G.el('button.big.bic.pl-lobby.lb-today', { onclick: G.openToday }, G.bigIc('calendar', 'Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/4 việc · ' + G.dayProgress().mins + ' phút · bấm để xem việc cần làm')));
+      if (G.studyChart) P.home.appendChild(G.studyChart());
+      P.home.appendChild(G.el('div.out-row',
         G.el('button.big.bic', { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', G.weekLine())),
         G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được'))));
-      if (G.openMemMap) root.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openMemMap(); } }, G.bigIc('brain', 'Bản đồ nhớ từ'),
+      if (G.openMemMap) P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openMemMap(); } }, G.bigIc('brain', 'Bản đồ nhớ từ'),
         G.el('span', G.srsDue && G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn hôm nay · xem buổi nào sắp quên' : 'Mỗi ô là một buổi học, màu càng xanh là càng nhớ chắc')));
       // trình độ đầu vào (kiểm tra 4 kỹ năng), làm lại để đo đầu ra
       if (G.openPlacement) {
         var dv = G.S.dauVao;
-        root.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openPlacement(function () { G.goLobby(); }, { canSkip: true }); } },
+        P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openPlacement(function () { G.goLobby(); }, { canSkip: true }); } },
           G.bigIc('target', 'Trình độ đầu vào' + (dv ? ': ' + G.levelName(dv.lv) : '')),
           G.el('span', dv ? 'Làm ngày ' + dv.luc.slice(8, 10) + '/' + dv.luc.slice(5, 7) + ' · Nghe ' + G.PLACE_EN.levels[dv.nghe] + ' · Đọc ' + G.PLACE_EN.levels[dv.doc] + ' · Giao tiếp ' + G.PLACE_EN.levels[dv.gt] + ' · Nói ' + (dv.noi === null ? 'chưa đo' : G.PLACE_EN.levels[dv.noi]) + ' · bấm để làm lại'
             : 'Chưa làm · 4 kỹ năng theo CEFR, 3–12 phút')));
@@ -148,26 +156,26 @@ var G = window.G || (window.G = {});
       // luyện phát âm theo lỗi của mình (bắt lỗi trước nếu chưa làm)
       if (G.openPronFromLobby) {
         var pe = G.pronErrors(), pk = G.S.phatAmKiem;
-        root.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openPronFromLobby(function () { G.goLobby(); }); } },
+        P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: function () { G.openPronFromLobby(function () { G.goLobby(); }); } },
           G.bigIc('mic', 'Luyện phát âm theo lỗi'),
           G.el('span', pe.length ? 'Lỗi cần sửa: ' + pe.slice(0, 3).map(function (e) { return G.PRON_EN.tags[e.tag]; }).join(' · ') : pk ? 'Chưa thấy lỗi nào · luyện thêm âm cuối, đuôi -s, th' : 'Đọc 12 từ, máy tìm lỗi người Việt hay mắc rồi luyện riêng')));
       }
-      root.appendChild(G.weeklyChart());
+      P.home.appendChild(G.weeklyChart());
     }
-    root.appendChild(G.el('h2.sec', 'Rank và huy hiệu'));
-    root.appendChild(G.rankCard());
-    root.appendChild(G.badgeGrid());
+    P.me.appendChild(G.el('h2.sec', 'Rank và huy hiệu'));
+    P.me.appendChild(G.rankCard());
+    P.me.appendChild(G.badgeGrid());
 
-    root.appendChild(G.el('h2.sec', 'Đồ kỷ niệm'));
-    root.appendChild(G.el('div.souvs', G.souvenirs().map(function (v) {
-      return G.el('div.souv' + (v.got ? '' : '.lock'), G.imgEl(v.item.img, 'souv-img'), G.el('b', v.got ? v.item.name : '???'), G.el('span.faint', v.place));
+    P.me.appendChild(G.el('h2.sec', 'Đồ kỷ niệm'));
+    P.me.appendChild(G.el('div.souvs', G.souvenirs().map(function (v) {
+      // món chưa nhận: bóng mờ của món đồ và việc cần làm để nhận (taste-skill: không để chữ giữ chỗ)
+      return G.el('div.souv' + (v.got ? '' : '.lock'), G.imgEl(v.item.img, 'souv-img'), G.el('b', v.got ? v.item.name : 'Quà ở ' + v.place), G.el('span.faint', v.got ? v.place : 'Xong 3 tình huống ở đây để nhận'));
     })));
 
-    root.appendChild(G.el('h2.sec', 'Sao lưu và cài đặt'));
     // lưu trên mây (Supabase): đăng nhập một lần, tự đồng bộ
     if (G.cloudReady && G.cloudReady()) {
       var cu = G.cloudUser(), cs = G.cloudStatus();
-      root.appendChild(cu
+      P.set.appendChild(cu
         ? G.el('div.cl-card', G.el('b', G.ic3('cloud', 'ic3-s'), 'Đang lưu trên mây · ' + cu.email),
             G.el('span.small.faint', cs.err ? '⚠️ ' + cs.err : cs.luc ? 'Đồng bộ lần cuối lúc ' + cs.luc + ' (giờ Việt Nam). App tự lưu sau mỗi bài.' : 'App tự lưu sau mỗi bài.'),
             G.el('div.row',
@@ -178,18 +186,18 @@ var G = window.G || (window.G = {});
             G.el('button.btn.seal.sm', { onclick: function () { G.openCloudLogin(function () { G.renderLobby(); }); } }, 'Đăng nhập / Tạo tài khoản')));
     }
     var file = G.el('input', { type: 'file', accept: 'application/json,.json', style: { display: 'none' }, onchange: function (e) { if (e.target.files[0]) G.importSave(e.target.files[0], G.renderLobby); e.target.value = ''; } });
-    root.appendChild(G.el('div.tools',
+    P.set.appendChild(G.el('div.tools',
       G.el('button.btn', { onclick: G.exportSave }, '⤓ Xuất file sao lưu'),
       G.el('button.btn', { onclick: function () { file.click(); } }, '⤒ Nhập file sao lưu'),
       file
     ));
     // cài đặt dạng nút gạt (mẫu "toggles" của taste-skill)
-    root.appendChild(G.el('div.tg-list',
+    P.set.appendChild(G.el('div.tg-list',
       G.switchRow('bell', 'Âm thanh', 'Tiếng bấm, tiếng đúng sai, tiếng ăn mừng', G.S.caiDat.amThanh !== false, function (on) { G.S.caiDat.amThanh = on; G.save(); }),
       G.switchRow('piano', 'Nhạc nền', 'Nhạc nhẹ khi đi trong thành phố', G.musicOn(), function (on) { G.setMusic(on); }),
       G.switchRow('turtle', 'Đọc truyện chậm', 'Giọng đọc truyện chậm hơn để nghe rõ từng chữ', !!G.S.caiDat.docCham, function (on) { G.S.caiDat.docCham = on; G.save(); }),
       G.canListen ? G.switchRow('mic', 'Dùng micro khi luyện nói', 'Máy nghe bạn nói và chấm điểm phát âm', G.micOn(), function (on) { G.setMic(on); }) : null));
-    root.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam).' + (G.cloudReady && G.cloudReady() && G.cloudUser() ? ' Đã bật lưu trên mây.' : ' Nhớ xuất file sao lưu thỉnh thoảng nhé.')));
+    P.set.appendChild(G.el('p.foot', 'Tiến độ lưu trong máy này (bắt đầu ' + G.S.taoLuc + ', giờ Việt Nam).' + (G.cloudReady && G.cloudReady() && G.cloudUser() ? ' Đã bật lưu trên mây.' : ' Nhớ xuất file sao lưu thỉnh thoảng nhé.')));
   };
 
   // số chạy từ 0 khi mở Sảnh (con số kiểu bảng điều khiển)

@@ -1042,7 +1042,7 @@ var G = window.G || (window.G = {});
     var h = hourNow();
     return h >= 5 && h < 10 ? 'sang' : h >= 10 && h < 14 ? 'trua' : h >= 14 && h < 17 ? 'chieu' : h >= 17 && h < 19 ? 'hoanghon' : 'toi';
   };
-  var PART_NAME = { sang: '🌅 Sáng', trua: '☀️ Trưa', chieu: '🌤 Chiều', hoanghon: '🌇 Hoàng hôn', toi: '🌙 Tối' };
+  var PART_NAME = { sang: 'Sáng', trua: 'Trưa', chieu: 'Chiều', hoanghon: 'Hoàng hôn', toi: 'Tối' };
   function raining() { return scene && scene.kind === 'city' && G.weather() === 'rain'; }
   /* chiếc ô cầm trong tay (vẽ bằng code). Bàn tay lấy từ G.HANDS (vị trí bàn tay trên từng hình); cán đi từ bàn tay
      lên giữa tán, tán che trên đầu và nghiêng theo cán. Cán vẽ trước người (part 'pole': nằm sau bàn tay, sau thân),
@@ -1191,8 +1191,7 @@ var G = window.G || (window.G = {});
   function hudWeather() {
     if (Date.now() - hudT < 4000) return; hudT = Date.now();
     var el = document.getElementById('hud-title'); if (!el) return;
-    var w = G.weather(), ic = scene.kind === 'city' ? (w === 'rain' ? ' · 🌧 Mưa' : w === 'cloudy' ? ' · ☁️ Nhiều mây' : '') : '';
-    el.textContent = scene.title + (scene.kind === 'city' ? ' · ' + PART_NAME[G.dayPart()] + ic : '');
+    el.textContent = scene.title + (scene.kind === 'city' ? ' · ' + PART_NAME[G.dayPart()] : '');   // thời tiết xem ở la bàn
   }
 
   function drawSky() {
