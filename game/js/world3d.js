@@ -302,13 +302,11 @@ var G = window.G || (window.G = {});
   }
   var BUBBLE_T = null;
   function talkBubble() {
-    if (!BUBBLE_T) BUBBLE_T = canvasTex(96, 96, function (x) {
-      x.fillStyle = '#fff'; x.strokeStyle = '#1b2140'; x.lineWidth = 7; x.beginPath(); x.arc(48, 48, 38, 0, 6.283); x.fill(); x.stroke();
-    });
-    if (!BUBBLE_T._ic) {   // icon 3D bong bóng chat (Fluent, MIT) vẽ lên nền tròn khi tải xong
+    if (!BUBBLE_T) BUBBLE_T = canvasTex(128, 128, function () {});
+    if (!BUBBLE_T._ic) {   // bong bóng chat kiểu giấy (hình đặt, Đơn N) vẽ lên khi tải xong
       BUBBLE_T._ic = new Image();
-      BUBBLE_T._ic.onload = function () { BUBBLE_T.image.getContext('2d').drawImage(BUBBLE_T._ic, 20, 20, 56, 56); BUBBLE_T.needsUpdate = true; };
-      BUBBLE_T._ic.src = G.assetUrl('ic3_talk.webp');
+      BUBBLE_T._ic.onload = function () { BUBBLE_T.image.getContext('2d').drawImage(BUBBLE_T._ic, 0, 0, 128, 128); BUBBLE_T.needsUpdate = true; };
+      BUBBLE_T._ic.src = G.assetUrl('talk_bubble_paper.png');
     }
     var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: BUBBLE_T, depthTest: false, transparent: true }));
     sp.scale.set(0.34, 0.34, 1); sp.renderOrder = 11; sp.visible = false; SC.add(sp); return sp;

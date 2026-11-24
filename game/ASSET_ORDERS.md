@@ -642,3 +642,5 @@ Three images for my paper-craft English-learning game "ConnectLife" (handmade cu
 2) share_card.png — 1200x630 social share card: on the left the two paper-craft islands of the city of Brightford seen from above (white dome houses, green trees, a red bridge, blue water), on the right the word "ConnectLife" in chunky coral clay letters and under it in small navy text "Học tiếng Anh bằng cách sống ở Brightford". Cream paper background, generous margins.
 3) talk_bubble_paper.png — 256x256, transparent background, a single speech bubble cut from white paper with a thin navy outline and a small soft drop shadow, slightly 3D like layered paper, three small coral dots inside. Centered, nothing else.
 ```
+
+**Đã nhận Đơn N 24/11 · đã gắn vào game:** paper_tile_1600.webp (em làm liền mép bốn cạnh rồi dùng làm nền Sảnh, hiển thị 800 px), share_card.jpg (ảnh khi gửi link, thẻ og:image), talk_bubble_paper.png (bong bóng chat trên đầu người qua đường, cả bản 3D và 2D).
