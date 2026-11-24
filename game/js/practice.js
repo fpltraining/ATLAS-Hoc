@@ -317,21 +317,33 @@ var G = window.G || (window.G = {});
       var body = panelOpen('📝 Kết quả kiểm tra tuần');
       body.appendChild(G.el('div.wk-total', G.el('b', tong), G.el('span', '/100'), G.el('div', levelOf(tong))));
       if (prev) body.appendChild(G.el('div.small.faint.wk-cmp', (tong >= prev.tong ? '▲ +' : '▼ ') + (tong - prev.tong) + ' điểm so với lần trước (' + prev.ngay.split('-').reverse().join('/') + ')'));
-      body.appendChild(bars([['👂 Nghe', sc.nghe], ['📄 Đọc', sc.doc], ['🗣 Nói tự do', sc.noi]]));
+      body.appendChild(skillCards(sc));
       body.appendChild(G.el('p.small', advice(sc)));
       body.appendChild(G.weeklyChart());
-      body.appendChild(G.el('div.row', G.el('button.btn', { onclick: G.openCanDo }, '📒 Mình nói được'), G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
+      body.appendChild(G.el('div.row', G.el('button.btn', { onclick: G.openCanDo }, G.ic3('speak', 'ic3-s'), 'Mình nói được'), G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
     }
     partListen();
   };
   function levelOf(t) {
-    return t >= 90 ? '🌟 Sẵn sàng giao tiếp thật' : t >= 75 ? '💪 Tự tin trong đời sống hằng ngày' : t >= 50 ? '🙂 Xử lý được tình huống quen thuộc' : '🌱 Cần luyện thêm các tình huống cơ bản';
+    return t >= 90 ? 'Sẵn sàng giao tiếp thật' : t >= 75 ? 'Tự tin trong đời sống hằng ngày' : t >= 50 ? 'Xử lý được tình huống quen thuộc' : ' Cần luyện thêm các tình huống cơ bản';
   }
   function advice(s) {
     var low = [['nghe', s.nghe, 'Nghe: bật nút gạt "Chỉ nghe, ẩn chữ" khi nói chuyện ngoài phố.'], ['doc', s.doc, 'Đọc: đọc thêm 1 chương truyện mỗi ngày.'], ['noi', s.noi, 'Nói: mỗi ngày làm 2–3 câu "Tự nói" ở các nơi đời sống.']];
     low.sort(function (a, b) { return a[1] - b[1]; });
     if (low[0][1] >= 90) return 'Rất tốt! Tuần này giữ nhịp: nói chuyện ngoài phố mỗi ngày và thử các tình huống công việc trong "📒 Mình nói được".';
     return 'Tuần này nên tập trung: ' + low[0][2];
+  }
+  /* kết quả theo kỹ năng (mẫu "stat" của taste-skill): mỗi kỹ năng một con số lớn, so với lần trước, cột qua các tuần */
+  function skillCards(sc) {
+    var h = (G.S.tuan || []).slice(-8), prev = h.length > 1 ? h[h.length - 2] : null;
+    var SK = [['nghe', 'Nghe', 'headphone'], ['doc', 'Đọc hiểu', 'book'], ['noi', 'Nói', 'mic']];
+    return G.el('div.sk-cards', SK.map(function (k) {
+      var v = sc[k[0]], n = G.el('b', '0'), d = prev ? v - prev[k[0]] : null;
+      G.countUp(n, 0, v, { dur: 900, delay: 150 });
+      var cols = G.el('div.sk-cols', h.map(function (x, i) { var c = G.el('i' + (i === h.length - 1 ? '.now' : '')); c.style.transform = 'scaleY(' + Math.max(0.04, (x[k[0]] || 0) / 100) + ')'; return G.el('span', c); }));
+      return G.el('div.sk-card', G.el('div.sk-h', G.ic3(k[2], 'ic3-s'), k[1]),
+        G.el('div.sk-n', n, G.el('span', '/100'), d === null ? null : G.el('span.sc-chg' + (d >= 0 ? '.up' : '.down'), (d >= 0 ? '+' : '') + d)), cols);
+    }));
   }
   function bars(rows) {
     return G.el('div.wk-bars', rows.map(function (r) {
@@ -362,24 +374,34 @@ var G = window.G || (window.G = {});
   G.openCanDo = function () {
     var body = panelOpen('📒 Mình nói được');
     var st = G.canDoStats();
+    // sổ dạng checklist (mẫu "checklist" của taste-skill): vòng tick, sao cho việc làm tốt, thanh tiến độ cho từng nơi
     body.appendChild(G.el('div.cd-head', G.el('b', st.n + '/' + st.total), G.el('span', ' việc bạn đã xử lý được bằng tiếng Anh')));
-    body.appendChild(G.el('p.small.faint', '✅ đã làm được · 🌟 làm tốt (nói qua micro từ 75 điểm hoặc tự nói từ 60) · ⚪ chưa làm. Đây là đầu ra thật của bạn: những việc làm được ngoài đời.'));
+    body.appendChild(G.el('div.cd-legend', G.el('span', G.el('i.cd-mk.ok'), 'Đã làm được'), G.el('span', G.el('i.cd-mk.star'), 'Làm tốt (micro từ 75 điểm, tự nói từ 60)'), G.el('span', G.el('i.cd-mk'), 'Chưa làm')));
+    function row(state, label, free) {   // state: '' chưa làm, 'ok' đã làm, 'star' làm tốt
+      return G.el('div.cd-row' + (state ? '.ok' : ''), G.el('i.cd-mk' + (state ? '.' + state : ''), { 'aria-label': state === 'star' ? 'Làm tốt' : state ? 'Đã làm được' : 'Chưa làm' }),
+        G.el('span', free ? G.el('em.cd-free', 'Tự nói') : null, label));
+    }
+    function place(title, ic, rows, done, extra) {
+      var bar = G.el('i'); bar.style.transform = 'scaleX(' + (rows.length ? done / rows.length : 0) + ')';
+      return G.el('div.cd-place', G.el('div.cd-ph', G.el('b', ic ? G.ic3(ic, 'ic3-s') : null, title), G.el('span', done + '/' + rows.length)), G.el('span.cl-bar', bar), rows, extra || null);
+    }
     for (var id in G.LIFE) if (G.LIFE.hasOwnProperty(id) && G.LIFE[id].lang === 'en') {
-      var L = G.LIFE[id], s = G.S.doiSong[id] || {}, xs = s.xong || {}, dm = s.diem || {};
+      var L = G.LIFE[id], s = G.S.doiSong[id] || {}, xs = s.xong || {}, dm = s.diem || {}, done = 0;
       var rows = L.talks.map(function (t, i) {
-        var mark = !xs[i] ? '⚪' : (dm[i] === undefined || dm[i] === null || dm[i] >= 75) ? (dm[i] >= 75 ? '🌟' : '✅') : '✅';
-        return G.el('div.cd-row' + (xs[i] ? '.ok' : ''), G.el('span', mark), G.el('span', t.title));
+        var stt = !xs[i] ? '' : dm[i] >= 75 ? 'star' : 'ok';
+        if (stt) done++;
+        return row(stt, t.title);
       });
       G.freeFor(id).forEach(function (f) {
         var v = (G.S.tuNoi || {})[f.id];
-        rows.push(G.el('div.cd-row' + (v >= 60 ? '.ok' : ''), G.el('span', v >= 60 ? '🌟' : '⚪'), G.el('span', '💡 Tự nói: ' + f.sit)));
+        if (v >= 60) done++;
+        rows.push(row(v >= 60 ? 'star' : '', f.sit, true));
       });
-      body.appendChild(G.el('div.cd-place', G.el('b', L.title), rows));
+      body.appendChild(place(L.title, null, rows, done));
     }
-    var work = G.freeFor('work');
-    body.appendChild(G.el('div.cd-place', G.el('b', G.ic3('work', 'ic3-s'), 'Công việc'), work.map(function (f) {
-      var v = (G.S.tuNoi || {})[f.id];
-      return G.el('div.cd-row' + (v >= 60 ? '.ok' : ''), G.el('span', v >= 60 ? '🌟' : '⚪'), G.el('span', f.sit));
-    }), G.el('button.btn.sm', { onclick: function () { G.openFree(G.shuffle(work).slice(0, 3), '💼 Nói tự do · công việc', G.openCanDo); } }, 'Luyện 3 tình huống công việc ›')));
+    var work = G.freeFor('work'), wd = 0;
+    var wrows = work.map(function (f) { var v = (G.S.tuNoi || {})[f.id]; if (v >= 60) wd++; return row(v >= 60 ? 'star' : '', f.sit, true); });
+    body.appendChild(place('Công việc', 'work', wrows, wd,
+      G.el('button.btn.sm', { onclick: function () { G.openFree(G.shuffle(work).slice(0, 3), '💼 Nói tự do · công việc', G.openCanDo); } }, 'Luyện 3 tình huống công việc ›')));
   };
 })();

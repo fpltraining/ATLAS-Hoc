@@ -99,7 +99,10 @@ function audit(screen) {
 
 // các màn cần soát
 const SCREENS = [
-  ['Sảnh', () => { G.goLobby(); }],
+  ['Sảnh', () => { G._lobbyTab = 'home'; G.goLobby(); }],
+  ['Sảnh · Lộ trình', () => { G.goLobby(); document.querySelectorAll('.lb-tabs button')[1].click(); }],
+  ['Sảnh · Hồ sơ', () => { G.goLobby(); document.querySelectorAll('.lb-tabs button')[2].click(); }],
+  ['Sảnh · Cài đặt', () => { G.goLobby(); document.querySelectorAll('.lb-tabs button')[3].click(); }],
   ['Hôm nay', () => { G.openToday(); }],
   ['Bản đồ nhớ từ', () => { G.openMemMap(0); }],
   ['Bài học', () => { G.closeLesson(); G.openLesson('en-a1-1'); }],

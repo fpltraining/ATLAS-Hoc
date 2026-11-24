@@ -304,8 +304,12 @@ var G = window.G || (window.G = {});
   function talkBubble() {
     if (!BUBBLE_T) BUBBLE_T = canvasTex(96, 96, function (x) {
       x.fillStyle = '#fff'; x.strokeStyle = '#1b2140'; x.lineWidth = 7; x.beginPath(); x.arc(48, 48, 38, 0, 6.283); x.fill(); x.stroke();
-      x.font = '42px sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillText('💬', 48, 51);
     });
+    if (!BUBBLE_T._ic) {   // icon 3D bong bóng chat (Fluent, MIT) vẽ lên nền tròn khi tải xong
+      BUBBLE_T._ic = new Image();
+      BUBBLE_T._ic.onload = function () { BUBBLE_T.image.getContext('2d').drawImage(BUBBLE_T._ic, 20, 20, 56, 56); BUBBLE_T.needsUpdate = true; };
+      BUBBLE_T._ic.src = G.assetUrl('ic3_talk.webp');
+    }
     var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: BUBBLE_T, depthTest: false, transparent: true }));
     sp.scale.set(0.34, 0.34, 1); sp.renderOrder = 11; sp.visible = false; SC.add(sp); return sp;
   }
@@ -340,7 +344,7 @@ var G = window.G || (window.G = {});
       if (o.bimg) {   // tiệm nhỏ có hình toà nhà: người bán ở bên trong
         var bs = o.bs || 210, g = card(o.bimg, d.ox + o.x, d.oy + o.y + 14, bs, 0.975, { own: true, fold: 'b' }); FADE.push(g);
         g.userData.mesh.userData.pick = { kind: 'npc', id: d.id, x: o.x, y: o.y + 40 }; PICK.push(g.userData.mesh);
-        plate((o.icon || '') + ' ' + o.stall, d.ox + o.x, d.oy + o.y + 40, g.userData.pop);
+        plate(o.stall, d.ox + o.x, d.oy + o.y + 40, g.userData.pop);
         e.pop = g.userData.pop; e.bx = (d.ox + o.x + bs * 0.33) * U; e.bh = bs * 0.92 * U; e.bz = (d.oy + o.y + 14) * U; NPCW.push(e); return;
       }
       if (!n || !n.img) return;

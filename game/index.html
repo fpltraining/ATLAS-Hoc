@@ -51,15 +51,15 @@
     <div id="tilt3d" class="tilt3d" style="display:none"></div>
     <canvas id="world"></canvas>
     <div class="hud">
-      <button id="hud-home" class="hud-btn" aria-label="Về Ngôi nhà chung">🏠</button>
+      <button id="hud-home" class="hud-btn" aria-label="Về Ngôi nhà chung"><img class="ic3" data-asset="ic3_house.webp" alt=""></button>
       <b id="hud-title"></b>
       <span id="hud-xp" class="hud-xp"></span>
     </div>
     <div id="radar" class="radar"><canvas id="radar-cv" aria-label="Radar, la bàn"></canvas><button id="temp" class="temp" aria-label="Nhiệt độ ngoài trời"></button></div>
-    <button id="quest" class="quest"><span class="q-pin">📍</span><span><small>Việc tiếp theo</small><b id="quest-text"></b></span><span class="q-go">Đi ›</span></button>
+    <button id="quest" class="quest"><span class="q-pin"><img class="ic3" data-asset="ic3_pin.webp" alt=""></span><span><small>Việc tiếp theo</small><b id="quest-text"></b></span><span class="q-go">Đi ›</span></button>
     <div id="joy" class="joy" aria-label="Cần điều khiển"><div id="joy-knob" class="joy-knob"></div></div>
     <button id="act" class="act"></button>
-    <div id="kai" class="kai"><div class="kai-face">🤖</div><div id="kai-text" class="kai-text"></div></div>
+    <div id="kai" class="kai" role="button" aria-label="Lời Kai, chạm để đọc hết"><div class="kai-face"><img data-asset="kai_follow.png" alt=""></div><div id="kai-text" class="kai-text"></div></div>
   </section>
 
   <!-- Bảng học trong phòng -->
@@ -96,10 +96,8 @@
   <script src="data/hands.js"></script>
   <script src="data/river_en.js"></script>
   <script src="js/world.js"></script>
-  <script src="vendor/three.min.js"></script>
   <script src="vendor/anime.min.js"></script>
   <script src="vendor/auto-animate.js"></script>
-  <script src="js/world3d.js"></script>
   <script src="js/rooms.js"></script>
   <script src="js/engine.js"></script>
   <script src="js/lesson.js"></script>

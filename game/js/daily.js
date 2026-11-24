@@ -59,6 +59,26 @@ var G = window.G || (window.G = {});
     }
     return out;
   };
+  /* lịch tháng (mẫu "calendar" của taste-skill): ngày đã học tô xanh, ngày học theo lịch có viền, hôm nay viền cam; chạm ngày xem đã học gì */
+  G.monthCal = function () {
+    var N = G.S.ngay || {}, now = G.vnParts(Date.now()), y = now.y, m = now.m, today = G.vnDay();
+    var first = Date.parse(y + '-' + (m < 10 ? '0' : '') + m + '-01T12:00:00+07:00'), dim = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    var lead = (new Date(first + 7 * 3600000).getUTCDay() + 6) % 7, plan = G.studyDays ? G.studyDays() : [1, 2, 3, 4, 5];
+    var info = G.el('div.mc-info', 'Chạm một ngày để xem đã học gì.'), cells = [], studied = 0, i;
+    ['T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'CN'].forEach(function (d) { cells.push(G.el('span.mc-dow', d)); });
+    for (i = 0; i < lead; i++) cells.push(G.el('span.mc-pad'));
+    for (i = 1; i <= dim; i++) (function (dd) {
+      var key = y + '-' + (m < 10 ? '0' : '') + m + '-' + (dd < 10 ? '0' : '') + dd, r = N[key], v = 0, t;
+      if (r) for (t in r.viec) if (r.viec.hasOwnProperty(t)) v++;
+      var done = !!(r && (r.giay >= 600 || v)), dow = (lead + dd - 1) % 7 + 1, sched = plan.indexOf(dow) >= 0;
+      if (done) studied++;
+      cells.push(G.el('button.mc-d' + (done ? '.done' : '') + (sched && !done && key < today ? '.miss' : '') + (sched && key >= today && !done ? '.plan' : '') + (key === today ? '.today' : ''),
+        { 'aria-label': dd + '/' + m + (done ? ', đã học' : sched ? ', ngày học' : ', ngày nghỉ'), onclick: function () {
+          info.textContent = dd + '/' + m + ': ' + (r ? Math.round((r.giay || 0) / 60) + ' phút, ' + v + ' việc' : key > today ? (sched ? 'ngày học theo lịch' : 'ngày nghỉ') : 'chưa học');
+        } }, String(dd)));
+    })(i);
+    return G.el('div.mc', G.el('div.mc-h', G.el('b', 'Tháng ' + m + '/' + y), G.el('span', studied + ' ngày đã học')), G.el('div.mc-grid', cells), info);
+  };
   /* phút học 14 ngày gần nhất (mẫu "stat" của taste-skill): một con số lớn, so với tuần trước, 14 cột, cột hôm nay màu cam */
   G.studyChart = function () {
     var N = G.S.ngay || {}, mins = [], i;
@@ -149,6 +169,7 @@ var G = window.G || (window.G = {});
     if (G.openWeekly) body.appendChild(G.el('div.td-week',
       G.el('button.big.bic' + (G.weeklyInfo().due ? '.seal' : ''), { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),
       G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats().n + '/' + G.canDoStats().total + ' việc'))));
+    if (G.monthCal) body.appendChild(G.monthCal());
     // các cuộc nói chuyện hôm nay
     var ht = d.hoiThoai || [];
     body.appendChild(G.el('div.td-talks',
@@ -188,15 +209,19 @@ var G = window.G || (window.G = {});
   G.weekLine = weekLine;
   /* ---------- Nhà của bạn: góc học ---------- */
   G.openHome = function () {
-    var body = panelOpen('🏠 Nhà của bạn');
+    var body = panelOpen('Nhà của bạn');
     var d = today(), n = G.S.tuKho.length;
     var momDone = !!(d.sang && d.sang['en-home']);
+    // chỉ tô cam một việc nên làm tiếp (taste-skill: một nút chính mỗi màn)
+    var wkDue = !!(G.weeklyInfo && G.weeklyInfo().due);
+    var next = G.LIFE['en-home'] && !momDone ? 'me' : !d.viec.doc ? 'doc' : !d.viec.on ? 'on' : wkDue ? 'wk' : '';
+    function hl(k) { return next === k ? '.seal' : ''; }
     body.appendChild(G.el('div.menu3',
-      G.LIFE['en-home'] ? G.el('button.big.bic' + (momDone ? '.done' : '.seal'), { onclick: function () { G.openLife('en-home'); } },
+      G.LIFE['en-home'] ? G.el('button.big.bic' + (momDone ? '.done' : hl('me')), { onclick: function () { G.openLife('en-home'); } },
         G.bigIc(momDone ? 'check' : 'talk', 'Nói chuyện với mẹ'), G.el('span', 'Buổi sáng ở nhà: thức dậy, ăn sáng, chuẩn bị đi học')) : null,
-      G.el('button.big.bic' + (d.viec.doc ? '.done' : ''), { onclick: G.openReader }, G.bigIc(d.viec.doc ? 'check' : 'book', 'Đọc truyện'), G.el('span', 'Truyện song ngữ theo cấp, bấm câu để xem nghĩa, nghe giọng đọc')),
-      G.el('button.big.bic' + (d.viec.on ? '.done' : ''), { onclick: G.openReview }, G.bigIc(d.viec.on ? 'check' : 'repeat', 'Ôn câu đã học'), G.el('span', G.srsDue ? (G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn hôm nay' : 'Không có câu đến hạn · ôn thêm tuỳ ý') : '')),
-      G.el('button.big.bic' + (G.weeklyInfo && G.weeklyInfo().due ? '.seal' : ''), { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),
+      G.el('button.big.bic' + (d.viec.doc ? '.done' : hl('doc')), { onclick: G.openReader }, G.bigIc(d.viec.doc ? 'check' : 'book', 'Đọc truyện'), G.el('span', 'Truyện song ngữ theo cấp, bấm câu để xem nghĩa, nghe giọng đọc')),
+      G.el('button.big.bic' + (d.viec.on ? '.done' : hl('on')), { onclick: G.openReview }, G.bigIc(d.viec.on ? 'check' : 'repeat', 'Ôn câu đã học'), G.el('span', G.srsDue ? (G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn hôm nay' : 'Không có câu đến hạn · ôn thêm tuỳ ý') : '')),
+      G.el('button.big.bic' + hl('wk'), { onclick: G.openWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', weekLine())),
       G.el('button.big.bic', { onclick: G.openCanDo }, G.bigIc('speak', 'Mình nói được'), G.el('span', G.canDoStats ? G.canDoStats().n + '/' + G.canDoStats().total + ' việc đã làm được bằng tiếng Anh' : '')),
       G.el('button.big.bic', { onclick: G.openToday }, G.bigIc('calendar', 'Kế hoạch hôm nay'), G.el('span', G.dayProgress().done + '/4 việc · ' + G.dayProgress().mins + ' phút'))));
   };
@@ -233,10 +258,13 @@ var G = window.G || (window.G = {});
         var grp = s.shelf || 'long';
         if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', SHELF_NAME[grp] || 'Truyện khác')); }
         var r = readN(s.id);
-        body.appendChild(G.el('button.rd-story' + (s.shelf === 'future' ? '.future' : ''), { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
-          G.el('b', s.title), G.el('span.small.faint', s.vi + ' · ' + s.level + ' · ' + s.chapters.length + ' chương'),
-          s.blurb ? G.el('span.small.rd-blurb', s.blurb) : null,
-          G.el('span.rd-prog', r >= s.chapters.length ? '✓ Đã đọc' : r ? r + '/' + s.chapters.length : '')));
+        // thẻ truyện nền trắng có tranh bìa (taste-skill: tranh thật dẫn dắt, chỉ "Đọc tiếp" nổi bật)
+        var cover = G.el('img.rd-cover', { src: '../img/covers/' + s.id + '.webp', alt: '', loading: 'lazy', onerror: function () { this.style.display = 'none'; if (this.parentNode) this.parentNode.className += ' no-cover'; } });
+        body.appendChild(G.el('button.rd-story', { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
+          cover,
+          G.el('span.rd-txt', G.el('b', s.title), G.el('span.small.faint', s.vi + ' · ' + s.level + ' · ' + s.chapters.length + ' chương'),
+            s.blurb ? G.el('span.small.rd-blurb', s.blurb) : null,
+            r ? G.el('span.rd-prog', r >= s.chapters.length ? 'Đã đọc xong' : 'Đã đọc ' + r + '/' + s.chapters.length + ' chương') : null)));
       });
     });
   };

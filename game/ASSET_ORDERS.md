@@ -626,3 +626,19 @@ Thay phần lớn Đơn M bằng ghi âm thật miễn phí (Kenney, OpenGameArt
 - Tiếng động: bước chân trên cỏ / đá / gỗ (5 tiếng mỗi loại), cửa gỗ, kéo ghế, đẩy ghế, ngồi ghế, lật sách, giấy bật lên, cá quẫy, vịt kêu, sấm xa (2), còi xe, cửa xe xì hơi, chuông vào lớp
 
 Còn thiếu (Meta AI hoặc tìm thêm): amb_cafe, amb_market, amb_playground (sân trường). Nhạc nền vẫn dùng 4 bản piano cũ.
+
+## Đơn N · Giao diện theo báo cáo taste-skill (22/11)
+
+Ba hình cho phần giao diện, đặt qua ChatGPT rồi gửi em. Giữ đúng tên tệp; em cắt nền (nếu cần) và gắn vào.
+
+1. **paper_tile_1600.webp** · nền giấy Sảnh, 1600 × 1600, ô lặp liền mép (seamless) để trải kín màn iPad không bị nhoè (ảnh nền giấy hiện chỉ 400 px nên bị kéo to).
+2. **share_card.png** · ảnh khi gửi link app cho người khác, 1200 × 630.
+3. **talk_bubble_paper.png** · bong bóng chat kiểu giấy cắt nổi trên đầu người qua đường ở ngoài phố, nền trong suốt, 256 × 256. Hiện em tạm dùng icon 3D bong bóng chat.
+
+Prompt gửi ChatGPT (một lần, ba hình):
+```
+Three images for my paper-craft English-learning game "ConnectLife" (handmade cut-paper and clay look, warm cream paper, navy #1b2140, coral #b84b35, jade #2f7a63 accents, soft studio light, no text unless asked):
+1) paper_tile_1600.webp — 1600x1600 seamless tileable texture of warm cream handmade paper with subtle fibers and very light grain. Must tile without visible seams on all four edges. No objects, no shadows, no vignette.
+2) share_card.png — 1200x630 social share card: on the left the two paper-craft islands of the city of Brightford seen from above (white dome houses, green trees, a red bridge, blue water), on the right the word "ConnectLife" in chunky coral clay letters and under it in small navy text "Học tiếng Anh bằng cách sống ở Brightford". Cream paper background, generous margins.
+3) talk_bubble_paper.png — 256x256, transparent background, a single speech bubble cut from white paper with a thin navy outline and a small soft drop shadow, slightly 3D like layered paper, three small coral dots inside. Centered, nothing else.
+```

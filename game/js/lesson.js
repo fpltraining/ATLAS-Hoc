@@ -87,7 +87,7 @@ var G = window.G || (window.G = {});
       return G.el('button.big' + (sid === cur && !done ? '.cur' : '') + (open ? '' : '.off'), { onclick: function () {
         if (!open) { G.sfx('wrong'); G.toast('Qua buổi ' + (r.n - 1) + ' (kiểm tra từ 8/10) để mở buổi ' + r.n + '.'); return; }
         G.openLesson(sid);
-      } }, G.el('b', (done ? '✓ ' : open ? '' : '🔒 ') + r.title), G.el('span', sub));
+      } }, G.el('b', done ? G.ic3('check', 'ic3-s') : open ? null : G.ic3('lock', 'ic3-s'), r.title), G.el('span', sub));
     })));
   }
 
@@ -99,21 +99,23 @@ var G = window.G || (window.G = {});
     body.appendChild(teacherLine(R.intro[1], null));
     body.appendChild(G.el('div.tline.small', G.el('div.tbubble.en', G.el('div', R.intro[0]), pyEl(R.introPy), speakBtn(R.intro[0]))));
     say(R.intro[0]);
+    // chỉ tô cam bước nên làm tiếp: chưa học thì Học, học rồi thì Luyện, luyện rồi thì Kiểm tra (taste-skill: một nút chính)
+    var nx = !d.hocXong ? 0 : !d.luyenXong ? 1 : 2;
     body.appendChild(G.el('div.menu3',
-      G.el('button.big' + (d.hocXong ? '.done' : ''), { onclick: function () { learn(d.the > 0 && !d.hocXong ? Math.min(d.the, R.items.length - 1) : snd ? -2 : R.gram ? -1 : 0); } },
-        G.el('b', (d.hocXong ? '✓ ' : '') + (R.final ? '1 · Ôn tập' : '1 · Học')),
+      G.el('button.big.bic' + (d.hocXong ? '.done' : nx === 0 ? '.seal' : ''), { onclick: function () { learn(d.the > 0 && !d.hocXong ? Math.min(d.the, R.items.length - 1) : snd ? -2 : R.gram ? -1 : 0); } },
+        G.bigIc(d.hocXong ? 'check' : 'book', R.final ? '1 · Ôn tập' : '1 · Học'),
         G.el('span', d.hocXong ? 'Đã học xong ' + R.items.length + ' thẻ · xem lại' : d.the > 0 ? 'Học tiếp từ thẻ ' + (d.the + 1) + '/' + R.items.length
           : snd ? 'Âm “' + G.FOUND_SOUNDS[R.sound].title + '”, ngữ pháp “' + R.gram.t + '” và ' + R.items.length + ' từ mới'
           : R.gram ? 'Ngữ pháp “' + R.gram.t + '” và ' + R.items.length + ' câu dùng thật'
           : R.items.length + ' từ và câu' + (R.final ? ' của cả cấp ' + R.final.level : ', nghe và xem nghĩa'))),
-      G.el('button.big' + (d.luyenXong ? '.done' : ''), { onclick: practice },
-        G.el('b', (d.luyenXong ? '✓ ' : '') + '2 · Luyện'),
+      G.el('button.big.bic' + (d.luyenXong ? '.done' : nx === 1 ? '.seal' : ''), { onclick: practice },
+        G.bigIc(d.luyenXong ? 'check' : 'mic', '2 · Luyện'),
         G.el('span', d.luyenXong ? 'Đã luyện xong · luyện lại' : d.tro > 0 ? 'Làm tiếp trò ' + (d.tro + 1) + '/4' : '4 trò ngắn: nghe, chọn câu, nói qua micro, xếp câu')),
-      G.el('button.big.seal', { onclick: test }, G.el('b', R.final && speakList() ? '3 · Thi phần 1 · Hiểu' : '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/' + TN() + ' ' + stars(p.sao) : TN() + ' câu, đạt từ ' + PN() + ' câu là ' + (R.final ? (speakList() ? 'qua phần 1' : 'nhận chứng chỉ') : R.parent ? 'qua buổi' : 'qua phòng')))
+      G.el('button.big.bic' + (nx === 2 ? '.seal' : ''), { onclick: test }, G.bigIc('memo', R.final && speakList() ? '3 · Thi phần 1 · Hiểu' : '3 · Kiểm tra'), G.el('span', p ? 'Lần trước: ' + p.diem + '/' + TN() + ' ' + stars(p.sao) : TN() + ' câu, đạt từ ' + PN() + ' câu là ' + (R.final ? (speakList() ? 'qua phần 1' : 'nhận chứng chỉ') : R.parent ? 'qua buổi' : 'qua phòng')))
     ));
     // thi chứng chỉ: đã qua phần Hiểu mà chưa có chứng chỉ thì thi tiếp phần Nói (không phải làm lại phần 1)
-    if (R.final && speakList() && !certOf() && p && p.diem >= PN()) body.appendChild(G.el('button.big.seal.cert-speak', { onclick: function () { speakPart(p.diem); } },
-      G.el('b', '🗣 Phần 2 · Nói'), G.el('span', '5 tình huống, tự nói bằng câu của bạn · trung bình từ 60/100 là nhận chứng chỉ' + (G.S.thiNoi && G.S.thiNoi[R.id] ? ' · lần trước ' + G.S.thiNoi[R.id] + '/100' : ''))));
+    if (R.final && speakList() && !certOf() && p && p.diem >= PN()) body.appendChild(G.el('button.big.bic.seal.cert-speak', { onclick: function () { speakPart(p.diem); } },
+      G.bigIc('mic', 'Phần 2 · Nói'), G.el('span', '5 tình huống, tự nói bằng câu của bạn · trung bình từ 60/100 là nhận chứng chỉ' + (G.S.thiNoi && G.S.thiNoi[R.id] ? ' · lần trước ' + G.S.thiNoi[R.id] + '/100' : ''))));
   }
   /* tiến độ đang học dở của phòng (lưu ngay, mở lại học tiếp, cập nhật app không mất) */
   function st() { G.S.dangHoc = G.S.dangHoc || {}; return G.S.dangHoc[R.id] || (G.S.dangHoc[R.id] = { the: 0, hocXong: '', tro: 0, luyenXong: '' }); }
