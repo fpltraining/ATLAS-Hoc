@@ -105,6 +105,69 @@ var G = window.G || (window.G = {});
     return { done: done, all: TASKS.length, mins: mins, goal: gm, pct: pct };
   };
 
+  /* ---------- Nhiệm vụ hôm nay (kiểu "daily quests" của Duolingo): 5 việc, việc nào cũng có nút Làm ngay mở thẳng tới đúng chỗ,
+     xong cả 5 thì mở rương +30 XP. Dùng ở Sảnh, bảng Hôm nay và ô nhiệm vụ ngoài phố (G.updateHud). ---------- */
+  var CHEST_XP = 30;
+  function hintOf(t) {
+    if (t.id === 'bai') { var nl = G.nextLesson && G.nextLesson(); return nl ? nl.label + (nl.teacher ? ' với ' + nl.teacher : '') : t.hint; }
+    if (t.id === 'noi') { var lf = G.nextLifeId && G.nextLifeId(), L = lf && G.LIFE[lf]; return L ? L.title + ' · nói với ' + ((G.NPCS[L.npc] || {}).name || '') : t.hint; }
+    if (t.id === 'on') { var n = G.srsDue ? G.srsDue().length : 0; return n ? n + ' câu đến hạn ôn' : 'Ôn thêm 5 câu bất kỳ'; }
+    if (t.id === 'tu') { var tp = G.topicNext && G.topicNext(); return tp ? tp.name + ' · 10 từ mới' : t.hint; }
+    return 'Truyện song ngữ, bấm câu để xem nghĩa';
+  }
+  G.questHint = function (id) { for (var i = 0; i < TASKS.length; i++) if (TASKS[i].id === id) return hintOf(TASKS[i]); return ''; };
+  G.QUESTS = TASKS;
+  G.questAct = function (id) {
+    if (id === 'bai') { var nl = G.nextLesson && G.nextLesson(); if (nl && G.openLesson) G.openLesson(nl.id); else G.toast('Đã học hết các phòng đang mở. Ôn lại một phòng bất kỳ ở trường nhé.'); }
+    else if (id === 'doc') G.openReader();
+    else if (id === 'noi') { var lf = G.nextLifeId && G.nextLifeId(); if (lf && G.openLife) G.openLife(lf); else G.toast('Ra phố gặp người có bong bóng chat trên đầu nhé.'); }
+    else if (id === 'on') G.openReview();
+    else if (id === 'tu' && G.openTopics) G.openTopics();
+  };
+  /* biểu tượng 5 nhiệm vụ: xong thì sáng màu */
+  G.questIcons = function (cls) {
+    var d = today();
+    return TASKS.map(function (t) { return G.el('span.qi' + (d.viec[t.id] ? '.on' : '') + (cls ? '.' + cls : ''), { title: t.name }, G.ic3(t.ic3)); });
+  };
+  G.claimChest = function () {
+    var d = today(); if (d.ruong) return false;
+    var p = G.dayProgress(); if (p.done < p.all) return false;
+    d.ruong = G.vnNow().slice(11, 16); G.save(); G.addXp(CHEST_XP);
+    if (G.sfx) G.sfx('done'); if (G.confetti) G.confetti();
+    G.toast('🎉 Mở rương hôm nay: +' + CHEST_XP + ' XP'); if (G.updateHud) G.updateHud();
+    return true;
+  };
+  /* danh sách nhiệm vụ: o.noSeal = không tô cam (Sảnh đã có thẻ Bắt đầu từ đây tô cam) */
+  G.questList = function (o) {
+    o = o || {};
+    var wrap = G.el('div.qs');
+    function draw() {
+      var d = today(), p = G.dayProgress(), first = null;
+      for (var i = 0; i < TASKS.length; i++) if (!d.viec[TASKS[i].id]) { first = TASKS[i].id; break; }
+      wrap.innerHTML = '';
+      var bar = G.el('i'); bar.style.transform = 'scaleX(' + (p.done / p.all) + ')';
+      wrap.appendChild(G.el('div.qs-h',
+        G.el('div.qs-ht', G.el('b', 'Nhiệm vụ hôm nay'), G.el('span', p.done + '/' + p.all + ' xong · ' + p.mins + '/' + p.goal + ' phút học')),
+        o.more ? G.el('button.btn.sm.ghost', { onclick: G.openToday }, 'Chi tiết ›') : null));
+      wrap.appendChild(G.el('span.qs-bar', bar));
+      wrap.appendChild(G.el('div.qs-list', TASKS.map(function (t) {
+        var ok = !!d.viec[t.id];
+        return G.el('div.qs-row' + (ok ? '.ok' : ''),
+          G.el('span.qs-ic', G.ic3(t.ic3), ok ? G.el('i.qs-tick', G.ic3('check')) : null),
+          G.el('div.qs-txt', G.el('b', t.name), G.el('span', ok ? 'Xong lúc ' + d.viec[t.id] : hintOf(t) + ' · khoảng ' + t.min + ' phút')),
+          ok ? G.el('span.qs-done', 'Xong') : G.el('button.btn.sm' + (!o.noSeal && t.id === first ? '.seal' : ''), { onclick: function () { G.questAct(t.id); } }, 'Làm ngay'));
+      })));
+      // rương: xong cả 5 nhiệm vụ thì mở được
+      if (d.ruong) wrap.appendChild(G.el('div.qs-chest.got', G.ic3('trophy'), G.el('div', G.el('b', 'Đã mở rương hôm nay · +' + CHEST_XP + ' XP'), G.el('span', 'Mai có 5 nhiệm vụ mới.'))));
+      else if (p.done >= p.all) wrap.appendChild(G.el('button.big.bic.qs-chest.ready' + (o.noSeal ? '' : '.seal'), { onclick: function () { if (G.claimChest()) { draw(); if (o.onChange) o.onChange(); } } },
+        G.bigIc('gift', 'Mở rương hôm nay'), G.el('span', '+' + CHEST_XP + ' XP thưởng vì xong cả ' + p.all + ' nhiệm vụ')));
+      else wrap.appendChild(G.el('div.qs-chest', G.ic3('gift'), G.el('div', G.el('b', 'Rương hôm nay +' + CHEST_XP + ' XP'), G.el('span', 'Còn ' + (p.all - p.done) + ' nhiệm vụ nữa là mở được.'))));
+      G.enter(wrap.querySelectorAll('.qs-row'), { gap: 55, y: 8, dur: 320 });
+    }
+    draw();
+    return wrap;
+  };
+
   /* đếm thời gian học thật */
   var lastInput = Date.now();
   function touch() { lastInput = Date.now(); }
@@ -146,6 +209,8 @@ var G = window.G || (window.G = {});
     body.appendChild(G.el('div.td-head', ring,
       G.el('div.td-txt', G.el('b', p.mins + ' / ' + p.goal + ' phút'), G.el('div.small.faint', p.done + '/' + p.all + ' việc hôm nay')),
       G.el('div.td-streak', fire, G.el('div', sn, G.el('span', 'ngày học liên tiếp')))));
+    // nhiệm vụ hôm nay ngay dưới vòng %: việc cần làm là trung tâm của bảng
+    body.appendChild(G.questList({ onChange: function () { G.openToday(); } }));
     var wk = G.weekStudy();
     var rest = G.isStudyDay && !G.isStudyDay();
     if (G.planLine) body.appendChild(G.el('div.td-plan', G.el('b.td-plan-h', G.ic3((G.goalOf() && G.goalOf().ic3) || 'calendar'), 'Tiến độ theo mốc'), G.el('div.small', G.planLine()),
@@ -154,16 +219,6 @@ var G = window.G || (window.G = {});
       G.S.mocHoc ? null : G.el('button.btn.sm', { onclick: function () { G.goLobby && G.goLobby(); } }, 'Chọn mốc ở Sảnh')));
     if (G.rankCard) body.appendChild(G.rankCard());
     // danh sách việc hôm nay (mẫu "checklist" của taste-skill): thanh tiến độ, việc xong có dấu tick và gạch ngang
-    var nDone = 0; TASKS.forEach(function (t) { if (d.viec[t.id]) nDone++; });
-    var clBar = G.el('i'); clBar.style.transform = 'scaleX(' + (nDone / TASKS.length) + ')';
-    body.appendChild(G.el('div.cl-h', G.el('b', 'Việc hôm nay'), G.el('span', nDone + '/' + TASKS.length + ' xong'), G.el('span.cl-bar', clBar)));
-    body.appendChild(G.el('div.td-list', TASKS.map(function (t) {
-      var ok = !!d.viec[t.id];
-      return G.el('div.td-item' + (ok ? '.ok' : ''),
-        G.el('span.td-ic', G.ic3(ok ? 'check' : t.ic3)),
-        G.el('div.td-txt', G.el('b', t.name), G.el('div.small.faint', ok ? 'Xong lúc ' + d.viec[t.id] : t.hint + ' · khoảng ' + t.min + ' phút')),
-        !ok && (t.id === 'doc' || t.id === 'on' || (t.id === 'tu' && G.openTopics)) ? G.el('button.btn.sm', { onclick: function () { if (t.id === 'doc') G.openReader(); else if (t.id === 'tu') G.openTopics(); else G.openReview(); } }, 'Làm ngay') : null);
-    })));
     if (G.openMemMap) body.appendChild(G.el('button.big.bic.td-mm', { onclick: function () { G.openMemMap(); } }, G.bigIc('brain', 'Bản đồ nhớ từ'),
       G.el('span', G.srsDue ? (G.srsDue().length ? G.srsDue().length + ' câu đến hạn ôn · xem buổi nào sắp quên' : 'Xem buổi nào nhớ chắc, buổi nào sắp quên') : '')));
     // kiểm tra tuần + sổ mình nói được
@@ -194,12 +249,11 @@ var G = window.G || (window.G = {});
     }
     drawMic();
     body.appendChild(micBox);
-    body.appendChild(G.el('p.small.faint', 'Làm đủ ' + p.all + ' việc và học đủ ' + p.goal + ' phút là tròn vòng hôm nay, đúng tiến độ theo mốc. Thanh 📍 Việc tiếp theo luôn chỉ chỗ cần đến.'));
+    body.appendChild(G.el('p.small.faint', 'Làm đủ ' + p.all + ' nhiệm vụ và học đủ ' + p.goal + ' phút là tròn vòng hôm nay, đúng tiến độ theo mốc. Ngoài phố, thanh Việc tiếp theo luôn chỉ chỗ cần đến.'));
     // chuyển động khi mở bảng: ngọn lửa bật lên, số chuỗi chạy, 7 ngày và 4 việc hiện lần lượt
     G.pop(fire, 120);
     G.countUp(sn, 0, G.S.chuoi.hienTai, { delay: 250, dur: 700 });
     G.enter(body.querySelectorAll('.td-days span'), { gap: 45, start: 200, y: 10 });
-    G.enter(body.querySelectorAll('.td-item'), { gap: 70, start: 300 });
   };
 
   function weekLine() {

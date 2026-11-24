@@ -1,6 +1,11 @@
 /* Bài kiểm tra đầu vào tiếng Anh · "Ngày đầu tới Brightford" (dữ liệu: data/placement_en.js).
    Kai dẫn người học đi một vòng thành phố: mỗi câu diễn ra ở một nơi (ảnh nơi đó, người ở đó nói với bạn).
-   4 phần Nghe · Đọc · Phản xạ giao tiếp · Nói, mỗi phần đi từ Pre-A1 lên B2 và tự dừng khi tới mức khó.
+   5 phần, theo cách các bài kiểm tra đầu vào chuẩn (Duolingo English Test, EF SET, Cambridge) đang làm:
+   1. Từ vựng kiểu Có/Không (như "Read and Select" của Duolingo, LexTALE): mỗi cấp 12 từ, 8 thật 4 giả; chạm từ giả bị trừ,
+      2 từ đã chạm được hỏi lại nghĩa để kiểm chứng. Điểm cấp = từ thật biết / 8 − từ giả chạm / 4, đạt từ 0,75.
+   2–5. Nghe · Đọc · Phản xạ giao tiếp · Nói: thích ứng (adaptive), bắt đầu ở cấp từ vựng vừa đo; đạt thì lên, chưa đạt thì xuống
+      tới khi tìm được cấp cao nhất làm được. Cấp A2 trở lên cần đúng 3 câu trước khi sai 2 câu (đoán mò chỉ khoảng 5% qua được một cấp).
+   Trình độ chung = trung vị các kỹ năng, nhưng không vượt cấp từ vựng (thiếu từ nền thì chưa xếp lên cao).
    Mỗi cấp rút ngẫu nhiên từ kho câu, câu đã gặp ở lần làm trước để sau cùng (G.S.dauVaoDaHoi), nên làm lại sau 30 ngày gặp câu mới.
    Kết quả có thêm bản đồ Brightford: nơi bạn đã tự lo được sáng lên, nơi cần học khoá lại.
    Kết quả lưu G.S.dauVao = { lv, nghe, doc, gt, noi, luc, dung, tong } (giờ Việt Nam), lịch sử ở G.S.dauVaoLs.
@@ -50,7 +55,8 @@ var G = window.G || (window.G = {});
       return G.el('div.pl-part', G.el('b', p.icon + ' ' + p.name), G.el('span.small.faint', p.what));
     })));
     box.appendChild(G.el('div.pl-note',
-      G.el('div', '⏱ Bài tự dừng khi tới mức khó với bạn: người mới khoảng 3 phút, người đã học khoảng 10–12 phút.'),
+      G.el('div', '⏱ Bài tự điều chỉnh theo bạn: người mới khoảng 4 phút, người đã học khoảng 12–15 phút.'),
+      G.el('div', '🔤 Phần đầu là Từ vựng: có từ giả trộn vào, chỉ chạm từ bạn thật sự biết nghĩa.'),
       G.el('div', '🙅 Không tra từ. Không biết thì bấm “Không biết”, như vậy kết quả mới đúng.'),
       G.el('div', '🌱 Chưa biết tiếng Anh cũng làm bình thường: bấm “Không biết”, bài sẽ tự dừng sau vài câu.'),
       G.el('div', '🔊 Bật loa hoặc đeo tai nghe để làm phần Nghe.')));
@@ -61,7 +67,7 @@ var G = window.G || (window.G = {});
     if (opts.canSkip) box.appendChild(G.el('button.btn.ghost.pl-later', { onclick: close }, 'Để sau'));
   }
   function start() {
-    res = { nghe: null, doc: null, gt: null, noi: null }; pi = 0; nAsk = 0; nRight = 0; asked = []; lastPl = ''; pronRes = null;
+    res = { tv: null, nghe: null, doc: null, gt: null, noi: null }; pi = 0; nAsk = 0; nRight = 0; asked = []; lastPl = ''; pronRes = null;
     seen = {}; var ds = G.S.dauVaoDaHoi || []; for (var i = 0; i < ds.length; i++) seen[ds[i]] = 1;
     part();
   }
@@ -97,9 +103,12 @@ var G = window.G || (window.G = {});
   /* đi từ cấp 1 lên 5: đúng 2 câu đầu thì lên cấp, sai cả 2 thì dừng, đúng 1 thì làm câu thứ 3.
      Đúng 1 sai 2 (có thể do bấm nhầm): thêm 2 câu xác nhận, đúng cả 2 thì vẫn lên cấp. Phần Nói: mỗi cấp một bài, chưa đạt thì thử bài thứ hai. */
   function runPart(p) {
-    var bank = P[p.id], lv = 1, passed = 0, tried = false;
+    if (p.id === 'tv') { runVocab(p); return; }
+    // thích ứng: bắt đầu ở cấp từ vựng vừa đo (ít nhất Pre-A1); đạt thì lên, chưa đạt thì xuống
+    var bank = P[p.id], lv = Math.max(1, Math.min(5, res.tv || 1)), passed = 0, tried = false, dir = 0;
     function itemsOf(l) { return bank.filter(function (it) { return it.lv === l; }); }
-    function up() { passed = lv; lv++; level(); }
+    function up() { passed = lv; if (dir < 0) { end(); return; } dir = 1; lv++; level(); }
+    function down() { if (dir > 0) { end(); return; } dir = -1; lv--; if (lv < 1) { end(); return; } level(); }
     function level() {
       var L = itemsOf(lv);
       if (lv > 5 || !L.length) { end(); return; }
@@ -112,21 +121,22 @@ var G = window.G || (window.G = {});
             tried = true;
             if (ok) { up(); return; }
             if (!again && k < q.length) { again = true; speakOne(); return; }   // máy nghe nhầm: cho thử bài thứ hai
-            end();
+            down();
           });
         })();
         return;
       }
-      var right = 0, wrong = 0, confirm = false;
+      // Pre-A1, A1: đúng 2 câu là lên (người mới làm nhanh); A2 trở lên: đúng 3 câu trước khi sai 2 câu
+      var right = 0, wrong = 0, confirm = false, need = lv >= 3 ? 3 : 2;
       (function one() {
-        if (k >= q.length) { if (right >= 2) up(); else end(); return; }
+        if (k >= q.length) { if (right >= need) up(); else down(); return; }
         ask(p, q[k++], lv, function (ok) {
           if (ok) right++; else wrong++;
-          if (confirm) { if (!ok) end(); else if (right >= 2) up(); else one(); return; }
-          if (right >= 2) { up(); return; }
+          if (confirm) { if (!ok) down(); else if (right >= 2) up(); else one(); return; }
+          if (right >= need) { up(); return; }
           if (wrong >= 2) {
-            if (right === 1 && q.length - k >= 2) { confirm = true; right = 0; wrong = 0; one(); return; }
-            end(); return;
+            if (need === 2 && right === 1 && q.length - k >= 2) { confirm = true; right = 0; wrong = 0; one(); return; }
+            down(); return;
           }
           one();
         });
@@ -137,6 +147,72 @@ var G = window.G || (window.G = {});
       pi++; part();
     }
     level();
+  }
+
+  /* ---------- phần Từ vựng: Có/Không có từ giả, đi từ Pre-A1 lên, dừng ở cấp đầu tiên chưa đạt ---------- */
+  function runVocab(p) {
+    var V = G.VOCAB_TEST_EN, F = G.VOCAB_FAKE_EN, lv = 1, passed = 0, used = {};
+    if (!V || !F) { res.tv = null; pi++; part(); return; }
+    function wk(x) { return typeof x === 'string' ? x : x[0]; }
+    function draw(list, n) { return G.shuffle(list.filter(function (x) { return !used[wk(x)]; })).slice(0, n); }
+    (function band() {
+      if (lv > 5 || !V[lv]) { fin(); return; }
+      var real = draw(V[lv], 8), fake = draw(F[lv], 4);
+      real.concat(fake).forEach(function (x) { used[wk(x)] = 1; });
+      grid(lv, real, fake, function (tapReal, tapFake) {
+        // kiểm chứng: hỏi lại nghĩa 2 từ đã chạm; trả lời sai một từ thì trừ 2 từ (coi như chạm quá tay)
+        var check = G.shuffle(tapReal.slice()).slice(0, 2), k = 0, bad = 0;
+        (function next() {
+          if (k >= check.length) {
+            var hits = Math.max(0, tapReal.length - bad * 2), score = hits / 8 - tapFake.length / 4;
+            if (score >= 0.75) { passed = lv; lv++; band(); } else fin();
+            return;
+          }
+          meaning(check[k++], V[lv], function (ok) { if (!ok) bad++; next(); });
+        })();
+      });
+    })();
+    function fin() { res.tv = passed; pi++; part(); }
+  }
+  function vocabTop(sub) {
+    box.className = 'pl-wrap pl-qs pl-tvw';
+    var dots = G.el('div.pl-prog', P.parts.map(function (q, i) { return G.el('i' + (i < pi ? '.done' : i === pi ? '.on' : '')); }));
+    box.appendChild(G.el('div.pl-top', G.el('span.small.faint', P.parts[pi].icon + ' ' + P.parts[pi].name + ' · ' + sub), dots));
+  }
+  function grid(lv, real, fake, cb) {
+    screen(); vocabTop('màn ' + lv + '/5');
+    var all = G.shuffle(real.map(function (x) { return { w: x[0], real: true }; }).concat(fake.map(function (w) { return { w: w, real: false }; })));
+    box.appendChild(G.el('div.pl-yn-h', G.el('b', 'Chạm những từ bạn biết nghĩa'), G.el('span.small.faint', 'Có 4 từ không có thật trộn vào. Chạm nhầm từ giả bị trừ điểm, không chắc thì đừng chạm.')));
+    var g = G.el('div.pl-yn', all.map(function (x) {
+      var b = G.el('button.pl-yn-w', { 'aria-pressed': 'false', onclick: function () { x.on = !x.on; b.className = 'pl-yn-w' + (x.on ? ' on' : ''); b.setAttribute('aria-pressed', x.on ? 'true' : 'false'); } }, x.w);
+      return b;
+    }));
+    box.appendChild(g);
+    G.enter(g.children, { gap: 25, y: 6, dur: 300 });
+    box.appendChild(G.el('div.row.pl-yn-go',
+      G.el('button.btn.ghost', { onclick: function () { cb([], []); } }, 'Không biết từ nào'),
+      G.el('button.btn.seal', { onclick: function () {
+        var tr = [], tf = [];
+        all.forEach(function (x) { if (!x.on) return; if (x.real) { for (var i = 0; i < real.length; i++) if (real[i][0] === x.w) tr.push(real[i]); } else tf.push(x.w); });
+        cb(tr, tf);
+      } }, 'Xong ›')));
+  }
+  function meaning(row, pool, cb) {
+    screen(); vocabTop('kiểm chứng');
+    var seg = function (s) { return s.toLowerCase().split(/[,;/]/)[0].trim(); }, opts = [row[1]], tries = 0;
+    while (opts.length < 4 && tries++ < 80) {
+      var o = pool[Math.floor(Math.random() * pool.length)][1];
+      if (opts.every(function (x) { return seg(x) !== seg(o) && x.indexOf(seg(o)) < 0 && o.indexOf(seg(x)) < 0; })) opts.push(o);
+    }
+    var card = G.el('div.pl-card');
+    card.appendChild(G.el('div.small.faint', 'Bạn vừa chạm từ này. Nghĩa của nó là gì?'));
+    card.appendChild(G.el('div.pl-tvword', row[0], G.sayBtns ? G.sayBtns(row[0], 'en') : null));
+    var picked = false;
+    card.appendChild(G.el('div.pl-opts', G.shuffle(opts).map(function (o) {
+      return G.el('button.opt', { onclick: function (e) { if (picked) return; picked = true; e.currentTarget.className = 'opt pl-picked'; answer(o === row[1], cb); } }, o);
+    })));
+    card.appendChild(G.el('button.btn.ghost.pl-idk', { onclick: function () { if (picked) return; picked = true; answer(false, cb); } }, 'Không biết'));
+    box.appendChild(card);
   }
 
   /* nơi diễn ra câu hỏi và người nói */
@@ -428,14 +504,19 @@ var G = window.G || (window.G = {});
   };
 
   /* ---------- kết quả ---------- */
-  function overall(r) {
+  function skillMid(r) {
     var v = [r.nghe, r.doc, r.gt]; if (r.noi !== null && r.noi !== undefined) v.push(r.noi);
     v.sort(function (a, b) { return a - b; });
     return v[Math.floor((v.length - 1) / 2)];   // trung vị (lấy giá trị thấp hơn khi số phần chẵn)
   }
+  // trình độ chung: trung vị các kỹ năng, không vượt cấp từ vựng (từ là nền của cả nghe, đọc, nói)
+  function overall(r) { var m = skillMid(r); return r.tv === null || r.tv === undefined ? m : Math.min(m, r.tv); }
+  /* tầng nên học theo trình độ: A0, Pre-A1 → Tầng 1 Nền tảng; A1 → Tầng 2; A2 → Tầng 3; B1 trở lên → Tầng 4 */
+  G.floorForLevel = function (lv) { return lv >= 4 ? 4 : lv === 3 ? 3 : lv === 2 ? 2 : 1; };
   function finish() {
     var lv = overall(res);
-    var rec = { lv: lv, nghe: res.nghe, doc: res.doc, gt: res.gt, noi: res.noi, luc: G.vnNow(), dung: nRight, tong: nAsk };
+    var rec = { lv: lv, tv: res.tv, nghe: res.nghe, doc: res.doc, gt: res.gt, noi: res.noi, luc: G.vnNow(), dung: nRight, tong: nAsk, ban: 2 };
+    var floorWas = G.enFloorNow ? G.enFloorNow() : 1;
     var prev = G.S.dauVao;
     G.S.dauVao = rec;
     G.S.dauVaoLs = (G.S.dauVaoLs || []).concat([rec]).slice(-12);
@@ -453,7 +534,15 @@ var G = window.G || (window.G = {});
         G.el('b.pl-sk-lv', v === null ? 'chưa đo' : P.levels[v]));
     })));
     if (prev && prev.luc) box.appendChild(G.el('p.small', (lv > prev.lv ? '📈 Tiến bộ: ' : lv < prev.lv ? '📉 ' : '➖ ') + 'lần trước ' + P.levels[prev.lv] + ' (' + prev.luc.slice(0, 10) + ') → lần này ' + P.levels[lv]));
+    if (res.tv !== null && res.tv !== undefined && lv < skillMid(res)) box.appendChild(G.el('p.small.pl-cap', 'Nghe, đọc, giao tiếp của bạn ở mức ' + P.levels[skillMid(res)] + ', nhưng vốn từ mới ở mức ' + P.levels[res.tv] + '. Trình độ chung tính theo vốn từ, vì thiếu từ nền thì học lên cao sẽ hổng. Học từ ở tầng dưới nhanh thôi, thấy dễ thì thi vượt.'));
     box.appendChild(G.el('div.pl-can', G.el('b', 'Bạn đang ở mức: '), P.cando[lv]));
+    // tầng nên học theo kết quả này; khác tầng đang học thì cho chọn (tiến độ cũ giữ nguyên, thang máy vẫn đi được tầng đã học)
+    var fl = G.floorForLevel(lv), moveBtn = null;
+    if (prev && fl !== floorWas) {
+      var fName = function (n) { var r = G.ROADMAP_EN && G.ROADMAP_EN[n - 1]; return r ? r.name : 'Tầng ' + n; };
+      moveBtn = G.el('button.btn.seal', { onclick: function () { G.S.tangEn = fl; G.save(); if (G.updateHud) G.updateHud(); moveBtn.disabled = true; moveBtn.textContent = 'Đã chuyển sang ' + fName(fl); G.toast('📍 Từ giờ học ở ' + fName(fl) + '. Tiến độ cũ vẫn giữ nguyên.'); } }, 'Học ở ' + fName(fl) + ' ›');
+      box.appendChild(G.el('div.pl-floor', G.el('b', 'Tầng nên học: ' + fName(fl)), G.el('span.small', 'Bạn đang học ở ' + fName(floorWas) + '. Chuyển tầng không mất tiến độ: phòng đã học vẫn vào lại được bằng thang máy.'), moveBtn));
+    }
     box.appendChild(cityMap(lv));
     if (pronRes && G.pronCard) {   // vừa bắt lỗi phát âm: 3 lỗi hay mắc nhất, cách sửa, nút luyện ngay
       var det = {}; pronRes.loi.forEach(function (x) { det[x.tag] = x.heard; });
@@ -462,7 +551,7 @@ var G = window.G || (window.G = {});
     box.appendChild(G.goalCard());
     box.appendChild(G.el('div.pl-plan', G.el('b', 'App sẽ chỉnh cho bạn:'), G.el('ul', plan(lv).map(function (t) { return G.el('li', t); }))));
     box.appendChild(G.el('p.small.faint', 'Học khoảng 30 ngày thì làm lại ở Sảnh → “Trình độ đầu vào” để xem mình lên cấp chưa.'));
-    box.appendChild(G.el('button.btn.seal.big1.pl-go', { onclick: close }, opts.first ? 'Tiếp: chọn nhân vật ›' : opts.canSkip ? 'Xong ›' : 'Vào học ›'));
+    box.appendChild(G.el('button.btn.big1.pl-go' + (moveBtn ? '' : '.seal'), { onclick: close }, opts.first ? 'Tiếp: chọn nhân vật ›' : opts.canSkip ? 'Xong ›' : 'Vào học ›'));
   }
   /* bản đồ Brightford của bạn: nơi đã tự lo được (đủ cấp) sáng lên, nơi cần học khoá lại kèm cấp cần đạt */
   function cityMap(lv) {

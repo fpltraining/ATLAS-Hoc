@@ -149,7 +149,14 @@ var G = window.G || (window.G = {});
   }
   /* mở app sau khi Google trả về: cất phiên đăng nhập, đồng bộ lần đầu. Trả về true nếu đang xử lý (cb gọi sau) */
   G.cloudCatchRedirect = function (cb) {
-    var h = location.hash || '';
+    var h = location.hash || '', qs = location.search || '';
+    // Supabase báo lỗi ở phần ?… của địa chỉ (vd. bad_oauth_state: phiên đăng nhập Google hết hạn hoặc bị mở hai lần): báo rõ, dọn địa chỉ
+    if (/[?&]error(_description|_code)?=/.test(qs)) {
+      var em = (qs.match(/error_code=([^&]+)/) || [])[1] || '', ed = decodeURIComponent(((qs.match(/error_description=([^&]+)/) || [])[1] || '').replace(/\+/g, ' '));
+      try { history.replaceState(null, '', appUrl() + h); } catch (e) { /* bỏ qua */ }
+      setTimeout(function () { cb(em === 'bad_oauth_state' ? 'Đăng nhập Google chưa xong (phiên đăng nhập đã hết hạn). Bấm Đăng nhập bằng Google lần nữa, làm liền một mạch trong cùng trình duyệt.' : 'Đăng nhập Google chưa được: ' + (ed || 'thử lại')); }, 0);
+      return true;
+    }
     if (!/access_token=|error_description=/.test(h)) return false;
     var q = {};
     h.replace(/^#/, '').split('&').forEach(function (kv) { var i = kv.indexOf('='); if (i > 0) q[kv.slice(0, i)] = decodeURIComponent(kv.slice(i + 1).replace(/\+/g, ' ')); });

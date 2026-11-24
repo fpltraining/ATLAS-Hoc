@@ -71,6 +71,7 @@ var G = window.G || (window.G = {});
     for (var i = 0; i < a.length; i++) if (isOpen(a[i])) { var s = G.topicStat(a[i].id); if (s.learned < s.all) return s; }
     return null;
   }
+  G.topicNext = function () { var s = nextTopic(); return s ? { id: s.id, name: s.t.name, left: s.all - s.learned } : null; };
   /* câu ví dụ của từ chủ đề trong thẻ ôn (practice.js): điền khi kho từ đã tải */
   G.topicExEl = function (c) {
     var box = G.el('div.wex.tp-rvex');

@@ -1,4 +1,13 @@
 /* Thế giới Ngôn Ngữ: giao diện. Bảng màu theo bộ hình: navy, kem, san hô, ngọc, xanh trời. */
+/* Be Vietnam Pro (OFL 1.1, github.com/bettergui/BeVietnamPro, lấy qua @fontsource/be-vietnam-pro 5.3.0): chữ tiếng Việt đồng bộ mọi máy */
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-display: swap; font-weight: 400; src: url(../vendor/fonts/be-vietnam-pro-vietnamese-400-normal.woff2) format('woff2'); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-display: swap; font-weight: 400; src: url(../vendor/fonts/be-vietnam-pro-latin-400-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-display: swap; font-weight: 600; src: url(../vendor/fonts/be-vietnam-pro-vietnamese-600-normal.woff2) format('woff2'); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-display: swap; font-weight: 600; src: url(../vendor/fonts/be-vietnam-pro-latin-600-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-display: swap; font-weight: 700; src: url(../vendor/fonts/be-vietnam-pro-vietnamese-700-normal.woff2) format('woff2'); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-display: swap; font-weight: 700; src: url(../vendor/fonts/be-vietnam-pro-latin-700-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-display: swap; font-weight: 800; src: url(../vendor/fonts/be-vietnam-pro-vietnamese-800-normal.woff2) format('woff2'); unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+@font-face { font-family: 'Be Vietnam Pro'; font-style: normal; font-display: swap; font-weight: 800; src: url(../vendor/fonts/be-vietnam-pro-latin-800-normal.woff2) format('woff2'); unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
 :root {
   --navy: #1b2140; --cream: #f8f4ee; --paper: #fffdf9; --coral: #b84b35; --coral-soft: #f6ddd5;
   --jade: #2f7a63; --jade-soft: #dcefe7; --sky: #8bbac0; --line: #e6dfd2; --ink: #1b2140; --soft: #59607c; --faint: #6a6f86;
@@ -12,7 +21,7 @@
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { margin: 0; height: 100%; }
-body { background: var(--cream); color: var(--ink); font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
+body { background: var(--cream); color: var(--ink); font: 16px/1.5 "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
 button { font: inherit; color: inherit; cursor: pointer; }
 .small { font-size: 13px; }
 .faint { color: var(--faint); }
@@ -1181,3 +1190,108 @@ body { background: #f4e9dc url(../assets/paper_tile_1600.webp) repeat; backgroun
 .mm-c.mm-tp .mm-tpic { width: 60%; max-width: 44px; height: auto; aspect-ratio: 1; }
 .mm-c.mm-tp.lock .mm-tpic { opacity: .45; filter: grayscale(.7); }
 @media (max-width: 520px) { .tp-grid, .tp-words { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- bài đầu vào: phần Từ vựng Có/Không (có từ giả), tầng nên học ---------- */
+.pl-tvw { max-width: 760px; }
+.pl-yn-h { display: flex; flex-direction: column; gap: 4px; margin: 6px 0 12px; }
+.pl-yn-h b { font-size: 20px; }
+.pl-yn { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.pl-yn-w { min-height: 56px; padding: 8px 6px; border-radius: 14px; border: 1.5px solid var(--line); background: #fff; font-size: 18px; font-weight: 700; color: var(--ink); text-align: center; word-break: break-word; }
+.pl-yn-w.on { background: var(--jade-soft); border-color: var(--jade); color: #1d5a45; box-shadow: inset 0 0 0 1.5px var(--jade); }
+.pl-yn-go { margin-top: 14px; }
+.pl-tvword { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 32px; font-weight: 800; color: var(--navy); }
+.pl-cap { background: #fff4e5; border: 1px solid #f0d3a8; border-radius: 14px; padding: 10px 12px; }
+.pl-floor { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1.5px solid var(--coral); border-radius: 16px; padding: 12px 14px; }
+.pl-floor .btn { align-self: flex-start; }
+@media (max-width: 520px) { .pl-yn { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-height: 500px) { .pl-tvw .pl-yn-w { min-height: 48px; font-size: 16px; } .pl-tvw.pl-qs { display: block; } }
+.pl-yn-w { transition: transform .12s var(--ease-ui), background-color .15s, border-color .15s; }
+.pl-yn-w:active { transform: translateY(1px) scale(.985); }
+
+/* ---------- Nhiệm vụ hôm nay (daily.js G.questList, kiểu daily quests): mỗi việc một hàng, nút Làm ngay, rương +30 XP ---------- */
+.qs { display: flex; flex-direction: column; gap: 10px; background: #fff; border: 1.5px solid var(--line); border-radius: 20px; padding: 14px; margin: 12px 0; }
+.qs-h { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.qs-ht { display: flex; flex-direction: column; gap: 2px; }
+.qs-ht b { font-size: 19px; letter-spacing: -.01em; }
+.qs-ht span { font-size: 13.5px; color: var(--soft); font-weight: 600; }
+.qs-bar { display: block; height: 10px; border-radius: 99px; background: var(--cream); overflow: hidden; }
+.qs-bar i { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, #3fa37f, var(--jade)); transform-origin: left center; transition: transform .6s var(--ease-io); }
+.qs-list { display: flex; flex-direction: column; gap: 6px; }
+.qs-row { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 60px; padding: 6px 10px 6px 6px; border-radius: 14px; background: var(--paper); border: 1px solid var(--line); }
+.qs-row.ok { background: var(--jade-soft); border-color: #b9dccb; }
+.qs-ic { position: relative; width: 48px; height: 48px; display: grid; place-items: center; }
+.qs-ic > .ic3 { width: 40px; height: 40px; }
+.qs-tick { position: absolute; right: -2px; bottom: -2px; width: 22px; height: 22px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 1px 3px rgba(0,0,0,.18); }
+.qs-tick .ic3 { width: 18px; height: 18px; }
+.qs-txt { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.qs-txt b { font-size: 15.5px; }
+.qs-txt span { font-size: 13px; color: var(--soft); overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.qs-row.ok .qs-txt b { color: #1d5a45; }
+.qs-done { font-size: 13px; font-weight: 800; color: #1d5a45; padding: 0 8px; }
+.qs-row .btn.sm { min-height: 44px; padding: 0 14px; white-space: nowrap; }
+.qs-chest { display: grid; grid-template-columns: 48px 1fr; align-items: center; gap: 12px; padding: 8px 10px 8px 6px; border-radius: 14px; border: 1.5px dashed #e3c79b; background: #fff8ec; }
+.qs-chest > .ic3 { width: 44px; height: 44px; filter: grayscale(.35); opacity: .85; }
+.qs-chest b { display: block; font-size: 15px; }
+.qs-chest span { font-size: 13px; color: var(--soft); }
+.qs-chest.got { border-style: solid; border-color: #b9dccb; background: var(--jade-soft); }
+.qs-chest.got > .ic3 { filter: none; opacity: 1; }
+.qs-chest.ready { border-style: solid; }
+.qs-chest.ready > .ic3 { animation: qchest 1.6s var(--ease-io) infinite; }
+@keyframes qchest { 0%, 70%, 100% { transform: rotate(0); } 76% { transform: rotate(-9deg) scale(1.06); } 84% { transform: rotate(8deg) scale(1.06); } 92% { transform: rotate(-4deg); } }
+
+/* ô nhiệm vụ ngoài phố (góc phải): giấy kem, rương lắc nhẹ khi còn việc, 5 biểu tượng sáng dần */
+.hud-xp.hud-q { display: flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; min-height: 52px; border-radius: 18px; background: rgba(255,251,242,.96); color: var(--ink); border: 1.5px solid #ecdcc0; box-shadow: 0 6px 18px -6px rgba(60,35,10,.35); font-weight: 700; font-size: 13px; cursor: pointer; }
+.hq-chest { position: relative; width: 40px; height: 40px; display: grid; place-items: center; flex: none; }
+.hq-chest .ic3 { width: 38px; height: 38px; }
+.hud-q:not(.full) .hq-chest .ic3 { animation: qchest 6s var(--ease-io) infinite; }
+.hud-q.claim .hq-chest .ic3 { animation: qchest 1.6s var(--ease-io) infinite; }
+.hq-n { position: absolute; top: -4px; right: -5px; min-width: 19px; height: 19px; padding: 0 5px; border-radius: 99px; background: var(--coral); color: #fff; font-size: 11.5px; line-height: 19px; text-align: center; box-shadow: 0 0 0 2px #fffbf2; }
+.hq-mid { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.hq-t { font-size: 13px; line-height: 1.1; }
+.hq-icons { display: flex; gap: 3px; }
+.qi { width: 20px; height: 20px; display: grid; place-items: center; border-radius: 6px; background: rgba(0,0,0,.05); }
+.qi .ic3 { width: 16px; height: 16px; opacity: .42; filter: grayscale(1); }
+.qi.on { background: #d8efe3; }
+.qi.on .ic3 { opacity: 1; filter: none; }
+.hq-bar { display: block; height: 5px; border-radius: 99px; background: #eadfcb; overflow: hidden; }
+.hq-bar i { display: block; height: 100%; background: var(--jade); transform-origin: left center; transition: transform .6s var(--ease-io); }
+.hq-m { font-size: 10.5px; color: var(--soft); font-weight: 600; line-height: 1; }
+.hud-q.full { background: rgba(232,246,238,.97); border-color: #b9dccb; }
+.hud-q.claim { background: #fff4e5; border-color: var(--coral); }
+.hud-q:active { transform: translateY(1px) scale(.985); }
+@media (hover: hover) and (pointer: fine) { .hud-q:hover { transform: translateY(-1px); box-shadow: 0 10px 22px -8px rgba(60,35,10,.4); } }
+@media (max-height: 500px) { .hud-xp.hud-q { min-height: 46px; padding: 4px 10px 4px 4px; gap: 6px; } .hq-chest, .hq-chest .ic3 { width: 32px; height: 32px; } .qi { width: 17px; height: 17px; } .qi .ic3 { width: 13px; height: 13px; } .hq-m { display: none; } }
+@media (prefers-reduced-motion: reduce) { .hud-q .hq-chest .ic3, .qs-chest.ready > .ic3 { animation: none !important; } }
+
+/* ---------- Sảnh: Bắt đầu từ đây (một việc, một nút cam) + Bạn đang ở đây (Lộ trình) ---------- */
+.sh-card { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 14px 16px; margin: 14px 0 4px; border-radius: 22px; background: #fff; border: 2px solid var(--coral); box-shadow: 0 14px 30px -18px rgba(184,75,53,.55); }
+.sh-ic { width: 76px; height: 76px; border-radius: 20px; background: #fff1e6; display: grid; place-items: center; }
+.sh-ic .ic3 { width: 58px; height: 58px; }
+.sh-txt { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.sh-k { display: inline-flex; align-items: center; gap: 2px; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--coral); }
+.sh-txt b { font-size: 21px; line-height: 1.2; letter-spacing: -.01em; }
+.sh-txt > span:last-child { font-size: 14px; color: var(--soft); }
+.sh-go { min-height: 52px; padding: 0 22px; font-size: 16px; white-space: nowrap; }
+@media (max-width: 640px) { .sh-card { grid-template-columns: 56px minmax(0, 1fr); } .sh-ic { width: 56px; height: 56px; } .sh-ic .ic3 { width: 44px; height: 44px; } .sh-go { grid-column: 1 / -1; width: 100%; } }
+.here-card { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; margin: 12px 0; border-radius: 22px; background: #fff; border: 2px solid var(--coral); }
+.here-h { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.here-h b { font-size: 21px; }
+.here-n b { font-size: 34px; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.here-n span { font-size: 14px; color: var(--soft); font-weight: 600; }
+.here-card .sh-go { align-self: flex-start; }
+#lobby .sh-card, #lobby .here-card, #lobby .qs { background: #fffdf8; }
+/* Hồ sơ: Trình độ của bạn */
+.lv-card { display: flex; flex-direction: column; gap: 12px; padding: 14px 16px; margin: 14px 0; border-radius: 22px; background: #fffdf8; border: 1.5px solid var(--line); }
+.lv-top { display: flex; align-items: center; gap: 14px; }
+.lv-big { width: 92px; height: 92px; flex: none; border-radius: 22px; background: var(--navy); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+.lv-big b { font-size: 32px; line-height: 1; letter-spacing: -.02em; }
+.lv-big span { font-size: 12px; opacity: .9; }
+.lv-txt { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.lv-txt b { font-size: 19px; }
+.lv-txt > span:last-child { font-size: 13.5px; color: var(--soft); }
+.lv-sk { background: none; border: 0; padding: 0; }
+.lv-re { align-self: flex-start; }
+.hero-next { display: inline-flex; align-items: center; gap: 4px; min-height: 44px; margin-top: 10px; padding: 6px 14px; border-radius: 99px; border: 1.5px solid #e3c79b; background: #fffaf1; color: #5b3a22; font-size: 14px; font-weight: 700; max-width: 100%; }
+.hero-next span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hero-next { transition: transform .12s var(--ease-ui), background-color .15s; }
+.hero-next:active { transform: translateY(1px) scale(.985); }
