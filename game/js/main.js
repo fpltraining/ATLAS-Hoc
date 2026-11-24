@@ -78,6 +78,7 @@ var G = window.G || (window.G = {});
   }
 
   G.goLobby = function () {
+    if (G._newVer) { G._newVer = false; G.save(); location.reload(); return; }   // bản app mới: nạp lại khi về Sảnh (tiến độ đã lưu)
     document.documentElement.classList.remove('in-city');
     G.stopEngine();
     document.getElementById('create').style.display = 'none';
@@ -243,6 +244,9 @@ var G = window.G || (window.G = {});
     if (!(G.cloudCatchRedirect && G.cloudCatchRedirect(function (err, what) { if (what === 'pulled') { location.reload(); return; } if (err) G.toast(err); begin(); }))) begin();
     if ('serviceWorker' in navigator && location.protocol !== 'file:') {
       navigator.serviceWorker.register('sw.js').catch(function () {});
+      // có bản app mới (service worker mới nắm quyền): không nạp lại giữa bài, chờ lúc người học về Sảnh mới nạp lại (G.goLobby)
+      var hadCtrl = !!navigator.serviceWorker.controller;
+      navigator.serviceWorker.addEventListener('controllerchange', function () { if (hadCtrl) G._newVer = true; hadCtrl = true; });
       // app chạy ổn được 25 giây: nhờ service worker tải dần hình còn thiếu để học offline (máy bật Tiết kiệm dữ liệu hoặc mạng 2G thì thôi)
       setTimeout(function () {
         try {
@@ -261,8 +265,21 @@ var G = window.G || (window.G = {});
     if (!(G.cloudReady && G.cloudReady()) || G.cloudUser() || !G.openCloudGate || document.querySelector('.cgate')) return;
     var cd = G.S.caiDat || {};
     if (cd.hoiTK >= 3 || cd.hoiTKluc === G.vnDay()) return;   // hỏi tối đa 3 lần, mỗi ngày một lần
-    setTimeout(function () { G.openCloudGate(function () {}, { soft: true }); }, 1800);
+    if (askT) return;
+    var tries = 0;
+    // không chen vào giữa bài (vd. vừa luyện xong đã vào kiểm tra): chờ tới khi người học đóng bảng học, không có màn nào khác
+    (function later() {
+      askT = setTimeout(function () {
+        askT = 0;
+        if (G.cloudUser() || document.querySelector('.cgate')) return;
+        var pn = document.getElementById('panel'), pl = document.getElementById('placement');
+        var busy = (pn && pn.classList.contains('open')) || document.querySelector('.modal') || (pl && pl.style.display !== 'none' && pl.offsetParent);
+        if (busy) { if (++tries < 900) later(); return; }
+        G.openCloudGate(function () {}, { soft: true });
+      }, tries ? 2000 : 1800);
+    })();
   };
+  var askT = 0;
   function flow() {
     if (!G.S.nhanVat && !G.S.dauVao) {
       // lần đầu: kiểm tra nhanh 3 phút (Từ vựng) → chọn nhân vật → lời mở đầu → vào thành phố và mở ngay buổi học đầu

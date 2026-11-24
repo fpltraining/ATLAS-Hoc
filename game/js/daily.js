@@ -124,7 +124,7 @@ var G = window.G || (window.G = {});
     else if (id === 'doc') G.openReader();
     else if (id === 'noi') { var lf = G.nextLifeId && G.nextLifeId(); if (lf && G.openLife) G.openLife(lf); else G.toast('Ra phố gặp người có bong bóng chat trên đầu nhé.'); }
     else if (id === 'on') G.openReview();
-    else if (id === 'tu' && G.openTopics) G.openTopics();
+    else if (id === 'tu') { var tn = G.topicNext && G.topicNext(); if (tn && G.topicLearn) G.topicLearn(tn.id); else if (G.openTopics) G.openTopics(); }
   };
   /* biểu tượng 5 nhiệm vụ: xong thì sáng màu */
   G.questIcons = function (cls) {
@@ -289,10 +289,12 @@ var G = window.G || (window.G = {});
   };
 
   /* ---------- Đọc truyện ---------- */
-  var IDX = null;
+  var IDX = null, COVERS = null;
   function loadIndex(cb) {
     if (IDX) { cb(IDX); return; }
-    fetch('../data/stories/index.json').then(function (r) { return r.json(); }).then(function (j) {
+    // danh sách tranh bìa đã có (data/covers.json): truyện chưa có bìa thì hiện kiểu thẻ chữ, không tải hình hỏng
+    fetch('../data/covers.json').then(function (r) { return r.json(); }).then(function (c) { COVERS = {}; c.forEach(function (id) { COVERS[id] = 1; }); }).catch(function () { /* không có danh sách: thử tải mọi bìa */ })
+    .then(function () { return fetch('../data/stories/index.json'); }).then(function (r) { return r.json(); }).then(function (j) {
       var order = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5 };
       // hiện tất cả truyện tiếng Anh, xếp theo kệ (Brightford 2080 đầu tiên), trong kệ theo cấp
       IDX = j.filter(function (s) { return s.lang === 'en'; });
@@ -310,9 +312,10 @@ var G = window.G || (window.G = {});
   function readN(id) { return (G.S.truyen && G.S.truyen[id]) || 0; }
   G.openReader = function () {
     stopListen();
-    var body = panelOpen('Đọc truyện');
+    var body = panelOpen('Đọc truyện'), gen = G.panelGen;
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));
     loadIndex(function (list) {
+      if (!G.panelLive(gen)) return;   // đã đóng hoặc mở bảng khác trong lúc tải
       body.innerHTML = '';
       // gợi ý: truyện đang đọc dở, không có thì truyện dễ nhất chưa đọc
       var next = null;
@@ -331,8 +334,9 @@ var G = window.G || (window.G = {});
         if (grp !== lv) { lv = grp; body.appendChild(G.el('h3.rd-lv', SHELF_NAME[grp] || 'Truyện khác')); }
         var r = readN(s.id);
         // thẻ truyện nền trắng có tranh bìa (taste-skill: tranh thật dẫn dắt, chỉ "Đọc tiếp" nổi bật)
-        var cover = G.el('img.rd-cover', { src: '../img/covers/' + s.id + '.webp', alt: '', loading: 'lazy', onerror: function () { this.style.display = 'none'; if (this.parentNode) this.parentNode.className += ' no-cover'; } });
-        body.appendChild(G.el('button.rd-story', { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
+        var hasCover = !COVERS || COVERS[s.id];
+        var cover = hasCover ? G.el('img.rd-cover', { src: '../img/covers/' + s.id + '.webp', alt: '', loading: 'lazy', onerror: function () { this.style.display = 'none'; if (this.parentNode) this.parentNode.className += ' no-cover'; } }) : null;
+        body.appendChild(G.el('button.rd-story' + (hasCover ? '' : '.no-cover'), { onclick: function () { chapter(s, Math.min(r, s.chapters.length - 1)); } },
           cover,
           G.el('span.rd-txt', G.el('b', s.title), G.el('span.small.faint', s.vi + ' · ' + s.level + ' · ' + s.chapters.length + ' chương'),
             s.blurb ? G.el('span.small.rd-blurb', s.blurb) : null,
@@ -349,9 +353,10 @@ var G = window.G || (window.G = {});
   function shuffled(n) { var a = [], i, j, t; for (i = 0; i < n; i++) a.push(i); for (i = n - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function chapter(s, k) {
     stopListen();
-    var body = panelOpen(s.title);
+    var body = panelOpen(s.title), gen = G.panelGen;
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));
     fetch('../data/stories/' + s.id + '.json').then(function (r) { return r.json(); }).then(function (full) {
+      if (!G.panelLive(gen)) return;   // người học đã đóng hoặc mở bảng khác: không ghi đè bảng đó
       var ch = full.chapters[k], lines = [], texts = [];
       body.innerHTML = '';
       body.appendChild(G.el('div.lhead', G.el('div.lsub', 'Chương ' + ch.n + '/' + full.chapters.length + ' · ' + ch.title + ' · ' + (ch.vi || '') + ' · bấm câu để nghe')));
@@ -443,7 +448,7 @@ var G = window.G || (window.G = {});
           if (k + 1 < full.chapters.length) chapter(s, k + 1); else { G.openReader(); G.toast('Đọc xong truyện ' + s.title + '. Giỏi lắm!'); }
         } }, k + 1 < full.chapters.length ? 'Đọc xong · chương sau ›' : 'Đọc xong truyện')));
       body.scrollTop = 0;
-    }).catch(function () { body.innerHTML = ''; body.appendChild(G.el('p', 'Chưa tải được chương này. Thử lại khi có mạng.')); });
+    }).catch(function () { if (!G.panelLive(gen)) return; body.innerHTML = ''; body.appendChild(G.el('p', 'Chưa tải được chương này. Thử lại khi có mạng.')); });
   }
 
   /* Ôn câu đã học: xem js/practice.js (G.openReview) */

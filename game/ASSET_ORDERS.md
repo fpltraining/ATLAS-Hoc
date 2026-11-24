@@ -715,3 +715,24 @@ Motion style: calm and short (0.2–0.5 s for normal changes), squash and stretc
 - Han (khi người chơi chọn Han): Hồ sơ, màn kết quả, luyện nói (`listening` khi micro đang nghe, `viseme` khi phát câu mẫu).
 - Khẩu hình: giọng Kokoro không kèm mốc âm, em ước lượng khẩu hình theo chữ của câu và độ dài tệp giọng (đủ khớp mắt thường).
 - Máy bật Giảm chuyển động hoặc chưa tải xong tệp .riv: hiện hình PNG hiện tại như cũ.
+
+## Đơn P · Tranh bìa 12 truyện còn thiếu (24/11/2026)
+
+Kho truyện đang hiện 12 truyện bằng thẻ chữ vì chưa có tranh bìa (app không vẽ hình bằng code). Đặt qua ChatGPT, giữ đúng tên tệp, cỡ 1120 × 720 (em thu về 560 px và lưu vào `img/covers/<tên>.webp`, rồi thêm tên vào `data/covers.json`).
+
+Câu mở đầu chung (dán trước mỗi dòng): `Book cover illustration for an English-learning story app, warm hand-drawn comic style like the other covers (clean ink lines, soft watercolor shading, friendly characters, cozy small-town setting called Brightford), landscape 1120x720, NO text, NO letters, NO logos.`
+
+| Tệp | Truyện | Cảnh vẽ (gửi ChatGPT) |
+|---|---|---|
+| `a1-first-day.webp` | Lan's First Day | A young Vietnamese woman with one big suitcase and one small bag arriving at a busy small airport, a friendly grey-haired older woman waving at her with a big smile. |
+| `a1-where-mochi.webp` | Where Is Mochi? | An 8-year-old girl peeking under a bakery table and finding a small white cat with one black ear eating a little fish, an older woman baker laughing behind the counter. |
+| `a1-market-day.webp` | Saturday at the Market | A young man with a big shopping bag at a sunny Saturday farmers market, buying mangoes and eggs, colorful fruit and vegetable stalls. |
+| `a1-late-bus.webp` | The Late Bus | A young man without an umbrella at a rainy bus stop, a young woman nurse sharing her big umbrella with him, a bus arriving in the background. |
+| `a1-rainy-weekend.webp` | A Rainy Weekend | A grandmother, a 10-year-old girl and her little brother rolling Vietnamese spring rolls at a big kitchen table, rain on the window. |
+| `a1-cafe-job.webp` | Nam's New Job | A 19-year-old boy in an apron at a small cozy cafe counter, many small order papers everywhere, a tall friendly cafe owner handing him a small notebook. |
+| `future-job.webp` | The Robot in Dad's Chair | A sad father bus driver watching a humanoid robot sit in his driver's seat of a futuristic city bus, his daughter holding his hand. |
+| `future-score.webp` | Leo's Perfect Score | A teenage boy looking at a glowing personal score number floating above his phone, people on a futuristic street each with a small score above their head. |
+| `future-water.webp` | The Last River | A dry cracked riverbed in 2080, a small group of tired climate travelers with bags at the edge of a small town, townspeople watching. |
+| `future-lonely.webp` | A Thousand Friends | A teenage girl alone in her room at night surrounded by many floating chat bubbles and a friendly AI avatar on a screen, looking lonely. |
+| `future-fake.webp` | The Video That Never Happened | A crowd of townspeople staring at phones showing a fake video of a woman doctor, the real doctor standing shocked in the background. |
+| `future-care.webp` | Grandpa's New Nurse | An old grandfather in an armchair with a perfect white robot nurse, his grandson arriving at the door with a gift. |

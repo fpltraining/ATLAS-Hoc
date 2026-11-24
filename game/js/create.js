@@ -61,8 +61,9 @@ var G = window.G || (window.G = {});
       'Hôm nay là ngày đầu đi học ở Trường Anh ngữ. Nhà bạn ở khu phố Maple, trường ở trung tâm.',
       'Đi bộ sang Trung tâm tới trường, hoặc ra bến xe buýt nghe thông báo trạm bằng tiếng Anh và xuống đúng trạm nhé!'
     ];
-    if (G.S.dauVao && G.S.dauVao.lv <= 1) lines.push('Bạn mới bắt đầu nên mình sẽ dẫn bạn tới trường học phòng A1-1 trước. Câu nào cũng có nghĩa tiếng Việt, bấm 🐢 để nghe chậm.');
-    else if (G.S.dauVao && G.S.dauVao.lv >= 3) lines.push('Trình độ của bạn từ A2 trở lên: cả 4 phòng A1 đã mở, vào kiểm tra thẳng để lấy sao rồi ra Phố mua sắm luyện nói.');
+    if (G.S.dauVao && G.S.dauVao.lv <= 1) lines.push('Bạn mới bắt đầu nên mình sẽ dẫn bạn học Tầng 1 · Nền tảng trước: phát âm và những từ dùng nhiều nhất. Câu nào cũng có nghĩa tiếng Việt, bấm nút con rùa để nghe chậm.');
+    else if (G.S.dauVao && G.S.dauVao.lv === 2) lines.push('Bạn học ở Tầng 2 · A1: 4 phòng, 16 buổi. Mỗi buổi khoảng 30–40 phút: Học, Luyện, rồi Kiểm tra.');
+    else if (G.S.dauVao && G.S.dauVao.lv >= 3) lines.push('Trình độ của bạn từ A2: bạn học tiếp ở Tầng 3 · A2 – B1. Các tầng dưới vẫn mở nếu muốn ôn lại.');
     var i = 0, txt = G.el('p.st-text'), pic = G.el('div.st-kai');
     pic.appendChild(G.imgEl('kai_follow.png', 'st-kai-img'));
     var btn = G.el('button.btn.seal.big1', { onclick: next }, 'Tiếp ›');

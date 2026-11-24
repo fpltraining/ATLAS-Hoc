@@ -240,7 +240,7 @@ var G = window.G || (window.G = {});
     }
     function selfMode() {
       box.appendChild(G.el('div.mk-row', icon('ic_speak.png', 'mk-self-img'),
-        G.el('div.small', 'Bấm 🔊 nghe mẫu (🐢 để nghe chậm), rồi nhắc lại thật to 2 lần. Nói xong thì bấm nút bên dưới.')));
+        G.el('div.small', 'Bấm loa nghe mẫu (nút con rùa để nghe chậm), rồi nhắc lại thật to 2 lần. Nói xong thì bấm nút bên dưới.')));
       box.appendChild(G.el('div.mk-foot',
         G.canListen ? G.el('button.mk-sw', { onclick: function () { G.setMic(true); render(); } }, icon('ic_mic.png'), 'Dùng micro chấm điểm') : G.el('span.small.faint', 'Máy này chưa có micro chấm điểm'),
         G.el('button.btn.seal.sm', { onclick: function () { G.sfx('right'); G.addXp(1); finish(null); } }, 'Mình đã nói xong')));

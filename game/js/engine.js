@@ -63,7 +63,7 @@ var G = window.G || (window.G = {});
     G.S.viTri = { canh: id, x: Math.round(P.x), y: Math.round(P.y) };
     G.save();
     var PH = people(); for (var ph = 0; ph < PH.length; ph++) if (PH[ph].hx !== undefined) { PH[ph].x = PH[ph].hx; PH[ph].pmov = false; }   // NPC đi dạo: vào cảnh thì đứng lại chỗ cũ
-    if (G.checkFloorBadge && scene.kind === 'city') setTimeout(G.checkFloorBadge, 900);   // huy hiệu mới (vd. vừa kiểm tra đầu vào): chúc mừng khi ra phố
+    if (G.checkFloorBadge && scene.kind === 'city') setTimeout(G.checkFloorBadge, 2600);   // huy hiệu mới (vd. vừa kiểm tra đầu vào): chúc mừng khi ra phố; chờ buổi học đầu mở (1,4 giây) để không che bài, hiện sau khi đóng bài
     camSnap = true; spawnTown(); fx = []; hudT = 0; weatherHint(); makePuddles();
     if (G.rainSound) G.rainSound(scene.kind === 'city' && G.weather() === 'rain');
     document.getElementById('hud-title').textContent = scene.title;

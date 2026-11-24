@@ -126,7 +126,10 @@ G.ASSET_LIST = [
 
   /* Ảnh trong giao diện HTML (thẻ thành phố, ảnh đầu trang): thiếu thì hiện ô màu có tên file */
   /* fallback: tên file dùng thay khi file chính chưa có */
+  var LOADING_BG = 'rgba(120,90,50,.07)';
   G.imgEl = function (name, cls, fallback) {
+    // hình không có trong danh sách hình (data/asset_rev.js) mà có hình dự phòng: dùng luôn hình dự phòng, khỏi gọi tệp không tồn tại
+    if (fallback && G.ASSET_REV && !G.ASSET_REV[name] && G.ASSET_REV[fallback]) { name = fallback; fallback = null; }
     var wrap = G.el('div.asset ' + (cls || ''));
     var img = new Image();
     img.alt = '';
@@ -141,10 +144,10 @@ G.ASSET_LIST = [
         return;
       }
       if (fallback) { var f = fallback; fallback = null; name = f; tries = 2; img.src = G.assetUrl(f); return; }
-      wrap.innerHTML = ''; wrap.appendChild(G.el('span.asset-name', name)); wrap.style.background = colorOf(name); };
+      wrap.innerHTML = ''; wrap.style.background = LOADING_BG; };
     img.src = G.assetUrl(name);
-    wrap.appendChild(G.el('span.asset-name', name));
-    wrap.style.background = colorOf(name);
+    // đang tải: nền giấy nhạt, không hiện tên tệp
+    wrap.style.background = LOADING_BG;
     return wrap;
   };
 
