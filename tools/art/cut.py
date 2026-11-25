@@ -12,6 +12,10 @@ Bảng việc: danh sách {"src": tệp gốc, "kind": loại, "out": tệp ra h
             → <out>_down.png, _down_w1.png, _down_w2.png, _up…, _left… (512×512, đứng cao 466, chân y = 490, canh theo tâm đầu)
   map       tờ bản đồ → 1536×1024 webp (cắt giữa cho đúng 3:2)
   keep      giữ nguyên khung, chỉ đổi cỡ (giấy chứng chỉ, thẻ thành phố): "size": [w, h]
+  grid      tấm nhiều tư thế dán trên nền hồng, chia đều "cols" × "rows" ô → <out>/<names[i]>.png (khung 512 như portrait,
+            hoặc cắt gọn theo "tight": {"tên": chiều cao})
+  avatar    ảnh đại diện tròn trên nền hồng → giữa khung 512×512
+Tấm bước có 3 kiểu: tấm giấy kem rời, hình dán thẳng trên nền hồng, khung giấy liền nhau có nền hồng bên trong (cells()).
 Nền hồng: tách theo độ "hồng" (R, B cao hơn G), khử viền hồng ở mép, bỏ các mảng nhỏ rời (chữ "Meta AI", vệt màu).
 Nền giấy kem của tấm bước: tách bằng rembg (mô hình isnet-anime, MIT) — cần `pip install "rembg[cpu]"`.
 Ảnh ra là PNG bảng màu 256 màu như hình cũ của game (nhẹ). Chạy xong nhớ `node tools/asset-rev.mjs` nếu ghi vào game/assets.
@@ -153,20 +157,51 @@ def do_views3card(t):
     for im, nm in zip(figs, ['side', 'front', 'back']):
         save_png(im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS), t['out'] + '_' + nm + '.png')
 
-def cells(path):
-    """9 ô của tấm bước: các tấm giấy (hoặc vùng) tách nhau bởi nền hồng, xếp theo hàng rồi cột."""
+def boxes_of(lab, idx):
+    out = []
+    for i in idx:
+        ys, xs = np.nonzero(lab == i + 1)
+        out.append((int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1))
+    return out
+
+def grid_rows(boxes, ncol):
+    boxes = sorted(boxes, key=lambda b: (b[1] + b[3]) / 2)
+    return [sorted(boxes[k:k + ncol], key=lambda b: b[0]) for k in range(0, len(boxes), ncol)]
+
+def cells(path, n=9, ncol=3):
+    """n ô của tấm bước, xếp theo hàng rồi cột. Ba kiểu tấm anh Han gửi:
+       tấm giấy kem rời nhau, hoặc hình dán thẳng trên nền hồng → mỗi ô là một mảng không hồng ('parts');
+       khung giấy liền nhau, trong khung là nền hồng → mỗi ô là một vùng hồng không chạm mép ảnh ('holes')."""
     rgb = np.asarray(Image.open(path).convert('RGB')).astype(np.float32)
     a = magenta_alpha(rgb)
-    lab, n = ndimage.label(a > 0.5)
-    areas = ndimage.sum(np.ones_like(a), lab, index=np.arange(1, n + 1))
-    order = np.argsort(-areas)[:9]
-    boxes = []
-    for i in order:
-        ys, xs = np.nonzero(lab == i + 1)
-        boxes.append((xs.min(), ys.min(), xs.max() + 1, ys.max() + 1))
-    boxes.sort(key=lambda b: b[1])
-    rows = [sorted(boxes[k:k + 3], key=lambda b: b[0]) for k in (0, 3, 6)]
-    return rgb, rows
+    lab, k = ndimage.label(a > 0.5)
+    areas = ndimage.sum(np.ones_like(a), lab, index=np.arange(1, k + 1))
+    order = np.argsort(-areas)[:n]
+    if k >= n and areas[order[0]] < 4 * areas[order[n - 1]]:
+        return rgb, grid_rows(boxes_of(lab, order), ncol), 'parts'
+    lab, k = ndimage.label(a < 0.5)
+    areas = ndimage.sum(np.ones_like(a), lab, index=np.arange(1, k + 1))
+    for i in set(np.unique(np.concatenate([lab[0], lab[-1], lab[:, 0], lab[:, -1]]))) - {0}: areas[i - 1] = 0
+    order = np.argsort(-areas)[:n]
+    return rgb, grid_rows(boxes_of(lab, order), ncol), 'holes'
+
+def cell_figure(src, rgb, b, mode):
+    """Nhân vật trong một ô: hình dán trên nền hồng (viền ô phần lớn là hồng) hoặc trong khung hồng → tách theo nền hồng;
+       vẽ trên tấm giấy kem → tách bằng rembg."""
+    x0, y0, x1, y1 = b
+    border = np.concatenate([rgb[y0, x0:x1], rgb[y1 - 1, x0:x1], rgb[y0:y1, x0], rgb[y0:y1, x1 - 1]])
+    if mode == 'holes' or (magenta_alpha(border[None])[0] < 0.5).mean() > 0.5:
+        e = 0 if mode == 'holes' else 12                 # hình dán: lấy rộng ra để không cụt viền giấy
+        H, W = rgb.shape[:2]
+        arr = rgb[max(0, y0 - e):min(H, y1 + e), max(0, x0 - e):min(W, x1 + e)]
+        a = np.where(shadow_mask(arr), 0.0, magenta_alpha(arr))
+        a2, _ = keep_main(a, no_border=True)               # bỏ mép khung giấy còn sót quanh ô
+        if a2.max() == 0: a2, _ = keep_main(a)
+        return trim(rgba(despill(arr, a2), a2))
+    fig = figure_from_card(src.crop((x0 + 6, y0 + 6, x1 - 6, y1 - 6)))
+    fa = np.asarray(fig).astype(np.float32)
+    a, _ = keep_main(fa[..., 3] / 255.0)
+    return trim(rgba(fa[..., :3], a))
 
 _SESSION = None
 def figure_from_card(img):
@@ -177,22 +212,11 @@ def figure_from_card(img):
     return remove(img, session=_SESSION, post_process_mask=True)
 
 def do_walk9(t):
-    rgb, rows = cells(t['src'])
+    rgb, rows, mode = cells(t['src'])
     src = Image.open(t['src']).convert('RGB')
     names = ['down', 'up', 'left']
     for ri, row in enumerate(rows):
-        figs = []
-        for b in row:
-            pad = 6
-            crop = src.crop((b[0] + pad, b[1] + pad, b[2] - pad, b[3] - pad))
-            arr = np.asarray(crop.convert('RGB')).astype(np.float32)
-            if (magenta_alpha(arr) < 0.5).mean() > 0.3:   # ô nền hồng (nhân vật dán viền giấy): tách theo nền hồng
-                a = magenta_alpha(arr); a, _ = keep_main(a); fig = rgba(despill(arr, a), a)
-            else:
-                fig = figure_from_card(crop)
-                fa = np.asarray(fig).astype(np.float32)
-                a, _ = keep_main(fa[..., 3] / 255.0); fig = rgba(fa[..., :3], a)
-            figs.append(trim(fig))
+        figs = [cell_figure(src, rgb, b, mode) for b in row]
         s = 466 / figs[0].height                      # cùng tỉ lệ với khung đứng của hàng
         for ci, fig in enumerate(figs):
             im2 = fig.resize((max(1, round(fig.width * s)), max(1, round(fig.height * s))), Image.LANCZOS)
@@ -226,7 +250,31 @@ def do_keep(t):
     else: im.quantize(256, method=Image.Quantize.MEDIANCUT).save(t['out'], optimize=True)
     print('  ✓', t['out'], im.size)
 
-KINDS = {'portrait': do_portrait, 'building': do_building, 'prop': do_building, 'views3': do_views3, 'views3card': do_views3card, 'walk9': do_walk9, 'map': do_map, 'keep': do_keep}
+def do_grid(t):
+    """Tấm nhiều tư thế dán trên nền hồng, chia đều "cols" × "rows" ô: mỗi ô ra một tệp <out>/<tên>.png theo "names"
+    (giữ cả mảng nhỏ đi kèm trong ô như mũi tên, đám mây). Mặc định khung 512 như portrait; "tight": {"tên": cao}
+    thì cắt gọn theo hình và đổi về chiều cao đó (như kai_sit.png, kai_rotate.png)."""
+    rgb = np.asarray(Image.open(t['src']).convert('RGB')).astype(np.float32)
+    x0, y0, x1, y1 = magenta_box(rgb)
+    cols, rows = t.get('cols', 3), t.get('rows', 2)
+    cw, ch = (x1 - x0) / cols, (y1 - y0) / rows
+    for i, nm in enumerate(t['names']):
+        if not nm: continue
+        cx, cy = i % cols, i // cols
+        arr = rgb[int(y0 + cy * ch):int(y0 + (cy + 1) * ch), int(x0 + cx * cw):int(x0 + (cx + 1) * cw)]
+        a = np.where(shadow_mask(arr), 0.0, magenta_alpha(arr))
+        a, _ = keep_main(a, min_frac=0.01)
+        im = trim(rgba(despill(arr, a), a))
+        h = (t.get('tight') or {}).get(nm)
+        im = im.resize((round(im.width * h / im.height), h), Image.LANCZOS) if h else fit(im, 490, 466, bottom=490)
+        save_png(im, os.path.join(t['out'], nm + '.png'))
+
+def do_avatar(t):
+    """Ảnh đại diện tròn trên nền hồng → giữa khung 512×512."""
+    rgb, a, _ = cut_magenta(t['src'])
+    save_png(fit(trim(rgba(rgb, a)), 500, 500), t['out'])
+
+KINDS = {'portrait': do_portrait, 'building': do_building, 'prop': do_building, 'views3': do_views3, 'views3card': do_views3card, 'walk9': do_walk9, 'map': do_map, 'keep': do_keep, 'grid': do_grid, 'avatar': do_avatar}
 
 if __name__ == '__main__':
     jobs = json.load(open(sys.argv[1], encoding='utf-8'))

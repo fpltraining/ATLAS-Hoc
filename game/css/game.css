@@ -263,6 +263,9 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .dip-img { width: 100%; aspect-ratio: 800 / 667; background: transparent !important; }
 .dip-img.ok img { object-fit: contain; }
 .dip-text { position: absolute; inset: 27% 18% 36%; display: flex; flex-direction: column; justify-content: center; gap: 4px; color: var(--navy); }
+/* giấy Trường Lạc trấn (diploma_zh.webp): khổ 3:2, viền đỏ hẹp, cành mai góc dưới trái, ấn đỏ góc dưới phải */
+.diploma.zh .dip-img { aspect-ratio: 3 / 2; }
+.diploma.zh .dip-text { inset: 11% 17% 33%; }
 .dip-school { font-size: 13px; font-weight: 700; letter-spacing: .04em; }
 .dip-title { font-size: 17px; font-weight: 800; color: var(--coral); }
 .dip-name { font-size: 24px; font-weight: 800; }
