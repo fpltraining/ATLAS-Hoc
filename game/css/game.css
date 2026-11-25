@@ -76,7 +76,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 #world { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; display: block; }
 /* bản đồ 3D: canvas 3D nằm dưới, canvas 2D trong suốt ở trên (chữ nói, mưa, mũi tên), dải trời ở giữa */
 #world3d { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.sky3d { position: absolute; left: 0; right: 0; top: 0; height: 32%; pointer-events: none; overflow: hidden;
+.sky3d { position: absolute; left: 0; right: 0; top: 0; height: 19%; pointer-events: none; overflow: hidden;
   -webkit-mask-image: linear-gradient(#000 45%, transparent); mask-image: linear-gradient(#000 45%, transparent); }
 .sky3d .sk-grad, .sky3d .sk-dark { position: absolute; inset: 0; }
 .sky3d .sk-dark { background: linear-gradient(rgba(38,42,58,.92), rgba(58,62,80,.55)); opacity: 0; }
@@ -88,8 +88,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tilt3d { position: absolute; left: 0; right: 0; top: 0; height: 20%; pointer-events: none; -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
   -webkit-mask-image: linear-gradient(#000 25%, transparent); mask-image: linear-gradient(#000 25%, transparent); }
 #play.w3d #world { background: transparent; }
-.sky3d.img { height: 40%; -webkit-mask-image: linear-gradient(#000 66%, transparent); mask-image: linear-gradient(#000 66%, transparent); }
-.sky3d .sk-img { position: absolute; inset: 0; background: center bottom / cover no-repeat; }
+.sky3d.img { height: 19%; -webkit-mask-image: linear-gradient(#000 30%, transparent); mask-image: linear-gradient(#000 30%, transparent); }   /* dải trời mỏng ở mép trên (anh Han 26/11/2026: nhìn xa, rộng): phía dưới là đồng cỏ 3D tan vào sương cùng màu trời */
+/* tranh trời: chỉ lấy phần mây và trời, bỏ dải đồi có nhà nhỏ ở đáy tranh (dải đó dính theo camera nên trông như tấm phông chắn);
+   dưới mép mờ là đồng cỏ 3D trải tới chân trời, tan vào sương cùng màu trời nên trông xa, rộng, đi mãi không hết */
+.sky3d .sk-img { position: absolute; inset: 0; background: center 30% / 100% auto no-repeat; }
 .hud { position: absolute; top: 0; left: 0; right: 0; display: flex; align-items: center; gap: 10px; padding: max(10px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) 10px max(12px, env(safe-area-inset-left)); background: linear-gradient(rgba(27,33,64,.75), rgba(27,33,64,0)); color: #fff; pointer-events: none; }
 .hud > * { pointer-events: auto; }
 .hud b { flex: 1; font-size: 17px; text-shadow: 0 1px 3px rgba(0,0,0,.4); }

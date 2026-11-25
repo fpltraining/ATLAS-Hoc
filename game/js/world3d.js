@@ -704,7 +704,11 @@ var G = window.G || (window.G = {});
     var ax = Math.max(1, (CAM.aspect || 1.45) / 1.45) * Math.max(1, zoomK), az = Math.max(1, zoomK);
     for (var i = 0; i < POPS.length; i++) {
       var p = POPS[i], rq = rel(p.x - FX, p.z - FZ), dx = rq[0] / ax, dz = rq[1] * (rq[1] < 0 ? 0.7 : 1) / az, d = Math.max(0, Math.sqrt(dx * dx + dz * dz) - p.r);
-      if (snap) { p.up = d < POP_UP; p.a = p.up ? 1 : 0; p.v = 0; p.wait = 0; }
+      if (snap) {   // vừa vào bản đồ / đổi khu: vật trong vùng dựng đứng luôn, ngoài vùng nằm rạp (đặt góc ngay, lỗi cũ: đánh dấu đã dựng mà góc vẫn nằm)
+        p.up = d < POP_UP; p.a = p.up ? 1 : 0; p.v = 0; p.wait = 0;
+        p.g.rotation.x = -Math.PI / 2 + p.a * (Math.PI / 2 - LEAN); p.g.userData.mesh.castShadow = p.a > 0.25;
+        continue;
+      }
       else if (!p.up && d < POP_UP) { p.up = true; p.wait = p.jit + d / POP_UP * 0.22; }
       else if (p.up && d > POP_DOWN) { p.up = false; p.wait = p.jit * 0.5; }
       if (p.wait > 0) { p.wait -= dt; if (p.wait <= 0 && p.up && d < POP_UP + 0.5) flip(0.05 * (1 - d / POP_UP) + 0.012); else if (p.wait > 0) continue; }
