@@ -41,7 +41,8 @@ var G = window.G || (window.G = {});
      có mũi nhọn chỉ hướng đi, nơi cần tới là ghim đỏ (ở xa thì ghim nằm trên vành chỉ hướng). Tên khu ở nhãn bên dưới.
      Bấm bản đồ: đổi giữa xem gần và xem cả khu. N E S W trên vành để học hướng bằng tiếng Anh. ---------- */
   var RD = { cv: null, g: null, far: false, lx: null, ly: null, ang: -Math.PI / 2, name: '' }, GRASS = '#b7c08d';
-  var ICON = { home: 'house', busstop: 'bus', shuttle: 'minibus', school: 'school', cafe: 'coffee', market: 'apple', hospital: 'hospital', airport: 'plane', teahouse: 'tea' };
+  var ICON = { home: 'house', busstop: 'bus', shuttle: 'minibus', school: 'school', cafe: 'coffee', market: 'apple', hospital: 'hospital', airport: 'plane', teahouse: 'tea',
+    clinic: 'hospital', bank: 'bank', store: 'store', metro: 'ticket', station: 'ticket', pagoda: 'star' };   // Trường Lạc trấn
   function sceneImage(sc) { if (sc.bg) { var a = G.asset(sc.bg); return a.ok ? a.img : null; } return null; }
   function ic(g, name, x, y, s) { var a = G.asset('ic3_' + name + '.webp'); if (a.ok) g.drawImage(a.img, x - s / 2, y - s / 2, s, s); }
   function face() {   // ảnh đầu nhân vật cho dấu "mình"

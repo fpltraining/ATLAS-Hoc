@@ -300,6 +300,25 @@ async function zhFlow() {
     && zx.dv.lv >= 1 && zx.dv.start && zx.wkr && zx.wkr.tong >= 60 && zx.cert;
   report.push(`Trường Lạc trấn · Học viện: ${zx.hall.floors} tầng; Nền tảng 1 (nghe chọn pinyin) ${zx.p.n01 ? zx.p.n01.diem + '/10' : 'CHƯA QUA'}; HSK1 bài 1 ${zx.p.l001 ? zx.p.l001.diem + '/10' : 'CHƯA QUA'} (tải ${zx.p.c1 ? 'đúng' : 'THIẾU'} tệp cấp 1${zx.p.c3 ? ', TẢI THỪA cấp 3' : ''}); hội thoại ${zx.talk === 'done' ? 'xong, pinyin ' + zx.talkPy + ' dòng' : 'dừng ở "' + zx.talk + '"'}; bài đo ${zx.dv.lv !== undefined ? 'cấp ' + zx.dv.lv + ' → bắt đầu ' + zx.dv.start : 'CHƯA XONG'}; kiểm tra tuần ${zx.wkr ? zx.wkr.tong + '/100' : 'CHƯA XONG'}; thi Nền tảng ${zx.cert ? 'có chứng chỉ, hiểu ' + zx.cert.diem + '/' + zx.cert.tong : 'CHƯA ĐẠT (' + zx.ex + ')'}`);
   if (!ok2) problems.push('Trường Lạc trấn: Học viện / hội thoại / bài đo / thi chưa chạy hết');
+  // bản đồ 3D Trường Lạc trấn (data/city_zh.js): vào từ nút đất sét ở Sảnh, Tiểu Long nói, đi qua 3 khu,
+  // nói chuyện với Tiểu Mỹ ở cổng Học viện, vào Học viện mở bảng phòng học, về Sảnh
+  await P.ev(() => { const b = [].filter.call(document.querySelectorAll('button.clay-btn'), (x) => /Trường Lạc/.test(x.textContent))[0]; b.click(); });
+  await wait(7000); await P.shot('zh-10-city');
+  const city = await P.ev(() => ({ c: G.W3D && G.W3D.city, s: G.debugState().scene, d3: G.debugState().mode3d, face: document.querySelector('#kai .kai-face img').getAttribute('data-asset'), goal: G.debugState().goal }));
+  city.walk = [];
+  for (const sid of ['center_zh', 'newtown_zh', 'oldtown_zh']) { await P.ev((x) => G.enterScene(x, { x: 778, y: 760, dir: 'up' }), sid); await wait(900); city.walk.push(await P.ev(() => G.debugState().scene)); }
+  await P.ev(() => G.enterScene('center_zh', { x: 1050, y: 590, dir: 'up' })); await wait(1200);
+  city.near = await P.ev(() => G.debugState().near);
+  await P.ev(() => document.getElementById('act').click()); await wait(1200);
+  city.talk = await P.ev(() => document.getElementById('panel').classList.contains('open') && document.getElementById('panel-title').textContent);
+  await P.ev(() => { G.closeLesson(); G.enterScene('center_zh', { x: 1190, y: 540, dir: 'up' }); }); await wait(1200);
+  await P.ev(() => document.getElementById('act').click()); await wait(1200);
+  city.hall = await P.ev(() => document.getElementById('panel-title').textContent); await P.shot('zh-11-city-hall');
+  await P.ev(() => { G.closeLesson(); G.goLobby(); }); await wait(900);
+  const cityOk = city.c === 'zh' && city.d3 && city.s === 'oldtown_zh' && city.face === 'long_face.png' && /Học viện/.test(city.goal || '')
+    && city.walk.join() === 'center_zh,newtown_zh,oldtown_zh' && /Tiểu Mỹ/.test(city.near || '') && /bạn cùng lớp/.test(city.talk || '') && /Học viện Hán ngữ/.test(city.hall || '');
+  report.push(`Trường Lạc trấn · bản đồ 3D: ${city.d3 ? '3D' : '2D'}, vào ${city.s}, Tiểu Long ${city.face === 'long_face.png' ? 'nói' : 'CHƯA'}; ghim "${city.goal}"; đi qua ${city.walk.join(' → ')}; ${city.near} → ${city.talk || 'KHÔNG MỞ'}; Học viện → ${city.hall}`);
+  if (!cityOk) problems.push('Trường Lạc trấn: bản đồ 3D chưa chạy hết');
   // về Brightford: hồ sơ tiếng Anh còn nguyên
   await P.ev(() => { const b = [].filter.call(document.querySelectorAll('.city-chip'), (x) => /Brightford/.test(x.textContent))[0]; b.click(); });
   await wait(1200);
@@ -366,7 +385,7 @@ async function cloudFlow() {
   await ctx.close();
 }
 
-// node tools/qa-run.mjs [moi|moi1|dau-ra|quet|may|zh] để chạy riêng một phần (moi1: một người học A1, khoảng 3 phút; may: lưu trên mây; zh: Trường Lạc trấn)
+// node tools/qa-run.mjs [moi|moi1|dau-ra|quet|may|zh] để chạy riêng một phần (moi1: một người học A1, khoảng 3 phút; may: lưu trên mây; zh: Trường Lạc trấn, cả bản đồ 3D)
 const ONLY = process.argv[2] || '';
 if (!ONLY || ONLY === 'may') await cloudFlow();
 if (!ONLY || ONLY === 'zh') await zhFlow();

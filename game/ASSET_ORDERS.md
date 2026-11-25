@@ -751,6 +751,7 @@ Câu mở đầu chung (dán trước mỗi dòng): `Book cover illustration for
 - Q3: giấy chứng chỉ `diploma_zh.webp` (khổ 3:2, màn trao chứng chỉ tiếng Trung đã dùng).
 - Chân dung Meta AI: cô Vương `npc_wang.png` (hiện ở mọi bài học tiếng Trung), Bà Lý `npc_nainai.png` (bác bán rau), cô Chu `npc_zhou.png`, `npc_xiaolin.png`, `npc_zhang.png`, `npc_chen.png`, `npc_li.png`, `npc_principal_li.png`.
 
+**Đã dùng:** bản đồ 3D Trường Lạc trấn (`game/data/city_zh.js`) dùng đủ 3 tờ bản đồ, 12 nhà, 12 vật, 8 tấm bước người dân, xe và Tiểu Long.
 **Còn chờ:** 8 chân dung nói chuyện `npc_*_talk.png` (tin thứ hai của Phần 4). Trong lúc chờ, Tiểu Mỹ, chị Lâm, chú Trương, bác sĩ Triệu, ông Trần hiện khung đứng trong tấm bước của chính người đó. Không bắt buộc: đặt lại 2 khung Tiểu Long bước về phía trước (hàng 1, cột 2–3 của `long_walk`).
 **Chưa dùng (`art/inbox/`):** bản Meta AI của Leo, bà Rosa (giỏ táo), Officer Grace, Dr. Anna; game tiếng Anh đã có chân dung các người này, anh muốn thay thì báo em.
 

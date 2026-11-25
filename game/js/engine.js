@@ -114,7 +114,11 @@ var G = window.G || (window.G = {});
       var pp = PP[pi], pn = G.NPCS[pp.npc];
       var shop = G.SHOPS && G.SHOPS[pp.life];
       if (shop) list.push({ x: pp.x, y: pp.y + 40, r: 95, npc: pp.npc, tall: pp.bs, label: 'Vào ' + shop.title, act: (function (sh, q) { return function () { enterShop(sh, q); }; })(shop, pp) });
-      else list.push({ x: pp.x, y: pp.y + 40, r: 95, npc: pp.npc, label: 'Nói chuyện với ' + pn.name, act: (function (lf) { return function () { G.openLife(lf); }; })(pp.life) });
+      else list.push({ x: pp.x, y: pp.y + 40, r: 95, npc: pp.npc, label: 'Nói chuyện với ' + pn.name, act: (function (lf, nm) { return function () {
+        var L = G.LIFE[lf];
+        if (L && L.lang === 'zh' && G.zhPlaceOpen && !G.zhPlaceOpen(lf)) { G.sfx('wrong'); G.kaiSay(nm + ' đang bận. ' + (L.unlockText || 'Học thêm vài bài ở Học viện để mở.')); return; }   // Trường Lạc trấn: mở theo bài đã học
+        G.openLife(lf);
+      }; })(pp.life, pn.name) });
     }
     if (scene.exit) list.push({ x: scene.exit.x, y: scene.exit.y, r: 70, label: scene.exit.label, act: useExit });
     (scene.gates || []).forEach(function (g) { list.push({ x: g.x, y: g.y, r: 80, label: g.label, act: function () { useGate(g); } }); });
@@ -140,9 +144,11 @@ var G = window.G || (window.G = {});
     if (b.shuttle) { startShuttle(b.shuttle); return; }
     if (b.ride) { G.sfx('door'); G.openRide(b.ride, b.toward); return; }
     if (b.fly) { G.sfx('door'); G.openFlight(scene.city, b.fly); return; }
+    if (b.panel && G[b.panel]) { doorSfx(); G[b.panel](); return; }   // Trường Lạc trấn: Học viện Hán ngữ mở bảng phòng học
     if (b.life) {
       var L = G.LIFE[b.life];
-      if (!G.roomPassed(L.unlock)) { G.sfx('wrong'); G.kaiSay(b.name + ' chưa mở. ' + L.unlockText); return; }
+      if (!(L.lang === 'zh' && G.zhPlaceOpen ? G.zhPlaceOpen(b.life) : G.roomPassed(L.unlock))) { G.sfx('wrong'); G.kaiSay(b.name + ' chưa mở. ' + L.unlockText); return; }
+      if (!G.SCENES[L.scene]) { doorSfx(); G.openLife(b.life); return; }   // chưa có cảnh bên trong: nói chuyện ngay ở cửa
       doorSfx(); G.enterScene(L.scene, { x: 768, y: 930, dir: 'up' });
       G.kaiSay('Đi tới gặp ' + G.NPCS[L.npc].name + ' rồi bấm "Nói chuyện". Ở đây chỉ nói tiếng Anh nhé!');
       return;
@@ -426,12 +432,13 @@ var G = window.G || (window.G = {});
         var morning = hr >= 5 && hr < 10 ? 1 : hr >= 10 && hr < 17 ? 0.45 : hr >= 17 && hr < 18.6 ? 0.55 : 0;
         ambV.birds = 0.55 * morning * (1 - Math.min(1, w.gather * 1.4 + rain));
         ambV.crickets = (hr >= 19 || hr < 4.8 ? 0.5 : hr >= 18.6 ? 0.25 : 0) * (1 - rain);
-        var busy = sceneId === 'city_en' || sceneId === 'street_en' ? 1 : sceneId === 'campus_en' ? 0.45 : 0.25;
+        var busy = scene.busy !== undefined ? scene.busy : sceneId === 'city_en' || sceneId === 'street_en' ? 1 : sceneId === 'campus_en' ? 0.45 : 0.25;
         ambV.city = hr >= 6.5 && hr < 21.5 ? 0.42 * busy * (1 - rain * 0.5) : 0;
         ambV.wind = 0.55 * Math.min(1, w.gather * 1.2 + rain * 0.45 + (w.kind === 'cloudy' ? 0.12 : 0));
         ambV.rain = 0.5 * light * (1 - heavy * 0.6); ambV.rainHeavy = 0.55 * heavy;
         ambV.river = 0.65 * riverNear();
         ambV.playground = sceneId === 'campus_en' && hr >= 7 && hr < 17 && rain < 0.1 ? 0.22 : 0;
+        if (scene.amb) for (var ak in scene.amb) if (scene.amb.hasOwnProperty(ak) && (ak !== 'playground' || (hr >= 7 && hr < 17 && rain < 0.1))) ambV[ak] = Math.max(ambV[ak] || 0, scene.amb[ak]);
       } else {
         ambV.rain = 0.12 * light; ambV.rainHeavy = 0.1 * heavy;   // trong nhà nghe mưa vọng vào
         if (scene.kind === 'classroom') ambV.classroom = seat ? 0.22 : 0.32;
@@ -767,7 +774,33 @@ var G = window.G || (window.G = {});
     return all.length ? all[(+G.vnDay().slice(8, 10)) % all.length] : (G.LIFE['en-home'] ? 'en-home' : null);   // đã xong hết: xoay vòng mỗi ngày một nơi
   };
   /* trả về { text, x, y, h (độ cao dấu), label (nút hành động khớp) } hoặc null */
+  /* Trường Lạc trấn: chưa học bài hôm nay thì tới Học viện (Trung tâm); học rồi thì tới người dân ở nơi nói chuyện tiếp theo, rồi về nhà
+     đọc truyện, ôn từ. Đích ở khu khác thì chỉ ra lối sang khu đó (G.ZH_CITY xếp từ dưới lên). */
+  var zhG = null, zhGs = '', zhGt = 0;
+  function zhGoal() {   // tính lại mỗi giây (vẽ mỗi khung gọi tới)
+    var t = Date.now();
+    if (zhGs === sceneId && t - zhGt < 1000) return zhG;
+    zhGs = sceneId; zhGt = t; zhG = zhGoalNow(); return zhG;
+  }
+  function zhGoalNow() {
+    var td = G.today().viec || {}, nl = G.zhNextLesson ? G.zhNextLesson() : null, lf = G.zhNextLife ? G.zhNextLife() : null, want = null;
+    var short = nl ? (G.zhShort ? G.zhShort(nl.id) : nl.id) : '';
+    if (nl && !td.bai) want = { scene: 'center_zh', b: 'school', text: 'Học viện Hán ngữ: học ' + short };
+    else if (lf && !talkedToday(lf)) G.ZH_CITY.forEach(function (sid) { (G.PEOPLE[sid] || []).forEach(function (p) { if (!want && p.life === lf) want = { scene: sid, life: lf, text: 'Nói chuyện ở ' + G.LIFE[lf].title }; }); });
+    else if (!td.doc || !td.on) want = { scene: 'oldtown_zh', b: 'home', text: 'Về nhà ' + (!td.doc ? 'đọc 1 chương truyện' : 'ôn từ khó') + ' (việc hôm nay)' };
+    else if (nl) want = { scene: 'center_zh', b: 'school', text: 'Học viện Hán ngữ: học thêm ' + short + ' (vượt tiến độ)' };   // xong việc hôm nay: như thẻ "Bắt đầu từ đây" ở Sảnh
+    if (!want) return null;
+    if (want.scene !== sceneId) {
+      var up = G.ZH_CITY.indexOf(want.scene) > G.ZH_CITY.indexOf(sceneId), gs = scene.gates || [], g = null;
+      for (var i = 0; i < gs.length; i++) if (gs[i].side === (up ? 'up' : 'down')) g = gs[i];
+      return g ? { text: want.text + ' · đi ' + (up ? 'lên ' : 'xuống ') + G.SCENES[g.to.scene].title.split(' ·')[0], x: g.x, y: g.y, h: 170, label: g.label } : null;
+    }
+    if (want.b) { var b = bld(want.b); if (b) return { text: want.text, x: b.x, y: b.y + 18, h: 300, label: 'Vào ' + b.name }; }
+    var pp = want.life && personOf(want.life);
+    return pp ? { text: want.text + ' (+20 XP mỗi tình huống)', x: pp.x, y: pp.y + 40, h: pp.bs ? pp.bs * 0.75 : 150, label: 'Nói chuyện với ' + G.NPCS[pp.npc].name } : null;
+  }
   function goal() {
+    if (scene.city === 'zh' && G.ZH_CITY && G.ZH_CITY.indexOf(sceneId) >= 0) return zhGoal();
     var nr = nextRoom(), lf = nr ? null : nextLife();
     var tName = nr ? G.NPCS[G.ROOM_TEACHER[nr.door.room]].name : '';
     var ses = nr && G.ROOMS[nr.door.room].group ? G.ROOMS[G.curSession(nr.door.room)] : null;   // phòng nhóm: buổi đang học
@@ -834,7 +867,7 @@ var G = window.G || (window.G = {});
     q.style.display = curGoal ? '' : 'none';
     if (curGoal && curGoal.text !== lastGoalText) { lastGoalText = curGoal.text; document.getElementById('quest-text').textContent = curGoal.text; }
     // "Học ngay": việc tiếp theo là buổi học và chưa ở trong lớp → chạm nút cam mở thẳng bài, chạm phần chữ thì đi bộ tới như cũ
-    var now = !!(curGoal && scene && scene.kind !== 'classroom' && G.nextLesson && G.nextLesson() && /Học Buổi|Học phòng|thang máy|Tầng \d/.test(curGoal.text));
+    var now = !!(curGoal && scene && scene.kind !== 'classroom' && G.nextLesson && G.nextLesson() && /Học Buổi|Học phòng|thang máy|Tầng \d|Học viện Hán ngữ: học/.test(curGoal.text));
     if (now !== questNow) { questNow = now; var go = q.querySelector('.q-go'); if (go) go.textContent = now ? 'Học ngay ›' : 'Đi ›'; }
   }
   var questNow = null;
@@ -1550,7 +1583,8 @@ var G = window.G || (window.G = {});
     shadow(K.x, K.y, 16);
     // có hình riêng từng hướng (kai_up / kai_left) thì dùng; chưa có thì lật hình mặt trước theo hướng đi
     var side = dir === 'left' || dir === 'right';
-    if (G.hasWalk('kai', 'down')) { G.walkSprite(ctx, 'kai', K.x, K.y + 3, 84, dir, (K.t || 0) * STEP_RATE, K.moving); return; }   // Kai có chân: bước như Han
+    var bud = G.buddy ? G.buddy() : 'kai';   // Trường Lạc trấn: rồng con Tiểu Long đi theo
+    if (G.hasWalk(bud, 'down')) { G.walkSprite(ctx, bud, K.x, K.y + 3, 84, dir, (K.t || 0) * STEP_RATE, K.moving); return; }   // Kai có chân: bước như Han
     var name = dir === 'up' && G.asset('kai_up.png').ok ? 'kai_up.png' : side && G.asset('kai_left.png').ok ? 'kai_left.png' : 'kai_follow.png';
     var flip = name === 'kai_left.png' ? dir === 'right' : dir === 'left';
     G.hopDraw(ctx, function (c, X, Y, S) { G.drawAsset(c, name, X, Y, S, S, flip); }, K.x, K.y + 3, 82, (K.t || 0) * 14, K.moving);   // robot: nhún nhảy (hình đã bỏ đám cỏ: thân chạm bóng)
