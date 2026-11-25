@@ -14,10 +14,11 @@ Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính 
 2. Thử tay khoảng 10 phút trên iPhone và iPad thật: micro ở phần Nói, nhại có ghi âm, thêm lịch nhắc học (.ics), bản đồ 3D trên máy yếu (bộ soát `tools/qa-run.mjs` chỉ giả lập micro).
 3. Đặt 12 tranh bìa truyện còn thiếu (Đơn P trong `game/ASSET_ORDERS.md`).
 4. Thêm bài Tầng 3–4 trước khi học viên đầu tiên lên tới đó: bài có sẵn khoảng 123 giờ (Tầng 1: 38/60 giờ chuẩn, Tầng 2: 21/50, Tầng 3: 31/140, Tầng 4: 33/180), học 40 phút × 5 ngày/tuần thì đủ khoảng 8 tháng.
-5. Người bản ngữ đọc soát nội dung; hiệu chỉnh bài đầu vào khi có vài chục học viên thật (số liệu `app_events`).
+5. Người bản ngữ đọc soát nội dung (tiếng Trung mới soạn: hội thoại `game/data/life_zh.js`, nói tự do `game/data/free_zh.js`); hiệu chỉnh bài đầu vào khi có vài chục học viên thật (số liệu `app_events`).
 6. Pháp lý (anh hẹn làm sau).
 7. UI/UX: hỏi anh những chỗ thấy vướng khi tự học bằng app, rồi làm tiếp phần giao diện.
-8. Đặt hình Đơn Q (Trường Lạc trấn): Q1 Tiểu Long + thẻ thành phố trước, Q2 bản đồ 3D sau (`game/ASSET_ORDERS.md`).
+8. Đặt hình Đơn Q (Trường Lạc trấn): Q1 Tiểu Long + thẻ thành phố và Q3 giấy chứng chỉ trước, Q2 bản đồ 3D + 8 người dân sau (`game/ASSET_ORDERS.md`).
+9. Học thử phần tiếng Trung (Sảnh → Trường Lạc trấn): phòng Phát âm, một bài HSK, viết chữ bằng Apple Pencil, nói chuyện ở quán trà; báo em chỗ nào vướng.
 
 ## Thành phố Trung Hoa: Trường Lạc trấn 长乐镇 (anh Han chốt 24/11/2026)
 
