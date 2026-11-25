@@ -120,7 +120,7 @@ var G = window.G || (window.G = {});
 
     // đầu trang kiểu giấy thủ công: tranh hai hòn đảo (Brightford, Trường Lạc trấn) + chữ ConnectLife đất sét + nút vào thành phố
     root.appendChild(G.el('header.lhero',
-      G.el('div.hero-pic', G.imgEl('lobby_hero.webp', 'hero-img')),
+      G.el('div.hero-pic', zh ? G.imgEl('card_city_zh_v2.webp', 'hero-img zh-hero', 'lobby_hero.webp') : G.imgEl('lobby_hero.webp', 'hero-img')),   // Trường Lạc trấn: thẻ thành phố có Tiểu Long (Đơn Q1)
       G.el('div.hero-text',
         G.el('img.lobby-title', { src: G.assetUrl('lobby_title.png'), alt: 'ConnectLife · Kết nối cuộc sống' }),
         citySwitch(),

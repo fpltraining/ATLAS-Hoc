@@ -26,6 +26,8 @@ Mọi tệp đều là ghi âm thật, lấy từ nguồn miễn phí, được 
 | sfx_shuttle_door | bart · Steam release sounds, OpenGameArt, CC0 |
 | amb_city_day | ezwa · Bird sings in the morning with cars in the background.ogg, Wikimedia Commons, phạm vi công cộng |
 | amb_classroom | rcrossley · Ambient classroom mono.ogg, Wikimedia Commons, phạm vi công cộng |
+| sfx_pen_write | Pencil Sounds (OpenGameArt, CC0): pencil_write của NachtmahrTV (freesound 571800), cắt vòng lặp 1,08 giây (tools/sfx/build-amb.py) |
+| tiếng tách, chén, ly trong amb_cafe | rubberduck · 100 CC0 SFX (dishes_01–04, glass_01–03), OpenGameArt, CC0 |
 
 ## Cần ghi tên tác giả
 
@@ -34,8 +36,12 @@ Mọi tệp đều là ghi âm thật, lấy từ nguồn miễn phí, được 
 | sfx_chair_pull, sfx_chair_push | dklon · Super Foley Pack (chair_push.wav), OpenGameArt | CC BY 3.0 |
 | amb_shuttle_drive | kurt · Engine Sound (enginehum.ogg), OpenGameArt | CC BY 3.0 |
 | sfx_duck | Jonathon Jongsma · Anas platyrhynchos - Mallard - XC62258 (xeno-canto, Wikimedia Commons) | CC BY-SA 3.0 |
+| amb_market, amb_cafe (nền đám đông) | Gregor Quendel · Free General Ambience Sounds: crowd - mall ambience (OpenGameArt) | CC BY-SA 4.0 |
+| amb_playground | Gregor Quendel · Free General Ambience Sounds: crowd - school excursion (OpenGameArt) | CC BY-SA 4.0 |
 
 Tệp `sfx_duck.mp3` giữ giấy phép CC BY-SA 3.0 (đã cắt đoạn 2 tiếng kêu, chỉnh âm lượng).
+Tệp `amb_market.mp3`, `amb_cafe.mp3`, `amb_playground.mp3` giữ giấy phép CC BY-SA 4.0 (đã cắt 40 giây, nối vòng, lọc, chỉnh âm lượng; quán cà phê trộn thêm tiếng chén ly CC0). Dựng lại: `python tools/sfx/build-amb.py <thư mục nguồn>`.
+- CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/
 
 - CC BY 3.0: https://creativecommons.org/licenses/by/3.0/
 - CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/

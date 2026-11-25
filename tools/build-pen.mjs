@@ -1,6 +1,6 @@
 // Dựng game/js/pen.js (ES5) từ bộ bút viết chữ Hán của app ATLAS gốc (js/pen: brush, grid, grade, canvas).
 // Bản gốc vẫn là bản chính: sửa ở js/pen rồi chạy lại `npm i --no-save typescript && node tools/build-pen.mjs`.
-// Bỏ tiếng bút tạo bằng code (sound.js): âm thanh của game phải là ghi âm thật (CLAUDE.md), sẽ gắn tiếng CC0 sau.
+// Bỏ tiếng bút tạo bằng code (sound.js): game dùng ghi âm bút chì thật (G.penSound, js/audio.js).
 // Kết quả: G.Pen = { WritingPad, gradeWhole, gradeStroke, gradeInOrder, verdict, STRICTNESS, drawChar, drawGrid, drawPartialStroke, drawStrokeNumbers, drawMedianHint }
 import fs from 'node:fs';
 import path from 'node:path';
@@ -21,7 +21,9 @@ const parts = ['brush', 'grid', 'grade', 'canvas'].map((n) => {
 const src = `var G = window.G || (window.G = {});
 (function () {
 var GRID = 1024, Y_OFFSET = 900;   // hệ toạ độ dữ liệu nét (hanzi-writer-data), như js/data.js của ATLAS
-var sound = { initSound: function () {}, batDau: function () {}, capNhat: function () {}, ketThuc: function () {}, dungHan: function () {} };
+// tiếng bút: ghi âm bút chì thật (game/sfx/sfx_pen_write.mp3, CC0) qua G.penSound trong js/audio.js, thay tiếng tạo bằng code của bản gốc
+var sound = { initSound: function () { return G.penSound ? G.penSound.init() : false; }, batDau: function () { if (G.penSound) G.penSound.start(); },
+  capNhat: function (v, p) { if (G.penSound) G.penSound.move(v, p); }, ketThuc: function () { if (G.penSound) G.penSound.end(); }, dungHan: function () { if (G.penSound) G.penSound.end(true); } };
 ${parts}
 G.Pen = { WritingPad: WritingPad, gradeWhole: gradeWhole, gradeStroke: gradeStroke, gradeInOrder: gradeInOrder, bestMatch: bestMatch, verdict: verdict, STRICTNESS: STRICTNESS,
   drawChar: drawChar, drawGrid: drawGrid, drawPartialStroke: drawPartialStroke, drawStrokeNumbers: drawStrokeNumbers, drawMedianHint: drawMedianHint, invalidateColors: invalidateColors };

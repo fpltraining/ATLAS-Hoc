@@ -24,7 +24,13 @@ var G = window.G || (window.G = {});
 (function () {
     var _a, _b;
     var GRID = 1024, Y_OFFSET = 900; // hệ toạ độ dữ liệu nét (hanzi-writer-data), như js/data.js của ATLAS
-    var sound = { initSound: function () { }, batDau: function () { }, capNhat: function () { }, ketThuc: function () { }, dungHan: function () { } };
+    // tiếng bút: ghi âm bút chì thật (game/sfx/sfx_pen_write.mp3, CC0) qua G.penSound trong js/audio.js, thay tiếng tạo bằng code của bản gốc
+    var sound = { initSound: function () { return G.penSound ? G.penSound.init() : false; }, batDau: function () { if (G.penSound)
+            G.penSound.start(); },
+        capNhat: function (v, p) { if (G.penSound)
+            G.penSound.move(v, p); }, ketThuc: function () { if (G.penSound)
+            G.penSound.end(); }, dungHan: function () { if (G.penSound)
+            G.penSound.end(true); } };
     /* ---------- js/pen/brush.js ---------- */
     /* Vẽ nét bút.
     

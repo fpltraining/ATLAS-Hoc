@@ -206,17 +206,17 @@ var G = window.G || (window.G = {});
   /* ---------- tiếng thật từ tệp (game/sfx/, nguồn miễn phí CC0 / CC-BY, xem sfx/CREDITS.md) ----------
      Tải về một lần, giải mã thành bộ đệm WebAudio: phát ngay không trễ (bước chân), lặp liền mạch (tiếng nền).
      Tệp tiếng nền có đệm 0,5 giây hai đầu: lặp từ 0,5 s tới (dài − 0,5 s) nên chỗ nối không hở, không tách. */
-  var SFXV = 2;
+  var SFXV = 2;   // đổi khi thay nội dung tệp tiếng cũ (máy tải lại); tệp mới tên mới thì không cần
   G.SFX_FILES = G.SFX_FILES || {};
   G.AMB_FILES = G.AMB_FILES || {};
   (function () {
     var s = ['door_wood', 'page_turn', 'paper_pop_1', 'paper_pop_2', 'paper_pop_3', 'chair_pull', 'chair_push', 'chair_sit', 'fish_splash',
       'thunder_far_1', 'thunder_far_2', 'duck', 'horn_soft', 'school_bell', 'shuttle_door',
-      'ui_right', 'ui_wrong', 'ui_done', 'ui_quest', 'ui_chest', 'ui_tap', 'ui_tab'];   // ui_*: Kenney Interface Sounds (CC0)
+      'ui_right', 'ui_wrong', 'ui_done', 'ui_quest', 'ui_chest', 'ui_tap', 'ui_tab', 'pen_write'];   // ui_*: Kenney Interface Sounds (CC0); pen_write: bút chì (CC0)
     for (var i = 1; i <= 5; i++) s.push('step_grass_' + i, 'step_stone_' + i, 'step_wood_' + i);
     for (var j = 0; j < s.length; j++) if (!G.SFX_FILES['sfx_' + s[j]]) G.SFX_FILES['sfx_' + s[j]] = 'sfx/sfx_' + s[j] + '.mp3?v=' + SFXV;
     var a = { birds: 'birds_morning', city: 'city_day', crickets: 'crickets_night', wind: 'wind_storm', rain: 'rain_light', rainHeavy: 'rain_heavy',
-      river: 'river', classroom: 'classroom', shuttle: 'shuttle_drive' };   // còn chờ: cafe, market, playground
+      river: 'river', classroom: 'classroom', shuttle: 'shuttle_drive', cafe: 'cafe', market: 'market', playground: 'playground' };   // cafe, market, playground: tools/sfx/build-amb.py
     for (var k in a) if (a.hasOwnProperty(k) && !G.AMB_FILES[k]) G.AMB_FILES[k] = 'sfx/amb_' + a[k] + '.mp3?v=' + SFXV;
   })();
   function muted() { return !!(G.S && G.S.caiDat && G.S.caiDat.amThanh === false); }
@@ -274,6 +274,35 @@ var G = window.G || (window.G = {});
     if (vol <= 0.003) { L.idle += 1; if (L.idle > 240) { try { L.s.stop(); L.s.disconnect(); L.g.disconnect(); } catch (e) { /* bỏ qua */ } delete LOOPS[kind]; } }
     else L.idle = 0;
     return true;
+  };
+  /* tiếng bút chì khi viết chữ Hán: bảng viết (pen.js) gọi G.penSound khi đặt bút, đưa bút, nhấc bút.
+     Vòng lặp tiếng bút thật (sfx_pen_write, đệm 0,3 s hai đầu), to nhỏ theo tốc độ nét và lực nhấn như bút thật. */
+  var PEN = null, PEN_PAD = 0.3;
+  G.penSound = {
+    init: function () { var u = G.SFX_FILES.sfx_pen_write; if (u && ctx) loadBuf(u); return !!ctx; },
+    start: function () {
+      var a = G.audioReady(), u = G.SFX_FILES.sfx_pen_write; if (!a || !u || muted()) return;
+      var b = BUF[u]; if (!b) { loadBuf(u); return; }
+      G.penSound.end(true);
+      try {
+        var s = a.createBufferSource(), g = a.createGain();
+        s.buffer = b; s.loop = true; s.loopStart = PEN_PAD; s.loopEnd = b.duration - PEN_PAD;
+        g.gain.value = 0; s.connect(g); g.connect(a.destination);
+        s.start(0, PEN_PAD + Math.random() * (b.duration - 2 * PEN_PAD) * 0.9);
+        PEN = { s: s, g: g };
+      } catch (e) { PEN = null; }
+    },
+    move: function (tocDo, luc) {   // tocDo: điểm ảnh mỗi mili-giây; luc: lực nhấn 0…1 (ngón tay: 0)
+      var a = ctx; if (!PEN || !a) return;
+      var vol = 0.55 * Math.min(1, tocDo / 1.6) * (0.45 + 0.55 * (luc || 0.4));
+      PEN.g.gain.setTargetAtTime(vol, a.currentTime, 0.03);
+    },
+    end: function (now) {
+      var a = ctx, P = PEN; if (!P || !a) return;
+      PEN = null;
+      try { P.g.gain.setTargetAtTime(0, a.currentTime, now ? 0.01 : 0.04); } catch (e) { /* bỏ qua */ }
+      setTimeout(function () { try { P.s.stop(); P.s.disconnect(); P.g.disconnect(); } catch (e2) { /* bỏ qua */ } }, now ? 60 : 260);
+    }
   };
   G.ambState = function () { var o = {}; for (var k in LOOPS) if (LOOPS.hasOwnProperty(k)) o[k] = Math.round(LOOPS[k].vol * 100) / 100; var n = 0; for (var u in BUF) if (BUF.hasOwnProperty(u)) n++; o._buffers = n; return o; };   // để kiểm tra
   G.ambStopAll = function () { for (var k in LOOPS) if (LOOPS.hasOwnProperty(k)) G.ambSet(k, 0); };
