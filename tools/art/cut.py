@@ -189,8 +189,8 @@ def cell_figure(src, rgb, b, mode):
     """Nhân vật trong một ô: hình dán trên nền hồng (viền ô phần lớn là hồng) hoặc trong khung hồng → tách theo nền hồng;
        vẽ trên tấm giấy kem → tách bằng rembg."""
     x0, y0, x1, y1 = b
-    border = np.concatenate([rgb[y0, x0:x1], rgb[y1 - 1, x0:x1], rgb[y0:y1, x0], rgb[y0:y1, x1 - 1]])
-    if mode == 'holes' or (magenta_alpha(border[None])[0] < 0.5).mean() > 0.5:
+    # hình dán: nền hồng chiếm phần đáng kể trong khung bao (quanh dáng người); tấm giấy kem (kể cả đặt hơi nghiêng) gần như kín khung
+    if mode == 'holes' or (magenta_alpha(rgb[y0:y1, x0:x1]) < 0.5).mean() > 0.25:
         e = 0 if mode == 'holes' else 12                 # hình dán: lấy rộng ra để không cụt viền giấy
         H, W = rgb.shape[:2]
         arr = rgb[max(0, y0 - e):min(H, y1 + e), max(0, x0 - e):min(W, x1 + e)]

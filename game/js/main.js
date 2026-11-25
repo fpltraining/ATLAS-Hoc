@@ -32,20 +32,40 @@ var G = window.G || (window.G = {});
     placeRadar(); setTimeout(placeRadar, 60);
   };
 
+  /* bố cục 3D theo thành phố (G.WORLDS: Brightford, Trường Lạc trấn ở data/city_zh.js). Bản 3D đã dựng cho thành phố kia thì trả false
+     (phải nạp lại trang: bản 3D dựng một lần cho một thành phố) */
+  G.useWorld = function (city) {
+    var w = G.WORLDS && G.WORLDS[city];
+    if (!w) return true;
+    if (G.W3D && G.W3D.ready && G.W3D.city && G.W3D.city !== city) return false;
+    G.WORLD3D = w;
+    return true;
+  };
+  /* bạn đồng hành: Kai ở Brightford, rồng con Tiểu Long ở Trường Lạc trấn (hình Đơn Q1: long_*.png) */
+  G.buddy = function () { return G.lang && G.lang() === 'zh' && G.ASSET_REV && G.ASSET_REV['long_down.png'] ? 'long' : 'kai'; };
   G.goCity = function (id) {
+    var zh = !!(G.lang && G.lang() === 'zh' && G.WORLDS && G.WORLDS.zh);
+    id = zh ? 'zh' : 'en';   // thành phố theo thứ tiếng đang học
+    if (G.useWorld && !G.useWorld(id)) {   // vừa đi dạo thành phố kia: lưu, nạp lại trang rồi vào thẳng thành phố này
+      G.save(); try { sessionStorage.setItem('cl-go-city', id); } catch (e) {}
+      G.toast(zh ? 'Đang mở Trường Lạc trấn…' : 'Đang mở Brightford…', 2500);
+      setTimeout(function () { location.reload(); }, 300);
+      return;
+    }
     document.documentElement.classList.add('in-city');   // điện thoại cầm dọc: chỉ ngoài phố mới nhắc xoay ngang
     document.getElementById('lobby').style.display = 'none';
     document.getElementById('play').style.display = 'block';
+    var ri = document.getElementById('rot-img'); if (ri) ri.src = G.assetUrl(G.buddy() === 'long' ? 'long_rotate.png' : 'kai_rotate.png');
     G.updateHud();
-    // vị trí đã lưu thuộc thành phố này thì đi tiếp từ đó, không thì vào cổng chính của thành phố
+    // vị trí đã lưu thuộc thành phố này thì đi tiếp từ đó, không thì về nhà (Trường Lạc trấn: chỉ nhận vị trí trên bản đồ mới, bỏ cảnh cũ city_zh, zh_hall)
     var v = G.S.viTri, sv = v && G.SCENES[v.canh];
-    id = 'en';   // chỉ còn tiếng Anh: vị trí cũ ở Trường Lạc trấn thì về nhà ở Brightford
-    if (sv && sv.city === id && sv.kind !== 'classroom') G.enterScene(v.canh, { x: v.x, y: v.y, dir: 'down' });
-    else G.enterScene('home_en');
+    if (sv && sv.city === id && sv.kind !== 'classroom' && (!zh || G.WORLD3D[v.canh])) G.enterScene(v.canh, { x: v.x, y: v.y, dir: 'down' });
+    else G.enterScene(zh ? 'oldtown_zh' : 'home_en');
     var sc = G.S.viTri.canh;
     G.kaiSay(sc === 'home_en' ? 'Chào ' + G.playerName() + '! Đi học thôi: đi bộ theo đường mòn bên phải, qua cầu ở Bờ sông sang Trung tâm rồi xuống trường. Muốn nhanh thì gọi xe đưa đón ở góc dưới.'
       : sc === 'city_en' ? 'Trường Anh ngữ ở Khuôn viên phía dưới: đi theo đường giữa xuống là tới. Về nhà: đi bộ sang trái qua cầu, hoặc đi xe buýt, xe đưa đón.'
-      : sc === 'city_zh' ? '欢迎！Chào mừng tới Trường Lạc trấn. Học viện Hán ngữ ở góc dưới bên trái, sân bay ở phía trên.' : 'Tiếp tục học nào!');
+      : sc === 'oldtown_zh' ? '欢迎回家！Chào mừng về Trường Lạc trấn. Học viện Hán ngữ ở Trung tâm: đi theo ngõ đá lên phía trên, qua cổng chào đỏ là tới.'
+      : zh ? '加油！Cố lên! Tiếp tục học nào.' : 'Tiếp tục học nào!');
   };
 
   /* thư viện 3D (three.js ~600 KB) và js/world3d.js chỉ nạp khi vào thành phố (taste-skill perf: mở app nhẹ hơn);
@@ -62,7 +82,7 @@ var G = window.G || (window.G = {});
   G.need3d = need3d;
   G.goCity = function (id) {
     if (window.THREE && G.W3D) { goCity0(id); return; }
-    G.toast('Đang mở Brightford…', 1500);
+    G.toast(G.lang && G.lang() === 'zh' ? 'Đang mở Trường Lạc trấn…' : 'Đang mở Brightford…', 1500);
     need3d(function () { goCity0(id); });
   };
   setTimeout(function () { need3d(function () {}); }, 3500);
@@ -111,6 +131,9 @@ var G = window.G || (window.G = {});
   // taste-skill: lời Kai gọn một dòng để không che cảnh; chạm để đọc hết (giữ lâu hơn), chạm lần nữa để đóng
   G.kaiSay = function (text) {
     var k = document.getElementById('kai');
+    // Trường Lạc trấn: Tiểu Long nói thay Kai
+    var fi = k.querySelector('.kai-face img'), fn = G.buddy && G.buddy() === 'long' ? 'long_face.png' : 'kai_follow.png';
+    if (fi && fi.getAttribute('data-asset') !== fn) { fi.setAttribute('data-asset', fn); fi.src = G.assetUrl(fn); k.setAttribute('aria-label', (fn === 'long_face.png' ? 'Lời Tiểu Long' : 'Lời Kai') + ', chạm để đọc hết'); }
     document.getElementById('kai-text').textContent = String(text).replace(/^(?:[☀-➿]|[\ud83c-\ud83e][\udc00-\udfff])[️‍]*\s*/, '');
     k.className = 'kai show';
     clearTimeout(kaiTimer);
@@ -124,6 +147,7 @@ var G = window.G || (window.G = {});
   /* Nút hành động khi đứng gần cửa / NPC */
   G.showAction = function (t) {
     var b = document.getElementById('act');
+    document.documentElement.classList.toggle('act-on', !!t);   // điện thoại nằm ngang: ẩn ô nhiệt độ để không đè nút hành động
     if (!t) { b.className = 'act'; return; }
     b.textContent = t.label + ' ›';
     b.className = 'act show';
@@ -299,6 +323,8 @@ var G = window.G || (window.G = {});
       // người đang học: chưa có kết quả đầu vào thì phải làm trước khi vào sảnh
       G.renderLobby();
       mustTest(function () { G.renderLobby(); });
+      var gc = null; try { gc = sessionStorage.getItem('cl-go-city'); sessionStorage.removeItem('cl-go-city'); } catch (e) {}
+      if (gc) setTimeout(function () { G.goCity(gc); }, 400);   // vừa nạp lại trang để đổi bản đồ 3D sang thành phố kia
     }
   }
 

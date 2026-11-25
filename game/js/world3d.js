@@ -273,6 +273,7 @@ var G = window.G || (window.G = {});
     var base = new THREE.Mesh(new THREE.PlaneGeometry(220, 160), new THREE.MeshLambertMaterial({ map: grass, color: 0xf6f3e6 }));
     base.rotation.x = -Math.PI / 2; base.position.set(0, -0.01, 10.24); base.receiveShadow = true; SC.add(base);
     for (var id in G.WORLD3D) if (G.WORLD3D.hasOwnProperty(id) && G.SCENES[id]) DIST.push({ id: id, ox: G.WORLD3D[id].ox, oy: G.WORLD3D[id].oy, s: G.SCENES[id] });
+    W3.city = DIST.length && DIST[0].s.city === 'zh' ? 'zh' : 'en';   // bản 3D dựng cho một thành phố (main.js G.useWorld)
     DIST.forEach(function (d) {
       var s = d.s, gm = new THREE.Mesh(new THREE.PlaneGeometry(s.w * U, s.h * U), new THREE.MeshLambertMaterial({ map: tex(s.bg) }));
       gm.rotation.x = -Math.PI / 2; gm.position.set((d.ox + s.w / 2) * U, 0, (d.oy + s.h / 2) * U); gm.receiveShadow = true; SC.add(gm);
@@ -326,7 +327,10 @@ var G = window.G || (window.G = {});
     var x0 = 1e9, z0 = 1e9, x1 = -1e9, z1 = -1e9;
     RECT.forEach(function (r) { x0 = Math.min(x0, r[0]); z0 = Math.min(z0, r[1]); x1 = Math.max(x1, r[2]); z1 = Math.max(z1, r[3]); });
     function inside(x, z) { for (var i = 0; i < RECT.length; i++) { var r = RECT[i]; if (x > r[0] && x < r[2] && z > r[1] && z < r[3]) return true; } return false; }
-    var KIND = [['pc_tree_green.png', 230, 'tree'], ['pc_tree_birch.png', 220, 'tree'], ['pc_tree_maple.png', 220, 'tree'], ['pc_tree_orange.png', 220, 'tree'],
+    var KIND = W3.city === 'zh' ? [['pc_zh_willow.png', 250, 'tree'], ['pc_zh_bamboo.png', 210, 'tree'], ['pc_zh_plum.png', 220, 'tree'], ['pc_tree_green.png', 230, 'tree'],
+      ['pc_zh_willow.png', 270, 'tree'], ['pc_zh_bamboo.png', 190, 'tree'], ['pc_tree_small.png', 160, 'tree'],
+      ['pc_bush_white.png', 120, 'tree'], ['pc_rock_moss.png', 95, null], ['pc_rock.png', 85, null]]   // Trường Lạc trấn: liễu, trúc, mai
+      : [['pc_tree_green.png', 230, 'tree'], ['pc_tree_birch.png', 220, 'tree'], ['pc_tree_maple.png', 220, 'tree'], ['pc_tree_orange.png', 220, 'tree'],
       ['pc_tree_pine.png', 250, 'tree'], ['pc_tree_small.png', 160, 'tree'], ['pc_tree_green.png', 260, 'tree'], ['pc_tree_pine.png', 280, 'tree'],
       ['pc_bush_orange.png', 120, 'tree'], ['pc_bush_white.png', 120, 'tree'], ['pc_rock_moss.png', 95, null], ['pc_rock.png', 85, null]];
     var STEP = 2.1, n = 0, M = 16;   // rải trong dải 16 đơn vị quanh thành phố (xa hơn đã chìm trong sương)
@@ -356,10 +360,12 @@ var G = window.G || (window.G = {});
         fm.scale.set(p.s * U, 1, p.s * U); fm.position.set((d.ox + p.x) * U, 0.02, (d.oy + p.y) * U); fm.renderOrder = 1; SC.add(fm); FLATS.push({ m: fm, ph: Math.random() * 6 });
         return;
       }
-      var g = card(p.img, d.ox + p.x, d.oy + p.y, p.s, 0.96, { own: /tree|fountain/.test(p.img), fold: /tree|bush/.test(p.img) ? 'tree' : /fountain|kiosk|cart|news/.test(p.img) ? 'b' : null });
-      if (/tree/.test(p.img)) { SWAY.push({ g: g, ph: Math.random() * 6, k: 0.6 + Math.random() * 0.5 }); FADE.push(g); }
+      var tree = /tree|willow|plum|bamboo/.test(p.img);   // cây Trường Lạc trấn (liễu, mai, trúc) đung đưa, mờ đi khi che người như cây Brightford
+      var g = card(p.img, d.ox + p.x, d.oy + p.y, p.s, 0.96, { own: tree || /fountain|zh_gate/.test(p.img), fold: tree || /bush/.test(p.img) ? 'tree' : /fountain|kiosk|cart|news|chess|well/.test(p.img) ? 'b' : null });
+      if (tree) { SWAY.push({ g: g, ph: Math.random() * 6, k: 0.6 + Math.random() * 0.5 }); FADE.push(g); }
+      else if (/zh_gate/.test(p.img)) FADE.push(g);   // cổng chào: đi qua thì mờ đi, không che người
       if (/traffic_light/.test(p.img)) TLS.push({ x: (d.ox + p.x) * U, z: (d.oy + p.y) * U, s: p.s, pop: g.userData.pop });
-      if (/lamp/.test(p.img)) {
+      if (/lamp|lantern/.test(p.img)) {   // đèn đường, cột đèn lồng: sáng khi trời tối
         var gl = new THREE.Sprite(new THREE.SpriteMaterial({ map: GLOW, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false, opacity: 0 }));
         gl.scale.set(0.9, 0.9, 1); gl.position.set((d.ox + p.x) * U, p.s * U * 0.82, (d.oy + p.y) * U - 0.25); SC.add(gl);
         var pool = new THREE.Mesh(BLOBG, new THREE.MeshBasicMaterial({ map: GLOW, transparent: true, blending: THREE.AdditiveBlending, depthWrite: false, opacity: 0 }));
@@ -406,6 +412,7 @@ var G = window.G || (window.G = {});
     return { x: (d.ox + d.s.w / 2) * U, z: (d.oy + d.s.h / 2) * U };
   }
   function buildTown() {
+    if (W3.city === 'zh') return;   // người đi đường Brightford không sang Trường Lạc trấn; ở đó có 8 người dân đứng ở nơi nói chuyện
     var SETS = (G.TOWNIE_SETS || []).filter(function (s) { return has('person_' + s + '_down_w1.png') || has('person_' + s + '_left_w1.png'); });
     DIST.forEach(function (d, di) {
       var n = d.id === 'home_en' ? 4 : 6;
@@ -450,15 +457,17 @@ var G = window.G || (window.G = {});
     return { g: g, b: b, w: w };
   }
   function buildCars() {
-    CAR_T = [
+    // khu có đường xe chạy: Phố mua sắm (Brightford) hoặc khu ghi "road" trong dữ liệu (Khu mới Trường Lạc trấn: làn, vạch qua đường, loại xe)
+    var st = null; DIST.forEach(function (d) { if (!st && (d.s.road || d.id === 'street_en')) st = d; });
+    if (!st) return;
+    var RD = st.s.road;
+    CAR_T = (RD ? RD.cars : [
       { n: 'car_red', h: 86, k: 403 / 219, v: 190 }, { n: 'car_taxi', h: 86, k: 415 / 221, v: 210 }, { n: 'car_blue', h: 86, k: 434 / 214, v: 180 },
       { n: 'car_van', h: 104, k: 409 / 256, v: 160 }, { n: 'bus', h: 118, k: 510 / 214, v: 140 },
       { n: 'ride_bike', h: 96, k: 261 / 256, v: 95 }, { n: 'ride_scooter', h: 96, k: 253 / 256, v: 165 }
-    ].filter(function (t) { return has(t.n + '_side.png'); });
-    var st = null; DIST.forEach(function (d) { if (d.id === 'street_en') st = d; });
-    if (!st) return;
-    LANES = [{ y: st.oy + 488, dir: -1 }, { y: st.oy + 622, dir: 1 }];
-    X0 = st.ox + 30; X1 = st.ox + st.s.w - 30; CROSS0 = st.ox + 704; CROSS1 = st.ox + 836;
+    ]).filter(function (t) { return has(t.n + '_side.png'); });
+    LANES = RD ? RD.lanes.map(function (l) { return { y: st.oy + l[0], dir: l[1] }; }) : [{ y: st.oy + 488, dir: -1 }, { y: st.oy + 622, dir: 1 }];
+    X0 = st.ox + (RD ? RD.x0 : 30); X1 = st.ox + (RD ? RD.x1 : st.s.w - 30); CROSS0 = st.ox + (RD ? RD.cross[0] : 704); CROSS1 = st.ox + (RD ? RD.cross[1] : 836);
     LANES.forEach(function (L) { L.next = 1 + Math.random() * 3; spawnCar(L, X0 + 300 + Math.random() * 500); });
     TLS.forEach(function (t) {
       t.glow = new THREE.Sprite(new THREE.SpriteMaterial({ map: GLOW, color: 0x5fe08a, blending: THREE.AdditiveBlending, transparent: true, depthWrite: false }));
@@ -746,9 +755,10 @@ var G = window.G || (window.G = {});
     } else P3 = walker(base, 0, 0, who === 'kai' ? 104 : 120, who === 'kai' ? 490 / 512 : 0.957);
     addUmbrella(P3, who === 'kai' ? 3 : 0);
     if (K3) { SC.remove(K3.g); SC.remove(K3.blob); if (K3.um) SC.remove(K3.um); K3 = null; }
-    if (who !== 'kai') {
-      if (G.hasWalk && G.hasWalk('kai', 'down')) K3 = walker('kai', 0, 0, 86, 490 / 512);
-      else { K3 = { base: null, x: 0, z: 0, dir: 'down', t: 0, S: 82 }; K3.g = card('kai_follow.png', 0, 0, 82, 497 / 512, { own: true, pop: false }); K3.blob = blob(0.18); }
+    var bud = W3.city === 'zh' && G.hasWalk && G.hasWalk('long', 'down') ? 'long' : 'kai';   // Trường Lạc trấn: rồng con Tiểu Long đi theo
+    if (who !== bud) {
+      if (G.hasWalk && G.hasWalk(bud, 'down')) K3 = walker(bud, 0, 0, 86, 490 / 512);
+      else { K3 = { base: null, x: 0, z: 0, dir: 'down', t: 0, S: 82 }; K3.g = card(bud + '_follow.png', 0, 0, 82, 497 / 512, { own: true, pop: false }); K3.blob = blob(0.18); }
     }
   }
   function drawPlayer(st) {

@@ -126,7 +126,7 @@ var G = window.G || (window.G = {});
         citySwitch(),
         G.el('p.hero-sub', zh ? 'Sống ở Trường Lạc trấn, học tiếng Trung như người bản xứ: pinyin và thanh điệu, viết chữ từng nét, nói chuyện ở quán trà, chợ, ga tàu.'
           : 'Sống ở Brightford, học tiếng Anh như người bản xứ: học ở trường, nói chuyện ở quán, đi khắp thành phố.'),
-        zh ? G.el('button.clay-btn', { onclick: G.openZhHall }, 'Vào Học viện Hán ngữ ›')
+        zh ? G.el('button.clay-btn', { onclick: function () { G.goCity('zh'); } }, 'Vào Trường Lạc trấn ›')   // bản đồ 3D (data/city_zh.js): đi bộ tới Học viện, nói chuyện với người dân
           : G.el('button.clay-btn', { onclick: function () { G.goCity(lastCity()); } }, 'Vào Brightford ›'),
         sh0 ? G.el('button.hero-next', { onclick: sh0.go }, G.ic3(sh0.ic, 'ic3-s'), G.el('span', 'Việc nên làm: ' + sh0.t + ' ›')) : null,
         G.el('p.hero-prog', zh ? (function () { var f = G.zhFloorNow(), c = G.zhFloorCount(f), st = G.ROADMAP_ZH[f - 1]; return st.name + ' · ' + c.k + '/' + c.all + ' phòng · ' + G.S.xp + ' XP'; })()
