@@ -131,16 +131,17 @@ var G = window.G || (window.G = {});
   /* ---------- 1. Bài đầu vào ---------- */
   var LV_NAME = ['Mới bắt đầu', 'HSK 1', 'HSK 2', 'HSK 3', 'HSK 4', 'HSK 5'];
   G.zhLevelName = function (lv) { return LV_NAME[lv] || 'HSK ' + lv; };
-  /* phòng bắt đầu theo trình độ: buổi đầu tiên của cấp đó trong giáo trình */
+  /* phòng bắt đầu theo trình độ: đã vững HSK n thì học từ bài đầu của HSK n + 1 (bài trước vẫn mở để ôn); chưa vững HSK 1 thì từ Phát âm */
   function startFor(lv) {
     if (lv <= 0) return 'zh-py';
-    var want = Math.min(5, lv), floors = [2, 3, 4];
+    var want = Math.min(5, lv + 1), floors = [2, 3, 4];
     for (var i = 0; i < floors.length; i++) {
       var idx = G.ZH_INDEX[floors[i]] || [];
       for (var j = 0; j < idx.length; j++) if (idx[j][2] >= want) return idx[j][0];
     }
     return 'zh-l001';
   }
+  G.zhStartFor = startFor;
   G.openZhPlacement = function (after) {
     var body = panelOpen('Đo trình độ tiếng Trung');
     body.appendChild(G.el('div.small.faint', 'Đang tải…'));

@@ -52,6 +52,10 @@ delete G.S.zhStart; delete G.S.phong['zh-l030'];
 G.S.phong['zh-x1'] = { sao: 2, diem: 8 };
 ok('phòng thi đã qua được tính là qua', G.roomPassed('zh-x1'));
 
+// bài đo: chưa vững HSK 1 → Phát âm; vững HSK n → bài đầu của HSK n + 1; vững HSK 5 → bài đầu HSK 5 (chưa có HSK 6)
+const firstOf = (lv) => [2, 3, 4].map((f) => I[f].find((r) => r[2] === lv)).find(Boolean)[0];
+eq('phòng bắt đầu theo bài đo', [0, 1, 2, 4, 5].map((lv) => G.zhStartFor(lv)), ['zh-py', firstOf(2), firstOf(3), firstOf(5), firstOf(5)]);
+
 // 4. nghe chọn pinyin: phương án cùng âm, khác thanh
 const o = G.zhPyOptions({ py: 'mā' });
 ok('mā: 4 phương án mā má mǎ mà', o.length === 4 && ['mā', 'má', 'mǎ', 'mà'].every((x) => o.includes(x)));
