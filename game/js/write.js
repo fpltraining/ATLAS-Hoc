@@ -124,7 +124,7 @@ var G = window.G || (window.G = {});
     var side = G.el('div.wr-side', G.el('div.wr-head', G.el('div', bigCh), G.el('div', pyEl, hvEl, viEl), counter), dots, fb, tools, nextBtn);
     body.appendChild(G.el('div.wr-wrap', padEl, side));
 
-    var pad = new G.Pen.WritingPad(padEl, { grid: 'tian', brush: 'but-chi', penOnly: false, penSound: false, onStroke: onStroke });
+    var pad = new G.Pen.WritingPad(padEl, { grid: 'tian', brush: 'but-chi', penOnly: false, penSound: true, onStroke: onStroke });   // tiếng bút chì thật (G.penSound)
     cur = { pad: pad, stopAnim: stopAnim, S: S, chars: chars, data: function () { return strokeData(chars[S.i]); } };
     G._wr = cur;   // cho bộ soát tự động (tools/qa/driver.js) viết thử
 
