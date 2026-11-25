@@ -23,7 +23,7 @@ G.ASSET_LIST = [
   'npc_emma_talk.png', 'npc_wang_talk.png', 'npc_principal_li_talk.png',
   'player_han_happy.png', 'player_han_wow.png', 'player_han_think.png', 'player_minh_happy.png', 'player_minh_wow.png', 'player_minh_think.png',
   'npc_leo.png', 'npc_xiaolin.png', 'npc_rosa.png', 'npc_wangdama.png', 'npc_grace.png', 'npc_zhou.png', 'npc_anna.png', 'npc_sun.png',
-  'door_locked.png', 'door_open.png', 'door_lock.png', 'npc_tom_talk.png', 'npc_lily_talk.png', 'npc_sam_talk.png', 'plane.png', 'prop_oak.png', 'prop_palm.png', 'prop_lamp.png', 'prop_bench.png', 'prop_car.png', 'prop_mailbox.png', 'prop_flowers.png', 'prop_drone.png', 'logo_icon.png', 'flight_bg.png', 'npc_zhou_talk.png', 'npc_grace_talk.png', 'npc_li_talk.png', 'npc_zhang_talk.png', 'npc_chen_talk.png', 'diploma_en.png', 'diploma_zh.png',
+  'door_locked.png', 'door_open.png', 'door_lock.png', 'npc_tom_talk.png', 'npc_lily_talk.png', 'npc_sam_talk.png', 'plane.png', 'prop_oak.png', 'prop_palm.png', 'prop_lamp.png', 'prop_bench.png', 'prop_car.png', 'prop_mailbox.png', 'prop_flowers.png', 'prop_drone.png', 'logo_icon.png', 'flight_bg.png', 'npc_zhou_talk.png', 'npc_grace_talk.png', 'npc_li_talk.png', 'npc_zhang_talk.png', 'npc_chen_talk.png', 'diploma_en.png', 'diploma_zh.webp',
   /* ảnh ChatGPT: người trong đời sống, toà nhà và nội thất các tiệm */
   'npc_mom.png', 'npc_mom_talk.png', 'npc_mia.png', 'npc_mia_talk.png', 'npc_ben.png', 'npc_ben_talk.png', 'npc_carlos.png', 'npc_carlos_talk.png', 'npc_dan.png', 'npc_dan_talk.png',
   'npc_owen.png', 'npc_owen_talk.png', 'npc_jake.png', 'npc_jake_talk.png', 'npc_ivy.png', 'npc_ivy_talk.png', 'npc_grant.png', 'npc_grant_talk.png',

@@ -7,14 +7,15 @@ G.LIFE = G.LIFE || {};
 G.NPCS = G.NPCS || {};
 
 (function () {
-  // người dân Trường Lạc trấn (hình chờ Đơn Q2, chưa có thì hiện nền giấy). Mã riêng: li / zhang / chen là thầy cô Học viện cũ (world.js)
+  // người dân Trường Lạc trấn. Mã riêng: li / zhang / chen là thầy cô Học viện cũ (world.js). Bà Lý, cô Chu có chân dung riêng (Meta AI);
+  // 5 người còn lại tạm dùng khung đứng trong tấm bước của chính người đó (walk_*_down.png, Đơn Q2 Phần 4) tới khi có chân dung nói chuyện npc_*_talk.png
   var P = {
-    xiaomei: { name: '小美 Tiểu Mỹ', img: 'npc_xiaolin.png', role: 'Bạn cùng lớp, làm thêm ở quán trà sữa' },   // tạm dùng hình cô bé quán trà sữa (npc_xiaolin) tới khi có npc_xiaomei_talk.png (Đơn Q2)
-    lin: { name: '林姐 Chị Lâm', img: 'npc_lin.png', role: 'Chủ quán trà' },
+    xiaomei: { name: '小美 Tiểu Mỹ', img: 'walk_xiaomei_down.png', role: 'Bạn cùng lớp, làm thêm ở quán trà sữa' },
+    lin: { name: '林姐 Chị Lâm', img: 'walk_lin_down.png', role: 'Chủ quán trà' },
     nainai: { name: '李奶奶 Bà Lý', img: 'npc_nainai.png', role: 'Bán rau ở chợ sáng' },
-    shifu: { name: '张师傅 Chú Trương', img: 'npc_shifu.png', role: 'Tài xế taxi' },
-    zhao: { name: '赵医生 Bác sĩ Triệu', img: 'npc_zhao.png', role: 'Bác sĩ phòng khám' },
-    yeye: { name: '陈爷爷 Ông Trần', img: 'npc_principal_li.png', role: 'Ông cụ chơi cờ ở công viên' },   // tạm dùng hình ông cụ áo Đường (npc_principal_li) tới khi có npc_yeye_talk.png (Đơn Q2)
+    shifu: { name: '张师傅 Chú Trương', img: 'walk_shifu_down.png', role: 'Tài xế taxi' },
+    zhao: { name: '赵医生 Bác sĩ Triệu', img: 'walk_zhao_down.png', role: 'Bác sĩ phòng khám' },
+    yeye: { name: '陈爷爷 Ông Trần', img: 'walk_yeye_down.png', role: 'Ông cụ chơi cờ ở công viên' },
     zhou: { name: '周小姐 Cô Chu', img: 'npc_zhou.png', role: 'Nhân viên ga tàu cao tốc' }
   };
   for (var k in P) if (P.hasOwnProperty(k) && !G.NPCS[k]) G.NPCS[k] = P[k];

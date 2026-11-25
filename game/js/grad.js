@@ -33,8 +33,8 @@ var G = window.G || (window.G = {});
       G.el('div.grad-card',
         G.el('div.kicker', 'Chứng chỉ ConnectLife'),
         G.el('h2', 'Chứng chỉ cấp ' + level),
-        G.el('div.diploma',
-          G.imgEl(zh && G.ASSET_REV && G.ASSET_REV['diploma_zh.png'] ? 'diploma_zh.png' : 'diploma_en.png', 'dip-img'),   // giấy Trường Lạc trấn: Đơn Q3, chưa có thì dùng chung giấy
+        G.el('div.diploma' + (zh && G.ASSET_REV && G.ASSET_REV['diploma_zh.webp'] ? '.zh' : ''),
+          G.imgEl(zh && G.ASSET_REV && G.ASSET_REV['diploma_zh.webp'] ? 'diploma_zh.webp' : 'diploma_en.png', 'dip-img'),   // giấy Trường Lạc trấn (Đơn Q3, khổ 3:2); chưa có thì dùng chung giấy
           G.el('div.dip-text',
             G.el('div.dip-school', SCHOOL[lang] || ''),
             G.el('div.dip-title', 'CHỨNG CHỈ CONNECTLIFE · CẤP ' + level),

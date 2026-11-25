@@ -741,8 +741,18 @@ Câu mở đầu chung (dán trước mỗi dòng): `Book cover illustration for
 
 # Đơn Q · Trường Lạc trấn 长乐镇 (tiếng Trung) · 24/11/2026
 
-**Đã nhận và gắn (25/11/2026, cắt bằng `tools/art/cut.py`):** thẻ thành phố `card_city_zh_v2.webp` (ảnh đầu Sảnh khi chọn Trường Lạc trấn), `long_icon.png`, quán trà `building_zh_teahouse.png`, trà sữa `building_zh_milktea.png`, cổng Học viện `building_zh_school.png`, cột đèn lồng `pc_zh_lantern_post.png`, taxi `car_zh_taxi_*`, xe máy giao hàng `car_zh_scooter_*`, bản đồ khu mới `map_zh_newtown.webp`, tấm bước Bà Lý `walk_nainai_*` (9 khung), chân dung Bà Lý `npc_nainai.png`; chân dung Meta AI của đơn cũ: cô Vương `npc_wang.png` (thay bản cũ, hiện ở mọi bài học tiếng Trung), `npc_xiaolin.png`, `npc_zhang.png`, `npc_chen.png`, `npc_li.png`, `npc_principal_li.png`. Tạm mượn: Tiểu Mỹ dùng `npc_xiaolin.png`, ông Trần dùng `npc_principal_li.png` tới khi có chân dung riêng.
-**Còn chờ** (anh đã gửi vào chat nhưng hình gửi lúc em đang chạy không lưu thành tệp, gửi lại qua Google Drive): Q1 `long_walk`, `long_poses`, `long_face`; Q3 `diploma_zh`; Q2 bản đồ `map_zh_oldtown`, `map_zh_center`; nhà (home, bank, metro, pagoda, station, clinic, market, store, busstop); vật (bridge, boat, willow, plum, bamboo, lion, bikes, foodcart, chess, well, gate); tấm bước cô Vương, ông Trần, chú Trương, Tiểu Mỹ, chị Lâm, bác sĩ Triệu, cô Chu; xe buýt, xe đạp (và tàu cao tốc); 8 chân dung nói chuyện `npc_*_talk.png`.
+**Đã nhận đủ (25/11/2026, cắt bằng `tools/art/cut.py`; hình anh gửi lúc em đang chạy lấy lại được từ lịch sử phiên):**
+- Q1: thẻ thành phố `card_city_zh_v2.webp` (ảnh đầu Sảnh khi chọn Trường Lạc trấn), `long_icon.png`; tấm bước Tiểu Long `long_down|up|left` (+ `_w1`, `_w2`), `long_follow.png` (= khung đứng); tư thế `long_wave`, `long_talk`, `long_think`, `long_rotate`, `long_sit`, `long_happy`; mặt tròn `long_face.png`. Hàng "đi về phía trước" vẽ nghiêng sang phải nên `long_down_w1`, `long_down_w2` tạm dùng khung đứng.
+- Q2 Phần 1: `map_zh_oldtown.webp`, `map_zh_center.webp`, `map_zh_newtown.webp`.
+- Q2 Phần 2: đủ 12 nhà `building_zh_*` (home, school, teahouse, market, station, metro, store, milktea, clinic, bank, busstop, pagoda).
+- Q2 Phần 3: đủ 12 vật `pc_zh_*` (lantern_post, bridge, boat, willow, plum, bamboo, lion, bikes, foodcart, chess, well, gate).
+- Q2 Phần 4: tấm bước đủ 8 người `walk_<wang|nainai|yeye|shifu|xiaomei|lin|zhao|zhou>_*` (9 khung mỗi người).
+- Q2 Phần 5: `car_zh_bus_*`, `car_zh_taxi_*`, `car_zh_scooter_*`, `car_zh_bike_*` (side, front, back), thêm tàu cao tốc `car_zh_train_*`.
+- Q3: giấy chứng chỉ `diploma_zh.webp` (khổ 3:2, màn trao chứng chỉ tiếng Trung đã dùng).
+- Chân dung Meta AI: cô Vương `npc_wang.png` (hiện ở mọi bài học tiếng Trung), Bà Lý `npc_nainai.png` (bác bán rau), cô Chu `npc_zhou.png`, `npc_xiaolin.png`, `npc_zhang.png`, `npc_chen.png`, `npc_li.png`, `npc_principal_li.png`.
+
+**Còn chờ:** 8 chân dung nói chuyện `npc_*_talk.png` (tin thứ hai của Phần 4). Trong lúc chờ, Tiểu Mỹ, chị Lâm, chú Trương, bác sĩ Triệu, ông Trần hiện khung đứng trong tấm bước của chính người đó. Không bắt buộc: đặt lại 2 khung Tiểu Long bước về phía trước (hàng 1, cột 2–3 của `long_walk`).
+**Chưa dùng (`art/inbox/`):** bản Meta AI của Leo, bà Rosa (giỏ táo), Officer Grace, Dr. Anna; game tiếng Anh đã có chân dung các người này, anh muốn thay thì báo em.
 
 Anh Han chốt: thị trấn **phố cổ sông nước + khu mới**, bạn đồng hành mới là **rồng con Tiểu Long 小龙**, cùng kiểu giấy màu nước của Brightford nhưng **đậm nét Trung Hoa** (tường trắng ngói đen, cầu đá, kênh, đèn lồng đỏ, liễu, hoa mai; khu mới có ga tàu cao tốc, tàu điện, cửa hàng tiện lợi, trà sữa, xe giao đồ ăn, xe đạp công cộng).
 Luật chung: **không có chữ nào trên hình**, kể cả chữ Hán (máy vẽ hay sai chữ; biển, câu đối, đèn lồng để trống, game tự đặt chữ thật). Không màu tím. Đáy nhân vật là đế giày, không đế giấy, không cỏ.
