@@ -67,11 +67,12 @@ var G = window.G || (window.G = {});
   }
   /* đẩy lên; mây trả lại mốc lưu đang giữ (bị từ chối vì máy khác vừa lưu bản mới hơn thì mốc đó lớn hơn của máy này) */
   function push(s, cb) {
-    http('POST', '/rest/v1/connectlife_save?on_conflict=user_id&select=luu_luc', { user_id: s.user.id, data: G.S, luu_luc: G.S.luuLuc || 0 }, s.at,
+    var R = G.root();   // bản lưu gốc: cả hồ sơ tiếng Anh và tiếng Trung
+    http('POST', '/rest/v1/connectlife_save?on_conflict=user_id&select=luu_luc', { user_id: s.user.id, data: R, luu_luc: R.luuLuc || 0 }, s.at,
       'resolution=merge-duplicates,return=representation', function (err, j) { cb(err, j && j.length ? j[0].luu_luc : null); });
   }
   function take(row) {
-    try { localStorage.setItem('thegioi-save-truocmay', JSON.stringify(G.S)); } catch (e) { /* bỏ qua */ }   // bản trong máy cất dự phòng
+    try { localStorage.setItem('thegioi-save-truocmay', JSON.stringify(G.root())); } catch (e) { /* bỏ qua */ }   // bản trong máy cất dự phòng
     G.applySave(row.data);
   }
 
@@ -105,7 +106,7 @@ var G = window.G || (window.G = {});
       pull(s, function (err2, row) {
         if (err2) { done(err2); return; }
         var rd = row && row.data, rl = row ? (row.luu_luc || 0) : 0;
-        if (rd && rd.v === 1 && !first && rl === (G.S.luuLuc || 0)) { setLast(s, rl); done(null, 'same'); return; }
+        if (rd && rd.v === 1 && !first && rl === (G.root().luuLuc || 0)) { setLast(s, rl); done(null, 'same'); return; }
         if (rd && rd.v === 1 && (first || rl !== lastLuc(s))) {
           // máy khác đã lưu bản mới (hoặc lần đầu đăng nhập ở máy này): gộp từng phần, không bản nào ghi đè bản nào
           if (!first && !G.cloudCalm()) { G._cloudWait = true; done(null, 'wait'); return; }
@@ -117,21 +118,21 @@ var G = window.G || (window.G = {});
     });
     // gộp bản trên mây vào máy này; trả về true nếu bản đó mang thêm tiến độ (so với gộp bản trong máy với chính nó)
     function merge(data, fst) {
-      var mg = G.mergeSave(G.S, data, fst), more = !G.sameProgress(mg, G.mergeSave(G.S, G.S, fst));
+      var R = G.root(), mg = G.mergeSave(R, data, fst), more = !G.sameProgress(mg, G.mergeSave(R, R, fst));
       take({ data: mg });
       return more;
     }
     function send(s) {
       push(s, function (err3, kept) {
-        if (!err3 && kept === (G.S.luuLuc || 0)) setLast(s, kept);
-        if (err3 || !kept || kept <= (G.S.luuLuc || 0)) { done(err3, gotNew ? 'pulled' : 'pushed'); return; }
+        if (!err3 && kept === (G.root().luuLuc || 0)) setLast(s, kept);
+        if (err3 || !kept || kept <= (G.root().luuLuc || 0)) { done(err3, gotNew ? 'pulled' : 'pushed'); return; }
         // máy khác vừa lưu sau lúc máy này lấy về: lấy bản đó gộp thêm rồi đẩy lại
         pull(s, function (err4, row2) {
           if (err4 || !row2 || !row2.data || row2.data.v !== 1) { done(err4, gotNew ? 'pulled' : 'pushed'); return; }
           if (!G.cloudCalm()) { G._cloudWait = true; done(null, gotNew ? 'pulled' : 'wait'); return; }
           if (merge(row2.data)) gotNew = true;
           setLast(s, row2.luu_luc || 0);
-          push(s, function (err5, k5) { if (!err5 && k5 === (G.S.luuLuc || 0)) setLast(s, k5); done(err5, gotNew ? 'pulled' : 'pushed'); });
+          push(s, function (err5, k5) { if (!err5 && k5 === (G.root().luuLuc || 0)) setLast(s, k5); done(err5, gotNew ? 'pulled' : 'pushed'); });
         });
       });
     }

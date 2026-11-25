@@ -365,16 +365,16 @@ var G = window.G || (window.G = {});
     cd.phutNgay = need; ptAt = 0; G.save(); if (G.updateHud) G.updateHud();
   };
   /* tiến độ hôm nay theo mốc: { phut cần học hôm nay, den, ngay còn lại, xong, het (quá mốc), cham, nhanh } */
-  var ptCache = null, ptAt = 0;
+  var ptCache = null, ptAt = 0, ptFor = null;
   G.planToday = function () {
     var m = G.S.mocHoc; if (!m || !G.etaPlan) return null;
-    if (ptCache && Date.now() - ptAt < 60000) return ptCache;
+    if (ptCache && ptFor === G.S && Date.now() - ptAt < 60000) return ptCache;   // mỗi hồ sơ (tiếng Anh, tiếng Trung) một kế hoạch
     var cd = G.S.caiDat || {}, dpw = cd.ngayTuan || 5, end = Date.parse(m.den + 'T23:59:59+07:00');
     var daysLeft = (end - Date.now()) / 86400000, h = hoursTo(m.buoc, dpw);
     var o = { thang: m.thang, den: m.den, ngay: Math.max(0, Math.ceil(daysLeft)), xong: h <= 0, het: daysLeft <= 0, phut0: m.phut0 };
     o.phut = o.xong || o.het ? (cd.phutNgay || m.phut0) : Math.min(240, Math.max(10, ceil5(h * 60 / Math.max(1, daysLeft * dpw / 7))));
     o.cham = !o.xong && !o.het && o.phut > m.phut0 * 1.1; o.nhanh = !o.xong && !o.het && o.phut < m.phut0 * 0.9;
-    ptCache = o; ptAt = Date.now(); return o;
+    ptCache = o; ptAt = Date.now(); ptFor = G.S; return o;
   };
   /* một dòng nói rõ kế hoạch: đạt gì, trước ngày nào, mỗi ngày bao lâu */
   G.planLine = function () {

@@ -756,6 +756,7 @@ var G = window.G || (window.G = {});
   }
   /* cho Nhiệm vụ hôm nay (daily.js): buổi học tiếp theo và nơi nói chuyện tiếp theo, mở thẳng được từ Sảnh */
   G.nextLesson = function () {
+    if (G.lang && G.lang() === 'zh') return G.zhNextLesson ? G.zhNextLesson() : null;   // Trường Lạc trấn: phòng tiếp theo ở Học viện Hán ngữ (zh.js)
     var nr = nextRoom(); if (!nr) return null;
     var R = G.ROOMS[nr.door.room], ses = R.group ? G.ROOMS[G.curSession(nr.door.room)] : null, t = G.NPCS[G.ROOM_TEACHER[nr.door.room]];
     return { id: ses ? ses.id : R.id, floor: nr.floor, label: ses ? 'Buổi ' + ses.n + ' · phòng ' + nr.door.label : 'Phòng ' + nr.door.label, teacher: t ? t.name : '' };

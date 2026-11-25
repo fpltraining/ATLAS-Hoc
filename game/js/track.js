@@ -5,7 +5,7 @@
 var G = window.G || (window.G = {});
 
 (function () {
-  G.APP_VER = 'thegioi-v126';
+  G.APP_VER = 'thegioi-v129';
   var Q = [], off = false, timer = 0, errs = {}, nErr = 0;
   function on() {
     if (off || !G.CLOUD_URL || !G.CLOUD_KEY) return false;
@@ -38,7 +38,8 @@ var G = window.G || (window.G = {});
   G.track = function (name, props) {
     if (!on()) return;
     var p = props || {};
-    p.tang = G.enFloorNow ? G.enFloorNow() : undefined;
+    p.lang = G.lang ? G.lang() : 'en';   // thứ tiếng đang học (hồ sơ riêng)
+    p.tang = p.lang === 'zh' ? (G.zhFloorNow ? G.zhFloorNow() : undefined) : (G.enFloorNow ? G.enFloorNow() : undefined);
     Q.push({ device: device(), ver: G.APP_VER, name: String(name).slice(0, 40), props: p });
     if (Q.length >= 20) flush(); else if (!timer) timer = setTimeout(flush, 30000);
   };

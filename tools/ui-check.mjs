@@ -121,6 +121,21 @@ const SCREENS = [
   ['Kiểm tra tuần', () => { G.openWeekly(); }],
   ['Mình nói được', () => { G.openCanDo(); }],
   ['Hội thoại', () => { G.openLife('en-home'); }],
+  // Trường Lạc trấn (tiếng Trung): đổi hồ sơ rồi soát Sảnh, Học viện, bài học, truyện có pinyin, ôn câu, luyện nói; xong đổi lại tiếng Anh
+  ['Sảnh tiếng Trung', () => { G.setLang('zh'); G._lobbyTab = 'home'; G.goLobby(); }],
+  ['Sảnh tiếng Trung · Lộ trình', () => { G.goLobby(); document.querySelectorAll('.lb-tabs button')[1].click(); }],
+  ['Học viện Hán ngữ', () => { G.openZhHall(); }],
+  ['Bài học tiếng Trung', () => { G.closeLesson(); G.openLesson('zh-py'); }],
+  ['Bài HSK 1 (tải theo cấp)', () => { G.closeLesson(); G.openLesson('zh-l001'); }],
+  ['Ngữ pháp bài HSK', () => { const b = [...document.querySelectorAll('#panel-body button.big')].find((x) => /1 · Học/.test(x.textContent)); if (b) b.click(); }],
+  ['Nói chuyện ở Trường Lạc trấn', () => { G.closeLesson(); G.S.phong['zh-l002'] = { sao: 1, diem: 8 }; G.openZhTalks(); }],
+  ['Hội thoại tiếng Trung', () => { G.closeLesson(); G.openLife('zh-school'); setTimeout(() => { const b = document.querySelector('#panel-body .menu3 button.big'); if (b) b.click(); }, 200); }],
+  ['Đo trình độ tiếng Trung', () => { G.closeLesson(); G.openZhPlacement(function () {}); }],
+  ['Thi chứng chỉ Nền tảng', () => { G.closeLesson(); G.openLesson('zh-x1'); }],
+  ['Truyện tiếng Trung', () => { G.openReader(); setTimeout(() => { const b = document.querySelector('.rd-next'); if (b) b.click(); }, 300); }],
+  ['Luyện nói tiếng Trung', () => { G.S.phong['zh-py'] = { sao: 3, diem: 10 }; G.openSpeakZh(); }],
+  ['Viết chữ Hán', () => { G.openWrite(['人', '大']); }],
+  ['Về tiếng Anh', () => { G.closeLesson(); G.setLang('en'); G.goLobby(); }],
   ['Kiểm tra nhanh', () => { window._keepPl = true; G.openPlacement(function () {}, { quick: true, canSkip: true }); }],
   ['Kiểm tra nhanh · Từ vựng', () => { [...document.querySelectorAll('#placement button')].find((x) => /Bắt đầu/.test(x.textContent)).click(); setTimeout(() => { const b = [...document.querySelectorAll('#placement button')].find((x) => /Bắt đầu ›/.test(x.textContent)); if (b) b.click(); }, 200); }]
 ];

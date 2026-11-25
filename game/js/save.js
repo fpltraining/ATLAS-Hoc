@@ -52,6 +52,42 @@ var G = window.G || (window.G = {});
     return s ? fill(s) : blank();
   };
 
+  /* ---------- hai thứ tiếng, hai hồ sơ riêng hoàn toàn (anh Han chốt 24/11/2026) ----------
+     Bản lưu gốc G.R chính là hồ sơ tiếng Anh như trước (không đổi định dạng, bản cũ đọc được ngay); hồ sơ tiếng Trung
+     nằm trong G.R.zh. G.S là hồ sơ đang học: mọi phần của game vẫn đọc ghi G.S nên XP, chuỗi ngày học, rank, phòng,
+     kho ôn, ngày học, bài đầu vào, mốc thời gian… của mỗi thứ tiếng tách riêng. Lưu, sao lưu, đồng bộ mây đi theo cả bản gốc.
+     Danh tính (nhân vật, tên, micro) dùng chung: đổi ở thứ tiếng nào cũng đổi cả hai. */
+  var SHARE = ['nhanVat', 'ten', 'avatar', 'micro'];
+  function zhOf(R) {
+    if (!R.zh || R.zh.v !== 1) {
+      var z = blank(), cd = JSON.parse(JSON.stringify(R.caiDat || {}));
+      delete cd.phutNgay; delete cd.nghiaDapAn;   // mốc thời gian, nghĩa đáp án theo trình độ: riêng từng thứ tiếng
+      z.caiDat = cd;
+      z.viTri = { canh: 'city_zh', x: 768, y: 330 };
+      R.zh = z;
+    }
+    fill(R.zh);
+    for (var i = 0; i < SHARE.length; i++) if (R[SHARE[i]] !== undefined) R.zh[SHARE[i]] = R[SHARE[i]];
+    return R.zh;
+  }
+  G.LANG_NAME = { en: 'tiếng Anh', zh: 'tiếng Trung' };
+  G.useRoot = function (R) { G.R = R; G.S = R.lang === 'zh' ? zhOf(R) : R; return G.S; };
+  G.root = function () { return G.R || G.S; };
+  G.lang = function () { return G.R && G.R.lang === 'zh' ? 'zh' : 'en'; };
+  /* đổi thứ tiếng đang học (Sảnh, thẻ thành phố): đổi hồ sơ, rank tính lại theo hồ sơ đó */
+  G.setLang = function (lang) {
+    if (!G.R) G.R = G.S;
+    G.R.lang = lang === 'zh' ? 'zh' : 'en';
+    G.useRoot(G.R);
+    G.save();
+    if (G.initRank) G.initRank();
+  };
+  function syncShare() {
+    var R = G.root(), o = G.S === R ? R.zh : R;
+    if (!o || o === G.S) return;
+    for (var i = 0; i < SHARE.length; i++) if (G.S[SHARE[i]] !== undefined) o[SHARE[i]] = G.S[SHARE[i]];
+  }
+
   /* IndexedDB: bản sao thứ 3 */
   var idb = null;
   function openIdb(cb) {
@@ -68,7 +104,7 @@ var G = window.G || (window.G = {});
   function mirror() {
     clearTimeout(idbT);
     idbT = setTimeout(function () {
-      var data = JSON.stringify(G.S);
+      var data = JSON.stringify(G.root());
       openIdb(function (db) { if (!db) return; try { db.transaction('s', 'readwrite').objectStore('s').put(data, 'save'); } catch (e) { /* bỏ qua */ } });
     }, 1500);
   }
@@ -80,8 +116,9 @@ var G = window.G || (window.G = {});
         var q = db.transaction('s', 'readonly').objectStore('s').get('save');
         q.onsuccess = function () {
           var o = null; try { o = q.result ? JSON.parse(q.result) : null; } catch (e) { o = null; }
-          if (o && o.v === 1 && newer(o, G.S) === o && ((o.luuLuc || 0) > (G.S.luuLuc || 0)) && ((o.xp || 0) > (G.S.xp || 0) || !G.S.nhanVat)) {
-            G.S = fill(o); G.save(); G.toast('Đã khôi phục tiến độ học từ bản sao trong máy.'); if (done) done(true);
+          var R = G.root();
+          if (o && o.v === 1 && newer(o, R) === o && ((o.luuLuc || 0) > (R.luuLuc || 0)) && ((o.xp || 0) > (R.xp || 0) || !R.nhanVat)) {
+            G.useRoot(fill(o)); G.save(); G.toast('Đã khôi phục tiến độ học từ bản sao trong máy.'); if (done) done(true);
           } else { mirror(); if (done) done(false); }
         };
         q.onerror = function () { if (done) done(false); };
@@ -92,8 +129,10 @@ var G = window.G || (window.G = {});
   try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) { /* bỏ qua */ }
 
   G.save = function () {
-    G.S.luuLuc = Date.now();
-    var data = JSON.stringify(G.S), ok = true;
+    var R = G.root(), now = Date.now();
+    G.S.luuLuc = now; R.luuLuc = now;
+    syncShare();
+    var data = JSON.stringify(R), ok = true;
     try { localStorage.setItem(KEY, data); } catch (e) { ok = false; }
     try { localStorage.setItem(BAK, data); } catch (e2) { /* bỏ qua */ }
     mirror();
@@ -148,6 +187,10 @@ var G = window.G || (window.G = {});
     m.dauVaoLs = m.dauVaoLs.slice(-12);
     m.tuKho = base.tuKho || [];   // hàng chờ tạm: lấy theo bản gốc (gộp sẽ làm câu đã ôn bị đặt lại)
     m.luuLuc = Math.max(num(x.luuLuc), num(y.luuLuc)) + 1;
+    // hồ sơ tiếng Trung: gộp riêng theo đúng các luật trên; thứ tiếng đang học giữ theo máy này (x)
+    if (x.zh || y.zh) m.zh = G.mergeSave(x.zh || null, y.zh || null, first);
+    if (m.zh === undefined || m.zh === null) delete m.zh;
+    m.lang = x.lang === 'zh' ? 'zh' : 'en';
     return m;
   };
   /* hai bản tiến độ có như nhau không: bỏ qua mốc lưu (luuLuc) và thứ tự khoá.
@@ -166,8 +209,8 @@ var G = window.G || (window.G = {});
   };
   /* nhận bản tiến độ từ mây: ghi vào máy (không đẩy ngược lên mây) */
   G.applySave = function (obj) {
-    G.S = fill(obj);
-    var data = JSON.stringify(G.S);
+    G.useRoot(fill(obj));
+    var data = JSON.stringify(G.R);
     try { localStorage.setItem(KEY, data); } catch (e) { /* bỏ qua */ }
     try { localStorage.setItem(BAK, data); } catch (e2) { /* bỏ qua */ }
     mirror();
@@ -209,7 +252,7 @@ var G = window.G || (window.G = {});
 
   /* Xuất: tải về file thegioi-YYYYMMDD-HHmm.json */
   G.exportSave = function () {
-    var data = JSON.stringify({ app: 'the-gioi-ngon-ngu', xuatLuc: G.vnNow(), save: G.S }, null, 2);
+    var data = JSON.stringify({ app: 'the-gioi-ngon-ngu', xuatLuc: G.vnNow(), save: G.root() }, null, 2);
     var blob = new Blob([data], { type: 'application/json' });
     var a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
@@ -230,7 +273,7 @@ var G = window.G || (window.G = {});
       if (!s || s.v !== 1 || typeof s.xp !== 'number' || !s.phong) { G.toast('File này không phải bản sao lưu của game.'); return; }
       var msg = 'Ghi đè tiến độ hiện tại bằng bản sao lưu' + (obj.xuatLuc ? ' lúc ' + obj.xuatLuc : '') + '? (' + s.xp + ' XP)';
       G.confirm(msg, function () {
-        G.S = s;
+        G.useRoot(fill(s));
         G.save();
         G.toast('Đã khôi phục tiến độ.');
         if (done) done();

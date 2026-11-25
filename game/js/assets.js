@@ -131,6 +131,8 @@ G.ASSET_LIST = [
     // hình không có trong danh sách hình (data/asset_rev.js) mà có hình dự phòng: dùng luôn hình dự phòng, khỏi gọi tệp không tồn tại
     if (fallback && G.ASSET_REV && !G.ASSET_REV[name] && G.ASSET_REV[fallback]) { name = fallback; fallback = null; }
     var wrap = G.el('div.asset ' + (cls || ''));
+    // hình đã đặt mà chưa về (không có trong danh sách hình, cả hình dự phòng): nền giấy nhạt, không gọi tệp chưa có
+    if (G.ASSET_REV && !G.ASSET_REV[name] && !(fallback && G.ASSET_REV[fallback])) { wrap.style.background = LOADING_BG; return wrap; }
     var img = new Image();
     img.alt = '';
     img.onload = function () { wrap.innerHTML = ''; wrap.style.background = ''; wrap.appendChild(img); wrap.className = 'asset ok ' + (cls || ''); };

@@ -161,6 +161,42 @@ if (fs.existsSync(path.join(ROOT, 'data-src/pron-audio.json'))) {
   [...lb.matchAll(/\['((?:[^'\\]|\\.)*)', '/g)].forEach((m, i) => add('en', m[1].replace(/\\'/g, "'"), alt(i)));
 }
 
+// Trường Lạc trấn (tiếng Trung trong game): buổi học HSK 1–5 (game/data/zh_*.js, dựng bằng tools/build-zh-game.mjs), hội thoại với người dân.
+// Cô Vương, chị Lâm, bà Lý, Tiểu Mỹ, cô Chu giọng nữ; người học, ông Trần, chú Trương, bác sĩ Triệu giọng nam.
+{
+  const vm = await import('node:vm');
+  const ctx = { console }; ctx.window = ctx; ctx.G = {}; vm.createContext(ctx);
+  for (const f of ['game/data/zh_hsk1.js', 'game/data/zh_found.js', 'game/data/zh_c1.js', 'game/data/zh_c2.js', 'game/data/zh_c3.js', 'game/data/zh_c4.js', 'game/data/zh_c5.js', 'game/data/life_zh.js', 'game/data/zh_exam.js', 'game/data/free_zh.js']) {
+    if (fs.existsSync(path.join(ROOT, f))) vm.runInContext(fs.readFileSync(path.join(ROOT, f), 'utf8'), ctx, { filename: f });
+  }
+  const FEMZ = { wang: 1, lin: 1, nainai: 1, xiaomei: 1, zhou: 1 };
+  for (const R of Object.values(ctx.G.ROOMS || {})) {
+    if (R.lang !== 'zh') continue;
+    const sx = FEMZ[R.teacher] ? 'f' : 'm';
+    if (R.intro) add('zh', R.intro[0], sx);
+    (R.items || []).forEach((it, i) => { add('zh', it.zh); add('zh', it.ex, alt(i)); });
+    (R.grams || (R.gram ? [R.gram] : [])).forEach((g) => g.ex.forEach(([t], i) => add('zh', t, alt(i))));
+  }
+  for (const L of Object.values(ctx.G.LIFE || {})) {
+    if (L.lang !== 'zh') continue;
+    for (const t of L.talks) for (const u of t.turns) for (const nm of ['Han', 'Minh', 'Kai']) {
+      add('zh', u.npc.replace(/\{name\}/g, nm), FEMZ[L.npc] ? 'f' : 'm');
+      add('zh', u.ok.replace(/\{name\}/g, nm), 'm');
+    }
+  }
+  // thi và kiểm tra tiếng Trung (game/data/zh_exam.js): câu nghe, câu mẫu phần nói
+  const ZX = ctx.G.ZH_EXAM;
+  if (ZX) for (const t of ZX.texts || []) add('zh', t[0], t[1] || 'f');
+  // nói tự do (game/data/free_zh.js): câu người dân hỏi, câu mẫu (với các tên hay gặp)
+  for (const f of ctx.G.FREE_ZH || []) {
+    add('zh', f.q, FEMZ[f.npc] ? 'f' : 'm');
+    for (const s of f.sample) for (const nm of ['Han', 'Minh', 'Kai']) add('zh', s.replace(/\{name\}/g, nm), 'm');
+  }
+  // lời cô Vương trong code (js/lesson.js, js/zh.js, js/grad.js): đọc phần chữ Hán
+  for (const t of ['很好！', '练得很好！', '没关系，多练习就好了！', '你好！欢迎来到汉语学院。']) add('zh', t, 'f');
+  for (const nm of ['Han', 'Minh', 'Kai']) for (const lv of ['基础', 'HSK二级', 'HSK四级', 'HSK五级']) add('zh', '恭喜你，' + nm + '！你通过了' + lv + '的考试，继续加油！', 'f');   // js/grad.js
+}
+
 const list = [...items.values()];
 fs.writeFileSync(path.join(ROOT, 'data-src', 'audio-list.json'), JSON.stringify(list));
 const by = (l) => list.filter((x) => x.lang === l);

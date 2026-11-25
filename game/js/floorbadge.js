@@ -71,7 +71,7 @@ var G = window.G || (window.G = {});
   /* có huy hiệu mới (tốt nghiệp tầng, kiểm tra đầu vào, lấy tiến độ từ máy khác): màn chúc mừng một lần */
   var fbT = 0;
   G.checkFloorBadge = function () {
-    if (!G.floorBadgeReady() || !G.S) return;
+    if (!G.floorBadgeReady() || !G.S || (G.lang && G.lang() === 'zh')) return;   // huy hiệu tầng: chỉ tầng tiếng Anh
     var lv = G.floorBadgeLevel(), seen = G.S.hhTang || 0;
     if (lv <= seen) { if (lv < seen) { G.S.hhTang = lv; G.save(); } return; }
     // đang có màn khác (bằng tốt nghiệp, kiểm tra, chọn nhân vật, bảng bài học) thì chờ, hiện sau khi màn đó đóng

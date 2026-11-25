@@ -204,6 +204,114 @@ async function crawl() {
   await P.ctx.close();
 }
 
+// ---------- 5. Trường Lạc trấn (tiếng Trung): người đang học tiếng Anh chuyển sang tiếng Trung ----------
+// Hồ sơ riêng: XP, nhiệm vụ, rương của tiếng Trung tính riêng; học phòng Phát âm, đủ 4 nhiệm vụ, mở rương; về tiếng Anh còn nguyên.
+async function zhFlow() {
+  const P = await page('iPhone 15 landscape', seed({ hhTang: 2, rank: 3, dauVao: dv(2) }));
+  await P.ev(() => document.querySelectorAll('.modal, .cgate').forEach((m) => m.remove()));
+  const en0 = await P.ev(() => ({ xp: G.S.xp, viec: Object.keys(G.today().viec).length }));
+  await P.ev(() => { const b = [].filter.call(document.querySelectorAll('.city-chip'), (x) => /Trường Lạc/.test(x.textContent))[0]; b.click(); });
+  await wait(1500); await P.shot('zh-1-lobby');
+  const a = await P.ev(() => ({ lang: G.lang(), xp: G.S.xp, hero: document.querySelector('.hero-sub').textContent, sh: (document.querySelector('.sh-card b') || {}).textContent || '' }));
+  const switched = a.lang === 'zh' && a.xp === 0 && /Trường Lạc/.test(a.hero) && /pinyin/.test(a.sh);
+  // việc nên làm đầu tiên: phòng Phát âm (pinyin, 4 thanh) với cô Vương
+  await P.ev(() => document.querySelector('.sh-card .sh-go').click()); await wait(1500);
+  await loop(P, (x) => __qa.lesson(x), 'zh-py', 300, 450, /^(finish|closed)$/);
+  await P.shot('zh-2-lesson');
+  const les = await P.ev(() => ({ p: G.S.phong['zh-py'], bai: !!G.today().viec.bai, cards: G.srsCount() }));
+  const zlog = {};
+  const quest = async (q, fn, max) => {
+    await P.ev(() => { G.closeLesson(); document.querySelectorAll('.modal').forEach((m) => m.remove()); });
+    await P.ev((x) => G.questAct(x), q); await wait(1500);
+    zlog[q] = await loop(P, fn, null, max, 700, /^done$/);
+    if (zlog[q] !== 'done') await P.shot('zh-quest-' + q);
+  };
+  await quest('noi', () => {
+    const q = window.__qa; let s;
+    if ((s = q.byText('#panel-body button', /^Mình đã nói xong/))) { s.click(); return 'said'; }
+    if ((s = q.byText('#panel-body button.link', /Tiếp tục|Bỏ qua/))) { s.click(); return 'skip'; }
+    if (G.today().viec.noi) return 'done';
+    return 'wait';
+  }, 40);
+  await quest('on', () => {
+    const q = window.__qa; let s;
+    if ((s = q.byText('#panel-body button', /Ôn thêm 5 câu|Ôn \d+ câu khó/))) { s.click(); return 'start'; }
+    if ((s = q.byText('#panel-body .rv-show', /Xem đáp án/))) { s.click(); return 'show'; }
+    if ((s = q.byText('#panel-body .rv-grade button', /Nhớ chắc/))) { s.click(); return 'grade'; }
+    if (G.today().viec.on) return 'done';
+    return 'wait';
+  }, 40);
+  let pyRows = 0;
+  await quest('doc', async () => {
+    const q = window.__qa; let s;
+    if ((s = document.querySelector('.rd-next')) && q.vis(s)) { s.click(); return 'open'; }
+    window.__zhPy = Math.max(window.__zhPy || 0, document.querySelectorAll('.rd-zh .rd-py').length);   // đếm trong trang (biến của bộ soát không vào được trang)
+    const qs = q.all('.rd-q');
+    if (qs.length && !document.querySelector('.rd-opt.ok, .rd-opt.no')) { qs.forEach((qq) => { const o = qq.querySelector('.rd-opt'); if (o) o.click(); }); return 'quiz'; }
+    if ((s = q.byText('#panel-body button.seal', /Đọc xong/))) { s.click(); return 'done'; }
+    return 'wait';
+  }, 40);
+  pyRows = await P.ev(() => window.__zhPy || 0);
+  // viết 5 chữ Hán: vẽ từng nét theo nét mẫu (driver.js writeStroke); thử một nét sai chiều phải bị báo lỗi
+  await P.ev(() => { G.closeLesson(); G.questAct('viet'); }); await wait(2500);
+  await P.ev(() => __qa.writeStroke(true)); await wait(300);
+  const wrongMsg = await P.ev(() => (document.querySelector('.wr-fb') || {}).textContent || '');
+  for (let i = 0; i < 700; i++) {
+    const r = await P.ev(() => __qa.writeStroke()); zlog.viet = r;
+    if (r === 'no-pad') break;
+    await wait(r === 'anim' || r === 'round-wait' ? 350 : 110);
+  }
+  const wr = await P.ev(() => ({ n: Object.keys(G.S.vietChu || {}).length, done: !!G.today().viec.viet }));
+  if (wr.done) zlog.viet = 'done';
+  await P.shot('zh-4-write-done');
+  await P.ev(() => { G.closeLesson(); G.claimChest(); }); await wait(1200);
+  await P.ev(() => { __qa.common(); G.goLobby(); }); await wait(1000); await P.shot('zh-3-lobby-done');
+  const day = await P.ev(() => ({ p: G.dayProgress(), chest: !!G.today().ruong, xp: G.S.xp }));
+  // Học viện 4 tầng: phòng phát âm (nghe chọn pinyin), bài HSK tải theo cấp, hội thoại có pinyin, bài đo, kiểm tra tuần, thi Nền tảng
+  const zx = {};
+  await P.ev(() => { G.closeLesson(); G.openZhHall(); }); await wait(900); await P.shot('zh-5-hall');
+  zx.hall = await P.ev(() => ({ floors: document.querySelectorAll('.zh-floor').length, rooms: document.querySelectorAll('.zh-room').length }));
+  await P.ev(() => { G.closeLesson(); G.openLesson('zh-n01'); }); await wait(1500);
+  zx.n01 = await loop(P, (x) => __qa.lesson(x), 'zh-n01', 300, 450, /^(finish|closed)$/);
+  await P.ev(() => { G.closeLesson(); G.openLesson('zh-l001'); }); await wait(2500); await P.shot('zh-6-hsk1');
+  zx.l001 = await loop(P, (x) => __qa.lesson(x), 'zh-l001', 400, 450, /^(finish|closed)$/);
+  zx.p = await P.ev(() => ({ n01: G.S.phong['zh-n01'], l001: G.S.phong['zh-l001'], c1: !!(G.ZH_LOADED && G.ZH_LOADED['data/zh_c1.js']), c3: !!(G.ZH_LOADED && G.ZH_LOADED['data/zh_c3.js']) }));
+  await P.ev(() => { G.closeLesson(); G.S.phong['zh-l002'] = { sao: 1, diem: 8 }; G.openLife('zh-school'); }); await wait(900);
+  zx.talk = await loop(P, () => {
+    const q = window.__qa; let s;
+    if ((s = q.all('#panel-body .menu3 button.big:not(.done)')[0]) && !document.querySelector('.chatlog')) { s.click(); return 'talk'; }
+    window.__zhTalkPy = Math.max(window.__zhTalkPy || 0, document.querySelectorAll('#panel-body .chatlog .py').length);
+    const o = q.all('#panel-body .chatopts .opt').filter((x) => x.className.indexOf(' no') < 0)[0]; if (o) { o.click(); return 'reply'; }
+    return document.querySelector('#panel-body .result') ? 'done' : 'wait';
+  }, null, 80, 700, /^done$/);
+  zx.talkPy = await P.ev(() => window.__zhTalkPy || 0); await P.shot('zh-7-talk');
+  await P.ev(() => { G.closeLesson(); G.openZhPlacement(function () {}); }); await wait(2500);
+  zx.pl = await loop(P, () => __qa.zhTest(), null, 200, 600, /^(result|closed)$/); await P.shot('zh-8-placement');
+  zx.dv = await P.ev(() => ({ lv: G.S.dauVao && G.S.dauVao.lv, start: G.S.zhStart, next: G.zhNextLesson() && G.zhNextLesson().id }));
+  await P.ev(() => { G.closeLesson(); G.openWeekly(); }); await wait(1500);
+  zx.wk = await loop(P, () => __qa.zhTest(), null, 120, 600, /^(done|closed)$/);
+  zx.wkr = await P.ev(() => (G.S.tuan || []).slice(-1)[0] || null);
+  await P.ev(() => { G.closeLesson(); G.openLesson('zh-x1'); }); await wait(2500);
+  zx.ex = await loop(P, () => __qa.zhTest(), null, 200, 600, /^(grad|done|fail|closed)$/); await wait(800); await P.shot('zh-9-cert');
+  zx.cert = await P.ev(() => (G.S.totNghiep && G.S.totNghiep.zh && G.S.totNghiep.zh['Nền tảng']) || null);
+  await P.ev(() => { document.querySelectorAll('.modal').forEach((m) => m.remove()); G.closeLesson(); G.goLobby(); }); await wait(800);
+  const zhXpEnd = await P.ev(() => G.S.xp);
+  const ok2 = zx.hall.floors === 4 && zx.p.n01 && zx.p.n01.diem >= 8 && zx.p.l001 && zx.p.l001.diem >= 8 && zx.p.c1 && !zx.p.c3 && zx.talk === 'done' && zx.talkPy > 0
+    && zx.dv.lv >= 1 && zx.dv.start && zx.wkr && zx.wkr.tong >= 60 && zx.cert;
+  report.push(`Trường Lạc trấn · Học viện: ${zx.hall.floors} tầng; Nền tảng 1 (nghe chọn pinyin) ${zx.p.n01 ? zx.p.n01.diem + '/10' : 'CHƯA QUA'}; HSK1 bài 1 ${zx.p.l001 ? zx.p.l001.diem + '/10' : 'CHƯA QUA'} (tải ${zx.p.c1 ? 'đúng' : 'THIẾU'} tệp cấp 1${zx.p.c3 ? ', TẢI THỪA cấp 3' : ''}); hội thoại ${zx.talk === 'done' ? 'xong, pinyin ' + zx.talkPy + ' dòng' : 'dừng ở "' + zx.talk + '"'}; bài đo ${zx.dv.lv !== undefined ? 'cấp ' + zx.dv.lv + ' → bắt đầu ' + zx.dv.start : 'CHƯA XONG'}; kiểm tra tuần ${zx.wkr ? zx.wkr.tong + '/100' : 'CHƯA XONG'}; thi Nền tảng ${zx.cert ? 'có chứng chỉ, hiểu ' + zx.cert.diem + '/' + zx.cert.tong : 'CHƯA ĐẠT (' + zx.ex + ')'}`);
+  if (!ok2) problems.push('Trường Lạc trấn: Học viện / hội thoại / bài đo / thi chưa chạy hết');
+  // về Brightford: hồ sơ tiếng Anh còn nguyên
+  await P.ev(() => { const b = [].filter.call(document.querySelectorAll('.city-chip'), (x) => /Brightford/.test(x.textContent))[0]; b.click(); });
+  await wait(1200);
+  const en1 = await P.ev(() => ({ lang: G.lang(), xp: G.S.xp, viec: Object.keys(G.today().viec).length, zhXp: G.R.zh.xp }));
+  const back = en1.lang === 'en' && en1.xp === en0.xp && en1.viec === en0.viec && en1.zhXp === zhXpEnd;
+  const ok = switched && les.p && les.p.diem >= 8 && les.bai && day.p.done === day.p.all && day.chest && pyRows > 0 && back && wr.n >= 5 && /ngược chiều|chiều|thứ tự/i.test(wrongMsg);
+  report.push(`Trường Lạc trấn: ${switched ? 'đổi sang tiếng Trung, hồ sơ riêng' : 'ĐỔI THÀNH PHỐ LỖI ' + JSON.stringify(a)}; phòng Phát âm ${les.p ? les.p.diem + '/10' : 'chưa qua'}, ${les.cards} thẻ ôn; nhiệm vụ ${day.p.done}/${day.p.all}${Object.keys(zlog).filter((k) => zlog[k] !== 'done').map((k) => ' · ' + k + ' dừng ở "' + zlog[k] + '"').join('')}, rương ${day.chest ? 'đã mở' : 'chưa'}, ${day.xp} XP tiếng Trung; truyện có pinyin ${pyRows} dòng; viết ${wr.n} chữ từng nét${/ngược chiều|chiều|thứ tự/i.test(wrongMsg) ? ', nét sai chiều bị báo' : ', NÉT SAI KHÔNG BỊ BÁO'}; về Brightford ${back ? 'XP và nhiệm vụ tiếng Anh còn nguyên' : 'LỆCH ' + JSON.stringify([en0, en1])}`);
+  if (!ok) problems.push('Trường Lạc trấn: luồng học tiếng Trung chưa chạy hết');
+  P.errs.forEach((e) => problems.push('tiếng Trung lỗi JS: ' + e)); [...new Set(P.fails)].forEach((f) => problems.push('tiếng Trung tệp hỏng: ' + f));
+  await P.ctx.close();
+}
+
 // ---------- 4. lưu trên mây: đã đăng nhập, vào map và học thì không bị văng ra (lỗi 24/11/2026) ----------
 // Supabase giả có nhớ bản lưu. Một máy: lưu ngoài phố chỉ đẩy lên, không nạp lại app. Máy khác lưu lúc đang ngoài phố:
 // chờ, không đụng tiến độ, không ghi đè mây; về Sảnh mới gộp (có buổi của máy kia, giữ XP của máy này).
@@ -258,9 +366,10 @@ async function cloudFlow() {
   await ctx.close();
 }
 
-// node tools/qa-run.mjs [moi|moi1|dau-ra|quet|may] để chạy riêng một phần (moi1: một người học A1, khoảng 3 phút; may: lưu trên mây)
+// node tools/qa-run.mjs [moi|moi1|dau-ra|quet|may|zh] để chạy riêng một phần (moi1: một người học A1, khoảng 3 phút; may: lưu trên mây; zh: Trường Lạc trấn)
 const ONLY = process.argv[2] || '';
 if (!ONLY || ONLY === 'may') await cloudFlow();
+if (!ONLY || ONLY === 'zh') await zhFlow();
 if (ONLY === 'moi1') await newLearner('iPhone 15 landscape', 2, 'A1-iPhone-ngang');
 if (!ONLY || ONLY === 'moi') {
   await newLearner('iPhone 15', 0, 'moi-tinh-iPhone-doc');
