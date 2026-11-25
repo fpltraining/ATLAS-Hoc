@@ -4,7 +4,7 @@
    Từ đó học được ở bất cứ đâu, kể cả khi bật Chế độ máy bay.
 */
 
-const VERSION = 'atlas-v68';
+const VERSION = 'atlas-v69';   // 25/11/2026: bù nét 644 chữ (data/strokes), chấm sai thứ tự nét (js/pen/grade.js)
 const CORE = `${VERSION}-core`;
 const RUNTIME = `${VERSION}-runtime`;
 /* Âm thanh giọng AI: tệp không bao giờ đổi nội dung (tên là khoá của câu), nên giữ qua mọi lần cập nhật */

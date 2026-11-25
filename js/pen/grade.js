@@ -188,12 +188,15 @@ export function bestMatch(user, medians, strictness = 'vua') {
  */
 export function gradeInOrder(user, medians, expected, strictness = 'vua') {
   const own = gradeStroke(user, medians[expected], strictness);
-  if (own.pass) return { ...own, kind: 'ok', expected };
-
+  // Nét dài được nới tay, nên một nét khác chạy dọc theo nó (vd. nét 3 của 册, 网) vẫn có thể "tạm đạt" nét đang cần.
+  // Vì vậy dù nét đang cần đạt, nếu nét khác khớp hơn hẳn (hơn 18 điểm) thì vẫn báo sai thứ tự. Soát 1.920 chữ:
+  // viết đúng nét thì nét khác không bao giờ hơn quá 1 điểm, viết nhầm nét khác thì hơn 31–37 điểm (tools/test/strokes.test.mjs).
   const best = bestMatch(user, medians, strictness);
-  if (best.index !== expected && best.result.pass && best.score > own.score + 18) {
+  const other = best.index !== expected && best.result.pass && best.score > own.score + 18;
+  if (own.pass && !other) return { ...own, kind: 'ok', expected };
+  if (other) {
     return {
-      ...own, kind: 'order', expected, matched: best.index,
+      ...own, pass: false, kind: 'order', expected, matched: best.index,
       issues: [{
         code: 'order',
         msg: `Nét này viết đẹp, nhưng nó là nét thứ ${best.index + 1}. Bây giờ đang cần nét thứ ${expected + 1}.`,

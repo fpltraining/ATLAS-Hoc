@@ -508,11 +508,15 @@ var G = window.G || (window.G = {});
     function gradeInOrder(user, medians, expected, strictness) {
         if (strictness === void 0) { strictness = 'vua'; }
         var own = gradeStroke(user, medians[expected], strictness);
-        if (own.pass)
-            return __assign(__assign({}, own), { kind: 'ok', expected: expected });
+        // Nét dài được nới tay, nên một nét khác chạy dọc theo nó (vd. nét 3 của 册, 网) vẫn có thể "tạm đạt" nét đang cần.
+        // Vì vậy dù nét đang cần đạt, nếu nét khác khớp hơn hẳn (hơn 18 điểm) thì vẫn báo sai thứ tự. Soát 1.920 chữ:
+        // viết đúng nét thì nét khác không bao giờ hơn quá 1 điểm, viết nhầm nét khác thì hơn 31–37 điểm (tools/test/strokes.test.mjs).
         var best = bestMatch(user, medians, strictness);
-        if (best.index !== expected && best.result.pass && best.score > own.score + 18) {
-            return __assign(__assign({}, own), { kind: 'order', expected: expected, matched: best.index, issues: [{
+        var other = best.index !== expected && best.result.pass && best.score > own.score + 18;
+        if (own.pass && !other)
+            return __assign(__assign({}, own), { kind: 'ok', expected: expected });
+        if (other) {
+            return __assign(__assign({}, own), { pass: false, kind: 'order', expected: expected, matched: best.index, issues: [{
                         code: 'order',
                         msg: "N\u00E9t n\u00E0y vi\u1EBFt \u0111\u1EB9p, nh\u01B0ng n\u00F3 l\u00E0 n\u00E9t th\u1EE9 ".concat(best.index + 1, ". B\u00E2y gi\u1EDD \u0111ang c\u1EA7n n\u00E9t th\u1EE9 ").concat(expected + 1, "."),
                     }] });

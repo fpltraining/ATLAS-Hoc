@@ -112,6 +112,7 @@ var G = window.G || (window.G = {});
   }
 
   G.renderLobby = function () {
+    if (G._lobbyRefresh) { clearTimeout(G._lobbyRefresh); G._lobbyRefresh = 0; }   // đang vẽ lại rồi: bỏ lượt vẽ chờ sau khi đóng bảng (zh.js)
     var root = document.getElementById('lobby');
     root.innerHTML = '';
     var zh = G.lang && G.lang() === 'zh';
@@ -187,6 +188,21 @@ var G = window.G || (window.G = {});
     }
 
     var who = G.S.nhanVat || 'han';
+    // tiếng Trung: trình độ theo bài đo (Từ vựng, Nghe, Đọc theo cấp HSK), tầng đang học, làm lại bài đo
+    if (zh && G.openZhPlacement) {
+      var zd = G.S.dauVao, zfN = G.zhFloorNow(), zfc = G.zhFloorCount(zfN), zst = G.ROADMAP_ZH[zfN - 1];
+      P.me.appendChild(G.el('div.lv-card',
+        G.el('div.lv-top',
+          G.el('div.lv-big', G.el('b', zd ? G.zhLevelName(zd.lv) : '–'), G.el('span', zd ? 'Trình độ chung' : 'Chưa đo')),
+          G.el('div.lv-txt', G.el('span.sh-k', 'Trình độ tiếng Trung của bạn'),
+            G.el('b', zst.name + ' · ' + zfc.k + '/' + zfc.all + ' phòng'),
+            G.el('span', zd ? 'Đo ngày ' + zd.luc.slice(8, 10) + '/' + zd.luc.slice(5, 7) : 'Mới học từ đầu thì bắt đầu ở phòng Phát âm. Đã biết tiếng Trung thì đo để vào đúng bài.'))),
+        zd ? G.el('div.pl-skills.lv-sk', [['tv', 'Từ vựng'], ['nghe', 'Nghe'], ['doc', 'Đọc']].map(function (k) {
+          var v = zd[k[0]] || 0;
+          return G.el('div.pl-skill', G.el('span.pl-sk-name', k[1]), G.el('span.pl-bar', [1, 2, 3, 4, 5].map(function (j) { return G.el('i' + (v >= j ? '.on' : '')); })), G.el('b.pl-sk-lv', G.zhLevelName(v)));
+        })) : null,
+        G.el('button.btn.lv-re', { onclick: function () { G.openZhPlacement(function () { G.goLobby(); }); } }, zd ? 'Làm lại bài đo trình độ' : 'Làm bài đo trình độ')));
+    }
     // Trình độ của bạn: cấp chung (số là trung tâm), 5 kỹ năng, tầng đang học, làm lại bài đầu vào
     if (!zh && G.PLACE_EN) {
       var dv0 = G.S.dauVao, PL = G.PLACE_EN, fNow = G.enFloorNow(), fcNow = floorCount(fNow), stF = G.ROADMAP_EN && G.ROADMAP_EN[fNow - 1];
@@ -243,6 +259,9 @@ var G = window.G || (window.G = {});
         P.home.appendChild(G.el('div.out-row',
           G.el('button.big.bic', { onclick: G.openZhHall }, G.bigIc('school', 'Học viện Hán ngữ'), G.el('span', G.ROADMAP_ZH[zf - 1].name + ' · ' + zc.k + '/' + zc.all + ' phòng đã qua')),
           G.el('button.big.bic', { onclick: G.openReview }, G.bigIc('repeat', 'Ôn câu đã học'), G.el('span', due ? due + ' câu đến hạn ôn hôm nay' : 'Câu nào sắp quên sẽ tự quay lại'))));
+        if (G.openZhTalks) { var zl = G.zhNextLife && G.zhNextLife(), ZL = zl && G.LIFE[zl]; P.home.appendChild(G.el('div.out-row',
+          G.el('button.big.bic', { onclick: G.openZhTalks }, G.bigIc('talk', 'Nói chuyện với người dân'), G.el('span', ZL ? 'Tiếp: ' + ZL.title : 'Quán trà, chợ, taxi, ga tàu… mở dần theo bài đã học')),
+          G.el('button.big.bic', { onclick: G.openZhWeekly }, G.bigIc('memo', 'Kiểm tra tuần'), G.el('span', G.weekLine ? G.weekLine() : 'Nghe, đọc hiểu, nói từ các bài đã học')))); }
         P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: G.openReader }, G.bigIc('book', 'Truyện tiếng Trung'), G.el('span', 'Truyện theo cấp HSK, thành ngữ, chuyện bí ẩn · có pinyin, nghĩa và giọng đọc')));
         if (G.openWriteToday) { var ws = G.writeStats(); P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: G.openWriteToday }, G.bigIc('pencil', 'Viết chữ Hán'), G.el('span', (ws.n ? 'Đã viết ' + ws.n + ' chữ, ' + ws.good + ' chữ từ 75 điểm · ' : '') + 'Xem nét, tô theo rồi tự viết, bằng Apple Pencil hoặc ngón tay'))); }
         P.home.appendChild(G.el('button.big.bic.pl-lobby', { onclick: G.openSpeakZh }, G.bigIc('mic', 'Luyện nói'), G.el('span', 'Nghe câu mẫu rồi nói theo, máy chấm từng chữ và thanh điệu')));

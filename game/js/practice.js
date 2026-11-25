@@ -50,8 +50,10 @@ var G = window.G || (window.G = {});
     var L = G.LIFE[placeId]; if (!L || !L.talks[ti]) return;
     var t = L.talks[ti];
     for (var i = 0; i < t.turns.length; i++) {
-      var u = t.turns[i], nm = G.playerName();
-      G.srsAdd({ t: 'reply', en: u.ok.replace(/\{name\}/g, nm), npc: u.npc.replace(/\{name\}/g, nm), npcVi: u.vi, who: L.npc, noi: L.title });
+      var u = t.turns[i], nm = G.playerName(), f = function (x) { return x ? x.replace(/\{name\}/g, nm) : x; };
+      var c = { t: 'reply', en: f(u.ok), npc: f(u.npc), npcVi: u.vi, who: L.npc, noi: L.title };
+      if (L.lang === 'zh') { c.l = 'zh'; c.py = f(u.okPy); c.npcPy = f(u.py); c.vi = u.okVi ? f(u.okVi) : ''; }   // thẻ tiếng Trung: chữ Hán + pinyin
+      G.srsAdd(c);
     }
   };
   G.srsSeed = function () { seed(); pullHard(); };
@@ -130,9 +132,9 @@ var G = window.G || (window.G = {});
       var c = q[k], done = false, best = -1, mic = G.micOn(), CL = c.l === 'zh' ? 'zh' : 'en';
       function next(r) { grade(c, r); if (r === 2) got++; k++; card(); }
       var prompt = c.t === 'reply'
-        ? G.el('div.rv-q', G.el('div.small.faint', (c.noi || 'Nói chuyện') + ' · người kia nói:'), G.el('div.wbig.sm', c.npc, G.sayBtns(c.npc, 'en')), G.el('div.faint', c.npcVi), G.el('b', 'Bạn đáp thế nào?'))
+        ? G.el('div.rv-q', G.el('div.small.faint', (c.noi || 'Nói chuyện') + ' · người kia nói:'), G.el('div.wbig.sm', c.npc, G.sayBtns(c.npc, CL)), c.npcPy ? G.el('div.py', c.npcPy) : null, G.el('div.faint', c.npcVi), G.el('b', 'Bạn đáp thế nào?'))
         : G.el('div.rv-q', G.el('div.small.faint', CL === 'zh' ? 'Nói bằng tiếng Trung:' : 'Nói bằng tiếng Anh:'), G.el('div.wbig.sm', c.vi));
-      if (c.t === 'reply') G.say(c.npc, 'en');
+      if (c.t === 'reply') G.say(c.npc, CL);
       body.appendChild(G.el('div.wcard', c.kho ? G.el('span.rv-kho', 'Câu khó') : null, prompt));
       var ans = G.el('div.rv-ans', { style: { display: 'none' } }, G.el('div.small.faint', CL === 'zh' ? 'Tiếng Trung:' : 'Câu tiếng Anh:'), G.el('div.wbig.sm', c.en, G.sayBtns(c.en, CL)),
         c.py ? G.el('div.py', c.py) : null,
@@ -193,7 +195,34 @@ var G = window.G || (window.G = {});
     return false;
   }
   /* chấm câu tự nói: mỗi ý có ít nhất một cách nói xuất hiện là đạt ý đó */
+  /* tiếng Trung: so theo âm tiết pinyin không dấu, nối liền (máy nghe ra chữ đồng âm, hoặc người học gõ pinyin, vẫn khớp) */
+  var TONELESS = { 'ā': 'a', 'á': 'a', 'ǎ': 'a', 'à': 'a', 'ē': 'e', 'é': 'e', 'ě': 'e', 'è': 'e', 'ī': 'i', 'í': 'i', 'ǐ': 'i', 'ì': 'i', 'ō': 'o', 'ó': 'o', 'ǒ': 'o', 'ò': 'o',
+    'ū': 'u', 'ú': 'u', 'ǔ': 'u', 'ù': 'u', 'ǖ': 'v', 'ǘ': 'v', 'ǚ': 'v', 'ǜ': 'v', 'ü': 'v' };
+  function sylls(s) {
+    var out = [];
+    String(s || '').toLowerCase().replace(/[\u3400-\u9fff]|[a-zāáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]+/g, function (m) {
+      var py = /[\u3400-\u9fff]/.test(m) ? (G.zhPyOf ? G.zhPyOf(m) : m) : m;
+      if (py === m && /[\u3400-\u9fff]/.test(m)) { out.push(m); return m; }   // chưa tải bảng pinyin: so theo chữ
+      py = String(py).toLowerCase().replace(/[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜü]/g, function (c) { return TONELESS[c]; }).replace(/[^a-z]/g, '');
+      if (py) out.push(py);
+      return m;
+    });
+    return out;
+  }
+  G.zhSylls = sylls;
+  function scoreFreeZh(text, need) {
+    var ans = sylls(text), joined = ans.join(' '), hit = [], n = 0;
+    for (var g = 0; g < need.length; g++) {
+      var ok = false;
+      for (var a = 0; a < need[g].length && !ok; a++) { var kw = sylls(need[g][a]).join(' '); if (kw && (' ' + joined + ' ').indexOf(' ' + kw + ' ') >= 0) ok = true; }
+      hit.push(ok); if (ok) n++;
+    }
+    var sc = need.length ? Math.round(n / need.length * 100) : 0;
+    if (ans.length < 4) sc = Math.min(sc, 40);    // trả lời cụt quá
+    return { score: sc, hit: hit };
+  }
   G.scoreFree = function (text, need) {
+    if (need.length && /[\u3400-\u9fff]/.test(need[0][0])) return scoreFreeZh(text, need);   // tình huống tiếng Trung (data/free_zh.js)
     var words = G.words(text), hit = [], n = 0;
     for (var g = 0; g < need.length; g++) {
       var ok = false;
@@ -210,20 +239,21 @@ var G = window.G || (window.G = {});
   };
   /* một câu hỏi tự nói; onDone(score) */
   function freeCard(body, it, onDone) {
-    var n = G.NPCS[it.npc] || {}, pic = G.el('div.tpic');
+    var n = G.NPCS[it.npc] || {}, pic = G.el('div.tpic'), L = it.lang || 'en', nm = G.playerName();
+    function fill(t) { return String(t).replace(/\{name\}/g, nm); }
     if (n.img) pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img)); else if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));
     body.appendChild(G.el('div.fr-sit', G.el('b', G.ic3('target', 'ic3-s'), ' Tình huống'), G.el('div', it.sit)));
-    body.appendChild(G.el('div.tline', pic, G.el('div.tbubble', G.el('b', n.name || ''), G.el('div.en', it.q), G.el('div.small.faint', it.vi), G.sayBtns(it.q, 'en'))));
-    G.say(it.q, 'en');
+    body.appendChild(G.el('div.tline', pic, G.el('div.tbubble', G.el('b', n.name || ''), G.el('div.en', it.q), it.py ? G.el('div.py', it.py) : null, G.el('div.small.faint', it.vi), G.sayBtns(it.q, L))));
+    G.say(it.q, L);
     var res = G.el('div.fr-res'), box = G.el('div.fr-box'), fin = false;
-    var input = G.el('textarea.fr-in', { rows: 2, placeholder: 'Hoặc gõ câu trả lời bằng tiếng Anh…' });
+    var input = G.el('textarea.fr-in', { rows: 2, placeholder: L === 'zh' ? 'Hoặc gõ chữ Hán, hoặc pinyin cách nhau bằng dấu cách…' : 'Hoặc gõ câu trả lời bằng tiếng Anh…' });
     function check(text) {
       var r = G.scoreFree(text, it.need);
       res.innerHTML = '';
       res.appendChild(G.el('div.mk-score.' + G.scoreLabel(r.score)[1], G.el('b', r.score), G.el('span', '/100')));
       res.appendChild(G.el('div.small', 'Bạn nói: “' + text + '”'));
       res.appendChild(G.el('div.fr-ideas', it.need.map(function (g, i) { return G.el('span.' + (r.hit[i] ? 'w-ok' : 'w-miss'), (r.hit[i] ? '✓ ' : '✗ ') + g[0]); })));
-      res.appendChild(G.el('div.fr-sample', G.el('b', 'Có thể nói:'), it.sample.map(function (s) { return G.el('div', s, G.sayBtns(s, 'en')); })));
+      res.appendChild(G.el('div.fr-sample', G.el('b', 'Có thể nói:'), it.sample.map(function (s, i) { return G.el('div', fill(s), G.sayBtns(fill(s), L), it.samplePy ? G.el('div.py', fill(it.samplePy[i])) : null); })));
       G.sfx(r.score >= 60 ? 'right' : 'wrong');
       G.S.tuNoi = G.S.tuNoi || {}; G.S.tuNoi[it.id] = Math.max(G.S.tuNoi[it.id] || 0, r.score); G.save();
       if (!fin) { fin = true; next.style.display = ''; }
@@ -234,7 +264,7 @@ var G = window.G || (window.G = {});
     if (G.micOn()) {
       var mic = G.el('button.mk-mic', { onclick: function () {
         mic.className = 'mk-mic on';
-        G.listen('en', function (err, alts) {
+        G.listen(L, function (err, alts) {
           mic.className = 'mk-mic';
           if (err) { res.innerHTML = ''; res.appendChild(G.el('div.mk-err', err.msg || err)); return; }
           // lấy cách nghe được điểm cao nhất
@@ -264,7 +294,7 @@ var G = window.G || (window.G = {});
       freeCard(body, list[k], function (sc) { sum += sc; k++; one(); });
     })();
   };
-  G.freeFor = function (placeId) { return G.FREE_TALK.filter(function (f) { return f.place === placeId; }); };
+  G.freeFor = function (placeId) { return (/^zh-/.test(placeId) ? G.FREE_ZH || [] : G.FREE_TALK).filter(function (f) { return f.place === placeId; }); };
 
   /* ---------- 3. kiểm tra tuần ---------- */
   function lifeTurns() {

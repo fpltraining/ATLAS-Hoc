@@ -56,6 +56,7 @@ window.__qa = (function () {
       var t = qt.firstChild && qt.firstChild.nodeType === 3 ? qt.firstChild.nodeValue : qt.textContent, ans = null, m2;
       var T = function (x) { return x.en || x.zh; };   // mục tiếng Trung: chữ Hán ở zh
       if (/^Nghe và chọn nghĩa đúng/.test(t)) { var last = said[said.length - 1]; R.items.forEach(function (x) { if (T(x) === last) ans = x.vi; }); }
+      else if (/^Nghe và chọn pinyin đúng/.test(t)) { var lp = said[said.length - 1]; R.items.forEach(function (x) { if (T(x) === lp) ans = x.py; }); }
       else if ((m2 = /^“(.*)” nói thế nào\?$/.exec(t))) { R.items.forEach(function (x) { if (x.vi === m2[1]) ans = T(x); }); }
       else { R.items.forEach(function (x) { if (T(x) === t) ans = x.vi; }); }
       var b = opts.filter(function (o) { return o.getAttribute('data-v') === ans; })[0];
@@ -66,7 +67,7 @@ window.__qa = (function () {
     if ((s = byText('#panel-body .result button.seal, #panel-body .row button.seal', /Các buổi tiếp theo|Xong ›|Nhận chứng chỉ|Sang phần 2/))) { click(s); return 'finish'; }
     return 'wait';
   }
-  return { vis: vis, all: all, byText: byText, click: click, vocab: vocab, lesson: lesson, said: said };
+  return { vis: vis, all: all, byText: byText, click: click, vocab: vocab, lesson: lesson, said: said, hook: hookSay };
 })();
 // các bước chung khi làm nhiệm vụ: lời mời tài khoản, huy hiệu, micro, nói xong, ôn câu, trắc nghiệm còn lại
 window.__qa.common = function () {
@@ -97,8 +98,8 @@ window.__qa.weekly = function () {
   }
   var ta = document.querySelector('#panel-body textarea.fr-in');
   if (ta && !document.querySelector('#panel-body .fr-res .mk-score')) {
-    var qq = (document.querySelector('#panel-body .tbubble .en') || {}).textContent, pool = G.FREE_TALK.slice(); for (var cs in (G.CERT_SPEAK || {})) pool = pool.concat(G.CERT_SPEAK[cs]); var f = pool.filter(function (x) { return x.q === qq; })[0];
-    ta.value = f ? f.sample[0] : 'Hello, nice to meet you.';
+    var qq = (document.querySelector('#panel-body .tbubble .en') || {}).textContent, pool = G.FREE_TALK.concat(G.FREE_ZH || []); for (var cs in (G.CERT_SPEAK || {})) pool = pool.concat(G.CERT_SPEAK[cs]); var f = pool.filter(function (x) { return x.q === qq; })[0];
+    ta.value = f ? f.sample[0].replace(/\{name\}/g, nm) : 'Hello, nice to meet you.';
     var kb = q.byText('#panel-body .fr-box button', /Kiểm|Chấm|Gửi/); if (kb) kb.click(); return 'type ' + (f ? 'sample' : '?');
   }
   if ((s = q.byText('#panel-body button.seal', /Xong ›/))) return 'done';
@@ -131,4 +132,55 @@ window.__qa.writeStroke = function (bad) {
   function ev(type, p) { el.dispatchEvent(new PointerEvent(type, { pointerId: 7, pointerType: 'touch', isPrimary: true, clientX: r.left + p[0] * k, clientY: r.top + p[1] * k, pressure: 0.5, bubbles: true, cancelable: true })); }
   ev('pointerdown', pts[0]); for (i = 1; i < pts.length; i++) ev('pointermove', pts[i]); ev('pointerup', pts[pts.length - 1]);
   return 'stroke';
+};
+// Trường Lạc trấn: bài đo trình độ, thi chứng chỉ, kiểm tra tuần (js/zh_test.js) — đáp án lấy từ G.ZH_VOCAB, G.ZH_EXAMS, G.ROOMS
+window.__qa.zhTest = function () {
+  var q = window.__qa, s, body = document.getElementById('panel-body');
+  q.hook();
+  if (document.querySelector('.modal.grad')) return 'grad';
+  if (!document.getElementById('panel').classList.contains('open')) return 'closed';
+  if (body.querySelector('.lv-card') && (s = q.byText('#panel-body button.seal', /Bắt đầu học/))) return 'result';
+  if ((s = q.byText('#panel-body button.seal', /^(Bắt đầu|Vào thi|Sang phần nói) ›$/))) { s.click(); return 'start'; }
+  if ((s = q.byText('#panel-body .mk-sw', /Không dùng micro/))) { s.click(); return 'mic-off'; }
+  if ((s = q.byText('#panel-body button', /^Mình đã nói xong/))) { s.click(); return 'said'; }
+  // xếp câu
+  var line = body.querySelector('.oline'), pool = body.querySelector('.opool'), vi = body.querySelector('.zx-vi');
+  if (line && pool && pool.children.length && vi) {
+    var it0 = null;
+    for (var ex in G.ZH_EXAMS) G.ZH_EXAMS[ex].sections.forEach(function (sc) { sc.items.forEach(function (it) { if (it.t === 'order' && it.vi === vi.textContent) it0 = it; }); });
+    var want = it0 ? it0.answer[line.children.length] : null, c = [].filter.call(pool.children, function (x) { return x.textContent === want; })[0] || pool.children[0];
+    c.click(); return 'order ' + (it0 ? 'ok' : 'guess');
+  }
+  var qt = body.querySelector('.qbox .qtext'), opts = q.all('#panel-body .opts .opt');
+  if (qt && opts.length && !body.querySelector('.opt.ok, .opt.no')) {
+    var t = qt.firstChild && qt.firstChild.nodeType === 3 ? qt.firstChild.nodeValue : qt.textContent, ans = null, k, id;
+    if (/^Nghe/.test(t)) { var sp = qt.querySelector('.speak'); if (sp) sp.click(); }   // nghe lại để biết câu vừa phát
+    var last = q.said[q.said.length - 1];
+    for (k in (G.ZH_VOCAB || {})) G.ZH_VOCAB[k].forEach(function (w) { if (w[0] === t) ans = w[2]; });
+    if (ans === null && G.ZH_EXAMS) for (id in G.ZH_EXAMS) G.ZH_EXAMS[id].sections.forEach(function (sc) { sc.items.forEach(function (it) {
+      if (/^Nghe/.test(t) && it.audio && it.audio === last && it.opts) ans = it.opts[it.a];
+      if (it.q && it.q === t) ans = it.opts[it.a];
+    }); });
+    if (ans === null) for (id in G.ROOMS) if (G.ROOMS[id].lang === 'zh') (G.ROOMS[id].items || []).forEach(function (it) {
+      if (/^Nghe và chọn pinyin/.test(t)) { if (it.zh === last) ans = it.py; }
+      else if (/^Nghe và chọn nghĩa/.test(t)) { if (it.ex === last) ans = it.exVi; }
+      else if (it.ex === t && it.ex !== it.zh) ans = it.exVi;
+      else if (it.zh === t && /^bộ /.test(it.vi)) ans = it.vi;
+    });
+    var b = opts.filter(function (o) { return o.getAttribute('data-v') === ans; })[0] || opts[0];
+    b.click(); return 'mcq ' + (ans !== null ? 'ok' : 'guess');
+  }
+  // tự nói (thi chứng chỉ Tầng 2–4): gõ câu mẫu, kiểm tra, sang câu sau
+  var ta = body.querySelector('textarea.fr-in');
+  if (ta) {
+    if (!body.querySelector('.fr-res .mk-score')) {
+      var qq = (body.querySelector('.tbubble .en') || {}).textContent, f = (G.FREE_ZH || []).filter(function (x) { return x.q === qq; })[0];
+      ta.value = f ? f.sample[0].replace(/\{name\}/g, G.playerName()) : '你好';
+      var kb = q.byText('#panel-body .fr-box button', /Kiểm/); if (kb) kb.click(); return 'type ' + (f ? 'sample' : '?');
+    }
+    if ((s = q.byText('#panel-body .fr-box button.seal', /^Tiếp ›$/))) { s.click(); return 'free-next'; }
+  }
+  if ((s = q.byText('#panel-body button.seal', /^Xong ›$/))) return 'done';
+  if ((s = q.byText('#panel-body button.seal', /^Thi lại ›$/))) return 'fail';
+  return 'wait';
 };

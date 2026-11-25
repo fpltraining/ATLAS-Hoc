@@ -267,11 +267,44 @@ async function zhFlow() {
   await P.ev(() => { G.closeLesson(); G.claimChest(); }); await wait(1200);
   await P.ev(() => { __qa.common(); G.goLobby(); }); await wait(1000); await P.shot('zh-3-lobby-done');
   const day = await P.ev(() => ({ p: G.dayProgress(), chest: !!G.today().ruong, xp: G.S.xp }));
+  // Học viện 4 tầng: phòng phát âm (nghe chọn pinyin), bài HSK tải theo cấp, hội thoại có pinyin, bài đo, kiểm tra tuần, thi Nền tảng
+  const zx = {};
+  await P.ev(() => { G.closeLesson(); G.openZhHall(); }); await wait(900); await P.shot('zh-5-hall');
+  zx.hall = await P.ev(() => ({ floors: document.querySelectorAll('.zh-floor').length, rooms: document.querySelectorAll('.zh-room').length }));
+  await P.ev(() => { G.closeLesson(); G.openLesson('zh-n01'); }); await wait(1500);
+  zx.n01 = await loop(P, (x) => __qa.lesson(x), 'zh-n01', 300, 450, /^(finish|closed)$/);
+  await P.ev(() => { G.closeLesson(); G.openLesson('zh-l001'); }); await wait(2500); await P.shot('zh-6-hsk1');
+  zx.l001 = await loop(P, (x) => __qa.lesson(x), 'zh-l001', 400, 450, /^(finish|closed)$/);
+  zx.p = await P.ev(() => ({ n01: G.S.phong['zh-n01'], l001: G.S.phong['zh-l001'], c1: !!(G.ZH_LOADED && G.ZH_LOADED['data/zh_c1.js']), c3: !!(G.ZH_LOADED && G.ZH_LOADED['data/zh_c3.js']) }));
+  await P.ev(() => { G.closeLesson(); G.S.phong['zh-l002'] = { sao: 1, diem: 8 }; G.openLife('zh-school'); }); await wait(900);
+  zx.talk = await loop(P, () => {
+    const q = window.__qa; let s;
+    if ((s = q.all('#panel-body .menu3 button.big:not(.done)')[0]) && !document.querySelector('.chatlog')) { s.click(); return 'talk'; }
+    window.__zhTalkPy = Math.max(window.__zhTalkPy || 0, document.querySelectorAll('#panel-body .chatlog .py').length);
+    const o = q.all('#panel-body .chatopts .opt').filter((x) => x.className.indexOf(' no') < 0)[0]; if (o) { o.click(); return 'reply'; }
+    return document.querySelector('#panel-body .result') ? 'done' : 'wait';
+  }, null, 80, 700, /^done$/);
+  zx.talkPy = await P.ev(() => window.__zhTalkPy || 0); await P.shot('zh-7-talk');
+  await P.ev(() => { G.closeLesson(); G.openZhPlacement(function () {}); }); await wait(2500);
+  zx.pl = await loop(P, () => __qa.zhTest(), null, 200, 600, /^(result|closed)$/); await P.shot('zh-8-placement');
+  zx.dv = await P.ev(() => ({ lv: G.S.dauVao && G.S.dauVao.lv, start: G.S.zhStart, next: G.zhNextLesson() && G.zhNextLesson().id }));
+  await P.ev(() => { G.closeLesson(); G.openWeekly(); }); await wait(1500);
+  zx.wk = await loop(P, () => __qa.zhTest(), null, 120, 600, /^(done|closed)$/);
+  zx.wkr = await P.ev(() => (G.S.tuan || []).slice(-1)[0] || null);
+  await P.ev(() => { G.closeLesson(); G.openLesson('zh-x1'); }); await wait(2500);
+  zx.ex = await loop(P, () => __qa.zhTest(), null, 200, 600, /^(grad|done|fail|closed)$/); await wait(800); await P.shot('zh-9-cert');
+  zx.cert = await P.ev(() => (G.S.totNghiep && G.S.totNghiep.zh && G.S.totNghiep.zh['Nền tảng']) || null);
+  await P.ev(() => { document.querySelectorAll('.modal').forEach((m) => m.remove()); G.closeLesson(); G.goLobby(); }); await wait(800);
+  const zhXpEnd = await P.ev(() => G.S.xp);
+  const ok2 = zx.hall.floors === 4 && zx.p.n01 && zx.p.n01.diem >= 8 && zx.p.l001 && zx.p.l001.diem >= 8 && zx.p.c1 && !zx.p.c3 && zx.talk === 'done' && zx.talkPy > 0
+    && zx.dv.lv >= 1 && zx.dv.start && zx.wkr && zx.wkr.tong >= 60 && zx.cert;
+  report.push(`Trường Lạc trấn · Học viện: ${zx.hall.floors} tầng; Nền tảng 1 (nghe chọn pinyin) ${zx.p.n01 ? zx.p.n01.diem + '/10' : 'CHƯA QUA'}; HSK1 bài 1 ${zx.p.l001 ? zx.p.l001.diem + '/10' : 'CHƯA QUA'} (tải ${zx.p.c1 ? 'đúng' : 'THIẾU'} tệp cấp 1${zx.p.c3 ? ', TẢI THỪA cấp 3' : ''}); hội thoại ${zx.talk === 'done' ? 'xong, pinyin ' + zx.talkPy + ' dòng' : 'dừng ở "' + zx.talk + '"'}; bài đo ${zx.dv.lv !== undefined ? 'cấp ' + zx.dv.lv + ' → bắt đầu ' + zx.dv.start : 'CHƯA XONG'}; kiểm tra tuần ${zx.wkr ? zx.wkr.tong + '/100' : 'CHƯA XONG'}; thi Nền tảng ${zx.cert ? 'có chứng chỉ, hiểu ' + zx.cert.diem + '/' + zx.cert.tong : 'CHƯA ĐẠT (' + zx.ex + ')'}`);
+  if (!ok2) problems.push('Trường Lạc trấn: Học viện / hội thoại / bài đo / thi chưa chạy hết');
   // về Brightford: hồ sơ tiếng Anh còn nguyên
   await P.ev(() => { const b = [].filter.call(document.querySelectorAll('.city-chip'), (x) => /Brightford/.test(x.textContent))[0]; b.click(); });
   await wait(1200);
   const en1 = await P.ev(() => ({ lang: G.lang(), xp: G.S.xp, viec: Object.keys(G.today().viec).length, zhXp: G.R.zh.xp }));
-  const back = en1.lang === 'en' && en1.xp === en0.xp && en1.viec === en0.viec && en1.zhXp === day.xp;
+  const back = en1.lang === 'en' && en1.xp === en0.xp && en1.viec === en0.viec && en1.zhXp === zhXpEnd;
   const ok = switched && les.p && les.p.diem >= 8 && les.bai && day.p.done === day.p.all && day.chest && pyRows > 0 && back && wr.n >= 5 && /ngược chiều|chiều|thứ tự/i.test(wrongMsg);
   report.push(`Trường Lạc trấn: ${switched ? 'đổi sang tiếng Trung, hồ sơ riêng' : 'ĐỔI THÀNH PHỐ LỖI ' + JSON.stringify(a)}; phòng Phát âm ${les.p ? les.p.diem + '/10' : 'chưa qua'}, ${les.cards} thẻ ôn; nhiệm vụ ${day.p.done}/${day.p.all}${Object.keys(zlog).filter((k) => zlog[k] !== 'done').map((k) => ' · ' + k + ' dừng ở "' + zlog[k] + '"').join('')}, rương ${day.chest ? 'đã mở' : 'chưa'}, ${day.xp} XP tiếng Trung; truyện có pinyin ${pyRows} dòng; viết ${wr.n} chữ từng nét${/ngược chiều|chiều|thứ tự/i.test(wrongMsg) ? ', nét sai chiều bị báo' : ', NÉT SAI KHÔNG BỊ BÁO'}; về Brightford ${back ? 'XP và nhiệm vụ tiếng Anh còn nguyên' : 'LỆCH ' + JSON.stringify([en0, en1])}`);
   if (!ok) problems.push('Trường Lạc trấn: luồng học tiếng Trung chưa chạy hết');

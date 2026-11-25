@@ -1,4 +1,5 @@
-/* Khu đời sống: hội thoại thực tế với người bán, bác sĩ… (tiếng Anh).
+/* Khu đời sống: hội thoại thực tế với người bán, bác sĩ… (tiếng Anh ở Brightford, tiếng Trung ở Trường Lạc trấn: data/life_zh.js,
+   câu tiếng Trung có pinyin dưới chữ, theo nút Ẩn pinyin trong Cài đặt).
    Mỗi nơi 3 tình huống × 5 lượt. Người chơi chọn câu đáp; sai thì người kia hỏi lại và Kai gợi ý.
    Xong một tình huống lần đầu +20 XP (làm lại +5). Xong cả 3 tình huống thì nhận đồ kỷ niệm. */
 var G = window.G || (window.G = {});
@@ -12,18 +13,27 @@ var G = window.G || (window.G = {});
   function state() { var d = G.S.doiSong[id] || (G.S.doiSong[id] = { xong: {}, kyNiem: '' }); return d; }
 
   function speak(t) { return G.sayBtns(t, L.lang); }
-  function npcLine(text, vi) {
+  function zh() { return L.lang === 'zh'; }
+  function pyOn() { return zh() && !(G.S.caiDat && G.S.caiDat.hienPinyin === false); }
+  function pyLine(py) { return py && pyOn() ? G.el('div.py', fill(py)) : null; }
+  /* lời nhắc khi chọn sai: Kai nhắc ngoài phố Brightford; Trường Lạc trấn chưa có bạn đồng hành nên hiện thông báo */
+  function hint(t) { if (zh()) G.toast(t); else G.kaiSay(t); }
+  function npcLine(text, vi, py) {
     var n = npc(), pic = G.el('div.tpic');
     if (n.img) pic.appendChild(G.imgEl(n.img.replace('.png', '_talk.png'), 'tpic-img', n.img));   // có ảnh riêng thì dùng ảnh
     else if (n.av) pic.appendChild(G.avatarCanvas(n.av, 56, 'down', 'tpic-img'));   // chưa có: ghép từ lớp hình
     var hide = G.S.caiDat && G.S.caiDat.chiNgheNoi && vi;   // chế độ chỉ nghe: ẩn chữ, đáp xong mới hiện
-    var bub = G.el('div.tbubble' + (hide ? '.hidetext' : ''), G.el('b', n.name), hide ? G.el('div.small.listen-tag', G.ic3('headphone', 'ic3-s'), ' Nghe rồi chọn câu đáp') : null, G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null, speak(text));
+    var bub = G.el('div.tbubble' + (hide ? '.hidetext' : ''), G.el('b', n.name), hide ? G.el('div.small.listen-tag', G.ic3('headphone', 'ic3-s'), ' Nghe rồi chọn câu đáp') : null, G.el('div.en', text), pyLine(py), vi ? G.el('div.small.faint', vi) : null, speak(text));
     if (hide) lastHidden = bub;
     return G.el('div.tline', pic, bub);
   }
   /* nghĩa tiếng Việt của câu người học nói (G.OK_VI, khoá giữ {name}) */
   function okVi(text) {
     var M = G.OK_VI || {}, v = M[text] || M[text.split(name()).join('{name}')];
+    return v ? fill(v) : '';
+  }
+  function okPy(text) {   // pinyin của câu đáp tiếng Trung (G.ZH_OKPY, data/life_zh.js)
+    var M = G.ZH_OKPY || {}, v = M[text] || M[text.split(name()).join('{name}')];
     return v ? fill(v) : '';
   }
   /* hiện nghĩa dưới các lựa chọn: người mới (bài đầu vào dưới A1 hoặc chưa làm) mặc định bật, chỉnh được */
@@ -34,7 +44,7 @@ var G = window.G || (window.G = {});
   }
   function meLine(text, sc) {
     var vi = okVi(text);
-    return G.el('div.tline.me', G.el('div.tbubble.mine', G.el('b', name()), G.el('div.en', text), vi ? G.el('div.small.faint', vi) : null,
+    return G.el('div.tline.me', G.el('div.tbubble.mine', G.el('b', name()), G.el('div.en', text), pyLine(okPy(text)), vi ? G.el('div.small.faint', vi) : null,
       sc !== null && sc !== undefined ? G.el('span.mk-chip.' + G.scoreLabel(sc)[1], G.ic3('mic', 'ic3-s'), ' ' + sc + '/100') : null), G.el('div.tpic', G.playerPic(56, 'tpic-img')));
   }
 
@@ -59,13 +69,14 @@ var G = window.G || (window.G = {});
     document.getElementById('panel-title').textContent = L.title;
     var pb = document.getElementById('panel-py'); if (pb) pb.style.display = 'none';
     G.markStudy();
+    if (zh() && G.zhLoadDict) G.zhLoadDict();   // pinyin từng chữ để chấm nói tiếng Trung
     home();
   };
 
   function home() {
     var st = state(), n = 0;
     body.innerHTML = '';
-    body.appendChild(npcLine(fill(L.talks[0].turns[0].npc), 'Chọn một tình huống để bắt đầu nói chuyện.'));
+    body.appendChild(npcLine(fill(L.talks[0].turns[0].npc), 'Chọn một tình huống để bắt đầu nói chuyện.', L.talks[0].turns[0].py));
     body.appendChild(G.el('div.menu3', L.talks.map(function (t, i) {
       var done = !!st.xong[i]; if (done) n++;
       return G.el('button.big' + (done ? '.done' : ''), { onclick: function () { talk(i); } },
@@ -79,7 +90,7 @@ var G = window.G || (window.G = {});
     // hai chế độ dạng nút gạt (mẫu "toggles" của taste-skill)
     body.appendChild(G.el('div.tg-list.lf-mode',
       G.switchRow('headphone', 'Chỉ nghe, ẩn chữ', 'Nghe người kia nói rồi chọn câu đáp, nói xong mới hiện chữ', !!cd.chiNgheNoi, function (on) { cd.chiNgheNoi = on; G.save(); }),
-      G.switchRow('book', 'Hiện nghĩa tiếng Việt dưới câu đáp', 'Tắt để tự hiểu câu tiếng Anh', showOptVi(), function (on) { cd.nghiaDapAn = on; G.save(); })));
+      G.switchRow('book', 'Hiện nghĩa tiếng Việt dưới câu đáp', 'Tắt để tự hiểu câu ' + (zh() ? 'tiếng Trung' : 'tiếng Anh'), showOptVi(), function (on) { cd.nghiaDapAn = on; G.save(); })));
     if (L.souvenir) body.appendChild(G.el('div.souv-row', G.imgEl(L.souvenir.img, 'souv-img'),
       G.el('div', G.el('b', 'Đồ kỷ niệm: ' + L.souvenir.name), G.el('div.small.faint', st.kyNiem ? 'Đã nhận, bày ở Ngôi nhà chung.' : 'Xong cả 3 tình huống để nhận (' + n + '/3).'))));
   }
@@ -92,30 +103,30 @@ var G = window.G || (window.G = {});
     function turn() {
       if (k >= t.turns.length) { finish(ti, scores); return; }
       var tu = t.turns[k], said = fill(tu.npc), right = fill(tu.ok);
-      log.appendChild(npcLine(said, tu.vi));
+      log.appendChild(npcLine(said, tu.vi, tu.py));
       G.say(said, L.lang);
       box.innerHTML = '';
       var ov = showOptVi();
       box.appendChild(G.el('div.opts', G.shuffle([right].concat(distractors(right, 2))).map(function (o) {
-        var ovi = ov ? okVi(o) : '';
-        return G.el('button.opt' + (ovi ? '.opt-vi' : ''), { onclick: function (e) {
+        var ovi = ov ? okVi(o) : '', opy = pyOn() ? okPy(o) : '';
+        return G.el('button.opt' + (ovi || opy ? '.opt-vi' : ''), { onclick: function (e) {
           if (o === right) {
             G.sfx('right'); box.innerHTML = '';
             if (lastHidden) { lastHidden.className = 'tbubble'; lastHidden = null; }
             // chọn đúng rồi thì nói câu đó thành tiếng (có micro thì chấm điểm 0–100)
             box.appendChild(G.el('div.small.faint', 'Giờ hãy nói câu này với ' + npc().name + ':'));
-            box.appendChild(G.speakCard({ text: o, vi: okVi(o), lang: L.lang, onDone: function (sc) {
+            box.appendChild(G.speakCard({ text: o, py: zh() ? okPy(o) : null, vi: okVi(o), lang: L.lang, onDone: function (sc) {
               if (sc !== null) { scores.push(sc); G.logSpeak(sc); }
               box.innerHTML = '';
               log.appendChild(meLine(o, sc));
               k++; setTimeout(function () { turn(); scrollEnd(); }, 700);
             } }));
           } else {
-            e.currentTarget.className = 'opt no' + (ovi ? ' opt-vi' : ''); G.sfx('wrong');
-            G.kaiSay('Chưa hợp. ' + npc().name + ' vừa nói: "' + tu.vi + '". Chọn câu trả lời đúng ý đó nhé.');
+            e.currentTarget.className = 'opt no' + (ovi || opy ? ' opt-vi' : ''); G.sfx('wrong');
+            hint('Chưa hợp. ' + npc().name + ' vừa nói: "' + tu.vi + '". Chọn câu trả lời đúng ý đó nhé.');
           }
           scrollEnd();
-        } }, ovi ? [G.el('span', o), G.el('small', ovi)] : o);
+        } }, ovi || opy ? [G.el('span', o), opy ? G.el('small.py', opy) : null, ovi ? G.el('small', ovi) : null] : o);
       })));
       scrollEnd();
     }
@@ -134,7 +145,7 @@ var G = window.G || (window.G = {});
     td.sang = td.sang || {}; td.sang[id] = G.vnNow().slice(11, 16);   // đã gặp hôm nay (tắt bong bóng 💬)
     // ghi vào tiến độ hôm nay: nơi, tình huống, giờ, điểm nói trung bình
     var avg0 = null; if (scores && scores.length) { var s0 = 0; for (var q = 0; q < scores.length; q++) s0 += scores[q]; avg0 = Math.round(s0 / scores.length); }
-    if (G.srsAddTalk && L.lang === 'en') G.srsAddTalk(id, ti);
+    if (G.srsAddTalk) G.srsAddTalk(id, ti);   // câu đáp vào kho ôn của hồ sơ đang học (tiếng Trung có pinyin)
     st.diem = st.diem || {}; if (avg0 !== null && (st.diem[ti] === undefined || avg0 > st.diem[ti])) st.diem[ti] = avg0;
     td.hoiThoai = td.hoiThoai || [];
     td.hoiThoai.push({ noi: id, ten: L.title, tinhHuong: L.talks[ti].title, luc: G.vnNow().slice(11, 16), diem: avg0 });
@@ -150,7 +161,7 @@ var G = window.G || (window.G = {});
         G.el('b', 'Nhận đồ kỷ niệm: ' + L.souvenir.name), G.el('div.small', 'Đã bày ở Ngôi nhà chung.')));
     }
     body.appendChild(G.el('div.row', G.el('button.btn', { onclick: home }, '‹ Các tình huống'),
-      G.el('button.btn.seal', { onclick: function () { G.closeLesson(); G.kaiSay(gift ? 'Bạn nhận được ' + L.souvenir.name + '!' : 'Nói chuyện giỏi lắm!'); } }, 'Xong ›')));
+      G.el('button.btn.seal', { onclick: function () { G.closeLesson(); if (!zh()) G.kaiSay(gift ? 'Bạn nhận được ' + L.souvenir.name + '!' : 'Nói chuyện giỏi lắm!'); } }, 'Xong ›')));
     scrollEnd();
   }
 

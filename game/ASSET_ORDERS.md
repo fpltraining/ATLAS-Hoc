@@ -798,18 +798,19 @@ Same style, solid flat magenta #FF00FF background, 1024 x 1024, one object per i
 1. pc_zh_lantern_post.png (a wooden post with two red lanterns), 2. pc_zh_bridge.png (a stone arch bridge, 3/4 view), 3. pc_zh_boat.png (a small wooden canal boat with a black awning), 4. pc_zh_willow.png (weeping willow tree), 5. pc_zh_plum.png (plum blossom tree, pink flowers), 6. pc_zh_bamboo.png (cluster of bamboo), 7. pc_zh_lion.png (stone lion statue), 8. pc_zh_bikes.png (a row of three shared bicycles), 9. pc_zh_foodcart.png (street food cart with steaming baskets of buns), 10. pc_zh_chess.png (a stone table with a Chinese chess board and two stools under a small tree), 11. pc_zh_well.png (an old stone well), 12. pc_zh_gate.png (a red paifang archway, blank, no writing).
 ```
 
-**Phần 4 · người dân (tấm bước 3×3 như Đơn A, đính kèm A1_walk_example.png)**
+**Phần 4 · người dân (tấm bước 3×3 như Đơn A, đính kèm A1_walk_example.png)** · 8 người khớp với 8 nơi nói chuyện đã có trong game (data/life_zh.js); tên tệp đúng như dưới để gắn ngay
 ```
-Same walk sheet rules as before: a 3 x 3 grid on solid flat magenta #FF00FF, row 1 FRONT, row 2 BACK, row 3 SIDE facing LEFT, column 1 standing, column 2 LEFT foot forward, column 3 RIGHT foot forward, small calm steps, nothing under the feet, no text. One sheet per character:
-1. Teacher Wang: a young female Chinese teacher, black hair in a low bun, round glasses, a jade-green cardigan over a white blouse, a navy skirt, holding a book.
-2. Grandma Li: a cheerful old lady who sells vegetables, grey short hair, a floral blouse, an apron, a woven bamboo basket.
-3. Grandpa Chen: a calm old man in a dark blue Tang-style jacket with knot buttons, cloth shoes, holding a folding fan.
-4. Uncle Zhang: a friendly taxi driver in his forties, short hair, a light blue shirt, dark trousers.
-5. Xiaomei: a teenage student girl with a high ponytail, a blue-and-white Chinese school tracksuit, a backpack.
-6. Sister Lin: a young woman who runs the teahouse, black hair in a braid, a simple dark red qipao-style top and black trousers.
-7. A delivery rider: a young man in a yellow jacket and helmet (helmet blank), carrying a delivery box.
-8. Doctor Zhou: a middle-aged doctor in a white coat with a stethoscope, short hair, glasses.
+Same walk sheet rules as before: a 3 x 3 grid on solid flat magenta #FF00FF, row 1 FRONT, row 2 BACK, row 3 SIDE facing LEFT, column 1 standing, column 2 LEFT foot forward, column 3 RIGHT foot forward, small calm steps, nothing under the feet, no text. One sheet per character, file names exactly as listed:
+1. walk_wang.png — Teacher Wang: a young female Chinese teacher, black hair in a low bun, round glasses, a jade-green cardigan over a white blouse, a navy skirt, holding a book.
+2. walk_nainai.png — Grandma Li: a cheerful old lady who sells vegetables at the morning market, grey short hair, a floral blouse, an apron, a woven bamboo basket.
+3. walk_yeye.png — Grandpa Chen: a calm old man who plays Chinese chess in the park, a dark blue Tang-style jacket with knot buttons, cloth shoes, holding a folding fan.
+4. walk_shifu.png — Uncle Zhang: a friendly taxi driver in his forties, short hair, a light blue shirt, dark trousers, car keys in hand.
+5. walk_xiaomei.png — Xiaomei: a teenage student girl with a high ponytail, a blue-and-white Chinese school tracksuit, a backpack.
+6. walk_lin.png — Sister Lin: a young woman who runs the teahouse, black hair in a braid, a simple dark red qipao-style top and black trousers, holding a teapot.
+7. walk_zhao.png — Doctor Zhao: a middle-aged male doctor in a white coat with a stethoscope, short hair, glasses.
+8. walk_zhou.png — Miss Zhou: a young woman who works at the high-speed train station, a navy uniform with a small scarf, hair in a neat bun, holding a tablet.
 ```
+Sau đó MỘT tin nữa cho 8 ảnh chân dung nói chuyện (cùng người, cùng màu, nửa người, nền hồng, miệng hơi mở, một tay giơ lên như đang nói), đặt tên `npc_wang_talk.png`, `npc_nainai_talk.png`, `npc_yeye_talk.png`, `npc_shifu_talk.png`, `npc_xiaomei_talk.png`, `npc_lin_talk.png`, `npc_zhao_talk.png`, `npc_zhou_talk.png` (game đang chờ đúng các tên này ở màn nói chuyện; chưa có thì hiện nền giấy).
 
 **Phần 5 · xe (nền hồng, mỗi xe 3 góc: bên trái, trước, sau, như Đơn B)**
 ```
@@ -818,3 +819,11 @@ Same style, solid flat magenta #FF00FF background, no text or Chinese characters
 ```
 
 Gắn vào game khi nhận: cắt nền hồng bằng công cụ cũ, đặt tên đúng như trên, chạy `node tools/asset-rev.mjs`; Tiểu Long thay Kai ở mọi chỗ của hồ sơ tiếng Trung (lời dẫn, đi theo, ngồi học), bản đồ 3D Trường Lạc trấn bật khi đủ Phần 1–3.
+
+## Q3 · Giấy chứng chỉ Trường Lạc (đặt cùng Q1 được · MỘT tin)
+
+Game đã có 4 bài thi chứng chỉ tiếng Trung (Nền tảng, HSK 2, HSK 4, HSK 5); màn trao chứng chỉ đang tạm dùng giấy của Brightford. Đính kèm **game/assets/diploma_en.png** để giữ đúng khổ và chỗ trống cho chữ:
+```
+Same size and layout as the attached certificate paper, but Chinese style: cream xuan paper texture, a thin red border with a simple cloud pattern in the corners, a small red seal-stamp shape in the lower right corner (blank, no characters inside), a light ink-wash mountain and plum branch in one corner. Leave the middle completely empty for text. Absolutely no text, letters, numbers or Chinese characters anywhere. No purple. Landscape, same pixel size as the attachment.
+```
+Tên tệp: `diploma_zh.png` (game tự đổi sang giấy này khi có tệp).

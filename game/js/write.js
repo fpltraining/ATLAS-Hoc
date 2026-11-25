@@ -91,7 +91,7 @@ var G = window.G || (window.G = {});
   };
   G.writeStats = function () { var v = G.S.vietChu || {}, n = 0, good = 0; for (var k in v) if (v.hasOwnProperty(k)) { n++; if (v[k].best >= 75) good++; } return { n: n, good: good }; };
 
-  /* ---------- màn viết: chars = danh sách chữ Hán ---------- */
+  /* ---------- màn viết: chars = danh sách chữ Hán; opts.quest = nhiệm vụ hôm nay, opts.back = quay về bài học ---------- */
   var cur = null;   // màn đang mở (để dừng hoạt hình, gỡ bảng viết khi đóng hoặc mở màn khác)
   function stop() { if (cur) { cur.stopAnim(); if (cur.pad) cur.pad.destroy(); cur = null; } }
   G.openWrite = function (chars, opts) {
@@ -213,7 +213,8 @@ var G = window.G || (window.G = {});
       b.appendChild(G.el('div.result' + (a >= 55 ? '.pass' : ''), G.el('b', 'Xong ' + chars.length + ' chữ · ' + a + ' điểm · ' + v.text),
         G.el('div', chars.map(function (c, i) { return c + ' ' + S.scores[i]; }).join(' · ') + ' · +' + xp + ' XP'),
         G.el('div.small.faint', 'Chữ viết dưới 75 điểm sẽ quay lại ở lượt viết sau. Viết đúng thứ tự nét thì chữ đẹp và nhớ lâu hơn.')));
-      b.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { G.openWrite(chars, opts); } }, 'Viết lại'), G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
+      b.appendChild(G.el('div.row', G.el('button.btn', { onclick: function () { G.openWrite(chars, opts); } }, 'Viết lại'),
+        opts.back ? G.el('button.btn.seal', { onclick: function () { stop(); opts.back(); } }, 'Về bài học ›') : G.el('button.btn.seal', { onclick: G.closeLesson }, 'Xong ›')));
     }
     /* hoạt hình thứ tự nét: từng nét chạy theo đúng chiều bút */
     function stopAnim() { if (S.anim) { cancelAnimationFrame(S.anim); S.anim = 0; } }

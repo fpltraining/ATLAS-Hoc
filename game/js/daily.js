@@ -19,10 +19,11 @@ var G = window.G || (window.G = {});
     { id: 'on', icon: '🔁', ic3: 'repeat', name: 'Ôn câu đã học', hint: 'Về nhà, ôn các câu sắp quên', min: 20 },
     { id: 'tu', icon: '📚', ic3: 'books', name: 'Học 10 từ theo chủ đề', hint: 'Từ đọc tin, công sở, kinh tế…', min: 10 }
   ];
-  /* tiếng Trung (hồ sơ riêng, save.js): chưa có bản đồ Trường Lạc trấn nên Nói là nói theo câu đã học (G.openSpeakZh) */
+  /* tiếng Trung (hồ sơ riêng, save.js): chưa có bản đồ Trường Lạc trấn nên Nói là nói chuyện với người dân ở nơi đã mở
+     (data/life_zh.js, mở từ Sảnh), chưa mở nơi nào thì nói theo 5 câu đã học (G.zhSpeakQuest trong zh.js) */
   var TASKS_ZH = [
     { id: 'bai', ic3: 'school', name: 'Học bài ở Học viện Hán ngữ', hint: 'Học, luyện hoặc kiểm tra một phòng', min: 30 },
-    { id: 'noi', ic3: 'talk', name: 'Luyện nói 5 câu', hint: 'Nghe câu mẫu rồi nói theo, máy chấm từng chữ và thanh', min: 10 },
+    { id: 'noi', ic3: 'talk', name: 'Nói chuyện bằng tiếng Trung', hint: 'Nghe câu mẫu rồi nói theo, máy chấm từng chữ và thanh', min: 15 },
     { id: 'on', ic3: 'repeat', name: 'Ôn câu đã học', hint: 'Ôn các câu sắp quên', min: 15 },
     { id: 'doc', ic3: 'book', name: 'Đọc 1 chương truyện', hint: 'Truyện tiếng Trung có pinyin và nghĩa', min: 20 },
     { id: 'viet', ic3: 'pencil', name: 'Viết 5 chữ Hán', hint: 'Xem nét, tô theo rồi tự viết từng nét', min: 10 }
@@ -121,7 +122,7 @@ var G = window.G || (window.G = {});
   var CHEST_XP = 30;
   function hintOf(t) {
     if (t.id === 'bai') { var nl = G.nextLesson && G.nextLesson(); return nl ? nl.label + (nl.teacher ? ' với ' + nl.teacher : '') : t.hint; }
-    if (t.id === 'noi' && G.lang() === 'zh') return t.hint;
+    if (t.id === 'noi' && G.lang() === 'zh') { var zl = G.zhNextLife && G.zhNextLife(), ZL = zl && G.LIFE[zl]; return ZL ? ZL.title + ' · nói với ' + ((G.NPCS[ZL.npc] || {}).name || '') : t.hint; }
     if (t.id === 'noi') { var lf = G.nextLifeId && G.nextLifeId(), L = lf && G.LIFE[lf]; return L ? L.title + ' · nói với ' + ((G.NPCS[L.npc] || {}).name || '') : t.hint; }
     if (t.id === 'on') { var n = G.srsDue ? G.srsDue().length : 0; return n ? n + ' câu đến hạn ôn' : 'Ôn thêm 5 câu bất kỳ'; }
     if (t.id === 'tu') { var tp = G.topicNext && G.topicNext(); return tp ? tp.name + ' · 10 từ mới' : t.hint; }
@@ -132,7 +133,7 @@ var G = window.G || (window.G = {});
   G.questAct = function (id) {
     if (id === 'bai') { var nl = G.nextLesson && G.nextLesson(); if (nl && G.openLesson) G.openLesson(nl.id); else G.toast('Đã học hết các phòng đang mở. Ôn lại một phòng bất kỳ ở trường nhé.'); }
     else if (id === 'doc') G.openReader();
-    else if (id === 'noi' && G.lang() === 'zh') { if (G.openSpeakZh) G.openSpeakZh(); }
+    else if (id === 'noi' && G.lang() === 'zh') { if (G.zhSpeakQuest) G.zhSpeakQuest(); }
     else if (id === 'viet') { if (G.openWriteToday) G.openWriteToday(); }
     else if (id === 'noi') { var lf = G.nextLifeId && G.nextLifeId(); if (lf && G.openLife) G.openLife(lf); else G.toast('Ra phố gặp người có bong bóng chat trên đầu nhé.'); }
     else if (id === 'on') G.openReview();

@@ -1453,6 +1453,24 @@ html:not(.in-city) .rotate { display: none !important; }
 .zh-rooms { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 8px; }
 .zh-room.lock { opacity: .62; }
 .zh-room.ok { background: #f3f8f1; }
+.zh-room.cur { box-shadow: inset 0 0 0 2px var(--coral); }
+/* Học viện: mỗi tầng một thanh gập / mở (tầng đang học mở sẵn) */
+.zh-floor { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 52px; margin: 14px 0 8px; padding: 8px 14px; border-radius: 12px;
+  border: 1.5px solid var(--line, #e6d8bf); background: #fffaf1; color: var(--ink, #4a2f1d); text-align: left; cursor: pointer; }
+.zh-floor b { font-size: 17px; flex: none; }
+.zh-floor span { font-size: 13.5px; color: var(--soft, #7d5a40); flex: 1; min-width: 0; }
+.zh-floor .zh-chev { font-style: normal; font-size: 20px; color: var(--soft, #7d5a40); transition: transform .25s var(--ease-out-3); }
+.zh-floor.open .zh-chev { transform: rotate(90deg); }
+.zh-floor.open { border-color: var(--coral); }
+.zh-lv { grid-column: 1 / -1; font-size: 15px; margin: 8px 2px 0; color: var(--soft, #7d5a40); }
+.zh-pl { display: inline-flex; align-items: center; min-height: 44px; margin: 2px 0 4px; padding: 0 2px; background: none; border: 0;
+  color: var(--ink, #1b2140); text-decoration: underline; font-weight: 600; text-align: left; cursor: pointer; }
+/* bài học tiếng Trung: ghi chú ngữ pháp, Hán Việt, ghi chú từ, nút viết chữ mới */
+.gram-d { color: var(--soft, #5d5448); }
+.wr-hvl { margin-top: 2px; color: var(--soft, #5d5448); }
+.wnote { margin: 4px 0; }
+.wr-step { margin-top: 8px; width: 100%; }
+.opt .py { display: block; font-size: 13.5px; }
 .rd-line .rd-py { font-size: 14px; color: var(--jade); font-weight: 600; letter-spacing: .01em; line-height: 1.3; }
 .rd-zh > span { font-size: 21px; letter-spacing: .04em; }
 .rd-hidepy .rd-py, .rd-hideen .rd-line:not(.seen) .rd-py { display: none; }
