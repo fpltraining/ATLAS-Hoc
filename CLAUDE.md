@@ -19,6 +19,7 @@ Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính 
 7. UI/UX: hỏi anh những chỗ thấy vướng khi tự học bằng app, rồi làm tiếp phần giao diện.
 8. Hình Đơn Q (Trường Lạc trấn): đã nhận đủ Q1–Q3 và Q2 Phần 1–5 (25/11/2026, danh sách ở đầu Đơn Q trong `game/ASSET_ORDERS.md`). Còn chờ 8 chân dung nói chuyện `npc_*_talk.png` (tin thứ hai của Q2 Phần 4); hỏi anh có dùng bản Meta AI của Leo, bà Rosa, Officer Grace, Dr. Anna cho Brightford không (`art/inbox/`).
 9. Học thử phần tiếng Trung (Sảnh → Trường Lạc trấn): phòng Phát âm, một bài HSK, viết chữ bằng Apple Pencil, nói chuyện ở quán trà; báo em chỗ nào vướng.
+10. Đặt hình Đơn R (cảnh xa quanh thành phố, `game/ASSET_ORDERS.md`): R1 núi thủy mặc, ruộng bậc thang, đồi chùa tháp quanh Trường Lạc trấn (5 hình); R2 Brightford tuỳ anh (4 hình). Nhận hình thì em dựng vòng cảnh xa (`buildFar`) đứng trên đồng cỏ 3D, tan vào sương.
 
 ## Thành phố Trung Hoa: Trường Lạc trấn 长乐镇 (anh Han chốt 24/11/2026)
 

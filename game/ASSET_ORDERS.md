@@ -841,3 +841,38 @@ Game đã có 4 bài thi chứng chỉ tiếng Trung (Nền tảng, HSK 2, HSK 4
 Same size and layout as the attached certificate paper, but Chinese style: cream xuan paper texture, a thin red border with a simple cloud pattern in the corners, a small red seal-stamp shape in the lower right corner (blank, no characters inside), a light ink-wash mountain and plum branch in one corner. Leave the middle completely empty for text. Absolutely no text, letters, numbers or Chinese characters anywhere. No purple. Landscape, same pixel size as the attachment.
 ```
 Tên tệp: `diploma_zh.png` (game tự đổi sang giấy này khi có tệp).
+
+# Đơn R · Cảnh xa quanh thành phố (26/11/2026)
+
+Anh Han muốn nhìn ra thấy xa, rộng, đi không có giới hạn. Dải đồi có nhà nhỏ ở đáy tranh trời đã bỏ, vì dải đó đi theo camera nên trông như tấm phông chắn. Thay vào đó, em dựng **một vòng tấm cảnh xa đứng trên đồng cỏ 3D**, cách thành phố khoảng 30–40 bước bản đồ, tấm cao 5–9 đơn vị. Các tấm tan dần vào sương và xoay theo khi đổi góc nhìn, nên có chiều sâu thật. Mỗi hình được dùng lại nhiều lần quanh vòng, có lật trái phải, đổi cỡ.
+
+Đặt qua ChatGPT, trong một cuộc trò chuyện mới, đính kèm **art/orders/B_style.png** (nét giấy cắt màu nước) và **game/assets/map_zh_oldtown.webp** (màu Trường Lạc trấn). Giữ đúng tên tệp.
+
+## R1 · Núi xa thủy mặc quanh Trường Lạc trấn (đặt trước · gửi MỘT tin)
+```
+I'm making a 3D paper-craft language-learning game. Please create the following 5 images, ONE image per message, in this order. Do not ask me any questions. After each image, go straight on to the next one. If you have to stop, I will type "next".
+Match the attached style exactly: soft watercolor on cut paper, layered paper cut-outs with thin cream paper edges and gentle shadows between the layers. These are FAR-AWAY scenery pieces that will stand around a small Chinese water town, so keep them soft, misty and low in contrast, like a Chinese ink-wash landscape (shan shui) made of layered paper.
+Every image: landscape 1536 x 1024. Solid flat magenta #FF00FF background everywhere outside the scenery (no sky, no clouds, no sun, no ground plane). The scenery spans the FULL WIDTH from the left edge to the right edge, and its bottom edge is a straight horizontal line along the very bottom of the image, because it stands on the ground. Absolutely no text, letters, numbers or Chinese characters. No purple, no pink and no magenta inside the scenery: the background is the only magenta. No people, no animals.
+1. far_zh_mountains_1.png — a long range of tall misty ink-wash mountains in 3 paper layers: pale blue-grey peaks at the back, grey-green peaks in the middle, darker green hills at the front; soft white mist strips between the layers; a few small pine trees on the ridges. The highest peak reaches about 80% of the image height.
+2. far_zh_mountains_2.png — a different range: two very tall pointed karst peaks like Guilin and several rounded ones, a thin white waterfall down one cliff, white mist at the foot. The highest peak reaches about 85% of the image height.
+3. far_zh_mountains_3.png — a gentle wide mountain range, lower (about 55% of the image height), a tiny red-roofed pavilion on one peak, a thin winding stone path, soft mist bands.
+4. far_zh_terraces.png — rolling hills covered with curving green rice terraces, a few tiny white-wall black-roof farmhouses, a small bamboo grove; about 45% of the image height.
+5. far_zh_pagoda_hill.png — one forested hill in the middle with a small slender seven-storey pagoda on top (blank, no writing), pine trees, mist at its foot; lower hills taper off to both edges; the hill top reaches about 65% of the image height.
+```
+
+## R2 · Cảnh xa quanh Brightford (tuỳ anh, đặt sau cũng được · gửi MỘT tin)
+Cuộc trò chuyện ChatGPT mới, đính kèm **art/orders/B_style.png** và một tờ bản đồ Brightford (vd. `game/assets/map_river_en.webp`), dán nguyên khối:
+```
+I'm making a 3D paper-craft language-learning game. Please create the following 4 images, ONE image per message, in this order. Do not ask me any questions. After each image, go straight on to the next one. If you have to stop, I will type "next".
+Match the attached style exactly: soft watercolor on cut paper, layered paper cut-outs with thin cream paper edges and gentle shadows between the layers. These are FAR-AWAY scenery pieces that will stand around a small near-future American town, so keep them soft, hazy and low in contrast.
+Every image: landscape 1536 x 1024. Solid flat magenta #FF00FF background everywhere outside the scenery (no sky, no clouds, no sun, no ground plane). The scenery spans the FULL WIDTH from the left edge to the right edge, and its bottom edge is a straight horizontal line along the very bottom of the image, because it stands on the ground. Absolutely no text, letters or numbers. No purple, no pink and no magenta inside the scenery: the background is the only magenta. No people, no animals.
+1. far_en_hills.png — rolling green farm hills with patchwork fields, a red barn and two silos, a few round trees; about 45% of the image height.
+2. far_en_forest.png — a long ridge of pine forest with a few birch trees and soft mist; about 55% of the image height.
+3. far_en_wind.png — gentle green hills with a row of tall white wind turbines and a small field of solar panels; turbine tops reach about 70% of the image height.
+4. far_en_mountains.png — far blue mountains with snowy tops in 2 paper layers; the highest peak reaches about 80% of the image height.
+```
+
+**Gắn vào game khi nhận (em làm):**
+- **Cắt nền:** cắt nền hồng bằng `tools/art/cut.py` (thêm kiểu `far`: giữ nguyên chiều ngang, đáy thẳng).
+- **Dựng vòng:** dựng vòng cảnh xa trong `world3d.js` (`buildFar`): tấm luôn đứng, không bật lên, tan vào sương. Trường Lạc trấn dùng `far_zh_*`; Brightford dùng `far_en_*` khi có, chưa có thì giữ đồng cỏ và cây như bây giờ.
+- **Soát:** kiểm tra máy yếu (iPad cũ) vẫn mượt.
