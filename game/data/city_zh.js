@@ -20,7 +20,7 @@ var G = window.G || (window.G = {});
   G.WORLDS.zh = { oldtown_zh: { ox: 0, oy: 0 }, center_zh: { ox: -30, oy: -1024 }, newtown_zh: { ox: 112, oy: -2048 } };
   G.ZH_CITY = ['oldtown_zh', 'center_zh', 'newtown_zh'];   // từ dưới lên, để chỉ đường
 
-  function W(x, y, s) { return { img: 'pc_zh_willow.png', x: x, y: y, s: s || 250, r: 20 }; }
+  function W(x, y, s) { return { img: 'pc_zh_willow.png', x: x, y: y, s: s || 215, r: 20 }; }
   function lamp(x, y) { return { img: 'pc_zh_lantern_post.png', x: x, y: y, s: 170, r: 10 }; }
 
   G.SCENE_MORE.oldtown_zh = {
@@ -33,8 +33,7 @@ var G = window.G || (window.G = {});
       { id: 'clinic', img: 'building_zh_clinic.png', s: 280, x: 1290, y: 925, name: '诊所 Phòng khám', life: 'zh-clinic' }
     ],
     props: [
-      W(115, 400), W(315, 408), W(660, 415), W(835, 410), W(1190, 345), W(1440, 296),
-      W(115, 700), W(575, 696), W(905, 666), W(1300, 610), W(1460, 590), W(130, 935), W(360, 1000),
+      W(115, 400), W(660, 415), W(835, 410), W(1440, 296), W(115, 700), W(905, 666), W(1460, 590), W(130, 935),   // liễu dựng trên chỗ liễu vẽ sẵn, chừa trước cửa nhà, quán trà
       { img: 'pc_zh_well.png', x: 300, y: 835, s: 170, r: 50 },
       { img: 'pc_zh_boat.png', x: 700, y: 560, s: 210, r: 0 },
       lamp(600, 322), lamp(905, 330), lamp(700, 762), lamp(1010, 762),

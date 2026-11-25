@@ -98,6 +98,8 @@ Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính 
 - Camera kiểu GTA: tay trái là cần điều khiển (đi theo hướng camera), tay phải vuốt để xoay góc nhìn quanh nhân vật; nút 🧭 đưa về hướng cũ. Mọi tấm giấy (người, nhà, cây, xe, ô) luôn quay mặt về camera (`bill`, `YAW` trong game/js/world3d.js).
 - Ngoài các khu là đồng cỏ màu nước (`grass_tile.webp`, ghép từ cỏ trong các tờ bản đồ đã đặt) và cây, bụi, đá rải tới chân trời (`buildCountry`). Vật trong khung nhìn luôn bật lên: bán kính dựng theo tỉ lệ màn và độ lùi camera, vật to tính từ mép (`updatePops`).
 - Ô che mưa: điểm cầm trên cán (`G.UMB_GRIP`) đặt đúng lòng bàn tay (`G.HANDS`, có cả khung bước); phần cán vẽ đè lên tay.
+- Mô hình giấy bật lên (`updatePops`): vừa vào bản đồ / đổi khu thì vật trong vùng dựng đứng ngay, nhánh `snap` phải đặt góc (lỗi cũ tới 26/11/2026: đánh dấu đã dựng mà góc vẫn nằm rạp, anh Han thấy ở Trường Lạc trấn).
+- Trời là dải mỏng ở mép trên (`.sky3d`, 19% màn, mờ dần; anh Han 26/11/2026: nhìn xa, rộng, không giới hạn): chỉ lấy phần mây, trăng sao của tranh trời, bỏ dải đồi có nhà nhỏ ở đáy tranh (dải đó dính theo camera nên như tấm phông chắn); bên dưới là đồng cỏ 3D, các khu xa, cây tan vào sương cùng màu trời.
 
 ## Quy tắc làm việc
 
