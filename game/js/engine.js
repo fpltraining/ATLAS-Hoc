@@ -249,7 +249,8 @@ var G = window.G || (window.G = {});
   }
 
   /* ---------- va chạm ---------- */
-  /* bản đồ 3D: các khu ghép liền thành một thành phố, đi bộ xuyên qua chỗ nối (toạ độ px toàn thành phố) */
+  /* bản đồ 3D: các khu ghép liền thành một thành phố, đi bộ xuyên qua chỗ nối (toạ độ px toàn thành phố);
+     mép ngoài và ngoài các tờ bản đồ là đồng cỏ đi được tới vòng cảnh xa (G.countryBlocked trong world.js) */
   G.blockedWorld = function (gx, gy) {
     var WD = G.WORLD3D, id, d, s, lx, ly;
     for (id in WD) {
@@ -257,17 +258,18 @@ var G = window.G || (window.G = {});
       d = WD[id]; lx = gx - d.ox; ly = gy - d.oy;
       if (lx >= 4 && lx < s.w - 4 && ly >= 50 && ly < s.h - 14) return blockedIn(s, id, lx, ly, true);
     }
-    for (id in WD) {   // mép tờ: chỉ đi qua chỗ nối với khu bên cạnh (trái, phải, trên, dưới)
+    for (id in WD) {   // mép tờ: đi qua chỗ nối với khu bên cạnh (trái, phải, trên, dưới), mép ngoài thì bước ra đồng cỏ
       if (!WD.hasOwnProperty(id) || !(s = G.SCENES[id])) continue;
       d = WD[id]; lx = gx - d.ox; ly = gy - d.oy;
       if (lx < 0 || lx >= s.w || ly < 0 || ly >= s.h) continue;
+      var inner = blockedIn(s, id, Math.min(Math.max(lx, 5), s.w - 5), Math.min(Math.max(ly, 50), s.h - 15), true);   // chỗ ảnh có nước, nhà sát mép thì vẫn chặn
       for (var j in WD) {
         var e = WD[j], es = G.SCENES[j]; if (j === id || !es) continue;
-        if (gx >= e.ox - 40 && gx < e.ox + es.w + 40 && gy >= e.oy - 70 && gy < e.oy + es.h + 40) return blockedIn(s, id, Math.min(Math.max(lx, 5), s.w - 5), Math.min(Math.max(ly, 50), s.h - 15), true);
+        if (gx >= e.ox - 40 && gx < e.ox + es.w + 40 && gy >= e.oy - 70 && gy < e.oy + es.h + 40) return inner;
       }
-      return true;
+      return inner || (G.countryBlocked ? G.countryBlocked(gx, gy) : true);
     }
-    return true;
+    return G.countryBlocked ? G.countryBlocked(gx, gy) : true;
   };
   function blocked(x, y) {
     if (mode3d) { var o = G.WORLD3D[sceneId]; return G.blockedWorld(x + o.ox, y + o.oy); }
@@ -354,6 +356,7 @@ var G = window.G || (window.G = {});
       }
       if (!moved) P.moving = false;
       if (mode3d) checkCross();
+      if (mode3d && camRel) countryPush(vx, vy);
       // hướng nhìn có độ trễ: đi chéo gần 45° thì giữ hướng cũ, không nhấp nháy giữa hai hình
       var ax = Math.abs(vx), ay = Math.abs(vy), horiz = P.dir === 'left' || P.dir === 'right';
       if (horiz ? ay > ax * 1.3 : ax > ay * 1.3) horiz = !horiz;
@@ -365,12 +368,36 @@ var G = window.G || (window.G = {});
     updateSeat(dt);
     if (seat) { K.moving = false; K.dir = 'up'; } else kaiFollow(dt);
 
+    countryTick(dt);
     ambience(dt);
     // chỗ tương tác gần nhất → nút hành động
     nearUpdate();
     if (mode3d) { updatePeople(dt); updateFx(dt); if (fade > 0) fade = Math.max(0, fade - dt * 3); return; }
     cameraUpdate(dt);
   }
+  /* ---------- đồng cỏ ngoài phố (bản 3D): chỉ để ngắm cảnh. Lần đầu ra đồng cỏ Kai / Tiểu Long nhắc việc học ở trong phố;
+     đẩy cần tới mép đi được (vòng cảnh xa) thì nhắc quay về, mỗi câu kèm một câu tiếng Anh / tiếng Trung ngắn ---------- */
+  var outNow = 0, outHinted = false, edgeT = 0;
+  function countryTick(dt) {
+    var o = mode3d && G.WORLD3D && G.WORLD3D[sceneId];
+    outNow = o && G.countryOut ? G.countryOut(P.x + o.ox, P.y + o.oy) : 0;
+    if (edgeT > 0) edgeT -= dt;
+    if (outNow > 260 && !outHinted && !riding) {
+      outHinted = true;
+      G.kaiSay(G.buddy && G.buddy() === 'long' ? '风景真美！Fēngjǐng zhēn měi! Phong cảnh đẹp quá. Ngoài này chỉ để ngắm cảnh, việc học ở trong phố nhé.'
+        : '"What a view!" Cảnh đẹp quá! Ngoài này chỉ để ngắm cảnh, việc học ở trong phố nhé.');
+    }
+  }
+  function countryPush(vx, vy) {
+    var o = G.WORLD3D && G.WORLD3D[sceneId];
+    if (!o || outNow <= 0 || edgeT > 0 || !G.countryEdge || G.countryEdge(P.x + o.ox + vx * 50, P.y + o.oy + vy * 50) >= 0) return;
+    edgeT = 25;
+    var C = G.country && G.country(), hill = !!(C && C.far.length), zh = G.buddy && G.buddy() === 'long';
+    G.kaiSay(zh ? (hill ? '前面是山。Qiánmiàn shì shān. Phía trước là núi rồi, mình quay về phố học tiếp nhé!' : '前面有雾。Qiánmiàn yǒu wù. Phía trước toàn sương mù, mình quay về phố học tiếp nhé!')
+      : (hill ? '"We can\'t climb the mountains." Không leo núi được đâu, mình quay về phố học tiếp nhé!' : '"It\'s too foggy." Phía trước toàn sương mù, mình quay về phố học tiếp nhé!'));
+  }
+  G.countryNow = function () { return outNow; };
+
   /* ---------- bước chân: 2,2 bước/giây theo nhịp đi; mặt đất lấy theo màu bản đồ dưới chân (xanh = cỏ, còn lại = đá),
      trên cầu qua sông = gỗ, trong nhà = sàn gỗ ---------- */
   var stepN = -1, BGS = {};
@@ -390,6 +417,7 @@ var G = window.G || (window.G = {});
   }
   function surfaceAt(x, y) {
     if (scene.kind !== 'city') return 'wood';
+    if (x < 0 || y < 0 || x >= scene.w || y >= scene.h) return 'grass';   // đồng cỏ ngoài tờ bản đồ
     if (G.RIVER && sceneId === G.RIVER.id) {
       for (var i = 0; i < G.RIVER.bridges.length; i++) {
         var br = G.RIVER.bridges[i];
@@ -439,6 +467,12 @@ var G = window.G || (window.G = {});
         ambV.river = 0.65 * riverNear();
         ambV.playground = sceneId === 'campus_en' && hr >= 7 && hr < 17 && rain < 0.1 ? 0.22 : 0;
         if (scene.amb) for (var ak in scene.amb) if (scene.amb.hasOwnProperty(ak) && (ak !== 'playground' || (hr >= 7 && hr < 17 && rain < 0.1))) ambV[ak] = Math.max(ambV[ak] || 0, scene.amb[ak]);
+        if (outNow > 0) {   // ra đồng cỏ: tiếng phố, chợ, kênh nhỏ dần theo đường đi; chim, gió đồng rõ hơn
+          var away = clamp(1 - outNow / 900, 0, 1), FADEK = ['city', 'river', 'playground', 'market', 'cafe'];
+          for (i = 0; i < FADEK.length; i++) ambV[FADEK[i]] = (ambV[FADEK[i]] || 0) * away;
+          ambV.birds = Math.max(ambV.birds, 0.32 * (1 - away) * (hr >= 5 && hr < 18.6 ? 1 : 0) * (1 - Math.min(1, rain * 2)));
+          ambV.wind = Math.max(ambV.wind, 0.16 * (1 - away));
+        }
       } else {
         ambV.rain = 0.12 * light; ambV.rainHeavy = 0.1 * heavy;   // trong nhà nghe mưa vọng vào
         if (scene.kind === 'classroom') ambV.classroom = seat ? 0.22 : 0.32;
@@ -1332,7 +1366,7 @@ var G = window.G || (window.G = {});
     vg.addColorStop(0, 'rgba(10,12,30,0)'); vg.addColorStop(1, 'rgba(10,12,30,.28)');
     ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
     drawGoalMark();
-    if (G.drawRadar) G.drawRadar({ scene: scene, id: sceneId, P: P, goal: curGoal, people: people(), talked: talkedToday, dpr: dpr });
+    if (G.drawRadar) G.drawRadar({ scene: scene, id: sceneId, P: P, goal: curGoal, people: people(), talked: talkedToday, dpr: dpr, out: outNow });
     if (fade > 0) { ctx.fillStyle = 'rgba(27,33,64,' + fade + ')'; ctx.fillRect(0, 0, W, H); }
   }
 
@@ -1373,7 +1407,7 @@ var G = window.G || (window.G = {});
         ctx.restore();
       }
     }
-    if (G.drawRadar) G.drawRadar({ scene: scene, id: sceneId, P: P, goal: curGoal, people: people(), talked: talkedToday, dpr: dpr });
+    if (G.drawRadar) G.drawRadar({ scene: scene, id: sceneId, P: P, goal: curGoal, people: people(), talked: talkedToday, dpr: dpr, out: outNow });
     if (fade > 0) { ctx.fillStyle = 'rgba(27,33,64,' + fade + ')'; ctx.fillRect(0, 0, W, H); }
   }
   /* người đi đường trong bản 3D: tự chào khi đi ngang, bấm vào thì nói một câu (có giọng đọc), Kai dịch nghĩa */

@@ -68,7 +68,7 @@ var G = window.G || (window.G = {});
     var ya = G.W3D && G.W3D.active && G.W3D.yaw ? G.W3D.yaw() : 0;
     if (RD.ya !== ya) { RD.ya = ya; RD.cv.style.transform = ya ? 'rotate(' + ya.toFixed(3) + 'rad)' : ''; }
     updateTemp();
-    var nm = (st.scene.title || '') + (RD.far ? ' · cả khu' : '');
+    var nm = (st.out > 0 ? 'Đồng cỏ ngoài phố' : st.scene.title || '') + (RD.far ? ' · cả khu' : '');   // ra đồng cỏ ngoài các tờ bản đồ
     if (RD.name !== nm) { RD.name = nm; var ne = document.getElementById('radar-name'); if (ne) ne.textContent = nm; }
     var css = RD.cv.clientWidth; if (!css) return;
     var S = Math.round(css * st.dpr); if (RD.cv.width !== S) { RD.cv.width = S; RD.cv.height = S; }
@@ -118,6 +118,10 @@ var G = window.G || (window.G = {});
     }
     // mình: mặt nhân vật trong khung tròn trắng, mũi nhọn cam chỉ hướng đi
     var px = X(P.x), py = Y(P.y), a0 = RD.ang, R0 = Math.max(9, S * 0.1);
+    if (RD.far) {   // xem cả khu mà mình đang ở đồng cỏ xa: mặt mình nằm sát vành theo hướng
+      var mdx = px - r, mdy = py - r, md = Math.sqrt(mdx * mdx + mdy * mdy), lim = r - ring - R0 - 2;
+      if (md > lim) { px = r + mdx / md * lim; py = r + mdy / md * lim; }
+    }
     g.fillStyle = '#b84b35'; g.beginPath();
     g.moveTo(px + Math.cos(a0) * R0 * 1.75, py + Math.sin(a0) * R0 * 1.75);
     g.lineTo(px + Math.cos(a0 + 0.6) * R0 * 0.95, py + Math.sin(a0 + 0.6) * R0 * 0.95);

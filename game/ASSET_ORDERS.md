@@ -844,7 +844,9 @@ Tên tệp: `diploma_zh.png` (game tự đổi sang giấy này khi có tệp).
 
 # Đơn R · Cảnh xa quanh thành phố (26/11/2026)
 
-Anh Han muốn nhìn ra thấy xa, rộng, đi không có giới hạn. Dải đồi có nhà nhỏ ở đáy tranh trời đã bỏ, vì dải đó đi theo camera nên trông như tấm phông chắn. Thay vào đó, em dựng **một vòng tấm cảnh xa đứng trên đồng cỏ 3D**, cách thành phố khoảng 30–40 bước bản đồ, tấm cao 5–9 đơn vị. Các tấm tan dần vào sương và xoay theo khi đổi góc nhìn, nên có chiều sâu thật. Mỗi hình được dùng lại nhiều lần quanh vòng, có lật trái phải, đổi cỡ.
+> **Tình trạng (26/11/2026):** R1 đã nhận đủ 5 hình (ảnh gốc ở `art/inbox/R1/`), đã cắt nền (`python tools/art/cut.py tools/art/far_r1.json`, kiểu `far`) thành `game/assets/far_zh_*.webp` và dựng thành vòng núi quanh Trường Lạc trấn. Anh Han chốt thêm (25/11/2026): **đi bộ tới tận chân núi được, nhưng chỉ để ngắm cảnh** (đồng cỏ không có người, không có việc). Vì vậy vòng núi đứng gần hơn dự kiến ban đầu: cách mép thành phố 16,6 đơn vị, người đi được tới 15 đơn vị rồi dừng. R2 Brightford vẫn tuỳ anh; nhận hình thì đặt tên `far_en_*.png` như dưới, em cắt ra `.webp` và Brightford tự có vòng núi.
+
+Anh Han muốn nhìn ra thấy xa, rộng, đi không có giới hạn. Dải đồi có nhà nhỏ ở đáy tranh trời đã bỏ, vì dải đó đi theo camera nên trông như tấm phông chắn. Thay vào đó, em dựng **một vòng tấm cảnh xa đứng trên đồng cỏ 3D**, ngay sau mép đi được của đồng cỏ (cách thành phố khoảng 16–17 đơn vị), tấm cao 5–9 đơn vị. Các tấm tan dần vào sương và xoay theo khi đổi góc nhìn, nên có chiều sâu thật. Mỗi hình được dùng lại nhiều lần quanh vòng, có lật trái phải, đổi cỡ.
 
 Đặt qua ChatGPT, trong một cuộc trò chuyện mới, đính kèm **art/orders/B_style.png** (nét giấy cắt màu nước) và **game/assets/map_zh_oldtown.webp** (màu Trường Lạc trấn). Giữ đúng tên tệp.
 

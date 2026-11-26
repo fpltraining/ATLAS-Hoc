@@ -314,11 +314,23 @@ async function zhFlow() {
   await P.ev(() => { G.closeLesson(); G.enterScene('center_zh', { x: 1190, y: 540, dir: 'up' }); }); await wait(1200);
   await P.ev(() => document.getElementById('act').click()); await wait(1200);
   city.hall = await P.ev(() => document.getElementById('panel-title').textContent); await P.shot('zh-11-city-hall');
+  // đồng cỏ ngoài phố (anh Han 25/11/2026): đi bộ ra khỏi phố cổ sang đồng cỏ, thấy vòng núi xa (Đơn R), tới mép thì dừng trước chân núi, quay về
+  await P.ev(() => { G.closeLesson(); G.enterScene('oldtown_zh', { x: 150, y: 760, dir: 'left' }); }); await wait(1200);
+  await P.ev(() => G.debugGo(-700, 760)); await wait(5000);
+  city.out = await P.ev(() => { const s = G.debugState(), w = G.W3D.state(); return { s: s.scene, x: Math.round(s.x), out: Math.round(G.countryNow()), far: w.far, farShown: w.farShown, country: w.country, limit: G.debugFree(-1700, 760), radar: document.getElementById('radar-name').textContent }; });
+  await P.shot('zh-12-country');
+  await P.ev(() => G.debugGo(-1450, 760)); await wait(5000);
+  city.edge = await P.ev(() => Math.round(G.debugState().x)); await P.shot('zh-13-mountains');
+  await P.ev(() => G.debugGo(300, 760)); await wait(8000);
+  city.back = await P.ev(() => ({ s: G.debugState().scene, x: Math.round(G.debugState().x), out: G.countryNow() }));
   await P.ev(() => { G.closeLesson(); G.goLobby(); }); await wait(900);
+  const outOk = city.out.s === 'oldtown_zh' && city.out.x < -300 && city.out.out > 0 && city.out.far >= 8 && city.out.farShown >= 8 && city.out.country > 150
+    && city.out.limit === false && /Đồng cỏ/.test(city.out.radar) && city.edge < -1200 && city.edge > -1530 && city.back.x > 0 && city.back.out === 0;
   const cityOk = city.c === 'zh' && city.d3 && city.s === 'oldtown_zh' && city.face === 'long_face.png' && /Học viện/.test(city.goal || '')
-    && city.walk.join() === 'center_zh,newtown_zh,oldtown_zh' && /Tiểu Mỹ/.test(city.near || '') && /bạn cùng lớp/.test(city.talk || '') && /Học viện Hán ngữ/.test(city.hall || '');
+    && city.walk.join() === 'center_zh,newtown_zh,oldtown_zh' && /Tiểu Mỹ/.test(city.near || '') && /bạn cùng lớp/.test(city.talk || '') && /Học viện Hán ngữ/.test(city.hall || '') && outOk;
   report.push(`Trường Lạc trấn · bản đồ 3D: ${city.d3 ? '3D' : '2D'}, vào ${city.s}, Tiểu Long ${city.face === 'long_face.png' ? 'nói' : 'CHƯA'}; ghim "${city.goal}"; đi qua ${city.walk.join(' → ')}; ${city.near} → ${city.talk || 'KHÔNG MỞ'}; Học viện → ${city.hall}`);
-  if (!cityOk) problems.push('Trường Lạc trấn: bản đồ 3D chưa chạy hết');
+  report.push(`Trường Lạc trấn · đồng cỏ: ra tới x ${city.out.x} (cách phố ${city.out.out} px, bản đồ nhỏ "${city.out.radar}"), ${city.out.country} cây đá, núi xa ${city.out.farShown}/${city.out.far} tấm; tới mép dừng ở x ${city.edge}${city.out.limit === false ? ', quá mép bị chặn' : ', QUÁ MÉP VẪN ĐI ĐƯỢC'}; quay về ${city.back.s} x ${city.back.x}${outOk ? '' : ' · CHƯA ĐẠT'}`);
+  if (!cityOk) problems.push('Trường Lạc trấn: bản đồ 3D chưa chạy hết' + (outOk ? '' : ' (đồng cỏ ngoài phố)'));
   // về Brightford: hồ sơ tiếng Anh còn nguyên
   await P.ev(() => { const b = [].filter.call(document.querySelectorAll('.city-chip'), (x) => /Brightford/.test(x.textContent))[0]; b.click(); });
   await wait(1200);

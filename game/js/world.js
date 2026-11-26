@@ -335,3 +335,94 @@ G.roomOpen = function (idx, doors) {
   if (G.S && G.S.dauVao && G.S.dauVao.lv >= 5 && doors === G.EN_F4_DOORS) return true;     // đầu vào từ B2: học vượt tầng 4
   return G.roomPassed(doors[idx - 1].room);
 };
+
+/* ---------- Đồng cỏ quanh thành phố 3D (anh Han 25/11/2026: "di chuyển tới đó được luôn nhưng chỉ là cảnh đẹp thôi") ----------
+   Ra khỏi các tờ bản đồ là đồng cỏ có cây, bụi, đá; đi bộ được tới vòng cảnh xa (núi Đơn R) rồi dừng. Không có người, không có việc.
+   Dùng chung cho bản 3D (world3d.js vẽ cây, đá, cảnh xa) và va chạm (engine.js G.blockedWorld). Toạ độ px toàn thành phố (100 px = 1 đơn vị 3D):
+   walk = đi được tới cách mép thành phố bao xa, far = vòng cảnh xa đứng ngay sau đó, band = cây, đá rải tới đâu (xa hơn đã chìm trong sương). */
+G.COUNTRY = { walk: 1500, far: 1660, band: 1900, cell: 200 };
+G.FAR_IMG = {   // cảnh xa đã đặt (Đơn R); chỉ dùng hình đã có trong game/assets, chưa có thì vòng cảnh xa trống
+  zh: ['far_zh_mountains_1.webp', 'far_zh_mountains_2.webp', 'far_zh_terraces.webp', 'far_zh_mountains_3.webp', 'far_zh_pagoda_hill.webp'],
+  en: ['far_en_hills.webp', 'far_en_forest.webp', 'far_en_wind.webp', 'far_en_mountains.webp']
+};
+(function () {
+  var CT = null;
+  // [hình, cỡ px, kiểu gấp, bán kính chặn theo cỡ]: cây chặn ở gốc, bụi và đá chặn cả khối
+  var KIND = {
+    zh: [['pc_zh_willow.png', 250, 'tree', 0.12], ['pc_zh_bamboo.png', 210, 'tree', 0.12], ['pc_zh_plum.png', 220, 'tree', 0.12], ['pc_tree_green.png', 230, 'tree', 0.12],
+      ['pc_zh_willow.png', 270, 'tree', 0.12], ['pc_zh_bamboo.png', 190, 'tree', 0.12], ['pc_tree_small.png', 160, 'tree', 0.12],
+      ['pc_bush_white.png', 120, 'tree', 0.3], ['pc_rock_moss.png', 95, null, 0.32], ['pc_rock.png', 85, null, 0.32]],
+    en: [['pc_tree_green.png', 230, 'tree', 0.12], ['pc_tree_birch.png', 220, 'tree', 0.12], ['pc_tree_maple.png', 220, 'tree', 0.12], ['pc_tree_orange.png', 220, 'tree', 0.12],
+      ['pc_tree_pine.png', 250, 'tree', 0.12], ['pc_tree_small.png', 160, 'tree', 0.12], ['pc_tree_green.png', 260, 'tree', 0.12], ['pc_tree_pine.png', 280, 'tree', 0.12],
+      ['pc_bush_orange.png', 120, 'tree', 0.3], ['pc_bush_white.png', 120, 'tree', 0.3], ['pc_rock_moss.png', 95, null, 0.32], ['pc_rock.png', 85, null, 0.32]]
+  };
+  function hasImg(n) { return !!(G.ASSET_REV && G.ASSET_REV[n]); }
+  /* bố cục đồng cỏ của thành phố đang dựng (G.WORLD3D), tính một lần; fresh: tính lại (kiểm thử) */
+  G.country = function (fresh) {
+    var WD = G.WORLD3D, id; if (!WD || !G.SCENES) return null;
+    if (CT && CT.wd === WD && !fresh) return CT;
+    var R = [], x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9, city = 'en';
+    for (id in WD) if (WD.hasOwnProperty(id) && G.SCENES[id]) {
+      var d = WD[id], s = G.SCENES[id];
+      R.push([d.ox, d.oy, d.ox + s.w, d.oy + s.h]);
+      x0 = Math.min(x0, d.ox); y0 = Math.min(y0, d.oy); x1 = Math.max(x1, d.ox + s.w); y1 = Math.max(y1, d.oy + s.h);
+      if (s.city === 'zh') city = 'zh';
+    }
+    if (!R.length) return null;
+    var C = G.COUNTRY, K = KIND[city], items = [], grid = {}, seed = 20261124, STEP = 210;
+    function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
+    function inside(x, y) { for (var i = 0; i < R.length; i++) { var r = R[i]; if (x > r[0] - 25 && x < r[2] + 25 && y > r[1] - 25 && y < r[3] + 25) return true; } return false; }
+    for (var y = y0 - C.band; y < y1 + C.band; y += STEP) for (var x = x0 - C.band; x < x1 + C.band; x += STEP) {
+      var px = x + (rnd() - 0.5) * STEP * 0.9, py = y + (rnd() - 0.5) * STEP * 0.9;
+      if (inside(px, py)) continue;
+      var edge = Math.max(x0 - px, px - x1, y0 - py, py - y1, 0);   // càng xa thành phố càng thưa
+      if (rnd() > (edge < 300 ? 0.5 : edge < C.walk ? 0.32 : 0.24)) continue;
+      var k = K[Math.floor(rnd() * K.length)], sz = k[1] * (0.8 + rnd() * 0.45);
+      if (Math.abs(edge - C.far) < 90) continue;   // chừa chỗ cho vòng cảnh xa
+      var it = { img: k[0], x: px, y: py, s: sz, fold: k[2], r: sz * k[3] }, gk = Math.floor(px / C.cell) + ',' + Math.floor(py / C.cell);
+      items.push(it); (grid[gk] || (grid[gk] = [])).push(it);
+    }
+    // vòng cảnh xa: các tấm đứng nối nhau dọc đường bao cách mép thành phố C.far px, cao 5–9 đơn vị, dùng lại hình có lật, đổi cỡ
+    var far = [], imgs = (G.FAR_IMG[city] || []).filter(hasImg);
+    if (imgs.length) {
+      var fx0 = x0 - C.far, fy0 = y0 - C.far, fw = x1 - x0 + 2 * C.far, fh = y1 - y0 + 2 * C.far, per = 2 * (fw + fh), n = Math.max(8, Math.round(per / 950)), fseed = 7;
+      for (var q = 0; q < n; q++) {
+        var t = (q + 0.5) / n * per, fxp, fyp;
+        if (t < fw) { fxp = fx0 + t; fyp = fy0; }
+        else if (t < fw + fh) { fxp = fx0 + fw; fyp = fy0 + t - fw; }
+        else if (t < 2 * fw + fh) { fxp = fx0 + fw - (t - fw - fh); fyp = fy0 + fh; }
+        else { fxp = fx0; fyp = fy0 + fh - (t - 2 * fw - fh); }
+        fseed = (fseed * 16807) % 2147483647;
+        far.push({ img: imgs[q % imgs.length], x: fxp, y: fyp, h: 520 + (fseed % 380), flip: (fseed >> 3) % 2 === 1 });
+      }
+    }
+    return (CT = { wd: WD, city: city, rects: R, x0: x0, y0: y0, x1: x1, y1: y1, items: items, grid: grid, far: far });
+  };
+  /* đồng cỏ: chặn khi quá mép đi được (tới vòng cảnh xa thì dừng) hoặc vướng gốc cây, bụi, đá */
+  G.countryBlocked = function (gx, gy) {
+    var C = G.country(); if (!C) return true;
+    var lim = G.COUNTRY.walk, cs = G.COUNTRY.cell;
+    if (gx < C.x0 - lim || gx > C.x1 + lim || gy < C.y0 - lim || gy > C.y1 + lim) return true;
+    var cx = Math.floor(gx / cs), cy = Math.floor(gy / cs);
+    for (var j = cy - 1; j <= cy + 1; j++) for (var i = cx - 1; i <= cx + 1; i++) {
+      var L = C.grid[i + ',' + j]; if (!L) continue;
+      for (var k = 0; k < L.length; k++) { var o = L[k], dx = gx - o.x, dy = (gy - o.y) * 2; if (dx * dx + dy * dy < o.r * o.r) return true; }
+    }
+    return false;
+  };
+  /* còn cách mép đi được bao nhiêu px (âm: đã quá mép) */
+  G.countryEdge = function (gx, gy) {
+    var C = G.country(), lim = G.COUNTRY.walk; if (!C) return 0;
+    return Math.min(gx - (C.x0 - lim), C.x1 + lim - gx, gy - (C.y0 - lim), C.y1 + lim - gy);
+  };
+  /* đang ở đồng cỏ cách tờ bản đồ gần nhất bao nhiêu px; 0 = đang trong phố */
+  G.countryOut = function (gx, gy) {
+    var C = G.country(); if (!C) return 0;
+    var best = 1e9;
+    for (var i = 0; i < C.rects.length; i++) {
+      var r = C.rects[i], dx = Math.max(r[0] - gx, 0, gx - r[2]), dy = Math.max(r[1] - gy, 0, gy - r[3]);
+      best = Math.min(best, Math.sqrt(dx * dx + dy * dy));
+    }
+    return best;
+  };
+})();

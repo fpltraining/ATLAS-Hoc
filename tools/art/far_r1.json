@@ -1,0 +1,28 @@
+[
+  {
+    "src": "art/inbox/R1/far_zh_mountains_1.webp",
+    "kind": "far",
+    "out": "game/assets/far_zh_mountains_1.webp"
+  },
+  {
+    "src": "art/inbox/R1/far_zh_mountains_2.jpg",
+    "kind": "far",
+    "out": "game/assets/far_zh_mountains_2.webp",
+    "keep_h": 1140
+  },
+  {
+    "src": "art/inbox/R1/far_zh_mountains_3.jpg",
+    "kind": "far",
+    "out": "game/assets/far_zh_mountains_3.webp"
+  },
+  {
+    "src": "art/inbox/R1/far_zh_terraces.jpg",
+    "kind": "far",
+    "out": "game/assets/far_zh_terraces.webp"
+  },
+  {
+    "src": "art/inbox/R1/far_zh_pagoda_hill.jpg",
+    "kind": "far",
+    "out": "game/assets/far_zh_pagoda_hill.webp"
+  }
+]

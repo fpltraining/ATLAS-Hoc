@@ -320,30 +320,41 @@ var G = window.G || (window.G = {});
     var sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: BUBBLE_T, depthTest: false, transparent: true }));
     sp.scale.set(0.34, 0.34, 1); sp.renderOrder = 11; sp.visible = false; SC.add(sp); return sp;
   }
-  /* vùng quê quanh thành phố: cây, bụi, đá (hình đã đặt) rải ngoài các tờ bản đồ, luôn đứng, mờ dần theo sương xa */
+  /* đồng cỏ quanh thành phố (bố cục chung G.country trong world.js, cùng chỗ với va chạm): cây, bụi, đá rải ngoài các tờ bản đồ,
+     luôn đứng, mờ dần theo sương xa; cây che người thì mờ đi như cây trong phố (đi bộ ra đồng cỏ được, anh Han 25/11/2026) */
   function buildCountry() {
-    var seed = 20261124; function rnd() { seed = (seed * 16807) % 2147483647; return seed / 2147483647; }
-    var RECT = DIST.map(function (d) { return [d.ox * U - 0.25, d.oy * U - 0.25, (d.ox + d.s.w) * U + 0.25, (d.oy + d.s.h) * U + 0.25]; });
-    var x0 = 1e9, z0 = 1e9, x1 = -1e9, z1 = -1e9;
-    RECT.forEach(function (r) { x0 = Math.min(x0, r[0]); z0 = Math.min(z0, r[1]); x1 = Math.max(x1, r[2]); z1 = Math.max(z1, r[3]); });
-    function inside(x, z) { for (var i = 0; i < RECT.length; i++) { var r = RECT[i]; if (x > r[0] && x < r[2] && z > r[1] && z < r[3]) return true; } return false; }
-    var KIND = W3.city === 'zh' ? [['pc_zh_willow.png', 250, 'tree'], ['pc_zh_bamboo.png', 210, 'tree'], ['pc_zh_plum.png', 220, 'tree'], ['pc_tree_green.png', 230, 'tree'],
-      ['pc_zh_willow.png', 270, 'tree'], ['pc_zh_bamboo.png', 190, 'tree'], ['pc_tree_small.png', 160, 'tree'],
-      ['pc_bush_white.png', 120, 'tree'], ['pc_rock_moss.png', 95, null], ['pc_rock.png', 85, null]]   // Trường Lạc trấn: liễu, trúc, mai
-      : [['pc_tree_green.png', 230, 'tree'], ['pc_tree_birch.png', 220, 'tree'], ['pc_tree_maple.png', 220, 'tree'], ['pc_tree_orange.png', 220, 'tree'],
-      ['pc_tree_pine.png', 250, 'tree'], ['pc_tree_small.png', 160, 'tree'], ['pc_tree_green.png', 260, 'tree'], ['pc_tree_pine.png', 280, 'tree'],
-      ['pc_bush_orange.png', 120, 'tree'], ['pc_bush_white.png', 120, 'tree'], ['pc_rock_moss.png', 95, null], ['pc_rock.png', 85, null]];
-    var STEP = 2.1, n = 0, M = 16;   // rải trong dải 16 đơn vị quanh thành phố (xa hơn đã chìm trong sương)
-    for (var z = z0 - M; z < z1 + M; z += STEP) for (var x = x0 - M; x < x1 + M; x += STEP) {
-      var px = x + (rnd() - 0.5) * STEP * 0.9, pz = z + (rnd() - 0.5) * STEP * 0.9;
-      if (inside(px, pz)) continue;
-      var edge = Math.max(x0 - px, px - x1, z0 - pz, pz - z1, 0);   // càng xa thành phố càng thưa
-      if (rnd() > (edge < 3 ? 0.5 : 0.32)) continue;
-      var k = KIND[Math.floor(rnd() * KIND.length)], s = k[1] * (0.8 + rnd() * 0.45);
-      card(k[0], px / U, pz / U, s, 0.96, { fold: k[2], pop: false });
-      n++;
+    var C = G.country && G.country(); W3.countryN = 0; if (!C) return;
+    C.items.forEach(function (it) {
+      var tree = it.fold === 'tree', g = card(it.img, it.x, it.y, it.s, 0.96, { fold: it.fold, pop: false, own: tree });
+      if (tree) FADE.push(g);
+    });
+    W3.countryN = C.items.length;
+    buildFar(C);
+  }
+  /* vòng cảnh xa (Đơn R): núi, đồi giấy cắt đứng ngay sau mép đi được của đồng cỏ, luôn quay về camera, tan vào sương.
+     Sương ở mép hình trong dần (webp có kênh trong suốt) nên vẽ kiểu trong suốt; đứng chắn giữa camera và người thì mờ hẳn đi */
+  var FARS = [];
+  function buildFar(C) {
+    (C.far || []).forEach(function (f) {
+      var t = tex(f.img);   // lật trái phải bằng tỉ lệ âm (không tải thêm bản lật: đỡ bộ nhớ máy)
+      var m = new THREE.Mesh(PLANE, new THREE.MeshLambertMaterial({ map: t, emissive: 0x6a6a6a, emissiveMap: t, transparent: true, alphaTest: 0.03, depthWrite: false, side: THREE.DoubleSide }));
+      m.position.y = -0.03; m.renderOrder = -1;
+      var g = new THREE.Group(); g.add(m); g.visible = false;
+      g.position.set(f.x * U, 0, f.y * U); g.rotation.x = -LEAN * 0.6; bill(g); SC.add(g);
+      FARS.push({ g: g, m: m, t: t, h: f.h * U, w: 0, flip: f.flip });
+    });
+  }
+  function updateFar(dt) {
+    for (var i = 0; i < FARS.length; i++) {
+      var f = FARS[i], mm = f.m.material;
+      if (!f.w) {   // hình tải xong mới biết tỉ lệ ngang / cao
+        if (!ready(f.t)) continue;
+        f.w = f.h * f.t.image.width / f.t.image.height; f.g.scale.set(f.flip ? -f.w : f.w, f.h, 1); f.g.visible = true;
+      }
+      var q = rel(f.g.position.x - FX, f.g.position.z - FZ);
+      var want = q[1] > -0.5 && q[1] < 8.4 * zoomK + 2.5 && Math.abs(q[0]) < f.w * 0.5 ? 0.12 : 1;   // đứng giữa camera và người (camera lùi theo mức thu phóng): mờ hẳn
+      if (Math.abs(mm.opacity - want) > 0.01) mm.opacity += (want - mm.opacity) * Math.min(1, dt * 5);
     }
-    W3.countryN = n;
   }
   function buildDistrict(d) {
     var s = d.s;
@@ -973,8 +984,10 @@ var G = window.G || (window.G = {});
     var cy = Math.cos(YAW), sy = Math.sin(YAW);
     var hd0 = 8.4 * zoomK + 0.6, vh0 = 5.2 * zoomK - 0.7, Rr = Math.sqrt(hd0 * hd0 + vh0 * vh0), el = Math.atan2(vh0, hd0) + PITCH;
     var lx = FX - sy * 0.6, lz = FZ - cy * 0.6, k = snap ? 1 : 1 - Math.exp(-dt * 6);
-    // nhìn thẳng về phía bắc (góc cũ): không để lộ khoảng giấy trắng ngoài mép bản đồ; xoay đi thì bớt dần việc giữ mép
+    // nhìn thẳng về phía bắc (góc cũ): không để lộ khoảng giấy trắng ngoài mép bản đồ; xoay đi thì bớt dần việc giữ mép;
+    // ra đồng cỏ ngoài các tờ bản đồ thì thôi giữ mép trong 1,5 đơn vị đầu: camera theo người ra tới vòng cảnh xa
     var wgt = Math.max(0, 1 - Math.abs(YAW) / 0.5);
+    if (wgt > 0 && G.countryOut) wgt *= Math.max(0, 1 - G.countryOut(FX / U, FZ / U) * U / 1.5);
     if (wgt > 0) {
       var hw = 2.6 * zoomK * CAM.aspect, X0 = 1e9, X1 = -1e9, zMax = 0, cx0 = lx, cz0 = lz;
       for (var i = 0; i < DIST.length; i++) {
@@ -1013,7 +1026,7 @@ var G = window.G || (window.G = {});
     var d = G.WORLD3D[st.id];
     if (SH && SH.phase !== 'come') { FX = SH.x * U; FZ = SH.y * U; } else { FX = (d.ox + st.P.x) * U; FZ = (d.oy + st.P.y) * U; }
     drawPlayer(st);
-    updateNpcs(dt, st); updateTown(dt); updateCars(dt); updateRiver(dt); updateShuttle(dt); updateBirds(dt); updateClouds(dt); updatePops(dt);
+    updateNpcs(dt, st); updateTown(dt); updateCars(dt); updateRiver(dt); updateShuttle(dt); updateBirds(dt); updateClouds(dt); updatePops(dt); updateFar(dt);
     var wind = 1 + wxNow.gather * 2 + wxNow.rain * 1.4;   // gió mạnh trước cơn mưa: cây lắc nhiều hơn
     for (var i = 0; i < SWAY.length; i++) { var sw = SWAY[i]; sw.g.rotation.z = (Math.sin(T * 1.3 * sw.k * Math.min(1.8, wind) + sw.ph) * 0.025 + Math.sin(T * 0.37 + sw.ph) * 0.012) * wind; }
     for (i = 0; i < STAND.length; i++) { var sd = STAND[i]; sd.g.scale.y = 1.24 * (1 + Math.sin(T * 1.6 + sd.ph) * 0.012); }
@@ -1072,6 +1085,7 @@ var G = window.G || (window.G = {});
   W3.state = function () {
     var up = 0; for (var q = 0; q < POPS.length; q++) if (POPS[q].a > 0.9) up++;
     return { pops: POPS.length, up: up, walkers: TOWN.length, cars: CARS.length, birds: BIRDS.length, clouds: CLOUDS.length, light: LIGHT, night: night, zoom: zoomK,
+      country: W3.countryN || 0, far: FARS.length, farShown: FARS.filter(function (f) { return f.g.visible; }).length,
       fx: FX / U, fz: FZ / U, shuttle: SH ? { x: Math.round(SH.x), y: Math.round(SH.y), phase: SH.phase, face: SH.face } : null,
       birdFlip: BIRDS.map(function (b) { return (b.sp.material.map === b.tf ? 'flip' : 'norm') + (b.dir > 0 ? '>' : '<') + b.k; }),
       player: P3 ? { map: P3.g.userData.mesh.material.map.image ? P3.g.userData.mesh.material.map.image.src.split('/').pop().split('?')[0] : '', y: +P3.g.position.y.toFixed(4) } : null };

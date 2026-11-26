@@ -19,7 +19,7 @@ Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính 
 7. UI/UX: hỏi anh những chỗ thấy vướng khi tự học bằng app, rồi làm tiếp phần giao diện.
 8. Hình Đơn Q (Trường Lạc trấn): đã nhận đủ Q1–Q3 và Q2 Phần 1–5 (25/11/2026, danh sách ở đầu Đơn Q trong `game/ASSET_ORDERS.md`). Còn chờ 8 chân dung nói chuyện `npc_*_talk.png` (tin thứ hai của Q2 Phần 4); hỏi anh có dùng bản Meta AI của Leo, bà Rosa, Officer Grace, Dr. Anna cho Brightford không (`art/inbox/`).
 9. Học thử phần tiếng Trung (Sảnh → Trường Lạc trấn): phòng Phát âm, một bài HSK, viết chữ bằng Apple Pencil, nói chuyện ở quán trà; báo em chỗ nào vướng.
-10. Đặt hình Đơn R (cảnh xa quanh thành phố, `game/ASSET_ORDERS.md`): R1 núi thủy mặc, ruộng bậc thang, đồi chùa tháp quanh Trường Lạc trấn (5 hình); R2 Brightford tuỳ anh (4 hình). Nhận hình thì em dựng vòng cảnh xa (`buildFar`) đứng trên đồng cỏ 3D, tan vào sương.
+10. Hình Đơn R (cảnh xa, `game/ASSET_ORDERS.md`): R1 Trường Lạc trấn đã nhận đủ 5 hình và dựng thành vòng núi (26/11/2026). R2 Brightford (4 hình) tuỳ anh; chưa có thì Brightford chỉ có đồng cỏ, cây tan vào sương.
 
 ## Thành phố Trung Hoa: Trường Lạc trấn 长乐镇 (anh Han chốt 24/11/2026)
 
@@ -101,6 +101,7 @@ Từ 24/11/2026 anh Han dùng app để tự học trước, phần UI/UX tính 
 - Ô che mưa: điểm cầm trên cán (`G.UMB_GRIP`) đặt đúng lòng bàn tay (`G.HANDS`, có cả khung bước); phần cán vẽ đè lên tay.
 - Mô hình giấy bật lên (`updatePops`): vừa vào bản đồ / đổi khu thì vật trong vùng dựng đứng ngay, nhánh `snap` phải đặt góc (lỗi cũ tới 26/11/2026: đánh dấu đã dựng mà góc vẫn nằm rạp, anh Han thấy ở Trường Lạc trấn).
 - Trời là dải mỏng ở mép trên (`.sky3d`, 19% màn, mờ dần; anh Han 26/11/2026: nhìn xa, rộng, không giới hạn): chỉ lấy phần mây, trăng sao của tranh trời, bỏ dải đồi có nhà nhỏ ở đáy tranh (dải đó dính theo camera nên như tấm phông chắn); bên dưới là đồng cỏ 3D, các khu xa, cây tan vào sương cùng màu trời.
+- **Đồng cỏ ngoài phố đi được, chỉ để ngắm** (anh Han 25/11/2026: "di chuyển tới đó được luôn nhưng chỉ là cảnh đẹp thôi"): mép ngoài các tờ bản đồ bước ra đồng cỏ (chỗ ảnh có nước, nhà sát mép vẫn chặn), đi được tới cách mép thành phố 15 đơn vị (`G.COUNTRY.walk`), ngay sau đó là vòng núi Đơn R (`G.COUNTRY.far`, `buildFar` trong world3d.js: tấm luôn quay về camera, sương ở mép hình trong dần, đứng chắn giữa camera và người thì mờ hẳn). Bố cục cây, bụi, đá và vòng núi tính một chỗ cho cả vẽ lẫn va chạm (`G.country`, `G.countryBlocked`, `G.countryEdge`, `G.countryOut` cuối js/world.js); gốc cây chặn, cây che người thì mờ đi. Không có người, không có việc: lần đầu ra đồng Kai / Tiểu Long nhắc việc học ở trong phố, đẩy cần tới mép thì nhắc quay về (kèm một câu tiếng Anh / tiếng Trung ngắn); bản đồ nhỏ ghi "Đồng cỏ ngoài phố"; tiếng phố nhỏ dần, chim, gió rõ hơn; camera thôi giữ mép bản đồ khi ra đồng. Vị trí lưu vẫn là chỗ vào khu cuối cùng. Hình cảnh xa: `G.FAR_IMG` (chỉ dùng hình đã có), cắt bằng kiểu `far` của tools/art/cut.py (bảng việc tools/art/far_r1.json, ảnh gốc art/inbox/R1). Kiểm thử: tools/test/country.test.mjs; QA `zh` đi ra đồng, tới chân núi, quay về.
 
 ## Quy tắc làm việc
 

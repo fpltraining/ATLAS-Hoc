@@ -15,6 +15,7 @@ Bảng việc: danh sách {"src": tệp gốc, "kind": loại, "out": tệp ra h
   grid      tấm nhiều tư thế dán trên nền hồng, chia đều "cols" × "rows" ô → <out>/<names[i]>.png (khung 512 như portrait,
             hoặc cắt gọn theo "tight": {"tên": chiều cao})
   avatar    ảnh đại diện tròn trên nền hồng → giữa khung 512×512
+  far       cảnh xa (Đơn R) trên nền hồng → webp trong suốt, giữ nguyên chiều ngang, đáy thẳng, ngang "width" px (mặc định 1024)
 Tấm bước có 3 kiểu: tấm giấy kem rời, hình dán thẳng trên nền hồng, khung giấy liền nhau có nền hồng bên trong (cells()).
 Nền hồng: tách theo độ "hồng" (R, B cao hơn G), khử viền hồng ở mép, bỏ các mảng nhỏ rời (chữ "Meta AI", vệt màu).
 Nền giấy kem của tấm bước: tách bằng rembg (mô hình isnet-anime, MIT) — cần `pip install "rembg[cpu]"`.
@@ -274,7 +275,33 @@ def do_avatar(t):
     rgb, a, _ = cut_magenta(t['src'])
     save_png(fit(trim(rgba(rgb, a)), 500, 500), t['out'])
 
-KINDS = {'portrait': do_portrait, 'building': do_building, 'prop': do_building, 'views3': do_views3, 'views3card': do_views3card, 'walk9': do_walk9, 'map': do_map, 'keep': do_keep, 'grid': do_grid, 'avatar': do_avatar}
+def do_far(t):
+    """Cảnh xa (Đơn R): dải núi, đồi đứng trên đồng cỏ ở xa. Nền hồng tách theo cách gỡ màu: điểm ảnh = a·màu thật + (1 − a)·hồng,
+    nên sương trắng loang trên nền hồng thành trong dần mà không còn ánh hồng. Giữ nguyên chiều ngang, cắt sát mép, đáy thẳng như ảnh gốc;
+    ra webp có kênh trong suốt, ngang "width" px (mặc định 1024) cho nhẹ máy; "keep_h": chỉ lấy phần trên của ảnh gốc (bỏ bệ giấy)."""
+    rgb = np.asarray(Image.open(t['src']).convert('RGB')).astype(np.float32)
+    if t.get('keep_h'): rgb = rgb[:t['keep_h']]                  # bỏ bệ giấy dưới chân (vd. far_zh_mountains_2)
+    r, g, b = rgb[..., 0], rgb[..., 1], rgb[..., 2]
+    s = np.minimum(r, b) - g
+    hue = np.abs(r - b) < 0.45 * np.maximum(r, b) + 25          # đỏ (mái đình), xanh dương: không phải nền
+    a = np.where(hue, 1.0 - np.clip((s - 12.0) / 178.0, 0, 1), 1.0)
+    a = np.where(shadow_mask(rgb), 0.0, a)
+    a, _ = keep_main(a, min_frac=0.01)
+    a = np.where(a < 0.06, 0.0, a)
+    al = np.maximum(a, 1e-3)[..., None]
+    F = np.clip((rgb - (1.0 - a)[..., None] * np.array([255.0, 0.0, 255.0])) / al, 0, 255)
+    F = np.where((a > 0.995)[..., None], rgb, F)
+    spill = np.clip(np.minimum(F[..., 0], F[..., 2]) - F[..., 1], 0, None)   # cảnh xa không có màu tím, hồng: ánh tím còn sót trong sương kéo về xám
+    spill = np.where(np.abs(F[..., 0] - F[..., 2]) < 0.45 * np.maximum(F[..., 0], F[..., 2]) + 25, spill, 0)
+    F[..., 0] -= spill; F[..., 2] -= spill
+    im = trim(rgba(F, a), thr=10)
+    w = t.get('width', 1024)
+    im = im.resize((w, max(1, round(im.height * w / im.width))), Image.LANCZOS)
+    os.makedirs(os.path.dirname(t['out']) or '.', exist_ok=True)
+    im.save(t['out'], 'WEBP', quality=86, method=6)
+    print('  ✓', t['out'], im.size)
+
+KINDS = {'portrait': do_portrait, 'building': do_building, 'prop': do_building, 'views3': do_views3, 'views3card': do_views3card, 'walk9': do_walk9, 'map': do_map, 'keep': do_keep, 'grid': do_grid, 'avatar': do_avatar, 'far': do_far}
 
 if __name__ == '__main__':
     jobs = json.load(open(sys.argv[1], encoding='utf-8'))
